@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -786,40 +787,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a7ad841b8dafd9646dec64c9e2e43b9dc">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/dab/PlanetaryShield_8java_source.html#l00118">118</a> of file <a class="el" href="../../dc/dab/PlanetaryShield_8java_source.html">PlanetaryShield.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  118</span>                                                                                                {</div>
-<div class="line"><span class="lineno">  119</span>        <span class="keywordtype">float</span> opad = 10f;</div>
-<div class="line"><span class="lineno">  120</span>        Color highlight = Misc.getHighlightColor();</div>
-<div class="line"><span class="lineno">  121</span>        </div>
-<div class="line"><span class="lineno">  122</span>        String pre = <span class="stringliteral">&quot;Alpha-level AI core currently assigned. &quot;</span>;</div>
-<div class="line"><span class="lineno">  123</span>        <span class="keywordflow">if</span> (mode == AICoreDescriptionMode.MANAGE_CORE_DIALOG_LIST || mode == AICoreDescriptionMode.INDUSTRY_TOOLTIP) {</div>
-<div class="line"><span class="lineno">  124</span>            pre = <span class="stringliteral">&quot;Alpha-level AI core. &quot;</span>;</div>
-<div class="line"><span class="lineno">  125</span>        }</div>
-<div class="line"><span class="lineno">  126</span>        <span class="keywordtype">float</span> a = <a class="code hl_variable" href="../../d7/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1PlanetaryShield.html#a0d1fa474f53d0db2aa3cbd723e76945b">ALPHA_CORE_BONUS</a>;</div>
-<div class="line"><span class="lineno">  127</span>        <span class="comment">//String str = Strings.X + (int)Math.round(a * 100f) + &quot;%&quot;;</span></div>
-<div class="line"><span class="lineno">  128</span>        String str = Strings.X + (1f + a) + <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">  129</span>        </div>
-<div class="line"><span class="lineno">  130</span>        <span class="keywordflow">if</span> (mode == AICoreDescriptionMode.INDUSTRY_TOOLTIP) {</div>
-<div class="line"><span class="lineno">  131</span>            CommoditySpecAPI coreSpec = Global.getSettings().getCommoditySpec(<a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#acee5118b579b1ab038a7e766124ffaf2">aiCoreId</a>);</div>
-<div class="line"><span class="lineno">  132</span>            TooltipMakerAPI text = tooltip.beginImageWithText(coreSpec.getIconName(), 48);</div>
-<div class="line"><span class="lineno">  133</span>            text.addPara(pre + <span class="stringliteral">&quot;Reduces upkeep cost by %s. Reduces demand by %s unit. &quot;</span> +</div>
-<div class="line"><span class="lineno">  134</span>                    <span class="stringliteral">&quot;Increases ground defenses by %s.&quot;</span>, 0f, highlight,</div>
-<div class="line"><span class="lineno">  135</span>                    <span class="stringliteral">&quot;&quot;</span> + (<span class="keywordtype">int</span>)((1f - <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#aa0521cdb7d92e9aad3551fd60573293f">UPKEEP_MULT</a>) * 100f) + <span class="stringliteral">&quot;%&quot;</span>, <span class="stringliteral">&quot;&quot;</span> + <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a1034a17059a3e8a52163e7dc6a8d3a9e">DEMAND_REDUCTION</a>,</div>
-<div class="line"><span class="lineno">  136</span>                    str);</div>
-<div class="line"><span class="lineno">  137</span>            tooltip.addImageWithText(opad);</div>
-<div class="line"><span class="lineno">  138</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  139</span>        }</div>
-<div class="line"><span class="lineno">  140</span>        </div>
-<div class="line"><span class="lineno">  141</span>        tooltip.addPara(pre + <span class="stringliteral">&quot;Reduces upkeep cost by %s. Reduces demand by %s unit. &quot;</span> +</div>
-<div class="line"><span class="lineno">  142</span>                <span class="stringliteral">&quot;Increases ground defenses by %s.&quot;</span>, opad, highlight,</div>
-<div class="line"><span class="lineno">  143</span>                <span class="stringliteral">&quot;&quot;</span> + (<span class="keywordtype">int</span>)((1f - <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#aa0521cdb7d92e9aad3551fd60573293f">UPKEEP_MULT</a>) * 100f) + <span class="stringliteral">&quot;%&quot;</span>, <span class="stringliteral">&quot;&quot;</span> + <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a1034a17059a3e8a52163e7dc6a8d3a9e">DEMAND_REDUCTION</a>,</div>
-<div class="line"><span class="lineno">  144</span>                str);</div>
-<div class="line"><span class="lineno">  145</span>        </div>
-<div class="line"><span class="lineno">  146</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry_html_a1034a17059a3e8a52163e7dc6a8d3a9e"><div class="ttname"><a href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a1034a17059a3e8a52163e7dc6a8d3a9e">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry.DEMAND_REDUCTION</a></div><div class="ttdeci">static int DEMAND_REDUCTION</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8f/BaseIndustry_8java_source.html#l00060">BaseIndustry.java:60</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry_html_aa0521cdb7d92e9aad3551fd60573293f"><div class="ttname"><a href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#aa0521cdb7d92e9aad3551fd60573293f">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry.UPKEEP_MULT</a></div><div class="ttdeci">static float UPKEEP_MULT</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8f/BaseIndustry_8java_source.html#l00059">BaseIndustry.java:59</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry_html_acee5118b579b1ab038a7e766124ffaf2"><div class="ttname"><a href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#acee5118b579b1ab038a7e766124ffaf2">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry.aiCoreId</a></div><div class="ttdeci">String aiCoreId</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8f/BaseIndustry_8java_source.html#l00107">BaseIndustry.java:107</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1PlanetaryShield_html_a0d1fa474f53d0db2aa3cbd723e76945b"><div class="ttname"><a href="../../d7/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1PlanetaryShield.html#a0d1fa474f53d0db2aa3cbd723e76945b">com.fs.starfarer.api.impl.campaign.econ.impl.PlanetaryShield.ALPHA_CORE_BONUS</a></div><div class="ttdeci">static float ALPHA_CORE_BONUS</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dab/PlanetaryShield_8java_source.html#l00020">PlanetaryShield.java:20</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af762c44cb2c37125e29bc1d315945cb0" name="af762c44cb2c37125e29bc1d315945cb0"></a>
@@ -851,24 +819,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a08e54587596d8c0b4cf9b7cca0a21267">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/dab/PlanetaryShield_8java_source.html#l00164">164</a> of file <a class="el" href="../../dc/dab/PlanetaryShield_8java_source.html">PlanetaryShield.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  164</span>                                                                                      {</div>
-<div class="line"><span class="lineno">  165</span>        <span class="keywordtype">float</span> opad = 10f;</div>
-<div class="line"><span class="lineno">  166</span>        Color highlight = Misc.getHighlightColor();</div>
-<div class="line"><span class="lineno">  167</span>        </div>
-<div class="line"><span class="lineno">  168</span>        <span class="keywordtype">float</span> a = <a class="code hl_variable" href="../../d7/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1PlanetaryShield.html#ac83e0eecb01495c382b7a97c1ee70dbb">IMPROVE_DEFENSE_BONUS</a>;</div>
-<div class="line"><span class="lineno">  169</span>        String str = Strings.X + (1f + a) + <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">  170</span>        </div>
-<div class="line"><span class="lineno">  171</span>        <span class="keywordflow">if</span> (mode == ImprovementDescriptionMode.INDUSTRY_TOOLTIP) {</div>
-<div class="line"><span class="lineno">  172</span>            info.addPara(<span class="stringliteral">&quot;Ground defenses increased by %s.&quot;</span>, 0f, highlight, str);</div>
-<div class="line"><span class="lineno">  173</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  174</span>            info.addPara(<span class="stringliteral">&quot;Increases ground defenses by %s.&quot;</span>, 0f, highlight, str);</div>
-<div class="line"><span class="lineno">  175</span>        }</div>
-<div class="line"><span class="lineno">  176</span> </div>
-<div class="line"><span class="lineno">  177</span>        info.addSpacer(opad);</div>
-<div class="line"><span class="lineno">  178</span>        super.addImproveDesc(info, mode);</div>
-<div class="line"><span class="lineno">  179</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1PlanetaryShield_html_ac83e0eecb01495c382b7a97c1ee70dbb"><div class="ttname"><a href="../../d7/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1PlanetaryShield.html#ac83e0eecb01495c382b7a97c1ee70dbb">com.fs.starfarer.api.impl.campaign.econ.impl.PlanetaryShield.IMPROVE_DEFENSE_BONUS</a></div><div class="ttdeci">static float IMPROVE_DEFENSE_BONUS</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dab/PlanetaryShield_8java_source.html#l00021">PlanetaryShield.java:21</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a82e359a03dc467ccb4ba0a4003c1e4bd" name="a82e359a03dc467ccb4ba0a4003c1e4bd"></a>
@@ -914,17 +865,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a8686f09d9cee32e9ccc6fdcbf9df071c">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/dab/PlanetaryShield_8java_source.html#l00093">93</a> of file <a class="el" href="../../dc/dab/PlanetaryShield_8java_source.html">PlanetaryShield.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   93</span>                                                                                                              {</div>
-<div class="line"><span class="lineno">   94</span>        <span class="keywordflow">if</span> (mode != IndustryTooltipMode.NORMAL || <a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a511613f792cac2306ff2ea5ba6be8407">isFunctional</a>()) {</div>
-<div class="line"><span class="lineno">   95</span>            </div>
-<div class="line"><span class="lineno">   96</span>            <span class="keywordtype">float</span> bonus = <a class="code hl_variable" href="../../d7/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1PlanetaryShield.html#a331833bf4d9797cc5ad6f4e3e34a2eea">DEFENSE_BONUS</a>;</div>
-<div class="line"><span class="lineno">   97</span>            <a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#acdac6c6ca67fd574d0f7f9c312f9a2de">addGroundDefensesImpactSection</a>(tooltip, bonus, (String[])<span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   98</span>        }</div>
-<div class="line"><span class="lineno">   99</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry_html_a511613f792cac2306ff2ea5ba6be8407"><div class="ttname"><a href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a511613f792cac2306ff2ea5ba6be8407">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry.isFunctional</a></div><div class="ttdeci">boolean isFunctional()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8f/BaseIndustry_8java_source.html#l00475">BaseIndustry.java:475</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry_html_acdac6c6ca67fd574d0f7f9c312f9a2de"><div class="ttname"><a href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#acdac6c6ca67fd574d0f7f9c312f9a2de">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry.addGroundDefensesImpactSection</a></div><div class="ttdeci">void addGroundDefensesImpactSection(TooltipMakerAPI tooltip, float bonus, String ...commodities)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8f/BaseIndustry_8java_source.html#l01884">BaseIndustry.java:1884</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1PlanetaryShield_html_a331833bf4d9797cc5ad6f4e3e34a2eea"><div class="ttname"><a href="../../d7/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1PlanetaryShield.html#a331833bf4d9797cc5ad6f4e3e34a2eea">com.fs.starfarer.api.impl.campaign.econ.impl.PlanetaryShield.DEFENSE_BONUS</a></div><div class="ttdeci">static float DEFENSE_BONUS</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dab/PlanetaryShield_8java_source.html#l00018">PlanetaryShield.java:18</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a228d7e62d49495aabc59397166c7b826" name="a228d7e62d49495aabc59397166c7b826"></a>
@@ -945,36 +886,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="../../db/d10/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1Industry.html#afec13f539610ffc411c4aa0074a3b767">com.fs.starfarer.api.campaign.econ.Industry</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/dab/PlanetaryShield_8java_source.html#l00023">23</a> of file <a class="el" href="../../dc/dab/PlanetaryShield_8java_source.html">PlanetaryShield.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   23</span>                        {</div>
-<div class="line"><span class="lineno">   24</span>        super.apply(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   25</span>        </div>
-<div class="line"><span class="lineno">   26</span>        <span class="keywordtype">int</span> size = 5;</div>
-<div class="line"><span class="lineno">   27</span>        <a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a23b3a7fe9722f0ed85f72701e8401630">applyIncomeAndUpkeep</a>(size);</div>
-<div class="line"><span class="lineno">   28</span>        </div>
-<div class="line"><span class="lineno">   29</span>        <span class="keywordtype">float</span> bonus = <a class="code hl_variable" href="../../d7/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1PlanetaryShield.html#a331833bf4d9797cc5ad6f4e3e34a2eea">DEFENSE_BONUS</a>;</div>
-<div class="line"><span class="lineno">   30</span>        <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a70323dd35f954c1be49bf2e8c43c9284">getStats</a>().<a class="code hl_function" href="../../d0/d6d/interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1MutableMarketStatsAPI.html#a07a35dc173333e48b78a68c47950280d">getDynamic</a>().<a class="code hl_function" href="../../db/dcf/interfacecom_1_1fs_1_1starfarer_1_1api_1_1util_1_1DynamicStatsAPI.html#a873b747b8989616c2da542355d167c79">getMod</a>(Stats.GROUND_DEFENSES_MOD)</div>
-<div class="line"><span class="lineno">   31</span>                        .<a class="code hl_function" href="../../dc/d19/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus.html#a246f649ef63533936f9dc3fdbf3bd7e0">modifyMult</a>(<a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a33413101f7f7479cfe98427bc31ec114">getModId</a>(), 1f + bonus, <a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#ae7fa4bd5c6ff749aa7a2fae48988657d">getNameForModifier</a>());</div>
-<div class="line"><span class="lineno">   32</span>        </div>
-<div class="line"><span class="lineno">   33</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a511613f792cac2306ff2ea5ba6be8407">isFunctional</a>()) {</div>
-<div class="line"><span class="lineno">   34</span>            <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a137dcd5079befd8bdc68f13bb69fc62d">suppressCondition</a>(Conditions.METEOR_IMPACTS);</div>
-<div class="line"><span class="lineno">   35</span>            <a class="code hl_function" href="../../d7/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1PlanetaryShield.html#a67f38d720ea49851504ba79b04607666">applyVisuals</a>(<a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#ad971f2c7cbd461a5e27f61536628a4fe">getPlanetEntity</a>());</div>
-<div class="line"><span class="lineno">   36</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   37</span>            <a class="code hl_function" href="../../d7/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1PlanetaryShield.html#aa47aef0df0fcd9b3c1041e045ac635b7">unapply</a>();</div>
-<div class="line"><span class="lineno">   38</span>        }</div>
-<div class="line"><span class="lineno">   39</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus_html_a246f649ef63533936f9dc3fdbf3bd7e0"><div class="ttname"><a href="../../dc/d19/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus.html#a246f649ef63533936f9dc3fdbf3bd7e0">com.fs.starfarer.api.combat.StatBonus.modifyMult</a></div><div class="ttdeci">void modifyMult(String source, float value)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d6c/StatBonus_8java_source.html#l00154">StatBonus.java:154</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry_html_a23b3a7fe9722f0ed85f72701e8401630"><div class="ttname"><a href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a23b3a7fe9722f0ed85f72701e8401630">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry.applyIncomeAndUpkeep</a></div><div class="ttdeci">void applyIncomeAndUpkeep(float sizeOverride)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8f/BaseIndustry_8java_source.html#l00357">BaseIndustry.java:357</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry_html_a33413101f7f7479cfe98427bc31ec114"><div class="ttname"><a href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a33413101f7f7479cfe98427bc31ec114">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry.getModId</a></div><div class="ttdeci">String getModId()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8f/BaseIndustry_8java_source.html#l00259">BaseIndustry.java:259</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry_html_a3a6a42045fe8b527252be206b4d9f27c"><div class="ttname"><a href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry.market</a></div><div class="ttdeci">MarketAPI market</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8f/BaseIndustry_8java_source.html#l00095">BaseIndustry.java:95</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry_html_ae7fa4bd5c6ff749aa7a2fae48988657d"><div class="ttname"><a href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#ae7fa4bd5c6ff749aa7a2fae48988657d">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry.getNameForModifier</a></div><div class="ttdeci">String getNameForModifier()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8f/BaseIndustry_8java_source.html#l01623">BaseIndustry.java:1623</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1PlanetaryShield_html_a67f38d720ea49851504ba79b04607666"><div class="ttname"><a href="../../d7/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1PlanetaryShield.html#a67f38d720ea49851504ba79b04607666">com.fs.starfarer.api.impl.campaign.econ.impl.PlanetaryShield.applyVisuals</a></div><div class="ttdeci">static void applyVisuals(PlanetAPI planet)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dab/PlanetaryShield_8java_source.html#l00041">PlanetaryShield.java:41</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1PlanetaryShield_html_aa47aef0df0fcd9b3c1041e045ac635b7"><div class="ttname"><a href="../../d7/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1PlanetaryShield.html#aa47aef0df0fcd9b3c1041e045ac635b7">com.fs.starfarer.api.impl.campaign.econ.impl.PlanetaryShield.unapply</a></div><div class="ttdeci">void unapply()</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dab/PlanetaryShield_8java_source.html#l00061">PlanetaryShield.java:61</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a137dcd5079befd8bdc68f13bb69fc62d"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a137dcd5079befd8bdc68f13bb69fc62d">com.fs.starfarer.api.campaign.econ.MarketAPI.suppressCondition</a></div><div class="ttdeci">void suppressCondition(String id)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a70323dd35f954c1be49bf2e8c43c9284"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a70323dd35f954c1be49bf2e8c43c9284">com.fs.starfarer.api.campaign.econ.MarketAPI.getStats</a></div><div class="ttdeci">MutableMarketStatsAPI getStats()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_ad971f2c7cbd461a5e27f61536628a4fe"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#ad971f2c7cbd461a5e27f61536628a4fe">com.fs.starfarer.api.campaign.econ.MarketAPI.getPlanetEntity</a></div><div class="ttdeci">PlanetAPI getPlanetEntity()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1MutableMarketStatsAPI_html_a07a35dc173333e48b78a68c47950280d"><div class="ttname"><a href="../../d0/d6d/interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1MutableMarketStatsAPI.html#a07a35dc173333e48b78a68c47950280d">com.fs.starfarer.api.fleet.MutableMarketStatsAPI.getDynamic</a></div><div class="ttdeci">DynamicStatsAPI getDynamic()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1util_1_1DynamicStatsAPI_html_a873b747b8989616c2da542355d167c79"><div class="ttname"><a href="../../db/dcf/interfacecom_1_1fs_1_1starfarer_1_1api_1_1util_1_1DynamicStatsAPI.html#a873b747b8989616c2da542355d167c79">com.fs.starfarer.api.util.DynamicStatsAPI.getMod</a></div><div class="ttdeci">StatBonus getMod(String id)</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a259407bda8f252456ee976ed1ae88bf7" name="a259407bda8f252456ee976ed1ae88bf7"></a>
@@ -1003,11 +915,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a9ec2923f1a2af4301bc295759a6763bd">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/dab/PlanetaryShield_8java_source.html#l00103">103</a> of file <a class="el" href="../../dc/dab/PlanetaryShield_8java_source.html">PlanetaryShield.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  103</span>                                             {</div>
-<div class="line"><span class="lineno">  104</span>        <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a70323dd35f954c1be49bf2e8c43c9284">getStats</a>().<a class="code hl_function" href="../../d0/d6d/interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1MutableMarketStatsAPI.html#a07a35dc173333e48b78a68c47950280d">getDynamic</a>().<a class="code hl_function" href="../../db/dcf/interfacecom_1_1fs_1_1starfarer_1_1api_1_1util_1_1DynamicStatsAPI.html#a873b747b8989616c2da542355d167c79">getMod</a>(Stats.GROUND_DEFENSES_MOD).<a class="code hl_function" href="../../dc/d19/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus.html#a246f649ef63533936f9dc3fdbf3bd7e0">modifyMult</a>(</div>
-<div class="line"><span class="lineno">  105</span>                <a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a33413101f7f7479cfe98427bc31ec114">getModId</a>(1), 1f + <a class="code hl_variable" href="../../d7/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1PlanetaryShield.html#a0d1fa474f53d0db2aa3cbd723e76945b">ALPHA_CORE_BONUS</a>, <span class="stringliteral">&quot;Alpha core (&quot;</span> + <a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#ae7fa4bd5c6ff749aa7a2fae48988657d">getNameForModifier</a>() + <span class="stringliteral">&quot;)&quot;</span>);</div>
-<div class="line"><span class="lineno">  106</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa6d4942e15883b32d5ac1f91164cf48f" name="aa6d4942e15883b32d5ac1f91164cf48f"></a>
@@ -1036,12 +944,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a70cda419e1144f15680791a1f7288d70">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/dab/PlanetaryShield_8java_source.html#l00114">114</a> of file <a class="el" href="../../dc/dab/PlanetaryShield_8java_source.html">PlanetaryShield.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  114</span>                                                            {</div>
-<div class="line"><span class="lineno">  115</span>        <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#aed79018a72a2a032cb317bb3809ed4cb">demandReduction</a>.<a class="code hl_function" href="../../d4/d1a/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableStat.html#a3af420f08b9b78a54ab0e4c8fdc9184b">modifyFlat</a>(<a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a33413101f7f7479cfe98427bc31ec114">getModId</a>(0), <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a1034a17059a3e8a52163e7dc6a8d3a9e">DEMAND_REDUCTION</a>, <span class="stringliteral">&quot;Alpha core&quot;</span>);</div>
-<div class="line"><span class="lineno">  116</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableStat_html_a3af420f08b9b78a54ab0e4c8fdc9184b"><div class="ttname"><a href="../../d4/d1a/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableStat.html#a3af420f08b9b78a54ab0e4c8fdc9184b">com.fs.starfarer.api.combat.MutableStat.modifyFlat</a></div><div class="ttdeci">void modifyFlat(String source, float value)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d27/MutableStat_8java_source.html#l00176">MutableStat.java:176</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry_html_aed79018a72a2a032cb317bb3809ed4cb"><div class="ttname"><a href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#aed79018a72a2a032cb317bb3809ed4cb">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry.demandReduction</a></div><div class="ttdeci">MutableStat demandReduction</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8f/BaseIndustry_8java_source.html#l00111">BaseIndustry.java:111</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aac6e491c516e0942db6b59979de9f313" name="aac6e491c516e0942db6b59979de9f313"></a>
@@ -1070,19 +973,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a65f7baa78d347ea52b02de05f3f913b8">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/dab/PlanetaryShield_8java_source.html#l00154">154</a> of file <a class="el" href="../../dc/dab/PlanetaryShield_8java_source.html">PlanetaryShield.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  154</span>                                           {</div>
-<div class="line"><span class="lineno">  155</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a114bff8f3b74c4f7a5e0ed7d18004c67">isImproved</a>()) {</div>
-<div class="line"><span class="lineno">  156</span>            <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a70323dd35f954c1be49bf2e8c43c9284">getStats</a>().<a class="code hl_function" href="../../d0/d6d/interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1MutableMarketStatsAPI.html#a07a35dc173333e48b78a68c47950280d">getDynamic</a>().<a class="code hl_function" href="../../db/dcf/interfacecom_1_1fs_1_1starfarer_1_1api_1_1util_1_1DynamicStatsAPI.html#a873b747b8989616c2da542355d167c79">getMod</a>(Stats.GROUND_DEFENSES_MOD).<a class="code hl_function" href="../../dc/d19/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus.html#a246f649ef63533936f9dc3fdbf3bd7e0">modifyMult</a>(<a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a33413101f7f7479cfe98427bc31ec114">getModId</a>(2),</div>
-<div class="line"><span class="lineno">  157</span>                            1f + <a class="code hl_variable" href="../../d7/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1PlanetaryShield.html#ac83e0eecb01495c382b7a97c1ee70dbb">IMPROVE_DEFENSE_BONUS</a>,</div>
-<div class="line"><span class="lineno">  158</span>                            <a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a418056b5886c29e142c4275ccc844373">getImprovementsDescForModifiers</a>() + <span class="stringliteral">&quot; (&quot;</span> + <a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#ae7fa4bd5c6ff749aa7a2fae48988657d">getNameForModifier</a>() + <span class="stringliteral">&quot;)&quot;</span>);</div>
-<div class="line"><span class="lineno">  159</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  160</span>            <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a70323dd35f954c1be49bf2e8c43c9284">getStats</a>().<a class="code hl_function" href="../../d0/d6d/interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1MutableMarketStatsAPI.html#a07a35dc173333e48b78a68c47950280d">getDynamic</a>().<a class="code hl_function" href="../../db/dcf/interfacecom_1_1fs_1_1starfarer_1_1api_1_1util_1_1DynamicStatsAPI.html#a873b747b8989616c2da542355d167c79">getMod</a>(Stats.GROUND_DEFENSES_MOD).<a class="code hl_function" href="../../dc/d19/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus.html#a9bf42690fee3b977ec4836ddf3da7388">unmodifyMult</a>(<a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a33413101f7f7479cfe98427bc31ec114">getModId</a>(2));</div>
-<div class="line"><span class="lineno">  161</span>        }</div>
-<div class="line"><span class="lineno">  162</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus_html_a9bf42690fee3b977ec4836ddf3da7388"><div class="ttname"><a href="../../dc/d19/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus.html#a9bf42690fee3b977ec4836ddf3da7388">com.fs.starfarer.api.combat.StatBonus.unmodifyMult</a></div><div class="ttdeci">void unmodifyMult(String source)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d6c/StatBonus_8java_source.html#l00214">StatBonus.java:214</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry_html_a114bff8f3b74c4f7a5e0ed7d18004c67"><div class="ttname"><a href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a114bff8f3b74c4f7a5e0ed7d18004c67">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry.isImproved</a></div><div class="ttdeci">boolean isImproved()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8f/BaseIndustry_8java_source.html#l01969">BaseIndustry.java:1969</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry_html_a418056b5886c29e142c4275ccc844373"><div class="ttname"><a href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a418056b5886c29e142c4275ccc844373">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry.getImprovementsDescForModifiers</a></div><div class="ttdeci">String getImprovementsDescForModifiers()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8f/BaseIndustry_8java_source.html#l02042">BaseIndustry.java:2042</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a886a5d9ecd7a53014d340c5f4320ed40" name="a886a5d9ecd7a53014d340c5f4320ed40"></a>
@@ -1111,10 +1002,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#aea28248ea34657af478e7322dd090c42">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/dab/PlanetaryShield_8java_source.html#l00109">109</a> of file <a class="el" href="../../dc/dab/PlanetaryShield_8java_source.html">PlanetaryShield.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  109</span>                                            {</div>
-<div class="line"><span class="lineno">  110</span>        <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a70323dd35f954c1be49bf2e8c43c9284">getStats</a>().<a class="code hl_function" href="../../d0/d6d/interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1MutableMarketStatsAPI.html#a07a35dc173333e48b78a68c47950280d">getDynamic</a>().<a class="code hl_function" href="../../db/dcf/interfacecom_1_1fs_1_1starfarer_1_1api_1_1util_1_1DynamicStatsAPI.html#a873b747b8989616c2da542355d167c79">getMod</a>(Stats.GROUND_DEFENSES_MOD).<a class="code hl_function" href="../../dc/d19/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus.html#a9bf42690fee3b977ec4836ddf3da7388">unmodifyMult</a>(<a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a33413101f7f7479cfe98427bc31ec114">getModId</a>(1));</div>
-<div class="line"><span class="lineno">  111</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a67f38d720ea49851504ba79b04607666" name="a67f38d720ea49851504ba79b04607666"></a>
@@ -1142,16 +1030,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/dab/PlanetaryShield_8java_source.html#l00041">41</a> of file <a class="el" href="../../dc/dab/PlanetaryShield_8java_source.html">PlanetaryShield.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   41</span>                                                      {</div>
-<div class="line"><span class="lineno">   42</span>        <span class="keywordflow">if</span> (planet == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   43</span>        planet.getSpec().setShieldTexture(Global.getSettings().getSpriteName(<span class="stringliteral">&quot;industry&quot;</span>, <span class="stringliteral">&quot;shield_texture&quot;</span>));</div>
-<div class="line"><span class="lineno">   44</span>        <span class="comment">//planet.getSpec().setShieldThickness(0.07f);</span></div>
-<div class="line"><span class="lineno">   45</span>        <span class="comment">//planet.getSpec().setShieldColor(new Color(255,0,0,255));</span></div>
-<div class="line"><span class="lineno">   46</span>        planet.getSpec().setShieldThickness(0.1f);</div>
-<div class="line"><span class="lineno">   47</span>        planet.getSpec().setShieldColor(<span class="keyword">new</span> Color(255,255,255,175));</div>
-<div class="line"><span class="lineno">   48</span>        planet.applySpecChanges();</div>
-<div class="line"><span class="lineno">   49</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a4ba05f5f04ee73d798e0ea5e42ca78ee" name="a4ba05f5f04ee73d798e0ea5e42ca78ee"></a>
@@ -1172,10 +1051,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#acdf9e1b2da8ccbdaeda1f10bdb7a1a88">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/dab/PlanetaryShield_8java_source.html#l00150">150</a> of file <a class="el" href="../../dc/dab/PlanetaryShield_8java_source.html">PlanetaryShield.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  150</span>                                {</div>
-<div class="line"><span class="lineno">  151</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  152</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa78921d6370f34e2108f45e9512981ff" name="aa78921d6370f34e2108f45e9512981ff"></a>
@@ -1196,11 +1072,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a72d87df6d16cc07579bf6a1043bcd0cb">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/dab/PlanetaryShield_8java_source.html#l00079">79</a> of file <a class="el" href="../../dc/dab/PlanetaryShield_8java_source.html">PlanetaryShield.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   79</span>                                         {</div>
-<div class="line"><span class="lineno">   80</span>        <span class="keywordflow">if</span> (!super.isAvailableToBuild()) <span class="keywordflow">return</span> super.getUnavailableReason();</div>
-<div class="line"><span class="lineno">   81</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Can not be built at a gas giant&quot;</span>;</div>
-<div class="line"><span class="lineno">   82</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac418e278281106fd54a05e59255808ac" name="ac418e278281106fd54a05e59255808ac"></a>
@@ -1240,10 +1112,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a7a958826403867d88cdf08ef5257dfe2">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/dab/PlanetaryShield_8java_source.html#l00088">88</a> of file <a class="el" href="../../dc/dab/PlanetaryShield_8java_source.html">PlanetaryShield.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   88</span>                                                                                        {</div>
-<div class="line"><span class="lineno">   89</span>        <span class="keywordflow">return</span> mode != IndustryTooltipMode.NORMAL || <a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a511613f792cac2306ff2ea5ba6be8407">isFunctional</a>();</div>
-<div class="line"><span class="lineno">   90</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="acb270d900c0c896b559b56c606520db4" name="acb270d900c0c896b559b56c606520db4"></a>
@@ -1264,15 +1133,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a5572288890e72ad03aa2e70bdfb7e639">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/dab/PlanetaryShield_8java_source.html#l00071">71</a> of file <a class="el" href="../../dc/dab/PlanetaryShield_8java_source.html">PlanetaryShield.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   71</span>                                        {</div>
-<div class="line"><span class="lineno">   72</span>        <span class="keywordflow">if</span> (!Global.getSector().getPlayerFaction().knowsIndustry(<a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a4cfea1fb4cb6ac2d0159857c2610a2a8">getId</a>())) {</div>
-<div class="line"><span class="lineno">   73</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   74</span>        }</div>
-<div class="line"><span class="lineno">   75</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#ad971f2c7cbd461a5e27f61536628a4fe">getPlanetEntity</a>() != <span class="keyword">null</span> &amp;&amp; !<a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#ad971f2c7cbd461a5e27f61536628a4fe">getPlanetEntity</a>().<a class="code hl_function" href="../../da/d9e/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PlanetAPI.html#aac7b740e2b087b4f7bca1623d2cab79e">isGasGiant</a>();</div>
-<div class="line"><span class="lineno">   76</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry_html_a4cfea1fb4cb6ac2d0159857c2610a2a8"><div class="ttname"><a href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a4cfea1fb4cb6ac2d0159857c2610a2a8">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry.getId</a></div><div class="ttdeci">String getId()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8f/BaseIndustry_8java_source.html#l00691">BaseIndustry.java:691</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PlanetAPI_html_aac7b740e2b087b4f7bca1623d2cab79e"><div class="ttname"><a href="../../da/d9e/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PlanetAPI.html#aac7b740e2b087b4f7bca1623d2cab79e">com.fs.starfarer.api.campaign.PlanetAPI.isGasGiant</a></div><div class="ttdeci">boolean isGasGiant()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aea0eab29cc80d7aee9a432807415dfb3" name="aea0eab29cc80d7aee9a432807415dfb3"></a>
@@ -1293,10 +1154,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#ada878c79f769abea9b20a68ce2a7a263">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/dab/PlanetaryShield_8java_source.html#l00084">84</a> of file <a class="el" href="../../dc/dab/PlanetaryShield_8java_source.html">PlanetaryShield.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   84</span>                                         {</div>
-<div class="line"><span class="lineno">   85</span>        <span class="keywordflow">return</span> Global.getSector().getPlayerFaction().knowsIndustry(<a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a4cfea1fb4cb6ac2d0159857c2610a2a8">getId</a>());</div>
-<div class="line"><span class="lineno">   86</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa47aef0df0fcd9b3c1041e045ac635b7" name="aa47aef0df0fcd9b3c1041e045ac635b7"></a>
@@ -1317,17 +1175,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#af3f1bd9a049574f633533ece2a744e0c">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/dab/PlanetaryShield_8java_source.html#l00061">61</a> of file <a class="el" href="../../dc/dab/PlanetaryShield_8java_source.html">PlanetaryShield.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   61</span>                          {</div>
-<div class="line"><span class="lineno">   62</span>        super.unapply();</div>
-<div class="line"><span class="lineno">   63</span>        </div>
-<div class="line"><span class="lineno">   64</span>        <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a0953642af9014a9040423001658c8949">unsuppressCondition</a>(Conditions.METEOR_IMPACTS);</div>
-<div class="line"><span class="lineno">   65</span>        <a class="code hl_function" href="../../d7/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1PlanetaryShield.html#a912908a26c9b940f19f606c20217db66">unapplyVisuals</a>(<a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#ad971f2c7cbd461a5e27f61536628a4fe">getPlanetEntity</a>());</div>
-<div class="line"><span class="lineno">   66</span>        </div>
-<div class="line"><span class="lineno">   67</span>        <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a70323dd35f954c1be49bf2e8c43c9284">getStats</a>().<a class="code hl_function" href="../../d0/d6d/interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1MutableMarketStatsAPI.html#a07a35dc173333e48b78a68c47950280d">getDynamic</a>().<a class="code hl_function" href="../../db/dcf/interfacecom_1_1fs_1_1starfarer_1_1api_1_1util_1_1DynamicStatsAPI.html#a873b747b8989616c2da542355d167c79">getMod</a>(Stats.GROUND_DEFENSES_MOD).<a class="code hl_function" href="../../dc/d19/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus.html#a9bf42690fee3b977ec4836ddf3da7388">unmodifyMult</a>(<a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a33413101f7f7479cfe98427bc31ec114">getModId</a>());</div>
-<div class="line"><span class="lineno">   68</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1PlanetaryShield_html_a912908a26c9b940f19f606c20217db66"><div class="ttname"><a href="../../d7/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1PlanetaryShield.html#a912908a26c9b940f19f606c20217db66">com.fs.starfarer.api.impl.campaign.econ.impl.PlanetaryShield.unapplyVisuals</a></div><div class="ttdeci">static void unapplyVisuals(PlanetAPI planet)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dab/PlanetaryShield_8java_source.html#l00051">PlanetaryShield.java:51</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a0953642af9014a9040423001658c8949"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a0953642af9014a9040423001658c8949">com.fs.starfarer.api.campaign.econ.MarketAPI.unsuppressCondition</a></div><div class="ttdeci">void unsuppressCondition(String id)</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a912908a26c9b940f19f606c20217db66" name="a912908a26c9b940f19f606c20217db66"></a>
@@ -1355,14 +1203,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/dab/PlanetaryShield_8java_source.html#l00051">51</a> of file <a class="el" href="../../dc/dab/PlanetaryShield_8java_source.html">PlanetaryShield.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   51</span>                                                        {</div>
-<div class="line"><span class="lineno">   52</span>        <span class="keywordflow">if</span> (planet == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   53</span>        planet.getSpec().setShieldTexture(<span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   54</span>        planet.getSpec().setShieldThickness(0f);</div>
-<div class="line"><span class="lineno">   55</span>        planet.getSpec().setShieldColor(<span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   56</span>        planet.applySpecChanges();</div>
-<div class="line"><span class="lineno">   57</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

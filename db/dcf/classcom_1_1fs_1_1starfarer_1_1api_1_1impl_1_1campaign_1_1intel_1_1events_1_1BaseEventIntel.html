@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -688,18 +689,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html#l00145">145</a> of file <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html">BaseEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  145</span>                            {</div>
-<div class="line"><span class="lineno">  146</span>        <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a3bd0010e8aeb302e3666e39c6b374cd6">setSortTier</a>(IntelSortTier.TIER_2);</div>
-<div class="line"><span class="lineno">  147</span>        </div>
-<div class="line"><span class="lineno">  148</span>        Global.getSector().addScript(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  149</span>        <span class="comment">// this needs to be done in sub-classes since it sends out an intel update</span></div>
-<div class="line"><span class="lineno">  150</span>        <span class="comment">// and that won&#39;t have the right data because the event isn&#39;t finished</span></div>
-<div class="line"><span class="lineno">  151</span>        <span class="comment">// being constructed here - it needs stages etc added to it</span></div>
-<div class="line"><span class="lineno">  152</span>        <span class="comment">//Global.getSector().getIntelManager().addIntel(this);</span></div>
-<div class="line"><span class="lineno">  153</span>        Global.getSector().getListenerManager().addListener(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  154</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_html_a3bd0010e8aeb302e3666e39c6b374cd6"><div class="ttname"><a href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a3bd0010e8aeb302e3666e39c6b374cd6">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.setSortTier</a></div><div class="ttdeci">void setSortTier(IntelSortTier sortTier)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d56/BaseEventIntel_8java_source.html#l00698">BaseEventIntel.java:698</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -756,18 +746,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html#l00180">180</a> of file <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html">BaseEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  181</span>                                        {</div>
-<div class="line"><span class="lineno">  182</span>        <span class="keywordflow">if</span> (isUpdate &amp;&amp; <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a9ba572be19912ec6b816dc7b69352660">getListInfoParam</a>() instanceof EventFactor) {</div>
-<div class="line"><span class="lineno">  183</span>            EventFactor factor = (EventFactor) <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a9ba572be19912ec6b816dc7b69352660">getListInfoParam</a>();</div>
-<div class="line"><span class="lineno">  184</span>            <span class="keywordflow">if</span> (factor.isOneTime()) {</div>
-<div class="line"><span class="lineno">  185</span>                factor.addBulletPointForOneTimeFactor(<span class="keyword">this</span>, info, tc, initPad);</div>
-<div class="line"><span class="lineno">  186</span>            }</div>
-<div class="line"><span class="lineno">  187</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  188</span>        }</div>
-<div class="line"><span class="lineno">  189</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  190</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_a9ba572be19912ec6b816dc7b69352660"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a9ba572be19912ec6b816dc7b69352660">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.getListInfoParam</a></div><div class="ttdeci">Object getListInfoParam()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00140">BaseIntelPlugin.java:140</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a477a5ee57e58b47c4206e74800868b5e" name="a477a5ee57e58b47c4206e74800868b5e"></a>
@@ -787,11 +766,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html#l00733">733</a> of file <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html">BaseEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  733</span>                                              {</div>
-<div class="line"><span class="lineno">  734</span>        <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a477a5ee57e58b47c4206e74800868b5e">addFactor</a>(factor, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  735</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_html_a477a5ee57e58b47c4206e74800868b5e"><div class="ttname"><a href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a477a5ee57e58b47c4206e74800868b5e">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.addFactor</a></div><div class="ttdeci">void addFactor(EventFactor factor)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d56/BaseEventIntel_8java_source.html#l00733">BaseEventIntel.java:733</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a7a728fc7480cae897fe715f24aaa59ba" name="a7a728fc7480cae897fe715f24aaa59ba"></a>
@@ -821,24 +796,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html#l00743">743</a> of file <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html">BaseEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  743</span>                                                                           {</div>
-<div class="line"><span class="lineno">  744</span>        <a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a6ec985383e3a00627ccd7a817bd55626">addingFactorDialog</a> = dialog;</div>
-<div class="line"><span class="lineno">  745</span>        <a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ad00fcb944d26c95dcd71888578da03d1">factors</a>.add(factor);</div>
-<div class="line"><span class="lineno">  746</span>        <span class="keywordflow">if</span> (factor.isOneTime()) {</div>
-<div class="line"><span class="lineno">  747</span>            <span class="keywordflow">if</span> (factor.getProgress(<span class="keyword">this</span>) != 0) {</div>
-<div class="line"><span class="lineno">  748</span>                TextPanelAPI textPanel = dialog == <span class="keyword">null</span> ? null : dialog.getTextPanel();</div>
-<div class="line"><span class="lineno">  749</span>                <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a9a95c1eccf4604952fd8a65605f24e31">sendUpdateIfPlayerHasIntel</a>(factor, textPanel);</div>
-<div class="line"><span class="lineno">  750</span>            }</div>
-<div class="line"><span class="lineno">  751</span>            <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ab5b560e81b4ed5ef19262a77b5ca34f6">setProgress</a>(<a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a27fb01dd47a20659cb181075d3a5b81e">getProgress</a>() + factor.getProgress(<span class="keyword">this</span>));</div>
-<div class="line"><span class="lineno">  752</span>        }</div>
-<div class="line"><span class="lineno">  753</span>        <a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a6ec985383e3a00627ccd7a817bd55626">addingFactorDialog</a> = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  754</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_a9a95c1eccf4604952fd8a65605f24e31"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a9a95c1eccf4604952fd8a65605f24e31">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.sendUpdateIfPlayerHasIntel</a></div><div class="ttdeci">void sendUpdateIfPlayerHasIntel(Object listInfoParam, TextPanelAPI textPanel)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00159">BaseIntelPlugin.java:159</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_html_a27fb01dd47a20659cb181075d3a5b81e"><div class="ttname"><a href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a27fb01dd47a20659cb181075d3a5b81e">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.getProgress</a></div><div class="ttdeci">int getProgress()</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d56/BaseEventIntel_8java_source.html#l00809">BaseEventIntel.java:809</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_html_a6ec985383e3a00627ccd7a817bd55626"><div class="ttname"><a href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a6ec985383e3a00627ccd7a817bd55626">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.addingFactorDialog</a></div><div class="ttdeci">transient InteractionDialogAPI addingFactorDialog</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d56/BaseEventIntel_8java_source.html#l00742">BaseEventIntel.java:742</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_html_ab5b560e81b4ed5ef19262a77b5ca34f6"><div class="ttname"><a href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ab5b560e81b4ed5ef19262a77b5ca34f6">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.setProgress</a></div><div class="ttdeci">void setProgress(int progress)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d56/BaseEventIntel_8java_source.html#l00814">BaseEventIntel.java:814</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_html_ad00fcb944d26c95dcd71888578da03d1"><div class="ttname"><a href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ad00fcb944d26c95dcd71888578da03d1">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.factors</a></div><div class="ttdeci">List&lt; EventFactor &gt; factors</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d56/BaseEventIntel_8java_source.html#l00139">BaseEventIntel.java:139</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8a54ea51a20325d20ab698a3a3849a1a" name="a8a54ea51a20325d20ab698a3a3849a1a"></a>
@@ -868,12 +826,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html#l00651">651</a> of file <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html">BaseEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  651</span>                                                  {</div>
-<div class="line"><span class="lineno">  652</span>        <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a8a54ea51a20325d20ab698a3a3849a1a">addStage</a>(<span class="keywordtype">id</span>, <a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ad0ba35414301e3703a0feae649d13ae7">progress</a>, StageIconSize.MEDIUM);</div>
-<div class="line"><span class="lineno">  653</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_html_a8a54ea51a20325d20ab698a3a3849a1a"><div class="ttname"><a href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a8a54ea51a20325d20ab698a3a3849a1a">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.addStage</a></div><div class="ttdeci">void addStage(Object id, int progress)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d56/BaseEventIntel_8java_source.html#l00651">BaseEventIntel.java:651</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_html_ad0ba35414301e3703a0feae649d13ae7"><div class="ttname"><a href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ad0ba35414301e3703a0feae649d13ae7">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.progress</a></div><div class="ttdeci">int progress</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d56/BaseEventIntel_8java_source.html#l00132">BaseEventIntel.java:132</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aeadefa6aeacd9a30abafbb10b43b86d2" name="aeadefa6aeacd9a30abafbb10b43b86d2"></a>
@@ -909,10 +862,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html#l00657">657</a> of file <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html">BaseEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  657</span>                                                                         {</div>
-<div class="line"><span class="lineno">  658</span>        <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a8a54ea51a20325d20ab698a3a3849a1a">addStage</a>(<span class="keywordtype">id</span>, <a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ad0ba35414301e3703a0feae649d13ae7">progress</a>, isOneOffEvent, StageIconSize.MEDIUM);</div>
-<div class="line"><span class="lineno">  659</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab112be2ec7e7a2f2578d3d7b7059122a" name="ab112be2ec7e7a2f2578d3d7b7059122a"></a>
@@ -954,11 +904,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html#l00660">660</a> of file <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html">BaseEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  660</span>                                                                                                 {</div>
-<div class="line"><span class="lineno">  661</span>        <a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#acf0bae62125cd9582dba8e499d941ac4">stages</a>.add(<span class="keyword">new</span> EventStageData(<span class="keywordtype">id</span>, <a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ad0ba35414301e3703a0feae649d13ae7">progress</a>, isOneOffEvent, iconSize));</div>
-<div class="line"><span class="lineno">  662</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_html_acf0bae62125cd9582dba8e499d941ac4"><div class="ttname"><a href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#acf0bae62125cd9582dba8e499d941ac4">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.stages</a></div><div class="ttdeci">List&lt; EventStageData &gt; stages</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d56/BaseEventIntel_8java_source.html#l00136">BaseEventIntel.java:136</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9a1693758d285b456908e7bd90268139" name="a9a1693758d285b456908e7bd90268139"></a>
@@ -994,10 +940,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html#l00654">654</a> of file <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html">BaseEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  654</span>                                                                          {</div>
-<div class="line"><span class="lineno">  655</span>        <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a8a54ea51a20325d20ab698a3a3849a1a">addStage</a>(<span class="keywordtype">id</span>, <a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ad0ba35414301e3703a0feae649d13ae7">progress</a>, <span class="keyword">false</span>, iconSize);</div>
-<div class="line"><span class="lineno">  656</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a044f95e28bad28ac90cddfab894295ac" name="a044f95e28bad28ac90cddfab894295ac"></a>
@@ -1035,10 +978,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../db/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#a62401ca30ff2d57ed1d0c61dd0c44169">com.fs.starfarer.api.impl.campaign.intel.events.HostileActivityEventIntel</a>, and <a class="el" href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#a163fa31eaafb3893390c44ef0b7d0cc7">com.fs.starfarer.api.impl.campaign.intel.events.ht.HyperspaceTopographyEventIntel</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html#l00432">432</a> of file <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html">BaseEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  432</span>                                                                                           {</div>
-<div class="line"><span class="lineno">  433</span>        </div>
-<div class="line"><span class="lineno">  434</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a551dc5e02d7b14f32906250c18817ea6" name="a551dc5e02d7b14f32906250c18817ea6"></a>
@@ -1068,35 +1008,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html#l00408">408</a> of file <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html">BaseEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  408</span>                                                                                   {</div>
-<div class="line"><span class="lineno">  409</span>        EventStageDisplayData data = <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#aedd64fdd835409a2cf9dfee80df650b9">createDisplayData</a>(stageId);</div>
-<div class="line"><span class="lineno">  410</span>        String icon;</div>
-<div class="line"><span class="lineno">  411</span>        <span class="keywordflow">if</span> (data != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  412</span>            icon = data.icon;</div>
-<div class="line"><span class="lineno">  413</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  414</span>            icon = <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a6499624a08c9565334e2395989f542c9">getIcon</a>();</div>
-<div class="line"><span class="lineno">  415</span>        }</div>
-<div class="line"><span class="lineno">  416</span>        <span class="keywordtype">float</span> imageSize = 64;</div>
-<div class="line"><span class="lineno">  417</span>        <span class="keywordtype">float</span> opad = 10f;</div>
-<div class="line"><span class="lineno">  418</span>        <span class="keywordtype">float</span> <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a09ab8314d72610d7b7258acfd644a789">indent</a> = 0;</div>
-<div class="line"><span class="lineno">  419</span>        <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a09ab8314d72610d7b7258acfd644a789">indent</a> = 10f;</div>
-<div class="line"><span class="lineno">  420</span>        <span class="keywordtype">float</span> width = <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a9725bf895c894871a1cda14507727b72">getBarWidth</a>() - <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a09ab8314d72610d7b7258acfd644a789">indent</a> * 2f;</div>
-<div class="line"><span class="lineno">  421</span>        </div>
-<div class="line"><span class="lineno">  422</span>        </div>
-<div class="line"><span class="lineno">  423</span>        TooltipMakerAPI info = main.beginImageWithText(icon, imageSize, width, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  424</span>        <span class="comment">//TooltipMakerAPI info = main.beginImageWithText(&quot;graphics/icons/missions/ga_intro.png&quot;, 64);</span></div>
-<div class="line"><span class="lineno">  425</span>        <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a044f95e28bad28ac90cddfab894295ac">addStageDescriptionText</a>(info, width - imageSize - opad, stageId);</div>
-<div class="line"><span class="lineno">  426</span>        <span class="keywordflow">if</span> (info.getHeightSoFar() &gt; 0) {</div>
-<div class="line"><span class="lineno">  427</span>            main.addImageWithText(opad).getPosition().setXAlignOffset(<a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a09ab8314d72610d7b7258acfd644a789">indent</a>);</div>
-<div class="line"><span class="lineno">  428</span>            main.addSpacer(0).getPosition().setXAlignOffset(-<a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a09ab8314d72610d7b7258acfd644a789">indent</a>);</div>
-<div class="line"><span class="lineno">  429</span>        }</div>
-<div class="line"><span class="lineno">  430</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_a09ab8314d72610d7b7258acfd644a789"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a09ab8314d72610d7b7258acfd644a789">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.indent</a></div><div class="ttdeci">void indent(TooltipMakerAPI info)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00562">BaseIntelPlugin.java:562</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_a6499624a08c9565334e2395989f542c9"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a6499624a08c9565334e2395989f542c9">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.getIcon</a></div><div class="ttdeci">String getIcon()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00251">BaseIntelPlugin.java:251</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_html_a044f95e28bad28ac90cddfab894295ac"><div class="ttname"><a href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a044f95e28bad28ac90cddfab894295ac">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.addStageDescriptionText</a></div><div class="ttdeci">void addStageDescriptionText(TooltipMakerAPI info, float width, Object stageId)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d56/BaseEventIntel_8java_source.html#l00432">BaseEventIntel.java:432</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_html_a9725bf895c894871a1cda14507727b72"><div class="ttname"><a href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a9725bf895c894871a1cda14507727b72">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.getBarWidth</a></div><div class="ttdeci">float getBarWidth()</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d56/BaseEventIntel_8java_source.html#l00485">BaseEventIntel.java:485</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_html_aedd64fdd835409a2cf9dfee80df650b9"><div class="ttname"><a href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#aedd64fdd835409a2cf9dfee80df650b9">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.createDisplayData</a></div><div class="ttdeci">EventStageDisplayData createDisplayData(Object stageId)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d56/BaseEventIntel_8java_source.html#l00437">BaseEventIntel.java:437</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a735360399cc204b9856f04af9794303c" name="a735360399cc204b9856f04af9794303c"></a>
@@ -1128,16 +1040,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#ac883ecaec12f552c007aeb6b78db0a8d">com.fs.starfarer.api.impl.campaign.intel.events.ht.HyperspaceTopographyEventIntel</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html#l00157">157</a> of file <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html">BaseEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  157</span>                                             {</div>
-<div class="line"><span class="lineno">  158</span>        super.advanceImpl(amount);</div>
-<div class="line"><span class="lineno">  159</span>        </div>
-<div class="line"><span class="lineno">  160</span>        List&lt;EventFactor&gt; <span class="keyword">remove</span> = <span class="keyword">new</span> ArrayList&lt;EventFactor&gt;();</div>
-<div class="line"><span class="lineno">  161</span>        <span class="keywordflow">for</span> (EventFactor curr : <a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ad00fcb944d26c95dcd71888578da03d1">factors</a>) {</div>
-<div class="line"><span class="lineno">  162</span>            <span class="keywordflow">if</span> (curr.isExpired()) <span class="keyword">remove</span>.add(curr);</div>
-<div class="line"><span class="lineno">  163</span>        }</div>
-<div class="line"><span class="lineno">  164</span>        <a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ad00fcb944d26c95dcd71888578da03d1">factors</a>.removeAll(<span class="keyword">remove</span>);</div>
-<div class="line"><span class="lineno">  165</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aedd64fdd835409a2cf9dfee80df650b9" name="aedd64fdd835409a2cf9dfee80df650b9"></a>
@@ -1157,27 +1060,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html#l00437">437</a> of file <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html">BaseEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  437</span>                                                                   {</div>
-<div class="line"><span class="lineno">  438</span>        EventStageDisplayData data = <span class="keyword">new</span> EventStageDisplayData();</div>
-<div class="line"><span class="lineno">  439</span>        data.size = <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#afd70538d7c46aa4a7fa42658f1967bb1">getStageIconSize</a>(stageId);</div>
-<div class="line"><span class="lineno">  440</span>        data.downLineLength = <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ab679890b789fd5f35c17ae404c4b3cdc">getStageDownLineLength</a>(stageId);</div>
-<div class="line"><span class="lineno">  441</span>        data.color = <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ab523142bc59be497f18b3101717cc03a">getStageColor</a>(stageId);</div>
-<div class="line"><span class="lineno">  442</span>        data.icon = <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a7ca063a5f64cdc0790766679e8fd23d0">getStageIcon</a>(stageId);</div>
-<div class="line"><span class="lineno">  443</span>        data.iconColor = <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ac1f46bd2e40a87f358c2bab8767ed020">getStageIconColor</a>(stageId);</div>
-<div class="line"><span class="lineno">  444</span>        data.importance = <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#aa6b97feefb5a4f931194eaf3b8846f77">getStageImportance</a>(stageId);</div>
-<div class="line"><span class="lineno">  445</span>        data.label = <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a5f06be320fdffcd2858c9f15fd97d7cc">getStageLabel</a>(stageId);</div>
-<div class="line"><span class="lineno">  446</span>        data.labelColor = <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a3645c4fea6ba7a8ede44f0a5814d9570">getStageLabelColor</a>(stageId);</div>
-<div class="line"><span class="lineno">  447</span>        <span class="keywordflow">return</span> data;</div>
-<div class="line"><span class="lineno">  448</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_html_a3645c4fea6ba7a8ede44f0a5814d9570"><div class="ttname"><a href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a3645c4fea6ba7a8ede44f0a5814d9570">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.getStageLabelColor</a></div><div class="ttdeci">Color getStageLabelColor(Object stageId)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d56/BaseEventIntel_8java_source.html#l00589">BaseEventIntel.java:589</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_html_a5f06be320fdffcd2858c9f15fd97d7cc"><div class="ttname"><a href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a5f06be320fdffcd2858c9f15fd97d7cc">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.getStageLabel</a></div><div class="ttdeci">String getStageLabel(Object stageId)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d56/BaseEventIntel_8java_source.html#l00574">BaseEventIntel.java:574</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_html_a7ca063a5f64cdc0790766679e8fd23d0"><div class="ttname"><a href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a7ca063a5f64cdc0790766679e8fd23d0">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.getStageIcon</a></div><div class="ttdeci">String getStageIcon(Object stageId)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d56/BaseEventIntel_8java_source.html#l00450">BaseEventIntel.java:450</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_html_aa6b97feefb5a4f931194eaf3b8846f77"><div class="ttname"><a href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#aa6b97feefb5a4f931194eaf3b8846f77">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.getStageImportance</a></div><div class="ttdeci">int getStageImportance(Object stageId)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d56/BaseEventIntel_8java_source.html#l00571">BaseEventIntel.java:571</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_html_ab523142bc59be497f18b3101717cc03a"><div class="ttname"><a href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ab523142bc59be497f18b3101717cc03a">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.getStageColor</a></div><div class="ttdeci">Color getStageColor(Object stageId)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d56/BaseEventIntel_8java_source.html#l00529">BaseEventIntel.java:529</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_html_ab679890b789fd5f35c17ae404c4b3cdc"><div class="ttname"><a href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ab679890b789fd5f35c17ae404c4b3cdc">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.getStageDownLineLength</a></div><div class="ttdeci">float getStageDownLineLength(Object stageId)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d56/BaseEventIntel_8java_source.html#l00475">BaseEventIntel.java:475</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_html_ac1f46bd2e40a87f358c2bab8767ed020"><div class="ttname"><a href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ac1f46bd2e40a87f358c2bab8767ed020">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.getStageIconColor</a></div><div class="ttdeci">Color getStageIconColor(Object stageId)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d56/BaseEventIntel_8java_source.html#l00550">BaseEventIntel.java:550</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_html_afd70538d7c46aa4a7fa42658f1967bb1"><div class="ttname"><a href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#afd70538d7c46aa4a7fa42658f1967bb1">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.getStageIconSize</a></div><div class="ttdeci">float getStageIconSize(Object stageId)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d56/BaseEventIntel_8java_source.html#l00467">BaseEventIntel.java:467</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a577f6e4c870cc21fa18112c6abe514d8" name="a577f6e4c870cc21fa18112c6abe514d8"></a>
@@ -1209,19 +1092,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#afa8bb8f2afc14a90ef02a999a66535e9">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html#l00170">170</a> of file <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html">BaseEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  170</span>                                                                         {</div>
-<div class="line"><span class="lineno">  171</span>        Color c = <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#af44e4a0a7c61b8efbc4ef210c7061723">getTitleColor</a>(mode);</div>
-<div class="line"><span class="lineno">  172</span>        <span class="keywordtype">boolean</span> large = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  173</span>        <span class="keywordflow">if</span> (large) info.setParaSmallInsignia();</div>
-<div class="line"><span class="lineno">  174</span>        info.addPara(<a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a582fe7cb29e8f2f65670d4dd74418235">getName</a>(), c, 0f);</div>
-<div class="line"><span class="lineno">  175</span>        <span class="comment">//info.addPara(&quot;Hostile Activity&quot;, c, 0f);</span></div>
-<div class="line"><span class="lineno">  176</span>        <span class="keywordflow">if</span> (large) info.setParaFontDefault();</div>
-<div class="line"><span class="lineno">  177</span>        <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a78b9181ed44f28dac2b1167e1ce4395c">addBulletPoints</a>(info, mode);</div>
-<div class="line"><span class="lineno">  178</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_a582fe7cb29e8f2f65670d4dd74418235"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a582fe7cb29e8f2f65670d4dd74418235">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.getName</a></div><div class="ttdeci">String getName()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00228">BaseIntelPlugin.java:228</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_a78b9181ed44f28dac2b1167e1ce4395c"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a78b9181ed44f28dac2b1167e1ce4395c">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.addBulletPoints</a></div><div class="ttdeci">void addBulletPoints(TooltipMakerAPI info, ListInfoMode mode)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00199">BaseIntelPlugin.java:199</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_af44e4a0a7c61b8efbc4ef210c7061723"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#af44e4a0a7c61b8efbc4ef210c7061723">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.getTitleColor</a></div><div class="ttdeci">Color getTitleColor(ListInfoMode mode)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00615">BaseIntelPlugin.java:615</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a4454636b0c5e1e87d25a4e1b7890daee" name="a4454636b0c5e1e87d25a4e1b7890daee"></a>
@@ -1259,174 +1130,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a257801f80bbb907e2fef217e12296711">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html#l00194">194</a> of file <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html">BaseEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  194</span>                                                                                        {</div>
-<div class="line"><span class="lineno">  195</span>        </div>
-<div class="line"><span class="lineno">  196</span>        <span class="keywordtype">float</span> opad = 10f;</div>
-<div class="line"><span class="lineno">  197</span>        <a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a09712cc3b5577a50c83cad120ab38e24">uiWidth</a> = width;</div>
-<div class="line"><span class="lineno">  198</span> </div>
-<div class="line"><span class="lineno">  199</span>        <span class="comment">// TODO DEBUG</span></div>
-<div class="line"><span class="lineno">  200</span>        <span class="comment">//setProgress(900);</span></div>
-<div class="line"><span class="lineno">  201</span>        <span class="comment">//setProgress((int) (0 + (float) Math.random() * 400));</span></div>
-<div class="line"><span class="lineno">  202</span>        <span class="comment">//setProgress(900);</span></div>
-<div class="line"><span class="lineno">  203</span>        <span class="comment">//setProgress(499);</span></div>
-<div class="line"><span class="lineno">  204</span>        <span class="comment">//setProgress(200);</span></div>
-<div class="line"><span class="lineno">  205</span>        </div>
-<div class="line"><span class="lineno">  206</span>        TooltipMakerAPI main = panel.createUIElement(width, height, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  207</span> </div>
-<div class="line"><span class="lineno">  208</span>        main.setTitleOrbitronVeryLarge();</div>
-<div class="line"><span class="lineno">  209</span>        main.addTitle(<a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a582fe7cb29e8f2f65670d4dd74418235">getName</a>(), Misc.getBasePlayerColor());</div>
-<div class="line"><span class="lineno">  210</span>        </div>
-<div class="line"><span class="lineno">  211</span>        EventProgressBarAPI bar = main.addEventProgressBar(<span class="keyword">this</span>, 100f);</div>
-<div class="line"><span class="lineno">  212</span>        TooltipCreator barTC = <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a7e42368c7c00eb56d84bf0754ab735a5">getBarTooltip</a>();</div>
-<div class="line"><span class="lineno">  213</span>        <span class="keywordflow">if</span> (barTC != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  214</span>            main.addTooltipToPrevious(barTC, TooltipLocation.BELOW, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  215</span>        }</div>
-<div class="line"><span class="lineno">  216</span>        </div>
-<div class="line"><span class="lineno">  217</span>        <span class="keywordflow">for</span> (EventStageData curr : <a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#acf0bae62125cd9582dba8e499d941ac4">stages</a>) {</div>
-<div class="line"><span class="lineno">  218</span>            <span class="keywordflow">if</span> (curr.progress &lt;= 0) <span class="keywordflow">continue</span>; <span class="comment">// no icon for &quot;starting&quot; stage</span></div>
-<div class="line"><span class="lineno">  219</span>            <span class="keywordflow">if</span> (curr.rollData == <a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a78d4e00e402d57c4b2dd98012b52c202">RANDOM_EVENT_NONE</a>) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  220</span>            <span class="keywordflow">if</span> (curr.wasEverReached &amp;&amp; curr.isOneOffEvent &amp;&amp; !curr.isRepeatable) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  221</span>            </div>
-<div class="line"><span class="lineno">  222</span>            <span class="keywordflow">if</span> (curr.hideIconWhenPastStageUnlessLastActive &amp;&amp; </div>
-<div class="line"><span class="lineno">  223</span>                    curr.progress &lt;= <a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ad0ba35414301e3703a0feae649d13ae7">progress</a> &amp;&amp;</div>
-<div class="line"><span class="lineno">  224</span>                    <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a3642aecf210dacfc23c64e0292ba45c2">getLastActiveStage</a>(<span class="keyword">true</span>) != curr) {</div>
-<div class="line"><span class="lineno">  225</span>                <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  226</span>            }</div>
-<div class="line"><span class="lineno">  227</span>            </div>
-<div class="line"><span class="lineno">  228</span>            EventStageDisplayData data = <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#aedd64fdd835409a2cf9dfee80df650b9">createDisplayData</a>(curr.id);</div>
-<div class="line"><span class="lineno">  229</span>            UIComponentAPI marker = main.addEventStageMarker(data);</div>
-<div class="line"><span class="lineno">  230</span>            <span class="keywordtype">float</span> xOff = bar.getXCoordinateForProgress(curr.progress) - bar.getPosition().getX();</div>
-<div class="line"><span class="lineno">  231</span>            marker.getPosition().aboveLeft(bar, data.downLineLength).setXAlignOffset(xOff - data.size / 2f - 1);</div>
-<div class="line"><span class="lineno">  232</span>            </div>
-<div class="line"><span class="lineno">  233</span>            TooltipCreator tc = <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a572febfa378ddf88ac04252011049d3a">getStageTooltip</a>(curr.id);</div>
-<div class="line"><span class="lineno">  234</span>            <span class="keywordflow">if</span> (tc != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  235</span>                main.addTooltipTo(tc, marker, TooltipLocation.LEFT, <span class="keyword">false</span>); </div>
-<div class="line"><span class="lineno">  236</span>            }</div>
-<div class="line"><span class="lineno">  237</span>        }</div>
-<div class="line"><span class="lineno">  238</span>        </div>
-<div class="line"><span class="lineno">  239</span>        <span class="comment">// progress indicator</span></div>
-<div class="line"><span class="lineno">  240</span>        {</div>
-<div class="line"><span class="lineno">  241</span>            UIComponentAPI marker = main.addEventProgressMarker(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  242</span>            <span class="keywordtype">float</span> xOff = bar.getXCoordinateForProgress(<a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ad0ba35414301e3703a0feae649d13ae7">progress</a>) - bar.getPosition().getX();</div>
-<div class="line"><span class="lineno">  243</span>            marker.getPosition().belowLeft(bar, -<a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a0c46e59f42bfc4d91f2d73a3609bef74">getBarProgressIndicatorHeight</a>() * 0.5f - 2)</div>
-<div class="line"><span class="lineno">  244</span>                        .setXAlignOffset(xOff - <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#aa8b5b6e5895655810fb3b1b4e6183a6c">getBarProgressIndicatorWidth</a>() / 2 - 1);</div>
-<div class="line"><span class="lineno">  245</span>        }</div>
-<div class="line"><span class="lineno">  246</span> </div>
-<div class="line"><span class="lineno">  247</span>        main.addSpacer(opad);</div>
-<div class="line"><span class="lineno">  248</span>        main.addSpacer(opad);</div>
-<div class="line"><span class="lineno">  249</span>        <span class="keywordflow">for</span> (EventStageData curr : <a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#acf0bae62125cd9582dba8e499d941ac4">stages</a>) {</div>
-<div class="line"><span class="lineno">  250</span>            <span class="keywordflow">if</span> (curr.wasEverReached &amp;&amp; curr.isOneOffEvent &amp;&amp; !curr.isRepeatable) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  251</span>            <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a551dc5e02d7b14f32906250c18817ea6">addStageDescriptionWithImage</a>(main, curr.id);</div>
-<div class="line"><span class="lineno">  252</span>        }</div>
-<div class="line"><span class="lineno">  253</span>        </div>
-<div class="line"><span class="lineno">  254</span> </div>
-<div class="line"><span class="lineno">  255</span>        </div>
-<div class="line"><span class="lineno">  256</span>        <span class="keywordtype">float</span> barW = <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a9725bf895c894871a1cda14507727b72">getBarWidth</a>();</div>
-<div class="line"><span class="lineno">  257</span>        <span class="keywordtype">float</span> factorWidth = (barW - opad) / 2f;</div>
-<div class="line"><span class="lineno">  258</span>        </div>
-<div class="line"><span class="lineno">  259</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a5feb1ad12705b3d8017339813512f559">withMonthlyFactors</a>() != <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a94632b6573d51f006d4cae053ff2d973">withOneTimeFactors</a>()) {</div>
-<div class="line"><span class="lineno">  260</span>            <span class="comment">//factorWidth = barW;</span></div>
-<div class="line"><span class="lineno">  261</span>            factorWidth = (int) (barW * 0.6f);</div>
-<div class="line"><span class="lineno">  262</span>        }</div>
-<div class="line"><span class="lineno">  263</span>        </div>
-<div class="line"><span class="lineno">  264</span>        TooltipMakerAPI mFac = main.beginSubTooltip(factorWidth);</div>
-<div class="line"><span class="lineno">  265</span>        </div>
-<div class="line"><span class="lineno">  266</span>        Color c = <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#aef7175eff8878a18ebb3099d3a7ab59f">getFactionForUIColors</a>().<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a0213b272fbf9c2669316aa25c775ad60">getBaseUIColor</a>();</div>
-<div class="line"><span class="lineno">  267</span>        Color bg = <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#aef7175eff8878a18ebb3099d3a7ab59f">getFactionForUIColors</a>().<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a579e737df0b7d656e6d9599d80aaa0f2">getDarkUIColor</a>();</div>
-<div class="line"><span class="lineno">  268</span>        mFac.addSectionHeading(<span class="stringliteral">&quot;Monthly factors&quot;</span>, c, bg, Alignment.MID, opad).getPosition().setXAlignOffset(0);</div>
-<div class="line"><span class="lineno">  269</span>        </div>
-<div class="line"><span class="lineno">  270</span>        <span class="keywordtype">float</span> strW = 40f;</div>
-<div class="line"><span class="lineno">  271</span>        <span class="keywordtype">float</span> rh = 20f;</div>
-<div class="line"><span class="lineno">  272</span>        <span class="comment">//rh = 15f;</span></div>
-<div class="line"><span class="lineno">  273</span>        mFac.beginTable2(<a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#aef7175eff8878a18ebb3099d3a7ab59f">getFactionForUIColors</a>(), rh, <span class="keyword">false</span>, <span class="keyword">false</span>, </div>
-<div class="line"><span class="lineno">  274</span>                <span class="stringliteral">&quot;Monthly factors&quot;</span>, factorWidth - strW - 3,</div>
-<div class="line"><span class="lineno">  275</span>                <span class="stringliteral">&quot;Progress&quot;</span>, strW</div>
-<div class="line"><span class="lineno">  276</span>                );</div>
-<div class="line"><span class="lineno">  277</span>        </div>
-<div class="line"><span class="lineno">  278</span>        <span class="keywordflow">for</span> (EventFactor factor : <a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ad00fcb944d26c95dcd71888578da03d1">factors</a>) {</div>
-<div class="line"><span class="lineno">  279</span>            <span class="keywordflow">if</span> (factor.isOneTime()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  280</span>            <span class="keywordflow">if</span> (!factor.shouldShow(<span class="keyword">this</span>)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  281</span>            </div>
-<div class="line"><span class="lineno">  282</span>            String desc = factor.getDesc(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  283</span>            <span class="keywordflow">if</span> (desc != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  284</span>                mFac.addRowWithGlow(Alignment.LMID, factor.getDescColor(<span class="keyword">this</span>), desc,</div>
-<div class="line"><span class="lineno">  285</span>                                    Alignment.RMID, factor.getProgressColor(<span class="keyword">this</span>), factor.getProgressStr(<span class="keyword">this</span>));</div>
-<div class="line"><span class="lineno">  286</span>                TooltipCreator t = factor.getMainRowTooltip();</div>
-<div class="line"><span class="lineno">  287</span>                <span class="keywordflow">if</span> (t != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  288</span>                    mFac.addTooltipToAddedRow(t, TooltipLocation.RIGHT, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  289</span>                }</div>
-<div class="line"><span class="lineno">  290</span>            }</div>
-<div class="line"><span class="lineno">  291</span>            factor.addExtraRows(mFac, <span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  292</span>        }</div>
-<div class="line"><span class="lineno">  293</span>        </div>
-<div class="line"><span class="lineno">  294</span>        <span class="comment">//mFac.addButton(&quot;TEST&quot;, new String(), factorWidth, 20f, opad);</span></div>
-<div class="line"><span class="lineno">  295</span>        mFac.addTable(<span class="stringliteral">&quot;None&quot;</span>, -1, opad);</div>
-<div class="line"><span class="lineno">  296</span>        mFac.getPrev().getPosition().setXAlignOffset(-5);</div>
-<div class="line"><span class="lineno">  297</span>        </div>
-<div class="line"><span class="lineno">  298</span>        main.endSubTooltip();</div>
-<div class="line"><span class="lineno">  299</span>        </div>
-<div class="line"><span class="lineno">  300</span>        TooltipMakerAPI oFac = main.beginSubTooltip(factorWidth);</div>
-<div class="line"><span class="lineno">  301</span>        </div>
-<div class="line"><span class="lineno">  302</span>        oFac.addSectionHeading(<span class="stringliteral">&quot;Recent one-time factors&quot;</span>, c, bg, Alignment.MID, opad).getPosition().setXAlignOffset(0);</div>
-<div class="line"><span class="lineno">  303</span>        </div>
-<div class="line"><span class="lineno">  304</span>        oFac.beginTable2(<a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#aef7175eff8878a18ebb3099d3a7ab59f">getFactionForUIColors</a>(), 20f, <span class="keyword">false</span>, <span class="keyword">false</span>,</div>
-<div class="line"><span class="lineno">  305</span>                <span class="stringliteral">&quot;One-time factors&quot;</span>, factorWidth - strW - 3,</div>
-<div class="line"><span class="lineno">  306</span>                <span class="stringliteral">&quot;Progress&quot;</span>, strW</div>
-<div class="line"><span class="lineno">  307</span>                );</div>
-<div class="line"><span class="lineno">  308</span>        </div>
-<div class="line"><span class="lineno">  309</span>        <span class="keywordflow">for</span> (EventFactor factor : <a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ad00fcb944d26c95dcd71888578da03d1">factors</a>) {</div>
-<div class="line"><span class="lineno">  310</span>            <span class="keywordflow">if</span> (!factor.isOneTime()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  311</span>            <span class="keywordflow">if</span> (!factor.shouldShow(<span class="keyword">this</span>)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  312</span>            </div>
-<div class="line"><span class="lineno">  313</span>            String desc = factor.getDesc(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  314</span>            <span class="keywordflow">if</span> (desc != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  315</span>                oFac.addRowWithGlow(Alignment.LMID, factor.getDescColor(<span class="keyword">this</span>), desc,</div>
-<div class="line"><span class="lineno">  316</span>                                    Alignment.RMID, factor.getProgressColor(<span class="keyword">this</span>), factor.getProgressStr(<span class="keyword">this</span>));</div>
-<div class="line"><span class="lineno">  317</span>                TooltipCreator t = factor.getMainRowTooltip();</div>
-<div class="line"><span class="lineno">  318</span>                <span class="keywordflow">if</span> (t != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  319</span>                    oFac.addTooltipToAddedRow(t, TooltipLocation.LEFT);</div>
-<div class="line"><span class="lineno">  320</span>                }</div>
-<div class="line"><span class="lineno">  321</span>            }</div>
-<div class="line"><span class="lineno">  322</span>            factor.addExtraRows(oFac, <span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  323</span>        }</div>
-<div class="line"><span class="lineno">  324</span>        </div>
-<div class="line"><span class="lineno">  325</span>        oFac.addTable(<span class="stringliteral">&quot;None&quot;</span>, -1, opad);</div>
-<div class="line"><span class="lineno">  326</span>        oFac.getPrev().getPosition().setXAlignOffset(-5);</div>
-<div class="line"><span class="lineno">  327</span>        main.endSubTooltip();</div>
-<div class="line"><span class="lineno">  328</span>        </div>
-<div class="line"><span class="lineno">  329</span>        </div>
-<div class="line"><span class="lineno">  330</span>        <span class="keywordtype">float</span> factorHeight = Math.max(mFac.getHeightSoFar(), oFac.getHeightSoFar());</div>
-<div class="line"><span class="lineno">  331</span>        mFac.setHeightSoFar(factorHeight);</div>
-<div class="line"><span class="lineno">  332</span>        oFac.setHeightSoFar(factorHeight);</div>
-<div class="line"><span class="lineno">  333</span>        </div>
-<div class="line"><span class="lineno">  334</span>        </div>
-<div class="line"><span class="lineno">  335</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a5feb1ad12705b3d8017339813512f559">withMonthlyFactors</a>() &amp;&amp; <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a94632b6573d51f006d4cae053ff2d973">withOneTimeFactors</a>()) {</div>
-<div class="line"><span class="lineno">  336</span>            main.addCustom(mFac, opad * 2f);</div>
-<div class="line"><span class="lineno">  337</span>            main.addCustomDoNotSetPosition(oFac).getPosition().rightOfTop(mFac, opad);</div>
-<div class="line"><span class="lineno">  338</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a5feb1ad12705b3d8017339813512f559">withMonthlyFactors</a>()) {</div>
-<div class="line"><span class="lineno">  339</span>            main.addCustom(mFac, opad * 2f);</div>
-<div class="line"><span class="lineno">  340</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a94632b6573d51f006d4cae053ff2d973">withOneTimeFactors</a>()) {</div>
-<div class="line"><span class="lineno">  341</span>            main.addCustom(oFac, opad * 2f);</div>
-<div class="line"><span class="lineno">  342</span>        }</div>
-<div class="line"><span class="lineno">  343</span>        </div>
-<div class="line"><span class="lineno">  344</span>        <span class="comment">//main.addButton(&quot;TEST&quot;, new String(), factorWidth, 20f, opad);</span></div>
-<div class="line"><span class="lineno">  345</span>        </div>
-<div class="line"><span class="lineno">  346</span>        panel.addUIElement(main).inTL(0, 0);</div>
-<div class="line"><span class="lineno">  347</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_aef7175eff8878a18ebb3099d3a7ab59f"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#aef7175eff8878a18ebb3099d3a7ab59f">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.getFactionForUIColors</a></div><div class="ttdeci">FactionAPI getFactionForUIColors()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00319">BaseIntelPlugin.java:319</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_html_a09712cc3b5577a50c83cad120ab38e24"><div class="ttname"><a href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a09712cc3b5577a50c83cad120ab38e24">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.uiWidth</a></div><div class="ttdeci">transient float uiWidth</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d56/BaseEventIntel_8java_source.html#l00143">BaseEventIntel.java:143</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_html_a0c46e59f42bfc4d91f2d73a3609bef74"><div class="ttname"><a href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a0c46e59f42bfc4d91f2d73a3609bef74">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.getBarProgressIndicatorHeight</a></div><div class="ttdeci">float getBarProgressIndicatorHeight()</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d56/BaseEventIntel_8java_source.html#l00498">BaseEventIntel.java:498</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_html_a3642aecf210dacfc23c64e0292ba45c2"><div class="ttname"><a href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a3642aecf210dacfc23c64e0292ba45c2">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.getLastActiveStage</a></div><div class="ttdeci">EventStageData getLastActiveStage(boolean includeOneOffEvents)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d56/BaseEventIntel_8java_source.html#l00670">BaseEventIntel.java:670</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_html_a551dc5e02d7b14f32906250c18817ea6"><div class="ttname"><a href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a551dc5e02d7b14f32906250c18817ea6">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.addStageDescriptionWithImage</a></div><div class="ttdeci">void addStageDescriptionWithImage(TooltipMakerAPI main, Object stageId)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d56/BaseEventIntel_8java_source.html#l00408">BaseEventIntel.java:408</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_html_a572febfa378ddf88ac04252011049d3a"><div class="ttname"><a href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a572febfa378ddf88ac04252011049d3a">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.getStageTooltip</a></div><div class="ttdeci">TooltipCreator getStageTooltip(Object stageId)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d56/BaseEventIntel_8java_source.html#l00374">BaseEventIntel.java:374</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_html_a5feb1ad12705b3d8017339813512f559"><div class="ttname"><a href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a5feb1ad12705b3d8017339813512f559">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.withMonthlyFactors</a></div><div class="ttdeci">boolean withMonthlyFactors()</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d56/BaseEventIntel_8java_source.html#l00942">BaseEventIntel.java:942</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_html_a78d4e00e402d57c4b2dd98012b52c202"><div class="ttname"><a href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a78d4e00e402d57c4b2dd98012b52c202">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.RANDOM_EVENT_NONE</a></div><div class="ttdeci">static final String RANDOM_EVENT_NONE</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d56/BaseEventIntel_8java_source.html#l00039">BaseEventIntel.java:39</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_html_a7e42368c7c00eb56d84bf0754ab735a5"><div class="ttname"><a href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a7e42368c7c00eb56d84bf0754ab735a5">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.getBarTooltip</a></div><div class="ttdeci">TooltipCreator getBarTooltip()</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d56/BaseEventIntel_8java_source.html#l00349">BaseEventIntel.java:349</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_html_a94632b6573d51f006d4cae053ff2d973"><div class="ttname"><a href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a94632b6573d51f006d4cae053ff2d973">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.withOneTimeFactors</a></div><div class="ttdeci">boolean withOneTimeFactors()</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d56/BaseEventIntel_8java_source.html#l00945">BaseEventIntel.java:945</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_html_aa8b5b6e5895655810fb3b1b4e6183a6c"><div class="ttname"><a href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#aa8b5b6e5895655810fb3b1b4e6183a6c">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.getBarProgressIndicatorWidth</a></div><div class="ttdeci">float getBarProgressIndicatorWidth()</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d56/BaseEventIntel_8java_source.html#l00501">BaseEventIntel.java:501</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI_html_a0213b272fbf9c2669316aa25c775ad60"><div class="ttname"><a href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a0213b272fbf9c2669316aa25c775ad60">com.fs.starfarer.api.campaign.FactionAPI.getBaseUIColor</a></div><div class="ttdeci">Color getBaseUIColor()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI_html_a579e737df0b7d656e6d9599d80aaa0f2"><div class="ttname"><a href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a579e737df0b7d656e6d9599d80aaa0f2">com.fs.starfarer.api.campaign.FactionAPI.getDarkUIColor</a></div><div class="ttdeci">Color getDarkUIColor()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a90b16325fc83c9e2387cd66ae5b7d825" name="a90b16325fc83c9e2387cd66ae5b7d825"></a>
@@ -1445,12 +1149,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html#l00510">510</a> of file <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html">BaseEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  510</span>                                      {</div>
-<div class="line"><span class="lineno">  511</span>        <span class="keywordflow">if</span> (<span class="keyword">true</span>) <span class="keywordflow">return</span> Misc.getBasePlayerColor();</div>
-<div class="line"><span class="lineno">  512</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a7b64cd609d54e4e7db47a5c2fe236e20">getBarColor</a>();</div>
-<div class="line"><span class="lineno">  513</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_html_a7b64cd609d54e4e7db47a5c2fe236e20"><div class="ttname"><a href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a7b64cd609d54e4e7db47a5c2fe236e20">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.getBarColor</a></div><div class="ttdeci">Color getBarColor()</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d56/BaseEventIntel_8java_source.html#l00515">BaseEventIntel.java:515</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a7b64cd609d54e4e7db47a5c2fe236e20" name="a7b64cd609d54e4e7db47a5c2fe236e20"></a>
@@ -1471,12 +1170,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../db/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#a51d8df726641e38a3326ff5d9de76051">com.fs.starfarer.api.impl.campaign.intel.events.HostileActivityEventIntel</a>, and <a class="el" href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#a9cedfe0409ea20d3a4da549916ae7537">com.fs.starfarer.api.impl.campaign.intel.events.ht.HyperspaceTopographyEventIntel</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html#l00515">515</a> of file <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html">BaseEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  515</span>                               {</div>
-<div class="line"><span class="lineno">  516</span>        Color color = Misc.getBasePlayerColor();</div>
-<div class="line"><span class="lineno">  517</span>        color = Misc.interpolateColor(color, Color.black, 0.25f);</div>
-<div class="line"><span class="lineno">  518</span>        <span class="keywordflow">return</span> color;</div>
-<div class="line"><span class="lineno">  519</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5ee79422bc8467f854f88ecaaae51c52" name="a5ee79422bc8467f854f88ecaaae51c52"></a>
@@ -1495,10 +1189,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html#l00489">489</a> of file <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html">BaseEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  489</span>                                {</div>
-<div class="line"><span class="lineno">  490</span>        <span class="keywordflow">return</span> 20f;</div>
-<div class="line"><span class="lineno">  491</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a0f0ca2b35a1c33db0d6b5d8c9a85f583" name="a0f0ca2b35a1c33db0d6b5d8c9a85f583"></a>
@@ -1519,10 +1210,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../db/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#a72c9ce949d0205dc40a9feeeaf4941d1">com.fs.starfarer.api.impl.campaign.intel.events.HostileActivityEventIntel</a>, and <a class="el" href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#ad1e28df47b23e702434a2e89273324d9">com.fs.starfarer.api.impl.campaign.intel.events.ht.HyperspaceTopographyEventIntel</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html#l00507">507</a> of file <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html">BaseEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  507</span>                                                {</div>
-<div class="line"><span class="lineno">  508</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a7b64cd609d54e4e7db47a5c2fe236e20">getBarColor</a>();</div>
-<div class="line"><span class="lineno">  509</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a0c46e59f42bfc4d91f2d73a3609bef74" name="a0c46e59f42bfc4d91f2d73a3609bef74"></a>
@@ -1541,10 +1229,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html#l00498">498</a> of file <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html">BaseEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  498</span>                                                 {</div>
-<div class="line"><span class="lineno">  499</span>        <span class="keywordflow">return</span> 20f;</div>
-<div class="line"><span class="lineno">  500</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a80876a61fcfb8af97c78cb4414849d39" name="a80876a61fcfb8af97c78cb4414849d39"></a>
@@ -1563,10 +1248,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html#l00504">504</a> of file <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html">BaseEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  504</span>                                                     {</div>
-<div class="line"><span class="lineno">  505</span>        <span class="keywordflow">return</span> Misc.getHighlightColor();</div>
-<div class="line"><span class="lineno">  506</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa8b5b6e5895655810fb3b1b4e6183a6c" name="aa8b5b6e5895655810fb3b1b4e6183a6c"></a>
@@ -1585,10 +1267,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html#l00501">501</a> of file <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html">BaseEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  501</span>                                                {</div>
-<div class="line"><span class="lineno">  502</span>        <span class="keywordflow">return</span> 20f;</div>
-<div class="line"><span class="lineno">  503</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a7e42368c7c00eb56d84bf0754ab735a5" name="a7e42368c7c00eb56d84bf0754ab735a5"></a>
@@ -1607,35 +1286,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html#l00349">349</a> of file <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html">BaseEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  349</span>                                          {</div>
-<div class="line"><span class="lineno">  350</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> TooltipCreator() {</div>
-<div class="line"><span class="lineno">  351</span>            <span class="keyword">public</span> <span class="keywordtype">boolean</span> isTooltipExpandable(Object tooltipParam) {</div>
-<div class="line"><span class="lineno">  352</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  353</span>            }</div>
-<div class="line"><span class="lineno">  354</span>            <span class="keyword">public</span> <span class="keywordtype">float</span> getTooltipWidth(Object tooltipParam) {</div>
-<div class="line"><span class="lineno">  355</span>                <span class="keywordflow">return</span> 450;</div>
-<div class="line"><span class="lineno">  356</span>            }</div>
-<div class="line"><span class="lineno">  357</span>            </div>
-<div class="line"><span class="lineno">  358</span>            <span class="keyword">public</span> <span class="keywordtype">void</span> createTooltip(TooltipMakerAPI tooltip, <span class="keywordtype">boolean</span> expanded, Object tooltipParam) {</div>
-<div class="line"><span class="lineno">  359</span>                <span class="keywordtype">float</span> opad = 10f;</div>
-<div class="line"><span class="lineno">  360</span>                Color h = Misc.getHighlightColor();</div>
-<div class="line"><span class="lineno">  361</span>                </div>
-<div class="line"><span class="lineno">  362</span>                tooltip.addPara(<span class="stringliteral">&quot;Event progress: %s out of %s points.&quot;</span>, 0f, h, <span class="stringliteral">&quot;&quot;</span> + <a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ad0ba35414301e3703a0feae649d13ae7">progress</a>, <span class="stringliteral">&quot;&quot;</span> + <a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a29cd68fc8ebf3febfa5b5e57aab83baf">maxProgress</a>);</div>
-<div class="line"><span class="lineno">  363</span>                <span class="keywordtype">int</span> p = <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#af363f50691d14457e74ec1266073c24d">getMonthlyProgress</a>();</div>
-<div class="line"><span class="lineno">  364</span>                String pStr = <span class="stringliteral">&quot;&quot;</span> + p;</div>
-<div class="line"><span class="lineno">  365</span>                <span class="keywordflow">if</span> (p &gt; 0) pStr = <span class="stringliteral">&quot;+&quot;</span> + p;</div>
-<div class="line"><span class="lineno">  366</span>                tooltip.addPara(<span class="stringliteral">&quot;Projected monthly progress: %s points.&quot;</span>, opad, <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ab4bbb123d4d81547ec82208974d57b2a">getProgressColor</a>(p), pStr);</div>
-<div class="line"><span class="lineno">  367</span>                </div>
-<div class="line"><span class="lineno">  368</span>                tooltip.addPara(<span class="stringliteral">&quot;Event progress is influenced by various factors. Some of these apply over time, &quot;</span></div>
-<div class="line"><span class="lineno">  369</span>                        + <span class="stringliteral">&quot;and some only apply once. As the event progresses, &quot;</span></div>
-<div class="line"><span class="lineno">  370</span>                        + <span class="stringliteral">&quot;different stages and outcomes may unfold.&quot;</span>, opad);</div>
-<div class="line"><span class="lineno">  371</span>            }</div>
-<div class="line"><span class="lineno">  372</span>        };</div>
-<div class="line"><span class="lineno">  373</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_html_a29cd68fc8ebf3febfa5b5e57aab83baf"><div class="ttname"><a href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a29cd68fc8ebf3febfa5b5e57aab83baf">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.maxProgress</a></div><div class="ttdeci">int maxProgress</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d56/BaseEventIntel_8java_source.html#l00133">BaseEventIntel.java:133</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_html_ab4bbb123d4d81547ec82208974d57b2a"><div class="ttname"><a href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ab4bbb123d4d81547ec82208974d57b2a">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.getProgressColor</a></div><div class="ttdeci">Color getProgressColor(int delta)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d56/BaseEventIntel_8java_source.html#l00887">BaseEventIntel.java:887</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_html_af363f50691d14457e74ec1266073c24d"><div class="ttname"><a href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#af363f50691d14457e74ec1266073c24d">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.getMonthlyProgress</a></div><div class="ttdeci">int getMonthlyProgress()</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d56/BaseEventIntel_8java_source.html#l00783">BaseEventIntel.java:783</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9725bf895c894871a1cda14507727b72" name="a9725bf895c894871a1cda14507727b72"></a>
@@ -1654,11 +1305,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html#l00485">485</a> of file <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html">BaseEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  485</span>                               {</div>
-<div class="line"><span class="lineno">  486</span>        <span class="comment">//return uiWidth - 200f;</span></div>
-<div class="line"><span class="lineno">  487</span>        <span class="keywordflow">return</span> 750f;</div>
-<div class="line"><span class="lineno">  488</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a73c270b1063accd9d986ce09dc9686bc" name="a73c270b1063accd9d986ce09dc9686bc"></a>
@@ -1686,10 +1333,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html#l00521">521</a> of file <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html">BaseEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  521</span>                                                      {</div>
-<div class="line"><span class="lineno">  522</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a7b64cd609d54e4e7db47a5c2fe236e20">getBarColor</a>();</div>
-<div class="line"><span class="lineno">  523</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9d80620fc3e5817817deee2fecd587e2" name="a9d80620fc3e5817817deee2fecd587e2"></a>
@@ -1717,12 +1361,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html#l00524">524</a> of file <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html">BaseEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  524</span>                                                      {</div>
-<div class="line"><span class="lineno">  525</span>        Color color = <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a7b64cd609d54e4e7db47a5c2fe236e20">getBarColor</a>();</div>
-<div class="line"><span class="lineno">  526</span>        color = Misc.interpolateColor(color, Color.black, 0.5f);</div>
-<div class="line"><span class="lineno">  527</span>        <span class="keywordflow">return</span> color;</div>
-<div class="line"><span class="lineno">  528</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aaea47402cf58486cd60052a0e9297933" name="aaea47402cf58486cd60052a0e9297933"></a>
@@ -1742,13 +1381,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html#l00685">685</a> of file <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html">BaseEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  685</span>                                                     {</div>
-<div class="line"><span class="lineno">  686</span>        <span class="keywordflow">for</span> (EventStageData curr : <a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#acf0bae62125cd9582dba8e499d941ac4">stages</a>) {</div>
-<div class="line"><span class="lineno">  687</span>            <span class="keywordflow">if</span> (stageId.equals(curr.id)) <span class="keywordflow">return</span> curr;</div>
-<div class="line"><span class="lineno">  688</span>        }</div>
-<div class="line"><span class="lineno">  689</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  690</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a4c7a5875abad50ba157999454d34afd6" name="a4c7a5875abad50ba157999454d34afd6"></a>
@@ -1767,10 +1400,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html#l00760">760</a> of file <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html">BaseEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  760</span>                                          {</div>
-<div class="line"><span class="lineno">  761</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ad00fcb944d26c95dcd71888578da03d1">factors</a>;</div>
-<div class="line"><span class="lineno">  762</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a766d58aa3cc1f11bf282350948f9501e" name="a766d58aa3cc1f11bf282350948f9501e"></a>
@@ -1801,12 +1431,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../db/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#aa841fbac2b76b21bc03d840e1e146ef6">com.fs.starfarer.api.impl.campaign.intel.events.HostileActivityEventIntel</a>, and <a class="el" href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#a5e5395e22d0be3c27ffa27a3e3ee5c60">com.fs.starfarer.api.impl.campaign.intel.events.ht.HyperspaceTopographyEventIntel</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html#l00594">594</a> of file <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html">BaseEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  594</span>                                                      {</div>
-<div class="line"><span class="lineno">  595</span>        Set&lt;String&gt; tags = super.getIntelTags(map);</div>
-<div class="line"><span class="lineno">  596</span>        tags.add(Tags.INTEL_MAJOR_EVENT);</div>
-<div class="line"><span class="lineno">  597</span>        <span class="keywordflow">return</span> tags;</div>
-<div class="line"><span class="lineno">  598</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a3642aecf210dacfc23c64e0292ba45c2" name="a3642aecf210dacfc23c64e0292ba45c2"></a>
@@ -1826,21 +1451,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html#l00670">670</a> of file <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html">BaseEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  670</span>                                                                          {</div>
-<div class="line"><span class="lineno">  671</span>        EventStageData last = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  672</span>        <span class="keywordtype">int</span> max = Integer.MIN_VALUE;</div>
-<div class="line"><span class="lineno">  673</span>        <span class="keywordflow">for</span> (EventStageData curr : <a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#acf0bae62125cd9582dba8e499d941ac4">stages</a>) {</div>
-<div class="line"><span class="lineno">  674</span>            <span class="keywordflow">if</span> (!includeOneOffEvents &amp;&amp; curr.isOneOffEvent) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  675</span>            </div>
-<div class="line"><span class="lineno">  676</span>            <span class="keywordtype">int</span> req = curr.progress;</div>
-<div class="line"><span class="lineno">  677</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ad0ba35414301e3703a0feae649d13ae7">progress</a> &gt;= req &amp;&amp; req &gt; max) {</div>
-<div class="line"><span class="lineno">  678</span>                max = req;</div>
-<div class="line"><span class="lineno">  679</span>                last = curr;</div>
-<div class="line"><span class="lineno">  680</span>            }</div>
-<div class="line"><span class="lineno">  681</span>        }</div>
-<div class="line"><span class="lineno">  682</span>        <span class="keywordflow">return</span> last;</div>
-<div class="line"><span class="lineno">  683</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a6850899398defebb0cc91c795aef5919" name="a6850899398defebb0cc91c795aef5919"></a>
@@ -1859,10 +1470,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html#l00610">610</a> of file <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html">BaseEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  610</span>                                {</div>
-<div class="line"><span class="lineno">  611</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a29cd68fc8ebf3febfa5b5e57aab83baf">maxProgress</a>;</div>
-<div class="line"><span class="lineno">  612</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af363f50691d14457e74ec1266073c24d" name="af363f50691d14457e74ec1266073c24d"></a>
@@ -1881,15 +1489,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html#l00783">783</a> of file <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html">BaseEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  783</span>                                    {</div>
-<div class="line"><span class="lineno">  784</span>        <span class="keywordtype">int</span> total = 0;</div>
-<div class="line"><span class="lineno">  785</span>        <span class="keywordflow">for</span> (EventFactor factor : <a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ad00fcb944d26c95dcd71888578da03d1">factors</a>) {</div>
-<div class="line"><span class="lineno">  786</span>            <span class="keywordflow">if</span> (factor.isOneTime()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  787</span>            total += factor.getProgress(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  788</span>        }</div>
-<div class="line"><span class="lineno">  789</span>        <span class="keywordflow">return</span> total;</div>
-<div class="line"><span class="lineno">  790</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a27fb01dd47a20659cb181075d3a5b81e" name="a27fb01dd47a20659cb181075d3a5b81e"></a>
@@ -1908,10 +1508,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html#l00809">809</a> of file <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html">BaseEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  809</span>                             {</div>
-<div class="line"><span class="lineno">  810</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ad0ba35414301e3703a0feae649d13ae7">progress</a>;</div>
-<div class="line"><span class="lineno">  811</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab4bbb123d4d81547ec82208974d57b2a" name="ab4bbb123d4d81547ec82208974d57b2a"></a>
@@ -1931,20 +1528,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html#l00887">887</a> of file <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html">BaseEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  887</span>                                             {</div>
-<div class="line"><span class="lineno">  888</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#aa5765240073b259857ba68583a38782e">isEventProgressANegativeThingForThePlayer</a>()) {</div>
-<div class="line"><span class="lineno">  889</span>            <span class="keywordflow">if</span> (delta &lt; 0) {</div>
-<div class="line"><span class="lineno">  890</span>                <span class="keywordflow">return</span> Misc.getPositiveHighlightColor();</div>
-<div class="line"><span class="lineno">  891</span>            }</div>
-<div class="line"><span class="lineno">  892</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  893</span>            <span class="keywordflow">if</span> (delta &lt; 0) {</div>
-<div class="line"><span class="lineno">  894</span>                <span class="keywordflow">return</span> Misc.getNegativeHighlightColor();</div>
-<div class="line"><span class="lineno">  895</span>            }</div>
-<div class="line"><span class="lineno">  896</span>        }</div>
-<div class="line"><span class="lineno">  897</span>        <span class="keywordflow">return</span> Misc.getHighlightColor();</div>
-<div class="line"><span class="lineno">  898</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_html_aa5765240073b259857ba68583a38782e"><div class="ttname"><a href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#aa5765240073b259857ba68583a38782e">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.isEventProgressANegativeThingForThePlayer</a></div><div class="ttdeci">boolean isEventProgressANegativeThingForThePlayer()</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d56/BaseEventIntel_8java_source.html#l00778">BaseEventIntel.java:778</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a50cfcff548038a06e628f917c787be72" name="a50cfcff548038a06e628f917c787be72"></a>
@@ -1963,13 +1547,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html#l00935">935</a> of file <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html">BaseEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  935</span>                                       {</div>
-<div class="line"><span class="lineno">  936</span>        <span class="keywordtype">float</span> p = (float) <a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ad0ba35414301e3703a0feae649d13ae7">progress</a> / (<span class="keywordtype">float</span>) <a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a29cd68fc8ebf3febfa5b5e57aab83baf">maxProgress</a>;</div>
-<div class="line"><span class="lineno">  937</span>        <span class="keywordflow">if</span> (p &lt; 0) p = 0;</div>
-<div class="line"><span class="lineno">  938</span>        <span class="keywordflow">if</span> (p &gt; 1) p = 1;</div>
-<div class="line"><span class="lineno">  939</span>        <span class="keywordflow">return</span> p;</div>
-<div class="line"><span class="lineno">  940</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a4f64210f6e66721bbe6730c6b14a3d23" name="a4f64210f6e66721bbe6730c6b14a3d23"></a>
@@ -1988,11 +1566,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html#l00922">922</a> of file <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html">BaseEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  922</span>                              {</div>
-<div class="line"><span class="lineno">  923</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#adf15d041480bd48f43df1aaf51de0262">random</a>;</div>
-<div class="line"><span class="lineno">  924</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_html_adf15d041480bd48f43df1aaf51de0262"><div class="ttname"><a href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#adf15d041480bd48f43df1aaf51de0262">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.random</a></div><div class="ttdeci">Random random</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d56/BaseEventIntel_8java_source.html#l00140">BaseEventIntel.java:140</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9a2ff242ca95cf75cc456c0732f8c1c2" name="a9a2ff242ca95cf75cc456c0732f8c1c2"></a>
@@ -2012,13 +1586,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html#l00692">692</a> of file <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html">BaseEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  692</span>                                                   {</div>
-<div class="line"><span class="lineno">  693</span>        <span class="comment">//if (stageId == startingStage) return 0;</span></div>
-<div class="line"><span class="lineno">  694</span>        EventStageData data = <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#aaea47402cf58486cd60052a0e9297933">getDataFor</a>(stageId);</div>
-<div class="line"><span class="lineno">  695</span>        <span class="keywordflow">return</span> data == <span class="keyword">null</span> ? 0 : data.progress;</div>
-<div class="line"><span class="lineno">  696</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_html_aaea47402cf58486cd60052a0e9297933"><div class="ttname"><a href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#aaea47402cf58486cd60052a0e9297933">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.getDataFor</a></div><div class="ttdeci">EventStageData getDataFor(Object stageId)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d56/BaseEventIntel_8java_source.html#l00685">BaseEventIntel.java:685</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a1878218da4dc38f869d239778b5b1a66" name="a1878218da4dc38f869d239778b5b1a66"></a>
@@ -2039,14 +1607,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a17d2e9484483debccdebd1798e39df69">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html#l00703">703</a> of file <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html">BaseEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  703</span>                                       {</div>
-<div class="line"><span class="lineno">  704</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a7ca9d5da36f4197185a1b69a26941da8">sortTier</a> == <span class="keyword">null</span> || <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#ac265e304e3d245a6ae16be73e0b918b0">isEnding</a>() || <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a76be49f1d836a62e192edd4ba597a6cc">isEnded</a>()) <span class="keywordflow">return</span> super.getSortTier();</div>
-<div class="line"><span class="lineno">  705</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a7ca9d5da36f4197185a1b69a26941da8">sortTier</a>;</div>
-<div class="line"><span class="lineno">  706</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_a76be49f1d836a62e192edd4ba597a6cc"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a76be49f1d836a62e192edd4ba597a6cc">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.isEnded</a></div><div class="ttdeci">boolean isEnded()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00130">BaseIntelPlugin.java:130</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_ac265e304e3d245a6ae16be73e0b918b0"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#ac265e304e3d245a6ae16be73e0b918b0">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.isEnding</a></div><div class="ttdeci">boolean isEnding()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00126">BaseIntelPlugin.java:126</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_html_a7ca9d5da36f4197185a1b69a26941da8"><div class="ttname"><a href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a7ca9d5da36f4197185a1b69a26941da8">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.sortTier</a></div><div class="ttdeci">IntelSortTier sortTier</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d56/BaseEventIntel_8java_source.html#l00137">BaseEventIntel.java:137</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab523142bc59be497f18b3101717cc03a" name="ab523142bc59be497f18b3101717cc03a"></a>
@@ -2074,31 +1635,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html#l00529">529</a> of file <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html">BaseEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  529</span>                                                  {</div>
-<div class="line"><span class="lineno">  530</span>        <span class="keywordtype">int</span> req = <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a9a2ff242ca95cf75cc456c0732f8c1c2">getRequiredProgress</a>(stageId);</div>
-<div class="line"><span class="lineno">  531</span>        </div>
-<div class="line"><span class="lineno">  532</span>        EventStageData last = <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a3642aecf210dacfc23c64e0292ba45c2">getLastActiveStage</a>(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  533</span>        EventStageData esd = <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#aaea47402cf58486cd60052a0e9297933">getDataFor</a>(stageId);</div>
-<div class="line"><span class="lineno">  534</span>        <span class="keywordtype">boolean</span> grayItOut = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  535</span>        <span class="keywordflow">if</span> (last != <span class="keyword">null</span> &amp;&amp; esd != <span class="keyword">null</span> &amp;&amp; last != esd &amp;&amp; !esd.isOneOffEvent &amp;&amp;</div>
-<div class="line"><span class="lineno">  536</span>                !esd.keepIconBrightWhenLaterStageReached &amp;&amp;</div>
-<div class="line"><span class="lineno">  537</span>                esd.progress &lt; last.progress) {</div>
-<div class="line"><span class="lineno">  538</span>            grayItOut = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  539</span>        }</div>
-<div class="line"><span class="lineno">  540</span>        </div>
-<div class="line"><span class="lineno">  541</span>        <span class="keywordflow">if</span> (esd != <span class="keyword">null</span> &amp;&amp; esd.randomized &amp;&amp; esd.rollData != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  542</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a73c270b1063accd9d986ce09dc9686bc">getBaseStageColor</a>(stageId);</div>
-<div class="line"><span class="lineno">  543</span>        }</div>
-<div class="line"><span class="lineno">  544</span>        </div>
-<div class="line"><span class="lineno">  545</span>        <span class="keywordflow">if</span> (req &gt; <a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ad0ba35414301e3703a0feae649d13ae7">progress</a> || grayItOut) {</div>
-<div class="line"><span class="lineno">  546</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a9d80620fc3e5817817deee2fecd587e2">getDarkStageColor</a>(stageId);</div>
-<div class="line"><span class="lineno">  547</span>        }</div>
-<div class="line"><span class="lineno">  548</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a73c270b1063accd9d986ce09dc9686bc">getBaseStageColor</a>(stageId);</div>
-<div class="line"><span class="lineno">  549</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_html_a73c270b1063accd9d986ce09dc9686bc"><div class="ttname"><a href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a73c270b1063accd9d986ce09dc9686bc">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.getBaseStageColor</a></div><div class="ttdeci">Color getBaseStageColor(Object stageId)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d56/BaseEventIntel_8java_source.html#l00521">BaseEventIntel.java:521</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_html_a9a2ff242ca95cf75cc456c0732f8c1c2"><div class="ttname"><a href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a9a2ff242ca95cf75cc456c0732f8c1c2">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.getRequiredProgress</a></div><div class="ttdeci">int getRequiredProgress(Object stageId)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d56/BaseEventIntel_8java_source.html#l00692">BaseEventIntel.java:692</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_html_a9d80620fc3e5817817deee2fecd587e2"><div class="ttname"><a href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a9d80620fc3e5817817deee2fecd587e2">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.getDarkStageColor</a></div><div class="ttdeci">Color getDarkStageColor(Object stageId)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d56/BaseEventIntel_8java_source.html#l00524">BaseEventIntel.java:524</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab679890b789fd5f35c17ae404c4b3cdc" name="ab679890b789fd5f35c17ae404c4b3cdc"></a>
@@ -2126,15 +1663,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html#l00475">475</a> of file <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html">BaseEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  475</span>                                                           {</div>
-<div class="line"><span class="lineno">  476</span>        EventStageData esd = <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#aaea47402cf58486cd60052a0e9297933">getDataFor</a>(stageId);</div>
-<div class="line"><span class="lineno">  477</span>        <span class="comment">//if (esd != null &amp;&amp; esd.iconSize == StageIconSize.SMALL) return 24;</span></div>
-<div class="line"><span class="lineno">  478</span>        <span class="comment">//if (esd != null &amp;&amp; esd.iconSize == StageIconSize.SMALL) return 56; // level with top of LARGE</span></div>
-<div class="line"><span class="lineno">  479</span>        <span class="keywordflow">if</span> (esd != <span class="keyword">null</span> &amp;&amp; esd.iconSize == StageIconSize.SMALL) <span class="keywordflow">return</span> 48; <span class="comment">// level with middle of LARGE</span></div>
-<div class="line"><span class="lineno">  480</span>        <span class="keywordflow">if</span> (esd != <span class="keyword">null</span> &amp;&amp; esd.iconSize == StageIconSize.LARGE) <span class="keywordflow">return</span> 40;</div>
-<div class="line"><span class="lineno">  481</span>        <span class="keywordflow">return</span> 32;</div>
-<div class="line"><span class="lineno">  482</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a7ca063a5f64cdc0790766679e8fd23d0" name="a7ca063a5f64cdc0790766679e8fd23d0"></a>
@@ -2164,21 +1693,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../db/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#ab24f893a837022dfa60d0db2ceb6d778">com.fs.starfarer.api.impl.campaign.intel.events.HostileActivityEventIntel</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html#l00450">450</a> of file <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html">BaseEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  450</span>                                                  {</div>
-<div class="line"><span class="lineno">  451</span>        EventStageData esd = <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#aaea47402cf58486cd60052a0e9297933">getDataFor</a>(stageId);</div>
-<div class="line"><span class="lineno">  452</span>        <span class="keywordflow">if</span> (esd == <span class="keyword">null</span> || (esd.randomized &amp;&amp; (esd.rollData == <span class="keyword">null</span> || <a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a78d4e00e402d57c4b2dd98012b52c202">RANDOM_EVENT_NONE</a>.equals(esd.rollData)))) {</div>
-<div class="line"><span class="lineno">  453</span>            <span class="keywordflow">if</span> (esd.randomType == RandomizedStageType.GOOD) {</div>
-<div class="line"><span class="lineno">  454</span>                <span class="keywordflow">return</span> Global.getSettings().getSpriteName(<span class="stringliteral">&quot;events&quot;</span>, <span class="stringliteral">&quot;stage_unknown_good&quot;</span>);</div>
-<div class="line"><span class="lineno">  455</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (esd.randomType == RandomizedStageType.BAD) {</div>
-<div class="line"><span class="lineno">  456</span>                <span class="keywordflow">return</span> Global.getSettings().getSpriteName(<span class="stringliteral">&quot;events&quot;</span>, <span class="stringliteral">&quot;stage_unknown_bad&quot;</span>);</div>
-<div class="line"><span class="lineno">  457</span>            }</div>
-<div class="line"><span class="lineno">  458</span>            <span class="keywordflow">return</span> Global.getSettings().getSpriteName(<span class="stringliteral">&quot;events&quot;</span>, <span class="stringliteral">&quot;stage_unknown_neutral&quot;</span>);</div>
-<div class="line"><span class="lineno">  459</span>        }</div>
-<div class="line"><span class="lineno">  460</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#abdabd006be834a1d8b3db6a3a446257d">getStageIconImpl</a>(stageId);</div>
-<div class="line"><span class="lineno">  461</span>        </div>
-<div class="line"><span class="lineno">  462</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_html_abdabd006be834a1d8b3db6a3a446257d"><div class="ttname"><a href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#abdabd006be834a1d8b3db6a3a446257d">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.getStageIconImpl</a></div><div class="ttdeci">String getStageIconImpl(Object stageId)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d56/BaseEventIntel_8java_source.html#l00463">BaseEventIntel.java:463</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac1f46bd2e40a87f358c2bab8767ed020" name="ac1f46bd2e40a87f358c2bab8767ed020"></a>
@@ -2206,28 +1721,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html#l00550">550</a> of file <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html">BaseEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  550</span>                                                      {</div>
-<div class="line"><span class="lineno">  551</span>        <span class="keywordtype">int</span> req = <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a9a2ff242ca95cf75cc456c0732f8c1c2">getRequiredProgress</a>(stageId);</div>
-<div class="line"><span class="lineno">  552</span>        </div>
-<div class="line"><span class="lineno">  553</span>        EventStageData last = <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a3642aecf210dacfc23c64e0292ba45c2">getLastActiveStage</a>(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  554</span>        EventStageData esd = <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#aaea47402cf58486cd60052a0e9297933">getDataFor</a>(stageId);</div>
-<div class="line"><span class="lineno">  555</span>        <span class="keywordtype">boolean</span> grayItOut = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  556</span>        <span class="keywordflow">if</span> (last != <span class="keyword">null</span> &amp;&amp; esd != <span class="keyword">null</span> &amp;&amp; last != esd &amp;&amp; !esd.isOneOffEvent &amp;&amp;</div>
-<div class="line"><span class="lineno">  557</span>                !esd.keepIconBrightWhenLaterStageReached &amp;&amp; </div>
-<div class="line"><span class="lineno">  558</span>                esd.progress &lt; last.progress) {</div>
-<div class="line"><span class="lineno">  559</span>            grayItOut = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  560</span>        }</div>
-<div class="line"><span class="lineno">  561</span>        </div>
-<div class="line"><span class="lineno">  562</span>        <span class="keywordflow">if</span> (esd != <span class="keyword">null</span> &amp;&amp; esd.randomized &amp;&amp; esd.rollData != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  563</span>            <span class="keywordflow">return</span> Color.white;</div>
-<div class="line"><span class="lineno">  564</span>        }</div>
-<div class="line"><span class="lineno">  565</span>        </div>
-<div class="line"><span class="lineno">  566</span>        <span class="keywordflow">if</span> (req &gt; <a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ad0ba35414301e3703a0feae649d13ae7">progress</a> || grayItOut) {</div>
-<div class="line"><span class="lineno">  567</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> Color(255,255,255,155);</div>
-<div class="line"><span class="lineno">  568</span>        }</div>
-<div class="line"><span class="lineno">  569</span>        <span class="keywordflow">return</span> Color.white;</div>
-<div class="line"><span class="lineno">  570</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="abdabd006be834a1d8b3db6a3a446257d" name="abdabd006be834a1d8b3db6a3a446257d"></a>
@@ -2257,10 +1751,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../db/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#a9292db44c05ff333d8542b28e7dfad5a">com.fs.starfarer.api.impl.campaign.intel.events.HostileActivityEventIntel</a>, and <a class="el" href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#a9f4af805822555dc71e16f93ba2862a9">com.fs.starfarer.api.impl.campaign.intel.events.ht.HyperspaceTopographyEventIntel</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html#l00463">463</a> of file <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html">BaseEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  463</span>                                                      {</div>
-<div class="line"><span class="lineno">  464</span>        <span class="keywordflow">return</span> Global.getSettings().getSpriteName(<span class="stringliteral">&quot;events&quot;</span>, <span class="stringliteral">&quot;stage_unknown&quot;</span>);</div>
-<div class="line"><span class="lineno">  465</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="afd70538d7c46aa4a7fa42658f1967bb1" name="afd70538d7c46aa4a7fa42658f1967bb1"></a>
@@ -2288,14 +1779,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html#l00467">467</a> of file <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html">BaseEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  467</span>                                                     {</div>
-<div class="line"><span class="lineno">  468</span>        EventStageData esd = <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#aaea47402cf58486cd60052a0e9297933">getDataFor</a>(stageId);</div>
-<div class="line"><span class="lineno">  469</span>        <span class="keywordflow">if</span> (esd != <span class="keyword">null</span> &amp;&amp; esd.iconSize == StageIconSize.SMALL) <span class="keywordflow">return</span> 32;</div>
-<div class="line"><span class="lineno">  470</span>        <span class="keywordflow">if</span> (esd != <span class="keyword">null</span> &amp;&amp; esd.iconSize == StageIconSize.LARGE) <span class="keywordflow">return</span> 48;</div>
-<div class="line"><span class="lineno">  471</span>        <span class="keywordflow">return</span> 40;</div>
-<div class="line"><span class="lineno">  472</span>        <span class="comment">//return 32;</span></div>
-<div class="line"><span class="lineno">  473</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa6b97feefb5a4f931194eaf3b8846f77" name="aa6b97feefb5a4f931194eaf3b8846f77"></a>
@@ -2325,10 +1809,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../db/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#aaa024b02d0dedb07e4a7d8f9ed37d1c3">com.fs.starfarer.api.impl.campaign.intel.events.HostileActivityEventIntel</a>, and <a class="el" href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#a8c73590c6f2fcf82f47b13fdce1dde88">com.fs.starfarer.api.impl.campaign.intel.events.ht.HyperspaceTopographyEventIntel</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html#l00571">571</a> of file <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html">BaseEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  571</span>                                                     {</div>
-<div class="line"><span class="lineno">  572</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  573</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5f06be320fdffcd2858c9f15fd97d7cc" name="a5f06be320fdffcd2858c9f15fd97d7cc"></a>
@@ -2356,22 +1837,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html#l00574">574</a> of file <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html">BaseEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  574</span>                                                   {</div>
-<div class="line"><span class="lineno">  575</span>        Object least = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  576</span>        <span class="keywordtype">int</span> min = Integer.MAX_VALUE;</div>
-<div class="line"><span class="lineno">  577</span>        <span class="keywordflow">for</span> (EventStageData curr : <a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#acf0bae62125cd9582dba8e499d941ac4">stages</a>) {</div>
-<div class="line"><span class="lineno">  578</span>            <span class="keywordtype">int</span> req = curr.progress;</div>
-<div class="line"><span class="lineno">  579</span>            <span class="keywordflow">if</span> (req &gt; <a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ad0ba35414301e3703a0feae649d13ae7">progress</a> &amp;&amp; req &lt; min) {</div>
-<div class="line"><span class="lineno">  580</span>                min = req;</div>
-<div class="line"><span class="lineno">  581</span>                least = curr.id;</div>
-<div class="line"><span class="lineno">  582</span>            }</div>
-<div class="line"><span class="lineno">  583</span>        }</div>
-<div class="line"><span class="lineno">  584</span>        <span class="keywordflow">if</span> (stageId.equals(least)) {</div>
-<div class="line"><span class="lineno">  585</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span> + <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a9a2ff242ca95cf75cc456c0732f8c1c2">getRequiredProgress</a>(least);</div>
-<div class="line"><span class="lineno">  586</span>        }</div>
-<div class="line"><span class="lineno">  587</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  588</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a3645c4fea6ba7a8ede44f0a5814d9570" name="a3645c4fea6ba7a8ede44f0a5814d9570"></a>
@@ -2399,10 +1865,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html#l00589">589</a> of file <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html">BaseEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  589</span>                                                       {</div>
-<div class="line"><span class="lineno">  590</span>        <span class="keywordflow">return</span> Misc.getHighlightColor();</div>
-<div class="line"><span class="lineno">  591</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a6b389cf060448147a660f4f3a8ffd23b" name="a6b389cf060448147a660f4f3a8ffd23b"></a>
@@ -2421,10 +1884,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html#l00618">618</a> of file <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html">BaseEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  618</span>                                            {</div>
-<div class="line"><span class="lineno">  619</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#acf0bae62125cd9582dba8e499d941ac4">stages</a>;</div>
-<div class="line"><span class="lineno">  620</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a572febfa378ddf88ac04252011049d3a" name="a572febfa378ddf88ac04252011049d3a"></a>
@@ -2446,38 +1906,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../db/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#aa7ed429116e0e99bed64655b28dfde8c">com.fs.starfarer.api.impl.campaign.intel.events.HostileActivityEventIntel</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html#l00374">374</a> of file <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html">BaseEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  374</span>                                                          {</div>
-<div class="line"><span class="lineno">  375</span>        <span class="keyword">final</span> EventStageData esd = <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#aaea47402cf58486cd60052a0e9297933">getDataFor</a>(stageId);</div>
-<div class="line"><span class="lineno">  376</span>        <span class="keywordflow">if</span> (esd == <span class="keyword">null</span> || (esd.randomized &amp;&amp; (esd.rollData == <span class="keyword">null</span> || <a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a78d4e00e402d57c4b2dd98012b52c202">RANDOM_EVENT_NONE</a>.equals(esd.rollData)))) {</div>
-<div class="line"><span class="lineno">  377</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> TooltipCreator() {</div>
-<div class="line"><span class="lineno">  378</span>                <span class="keyword">public</span> <span class="keywordtype">boolean</span> isTooltipExpandable(Object tooltipParam) {</div>
-<div class="line"><span class="lineno">  379</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  380</span>                }</div>
-<div class="line"><span class="lineno">  381</span>                <span class="keyword">public</span> <span class="keywordtype">float</span> getTooltipWidth(Object tooltipParam) {</div>
-<div class="line"><span class="lineno">  382</span>                    <span class="keywordflow">return</span> BaseEventFactor.TOOLTIP_WIDTH;</div>
-<div class="line"><span class="lineno">  383</span>                }</div>
-<div class="line"><span class="lineno">  384</span>                </div>
-<div class="line"><span class="lineno">  385</span>                <span class="keyword">public</span> <span class="keywordtype">void</span> createTooltip(TooltipMakerAPI tooltip, <span class="keywordtype">boolean</span> expanded, Object tooltipParam) {</div>
-<div class="line"><span class="lineno">  386</span>                    <span class="keywordtype">float</span> opad = 10f;</div>
-<div class="line"><span class="lineno">  387</span>                    Color h = Misc.getHighlightColor();</div>
-<div class="line"><span class="lineno">  388</span>                    </div>
-<div class="line"><span class="lineno">  389</span>                    tooltip.addPara(<span class="stringliteral">&quot;Something might occur when event progress reaches %s points. &quot;</span></div>
-<div class="line"><span class="lineno">  390</span>                            + <span class="stringliteral">&quot;What that is, if anything, will be determined when event progress reaches &quot;</span></div>
-<div class="line"><span class="lineno">  391</span>                            + <span class="stringliteral">&quot;%s points.&quot;</span>, 0f, </div>
-<div class="line"><span class="lineno">  392</span>                            h, <span class="stringliteral">&quot;&quot;</span> + esd.progress, <span class="stringliteral">&quot;&quot;</span> + esd.progressToRollAt);</div>
-<div class="line"><span class="lineno">  393</span>                    </div>
-<div class="line"><span class="lineno">  394</span>                    <span class="keywordflow">if</span> (esd.isRepeatable) {</div>
-<div class="line"><span class="lineno">  395</span>                        tooltip.addPara(<span class="stringliteral">&quot;This event is repeatable.&quot;</span>, opad);</div>
-<div class="line"><span class="lineno">  396</span>                    } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  397</span>                        tooltip.addPara(<span class="stringliteral">&quot;This event is not repeatable.&quot;</span>, opad);</div>
-<div class="line"><span class="lineno">  398</span>                    }</div>
-<div class="line"><span class="lineno">  399</span>                }</div>
-<div class="line"><span class="lineno">  400</span>            };</div>
-<div class="line"><span class="lineno">  401</span>        }</div>
-<div class="line"><span class="lineno">  402</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ad124619eb847be5b7e089bf2860cdf6a">getStageTooltipImpl</a>(stageId);</div>
-<div class="line"><span class="lineno">  403</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_html_ad124619eb847be5b7e089bf2860cdf6a"><div class="ttname"><a href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ad124619eb847be5b7e089bf2860cdf6a">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.getStageTooltipImpl</a></div><div class="ttdeci">TooltipCreator getStageTooltipImpl(Object stageId)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d56/BaseEventIntel_8java_source.html#l00404">BaseEventIntel.java:404</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ad124619eb847be5b7e089bf2860cdf6a" name="ad124619eb847be5b7e089bf2860cdf6a"></a>
@@ -2499,10 +1928,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../db/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#ad55d9604b8d1a620f9d60c70a4a7dfe4">com.fs.starfarer.api.impl.campaign.intel.events.HostileActivityEventIntel</a>, and <a class="el" href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#a3c66e4f6454622b3f65eff54b24c179e">com.fs.starfarer.api.impl.campaign.intel.events.ht.HyperspaceTopographyEventIntel</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html#l00404">404</a> of file <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html">BaseEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  404</span>                                                              {</div>
-<div class="line"><span class="lineno">  405</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  406</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a6f676b54ff256e86b3901f1505972443" name="a6f676b54ff256e86b3901f1505972443"></a>
@@ -2521,12 +1947,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html#l00755">755</a> of file <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html">BaseEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  755</span>                                                     {</div>
-<div class="line"><span class="lineno">  756</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a6ec985383e3a00627ccd7a817bd55626">addingFactorDialog</a> == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  757</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a6ec985383e3a00627ccd7a817bd55626">addingFactorDialog</a>.<a class="code hl_function" href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#a52d00add8a9c52795f652f493ac37244">getTextPanel</a>();</div>
-<div class="line"><span class="lineno">  758</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI_html_a52d00add8a9c52795f652f493ac37244"><div class="ttname"><a href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#a52d00add8a9c52795f652f493ac37244">com.fs.starfarer.api.campaign.InteractionDialogAPI.getTextPanel</a></div><div class="ttdeci">TextPanelAPI getTextPanel()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a3c4ba606b9d93b6b7eba4f64e6fef9b0" name="a3c4ba606b9d93b6b7eba4f64e6fef9b0"></a>
@@ -2547,10 +1968,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a6e16c7466c98541d19cb8442b6d910c1">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html#l00606">606</a> of file <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html">BaseEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  606</span>                                         {</div>
-<div class="line"><span class="lineno">  607</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  608</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="afc0fb1b49089c37c63d99b9a972800a4" name="afc0fb1b49089c37c63d99b9a972800a4"></a>
@@ -2571,10 +1989,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#abc5ef72ee5874d9b22685d7f75936cce">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html#l00601">601</a> of file <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html">BaseEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  601</span>                                         {</div>
-<div class="line"><span class="lineno">  602</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  603</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa5765240073b259857ba68583a38782e" name="aa5765240073b259857ba68583a38782e"></a>
@@ -2595,10 +2010,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../db/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#a01f4072c366ee2743b26b2ccada496e7">com.fs.starfarer.api.impl.campaign.intel.events.HostileActivityEventIntel</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html#l00778">778</a> of file <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html">BaseEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  778</span>                                                               {</div>
-<div class="line"><span class="lineno">  779</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  780</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9d9f00c751dc6e4c4b8a852a90e70bb2" name="a9d9f00c751dc6e4c4b8a852a90e70bb2"></a>
@@ -2618,13 +2030,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html#l00664">664</a> of file <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html">BaseEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  664</span>                                                 {</div>
-<div class="line"><span class="lineno">  665</span>        EventStageData data = <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#aaea47402cf58486cd60052a0e9297933">getDataFor</a>(stageId);</div>
-<div class="line"><span class="lineno">  666</span>        <span class="keywordflow">if</span> (data == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  667</span>        <span class="keywordflow">return</span> data.progress &lt;= <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a27fb01dd47a20659cb181075d3a5b81e">getProgress</a>();</div>
-<div class="line"><span class="lineno">  668</span>        </div>
-<div class="line"><span class="lineno">  669</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af4809d9ea77ac2d93e7998fe40173587" name="af4809d9ea77ac2d93e7998fe40173587"></a>
@@ -2644,11 +2050,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html#l00627">627</a> of file <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html">BaseEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  627</span>                                                        {</div>
-<div class="line"><span class="lineno">  628</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#af4809d9ea77ac2d93e7998fe40173587">isStageActiveAndLast</a>(stageId, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  629</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_html_af4809d9ea77ac2d93e7998fe40173587"><div class="ttname"><a href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#af4809d9ea77ac2d93e7998fe40173587">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.isStageActiveAndLast</a></div><div class="ttdeci">boolean isStageActiveAndLast(Object stageId)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d56/BaseEventIntel_8java_source.html#l00627">BaseEventIntel.java:627</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="acd6ac828613893c8d1097069d8a7be5f" name="acd6ac828613893c8d1097069d8a7be5f"></a>
@@ -2678,13 +2080,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html#l00630">630</a> of file <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html">BaseEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  630</span>                                                                                     {</div>
-<div class="line"><span class="lineno">  631</span>        EventStageData data = <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a3642aecf210dacfc23c64e0292ba45c2">getLastActiveStage</a>(includeOneOffEvents);</div>
-<div class="line"><span class="lineno">  632</span>        <span class="comment">//if (data == null) return startingStage == stageId;</span></div>
-<div class="line"><span class="lineno">  633</span>        <span class="keywordflow">if</span> (data == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  634</span>        <span class="keywordflow">return</span> data.id == stageId; <span class="comment">// assuming stageId will be enums, so == check is ok</span></div>
-<div class="line"><span class="lineno">  635</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab4c0ea37293947534f0b4812d3b4dfaa" name="ab4c0ea37293947534f0b4812d3b4dfaa"></a>
@@ -2704,10 +2100,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html#l00623">623</a> of file <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html">BaseEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  623</span>                                                               {</div>
-<div class="line"><span class="lineno">  624</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ad0ba35414301e3703a0feae649d13ae7">progress</a> &gt;= <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a9a2ff242ca95cf75cc456c0732f8c1c2">getRequiredProgress</a>(stageId);</div>
-<div class="line"><span class="lineno">  625</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a48d9f60d637e9a68fc33e36df7809cde" name="a48d9f60d637e9a68fc33e36df7809cde"></a>
@@ -2738,14 +2131,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../db/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#ad28e739e04c8981811bb8e4c2e804f47">com.fs.starfarer.api.impl.campaign.intel.events.HostileActivityEventIntel</a>, and <a class="el" href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#a3c316868c3b8b65d8d78b6a953f620da">com.fs.starfarer.api.impl.campaign.intel.events.ht.HyperspaceTopographyEventIntel</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html#l00710">710</a> of file <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html">BaseEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  710</span>                                 {</div>
-<div class="line"><span class="lineno">  711</span>        super.notifyEnded();</div>
-<div class="line"><span class="lineno">  712</span>        Global.getSector().removeScript(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  713</span>        <span class="keywordflow">for</span> (EventFactor factor : <a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ad00fcb944d26c95dcd71888578da03d1">factors</a>) {</div>
-<div class="line"><span class="lineno">  714</span>            factor.notifyEventEnded();</div>
-<div class="line"><span class="lineno">  715</span>        }</div>
-<div class="line"><span class="lineno">  716</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a129e179baf5d397ba346dd99cf43fb1c" name="a129e179baf5d397ba346dd99cf43fb1c"></a>
@@ -2776,19 +2162,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../db/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#a2e029c82a9aa422ece700c702cb826a2">com.fs.starfarer.api.impl.campaign.intel.events.HostileActivityEventIntel</a>, and <a class="el" href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#aae834d180bf5eac47cfcec85a7a2976c">com.fs.starfarer.api.impl.campaign.intel.events.ht.HyperspaceTopographyEventIntel</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html#l00720">720</a> of file <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html">BaseEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  720</span>                                  {</div>
-<div class="line"><span class="lineno">  721</span>        super.notifyEnding();</div>
-<div class="line"><span class="lineno">  722</span><span class="comment">//      for (MarketAPI curr : getAffectedMarkets()) {</span></div>
-<div class="line"><span class="lineno">  723</span><span class="comment">//          if (curr.hasCondition(Conditions.HOSTILE_ACTIVITY)) {</span></div>
-<div class="line"><span class="lineno">  724</span><span class="comment">//              curr.removeCondition(Conditions.HOSTILE_ACTIVITY);</span></div>
-<div class="line"><span class="lineno">  725</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">  726</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  727</span>        Global.getSector().getListenerManager().removeListener(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  728</span>        <span class="keywordflow">for</span> (EventFactor factor : <a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ad00fcb944d26c95dcd71888578da03d1">factors</a>) {</div>
-<div class="line"><span class="lineno">  729</span>            factor.notifyEventEnding();</div>
-<div class="line"><span class="lineno">  730</span>        }</div>
-<div class="line"><span class="lineno">  731</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af1f5f12f5473a8118b460c337c8a9af4" name="af1f5f12f5473a8118b460c337c8a9af4"></a>
@@ -2818,10 +2192,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../db/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#a0fdf9ba7ce2fd731b1d730ca4b6b3e4d">com.fs.starfarer.api.impl.campaign.intel.events.HostileActivityEventIntel</a>, and <a class="el" href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#a35ba6d35b78f40148d21f29a306b0088">com.fs.starfarer.api.impl.campaign.intel.events.ht.HyperspaceTopographyEventIntel</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html#l00879">879</a> of file <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html">BaseEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  879</span>                                                            {</div>
-<div class="line"><span class="lineno">  880</span>        </div>
-<div class="line"><span class="lineno">  881</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a08abeee11b8d43f3f08b72d98482a888" name="a08abeee11b8d43f3f08b72d98482a888"></a>
@@ -2840,11 +2211,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html#l00493">493</a> of file <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html">BaseEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  493</span>                                                         {</div>
-<div class="line"><span class="lineno">  494</span>        <span class="keywordtype">float</span> test = (float)<a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ad0ba35414301e3703a0feae649d13ae7">progress</a> / (<span class="keywordtype">float</span>)<a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a29cd68fc8ebf3febfa5b5e57aab83baf">maxProgress</a> * <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a9725bf895c894871a1cda14507727b72">getBarWidth</a>();</div>
-<div class="line"><span class="lineno">  495</span>        <span class="keywordflow">return</span> test &lt; 50;</div>
-<div class="line"><span class="lineno">  496</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ad81a7f0266cc6fbecdbb673acced1b11" name="ad81a7f0266cc6fbecdbb673acced1b11"></a>
@@ -2864,10 +2231,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html#l00764">764</a> of file <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html">BaseEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  764</span>                                                 {</div>
-<div class="line"><span class="lineno">  765</span>        <a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ad00fcb944d26c95dcd71888578da03d1">factors</a>.remove(factor);</div>
-<div class="line"><span class="lineno">  766</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aac8c7c9057059d8e4447e13cded05bfd" name="aac8c7c9057059d8e4447e13cded05bfd"></a>
@@ -2887,16 +2251,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html#l00768">768</a> of file <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html">BaseEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  768</span>                                                          {</div>
-<div class="line"><span class="lineno">  769</span>        List&lt;EventFactor&gt; <span class="keyword">remove</span> = <span class="keyword">new</span> ArrayList&lt;EventFactor&gt;();</div>
-<div class="line"><span class="lineno">  770</span>        <span class="keywordflow">for</span> (EventFactor curr : <a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ad00fcb944d26c95dcd71888578da03d1">factors</a>) {</div>
-<div class="line"><span class="lineno">  771</span>            <span class="keywordflow">if</span> (c.isInstance(curr)) {</div>
-<div class="line"><span class="lineno">  772</span>                <span class="keyword">remove</span>.add(curr);</div>
-<div class="line"><span class="lineno">  773</span>            }</div>
-<div class="line"><span class="lineno">  774</span>        }</div>
-<div class="line"><span class="lineno">  775</span>        <a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ad00fcb944d26c95dcd71888578da03d1">factors</a>.removeAll(<span class="keyword">remove</span>);</div>
-<div class="line"><span class="lineno">  776</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a07c80cc74eece100e2d95fa25f248566" name="a07c80cc74eece100e2d95fa25f248566"></a>
@@ -2917,10 +2272,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="../../d4/df0/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1EconomyTickListener.html#ad95b4b1056bbbe8ab124cfdaeff2ca90">com.fs.starfarer.api.campaign.listeners.EconomyTickListener</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html#l00883">883</a> of file <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html">BaseEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  883</span>                                        {</div>
-<div class="line"><span class="lineno">  884</span>        </div>
-<div class="line"><span class="lineno">  885</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac80c29df4b4f1d409f328da2163670c5" name="ac80c29df4b4f1d409f328da2163670c5"></a>
@@ -2942,23 +2294,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="../../d4/df0/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1EconomyTickListener.html#a15cbf99d8b73c1ccd80df3b19cc4f757">com.fs.starfarer.api.campaign.listeners.EconomyTickListener</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html#l00793">793</a> of file <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html">BaseEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  793</span>                                                 {</div>
-<div class="line"><span class="lineno">  794</span>        <span class="keywordtype">float</span> delta = <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#af363f50691d14457e74ec1266073c24d">getMonthlyProgress</a>();</div>
-<div class="line"><span class="lineno">  795</span>        </div>
-<div class="line"><span class="lineno">  796</span>        <span class="keywordtype">float</span> numIter = Global.getSettings().getFloat(<span class="stringliteral">&quot;economyIterPerMonth&quot;</span>);</div>
-<div class="line"><span class="lineno">  797</span>        <span class="keywordtype">float</span> f = 1f / numIter;</div>
-<div class="line"><span class="lineno">  798</span>        </div>
-<div class="line"><span class="lineno">  799</span>        delta *= f;</div>
-<div class="line"><span class="lineno">  800</span>        delta += <a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a9b40a61579632e230de8ef02efeef564">progressDeltaRemainder</a>;</div>
-<div class="line"><span class="lineno">  801</span>        </div>
-<div class="line"><span class="lineno">  802</span>        <span class="keywordtype">int</span> apply = (int) delta;</div>
-<div class="line"><span class="lineno">  803</span> </div>
-<div class="line"><span class="lineno">  804</span>        <a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a9b40a61579632e230de8ef02efeef564">progressDeltaRemainder</a> = delta - (float) apply;</div>
-<div class="line"><span class="lineno">  805</span>        </div>
-<div class="line"><span class="lineno">  806</span>        <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ab5b560e81b4ed5ef19262a77b5ca34f6">setProgress</a>(<a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ad0ba35414301e3703a0feae649d13ae7">progress</a> + apply);</div>
-<div class="line"><span class="lineno">  807</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_html_a9b40a61579632e230de8ef02efeef564"><div class="ttname"><a href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a9b40a61579632e230de8ef02efeef564">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.progressDeltaRemainder</a></div><div class="ttdeci">float progressDeltaRemainder</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d56/BaseEventIntel_8java_source.html#l00142">BaseEventIntel.java:142</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a7023e30da731e1291c4406cbb3ed8946" name="a7023e30da731e1291c4406cbb3ed8946"></a>
@@ -2980,10 +2316,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../db/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#ac4bba58a3d9c968dde2ea4ac853dd357">com.fs.starfarer.api.impl.campaign.intel.events.HostileActivityEventIntel</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html#l00926">926</a> of file <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html">BaseEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  926</span>                                                           {</div>
-<div class="line"><span class="lineno">  927</span>        stage.rollData = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  928</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a977ab68ffe55cbd97fc60e6655c9eb8c" name="a977ab68ffe55cbd97fc60e6655c9eb8c"></a>
@@ -3005,10 +2338,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../db/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#a4c4eced6a00e86d90636104c2fce4223">com.fs.starfarer.api.impl.campaign.intel.events.HostileActivityEventIntel</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html#l00930">930</a> of file <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html">BaseEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  930</span>                                                          {</div>
-<div class="line"><span class="lineno">  931</span>        </div>
-<div class="line"><span class="lineno">  932</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a85b5c578837962633b1f3ccf0eabb6be" name="a85b5c578837962633b1f3ccf0eabb6be"></a>
@@ -3028,12 +2358,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html#l00900">900</a> of file <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html">BaseEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  900</span>                                                       {</div>
-<div class="line"><span class="lineno">  901</span>        EventStageData esd = <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#aaea47402cf58486cd60052a0e9297933">getDataFor</a>(stageId);</div>
-<div class="line"><span class="lineno">  902</span>        <span class="keywordflow">if</span> (esd == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  903</span>        esd.hideIconWhenPastStageUnlessLastActive = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  904</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aabb5537513d54b1dda9c4ae42c4a9b3c" name="aabb5537513d54b1dda9c4ae42c4a9b3c"></a>
@@ -3053,10 +2378,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html#l00614">614</a> of file <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html">BaseEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  614</span>                                                {</div>
-<div class="line"><span class="lineno">  615</span>        this.maxProgress = <a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a29cd68fc8ebf3febfa5b5e57aab83baf">maxProgress</a>;</div>
-<div class="line"><span class="lineno">  616</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab5b560e81b4ed5ef19262a77b5ca34f6" name="ab5b560e81b4ed5ef19262a77b5ca34f6"></a>
@@ -3076,78 +2398,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html#l00814">814</a> of file <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html">BaseEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  814</span>                                          {</div>
-<div class="line"><span class="lineno">  815</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ad0ba35414301e3703a0feae649d13ae7">progress</a> == <a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ad0ba35414301e3703a0feae649d13ae7">progress</a>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  816</span>        </div>
-<div class="line"><span class="lineno">  817</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ad0ba35414301e3703a0feae649d13ae7">progress</a> &lt; 0) <a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ad0ba35414301e3703a0feae649d13ae7">progress</a> = 0;</div>
-<div class="line"><span class="lineno">  818</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ad0ba35414301e3703a0feae649d13ae7">progress</a> &gt; <a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a29cd68fc8ebf3febfa5b5e57aab83baf">maxProgress</a>) <a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ad0ba35414301e3703a0feae649d13ae7">progress</a> = <a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a29cd68fc8ebf3febfa5b5e57aab83baf">maxProgress</a>;</div>
-<div class="line"><span class="lineno">  819</span>        </div>
-<div class="line"><span class="lineno">  820</span>        EventStageData prev = <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a3642aecf210dacfc23c64e0292ba45c2">getLastActiveStage</a>(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  821</span>        <a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a11afa5be0dfe89b956a5e358e52f1b3d">prevProgressDeltaWasPositive</a> = this.progress &lt; <a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ad0ba35414301e3703a0feae649d13ae7">progress</a>;</div>
-<div class="line"><span class="lineno">  822</span>        </div>
-<div class="line"><span class="lineno">  823</span>        <span class="comment">//progress += 30;</span></div>
-<div class="line"><span class="lineno">  824</span>        <span class="comment">//progress = 40;</span></div>
-<div class="line"><span class="lineno">  825</span>        <span class="comment">//progress = 40;</span></div>
-<div class="line"><span class="lineno">  826</span>        <span class="comment">//progress = 499;</span></div>
-<div class="line"><span class="lineno">  827</span>        </div>
-<div class="line"><span class="lineno">  828</span>        this.progress = <a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ad0ba35414301e3703a0feae649d13ae7">progress</a>;</div>
-<div class="line"><span class="lineno">  829</span>        </div>
-<div class="line"><span class="lineno">  830</span>        </div>
-<div class="line"><span class="lineno">  831</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ad0ba35414301e3703a0feae649d13ae7">progress</a> &lt; 0) {</div>
-<div class="line"><span class="lineno">  832</span>            <a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ad0ba35414301e3703a0feae649d13ae7">progress</a> = 0;</div>
-<div class="line"><span class="lineno">  833</span>        }</div>
-<div class="line"><span class="lineno">  834</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ad0ba35414301e3703a0feae649d13ae7">progress</a> &gt; <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a6850899398defebb0cc91c795aef5919">getMaxProgress</a>()) {</div>
-<div class="line"><span class="lineno">  835</span>            <a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ad0ba35414301e3703a0feae649d13ae7">progress</a> = <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a6850899398defebb0cc91c795aef5919">getMaxProgress</a>();</div>
-<div class="line"><span class="lineno">  836</span>        }</div>
-<div class="line"><span class="lineno">  837</span>        </div>
-<div class="line"><span class="lineno">  838</span>        <span class="comment">// Check to see if randomized events need to be rolled/reset</span></div>
-<div class="line"><span class="lineno">  839</span>        <span class="keywordflow">for</span> (EventStageData esd : <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a6b389cf060448147a660f4f3a8ffd23b">getStages</a>()) {</div>
-<div class="line"><span class="lineno">  840</span>            <span class="keywordflow">if</span> (esd.wasEverReached &amp;&amp; esd.isOneOffEvent &amp;&amp; !esd.isRepeatable) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  841</span>            </div>
-<div class="line"><span class="lineno">  842</span>            <span class="keywordflow">if</span> (esd.randomized) {</div>
-<div class="line"><span class="lineno">  843</span>                <span class="keywordflow">if</span> (esd.rollData != <span class="keyword">null</span> &amp;&amp; <a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ad0ba35414301e3703a0feae649d13ae7">progress</a> &lt;= esd.progressToResetAt) {</div>
-<div class="line"><span class="lineno">  844</span>                    <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a7023e30da731e1291c4406cbb3ed8946">resetRandomizedStage</a>(esd);</div>
-<div class="line"><span class="lineno">  845</span>                }</div>
-<div class="line"><span class="lineno">  846</span>                <span class="keywordflow">if</span> (esd.rollData == <span class="keyword">null</span> &amp;&amp; <a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ad0ba35414301e3703a0feae649d13ae7">progress</a> &gt;= esd.progressToRollAt) {</div>
-<div class="line"><span class="lineno">  847</span>                    <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a977ab68ffe55cbd97fc60e6655c9eb8c">rollRandomizedStage</a>(esd);</div>
-<div class="line"><span class="lineno">  848</span>                    <span class="keywordflow">if</span> (esd.rollData == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  849</span>                        esd.rollData = <a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a78d4e00e402d57c4b2dd98012b52c202">RANDOM_EVENT_NONE</a>;</div>
-<div class="line"><span class="lineno">  850</span>                    }</div>
-<div class="line"><span class="lineno">  851</span>                }</div>
-<div class="line"><span class="lineno">  852</span>            }</div>
-<div class="line"><span class="lineno">  853</span>        }</div>
-<div class="line"><span class="lineno">  854</span>        </div>
-<div class="line"><span class="lineno">  855</span>        <span class="comment">// go through all of the stages made active by the new progress value</span></div>
-<div class="line"><span class="lineno">  856</span>        <span class="comment">// generally this&#39;d just be one stage, but possible to have multiple for a large</span></div>
-<div class="line"><span class="lineno">  857</span>        <span class="comment">// progress increase</span></div>
-<div class="line"><span class="lineno">  858</span>        <span class="keywordflow">for</span> (EventStageData curr : <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a6b389cf060448147a660f4f3a8ffd23b">getStages</a>()) {</div>
-<div class="line"><span class="lineno">  859</span>            <span class="keywordflow">if</span> (curr.progress &lt;= prev.progress) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  860</span>            <span class="comment">//if (curr.progress &gt; progress) continue;</span></div>
-<div class="line"><span class="lineno">  861</span>            </div>
-<div class="line"><span class="lineno">  862</span>            <span class="comment">// reached</span></div>
-<div class="line"><span class="lineno">  863</span>            <span class="keywordflow">if</span> (curr.progress &lt;= <a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ad0ba35414301e3703a0feae649d13ae7">progress</a>) {</div>
-<div class="line"><span class="lineno">  864</span>                <span class="comment">//EventStageData curr = getLastActiveStage(true);</span></div>
-<div class="line"><span class="lineno">  865</span>                <span class="keywordflow">if</span> (curr != <span class="keyword">null</span> &amp;&amp; (curr != prev || !prev.wasEverReached)) {</div>
-<div class="line"><span class="lineno">  866</span>                    <span class="keywordflow">if</span> (curr.sendIntelUpdateOnReaching &amp;&amp; curr.progress &gt; 0 &amp;&amp; (prev == <span class="keyword">null</span> || prev.progress &lt; curr.progress)) {</div>
-<div class="line"><span class="lineno">  867</span>                        <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a9a95c1eccf4604952fd8a65605f24e31">sendUpdateIfPlayerHasIntel</a>(curr, <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a6f676b54ff256e86b3901f1505972443">getTextPanelForStageChange</a>());</div>
-<div class="line"><span class="lineno">  868</span>                    }</div>
-<div class="line"><span class="lineno">  869</span>                    <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#af1f5f12f5473a8118b460c337c8a9af4">notifyStageReached</a>(curr);</div>
-<div class="line"><span class="lineno">  870</span>                    curr.rollData = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  871</span>                    curr.wasEverReached = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  872</span>                    </div>
-<div class="line"><span class="lineno">  873</span>                    <a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ad0ba35414301e3703a0feae649d13ae7">progress</a> = <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a27fb01dd47a20659cb181075d3a5b81e">getProgress</a>(); <span class="comment">// in case it was changed by notifyStageReached()</span></div>
-<div class="line"><span class="lineno">  874</span>                }</div>
-<div class="line"><span class="lineno">  875</span>            }</div>
-<div class="line"><span class="lineno">  876</span>        }</div>
-<div class="line"><span class="lineno">  877</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_html_a11afa5be0dfe89b956a5e358e52f1b3d"><div class="ttname"><a href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a11afa5be0dfe89b956a5e358e52f1b3d">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.prevProgressDeltaWasPositive</a></div><div class="ttdeci">transient boolean prevProgressDeltaWasPositive</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d56/BaseEventIntel_8java_source.html#l00813">BaseEventIntel.java:813</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_html_a6850899398defebb0cc91c795aef5919"><div class="ttname"><a href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a6850899398defebb0cc91c795aef5919">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.getMaxProgress</a></div><div class="ttdeci">int getMaxProgress()</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d56/BaseEventIntel_8java_source.html#l00610">BaseEventIntel.java:610</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_html_a6b389cf060448147a660f4f3a8ffd23b"><div class="ttname"><a href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a6b389cf060448147a660f4f3a8ffd23b">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.getStages</a></div><div class="ttdeci">List&lt; EventStageData &gt; getStages()</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d56/BaseEventIntel_8java_source.html#l00618">BaseEventIntel.java:618</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_html_a6f676b54ff256e86b3901f1505972443"><div class="ttname"><a href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a6f676b54ff256e86b3901f1505972443">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.getTextPanelForStageChange</a></div><div class="ttdeci">TextPanelAPI getTextPanelForStageChange()</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d56/BaseEventIntel_8java_source.html#l00755">BaseEventIntel.java:755</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_html_a7023e30da731e1291c4406cbb3ed8946"><div class="ttname"><a href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a7023e30da731e1291c4406cbb3ed8946">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.resetRandomizedStage</a></div><div class="ttdeci">void resetRandomizedStage(EventStageData stage)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d56/BaseEventIntel_8java_source.html#l00926">BaseEventIntel.java:926</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_html_a977ab68ffe55cbd97fc60e6655c9eb8c"><div class="ttname"><a href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a977ab68ffe55cbd97fc60e6655c9eb8c">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.rollRandomizedStage</a></div><div class="ttdeci">void rollRandomizedStage(EventStageData stage)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d56/BaseEventIntel_8java_source.html#l00930">BaseEventIntel.java:930</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_html_af1f5f12f5473a8118b460c337c8a9af4"><div class="ttname"><a href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#af1f5f12f5473a8118b460c337c8a9af4">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.notifyStageReached</a></div><div class="ttdeci">void notifyStageReached(EventStageData stage)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d56/BaseEventIntel_8java_source.html#l00879">BaseEventIntel.java:879</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa588730c330c4e705f7b03c77e3cdd05" name="aa588730c330c4e705f7b03c77e3cdd05"></a>
@@ -3195,11 +2446,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html#l00906">906</a> of file <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html">BaseEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  906</span>                                                                                                                                {</div>
-<div class="line"><span class="lineno">  907</span>        <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#aa588730c330c4e705f7b03c77e3cdd05">setRandomized</a>(stageId, type, resetAt, rollAt, sendUpdateWhenReached, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  908</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_html_aa588730c330c4e705f7b03c77e3cdd05"><div class="ttname"><a href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#aa588730c330c4e705f7b03c77e3cdd05">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.setRandomized</a></div><div class="ttdeci">void setRandomized(Object stageId, RandomizedStageType type, int resetAt, int rollAt, boolean sendUpdateWhenReached)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d56/BaseEventIntel_8java_source.html#l00906">BaseEventIntel.java:906</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a7f4340ad3d19915f91d1e72dfa3c5abe" name="a7f4340ad3d19915f91d1e72dfa3c5abe"></a>
@@ -3253,19 +2500,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html#l00909">909</a> of file <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html">BaseEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  909</span>                                                                                                                                                    {</div>
-<div class="line"><span class="lineno">  910</span>        EventStageData esd = <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#aaea47402cf58486cd60052a0e9297933">getDataFor</a>(stageId);</div>
-<div class="line"><span class="lineno">  911</span>        <span class="keywordflow">if</span> (esd == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  912</span>        esd.sendIntelUpdateOnReaching = sendUpdateWhenReached;</div>
-<div class="line"><span class="lineno">  913</span>        esd.isRepeatable = repeatable;</div>
-<div class="line"><span class="lineno">  914</span>        esd.isOneOffEvent = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  915</span>        esd.randomized = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  916</span>        esd.rollData = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  917</span>        esd.progressToResetAt = resetAt;</div>
-<div class="line"><span class="lineno">  918</span>        esd.progressToRollAt = rollAt;</div>
-<div class="line"><span class="lineno">  919</span>        esd.randomType = type;</div>
-<div class="line"><span class="lineno">  920</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a3bd0010e8aeb302e3666e39c6b374cd6" name="a3bd0010e8aeb302e3666e39c6b374cd6"></a>
@@ -3285,10 +2520,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html#l00698">698</a> of file <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html">BaseEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  698</span>                                                    {</div>
-<div class="line"><span class="lineno">  699</span>        this.sortTier = <a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a7ca9d5da36f4197185a1b69a26941da8">sortTier</a>;</div>
-<div class="line"><span class="lineno">  700</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5feb1ad12705b3d8017339813512f559" name="a5feb1ad12705b3d8017339813512f559"></a>
@@ -3309,10 +2541,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#a07be27cb19fdbfd949faa066559cc0ce">com.fs.starfarer.api.impl.campaign.intel.events.ht.HyperspaceTopographyEventIntel</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html#l00942">942</a> of file <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html">BaseEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  942</span>                                        {</div>
-<div class="line"><span class="lineno">  943</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  944</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a94632b6573d51f006d4cae053ff2d973" name="a94632b6573d51f006d4cae053ff2d973"></a>
@@ -3331,10 +2560,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html#l00945">945</a> of file <a class="el" href="../../d5/d56/BaseEventIntel_8java_source.html">BaseEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  945</span>                                        {</div>
-<div class="line"><span class="lineno">  946</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  947</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

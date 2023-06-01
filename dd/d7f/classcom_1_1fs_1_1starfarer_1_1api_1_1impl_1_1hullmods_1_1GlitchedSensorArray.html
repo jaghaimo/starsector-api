@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -293,20 +294,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a3859215f6c3408946bf590a2ce5c0e74">com.fs.starfarer.api.combat.BaseHullMod</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../de/d4a/GlitchedSensorArray_8java_source.html#l00013">13</a> of file <a class="el" href="../../de/d4a/GlitchedSensorArray_8java_source.html">GlitchedSensorArray.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   13</span>                                                                                                        {</div>
-<div class="line"><span class="lineno">   14</span>        <span class="keywordtype">float</span> effect = stats.getDynamic().getValue(Stats.DMOD_EFFECT_MULT);</div>
-<div class="line"><span class="lineno">   15</span>        <span class="keywordtype">float</span> rangeMult = <a class="code hl_variable" href="../../dd/d7f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1GlitchedSensorArray.html#a3aefda7de53a46ab40e349f3da9534ad">RANGE_MULT</a> + (1f - <a class="code hl_variable" href="../../dd/d7f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1GlitchedSensorArray.html#a3aefda7de53a46ab40e349f3da9534ad">RANGE_MULT</a>) * (1f - effect);</div>
-<div class="line"><span class="lineno">   16</span>        <span class="keywordtype">float</span> sensorMult = <a class="code hl_variable" href="../../dd/d7f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1GlitchedSensorArray.html#ad555dec5adac39d63f56f18d821d104c">SENSOR_MULT</a> + (1f - <a class="code hl_variable" href="../../dd/d7f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1GlitchedSensorArray.html#ad555dec5adac39d63f56f18d821d104c">SENSOR_MULT</a>) * (1f - effect);</div>
-<div class="line"><span class="lineno">   17</span>        </div>
-<div class="line"><span class="lineno">   18</span>        </div>
-<div class="line"><span class="lineno">   19</span>        stats.getBallisticWeaponRangeBonus().modifyMult(<span class="keywordtype">id</span>, rangeMult);</div>
-<div class="line"><span class="lineno">   20</span>        stats.getEnergyWeaponRangeBonus().modifyMult(<span class="keywordtype">id</span>, rangeMult);</div>
-<div class="line"><span class="lineno">   21</span>        stats.getSensorStrength().modifyMult(<span class="keywordtype">id</span>, sensorMult);</div>
-<div class="line"><span class="lineno">   22</span>        CompromisedStructure.modifyCost(hullSize, stats, <span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">   23</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1GlitchedSensorArray_html_a3aefda7de53a46ab40e349f3da9534ad"><div class="ttname"><a href="../../dd/d7f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1GlitchedSensorArray.html#a3aefda7de53a46ab40e349f3da9534ad">com.fs.starfarer.api.impl.hullmods.GlitchedSensorArray.RANGE_MULT</a></div><div class="ttdeci">static final float RANGE_MULT</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d4a/GlitchedSensorArray_8java_source.html#l00010">GlitchedSensorArray.java:10</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1GlitchedSensorArray_html_ad555dec5adac39d63f56f18d821d104c"><div class="ttname"><a href="../../dd/d7f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1GlitchedSensorArray.html#ad555dec5adac39d63f56f18d821d104c">com.fs.starfarer.api.impl.hullmods.GlitchedSensorArray.SENSOR_MULT</a></div><div class="ttdeci">static final float SENSOR_MULT</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d4a/GlitchedSensorArray_8java_source.html#l00011">GlitchedSensorArray.java:11</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a7b243b5c6859bb8c2053470f592ee0f9" name="a7b243b5c6859bb8c2053470f592ee0f9"></a>
@@ -344,19 +332,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a81fc41471bf3bff9e51db9106e2e1bd2">com.fs.starfarer.api.combat.BaseHullMod</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../de/d4a/GlitchedSensorArray_8java_source.html#l00025">25</a> of file <a class="el" href="../../de/d4a/GlitchedSensorArray_8java_source.html">GlitchedSensorArray.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   25</span>                                                                                  {</div>
-<div class="line"><span class="lineno">   26</span>        <span class="keywordtype">float</span> effect = 1f;</div>
-<div class="line"><span class="lineno">   27</span>        <span class="keywordflow">if</span> (ship != <span class="keyword">null</span>) effect = ship.getMutableStats().getDynamic().getValue(Stats.DMOD_EFFECT_MULT);</div>
-<div class="line"><span class="lineno">   28</span>        <span class="keywordtype">float</span> rangeMult = <a class="code hl_variable" href="../../dd/d7f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1GlitchedSensorArray.html#a3aefda7de53a46ab40e349f3da9534ad">RANGE_MULT</a> + (1f - <a class="code hl_variable" href="../../dd/d7f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1GlitchedSensorArray.html#a3aefda7de53a46ab40e349f3da9534ad">RANGE_MULT</a>) * (1f - effect);</div>
-<div class="line"><span class="lineno">   29</span>        <span class="keywordtype">float</span> sensorMult = <a class="code hl_variable" href="../../dd/d7f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1GlitchedSensorArray.html#ad555dec5adac39d63f56f18d821d104c">SENSOR_MULT</a> + (1f - <a class="code hl_variable" href="../../dd/d7f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1GlitchedSensorArray.html#ad555dec5adac39d63f56f18d821d104c">SENSOR_MULT</a>) * (1f - effect);</div>
-<div class="line"><span class="lineno">   30</span>        </div>
-<div class="line"><span class="lineno">   31</span>        <span class="keywordflow">if</span> (index == 0) <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span> + (int) Math.round((1f - rangeMult) * 100f) + <span class="stringliteral">&quot;%&quot;</span>;</div>
-<div class="line"><span class="lineno">   32</span>        <span class="comment">//if (index == 1) return &quot;50%&quot;;</span></div>
-<div class="line"><span class="lineno">   33</span>        <span class="keywordflow">if</span> (index == 1) <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span> + (int) Math.round((1f - sensorMult) * 100f) + <span class="stringliteral">&quot;%&quot;</span>;</div>
-<div class="line"><span class="lineno">   34</span>        <span class="keywordflow">if</span> (index &gt;= 2) <span class="keywordflow">return</span> CompromisedStructure.getCostDescParam(index, 2); </div>
-<div class="line"><span class="lineno">   35</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   36</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

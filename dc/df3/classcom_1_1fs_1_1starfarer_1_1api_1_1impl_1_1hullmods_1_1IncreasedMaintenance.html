@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -295,18 +296,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a3859215f6c3408946bf590a2ce5c0e74">com.fs.starfarer.api.combat.BaseHullMod</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d76/IncreasedMaintenance_8java_source.html#l00015">15</a> of file <a class="el" href="../../d8/d76/IncreasedMaintenance_8java_source.html">IncreasedMaintenance.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   15</span>                                                                                                        {</div>
-<div class="line"><span class="lineno">   16</span>        <span class="keywordtype">float</span> effect = stats.getDynamic().getValue(Stats.DMOD_EFFECT_MULT);</div>
-<div class="line"><span class="lineno">   17</span>        <span class="comment">//stats.getSuppliesPerMonth().modifyMult(id, 1f + (SUPPLY_USE_MULT - 1f) * effect);</span></div>
-<div class="line"><span class="lineno">   18</span>        stats.getSuppliesPerMonth().modifyPercent(<span class="keywordtype">id</span>, Math.round((<a class="code hl_variable" href="../../dc/df3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1IncreasedMaintenance.html#ad6d051e04cd64b772abdc6d86d0bf1be">SUPPLY_USE_MULT</a> - 1f) * effect * 100f));</div>
-<div class="line"><span class="lineno">   19</span>        stats.getMinCrewMod().modifyPercent(<span class="keywordtype">id</span>, <a class="code hl_variable" href="../../dc/df3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1IncreasedMaintenance.html#aba4551361879ecd7321cf3ef6a85b31e">CREW_PERCENT</a> * effect);</div>
-<div class="line"><span class="lineno">   20</span>        stats.getMaxCombatReadiness().modifyFlat(<span class="keywordtype">id</span>, -Math.round(<a class="code hl_variable" href="../../dc/df3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1IncreasedMaintenance.html#ac93c22736ba13d9b81684c58d10f6aa9">MAX_CR_PENALTY</a> * effect * 100f) * 0.01f, <span class="stringliteral">&quot;Increased Maintenance&quot;</span>);</div>
-<div class="line"><span class="lineno">   21</span>        CompromisedStructure.modifyCost(hullSize, stats, <span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">   22</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1IncreasedMaintenance_html_aba4551361879ecd7321cf3ef6a85b31e"><div class="ttname"><a href="../../dc/df3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1IncreasedMaintenance.html#aba4551361879ecd7321cf3ef6a85b31e">com.fs.starfarer.api.impl.hullmods.IncreasedMaintenance.CREW_PERCENT</a></div><div class="ttdeci">static float CREW_PERCENT</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d76/IncreasedMaintenance_8java_source.html#l00011">IncreasedMaintenance.java:11</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1IncreasedMaintenance_html_ac93c22736ba13d9b81684c58d10f6aa9"><div class="ttname"><a href="../../dc/df3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1IncreasedMaintenance.html#ac93c22736ba13d9b81684c58d10f6aa9">com.fs.starfarer.api.impl.hullmods.IncreasedMaintenance.MAX_CR_PENALTY</a></div><div class="ttdeci">static float MAX_CR_PENALTY</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d76/IncreasedMaintenance_8java_source.html#l00013">IncreasedMaintenance.java:13</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1IncreasedMaintenance_html_ad6d051e04cd64b772abdc6d86d0bf1be"><div class="ttname"><a href="../../dc/df3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1IncreasedMaintenance.html#ad6d051e04cd64b772abdc6d86d0bf1be">com.fs.starfarer.api.impl.hullmods.IncreasedMaintenance.SUPPLY_USE_MULT</a></div><div class="ttdeci">static float SUPPLY_USE_MULT</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d76/IncreasedMaintenance_8java_source.html#l00012">IncreasedMaintenance.java:12</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a1c6eae5e6f235fad3861bab980cfdfa5" name="a1c6eae5e6f235fad3861bab980cfdfa5"></a>
@@ -344,16 +334,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a81fc41471bf3bff9e51db9106e2e1bd2">com.fs.starfarer.api.combat.BaseHullMod</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d76/IncreasedMaintenance_8java_source.html#l00024">24</a> of file <a class="el" href="../../d8/d76/IncreasedMaintenance_8java_source.html">IncreasedMaintenance.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   24</span>                                                                                  {</div>
-<div class="line"><span class="lineno">   25</span>        <span class="keywordtype">float</span> effect = 1f;</div>
-<div class="line"><span class="lineno">   26</span>        <span class="keywordflow">if</span> (ship != <span class="keyword">null</span>) effect = ship.getMutableStats().getDynamic().getValue(Stats.DMOD_EFFECT_MULT);</div>
-<div class="line"><span class="lineno">   27</span>        <span class="keywordflow">if</span> (index == 0) <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span> + (int)Math.round((1f + (<a class="code hl_variable" href="../../dc/df3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1IncreasedMaintenance.html#ad6d051e04cd64b772abdc6d86d0bf1be">SUPPLY_USE_MULT</a> - 1f) * effect - 1f) * 100f) + <span class="stringliteral">&quot;%&quot;</span>;</div>
-<div class="line"><span class="lineno">   28</span>        <span class="keywordflow">if</span> (index == 1) <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span> + (int)Math.round(<a class="code hl_variable" href="../../dc/df3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1IncreasedMaintenance.html#aba4551361879ecd7321cf3ef6a85b31e">CREW_PERCENT</a> * effect) + <span class="stringliteral">&quot;%&quot;</span>;</div>
-<div class="line"><span class="lineno">   29</span>        <span class="keywordflow">if</span> (index == 2) <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span> + Math.round(<a class="code hl_variable" href="../../dc/df3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1IncreasedMaintenance.html#ac93c22736ba13d9b81684c58d10f6aa9">MAX_CR_PENALTY</a> * 100f * effect) + <span class="stringliteral">&quot;%&quot;</span>;</div>
-<div class="line"><span class="lineno">   30</span>        <span class="keywordflow">if</span> (index &gt;= 3) <span class="keywordflow">return</span> CompromisedStructure.getCostDescParam(index, 3);</div>
-<div class="line"><span class="lineno">   31</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   32</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

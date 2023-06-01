@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -148,19 +149,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d3a/RadialLattice_8java_source.html#l00057">57</a> of file <a class="el" href="../../d8/d3a/RadialLattice_8java_source.html">RadialLattice.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   57</span>                                                      {</div>
-<div class="line"><span class="lineno">   58</span>        angle = Misc.normalizeAngle(angle);</div>
-<div class="line"><span class="lineno">   59</span>        </div>
-<div class="line"><span class="lineno">   60</span>        <span class="keywordtype">float</span> anglePer = 360f / (<a class="code hl_variable" href="../../d0/d1d/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1RadialLattice.html#adf1a288ecf659cb6146f3291652029e8">numBuckets</a> * 2);</div>
-<div class="line"><span class="lineno">   61</span>        </div>
-<div class="line"><span class="lineno">   62</span>        <span class="keywordtype">int</span> index = (int) (angle / anglePer);</div>
-<div class="line"><span class="lineno">   63</span>        <span class="keywordflow">if</span> (index &gt;= <a class="code hl_variable" href="../../d0/d1d/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1RadialLattice.html#adf1a288ecf659cb6146f3291652029e8">numBuckets</a>) index -= <a class="code hl_variable" href="../../d0/d1d/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1RadialLattice.html#adf1a288ecf659cb6146f3291652029e8">numBuckets</a>;</div>
-<div class="line"><span class="lineno">   64</span>        </div>
-<div class="line"><span class="lineno">   65</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d0/d1d/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1RadialLattice.html#a52107d3b3c62eb77cfb6e6b28289ef63">buckets</a>.get(index);</div>
-<div class="line"><span class="lineno">   66</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1RadialLattice_html_a52107d3b3c62eb77cfb6e6b28289ef63"><div class="ttname"><a href="../../d0/d1d/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1RadialLattice.html#a52107d3b3c62eb77cfb6e6b28289ef63">com.fs.starfarer.api.util.RadialLattice.buckets</a></div><div class="ttdeci">List&lt; RadialLatticeBucket &gt; buckets</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d3a/RadialLattice_8java_source.html#l00030">RadialLattice.java:30</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1RadialLattice_html_adf1a288ecf659cb6146f3291652029e8"><div class="ttname"><a href="../../d0/d1d/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1RadialLattice.html#adf1a288ecf659cb6146f3291652029e8">com.fs.starfarer.api.util.RadialLattice.numBuckets</a></div><div class="ttdeci">int numBuckets</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d3a/RadialLattice_8java_source.html#l00032">RadialLattice.java:32</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a06a98722b69af0cee46ed3c7a8502297" name="a06a98722b69af0cee46ed3c7a8502297"></a>
@@ -179,27 +168,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d3a/RadialLattice_8java_source.html#l00035">35</a> of file <a class="el" href="../../d8/d3a/RadialLattice_8java_source.html">RadialLattice.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   35</span>                         {</div>
-<div class="line"><span class="lineno">   36</span>        </div>
-<div class="line"><span class="lineno">   37</span>        <a class="code hl_variable" href="../../d0/d1d/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1RadialLattice.html#a52107d3b3c62eb77cfb6e6b28289ef63">buckets</a>.clear();</div>
-<div class="line"><span class="lineno">   38</span>        <span class="keywordtype">float</span> anglePer = 360f / (<a class="code hl_variable" href="../../d0/d1d/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1RadialLattice.html#adf1a288ecf659cb6146f3291652029e8">numBuckets</a> * 2);</div>
-<div class="line"><span class="lineno">   39</span>        </div>
-<div class="line"><span class="lineno">   40</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="../../d0/d1d/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1RadialLattice.html#adf1a288ecf659cb6146f3291652029e8">numBuckets</a>; i++) {</div>
-<div class="line"><span class="lineno">   41</span>            RadialLatticeBucket bucket = <span class="keyword">new</span> RadialLatticeBucket(i * anglePer);</div>
-<div class="line"><span class="lineno">   42</span>            <a class="code hl_variable" href="../../d0/d1d/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1RadialLattice.html#a52107d3b3c62eb77cfb6e6b28289ef63">buckets</a>.add(bucket);</div>
-<div class="line"><span class="lineno">   43</span>        }</div>
-<div class="line"><span class="lineno">   44</span>        </div>
-<div class="line"><span class="lineno">   45</span>        </div>
-<div class="line"><span class="lineno">   46</span>        CampaignFleetAPI playerFleet = Global.getSector().getPlayerFleet();</div>
-<div class="line"><span class="lineno">   47</span>        Vector2f origin = playerFleet.getLocation();</div>
-<div class="line"><span class="lineno">   48</span>        </div>
-<div class="line"><span class="lineno">   49</span>        </div>
-<div class="line"><span class="lineno">   50</span>        <span class="keywordflow">for</span> (StarSystemAPI system : Global.getSector().getStarSystems()) {</div>
-<div class="line"><span class="lineno">   51</span>            <span class="keywordtype">float</span> angle = Misc.getAngleInDegrees(origin, system.getLocation());</div>
-<div class="line"><span class="lineno">   52</span>        }</div>
-<div class="line"><span class="lineno">   53</span>        </div>
-<div class="line"><span class="lineno">   54</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

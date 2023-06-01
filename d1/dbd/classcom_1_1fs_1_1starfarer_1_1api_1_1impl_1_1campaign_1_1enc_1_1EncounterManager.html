@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -191,10 +192,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/dc9/EncounterManager_8java_source.html#l00065">65</a> of file <a class="el" href="../../d7/dc9/EncounterManager_8java_source.html">EncounterManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   65</span>                              {</div>
-<div class="line"><span class="lineno">   66</span>        Global.getSector().getListenerManager().addListener(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">   67</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -223,72 +221,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d7/d63/interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html#a3a97090ca8cfdc230e9ad7e633407af6">com.fs.starfarer.api.EveryFrameScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/dc9/EncounterManager_8java_source.html#l00069">69</a> of file <a class="el" href="../../d7/dc9/EncounterManager_8java_source.html">EncounterManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   69</span>                                      {</div>
-<div class="line"><span class="lineno">   70</span>        CampaignFleetAPI pf = Global.getSector().getPlayerFleet();</div>
-<div class="line"><span class="lineno">   71</span>        <span class="keywordflow">if</span> (pf == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   72</span>        <span class="keywordtype">float</span> days = Global.getSector().getClock().convertToDays(amount);</div>
-<div class="line"><span class="lineno">   73</span>        <span class="comment">//days *= 1000f;</span></div>
-<div class="line"><span class="lineno">   74</span>        <a class="code hl_variable" href="../../d1/dbd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1EncounterManager.html#afc467f043b1d8da070aeef519e107d5f">pointTimeout</a>.<a class="code hl_function" href="../../dd/df5/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTracker.html#a841c73d428617df86cca633e7640f439">advance</a>(days);</div>
-<div class="line"><span class="lineno">   75</span>        <a class="code hl_variable" href="../../d1/dbd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1EncounterManager.html#a41314d1992e98ad68252bd851256a001">creatorTimeout</a>.<a class="code hl_function" href="../../dd/df5/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTracker.html#a841c73d428617df86cca633e7640f439">advance</a>(days);</div>
-<div class="line"><span class="lineno">   76</span>        </div>
-<div class="line"><span class="lineno">   77</span>        <a class="code hl_variable" href="../../d1/dbd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1EncounterManager.html#a026b2045cdec6451c331c4a9dc405cbf">interval</a>.<a class="code hl_function" href="../../da/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html#a61881d44415cda2c50c3354c3f0a4d8a">advance</a>(days);</div>
-<div class="line"><span class="lineno">   78</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d1/dbd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1EncounterManager.html#a026b2045cdec6451c331c4a9dc405cbf">interval</a>.intervalElapsed()) {</div>
-<div class="line"><span class="lineno">   79</span>            </div>
-<div class="line"><span class="lineno">   80</span>            LocationAPI where = Global.getSector().getCurrentLocation();</div>
-<div class="line"><span class="lineno">   81</span>            <span class="keywordflow">if</span> (where == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   82</span>            </div>
-<div class="line"><span class="lineno">   83</span>            <span class="keywordtype">float</span> minRange = Global.getSettings().getMaxSensorRange(where);</div>
-<div class="line"><span class="lineno">   84</span>            <span class="keywordtype">float</span> maxRange = minRange + <a class="code hl_variable" href="../../d1/dbd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1EncounterManager.html#afeb5c6c6ca38a7a06576b7c757afa1ee">MAX_EP_DIST_ADD</a>;</div>
-<div class="line"><span class="lineno">   85</span>            </div>
-<div class="line"><span class="lineno">   86</span>            List&lt;EncounterPoint&gt; points = ListenerUtil.generateEncounterPoints(where);</div>
-<div class="line"><span class="lineno">   87</span>            EncounterPoint closest = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   88</span>            <span class="keywordtype">float</span> minDist = Float.MAX_VALUE;</div>
-<div class="line"><span class="lineno">   89</span>            <span class="keywordflow">for</span> (EncounterPoint p : points) {</div>
-<div class="line"><span class="lineno">   90</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d1/dbd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1EncounterManager.html#afc467f043b1d8da070aeef519e107d5f">pointTimeout</a>.<a class="code hl_function" href="../../dd/df5/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTracker.html#ab246103a8a3f46bc7645f1647f32393b">contains</a>(p.id)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   91</span>                <span class="keywordtype">float</span> dist = Misc.getDistance(pf.getLocation(), p.loc);</div>
-<div class="line"><span class="lineno">   92</span>                <span class="keywordflow">if</span> (dist &lt; minRange || dist &gt; maxRange) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   93</span>                <span class="keywordflow">if</span> (dist &lt; minDist) {</div>
-<div class="line"><span class="lineno">   94</span>                    closest = p;</div>
-<div class="line"><span class="lineno">   95</span>                    minDist = dist;</div>
-<div class="line"><span class="lineno">   96</span>                }</div>
-<div class="line"><span class="lineno">   97</span>            }</div>
-<div class="line"><span class="lineno">   98</span>            </div>
-<div class="line"><span class="lineno">   99</span>            <span class="keywordflow">if</span> (closest != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  100</span>                WeightedRandomPicker&lt;EPEncounterCreator&gt; picker = <span class="keyword">new</span> WeightedRandomPicker&lt;EPEncounterCreator&gt;(<a class="code hl_variable" href="../../d1/dbd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1EncounterManager.html#ac10dfcdc43ba52655e37fb5e854374f7">random</a>);</div>
-<div class="line"><span class="lineno">  101</span>                <span class="keywordflow">for</span> (EPEncounterCreator c : <a class="code hl_variable" href="../../d1/dbd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1EncounterManager.html#afeb1e35382c480a4bfaeca72161fe55c">CREATORS</a>) {</div>
-<div class="line"><span class="lineno">  102</span>                    <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d1/dbd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1EncounterManager.html#a41314d1992e98ad68252bd851256a001">creatorTimeout</a>.<a class="code hl_function" href="../../dd/df5/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTracker.html#ab246103a8a3f46bc7645f1647f32393b">contains</a>(c.getId())) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  103</span>                    <span class="keywordtype">float</span> f = c.getFrequencyForPoint(<span class="keyword">this</span>, closest);</div>
-<div class="line"><span class="lineno">  104</span>                    <span class="keywordflow">if</span> (f &gt; 0f) {</div>
-<div class="line"><span class="lineno">  105</span>                        picker.add(c, f);</div>
-<div class="line"><span class="lineno">  106</span>                    }</div>
-<div class="line"><span class="lineno">  107</span>                }</div>
-<div class="line"><span class="lineno">  108</span>                </div>
-<div class="line"><span class="lineno">  109</span>                EPEncounterCreator c = picker.pick();</div>
-<div class="line"><span class="lineno">  110</span>                <span class="keywordflow">if</span> (c != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  111</span>                    c.createEncounter(<span class="keyword">this</span>, closest);</div>
-<div class="line"><span class="lineno">  112</span>                    </div>
-<div class="line"><span class="lineno">  113</span>                    <span class="keywordtype">float</span> ptTO = c.getPointTimeoutMin() + (c.getPointTimeoutMax() - c.getPointTimeoutMin()) * <a class="code hl_variable" href="../../d1/dbd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1EncounterManager.html#ac10dfcdc43ba52655e37fb5e854374f7">random</a>.nextFloat();</div>
-<div class="line"><span class="lineno">  114</span>                    <span class="keywordtype">float</span> cTO = c.getCreatorTimeoutMin() + (c.getCreatorTimeoutMax() - c.getCreatorTimeoutMin()) * <a class="code hl_variable" href="../../d1/dbd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1EncounterManager.html#ac10dfcdc43ba52655e37fb5e854374f7">random</a>.nextFloat();</div>
-<div class="line"><span class="lineno">  115</span>                    <span class="keywordflow">if</span> (ptTO &gt; 0) {</div>
-<div class="line"><span class="lineno">  116</span>                        <a class="code hl_variable" href="../../d1/dbd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1EncounterManager.html#afc467f043b1d8da070aeef519e107d5f">pointTimeout</a>.set(closest.id, ptTO);</div>
-<div class="line"><span class="lineno">  117</span>                    }</div>
-<div class="line"><span class="lineno">  118</span>                    <span class="keywordflow">if</span> (cTO &gt; 0) {</div>
-<div class="line"><span class="lineno">  119</span>                        <a class="code hl_variable" href="../../d1/dbd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1EncounterManager.html#a41314d1992e98ad68252bd851256a001">creatorTimeout</a>.set(c.getId(), cTO);</div>
-<div class="line"><span class="lineno">  120</span>                    }</div>
-<div class="line"><span class="lineno">  121</span>                }</div>
-<div class="line"><span class="lineno">  122</span>            }</div>
-<div class="line"><span class="lineno">  123</span>        }</div>
-<div class="line"><span class="lineno">  124</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1EncounterManager_html_a026b2045cdec6451c331c4a9dc405cbf"><div class="ttname"><a href="../../d1/dbd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1EncounterManager.html#a026b2045cdec6451c331c4a9dc405cbf">com.fs.starfarer.api.impl.campaign.enc.EncounterManager.interval</a></div><div class="ttdeci">IntervalUtil interval</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dc9/EncounterManager_8java_source.html#l00061">EncounterManager.java:61</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1EncounterManager_html_a41314d1992e98ad68252bd851256a001"><div class="ttname"><a href="../../d1/dbd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1EncounterManager.html#a41314d1992e98ad68252bd851256a001">com.fs.starfarer.api.impl.campaign.enc.EncounterManager.creatorTimeout</a></div><div class="ttdeci">TimeoutTracker&lt; String &gt; creatorTimeout</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dc9/EncounterManager_8java_source.html#l00063">EncounterManager.java:63</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1EncounterManager_html_ac10dfcdc43ba52655e37fb5e854374f7"><div class="ttname"><a href="../../d1/dbd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1EncounterManager.html#ac10dfcdc43ba52655e37fb5e854374f7">com.fs.starfarer.api.impl.campaign.enc.EncounterManager.random</a></div><div class="ttdeci">Random random</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dc9/EncounterManager_8java_source.html#l00060">EncounterManager.java:60</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1EncounterManager_html_afc467f043b1d8da070aeef519e107d5f"><div class="ttname"><a href="../../d1/dbd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1EncounterManager.html#afc467f043b1d8da070aeef519e107d5f">com.fs.starfarer.api.impl.campaign.enc.EncounterManager.pointTimeout</a></div><div class="ttdeci">TimeoutTracker&lt; String &gt; pointTimeout</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dc9/EncounterManager_8java_source.html#l00062">EncounterManager.java:62</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1EncounterManager_html_afeb1e35382c480a4bfaeca72161fe55c"><div class="ttname"><a href="../../d1/dbd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1EncounterManager.html#afeb1e35382c480a4bfaeca72161fe55c">com.fs.starfarer.api.impl.campaign.enc.EncounterManager.CREATORS</a></div><div class="ttdeci">static List&lt; EPEncounterCreator &gt; CREATORS</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dc9/EncounterManager_8java_source.html#l00028">EncounterManager.java:28</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1EncounterManager_html_afeb5c6c6ca38a7a06576b7c757afa1ee"><div class="ttname"><a href="../../d1/dbd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1EncounterManager.html#afeb5c6c6ca38a7a06576b7c757afa1ee">com.fs.starfarer.api.impl.campaign.enc.EncounterManager.MAX_EP_DIST_ADD</a></div><div class="ttdeci">static float MAX_EP_DIST_ADD</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dc9/EncounterManager_8java_source.html#l00026">EncounterManager.java:26</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil_html_a61881d44415cda2c50c3354c3f0a4d8a"><div class="ttname"><a href="../../da/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html#a61881d44415cda2c50c3354c3f0a4d8a">com.fs.starfarer.api.util.IntervalUtil.advance</a></div><div class="ttdeci">void advance(float amount)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de3/IntervalUtil_8java_source.html#l00039">IntervalUtil.java:39</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTracker_html_a841c73d428617df86cca633e7640f439"><div class="ttname"><a href="../../dd/df5/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTracker.html#a841c73d428617df86cca633e7640f439">com.fs.starfarer.api.util.TimeoutTracker.advance</a></div><div class="ttdeci">void advance(float amount)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dcf/TimeoutTracker_8java_source.html#l00093">TimeoutTracker.java:93</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTracker_html_ab246103a8a3f46bc7645f1647f32393b"><div class="ttname"><a href="../../dd/df5/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTracker.html#ab246103a8a3f46bc7645f1647f32393b">com.fs.starfarer.api.util.TimeoutTracker.contains</a></div><div class="ttdeci">boolean contains(T item)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dcf/TimeoutTracker_8java_source.html#l00108">TimeoutTracker.java:108</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2077723012ff64ae5d65f80108ec4f01" name="a2077723012ff64ae5d65f80108ec4f01"></a>
@@ -310,39 +243,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d4/d65/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1EncounterPointProvider.html#ac3e272fc13851e8e990bbe4444332fc9">com.fs.starfarer.api.impl.campaign.enc.EncounterPointProvider</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/dc9/EncounterManager_8java_source.html#l00149">149</a> of file <a class="el" href="../../d7/dc9/EncounterManager_8java_source.html">EncounterManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  149</span>                                                                           {</div>
-<div class="line"><span class="lineno">  150</span>        <span class="keywordflow">if</span> (!where.isHyperspace()) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  151</span>        </div>
-<div class="line"><span class="lineno">  152</span>        List&lt;EncounterPoint&gt; result = <span class="keyword">new</span> ArrayList&lt;EncounterPoint&gt;();</div>
-<div class="line"><span class="lineno">  153</span>        CampaignFleetAPI pf = Global.getSector().getPlayerFleet();</div>
-<div class="line"><span class="lineno">  154</span>        <span class="keywordtype">float</span> velAngle = Misc.getAngleInDegrees(pf.getVelocity());</div>
-<div class="line"><span class="lineno">  155</span>        <span class="keywordflow">if</span> (pf.getVelocity().length() &lt; 10f) {</div>
-<div class="line"><span class="lineno">  156</span>            velAngle = pf.getFacing();</div>
-<div class="line"><span class="lineno">  157</span>        }</div>
-<div class="line"><span class="lineno">  158</span>        <span class="keywordflow">for</span> (CampaignTerrainAPI ter : where.getTerrainCopy()) {</div>
-<div class="line"><span class="lineno">  159</span>            <span class="keywordflow">if</span> (ter.getPlugin() instanceof SlipstreamTerrainPlugin2) {</div>
-<div class="line"><span class="lineno">  160</span>                SlipstreamTerrainPlugin2 plugin = (SlipstreamTerrainPlugin2) ter.getPlugin();</div>
-<div class="line"><span class="lineno">  161</span>                List&lt;Vector2f&gt; points = plugin.getEncounterPoints();</div>
-<div class="line"><span class="lineno">  162</span>                <span class="keywordflow">if</span> (points != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  163</span>                    <span class="keywordflow">for</span> (Vector2f p : points) {</div>
-<div class="line"><span class="lineno">  164</span>                        <span class="keywordtype">float</span> dist = Misc.getDistance(pf.getLocation(), p);</div>
-<div class="line"><span class="lineno">  165</span>                        <span class="keywordflow">if</span> (dist &gt; 10000f) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  166</span>                        <span class="keywordflow">if</span> (!Misc.isInsideSlipstream(p, 500f)) {</div>
-<div class="line"><span class="lineno">  167</span>                            <span class="keywordtype">float</span> diff = Misc.getAngleDiff(velAngle, Misc.getAngleInDegrees(pf.getLocation(), p));</div>
-<div class="line"><span class="lineno">  168</span>                            <span class="keywordflow">if</span> (diff &lt; 90f) {</div>
-<div class="line"><span class="lineno">  169</span>                                String <span class="keywordtype">id</span> = ter.getId() + <span class="stringliteral">&quot;_&quot;</span> + (int)Math.round(p.x) + <span class="stringliteral">&quot;_&quot;</span> + (int)Math.round(p.y); </div>
-<div class="line"><span class="lineno">  170</span>                                EncounterPoint ep = <span class="keyword">new</span> EncounterPoint(<span class="keywordtype">id</span>, where, p, <a class="code hl_variable" href="../../d1/dbd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1EncounterManager.html#a56b21ef3157fa747aaff3bc7acd6f60e">EP_TYPE_SLIPSTREAM</a>);</div>
-<div class="line"><span class="lineno">  171</span>                                result.add(ep);</div>
-<div class="line"><span class="lineno">  172</span>                            }</div>
-<div class="line"><span class="lineno">  173</span>                        }</div>
-<div class="line"><span class="lineno">  174</span>                    }</div>
-<div class="line"><span class="lineno">  175</span>                }</div>
-<div class="line"><span class="lineno">  176</span>            }</div>
-<div class="line"><span class="lineno">  177</span>        }</div>
-<div class="line"><span class="lineno">  178</span>        <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">  179</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1EncounterManager_html_a56b21ef3157fa747aaff3bc7acd6f60e"><div class="ttname"><a href="../../d1/dbd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1EncounterManager.html#a56b21ef3157fa747aaff3bc7acd6f60e">com.fs.starfarer.api.impl.campaign.enc.EncounterManager.EP_TYPE_SLIPSTREAM</a></div><div class="ttdeci">static String EP_TYPE_SLIPSTREAM</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dc9/EncounterManager_8java_source.html#l00023">EncounterManager.java:23</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a4cbfb3d17720081f4a3e157a88c19948" name="a4cbfb3d17720081f4a3e157a88c19948"></a>
@@ -361,10 +262,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/dc9/EncounterManager_8java_source.html#l00144">144</a> of file <a class="el" href="../../d7/dc9/EncounterManager_8java_source.html">EncounterManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  144</span>                                                      {</div>
-<div class="line"><span class="lineno">  145</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d1/dbd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1EncounterManager.html#a41314d1992e98ad68252bd851256a001">creatorTimeout</a>;</div>
-<div class="line"><span class="lineno">  146</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae5d7ee84f068776f92ff07ff5753bf72" name="ae5d7ee84f068776f92ff07ff5753bf72"></a>
@@ -391,22 +289,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/dc9/EncounterManager_8java_source.html#l00041">41</a> of file <a class="el" href="../../d7/dc9/EncounterManager_8java_source.html">EncounterManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   41</span>                                                 {</div>
-<div class="line"><span class="lineno">   42</span>        String key = <span class="stringliteral">&quot;$encounterManager&quot;</span>;</div>
-<div class="line"><span class="lineno">   43</span>        <a class="code hl_function" href="../../d1/dbd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1EncounterManager.html#ac38d36a23f1fb6e742ec26dd1e994eea">EncounterManager</a> calc = (<a class="code hl_function" href="../../d1/dbd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1EncounterManager.html#ac38d36a23f1fb6e742ec26dd1e994eea">EncounterManager</a>) Global.getSector().getMemoryWithoutUpdate().get(key);</div>
-<div class="line"><span class="lineno">   44</span>        <span class="keywordflow">if</span> (calc == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   45</span>            <span class="keywordflow">for</span> (EveryFrameScript curr : Global.getSector().getScripts()) {</div>
-<div class="line"><span class="lineno">   46</span>                <span class="keywordflow">if</span> (curr instanceof <a class="code hl_function" href="../../d1/dbd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1EncounterManager.html#ac38d36a23f1fb6e742ec26dd1e994eea">EncounterManager</a>) {</div>
-<div class="line"><span class="lineno">   47</span>                    calc = (<a class="code hl_function" href="../../d1/dbd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1EncounterManager.html#ac38d36a23f1fb6e742ec26dd1e994eea">EncounterManager</a>) curr;</div>
-<div class="line"><span class="lineno">   48</span>                    Global.getSector().getMemoryWithoutUpdate().set(key, calc);</div>
-<div class="line"><span class="lineno">   49</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   50</span>                }</div>
-<div class="line"><span class="lineno">   51</span>            }</div>
-<div class="line"><span class="lineno">   52</span>        }</div>
-<div class="line"><span class="lineno">   53</span>        <span class="keywordflow">return</span> calc;</div>
-<div class="line"><span class="lineno">   54</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1EncounterManager_html_ac38d36a23f1fb6e742ec26dd1e994eea"><div class="ttname"><a href="../../d1/dbd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1EncounterManager.html#ac38d36a23f1fb6e742ec26dd1e994eea">com.fs.starfarer.api.impl.campaign.enc.EncounterManager.EncounterManager</a></div><div class="ttdeci">EncounterManager()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dc9/EncounterManager_8java_source.html#l00065">EncounterManager.java:65</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a769564080a9c295719760a71cff7d855" name="a769564080a9c295719760a71cff7d855"></a>
@@ -425,10 +308,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/dc9/EncounterManager_8java_source.html#l00140">140</a> of file <a class="el" href="../../d7/dc9/EncounterManager_8java_source.html">EncounterManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  140</span>                                                    {</div>
-<div class="line"><span class="lineno">  141</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d1/dbd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1EncounterManager.html#afc467f043b1d8da070aeef519e107d5f">pointTimeout</a>;</div>
-<div class="line"><span class="lineno">  142</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a0b45791d0bcc27cb6b9fadaccd0177ee" name="a0b45791d0bcc27cb6b9fadaccd0177ee"></a>
@@ -447,10 +327,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/dc9/EncounterManager_8java_source.html#l00136">136</a> of file <a class="el" href="../../d7/dc9/EncounterManager_8java_source.html">EncounterManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  136</span>                              {</div>
-<div class="line"><span class="lineno">  137</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d1/dbd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1EncounterManager.html#ac10dfcdc43ba52655e37fb5e854374f7">random</a>;</div>
-<div class="line"><span class="lineno">  138</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a160db35b7c4d2cc52cf7f2968ee14817" name="a160db35b7c4d2cc52cf7f2968ee14817"></a>
@@ -472,10 +349,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d7/d63/interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html#a2b9a206acf99d1cdc1511885d14bb58c">com.fs.starfarer.api.EveryFrameScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/dc9/EncounterManager_8java_source.html#l00128">128</a> of file <a class="el" href="../../d7/dc9/EncounterManager_8java_source.html">EncounterManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  128</span>                            {</div>
-<div class="line"><span class="lineno">  129</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  130</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="adc58e2b7acbdec34593cf84bebaa1671" name="adc58e2b7acbdec34593cf84bebaa1671"></a>
@@ -502,10 +376,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/dc9/EncounterManager_8java_source.html#l00056">56</a> of file <a class="el" href="../../d7/dc9/EncounterManager_8java_source.html">EncounterManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   56</span>                                   {</div>
-<div class="line"><span class="lineno">   57</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">   58</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a397d831d535d3dd605cef2dd118b025b" name="a397d831d535d3dd605cef2dd118b025b"></a>
@@ -527,10 +398,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d7/d63/interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html#a6397d6c1c19a4dd0b58099219c0e0173">com.fs.starfarer.api.EveryFrameScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/dc9/EncounterManager_8java_source.html#l00132">132</a> of file <a class="el" href="../../d7/dc9/EncounterManager_8java_source.html">EncounterManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  132</span>                                    {</div>
-<div class="line"><span class="lineno">  133</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  134</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

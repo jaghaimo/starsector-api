@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -233,68 +234,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseShipSystemScript.html#a4bc8ac2999423cda8da369b8498bd43a">com.fs.starfarer.api.impl.combat.BaseShipSystemScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/df2/TriadShieldStats_8java_source.html#l00082">82</a> of file <a class="el" href="../../df/df2/TriadShieldStats_8java_source.html">TriadShieldStats.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   82</span>                                                                                            {</div>
-<div class="line"><span class="lineno">   83</span>        ShipAPI ship = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   84</span>        <span class="keywordtype">boolean</span> player = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   85</span>        <span class="keywordflow">if</span> (stats.getEntity() instanceof ShipAPI) {</div>
-<div class="line"><span class="lineno">   86</span>            ship = (ShipAPI) stats.getEntity();</div>
-<div class="line"><span class="lineno">   87</span>            player = ship == Global.getCombatEngine().getPlayerShip();</div>
-<div class="line"><span class="lineno">   88</span>            <span class="keywordtype">id</span> = <span class="keywordtype">id</span> + <span class="stringliteral">&quot;_&quot;</span> + ship.getId();</div>
-<div class="line"><span class="lineno">   89</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   90</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   91</span>        }</div>
-<div class="line"><span class="lineno">   92</span>        </div>
-<div class="line"><span class="lineno">   93</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dd/d2d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1TriadShieldStats.html#a33f26b28539a28beceb7fc0f0c125077">visuals</a> == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   94</span>            <a class="code hl_variable" href="../../dd/d2d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1TriadShieldStats.html#a33f26b28539a28beceb7fc0f0c125077">visuals</a> = <span class="keyword">new</span> TriadShieldVisuals(ship, <span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">   95</span>            Global.getCombatEngine().addLayeredRenderingPlugin(<a class="code hl_variable" href="../../dd/d2d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1TriadShieldStats.html#a33f26b28539a28beceb7fc0f0c125077">visuals</a>);</div>
-<div class="line"><span class="lineno">   96</span>            ship.addListener(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">   97</span>        }</div>
-<div class="line"><span class="lineno">   98</span>        </div>
-<div class="line"><span class="lineno">   99</span>        <span class="keywordflow">if</span> (Global.getCombatEngine().isPaused()) {</div>
-<div class="line"><span class="lineno">  100</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  101</span>        }</div>
-<div class="line"><span class="lineno">  102</span>        </div>
-<div class="line"><span class="lineno">  103</span>        <span class="keywordflow">if</span> (state == State.COOLDOWN || state == State.IDLE) {</div>
-<div class="line"><span class="lineno">  104</span>            <a class="code hl_function" href="../../dd/d2d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1TriadShieldStats.html#a8bd2b9ffb1e76d61d7bae400d69a6c85">unapply</a>(stats, <span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  105</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  106</span>        }</div>
-<div class="line"><span class="lineno">  107</span>        </div>
-<div class="line"><span class="lineno">  108</span>        ShipSystemAPI system = ship.getPhaseCloak();</div>
-<div class="line"><span class="lineno">  109</span>        <span class="keywordflow">if</span> (system == <span class="keyword">null</span>) system = ship.getSystem();</div>
-<div class="line"><span class="lineno">  110</span>        </div>
-<div class="line"><span class="lineno">  111</span>        </div>
-<div class="line"><span class="lineno">  112</span>        </div>
-<div class="line"><span class="lineno">  113</span>        <span class="keywordtype">float</span> jitterLevel = effectLevel;</div>
-<div class="line"><span class="lineno">  114</span>        <span class="keywordflow">if</span> (state == State.OUT) {</div>
-<div class="line"><span class="lineno">  115</span>            jitterLevel *= jitterLevel;</div>
-<div class="line"><span class="lineno">  116</span>        }</div>
-<div class="line"><span class="lineno">  117</span>        <span class="keywordtype">float</span> jitterRangeBonus = jitterLevel * 0f;</div>
-<div class="line"><span class="lineno">  118</span>        <span class="keywordflow">if</span> (state == State.IN || state == State.ACTIVE) {</div>
-<div class="line"><span class="lineno">  119</span>            </div>
-<div class="line"><span class="lineno">  120</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (state == State.OUT) {</div>
-<div class="line"><span class="lineno">  121</span> </div>
-<div class="line"><span class="lineno">  122</span>        }</div>
-<div class="line"><span class="lineno">  123</span>        </div>
-<div class="line"><span class="lineno">  124</span>        <span class="keywordtype">float</span> minJitter = 4;</div>
-<div class="line"><span class="lineno">  125</span>        <a class="code hl_variable" href="../../dd/d2d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1TriadShieldStats.html#a95c323e496e486872b8c9c1b89b0e04e">JITTER_COLOR</a> = <span class="keyword">new</span> Color(100,100,255,75);</div>
-<div class="line"><span class="lineno">  126</span>        <a class="code hl_variable" href="../../dd/d2d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1TriadShieldStats.html#a9bce93fffaabb93ef7f8ee965230e1ea">JITTER_UNDER_COLOR</a> = <span class="keyword">new</span> Color(100,100,255,155);</div>
-<div class="line"><span class="lineno">  127</span>        </div>
-<div class="line"><span class="lineno">  128</span>        <span class="comment">//JITTER_COLOR = new Color(100,50,255,125);</span></div>
-<div class="line"><span class="lineno">  129</span><span class="comment">//      JITTER_UNDER_COLOR = new Color(100,100,255,100);</span></div>
-<div class="line"><span class="lineno">  130</span><span class="comment">//      JITTER_UNDER_COLOR = new Color(50,50,125,100);</span></div>
-<div class="line"><span class="lineno">  131</span><span class="comment">//      JITTER_COLOR = new Color(100,255,50,125);</span></div>
-<div class="line"><span class="lineno">  132</span><span class="comment">//      JITTER_UNDER_COLOR = new Color(255,100,100,100);</span></div>
-<div class="line"><span class="lineno">  133</span>        <span class="keywordflow">if</span> (jitterLevel &gt; 0) {</div>
-<div class="line"><span class="lineno">  134</span>            ship.setCircularJitter(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  135</span>            ship.setJitter(<span class="keyword">this</span>, <a class="code hl_variable" href="../../dd/d2d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1TriadShieldStats.html#a95c323e496e486872b8c9c1b89b0e04e">JITTER_COLOR</a>, jitterLevel, 1, 0f, 7f + jitterRangeBonus);</div>
-<div class="line"><span class="lineno">  136</span>            ship.setJitterUnder(<span class="keyword">this</span>, <a class="code hl_variable" href="../../dd/d2d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1TriadShieldStats.html#a9bce93fffaabb93ef7f8ee965230e1ea">JITTER_UNDER_COLOR</a>, jitterLevel, 11, minJitter, minJitter + jitterRangeBonus);</div>
-<div class="line"><span class="lineno">  137</span>        }</div>
-<div class="line"><span class="lineno">  138</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1TriadShieldStats_html_a33f26b28539a28beceb7fc0f0c125077"><div class="ttname"><a href="../../dd/d2d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1TriadShieldStats.html#a33f26b28539a28beceb7fc0f0c125077">com.fs.starfarer.api.impl.combat.TriadShieldStats.visuals</a></div><div class="ttdeci">TriadShieldVisuals visuals</div><div class="ttdef"><b>Definition:</b> <a href="../../df/df2/TriadShieldStats_8java_source.html#l00076">TriadShieldStats.java:76</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1TriadShieldStats_html_a8bd2b9ffb1e76d61d7bae400d69a6c85"><div class="ttname"><a href="../../dd/d2d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1TriadShieldStats.html#a8bd2b9ffb1e76d61d7bae400d69a6c85">com.fs.starfarer.api.impl.combat.TriadShieldStats.unapply</a></div><div class="ttdeci">void unapply(MutableShipStatsAPI stats, String id)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/df2/TriadShieldStats_8java_source.html#l00141">TriadShieldStats.java:141</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1TriadShieldStats_html_a95c323e496e486872b8c9c1b89b0e04e"><div class="ttname"><a href="../../dd/d2d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1TriadShieldStats.html#a95c323e496e486872b8c9c1b89b0e04e">com.fs.starfarer.api.impl.combat.TriadShieldStats.JITTER_COLOR</a></div><div class="ttdeci">static Color JITTER_COLOR</div><div class="ttdef"><b>Definition:</b> <a href="../../df/df2/TriadShieldStats_8java_source.html#l00021">TriadShieldStats.java:21</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1TriadShieldStats_html_a9bce93fffaabb93ef7f8ee965230e1ea"><div class="ttname"><a href="../../dd/d2d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1TriadShieldStats.html#a9bce93fffaabb93ef7f8ee965230e1ea">com.fs.starfarer.api.impl.combat.TriadShieldStats.JITTER_UNDER_COLOR</a></div><div class="ttdeci">static Color JITTER_UNDER_COLOR</div><div class="ttdef"><b>Definition:</b> <a href="../../df/df2/TriadShieldStats_8java_source.html#l00022">TriadShieldStats.java:22</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a631ddbf46393303bcab9c01f6a0c2f7e" name="a631ddbf46393303bcab9c01f6a0c2f7e"></a>
@@ -332,10 +272,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseShipSystemScript.html#ab328cae8df05d23ccc045f4e32f5f9f0">com.fs.starfarer.api.impl.combat.BaseShipSystemScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/df2/TriadShieldStats_8java_source.html#l00155">155</a> of file <a class="el" href="../../df/df2/TriadShieldStats_8java_source.html">TriadShieldStats.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  155</span>                                                                               {</div>
-<div class="line"><span class="lineno">  156</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  157</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a1496c28d4be2c49a4654e51eb3feb37d" name="a1496c28d4be2c49a4654e51eb3feb37d"></a>
@@ -388,10 +325,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../db/df0/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1listeners_1_1DamageTakenModifier.html#aeae65f8558602e2562cc9c451b6c9914">com.fs.starfarer.api.combat.listeners.DamageTakenModifier</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/df2/TriadShieldStats_8java_source.html#l00078">78</a> of file <a class="el" href="../../df/df2/TriadShieldStats_8java_source.html">TriadShieldStats.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   78</span>                                                                                                                               {</div>
-<div class="line"><span class="lineno">   79</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   80</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8bd2b9ffb1e76d61d7bae400d69a6c85" name="a8bd2b9ffb1e76d61d7bae400d69a6c85"></a>
@@ -423,20 +357,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseShipSystemScript.html#a020712b9bb37e9ece4fbfd4c865c4037">com.fs.starfarer.api.impl.combat.BaseShipSystemScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/df2/TriadShieldStats_8java_source.html#l00141">141</a> of file <a class="el" href="../../df/df2/TriadShieldStats_8java_source.html">TriadShieldStats.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  141</span>                                                              {</div>
-<div class="line"><span class="lineno">  142</span>        ShipAPI ship = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  143</span>        <span class="keywordtype">boolean</span> player = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  144</span>        <span class="keywordflow">if</span> (stats.getEntity() instanceof ShipAPI) {</div>
-<div class="line"><span class="lineno">  145</span>            ship = (ShipAPI) stats.getEntity();</div>
-<div class="line"><span class="lineno">  146</span>            player = ship == Global.getCombatEngine().getPlayerShip();</div>
-<div class="line"><span class="lineno">  147</span>            <span class="keywordtype">id</span> = <span class="keywordtype">id</span> + <span class="stringliteral">&quot;_&quot;</span> + ship.getId();</div>
-<div class="line"><span class="lineno">  148</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  149</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  150</span>        }</div>
-<div class="line"><span class="lineno">  151</span>        </div>
-<div class="line"><span class="lineno">  152</span>        </div>
-<div class="line"><span class="lineno">  153</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

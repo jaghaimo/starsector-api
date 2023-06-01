@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -492,32 +493,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a12adf882423877632cedb6d50fbbe2f4">com.fs.starfarer.api.impl.campaign.abilities.BaseToggleAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/d5e/TransponderAbility_8java_source.html#l00045">45</a> of file <a class="el" href="../../df/d5e/TransponderAbility_8java_source.html">TransponderAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   45</span>                                  {</div>
-<div class="line"><span class="lineno">   46</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a9d2408f6489b56d90a93b2a21ea0f340">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a297539315e815b0edc7a70c09c4d4652">isPlayerFleet</a>()) {</div>
-<div class="line"><span class="lineno">   47</span>            List&lt;FactionAPI&gt; factions = <a class="code hl_function" href="../../d0/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#a6bdd3e693c3a1e9f5bbfe087d8cc5cd5">getFactionsThatWouldBecomeHostile</a>();</div>
-<div class="line"><span class="lineno">   48</span>            <span class="keywordflow">if</span> (!factions.isEmpty()) {</div>
-<div class="line"><span class="lineno">   49</span>                Global.getSector().getCampaignUI().addMessage(<span class="stringliteral">&quot;Your identity is revealed and linked to your recent hostile actions!&quot;</span>);</div>
-<div class="line"><span class="lineno">   50</span>                <span class="keywordflow">for</span> (FactionAPI faction : factions) {</div>
-<div class="line"><span class="lineno">   51</span>                    Global.getSector().adjustPlayerReputation(RepActions.COMBAT_NORMAL, faction.getId());</div>
-<div class="line"><span class="lineno">   52</span>                }</div>
-<div class="line"><span class="lineno">   53</span>            }</div>
-<div class="line"><span class="lineno">   54</span>        }</div>
-<div class="line"><span class="lineno">   55</span>        </div>
-<div class="line"><span class="lineno">   56</span>        <a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a9d2408f6489b56d90a93b2a21ea0f340">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#af8a3308d790e4e35e41f644e9f778f45">setTransponderOn</a>(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   57</span>        <a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a9d2408f6489b56d90a93b2a21ea0f340">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#adcd558c1d95f9755066ddaf9a77311c1">getMemoryWithoutUpdate</a>().<a class="code hl_function" href="../../d0/de7/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html#aacefa8e06571ecfc9a37897cbb61d2cf">set</a>(MemFlags.JUST_TOGGLED_TRANSPONDER, <span class="keyword">true</span>, 0.1f);</div>
-<div class="line"><span class="lineno">   58</span>        </div>
-<div class="line"><span class="lineno">   59</span><span class="comment">//      AbilityPlugin goDark = entity.getAbility(Abilities.GO_DARK);</span></div>
-<div class="line"><span class="lineno">   60</span><span class="comment">//      if (goDark != null &amp;&amp; goDark.isActive()) {</span></div>
-<div class="line"><span class="lineno">   61</span><span class="comment">//          goDark.deactivate();</span></div>
-<div class="line"><span class="lineno">   62</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">   63</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin_html_a9d2408f6489b56d90a93b2a21ea0f340"><div class="ttname"><a href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a9d2408f6489b56d90a93b2a21ea0f340">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin.entity</a></div><div class="ttdeci">SectorEntityToken entity</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00024">BaseAbilityPlugin.java:24</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility_html_a6bdd3e693c3a1e9f5bbfe087d8cc5cd5"><div class="ttname"><a href="../../d0/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#a6bdd3e693c3a1e9f5bbfe087d8cc5cd5">com.fs.starfarer.api.impl.campaign.abilities.TransponderAbility.getFactionsThatWouldBecomeHostile</a></div><div class="ttdeci">List&lt; FactionAPI &gt; getFactionsThatWouldBecomeHostile()</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d5e/TransponderAbility_8java_source.html#l00187">TransponderAbility.java:187</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_a297539315e815b0edc7a70c09c4d4652"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a297539315e815b0edc7a70c09c4d4652">com.fs.starfarer.api.campaign.SectorEntityToken.isPlayerFleet</a></div><div class="ttdeci">boolean isPlayerFleet()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_adcd558c1d95f9755066ddaf9a77311c1"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#adcd558c1d95f9755066ddaf9a77311c1">com.fs.starfarer.api.campaign.SectorEntityToken.getMemoryWithoutUpdate</a></div><div class="ttdeci">MemoryAPI getMemoryWithoutUpdate()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_af8a3308d790e4e35e41f644e9f778f45"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#af8a3308d790e4e35e41f644e9f778f45">com.fs.starfarer.api.campaign.SectorEntityToken.setTransponderOn</a></div><div class="ttdeci">void setTransponderOn(boolean transponderOn)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI_html_aacefa8e06571ecfc9a37897cbb61d2cf"><div class="ttname"><a href="../../d0/de7/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html#aacefa8e06571ecfc9a37897cbb61d2cf">com.fs.starfarer.api.campaign.rules.MemoryAPI.set</a></div><div class="ttdeci">void set(String key, Object value)</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5406b6bb4c0fe50fcca0b949ae08ad46" name="a5406b6bb4c0fe50fcca0b949ae08ad46"></a>
@@ -545,24 +521,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#aa9b81f5e0282a31da0a801b7d85c680e">com.fs.starfarer.api.impl.campaign.abilities.BaseToggleAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/d5e/TransponderAbility_8java_source.html#l00226">226</a> of file <a class="el" href="../../df/d5e/TransponderAbility_8java_source.html">TransponderAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  226</span>                                      {</div>
-<div class="line"><span class="lineno">  227</span>        <span class="keywordflow">if</span> (!Global.getSector().isPaused()) {</div>
-<div class="line"><span class="lineno">  228</span>            super.advance(amount);</div>
-<div class="line"><span class="lineno">  229</span>        }</div>
-<div class="line"><span class="lineno">  230</span>        </div>
-<div class="line"><span class="lineno">  231</span>        CampaignFleetAPI fleet = <a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#abdc51d7defc6b6bf60924a01ec361d2d">getFleet</a>();</div>
-<div class="line"><span class="lineno">  232</span>        <span class="keywordflow">if</span> (fleet == <span class="keyword">null</span> || !fleet.isPlayerFleet()) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  233</span>        sinceWarning += amount;</div>
-<div class="line"><span class="lineno">  234</span>        </div>
-<div class="line"><span class="lineno">  235</span>        List&lt;FactionAPI&gt; factions = <a class="code hl_function" href="../../d0/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#a6bdd3e693c3a1e9f5bbfe087d8cc5cd5">getFactionsThatWouldBecomeHostile</a>();</div>
-<div class="line"><span class="lineno">  236</span>        <span class="keywordflow">if</span> (factions.isEmpty()) {</div>
-<div class="line"><span class="lineno">  237</span>            showAlarm = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  238</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  239</span>            showAlarm = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  240</span>        }</div>
-<div class="line"><span class="lineno">  241</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin_html_abdc51d7defc6b6bf60924a01ec361d2d"><div class="ttname"><a href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#abdc51d7defc6b6bf60924a01ec361d2d">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin.getFleet</a></div><div class="ttdeci">CampaignFleetAPI getFleet()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00144">BaseAbilityPlugin.java:144</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac1a569cb37fe3dc73e371f3b759f2673" name="ac1a569cb37fe3dc73e371f3b759f2673"></a>
@@ -608,24 +567,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a2324a0cbf8a7db75371a93495b16f520">com.fs.starfarer.api.impl.campaign.abilities.BaseToggleAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/d5e/TransponderAbility_8java_source.html#l00066">66</a> of file <a class="el" href="../../df/d5e/TransponderAbility_8java_source.html">TransponderAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   66</span>                                                          {</div>
-<div class="line"><span class="lineno">   67</span>        CampaignFleetAPI fleet = <a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#abdc51d7defc6b6bf60924a01ec361d2d">getFleet</a>();</div>
-<div class="line"><span class="lineno">   68</span>        <span class="keywordflow">if</span> (fleet == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   69</span>        </div>
-<div class="line"><span class="lineno">   70</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#aac08e4b110b4b9c2b9d00dd035158553">level</a> &gt; 0) <a class="code hl_variable" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#aac08e4b110b4b9c2b9d00dd035158553">level</a> = 1;</div>
-<div class="line"><span class="lineno">   71</span>        fleet.getStats().getDetectedRangeMod().modifyMult(<a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a2e9e39ccbd5d39ae13b255974fef719c">getModId</a>(), 1f + (<a class="code hl_variable" href="../../d0/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#a38fbde3ca5e32917af286f905bd03a79">DETECTABILITY_MULT</a> - 1f) * <a class="code hl_variable" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#aac08e4b110b4b9c2b9d00dd035158553">level</a>, <span class="stringliteral">&quot;Transponder on&quot;</span>);</div>
-<div class="line"><span class="lineno">   72</span>        fleet.getStats().getDetectedRangeMod().modifyFlat(<a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a2e9e39ccbd5d39ae13b255974fef719c">getModId</a>(), <a class="code hl_variable" href="../../d0/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#a400afb657b11bcdc74ce5ab9770e403c">DETECTABILITY_FLAT</a> * <a class="code hl_variable" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#aac08e4b110b4b9c2b9d00dd035158553">level</a>, <span class="stringliteral">&quot;Transponder on&quot;</span>);</div>
-<div class="line"><span class="lineno">   73</span>        </div>
-<div class="line"><span class="lineno">   74</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#aac08e4b110b4b9c2b9d00dd035158553">level</a> &lt;= 0) {</div>
-<div class="line"><span class="lineno">   75</span>            <a class="code hl_function" href="../../d0/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#a351f5cec7eff1cd2cb1f45d164f64b18">cleanupImpl</a>();</div>
-<div class="line"><span class="lineno">   76</span>        }</div>
-<div class="line"><span class="lineno">   77</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin_html_a2e9e39ccbd5d39ae13b255974fef719c"><div class="ttname"><a href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a2e9e39ccbd5d39ae13b255974fef719c">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin.getModId</a></div><div class="ttdeci">String getModId()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00140">BaseAbilityPlugin.java:140</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility_html_aac08e4b110b4b9c2b9d00dd035158553"><div class="ttname"><a href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#aac08e4b110b4b9c2b9d00dd035158553">com.fs.starfarer.api.impl.campaign.abilities.BaseToggleAbility.level</a></div><div class="ttdeci">float level</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dc5/BaseToggleAbility_8java_source.html#l00049">BaseToggleAbility.java:49</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility_html_a351f5cec7eff1cd2cb1f45d164f64b18"><div class="ttname"><a href="../../d0/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#a351f5cec7eff1cd2cb1f45d164f64b18">com.fs.starfarer.api.impl.campaign.abilities.TransponderAbility.cleanupImpl</a></div><div class="ttdeci">void cleanupImpl()</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d5e/TransponderAbility_8java_source.html#l00110">TransponderAbility.java:110</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility_html_a38fbde3ca5e32917af286f905bd03a79"><div class="ttname"><a href="../../d0/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#a38fbde3ca5e32917af286f905bd03a79">com.fs.starfarer.api.impl.campaign.abilities.TransponderAbility.DETECTABILITY_MULT</a></div><div class="ttdeci">static final float DETECTABILITY_MULT</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d5e/TransponderAbility_8java_source.html#l00020">TransponderAbility.java:20</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility_html_a400afb657b11bcdc74ce5ab9770e403c"><div class="ttname"><a href="../../d0/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#a400afb657b11bcdc74ce5ab9770e403c">com.fs.starfarer.api.impl.campaign.abilities.TransponderAbility.DETECTABILITY_FLAT</a></div><div class="ttdeci">static final float DETECTABILITY_FLAT</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d5e/TransponderAbility_8java_source.html#l00021">TransponderAbility.java:21</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a351f5cec7eff1cd2cb1f45d164f64b18" name="a351f5cec7eff1cd2cb1f45d164f64b18"></a>
@@ -654,13 +596,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#afd746bf8322ded78a2365c6f9301bb49">com.fs.starfarer.api.impl.campaign.abilities.BaseToggleAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/d5e/TransponderAbility_8java_source.html#l00110">110</a> of file <a class="el" href="../../df/d5e/TransponderAbility_8java_source.html">TransponderAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  110</span>                                 {</div>
-<div class="line"><span class="lineno">  111</span>        CampaignFleetAPI fleet = <a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#abdc51d7defc6b6bf60924a01ec361d2d">getFleet</a>();</div>
-<div class="line"><span class="lineno">  112</span>        <span class="keywordflow">if</span> (fleet == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  113</span>        </div>
-<div class="line"><span class="lineno">  114</span>        fleet.getStats().getDetectedRangeMod().unmodify(<a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a2e9e39ccbd5d39ae13b255974fef719c">getModId</a>());</div>
-<div class="line"><span class="lineno">  115</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a1139d06aa5586652ca44225a555c898d" name="a1139d06aa5586652ca44225a555c898d"></a>
@@ -699,57 +635,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a524c99aa9c5d81332f100b0bf6e8c699">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/d5e/TransponderAbility_8java_source.html#l00118">118</a> of file <a class="el" href="../../df/d5e/TransponderAbility_8java_source.html">TransponderAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  118</span>                                                                         {</div>
-<div class="line"><span class="lineno">  119</span>        Color gray = Misc.getGrayColor();</div>
-<div class="line"><span class="lineno">  120</span>        Color highlight = Misc.getHighlightColor();</div>
-<div class="line"><span class="lineno">  121</span>        Color red = Misc.getNegativeHighlightColor();</div>
-<div class="line"><span class="lineno">  122</span>        </div>
-<div class="line"><span class="lineno">  123</span>        String status = <span class="stringliteral">&quot; (off)&quot;</span>;</div>
-<div class="line"><span class="lineno">  124</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a9d2408f6489b56d90a93b2a21ea0f340">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#af3dc3601bdcdbcf6f8c28034f2c1125c">isTransponderOn</a>()) {</div>
-<div class="line"><span class="lineno">  125</span>            status = <span class="stringliteral">&quot; (on)&quot;</span>;</div>
-<div class="line"><span class="lineno">  126</span>        }</div>
-<div class="line"><span class="lineno">  127</span>        </div>
-<div class="line"><span class="lineno">  128</span>        LabelAPI title = tooltip.addTitle(<a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a15549d8a5c8c5b5c0bffda444f5098ea">spec</a>.<a class="code hl_function" href="../../d4/df9/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1AbilitySpecAPI.html#a8cc28775697361fae5481df4bb39cf69">getName</a>() + status);</div>
-<div class="line"><span class="lineno">  129</span>        title.highlightLast(status);</div>
-<div class="line"><span class="lineno">  130</span>        title.setHighlightColor(gray);</div>
-<div class="line"><span class="lineno">  131</span> </div>
-<div class="line"><span class="lineno">  132</span>        <span class="keywordtype">float</span> pad = 10f;</div>
-<div class="line"><span class="lineno">  133</span>        tooltip.addPara(<span class="stringliteral">&quot;Transponders transmit identifying information to all fleets within range.&quot;</span>, pad);</div>
-<div class="line"><span class="lineno">  134</span>        </div>
-<div class="line"><span class="lineno">  135</span>        List&lt;FactionAPI&gt; factions = <a class="code hl_function" href="../../d0/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#a6bdd3e693c3a1e9f5bbfe087d8cc5cd5">getFactionsThatWouldBecomeHostile</a>();</div>
-<div class="line"><span class="lineno">  136</span>        <span class="keywordflow">if</span> (!factions.isEmpty()) {</div>
-<div class="line"><span class="lineno">  137</span>            String text = <span class="stringliteral">&quot;Turning the transponder on now would reveal your hostile actions to&quot;</span>;</div>
-<div class="line"><span class="lineno">  138</span>            <span class="keywordtype">boolean</span> first = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  139</span>            <span class="keywordtype">boolean</span> last = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  140</span>            <span class="keywordflow">for</span> (FactionAPI faction : factions) {</div>
-<div class="line"><span class="lineno">  141</span>                last = factions.indexOf(faction) == factions.size() - 1;</div>
-<div class="line"><span class="lineno">  142</span>                <span class="keywordflow">if</span> (first || !last) {</div>
-<div class="line"><span class="lineno">  143</span>                    text += <span class="stringliteral">&quot; &quot;</span> + faction.getDisplayNameWithArticle() + <span class="stringliteral">&quot;,&quot;</span>;</div>
-<div class="line"><span class="lineno">  144</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  145</span>                    text += <span class="stringliteral">&quot; and &quot;</span> + faction.getDisplayNameWithArticle() + <span class="stringliteral">&quot;,&quot;</span>;</div>
-<div class="line"><span class="lineno">  146</span>                }</div>
-<div class="line"><span class="lineno">  147</span>            }</div>
-<div class="line"><span class="lineno">  148</span>            text = text.substring(0, text.length() - 1) + <span class="stringliteral">&quot;.&quot;</span>;</div>
-<div class="line"><span class="lineno">  149</span>            tooltip.addPara(text, red, pad);</div>
-<div class="line"><span class="lineno">  150</span>        }</div>
-<div class="line"><span class="lineno">  151</span>        </div>
-<div class="line"><span class="lineno">  152</span>        tooltip.addPara(<span class="stringliteral">&quot;When the transponder is on, your fleet can be detected at longer range and &quot;</span> +</div>
-<div class="line"><span class="lineno">  153</span>                <span class="stringliteral">&quot;full information on its composition is available at maximum range.&quot;</span>, pad);</div>
-<div class="line"><span class="lineno">  154</span>        tooltip.addPara(<span class="stringliteral">&quot;Transponder status also affects the reputation changes from combat and trade. &quot;</span> +</div>
-<div class="line"><span class="lineno">  155</span>                <span class="stringliteral">&quot;With it turned off, you might be able to trade with otherwise inhospitable factions.&quot;</span>, pad);</div>
-<div class="line"><span class="lineno">  156</span>        tooltip.addPara(<span class="stringliteral">&quot;In most places, running with the transponder off will attract the attention of nearby patrols, &quot;</span> +</div>
-<div class="line"><span class="lineno">  157</span>                <span class="stringliteral">&quot;although several factions and certain free ports allow it. &quot;</span> +</div>
-<div class="line"><span class="lineno">  158</span>                <span class="stringliteral">&quot;Having the transponder off does not grant perfect anonymity.&quot;</span>, pad);</div>
-<div class="line"><span class="lineno">  159</span>        </div>
-<div class="line"><span class="lineno">  160</span>        </div>
-<div class="line"><span class="lineno">  161</span>        <span class="comment">//tooltip.addPara(&quot;Disables \&quot;Go Dark\&quot; when activated.&quot;, pad);</span></div>
-<div class="line"><span class="lineno">  162</span>        <a class="code hl_function" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a3e8ae9f4c6f68275ae9a1762df54e158">addIncompatibleToTooltip</a>(tooltip, expanded);</div>
-<div class="line"><span class="lineno">  163</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin_html_a15549d8a5c8c5b5c0bffda444f5098ea"><div class="ttname"><a href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a15549d8a5c8c5b5c0bffda444f5098ea">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin.spec</a></div><div class="ttdeci">transient AbilitySpecAPI spec</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00029">BaseAbilityPlugin.java:29</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility_html_a3e8ae9f4c6f68275ae9a1762df54e158"><div class="ttname"><a href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a3e8ae9f4c6f68275ae9a1762df54e158">com.fs.starfarer.api.impl.campaign.abilities.BaseToggleAbility.addIncompatibleToTooltip</a></div><div class="ttdeci">void addIncompatibleToTooltip(TooltipMakerAPI tooltip, boolean expanded)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dc5/BaseToggleAbility_8java_source.html#l00107">BaseToggleAbility.java:107</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_af3dc3601bdcdbcf6f8c28034f2c1125c"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#af3dc3601bdcdbcf6f8c28034f2c1125c">com.fs.starfarer.api.campaign.SectorEntityToken.isTransponderOn</a></div><div class="ttdeci">boolean isTransponderOn()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1AbilitySpecAPI_html_a8cc28775697361fae5481df4bb39cf69"><div class="ttname"><a href="../../d4/df9/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1AbilitySpecAPI.html#a8cc28775697361fae5481df4bb39cf69">com.fs.starfarer.api.loading.AbilitySpecAPI.getName</a></div><div class="ttdeci">String getName()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae9f306799059457470ce756052efbf2b" name="ae9f306799059457470ce756052efbf2b"></a>
@@ -772,14 +658,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a86af14d884d633297c911dadd52924c8">com.fs.starfarer.api.impl.campaign.abilities.BaseToggleAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/d5e/TransponderAbility_8java_source.html#l00081">81</a> of file <a class="el" href="../../df/d5e/TransponderAbility_8java_source.html">TransponderAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   81</span>                             {</div>
-<div class="line"><span class="lineno">   82</span>        super.deactivate();</div>
-<div class="line"><span class="lineno">   83</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a9d2408f6489b56d90a93b2a21ea0f340">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#af3dc3601bdcdbcf6f8c28034f2c1125c">isTransponderOn</a>()) {</div>
-<div class="line"><span class="lineno">   84</span>            <a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a9d2408f6489b56d90a93b2a21ea0f340">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#af8a3308d790e4e35e41f644e9f778f45">setTransponderOn</a>(<span class="keyword">false</span>); <span class="comment">// failsafe in case deactivation failed to actually deactivate transponder</span></div>
-<div class="line"><span class="lineno">   85</span>            <a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a9d2408f6489b56d90a93b2a21ea0f340">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#adcd558c1d95f9755066ddaf9a77311c1">getMemoryWithoutUpdate</a>().<a class="code hl_function" href="../../d0/de7/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html#aacefa8e06571ecfc9a37897cbb61d2cf">set</a>(MemFlags.JUST_TOGGLED_TRANSPONDER, <span class="keyword">true</span>, 0.1f);</div>
-<div class="line"><span class="lineno">   86</span>        }</div>
-<div class="line"><span class="lineno">   87</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aae655588f132f25c912f2f130878c96b" name="aae655588f132f25c912f2f130878c96b"></a>
@@ -808,12 +687,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#af75816a5c3940f89f16bc77c8a8eaf8d">com.fs.starfarer.api.impl.campaign.abilities.BaseToggleAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/d5e/TransponderAbility_8java_source.html#l00092">92</a> of file <a class="el" href="../../df/d5e/TransponderAbility_8java_source.html">TransponderAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   92</span>                                    {</div>
-<div class="line"><span class="lineno">   93</span>        <a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a9d2408f6489b56d90a93b2a21ea0f340">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#af8a3308d790e4e35e41f644e9f778f45">setTransponderOn</a>(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   94</span>        <a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a9d2408f6489b56d90a93b2a21ea0f340">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#adcd558c1d95f9755066ddaf9a77311c1">getMemoryWithoutUpdate</a>().<a class="code hl_function" href="../../d0/de7/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html#aacefa8e06571ecfc9a37897cbb61d2cf">set</a>(MemFlags.JUST_TOGGLED_TRANSPONDER, <span class="keyword">true</span>, 0.1f);</div>
-<div class="line"><span class="lineno">   95</span>        <span class="comment">//cleanupImpl();</span></div>
-<div class="line"><span class="lineno">   96</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a4d51aefeb93acc49b3eb79d55c46d140" name="a4d51aefeb93acc49b3eb79d55c46d140"></a>
@@ -840,13 +714,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/d5e/TransponderAbility_8java_source.html#l00332">332</a> of file <a class="el" href="../../df/d5e/TransponderAbility_8java_source.html">TransponderAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  332</span>                                            {</div>
-<div class="line"><span class="lineno">  333</span>        <span class="keywordflow">if</span> (showAlarm) {</div>
-<div class="line"><span class="lineno">  334</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;Activating the transponder will reveal your identity - use again to confirm&quot;</span>;</div>
-<div class="line"><span class="lineno">  335</span>        }</div>
-<div class="line"><span class="lineno">  336</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Transponder primed - use again to activate&quot;</span>;</div>
-<div class="line"><span class="lineno">  337</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a520f93734aadc0faf475a74799f9e739" name="a520f93734aadc0faf475a74799f9e739"></a>
@@ -875,10 +743,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a3be04ce2cf4b54d260d06d126bca0d7a">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/d5e/TransponderAbility_8java_source.html#l00029">29</a> of file <a class="el" href="../../df/d5e/TransponderAbility_8java_source.html">TransponderAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   29</span>                                         {</div>
-<div class="line"><span class="lineno">   30</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Transponder on&quot;</span>;</div>
-<div class="line"><span class="lineno">   31</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a75525e6dfb5c2c6dde531b04aacbfd09" name="a75525e6dfb5c2c6dde531b04aacbfd09"></a>
@@ -899,28 +764,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a2b7beaafff07fa48cea7e315d15012b1">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/d5e/TransponderAbility_8java_source.html#l00356">356</a> of file <a class="el" href="../../df/d5e/TransponderAbility_8java_source.html">TransponderAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  356</span>                                    {</div>
-<div class="line"><span class="lineno">  357</span>        <span class="keywordflow">if</span> (sinceWarning &lt; <a class="code hl_variable" href="../../d0/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#a86cc34270a1996f8b3b08924dc8c40b1">CONFIRM_DURATION</a>) {</div>
-<div class="line"><span class="lineno">  358</span>            Color color = Misc.getNegativeHighlightColor();</div>
-<div class="line"><span class="lineno">  359</span>            <span class="comment">//Color color = Color.red;</span></div>
-<div class="line"><span class="lineno">  360</span>            <span class="keywordflow">if</span> (!showAlarm) {</div>
-<div class="line"><span class="lineno">  361</span>                color = Misc.getHighlightColor();</div>
-<div class="line"><span class="lineno">  362</span>                <span class="comment">//color = Color.yellow;</span></div>
-<div class="line"><span class="lineno">  363</span>            }</div>
-<div class="line"><span class="lineno">  364</span>            <span class="keywordtype">float</span> b = 1f;</div>
-<div class="line"><span class="lineno">  365</span>            <span class="keywordtype">float</span> t = 0.25f;</div>
-<div class="line"><span class="lineno">  366</span>            <span class="keywordflow">if</span> (sinceWarning &lt; t) {</div>
-<div class="line"><span class="lineno">  367</span>                b = sinceWarning / t;</div>
-<div class="line"><span class="lineno">  368</span>            }</div>
-<div class="line"><span class="lineno">  369</span>            <span class="keywordflow">if</span> (sinceWarning &gt; <a class="code hl_variable" href="../../d0/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#a86cc34270a1996f8b3b08924dc8c40b1">CONFIRM_DURATION</a> - t) {</div>
-<div class="line"><span class="lineno">  370</span>                b = 1f - (sinceWarning - (<a class="code hl_variable" href="../../d0/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#a86cc34270a1996f8b3b08924dc8c40b1">CONFIRM_DURATION</a> - t)) / t;</div>
-<div class="line"><span class="lineno">  371</span>            }</div>
-<div class="line"><span class="lineno">  372</span>            <span class="keywordflow">return</span> Misc.scaleAlpha(color, Global.getSector().getCampaignUI().getSharedFader().getBrightness() * 0.75f * b);</div>
-<div class="line"><span class="lineno">  373</span>        }</div>
-<div class="line"><span class="lineno">  374</span>        <span class="keywordflow">return</span> super.getCooldownColor();</div>
-<div class="line"><span class="lineno">  375</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility_html_a86cc34270a1996f8b3b08924dc8c40b1"><div class="ttname"><a href="../../d0/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#a86cc34270a1996f8b3b08924dc8c40b1">com.fs.starfarer.api.impl.campaign.abilities.TransponderAbility.CONFIRM_DURATION</a></div><div class="ttdeci">static final float CONFIRM_DURATION</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d5e/TransponderAbility_8java_source.html#l00267">TransponderAbility.java:267</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a0a19a71c69bcfc49b4474a9d7cf6323b" name="a0a19a71c69bcfc49b4474a9d7cf6323b"></a>
@@ -942,13 +786,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#aa4e0d4b04f25dd1404cf1162620e4e64">com.fs.starfarer.api.impl.campaign.abilities.BaseToggleAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/d5e/TransponderAbility_8java_source.html#l00341">341</a> of file <a class="el" href="../../df/d5e/TransponderAbility_8java_source.html">TransponderAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  341</span>                                       {</div>
-<div class="line"><span class="lineno">  342</span>        <span class="keywordflow">if</span> (sinceWarning &lt; <a class="code hl_variable" href="../../d0/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#a86cc34270a1996f8b3b08924dc8c40b1">CONFIRM_DURATION</a>) {</div>
-<div class="line"><span class="lineno">  343</span>            <span class="keywordflow">return</span> 0f;</div>
-<div class="line"><span class="lineno">  344</span>        }</div>
-<div class="line"><span class="lineno">  345</span>        <span class="keywordflow">return</span> super.getCooldownFraction();</div>
-<div class="line"><span class="lineno">  346</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac521e9c965d2d7215c3aa3e296b70c53" name="ac521e9c965d2d7215c3aa3e296b70c53"></a>
@@ -975,10 +813,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/d5e/TransponderAbility_8java_source.html#l00329">329</a> of file <a class="el" href="../../df/d5e/TransponderAbility_8java_source.html">TransponderAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  329</span>                                              {</div>
-<div class="line"><span class="lineno">  330</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Transponder shutdown initiated - use again to deactivate&quot;</span>;</div>
-<div class="line"><span class="lineno">  331</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a13937e32e9d5e96f764cf8ea55afbdbd" name="a13937e32e9d5e96f764cf8ea55afbdbd"></a>
@@ -1007,13 +842,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a1f2ac4740a59ea1dc8fdf983f2227139">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/d5e/TransponderAbility_8java_source.html#l00036">36</a> of file <a class="el" href="../../df/d5e/TransponderAbility_8java_source.html">TransponderAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   36</span>                                           {</div>
-<div class="line"><span class="lineno">   37</span>        <span class="comment">//return &quot;Transponder off&quot;;</span></div>
-<div class="line"><span class="lineno">   38</span>        <span class="comment">// currently, doesn&#39;t work well - if something like &quot;go dark&quot; cancels transponder,</span></div>
-<div class="line"><span class="lineno">   39</span>        <span class="comment">// then you get multiple overlapping messages, &quot;Going dark&quot; + &quot;Transponder off&quot;</span></div>
-<div class="line"><span class="lineno">   40</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   41</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a97e5b013905f96047e9d358a4e389619" name="a97e5b013905f96047e9d358a4e389619"></a>
@@ -1033,22 +862,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/d5e/TransponderAbility_8java_source.html#l00165">165</a> of file <a class="el" href="../../df/d5e/TransponderAbility_8java_source.html">TransponderAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  165</span>                                                            {</div>
-<div class="line"><span class="lineno">  166</span>        String text = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">  167</span>        <span class="keywordtype">boolean</span> first = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  168</span>        <span class="keywordtype">boolean</span> last = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  169</span>        <span class="keywordflow">for</span> (FactionAPI faction : factions) {</div>
-<div class="line"><span class="lineno">  170</span>            last = factions.indexOf(faction) == factions.size() - 1;</div>
-<div class="line"><span class="lineno">  171</span>            <span class="keywordflow">if</span> (first || !last) {</div>
-<div class="line"><span class="lineno">  172</span>                text += <span class="stringliteral">&quot; &quot;</span> + faction.getDisplayNameLongWithArticle() + <span class="stringliteral">&quot;,&quot;</span>;</div>
-<div class="line"><span class="lineno">  173</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  174</span>                text += <span class="stringliteral">&quot; and &quot;</span> + faction.getDisplayNameLongWithArticle() + <span class="stringliteral">&quot;,&quot;</span>;</div>
-<div class="line"><span class="lineno">  175</span>            }</div>
-<div class="line"><span class="lineno">  176</span>        }</div>
-<div class="line"><span class="lineno">  177</span>        text = text.substring(0, text.length() - 1) + <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">  178</span>        <span class="keywordflow">return</span> text.trim();</div>
-<div class="line"><span class="lineno">  179</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a6bdd3e693c3a1e9f5bbfe087d8cc5cd5" name="a6bdd3e693c3a1e9f5bbfe087d8cc5cd5"></a>
@@ -1067,10 +881,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/d5e/TransponderAbility_8java_source.html#l00187">187</a> of file <a class="el" href="../../df/d5e/TransponderAbility_8java_source.html">TransponderAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  187</span>                                                                {</div>
-<div class="line"><span class="lineno">  188</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../d0/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#a6bdd3e693c3a1e9f5bbfe087d8cc5cd5">getFactionsThatWouldBecomeHostile</a>(<a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#abdc51d7defc6b6bf60924a01ec361d2d">getFleet</a>());</div>
-<div class="line"><span class="lineno">  189</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5f459acbe3240d4738c026f0939b7fb6" name="a5f459acbe3240d4738c026f0939b7fb6"></a>
@@ -1098,40 +909,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/d5e/TransponderAbility_8java_source.html#l00190">190</a> of file <a class="el" href="../../df/d5e/TransponderAbility_8java_source.html">TransponderAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  190</span>                                                                                             {</div>
-<div class="line"><span class="lineno">  191</span>        List&lt;FactionAPI&gt; result = <span class="keyword">new</span> ArrayList&lt;FactionAPI&gt;();</div>
-<div class="line"><span class="lineno">  192</span>        <span class="comment">//CampaignFleetAPI fleet = getFleet();</span></div>
-<div class="line"><span class="lineno">  193</span>        <span class="keywordflow">if</span> (fleet == <span class="keyword">null</span>) <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">  194</span>        <span class="keywordflow">if</span> (fleet.getContainingLocation() == <span class="keyword">null</span>) <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">  195</span>        <span class="keywordflow">if</span> (fleet.isTransponderOn()) <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">  196</span>        </div>
-<div class="line"><span class="lineno">  197</span>        List&lt;CampaignFleetAPI&gt; fleets = fleet.getContainingLocation().getFleets();</div>
-<div class="line"><span class="lineno">  198</span>        <span class="keywordflow">for</span> (CampaignFleetAPI other : fleets) {</div>
-<div class="line"><span class="lineno">  199</span>            <span class="keywordflow">if</span> (other.getFleetData().getNumMembers() &lt;= 0) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  200</span>            </div>
-<div class="line"><span class="lineno">  201</span><span class="comment">//          VisibilityLevel level = fleet.getVisibilityLevelTo(other);</span></div>
-<div class="line"><span class="lineno">  202</span><span class="comment">//          if (level == VisibilityLevel.NONE) continue;</span></div>
-<div class="line"><span class="lineno">  203</span> </div>
-<div class="line"><span class="lineno">  204</span>            <span class="keywordtype">float</span> dist = Misc.getDistance(fleet.getLocation(), other.getLocation());</div>
-<div class="line"><span class="lineno">  205</span>            fleet.setTransponderOn(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  206</span>            <span class="keywordtype">float</span> detectRange = (other.getMaxSensorRangeToDetect(fleet) + <a class="code hl_variable" href="../../d0/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#a400afb657b11bcdc74ce5ab9770e403c">DETECTABILITY_FLAT</a>) * <a class="code hl_variable" href="../../d0/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#a38fbde3ca5e32917af286f905bd03a79">DETECTABILITY_MULT</a> * 1.25f;</div>
-<div class="line"><span class="lineno">  207</span>            fleet.setTransponderOn(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  208</span>            </div>
-<div class="line"><span class="lineno">  209</span>            <span class="keywordflow">if</span> (dist &gt; detectRange) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  210</span>            </div>
-<div class="line"><span class="lineno">  211</span>            MemoryAPI mem = other.getMemoryWithoutUpdate();</div>
-<div class="line"><span class="lineno">  212</span>            </div>
-<div class="line"><span class="lineno">  213</span>            <span class="keywordflow">if</span> (mem.getBoolean(MemFlags.MEMORY_KEY_LOW_REP_IMPACT)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  214</span>            </div>
-<div class="line"><span class="lineno">  215</span>            <span class="keywordflow">if</span> (!result.contains(other.getFaction()) &amp;&amp; </div>
-<div class="line"><span class="lineno">  216</span>                    mem.getBoolean(MemFlags.MEMORY_KEY_MAKE_HOSTILE_WHILE_TOFF) &amp;&amp;</div>
-<div class="line"><span class="lineno">  217</span>                    !other.getFaction().isHostileTo(fleet.getFaction())) {</div>
-<div class="line"><span class="lineno">  218</span>                result.add(other.getFaction());</div>
-<div class="line"><span class="lineno">  219</span>            }</div>
-<div class="line"><span class="lineno">  220</span>        }</div>
-<div class="line"><span class="lineno">  221</span>        <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">  222</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="adb95dd34b9027fbfd0fc2794d7d80afd" name="adb95dd34b9027fbfd0fc2794d7d80afd"></a>
@@ -1152,11 +930,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a5bf283dfaedaeb49d108017beeb03e8a">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/d5e/TransponderAbility_8java_source.html#l00261">261</a> of file <a class="el" href="../../df/d5e/TransponderAbility_8java_source.html">TransponderAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  261</span>                                    {</div>
-<div class="line"><span class="lineno">  262</span>        Color color = Misc.getNegativeHighlightColor();</div>
-<div class="line"><span class="lineno">  263</span>        <span class="keywordflow">return</span> Misc.scaleAlpha(color, Global.getSector().getCampaignUI().getSharedFader().getBrightness());</div>
-<div class="line"><span class="lineno">  264</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a95b736d1772c5e3a8fd7dcfbb76e6936" name="a95b736d1772c5e3a8fd7dcfbb76e6936"></a>
@@ -1178,10 +952,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a2ce592aecdfd219c19d7424a40946d6a">com.fs.starfarer.api.impl.campaign.abilities.BaseToggleAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/d5e/TransponderAbility_8java_source.html#l00255">255</a> of file <a class="el" href="../../df/d5e/TransponderAbility_8java_source.html">TransponderAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  255</span>                                       {</div>
-<div class="line"><span class="lineno">  256</span>        <span class="keywordflow">return</span> 1f;</div>
-<div class="line"><span class="lineno">  257</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8b8bc166a28f358ce3f990b22aa3c63f" name="a8b8bc166a28f358ce3f990b22aa3c63f"></a>
@@ -1202,10 +973,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a35207ab01150d1c1521fa7ebf0ef4a75">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/d5e/TransponderAbility_8java_source.html#l00182">182</a> of file <a class="el" href="../../df/d5e/TransponderAbility_8java_source.html">TransponderAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  182</span>                                {</div>
-<div class="line"><span class="lineno">  183</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  184</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2eeed6992e241543363dced512ad091e" name="a2eeed6992e241543363dced512ad091e"></a>
@@ -1226,10 +994,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#ad6e3605521c9a92989384500fd02ef3b">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/d5e/TransponderAbility_8java_source.html#l00379">379</a> of file <a class="el" href="../../df/d5e/TransponderAbility_8java_source.html">TransponderAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  379</span>                                                 {</div>
-<div class="line"><span class="lineno">  380</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  381</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8de11140e699fbb298d64827707983e1" name="a8de11140e699fbb298d64827707983e1"></a>
@@ -1250,10 +1015,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a735b1d3fa7cefe6db074838fc9ab19ea">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/d5e/TransponderAbility_8java_source.html#l00350">350</a> of file <a class="el" href="../../df/d5e/TransponderAbility_8java_source.html">TransponderAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  350</span>                                  {</div>
-<div class="line"><span class="lineno">  351</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  352</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa9f4865b51b3dd7fafaa2e2586a48ae2" name="aa9f4865b51b3dd7fafaa2e2586a48ae2"></a>
@@ -1275,59 +1037,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a9b3c71fcb3b733099b79393aada2ea7f">com.fs.starfarer.api.impl.campaign.abilities.BaseToggleAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/d5e/TransponderAbility_8java_source.html#l00280">280</a> of file <a class="el" href="../../df/d5e/TransponderAbility_8java_source.html">TransponderAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  280</span>                              {</div>
-<div class="line"><span class="lineno">  281</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#abdc51d7defc6b6bf60924a01ec361d2d">getFleet</a>().isPlayerFleet()) {</div>
-<div class="line"><span class="lineno">  282</span>            <span class="keywordflow">if</span> (sinceWarning &lt; <a class="code hl_variable" href="../../d0/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#a86cc34270a1996f8b3b08924dc8c40b1">CONFIRM_DURATION</a>) {</div>
-<div class="line"><span class="lineno">  283</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a9d2408f6489b56d90a93b2a21ea0f340">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a297539315e815b0edc7a70c09c4d4652">isPlayerFleet</a>()) {</div>
-<div class="line"><span class="lineno">  284</span>                    List&lt;FactionAPI&gt; factions = <a class="code hl_function" href="../../d0/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#a6bdd3e693c3a1e9f5bbfe087d8cc5cd5">getFactionsThatWouldBecomeHostile</a>();</div>
-<div class="line"><span class="lineno">  285</span>                    <span class="keywordflow">if</span> (!factions.isEmpty()) {</div>
-<div class="line"><span class="lineno">  286</span>                        String list = <a class="code hl_function" href="../../d0/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#a97e5b013905f96047e9d358a4e389619">getFactionList</a>(factions);</div>
-<div class="line"><span class="lineno">  287</span>                        String text = <span class="stringliteral">&quot;Turning the transponder on will reveal your identity and make &quot;</span> + list + <span class="stringliteral">&quot; hostile.\n\n&quot;</span> +</div>
-<div class="line"><span class="lineno">  288</span>                                <span class="stringliteral">&quot;Are you sure you want to do this?&quot;</span>;</div>
-<div class="line"><span class="lineno">  289</span>                        Global.getSector().getCampaignUI().showConfirmDialog(text, <span class="stringliteral">&quot;Confirm&quot;</span>, <span class="stringliteral">&quot;Cancel&quot;</span>, </div>
-<div class="line"><span class="lineno">  290</span>                                <span class="keyword">new</span> Script() {</div>
-<div class="line"><span class="lineno">  291</span>                                    <span class="keyword">public</span> <span class="keywordtype">void</span> run() {</div>
-<div class="line"><span class="lineno">  292</span>                                        TransponderAbility.super.pressButton();</div>
-<div class="line"><span class="lineno">  293</span>                                        Global.getSector().getCampaignUI().getMessageDisplay().removeMessage(<a class="code hl_function" href="../../d0/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#ac521e9c965d2d7215c3aa3e296b70c53">getDeactivationMessage</a>());</div>
-<div class="line"><span class="lineno">  294</span>                                        Global.getSector().getCampaignUI().getMessageDisplay().removeMessage(<a class="code hl_function" href="../../d0/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#a4d51aefeb93acc49b3eb79d55c46d140">getActivationMessage</a>());</div>
-<div class="line"><span class="lineno">  295</span>                                        sinceWarning = 1000f;</div>
-<div class="line"><span class="lineno">  296</span>                                    }</div>
-<div class="line"><span class="lineno">  297</span>                                }, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  298</span>                    } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  299</span>                        super.pressButton();</div>
-<div class="line"><span class="lineno">  300</span>                        Global.getSector().getCampaignUI().getMessageDisplay().removeMessage(<a class="code hl_function" href="../../d0/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#ac521e9c965d2d7215c3aa3e296b70c53">getDeactivationMessage</a>());</div>
-<div class="line"><span class="lineno">  301</span>                        Global.getSector().getCampaignUI().getMessageDisplay().removeMessage(<a class="code hl_function" href="../../d0/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#a4d51aefeb93acc49b3eb79d55c46d140">getActivationMessage</a>());</div>
-<div class="line"><span class="lineno">  302</span>                        sinceWarning = 1000f;</div>
-<div class="line"><span class="lineno">  303</span>                    }</div>
-<div class="line"><span class="lineno">  304</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  305</span>                    super.pressButton();</div>
-<div class="line"><span class="lineno">  306</span>                    Global.getSector().getCampaignUI().getMessageDisplay().removeMessage(<a class="code hl_function" href="../../d0/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#ac521e9c965d2d7215c3aa3e296b70c53">getDeactivationMessage</a>());</div>
-<div class="line"><span class="lineno">  307</span>                    Global.getSector().getCampaignUI().getMessageDisplay().removeMessage(<a class="code hl_function" href="../../d0/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#a4d51aefeb93acc49b3eb79d55c46d140">getActivationMessage</a>());</div>
-<div class="line"><span class="lineno">  308</span>                    sinceWarning = 1000f;</div>
-<div class="line"><span class="lineno">  309</span>                }</div>
-<div class="line"><span class="lineno">  310</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  311</span>                sinceWarning = 0f;</div>
-<div class="line"><span class="lineno">  312</span>                <span class="keywordflow">if</span> (<a class="code hl_function" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#af91d6e2ffa81c95835cfd099c0b7c579">isActive</a>()) {</div>
-<div class="line"><span class="lineno">  313</span>                    <span class="comment">//Global.getSector().getCampaignUI().getMessageDisplay().addMessage(&quot;Use again to confirm transponder deactivation&quot;);</span></div>
-<div class="line"><span class="lineno">  314</span>                    Global.getSector().getCampaignUI().getMessageDisplay().addMessage(<a class="code hl_function" href="../../d0/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#ac521e9c965d2d7215c3aa3e296b70c53">getDeactivationMessage</a>());</div>
-<div class="line"><span class="lineno">  315</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  316</span>                    <span class="comment">//Global.getSector().getCampaignUI().getMessageDisplay().addMessage(&quot;Use again to confirm transponder activation&quot;);</span></div>
-<div class="line"><span class="lineno">  317</span>                    <span class="keywordflow">if</span> (showAlarm) {</div>
-<div class="line"><span class="lineno">  318</span>                        Global.getSector().getCampaignUI().getMessageDisplay().addMessage(<a class="code hl_function" href="../../d0/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#a4d51aefeb93acc49b3eb79d55c46d140">getActivationMessage</a>(), Misc.getNegativeHighlightColor());</div>
-<div class="line"><span class="lineno">  319</span>                    } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  320</span>                        Global.getSector().getCampaignUI().getMessageDisplay().addMessage(<a class="code hl_function" href="../../d0/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#a4d51aefeb93acc49b3eb79d55c46d140">getActivationMessage</a>());</div>
-<div class="line"><span class="lineno">  321</span>                    }</div>
-<div class="line"><span class="lineno">  322</span>                }</div>
-<div class="line"><span class="lineno">  323</span>            }</div>
-<div class="line"><span class="lineno">  324</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  325</span>            super.pressButton();</div>
-<div class="line"><span class="lineno">  326</span>        }</div>
-<div class="line"><span class="lineno">  327</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility_html_af91d6e2ffa81c95835cfd099c0b7c579"><div class="ttname"><a href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#af91d6e2ffa81c95835cfd099c0b7c579">com.fs.starfarer.api.impl.campaign.abilities.BaseToggleAbility.isActive</a></div><div class="ttdeci">boolean isActive()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dc5/BaseToggleAbility_8java_source.html#l00242">BaseToggleAbility.java:242</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility_html_a4d51aefeb93acc49b3eb79d55c46d140"><div class="ttname"><a href="../../d0/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#a4d51aefeb93acc49b3eb79d55c46d140">com.fs.starfarer.api.impl.campaign.abilities.TransponderAbility.getActivationMessage</a></div><div class="ttdeci">String getActivationMessage()</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d5e/TransponderAbility_8java_source.html#l00332">TransponderAbility.java:332</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility_html_a97e5b013905f96047e9d358a4e389619"><div class="ttname"><a href="../../d0/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#a97e5b013905f96047e9d358a4e389619">com.fs.starfarer.api.impl.campaign.abilities.TransponderAbility.getFactionList</a></div><div class="ttdeci">String getFactionList(List&lt; FactionAPI &gt; factions)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d5e/TransponderAbility_8java_source.html#l00165">TransponderAbility.java:165</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility_html_ac521e9c965d2d7215c3aa3e296b70c53"><div class="ttname"><a href="../../d0/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#ac521e9c965d2d7215c3aa3e296b70c53">com.fs.starfarer.api.impl.campaign.abilities.TransponderAbility.getDeactivationMessage</a></div><div class="ttdeci">String getDeactivationMessage()</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d5e/TransponderAbility_8java_source.html#l00329">TransponderAbility.java:329</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="abca8886764e08477a2a185128faf7cab" name="abca8886764e08477a2a185128faf7cab"></a>
@@ -1356,12 +1066,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#afa28056d36f8724843b68554522cc186">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/d5e/TransponderAbility_8java_source.html#l00271">271</a> of file <a class="el" href="../../df/d5e/TransponderAbility_8java_source.html">TransponderAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  271</span>                                   {</div>
-<div class="line"><span class="lineno">  272</span>        super.readResolve();</div>
-<div class="line"><span class="lineno">  273</span>        sinceWarning = 1000f;</div>
-<div class="line"><span class="lineno">  274</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">  275</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a3e78fb350363a1cb6415bcce38fb42cc" name="a3e78fb350363a1cb6415bcce38fb42cc"></a>
@@ -1383,11 +1088,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a0cc2a432f934a4a2d755e8283c5653d0">com.fs.starfarer.api.impl.campaign.abilities.BaseToggleAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/d5e/TransponderAbility_8java_source.html#l00244">244</a> of file <a class="el" href="../../df/d5e/TransponderAbility_8java_source.html">TransponderAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  244</span>                                    {</div>
-<div class="line"><span class="lineno">  245</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#abdc51d7defc6b6bf60924a01ec361d2d">getFleet</a>() != <span class="keyword">null</span> &amp;&amp; <a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#abdc51d7defc6b6bf60924a01ec361d2d">getFleet</a>().<a class="code hl_function" href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#aca63b88ff3c36215530149f16259d5c1">isPlayerFleet</a>();</div>
-<div class="line"><span class="lineno">  246</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI_html_aca63b88ff3c36215530149f16259d5c1"><div class="ttname"><a href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#aca63b88ff3c36215530149f16259d5c1">com.fs.starfarer.api.campaign.CampaignFleetAPI.isPlayerFleet</a></div><div class="ttdeci">boolean isPlayerFleet()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a4cfa6023b8355cabf30de6d5ca69f6f9" name="a4cfa6023b8355cabf30de6d5ca69f6f9"></a>
@@ -1408,10 +1109,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a9452c3fb21490f2df87b01217bc0ebb9">com.fs.starfarer.api.impl.campaign.abilities.BaseToggleAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/d5e/TransponderAbility_8java_source.html#l00250">250</a> of file <a class="el" href="../../df/d5e/TransponderAbility_8java_source.html">TransponderAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  250</span>                                           {</div>
-<div class="line"><span class="lineno">  251</span>        <span class="keywordflow">return</span> showAlarm;</div>
-<div class="line"><span class="lineno">  252</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

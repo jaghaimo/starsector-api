@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -228,35 +229,7 @@ Static Public Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseShipSystemScript.html#a4bc8ac2999423cda8da369b8498bd43a">com.fs.starfarer.api.impl.combat.BaseShipSystemScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d9b/CryofluxTransducerStats_8java_source.html#l00027">27</a> of file <a class="el" href="../../d0/d9b/CryofluxTransducerStats_8java_source.html">CryofluxTransducerStats.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   27</span>                                                                                                  {</div>
-<div class="line"><span class="lineno">   28</span>        ShipAPI ship = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   29</span>        <span class="keywordflow">if</span> (stats.getEntity() instanceof ShipAPI) {</div>
-<div class="line"><span class="lineno">   30</span>            ship = (ShipAPI) stats.getEntity();</div>
-<div class="line"><span class="lineno">   31</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   32</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   33</span>        }</div>
-<div class="line"><span class="lineno">   34</span>    </div>
-<div class="line"><span class="lineno">   35</span>        ship.fadeToColor(<a class="code hl_variable" href="../../d1/d11/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryofluxTransducerStats.html#ad845612f2cca77e9eaef3368632dc9ee">KEY_SHIP</a>, <span class="keyword">new</span> Color(75,75,75,255), 0.1f, 0.1f, effectLevel);</div>
-<div class="line"><span class="lineno">   36</span>        <span class="comment">//ship.fadeToColor(KEY_SHIP, new Color(100,100,100,255), 0.1f, 0.1f, effectLevel);</span></div>
-<div class="line"><span class="lineno">   37</span>        ship.setWeaponGlow(effectLevel, <span class="keyword">new</span> Color(100,165,255,255), EnumSet.of(WeaponType.BALLISTIC, WeaponType.ENERGY, WeaponType.MISSILE));</div>
-<div class="line"><span class="lineno">   38</span>        ship.getEngineController().fadeToOtherColor(<a class="code hl_variable" href="../../d1/d11/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryofluxTransducerStats.html#ad845612f2cca77e9eaef3368632dc9ee">KEY_SHIP</a>, <span class="keyword">new</span> Color(0,0,0,0), <span class="keyword">new</span> Color(0,0,0,0), effectLevel, 0.75f * effectLevel);</div>
-<div class="line"><span class="lineno">   39</span>        <span class="comment">//ship.setJitter(KEY_SHIP, new Color(100,165,255,55), effectLevel, 1, 0f, 5f);</span></div>
-<div class="line"><span class="lineno">   40</span>        ship.setJitterUnder(<a class="code hl_variable" href="../../d1/d11/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryofluxTransducerStats.html#ad845612f2cca77e9eaef3368632dc9ee">KEY_SHIP</a>, <span class="keyword">new</span> Color(100,165,255,255), effectLevel, 15, 0f, 15f);</div>
-<div class="line"><span class="lineno">   41</span>        <span class="comment">//ship.setShowModuleJitterUnder(true);</span></div>
-<div class="line"><span class="lineno">   42</span>        </div>
-<div class="line"><span class="lineno">   43</span>        effectLevel = 1f;</div>
-<div class="line"><span class="lineno">   44</span>        stats.getBallisticWeaponFluxCostMod().modifyMult(<span class="keywordtype">id</span>, 1f - (1f - <a class="code hl_variable" href="../../d1/d11/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryofluxTransducerStats.html#a08991a2fb74dc3c777e601f190d13d1a">FLUX_USE_MULT</a>) * effectLevel);</div>
-<div class="line"><span class="lineno">   45</span>        stats.getEnergyWeaponFluxCostMod().modifyMult(<span class="keywordtype">id</span>, 1f - (1f - <a class="code hl_variable" href="../../d1/d11/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryofluxTransducerStats.html#a08991a2fb74dc3c777e601f190d13d1a">FLUX_USE_MULT</a>) * effectLevel);</div>
-<div class="line"><span class="lineno">   46</span>        stats.getMissileWeaponFluxCostMod().modifyMult(<span class="keywordtype">id</span>, 1f - (1f - <a class="code hl_variable" href="../../d1/d11/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryofluxTransducerStats.html#a08991a2fb74dc3c777e601f190d13d1a">FLUX_USE_MULT</a>) * effectLevel);</div>
-<div class="line"><span class="lineno">   47</span>        </div>
-<div class="line"><span class="lineno">   48</span>        stats.getHullDamageTakenMult().modifyMult(<span class="keywordtype">id</span>, 1f - (1f - <a class="code hl_variable" href="../../d1/d11/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryofluxTransducerStats.html#a1bf39f99d8c7299d593639cdeb4580f5">INCOMING_DAMAGE_MULT</a>) * effectLevel);</div>
-<div class="line"><span class="lineno">   49</span>        stats.getArmorDamageTakenMult().modifyMult(<span class="keywordtype">id</span>, 1f - (1f - <a class="code hl_variable" href="../../d1/d11/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryofluxTransducerStats.html#a1bf39f99d8c7299d593639cdeb4580f5">INCOMING_DAMAGE_MULT</a>) * effectLevel);</div>
-<div class="line"><span class="lineno">   50</span>        stats.getEmpDamageTakenMult().modifyMult(<span class="keywordtype">id</span>, 1f - (1f - <a class="code hl_variable" href="../../d1/d11/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryofluxTransducerStats.html#a1bf39f99d8c7299d593639cdeb4580f5">INCOMING_DAMAGE_MULT</a>) * effectLevel);</div>
-<div class="line"><span class="lineno">   51</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryofluxTransducerStats_html_a08991a2fb74dc3c777e601f190d13d1a"><div class="ttname"><a href="../../d1/d11/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryofluxTransducerStats.html#a08991a2fb74dc3c777e601f190d13d1a">com.fs.starfarer.api.impl.combat.CryofluxTransducerStats.FLUX_USE_MULT</a></div><div class="ttdeci">static final float FLUX_USE_MULT</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d9b/CryofluxTransducerStats_8java_source.html#l00017">CryofluxTransducerStats.java:17</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryofluxTransducerStats_html_a1bf39f99d8c7299d593639cdeb4580f5"><div class="ttname"><a href="../../d1/d11/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryofluxTransducerStats.html#a1bf39f99d8c7299d593639cdeb4580f5">com.fs.starfarer.api.impl.combat.CryofluxTransducerStats.INCOMING_DAMAGE_MULT</a></div><div class="ttdeci">static final float INCOMING_DAMAGE_MULT</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d9b/CryofluxTransducerStats_8java_source.html#l00016">CryofluxTransducerStats.java:16</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryofluxTransducerStats_html_ad845612f2cca77e9eaef3368632dc9ee"><div class="ttname"><a href="../../d1/d11/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryofluxTransducerStats.html#ad845612f2cca77e9eaef3368632dc9ee">com.fs.starfarer.api.impl.combat.CryofluxTransducerStats.KEY_SHIP</a></div><div class="ttdeci">static final Object KEY_SHIP</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d9b/CryofluxTransducerStats_8java_source.html#l00014">CryofluxTransducerStats.java:14</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="acebbabf18db5d4eb6f8944f40fb77546" name="acebbabf18db5d4eb6f8944f40fb77546"></a>
@@ -294,19 +267,7 @@ Static Public Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseShipSystemScript.html#ab328cae8df05d23ccc045f4e32f5f9f0">com.fs.starfarer.api.impl.combat.BaseShipSystemScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d9b/CryofluxTransducerStats_8java_source.html#l00064">64</a> of file <a class="el" href="../../d0/d9b/CryofluxTransducerStats_8java_source.html">CryofluxTransducerStats.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   64</span>                                                                               {</div>
-<div class="line"><span class="lineno">   65</span>        effectLevel = 1f;</div>
-<div class="line"><span class="lineno">   66</span>        <span class="keywordtype">float</span> percent = (1f - <a class="code hl_variable" href="../../d1/d11/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryofluxTransducerStats.html#a08991a2fb74dc3c777e601f190d13d1a">FLUX_USE_MULT</a>) * effectLevel * 100;</div>
-<div class="line"><span class="lineno">   67</span>        <span class="keywordflow">if</span> (index == 0) {</div>
-<div class="line"><span class="lineno">   68</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> StatusData((<span class="keywordtype">int</span>) percent + <span class="stringliteral">&quot;% less flux generated&quot;</span>, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   69</span>        }</div>
-<div class="line"><span class="lineno">   70</span>        percent = (1f - <a class="code hl_variable" href="../../d1/d11/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryofluxTransducerStats.html#a1bf39f99d8c7299d593639cdeb4580f5">INCOMING_DAMAGE_MULT</a>) * effectLevel * 100;</div>
-<div class="line"><span class="lineno">   71</span>        <span class="keywordflow">if</span> (index == 1) {</div>
-<div class="line"><span class="lineno">   72</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> StatusData((<span class="keywordtype">int</span>) percent + <span class="stringliteral">&quot;% less damage taken&quot;</span>, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   73</span>        }</div>
-<div class="line"><span class="lineno">   74</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   75</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a64919f1a4704f00dd9192efee67a3d7e" name="a64919f1a4704f00dd9192efee67a3d7e"></a>
@@ -338,16 +299,7 @@ Static Public Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseShipSystemScript.html#a020712b9bb37e9ece4fbfd4c865c4037">com.fs.starfarer.api.impl.combat.BaseShipSystemScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d9b/CryofluxTransducerStats_8java_source.html#l00054">54</a> of file <a class="el" href="../../d0/d9b/CryofluxTransducerStats_8java_source.html">CryofluxTransducerStats.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   54</span>                                                              {</div>
-<div class="line"><span class="lineno">   55</span>        stats.getBallisticWeaponFluxCostMod().unmodify(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">   56</span>        stats.getEnergyWeaponFluxCostMod().unmodify(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">   57</span>        stats.getMissileWeaponFluxCostMod().unmodify(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">   58</span>        </div>
-<div class="line"><span class="lineno">   59</span>        stats.getHullDamageTakenMult().unmodify(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">   60</span>        stats.getArmorDamageTakenMult().unmodify(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">   61</span>        stats.getEmpDamageTakenMult().unmodify(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">   62</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -423,43 +424,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a892d9c8e77f8c51654d4399169a80540">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d16/CivilDisorder_8java_source.html#l00034">34</a> of file <a class="el" href="../../d6/d16/CivilDisorder_8java_source.html">CivilDisorder.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   34</span>                                      {</div>
-<div class="line"><span class="lineno">   35</span>        <span class="keywordflow">if</span> (Global.getSector().isPaused()) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   36</span>        <span class="keywordflow">if</span> (!started) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   37</span>        </div>
-<div class="line"><span class="lineno">   38</span>        <span class="comment">//System.out.println(&quot;Advance() in TestEvent called&quot;);</span></div>
-<div class="line"><span class="lineno">   39</span>        <span class="keywordtype">float</span> days = Global.getSector().getClock().convertToDays(amount);</div>
-<div class="line"><span class="lineno">   40</span>        </div>
-<div class="line"><span class="lineno">   41</span>        elapsedDays += days;</div>
-<div class="line"><span class="lineno">   42</span>        </div>
-<div class="line"><span class="lineno">   43</span>        <span class="keywordflow">if</span> (elapsedDays &gt; 0 &amp;&amp; stage == 0) {</div>
-<div class="line"><span class="lineno">   44</span>            WeightedRandomPicker&lt;String&gt; picker = <span class="keyword">new</span> WeightedRandomPicker&lt;String&gt;();</div>
-<div class="line"><span class="lineno">   45</span>            picker.add(<span class="stringliteral">&quot;start1&quot;</span>);</div>
-<div class="line"><span class="lineno">   46</span>            picker.add(<span class="stringliteral">&quot;start2&quot;</span>);</div>
-<div class="line"><span class="lineno">   47</span>            picker.add(<span class="stringliteral">&quot;start3&quot;</span>);</div>
-<div class="line"><span class="lineno">   48</span>            Global.getSector().reportEventStage(<span class="keyword">this</span>, picker.pick(), MessagePriority.SECTOR);</div>
-<div class="line"><span class="lineno">   49</span>            stage++;</div>
-<div class="line"><span class="lineno">   50</span>        }</div>
-<div class="line"><span class="lineno">   51</span>        </div>
-<div class="line"><span class="lineno">   52</span>        <span class="keywordflow">if</span> (elapsedDays &gt; 1 &amp;&amp; stage == 1) {</div>
-<div class="line"><span class="lineno">   53</span>            WeightedRandomPicker&lt;String&gt; picker = <span class="keyword">new</span> WeightedRandomPicker&lt;String&gt;();</div>
-<div class="line"><span class="lineno">   54</span>            picker.add(<span class="stringliteral">&quot;ending1&quot;</span>);</div>
-<div class="line"><span class="lineno">   55</span>            picker.add(<span class="stringliteral">&quot;ending2&quot;</span>);</div>
-<div class="line"><span class="lineno">   56</span>            picker.add(<span class="stringliteral">&quot;ending3&quot;</span>);</div>
-<div class="line"><span class="lineno">   57</span>            picker.add(<span class="stringliteral">&quot;ending4&quot;</span>);</div>
-<div class="line"><span class="lineno">   58</span>            Global.getSector().reportEventStage(<span class="keyword">this</span>, picker.pick(), MessagePriority.SECTOR);</div>
-<div class="line"><span class="lineno">   59</span>            stage++;</div>
-<div class="line"><span class="lineno">   60</span>        }</div>
-<div class="line"><span class="lineno">   61</span>        </div>
-<div class="line"><span class="lineno">   62</span>        <span class="keywordflow">if</span> (elapsedDays &gt; 2 &amp;&amp; stage == 2) {</div>
-<div class="line"><span class="lineno">   63</span>            WeightedRandomPicker&lt;String&gt; picker = <span class="keyword">new</span> WeightedRandomPicker&lt;String&gt;();</div>
-<div class="line"><span class="lineno">   64</span>            picker.add(<span class="stringliteral">&quot;end1&quot;</span>);</div>
-<div class="line"><span class="lineno">   65</span>            picker.add(<span class="stringliteral">&quot;end2&quot;</span>);</div>
-<div class="line"><span class="lineno">   66</span>            Global.getSector().reportEventStage(<span class="keyword">this</span>, picker.pick(), MessagePriority.SECTOR);</div>
-<div class="line"><span class="lineno">   67</span>            stage++;</div>
-<div class="line"><span class="lineno">   68</span>        }</div>
-<div class="line"><span class="lineno">   69</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a34d5ff9e0661fed8681bcf0298d47cff" name="a34d5ff9e0661fed8681bcf0298d47cff"></a>
@@ -483,11 +448,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a0be9635fa2049ae34b5b97153a12ddc9">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d16/CivilDisorder_8java_source.html#l00140">140</a> of file <a class="el" href="../../d6/d16/CivilDisorder_8java_source.html">CivilDisorder.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  140</span>                                                       {</div>
-<div class="line"><span class="lineno">  141</span>        <span class="comment">// TODO Auto-generated method stub</span></div>
-<div class="line"><span class="lineno">  142</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  143</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5c342d38455b112a0cb4ab185f7cadc3" name="a5c342d38455b112a0cb4ab185f7cadc3"></a>
@@ -509,11 +470,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#ab15b57181b8a578286ed9db4428762a8">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d16/CivilDisorder_8java_source.html#l00131">131</a> of file <a class="el" href="../../d6/d16/CivilDisorder_8java_source.html">CivilDisorder.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  131</span>                          {</div>
-<div class="line"><span class="lineno">  132</span>        <span class="comment">// TODO Auto-generated method stub</span></div>
-<div class="line"><span class="lineno">  133</span>        </div>
-<div class="line"><span class="lineno">  134</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a4d6018b50defc973428d514847728ab1" name="a4d6018b50defc973428d514847728ab1"></a>
@@ -534,10 +491,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#af2e4ba1b8f1c54db22375ebd2626c779">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d16/CivilDisorder_8java_source.html#l00075">75</a> of file <a class="el" href="../../d6/d16/CivilDisorder_8java_source.html">CivilDisorder.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   75</span>                                                {</div>
-<div class="line"><span class="lineno">   76</span>        <span class="keywordflow">return</span> eventTarget;</div>
-<div class="line"><span class="lineno">   77</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a4d177192e26162e2bda8460afdd257b7" name="a4d177192e26162e2bda8460afdd257b7"></a>
@@ -558,10 +512,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a737a23e9e36e9b6f9012cfd98914cab4">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d16/CivilDisorder_8java_source.html#l00079">79</a> of file <a class="el" href="../../d6/d16/CivilDisorder_8java_source.html">CivilDisorder.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   79</span>                                 {</div>
-<div class="line"><span class="lineno">   80</span>        <span class="keywordflow">return</span> type;</div>
-<div class="line"><span class="lineno">   81</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a18da1f6ed0f76f10eae571bd656b2eea" name="a18da1f6ed0f76f10eae571bd656b2eea"></a>
@@ -590,11 +541,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a3020d01a879fc0b9d383e46f7d9c53bf">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d16/CivilDisorder_8java_source.html#l00145">145</a> of file <a class="el" href="../../d6/d16/CivilDisorder_8java_source.html">CivilDisorder.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  145</span>                                                      {</div>
-<div class="line"><span class="lineno">  146</span>        <span class="comment">// TODO Auto-generated method stub</span></div>
-<div class="line"><span class="lineno">  147</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  148</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a79ea4099d510283d9e5054bba8f1b41d" name="a79ea4099d510283d9e5054bba8f1b41d"></a>
@@ -623,11 +570,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a00dc5b856ba666734d16d72b420e763d">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d16/CivilDisorder_8java_source.html#l00150">150</a> of file <a class="el" href="../../d6/d16/CivilDisorder_8java_source.html">CivilDisorder.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  150</span>                                                  {</div>
-<div class="line"><span class="lineno">  151</span>        <span class="comment">// TODO Auto-generated method stub</span></div>
-<div class="line"><span class="lineno">  152</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  153</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a33eb9d90486abc3c408260271bd512f9" name="a33eb9d90486abc3c408260271bd512f9"></a>
@@ -649,16 +592,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a4a1163afd1a5e01cede86521b91bf4bf">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d16/CivilDisorder_8java_source.html#l00110">110</a> of file <a class="el" href="../../d6/d16/CivilDisorder_8java_source.html">CivilDisorder.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  110</span>                                        {</div>
-<div class="line"><span class="lineno">  111</span>        WeightedRandomPicker&lt;String&gt; picker = <span class="keyword">new</span> WeightedRandomPicker&lt;String&gt;();</div>
-<div class="line"><span class="lineno">  112</span>        picker.add(<span class="stringliteral">&quot;possible1&quot;</span>);</div>
-<div class="line"><span class="lineno">  113</span>        picker.add(<span class="stringliteral">&quot;possible2&quot;</span>);</div>
-<div class="line"><span class="lineno">  114</span>        picker.add(<span class="stringliteral">&quot;possible3&quot;</span>);</div>
-<div class="line"><span class="lineno">  115</span>        picker.add(<span class="stringliteral">&quot;possible4&quot;</span>);</div>
-<div class="line"><span class="lineno">  116</span>        <span class="keywordflow">return</span> picker.pick();</div>
-<div class="line"><span class="lineno">  117</span>        <span class="comment">//return &quot;likely&quot;;</span></div>
-<div class="line"><span class="lineno">  118</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab0c879c72c3a51ff7050f94629062a73" name="ab0c879c72c3a51ff7050f94629062a73"></a>
@@ -680,15 +614,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#adeb439b2b8eb082c0317820a91cc1f7b">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d16/CivilDisorder_8java_source.html#l00122">122</a> of file <a class="el" href="../../d6/d16/CivilDisorder_8java_source.html">CivilDisorder.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  122</span>                                          {</div>
-<div class="line"><span class="lineno">  123</span>        WeightedRandomPicker&lt;String&gt; picker = <span class="keyword">new</span> WeightedRandomPicker&lt;String&gt;();</div>
-<div class="line"><span class="lineno">  124</span>        picker.add(<span class="stringliteral">&quot;possible1&quot;</span>);</div>
-<div class="line"><span class="lineno">  125</span>        picker.add(<span class="stringliteral">&quot;possible2&quot;</span>);</div>
-<div class="line"><span class="lineno">  126</span>        picker.add(<span class="stringliteral">&quot;possible3&quot;</span>);</div>
-<div class="line"><span class="lineno">  127</span>        picker.add(<span class="stringliteral">&quot;possible4&quot;</span>);</div>
-<div class="line"><span class="lineno">  128</span>        <span class="keywordflow">return</span> picker.pick();</div>
-<div class="line"><span class="lineno">  129</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a6df029ff2f93f0f63b16d555d83e62be" name="a6df029ff2f93f0f63b16d555d83e62be"></a>
@@ -710,25 +636,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#aa67b1f6c564a4765a764cfb90a60f4c9">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d16/CivilDisorder_8java_source.html#l00084">84</a> of file <a class="el" href="../../d6/d16/CivilDisorder_8java_source.html">CivilDisorder.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   84</span>                                                      {</div>
-<div class="line"><span class="lineno">   85</span>        Map&lt;String, String&gt; map = <span class="keyword">new</span> HashMap&lt;String, String&gt;();</div>
-<div class="line"><span class="lineno">   86</span>        </div>
-<div class="line"><span class="lineno">   87</span>        map.put(<span class="stringliteral">&quot;$market&quot;</span>, eventTarget.<a class="code hl_function" href="../../dc/d60/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventTarget.html#a4fdba2ae8cd89b839d2ea941da3ceba5">getEntity</a>().<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a4fa77e45f0774df8a8980dc438598678">getName</a>());</div>
-<div class="line"><span class="lineno">   88</span>        map.put(<span class="stringliteral">&quot;$rulingFaction&quot;</span>, eventTarget.<a class="code hl_function" href="../../dc/d60/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventTarget.html#a4fdba2ae8cd89b839d2ea941da3ceba5">getEntity</a>().<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#afb72bc74f75ccbbf240564b26b94e17b">getFaction</a>().<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a152197efac6967a0a459e4579b8ab1ef">getDisplayName</a>());</div>
-<div class="line"><span class="lineno">   89</span>        map.put(<span class="stringliteral">&quot;$rulingParty&quot;</span>, eventTarget.<a class="code hl_function" href="../../dc/d60/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventTarget.html#a4fdba2ae8cd89b839d2ea941da3ceba5">getEntity</a>().<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#afb72bc74f75ccbbf240564b26b94e17b">getFaction</a>().<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a152197efac6967a0a459e4579b8ab1ef">getDisplayName</a>());</div>
-<div class="line"><span class="lineno">   90</span>        </div>
-<div class="line"><span class="lineno">   91</span>        map.put(<span class="stringliteral">&quot;$theRulingFaction&quot;</span>, eventTarget.<a class="code hl_function" href="../../dc/d60/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventTarget.html#a4fdba2ae8cd89b839d2ea941da3ceba5">getEntity</a>().<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#afb72bc74f75ccbbf240564b26b94e17b">getFaction</a>().<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a69b86d194392c5eadd148b6e1e6cd5f0">getDisplayNameWithArticle</a>());</div>
-<div class="line"><span class="lineno">   92</span>        map.put(<span class="stringliteral">&quot;$TheRulingFaction&quot;</span>, Misc.ucFirst(eventTarget.<a class="code hl_function" href="../../dc/d60/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventTarget.html#a4fdba2ae8cd89b839d2ea941da3ceba5">getEntity</a>().<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#afb72bc74f75ccbbf240564b26b94e17b">getFaction</a>().<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a69b86d194392c5eadd148b6e1e6cd5f0">getDisplayNameWithArticle</a>()));</div>
-<div class="line"><span class="lineno">   93</span>        </div>
-<div class="line"><span class="lineno">   94</span>        <span class="keywordflow">return</span> map;</div>
-<div class="line"><span class="lineno">   95</span>        </div>
-<div class="line"><span class="lineno">   96</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventTarget_html_a4fdba2ae8cd89b839d2ea941da3ceba5"><div class="ttname"><a href="../../dc/d60/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventTarget.html#a4fdba2ae8cd89b839d2ea941da3ceba5">com.fs.starfarer.api.campaign.events.CampaignEventTarget.getEntity</a></div><div class="ttdeci">SectorEntityToken getEntity()</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d27/CampaignEventTarget_8java_source.html#l00061">CampaignEventTarget.java:61</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI_html_a152197efac6967a0a459e4579b8ab1ef"><div class="ttname"><a href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a152197efac6967a0a459e4579b8ab1ef">com.fs.starfarer.api.campaign.FactionAPI.getDisplayName</a></div><div class="ttdeci">String getDisplayName()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI_html_a69b86d194392c5eadd148b6e1e6cd5f0"><div class="ttname"><a href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a69b86d194392c5eadd148b6e1e6cd5f0">com.fs.starfarer.api.campaign.FactionAPI.getDisplayNameWithArticle</a></div><div class="ttdeci">String getDisplayNameWithArticle()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_a4fa77e45f0774df8a8980dc438598678"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a4fa77e45f0774df8a8980dc438598678">com.fs.starfarer.api.campaign.SectorEntityToken.getName</a></div><div class="ttdeci">String getName()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_afb72bc74f75ccbbf240564b26b94e17b"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#afb72bc74f75ccbbf240564b26b94e17b">com.fs.starfarer.api.campaign.SectorEntityToken.getFaction</a></div><div class="ttdeci">FactionAPI getFaction()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aab0745be93561cb7ff433f29ac98480a" name="aab0745be93561cb7ff433f29ac98480a"></a>
@@ -750,10 +658,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a696a37edbdd38a05a19184883b1c6115">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d16/CivilDisorder_8java_source.html#l00104">104</a> of file <a class="el" href="../../d6/d16/CivilDisorder_8java_source.html">CivilDisorder.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  104</span>                                                          {</div>
-<div class="line"><span class="lineno">  105</span>        <span class="keywordflow">return</span> MessagePriority.SECTOR;</div>
-<div class="line"><span class="lineno">  106</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="acd342bc403cedf96de34a62dfa810880" name="acd342bc403cedf96de34a62dfa810880"></a>
@@ -775,10 +680,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#afdc8099d9df144312e390638433e788b">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d16/CivilDisorder_8java_source.html#l00099">99</a> of file <a class="el" href="../../d6/d16/CivilDisorder_8java_source.html">CivilDisorder.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   99</span>                                                            {</div>
-<div class="line"><span class="lineno">  100</span>        <span class="keywordflow">return</span> MessagePriority.SECTOR;</div>
-<div class="line"><span class="lineno">  101</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5c91c942c21c3dcfbf88212312ee8b39" name="a5c91c942c21c3dcfbf88212312ee8b39"></a>
@@ -817,11 +719,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a85df425421b0ba2ec216cb3058f88297">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d16/CivilDisorder_8java_source.html#l00024">24</a> of file <a class="el" href="../../d6/d16/CivilDisorder_8java_source.html">CivilDisorder.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   24</span>                                                                   {</div>
-<div class="line"><span class="lineno">   25</span>        this.type = type;</div>
-<div class="line"><span class="lineno">   26</span>        this.eventTarget = eventTarget;</div>
-<div class="line"><span class="lineno">   27</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5e474e358277aa6868dc1f54434188d4" name="a5e474e358277aa6868dc1f54434188d4"></a>
@@ -842,10 +740,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#ab897ab2cfdb15c8183902a077567171b">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d16/CivilDisorder_8java_source.html#l00071">71</a> of file <a class="el" href="../../d6/d16/CivilDisorder_8java_source.html">CivilDisorder.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   71</span>                            {</div>
-<div class="line"><span class="lineno">   72</span>        <span class="keywordflow">return</span> elapsedDays &gt; 5f || stage &gt;= 3;</div>
-<div class="line"><span class="lineno">   73</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a7d6ad3fc91a69814413e49b462078973" name="a7d6ad3fc91a69814413e49b462078973"></a>
@@ -873,10 +768,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a21aa4fa63dacdbea51db7f48c4461637">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d16/CivilDisorder_8java_source.html#l00136">136</a> of file <a class="el" href="../../d6/d16/CivilDisorder_8java_source.html">CivilDisorder.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  136</span>                                       {</div>
-<div class="line"><span class="lineno">  137</span>        </div>
-<div class="line"><span class="lineno">  138</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae4427233deece2adec8468858babaea9" name="ae4427233deece2adec8468858babaea9"></a>
@@ -898,10 +790,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#aa016b5c97932063aa9184483bd01c5ee">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d16/CivilDisorder_8java_source.html#l00030">30</a> of file <a class="el" href="../../d6/d16/CivilDisorder_8java_source.html">CivilDisorder.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   30</span>                             {</div>
-<div class="line"><span class="lineno">   31</span>        started = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   32</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -780,23 +781,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a8686f09d9cee32e9ccc6fdcbf9df071c">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d83/Mining_8java_source.html#l00056">56</a> of file <a class="el" href="../../d9/d83/Mining_8java_source.html">Mining.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   56</span>                                                                                                              {</div>
-<div class="line"><span class="lineno">   57</span>        <span class="comment">//if (mode == IndustryTooltipMode.NORMAL &amp;&amp; isFunctional()) {</span></div>
-<div class="line"><span class="lineno">   58</span>        <span class="keywordflow">if</span> (mode != IndustryTooltipMode.NORMAL || <a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a511613f792cac2306ff2ea5ba6be8407">isFunctional</a>()) {         </div>
-<div class="line"><span class="lineno">   59</span>            Color h = Misc.getHighlightColor();</div>
-<div class="line"><span class="lineno">   60</span>            <span class="keywordtype">float</span> opad = 10f;</div>
-<div class="line"><span class="lineno">   61</span>            <span class="keywordtype">float</span> pad = 3f;</div>
-<div class="line"><span class="lineno">   62</span>            </div>
-<div class="line"><span class="lineno">   63</span>            Pair&lt;String, Integer&gt; deficit = <a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#af9ae61ae0ee27d39832661c87a9d1567">getMaxDeficit</a>(Commodities.DRUGS);</div>
-<div class="line"><span class="lineno">   64</span>            <span class="keywordflow">if</span> (deficit.two &gt; 0) {</div>
-<div class="line"><span class="lineno">   65</span>                tooltip.addPara(<a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a47ecacd3bd5f15e80e1ad37cd16b6f1f">getDeficitText</a>(Commodities.DRUGS) + <span class="stringliteral">&quot;: %s units. Reduced colony growth.&quot;</span>, pad, h, <span class="stringliteral">&quot;&quot;</span> + deficit.two);</div>
-<div class="line"><span class="lineno">   66</span>            }</div>
-<div class="line"><span class="lineno">   67</span>        }</div>
-<div class="line"><span class="lineno">   68</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry_html_a47ecacd3bd5f15e80e1ad37cd16b6f1f"><div class="ttname"><a href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a47ecacd3bd5f15e80e1ad37cd16b6f1f">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry.getDeficitText</a></div><div class="ttdeci">static String getDeficitText(String commodityId)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8f/BaseIndustry_8java_source.html#l00080">BaseIndustry.java:80</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry_html_a511613f792cac2306ff2ea5ba6be8407"><div class="ttname"><a href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a511613f792cac2306ff2ea5ba6be8407">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry.isFunctional</a></div><div class="ttdeci">boolean isFunctional()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8f/BaseIndustry_8java_source.html#l00475">BaseIndustry.java:475</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry_html_af9ae61ae0ee27d39832661c87a9d1567"><div class="ttname"><a href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#af9ae61ae0ee27d39832661c87a9d1567">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry.getMaxDeficit</a></div><div class="ttdeci">Pair&lt; String, Integer &gt; getMaxDeficit(String ... commodityIds)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8f/BaseIndustry_8java_source.html#l00799">BaseIndustry.java:799</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2ed231ebcf66a4870f3a408e773785c2" name="a2ed231ebcf66a4870f3a408e773785c2"></a>
@@ -817,31 +802,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="../../db/d10/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1Industry.html#afec13f539610ffc411c4aa0074a3b767">com.fs.starfarer.api.campaign.econ.Industry</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d83/Mining_8java_source.html#l00022">22</a> of file <a class="el" href="../../d9/d83/Mining_8java_source.html">Mining.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   22</span>                        {</div>
-<div class="line"><span class="lineno">   23</span>        super.apply(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   24</span>        </div>
-<div class="line"><span class="lineno">   25</span>        <span class="keywordtype">int</span> size = <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af6f714c59a16687b5cde142091a54150">getSize</a>();</div>
-<div class="line"><span class="lineno">   26</span>        </div>
-<div class="line"><span class="lineno">   27</span>        <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#ada1a3bcbe22df6e0198bf0612576c5b5">demand</a>(Commodities.HEAVY_MACHINERY, size - 3);</div>
-<div class="line"><span class="lineno">   28</span>        <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#ada1a3bcbe22df6e0198bf0612576c5b5">demand</a>(Commodities.DRUGS, size);</div>
-<div class="line"><span class="lineno">   29</span>        </div>
-<div class="line"><span class="lineno">   30</span>        Pair&lt;String, Integer&gt; deficit = <a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#af9ae61ae0ee27d39832661c87a9d1567">getMaxDeficit</a>(Commodities.HEAVY_MACHINERY);</div>
-<div class="line"><span class="lineno">   31</span>        <a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#af9bdec48945d46f8aa36e04865a4a886">applyDeficitToProduction</a>(0, deficit, </div>
-<div class="line"><span class="lineno">   32</span>                        Commodities.ORE,</div>
-<div class="line"><span class="lineno">   33</span>                        Commodities.RARE_ORE,</div>
-<div class="line"><span class="lineno">   34</span>                        Commodities.ORGANICS, </div>
-<div class="line"><span class="lineno">   35</span>                        Commodities.VOLATILES);</div>
-<div class="line"><span class="lineno">   36</span>        </div>
-<div class="line"><span class="lineno">   37</span>        <span class="keywordflow">if</span> (!<a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a511613f792cac2306ff2ea5ba6be8407">isFunctional</a>()) {</div>
-<div class="line"><span class="lineno">   38</span>            <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a2be46a5c977e13c63ef2b249999b89c1">supply</a>.clear();</div>
-<div class="line"><span class="lineno">   39</span>        }</div>
-<div class="line"><span class="lineno">   40</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry_html_a2be46a5c977e13c63ef2b249999b89c1"><div class="ttname"><a href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a2be46a5c977e13c63ef2b249999b89c1">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry.supply</a></div><div class="ttdeci">Map&lt; String, MutableCommodityQuantity &gt; supply</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8f/BaseIndustry_8java_source.html#l00090">BaseIndustry.java:90</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry_html_a3a6a42045fe8b527252be206b4d9f27c"><div class="ttname"><a href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry.market</a></div><div class="ttdeci">MarketAPI market</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8f/BaseIndustry_8java_source.html#l00095">BaseIndustry.java:95</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry_html_ada1a3bcbe22df6e0198bf0612576c5b5"><div class="ttname"><a href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#ada1a3bcbe22df6e0198bf0612576c5b5">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry.demand</a></div><div class="ttdeci">Map&lt; String, MutableCommodityQuantity &gt; demand</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8f/BaseIndustry_8java_source.html#l00091">BaseIndustry.java:91</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry_html_af9bdec48945d46f8aa36e04865a4a886"><div class="ttname"><a href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#af9bdec48945d46f8aa36e04865a4a886">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry.applyDeficitToProduction</a></div><div class="ttdeci">void applyDeficitToProduction(int index, Pair&lt; String, Integer &gt; deficit, String ... commodities)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8f/BaseIndustry_8java_source.html#l00336">BaseIndustry.java:336</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_af6f714c59a16687b5cde142091a54150"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af6f714c59a16687b5cde142091a54150">com.fs.starfarer.api.campaign.econ.MarketAPI.getSize</a></div><div class="ttdeci">int getSize()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a1130674b2545a2d66879466ac9ced487" name="a1130674b2545a2d66879466ac9ced487"></a>
@@ -861,17 +822,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d83/Mining_8java_source.html#l00119">119</a> of file <a class="el" href="../../d9/d83/Mining_8java_source.html">Mining.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  119</span>                                               {</div>
-<div class="line"><span class="lineno">  120</span>        <span class="keywordflow">if</span> (planet == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  121</span>        planet.getSpec().setShieldTexture2(Global.getSettings().getSpriteName(<span class="stringliteral">&quot;industry&quot;</span>, <span class="stringliteral">&quot;plasma_net_texture&quot;</span>));</div>
-<div class="line"><span class="lineno">  122</span>        planet.getSpec().setShieldThickness2(0.15f);</div>
-<div class="line"><span class="lineno">  123</span>        <span class="comment">//planet.getSpec().setShieldColor2(new Color(255,255,255,175));</span></div>
-<div class="line"><span class="lineno">  124</span>        planet.getSpec().setShieldColor2(<span class="keyword">new</span> Color(255,255,255,255));</div>
-<div class="line"><span class="lineno">  125</span>        planet.applySpecChanges();</div>
-<div class="line"><span class="lineno">  126</span>        <a class="code hl_variable" href="../../df/d25/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Mining.html#a70527419f336fca77ca87fcb6bbfecf2">shownPlasmaNetVisuals</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  127</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Mining_html_a70527419f336fca77ca87fcb6bbfecf2"><div class="ttname"><a href="../../df/d25/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Mining.html#a70527419f336fca77ca87fcb6bbfecf2">com.fs.starfarer.api.impl.campaign.econ.impl.Mining.shownPlasmaNetVisuals</a></div><div class="ttdeci">boolean shownPlasmaNetVisuals</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d83/Mining_8java_source.html#l00138">Mining.java:138</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a87ca6911026a5fa03a05433a9ce19f23" name="a87ca6911026a5fa03a05433a9ce19f23"></a>
@@ -900,10 +851,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a083da7bc1342db02941cd97f0de95791">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d83/Mining_8java_source.html#l00113">113</a> of file <a class="el" href="../../d9/d83/Mining_8java_source.html">Mining.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  113</span>                                                       {</div>
-<div class="line"><span class="lineno">  114</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  115</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae38318e516a87af1307abf6547f31f1e" name="ae38318e516a87af1307abf6547f31f1e"></a>
@@ -924,15 +872,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a28115fd026b8ed1973b1de3eaa9bec02">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d83/Mining_8java_source.html#l00100">100</a> of file <a class="el" href="../../d9/d83/Mining_8java_source.html">Mining.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  100</span>                                    {</div>
-<div class="line"><span class="lineno">  101</span>        <span class="keywordtype">float</span> size = <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af6f714c59a16687b5cde142091a54150">getSize</a>();</div>
-<div class="line"><span class="lineno">  102</span>        <span class="keywordflow">if</span> (size &lt;= <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#ad317749e492eb2dd1056aa335b1a3cf7">SIZE_FOR_SMALL_IMAGE</a>) {</div>
-<div class="line"><span class="lineno">  103</span>            <span class="keywordflow">return</span> Global.getSettings().getSpriteName(<span class="stringliteral">&quot;industry&quot;</span>, <span class="stringliteral">&quot;mining_low&quot;</span>);</div>
-<div class="line"><span class="lineno">  104</span>        }</div>
-<div class="line"><span class="lineno">  105</span>        <span class="keywordflow">return</span> super.getCurrentImage();</div>
-<div class="line"><span class="lineno">  106</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry_html_ad317749e492eb2dd1056aa335b1a3cf7"><div class="ttname"><a href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#ad317749e492eb2dd1056aa335b1a3cf7">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry.SIZE_FOR_SMALL_IMAGE</a></div><div class="ttdeci">static int SIZE_FOR_SMALL_IMAGE</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8f/BaseIndustry_8java_source.html#l00056">BaseIndustry.java:56</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac7662a3eae71519f7bdcd6277cb1f911" name="ac7662a3eae71519f7bdcd6277cb1f911"></a>
@@ -953,10 +893,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#ad35549f736384743f68934a01ba47620">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d83/Mining_8java_source.html#l00108">108</a> of file <a class="el" href="../../d9/d83/Mining_8java_source.html">Mining.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  108</span>                                     {</div>
-<div class="line"><span class="lineno">  109</span>        <span class="keywordflow">return</span> 1f + super.getPatherInterest();</div>
-<div class="line"><span class="lineno">  110</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a45b0d635212858ef06ff3384ab345da3" name="a45b0d635212858ef06ff3384ab345da3"></a>
@@ -977,12 +914,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a72d87df6d16cc07579bf6a1043bcd0cb">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d83/Mining_8java_source.html#l00086">86</a> of file <a class="el" href="../../d9/d83/Mining_8java_source.html">Mining.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   86</span>                                         {</div>
-<div class="line"><span class="lineno">   87</span>        <span class="keywordflow">if</span> (!super.isAvailableToBuild()) <span class="keywordflow">return</span> super.getUnavailableReason();</div>
-<div class="line"><span class="lineno">   88</span>        </div>
-<div class="line"><span class="lineno">   89</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Requires resource deposits&quot;</span>;</div>
-<div class="line"><span class="lineno">   90</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a71ab04e035581ce58bf43589454a81fe" name="a71ab04e035581ce58bf43589454a81fe"></a>
@@ -1022,13 +954,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a7a958826403867d88cdf08ef5257dfe2">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d83/Mining_8java_source.html#l00048">48</a> of file <a class="el" href="../../d9/d83/Mining_8java_source.html">Mining.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   48</span>                                                                                        {</div>
-<div class="line"><span class="lineno">   49</span>        Pair&lt;String, Integer&gt; deficit = <a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#af9ae61ae0ee27d39832661c87a9d1567">getMaxDeficit</a>(Commodities.DRUGS);</div>
-<div class="line"><span class="lineno">   50</span>        <span class="keywordflow">if</span> (deficit.two &lt;= 0) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   51</span>        <span class="comment">//return mode == IndustryTooltipMode.NORMAL &amp;&amp; isFunctional();</span></div>
-<div class="line"><span class="lineno">   52</span>        <span class="keywordflow">return</span> mode != IndustryTooltipMode.NORMAL || <a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a511613f792cac2306ff2ea5ba6be8407">isFunctional</a>();</div>
-<div class="line"><span class="lineno">   53</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a3d324bfbf4bc454416b02c4357f8168c" name="a3d324bfbf4bc454416b02c4357f8168c"></a>
@@ -1049,21 +975,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a5572288890e72ad03aa2e70bdfb7e639">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d83/Mining_8java_source.html#l00072">72</a> of file <a class="el" href="../../d9/d83/Mining_8java_source.html">Mining.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   72</span>                                        {</div>
-<div class="line"><span class="lineno">   73</span>        <span class="keywordflow">if</span> (!super.isAvailableToBuild()) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   74</span>        </div>
-<div class="line"><span class="lineno">   75</span>        <span class="keywordflow">for</span> (MarketConditionAPI mc : <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#ae1fa885b0a614ef950a4e678356f65da">getConditions</a>()) {</div>
-<div class="line"><span class="lineno">   76</span>            String commodity = ResourceDepositsCondition.COMMODITY.get(mc.getId());</div>
-<div class="line"><span class="lineno">   77</span>            <span class="keywordflow">if</span> (commodity != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   78</span>                String industry = ResourceDepositsCondition.INDUSTRY.get(commodity);</div>
-<div class="line"><span class="lineno">   79</span>                <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a4cfea1fb4cb6ac2d0159857c2610a2a8">getId</a>().equals(industry)) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   80</span>            }</div>
-<div class="line"><span class="lineno">   81</span>        }</div>
-<div class="line"><span class="lineno">   82</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   83</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry_html_a4cfea1fb4cb6ac2d0159857c2610a2a8"><div class="ttname"><a href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a4cfea1fb4cb6ac2d0159857c2610a2a8">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry.getId</a></div><div class="ttdeci">String getId()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8f/BaseIndustry_8java_source.html#l00691">BaseIndustry.java:691</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_ae1fa885b0a614ef950a4e678356f65da"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#ae1fa885b0a614ef950a4e678356f65da">com.fs.starfarer.api.campaign.econ.MarketAPI.getConditions</a></div><div class="ttdeci">List&lt; MarketConditionAPI &gt; getConditions()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a7ad93f71747cdc32dbc36c57bfe3ef14" name="a7ad93f71747cdc32dbc36c57bfe3ef14"></a>
@@ -1095,14 +1007,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="../../d9/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketImmigrationModifier.html#ad4d4f0bab2eba5dcfc416b285696caa7">com.fs.starfarer.api.campaign.econ.MarketImmigrationModifier</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d83/Mining_8java_source.html#l00092">92</a> of file <a class="el" href="../../d9/d83/Mining_8java_source.html">Mining.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   92</span>                                                                                 {</div>
-<div class="line"><span class="lineno">   93</span>        Pair&lt;String, Integer&gt; deficit = <a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#af9ae61ae0ee27d39832661c87a9d1567">getMaxDeficit</a>(Commodities.DRUGS);</div>
-<div class="line"><span class="lineno">   94</span>        <span class="keywordflow">if</span> (deficit.two &gt; 0) {</div>
-<div class="line"><span class="lineno">   95</span>            incoming.getWeight().modifyFlat(<a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a33413101f7f7479cfe98427bc31ec114">getModId</a>(), -deficit.two, <span class="stringliteral">&quot;Mining: drug shortage&quot;</span>);</div>
-<div class="line"><span class="lineno">   96</span>        }</div>
-<div class="line"><span class="lineno">   97</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry_html_a33413101f7f7479cfe98427bc31ec114"><div class="ttname"><a href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a33413101f7f7479cfe98427bc31ec114">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry.getModId</a></div><div class="ttdeci">String getModId()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8f/BaseIndustry_8java_source.html#l00259">BaseIndustry.java:259</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac49ee2169f62873546bf83b40a1aa462" name="ac49ee2169f62873546bf83b40a1aa462"></a>
@@ -1124,23 +1029,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a9f33bb9acb33ccdd2e47a02356c6d255">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d83/Mining_8java_source.html#l00141">141</a> of file <a class="el" href="../../d9/d83/Mining_8java_source.html">Mining.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  141</span>                                                        {</div>
-<div class="line"><span class="lineno">  142</span>        super.setSpecialItem(<a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a41a35f8d9cf1d888ef8f84082fd626ce">special</a>);</div>
-<div class="line"><span class="lineno">  143</span> </div>
-<div class="line"><span class="lineno">  144</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../df/d25/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Mining.html#a70527419f336fca77ca87fcb6bbfecf2">shownPlasmaNetVisuals</a> &amp;&amp; (<a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a41a35f8d9cf1d888ef8f84082fd626ce">special</a> == <span class="keyword">null</span> || !<a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a41a35f8d9cf1d888ef8f84082fd626ce">special</a>.<a class="code hl_function" href="../../d6/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SpecialItemData.html#a23dc35a03d0dd9065f97330443e314e0">getId</a>().equals(Items.PLASMA_DYNAMO))) {</div>
-<div class="line"><span class="lineno">  145</span>            <a class="code hl_function" href="../../df/d25/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Mining.html#af0d3813858d4715fbd64bc0cf7b1567d">unapplyVisuals</a>(<a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#ad971f2c7cbd461a5e27f61536628a4fe">getPlanetEntity</a>());</div>
-<div class="line"><span class="lineno">  146</span>        }</div>
-<div class="line"><span class="lineno">  147</span>        </div>
-<div class="line"><span class="lineno">  148</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a41a35f8d9cf1d888ef8f84082fd626ce">special</a> != <span class="keyword">null</span> &amp;&amp; <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a41a35f8d9cf1d888ef8f84082fd626ce">special</a>.<a class="code hl_function" href="../../d6/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SpecialItemData.html#a23dc35a03d0dd9065f97330443e314e0">getId</a>().equals(Items.PLASMA_DYNAMO)) {</div>
-<div class="line"><span class="lineno">  149</span>            <a class="code hl_function" href="../../df/d25/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Mining.html#a1130674b2545a2d66879466ac9ced487">applyVisuals</a>(<a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#ad971f2c7cbd461a5e27f61536628a4fe">getPlanetEntity</a>());</div>
-<div class="line"><span class="lineno">  150</span>        }</div>
-<div class="line"><span class="lineno">  151</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SpecialItemData_html_a23dc35a03d0dd9065f97330443e314e0"><div class="ttname"><a href="../../d6/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SpecialItemData.html#a23dc35a03d0dd9065f97330443e314e0">com.fs.starfarer.api.campaign.SpecialItemData.getId</a></div><div class="ttdeci">String getId()</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d63/SpecialItemData_8java_source.html#l00013">SpecialItemData.java:13</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry_html_a41a35f8d9cf1d888ef8f84082fd626ce"><div class="ttname"><a href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a41a35f8d9cf1d888ef8f84082fd626ce">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry.special</a></div><div class="ttdeci">SpecialItemData special</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8f/BaseIndustry_8java_source.html#l01847">BaseIndustry.java:1847</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Mining_html_a1130674b2545a2d66879466ac9ced487"><div class="ttname"><a href="../../df/d25/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Mining.html#a1130674b2545a2d66879466ac9ced487">com.fs.starfarer.api.impl.campaign.econ.impl.Mining.applyVisuals</a></div><div class="ttdeci">void applyVisuals(PlanetAPI planet)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d83/Mining_8java_source.html#l00119">Mining.java:119</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Mining_html_af0d3813858d4715fbd64bc0cf7b1567d"><div class="ttname"><a href="../../df/d25/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Mining.html#af0d3813858d4715fbd64bc0cf7b1567d">com.fs.starfarer.api.impl.campaign.econ.impl.Mining.unapplyVisuals</a></div><div class="ttdeci">void unapplyVisuals(PlanetAPI planet)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d83/Mining_8java_source.html#l00129">Mining.java:129</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_ad971f2c7cbd461a5e27f61536628a4fe"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#ad971f2c7cbd461a5e27f61536628a4fe">com.fs.starfarer.api.campaign.econ.MarketAPI.getPlanetEntity</a></div><div class="ttdeci">PlanetAPI getPlanetEntity()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac55729990eb0c842d9523928f587010d" name="ac55729990eb0c842d9523928f587010d"></a>
@@ -1161,10 +1050,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#af3f1bd9a049574f633533ece2a744e0c">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d83/Mining_8java_source.html#l00044">44</a> of file <a class="el" href="../../d9/d83/Mining_8java_source.html">Mining.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   44</span>                          {</div>
-<div class="line"><span class="lineno">   45</span>        super.unapply();</div>
-<div class="line"><span class="lineno">   46</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af0d3813858d4715fbd64bc0cf7b1567d" name="af0d3813858d4715fbd64bc0cf7b1567d"></a>
@@ -1184,15 +1070,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d83/Mining_8java_source.html#l00129">129</a> of file <a class="el" href="../../d9/d83/Mining_8java_source.html">Mining.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  129</span>                                                 {</div>
-<div class="line"><span class="lineno">  130</span>        <span class="keywordflow">if</span> (planet == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  131</span>        planet.getSpec().setShieldTexture2(<span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  132</span>        planet.getSpec().setShieldThickness2(0f);</div>
-<div class="line"><span class="lineno">  133</span>        planet.getSpec().setShieldColor2(<span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  134</span>        planet.applySpecChanges();</div>
-<div class="line"><span class="lineno">  135</span>        <a class="code hl_variable" href="../../df/d25/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Mining.html#a70527419f336fca77ca87fcb6bbfecf2">shownPlasmaNetVisuals</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  136</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

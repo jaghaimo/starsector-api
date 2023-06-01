@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -156,12 +157,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d7e/PatrolAssignmentAI_8java_source.html#l00030">30</a> of file <a class="el" href="../../d7/d7e/PatrolAssignmentAI_8java_source.html">PatrolAssignmentAI.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   30</span>                                                                            {</div>
-<div class="line"><span class="lineno">   31</span>        this.fleet = fleet;</div>
-<div class="line"><span class="lineno">   32</span>        this.data = data;</div>
-<div class="line"><span class="lineno">   33</span>        giveInitialAssignment();</div>
-<div class="line"><span class="lineno">   34</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -190,94 +186,7 @@ Public Member Functions</h2></td></tr>
 <p>Implements <a class="el" href="../../d7/d63/interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html#a3a97090ca8cfdc230e9ad7e633407af6">com.fs.starfarer.api.EveryFrameScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d7e/PatrolAssignmentAI_8java_source.html#l00048">48</a> of file <a class="el" href="../../d7/d7e/PatrolAssignmentAI_8java_source.html">PatrolAssignmentAI.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   48</span>                                      {</div>
-<div class="line"><span class="lineno">   49</span>        <span class="keywordtype">float</span> days = Global.getSector().getClock().convertToDays(amount);</div>
-<div class="line"><span class="lineno">   50</span>        </div>
-<div class="line"><span class="lineno">   51</span><span class="comment">//      if (!orderedReturn) {</span></div>
-<div class="line"><span class="lineno">   52</span><span class="comment">//          tracker.advance(days);</span></div>
-<div class="line"><span class="lineno">   53</span><span class="comment">//          if (tracker.intervalElapsed()) {</span></div>
-<div class="line"><span class="lineno">   54</span><span class="comment">//              checkNPCCustomsInspection();</span></div>
-<div class="line"><span class="lineno">   55</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">   56</span><span class="comment">//          performInspectionIfNeeded();</span></div>
-<div class="line"><span class="lineno">   57</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">   58</span>        </div>
-<div class="line"><span class="lineno">   59</span>        </div>
-<div class="line"><span class="lineno">   60</span>        </div>
-<div class="line"><span class="lineno">   61</span><span class="comment">//      if (fleet.getFaction().getId().equals(&quot;knights_of_ludd&quot;)) {</span></div>
-<div class="line"><span class="lineno">   62</span><span class="comment">//          System.out.println(&quot;wesdfsd&quot;);</span></div>
-<div class="line"><span class="lineno">   63</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">   64</span>        <span class="keywordflow">if</span> (fleet.<a class="code hl_function" href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a33bfcfbc5371e5c5736058a57ac8c7ad">getAI</a>().<a class="code hl_function" href="../../d4/d22/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1CampaignFleetAIAPI.html#aa3db8a9910615cce45acd0541f90a043">getCurrentAssignment</a>() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   65</span>            <span class="keywordtype">float</span> fp = fleet.<a class="code hl_function" href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a2f64517a0c1bd9f51740fee49142d806">getFleetPoints</a>();</div>
-<div class="line"><span class="lineno">   66</span>            <span class="keywordflow">if</span> (fp &lt; data.startingFleetPoints &amp;&amp; !orderedReturn) {</div>
-<div class="line"><span class="lineno">   67</span>                orderedReturn = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   68</span>                fleet.<a class="code hl_function" href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a44e274b99c131a9fac2eab31d5442416">clearAssignments</a>();</div>
-<div class="line"><span class="lineno">   69</span>                </div>
-<div class="line"><span class="lineno">   70</span>                fleet.<a class="code hl_function" href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#ac2560f0dc107b3b3a8fa3f6935243681">addAssignment</a>(FleetAssignment.GO_TO_LOCATION, data.sourceMarket.getPrimaryEntity(), 1000,</div>
-<div class="line"><span class="lineno">   71</span>                                    <span class="stringliteral">&quot;returning to &quot;</span> + data.sourceMarket.getName());</div>
-<div class="line"><span class="lineno">   72</span>                fleet.<a class="code hl_function" href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#ac2560f0dc107b3b3a8fa3f6935243681">addAssignment</a>(FleetAssignment.ORBIT_PASSIVE, data.sourceMarket.getPrimaryEntity(), 1f,</div>
-<div class="line"><span class="lineno">   73</span>                                    <span class="stringliteral">&quot;standing down from patrol duty&quot;</span>);</div>
-<div class="line"><span class="lineno">   74</span>                fleet.<a class="code hl_function" href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#ac2560f0dc107b3b3a8fa3f6935243681">addAssignment</a>(FleetAssignment.GO_TO_LOCATION_AND_DESPAWN, data.sourceMarket.getPrimaryEntity(), 1000);</div>
-<div class="line"><span class="lineno">   75</span>            }</div>
-<div class="line"><span class="lineno">   76</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   77</span><span class="comment">//          if (fleet.getFaction().getId().equals(&quot;knights_of_ludd&quot;)) {</span></div>
-<div class="line"><span class="lineno">   78</span><span class="comment">//              System.out.println(&quot;wesdfsd&quot;);</span></div>
-<div class="line"><span class="lineno">   79</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">   80</span>            <span class="keywordtype">float</span> daysToOrbit = getDaysToOrbit();</div>
-<div class="line"><span class="lineno">   81</span>            StarSystemAPI system = data.sourceMarket.getStarSystem();</div>
-<div class="line"><span class="lineno">   82</span>            <span class="keywordflow">if</span> (system == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   83</span>                fleet.<a class="code hl_function" href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#ac2560f0dc107b3b3a8fa3f6935243681">addAssignment</a>(FleetAssignment.DEFEND_LOCATION, data.sourceMarket.getPrimaryEntity(), 20,</div>
-<div class="line"><span class="lineno">   84</span>                                    <span class="stringliteral">&quot;patrolling around &quot;</span> + data.sourceMarket.getName());</div>
-<div class="line"><span class="lineno">   85</span>                fleet.<a class="code hl_function" href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#ac2560f0dc107b3b3a8fa3f6935243681">addAssignment</a>(FleetAssignment.GO_TO_LOCATION, data.sourceMarket.getPrimaryEntity(), 1000,</div>
-<div class="line"><span class="lineno">   86</span>                                    <span class="stringliteral">&quot;returning to &quot;</span> + data.sourceMarket.getName());</div>
-<div class="line"><span class="lineno">   87</span>                fleet.<a class="code hl_function" href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#ac2560f0dc107b3b3a8fa3f6935243681">addAssignment</a>(FleetAssignment.ORBIT_PASSIVE, data.sourceMarket.getPrimaryEntity(), daysToOrbit,</div>
-<div class="line"><span class="lineno">   88</span>                                    <span class="stringliteral">&quot;standing down from patrol duty&quot;</span>);</div>
-<div class="line"><span class="lineno">   89</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   90</span>                <span class="keywordflow">if</span> ((<span class="keywordtype">float</span>) Math.random() &gt; 0.95f) {</div>
-<div class="line"><span class="lineno">   91</span>                    fleet.<a class="code hl_function" href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#ac2560f0dc107b3b3a8fa3f6935243681">addAssignment</a>(FleetAssignment.PATROL_SYSTEM, system.getHyperspaceAnchor(), 20,</div>
-<div class="line"><span class="lineno">   92</span>                                        <span class="stringliteral">&quot;patrolling around the &quot;</span> + system.getBaseName() + <span class="stringliteral">&quot; star system&quot;</span>);</div>
-<div class="line"><span class="lineno">   93</span>                    fleet.<a class="code hl_function" href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#ac2560f0dc107b3b3a8fa3f6935243681">addAssignment</a>(FleetAssignment.GO_TO_LOCATION, data.sourceMarket.getPrimaryEntity(), 1000,</div>
-<div class="line"><span class="lineno">   94</span>                                        <span class="stringliteral">&quot;returning to &quot;</span> + data.sourceMarket.getName());</div>
-<div class="line"><span class="lineno">   95</span>                    fleet.<a class="code hl_function" href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#ac2560f0dc107b3b3a8fa3f6935243681">addAssignment</a>(FleetAssignment.ORBIT_PASSIVE, data.sourceMarket.getPrimaryEntity(), daysToOrbit,</div>
-<div class="line"><span class="lineno">   96</span>                                        <span class="stringliteral">&quot;standing down from patrol duty&quot;</span>);</div>
-<div class="line"><span class="lineno">   97</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   98</span>                    WeightedRandomPicker&lt;SectorEntityToken&gt; defenseTargets = <span class="keyword">new</span> WeightedRandomPicker&lt;SectorEntityToken&gt;();</div>
-<div class="line"><span class="lineno">   99</span>                    SectorEntityToken generalPatrol = data.sourceMarket.getPrimaryEntity().getContainingLocation().createToken(0, 0);</div>
-<div class="line"><span class="lineno">  100</span>                    </div>
-<div class="line"><span class="lineno">  101</span><span class="comment">//                  for (SectorEntityToken relay : system.getEntitiesWithTag(Tags.COMM_RELAY)) {</span></div>
-<div class="line"><span class="lineno">  102</span><span class="comment">//                      float weight = 10;</span></div>
-<div class="line"><span class="lineno">  103</span><span class="comment">//                      if (data.type == PatrolType.FAST) weight = 40;</span></div>
-<div class="line"><span class="lineno">  104</span><span class="comment">//                      defenseTargets.add(relay, weight);</span></div>
-<div class="line"><span class="lineno">  105</span><span class="comment">//                  }</span></div>
-<div class="line"><span class="lineno">  106</span><span class="comment">//                  defenseTargets.add(data.sourceMarket.getPrimaryEntity(), 30);</span></div>
-<div class="line"><span class="lineno">  107</span>                    defenseTargets.add(generalPatrol, 30);</div>
-<div class="line"><span class="lineno">  108</span>                    </div>
-<div class="line"><span class="lineno">  109</span>                    SectorEntityToken pick = defenseTargets.pick();</div>
-<div class="line"><span class="lineno">  110</span>                    </div>
-<div class="line"><span class="lineno">  111</span>                    <span class="keywordflow">if</span> (pick == generalPatrol) {</div>
-<div class="line"><span class="lineno">  112</span>                        fleet.<a class="code hl_function" href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#ac2560f0dc107b3b3a8fa3f6935243681">addAssignment</a>(FleetAssignment.PATROL_SYSTEM, system.getStar(), 30,</div>
-<div class="line"><span class="lineno">  113</span>                                <span class="stringliteral">&quot;patrolling the &quot;</span> + system.getBaseName() + <span class="stringliteral">&quot; star system&quot;</span>);</div>
-<div class="line"><span class="lineno">  114</span>                        fleet.<a class="code hl_function" href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#ac2560f0dc107b3b3a8fa3f6935243681">addAssignment</a>(FleetAssignment.GO_TO_LOCATION, data.sourceMarket.getPrimaryEntity(), 1000,</div>
-<div class="line"><span class="lineno">  115</span>                                <span class="stringliteral">&quot;returning to &quot;</span> + data.sourceMarket.getName());</div>
-<div class="line"><span class="lineno">  116</span>                        fleet.<a class="code hl_function" href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#ac2560f0dc107b3b3a8fa3f6935243681">addAssignment</a>(FleetAssignment.ORBIT_PASSIVE, data.sourceMarket.getPrimaryEntity(), daysToOrbit,</div>
-<div class="line"><span class="lineno">  117</span>                                <span class="stringliteral">&quot;standing down from patrol duty&quot;</span>);</div>
-<div class="line"><span class="lineno">  118</span>                    } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  119</span>                        fleet.<a class="code hl_function" href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#ac2560f0dc107b3b3a8fa3f6935243681">addAssignment</a>(FleetAssignment.DEFEND_LOCATION, pick, 30,</div>
-<div class="line"><span class="lineno">  120</span>                                <span class="stringliteral">&quot;patrolling around &quot;</span> + pick.getName());</div>
-<div class="line"><span class="lineno">  121</span>                        fleet.<a class="code hl_function" href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#ac2560f0dc107b3b3a8fa3f6935243681">addAssignment</a>(FleetAssignment.GO_TO_LOCATION, data.sourceMarket.getPrimaryEntity(), 1000,</div>
-<div class="line"><span class="lineno">  122</span>                                <span class="stringliteral">&quot;returning to &quot;</span> + data.sourceMarket.getName());</div>
-<div class="line"><span class="lineno">  123</span>                        fleet.<a class="code hl_function" href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#ac2560f0dc107b3b3a8fa3f6935243681">addAssignment</a>(FleetAssignment.ORBIT_PASSIVE, data.sourceMarket.getPrimaryEntity(), daysToOrbit,</div>
-<div class="line"><span class="lineno">  124</span>                                <span class="stringliteral">&quot;standing down from patrol duty&quot;</span>);</div>
-<div class="line"><span class="lineno">  125</span>                    }</div>
-<div class="line"><span class="lineno">  126</span>                }</div>
-<div class="line"><span class="lineno">  127</span>            }</div>
-<div class="line"><span class="lineno">  128</span>        }</div>
-<div class="line"><span class="lineno">  129</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI_html_a2f64517a0c1bd9f51740fee49142d806"><div class="ttname"><a href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a2f64517a0c1bd9f51740fee49142d806">com.fs.starfarer.api.campaign.CampaignFleetAPI.getFleetPoints</a></div><div class="ttdeci">int getFleetPoints()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI_html_a33bfcfbc5371e5c5736058a57ac8c7ad"><div class="ttname"><a href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a33bfcfbc5371e5c5736058a57ac8c7ad">com.fs.starfarer.api.campaign.CampaignFleetAPI.getAI</a></div><div class="ttdeci">CampaignFleetAIAPI getAI()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI_html_a44e274b99c131a9fac2eab31d5442416"><div class="ttname"><a href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a44e274b99c131a9fac2eab31d5442416">com.fs.starfarer.api.campaign.CampaignFleetAPI.clearAssignments</a></div><div class="ttdeci">void clearAssignments()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI_html_ac2560f0dc107b3b3a8fa3f6935243681"><div class="ttname"><a href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#ac2560f0dc107b3b3a8fa3f6935243681">com.fs.starfarer.api.campaign.CampaignFleetAPI.addAssignment</a></div><div class="ttdeci">void addAssignment(FleetAssignment assignment, SectorEntityToken target, float maxDurationInDays)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1CampaignFleetAIAPI_html_aa3db8a9910615cce45acd0541f90a043"><div class="ttname"><a href="../../d4/d22/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1CampaignFleetAIAPI.html#aa3db8a9910615cce45acd0541f90a043">com.fs.starfarer.api.campaign.ai.CampaignFleetAIAPI.getCurrentAssignment</a></div><div class="ttdeci">FleetAssignmentDataAPI getCurrentAssignment()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a6b4ce920730b2e9ca5832073a325ff31" name="a6b4ce920730b2e9ca5832073a325ff31"></a>
@@ -299,10 +208,7 @@ Public Member Functions</h2></td></tr>
 <p>Implements <a class="el" href="../../d7/d63/interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html#a2b9a206acf99d1cdc1511885d14bb58c">com.fs.starfarer.api.EveryFrameScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d7e/PatrolAssignmentAI_8java_source.html#l00301">301</a> of file <a class="el" href="../../d7/d7e/PatrolAssignmentAI_8java_source.html">PatrolAssignmentAI.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  301</span>                            {</div>
-<div class="line"><span class="lineno">  302</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  303</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9b0c0b4197c9296258ea002a71109b46" name="a9b0c0b4197c9296258ea002a71109b46"></a>
@@ -324,10 +230,7 @@ Public Member Functions</h2></td></tr>
 <p>Implements <a class="el" href="../../d7/d63/interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html#a6397d6c1c19a4dd0b58099219c0e0173">com.fs.starfarer.api.EveryFrameScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d7e/PatrolAssignmentAI_8java_source.html#l00304">304</a> of file <a class="el" href="../../d7/d7e/PatrolAssignmentAI_8java_source.html">PatrolAssignmentAI.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  304</span>                                    {</div>
-<div class="line"><span class="lineno">  305</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  306</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -151,13 +152,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d74/AnalyzeEntityIntelCreator_8java_source.html#l00016">16</a> of file <a class="el" href="../../d8/d74/AnalyzeEntityIntelCreator_8java_source.html">AnalyzeEntityIntelCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   16</span>                                                 {</div>
-<div class="line"><span class="lineno">   17</span>        SectorEntityToken entity = <a class="code hl_function" href="../../d3/d1e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1AnalyzeEntityIntelCreator.html#a5f5512dfe7ce62de584ba8e476d9287e">pickEntity</a>();</div>
-<div class="line"><span class="lineno">   18</span>        <span class="keywordflow">if</span> (entity == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   19</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> AnalyzeEntityMissionIntel(entity);</div>
-<div class="line"><span class="lineno">   20</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1AnalyzeEntityIntelCreator_html_a5f5512dfe7ce62de584ba8e476d9287e"><div class="ttname"><a href="../../d3/d1e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1AnalyzeEntityIntelCreator.html#a5f5512dfe7ce62de584ba8e476d9287e">com.fs.starfarer.api.impl.campaign.intel.AnalyzeEntityIntelCreator.pickEntity</a></div><div class="ttdeci">SectorEntityToken pickEntity()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d74/AnalyzeEntityIntelCreator_8java_source.html#l00069">AnalyzeEntityIntelCreator.java:69</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8cb0d5808c1dae64b072f6e9a126d0ad" name="a8cb0d5808c1dae64b072f6e9a126d0ad"></a>
@@ -176,10 +171,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d74/AnalyzeEntityIntelCreator_8java_source.html#l00022">22</a> of file <a class="el" href="../../d8/d74/AnalyzeEntityIntelCreator_8java_source.html">AnalyzeEntityIntelCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   22</span>                                             {</div>
-<div class="line"><span class="lineno">   23</span>        <span class="keywordflow">return</span> 15f;</div>
-<div class="line"><span class="lineno">   24</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8a52656a1cd68e1c5552e21c99eb8466" name="a8a52656a1cd68e1c5552e21c99eb8466"></a>
@@ -206,39 +198,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d74/AnalyzeEntityIntelCreator_8java_source.html#l00029">29</a> of file <a class="el" href="../../d8/d74/AnalyzeEntityIntelCreator_8java_source.html">AnalyzeEntityIntelCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   29</span>                                {</div>
-<div class="line"><span class="lineno">   30</span>        <a class="code hl_variable" href="../../d3/d1e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1AnalyzeEntityIntelCreator.html#a0185f8b90b2da7e0246ac7626be1a002">entityPicker</a> = <span class="keyword">new</span> WeightedRandomPicker&lt;SectorEntityToken&gt;();</div>
-<div class="line"><span class="lineno">   31</span>        <span class="keywordflow">for</span> (StarSystemAPI system : Global.getSector().getStarSystems()) {</div>
-<div class="line"><span class="lineno">   32</span>            <span class="keywordflow">if</span> (system.hasTag(Tags.THEME_DERELICT_MOTHERSHIP)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   33</span>            <span class="keywordflow">if</span> (system.hasTag(Tags.THEME_DERELICT_CRYOSLEEPER)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   34</span>            </div>
-<div class="line"><span class="lineno">   35</span>            <span class="keywordflow">if</span> (system.hasTag(Tags.THEME_DERELICT_PROBES) || </div>
-<div class="line"><span class="lineno">   36</span>                    system.hasTag(Tags.THEME_RUINS) ||</div>
-<div class="line"><span class="lineno">   37</span>                    system.hasTag(Tags.THEME_REMNANT_DESTROYED)) {</div>
-<div class="line"><span class="lineno">   38</span>                </div>
-<div class="line"><span class="lineno">   39</span>                <span class="keywordtype">float</span> w = 1f;</div>
-<div class="line"><span class="lineno">   40</span>                <span class="keywordflow">if</span> (system.hasTag(Tags.THEME_DERELICT_PROBES)) {</div>
-<div class="line"><span class="lineno">   41</span>                    w = 3f;</div>
-<div class="line"><span class="lineno">   42</span>                    <span class="keywordflow">if</span> (Global.getSector().isInNewGameAdvance()) {</div>
-<div class="line"><span class="lineno">   43</span>                        w = 5f;</div>
-<div class="line"><span class="lineno">   44</span>                    }</div>
-<div class="line"><span class="lineno">   45</span>                }</div>
-<div class="line"><span class="lineno">   46</span>                <span class="keywordflow">for</span> (SectorEntityToken entity : system.getEntitiesWithTag(Tags.SALVAGEABLE)) {</div>
-<div class="line"><span class="lineno">   47</span>                    <span class="comment">// skip derelict ships etc that will expire</span></div>
-<div class="line"><span class="lineno">   48</span>                    <span class="keywordflow">if</span> (entity.hasTag(Tags.EXPIRES)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   49</span>                    <span class="keywordflow">if</span> (Misc.isImportantForReason(entity.getMemoryWithoutUpdate(), <span class="stringliteral">&quot;aem&quot;</span>)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   50</span>                    <span class="keywordflow">if</span> (entity.hasTag(Tags.NOT_RANDOM_MISSION_TARGET)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   51</span>                    <span class="keywordflow">if</span> (entity.getMemoryWithoutUpdate() != <span class="keyword">null</span> &amp;&amp; entity.getMemoryWithoutUpdate().getBoolean(<span class="stringliteral">&quot;$ttWeaponsCache&quot;</span>)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   52</span>                    <span class="keywordflow">if</span> (entity.getCircularOrbitRadius() &gt; 10000f) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   53</span>                    <span class="keywordflow">if</span> (entity.getContainingLocation() != <span class="keyword">null</span> &amp;&amp; entity.getContainingLocation().hasTag(Tags.THEME_HIDDEN)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   54</span>                    <a class="code hl_variable" href="../../d3/d1e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1AnalyzeEntityIntelCreator.html#a0185f8b90b2da7e0246ac7626be1a002">entityPicker</a>.add(entity, w);</div>
-<div class="line"><span class="lineno">   55</span>                }</div>
-<div class="line"><span class="lineno">   56</span>                </div>
-<div class="line"><span class="lineno">   57</span>            }</div>
-<div class="line"><span class="lineno">   58</span>        }</div>
-<div class="line"><span class="lineno">   59</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1AnalyzeEntityIntelCreator_html_a0185f8b90b2da7e0246ac7626be1a002"><div class="ttname"><a href="../../d3/d1e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1AnalyzeEntityIntelCreator.html#a0185f8b90b2da7e0246ac7626be1a002">com.fs.starfarer.api.impl.campaign.intel.AnalyzeEntityIntelCreator.entityPicker</a></div><div class="ttdeci">transient WeightedRandomPicker&lt; SectorEntityToken &gt; entityPicker</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d74/AnalyzeEntityIntelCreator_8java_source.html#l00027">AnalyzeEntityIntelCreator.java:27</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5f5512dfe7ce62de584ba8e476d9287e" name="a5f5512dfe7ce62de584ba8e476d9287e"></a>
@@ -265,28 +225,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d74/AnalyzeEntityIntelCreator_8java_source.html#l00069">69</a> of file <a class="el" href="../../d8/d74/AnalyzeEntityIntelCreator_8java_source.html">AnalyzeEntityIntelCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   69</span>                                             {</div>
-<div class="line"><span class="lineno">   70</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d3/d1e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1AnalyzeEntityIntelCreator.html#a0185f8b90b2da7e0246ac7626be1a002">entityPicker</a> == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   71</span>            <a class="code hl_function" href="../../d3/d1e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1AnalyzeEntityIntelCreator.html#a8a52656a1cd68e1c5552e21c99eb8466">initPicker</a>();</div>
-<div class="line"><span class="lineno">   72</span>        }</div>
-<div class="line"><span class="lineno">   73</span>        <a class="code hl_function" href="../../d3/d1e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1AnalyzeEntityIntelCreator.html#ab2a8add3f22f0df0effb9ecd1305cb73">prunePicker</a>();</div>
-<div class="line"><span class="lineno">   74</span>        </div>
-<div class="line"><span class="lineno">   75</span>        SectorEntityToken entity = <a class="code hl_variable" href="../../d3/d1e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1AnalyzeEntityIntelCreator.html#a0185f8b90b2da7e0246ac7626be1a002">entityPicker</a>.pick();</div>
-<div class="line"><span class="lineno">   76</span>        </div>
-<div class="line"><span class="lineno">   77</span>        <span class="keywordflow">for</span> (EveryFrameScript s : GenericMissionManager.getInstance().getActive()) {</div>
-<div class="line"><span class="lineno">   78</span>            <span class="keywordflow">if</span> (s instanceof AnalyzeEntityMissionIntel) {</div>
-<div class="line"><span class="lineno">   79</span>                AnalyzeEntityMissionIntel intel = (AnalyzeEntityMissionIntel) s;</div>
-<div class="line"><span class="lineno">   80</span>                <span class="keywordflow">if</span> (entity == intel.getEntity()) {</div>
-<div class="line"><span class="lineno">   81</span>                    <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   82</span>                }</div>
-<div class="line"><span class="lineno">   83</span>            }</div>
-<div class="line"><span class="lineno">   84</span>        }</div>
-<div class="line"><span class="lineno">   85</span>        </div>
-<div class="line"><span class="lineno">   86</span>        <span class="keywordflow">return</span> entity;</div>
-<div class="line"><span class="lineno">   87</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1AnalyzeEntityIntelCreator_html_a8a52656a1cd68e1c5552e21c99eb8466"><div class="ttname"><a href="../../d3/d1e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1AnalyzeEntityIntelCreator.html#a8a52656a1cd68e1c5552e21c99eb8466">com.fs.starfarer.api.impl.campaign.intel.AnalyzeEntityIntelCreator.initPicker</a></div><div class="ttdeci">void initPicker()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d74/AnalyzeEntityIntelCreator_8java_source.html#l00029">AnalyzeEntityIntelCreator.java:29</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1AnalyzeEntityIntelCreator_html_ab2a8add3f22f0df0effb9ecd1305cb73"><div class="ttname"><a href="../../d3/d1e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1AnalyzeEntityIntelCreator.html#ab2a8add3f22f0df0effb9ecd1305cb73">com.fs.starfarer.api.impl.campaign.intel.AnalyzeEntityIntelCreator.prunePicker</a></div><div class="ttdeci">void prunePicker()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d74/AnalyzeEntityIntelCreator_8java_source.html#l00061">AnalyzeEntityIntelCreator.java:61</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab2a8add3f22f0df0effb9ecd1305cb73" name="ab2a8add3f22f0df0effb9ecd1305cb73"></a>
@@ -313,14 +252,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d74/AnalyzeEntityIntelCreator_8java_source.html#l00061">61</a> of file <a class="el" href="../../d8/d74/AnalyzeEntityIntelCreator_8java_source.html">AnalyzeEntityIntelCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   61</span>                                 {</div>
-<div class="line"><span class="lineno">   62</span>        <span class="keywordflow">for</span> (SectorEntityToken item : <span class="keyword">new</span> ArrayList&lt;SectorEntityToken&gt;(<a class="code hl_variable" href="../../d3/d1e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1AnalyzeEntityIntelCreator.html#a0185f8b90b2da7e0246ac7626be1a002">entityPicker</a>.getItems())) {</div>
-<div class="line"><span class="lineno">   63</span>            <span class="keywordflow">if</span> (!item.isAlive()) {</div>
-<div class="line"><span class="lineno">   64</span>                <a class="code hl_variable" href="../../d3/d1e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1AnalyzeEntityIntelCreator.html#a0185f8b90b2da7e0246ac7626be1a002">entityPicker</a>.remove(item);</div>
-<div class="line"><span class="lineno">   65</span>            }</div>
-<div class="line"><span class="lineno">   66</span>        }</div>
-<div class="line"><span class="lineno">   67</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

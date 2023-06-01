@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -431,10 +432,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dcd/DeliveryBarEvent_8java_source.html#l00056">56</a> of file <a class="el" href="../../d4/dcd/DeliveryBarEvent_8java_source.html">DeliveryBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   56</span>                              {</div>
-<div class="line"><span class="lineno">   57</span>        super();</div>
-<div class="line"><span class="lineno">   58</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -464,64 +462,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a9a7551dacae2af6ffa524617f89aa48a">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseGetCommodityBarEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dcd/DeliveryBarEvent_8java_source.html#l00340">340</a> of file <a class="el" href="../../d4/dcd/DeliveryBarEvent_8java_source.html">DeliveryBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  340</span>                                    {</div>
-<div class="line"><span class="lineno">  341</span>        String <span class="keywordtype">id</span> = <span class="stringliteral">&quot;negotiate_id&quot;</span>;</div>
-<div class="line"><span class="lineno">  342</span>        <a class="code hl_variable" href="../../dc/da0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEvent.html#a7319e305e3b103fa49bec1b9998ca244">options</a>.<a class="code hl_function" href="../../da/d65/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OptionPanelAPI.html#a57f02433899c784a146848ca9955130a">addOption</a>(<span class="stringliteral">&quot;Negotiate a higher fee for the delivery&quot;</span>, <span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  343</span>        </div>
-<div class="line"><span class="lineno">  344</span>        StoryOptionParams params = <span class="keyword">new</span> StoryOptionParams(<span class="keywordtype">id</span>, 1, <span class="stringliteral">&quot;negotiateDeliveryFee&quot;</span>, Sounds.STORY_POINT_SPEND_INDUSTRY,</div>
-<div class="line"><span class="lineno">  345</span>                <span class="stringliteral">&quot;Negotiated higher fee for delivery of &quot;</span> + <a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#adff3b087c89f948e2ea3d652ffe69e62">data</a>.comFrom.getCommodity().getLowerCaseName() + <span class="stringliteral">&quot; to &quot;</span> + <a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#adff3b087c89f948e2ea3d652ffe69e62">data</a>.dest.getName());</div>
-<div class="line"><span class="lineno">  346</span>        </div>
-<div class="line"><span class="lineno">  347</span>        SetStoryOption.set(<a class="code hl_variable" href="../../dc/da0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEvent.html#ac773a96bd84afb2ed3d04418a207f252">dialog</a>, params, </div>
-<div class="line"><span class="lineno">  348</span>            <span class="keyword">new</span> BaseOptionStoryPointActionDelegate(<a class="code hl_variable" href="../../dc/da0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEvent.html#ac773a96bd84afb2ed3d04418a207f252">dialog</a>, params) {</div>
-<div class="line"><span class="lineno">  349</span> </div>
-<div class="line"><span class="lineno">  350</span>                @Override</div>
-<div class="line"><span class="lineno">  351</span>                <span class="keyword">public</span> <span class="keywordtype">void</span> confirm() {</div>
-<div class="line"><span class="lineno">  352</span>                    super.confirm();</div>
-<div class="line"><span class="lineno">  353</span>                    <a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#af40eab71b65b1a18e5a490cba261c557">reward</a> = <a class="code hl_function" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a70b9961b979178504c53e2205c3f6d56">getNegotiatedAmount</a>();</div>
-<div class="line"><span class="lineno">  354</span>                    <a class="code hl_variable" href="../../dc/da0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEvent.html#ac773a96bd84afb2ed3d04418a207f252">dialog</a>.<a class="code hl_function" href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#a52d00add8a9c52795f652f493ac37244">getTextPanel</a>().<a class="code hl_function" href="../../d4/ddc/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1TextPanelAPI.html#a0ef96007fc183cddf8dce605e19a98bf">addPara</a>(<a class="code hl_function" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a8126ebdbff9058d81f268aa8e3b38c54">getNegotiatedText</a>());</div>
-<div class="line"><span class="lineno">  355</span>                    OptionPanelAPI <a class="code hl_variable" href="../../dc/da0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEvent.html#a7319e305e3b103fa49bec1b9998ca244">options</a> = <a class="code hl_variable" href="../../dc/da0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEvent.html#ac773a96bd84afb2ed3d04418a207f252">dialog</a>.<a class="code hl_function" href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#af4f0b5fdb66110b1d0565b433abaf65c">getOptionPanel</a>();</div>
-<div class="line"><span class="lineno">  356</span>                    <a class="code hl_variable" href="../../dc/da0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEvent.html#a7319e305e3b103fa49bec1b9998ca244">options</a>.<a class="code hl_function" href="../../da/d65/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OptionPanelAPI.html#a72ccab6cc04270d28959f8175d0821cb">clearOptions</a>();</div>
-<div class="line"><span class="lineno">  357</span>                    <a class="code hl_variable" href="../../dc/da0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEvent.html#a7319e305e3b103fa49bec1b9998ca244">options</a>.<a class="code hl_function" href="../../da/d65/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OptionPanelAPI.html#a57f02433899c784a146848ca9955130a">addOption</a>(<span class="stringliteral">&quot;Continue&quot;</span>, <a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a920ba64ee5b83ca791b0152fe5a75155">OPTION_CONFIRM</a>);</div>
-<div class="line"><span class="lineno">  358</span>                    <span class="comment">//optionSelected(null, OPTION_CONFIRM);</span></div>
-<div class="line"><span class="lineno">  359</span>                }</div>
-<div class="line"><span class="lineno">  360</span>                </div>
-<div class="line"><span class="lineno">  361</span>                @Override</div>
-<div class="line"><span class="lineno">  362</span>                <span class="keyword">public</span> String getTitle() {</div>
-<div class="line"><span class="lineno">  363</span>                    <span class="comment">//return &quot;Negotiating delivery fee&quot;;</span></div>
-<div class="line"><span class="lineno">  364</span>                    <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  365</span>                }</div>
-<div class="line"><span class="lineno">  366</span> </div>
-<div class="line"><span class="lineno">  367</span>                @Override</div>
-<div class="line"><span class="lineno">  368</span>                <span class="keyword">public</span> <span class="keywordtype">void</span> createDescription(TooltipMakerAPI info) {</div>
-<div class="line"><span class="lineno">  369</span>                    <span class="keywordtype">float</span> opad = 10f;</div>
-<div class="line"><span class="lineno">  370</span>                    </div>
-<div class="line"><span class="lineno">  371</span>                    info.addSpacer(-opad);</div>
-<div class="line"><span class="lineno">  372</span>                    </div>
-<div class="line"><span class="lineno">  373</span>                    info.setParaInsigniaLarge();</div>
-<div class="line"><span class="lineno">  374</span>                    info.addPara(<span class="stringliteral">&quot;You&#39;re able to negotiate the delivery fee from %s up to &quot;</span> +</div>
-<div class="line"><span class="lineno">  375</span>                            <span class="stringliteral">&quot;%s.&quot;</span>, 0f, Misc.getHighlightColor(),</div>
-<div class="line"><span class="lineno">  376</span>                            Misc.getDGSCredits(<a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#af40eab71b65b1a18e5a490cba261c557">reward</a>),</div>
-<div class="line"><span class="lineno">  377</span>                            Misc.getDGSCredits(<a class="code hl_function" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a70b9961b979178504c53e2205c3f6d56">getNegotiatedAmount</a>()));</div>
-<div class="line"><span class="lineno">  378</span>                    </div>
-<div class="line"><span class="lineno">  379</span>                    info.addSpacer(opad * 2f);</div>
-<div class="line"><span class="lineno">  380</span>                    addActionCostSection(info);</div>
-<div class="line"><span class="lineno">  381</span>                }</div>
-<div class="line"><span class="lineno">  382</span>            </div>
-<div class="line"><span class="lineno">  383</span>        });</div>
-<div class="line"><span class="lineno">  384</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEvent_html_a7319e305e3b103fa49bec1b9998ca244"><div class="ttname"><a href="../../dc/da0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEvent.html#a7319e305e3b103fa49bec1b9998ca244">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseBarEvent.options</a></div><div class="ttdeci">transient OptionPanelAPI options</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d7d/BaseBarEvent_8java_source.html#l00016">BaseBarEvent.java:16</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEvent_html_ac773a96bd84afb2ed3d04418a207f252"><div class="ttname"><a href="../../dc/da0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEvent.html#ac773a96bd84afb2ed3d04418a207f252">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseBarEvent.dialog</a></div><div class="ttdeci">transient InteractionDialogAPI dialog</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d7d/BaseBarEvent_8java_source.html#l00014">BaseBarEvent.java:14</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent_html_a920ba64ee5b83ca791b0152fe5a75155"><div class="ttname"><a href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a920ba64ee5b83ca791b0152fe5a75155">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseGetCommodityBarEvent.OPTION_CONFIRM</a></div><div class="ttdeci">static final String OPTION_CONFIRM</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d22/BaseGetCommodityBarEvent_8java_source.html#l00026">BaseGetCommodityBarEvent.java:26</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent_html_a70b9961b979178504c53e2205c3f6d56"><div class="ttname"><a href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a70b9961b979178504c53e2205c3f6d56">com.fs.starfarer.api.impl.campaign.intel.bar.events.DeliveryBarEvent.getNegotiatedAmount</a></div><div class="ttdeci">int getNegotiatedAmount()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcd/DeliveryBarEvent_8java_source.html#l00336">DeliveryBarEvent.java:336</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent_html_a8126ebdbff9058d81f268aa8e3b38c54"><div class="ttname"><a href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a8126ebdbff9058d81f268aa8e3b38c54">com.fs.starfarer.api.impl.campaign.intel.bar.events.DeliveryBarEvent.getNegotiatedText</a></div><div class="ttdeci">String getNegotiatedText()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcd/DeliveryBarEvent_8java_source.html#l00586">DeliveryBarEvent.java:586</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent_html_adff3b087c89f948e2ea3d652ffe69e62"><div class="ttname"><a href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#adff3b087c89f948e2ea3d652ffe69e62">com.fs.starfarer.api.impl.campaign.intel.bar.events.DeliveryBarEvent.data</a></div><div class="ttdeci">DestinationData data</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcd/DeliveryBarEvent_8java_source.html#l00054">DeliveryBarEvent.java:54</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent_html_af40eab71b65b1a18e5a490cba261c557"><div class="ttname"><a href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#af40eab71b65b1a18e5a490cba261c557">com.fs.starfarer.api.impl.campaign.intel.bar.events.DeliveryBarEvent.reward</a></div><div class="ttdeci">int reward</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcd/DeliveryBarEvent_8java_source.html#l00047">DeliveryBarEvent.java:47</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI_html_a52d00add8a9c52795f652f493ac37244"><div class="ttname"><a href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#a52d00add8a9c52795f652f493ac37244">com.fs.starfarer.api.campaign.InteractionDialogAPI.getTextPanel</a></div><div class="ttdeci">TextPanelAPI getTextPanel()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI_html_af4f0b5fdb66110b1d0565b433abaf65c"><div class="ttname"><a href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#af4f0b5fdb66110b1d0565b433abaf65c">com.fs.starfarer.api.campaign.InteractionDialogAPI.getOptionPanel</a></div><div class="ttdeci">OptionPanelAPI getOptionPanel()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OptionPanelAPI_html_a57f02433899c784a146848ca9955130a"><div class="ttname"><a href="../../da/d65/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OptionPanelAPI.html#a57f02433899c784a146848ca9955130a">com.fs.starfarer.api.campaign.OptionPanelAPI.addOption</a></div><div class="ttdeci">void addOption(String text, Object data)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OptionPanelAPI_html_a72ccab6cc04270d28959f8175d0821cb"><div class="ttname"><a href="../../da/d65/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OptionPanelAPI.html#a72ccab6cc04270d28959f8175d0821cb">com.fs.starfarer.api.campaign.OptionPanelAPI.clearOptions</a></div><div class="ttdeci">void clearOptions()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1TextPanelAPI_html_a0ef96007fc183cddf8dce605e19a98bf"><div class="ttname"><a href="../../d4/ddc/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1TextPanelAPI.html#a0ef96007fc183cddf8dce605e19a98bf">com.fs.starfarer.api.campaign.TextPanelAPI.addPara</a></div><div class="ttdeci">LabelAPI addPara(String text)</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aef2ae282e77ac2cd0eb4578303913273" name="aef2ae282e77ac2cd0eb4578303913273"></a>
@@ -551,17 +492,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a559f5d0868278e56e8d145bf131bb5c3">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseGetCommodityBarEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dcd/DeliveryBarEvent_8java_source.html#l00418">418</a> of file <a class="el" href="../../d4/dcd/DeliveryBarEvent_8java_source.html">DeliveryBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  418</span>                                                  {</div>
-<div class="line"><span class="lineno">  419</span>        super.adjustPerson(<a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#ad6ddfca6f68679730252f1bc41779553">person</a>);</div>
-<div class="line"><span class="lineno">  420</span>        <a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#ad6ddfca6f68679730252f1bc41779553">person</a>.<a class="code hl_function" href="../../d9/df0/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#a997d1fcb5b1c926e5b30387b3e9f6d38">setImportanceAndVoice</a>(<a class="code hl_function" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a5026deafe542d5b088c9a8c20fa3dee7">pickImportance</a>(), <a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a0870c60e641dfaff36c968eb2e4d1503">random</a>);</div>
-<div class="line"><span class="lineno">  421</span>        <a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#ad6ddfca6f68679730252f1bc41779553">person</a>.<a class="code hl_function" href="../../d9/df0/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#a6562cf3ba97840b60bed1eb2e38c5a45">addTag</a>(Tags.CONTACT_TRADE);</div>
-<div class="line"><span class="lineno">  422</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent_html_a0870c60e641dfaff36c968eb2e4d1503"><div class="ttname"><a href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a0870c60e641dfaff36c968eb2e4d1503">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseGetCommodityBarEvent.random</a></div><div class="ttdeci">transient Random random</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d22/BaseGetCommodityBarEvent_8java_source.html#l00040">BaseGetCommodityBarEvent.java:40</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent_html_a5026deafe542d5b088c9a8c20fa3dee7"><div class="ttname"><a href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a5026deafe542d5b088c9a8c20fa3dee7">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseGetCommodityBarEvent.pickImportance</a></div><div class="ttdeci">PersonImportance pickImportance()</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d22/BaseGetCommodityBarEvent_8java_source.html#l00378">BaseGetCommodityBarEvent.java:378</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent_html_ad6ddfca6f68679730252f1bc41779553"><div class="ttname"><a href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#ad6ddfca6f68679730252f1bc41779553">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseGetCommodityBarEvent.person</a></div><div class="ttdeci">PersonAPI person</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d22/BaseGetCommodityBarEvent_8java_source.html#l00031">BaseGetCommodityBarEvent.java:31</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI_html_a6562cf3ba97840b60bed1eb2e38c5a45"><div class="ttname"><a href="../../d9/df0/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#a6562cf3ba97840b60bed1eb2e38c5a45">com.fs.starfarer.api.characters.PersonAPI.addTag</a></div><div class="ttdeci">void addTag(String tag)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI_html_a997d1fcb5b1c926e5b30387b3e9f6d38"><div class="ttname"><a href="../../d9/df0/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#a997d1fcb5b1c926e5b30387b3e9f6d38">com.fs.starfarer.api.characters.PersonAPI.setImportanceAndVoice</a></div><div class="ttdeci">void setImportanceAndVoice(PersonImportance importance, Random random)</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2af3458b8ec66a3e9f8054a24e658e1a" name="a2af3458b8ec66a3e9f8054a24e658e1a"></a>
@@ -590,14 +521,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#aac1c5d5e526ffeedd84f7754471dfe6f">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseGetCommodityBarEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dcd/DeliveryBarEvent_8java_source.html#l00387">387</a> of file <a class="el" href="../../d4/dcd/DeliveryBarEvent_8java_source.html">DeliveryBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  387</span>                                  {</div>
-<div class="line"><span class="lineno">  388</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a0cdfe8766d7dfa0c9008c2cf5e5ef562">escrow</a> &lt;= 0) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  389</span>        <span class="keywordtype">float</span> credits = Global.getSector().getPlayerFleet().getCargo().getCredits().get();</div>
-<div class="line"><span class="lineno">  390</span>        <span class="keywordtype">boolean</span> canAfford = credits &gt;= <a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a0cdfe8766d7dfa0c9008c2cf5e5ef562">escrow</a>;</div>
-<div class="line"><span class="lineno">  391</span>        <span class="keywordflow">return</span> canAfford;</div>
-<div class="line"><span class="lineno">  392</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent_html_a0cdfe8766d7dfa0c9008c2cf5e5ef562"><div class="ttname"><a href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a0cdfe8766d7dfa0c9008c2cf5e5ef562">com.fs.starfarer.api.impl.campaign.intel.bar.events.DeliveryBarEvent.escrow</a></div><div class="ttdeci">int escrow</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcd/DeliveryBarEvent_8java_source.html#l00048">DeliveryBarEvent.java:48</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae99bcd937422b9524ff9d2007dbd1bd6" name="ae99bcd937422b9524ff9d2007dbd1bd6"></a>
@@ -625,200 +549,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dcd/DeliveryBarEvent_8java_source.html#l00155">155</a> of file <a class="el" href="../../d4/dcd/DeliveryBarEvent_8java_source.html">DeliveryBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  155</span>                                                 {</div>
-<div class="line"><span class="lineno">  156</span>        </div>
-<div class="line"><span class="lineno">  157</span>        <a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#adff3b087c89f948e2ea3d652ffe69e62">data</a> = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  158</span>        <a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#ac241b0f35ceb3dc1002cbe0853d093c7">destination</a> = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  159</span>        <a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#af40eab71b65b1a18e5a490cba261c557">reward</a> = 0;</div>
-<div class="line"><span class="lineno">  160</span>        <a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a735dfbcb759416e4abf3aeebcdf30083">duration</a> = 0;</div>
-<div class="line"><span class="lineno">  161</span>        <a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#af4cb427f6d545a6da98d30e21373bfe9">faction</a> = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  162</span>        <a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#aee7e8c3c2d87a324dd15ae8016ab32ac">quantity</a> = 0;</div>
-<div class="line"><span class="lineno">  163</span>        <a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a6d5595166189e56de621591f1ee4a16f">commodity</a> = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  164</span>        </div>
-<div class="line"><span class="lineno">  165</span>        List&lt;CommodityOnMarketAPI&gt; commodities = <span class="keyword">new</span> ArrayList&lt;CommodityOnMarketAPI&gt;();</div>
-<div class="line"><span class="lineno">  166</span>        <span class="keywordflow">for</span> (CommodityOnMarketAPI com : <a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a1931eabc2023e6ba13d6104f2302798a">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a738005dc149aa245fe872593b41517b0">getCommoditiesCopy</a>()) {</div>
-<div class="line"><span class="lineno">  167</span>            <span class="keywordflow">if</span> (com.isNonEcon()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  168</span>            <span class="keywordflow">if</span> (com.isMeta()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  169</span>            <span class="keywordflow">if</span> (com.isPersonnel()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  170</span>            <span class="keywordflow">if</span> (com.isIllegal()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  171</span>            </div>
-<div class="line"><span class="lineno">  172</span>            <span class="keywordflow">if</span> (com.getAvailable() &lt;= 0) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  173</span>            <span class="keywordflow">if</span> (com.getMaxSupply() &lt;= 0) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  174</span>            </div>
-<div class="line"><span class="lineno">  175</span>            commodities.add(com);</div>
-<div class="line"><span class="lineno">  176</span>        }</div>
-<div class="line"><span class="lineno">  177</span>        </div>
-<div class="line"><span class="lineno">  178</span>        List&lt;DestinationData&gt; potential = <span class="keyword">new</span> ArrayList&lt;DestinationData&gt;();</div>
-<div class="line"><span class="lineno">  179</span>        </div>
-<div class="line"><span class="lineno">  180</span>        <span class="keywordtype">float</span> maxScore = 0;</div>
-<div class="line"><span class="lineno">  181</span>        <span class="keywordtype">float</span> maxDist = 0;</div>
-<div class="line"><span class="lineno">  182</span>        <span class="keywordflow">for</span> (MarketAPI other : Global.getSector().getEconomy().getMarketsCopy()) {</div>
-<div class="line"><span class="lineno">  183</span>            <span class="keywordflow">if</span> (other == <a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a1931eabc2023e6ba13d6104f2302798a">market</a>) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  184</span>            <span class="keywordflow">if</span> (other.isHidden()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  185</span>            <span class="keywordflow">if</span> (other.isInvalidMissionTarget()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  186</span>            </div>
-<div class="line"><span class="lineno">  187</span>            <span class="keywordflow">if</span> (other.getEconGroup() == <span class="keyword">null</span> &amp;&amp; <a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a1931eabc2023e6ba13d6104f2302798a">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#ac81c50a88b7ee992490d66cab90c05ca">getEconGroup</a>() != <span class="keyword">null</span>) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  188</span>            <span class="keywordflow">if</span> (other.getEconGroup() != <span class="keyword">null</span> &amp;&amp; !other.getEconGroup().equals(<a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a1931eabc2023e6ba13d6104f2302798a">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#ac81c50a88b7ee992490d66cab90c05ca">getEconGroup</a>())) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  189</span>            </div>
-<div class="line"><span class="lineno">  190</span>            <span class="keywordflow">if</span> (other.getStarSystem() == <span class="keyword">null</span>) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  191</span>            </div>
-<div class="line"><span class="lineno">  192</span>            <span class="comment">//WeightedRandomPicker&lt;T&gt;</span></div>
-<div class="line"><span class="lineno">  193</span>            <span class="keywordflow">for</span> (CommodityOnMarketAPI com : commodities) {</div>
-<div class="line"><span class="lineno">  194</span>                <span class="comment">//CommodityOnMarketAPI otherCom = other.getCommodityData(com.getId());</span></div>
-<div class="line"><span class="lineno">  195</span>                CommodityOnMarketAPI otherCom = other.getCommodityData(com.getDemandClass());</div>
-<div class="line"><span class="lineno">  196</span>                <span class="keywordflow">if</span> (otherCom.getMaxDemand() &lt;= 0) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  197</span>                </div>
-<div class="line"><span class="lineno">  198</span>                DestinationData <a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#adff3b087c89f948e2ea3d652ffe69e62">data</a> = <span class="keyword">new</span> DestinationData(<a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a1931eabc2023e6ba13d6104f2302798a">market</a>, other, com, otherCom);</div>
-<div class="line"><span class="lineno">  199</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#adff3b087c89f948e2ea3d652ffe69e62">data</a>.illegal) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  200</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#adff3b087c89f948e2ea3d652ffe69e62">data</a>.score &gt; maxScore) {</div>
-<div class="line"><span class="lineno">  201</span>                    maxScore = <a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#adff3b087c89f948e2ea3d652ffe69e62">data</a>.score;</div>
-<div class="line"><span class="lineno">  202</span>                }</div>
-<div class="line"><span class="lineno">  203</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#adff3b087c89f948e2ea3d652ffe69e62">data</a>.distLY &gt; maxDist) {</div>
-<div class="line"><span class="lineno">  204</span>                    maxDist = <a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#adff3b087c89f948e2ea3d652ffe69e62">data</a>.distLY;</div>
-<div class="line"><span class="lineno">  205</span>                }</div>
-<div class="line"><span class="lineno">  206</span>                potential.add(<a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#adff3b087c89f948e2ea3d652ffe69e62">data</a>);</div>
-<div class="line"><span class="lineno">  207</span>            }</div>
-<div class="line"><span class="lineno">  208</span>        }</div>
-<div class="line"><span class="lineno">  209</span>        <span class="keywordflow">if</span> (maxDist &gt; 10) maxDist = 10;</div>
-<div class="line"><span class="lineno">  210</span>        </div>
-<div class="line"><span class="lineno">  211</span>        WeightedRandomPicker&lt;DestinationData&gt; picker = <span class="keyword">new</span> WeightedRandomPicker&lt;DestinationData&gt;(<a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a0870c60e641dfaff36c968eb2e4d1503">random</a>);</div>
-<div class="line"><span class="lineno">  212</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; potential.size(); i++) {</div>
-<div class="line"><span class="lineno">  213</span>            DestinationData d = potential.get(i);</div>
-<div class="line"><span class="lineno">  214</span>            <span class="keywordflow">if</span> (d.score &gt; maxScore * 0.5f &amp;&amp; d.distLY &gt; maxDist * 0.5f) {</div>
-<div class="line"><span class="lineno">  215</span>                picker.add(d, d.score * d.score * d.score);</div>
-<div class="line"><span class="lineno">  216</span>            }</div>
-<div class="line"><span class="lineno">  217</span>        }</div>
-<div class="line"><span class="lineno">  218</span>        </div>
-<div class="line"><span class="lineno">  219</span><span class="comment">//      Collections.sort(potential, new Comparator&lt;DestinationData&gt;() {</span></div>
-<div class="line"><span class="lineno">  220</span><span class="comment">//          public int compare(DestinationData o1, DestinationData o2) {</span></div>
-<div class="line"><span class="lineno">  221</span><span class="comment">//              return (int) Math.signum(o2.score - o1.score);</span></div>
-<div class="line"><span class="lineno">  222</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">  223</span><span class="comment">//      });</span></div>
-<div class="line"><span class="lineno">  224</span><span class="comment">//      </span></div>
-<div class="line"><span class="lineno">  225</span><span class="comment">//      </span></div>
-<div class="line"><span class="lineno">  226</span><span class="comment">//      WeightedRandomPicker&lt;DestinationData&gt; picker = new WeightedRandomPicker&lt;DestinationData&gt;(random);</span></div>
-<div class="line"><span class="lineno">  227</span><span class="comment">//      for (int i = 0; i &lt; potential.size() &amp;&amp; i &lt; 5; i++) {</span></div>
-<div class="line"><span class="lineno">  228</span><span class="comment">//          DestinationData d = potential.get(i);</span></div>
-<div class="line"><span class="lineno">  229</span><span class="comment">//          picker.add(d, d.score * d.score * d.score);</span></div>
-<div class="line"><span class="lineno">  230</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  231</span>        </div>
-<div class="line"><span class="lineno">  232</span>        DestinationData pick = picker.pick();</div>
-<div class="line"><span class="lineno">  233</span>        </div>
-<div class="line"><span class="lineno">  234</span>        <span class="keywordflow">if</span> (pick == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  235</span>        </div>
-<div class="line"><span class="lineno">  236</span>        <a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#ac241b0f35ceb3dc1002cbe0853d093c7">destination</a> = pick.dest;</div>
-<div class="line"><span class="lineno">  237</span>        <a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a735dfbcb759416e4abf3aeebcdf30083">duration</a> = pick.distLY * 5 + 50;</div>
-<div class="line"><span class="lineno">  238</span>        <a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a735dfbcb759416e4abf3aeebcdf30083">duration</a> = (int)<a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a735dfbcb759416e4abf3aeebcdf30083">duration</a> / 10 * 10;</div>
-<div class="line"><span class="lineno">  239</span>        </div>
-<div class="line"><span class="lineno">  240</span>        CargoAPI cargo = Global.getSector().getPlayerFleet().getCargo();</div>
-<div class="line"><span class="lineno">  241</span>        <a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#aee7e8c3c2d87a324dd15ae8016ab32ac">quantity</a> = (int) cargo.getMaxCapacity();</div>
-<div class="line"><span class="lineno">  242</span>        <span class="keywordflow">if</span> (pick.com.isFuel()) {</div>
-<div class="line"><span class="lineno">  243</span>            <a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#aee7e8c3c2d87a324dd15ae8016ab32ac">quantity</a> = (int) cargo.getMaxFuel();</div>
-<div class="line"><span class="lineno">  244</span>        }</div>
-<div class="line"><span class="lineno">  245</span>        </div>
-<div class="line"><span class="lineno">  246</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a0870c60e641dfaff36c968eb2e4d1503">random</a>.nextFloat() &lt; <a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#af06656d1e2d9ab8dbfa3d0e5069ddae4">PROB_HIGHER_CAPACITY</a>) {</div>
-<div class="line"><span class="lineno">  247</span>            <a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#aee7e8c3c2d87a324dd15ae8016ab32ac">quantity</a> *= 1f + <a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a0870c60e641dfaff36c968eb2e4d1503">random</a>.nextFloat() * 3f;</div>
-<div class="line"><span class="lineno">  248</span>            <a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#aee7e8c3c2d87a324dd15ae8016ab32ac">quantity</a> = (int) <a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#aee7e8c3c2d87a324dd15ae8016ab32ac">quantity</a>;</div>
-<div class="line"><span class="lineno">  249</span>        }</div>
-<div class="line"><span class="lineno">  250</span>        </div>
-<div class="line"><span class="lineno">  251</span>        <span class="comment">// don&#39;t want mission at market to update quantity as player changes their fleet up</span></div>
-<div class="line"><span class="lineno">  252</span>        <span class="keywordflow">if</span> (pick.com.isFuel()) {</div>
-<div class="line"><span class="lineno">  253</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a306316d86e84b98e77194346c3f133e5">playerFuelCap</a> == 0) {</div>
-<div class="line"><span class="lineno">  254</span>                <a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a306316d86e84b98e77194346c3f133e5">playerFuelCap</a> = <a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#aee7e8c3c2d87a324dd15ae8016ab32ac">quantity</a>;</div>
-<div class="line"><span class="lineno">  255</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  256</span>                <a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#aee7e8c3c2d87a324dd15ae8016ab32ac">quantity</a> = <a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a306316d86e84b98e77194346c3f133e5">playerFuelCap</a>;</div>
-<div class="line"><span class="lineno">  257</span>            }</div>
-<div class="line"><span class="lineno">  258</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  259</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a8f8e4fb9245cea3b3d435a506347486d">playerCargoCap</a> == 0) {</div>
-<div class="line"><span class="lineno">  260</span>                <a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a8f8e4fb9245cea3b3d435a506347486d">playerCargoCap</a> = <a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#aee7e8c3c2d87a324dd15ae8016ab32ac">quantity</a>;</div>
-<div class="line"><span class="lineno">  261</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  262</span>                <a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#aee7e8c3c2d87a324dd15ae8016ab32ac">quantity</a> = <a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a8f8e4fb9245cea3b3d435a506347486d">playerCargoCap</a>;</div>
-<div class="line"><span class="lineno">  263</span>            }</div>
-<div class="line"><span class="lineno">  264</span>        }</div>
-<div class="line"><span class="lineno">  265</span>        </div>
-<div class="line"><span class="lineno">  266</span>        <a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#aee7e8c3c2d87a324dd15ae8016ab32ac">quantity</a> *= 0.5f + 0.25f * <a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a0870c60e641dfaff36c968eb2e4d1503">random</a>.nextFloat();</div>
-<div class="line"><span class="lineno">  267</span>        </div>
-<div class="line"><span class="lineno">  268</span>        <span class="comment">// somewhat less of the more valuable stuff</span></div>
-<div class="line"><span class="lineno">  269</span>        <a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#aee7e8c3c2d87a324dd15ae8016ab32ac">quantity</a> *= Math.min(1f, 200f / pick.comFrom.getCommodity().getBasePrice());</div>
-<div class="line"><span class="lineno">  270</span>        </div>
-<div class="line"><span class="lineno">  271</span>        <span class="keywordtype">int</span> limit = (int) (pick.comFrom.getAvailable() * pick.comFrom.getCommodity().getEconUnit());</div>
-<div class="line"><span class="lineno">  272</span>        limit *= 0.75f + 0.5f * <a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a0870c60e641dfaff36c968eb2e4d1503">random</a>.nextFloat();</div>
-<div class="line"><span class="lineno">  273</span>        <span class="comment">//if (quantity &gt; 5000) quantity = 5000;</span></div>
-<div class="line"><span class="lineno">  274</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#aee7e8c3c2d87a324dd15ae8016ab32ac">quantity</a> &gt; limit) <a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#aee7e8c3c2d87a324dd15ae8016ab32ac">quantity</a> = limit;</div>
-<div class="line"><span class="lineno">  275</span>        </div>
-<div class="line"><span class="lineno">  276</span>        </div>
-<div class="line"><span class="lineno">  277</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#aee7e8c3c2d87a324dd15ae8016ab32ac">quantity</a> &gt; 10000) <a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#aee7e8c3c2d87a324dd15ae8016ab32ac">quantity</a> = <a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#aee7e8c3c2d87a324dd15ae8016ab32ac">quantity</a> / 1000 * 1000;</div>
-<div class="line"><span class="lineno">  278</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#aee7e8c3c2d87a324dd15ae8016ab32ac">quantity</a> &gt; 100) <a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#aee7e8c3c2d87a324dd15ae8016ab32ac">quantity</a> = <a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#aee7e8c3c2d87a324dd15ae8016ab32ac">quantity</a> / 10 * 10;</div>
-<div class="line"><span class="lineno">  279</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#aee7e8c3c2d87a324dd15ae8016ab32ac">quantity</a> &gt; 10) <a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#aee7e8c3c2d87a324dd15ae8016ab32ac">quantity</a> = <a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#aee7e8c3c2d87a324dd15ae8016ab32ac">quantity</a> / 10 * 10;</div>
-<div class="line"><span class="lineno">  280</span>        </div>
-<div class="line"><span class="lineno">  281</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#aee7e8c3c2d87a324dd15ae8016ab32ac">quantity</a> &lt; 10) <a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#aee7e8c3c2d87a324dd15ae8016ab32ac">quantity</a> = 10;</div>
-<div class="line"><span class="lineno">  282</span>        </div>
-<div class="line"><span class="lineno">  283</span>        </div>
-<div class="line"><span class="lineno">  284</span>        <span class="comment">//float base = pick.com.getMarket().getSupplyPrice(pick.com.getId(), 1, true);</span></div>
-<div class="line"><span class="lineno">  285</span>        <span class="keywordtype">float</span> base = pick.comFrom.getMarket().getSupplyPrice(pick.comFrom.getId(), 1, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  286</span>        </div>
-<div class="line"><span class="lineno">  287</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#aee7e8c3c2d87a324dd15ae8016ab32ac">quantity</a> * base &lt; 4000) {</div>
-<div class="line"><span class="lineno">  288</span>            base = Math.min(100, 4000 / <a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#aee7e8c3c2d87a324dd15ae8016ab32ac">quantity</a>);</div>
-<div class="line"><span class="lineno">  289</span>        }</div>
-<div class="line"><span class="lineno">  290</span>        </div>
-<div class="line"><span class="lineno">  291</span><span class="comment">//      float minBase = 100;</span></div>
-<div class="line"><span class="lineno">  292</span><span class="comment">//      if (quantity &gt; 500) {</span></div>
-<div class="line"><span class="lineno">  293</span><span class="comment">//          minBase = 50;</span></div>
-<div class="line"><span class="lineno">  294</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  295</span>        <span class="keywordtype">float</span> minBase = 100f - 50f * Math.min(1f, <a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#aee7e8c3c2d87a324dd15ae8016ab32ac">quantity</a> / 500f);</div>
-<div class="line"><span class="lineno">  296</span>        minBase = (base + minBase) * 0.75f;</div>
-<div class="line"><span class="lineno">  297</span>        </div>
-<div class="line"><span class="lineno">  298</span>        <span class="keywordflow">if</span> (base &lt; minBase) base = minBase;</div>
-<div class="line"><span class="lineno">  299</span>        </div>
-<div class="line"><span class="lineno">  300</span>        <span class="comment">//float extra = 2000;</span></div>
-<div class="line"><span class="lineno">  301</span>        </div>
-<div class="line"><span class="lineno">  302</span>        <span class="keywordtype">float</span> mult = pick.score / 30f;</div>
-<div class="line"><span class="lineno">  303</span>        <span class="comment">//if (market.isPlayerOwned() &amp;&amp; mult &gt; 2f) mult = 2f;</span></div>
-<div class="line"><span class="lineno">  304</span>        <span class="comment">//if (market.isPlayerOwned()) mult *= 0.75f;</span></div>
-<div class="line"><span class="lineno">  305</span>        </div>
-<div class="line"><span class="lineno">  306</span>        <span class="keywordflow">if</span> (mult &lt; 0.75f) mult = 0.75f;</div>
-<div class="line"><span class="lineno">  307</span>        <span class="comment">//if (mult &gt; 2) mult = 2;</span></div>
-<div class="line"><span class="lineno">  308</span>        <a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#af40eab71b65b1a18e5a490cba261c557">reward</a> = (int) (base * mult * <a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#aee7e8c3c2d87a324dd15ae8016ab32ac">quantity</a>);</div>
-<div class="line"><span class="lineno">  309</span>        </div>
-<div class="line"><span class="lineno">  310</span><span class="comment">//      float minPerUnit = 50;</span></div>
-<div class="line"><span class="lineno">  311</span><span class="comment">//      if (reward / quantity &lt; minPerUnit) {</span></div>
-<div class="line"><span class="lineno">  312</span><span class="comment">//          reward = (int) (minPerUnit * quantity);</span></div>
-<div class="line"><span class="lineno">  313</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  314</span>        </div>
-<div class="line"><span class="lineno">  315</span>        <a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#af40eab71b65b1a18e5a490cba261c557">reward</a> = <a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#af40eab71b65b1a18e5a490cba261c557">reward</a> / 1000 * 1000;</div>
-<div class="line"><span class="lineno">  316</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#af40eab71b65b1a18e5a490cba261c557">reward</a> &lt; 4000) <a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#af40eab71b65b1a18e5a490cba261c557">reward</a> = 4000;</div>
-<div class="line"><span class="lineno">  317</span>        </div>
-<div class="line"><span class="lineno">  318</span>        </div>
-<div class="line"><span class="lineno">  319</span>        <span class="keywordflow">if</span> (Global.getSector().getMemoryWithoutUpdate().getBoolean(<a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a292f521e3b1f93cd99a05903b1f873d1">KEY_FAILED_RECENTLY</a>)) {</div>
-<div class="line"><span class="lineno">  320</span>            <a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a0cdfe8766d7dfa0c9008c2cf5e5ef562">escrow</a> = (int) (<a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#aee7e8c3c2d87a324dd15ae8016ab32ac">quantity</a> * pick.comFrom.getCommodity().getBasePrice());</div>
-<div class="line"><span class="lineno">  321</span>        }</div>
-<div class="line"><span class="lineno">  322</span>        </div>
-<div class="line"><span class="lineno">  323</span>        </div>
-<div class="line"><span class="lineno">  324</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a1931eabc2023e6ba13d6104f2302798a">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a97645caff4adca5efcf3a462fb13ca0f">getFaction</a>() == pick.dest.getFaction()) {</div>
-<div class="line"><span class="lineno">  325</span>            <a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#af4cb427f6d545a6da98d30e21373bfe9">faction</a> = <a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a1931eabc2023e6ba13d6104f2302798a">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a97645caff4adca5efcf3a462fb13ca0f">getFaction</a>();</div>
-<div class="line"><span class="lineno">  326</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  327</span>            <a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#af4cb427f6d545a6da98d30e21373bfe9">faction</a> = Global.getSector().getFaction(Factions.INDEPENDENT);</div>
-<div class="line"><span class="lineno">  328</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#af4cb427f6d545a6da98d30e21373bfe9">faction</a> == <span class="keyword">null</span>) <a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#af4cb427f6d545a6da98d30e21373bfe9">faction</a> = <a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a1931eabc2023e6ba13d6104f2302798a">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a97645caff4adca5efcf3a462fb13ca0f">getFaction</a>();</div>
-<div class="line"><span class="lineno">  329</span>        }</div>
-<div class="line"><span class="lineno">  330</span>        </div>
-<div class="line"><span class="lineno">  331</span>        <a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a6d5595166189e56de621591f1ee4a16f">commodity</a> = pick.comFrom.getId();</div>
-<div class="line"><span class="lineno">  332</span>        </div>
-<div class="line"><span class="lineno">  333</span>        <a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#adff3b087c89f948e2ea3d652ffe69e62">data</a> = pick;</div>
-<div class="line"><span class="lineno">  334</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent_html_a1931eabc2023e6ba13d6104f2302798a"><div class="ttname"><a href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a1931eabc2023e6ba13d6104f2302798a">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseGetCommodityBarEvent.market</a></div><div class="ttdeci">MarketAPI market</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d22/BaseGetCommodityBarEvent_8java_source.html#l00042">BaseGetCommodityBarEvent.java:42</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent_html_a6d5595166189e56de621591f1ee4a16f"><div class="ttname"><a href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a6d5595166189e56de621591f1ee4a16f">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseGetCommodityBarEvent.commodity</a></div><div class="ttdeci">String commodity</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d22/BaseGetCommodityBarEvent_8java_source.html#l00034">BaseGetCommodityBarEvent.java:34</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent_html_aee7e8c3c2d87a324dd15ae8016ab32ac"><div class="ttname"><a href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#aee7e8c3c2d87a324dd15ae8016ab32ac">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseGetCommodityBarEvent.quantity</a></div><div class="ttdeci">int quantity</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d22/BaseGetCommodityBarEvent_8java_source.html#l00032">BaseGetCommodityBarEvent.java:32</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent_html_a292f521e3b1f93cd99a05903b1f873d1"><div class="ttname"><a href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a292f521e3b1f93cd99a05903b1f873d1">com.fs.starfarer.api.impl.campaign.intel.bar.events.DeliveryBarEvent.KEY_FAILED_RECENTLY</a></div><div class="ttdeci">static String KEY_FAILED_RECENTLY</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcd/DeliveryBarEvent_8java_source.html#l00033">DeliveryBarEvent.java:33</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent_html_a306316d86e84b98e77194346c3f133e5"><div class="ttname"><a href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a306316d86e84b98e77194346c3f133e5">com.fs.starfarer.api.impl.campaign.intel.bar.events.DeliveryBarEvent.playerFuelCap</a></div><div class="ttdeci">int playerFuelCap</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcd/DeliveryBarEvent_8java_source.html#l00052">DeliveryBarEvent.java:52</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent_html_a735dfbcb759416e4abf3aeebcdf30083"><div class="ttname"><a href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a735dfbcb759416e4abf3aeebcdf30083">com.fs.starfarer.api.impl.campaign.intel.bar.events.DeliveryBarEvent.duration</a></div><div class="ttdeci">float duration</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcd/DeliveryBarEvent_8java_source.html#l00049">DeliveryBarEvent.java:49</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent_html_a8f8e4fb9245cea3b3d435a506347486d"><div class="ttname"><a href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a8f8e4fb9245cea3b3d435a506347486d">com.fs.starfarer.api.impl.campaign.intel.bar.events.DeliveryBarEvent.playerCargoCap</a></div><div class="ttdeci">int playerCargoCap</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcd/DeliveryBarEvent_8java_source.html#l00051">DeliveryBarEvent.java:51</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent_html_ac241b0f35ceb3dc1002cbe0853d093c7"><div class="ttname"><a href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#ac241b0f35ceb3dc1002cbe0853d093c7">com.fs.starfarer.api.impl.campaign.intel.bar.events.DeliveryBarEvent.destination</a></div><div class="ttdeci">MarketAPI destination</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcd/DeliveryBarEvent_8java_source.html#l00046">DeliveryBarEvent.java:46</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent_html_af06656d1e2d9ab8dbfa3d0e5069ddae4"><div class="ttname"><a href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#af06656d1e2d9ab8dbfa3d0e5069ddae4">com.fs.starfarer.api.impl.campaign.intel.bar.events.DeliveryBarEvent.PROB_HIGHER_CAPACITY</a></div><div class="ttdeci">static float PROB_HIGHER_CAPACITY</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcd/DeliveryBarEvent_8java_source.html#l00038">DeliveryBarEvent.java:38</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent_html_af4cb427f6d545a6da98d30e21373bfe9"><div class="ttname"><a href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#af4cb427f6d545a6da98d30e21373bfe9">com.fs.starfarer.api.impl.campaign.intel.bar.events.DeliveryBarEvent.faction</a></div><div class="ttdeci">FactionAPI faction</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcd/DeliveryBarEvent_8java_source.html#l00050">DeliveryBarEvent.java:50</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a738005dc149aa245fe872593b41517b0"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a738005dc149aa245fe872593b41517b0">com.fs.starfarer.api.campaign.econ.MarketAPI.getCommoditiesCopy</a></div><div class="ttdeci">List&lt; CommodityOnMarketAPI &gt; getCommoditiesCopy()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a97645caff4adca5efcf3a462fb13ca0f"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a97645caff4adca5efcf3a462fb13ca0f">com.fs.starfarer.api.campaign.econ.MarketAPI.getFaction</a></div><div class="ttdeci">FactionAPI getFaction()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_ac81c50a88b7ee992490d66cab90c05ca"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#ac81c50a88b7ee992490d66cab90c05ca">com.fs.starfarer.api.campaign.econ.MarketAPI.getEconGroup</a></div><div class="ttdeci">String getEconGroup()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af19b21d5c0558de898d925c6fe1ddf16" name="af19b21d5c0558de898d925c6fe1ddf16"></a>
@@ -845,17 +576,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dcd/DeliveryBarEvent_8java_source.html#l00410">410</a> of file <a class="el" href="../../d4/dcd/DeliveryBarEvent_8java_source.html">DeliveryBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  410</span>                                 {</div>
-<div class="line"><span class="lineno">  411</span>        DeliveryMissionIntel intel = <span class="keyword">new</span> DeliveryMissionIntel(<span class="keyword">this</span>, <a class="code hl_variable" href="../../dc/da0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEvent.html#ac773a96bd84afb2ed3d04418a207f252">dialog</a>);</div>
-<div class="line"><span class="lineno">  412</span>        </div>
-<div class="line"><span class="lineno">  413</span>        <a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a1931eabc2023e6ba13d6104f2302798a">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a71f3d463f3bf8bdd2cfa76870ee63424">getMemoryWithoutUpdate</a>().<a class="code hl_function" href="../../d0/de7/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html#aacefa8e06571ecfc9a37897cbb61d2cf">set</a>(<a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a5acb783f1c7ea902a9d7617711fe782d">KEY_ACCEPTED_AT_THIS_MARKET_RECENTLY</a>, <span class="keyword">true</span>, </div>
-<div class="line"><span class="lineno">  414</span>                            <a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a0f6658258b19a4a692c1ee47e7ee1b2b">ACCEPTED_AT_THIS_MARKET_DURATION</a> * (0.75f + <a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a0870c60e641dfaff36c968eb2e4d1503">random</a>.nextFloat() * 0.5f));</div>
-<div class="line"><span class="lineno">  415</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent_html_a0f6658258b19a4a692c1ee47e7ee1b2b"><div class="ttname"><a href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a0f6658258b19a4a692c1ee47e7ee1b2b">com.fs.starfarer.api.impl.campaign.intel.bar.events.DeliveryBarEvent.ACCEPTED_AT_THIS_MARKET_DURATION</a></div><div class="ttdeci">static float ACCEPTED_AT_THIS_MARKET_DURATION</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcd/DeliveryBarEvent_8java_source.html#l00042">DeliveryBarEvent.java:42</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent_html_a5acb783f1c7ea902a9d7617711fe782d"><div class="ttname"><a href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a5acb783f1c7ea902a9d7617711fe782d">com.fs.starfarer.api.impl.campaign.intel.bar.events.DeliveryBarEvent.KEY_ACCEPTED_AT_THIS_MARKET_RECENTLY</a></div><div class="ttdeci">static String KEY_ACCEPTED_AT_THIS_MARKET_RECENTLY</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcd/DeliveryBarEvent_8java_source.html#l00036">DeliveryBarEvent.java:36</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a71f3d463f3bf8bdd2cfa76870ee63424"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a71f3d463f3bf8bdd2cfa76870ee63424">com.fs.starfarer.api.campaign.econ.MarketAPI.getMemoryWithoutUpdate</a></div><div class="ttdeci">MemoryAPI getMemoryWithoutUpdate()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI_html_aacefa8e06571ecfc9a37897cbb61d2cf"><div class="ttname"><a href="../../d0/de7/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html#aacefa8e06571ecfc9a37897cbb61d2cf">com.fs.starfarer.api.campaign.rules.MemoryAPI.set</a></div><div class="ttdeci">void set(String key, Object value)</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8372f14c2716ce2c99a7d61f84ff951c" name="a8372f14c2716ce2c99a7d61f84ff951c"></a>
@@ -884,23 +605,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a5eb66733dda8f8142f4229b5af55b1c3">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseGetCommodityBarEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dcd/DeliveryBarEvent_8java_source.html#l00395">395</a> of file <a class="el" href="../../d4/dcd/DeliveryBarEvent_8java_source.html">DeliveryBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  395</span>                                              {</div>
-<div class="line"><span class="lineno">  396</span>        CargoAPI cargo = Global.getSector().getPlayerFleet().getCargo();</div>
-<div class="line"><span class="lineno">  397</span>        TextPanelAPI <a class="code hl_variable" href="../../dc/da0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEvent.html#a2268511fc8daa52ae8728e974c1eeefa">text</a> = <a class="code hl_variable" href="../../dc/da0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEvent.html#ac773a96bd84afb2ed3d04418a207f252">dialog</a>.<a class="code hl_function" href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#a52d00add8a9c52795f652f493ac37244">getTextPanel</a>();</div>
-<div class="line"><span class="lineno">  398</span>        </div>
-<div class="line"><span class="lineno">  399</span>        cargo.addCommodity(<a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a6d5595166189e56de621591f1ee4a16f">commodity</a>, <a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#aee7e8c3c2d87a324dd15ae8016ab32ac">quantity</a>);</div>
-<div class="line"><span class="lineno">  400</span>        AddRemoveCommodity.addCommodityGainText(<a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a6d5595166189e56de621591f1ee4a16f">commodity</a>, <a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#aee7e8c3c2d87a324dd15ae8016ab32ac">quantity</a>, <a class="code hl_variable" href="../../dc/da0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEvent.html#a2268511fc8daa52ae8728e974c1eeefa">text</a>);</div>
-<div class="line"><span class="lineno">  401</span>        </div>
-<div class="line"><span class="lineno">  402</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a0cdfe8766d7dfa0c9008c2cf5e5ef562">escrow</a> &gt; 0) {</div>
-<div class="line"><span class="lineno">  403</span>            cargo.getCredits().subtract(<a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a0cdfe8766d7dfa0c9008c2cf5e5ef562">escrow</a>);</div>
-<div class="line"><span class="lineno">  404</span>            AddRemoveCommodity.addCreditsLossText(<a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a0cdfe8766d7dfa0c9008c2cf5e5ef562">escrow</a>, <a class="code hl_variable" href="../../dc/da0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEvent.html#a2268511fc8daa52ae8728e974c1eeefa">text</a>);</div>
-<div class="line"><span class="lineno">  405</span>        }</div>
-<div class="line"><span class="lineno">  406</span>        </div>
-<div class="line"><span class="lineno">  407</span>        <a class="code hl_function" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#af19b21d5c0558de898d925c6fe1ddf16">createIntel</a>();</div>
-<div class="line"><span class="lineno">  408</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEvent_html_a2268511fc8daa52ae8728e974c1eeefa"><div class="ttname"><a href="../../dc/da0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEvent.html#a2268511fc8daa52ae8728e974c1eeefa">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseBarEvent.text</a></div><div class="ttdeci">transient TextPanelAPI text</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d7d/BaseBarEvent_8java_source.html#l00015">BaseBarEvent.java:15</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent_html_af19b21d5c0558de898d925c6fe1ddf16"><div class="ttname"><a href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#af19b21d5c0558de898d925c6fe1ddf16">com.fs.starfarer.api.impl.campaign.intel.bar.events.DeliveryBarEvent.createIntel</a></div><div class="ttdeci">void createIntel()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcd/DeliveryBarEvent_8java_source.html#l00410">DeliveryBarEvent.java:410</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a411c5e16ac66381ea89ce7b0eea97422" name="a411c5e16ac66381ea89ce7b0eea97422"></a>
@@ -929,11 +634,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a3fb323b7a0a7c012fc8b95547e0d09ad">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseGetCommodityBarEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dcd/DeliveryBarEvent_8java_source.html#l00601">601</a> of file <a class="el" href="../../d4/dcd/DeliveryBarEvent_8java_source.html">DeliveryBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  601</span>                                     {</div>
-<div class="line"><span class="lineno">  602</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;You receive authorization codes to access a dockside warehouse, and &quot;</span> +</div>
-<div class="line"><span class="lineno">  603</span>                <span class="stringliteral">&quot;contact your quartermaster with instructions to begin loading the cargo.&quot;</span>;</div>
-<div class="line"><span class="lineno">  604</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a067d8e11bbb1bef06d9e395c752f717f" name="a067d8e11bbb1bef06d9e395c752f717f"></a>
@@ -962,14 +663,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a562f379738dd6aa74f871b2148a4078e">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseGetCommodityBarEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dcd/DeliveryBarEvent_8java_source.html#l00593">593</a> of file <a class="el" href="../../d4/dcd/DeliveryBarEvent_8java_source.html">DeliveryBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  593</span>                                     {</div>
-<div class="line"><span class="lineno">  594</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a1931eabc2023e6ba13d6104f2302798a">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a64c3437824f8a05ba3e6dc8a8ab61e62">isPlayerOwned</a>()) {</div>
-<div class="line"><span class="lineno">  595</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;Decline, explaining that you&#39;ve got other urgent business to attend to&quot;</span>;</div>
-<div class="line"><span class="lineno">  596</span>        }</div>
-<div class="line"><span class="lineno">  597</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Decline the offer, explaining that you&#39;ve got other plans&quot;</span>;</div>
-<div class="line"><span class="lineno">  598</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a64c3437824f8a05ba3e6dc8a8ab61e62"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a64c3437824f8a05ba3e6dc8a8ab61e62">com.fs.starfarer.api.campaign.econ.MarketAPI.isPlayerOwned</a></div><div class="ttdeci">boolean isPlayerOwned()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8010ce60bd2cbe0521a5e856666d2725" name="a8010ce60bd2cbe0521a5e856666d2725"></a>
@@ -998,13 +692,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#aa33549abaefdedabb7549582ffb4890b">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseGetCommodityBarEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dcd/DeliveryBarEvent_8java_source.html#l00579">579</a> of file <a class="el" href="../../d4/dcd/DeliveryBarEvent_8java_source.html">DeliveryBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  579</span>                                      {</div>
-<div class="line"><span class="lineno">  580</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a1931eabc2023e6ba13d6104f2302798a">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a64c3437824f8a05ba3e6dc8a8ab61e62">isPlayerOwned</a>()) {</div>
-<div class="line"><span class="lineno">  581</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;Agree to handle the contract&quot;</span>;</div>
-<div class="line"><span class="lineno">  582</span>        }</div>
-<div class="line"><span class="lineno">  583</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Accept the delivery contract&quot;</span>;</div>
-<div class="line"><span class="lineno">  584</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a1fcde095236256bfb74f29a2f200d9b2" name="a1fcde095236256bfb74f29a2f200d9b2"></a>
@@ -1023,10 +711,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dcd/DeliveryBarEvent_8java_source.html#l00623">623</a> of file <a class="el" href="../../d4/dcd/DeliveryBarEvent_8java_source.html">DeliveryBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  623</span>                                     {</div>
-<div class="line"><span class="lineno">  624</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#adff3b087c89f948e2ea3d652ffe69e62">data</a>;</div>
-<div class="line"><span class="lineno">  625</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8f7b49563d9b7b31d08676d08101e868" name="a8f7b49563d9b7b31d08676d08101e868"></a>
@@ -1045,10 +730,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dcd/DeliveryBarEvent_8java_source.html#l00607">607</a> of file <a class="el" href="../../d4/dcd/DeliveryBarEvent_8java_source.html">DeliveryBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  607</span>                                      {</div>
-<div class="line"><span class="lineno">  608</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#ac241b0f35ceb3dc1002cbe0853d093c7">destination</a>;</div>
-<div class="line"><span class="lineno">  609</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a749e9717a4bddfa53840ad687ae9a930" name="a749e9717a4bddfa53840ad687ae9a930"></a>
@@ -1067,10 +749,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dcd/DeliveryBarEvent_8java_source.html#l00615">615</a> of file <a class="el" href="../../d4/dcd/DeliveryBarEvent_8java_source.html">DeliveryBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  615</span>                               {</div>
-<div class="line"><span class="lineno">  616</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a735dfbcb759416e4abf3aeebcdf30083">duration</a>;</div>
-<div class="line"><span class="lineno">  617</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a898f0626bb585625f5c9400efb1d9314" name="a898f0626bb585625f5c9400efb1d9314"></a>
@@ -1089,10 +768,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dcd/DeliveryBarEvent_8java_source.html#l00631">631</a> of file <a class="el" href="../../d4/dcd/DeliveryBarEvent_8java_source.html">DeliveryBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  631</span>                           {</div>
-<div class="line"><span class="lineno">  632</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a0cdfe8766d7dfa0c9008c2cf5e5ef562">escrow</a>;</div>
-<div class="line"><span class="lineno">  633</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a4af1c33dbc27de5d3eeaff2a34839092" name="a4af1c33dbc27de5d3eeaff2a34839092"></a>
@@ -1111,10 +787,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dcd/DeliveryBarEvent_8java_source.html#l00619">619</a> of file <a class="el" href="../../d4/dcd/DeliveryBarEvent_8java_source.html">DeliveryBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  619</span>                                   {</div>
-<div class="line"><span class="lineno">  620</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#af4cb427f6d545a6da98d30e21373bfe9">faction</a>;</div>
-<div class="line"><span class="lineno">  621</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a862762395a2c01601e1684ea8a92af06" name="a862762395a2c01601e1684ea8a92af06"></a>
@@ -1143,92 +816,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#aeebb726b2188302e9cfad0b3ab5be636">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseGetCommodityBarEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dcd/DeliveryBarEvent_8java_source.html#l00464">464</a> of file <a class="el" href="../../d4/dcd/DeliveryBarEvent_8java_source.html">DeliveryBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  464</span>                                   {</div>
-<div class="line"><span class="lineno">  465</span>        String str = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">  466</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a1931eabc2023e6ba13d6104f2302798a">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a64c3437824f8a05ba3e6dc8a8ab61e62">isPlayerOwned</a>()) {</div>
-<div class="line"><span class="lineno">  467</span>            String sir = <span class="stringliteral">&quot;sir&quot;</span>;</div>
-<div class="line"><span class="lineno">  468</span>            <span class="keywordflow">if</span> (Global.getSector().getPlayerPerson().isFemale()) sir = <span class="stringliteral">&quot;ma&#39;am&quot;</span>;</div>
-<div class="line"><span class="lineno">  469</span>            str = <span class="stringliteral">&quot;\&quot;Oh, it&#39;s you, &quot;</span> + sir + <span class="stringliteral">&quot;!\&quot;, &quot;</span> + <a class="code hl_function" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#aebc0411fce93c8540f5378f281f2273a">getHeOrShe</a>() + </div>
-<div class="line"><span class="lineno">  470</span>            <span class="stringliteral">&quot; exclaims. Taking a moment to recover &quot;</span> + <a class="code hl_function" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#ad4552273729202b2f296d563940c9c91">getHisOrHer</a>() + <span class="stringliteral">&quot; composure, &quot;</span> + <a class="code hl_function" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#aebc0411fce93c8540f5378f281f2273a">getHeOrShe</a>() + <span class="stringliteral">&quot; says \&quot;We&#39;ve got a little logistical problem that could use &quot;</span> +</div>
-<div class="line"><span class="lineno">  471</span>            <span class="stringliteral">&quot;your personal touch. &quot;</span> +</div>
-<div class="line"><span class="lineno">  472</span>               <span class="stringliteral">&quot;There are %s units of &quot;</span> + <a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#adff3b087c89f948e2ea3d652ffe69e62">data</a>.comFrom.getCommodity().getLowerCaseName() + <span class="stringliteral">&quot; that urgently need to be delivered &quot;</span> +</div>
-<div class="line"><span class="lineno">  473</span>               <span class="stringliteral">&quot; to %s&quot;</span> + </div>
-<div class="line"><span class="lineno">  474</span>               <span class="stringliteral">&quot;, in the &quot;</span> + <a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#adff3b087c89f948e2ea3d652ffe69e62">data</a>.dest.getStarSystem().getNameWithLowercaseType() + <span class="stringliteral">&quot;. &quot;</span>;</div>
-<div class="line"><span class="lineno">  475</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#adff3b087c89f948e2ea3d652ffe69e62">data</a>.fromHasPA || <a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#adff3b087c89f948e2ea3d652ffe69e62">data</a>.hasPA) {</div>
-<div class="line"><span class="lineno">  476</span>                str += <span class="stringliteral">&quot;However, recent pirate activity has been making that difficult, and the regular trade fleets &quot;</span> +</div>
-<div class="line"><span class="lineno">  477</span>                        <span class="stringliteral">&quot;aren&#39;t quite up to the task.\&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">  478</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#adff3b087c89f948e2ea3d652ffe69e62">data</a>.fromHasCells || <a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#adff3b087c89f948e2ea3d652ffe69e62">data</a>.hasCells) {</div>
-<div class="line"><span class="lineno">  479</span>                str += <span class="stringliteral">&quot;However, recent Pather cell activity has been making that difficult, and the regular trade fleets &quot;</span> +</div>
-<div class="line"><span class="lineno">  480</span>                <span class="stringliteral">&quot;aren&#39;t quite up to the task.\&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">  481</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  482</span>                str += <span class="stringliteral">&quot;But, well, you know what trader captains are like. &quot;</span> +</div>
-<div class="line"><span class="lineno">  483</span>                        <span class="stringliteral">&quot;There have been some disagreements over hazard pay, and it&#39;s left us in the lurch.\&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">  484</span>            }</div>
-<div class="line"><span class="lineno">  485</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  486</span>            str = <span class="stringliteral">&quot;After brief introductions, &quot;</span> + <a class="code hl_function" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#aebc0411fce93c8540f5378f281f2273a">getHeOrShe</a>() + <span class="stringliteral">&quot; wastes no time in getting to the point. &quot;</span> +</div>
-<div class="line"><span class="lineno">  487</span>               <span class="stringliteral">&quot;\&quot;I&#39;ve got %s units of &quot;</span> + <a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#adff3b087c89f948e2ea3d652ffe69e62">data</a>.comFrom.getCommodity().getLowerCaseName() + <span class="stringliteral">&quot; that urgently need to be delivered &quot;</span> +</div>
-<div class="line"><span class="lineno">  488</span>               <span class="stringliteral">&quot; to %s&quot;</span> + </div>
-<div class="line"><span class="lineno">  489</span>               <span class="stringliteral">&quot;, in the &quot;</span> + <a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#adff3b087c89f948e2ea3d652ffe69e62">data</a>.dest.getStarSystem().getNameWithLowercaseType() + <span class="stringliteral">&quot;. &quot;</span>;</div>
-<div class="line"><span class="lineno">  490</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#adff3b087c89f948e2ea3d652ffe69e62">data</a>.fromHasPA || <a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#adff3b087c89f948e2ea3d652ffe69e62">data</a>.hasPA) {</div>
-<div class="line"><span class="lineno">  491</span>                str += <span class="stringliteral">&quot;Recent pirate activity has been making that difficult, but you look like someone that could &quot;</span> +</div>
-<div class="line"><span class="lineno">  492</span>                       <span class="stringliteral">&quot;get the job done.\&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">  493</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#adff3b087c89f948e2ea3d652ffe69e62">data</a>.fromHasCells || <a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#adff3b087c89f948e2ea3d652ffe69e62">data</a>.hasCells) {</div>
-<div class="line"><span class="lineno">  494</span>                str += <span class="stringliteral">&quot;Recent Pather cell activity has been making that difficult, but I&#39;m sure you can handle &quot;</span> +</div>
-<div class="line"><span class="lineno">  495</span>                        <span class="stringliteral">&quot;any trouble.\&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">  496</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  497</span>                str += <span class="stringliteral">&quot;We&#39;ve had some disputes with the regular shipping company, and it&#39;s left us in the lurch. &quot;</span> +</div>
-<div class="line"><span class="lineno">  498</span>                       <span class="stringliteral">&quot;Should be a milk run for someone like you, though.\&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">  499</span>            }</div>
-<div class="line"><span class="lineno">  500</span>        }</div>
-<div class="line"><span class="lineno">  501</span>        </div>
-<div class="line"><span class="lineno">  502</span>        <span class="comment">//str += &quot;\n\nYou recall that &quot; + data.dest.getName() + &quot; is under %s control, and %s light-years away. &quot;;</span></div>
-<div class="line"><span class="lineno">  503</span>        </div>
-<div class="line"><span class="lineno">  504</span>        String where = <span class="stringliteral">&quot;located in hyperspace,&quot;</span>;</div>
-<div class="line"><span class="lineno">  505</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#adff3b087c89f948e2ea3d652ffe69e62">data</a>.dest.getStarSystem() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  506</span>            <span class="comment">//where = &quot;located in the &quot; + data.dest.getStarSystem().getNameWithLowercaseType() + &quot;, which is&quot;;</span></div>
-<div class="line"><span class="lineno">  507</span>            where = <span class="stringliteral">&quot;located in the &quot;</span> + <a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#adff3b087c89f948e2ea3d652ffe69e62">data</a>.dest.getStarSystem().getNameWithLowercaseType() + <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">  508</span>        }</div>
-<div class="line"><span class="lineno">  509</span>        <span class="comment">//str += &quot;\n\nYou recall that &quot; + data.dest.getName() + &quot; is under %s control, and &quot; + where + &quot; %s light-years away. &quot;;</span></div>
-<div class="line"><span class="lineno">  510</span>        str += <span class="stringliteral">&quot;\n\nYou recall that &quot;</span> + <a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#adff3b087c89f948e2ea3d652ffe69e62">data</a>.dest.getName() + <span class="stringliteral">&quot; is under %s control, and &quot;</span> + where + <span class="stringliteral">&quot;. &quot;</span>;</div>
-<div class="line"><span class="lineno">  511</span>        </div>
-<div class="line"><span class="lineno">  512</span>        CargoAPI cargo = Global.getSector().getPlayerFleet().getCargo();</div>
-<div class="line"><span class="lineno">  513</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#adff3b087c89f948e2ea3d652ffe69e62">data</a>.comFrom.isFuel()) {</div>
-<div class="line"><span class="lineno">  514</span>            <span class="keywordtype">int</span> cap = cargo.getFreeFuelSpace();</div>
-<div class="line"><span class="lineno">  515</span>            <span class="keywordflow">if</span> (cap &gt; 1) {</div>
-<div class="line"><span class="lineno">  516</span>                str += <span class="stringliteral">&quot; Your fleet&#39;s fuel tanks can hold an additional %s units of fuel.&quot;</span>;</div>
-<div class="line"><span class="lineno">  517</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  518</span>                str += <span class="stringliteral">&quot;%sYour fleet&#39;s fuel tanks are currently full.&quot;</span>; <span class="comment">// %s - need to have same number of highlights</span></div>
-<div class="line"><span class="lineno">  519</span>            }</div>
-<div class="line"><span class="lineno">  520</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  521</span>            <span class="keywordtype">int</span> cap = (int) cargo.getSpaceLeft();</div>
-<div class="line"><span class="lineno">  522</span>            <span class="keywordflow">if</span> (cap &gt; 1) {</div>
-<div class="line"><span class="lineno">  523</span>                str += <span class="stringliteral">&quot; Your fleet&#39;s holds can accommodate an additional %s units of cargo.&quot;</span>;</div>
-<div class="line"><span class="lineno">  524</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  525</span>                str += <span class="stringliteral">&quot;%sYour fleet&#39;s cargo holds are currently full.&quot;</span>;</div>
-<div class="line"><span class="lineno">  526</span>            }</div>
-<div class="line"><span class="lineno">  527</span>        }</div>
-<div class="line"><span class="lineno">  528</span>        </div>
-<div class="line"><span class="lineno">  529</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a1931eabc2023e6ba13d6104f2302798a">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a64c3437824f8a05ba3e6dc8a8ab61e62">isPlayerOwned</a>()) {</div>
-<div class="line"><span class="lineno">  530</span>            str += <span class="stringliteral">&quot;\n\n&quot;</span> + Misc.ucFirst(<a class="code hl_function" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#aebc0411fce93c8540f5378f281f2273a">getHeOrShe</a>()) + <span class="stringliteral">&quot; double-checks something on &quot;</span> + <a class="code hl_function" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#ad4552273729202b2f296d563940c9c91">getHisOrHer</a>() + <span class="stringliteral">&quot; pad. &quot;</span> +</div>
-<div class="line"><span class="lineno">  531</span>                   <span class="stringliteral">&quot;\&quot;The customer will pay %s upon delivery within %s days. Can you take this on?\&quot;&quot;</span>;  </div>
-<div class="line"><span class="lineno">  532</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  533</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a0cdfe8766d7dfa0c9008c2cf5e5ef562">escrow</a> &gt; 0) {</div>
-<div class="line"><span class="lineno">  534</span>                str += <span class="stringliteral">&quot;\n\n&quot;</span> + Misc.ucFirst(<a class="code hl_function" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#aebc0411fce93c8540f5378f281f2273a">getHeOrShe</a>()) + <span class="stringliteral">&quot; double-checks something on &quot;</span> + <a class="code hl_function" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#ad4552273729202b2f296d563940c9c91">getHisOrHer</a>() + <span class="stringliteral">&quot; pad. &quot;</span> +</div>
-<div class="line"><span class="lineno">  535</span>                        <span class="stringliteral">&quot;\&quot;The offer is %s credits, payable upon delivery within %s days. You&#39;ll also have to &quot;</span> +</div>
-<div class="line"><span class="lineno">  536</span>                        <span class="stringliteral">&quot;transfer %s to an escrow account. This will be returned to you &quot;</span> +</div>
-<div class="line"><span class="lineno">  537</span>                        <span class="stringliteral">&quot;when you complete the delivery - &quot;</span> +</div>
-<div class="line"><span class="lineno">  538</span>                        <span class="stringliteral">&quot;standard insurance procedure, you understand.\&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">  539</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  540</span>                str += <span class="stringliteral">&quot;\n\n&quot;</span> + Misc.ucFirst(<a class="code hl_function" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#aebc0411fce93c8540f5378f281f2273a">getHeOrShe</a>()) + <span class="stringliteral">&quot; double-checks something on &quot;</span> + <a class="code hl_function" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#ad4552273729202b2f296d563940c9c91">getHisOrHer</a>() + <span class="stringliteral">&quot; pad. &quot;</span> +</div>
-<div class="line"><span class="lineno">  541</span>                            <span class="stringliteral">&quot;\&quot;The offer is %s credits, payable upon delivery within %s days. You in?\&quot;&quot;</span>;   </div>
-<div class="line"><span class="lineno">  542</span>            }</div>
-<div class="line"><span class="lineno">  543</span>        }</div>
-<div class="line"><span class="lineno">  544</span>        </div>
-<div class="line"><span class="lineno">  545</span>        <span class="keywordflow">return</span> str;</div>
-<div class="line"><span class="lineno">  546</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent_html_ad4552273729202b2f296d563940c9c91"><div class="ttname"><a href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#ad4552273729202b2f296d563940c9c91">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseGetCommodityBarEvent.getHisOrHer</a></div><div class="ttdeci">String getHisOrHer()</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d22/BaseGetCommodityBarEvent_8java_source.html#l00134">BaseGetCommodityBarEvent.java:134</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent_html_aebc0411fce93c8540f5378f281f2273a"><div class="ttname"><a href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#aebc0411fce93c8540f5378f281f2273a">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseGetCommodityBarEvent.getHeOrShe</a></div><div class="ttdeci">String getHeOrShe()</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d22/BaseGetCommodityBarEvent_8java_source.html#l00110">BaseGetCommodityBarEvent.java:110</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ad74528f0f0c35eaef12bdcac2fa5da83" name="ad74528f0f0c35eaef12bdcac2fa5da83"></a>
@@ -1257,18 +845,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a374a47f3ea0725251656d197ec7c4fd1">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseGetCommodityBarEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dcd/DeliveryBarEvent_8java_source.html#l00566">566</a> of file <a class="el" href="../../d4/dcd/DeliveryBarEvent_8java_source.html">DeliveryBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  566</span>                                           {</div>
-<div class="line"><span class="lineno">  567</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> Color [] { Misc.getHighlightColor(),</div>
-<div class="line"><span class="lineno">  568</span>                              <span class="comment">//data.dest.getFaction().getBaseUIColor(),</span></div>
-<div class="line"><span class="lineno">  569</span>                              Misc.getTextColor(),</div>
-<div class="line"><span class="lineno">  570</span>                              <a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#adff3b087c89f948e2ea3d652ffe69e62">data</a>.dest.getFaction().getBaseUIColor(),</div>
-<div class="line"><span class="lineno">  571</span>                              <span class="comment">//Misc.getHighlightColor(),</span></div>
-<div class="line"><span class="lineno">  572</span>                              Misc.getHighlightColor(),</div>
-<div class="line"><span class="lineno">  573</span>                              Misc.getHighlightColor(), </div>
-<div class="line"><span class="lineno">  574</span>                              Misc.getHighlightColor(), </div>
-<div class="line"><span class="lineno">  575</span>                              Misc.getHighlightColor() };</div>
-<div class="line"><span class="lineno">  576</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a99f5ff6b86e94fd4106d956a274ef719" name="a99f5ff6b86e94fd4106d956a274ef719"></a>
@@ -1297,23 +874,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a3af7f66834daeb240e1244f0cba04659">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseGetCommodityBarEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dcd/DeliveryBarEvent_8java_source.html#l00549">549</a> of file <a class="el" href="../../d4/dcd/DeliveryBarEvent_8java_source.html">DeliveryBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  549</span>                                            {</div>
-<div class="line"><span class="lineno">  550</span>        CargoAPI cargo = Global.getSector().getPlayerFleet().getCargo();</div>
-<div class="line"><span class="lineno">  551</span>        <span class="keywordtype">int</span> cap = 0;</div>
-<div class="line"><span class="lineno">  552</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#adff3b087c89f948e2ea3d652ffe69e62">data</a>.comFrom.isFuel()) {</div>
-<div class="line"><span class="lineno">  553</span>            cap = cargo.getFreeFuelSpace();</div>
-<div class="line"><span class="lineno">  554</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  555</span>            cap = (int) cargo.getSpaceLeft();</div>
-<div class="line"><span class="lineno">  556</span>        }</div>
-<div class="line"><span class="lineno">  557</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> String [] { Misc.getWithDGS(<a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#aee7e8c3c2d87a324dd15ae8016ab32ac">quantity</a>), <a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#adff3b087c89f948e2ea3d652ffe69e62">data</a>.dest.getName(), </div>
-<div class="line"><span class="lineno">  558</span>                               <a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#adff3b087c89f948e2ea3d652ffe69e62">data</a>.dest.getFaction().getPersonNamePrefix(),</div>
-<div class="line"><span class="lineno">  559</span>                               <span class="comment">//Misc.getRoundedValueMaxOneAfterDecimal(data.distLY),</span></div>
-<div class="line"><span class="lineno">  560</span>                               cap &gt; 1 ? Misc.getWithDGS(cap) : <span class="stringliteral">&quot; &quot;</span>,</div>
-<div class="line"><span class="lineno">  561</span>                               Misc.getDGSCredits(<a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#af40eab71b65b1a18e5a490cba261c557">reward</a>),</div>
-<div class="line"><span class="lineno">  562</span>                               Misc.getWithDGS(<a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a735dfbcb759416e4abf3aeebcdf30083">duration</a>),</div>
-<div class="line"><span class="lineno">  563</span>                               Misc.getDGSCredits(<a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a0cdfe8766d7dfa0c9008c2cf5e5ef562">escrow</a>) };</div>
-<div class="line"><span class="lineno">  564</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a70b9961b979178504c53e2205c3f6d56" name="a70b9961b979178504c53e2205c3f6d56"></a>
@@ -1340,10 +901,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dcd/DeliveryBarEvent_8java_source.html#l00336">336</a> of file <a class="el" href="../../d4/dcd/DeliveryBarEvent_8java_source.html">DeliveryBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  336</span>                                        {</div>
-<div class="line"><span class="lineno">  337</span>        <span class="keywordflow">return</span> (<span class="keywordtype">int</span>) (<a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#af40eab71b65b1a18e5a490cba261c557">reward</a> * 1.5f);</div>
-<div class="line"><span class="lineno">  338</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8126ebdbff9058d81f268aa8e3b38c54" name="a8126ebdbff9058d81f268aa8e3b38c54"></a>
@@ -1370,12 +928,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dcd/DeliveryBarEvent_8java_source.html#l00586">586</a> of file <a class="el" href="../../d4/dcd/DeliveryBarEvent_8java_source.html">DeliveryBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  586</span>                                         {</div>
-<div class="line"><span class="lineno">  587</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;\&quot;You drive a hard bargain! Very well, it&#39;s a deal.\&quot; &quot;</span> + Misc.ucFirst(<a class="code hl_function" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#aebc0411fce93c8540f5378f281f2273a">getHeOrShe</a>()) + </div>
-<div class="line"><span class="lineno">  588</span>                <span class="stringliteral">&quot; does not appear too displeased. You consider that the initial offer &quot;</span> +</div>
-<div class="line"><span class="lineno">  589</span>                <span class="stringliteral">&quot;was probably on the low side.&quot;</span>; </div>
-<div class="line"><span class="lineno">  590</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a458a01dfec38385113bcfea05f73eeb8" name="a458a01dfec38385113bcfea05f73eeb8"></a>
@@ -1404,11 +957,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#aba9383b02bc350088938e7b9c4b80750">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseGetCommodityBarEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dcd/DeliveryBarEvent_8java_source.html#l00459">459</a> of file <a class="el" href="../../d4/dcd/DeliveryBarEvent_8java_source.html">DeliveryBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  459</span>                                     {</div>
-<div class="line"><span class="lineno">  460</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Nod to the concerned &quot;</span> + <a class="code hl_function" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#ace14622f2539d9cd0f4c927b48f29e38">getManOrWoman</a>() + <span class="stringliteral">&quot; and walk over to &quot;</span> + <a class="code hl_function" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#ad4552273729202b2f296d563940c9c91">getHisOrHer</a>() + <span class="stringliteral">&quot; table&quot;</span>;</div>
-<div class="line"><span class="lineno">  461</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent_html_ace14622f2539d9cd0f4c927b48f29e38"><div class="ttname"><a href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#ace14622f2539d9cd0f4c927b48f29e38">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseGetCommodityBarEvent.getManOrWoman</a></div><div class="ttdeci">String getManOrWoman()</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d22/BaseGetCommodityBarEvent_8java_source.html#l00104">BaseGetCommodityBarEvent.java:104</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aaf73c910e000fd1e2eee0007e1f59471" name="aaf73c910e000fd1e2eee0007e1f59471"></a>
@@ -1437,11 +986,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#ae726529454dd2b2a8c9ef0032ea7021e">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseGetCommodityBarEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dcd/DeliveryBarEvent_8java_source.html#l00425">425</a> of file <a class="el" href="../../d4/dcd/DeliveryBarEvent_8java_source.html">DeliveryBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  425</span>                                        {</div>
-<div class="line"><span class="lineno">  426</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#af4cb427f6d545a6da98d30e21373bfe9">faction</a>.<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a7edcdc203f5ab26478e89e5d31e3bf85">getId</a>();</div>
-<div class="line"><span class="lineno">  427</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI_html_a7edcdc203f5ab26478e89e5d31e3bf85"><div class="ttname"><a href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a7edcdc203f5ab26478e89e5d31e3bf85">com.fs.starfarer.api.campaign.FactionAPI.getId</a></div><div class="ttdeci">String getId()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab20dd5f6453001ee77743165aa15c8aa" name="ab20dd5f6453001ee77743165aa15c8aa"></a>
@@ -1470,13 +1015,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#ab993d9a154982f7d6fb72f1c98053ef2">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseGetCommodityBarEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dcd/DeliveryBarEvent_8java_source.html#l00435">435</a> of file <a class="el" href="../../d4/dcd/DeliveryBarEvent_8java_source.html">DeliveryBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  435</span>                                     {</div>
-<div class="line"><span class="lineno">  436</span>        <span class="comment">//return Ranks.CITIZEN;</span></div>
-<div class="line"><span class="lineno">  437</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#ae534c3ab58644561ec81ef2856b652e5">pickOne</a>(Ranks.POST_TRADER, Ranks.POST_COMMODITIES_AGENT, </div>
-<div class="line"><span class="lineno">  438</span>                       Ranks.POST_MERCHANT, Ranks.POST_INVESTOR);</div>
-<div class="line"><span class="lineno">  439</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent_html_ae534c3ab58644561ec81ef2856b652e5"><div class="ttname"><a href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#ae534c3ab58644561ec81ef2856b652e5">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseGetCommodityBarEvent.pickOne</a></div><div class="ttdeci">String pickOne(String ... options)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d22/BaseGetCommodityBarEvent_8java_source.html#l00410">BaseGetCommodityBarEvent.java:410</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a7e84edd3e2bc5f0415bfd2bd0616853a" name="a7e84edd3e2bc5f0415bfd2bd0616853a"></a>
@@ -1505,10 +1044,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a355bebaa0bd37820cf884e0e6a90d7c4">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseGetCommodityBarEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dcd/DeliveryBarEvent_8java_source.html#l00430">430</a> of file <a class="el" href="../../d4/dcd/DeliveryBarEvent_8java_source.html">DeliveryBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  430</span>                                     {</div>
-<div class="line"><span class="lineno">  431</span>        <span class="keywordflow">return</span> Ranks.CITIZEN;</div>
-<div class="line"><span class="lineno">  432</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa9da027973b4aff50af90b44d2fccf70" name="aa9da027973b4aff50af90b44d2fccf70"></a>
@@ -1537,10 +1073,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#ab3bbe647f513ed5cefb98f810f222acc">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseGetCommodityBarEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dcd/DeliveryBarEvent_8java_source.html#l00442">442</a> of file <a class="el" href="../../d4/dcd/DeliveryBarEvent_8java_source.html">DeliveryBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  442</span>                                   {</div>
-<div class="line"><span class="lineno">  443</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  444</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a658b4ceb52245cf30e5924a17cd173b7" name="a658b4ceb52245cf30e5924a17cd173b7"></a>
@@ -1569,19 +1102,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a4e73133be2e4f896ca266dfdbb86406f">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseGetCommodityBarEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dcd/DeliveryBarEvent_8java_source.html#l00447">447</a> of file <a class="el" href="../../d4/dcd/DeliveryBarEvent_8java_source.html">DeliveryBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  447</span>                                 {</div>
-<div class="line"><span class="lineno">  448</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#af4cb427f6d545a6da98d30e21373bfe9">faction</a>.<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a7edcdc203f5ab26478e89e5d31e3bf85">getId</a>().equals(Factions.INDEPENDENT)) {</div>
-<div class="line"><span class="lineno">  449</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;At a corner table, a concerned-looking &quot;</span> + <a class="code hl_function" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#ace14622f2539d9cd0f4c927b48f29e38">getManOrWoman</a>() + </div>
-<div class="line"><span class="lineno">  450</span>                   <span class="stringliteral">&quot; glumly examines &quot;</span> + <a class="code hl_function" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#ad4552273729202b2f296d563940c9c91">getHisOrHer</a>() + <span class="stringliteral">&quot; TriPad.&quot;</span>;</div>
-<div class="line"><span class="lineno">  451</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  452</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;At a corner table, a concerned-looking &quot;</span> + <a class="code hl_function" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#ace14622f2539d9cd0f4c927b48f29e38">getManOrWoman</a>() + </div>
-<div class="line"><span class="lineno">  453</span>                   <span class="stringliteral">&quot; in &quot;</span> + <a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#af4cb427f6d545a6da98d30e21373bfe9">faction</a>.<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a1de30d4b7931566e747220dc53387036">getPersonNamePrefixAOrAn</a>() + <span class="stringliteral">&quot; &quot;</span> + <a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#af4cb427f6d545a6da98d30e21373bfe9">faction</a>.<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a7bdac222bb9ef69c1163e927ada02606">getPersonNamePrefix</a>() + <span class="stringliteral">&quot; uniform &quot;</span> + </div>
-<div class="line"><span class="lineno">  454</span>                   <span class="stringliteral">&quot; glumly examines &quot;</span> + <a class="code hl_function" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#ad4552273729202b2f296d563940c9c91">getHisOrHer</a>() + <span class="stringliteral">&quot; TriPad.&quot;</span>;</div>
-<div class="line"><span class="lineno">  455</span>        }</div>
-<div class="line"><span class="lineno">  456</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI_html_a1de30d4b7931566e747220dc53387036"><div class="ttname"><a href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a1de30d4b7931566e747220dc53387036">com.fs.starfarer.api.campaign.FactionAPI.getPersonNamePrefixAOrAn</a></div><div class="ttdeci">String getPersonNamePrefixAOrAn()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI_html_a7bdac222bb9ef69c1163e927ada02606"><div class="ttname"><a href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a7bdac222bb9ef69c1163e927ada02606">com.fs.starfarer.api.campaign.FactionAPI.getPersonNamePrefix</a></div><div class="ttdeci">String getPersonNamePrefix()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a36fba1f1a84570fa03cd10daa0f57e14" name="a36fba1f1a84570fa03cd10daa0f57e14"></a>
@@ -1600,10 +1121,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dcd/DeliveryBarEvent_8java_source.html#l00627">627</a> of file <a class="el" href="../../d4/dcd/DeliveryBarEvent_8java_source.html">DeliveryBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  627</span>                             {</div>
-<div class="line"><span class="lineno">  628</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#aee7e8c3c2d87a324dd15ae8016ab32ac">quantity</a>;</div>
-<div class="line"><span class="lineno">  629</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8583f200919a05ebd2988ba596176d2d" name="a8583f200919a05ebd2988ba596176d2d"></a>
@@ -1622,10 +1140,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dcd/DeliveryBarEvent_8java_source.html#l00611">611</a> of file <a class="el" href="../../d4/dcd/DeliveryBarEvent_8java_source.html">DeliveryBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  611</span>                           {</div>
-<div class="line"><span class="lineno">  612</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#af40eab71b65b1a18e5a490cba261c557">reward</a>;</div>
-<div class="line"><span class="lineno">  613</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a70062e419b0952e47013fd0807d2f3ca" name="a70062e419b0952e47013fd0807d2f3ca"></a>
@@ -1655,28 +1170,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#aa4deb343618d64551bc09595436472aa">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseGetCommodityBarEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dcd/DeliveryBarEvent_8java_source.html#l00094">94</a> of file <a class="el" href="../../d4/dcd/DeliveryBarEvent_8java_source.html">DeliveryBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   94</span>                                           {</div>
-<div class="line"><span class="lineno">   95</span>        <span class="comment">//if (this.market == market) return;</span></div>
-<div class="line"><span class="lineno">   96</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a1931eabc2023e6ba13d6104f2302798a">market</a> != <a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a1931eabc2023e6ba13d6104f2302798a">market</a>) {</div>
-<div class="line"><span class="lineno">   97</span>            <a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a8f8e4fb9245cea3b3d435a506347486d">playerCargoCap</a> = 0;</div>
-<div class="line"><span class="lineno">   98</span>            <a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a306316d86e84b98e77194346c3f133e5">playerFuelCap</a> = 0;</div>
-<div class="line"><span class="lineno">   99</span>        }</div>
-<div class="line"><span class="lineno">  100</span>        </div>
-<div class="line"><span class="lineno">  101</span>        this.market = <a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a1931eabc2023e6ba13d6104f2302798a">market</a>;</div>
-<div class="line"><span class="lineno">  102</span>        <a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a0870c60e641dfaff36c968eb2e4d1503">random</a> = <span class="keyword">new</span> Random(<a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a85d9d10ecdfdc0fa1c1b392ad71b1ec6">seed</a> + <a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a1931eabc2023e6ba13d6104f2302798a">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a1c2b30198b83f80a06c4943c81c203d5">getId</a>().hashCode());</div>
-<div class="line"><span class="lineno">  103</span>        <span class="comment">//random = Misc.random;</span></div>
-<div class="line"><span class="lineno">  104</span>        </div>
-<div class="line"><span class="lineno">  105</span>        <a class="code hl_function" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#ae99bcd937422b9524ff9d2007dbd1bd6">computeData</a>(<a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a1931eabc2023e6ba13d6104f2302798a">market</a>);</div>
-<div class="line"><span class="lineno">  106</span>        </div>
-<div class="line"><span class="lineno">  107</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#ac241b0f35ceb3dc1002cbe0853d093c7">destination</a> != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  108</span>            <a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#ad6ddfca6f68679730252f1bc41779553">person</a> = <a class="code hl_function" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#afe703577fba267a907ef01113f3b286e">createPerson</a>();</div>
-<div class="line"><span class="lineno">  109</span>        }</div>
-<div class="line"><span class="lineno">  110</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent_html_a85d9d10ecdfdc0fa1c1b392ad71b1ec6"><div class="ttname"><a href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a85d9d10ecdfdc0fa1c1b392ad71b1ec6">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseGetCommodityBarEvent.seed</a></div><div class="ttdeci">long seed</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d22/BaseGetCommodityBarEvent_8java_source.html#l00030">BaseGetCommodityBarEvent.java:30</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent_html_afe703577fba267a907ef01113f3b286e"><div class="ttname"><a href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#afe703577fba267a907ef01113f3b286e">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseGetCommodityBarEvent.createPerson</a></div><div class="ttdeci">PersonAPI createPerson()</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d22/BaseGetCommodityBarEvent_8java_source.html#l00067">BaseGetCommodityBarEvent.java:67</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent_html_ae99bcd937422b9524ff9d2007dbd1bd6"><div class="ttname"><a href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#ae99bcd937422b9524ff9d2007dbd1bd6">com.fs.starfarer.api.impl.campaign.intel.bar.events.DeliveryBarEvent.computeData</a></div><div class="ttdeci">void computeData(MarketAPI market)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcd/DeliveryBarEvent_8java_source.html#l00155">DeliveryBarEvent.java:155</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a1c2b30198b83f80a06c4943c81c203d5"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a1c2b30198b83f80a06c4943c81c203d5">com.fs.starfarer.api.campaign.econ.MarketAPI.getId</a></div><div class="ttdeci">String getId()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="accef09c7d6f77bef014b8e003a145eda" name="accef09c7d6f77bef014b8e003a145eda"></a>
@@ -1698,46 +1192,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../dc/da0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEvent.html#ac0a489e3d97adb2a637b3d01beadab9f">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseBarEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dcd/DeliveryBarEvent_8java_source.html#l00060">60</a> of file <a class="el" href="../../d4/dcd/DeliveryBarEvent_8java_source.html">DeliveryBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   60</span>                                                        {</div>
-<div class="line"><span class="lineno">   61</span>        <span class="comment">//if (true) return true;</span></div>
-<div class="line"><span class="lineno">   62</span>        <span class="keywordflow">if</span> (!super.shouldShowAtMarket(<a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a1931eabc2023e6ba13d6104f2302798a">market</a>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   63</span>        </div>
-<div class="line"><span class="lineno">   64</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a1931eabc2023e6ba13d6104f2302798a">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#aa132dbebb3e9e38ad71a576a4ea5ac9b">getFactionId</a>().equals(Factions.PIRATES)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   65</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a1931eabc2023e6ba13d6104f2302798a">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#aa132dbebb3e9e38ad71a576a4ea5ac9b">getFactionId</a>().equals(Factions.LUDDIC_PATH)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   66</span>        </div>
-<div class="line"><span class="lineno">   67</span>        <span class="comment">// what we want:</span></div>
-<div class="line"><span class="lineno">   68</span>        <span class="comment">// 1) don&#39;t show at the same market for a while</span></div>
-<div class="line"><span class="lineno">   69</span>        <span class="comment">// 2) randomly don&#39;t show at any particular market, </span></div>
-<div class="line"><span class="lineno">   70</span>        <span class="comment">// unless the player hasn&#39;t seen any delivery events in a while</span></div>
-<div class="line"><span class="lineno">   71</span>        </div>
-<div class="line"><span class="lineno">   72</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a1931eabc2023e6ba13d6104f2302798a">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a71f3d463f3bf8bdd2cfa76870ee63424">getMemoryWithoutUpdate</a>().<a class="code hl_function" href="../../d0/de7/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html#adb833cc81359cc239a89eae309480fc9">getBoolean</a>(<a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a5acb783f1c7ea902a9d7617711fe782d">KEY_ACCEPTED_AT_THIS_MARKET_RECENTLY</a>)) {</div>
-<div class="line"><span class="lineno">   73</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   74</span>        }</div>
-<div class="line"><span class="lineno">   75</span>        </div>
-<div class="line"><span class="lineno">   76</span>        <a class="code hl_function" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a70062e419b0952e47013fd0807d2f3ca">regen</a>(<a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a1931eabc2023e6ba13d6104f2302798a">market</a>);</div>
-<div class="line"><span class="lineno">   77</span>        </div>
-<div class="line"><span class="lineno">   78</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#ac241b0f35ceb3dc1002cbe0853d093c7">destination</a> == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   79</span>        </div>
-<div class="line"><span class="lineno">   80</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a0cdfe8766d7dfa0c9008c2cf5e5ef562">escrow</a> &gt; 0 &amp;&amp; <a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a1931eabc2023e6ba13d6104f2302798a">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a64c3437824f8a05ba3e6dc8a8ab61e62">isPlayerOwned</a>()) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   81</span>        </div>
-<div class="line"><span class="lineno">   82</span>        <span class="keywordflow">if</span> (Global.getSector().getMemoryWithoutUpdate().getBoolean(<a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a85dd01adcea7b2293d59228a18f5fb9f">KEY_SAW_DELIVERY_EVENT_RECENTLY</a>)</div>
-<div class="line"><span class="lineno">   83</span>                &amp;&amp; <a class="code hl_variable" href="../../dc/da0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEvent.html#a70bb16d694e8586510e9d7ba47e5f2b3">shownAt</a> != <a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a1931eabc2023e6ba13d6104f2302798a">market</a>) {</div>
-<div class="line"><span class="lineno">   84</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a0870c60e641dfaff36c968eb2e4d1503">random</a>.nextFloat() &gt; <a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#aeb6c7fcaf95bd85564efc6c17771c619">PROB_TO_SHOW</a>) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   85</span>        }</div>
-<div class="line"><span class="lineno">   86</span>        </div>
-<div class="line"><span class="lineno">   87</span>        Global.getSector().getMemoryWithoutUpdate().set(<a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a85dd01adcea7b2293d59228a18f5fb9f">KEY_SAW_DELIVERY_EVENT_RECENTLY</a>, <span class="keyword">true</span>, </div>
-<div class="line"><span class="lineno">   88</span>                                                        <a class="code hl_variable" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#aab3acab32bb9e5f1ac65149d879178cd">SAW_RECENTLY_DURATION</a>);</div>
-<div class="line"><span class="lineno">   89</span>        </div>
-<div class="line"><span class="lineno">   90</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   91</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEvent_html_a70bb16d694e8586510e9d7ba47e5f2b3"><div class="ttname"><a href="../../dc/da0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEvent.html#a70bb16d694e8586510e9d7ba47e5f2b3">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseBarEvent.shownAt</a></div><div class="ttdeci">MarketAPI shownAt</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d7d/BaseBarEvent_8java_source.html#l00067">BaseBarEvent.java:67</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent_html_a70062e419b0952e47013fd0807d2f3ca"><div class="ttname"><a href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a70062e419b0952e47013fd0807d2f3ca">com.fs.starfarer.api.impl.campaign.intel.bar.events.DeliveryBarEvent.regen</a></div><div class="ttdeci">void regen(MarketAPI market)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcd/DeliveryBarEvent_8java_source.html#l00094">DeliveryBarEvent.java:94</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent_html_a85dd01adcea7b2293d59228a18f5fb9f"><div class="ttname"><a href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a85dd01adcea7b2293d59228a18f5fb9f">com.fs.starfarer.api.impl.campaign.intel.bar.events.DeliveryBarEvent.KEY_SAW_DELIVERY_EVENT_RECENTLY</a></div><div class="ttdeci">static String KEY_SAW_DELIVERY_EVENT_RECENTLY</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcd/DeliveryBarEvent_8java_source.html#l00035">DeliveryBarEvent.java:35</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent_html_aab3acab32bb9e5f1ac65149d879178cd"><div class="ttname"><a href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#aab3acab32bb9e5f1ac65149d879178cd">com.fs.starfarer.api.impl.campaign.intel.bar.events.DeliveryBarEvent.SAW_RECENTLY_DURATION</a></div><div class="ttdeci">static float SAW_RECENTLY_DURATION</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcd/DeliveryBarEvent_8java_source.html#l00041">DeliveryBarEvent.java:41</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent_html_aeb6c7fcaf95bd85564efc6c17771c619"><div class="ttname"><a href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#aeb6c7fcaf95bd85564efc6c17771c619">com.fs.starfarer.api.impl.campaign.intel.bar.events.DeliveryBarEvent.PROB_TO_SHOW</a></div><div class="ttdeci">static float PROB_TO_SHOW</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcd/DeliveryBarEvent_8java_source.html#l00044">DeliveryBarEvent.java:44</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_aa132dbebb3e9e38ad71a576a4ea5ac9b"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#aa132dbebb3e9e38ad71a576a4ea5ac9b">com.fs.starfarer.api.campaign.econ.MarketAPI.getFactionId</a></div><div class="ttdeci">String getFactionId()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI_html_adb833cc81359cc239a89eae309480fc9"><div class="ttname"><a href="../../d0/de7/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html#adb833cc81359cc239a89eae309480fc9">com.fs.starfarer.api.campaign.rules.MemoryAPI.getBoolean</a></div><div class="ttdeci">boolean getBoolean(String key)</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a935a253b3dea72d6aa2b36d76d4ccdcd" name="a935a253b3dea72d6aa2b36d76d4ccdcd"></a>
@@ -1766,10 +1221,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#aaf80028ebc5cc22a17c352fa1b4a12e6">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseGetCommodityBarEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dcd/DeliveryBarEvent_8java_source.html#l00635">635</a> of file <a class="el" href="../../d4/dcd/DeliveryBarEvent_8java_source.html">DeliveryBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  635</span>                                     {</div>
-<div class="line"><span class="lineno">  636</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  637</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a194c7d2376b67f28b7ffce312e6d1ce2" name="a194c7d2376b67f28b7ffce312e6d1ce2"></a>
@@ -1798,23 +1250,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a901f3d095c7b28b7ec652a1afce54006">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseGetCommodityBarEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dcd/DeliveryBarEvent_8java_source.html#l00640">640</a> of file <a class="el" href="../../d4/dcd/DeliveryBarEvent_8java_source.html">DeliveryBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  640</span>                                         {</div>
-<div class="line"><span class="lineno">  641</span>        super.showTotalAndOptions();</div>
-<div class="line"><span class="lineno">  642</span> </div>
-<div class="line"><span class="lineno">  643</span>        String icon = Global.getSettings().getCommoditySpec(<a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a6d5595166189e56de621591f1ee4a16f">commodity</a>).getIconName();</div>
-<div class="line"><span class="lineno">  644</span>        String <a class="code hl_variable" href="../../dc/da0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEvent.html#a2268511fc8daa52ae8728e974c1eeefa">text</a> = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  645</span>        Set&lt;String&gt; tags = <span class="keyword">new</span> LinkedHashSet&lt;String&gt;();</div>
-<div class="line"><span class="lineno">  646</span>        tags.add(Tags.INTEL_MISSIONS);</div>
-<div class="line"><span class="lineno">  647</span>        </div>
-<div class="line"><span class="lineno">  648</span>        <a class="code hl_variable" href="../../dc/da0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEvent.html#ac773a96bd84afb2ed3d04418a207f252">dialog</a>.<a class="code hl_function" href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#a5619d9b7c7aec96fff1afb09c47fff1c">getVisualPanel</a>().<a class="code hl_function" href="../../d1/d60/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1VisualPanelAPI.html#a674909d9a0983908a369ad663aa2e3e3">showMapMarker</a>(<a class="code hl_function" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a8f7b49563d9b7b31d08676d08101e868">getDestination</a>().getPrimaryEntity(), </div>
-<div class="line"><span class="lineno">  649</span>                    <span class="stringliteral">&quot;Destination: &quot;</span> + <a class="code hl_function" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a8f7b49563d9b7b31d08676d08101e868">getDestination</a>().getName(), <a class="code hl_function" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a8f7b49563d9b7b31d08676d08101e868">getDestination</a>().<a class="code hl_function" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a4af1c33dbc27de5d3eeaff2a34839092">getFaction</a>().getBaseUIColor(), </div>
-<div class="line"><span class="lineno">  650</span>                    <span class="keyword">true</span>, icon, <a class="code hl_variable" href="../../dc/da0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEvent.html#a2268511fc8daa52ae8728e974c1eeefa">text</a>, tags);</div>
-<div class="line"><span class="lineno">  651</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent_html_a4af1c33dbc27de5d3eeaff2a34839092"><div class="ttname"><a href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a4af1c33dbc27de5d3eeaff2a34839092">com.fs.starfarer.api.impl.campaign.intel.bar.events.DeliveryBarEvent.getFaction</a></div><div class="ttdeci">FactionAPI getFaction()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcd/DeliveryBarEvent_8java_source.html#l00619">DeliveryBarEvent.java:619</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent_html_a8f7b49563d9b7b31d08676d08101e868"><div class="ttname"><a href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a8f7b49563d9b7b31d08676d08101e868">com.fs.starfarer.api.impl.campaign.intel.bar.events.DeliveryBarEvent.getDestination</a></div><div class="ttdeci">MarketAPI getDestination()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcd/DeliveryBarEvent_8java_source.html#l00607">DeliveryBarEvent.java:607</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI_html_a5619d9b7c7aec96fff1afb09c47fff1c"><div class="ttname"><a href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#a5619d9b7c7aec96fff1afb09c47fff1c">com.fs.starfarer.api.campaign.InteractionDialogAPI.getVisualPanel</a></div><div class="ttdeci">VisualPanelAPI getVisualPanel()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1VisualPanelAPI_html_a674909d9a0983908a369ad663aa2e3e3"><div class="ttname"><a href="../../d1/d60/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1VisualPanelAPI.html#a674909d9a0983908a369ad663aa2e3e3">com.fs.starfarer.api.campaign.VisualPanelAPI.showMapMarker</a></div><div class="ttdeci">void showMapMarker(SectorEntityToken marker, String title, Color titleColor, boolean withIntel, String icon, String text, Set&lt; String &gt; intelTags)</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

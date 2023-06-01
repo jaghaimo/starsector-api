@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -424,34 +425,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00246">246</a> of file <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html">BaseEventPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  246</span>                                                                                                           {</div>
-<div class="line"><span class="lineno">  247</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a5062e440ac3d3fb9a12bf3cac406e2c1">faction</a> != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  248</span>            String factionName = <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a5062e440ac3d3fb9a12bf3cac406e2c1">faction</a>.<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#ac87fc5c812cff54d347b6669697a302e">getEntityNamePrefix</a>();</div>
-<div class="line"><span class="lineno">  249</span>            <span class="keywordflow">if</span> (factionName == <span class="keyword">null</span> || factionName.isEmpty()) {</div>
-<div class="line"><span class="lineno">  250</span>                factionName = <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a5062e440ac3d3fb9a12bf3cac406e2c1">faction</a>.<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a152197efac6967a0a459e4579b8ab1ef">getDisplayName</a>();</div>
-<div class="line"><span class="lineno">  251</span>            }</div>
-<div class="line"><span class="lineno">  252</span>            String prefixUC = Misc.ucFirst(prefix);</div>
-<div class="line"><span class="lineno">  253</span>            tokens.put(<span class="stringliteral">&quot;$&quot;</span> + prefix + <span class="stringliteral">&quot;Faction&quot;</span>, factionName);</div>
-<div class="line"><span class="lineno">  254</span>            tokens.put(<span class="stringliteral">&quot;$&quot;</span> + prefixUC + <span class="stringliteral">&quot;Faction&quot;</span>, Misc.ucFirst(factionName));</div>
-<div class="line"><span class="lineno">  255</span>            tokens.put(<span class="stringliteral">&quot;$the&quot;</span> + prefixUC + <span class="stringliteral">&quot;Faction&quot;</span>, <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a5062e440ac3d3fb9a12bf3cac406e2c1">faction</a>.<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a69b86d194392c5eadd148b6e1e6cd5f0">getDisplayNameWithArticle</a>());</div>
-<div class="line"><span class="lineno">  256</span>            tokens.put(<span class="stringliteral">&quot;$The&quot;</span> + prefixUC + <span class="stringliteral">&quot;Faction&quot;</span>, Misc.ucFirst(<a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a5062e440ac3d3fb9a12bf3cac406e2c1">faction</a>.<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a69b86d194392c5eadd148b6e1e6cd5f0">getDisplayNameWithArticle</a>()));</div>
-<div class="line"><span class="lineno">  257</span>            </div>
-<div class="line"><span class="lineno">  258</span>            tokens.put(<span class="stringliteral">&quot;$&quot;</span> + prefix + <span class="stringliteral">&quot;FactionLong&quot;</span>, <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a5062e440ac3d3fb9a12bf3cac406e2c1">faction</a>.<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#af5bb50a5e497355e484b7038ec7d0c1c">getDisplayNameLong</a>());</div>
-<div class="line"><span class="lineno">  259</span>            tokens.put(<span class="stringliteral">&quot;$&quot;</span> + prefixUC + <span class="stringliteral">&quot;FactionLong&quot;</span>, Misc.ucFirst(<a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a5062e440ac3d3fb9a12bf3cac406e2c1">faction</a>.<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#af5bb50a5e497355e484b7038ec7d0c1c">getDisplayNameLong</a>()));</div>
-<div class="line"><span class="lineno">  260</span>            tokens.put(<span class="stringliteral">&quot;$the&quot;</span> + prefixUC + <span class="stringliteral">&quot;FactionLong&quot;</span>, <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a5062e440ac3d3fb9a12bf3cac406e2c1">faction</a>.<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a7e1a6ef580c6b321278e2d911ac5e0cf">getDisplayNameLongWithArticle</a>());</div>
-<div class="line"><span class="lineno">  261</span>            tokens.put(<span class="stringliteral">&quot;$The&quot;</span> + prefixUC + <span class="stringliteral">&quot;FactionLong&quot;</span>, Misc.ucFirst(<a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a5062e440ac3d3fb9a12bf3cac406e2c1">faction</a>.<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a7e1a6ef580c6b321278e2d911ac5e0cf">getDisplayNameLongWithArticle</a>()));</div>
-<div class="line"><span class="lineno">  262</span>            </div>
-<div class="line"><span class="lineno">  263</span>            tokens.put(<span class="stringliteral">&quot;$&quot;</span> + prefix + <span class="stringliteral">&quot;FactionIsOrAre&quot;</span>, <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a5062e440ac3d3fb9a12bf3cac406e2c1">faction</a>.<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#ad86103131f789a387de2afa152026ca3">getDisplayNameIsOrAre</a>());</div>
-<div class="line"><span class="lineno">  264</span>        }</div>
-<div class="line"><span class="lineno">  265</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin_html_a5062e440ac3d3fb9a12bf3cac406e2c1"><div class="ttname"><a href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a5062e440ac3d3fb9a12bf3cac406e2c1">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin.faction</a></div><div class="ttdeci">FactionAPI faction</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00045">BaseEventPlugin.java:45</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI_html_a152197efac6967a0a459e4579b8ab1ef"><div class="ttname"><a href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a152197efac6967a0a459e4579b8ab1ef">com.fs.starfarer.api.campaign.FactionAPI.getDisplayName</a></div><div class="ttdeci">String getDisplayName()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI_html_a69b86d194392c5eadd148b6e1e6cd5f0"><div class="ttname"><a href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a69b86d194392c5eadd148b6e1e6cd5f0">com.fs.starfarer.api.campaign.FactionAPI.getDisplayNameWithArticle</a></div><div class="ttdeci">String getDisplayNameWithArticle()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI_html_a7e1a6ef580c6b321278e2d911ac5e0cf"><div class="ttname"><a href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a7e1a6ef580c6b321278e2d911ac5e0cf">com.fs.starfarer.api.campaign.FactionAPI.getDisplayNameLongWithArticle</a></div><div class="ttdeci">String getDisplayNameLongWithArticle()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI_html_ac87fc5c812cff54d347b6669697a302e"><div class="ttname"><a href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#ac87fc5c812cff54d347b6669697a302e">com.fs.starfarer.api.campaign.FactionAPI.getEntityNamePrefix</a></div><div class="ttdeci">String getEntityNamePrefix()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI_html_ad86103131f789a387de2afa152026ca3"><div class="ttname"><a href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#ad86103131f789a387de2afa152026ca3">com.fs.starfarer.api.campaign.FactionAPI.getDisplayNameIsOrAre</a></div><div class="ttdeci">String getDisplayNameIsOrAre()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI_html_af5bb50a5e497355e484b7038ec7d0c1c"><div class="ttname"><a href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#af5bb50a5e497355e484b7038ec7d0c1c">com.fs.starfarer.api.campaign.FactionAPI.getDisplayNameLong</a></div><div class="ttdeci">String getDisplayNameLong()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a266c202fb9f5002e4c596f421170e429" name="a266c202fb9f5002e4c596f421170e429"></a>
@@ -495,38 +469,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00267">267</a> of file <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html">BaseEventPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  267</span>                                                                                                    {</div>
-<div class="line"><span class="lineno">  268</span>        <span class="keywordflow">if</span> (person != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  269</span>            tokens.put(<span class="stringliteral">&quot;$&quot;</span> + prefix + <span class="stringliteral">&quot;Name&quot;</span>, person.getName().getFullName());</div>
-<div class="line"><span class="lineno">  270</span>            tokens.put(<span class="stringliteral">&quot;$&quot;</span> + prefix + <span class="stringliteral">&quot;LastName&quot;</span>, person.getName().getLast());</div>
-<div class="line"><span class="lineno">  271</span>            tokens.put(<span class="stringliteral">&quot;$&quot;</span> + prefix + <span class="stringliteral">&quot;FirstName&quot;</span>, person.getName().getFirst());</div>
-<div class="line"><span class="lineno">  272</span>            </div>
-<div class="line"><span class="lineno">  273</span>            </div>
-<div class="line"><span class="lineno">  274</span>            tokens.put(<span class="stringliteral">&quot;$&quot;</span> + prefix + <span class="stringliteral">&quot;Rank&quot;</span>, person.getRank().toLowerCase());</div>
-<div class="line"><span class="lineno">  275</span>            tokens.put(<span class="stringliteral">&quot;$&quot;</span> + Misc.ucFirst(prefix) + <span class="stringliteral">&quot;Rank&quot;</span>, Misc.ucFirst(person.getRank()));</div>
-<div class="line"><span class="lineno">  276</span>            </div>
-<div class="line"><span class="lineno">  277</span>            tokens.put(<span class="stringliteral">&quot;$&quot;</span> + prefix + <span class="stringliteral">&quot;Post&quot;</span>, person.getPost().toLowerCase());</div>
-<div class="line"><span class="lineno">  278</span>            tokens.put(<span class="stringliteral">&quot;$&quot;</span> + Misc.ucFirst(prefix) + <span class="stringliteral">&quot;Post&quot;</span>, Misc.ucFirst(person.getPost()));</div>
-<div class="line"><span class="lineno">  279</span>            </div>
-<div class="line"><span class="lineno">  280</span>            </div>
-<div class="line"><span class="lineno">  281</span>            <span class="keywordflow">if</span> (person.isMale()) {</div>
-<div class="line"><span class="lineno">  282</span>                tokens.put(<span class="stringliteral">&quot;$&quot;</span> + prefix + <span class="stringliteral">&quot;HisOrHer&quot;</span>, <span class="stringliteral">&quot;his&quot;</span>);</div>
-<div class="line"><span class="lineno">  283</span>                tokens.put(<span class="stringliteral">&quot;$&quot;</span> + Misc.ucFirst(prefix) + <span class="stringliteral">&quot;HisOrHer&quot;</span>, <span class="stringliteral">&quot;His&quot;</span>);</div>
-<div class="line"><span class="lineno">  284</span>                tokens.put(<span class="stringliteral">&quot;$&quot;</span> + prefix + <span class="stringliteral">&quot;HimOrHer&quot;</span>, <span class="stringliteral">&quot;him&quot;</span>);</div>
-<div class="line"><span class="lineno">  285</span>                tokens.put(<span class="stringliteral">&quot;$&quot;</span> + Misc.ucFirst(prefix) + <span class="stringliteral">&quot;HimOrHer&quot;</span>, <span class="stringliteral">&quot;Him&quot;</span>);</div>
-<div class="line"><span class="lineno">  286</span>                tokens.put(<span class="stringliteral">&quot;$&quot;</span> + prefix + <span class="stringliteral">&quot;HeOrShe&quot;</span>, <span class="stringliteral">&quot;he&quot;</span>);</div>
-<div class="line"><span class="lineno">  287</span>                tokens.put(<span class="stringliteral">&quot;$&quot;</span> + Misc.ucFirst(prefix) + <span class="stringliteral">&quot;HeOrShe&quot;</span>, <span class="stringliteral">&quot;He&quot;</span>);</div>
-<div class="line"><span class="lineno">  288</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  289</span>                tokens.put(<span class="stringliteral">&quot;$&quot;</span> + prefix + <span class="stringliteral">&quot;HisOrHer&quot;</span>, <span class="stringliteral">&quot;her&quot;</span>);</div>
-<div class="line"><span class="lineno">  290</span>                tokens.put(<span class="stringliteral">&quot;$&quot;</span> + Misc.ucFirst(prefix) + <span class="stringliteral">&quot;HisOrHer&quot;</span>, <span class="stringliteral">&quot;Her&quot;</span>);</div>
-<div class="line"><span class="lineno">  291</span>                tokens.put(<span class="stringliteral">&quot;$&quot;</span> + prefix + <span class="stringliteral">&quot;HimOrHer&quot;</span>, <span class="stringliteral">&quot;her&quot;</span>);</div>
-<div class="line"><span class="lineno">  292</span>                tokens.put(<span class="stringliteral">&quot;$&quot;</span> + Misc.ucFirst(prefix) + <span class="stringliteral">&quot;HimOrHer&quot;</span>, <span class="stringliteral">&quot;Her&quot;</span>);</div>
-<div class="line"><span class="lineno">  293</span>                tokens.put(<span class="stringliteral">&quot;$&quot;</span> + prefix + <span class="stringliteral">&quot;HeOrShe&quot;</span>, <span class="stringliteral">&quot;she&quot;</span>);</div>
-<div class="line"><span class="lineno">  294</span>                tokens.put(<span class="stringliteral">&quot;$&quot;</span> + Misc.ucFirst(prefix) + <span class="stringliteral">&quot;HeOrShe&quot;</span>, <span class="stringliteral">&quot;She&quot;</span>);</div>
-<div class="line"><span class="lineno">  295</span>            }</div>
-<div class="line"><span class="lineno">  296</span>        }</div>
-<div class="line"><span class="lineno">  297</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a975fca0b61107178b5d2918dc55458a7" name="a975fca0b61107178b5d2918dc55458a7"></a>
@@ -556,16 +499,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00393">393</a> of file <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html">BaseEventPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  393</span>                                                                    {</div>
-<div class="line"><span class="lineno">  394</span>        Map&lt;String, String&gt; tokens = <a class="code hl_function" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#aa67b1f6c564a4765a764cfb90a60f4c9">getTokenReplacements</a>();</div>
-<div class="line"><span class="lineno">  395</span>        <span class="keywordflow">for</span> (String key : keys) {</div>
-<div class="line"><span class="lineno">  396</span>            <span class="keywordflow">if</span> (tokens.containsKey(key)) {</div>
-<div class="line"><span class="lineno">  397</span>                list.add(tokens.get(key));</div>
-<div class="line"><span class="lineno">  398</span>            }</div>
-<div class="line"><span class="lineno">  399</span>        }</div>
-<div class="line"><span class="lineno">  400</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin_html_aa67b1f6c564a4765a764cfb90a60f4c9"><div class="ttname"><a href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#aa67b1f6c564a4765a764cfb90a60f4c9">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin.getTokenReplacements</a></div><div class="ttdeci">Map&lt; String, String &gt; getTokenReplacements()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00130">BaseEventPlugin.java:130</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a892d9c8e77f8c51654d4399169a80540" name="a892d9c8e77f8c51654d4399169a80540"></a>
@@ -589,10 +523,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../db/dc2/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1CivilDisorder.html#a16046666ec98babf81ef13f206eb9bcf">com.fs.starfarer.api.impl.campaign.events.CivilDisorder</a>, <a class="el" href="../../d2/d93/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FactionHostilityEvent.html#a9cfa1a9bbbec56162f1838a472831c36">com.fs.starfarer.api.impl.campaign.events.FactionHostilityEvent</a>, <a class="el" href="../../dc/d04/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FleetLogEvent.html#a6bb596a16d4f5cf1b1437809e5c2f6fd">com.fs.starfarer.api.impl.campaign.events.FleetLogEvent</a>, <a class="el" href="../../da/d04/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent.html#a3f8219beab829e486626c441bbc2b436">com.fs.starfarer.api.impl.campaign.events.FoodShortageEvent</a>, <a class="el" href="../../de/d3d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEvent.html#af7ec5e9ac9d68ec3b21b5994bd93a9df">com.fs.starfarer.api.impl.campaign.events.InvestigationEvent</a>, <a class="el" href="../../d5/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventGoodRepWithOther.html#a442c652515724ed8e01cc75958a73e3f">com.fs.starfarer.api.impl.campaign.events.InvestigationEventGoodRepWithOther</a>, <a class="el" href="../../d8/d89/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventSmugglingV2.html#a17e77d84266d27bc8ca914cc141c9d07">com.fs.starfarer.api.impl.campaign.events.InvestigationEventSmugglingV2</a>, <a class="el" href="../../d9/d53/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1nearby_1_1NearbyEventsEvent.html#a8dfc587d2b5d4c2952affae6245c9dc2">com.fs.starfarer.api.impl.campaign.events.nearby.NearbyEventsEvent</a>, <a class="el" href="../../dd/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1OfficerManagerEvent.html#ae6206cd870bae9a00dd60b812fa18c2a">com.fs.starfarer.api.impl.campaign.events.OfficerManagerEvent</a>, <a class="el" href="../../de/d8f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1RecentUnrestEvent.html#a6e6766b7770c4ce28309486e300c82b9">com.fs.starfarer.api.impl.campaign.events.RecentUnrestEvent</a>, <a class="el" href="../../d9/df6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1RepTrackerEvent.html#aaa90d4d4d5a51044a97121ba88699d67">com.fs.starfarer.api.impl.campaign.events.RepTrackerEvent</a>, <a class="el" href="../../df/d35/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1TestEvent.html#abaee4547d87e74fb3db876871e58485f">com.fs.starfarer.api.impl.campaign.events.TestEvent</a>, <a class="el" href="../../d8/d8d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1TradeInfoUpdateEvent.html#a3cb7331713fbf24c5878dbeb5d0a4905">com.fs.starfarer.api.impl.campaign.events.TradeInfoUpdateEvent</a>, and <a class="el" href="../../df/d44/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionEvent.html#af4e1cbeb1c2a46e57cc255cd18f2f5bf">com.fs.starfarer.api.impl.campaign.tutorial.TutorialMissionEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00110">110</a> of file <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html">BaseEventPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  110</span>                                      {</div>
-<div class="line"><span class="lineno">  111</span>        </div>
-<div class="line"><span class="lineno">  112</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a0be9635fa2049ae34b5b97153a12ddc9" name="a0be9635fa2049ae34b5b97153a12ddc9"></a>
@@ -618,10 +549,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../db/dc2/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1CivilDisorder.html#a34d5ff9e0661fed8681bcf0298d47cff">com.fs.starfarer.api.impl.campaign.events.CivilDisorder</a>, and <a class="el" href="../../df/d35/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1TestEvent.html#a0f0c67cb415a790d005be0b63fa013fc">com.fs.starfarer.api.impl.campaign.events.TestEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00373">373</a> of file <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html">BaseEventPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  373</span>                                                       {</div>
-<div class="line"><span class="lineno">  374</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  375</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8d07c52ad6fa20fdd5dbf61b0bac5738" name="a8d07c52ad6fa20fdd5dbf61b0bac5738"></a>
@@ -674,10 +602,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../df/d44/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionEvent.html#a9cfe35367e5e6c8a19e4f1938721d1d6">com.fs.starfarer.api.impl.campaign.tutorial.TutorialMissionEvent</a>, <a class="el" href="../../d2/d93/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FactionHostilityEvent.html#a1e5e74f1645392d01e16d7ebf837b54c">com.fs.starfarer.api.impl.campaign.events.FactionHostilityEvent</a>, <a class="el" href="../../dc/d04/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FleetLogEvent.html#a869a9fb6ab2165d57b8e4156341f731d">com.fs.starfarer.api.impl.campaign.events.FleetLogEvent</a>, <a class="el" href="../../d5/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventGoodRepWithOther.html#af59f4efc9e207f9e920a2f80c63a3ef1">com.fs.starfarer.api.impl.campaign.events.InvestigationEventGoodRepWithOther</a>, <a class="el" href="../../d8/d89/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventSmugglingV2.html#a519e5f30449c4ac507880dd0c96d78cf">com.fs.starfarer.api.impl.campaign.events.InvestigationEventSmugglingV2</a>, <a class="el" href="../../d9/d53/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1nearby_1_1NearbyEventsEvent.html#af98adbc49c6019e8cd1893489ae6de70">com.fs.starfarer.api.impl.campaign.events.nearby.NearbyEventsEvent</a>, and <a class="el" href="../../dd/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1OfficerManagerEvent.html#a1b1fc9f9b99c0e755e04a44315467916">com.fs.starfarer.api.impl.campaign.events.OfficerManagerEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00488">488</a> of file <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html">BaseEventPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  488</span>                                                                                                                               {</div>
-<div class="line"><span class="lineno">  489</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  490</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab15b57181b8a578286ed9db4428762a8" name="ab15b57181b8a578286ed9db4428762a8"></a>
@@ -701,10 +626,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../db/dc2/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1CivilDisorder.html#a5c342d38455b112a0cb4ab185f7cadc3">com.fs.starfarer.api.impl.campaign.events.CivilDisorder</a>, and <a class="el" href="../../df/d35/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1TestEvent.html#a58c45c5a35cbda97501529310cf4b8e7">com.fs.starfarer.api.impl.campaign.events.TestEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00092">92</a> of file <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html">BaseEventPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   92</span>                          {</div>
-<div class="line"><span class="lineno">   93</span>        Global.getSector().removeListener(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">   94</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a6f47bdebbd6ed86fc777eb09993e65e4" name="a6f47bdebbd6ed86fc777eb09993e65e4"></a>
@@ -732,17 +654,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00340">340</a> of file <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html">BaseEventPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  340</span>                                                                           {</div>
-<div class="line"><span class="lineno">  341</span>        List&lt;MarketAPI&gt; result = <span class="keyword">new</span> ArrayList&lt;MarketAPI&gt;();</div>
-<div class="line"><span class="lineno">  342</span>        <span class="keywordflow">for</span> (MarketAPI <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a> : Global.getSector().getEconomy().getMarketsCopy()) {</div>
-<div class="line"><span class="lineno">  343</span>            <span class="keywordflow">if</span> (filter == <span class="keyword">null</span> || filter.acceptMarket(<a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a>)) {</div>
-<div class="line"><span class="lineno">  344</span>                result.add(<a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a>);</div>
-<div class="line"><span class="lineno">  345</span>            }</div>
-<div class="line"><span class="lineno">  346</span>        }</div>
-<div class="line"><span class="lineno">  347</span>        <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">  348</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin_html_a82135608621e80f71b991a0c839669e2"><div class="ttname"><a href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin.market</a></div><div class="ttdeci">MarketAPI market</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00043">BaseEventPlugin.java:43</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab6b2f0624cafeb655db2c050d5b06281" name="ab6b2f0624cafeb655db2c050d5b06281"></a>
@@ -780,21 +692,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00326">326</a> of file <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html">BaseEventPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  326</span>                                                                                   {</div>
-<div class="line"><span class="lineno">  327</span>        <span class="keywordtype">float</span> minDist = Float.MAX_VALUE;</div>
-<div class="line"><span class="lineno">  328</span>        MarketAPI result = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  329</span>        <span class="keywordflow">for</span> (MarketAPI <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a> : Global.getSector().getEconomy().getMarketsCopy()) {</div>
-<div class="line"><span class="lineno">  330</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a> == from) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  331</span>            <span class="keywordtype">float</span> dist = Misc.getDistance(<a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#ac7c52901d8193892f65ffba9ac182a4e">getLocationInHyperspace</a>(), from.getLocationInHyperspace());</div>
-<div class="line"><span class="lineno">  332</span>            <span class="keywordflow">if</span> (dist &lt; minDist &amp;&amp; (filter == <span class="keyword">null</span> || filter.acceptMarket(<a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a>))) {</div>
-<div class="line"><span class="lineno">  333</span>                minDist = dist;</div>
-<div class="line"><span class="lineno">  334</span>                result = <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a>;</div>
-<div class="line"><span class="lineno">  335</span>            }</div>
-<div class="line"><span class="lineno">  336</span>        }</div>
-<div class="line"><span class="lineno">  337</span>        <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">  338</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_ac7c52901d8193892f65ffba9ac182a4e"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#ac7c52901d8193892f65ffba9ac182a4e">com.fs.starfarer.api.campaign.econ.MarketAPI.getLocationInHyperspace</a></div><div class="ttdeci">Vector2f getLocationInHyperspace()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a03c0bff1e962ff7ef9f547119e9683da" name="a03c0bff1e962ff7ef9f547119e9683da"></a>
@@ -818,10 +716,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../df/d44/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionEvent.html#ab032a2af5378e861773d7f29fa972278">com.fs.starfarer.api.impl.campaign.tutorial.TutorialMissionEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00452">452</a> of file <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html">BaseEventPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  452</span>                                    {</div>
-<div class="line"><span class="lineno">  453</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  454</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae32a4da198ee3642f24b7581d1e18c36" name="ae32a4da198ee3642f24b7581d1e18c36"></a>
@@ -845,10 +740,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d9/d97/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventPlugin.html#aff497408c581632c2e3e93a20b1becf5">com.fs.starfarer.api.campaign.events.CampaignEventPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00448">448</a> of file <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html">BaseEventPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  448</span>                                          {</div>
-<div class="line"><span class="lineno">  449</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  450</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a85cf224c2f3e37252bc98c9d367b1350" name="a85cf224c2f3e37252bc98c9d367b1350"></a>
@@ -875,29 +767,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00410">410</a> of file <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html">BaseEventPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  410</span>                                                   {</div>
-<div class="line"><span class="lineno">  411</span>        MessagePriority priority = MessagePriority.SECTOR;</div>
-<div class="line"><span class="lineno">  412</span>        <span class="keywordflow">switch</span> (<a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af6f714c59a16687b5cde142091a54150">getSize</a>()) {</div>
-<div class="line"><span class="lineno">  413</span>        <span class="keywordflow">case</span> 1:</div>
-<div class="line"><span class="lineno">  414</span>        <span class="keywordflow">case</span> 2:</div>
-<div class="line"><span class="lineno">  415</span>        <span class="keywordflow">case</span> 3:</div>
-<div class="line"><span class="lineno">  416</span>            priority = MessagePriority.SYSTEM;</div>
-<div class="line"><span class="lineno">  417</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  418</span>        <span class="keywordflow">case</span> 4:</div>
-<div class="line"><span class="lineno">  419</span>        <span class="keywordflow">case</span> 5:</div>
-<div class="line"><span class="lineno">  420</span>        <span class="keywordflow">case</span> 6:</div>
-<div class="line"><span class="lineno">  421</span>            priority = MessagePriority.CLUSTER;</div>
-<div class="line"><span class="lineno">  422</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  423</span>        <span class="keywordflow">case</span> 7:</div>
-<div class="line"><span class="lineno">  424</span>        <span class="keywordflow">case</span> 8:</div>
-<div class="line"><span class="lineno">  425</span>        <span class="keywordflow">case</span> 9:</div>
-<div class="line"><span class="lineno">  426</span>            priority = MessagePriority.SECTOR;</div>
-<div class="line"><span class="lineno">  427</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  428</span>        }</div>
-<div class="line"><span class="lineno">  429</span>        <span class="keywordflow">return</span> priority;</div>
-<div class="line"><span class="lineno">  430</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_af6f714c59a16687b5cde142091a54150"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af6f714c59a16687b5cde142091a54150">com.fs.starfarer.api.campaign.econ.MarketAPI.getSize</a></div><div class="ttdeci">int getSize()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a768b12bc984bf1abddf99819a45f06e2" name="a768b12bc984bf1abddf99819a45f06e2"></a>
@@ -920,10 +790,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../dc/d04/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FleetLogEvent.html#a011b5cc0126e92cf6feaabdd888c60d3">com.fs.starfarer.api.impl.campaign.events.FleetLogEvent</a>, <a class="el" href="../../d9/d53/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1nearby_1_1NearbyEventsEvent.html#a5656808efd57c49fa0e88b08a794dff8">com.fs.starfarer.api.impl.campaign.events.nearby.NearbyEventsEvent</a>, <a class="el" href="../../d8/d8d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1TradeInfoUpdateEvent.html#aa4178ccb54da7a2c5e07ef6b54103ee4">com.fs.starfarer.api.impl.campaign.events.TradeInfoUpdateEvent</a>, and <a class="el" href="../../df/d44/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionEvent.html#a65b14b6fc5fcb2764a58f371846bd15f">com.fs.starfarer.api.impl.campaign.tutorial.TutorialMissionEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00406">406</a> of file <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html">BaseEventPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  406</span>                                                    {</div>
-<div class="line"><span class="lineno">  407</span>        <span class="keywordflow">return</span> CampaignEventCategory.EVENT;</div>
-<div class="line"><span class="lineno">  408</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac04d963eda041a0c5eb5fe61accb842f" name="ac04d963eda041a0c5eb5fe61accb842f"></a>
@@ -947,10 +814,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../df/d44/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionEvent.html#ae0aab0dfc02c46f197a09af186864ccd">com.fs.starfarer.api.impl.campaign.tutorial.TutorialMissionEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00456">456</a> of file <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html">BaseEventPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  456</span>                                 {</div>
-<div class="line"><span class="lineno">  457</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  458</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aef42b16a88a66024a330092d6f08eb9b" name="aef42b16a88a66024a330092d6f08eb9b"></a>
@@ -973,10 +837,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../d2/d93/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FactionHostilityEvent.html#a8153116f406b97dba2dbf3785eef07f6">com.fs.starfarer.api.impl.campaign.events.FactionHostilityEvent</a>, <a class="el" href="../../da/d04/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent.html#a305a2a7254754676553d19a1d91edd50">com.fs.starfarer.api.impl.campaign.events.FoodShortageEvent</a>, <a class="el" href="../../de/d3d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEvent.html#a15efae49efd5f654938c91e737157b51">com.fs.starfarer.api.impl.campaign.events.InvestigationEvent</a>, <a class="el" href="../../d5/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventGoodRepWithOther.html#a67003d8bde9ce88e04349d5eebc05a68">com.fs.starfarer.api.impl.campaign.events.InvestigationEventGoodRepWithOther</a>, <a class="el" href="../../d8/d89/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventSmugglingV2.html#a0eb536a702edf221b21c7defa8a6ccde">com.fs.starfarer.api.impl.campaign.events.InvestigationEventSmugglingV2</a>, <a class="el" href="../../de/d8f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1RecentUnrestEvent.html#a2ef57c5018a8400ebd92f00f74d11d4b">com.fs.starfarer.api.impl.campaign.events.RecentUnrestEvent</a>, <a class="el" href="../../d8/d8d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1TradeInfoUpdateEvent.html#aa8776ed0b30489e4f422e0d2665d30b3">com.fs.starfarer.api.impl.campaign.events.TradeInfoUpdateEvent</a>, and <a class="el" href="../../df/d44/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionEvent.html#aa6e9ea2fac0252e00b855b7d6a260be5">com.fs.starfarer.api.impl.campaign.tutorial.TutorialMissionEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00402">402</a> of file <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html">BaseEventPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  402</span>                                 {</div>
-<div class="line"><span class="lineno">  403</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;BaseEventPlugin.getEventName()&quot;</span>;</div>
-<div class="line"><span class="lineno">  404</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af2e4ba1b8f1c54db22375ebd2626c779" name="af2e4ba1b8f1c54db22375ebd2626c779"></a>
@@ -999,11 +860,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../db/dc2/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1CivilDisorder.html#a4d6018b50defc973428d514847728ab1">com.fs.starfarer.api.impl.campaign.events.CivilDisorder</a>, <a class="el" href="../../dc/d04/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FleetLogEvent.html#a351c20f0f87b29581aa5ad262ae87230">com.fs.starfarer.api.impl.campaign.events.FleetLogEvent</a>, <a class="el" href="../../d9/d53/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1nearby_1_1NearbyEventsEvent.html#ad7677e7210d9df06c79f98c87999227e">com.fs.starfarer.api.impl.campaign.events.nearby.NearbyEventsEvent</a>, <a class="el" href="../../df/d35/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1TestEvent.html#ae347395bcd5a17f76d2eb1cff651927b">com.fs.starfarer.api.impl.campaign.events.TestEvent</a>, and <a class="el" href="../../d8/d8d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1TradeInfoUpdateEvent.html#a3244a4b83cb25f4f84f8dc7a379c6206">com.fs.starfarer.api.impl.campaign.events.TradeInfoUpdateEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00114">114</a> of file <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html">BaseEventPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  114</span>                                                {</div>
-<div class="line"><span class="lineno">  115</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#abe1c16c1836db2f6bacef1b8b0814872">eventTarget</a>;</div>
-<div class="line"><span class="lineno">  116</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin_html_abe1c16c1836db2f6bacef1b8b0814872"><div class="ttname"><a href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#abe1c16c1836db2f6bacef1b8b0814872">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin.eventTarget</a></div><div class="ttdeci">CampaignEventTarget eventTarget</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00042">BaseEventPlugin.java:42</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a737a23e9e36e9b6f9012cfd98914cab4" name="a737a23e9e36e9b6f9012cfd98914cab4"></a>
@@ -1026,11 +883,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../db/dc2/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1CivilDisorder.html#a4d177192e26162e2bda8460afdd257b7">com.fs.starfarer.api.impl.campaign.events.CivilDisorder</a>, and <a class="el" href="../../df/d35/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1TestEvent.html#a9df7f00482457e2b1fe4e88cab6485a5">com.fs.starfarer.api.impl.campaign.events.TestEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00118">118</a> of file <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html">BaseEventPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  118</span>                                 {</div>
-<div class="line"><span class="lineno">  119</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#aac2085bc3d01045862487bc6a8f01d06">eventType</a>;</div>
-<div class="line"><span class="lineno">  120</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin_html_aac2085bc3d01045862487bc6a8f01d06"><div class="ttname"><a href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#aac2085bc3d01045862487bc6a8f01d06">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin.eventType</a></div><div class="ttdeci">String eventType</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00041">BaseEventPlugin.java:41</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a3020d01a879fc0b9d383e46f7d9c53bf" name="a3020d01a879fc0b9d383e46f7d9c53bf"></a>
@@ -1061,18 +914,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../db/dc2/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1CivilDisorder.html#a18da1f6ed0f76f10eae571bd656b2eea">com.fs.starfarer.api.impl.campaign.events.CivilDisorder</a>, <a class="el" href="../../dc/d04/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FleetLogEvent.html#aa8b37135e7b7c691cd284b670ca82659">com.fs.starfarer.api.impl.campaign.events.FleetLogEvent</a>, <a class="el" href="../../da/d04/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent.html#a54e75c680fca898ccaca54a5aa9da120">com.fs.starfarer.api.impl.campaign.events.FoodShortageEvent</a>, <a class="el" href="../../d9/d53/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1nearby_1_1NearbyEventsEvent.html#a73ed2853aab0f9d07691c0a97c95c2c6">com.fs.starfarer.api.impl.campaign.events.nearby.NearbyEventsEvent</a>, <a class="el" href="../../df/d35/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1TestEvent.html#aaf6851e60fdad8bb696f5d3d3a4e5246">com.fs.starfarer.api.impl.campaign.events.TestEvent</a>, <a class="el" href="../../d8/d8d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1TradeInfoUpdateEvent.html#a8f97a4cdfc1f8120ad7d76b87323d904">com.fs.starfarer.api.impl.campaign.events.TradeInfoUpdateEvent</a>, and <a class="el" href="../../df/d44/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionEvent.html#a1bda750dee6587bb0194063a290d90b0">com.fs.starfarer.api.impl.campaign.tutorial.TutorialMissionEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00381">381</a> of file <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html">BaseEventPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  381</span>                                                      {</div>
-<div class="line"><span class="lineno">  382</span>        String [] highlights = <a class="code hl_function" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a00dc5b856ba666734d16d72b420e763d">getHighlights</a>(stageId);</div>
-<div class="line"><span class="lineno">  383</span>        <span class="keywordflow">if</span> (highlights != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  384</span>            Color c = Global.getSettings().getColor(<span class="stringliteral">&quot;buttonShortcut&quot;</span>);</div>
-<div class="line"><span class="lineno">  385</span>            Color [] colors = <span class="keyword">new</span> Color[highlights.length];</div>
-<div class="line"><span class="lineno">  386</span>            Arrays.fill(colors, c);</div>
-<div class="line"><span class="lineno">  387</span>            <span class="keywordflow">return</span> colors;</div>
-<div class="line"><span class="lineno">  388</span>        }</div>
-<div class="line"><span class="lineno">  389</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  390</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin_html_a00dc5b856ba666734d16d72b420e763d"><div class="ttname"><a href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a00dc5b856ba666734d16d72b420e763d">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin.getHighlights</a></div><div class="ttdeci">String[] getHighlights(String stageId)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00377">BaseEventPlugin.java:377</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a00dc5b856ba666734d16d72b420e763d" name="a00dc5b856ba666734d16d72b420e763d"></a>
@@ -1103,10 +945,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../db/dc2/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1CivilDisorder.html#a79ea4099d510283d9e5054bba8f1b41d">com.fs.starfarer.api.impl.campaign.events.CivilDisorder</a>, <a class="el" href="../../d2/d93/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FactionHostilityEvent.html#a57a54729d5a55d27509c282102b2815f">com.fs.starfarer.api.impl.campaign.events.FactionHostilityEvent</a>, <a class="el" href="../../dc/d04/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FleetLogEvent.html#a6b44403c29f4a800500a679152cecb56">com.fs.starfarer.api.impl.campaign.events.FleetLogEvent</a>, <a class="el" href="../../da/d04/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent.html#a5ef38ee0e75fe773e2d70c3cc025cb47">com.fs.starfarer.api.impl.campaign.events.FoodShortageEvent</a>, <a class="el" href="../../d5/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventGoodRepWithOther.html#ae75ad9184a6dface908e9accc2249387">com.fs.starfarer.api.impl.campaign.events.InvestigationEventGoodRepWithOther</a>, <a class="el" href="../../d8/d89/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventSmugglingV2.html#a701b9cc68f521ee8ac1fecf2f5e495bc">com.fs.starfarer.api.impl.campaign.events.InvestigationEventSmugglingV2</a>, <a class="el" href="../../d9/d53/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1nearby_1_1NearbyEventsEvent.html#ae9fe82037ad801038d7ef0ec3286658c">com.fs.starfarer.api.impl.campaign.events.nearby.NearbyEventsEvent</a>, <a class="el" href="../../df/d35/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1TestEvent.html#a8ca3d60fb7d2ca0ebb3d099a377d98f1">com.fs.starfarer.api.impl.campaign.events.TestEvent</a>, <a class="el" href="../../d8/d8d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1TradeInfoUpdateEvent.html#afb65aa6bc440ec1299090d61a87cbfe3">com.fs.starfarer.api.impl.campaign.events.TradeInfoUpdateEvent</a>, and <a class="el" href="../../df/d44/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionEvent.html#a649cdd59dea3aff74d75d8793fd10336">com.fs.starfarer.api.impl.campaign.tutorial.TutorialMissionEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00377">377</a> of file <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html">BaseEventPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  377</span>                                                  {</div>
-<div class="line"><span class="lineno">  378</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  379</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="adead8c231ba919bb0857b36d3444f955" name="adead8c231ba919bb0857b36d3444f955"></a>
@@ -1128,13 +967,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d9/d97/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventPlugin.html#a7cab69f939c989cb89f943f055a5e209">com.fs.starfarer.api.campaign.events.CampaignEventPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00496">496</a> of file <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html">BaseEventPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  496</span>                          {</div>
-<div class="line"><span class="lineno">  497</span>        <span class="keywordflow">if</span> (<span class="keywordtype">id</span> == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  498</span>            <span class="keywordtype">id</span> = Misc.genUID();</div>
-<div class="line"><span class="lineno">  499</span>        }</div>
-<div class="line"><span class="lineno">  500</span>        <span class="keywordflow">return</span> id;</div>
-<div class="line"><span class="lineno">  501</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ad95fb45243d453e6a41ce156d3997861" name="ad95fb45243d453e6a41ce156d3997861"></a>
@@ -1161,19 +994,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00082">82</a> of file <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html">BaseEventPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   82</span>                                    {</div>
-<div class="line"><span class="lineno">   83</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a> != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   84</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;[&quot;</span> + <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a7e5b6e8035c61f63cd8b331df994233b">getName</a>() + <span class="stringliteral">&quot;]&quot;</span>;</div>
-<div class="line"><span class="lineno">   85</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#abe1c16c1836db2f6bacef1b8b0814872">eventTarget</a> != <span class="keyword">null</span> &amp;&amp; <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#abe1c16c1836db2f6bacef1b8b0814872">eventTarget</a>.<a class="code hl_function" href="../../dc/d60/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventTarget.html#a4fdba2ae8cd89b839d2ea941da3ceba5">getEntity</a>() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   86</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;[&quot;</span> + <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#abe1c16c1836db2f6bacef1b8b0814872">eventTarget</a>.<a class="code hl_function" href="../../dc/d60/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventTarget.html#a4fdba2ae8cd89b839d2ea941da3ceba5">getEntity</a>().<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a4fa77e45f0774df8a8980dc438598678">getName</a>() + <span class="stringliteral">&quot;]&quot;</span>;</div>
-<div class="line"><span class="lineno">   87</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   88</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;[&quot;</span> + <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#aac2085bc3d01045862487bc6a8f01d06">eventType</a> + <span class="stringliteral">&quot;]&quot;</span>;</div>
-<div class="line"><span class="lineno">   89</span>        }</div>
-<div class="line"><span class="lineno">   90</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventTarget_html_a4fdba2ae8cd89b839d2ea941da3ceba5"><div class="ttname"><a href="../../dc/d60/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventTarget.html#a4fdba2ae8cd89b839d2ea941da3ceba5">com.fs.starfarer.api.campaign.events.CampaignEventTarget.getEntity</a></div><div class="ttdeci">SectorEntityToken getEntity()</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d27/CampaignEventTarget_8java_source.html#l00061">CampaignEventTarget.java:61</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_a4fa77e45f0774df8a8980dc438598678"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a4fa77e45f0774df8a8980dc438598678">com.fs.starfarer.api.campaign.SectorEntityToken.getName</a></div><div class="ttdeci">String getName()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a7e5b6e8035c61f63cd8b331df994233b"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a7e5b6e8035c61f63cd8b331df994233b">com.fs.starfarer.api.campaign.econ.MarketAPI.getName</a></div><div class="ttdeci">String getName()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aab79535d56abc3c186d6629c4b9c73e5" name="aab79535d56abc3c186d6629c4b9c73e5"></a>
@@ -1194,11 +1015,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d9/d97/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventPlugin.html#a2c63b5478023918111afdc2a221d7c44">com.fs.starfarer.api.campaign.events.CampaignEventPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00492">492</a> of file <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html">BaseEventPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  492</span>                                 {</div>
-<div class="line"><span class="lineno">  493</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a1e63b0b9f60a876a974da87de0ddad82">memory</a>;</div>
-<div class="line"><span class="lineno">  494</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin_html_a1e63b0b9f60a876a974da87de0ddad82"><div class="ttname"><a href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a1e63b0b9f60a876a974da87de0ddad82">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin.memory</a></div><div class="ttdeci">MemoryAPI memory</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00049">BaseEventPlugin.java:49</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ad9fe317284841355f94d9d3db565eff5" name="ad9fe317284841355f94d9d3db565eff5"></a>
@@ -1221,10 +1038,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../da/d04/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent.html#aca8352034e79da4fec360118e4694c9e">com.fs.starfarer.api.impl.campaign.events.FoodShortageEvent</a>, and <a class="el" href="../../d8/d8d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1TradeInfoUpdateEvent.html#a553575dc357e866aa5a46c622db2371f">com.fs.starfarer.api.impl.campaign.events.TradeInfoUpdateEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00436">436</a> of file <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html">BaseEventPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  436</span>                                                     {</div>
-<div class="line"><span class="lineno">  437</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  438</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="abd961aa7802b8e214ae9842644eeac94" name="abd961aa7802b8e214ae9842644eeac94"></a>
@@ -1247,10 +1061,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../da/d04/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent.html#a7bc57529e3a3790083d67ee3a5a9daa8">com.fs.starfarer.api.impl.campaign.events.FoodShortageEvent</a>, and <a class="el" href="../../d8/d8d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1TradeInfoUpdateEvent.html#a2e15f2dfe04250d926dfebcb56b290d8">com.fs.starfarer.api.impl.campaign.events.TradeInfoUpdateEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00432">432</a> of file <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html">BaseEventPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  432</span>                                                {</div>
-<div class="line"><span class="lineno">  433</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  434</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a4a1163afd1a5e01cede86521b91bf4bf" name="a4a1163afd1a5e01cede86521b91bf4bf"></a>
@@ -1274,10 +1085,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../db/dc2/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1CivilDisorder.html#a33eb9d90486abc3c408260271bd512f9">com.fs.starfarer.api.impl.campaign.events.CivilDisorder</a>, <a class="el" href="../../da/d04/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent.html#ab8665c65102212da0ae6f8e5ff2fae9e">com.fs.starfarer.api.impl.campaign.events.FoodShortageEvent</a>, and <a class="el" href="../../df/d35/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1TestEvent.html#a6e0c989dc0afe45c7d6860f462530f25">com.fs.starfarer.api.impl.campaign.events.TestEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00122">122</a> of file <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html">BaseEventPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  122</span>                                        {</div>
-<div class="line"><span class="lineno">  123</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  124</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="adeb439b2b8eb082c0317820a91cc1f7b" name="adeb439b2b8eb082c0317820a91cc1f7b"></a>
@@ -1301,10 +1109,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../db/dc2/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1CivilDisorder.html#ab0c879c72c3a51ff7050f94629062a73">com.fs.starfarer.api.impl.campaign.events.CivilDisorder</a>, <a class="el" href="../../da/d04/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent.html#a0d87902f81242f200bc897204402794d">com.fs.starfarer.api.impl.campaign.events.FoodShortageEvent</a>, and <a class="el" href="../../df/d35/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1TestEvent.html#a5bb7123972870ce5e21e36970f53b97d">com.fs.starfarer.api.impl.campaign.events.TestEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00126">126</a> of file <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html">BaseEventPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  126</span>                                          {</div>
-<div class="line"><span class="lineno">  127</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  128</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac722f73d24c6939c05746c787f0c3a87" name="ac722f73d24c6939c05746c787f0c3a87"></a>
@@ -1323,11 +1128,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00503">503</a> of file <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html">BaseEventPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  503</span>                                 {</div>
-<div class="line"><span class="lineno">  504</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#ad9f175a3f9ef05e90362965308f01222">statModId</a>;</div>
-<div class="line"><span class="lineno">  505</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin_html_ad9f175a3f9ef05e90362965308f01222"><div class="ttname"><a href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#ad9f175a3f9ef05e90362965308f01222">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin.statModId</a></div><div class="ttdeci">String statModId</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00046">BaseEventPlugin.java:46</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9273568e4a61b238af5c135ce46cd1db" name="a9273568e4a61b238af5c135ce46cd1db"></a>
@@ -1346,15 +1147,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00315">315</a> of file <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html">BaseEventPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  315</span>                                  {</div>
-<div class="line"><span class="lineno">  316</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#abe1c16c1836db2f6bacef1b8b0814872">eventTarget</a>.<a class="code hl_function" href="../../dc/d60/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventTarget.html#a4fdba2ae8cd89b839d2ea941da3ceba5">getEntity</a>() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  317</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#abe1c16c1836db2f6bacef1b8b0814872">eventTarget</a>.<a class="code hl_function" href="../../dc/d60/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventTarget.html#a4fdba2ae8cd89b839d2ea941da3ceba5">getEntity</a>().<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a4fa77e45f0774df8a8980dc438598678">getName</a>() + <span class="stringliteral">&quot; (&quot;</span> + <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#abe1c16c1836db2f6bacef1b8b0814872">eventTarget</a>.<a class="code hl_function" href="../../dc/d60/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventTarget.html#aa24a3050e60e6be633a5c6495cfffc32">getLocation</a>().<a class="code hl_function" href="../../d2/d2c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI.html#aa5bde83a28f934c45683ace6f02dc478">getName</a>() + <span class="stringliteral">&quot;)&quot;</span>;</div>
-<div class="line"><span class="lineno">  318</span>        }</div>
-<div class="line"><span class="lineno">  319</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#abe1c16c1836db2f6bacef1b8b0814872">eventTarget</a>.<a class="code hl_function" href="../../dc/d60/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventTarget.html#aa24a3050e60e6be633a5c6495cfffc32">getLocation</a>().<a class="code hl_function" href="../../d2/d2c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI.html#aa5bde83a28f934c45683ace6f02dc478">getName</a>();</div>
-<div class="line"><span class="lineno">  320</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventTarget_html_aa24a3050e60e6be633a5c6495cfffc32"><div class="ttname"><a href="../../dc/d60/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventTarget.html#aa24a3050e60e6be633a5c6495cfffc32">com.fs.starfarer.api.campaign.events.CampaignEventTarget.getLocation</a></div><div class="ttdeci">LocationAPI getLocation()</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d27/CampaignEventTarget_8java_source.html#l00053">CampaignEventTarget.java:53</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI_html_aa5bde83a28f934c45683ace6f02dc478"><div class="ttname"><a href="../../d2/d2c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI.html#aa5bde83a28f934c45683ace6f02dc478">com.fs.starfarer.api.campaign.LocationAPI.getName</a></div><div class="ttdeci">String getName()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa67b1f6c564a4765a764cfb90a60f4c9" name="aa67b1f6c564a4765a764cfb90a60f4c9"></a>
@@ -1378,129 +1171,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../db/dc2/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1CivilDisorder.html#a6df029ff2f93f0f63b16d555d83e62be">com.fs.starfarer.api.impl.campaign.events.CivilDisorder</a>, <a class="el" href="../../d2/d93/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FactionHostilityEvent.html#aa34871b07cdcf87ef3171fe45a0d3818">com.fs.starfarer.api.impl.campaign.events.FactionHostilityEvent</a>, <a class="el" href="../../dc/d04/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FleetLogEvent.html#a9689c8f65a2b1dd9cae3ec00a906ef10">com.fs.starfarer.api.impl.campaign.events.FleetLogEvent</a>, <a class="el" href="../../da/d04/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent.html#a9cbaacb24f9f5afd084373bcd8bab166">com.fs.starfarer.api.impl.campaign.events.FoodShortageEvent</a>, <a class="el" href="../../de/d3d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEvent.html#a1f394f02b2ca0e671d14444eae4079a4">com.fs.starfarer.api.impl.campaign.events.InvestigationEvent</a>, <a class="el" href="../../da/dca/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventCommSniffer.html#a6b8d215b24cad71531511f824a86cccb">com.fs.starfarer.api.impl.campaign.events.InvestigationEventCommSniffer</a>, <a class="el" href="../../d5/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventGoodRepWithOther.html#a36a1d4baeacb73eae7349978ff4d7a10">com.fs.starfarer.api.impl.campaign.events.InvestigationEventGoodRepWithOther</a>, <a class="el" href="../../d8/d89/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventSmugglingV2.html#aee2a6c0d2173392ede380f04fa385110">com.fs.starfarer.api.impl.campaign.events.InvestigationEventSmugglingV2</a>, <a class="el" href="../../d9/d53/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1nearby_1_1NearbyEventsEvent.html#ac936cb61796de330829a88977603cc7d">com.fs.starfarer.api.impl.campaign.events.nearby.NearbyEventsEvent</a>, <a class="el" href="../../df/d35/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1TestEvent.html#ab8b87629702a759ceed7ac0859d0032d">com.fs.starfarer.api.impl.campaign.events.TestEvent</a>, <a class="el" href="../../d8/d8d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1TradeInfoUpdateEvent.html#aa0cbef00e6fe9b78791ed084bb1a6c90">com.fs.starfarer.api.impl.campaign.events.TradeInfoUpdateEvent</a>, and <a class="el" href="../../df/d44/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionEvent.html#a4f9fd090bba0519da4a5e7638687d32e">com.fs.starfarer.api.impl.campaign.tutorial.TutorialMissionEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00130">130</a> of file <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html">BaseEventPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  130</span>                                                      {</div>
-<div class="line"><span class="lineno">  131</span>        HashMap&lt;String, String&gt; tokens = <span class="keyword">new</span> HashMap&lt;String, String&gt;();</div>
-<div class="line"><span class="lineno">  132</span>        </div>
-<div class="line"><span class="lineno">  133</span>        CampaignFleetAPI playerFleet = Global.getSector().getPlayerFleet();</div>
-<div class="line"><span class="lineno">  134</span>        tokens.put(<span class="stringliteral">&quot;$playerName&quot;</span>, Global.getSector().getCharacterData().getName());</div>
-<div class="line"><span class="lineno">  135</span>        <span class="comment">//PersonAPI playerPerson = playerFleet.getCommander();</span></div>
-<div class="line"><span class="lineno">  136</span>        PersonAPI playerPerson = Global.getSector().getPlayerPerson();</div>
-<div class="line"><span class="lineno">  137</span>        <span class="keywordflow">if</span> (playerPerson != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  138</span>            <span class="keywordflow">if</span> (playerPerson.isMale()) {</div>
-<div class="line"><span class="lineno">  139</span>                tokens.put(<span class="stringliteral">&quot;$playerHisOrHer&quot;</span>, <span class="stringliteral">&quot;his&quot;</span>);</div>
-<div class="line"><span class="lineno">  140</span>                tokens.put(<span class="stringliteral">&quot;$PlayerHisOrHer&quot;</span>, <span class="stringliteral">&quot;His&quot;</span>);</div>
-<div class="line"><span class="lineno">  141</span>                tokens.put(<span class="stringliteral">&quot;$playerHimOrHer&quot;</span>, <span class="stringliteral">&quot;him&quot;</span>);</div>
-<div class="line"><span class="lineno">  142</span>                tokens.put(<span class="stringliteral">&quot;$PlayerHimOrHer&quot;</span>, <span class="stringliteral">&quot;Him&quot;</span>);</div>
-<div class="line"><span class="lineno">  143</span>                tokens.put(<span class="stringliteral">&quot;$playerHeOrShe&quot;</span>, <span class="stringliteral">&quot;he&quot;</span>);</div>
-<div class="line"><span class="lineno">  144</span>                tokens.put(<span class="stringliteral">&quot;$PlayerHeOrShe&quot;</span>, <span class="stringliteral">&quot;He&quot;</span>);</div>
-<div class="line"><span class="lineno">  145</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  146</span>                tokens.put(<span class="stringliteral">&quot;$playerHisOrHer&quot;</span>, <span class="stringliteral">&quot;her&quot;</span>);</div>
-<div class="line"><span class="lineno">  147</span>                tokens.put(<span class="stringliteral">&quot;$PlayerHisOrHer&quot;</span>, <span class="stringliteral">&quot;Her&quot;</span>);</div>
-<div class="line"><span class="lineno">  148</span>                tokens.put(<span class="stringliteral">&quot;$playerHimOrHer&quot;</span>, <span class="stringliteral">&quot;her&quot;</span>);</div>
-<div class="line"><span class="lineno">  149</span>                tokens.put(<span class="stringliteral">&quot;$PlayerHimOrHer&quot;</span>, <span class="stringliteral">&quot;Her&quot;</span>);</div>
-<div class="line"><span class="lineno">  150</span>                tokens.put(<span class="stringliteral">&quot;$playerHeOrShe&quot;</span>, <span class="stringliteral">&quot;she&quot;</span>);</div>
-<div class="line"><span class="lineno">  151</span>                tokens.put(<span class="stringliteral">&quot;$PlayerHeOrShe&quot;</span>, <span class="stringliteral">&quot;She&quot;</span>);</div>
-<div class="line"><span class="lineno">  152</span>            }</div>
-<div class="line"><span class="lineno">  153</span>        }</div>
-<div class="line"><span class="lineno">  154</span>        </div>
-<div class="line"><span class="lineno">  155</span>        MarketAPI <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a> = this.<a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a>;</div>
-<div class="line"><span class="lineno">  156</span>        SectorEntityToken <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#aa9dc186620955830e7bd8c065f3c9707">entity</a> = this.<a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#aa9dc186620955830e7bd8c065f3c9707">entity</a>;</div>
-<div class="line"><span class="lineno">  157</span>        FactionAPI <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a5062e440ac3d3fb9a12bf3cac406e2c1">faction</a> = this.<a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a5062e440ac3d3fb9a12bf3cac406e2c1">faction</a>;</div>
-<div class="line"><span class="lineno">  158</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#af2e4ba1b8f1c54db22375ebd2626c779">getEventTarget</a>() != <span class="keyword">null</span>) { <span class="comment">// for special events that can change their targets</span></div>
-<div class="line"><span class="lineno">  159</span>            market = <a class="code hl_function" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#af2e4ba1b8f1c54db22375ebd2626c779">getEventTarget</a>().<a class="code hl_function" href="../../dc/d60/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventTarget.html#a8422d28eb3ba51cd2a1765dae626319d">getMarket</a>();</div>
-<div class="line"><span class="lineno">  160</span>            <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#aa9dc186620955830e7bd8c065f3c9707">entity</a> = <a class="code hl_function" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#af2e4ba1b8f1c54db22375ebd2626c779">getEventTarget</a>().<a class="code hl_function" href="../../dc/d60/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventTarget.html#a4fdba2ae8cd89b839d2ea941da3ceba5">getEntity</a>();</div>
-<div class="line"><span class="lineno">  161</span>            <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a5062e440ac3d3fb9a12bf3cac406e2c1">faction</a> = <a class="code hl_function" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#af2e4ba1b8f1c54db22375ebd2626c779">getEventTarget</a>().<a class="code hl_function" href="../../dc/d60/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventTarget.html#a1a38d04592f2eee559380936ebd9f2a8">getFaction</a>();</div>
-<div class="line"><span class="lineno">  162</span>        }</div>
-<div class="line"><span class="lineno">  163</span>        </div>
-<div class="line"><span class="lineno">  164</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#aa9dc186620955830e7bd8c065f3c9707">entity</a> != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  165</span>            tokens.put(<span class="stringliteral">&quot;$name&quot;</span>, <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#aa9dc186620955830e7bd8c065f3c9707">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a4fa77e45f0774df8a8980dc438598678">getName</a>());</div>
-<div class="line"><span class="lineno">  166</span>        }</div>
-<div class="line"><span class="lineno">  167</span>        </div>
-<div class="line"><span class="lineno">  168</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a> != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  169</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af1677b531fa1a657e17b732868c7b953">getPrimaryEntity</a>().<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#abed0787f3c057816961d1a07f2c55662">hasTag</a>(Tags.STATION)) {</div>
-<div class="line"><span class="lineno">  170</span>                tokens.put(<span class="stringliteral">&quot;$onOrAt&quot;</span>, <span class="stringliteral">&quot;at&quot;</span>);</div>
-<div class="line"><span class="lineno">  171</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  172</span>                tokens.put(<span class="stringliteral">&quot;$onOrAt&quot;</span>, <span class="stringliteral">&quot;on&quot;</span>);</div>
-<div class="line"><span class="lineno">  173</span>            }</div>
-<div class="line"><span class="lineno">  174</span>            </div>
-<div class="line"><span class="lineno">  175</span>            tokens.put(<span class="stringliteral">&quot;$market&quot;</span>, <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a7e5b6e8035c61f63cd8b331df994233b">getName</a>());</div>
-<div class="line"><span class="lineno">  176</span>            tokens.put(<span class="stringliteral">&quot;$marketFaction&quot;</span>, <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a97645caff4adca5efcf3a462fb13ca0f">getFaction</a>().<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a152197efac6967a0a459e4579b8ab1ef">getDisplayName</a>());</div>
-<div class="line"><span class="lineno">  177</span>            tokens.put(<span class="stringliteral">&quot;$MarketFaction&quot;</span>, Misc.ucFirst(<a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a97645caff4adca5efcf3a462fb13ca0f">getFaction</a>().<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a152197efac6967a0a459e4579b8ab1ef">getDisplayName</a>()));</div>
-<div class="line"><span class="lineno">  178</span>            tokens.put(<span class="stringliteral">&quot;$TheMarketFaction&quot;</span>, Misc.ucFirst(<a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a97645caff4adca5efcf3a462fb13ca0f">getFaction</a>().<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a69b86d194392c5eadd148b6e1e6cd5f0">getDisplayNameWithArticle</a>()));</div>
-<div class="line"><span class="lineno">  179</span>            tokens.put(<span class="stringliteral">&quot;$theMarketFaction&quot;</span>, <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a97645caff4adca5efcf3a462fb13ca0f">getFaction</a>().<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a69b86d194392c5eadd148b6e1e6cd5f0">getDisplayNameWithArticle</a>());</div>
-<div class="line"><span class="lineno">  180</span>            </div>
-<div class="line"><span class="lineno">  181</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#abe1c16c1836db2f6bacef1b8b0814872">eventTarget</a>.<a class="code hl_function" href="../../dc/d60/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventTarget.html#aa24a3050e60e6be633a5c6495cfffc32">getLocation</a>() instanceof StarSystemAPI) {</div>
-<div class="line"><span class="lineno">  182</span>                <span class="comment">//tokens.put(&quot;$marketSystem&quot;, ((StarSystemAPI)eventTarget.getLocation()).getBaseName() + &quot; star system&quot;);</span></div>
-<div class="line"><span class="lineno">  183</span>                tokens.put(<span class="stringliteral">&quot;$marketSystem&quot;</span>, ((StarSystemAPI)<a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#abe1c16c1836db2f6bacef1b8b0814872">eventTarget</a>.<a class="code hl_function" href="../../dc/d60/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventTarget.html#aa24a3050e60e6be633a5c6495cfffc32">getLocation</a>()).getBaseName());</div>
-<div class="line"><span class="lineno">  184</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  185</span>                tokens.put(<span class="stringliteral">&quot;$marketSystem&quot;</span>, <span class="stringliteral">&quot;hyperspace&quot;</span>);</div>
-<div class="line"><span class="lineno">  186</span>            }</div>
-<div class="line"><span class="lineno">  187</span>            </div>
-<div class="line"><span class="lineno">  188</span>            RepLevel level = playerFleet.getFaction().<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#aad3990d52250d5cc6cb1faf21569e56f">getRelationshipLevel</a>(<a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a97645caff4adca5efcf3a462fb13ca0f">getFaction</a>());</div>
-<div class="line"><span class="lineno">  189</span>            tokens.put(<span class="stringliteral">&quot;$factionStanding&quot;</span>, level.getDisplayName().toLowerCase());</div>
-<div class="line"><span class="lineno">  190</span>            tokens.put(<span class="stringliteral">&quot;$FactionStanding&quot;</span>, Misc.ucFirst(level.getDisplayName()));</div>
-<div class="line"><span class="lineno">  191</span>        }</div>
-<div class="line"><span class="lineno">  192</span>        </div>
-<div class="line"><span class="lineno">  193</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a5062e440ac3d3fb9a12bf3cac406e2c1">faction</a> != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  194</span>            RepLevel level = playerFleet.getFaction().getRelationshipLevel(<a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a5062e440ac3d3fb9a12bf3cac406e2c1">faction</a>);</div>
-<div class="line"><span class="lineno">  195</span>            tokens.put(<span class="stringliteral">&quot;$factionStanding&quot;</span>, level.getDisplayName().toLowerCase());</div>
-<div class="line"><span class="lineno">  196</span>            tokens.put(<span class="stringliteral">&quot;$FactionStanding&quot;</span>, Misc.ucFirst(level.getDisplayName()));</div>
-<div class="line"><span class="lineno">  197</span>        }</div>
-<div class="line"><span class="lineno">  198</span>        </div>
-<div class="line"><span class="lineno">  199</span>        <span class="keywordflow">if</span> (playerFleet != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  200</span>            String fleetOrShip = <span class="stringliteral">&quot;fleet&quot;</span>;</div>
-<div class="line"><span class="lineno">  201</span>            <span class="keywordflow">if</span> (playerFleet.getFleetData().getMembersListCopy().size() == 1) {</div>
-<div class="line"><span class="lineno">  202</span>                fleetOrShip = <span class="stringliteral">&quot;ship&quot;</span>;</div>
-<div class="line"><span class="lineno">  203</span>                <span class="keywordflow">if</span> (playerFleet.getFleetData().getMembersListCopy().get(0).isFighterWing()) {</div>
-<div class="line"><span class="lineno">  204</span>                    fleetOrShip = <span class="stringliteral">&quot;fighter wing&quot;</span>;</div>
-<div class="line"><span class="lineno">  205</span>                }</div>
-<div class="line"><span class="lineno">  206</span>            }</div>
-<div class="line"><span class="lineno">  207</span>            tokens.put(<span class="stringliteral">&quot;$playerShipOrFleet&quot;</span>, fleetOrShip);</div>
-<div class="line"><span class="lineno">  208</span>        }</div>
-<div class="line"><span class="lineno">  209</span>        </div>
-<div class="line"><span class="lineno">  210</span>        <span class="comment">//if (getEventTarget() != null &amp;&amp; getEventTarget().getEntity() instanceof CampaignFleetAPI) {</span></div>
-<div class="line"><span class="lineno">  211</span>        <span class="comment">//if (getEventTarget() != null &amp;&amp; getEventTarget().getEntity() != null) {</span></div>
-<div class="line"><span class="lineno">  212</span>        <span class="comment">//getEventTarget().getEntity().getFaction();</span></div>
-<div class="line"><span class="lineno">  213</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a5062e440ac3d3fb9a12bf3cac406e2c1">faction</a> != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  214</span>            <span class="comment">//CampaignFleetAPI fleet = (CampaignFleetAPI) getEventTarget().getEntity();</span></div>
-<div class="line"><span class="lineno">  215</span>            <span class="comment">//FactionAPI faction = getEventTarget().getEntity().getFaction();</span></div>
-<div class="line"><span class="lineno">  216</span>            String factionName = <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a5062e440ac3d3fb9a12bf3cac406e2c1">faction</a>.<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#ac87fc5c812cff54d347b6669697a302e">getEntityNamePrefix</a>();</div>
-<div class="line"><span class="lineno">  217</span>            <span class="keywordflow">if</span> (factionName == <span class="keyword">null</span> || factionName.isEmpty()) {</div>
-<div class="line"><span class="lineno">  218</span>                factionName = <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a5062e440ac3d3fb9a12bf3cac406e2c1">faction</a>.<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a152197efac6967a0a459e4579b8ab1ef">getDisplayName</a>();</div>
-<div class="line"><span class="lineno">  219</span>            }</div>
-<div class="line"><span class="lineno">  220</span>            </div>
-<div class="line"><span class="lineno">  221</span>            tokens.put(<span class="stringliteral">&quot;$factionIsOrAre&quot;</span>, <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a5062e440ac3d3fb9a12bf3cac406e2c1">faction</a>.<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#ad86103131f789a387de2afa152026ca3">getDisplayNameIsOrAre</a>());</div>
-<div class="line"><span class="lineno">  222</span>            </div>
-<div class="line"><span class="lineno">  223</span>            tokens.put(<span class="stringliteral">&quot;$faction&quot;</span>, factionName);</div>
-<div class="line"><span class="lineno">  224</span>            tokens.put(<span class="stringliteral">&quot;$ownerFaction&quot;</span>, factionName);</div>
-<div class="line"><span class="lineno">  225</span>            tokens.put(<span class="stringliteral">&quot;$marketFaction&quot;</span>, factionName);</div>
-<div class="line"><span class="lineno">  226</span>            tokens.put(<span class="stringliteral">&quot;$Faction&quot;</span>, Misc.ucFirst(factionName));</div>
-<div class="line"><span class="lineno">  227</span>            tokens.put(<span class="stringliteral">&quot;$OwnerFaction&quot;</span>, Misc.ucFirst(factionName));</div>
-<div class="line"><span class="lineno">  228</span>            tokens.put(<span class="stringliteral">&quot;$MarketFaction&quot;</span>, Misc.ucFirst(factionName));</div>
-<div class="line"><span class="lineno">  229</span>            tokens.put(<span class="stringliteral">&quot;$theFaction&quot;</span>, <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a5062e440ac3d3fb9a12bf3cac406e2c1">faction</a>.<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a69b86d194392c5eadd148b6e1e6cd5f0">getDisplayNameWithArticle</a>());</div>
-<div class="line"><span class="lineno">  230</span>            tokens.put(<span class="stringliteral">&quot;$theOwnerFaction&quot;</span>, <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a5062e440ac3d3fb9a12bf3cac406e2c1">faction</a>.<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a69b86d194392c5eadd148b6e1e6cd5f0">getDisplayNameWithArticle</a>());</div>
-<div class="line"><span class="lineno">  231</span>            tokens.put(<span class="stringliteral">&quot;$theMarketFaction&quot;</span>, <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a5062e440ac3d3fb9a12bf3cac406e2c1">faction</a>.<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a69b86d194392c5eadd148b6e1e6cd5f0">getDisplayNameWithArticle</a>());</div>
-<div class="line"><span class="lineno">  232</span>            tokens.put(<span class="stringliteral">&quot;$TheFaction&quot;</span>, Misc.ucFirst(<a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a5062e440ac3d3fb9a12bf3cac406e2c1">faction</a>.<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a69b86d194392c5eadd148b6e1e6cd5f0">getDisplayNameWithArticle</a>()));</div>
-<div class="line"><span class="lineno">  233</span>            tokens.put(<span class="stringliteral">&quot;$TheOwnerFaction&quot;</span>, Misc.ucFirst(<a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a5062e440ac3d3fb9a12bf3cac406e2c1">faction</a>.<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a69b86d194392c5eadd148b6e1e6cd5f0">getDisplayNameWithArticle</a>()));</div>
-<div class="line"><span class="lineno">  234</span>            tokens.put(<span class="stringliteral">&quot;$TheMarketFaction&quot;</span>, Misc.ucFirst(<a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a5062e440ac3d3fb9a12bf3cac406e2c1">faction</a>.<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a69b86d194392c5eadd148b6e1e6cd5f0">getDisplayNameWithArticle</a>()));</div>
-<div class="line"><span class="lineno">  235</span>            </div>
-<div class="line"><span class="lineno">  236</span>            tokens.put(<span class="stringliteral">&quot;$factionLong&quot;</span>, <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a5062e440ac3d3fb9a12bf3cac406e2c1">faction</a>.<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#af5bb50a5e497355e484b7038ec7d0c1c">getDisplayNameLong</a>());</div>
-<div class="line"><span class="lineno">  237</span>            tokens.put(<span class="stringliteral">&quot;$FactionLong&quot;</span>, Misc.ucFirst(<a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a5062e440ac3d3fb9a12bf3cac406e2c1">faction</a>.<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#af5bb50a5e497355e484b7038ec7d0c1c">getDisplayNameLong</a>()));</div>
-<div class="line"><span class="lineno">  238</span>            tokens.put(<span class="stringliteral">&quot;$theFactionLong&quot;</span>, <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a5062e440ac3d3fb9a12bf3cac406e2c1">faction</a>.<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a7e1a6ef580c6b321278e2d911ac5e0cf">getDisplayNameLongWithArticle</a>());</div>
-<div class="line"><span class="lineno">  239</span>            tokens.put(<span class="stringliteral">&quot;$TheFactionLong&quot;</span>, Misc.ucFirst(<a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a5062e440ac3d3fb9a12bf3cac406e2c1">faction</a>.<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a7e1a6ef580c6b321278e2d911ac5e0cf">getDisplayNameLongWithArticle</a>()));</div>
-<div class="line"><span class="lineno">  240</span>        }</div>
-<div class="line"><span class="lineno">  241</span>        </div>
-<div class="line"><span class="lineno">  242</span>        <span class="keywordflow">return</span> tokens;</div>
-<div class="line"><span class="lineno">  243</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventTarget_html_a1a38d04592f2eee559380936ebd9f2a8"><div class="ttname"><a href="../../dc/d60/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventTarget.html#a1a38d04592f2eee559380936ebd9f2a8">com.fs.starfarer.api.campaign.events.CampaignEventTarget.getFaction</a></div><div class="ttdeci">FactionAPI getFaction()</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d27/CampaignEventTarget_8java_source.html#l00171">CampaignEventTarget.java:171</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventTarget_html_a8422d28eb3ba51cd2a1765dae626319d"><div class="ttname"><a href="../../dc/d60/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventTarget.html#a8422d28eb3ba51cd2a1765dae626319d">com.fs.starfarer.api.campaign.events.CampaignEventTarget.getMarket</a></div><div class="ttdeci">MarketAPI getMarket()</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d27/CampaignEventTarget_8java_source.html#l00041">CampaignEventTarget.java:41</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin_html_aa9dc186620955830e7bd8c065f3c9707"><div class="ttname"><a href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#aa9dc186620955830e7bd8c065f3c9707">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin.entity</a></div><div class="ttdeci">SectorEntityToken entity</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00044">BaseEventPlugin.java:44</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin_html_af2e4ba1b8f1c54db22375ebd2626c779"><div class="ttname"><a href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#af2e4ba1b8f1c54db22375ebd2626c779">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin.getEventTarget</a></div><div class="ttdeci">CampaignEventTarget getEventTarget()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00114">BaseEventPlugin.java:114</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI_html_aad3990d52250d5cc6cb1faf21569e56f"><div class="ttname"><a href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#aad3990d52250d5cc6cb1faf21569e56f">com.fs.starfarer.api.campaign.FactionAPI.getRelationshipLevel</a></div><div class="ttdeci">RepLevel getRelationshipLevel(FactionAPI faction)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_abed0787f3c057816961d1a07f2c55662"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#abed0787f3c057816961d1a07f2c55662">com.fs.starfarer.api.campaign.SectorEntityToken.hasTag</a></div><div class="ttdeci">boolean hasTag(String tag)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a97645caff4adca5efcf3a462fb13ca0f"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a97645caff4adca5efcf3a462fb13ca0f">com.fs.starfarer.api.campaign.econ.MarketAPI.getFaction</a></div><div class="ttdeci">FactionAPI getFaction()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_af1677b531fa1a657e17b732868c7b953"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af1677b531fa1a657e17b732868c7b953">com.fs.starfarer.api.campaign.econ.MarketAPI.getPrimaryEntity</a></div><div class="ttdeci">SectorEntityToken getPrimaryEntity()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a696a37edbdd38a05a19184883b1c6115" name="a696a37edbdd38a05a19184883b1c6115"></a>
@@ -1524,10 +1195,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../db/dc2/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1CivilDisorder.html#aab0745be93561cb7ff433f29ac98480a">com.fs.starfarer.api.impl.campaign.events.CivilDisorder</a>, <a class="el" href="../../da/d04/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent.html#a2b73ca0e0f638cb912bd53f2a3647b58">com.fs.starfarer.api.impl.campaign.events.FoodShortageEvent</a>, and <a class="el" href="../../df/d35/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1TestEvent.html#aff2a3ccf916a4d51182a7b61d153108e">com.fs.starfarer.api.impl.campaign.events.TestEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00299">299</a> of file <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html">BaseEventPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  299</span>                                                          {</div>
-<div class="line"><span class="lineno">  300</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  301</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="afdc8099d9df144312e390638433e788b" name="afdc8099d9df144312e390638433e788b"></a>
@@ -1551,10 +1219,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../db/dc2/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1CivilDisorder.html#acd342bc403cedf96de34a62dfa810880">com.fs.starfarer.api.impl.campaign.events.CivilDisorder</a>, <a class="el" href="../../da/d04/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent.html#aacff32a6613290eba9f969249cdea152">com.fs.starfarer.api.impl.campaign.events.FoodShortageEvent</a>, and <a class="el" href="../../df/d35/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1TestEvent.html#a722957ec080611c15340f35cd9372918">com.fs.starfarer.api.impl.campaign.events.TestEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00303">303</a> of file <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html">BaseEventPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  303</span>                                                            {</div>
-<div class="line"><span class="lineno">  304</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  305</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a6b20999e1466cdaec6b0e440d5f827e3" name="a6b20999e1466cdaec6b0e440d5f827e3"></a>
@@ -1574,16 +1239,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00350">350</a> of file <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html">BaseEventPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  350</span>                                                            {</div>
-<div class="line"><span class="lineno">  351</span>        <span class="keywordflow">if</span> (stabilityChange &lt;= 0) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  352</span>        CampaignEventManagerAPI manager = Global.getSector().getEventManager();</div>
-<div class="line"><span class="lineno">  353</span>        RecentUnrestEvent <span class="keyword">event</span> = (RecentUnrestEvent) manager.getOngoingEvent(<a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#abe1c16c1836db2f6bacef1b8b0814872">eventTarget</a>, Events.RECENT_UNREST);</div>
-<div class="line"><span class="lineno">  354</span>        <span class="keywordflow">if</span> (event == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  355</span>            <span class="keyword">event</span> = (RecentUnrestEvent) manager.startEvent(<a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#abe1c16c1836db2f6bacef1b8b0814872">eventTarget</a>, Events.RECENT_UNREST, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  356</span>        }</div>
-<div class="line"><span class="lineno">  357</span>        <span class="keyword">event</span>.increaseStabilityPenalty((<span class="keywordtype">int</span>) stabilityChange);</div>
-<div class="line"><span class="lineno">  358</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a85df425421b0ba2ec216cb3058f88297" name="a85df425421b0ba2ec216cb3058f88297"></a>
@@ -1624,11 +1280,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../db/dc2/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1CivilDisorder.html#a5c91c942c21c3dcfbf88212312ee8b39">com.fs.starfarer.api.impl.campaign.events.CivilDisorder</a>, <a class="el" href="../../d2/d93/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FactionHostilityEvent.html#a523ec396c6c1d2206e7ce392e5e16c7b">com.fs.starfarer.api.impl.campaign.events.FactionHostilityEvent</a>, <a class="el" href="../../dc/d04/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FleetLogEvent.html#acb7b59c3f45b09a1b5f2a275890f0eba">com.fs.starfarer.api.impl.campaign.events.FleetLogEvent</a>, <a class="el" href="../../da/d04/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent.html#a8671a0e3b39701b28290e1b7f51453a9">com.fs.starfarer.api.impl.campaign.events.FoodShortageEvent</a>, <a class="el" href="../../de/d3d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEvent.html#a0c72da43aed4d8a53631e9aedf65626d">com.fs.starfarer.api.impl.campaign.events.InvestigationEvent</a>, <a class="el" href="../../d5/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventGoodRepWithOther.html#aa9534c988f4f832ef9660750a73d6cab">com.fs.starfarer.api.impl.campaign.events.InvestigationEventGoodRepWithOther</a>, <a class="el" href="../../d8/d89/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventSmugglingV2.html#ae5f2251df16f1d4a02d7d9a7404816f8">com.fs.starfarer.api.impl.campaign.events.InvestigationEventSmugglingV2</a>, <a class="el" href="../../d9/d53/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1nearby_1_1NearbyEventsEvent.html#a8597dbfe7d3e10d8d361e068dcd61afa">com.fs.starfarer.api.impl.campaign.events.nearby.NearbyEventsEvent</a>, <a class="el" href="../../de/d8f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1RecentUnrestEvent.html#a1fc52e114b73ba2d37d8df006cd35657">com.fs.starfarer.api.impl.campaign.events.RecentUnrestEvent</a>, <a class="el" href="../../d9/df6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1RepTrackerEvent.html#a60f1f3a550d5ca251b369f9c5af03eb3">com.fs.starfarer.api.impl.campaign.events.RepTrackerEvent</a>, <a class="el" href="../../df/d35/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1TestEvent.html#afdf556761274f1e3b9eefcf4e24d3227">com.fs.starfarer.api.impl.campaign.events.TestEvent</a>, <a class="el" href="../../d8/d8d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1TradeInfoUpdateEvent.html#a1ceedda10667f8253035c22823ee8c1e">com.fs.starfarer.api.impl.campaign.events.TradeInfoUpdateEvent</a>, and <a class="el" href="../../df/d44/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionEvent.html#a1dc9e0e6db01c237ff235e3fd355e6c8">com.fs.starfarer.api.impl.campaign.tutorial.TutorialMissionEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00053">53</a> of file <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html">BaseEventPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   53</span>                                                                        {</div>
-<div class="line"><span class="lineno">   54</span>        <a class="code hl_function" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a85df425421b0ba2ec216cb3058f88297">init</a>(<a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#aac2085bc3d01045862487bc6a8f01d06">eventType</a>, <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#abe1c16c1836db2f6bacef1b8b0814872">eventTarget</a>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   55</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin_html_a85df425421b0ba2ec216cb3058f88297"><div class="ttname"><a href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a85df425421b0ba2ec216cb3058f88297">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin.init</a></div><div class="ttdeci">void init(String eventType, CampaignEventTarget eventTarget)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00053">BaseEventPlugin.java:53</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8081f8490258522942e1c940b6744a6f" name="a8081f8490258522942e1c940b6744a6f"></a>
@@ -1664,25 +1316,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00056">56</a> of file <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html">BaseEventPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   56</span>                                                                                             {</div>
-<div class="line"><span class="lineno">   57</span>        this.eventType = <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#aac2085bc3d01045862487bc6a8f01d06">eventType</a>;</div>
-<div class="line"><span class="lineno">   58</span>        this.eventTarget = <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#abe1c16c1836db2f6bacef1b8b0814872">eventTarget</a>;</div>
-<div class="line"><span class="lineno">   59</span> </div>
-<div class="line"><span class="lineno">   60</span>        <a class="code hl_function" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#ab7ad50e02420b299bc2da9135e308864">setTarget</a>(<a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#abe1c16c1836db2f6bacef1b8b0814872">eventTarget</a>);</div>
-<div class="line"><span class="lineno">   61</span>        </div>
-<div class="line"><span class="lineno">   62</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a> == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   63</span>            <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#ad9f175a3f9ef05e90362965308f01222">statModId</a> = <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#aac2085bc3d01045862487bc6a8f01d06">eventType</a> + <span class="stringliteral">&quot;_&quot;</span> + Misc.genUID();</div>
-<div class="line"><span class="lineno">   64</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   65</span>            <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#ad9f175a3f9ef05e90362965308f01222">statModId</a> = <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#aac2085bc3d01045862487bc6a8f01d06">eventType</a> + <span class="stringliteral">&quot;_&quot;</span> + <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a1c2b30198b83f80a06c4943c81c203d5">getId</a>() + <span class="stringliteral">&quot;_&quot;</span> + Misc.genUID();</div>
-<div class="line"><span class="lineno">   66</span>        }</div>
-<div class="line"><span class="lineno">   67</span> </div>
-<div class="line"><span class="lineno">   68</span>        <span class="keywordflow">if</span> (addListener) {</div>
-<div class="line"><span class="lineno">   69</span>            Global.getSector().addListener(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">   70</span>        }</div>
-<div class="line"><span class="lineno">   71</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin_html_ab7ad50e02420b299bc2da9135e308864"><div class="ttname"><a href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#ab7ad50e02420b299bc2da9135e308864">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin.setTarget</a></div><div class="ttdeci">void setTarget(CampaignEventTarget eventTarget)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00073">BaseEventPlugin.java:73</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a1c2b30198b83f80a06c4943c81c203d5"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a1c2b30198b83f80a06c4943c81c203d5">com.fs.starfarer.api.campaign.econ.MarketAPI.getId</a></div><div class="ttdeci">String getId()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab897ab2cfdb15c8183902a077567171b" name="ab897ab2cfdb15c8183902a077567171b"></a>
@@ -1705,10 +1339,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../db/dc2/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1CivilDisorder.html#a5e474e358277aa6868dc1f54434188d4">com.fs.starfarer.api.impl.campaign.events.CivilDisorder</a>, <a class="el" href="../../d2/d93/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FactionHostilityEvent.html#a32decfc3008fa35d11b7525fdf3bea3b">com.fs.starfarer.api.impl.campaign.events.FactionHostilityEvent</a>, <a class="el" href="../../dc/d04/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FleetLogEvent.html#a19242c2d3bc032a036ae155f0bc5d380">com.fs.starfarer.api.impl.campaign.events.FleetLogEvent</a>, <a class="el" href="../../da/d04/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent.html#a1a3aba76c47c6eae925122add587bf3b">com.fs.starfarer.api.impl.campaign.events.FoodShortageEvent</a>, <a class="el" href="../../de/d3d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEvent.html#a53eaccca8f62f706bd843fa1bb436d8f">com.fs.starfarer.api.impl.campaign.events.InvestigationEvent</a>, <a class="el" href="../../d5/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventGoodRepWithOther.html#a9867b0190dbe0fbfbdd3a18412a7978b">com.fs.starfarer.api.impl.campaign.events.InvestigationEventGoodRepWithOther</a>, <a class="el" href="../../d8/d89/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventSmugglingV2.html#a653d4cb5e28406a1f7aa680c3764626e">com.fs.starfarer.api.impl.campaign.events.InvestigationEventSmugglingV2</a>, <a class="el" href="../../d9/d53/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1nearby_1_1NearbyEventsEvent.html#ae00d5056bac6251ed80a1957093fc10d">com.fs.starfarer.api.impl.campaign.events.nearby.NearbyEventsEvent</a>, <a class="el" href="../../dd/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1OfficerManagerEvent.html#a523b89bc987b726dc3f865ed77397620">com.fs.starfarer.api.impl.campaign.events.OfficerManagerEvent</a>, <a class="el" href="../../de/d8f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1RecentUnrestEvent.html#a35c8084704ff5dcefa5c0f3720ef30e9">com.fs.starfarer.api.impl.campaign.events.RecentUnrestEvent</a>, <a class="el" href="../../d9/df6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1RepTrackerEvent.html#a19202139cc03ff51d0c0ce327192b7d8">com.fs.starfarer.api.impl.campaign.events.RepTrackerEvent</a>, <a class="el" href="../../df/d35/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1TestEvent.html#a7c0e09fffacd007ce4386b6c1a162898">com.fs.starfarer.api.impl.campaign.events.TestEvent</a>, <a class="el" href="../../d8/d8d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1TradeInfoUpdateEvent.html#ac7a92af688436f9ec133bc58a1e91c7a">com.fs.starfarer.api.impl.campaign.events.TradeInfoUpdateEvent</a>, and <a class="el" href="../../df/d44/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionEvent.html#a41a348b5fb69d4a7d13442628db177ae">com.fs.starfarer.api.impl.campaign.tutorial.TutorialMissionEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00307">307</a> of file <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html">BaseEventPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  307</span>                            {</div>
-<div class="line"><span class="lineno">  308</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  309</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac5c47dbb1c74444a7517c8d031192459" name="ac5c47dbb1c74444a7517c8d031192459"></a>
@@ -1735,11 +1366,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00106">106</a> of file <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html">BaseEventPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  106</span>                                       {</div>
-<div class="line"><span class="lineno">  107</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a126ff3cb90aa6aa816b02ff33a9b5269">started</a>;</div>
-<div class="line"><span class="lineno">  108</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin_html_a126ff3cb90aa6aa816b02ff33a9b5269"><div class="ttname"><a href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a126ff3cb90aa6aa816b02ff33a9b5269">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin.started</a></div><div class="ttdeci">boolean started</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00047">BaseEventPlugin.java:47</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a3e295707c4796ffbab335981c298914d" name="a3e295707c4796ffbab335981c298914d"></a>
@@ -1771,10 +1398,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../db/d06/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignEventListener.html#ac270f4938db3e245e93cdd27196e4490">com.fs.starfarer.api.campaign.CampaignEventListener</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00519">519</a> of file <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html">BaseEventPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  519</span>                                                                                       {</div>
-<div class="line"><span class="lineno">  520</span>        </div>
-<div class="line"><span class="lineno">  521</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="afb6728ea9c0ee511eeffc2696e5195f2" name="afb6728ea9c0ee511eeffc2696e5195f2"></a>
@@ -1813,10 +1437,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../db/d06/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignEventListener.html#a145e94715a3430c16bb27d3d2c691f5a">com.fs.starfarer.api.campaign.CampaignEventListener</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00523">523</a> of file <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html">BaseEventPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  523</span>                                                                                       {</div>
-<div class="line"><span class="lineno">  524</span>        </div>
-<div class="line"><span class="lineno">  525</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa0253ef331ec2a5f1e264f3426016865" name="aa0253ef331ec2a5f1e264f3426016865"></a>
@@ -1837,11 +1458,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../db/d06/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignEventListener.html#a560b555e5b3385c51a42dea51eb4f73d">com.fs.starfarer.api.campaign.CampaignEventListener</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00544">544</a> of file <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html">BaseEventPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  544</span>                                        {</div>
-<div class="line"><span class="lineno">  545</span>        <span class="comment">// TODO Auto-generated method stub</span></div>
-<div class="line"><span class="lineno">  546</span>        </div>
-<div class="line"><span class="lineno">  547</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a7f262062368536aae0ebec717eacfcef" name="a7f262062368536aae0ebec717eacfcef"></a>
@@ -1863,11 +1480,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../db/d06/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignEventListener.html#a43115ea7ca235e3451cd4835190e09e1">com.fs.starfarer.api.campaign.CampaignEventListener</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00548">548</a> of file <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html">BaseEventPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  548</span>                                                 {</div>
-<div class="line"><span class="lineno">  549</span>        <span class="comment">// TODO Auto-generated method stub</span></div>
-<div class="line"><span class="lineno">  550</span>        </div>
-<div class="line"><span class="lineno">  551</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a7dd2420e17a0c6f5b18347c69a6cb20b" name="a7dd2420e17a0c6f5b18347c69a6cb20b"></a>
@@ -1899,10 +1512,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../db/d06/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignEventListener.html#a736d93c39a8bca211c35d6c645a4f7a6">com.fs.starfarer.api.campaign.CampaignEventListener</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00480">480</a> of file <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html">BaseEventPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  480</span>                                                                                                {</div>
-<div class="line"><span class="lineno">  481</span>        </div>
-<div class="line"><span class="lineno">  482</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aaf835c7c0fa6646864f95dfe16115ce7" name="aaf835c7c0fa6646864f95dfe16115ce7"></a>
@@ -1950,9 +1560,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../da/d04/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent.html#a16dbfb893a64d752d978ce3e074644b5">com.fs.starfarer.api.impl.campaign.events.FoodShortageEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00364">364</a> of file <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html">BaseEventPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  364</span>                                                                                                      {</div>
-<div class="line"><span class="lineno">  365</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aca93ee36b318bab0e2ca8cf062360ede" name="aca93ee36b318bab0e2ca8cf062360ede"></a>
@@ -1998,9 +1606,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../db/d06/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignEventListener.html#af1ccbd21423e05cc2f7a8c730cce96fd">com.fs.starfarer.api.campaign.CampaignEventListener</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00367">367</a> of file <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html">BaseEventPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  367</span>                                                                                                      {</div>
-<div class="line"><span class="lineno">  368</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae7fd151c63de2561d5e81711d9571958" name="ae7fd151c63de2561d5e81711d9571958"></a>
@@ -2039,9 +1645,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../db/d06/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignEventListener.html#a616a2ce15b2581e828b0cbebeb3645b4">com.fs.starfarer.api.campaign.CampaignEventListener</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00370">370</a> of file <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html">BaseEventPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  370</span>                                                                                           {</div>
-<div class="line"><span class="lineno">  371</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a80c336e92841593910fb9fd5b4244490" name="a80c336e92841593910fb9fd5b4244490"></a>
@@ -2069,10 +1673,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../db/d06/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignEventListener.html#af1c35c41eea8a90a03c50fb9f9877718">com.fs.starfarer.api.campaign.CampaignEventListener</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00472">472</a> of file <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html">BaseEventPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  472</span>                                                           {</div>
-<div class="line"><span class="lineno">  473</span>        </div>
-<div class="line"><span class="lineno">  474</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a784e14c26b34f79df394cd02b6327a06" name="a784e14c26b34f79df394cd02b6327a06"></a>
@@ -2104,10 +1705,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../db/d06/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignEventListener.html#a0f51ce9fd9820aacf3bd308b2f174718">com.fs.starfarer.api.campaign.CampaignEventListener</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00511">511</a> of file <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html">BaseEventPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  511</span>                                                                                  {</div>
-<div class="line"><span class="lineno">  512</span>        </div>
-<div class="line"><span class="lineno">  513</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a3db0ae59d2f6b8a22665c8a4777c110b" name="a3db0ae59d2f6b8a22665c8a4777c110b"></a>
@@ -2131,10 +1729,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../dd/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1OfficerManagerEvent.html#a1e2c0fde6a1448bb442f91ad78cfd5b2">com.fs.starfarer.api.impl.campaign.events.OfficerManagerEvent</a>, and <a class="el" href="../../d8/d8d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1TradeInfoUpdateEvent.html#a88d4c7e87b89c3db500696e244a5588a">com.fs.starfarer.api.impl.campaign.events.TradeInfoUpdateEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00484">484</a> of file <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html">BaseEventPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  484</span>                                                           {</div>
-<div class="line"><span class="lineno">  485</span>        </div>
-<div class="line"><span class="lineno">  486</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac25af40c41926296794a82e7b56e8f00" name="ac25af40c41926296794a82e7b56e8f00"></a>
@@ -2166,10 +1761,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../db/d06/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignEventListener.html#a5fff94f05b2f42587a035acb176f40e7">com.fs.starfarer.api.campaign.CampaignEventListener</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00515">515</a> of file <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html">BaseEventPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  515</span>                                                                                    {</div>
-<div class="line"><span class="lineno">  516</span>        </div>
-<div class="line"><span class="lineno">  517</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a534159af5e99618f0ce8d466d3a241db" name="a534159af5e99618f0ce8d466d3a241db"></a>
@@ -2191,10 +1783,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../db/d06/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignEventListener.html#aba9d9b621c96d3e2e77c2fcde1e046e8">com.fs.starfarer.api.campaign.CampaignEventListener</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00541">541</a> of file <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html">BaseEventPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  541</span>                                                            {</div>
-<div class="line"><span class="lineno">  542</span>        </div>
-<div class="line"><span class="lineno">  543</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af4aabceba0411a1493b57534e5951b1e" name="af4aabceba0411a1493b57534e5951b1e"></a>
@@ -2216,10 +1805,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../db/d06/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignEventListener.html#a1528bd8b4c00ff21dcb0a4100660a130">com.fs.starfarer.api.campaign.CampaignEventListener</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00538">538</a> of file <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html">BaseEventPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  538</span>                                                        {</div>
-<div class="line"><span class="lineno">  539</span>        </div>
-<div class="line"><span class="lineno">  540</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a1b86b8f81ce7af04ac2e160765bd5bb3" name="a1b86b8f81ce7af04ac2e160765bd5bb3"></a>
@@ -2241,10 +1827,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../db/d06/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignEventListener.html#a15d50875c14572f396b74d84460d8711">com.fs.starfarer.api.campaign.CampaignEventListener</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00468">468</a> of file <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html">BaseEventPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  468</span>                                                                   {</div>
-<div class="line"><span class="lineno">  469</span>        </div>
-<div class="line"><span class="lineno">  470</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5b5d29ae3d29aecfefe97e3bff2e1815" name="a5b5d29ae3d29aecfefe97e3bff2e1815"></a>
@@ -2268,10 +1851,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../da/d04/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent.html#a9fa1aec3b24da581318d04992ced1fd6">com.fs.starfarer.api.impl.campaign.events.FoodShortageEvent</a>, and <a class="el" href="../../dd/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1OfficerManagerEvent.html#a0f95afc2ab1da74a61b8ce37ff52ddc7">com.fs.starfarer.api.impl.campaign.events.OfficerManagerEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00360">360</a> of file <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html">BaseEventPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  360</span>                                                                                   {</div>
-<div class="line"><span class="lineno">  361</span>        </div>
-<div class="line"><span class="lineno">  362</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="adbf754dfd872992b4779989a4e04f82d" name="adbf754dfd872992b4779989a4e04f82d"></a>
@@ -2295,10 +1875,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../dd/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1OfficerManagerEvent.html#afbe691dfa4e3278666f4554c63414797">com.fs.starfarer.api.impl.campaign.events.OfficerManagerEvent</a>, and <a class="el" href="../../d8/d8d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1TradeInfoUpdateEvent.html#ab29f50dbfc73900e0a319f87b0fd303e">com.fs.starfarer.api.impl.campaign.events.TradeInfoUpdateEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00444">444</a> of file <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html">BaseEventPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  444</span>                                                           {</div>
-<div class="line"><span class="lineno">  445</span>        </div>
-<div class="line"><span class="lineno">  446</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab1fe8fbbef6182cc89cd84130c7be2a8" name="ab1fe8fbbef6182cc89cd84130c7be2a8"></a>
@@ -2322,10 +1899,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../dd/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1OfficerManagerEvent.html#a9e943006b7d7ec7572128ffa2473563b">com.fs.starfarer.api.impl.campaign.events.OfficerManagerEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00476">476</a> of file <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html">BaseEventPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  476</span>                                                                          {</div>
-<div class="line"><span class="lineno">  477</span>        </div>
-<div class="line"><span class="lineno">  478</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a80a70cb14a3e41c587c45829468d6f94" name="a80a70cb14a3e41c587c45829468d6f94"></a>
@@ -2357,10 +1931,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../db/d06/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignEventListener.html#a6a0a0dadd79a710e25648f8760e1cc0a">com.fs.starfarer.api.campaign.CampaignEventListener</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00507">507</a> of file <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html">BaseEventPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  507</span>                                                                            {</div>
-<div class="line"><span class="lineno">  508</span>        </div>
-<div class="line"><span class="lineno">  509</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a17b8f5cab51c8d3e2ab765b67b4eb391" name="a17b8f5cab51c8d3e2ab765b67b4eb391"></a>
@@ -2392,10 +1963,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../db/d06/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignEventListener.html#afe2e760b4f06faa63f1709d116079675">com.fs.starfarer.api.campaign.CampaignEventListener</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00464">464</a> of file <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html">BaseEventPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  464</span>                                                                          {</div>
-<div class="line"><span class="lineno">  465</span>        </div>
-<div class="line"><span class="lineno">  466</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae978da645cdbae773eedd471250bcc80" name="ae978da645cdbae773eedd471250bcc80"></a>
@@ -2417,10 +1985,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../db/d06/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignEventListener.html#a1a2928205d02b74e9969cc4de9cb2dac">com.fs.starfarer.api.campaign.CampaignEventListener</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00440">440</a> of file <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html">BaseEventPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  440</span>                                                                          {</div>
-<div class="line"><span class="lineno">  441</span>        </div>
-<div class="line"><span class="lineno">  442</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a21aa4fa63dacdbea51db7f48c4461637" name="a21aa4fa63dacdbea51db7f48c4461637"></a>
@@ -2450,10 +2015,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../db/dc2/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1CivilDisorder.html#a7d6ad3fc91a69814413e49b462078973">com.fs.starfarer.api.impl.campaign.events.CivilDisorder</a>, <a class="el" href="../../de/d3d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEvent.html#a76d49beb7a1f4d3c662d1651c0df70ac">com.fs.starfarer.api.impl.campaign.events.InvestigationEvent</a>, <a class="el" href="../../df/d35/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1TestEvent.html#a90300d029bd0f3a5169c69bee37d1265">com.fs.starfarer.api.impl.campaign.events.TestEvent</a>, and <a class="el" href="../../df/d44/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionEvent.html#a6fd15699929f84a8bd29bbef9076ad06">com.fs.starfarer.api.impl.campaign.tutorial.TutorialMissionEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00311">311</a> of file <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html">BaseEventPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  311</span>                                       {</div>
-<div class="line"><span class="lineno">  312</span>        </div>
-<div class="line"><span class="lineno">  313</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9b71373615ac88ae7b5cf78683fe559f" name="a9b71373615ac88ae7b5cf78683fe559f"></a>
@@ -2481,11 +2043,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d9/d97/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventPlugin.html#a2b307daa106372748d4149c9dd6cbeba">com.fs.starfarer.api.campaign.events.CampaignEventPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00526">526</a> of file <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html">BaseEventPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  526</span>                                        {</div>
-<div class="line"><span class="lineno">  527</span>        this.startProbability = p;</div>
-<div class="line"><span class="lineno">  528</span>        </div>
-<div class="line"><span class="lineno">  529</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab7ad50e02420b299bc2da9135e308864" name="ab7ad50e02420b299bc2da9135e308864"></a>
@@ -2505,16 +2063,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00073">73</a> of file <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html">BaseEventPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   73</span>                                                           {</div>
-<div class="line"><span class="lineno">   74</span>        this.eventTarget = <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#abe1c16c1836db2f6bacef1b8b0814872">eventTarget</a>;</div>
-<div class="line"><span class="lineno">   75</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#abe1c16c1836db2f6bacef1b8b0814872">eventTarget</a>.<a class="code hl_function" href="../../dc/d60/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventTarget.html#a4fdba2ae8cd89b839d2ea941da3ceba5">getEntity</a>() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   76</span>            <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a> = <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#abe1c16c1836db2f6bacef1b8b0814872">eventTarget</a>.<a class="code hl_function" href="../../dc/d60/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventTarget.html#a4fdba2ae8cd89b839d2ea941da3ceba5">getEntity</a>().<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#acfdfd07dc0bd1b2ecdd9d36bb21d9c4f">getMarket</a>();</div>
-<div class="line"><span class="lineno">   77</span>            <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a5062e440ac3d3fb9a12bf3cac406e2c1">faction</a> = <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#abe1c16c1836db2f6bacef1b8b0814872">eventTarget</a>.<a class="code hl_function" href="../../dc/d60/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventTarget.html#a1a38d04592f2eee559380936ebd9f2a8">getFaction</a>();</div>
-<div class="line"><span class="lineno">   78</span>            <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#aa9dc186620955830e7bd8c065f3c9707">entity</a> = <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#abe1c16c1836db2f6bacef1b8b0814872">eventTarget</a>.<a class="code hl_function" href="../../dc/d60/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventTarget.html#a4fdba2ae8cd89b839d2ea941da3ceba5">getEntity</a>();</div>
-<div class="line"><span class="lineno">   79</span>        }</div>
-<div class="line"><span class="lineno">   80</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_acfdfd07dc0bd1b2ecdd9d36bb21d9c4f"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#acfdfd07dc0bd1b2ecdd9d36bb21d9c4f">com.fs.starfarer.api.campaign.SectorEntityToken.getMarket</a></div><div class="ttdeci">MarketAPI getMarket()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af30b0da9b4fc72069e1eec6514402634" name="af30b0da9b4fc72069e1eec6514402634"></a>
@@ -2538,10 +2087,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../dc/d04/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FleetLogEvent.html#aedaf5c4e26ccaeb4b6cc407ce6f85482">com.fs.starfarer.api.impl.campaign.events.FleetLogEvent</a>, <a class="el" href="../../d9/d53/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1nearby_1_1NearbyEventsEvent.html#a839b947fbf4e0ff74e7c8236cd01909e">com.fs.starfarer.api.impl.campaign.events.nearby.NearbyEventsEvent</a>, and <a class="el" href="../../d8/d8d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1TradeInfoUpdateEvent.html#a08ccea44f1153431f65463261491bdd8">com.fs.starfarer.api.impl.campaign.events.TradeInfoUpdateEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00460">460</a> of file <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html">BaseEventPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  460</span>                                              {</div>
-<div class="line"><span class="lineno">  461</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  462</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af51d4c1f653595f32bfc1b1881ecc5b4" name="af51d4c1f653595f32bfc1b1881ecc5b4"></a>
@@ -2562,10 +2108,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d9/d97/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventPlugin.html#a06dbe2f50b848226ca7d38ebe6496ce5">com.fs.starfarer.api.campaign.events.CampaignEventPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00534">534</a> of file <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html">BaseEventPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  534</span>                                                {</div>
-<div class="line"><span class="lineno">  535</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  536</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa016b5c97932063aa9184483bd01c5ee" name="aa016b5c97932063aa9184483bd01c5ee"></a>
@@ -2589,11 +2132,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../db/dc2/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1CivilDisorder.html#ae4427233deece2adec8468858babaea9">com.fs.starfarer.api.impl.campaign.events.CivilDisorder</a>, <a class="el" href="../../d2/d93/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FactionHostilityEvent.html#ae29acbe10a75055d2a63ce9288d03fc9">com.fs.starfarer.api.impl.campaign.events.FactionHostilityEvent</a>, <a class="el" href="../../dc/d04/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FleetLogEvent.html#a36be7f48b88c2a96a84633363e672b8b">com.fs.starfarer.api.impl.campaign.events.FleetLogEvent</a>, <a class="el" href="../../da/d04/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent.html#a3cd2c30b6e364f27e554330e68cd612f">com.fs.starfarer.api.impl.campaign.events.FoodShortageEvent</a>, <a class="el" href="../../de/d3d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEvent.html#a1cbec1a0dafce7ad3cf3d51c6dd1628e">com.fs.starfarer.api.impl.campaign.events.InvestigationEvent</a>, <a class="el" href="../../da/dca/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventCommSniffer.html#ab9e6c22ccf4cd2d39a5457f03b18d542">com.fs.starfarer.api.impl.campaign.events.InvestigationEventCommSniffer</a>, <a class="el" href="../../d5/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventGoodRepWithOther.html#a8035d83fd3b37559f483c233b7e4bc91">com.fs.starfarer.api.impl.campaign.events.InvestigationEventGoodRepWithOther</a>, <a class="el" href="../../d8/d89/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventSmugglingV2.html#a9812b687b61746be55e1a8b61e38df6c">com.fs.starfarer.api.impl.campaign.events.InvestigationEventSmugglingV2</a>, <a class="el" href="../../d9/d53/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1nearby_1_1NearbyEventsEvent.html#ae560d4ff816788abc62e291f33506d3f">com.fs.starfarer.api.impl.campaign.events.nearby.NearbyEventsEvent</a>, <a class="el" href="../../de/d8f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1RecentUnrestEvent.html#a8b0ce6c5b0a705860a77cfd50f0f1248">com.fs.starfarer.api.impl.campaign.events.RecentUnrestEvent</a>, <a class="el" href="../../d9/df6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1RepTrackerEvent.html#a8d7c9a73813b4d59a1fbaff077f2f2c2">com.fs.starfarer.api.impl.campaign.events.RepTrackerEvent</a>, <a class="el" href="../../df/d35/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1TestEvent.html#a7ae7ff4d80666721ba18c607649121cd">com.fs.starfarer.api.impl.campaign.events.TestEvent</a>, <a class="el" href="../../d8/d8d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1TradeInfoUpdateEvent.html#a269c2e36c386246f636881e9ad205be9">com.fs.starfarer.api.impl.campaign.events.TradeInfoUpdateEvent</a>, and <a class="el" href="../../df/d44/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionEvent.html#ad9fe5778a0c5510146f76cc0ccaad8e0">com.fs.starfarer.api.impl.campaign.tutorial.TutorialMissionEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00096">96</a> of file <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html">BaseEventPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   96</span>                             {</div>
-<div class="line"><span class="lineno">   97</span>        <a class="code hl_function" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#aa016b5c97932063aa9184483bd01c5ee">startEvent</a>(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   98</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin_html_aa016b5c97932063aa9184483bd01c5ee"><div class="ttname"><a href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#aa016b5c97932063aa9184483bd01c5ee">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin.startEvent</a></div><div class="ttdeci">void startEvent()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00096">BaseEventPlugin.java:96</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a17a725700dda52c9cb101d1eeec8a272" name="a17a725700dda52c9cb101d1eeec8a272"></a>
@@ -2613,13 +2152,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00099">99</a> of file <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html">BaseEventPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   99</span>                                                {</div>
-<div class="line"><span class="lineno">  100</span>        <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a126ff3cb90aa6aa816b02ff33a9b5269">started</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  101</span>        <span class="keywordflow">if</span> (addListener) {</div>
-<div class="line"><span class="lineno">  102</span>            Global.getSector().addListener(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  103</span>        }</div>
-<div class="line"><span class="lineno">  104</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a25b301caa8708c6deaf79a365b64a6ae" name="a25b301caa8708c6deaf79a365b64a6ae"></a>
@@ -2640,10 +2173,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d9/d97/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventPlugin.html#a52fbbd45775ce8f43541f02e521d4dcb">com.fs.starfarer.api.campaign.events.CampaignEventPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00530">530</a> of file <a class="el" href="../../d4/d1a/BaseEventPlugin_8java_source.html">BaseEventPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  530</span>                                      {</div>
-<div class="line"><span class="lineno">  531</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  532</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

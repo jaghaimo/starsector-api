@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -132,19 +133,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/d93/CategoryGenDataSpec_8java_source.html#l00015">15</a> of file <a class="el" href="../../de/d93/CategoryGenDataSpec_8java_source.html">CategoryGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   15</span>                                                                    {</div>
-<div class="line"><span class="lineno">   16</span>        category = row.getString(<span class="stringliteral">&quot;category&quot;</span>);</div>
-<div class="line"><span class="lineno">   17</span>        frequency = (float) row.getDouble(<span class="stringliteral">&quot;frequency&quot;</span>);</div>
-<div class="line"><span class="lineno">   18</span>        </div>
-<div class="line"><span class="lineno">   19</span>        <span class="keywordflow">for</span> (String key : JSONObject.getNames(row)) {</div>
-<div class="line"><span class="lineno">   20</span>            <span class="keywordtype">float</span> frequency = (float) row.optDouble(key, 1f);</div>
-<div class="line"><span class="lineno">   21</span>            <span class="keywordflow">if</span> (frequency != 1) {</div>
-<div class="line"><span class="lineno">   22</span>                multipliers.put(key, frequency);</div>
-<div class="line"><span class="lineno">   23</span>            }</div>
-<div class="line"><span class="lineno">   24</span>            </div>
-<div class="line"><span class="lineno">   25</span>        }</div>
-<div class="line"><span class="lineno">   26</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -164,10 +153,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/d93/CategoryGenDataSpec_8java_source.html#l00032">32</a> of file <a class="el" href="../../de/d93/CategoryGenDataSpec_8java_source.html">CategoryGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   32</span>                                {</div>
-<div class="line"><span class="lineno">   33</span>        <span class="keywordflow">return</span> category;</div>
-<div class="line"><span class="lineno">   34</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="abccb2cff5567ba7855974179b0996ea4" name="abccb2cff5567ba7855974179b0996ea4"></a>
@@ -186,10 +172,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/d93/CategoryGenDataSpec_8java_source.html#l00036">36</a> of file <a class="el" href="../../de/d93/CategoryGenDataSpec_8java_source.html">CategoryGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   36</span>                                {</div>
-<div class="line"><span class="lineno">   37</span>        <span class="keywordflow">return</span> frequency;</div>
-<div class="line"><span class="lineno">   38</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ad1e96db4b118c59b68325f0e30658985" name="ad1e96db4b118c59b68325f0e30658985"></a>
@@ -209,11 +192,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/d93/CategoryGenDataSpec_8java_source.html#l00040">40</a> of file <a class="el" href="../../de/d93/CategoryGenDataSpec_8java_source.html">CategoryGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   40</span>                                           {</div>
-<div class="line"><span class="lineno">   41</span>        <span class="keywordflow">if</span> (!multipliers.containsKey(key)) <span class="keywordflow">return</span> 1f;</div>
-<div class="line"><span class="lineno">   42</span>        <span class="keywordflow">return</span> multipliers.get(key);</div>
-<div class="line"><span class="lineno">   43</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae76596d101141212bab8835176cd53b6" name="ae76596d101141212bab8835176cd53b6"></a>
@@ -232,10 +211,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/d93/CategoryGenDataSpec_8java_source.html#l00045">45</a> of file <a class="el" href="../../de/d93/CategoryGenDataSpec_8java_source.html">CategoryGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   45</span>                                               {</div>
-<div class="line"><span class="lineno">   46</span>        <span class="keywordflow">return</span> multipliers;</div>
-<div class="line"><span class="lineno">   47</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a34d821346a9f931bf9a3b35662ced790" name="a34d821346a9f931bf9a3b35662ced790"></a>
@@ -254,11 +230,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/d93/CategoryGenDataSpec_8java_source.html#l00028">28</a> of file <a class="el" href="../../de/d93/CategoryGenDataSpec_8java_source.html">CategoryGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   28</span>                             {</div>
-<div class="line"><span class="lineno">   29</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../d1/dd4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1CategoryGenDataSpec.html#a32d78ba8fbba5e7e840ff5f2824d9f18">getCategory</a>();</div>
-<div class="line"><span class="lineno">   30</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1CategoryGenDataSpec_html_a32d78ba8fbba5e7e840ff5f2824d9f18"><div class="ttname"><a href="../../d1/dd4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1CategoryGenDataSpec.html#a32d78ba8fbba5e7e840ff5f2824d9f18">com.fs.starfarer.api.impl.campaign.procgen.CategoryGenDataSpec.getCategory</a></div><div class="ttdeci">String getCategory()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d93/CategoryGenDataSpec_8java_source.html#l00032">CategoryGenDataSpec.java:32</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

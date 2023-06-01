@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -198,10 +199,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/dec/BaseRaidStage_8java_source.html#l00033">33</a> of file <a class="el" href="../../de/dec/BaseRaidStage_8java_source.html">BaseRaidStage.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   33</span>                                         {</div>
-<div class="line"><span class="lineno">   34</span>        this.intel = raid;</div>
-<div class="line"><span class="lineno">   35</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -230,26 +228,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/dec/BaseRaidStage_8java_source.html#l00141">141</a> of file <a class="el" href="../../de/dec/BaseRaidStage_8java_source.html">BaseRaidStage.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  141</span>                                                                    {</div>
-<div class="line"><span class="lineno">  142</span>        List&lt;RouteData&gt; routes = <a class="code hl_function" href="../../d7/d82/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html#a524ba55b2d309c802a4de36699f7422f">getRoutes</a>();</div>
-<div class="line"><span class="lineno">  143</span>        List&lt;RouteData&gt; stragglers = <span class="keyword">new</span> ArrayList&lt;RouteData&gt;();</div>
-<div class="line"><span class="lineno">  144</span>        </div>
-<div class="line"><span class="lineno">  145</span>        <span class="keywordtype">boolean</span> <a class="code hl_function" href="../../d7/d82/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html#a37c5f1ae6d4f64f7b47efd043c0a6095">enoughMadeIt</a> = <a class="code hl_function" href="../../d7/d82/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html#a37c5f1ae6d4f64f7b47efd043c0a6095">enoughMadeIt</a>(routes, stragglers);</div>
-<div class="line"><span class="lineno">  146</span>        <span class="comment">//enoughMadeIt = false;</span></div>
-<div class="line"><span class="lineno">  147</span>        <span class="keywordflow">if</span> (!<a class="code hl_function" href="../../d7/d82/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html#a37c5f1ae6d4f64f7b47efd043c0a6095">enoughMadeIt</a>) {</div>
-<div class="line"><span class="lineno">  148</span>            <span class="comment">//enoughMadeIt = enoughMadeIt(routes, stragglers);</span></div>
-<div class="line"><span class="lineno">  149</span>            <a class="code hl_variable" href="../../d7/d82/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html#a0ba2fa58fbf6ee437ce78bf461393b2d">status</a> = RaidStageStatus.FAILURE;</div>
-<div class="line"><span class="lineno">  150</span>            <span class="keywordflow">if</span> (giveReturnOrders) {</div>
-<div class="line"><span class="lineno">  151</span>                <a class="code hl_function" href="../../d7/d82/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html#a2d6113eda9a8619fd46f9f1facb5570f">giveReturnOrdersToStragglers</a>(routes);</div>
-<div class="line"><span class="lineno">  152</span>            }</div>
-<div class="line"><span class="lineno">  153</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  154</span>        }</div>
-<div class="line"><span class="lineno">  155</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage_html_a0ba2fa58fbf6ee437ce78bf461393b2d"><div class="ttname"><a href="../../d7/d82/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html#a0ba2fa58fbf6ee437ce78bf461393b2d">com.fs.starfarer.api.impl.campaign.intel.raid.BaseRaidStage.status</a></div><div class="ttdeci">RaidStageStatus status</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dec/BaseRaidStage_8java_source.html#l00027">BaseRaidStage.java:27</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage_html_a2d6113eda9a8619fd46f9f1facb5570f"><div class="ttname"><a href="../../d7/d82/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html#a2d6113eda9a8619fd46f9f1facb5570f">com.fs.starfarer.api.impl.campaign.intel.raid.BaseRaidStage.giveReturnOrdersToStragglers</a></div><div class="ttdeci">void giveReturnOrdersToStragglers(List&lt; RouteData &gt; stragglers)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dec/BaseRaidStage_8java_source.html#l00079">BaseRaidStage.java:79</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage_html_a37c5f1ae6d4f64f7b47efd043c0a6095"><div class="ttname"><a href="../../d7/d82/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html#a37c5f1ae6d4f64f7b47efd043c0a6095">com.fs.starfarer.api.impl.campaign.intel.raid.BaseRaidStage.enoughMadeIt</a></div><div class="ttdeci">boolean enoughMadeIt(List&lt; RouteData &gt; routes, List&lt; RouteData &gt; stragglers)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dec/BaseRaidStage_8java_source.html#l00120">BaseRaidStage.java:120</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage_html_a524ba55b2d309c802a4de36699f7422f"><div class="ttname"><a href="../../d7/d82/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html#a524ba55b2d309c802a4de36699f7422f">com.fs.starfarer.api.impl.campaign.intel.raid.BaseRaidStage.getRoutes</a></div><div class="ttdeci">List&lt; RouteData &gt; getRoutes()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dec/BaseRaidStage_8java_source.html#l00068">BaseRaidStage.java:68</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a7172129089238b0a5067ded777e7fdb6" name="a7172129089238b0a5067ded777e7fdb6"></a>
@@ -271,21 +250,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../dd/db4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HIActionStage.html#abb84955cd2b96f0d9e88bc24a31aa596">com.fs.starfarer.api.impl.campaign.intel.inspection.HIActionStage</a>, <a class="el" href="../../d9/d70/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PEActionStage.html#a79150768315f55c0580ef8d9302504fe">com.fs.starfarer.api.impl.campaign.intel.punitive.PEActionStage</a>, <a class="el" href="../../df/db9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1ActionStage.html#a83e1e8b2cd44208e2ebac2afa6cac9ac">com.fs.starfarer.api.impl.campaign.intel.raid.ActionStage</a>, <a class="el" href="../../d4/d21/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1AssembleStage.html#ae04b9dedd5054df1d136db2a7f6dbd11">com.fs.starfarer.api.impl.campaign.intel.raid.AssembleStage</a>, <a class="el" href="../../d4/dcd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1OrganizeStage.html#a3bd3be736225ee0fcb59a7513c8f17bf">com.fs.starfarer.api.impl.campaign.intel.raid.OrganizeStage</a>, <a class="el" href="../../d7/d0a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1PirateRaidActionStage.html#ab91abd0d158426a09ec3fb9216d68668">com.fs.starfarer.api.impl.campaign.intel.raid.PirateRaidActionStage</a>, and <a class="el" href="../../d9/d26/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1ReturnStage.html#aecc3f565b9e87d4b03ae26882868e18d">com.fs.starfarer.api.impl.campaign.intel.raid.ReturnStage</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../de/dec/BaseRaidStage_8java_source.html#l00099">99</a> of file <a class="el" href="../../de/dec/BaseRaidStage_8java_source.html">BaseRaidStage.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   99</span>                                      {</div>
-<div class="line"><span class="lineno">  100</span>        <span class="keywordtype">float</span> days = Misc.getDays(amount);</div>
-<div class="line"><span class="lineno">  101</span>        </div>
-<div class="line"><span class="lineno">  102</span>        <a class="code hl_variable" href="../../d7/d82/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html#a75f51643b9c28fcaeafeb802dcc07d5b">elapsed</a> += days;</div>
-<div class="line"><span class="lineno">  103</span>        </div>
-<div class="line"><span class="lineno">  104</span>        <a class="code hl_variable" href="../../d7/d82/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html#a54d6f49c299fa51110cfb34318d91f9b">statusInterval</a>.<a class="code hl_function" href="../../da/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html#a61881d44415cda2c50c3354c3f0a4d8a">advance</a>(days);</div>
-<div class="line"><span class="lineno">  105</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d7/d82/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html#a54d6f49c299fa51110cfb34318d91f9b">statusInterval</a>.intervalElapsed()) {</div>
-<div class="line"><span class="lineno">  106</span>            <a class="code hl_function" href="../../d7/d82/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html#acd4d779945530c08d0e95e8ceebb994d">updateStatus</a>();</div>
-<div class="line"><span class="lineno">  107</span>        }</div>
-<div class="line"><span class="lineno">  108</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage_html_a54d6f49c299fa51110cfb34318d91f9b"><div class="ttname"><a href="../../d7/d82/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html#a54d6f49c299fa51110cfb34318d91f9b">com.fs.starfarer.api.impl.campaign.intel.raid.BaseRaidStage.statusInterval</a></div><div class="ttdeci">IntervalUtil statusInterval</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dec/BaseRaidStage_8java_source.html#l00026">BaseRaidStage.java:26</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage_html_a75f51643b9c28fcaeafeb802dcc07d5b"><div class="ttname"><a href="../../d7/d82/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html#a75f51643b9c28fcaeafeb802dcc07d5b">com.fs.starfarer.api.impl.campaign.intel.raid.BaseRaidStage.elapsed</a></div><div class="ttdeci">float elapsed</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dec/BaseRaidStage_8java_source.html#l00028">BaseRaidStage.java:28</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage_html_acd4d779945530c08d0e95e8ceebb994d"><div class="ttname"><a href="../../d7/d82/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html#acd4d779945530c08d0e95e8ceebb994d">com.fs.starfarer.api.impl.campaign.intel.raid.BaseRaidStage.updateStatus</a></div><div class="ttdeci">void updateStatus()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dec/BaseRaidStage_8java_source.html#l00137">BaseRaidStage.java:137</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil_html_a61881d44415cda2c50c3354c3f0a4d8a"><div class="ttname"><a href="../../da/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html#a61881d44415cda2c50c3354c3f0a4d8a">com.fs.starfarer.api.util.IntervalUtil.advance</a></div><div class="ttdeci">void advance(float amount)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de3/IntervalUtil_8java_source.html#l00039">IntervalUtil.java:39</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a37c5f1ae6d4f64f7b47efd043c0a6095" name="a37c5f1ae6d4f64f7b47efd043c0a6095"></a>
@@ -323,24 +288,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/dec/BaseRaidStage_8java_source.html#l00120">120</a> of file <a class="el" href="../../de/dec/BaseRaidStage_8java_source.html">BaseRaidStage.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  120</span>                                                                                       {</div>
-<div class="line"><span class="lineno">  121</span>        <span class="keywordtype">float</span> madeItFP = 0;</div>
-<div class="line"><span class="lineno">  122</span>        <span class="keywordflow">for</span> (RouteData route : routes) {</div>
-<div class="line"><span class="lineno">  123</span>            <span class="keywordflow">if</span> (stragglers.contains(route)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  124</span>            CampaignFleetAPI fleet = route.getActiveFleet();</div>
-<div class="line"><span class="lineno">  125</span>            <span class="keywordflow">if</span> (fleet != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  126</span><span class="comment">//              float mult = Misc.getAdjustedFP(1f, route.getMarket());</span></div>
-<div class="line"><span class="lineno">  127</span><span class="comment">//              if (mult &lt; 1) mult = 1f;</span></div>
-<div class="line"><span class="lineno">  128</span>                <span class="keywordtype">float</span> mult = Misc.getSpawnFPMult(fleet);</div>
-<div class="line"><span class="lineno">  129</span>                madeItFP += fleet.getFleetPoints() / mult;</div>
-<div class="line"><span class="lineno">  130</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  131</span>                madeItFP += route.getExtra().fp;</div>
-<div class="line"><span class="lineno">  132</span>            }</div>
-<div class="line"><span class="lineno">  133</span>        }</div>
-<div class="line"><span class="lineno">  134</span>        <span class="keywordflow">return</span> madeItFP &gt;= <a class="code hl_variable" href="../../d7/d82/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html#a153e36f19861bf47a8eae0f60b5baf1d">abortFP</a>;</div>
-<div class="line"><span class="lineno">  135</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage_html_a153e36f19861bf47a8eae0f60b5baf1d"><div class="ttname"><a href="../../d7/d82/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html#a153e36f19861bf47a8eae0f60b5baf1d">com.fs.starfarer.api.impl.campaign.intel.raid.BaseRaidStage.abortFP</a></div><div class="ttdeci">float abortFP</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dec/BaseRaidStage_8java_source.html#l00031">BaseRaidStage.java:31</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa2fae435e965f4f9fe327d1068339206" name="aa2fae435e965f4f9fe327d1068339206"></a>
@@ -359,10 +307,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/dec/BaseRaidStage_8java_source.html#l00037">37</a> of file <a class="el" href="../../de/dec/BaseRaidStage_8java_source.html">BaseRaidStage.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   37</span>                              {</div>
-<div class="line"><span class="lineno">   38</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d7/d82/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html#a153e36f19861bf47a8eae0f60b5baf1d">abortFP</a>;</div>
-<div class="line"><span class="lineno">   39</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a47f0577ac24c135300cb5dce59de3719" name="a47f0577ac24c135300cb5dce59de3719"></a>
@@ -381,10 +326,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/dec/BaseRaidStage_8java_source.html#l00224">224</a> of file <a class="el" href="../../de/dec/BaseRaidStage_8java_source.html">BaseRaidStage.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  224</span>                              {</div>
-<div class="line"><span class="lineno">  225</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d7/d82/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html#a75f51643b9c28fcaeafeb802dcc07d5b">elapsed</a>;</div>
-<div class="line"><span class="lineno">  226</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a3e3ddc949ff113f49c74431260a4a5e1" name="a3e3ddc949ff113f49c74431260a4a5e1"></a>
@@ -403,11 +345,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/dec/BaseRaidStage_8java_source.html#l00191">191</a> of file <a class="el" href="../../de/dec/BaseRaidStage_8java_source.html">BaseRaidStage.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  191</span>                                    {</div>
-<div class="line"><span class="lineno">  192</span>        <span class="keywordflow">return</span> Math.max(0, <a class="code hl_variable" href="../../d7/d82/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html#a75f51643b9c28fcaeafeb802dcc07d5b">elapsed</a> - <a class="code hl_variable" href="../../d7/d82/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html#af6b635586d2406f64b74df8053fc6ec2">maxDays</a>);</div>
-<div class="line"><span class="lineno">  193</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage_html_af6b635586d2406f64b74df8053fc6ec2"><div class="ttname"><a href="../../d7/d82/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html#af6b635586d2406f64b74df8053fc6ec2">com.fs.starfarer.api.impl.campaign.intel.raid.BaseRaidStage.maxDays</a></div><div class="ttdeci">float maxDays</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dec/BaseRaidStage_8java_source.html#l00029">BaseRaidStage.java:29</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af2c2902e709af65f26b92b547712af33" name="af2c2902e709af65f26b92b547712af33"></a>
@@ -426,10 +364,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/dec/BaseRaidStage_8java_source.html#l00228">228</a> of file <a class="el" href="../../de/dec/BaseRaidStage_8java_source.html">BaseRaidStage.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  228</span>                              {</div>
-<div class="line"><span class="lineno">  229</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d7/d82/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html#af6b635586d2406f64b74df8053fc6ec2">maxDays</a>;</div>
-<div class="line"><span class="lineno">  230</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a524ba55b2d309c802a4de36699f7422f" name="a524ba55b2d309c802a4de36699f7422f"></a>
@@ -448,20 +383,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/dec/BaseRaidStage_8java_source.html#l00068">68</a> of file <a class="el" href="../../de/dec/BaseRaidStage_8java_source.html">BaseRaidStage.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   68</span>                                       {</div>
-<div class="line"><span class="lineno">   69</span>        List&lt;RouteData&gt; routes = RouteManager.getInstance().getRoutesForSource(<a class="code hl_variable" href="../../d7/d82/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html#a8d021ad6fd424b9c4549d1a7f8895ed3">intel</a>.<a class="code hl_function" href="../../d2/d12/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#aadc3422b64432e9a1ae6bf5cae0f71a6">getRouteSourceId</a>());</div>
-<div class="line"><span class="lineno">   70</span>        List&lt;RouteData&gt; result = <span class="keyword">new</span> ArrayList&lt;RouteData&gt;();</div>
-<div class="line"><span class="lineno">   71</span>        <span class="keywordflow">for</span> (RouteData route : routes) {</div>
-<div class="line"><span class="lineno">   72</span>            <span class="keywordflow">if</span> (!<a class="code hl_variable" href="../../d7/d82/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html#a07b48d1e697cf97e53580080b6aa996f">STRAGGLER</a>.equals(route.getCustom())) {</div>
-<div class="line"><span class="lineno">   73</span>                result.add(route);</div>
-<div class="line"><span class="lineno">   74</span>            }</div>
-<div class="line"><span class="lineno">   75</span>        }</div>
-<div class="line"><span class="lineno">   76</span>        <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">   77</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage_html_a07b48d1e697cf97e53580080b6aa996f"><div class="ttname"><a href="../../d7/d82/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html#a07b48d1e697cf97e53580080b6aa996f">com.fs.starfarer.api.impl.campaign.intel.raid.BaseRaidStage.STRAGGLER</a></div><div class="ttdeci">static final String STRAGGLER</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dec/BaseRaidStage_8java_source.html#l00022">BaseRaidStage.java:22</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage_html_a8d021ad6fd424b9c4549d1a7f8895ed3"><div class="ttname"><a href="../../d7/d82/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html#a8d021ad6fd424b9c4549d1a7f8895ed3">com.fs.starfarer.api.impl.campaign.intel.raid.BaseRaidStage.intel</a></div><div class="ttdeci">RaidIntel intel</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dec/BaseRaidStage_8java_source.html#l00024">BaseRaidStage.java:24</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel_html_aadc3422b64432e9a1ae6bf5cae0f71a6"><div class="ttname"><a href="../../d2/d12/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#aadc3422b64432e9a1ae6bf5cae0f71a6">com.fs.starfarer.api.impl.campaign.intel.raid.RaidIntel.getRouteSourceId</a></div><div class="ttdeci">String getRouteSourceId()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d48/RaidIntel_8java_source.html#l00153">RaidIntel.java:153</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a31f2a3260642c5558bfc0e7cd83e2612" name="a31f2a3260642c5558bfc0e7cd83e2612"></a>
@@ -480,10 +402,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/dec/BaseRaidStage_8java_source.html#l00110">110</a> of file <a class="el" href="../../de/dec/BaseRaidStage_8java_source.html">BaseRaidStage.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  110</span>                                       {</div>
-<div class="line"><span class="lineno">  111</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d7/d82/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html#a0ba2fa58fbf6ee437ce78bf461393b2d">status</a>;</div>
-<div class="line"><span class="lineno">  112</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a4b36e0355aa91a1652569a1bcc1c640a" name="a4b36e0355aa91a1652569a1bcc1c640a"></a>
@@ -519,34 +438,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/dec/BaseRaidStage_8java_source.html#l00195">195</a> of file <a class="el" href="../../de/dec/BaseRaidStage_8java_source.html">BaseRaidStage.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  195</span>                                                                                                         {</div>
-<div class="line"><span class="lineno">  196</span>        List&lt;RouteData&gt; stragglers = <span class="keyword">new</span> ArrayList&lt;RouteData&gt;();</div>
-<div class="line"><span class="lineno">  197</span>        </div>
-<div class="line"><span class="lineno">  198</span>        <span class="keywordflow">for</span> (RouteData route : routes) {</div>
-<div class="line"><span class="lineno">  199</span>            CampaignFleetAPI fleet = route.getActiveFleet();</div>
-<div class="line"><span class="lineno">  200</span>            <span class="keywordflow">if</span> (fleet != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  201</span>                <span class="keywordflow">if</span> (fleet.getContainingLocation() == dest.getContainingLocation()) {</div>
-<div class="line"><span class="lineno">  202</span>                    <span class="keywordtype">float</span> dist = Misc.getDistance(fleet, dest);</div>
-<div class="line"><span class="lineno">  203</span>                    <span class="keywordflow">if</span> (dist &gt; maxRange) {</div>
-<div class="line"><span class="lineno">  204</span>                        stragglers.add(route);</div>
-<div class="line"><span class="lineno">  205</span>                    }</div>
-<div class="line"><span class="lineno">  206</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  207</span>                    stragglers.add(route);</div>
-<div class="line"><span class="lineno">  208</span>                }</div>
-<div class="line"><span class="lineno">  209</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!route.isExpired()) {</div>
-<div class="line"><span class="lineno">  210</span>                <span class="keywordtype">boolean</span> waiting = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  211</span>                <span class="keywordflow">if</span> (route.getCurrent() != <span class="keyword">null</span> &amp;&amp; AssembleStage.WAIT_STAGE.equals(route.getCurrent().custom)) {</div>
-<div class="line"><span class="lineno">  212</span>                    waiting = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  213</span>                }</div>
-<div class="line"><span class="lineno">  214</span>                <span class="keywordflow">if</span> (!waiting) {</div>
-<div class="line"><span class="lineno">  215</span>                    stragglers.add(route);</div>
-<div class="line"><span class="lineno">  216</span>                }</div>
-<div class="line"><span class="lineno">  217</span>            }</div>
-<div class="line"><span class="lineno">  218</span>        }</div>
-<div class="line"><span class="lineno">  219</span>        </div>
-<div class="line"><span class="lineno">  220</span>        <span class="keywordflow">return</span> stragglers;</div>
-<div class="line"><span class="lineno">  221</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2d6113eda9a8619fd46f9f1facb5570f" name="a2d6113eda9a8619fd46f9f1facb5570f"></a>
@@ -566,27 +458,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/dec/BaseRaidStage_8java_source.html#l00079">79</a> of file <a class="el" href="../../de/dec/BaseRaidStage_8java_source.html">BaseRaidStage.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   79</span>                                                                         {</div>
-<div class="line"><span class="lineno">   80</span>        <span class="keywordflow">for</span> (RouteData route : stragglers) {</div>
-<div class="line"><span class="lineno">   81</span>            SectorEntityToken from = Global.getSector().getHyperspace().createToken(route.getInterpolatedHyperLocation());</div>
-<div class="line"><span class="lineno">   82</span>            </div>
-<div class="line"><span class="lineno">   83</span>            route.setCustom(<a class="code hl_variable" href="../../d7/d82/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html#a07b48d1e697cf97e53580080b6aa996f">STRAGGLER</a>);</div>
-<div class="line"><span class="lineno">   84</span>            <a class="code hl_function" href="../../d7/d82/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html#a508304d0bf16c49bbc397cd23d8065bc">resetRoute</a>(route);</div>
-<div class="line"><span class="lineno">   85</span> </div>
-<div class="line"><span class="lineno">   86</span>            <span class="keywordtype">float</span> travelDays = RouteLocationCalculator.getTravelDays(from, route.getMarket().getPrimaryEntity());</div>
-<div class="line"><span class="lineno">   87</span>            <span class="keywordflow">if</span> (DebugFlags.RAID_DEBUG || DebugFlags.FAST_RAIDS) {</div>
-<div class="line"><span class="lineno">   88</span>                travelDays *= 0.1f;</div>
-<div class="line"><span class="lineno">   89</span>            }</div>
-<div class="line"><span class="lineno">   90</span>            </div>
-<div class="line"><span class="lineno">   91</span>            <span class="keywordtype">float</span> orbitDays = 1f + 1f * (float) Math.random();</div>
-<div class="line"><span class="lineno">   92</span>            route.addSegment(<span class="keyword">new</span> RouteSegment(travelDays, from, route.getMarket().getPrimaryEntity()));</div>
-<div class="line"><span class="lineno">   93</span>            route.addSegment(<span class="keyword">new</span> RouteSegment(orbitDays, route.getMarket().getPrimaryEntity()));</div>
-<div class="line"><span class="lineno">   94</span>            </div>
-<div class="line"><span class="lineno">   95</span>            <span class="comment">//route.addSegment(new RouteSegment(2f + (float) Math.random() * 1f, route.getMarket().getPrimaryEntity()));</span></div>
-<div class="line"><span class="lineno">   96</span>        }</div>
-<div class="line"><span class="lineno">   97</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage_html_a508304d0bf16c49bbc397cd23d8065bc"><div class="ttname"><a href="../../d7/d82/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html#a508304d0bf16c49bbc397cd23d8065bc">com.fs.starfarer.api.impl.campaign.intel.raid.BaseRaidStage.resetRoute</a></div><div class="ttdeci">void resetRoute(RouteData route)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dec/BaseRaidStage_8java_source.html#l00059">BaseRaidStage.java:59</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aab1ea814b50b87547368023808c8cb57" name="aab1ea814b50b87547368023808c8cb57"></a>
@@ -607,10 +479,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../df/db9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1ActionStage.html#ad64f0d5677e687015d2f3b82785dca51">com.fs.starfarer.api.impl.campaign.intel.raid.ActionStage</a>, <a class="el" href="../../d9/d26/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1ReturnStage.html#a9e65491e1e1639d2fe5eb32a11a1dde2">com.fs.starfarer.api.impl.campaign.intel.raid.ReturnStage</a>, and <a class="el" href="../../d8/dcb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1TravelStage.html#a47fd8631ac576cf1fd33555205b36618">com.fs.starfarer.api.impl.campaign.intel.raid.TravelStage</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../de/dec/BaseRaidStage_8java_source.html#l00115">115</a> of file <a class="el" href="../../de/dec/BaseRaidStage_8java_source.html">BaseRaidStage.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  115</span>                                {</div>
-<div class="line"><span class="lineno">  116</span>        </div>
-<div class="line"><span class="lineno">  117</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a508304d0bf16c49bbc397cd23d8065bc" name="a508304d0bf16c49bbc397cd23d8065bc"></a>
@@ -630,15 +499,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/dec/BaseRaidStage_8java_source.html#l00059">59</a> of file <a class="el" href="../../de/dec/BaseRaidStage_8java_source.html">BaseRaidStage.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   59</span>                                            {</div>
-<div class="line"><span class="lineno">   60</span>        CampaignFleetAPI fleet = route.getActiveFleet();</div>
-<div class="line"><span class="lineno">   61</span>        <span class="keywordflow">if</span> (fleet != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   62</span>            fleet.clearAssignments();</div>
-<div class="line"><span class="lineno">   63</span>        }</div>
-<div class="line"><span class="lineno">   64</span>        route.getSegments().clear();</div>
-<div class="line"><span class="lineno">   65</span>        route.setCurrent(<span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   66</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a04a86428782c9661eaf161b513609ac1" name="a04a86428782c9661eaf161b513609ac1"></a>
@@ -657,13 +518,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/dec/BaseRaidStage_8java_source.html#l00052">52</a> of file <a class="el" href="../../de/dec/BaseRaidStage_8java_source.html">BaseRaidStage.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   52</span>                              {</div>
-<div class="line"><span class="lineno">   53</span>        List&lt;RouteData&gt; routes = RouteManager.getInstance().getRoutesForSource(<a class="code hl_variable" href="../../d7/d82/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html#a8d021ad6fd424b9c4549d1a7f8895ed3">intel</a>.<a class="code hl_function" href="../../d2/d12/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#aadc3422b64432e9a1ae6bf5cae0f71a6">getRouteSourceId</a>());</div>
-<div class="line"><span class="lineno">   54</span>        <span class="keywordflow">for</span> (RouteData route : routes) {</div>
-<div class="line"><span class="lineno">   55</span>            <a class="code hl_function" href="../../d7/d82/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html#a508304d0bf16c49bbc397cd23d8065bc">resetRoute</a>(route);</div>
-<div class="line"><span class="lineno">   56</span>        }</div>
-<div class="line"><span class="lineno">   57</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa179e274c805bd4530a0e24541107022" name="aa179e274c805bd4530a0e24541107022"></a>
@@ -683,10 +538,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/dec/BaseRaidStage_8java_source.html#l00041">41</a> of file <a class="el" href="../../de/dec/BaseRaidStage_8java_source.html">BaseRaidStage.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   41</span>                                          {</div>
-<div class="line"><span class="lineno">   42</span>        this.abortFP = <a class="code hl_variable" href="../../d7/d82/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html#a153e36f19861bf47a8eae0f60b5baf1d">abortFP</a>;</div>
-<div class="line"><span class="lineno">   43</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac018ab420df4ef8d678e85ac168d7ac1" name="ac018ab420df4ef8d678e85ac168d7ac1"></a>
@@ -708,9 +560,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../dd/db4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HIActionStage.html#a31aa29e4091bee93a5d5efe4ad793d6c">com.fs.starfarer.api.impl.campaign.intel.inspection.HIActionStage</a>, <a class="el" href="../../d9/dad/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HIAssembleStage.html#a7d816851ce851fea3861f31a36746c23">com.fs.starfarer.api.impl.campaign.intel.inspection.HIAssembleStage</a>, <a class="el" href="../../d9/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HIReturnStage.html#a30f212241edd15f2e7770b390b0a8370">com.fs.starfarer.api.impl.campaign.intel.inspection.HIReturnStage</a>, <a class="el" href="../../d2/dc9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HITravelStage.html#a9d1beb226c00f499d2cd3b864b1ef931">com.fs.starfarer.api.impl.campaign.intel.inspection.HITravelStage</a>, <a class="el" href="../../d9/d70/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PEActionStage.html#ab1401030e8bc90034a56a6fccdd1809c">com.fs.starfarer.api.impl.campaign.intel.punitive.PEActionStage</a>, <a class="el" href="../../d9/d16/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PEAssembleStage.html#a1dd806077f5e70f598f63e9b7643c2d3">com.fs.starfarer.api.impl.campaign.intel.punitive.PEAssembleStage</a>, <a class="el" href="../../de/de4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PEReturnStage.html#ae1303ab81de5c38247aa9604f769cad4">com.fs.starfarer.api.impl.campaign.intel.punitive.PEReturnStage</a>, <a class="el" href="../../da/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PETravelStage.html#a80066a33203c535cf1e2a4ee384969a8">com.fs.starfarer.api.impl.campaign.intel.punitive.PETravelStage</a>, <a class="el" href="../../d4/d21/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1AssembleStage.html#a09c2ac09e15cfa1f782493a3796d793a">com.fs.starfarer.api.impl.campaign.intel.raid.AssembleStage</a>, <a class="el" href="../../d4/dcd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1OrganizeStage.html#ad1862e167addf0d91e5fc98d6fce1380">com.fs.starfarer.api.impl.campaign.intel.raid.OrganizeStage</a>, <a class="el" href="../../d7/d0a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1PirateRaidActionStage.html#a4da058d6ff9a935226a5814717dc59e5">com.fs.starfarer.api.impl.campaign.intel.raid.PirateRaidActionStage</a>, <a class="el" href="../../d9/d26/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1ReturnStage.html#a1373370866dafac31c9083c352a110a3">com.fs.starfarer.api.impl.campaign.intel.raid.ReturnStage</a>, and <a class="el" href="../../d8/dcb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1TravelStage.html#a9d4d1589ce58a830932d8bf55a309405">com.fs.starfarer.api.impl.campaign.intel.raid.TravelStage</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../de/dec/BaseRaidStage_8java_source.html#l00232">232</a> of file <a class="el" href="../../de/dec/BaseRaidStage_8java_source.html">BaseRaidStage.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  232</span>                                                    {</div>
-<div class="line"><span class="lineno">  233</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="acd4d779945530c08d0e95e8ceebb994d" name="acd4d779945530c08d0e95e8ceebb994d"></a>
@@ -739,11 +589,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../dd/db4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HIActionStage.html#adf9028f9494c26d73339102f69712326">com.fs.starfarer.api.impl.campaign.intel.inspection.HIActionStage</a>, <a class="el" href="../../d9/d70/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PEActionStage.html#a4cf2b4b964ab9340477af6956de16eb1">com.fs.starfarer.api.impl.campaign.intel.punitive.PEActionStage</a>, <a class="el" href="../../df/db9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1ActionStage.html#a09176af9fb28110ff277cb8315bcdf17">com.fs.starfarer.api.impl.campaign.intel.raid.ActionStage</a>, <a class="el" href="../../d4/d21/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1AssembleStage.html#adfeecb8c1a1382efd1184d8cd22d1f87">com.fs.starfarer.api.impl.campaign.intel.raid.AssembleStage</a>, <a class="el" href="../../d4/dcd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1OrganizeStage.html#a6cf57e3f4492df998773b3badb8c43f8">com.fs.starfarer.api.impl.campaign.intel.raid.OrganizeStage</a>, <a class="el" href="../../d7/d0a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1PirateRaidActionStage.html#a78dc48b4130fb519cb2b71409f16f4bc">com.fs.starfarer.api.impl.campaign.intel.raid.PirateRaidActionStage</a>, <a class="el" href="../../d9/d26/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1ReturnStage.html#a9193091bc3a119d5ea66bb0afe5c0c23">com.fs.starfarer.api.impl.campaign.intel.raid.ReturnStage</a>, and <a class="el" href="../../d8/dcb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1TravelStage.html#adbcfbb69fcbc7355222823033020d967">com.fs.starfarer.api.impl.campaign.intel.raid.TravelStage</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../de/dec/BaseRaidStage_8java_source.html#l00137">137</a> of file <a class="el" href="../../de/dec/BaseRaidStage_8java_source.html">BaseRaidStage.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  137</span>                                  {</div>
-<div class="line"><span class="lineno">  138</span>        <a class="code hl_function" href="../../d7/d82/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html#a913d35a1307442a864c9cba80b1e09ea">abortIfNeededBasedOnFP</a>(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  139</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage_html_a913d35a1307442a864c9cba80b1e09ea"><div class="ttname"><a href="../../d7/d82/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html#a913d35a1307442a864c9cba80b1e09ea">com.fs.starfarer.api.impl.campaign.intel.raid.BaseRaidStage.abortIfNeededBasedOnFP</a></div><div class="ttdeci">void abortIfNeededBasedOnFP(boolean giveReturnOrders)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dec/BaseRaidStage_8java_source.html#l00141">BaseRaidStage.java:141</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a63c0bd5dc7dfae3488986eac46200cc6" name="a63c0bd5dc7dfae3488986eac46200cc6"></a>
@@ -781,11 +627,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/dec/BaseRaidStage_8java_source.html#l00157">157</a> of file <a class="el" href="../../de/dec/BaseRaidStage_8java_source.html">BaseRaidStage.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  157</span>                                                                                                 {</div>
-<div class="line"><span class="lineno">  158</span>        <a class="code hl_function" href="../../d7/d82/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html#a63c0bd5dc7dfae3488986eac46200cc6">updateStatusBasedOnReaching</a>(dest, giveReturnOrders, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  159</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage_html_a63c0bd5dc7dfae3488986eac46200cc6"><div class="ttname"><a href="../../d7/d82/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html#a63c0bd5dc7dfae3488986eac46200cc6">com.fs.starfarer.api.impl.campaign.intel.raid.BaseRaidStage.updateStatusBasedOnReaching</a></div><div class="ttdeci">void updateStatusBasedOnReaching(SectorEntityToken dest, boolean giveReturnOrders)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dec/BaseRaidStage_8java_source.html#l00157">BaseRaidStage.java:157</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a3297501d3f40c35c4114b983b7eb6b6b" name="a3297501d3f40c35c4114b983b7eb6b6b"></a>
@@ -829,39 +671,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/dec/BaseRaidStage_8java_source.html#l00160">160</a> of file <a class="el" href="../../de/dec/BaseRaidStage_8java_source.html">BaseRaidStage.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  160</span>                                                                                                                            {</div>
-<div class="line"><span class="lineno">  161</span>        List&lt;RouteData&gt; routes = <a class="code hl_function" href="../../d7/d82/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html#a524ba55b2d309c802a4de36699f7422f">getRoutes</a>();</div>
-<div class="line"><span class="lineno">  162</span>        <span class="keywordtype">float</span> maxRange = 2000f;</div>
-<div class="line"><span class="lineno">  163</span>        <span class="keywordflow">if</span> (!requireNearTarget) {</div>
-<div class="line"><span class="lineno">  164</span>            maxRange = 10000000f;</div>
-<div class="line"><span class="lineno">  165</span>        }</div>
-<div class="line"><span class="lineno">  166</span>        List&lt;RouteData&gt; stragglers = <a class="code hl_function" href="../../d7/d82/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html#a4b36e0355aa91a1652569a1bcc1c640a">getStragglers</a>(routes, dest, maxRange);</div>
-<div class="line"><span class="lineno">  167</span>        </div>
-<div class="line"><span class="lineno">  168</span>        <span class="keywordtype">boolean</span> <a class="code hl_function" href="../../d7/d82/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html#a37c5f1ae6d4f64f7b47efd043c0a6095">enoughMadeIt</a> = <a class="code hl_function" href="../../d7/d82/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html#a37c5f1ae6d4f64f7b47efd043c0a6095">enoughMadeIt</a>(routes, stragglers);</div>
-<div class="line"><span class="lineno">  169</span>        </div>
-<div class="line"><span class="lineno">  170</span>        <span class="keywordflow">if</span> (stragglers.isEmpty() &amp;&amp; <a class="code hl_function" href="../../d7/d82/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html#a37c5f1ae6d4f64f7b47efd043c0a6095">enoughMadeIt</a>) {</div>
-<div class="line"><span class="lineno">  171</span>            <a class="code hl_variable" href="../../d7/d82/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html#a0ba2fa58fbf6ee437ce78bf461393b2d">status</a> = RaidStageStatus.SUCCESS;</div>
-<div class="line"><span class="lineno">  172</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  173</span>        }</div>
-<div class="line"><span class="lineno">  174</span>        </div>
-<div class="line"><span class="lineno">  175</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d7/d82/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html#a75f51643b9c28fcaeafeb802dcc07d5b">elapsed</a> &gt; <a class="code hl_variable" href="../../d7/d82/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html#af6b635586d2406f64b74df8053fc6ec2">maxDays</a> + <a class="code hl_variable" href="../../d7/d82/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html#a8d021ad6fd424b9c4549d1a7f8895ed3">intel</a>.<a class="code hl_function" href="../../d2/d12/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#a6b0dadaa87ddd2a39dd8efee027fc656">getExtraDays</a>()) {</div>
-<div class="line"><span class="lineno">  176</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d7/d82/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html#a37c5f1ae6d4f64f7b47efd043c0a6095">enoughMadeIt</a>) {</div>
-<div class="line"><span class="lineno">  177</span>                <a class="code hl_variable" href="../../d7/d82/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html#a0ba2fa58fbf6ee437ce78bf461393b2d">status</a> = RaidStageStatus.SUCCESS;</div>
-<div class="line"><span class="lineno">  178</span>                <span class="keywordflow">if</span> (giveReturnOrders) {</div>
-<div class="line"><span class="lineno">  179</span>                    <a class="code hl_function" href="../../d7/d82/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html#a2d6113eda9a8619fd46f9f1facb5570f">giveReturnOrdersToStragglers</a>(stragglers);</div>
-<div class="line"><span class="lineno">  180</span>                }</div>
-<div class="line"><span class="lineno">  181</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  182</span>                <a class="code hl_variable" href="../../d7/d82/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html#a0ba2fa58fbf6ee437ce78bf461393b2d">status</a> = RaidStageStatus.FAILURE;</div>
-<div class="line"><span class="lineno">  183</span>                <span class="keywordflow">if</span> (giveReturnOrders) {</div>
-<div class="line"><span class="lineno">  184</span>                    <a class="code hl_function" href="../../d7/d82/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html#a2d6113eda9a8619fd46f9f1facb5570f">giveReturnOrdersToStragglers</a>(routes);</div>
-<div class="line"><span class="lineno">  185</span>                }</div>
-<div class="line"><span class="lineno">  186</span>            }</div>
-<div class="line"><span class="lineno">  187</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  188</span>        }</div>
-<div class="line"><span class="lineno">  189</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage_html_a4b36e0355aa91a1652569a1bcc1c640a"><div class="ttname"><a href="../../d7/d82/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html#a4b36e0355aa91a1652569a1bcc1c640a">com.fs.starfarer.api.impl.campaign.intel.raid.BaseRaidStage.getStragglers</a></div><div class="ttdeci">List&lt; RouteData &gt; getStragglers(List&lt; RouteData &gt; routes, SectorEntityToken dest, float maxRange)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dec/BaseRaidStage_8java_source.html#l00195">BaseRaidStage.java:195</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel_html_a6b0dadaa87ddd2a39dd8efee027fc656"><div class="ttname"><a href="../../d2/d12/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#a6b0dadaa87ddd2a39dd8efee027fc656">com.fs.starfarer.api.impl.campaign.intel.raid.RaidIntel.getExtraDays</a></div><div class="ttdeci">float getExtraDays()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d48/RaidIntel_8java_source.html#l00157">RaidIntel.java:157</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

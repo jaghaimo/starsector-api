@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -178,57 +179,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="../../d0/d5c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1CommandPlugin.html#a72a44c5127e60136b87d3b37613fd0e0">com.fs.starfarer.api.campaign.rules.CommandPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d28/MakeOtherFleetLowRepImpact_8java_source.html#l00022">22</a> of file <a class="el" href="../../d4/d28/MakeOtherFleetLowRepImpact_8java_source.html">MakeOtherFleetLowRepImpact.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   22</span>                                                                                                                             {</div>
-<div class="line"><span class="lineno">   23</span> </div>
-<div class="line"><span class="lineno">   24</span>        <span class="keywordflow">if</span> (dialog == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   25</span>        <span class="keywordflow">if</span> (!(dialog.getInteractionTarget() instanceof CampaignFleetAPI)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   26</span>        </div>
-<div class="line"><span class="lineno">   27</span>        String reason = <span class="stringliteral">&quot;generic&quot;</span>;</div>
-<div class="line"><span class="lineno">   28</span>        <span class="keywordtype">boolean</span> value;</div>
-<div class="line"><span class="lineno">   29</span>        <span class="keywordtype">float</span> expire = 0f;</div>
-<div class="line"><span class="lineno">   30</span>        <span class="keywordflow">if</span> (params.size() &gt;= 2) {</div>
-<div class="line"><span class="lineno">   31</span>            reason = params.get(0).getString(memoryMap);</div>
-<div class="line"><span class="lineno">   32</span>            value = params.get(1).getBoolean(memoryMap);</div>
-<div class="line"><span class="lineno">   33</span>            <span class="keywordflow">if</span> (params.size() &gt;= 3) {</div>
-<div class="line"><span class="lineno">   34</span>                expire = params.get(2).getFloat(memoryMap);</div>
-<div class="line"><span class="lineno">   35</span>            }</div>
-<div class="line"><span class="lineno">   36</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (params.size() &lt; 1) {</div>
-<div class="line"><span class="lineno">   37</span>            value = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   38</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   39</span>            value = params.get(0).getBoolean(memoryMap);</div>
-<div class="line"><span class="lineno">   40</span>        }</div>
-<div class="line"><span class="lineno">   41</span>        </div>
-<div class="line"><span class="lineno">   42</span>        MemoryAPI memory = dialog.getInteractionTarget().getMemoryWithoutUpdate();</div>
-<div class="line"><span class="lineno">   43</span> </div>
-<div class="line"><span class="lineno">   44</span><span class="comment">//      boolean wasHostile = false;</span></div>
-<div class="line"><span class="lineno">   45</span><span class="comment">//      if (dialog.getInteractionTarget() instanceof CampaignFleetAPI) {</span></div>
-<div class="line"><span class="lineno">   46</span><span class="comment">//          CampaignFleetAPI fleet = (CampaignFleetAPI) dialog.getInteractionTarget();</span></div>
-<div class="line"><span class="lineno">   47</span><span class="comment">//          wasHostile = fleet.isHostileTo(Global.getSector().getPlayerFleet());</span></div>
-<div class="line"><span class="lineno">   48</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">   49</span>        </div>
-<div class="line"><span class="lineno">   50</span>        <span class="keywordtype">boolean</span> stillSet = Misc.setFlagWithReason(memory, MemFlags.MEMORY_KEY_LOW_REP_IMPACT, reason, value, expire);</div>
-<div class="line"><span class="lineno">   51</span>        </div>
-<div class="line"><span class="lineno">   52</span><span class="comment">//      if (!stillSet) {</span></div>
-<div class="line"><span class="lineno">   53</span><span class="comment">//          CampaignFleetAPI fleet = (CampaignFleetAPI) dialog.getInteractionTarget();</span></div>
-<div class="line"><span class="lineno">   54</span><span class="comment">//          if (fleet.getAI() instanceof ModularFleetAIAPI) {</span></div>
-<div class="line"><span class="lineno">   55</span><span class="comment">//              ModularFleetAIAPI mAI = (ModularFleetAIAPI) fleet.getAI();</span></div>
-<div class="line"><span class="lineno">   56</span><span class="comment">//              mAI.getTacticalModule().forceTargetReEval();</span></div>
-<div class="line"><span class="lineno">   57</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">   58</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">   59</span><span class="comment">//      </span></div>
-<div class="line"><span class="lineno">   60</span><span class="comment">//      boolean isHostile = false;</span></div>
-<div class="line"><span class="lineno">   61</span><span class="comment">//      if (dialog.getInteractionTarget() instanceof CampaignFleetAPI) {</span></div>
-<div class="line"><span class="lineno">   62</span><span class="comment">//          CampaignFleetAPI fleet = (CampaignFleetAPI) dialog.getInteractionTarget();</span></div>
-<div class="line"><span class="lineno">   63</span><span class="comment">//          isHostile = fleet.isHostileTo(Global.getSector().getPlayerFleet());</span></div>
-<div class="line"><span class="lineno">   64</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">   65</span><span class="comment">//      </span></div>
-<div class="line"><span class="lineno">   66</span><span class="comment">//      if (isHostile != wasHostile) {</span></div>
-<div class="line"><span class="lineno">   67</span><span class="comment">//          Global.getSoundPlayer().restartCurrentMusic();</span></div>
-<div class="line"><span class="lineno">   68</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">   69</span>        </div>
-<div class="line"><span class="lineno">   70</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   71</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

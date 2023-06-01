@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -288,34 +289,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a107100a4b58129790cba1a26265c1ad8">com.fs.starfarer.api.combat.BaseHullMod</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d2c/ShieldAlwaysOn_8java_source.html#l00019">19</a> of file <a class="el" href="../../d7/d2c/ShieldAlwaysOn_8java_source.html">ShieldAlwaysOn.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   19</span>                                                            {</div>
-<div class="line"><span class="lineno">   20</span>        super.advanceInCombat(ship, amount);</div>
-<div class="line"><span class="lineno">   21</span> </div>
-<div class="line"><span class="lineno">   22</span>        <span class="keywordflow">if</span> (!ship.isAlive()) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   23</span>        </div>
-<div class="line"><span class="lineno">   24</span>        <span class="comment">//CombatEngineAPI engine = Global.getCombatEngine();</span></div>
-<div class="line"><span class="lineno">   25</span>        </div>
-<div class="line"><span class="lineno">   26</span>        <span class="comment">// so the ship AI can&#39;t control it</span></div>
-<div class="line"><span class="lineno">   27</span>        ship.blockCommandForOneFrame(ShipCommand.TOGGLE_SHIELD_OR_PHASE_CLOAK);</div>
-<div class="line"><span class="lineno">   28</span>        ship.blockCommandForOneFrame(ShipCommand.VENT_FLUX);</div>
-<div class="line"><span class="lineno">   29</span>        </div>
-<div class="line"><span class="lineno">   30</span>        String <span class="keywordtype">id</span> = <span class="stringliteral">&quot;shield_always_on&quot;</span>;</div>
-<div class="line"><span class="lineno">   31</span>        ship.getMutableStats().getOverloadTimeMod().modifyMult(<span class="keywordtype">id</span>, 2f); <span class="comment">// frigate hull size; makes it 8 sec base</span></div>
-<div class="line"><span class="lineno">   32</span>        </div>
-<div class="line"><span class="lineno">   33</span>        <span class="keywordflow">if</span> (ship.getFluxTracker().isOverloadedOrVenting()) {</div>
-<div class="line"><span class="lineno">   34</span>            ship.getMutableStats().getFluxDissipation().modifyMult(<span class="keywordtype">id</span>, 10f);</div>
-<div class="line"><span class="lineno">   35</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   36</span>            ship.getMutableStats().getFluxDissipation().modifyMult(<span class="keywordtype">id</span>, 1f);</div>
-<div class="line"><span class="lineno">   37</span>            <span class="keywordflow">if</span> (!ship.getShield().isOn()) {</div>
-<div class="line"><span class="lineno">   38</span>                ship.getShield().toggleOn();</div>
-<div class="line"><span class="lineno">   39</span>            }</div>
-<div class="line"><span class="lineno">   40</span>            <span class="keywordflow">if</span> (ship.getFluxLevel() &gt; 0.99f) {</div>
-<div class="line"><span class="lineno">   41</span>                ship.getFluxTracker().beginOverloadWithTotalBaseDuration(5f);</div>
-<div class="line"><span class="lineno">   42</span>            }</div>
-<div class="line"><span class="lineno">   43</span>        }</div>
-<div class="line"><span class="lineno">   44</span>        </div>
-<div class="line"><span class="lineno">   45</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a00e63ff66597513690dbf913f1525da6" name="a00e63ff66597513690dbf913f1525da6"></a>
@@ -353,9 +327,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a3859215f6c3408946bf590a2ce5c0e74">com.fs.starfarer.api.combat.BaseHullMod</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d2c/ShieldAlwaysOn_8java_source.html#l00011">11</a> of file <a class="el" href="../../d7/d2c/ShieldAlwaysOn_8java_source.html">ShieldAlwaysOn.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   11</span>                                                                                                        {</div>
-<div class="line"><span class="lineno">   12</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa6738ee300fbcff93b55c16b204400ce" name="aa6738ee300fbcff93b55c16b204400ce"></a>
@@ -387,10 +359,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a5f6ac9583ca5b1606fda3e53f15c3d14">com.fs.starfarer.api.combat.BaseHullMod</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d2c/ShieldAlwaysOn_8java_source.html#l00014">14</a> of file <a class="el" href="../../d7/d2c/ShieldAlwaysOn_8java_source.html">ShieldAlwaysOn.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   14</span>                                                                    {</div>
-<div class="line"><span class="lineno">   15</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   16</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

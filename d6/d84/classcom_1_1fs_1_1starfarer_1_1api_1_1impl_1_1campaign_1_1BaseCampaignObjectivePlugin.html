@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -237,17 +238,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../da/d29/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CommRelayEntityPlugin.html#ab516b407ae716b8311ac455dc91ee030">com.fs.starfarer.api.impl.campaign.CommRelayEntityPlugin</a>, <a class="el" href="../../d1/da1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1NavBuoyEntityPlugin.html#ae5773a67f87ee64ec024af9c2fe78143">com.fs.starfarer.api.impl.campaign.NavBuoyEntityPlugin</a>, and <a class="el" href="../../da/dd8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1SensorArrayEntityPlugin.html#a844026b8d7da85301bbf72b434c6f1d4">com.fs.starfarer.api.impl.campaign.SensorArrayEntityPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d3a/BaseCampaignObjectivePlugin_8java_source.html#l00019">19</a> of file <a class="el" href="../../dd/d3a/BaseCampaignObjectivePlugin_8java_source.html">BaseCampaignObjectivePlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   19</span>                                                                        {</div>
-<div class="line"><span class="lineno">   20</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d6/d84/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCampaignObjectivePlugin.html#a1dc303c6ef637622447c870cdf665224">isHacked</a>()) {</div>
-<div class="line"><span class="lineno">   21</span>            text.addPara(<span class="stringliteral">&quot;Hacked&quot;</span>, Misc.getTextColor(), pad);</div>
-<div class="line"><span class="lineno">   22</span>        }</div>
-<div class="line"><span class="lineno">   23</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d6/d84/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCampaignObjectivePlugin.html#adb5d1abfd2339de35622250897b7d99d">isReset</a>()) {</div>
-<div class="line"><span class="lineno">   24</span>            text.addPara(<span class="stringliteral">&quot;Disrupted by factory reset&quot;</span>, Misc.getTextColor(), pad);</div>
-<div class="line"><span class="lineno">   25</span>        }</div>
-<div class="line"><span class="lineno">   26</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCampaignObjectivePlugin_html_a1dc303c6ef637622447c870cdf665224"><div class="ttname"><a href="../../d6/d84/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCampaignObjectivePlugin.html#a1dc303c6ef637622447c870cdf665224">com.fs.starfarer.api.impl.campaign.BaseCampaignObjectivePlugin.isHacked</a></div><div class="ttdeci">Boolean isHacked()</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d3a/BaseCampaignObjectivePlugin_8java_source.html#l00033">BaseCampaignObjectivePlugin.java:33</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCampaignObjectivePlugin_html_adb5d1abfd2339de35622250897b7d99d"><div class="ttname"><a href="../../d6/d84/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCampaignObjectivePlugin.html#adb5d1abfd2339de35622250897b7d99d">com.fs.starfarer.api.impl.campaign.BaseCampaignObjectivePlugin.isReset</a></div><div class="ttdeci">Boolean isReset()</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d3a/BaseCampaignObjectivePlugin_8java_source.html#l00049">BaseCampaignObjectivePlugin.java:49</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a1dc303c6ef637622447c870cdf665224" name="a1dc303c6ef637622447c870cdf665224"></a>
@@ -268,14 +259,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="../../d4/de9/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CampaignObjective.html#ae6d81234a5110d3207b3ac488ad1960b">com.fs.starfarer.api.impl.campaign.CampaignObjective</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d3a/BaseCampaignObjectivePlugin_8java_source.html#l00033">33</a> of file <a class="el" href="../../dd/d3a/BaseCampaignObjectivePlugin_8java_source.html">BaseCampaignObjectivePlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   33</span>                              {</div>
-<div class="line"><span class="lineno">   34</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d5/d0a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html#a4de611a62107d116dd5d3e8bc980fa6a">entity</a> != <span class="keyword">null</span> &amp;&amp; <a class="code hl_variable" href="../../d5/d0a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html#a4de611a62107d116dd5d3e8bc980fa6a">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#adcd558c1d95f9755066ddaf9a77311c1">getMemoryWithoutUpdate</a>().<a class="code hl_function" href="../../d0/de7/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html#adb833cc81359cc239a89eae309480fc9">getBoolean</a>(<a class="code hl_variable" href="../../d6/d84/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCampaignObjectivePlugin.html#a564a5c410e6624b5057b39be334d5c3e">HACKED</a>);</div>
-<div class="line"><span class="lineno">   35</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCampaignObjectivePlugin_html_a564a5c410e6624b5057b39be334d5c3e"><div class="ttname"><a href="../../d6/d84/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCampaignObjectivePlugin.html#a564a5c410e6624b5057b39be334d5c3e">com.fs.starfarer.api.impl.campaign.BaseCampaignObjectivePlugin.HACKED</a></div><div class="ttdeci">static final String HACKED</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d3a/BaseCampaignObjectivePlugin_8java_source.html#l00009">BaseCampaignObjectivePlugin.java:9</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin_html_a4de611a62107d116dd5d3e8bc980fa6a"><div class="ttname"><a href="../../d5/d0a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html#a4de611a62107d116dd5d3e8bc980fa6a">com.fs.starfarer.api.impl.campaign.BaseCustomEntityPlugin.entity</a></div><div class="ttdeci">SectorEntityToken entity</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d0e/BaseCustomEntityPlugin_8java_source.html#l00012">BaseCustomEntityPlugin.java:12</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_adcd558c1d95f9755066ddaf9a77311c1"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#adcd558c1d95f9755066ddaf9a77311c1">com.fs.starfarer.api.campaign.SectorEntityToken.getMemoryWithoutUpdate</a></div><div class="ttdeci">MemoryAPI getMemoryWithoutUpdate()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI_html_adb833cc81359cc239a89eae309480fc9"><div class="ttname"><a href="../../d0/de7/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html#adb833cc81359cc239a89eae309480fc9">com.fs.starfarer.api.campaign.rules.MemoryAPI.getBoolean</a></div><div class="ttdeci">boolean getBoolean(String key)</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="adb5d1abfd2339de35622250897b7d99d" name="adb5d1abfd2339de35622250897b7d99d"></a>
@@ -296,11 +280,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="../../d4/de9/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CampaignObjective.html#a20ab56161e00ed5236ff35d54afa1f27">com.fs.starfarer.api.impl.campaign.CampaignObjective</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d3a/BaseCampaignObjectivePlugin_8java_source.html#l00049">49</a> of file <a class="el" href="../../dd/d3a/BaseCampaignObjectivePlugin_8java_source.html">BaseCampaignObjectivePlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   49</span>                             {</div>
-<div class="line"><span class="lineno">   50</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d5/d0a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html#a4de611a62107d116dd5d3e8bc980fa6a">entity</a> != <span class="keyword">null</span> &amp;&amp; <a class="code hl_variable" href="../../d5/d0a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html#a4de611a62107d116dd5d3e8bc980fa6a">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#adcd558c1d95f9755066ddaf9a77311c1">getMemoryWithoutUpdate</a>().<a class="code hl_function" href="../../d0/de7/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html#adb833cc81359cc239a89eae309480fc9">getBoolean</a>(<a class="code hl_variable" href="../../d6/d84/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCampaignObjectivePlugin.html#a4c29a460a728f18fdb131633ba1a1c1f">RESET</a>);</div>
-<div class="line"><span class="lineno">   51</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCampaignObjectivePlugin_html_a4c29a460a728f18fdb131633ba1a1c1f"><div class="ttname"><a href="../../d6/d84/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCampaignObjectivePlugin.html#a4c29a460a728f18fdb131633ba1a1c1f">com.fs.starfarer.api.impl.campaign.BaseCampaignObjectivePlugin.RESET</a></div><div class="ttdeci">static final String RESET</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d3a/BaseCampaignObjectivePlugin_8java_source.html#l00010">BaseCampaignObjectivePlugin.java:10</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a609dc1fb1dfcda1d8443ec8dd53ddbdb" name="a609dc1fb1dfcda1d8443ec8dd53ddbdb"></a>
@@ -334,10 +314,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../da/d29/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CommRelayEntityPlugin.html#a680f8e8a3b40c51c74c71894f3b39f67">com.fs.starfarer.api.impl.campaign.CommRelayEntityPlugin</a>, <a class="el" href="../../d1/da1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1NavBuoyEntityPlugin.html#a8bfa1214bd97bc1cff5f9dda5579141a">com.fs.starfarer.api.impl.campaign.NavBuoyEntityPlugin</a>, and <a class="el" href="../../da/dd8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1SensorArrayEntityPlugin.html#a080ed3a6e2decedcff26434112a1a0fd">com.fs.starfarer.api.impl.campaign.SensorArrayEntityPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d3a/BaseCampaignObjectivePlugin_8java_source.html#l00015">15</a> of file <a class="el" href="../../dd/d3a/BaseCampaignObjectivePlugin_8java_source.html">BaseCampaignObjectivePlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   15</span>                                                             {</div>
-<div class="line"><span class="lineno">   16</span>        </div>
-<div class="line"><span class="lineno">   17</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="abf3266167aa6855628ae389a7b583b5e" name="abf3266167aa6855628ae389a7b583b5e"></a>
@@ -361,10 +338,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../da/d29/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CommRelayEntityPlugin.html#ad323689ed36827b5496a98bc4f7e36dd">com.fs.starfarer.api.impl.campaign.CommRelayEntityPlugin</a>, <a class="el" href="../../d1/da1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1NavBuoyEntityPlugin.html#a1b131b41533283cd6600bf92514ad999">com.fs.starfarer.api.impl.campaign.NavBuoyEntityPlugin</a>, and <a class="el" href="../../da/dd8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1SensorArrayEntityPlugin.html#a255d76e30f3f5aec02f4fa4aa8ba10ee">com.fs.starfarer.api.impl.campaign.SensorArrayEntityPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d3a/BaseCampaignObjectivePlugin_8java_source.html#l00028">28</a> of file <a class="el" href="../../dd/d3a/BaseCampaignObjectivePlugin_8java_source.html">BaseCampaignObjectivePlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   28</span>                                                                        {</div>
-<div class="line"><span class="lineno">   29</span> </div>
-<div class="line"><span class="lineno">   30</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a0aba63140c7e7b72332c56300a4c3deb" name="a0aba63140c7e7b72332c56300a4c3deb"></a>
@@ -388,12 +362,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../da/d29/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CommRelayEntityPlugin.html#a6e4cd94af7da3184f6386015a6dbc978">com.fs.starfarer.api.impl.campaign.CommRelayEntityPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d3a/BaseCampaignObjectivePlugin_8java_source.html#l00037">37</a> of file <a class="el" href="../../dd/d3a/BaseCampaignObjectivePlugin_8java_source.html">BaseCampaignObjectivePlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   37</span>                                          {</div>
-<div class="line"><span class="lineno">   38</span>        <a class="code hl_function" href="../../d6/d84/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCampaignObjectivePlugin.html#a0aba63140c7e7b72332c56300a4c3deb">setHacked</a>(hacked, <a class="code hl_variable" href="../../d6/d84/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCampaignObjectivePlugin.html#a3fab9a5b68009a576db6ad5b2a71edc7">HACK_DURATION_DAYS</a> + (<span class="keywordtype">float</span>) Math.random() * 0.5f * <a class="code hl_variable" href="../../d6/d84/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCampaignObjectivePlugin.html#a3fab9a5b68009a576db6ad5b2a71edc7">HACK_DURATION_DAYS</a>);</div>
-<div class="line"><span class="lineno">   39</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCampaignObjectivePlugin_html_a0aba63140c7e7b72332c56300a4c3deb"><div class="ttname"><a href="../../d6/d84/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCampaignObjectivePlugin.html#a0aba63140c7e7b72332c56300a4c3deb">com.fs.starfarer.api.impl.campaign.BaseCampaignObjectivePlugin.setHacked</a></div><div class="ttdeci">void setHacked(boolean hacked)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d3a/BaseCampaignObjectivePlugin_8java_source.html#l00037">BaseCampaignObjectivePlugin.java:37</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCampaignObjectivePlugin_html_a3fab9a5b68009a576db6ad5b2a71edc7"><div class="ttname"><a href="../../d6/d84/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCampaignObjectivePlugin.html#a3fab9a5b68009a576db6ad5b2a71edc7">com.fs.starfarer.api.impl.campaign.BaseCampaignObjectivePlugin.HACK_DURATION_DAYS</a></div><div class="ttdeci">static final float HACK_DURATION_DAYS</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d3a/BaseCampaignObjectivePlugin_8java_source.html#l00012">BaseCampaignObjectivePlugin.java:12</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9819f2d6789198e8554343bc4514d77a" name="a9819f2d6789198e8554343bc4514d77a"></a>
@@ -425,16 +394,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="../../d4/de9/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CampaignObjective.html#a5e5105e3cd7ec04cbb0e949a61ad7fcf">com.fs.starfarer.api.impl.campaign.CampaignObjective</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d3a/BaseCampaignObjectivePlugin_8java_source.html#l00041">41</a> of file <a class="el" href="../../dd/d3a/BaseCampaignObjectivePlugin_8java_source.html">BaseCampaignObjectivePlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   41</span>                                                      {</div>
-<div class="line"><span class="lineno">   42</span>        <span class="keywordflow">if</span> (hacked) {</div>
-<div class="line"><span class="lineno">   43</span>            <a class="code hl_variable" href="../../d5/d0a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html#a4de611a62107d116dd5d3e8bc980fa6a">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#adcd558c1d95f9755066ddaf9a77311c1">getMemoryWithoutUpdate</a>().<a class="code hl_function" href="../../d0/de7/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html#aacefa8e06571ecfc9a37897cbb61d2cf">set</a>(<a class="code hl_variable" href="../../d6/d84/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCampaignObjectivePlugin.html#a564a5c410e6624b5057b39be334d5c3e">HACKED</a>, hacked, days);</div>
-<div class="line"><span class="lineno">   44</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   45</span>            <a class="code hl_variable" href="../../d5/d0a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html#a4de611a62107d116dd5d3e8bc980fa6a">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#adcd558c1d95f9755066ddaf9a77311c1">getMemoryWithoutUpdate</a>().<a class="code hl_function" href="../../d0/de7/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html#a1187125b9f4fe3913d1ef3fb7c9fb211">unset</a>(<a class="code hl_variable" href="../../d6/d84/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCampaignObjectivePlugin.html#a564a5c410e6624b5057b39be334d5c3e">HACKED</a>);</div>
-<div class="line"><span class="lineno">   46</span>        }</div>
-<div class="line"><span class="lineno">   47</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI_html_a1187125b9f4fe3913d1ef3fb7c9fb211"><div class="ttname"><a href="../../d0/de7/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html#a1187125b9f4fe3913d1ef3fb7c9fb211">com.fs.starfarer.api.campaign.rules.MemoryAPI.unset</a></div><div class="ttdeci">void unset(String key)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI_html_aacefa8e06571ecfc9a37897cbb61d2cf"><div class="ttname"><a href="../../d0/de7/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html#aacefa8e06571ecfc9a37897cbb61d2cf">com.fs.starfarer.api.campaign.rules.MemoryAPI.set</a></div><div class="ttdeci">void set(String key, Object value)</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="afe2956bc548e47d68baa3a187c06ffd2" name="afe2956bc548e47d68baa3a187c06ffd2"></a>
@@ -456,12 +416,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="../../d4/de9/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CampaignObjective.html#a17130bd419427b0f36e42e68704cb041">com.fs.starfarer.api.impl.campaign.CampaignObjective</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d3a/BaseCampaignObjectivePlugin_8java_source.html#l00053">53</a> of file <a class="el" href="../../dd/d3a/BaseCampaignObjectivePlugin_8java_source.html">BaseCampaignObjectivePlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   53</span>                                        {</div>
-<div class="line"><span class="lineno">   54</span>        <a class="code hl_function" href="../../d6/d84/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCampaignObjectivePlugin.html#afe2956bc548e47d68baa3a187c06ffd2">setReset</a>(reset, <a class="code hl_variable" href="../../d6/d84/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCampaignObjectivePlugin.html#a1ee36f7bd55133e0e5bbeb74f0882197">RESET_DURATION_DAYS</a> + (<span class="keywordtype">float</span>) Math.random() * 0.5f * <a class="code hl_variable" href="../../d6/d84/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCampaignObjectivePlugin.html#a1ee36f7bd55133e0e5bbeb74f0882197">RESET_DURATION_DAYS</a>);</div>
-<div class="line"><span class="lineno">   55</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCampaignObjectivePlugin_html_a1ee36f7bd55133e0e5bbeb74f0882197"><div class="ttname"><a href="../../d6/d84/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCampaignObjectivePlugin.html#a1ee36f7bd55133e0e5bbeb74f0882197">com.fs.starfarer.api.impl.campaign.BaseCampaignObjectivePlugin.RESET_DURATION_DAYS</a></div><div class="ttdeci">static final float RESET_DURATION_DAYS</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d3a/BaseCampaignObjectivePlugin_8java_source.html#l00013">BaseCampaignObjectivePlugin.java:13</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCampaignObjectivePlugin_html_afe2956bc548e47d68baa3a187c06ffd2"><div class="ttname"><a href="../../d6/d84/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCampaignObjectivePlugin.html#afe2956bc548e47d68baa3a187c06ffd2">com.fs.starfarer.api.impl.campaign.BaseCampaignObjectivePlugin.setReset</a></div><div class="ttdeci">void setReset(boolean reset)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d3a/BaseCampaignObjectivePlugin_8java_source.html#l00053">BaseCampaignObjectivePlugin.java:53</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a94d9b2b9afba5a3b5277d4ca7f4cfcc4" name="a94d9b2b9afba5a3b5277d4ca7f4cfcc4"></a>
@@ -493,14 +448,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="../../d4/de9/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CampaignObjective.html#aa473bfce26645c5999b82c0878505b26">com.fs.starfarer.api.impl.campaign.CampaignObjective</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d3a/BaseCampaignObjectivePlugin_8java_source.html#l00057">57</a> of file <a class="el" href="../../dd/d3a/BaseCampaignObjectivePlugin_8java_source.html">BaseCampaignObjectivePlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   57</span>                                                    {</div>
-<div class="line"><span class="lineno">   58</span>        <span class="keywordflow">if</span> (reset) {</div>
-<div class="line"><span class="lineno">   59</span>            <a class="code hl_variable" href="../../d5/d0a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html#a4de611a62107d116dd5d3e8bc980fa6a">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#adcd558c1d95f9755066ddaf9a77311c1">getMemoryWithoutUpdate</a>().<a class="code hl_function" href="../../d0/de7/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html#aacefa8e06571ecfc9a37897cbb61d2cf">set</a>(<a class="code hl_variable" href="../../d6/d84/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCampaignObjectivePlugin.html#a4c29a460a728f18fdb131633ba1a1c1f">RESET</a>, reset, days);</div>
-<div class="line"><span class="lineno">   60</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   61</span>            <a class="code hl_variable" href="../../d5/d0a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html#a4de611a62107d116dd5d3e8bc980fa6a">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#adcd558c1d95f9755066ddaf9a77311c1">getMemoryWithoutUpdate</a>().<a class="code hl_function" href="../../d0/de7/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html#a1187125b9f4fe3913d1ef3fb7c9fb211">unset</a>(<a class="code hl_variable" href="../../d6/d84/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCampaignObjectivePlugin.html#a4c29a460a728f18fdb131633ba1a1c1f">RESET</a>);</div>
-<div class="line"><span class="lineno">   62</span>        }</div>
-<div class="line"><span class="lineno">   63</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

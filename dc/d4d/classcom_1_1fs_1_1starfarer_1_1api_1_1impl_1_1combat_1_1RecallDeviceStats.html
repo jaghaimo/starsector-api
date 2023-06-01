@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -223,67 +224,7 @@ Static Public Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseShipSystemScript.html#a4bc8ac2999423cda8da369b8498bd43a">com.fs.starfarer.api.impl.combat.BaseShipSystemScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/dcb/RecallDeviceStats_8java_source.html#l00016">16</a> of file <a class="el" href="../../da/dcb/RecallDeviceStats_8java_source.html">RecallDeviceStats.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   16</span>                                                                                            {</div>
-<div class="line"><span class="lineno">   17</span>        ShipAPI ship = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   18</span>        <span class="keywordflow">if</span> (stats.getEntity() instanceof ShipAPI) {</div>
-<div class="line"><span class="lineno">   19</span>            ship = (ShipAPI) stats.getEntity();</div>
-<div class="line"><span class="lineno">   20</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   21</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   22</span>        }</div>
-<div class="line"><span class="lineno">   23</span>        </div>
-<div class="line"><span class="lineno">   24</span>        </div>
-<div class="line"><span class="lineno">   25</span>        <span class="keywordflow">if</span> (effectLevel &gt; 0) {</div>
-<div class="line"><span class="lineno">   26</span>            <span class="keywordtype">float</span> jitterLevel = effectLevel;</div>
-<div class="line"><span class="lineno">   27</span>            </div>
-<div class="line"><span class="lineno">   28</span>            <span class="keywordtype">boolean</span> firstTime = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   29</span>            <span class="keyword">final</span> String fightersKey = ship.getId() + <span class="stringliteral">&quot;_recall_device_target&quot;</span>;</div>
-<div class="line"><span class="lineno">   30</span>            List&lt;ShipAPI&gt; fighters = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   31</span>            <span class="keywordflow">if</span> (!Global.getCombatEngine().getCustomData().containsKey(fightersKey)) {</div>
-<div class="line"><span class="lineno">   32</span>                fighters = <a class="code hl_function" href="../../dc/d4d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RecallDeviceStats.html#a79266e235620e60bcb8b88724d8fb208">getFighters</a>(ship);</div>
-<div class="line"><span class="lineno">   33</span>                Global.getCombatEngine().getCustomData().put(fightersKey, fighters);</div>
-<div class="line"><span class="lineno">   34</span>                firstTime = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   35</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   36</span>                fighters = (List&lt;ShipAPI&gt;) Global.getCombatEngine().getCustomData().get(fightersKey);</div>
-<div class="line"><span class="lineno">   37</span>            }</div>
-<div class="line"><span class="lineno">   38</span>            <span class="keywordflow">if</span> (fighters == <span class="keyword">null</span>) { <span class="comment">// shouldn&#39;t be possible, but still</span></div>
-<div class="line"><span class="lineno">   39</span>                fighters = <span class="keyword">new</span> ArrayList&lt;ShipAPI&gt;();</div>
-<div class="line"><span class="lineno">   40</span>            }</div>
-<div class="line"><span class="lineno">   41</span>            </div>
-<div class="line"><span class="lineno">   42</span>            <span class="keywordflow">for</span> (ShipAPI fighter : fighters) {</div>
-<div class="line"><span class="lineno">   43</span>                <span class="keywordflow">if</span> (fighter.isHulk()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   44</span>                </div>
-<div class="line"><span class="lineno">   45</span>                <span class="keywordtype">float</span> maxRangeBonus = fighter.getCollisionRadius() * 1f;</div>
-<div class="line"><span class="lineno">   46</span>                <span class="keywordtype">float</span> jitterRangeBonus = 5f + jitterLevel * maxRangeBonus;</div>
-<div class="line"><span class="lineno">   47</span>                </div>
-<div class="line"><span class="lineno">   48</span>                <span class="keywordflow">if</span> (firstTime) {</div>
-<div class="line"><span class="lineno">   49</span>                    Global.getSoundPlayer().playSound(<span class="stringliteral">&quot;system_phase_skimmer&quot;</span>, 1f, 0.5f, fighter.getLocation(), fighter.getVelocity());</div>
-<div class="line"><span class="lineno">   50</span>                }</div>
-<div class="line"><span class="lineno">   51</span>                </div>
-<div class="line"><span class="lineno">   52</span>                fighter.setJitter(<a class="code hl_variable" href="../../dc/d4d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RecallDeviceStats.html#ab54690ea8f08ae955c8f2272343e3088">KEY_JITTER</a>, <a class="code hl_variable" href="../../dc/d4d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RecallDeviceStats.html#a58a6d7257f807199fce67c9542daad7c">JITTER_COLOR</a>, jitterLevel, 10, 0f, jitterRangeBonus);</div>
-<div class="line"><span class="lineno">   53</span>                <span class="keywordflow">if</span> (fighter.isAlive()) {</div>
-<div class="line"><span class="lineno">   54</span>                    fighter.setPhased(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   55</span>                }</div>
-<div class="line"><span class="lineno">   56</span>                </div>
-<div class="line"><span class="lineno">   57</span>                <span class="keywordflow">if</span> (state == State.IN) {</div>
-<div class="line"><span class="lineno">   58</span>                    <span class="keywordtype">float</span> alpha = 1f - effectLevel * 0.5f;</div>
-<div class="line"><span class="lineno">   59</span>                    fighter.setExtraAlphaMult(alpha);</div>
-<div class="line"><span class="lineno">   60</span>                }</div>
-<div class="line"><span class="lineno">   61</span>    </div>
-<div class="line"><span class="lineno">   62</span>                <span class="keywordflow">if</span> (effectLevel == 1) {</div>
-<div class="line"><span class="lineno">   63</span>                    <span class="keywordflow">if</span> (fighter.getWing() != <span class="keyword">null</span> &amp;&amp; fighter.getWing().getSource() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   64</span>                        fighter.getWing().getSource().makeCurrentIntervalFast();</div>
-<div class="line"><span class="lineno">   65</span>                        fighter.getWing().getSource().land(fighter);</div>
-<div class="line"><span class="lineno">   66</span>                    } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   67</span>                        fighter.setExtraAlphaMult(1);</div>
-<div class="line"><span class="lineno">   68</span>                    }</div>
-<div class="line"><span class="lineno">   69</span>                }</div>
-<div class="line"><span class="lineno">   70</span>            }</div>
-<div class="line"><span class="lineno">   71</span>        }</div>
-<div class="line"><span class="lineno">   72</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RecallDeviceStats_html_a58a6d7257f807199fce67c9542daad7c"><div class="ttname"><a href="../../dc/d4d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RecallDeviceStats.html#a58a6d7257f807199fce67c9542daad7c">com.fs.starfarer.api.impl.combat.RecallDeviceStats.JITTER_COLOR</a></div><div class="ttdeci">static final Color JITTER_COLOR</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dcb/RecallDeviceStats_8java_source.html#l00013">RecallDeviceStats.java:13</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RecallDeviceStats_html_a79266e235620e60bcb8b88724d8fb208"><div class="ttname"><a href="../../dc/d4d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RecallDeviceStats.html#a79266e235620e60bcb8b88724d8fb208">com.fs.starfarer.api.impl.combat.RecallDeviceStats.getFighters</a></div><div class="ttdeci">static List&lt; ShipAPI &gt; getFighters(ShipAPI carrier)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dcb/RecallDeviceStats_8java_source.html#l00074">RecallDeviceStats.java:74</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RecallDeviceStats_html_ab54690ea8f08ae955c8f2272343e3088"><div class="ttname"><a href="../../dc/d4d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RecallDeviceStats.html#ab54690ea8f08ae955c8f2272343e3088">com.fs.starfarer.api.impl.combat.RecallDeviceStats.KEY_JITTER</a></div><div class="ttdeci">static final Object KEY_JITTER</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dcb/RecallDeviceStats_8java_source.html#l00012">RecallDeviceStats.java:12</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a79266e235620e60bcb8b88724d8fb208" name="a79266e235620e60bcb8b88724d8fb208"></a>
@@ -311,20 +252,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/dcb/RecallDeviceStats_8java_source.html#l00074">74</a> of file <a class="el" href="../../da/dcb/RecallDeviceStats_8java_source.html">RecallDeviceStats.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   74</span>                                                             {</div>
-<div class="line"><span class="lineno">   75</span>        List&lt;ShipAPI&gt; result = <span class="keyword">new</span> ArrayList&lt;ShipAPI&gt;();</div>
-<div class="line"><span class="lineno">   76</span>        </div>
-<div class="line"><span class="lineno">   77</span>        <span class="keywordflow">for</span> (ShipAPI ship : Global.getCombatEngine().getShips()) {</div>
-<div class="line"><span class="lineno">   78</span>            <span class="keywordflow">if</span> (!ship.isFighter()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   79</span>            <span class="keywordflow">if</span> (ship.getWing() == <span class="keyword">null</span>) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   80</span>            <span class="keywordflow">if</span> (ship.getWing().getSourceShip() == carrier) {</div>
-<div class="line"><span class="lineno">   81</span>                result.add(ship);</div>
-<div class="line"><span class="lineno">   82</span>            }</div>
-<div class="line"><span class="lineno">   83</span>        }</div>
-<div class="line"><span class="lineno">   84</span>        </div>
-<div class="line"><span class="lineno">   85</span>        <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">   86</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a0c765bab67fcdcb8e60d97e34fcf5f03" name="a0c765bab67fcdcb8e60d97e34fcf5f03"></a>
@@ -362,10 +290,7 @@ Static Public Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseShipSystemScript.html#ab328cae8df05d23ccc045f4e32f5f9f0">com.fs.starfarer.api.impl.combat.BaseShipSystemScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/dcb/RecallDeviceStats_8java_source.html#l00107">107</a> of file <a class="el" href="../../da/dcb/RecallDeviceStats_8java_source.html">RecallDeviceStats.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  107</span>                                                                               {</div>
-<div class="line"><span class="lineno">  108</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  109</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aaccfccb335b4f0a9a83509228fbe7883" name="aaccfccb335b4f0a9a83509228fbe7883"></a>
@@ -397,23 +322,7 @@ Static Public Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseShipSystemScript.html#a020712b9bb37e9ece4fbfd4c865c4037">com.fs.starfarer.api.impl.combat.BaseShipSystemScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/dcb/RecallDeviceStats_8java_source.html#l00089">89</a> of file <a class="el" href="../../da/dcb/RecallDeviceStats_8java_source.html">RecallDeviceStats.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   89</span>                                                              {</div>
-<div class="line"><span class="lineno">   90</span>        ShipAPI ship = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   91</span>        <span class="keywordflow">if</span> (stats.getEntity() instanceof ShipAPI) {</div>
-<div class="line"><span class="lineno">   92</span>            ship = (ShipAPI) stats.getEntity();</div>
-<div class="line"><span class="lineno">   93</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   94</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   95</span>        }</div>
-<div class="line"><span class="lineno">   96</span>        </div>
-<div class="line"><span class="lineno">   97</span>        <span class="keyword">final</span> String fightersKey = ship.getId() + <span class="stringliteral">&quot;_recall_device_target&quot;</span>;</div>
-<div class="line"><span class="lineno">   98</span>        Global.getCombatEngine().getCustomData().remove(fightersKey);</div>
-<div class="line"><span class="lineno">   99</span>        </div>
-<div class="line"><span class="lineno">  100</span><span class="comment">//      for (ShipAPI fighter : getFighters(ship)) {</span></div>
-<div class="line"><span class="lineno">  101</span><span class="comment">//          fighter.setPhased(false);</span></div>
-<div class="line"><span class="lineno">  102</span><span class="comment">//          fighter.setCopyLocation(null, 1f, fighter.getFacing());</span></div>
-<div class="line"><span class="lineno">  103</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  104</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

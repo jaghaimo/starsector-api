@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -237,53 +238,7 @@ Static Public Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseShipSystemScript.html#a4bc8ac2999423cda8da369b8498bd43a">com.fs.starfarer.api.impl.combat.BaseShipSystemScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/d23/ChiralFigmentStats_8java_source.html#l00065">65</a> of file <a class="el" href="../../df/d23/ChiralFigmentStats_8java_source.html">ChiralFigmentStats.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   65</span>                                                                                            {</div>
-<div class="line"><span class="lineno">   66</span>        ShipAPI ship = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   67</span>        <span class="comment">//boolean player = false;</span></div>
-<div class="line"><span class="lineno">   68</span>        <span class="keywordflow">if</span> (stats.getEntity() instanceof ShipAPI) {</div>
-<div class="line"><span class="lineno">   69</span>            ship = (ShipAPI) stats.getEntity();</div>
-<div class="line"><span class="lineno">   70</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   71</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   72</span>        }</div>
-<div class="line"><span class="lineno">   73</span>        </div>
-<div class="line"><span class="lineno">   74</span>        </div>
-<div class="line"><span class="lineno">   75</span>        <span class="keywordtype">float</span> jitterLevel = effectLevel;</div>
-<div class="line"><span class="lineno">   76</span>        <span class="keywordflow">if</span> (state == State.OUT) {</div>
-<div class="line"><span class="lineno">   77</span>            jitterLevel *= jitterLevel;</div>
-<div class="line"><span class="lineno">   78</span>        }</div>
-<div class="line"><span class="lineno">   79</span>        <span class="keywordtype">float</span> maxRangeBonus = 25f;</div>
-<div class="line"><span class="lineno">   80</span>        <span class="keywordtype">float</span> jitterRangeBonus = jitterLevel * maxRangeBonus;</div>
-<div class="line"><span class="lineno">   81</span>        <span class="keywordflow">if</span> (state == State.OUT) {</div>
-<div class="line"><span class="lineno">   82</span>        }</div>
-<div class="line"><span class="lineno">   83</span>        </div>
-<div class="line"><span class="lineno">   84</span>        ship.setJitterUnder(<span class="keyword">this</span>, <a class="code hl_variable" href="../../db/d76/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1ChiralFigmentStats.html#a8fdb0008dc8f15bd22291ff65d5b4728">JITTER_UNDER_COLOR</a>, jitterLevel, 11, 0f, 3f + jitterRangeBonus);</div>
-<div class="line"><span class="lineno">   85</span>        ship.setJitter(<span class="keyword">this</span>, <a class="code hl_variable" href="../../db/d76/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1ChiralFigmentStats.html#ab70b1b9e84501ee7f95af1ab7713407f">JITTER_COLOR</a>, jitterLevel, 4, 0f, 0 + jitterRangeBonus);</div>
-<div class="line"><span class="lineno">   86</span>        </div>
-<div class="line"><span class="lineno">   87</span>        <span class="keywordflow">if</span> (state == State.IN) {</div>
-<div class="line"><span class="lineno">   88</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (effectLevel &gt;= 1) {</div>
-<div class="line"><span class="lineno">   89</span>            String variant = <a class="code hl_variable" href="../../db/d76/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1ChiralFigmentStats.html#a81c709e979a92588584a91750b46ed9d">FIGMENTS</a>.get(ship.getVariant().getHullVariantId());</div>
-<div class="line"><span class="lineno">   90</span>            <span class="keywordflow">if</span> (ship.getVariant().getOriginalVariant() != <span class="keyword">null</span> &amp;&amp; variant == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   91</span>                variant = <a class="code hl_variable" href="../../db/d76/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1ChiralFigmentStats.html#a81c709e979a92588584a91750b46ed9d">FIGMENTS</a>.get(ship.getVariant().getOriginalVariant());</div>
-<div class="line"><span class="lineno">   92</span>            }</div>
-<div class="line"><span class="lineno">   93</span>            <span class="keywordflow">if</span> (variant != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   94</span>                <span class="keywordtype">float</span> angle = <a class="code hl_function" href="../../db/d76/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1ChiralFigmentStats.html#ace473d311fd3041401f422788851834c">getSpawnAngle</a>(ship);</div>
-<div class="line"><span class="lineno">   95</span>                <span class="keywordtype">float</span> dist = ship.getCollisionRadius() * 1.25f;</div>
-<div class="line"><span class="lineno">   96</span>                Vector2f loc = Misc.getUnitVectorAtDegreeAngle(ship.getFacing() + angle);</div>
-<div class="line"><span class="lineno">   97</span>                loc.scale(dist);</div>
-<div class="line"><span class="lineno">   98</span>                Vector2f.add(loc, ship.getLocation(), loc);</div>
-<div class="line"><span class="lineno">   99</span>                <span class="keywordflow">if</span> (isLocationClear(ship, loc, dist / 2f)) {</div>
-<div class="line"><span class="lineno">  100</span>                    FigmentPlugin figment = <span class="keyword">new</span> FigmentPlugin(variant, ship, 1f, 20f, loc);</div>
-<div class="line"><span class="lineno">  101</span>                    Global.getCombatEngine().addPlugin(figment);</div>
-<div class="line"><span class="lineno">  102</span>                }</div>
-<div class="line"><span class="lineno">  103</span>            }</div>
-<div class="line"><span class="lineno">  104</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (state == State.OUT ) {</div>
-<div class="line"><span class="lineno">  105</span>        }</div>
-<div class="line"><span class="lineno">  106</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1ChiralFigmentStats_html_a81c709e979a92588584a91750b46ed9d"><div class="ttname"><a href="../../db/d76/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1ChiralFigmentStats.html#a81c709e979a92588584a91750b46ed9d">com.fs.starfarer.api.impl.combat.ChiralFigmentStats.FIGMENTS</a></div><div class="ttdeci">static Map&lt; String, String &gt; FIGMENTS</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d23/ChiralFigmentStats_8java_source.html#l00031">ChiralFigmentStats.java:31</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1ChiralFigmentStats_html_a8fdb0008dc8f15bd22291ff65d5b4728"><div class="ttname"><a href="../../db/d76/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1ChiralFigmentStats.html#a8fdb0008dc8f15bd22291ff65d5b4728">com.fs.starfarer.api.impl.combat.ChiralFigmentStats.JITTER_UNDER_COLOR</a></div><div class="ttdeci">static final Color JITTER_UNDER_COLOR</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d23/ChiralFigmentStats_8java_source.html#l00046">ChiralFigmentStats.java:46</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1ChiralFigmentStats_html_ab70b1b9e84501ee7f95af1ab7713407f"><div class="ttname"><a href="../../db/d76/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1ChiralFigmentStats.html#ab70b1b9e84501ee7f95af1ab7713407f">com.fs.starfarer.api.impl.combat.ChiralFigmentStats.JITTER_COLOR</a></div><div class="ttdeci">static final Color JITTER_COLOR</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d23/ChiralFigmentStats_8java_source.html#l00045">ChiralFigmentStats.java:45</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1ChiralFigmentStats_html_ace473d311fd3041401f422788851834c"><div class="ttname"><a href="../../db/d76/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1ChiralFigmentStats.html#ace473d311fd3041401f422788851834c">com.fs.starfarer.api.impl.combat.ChiralFigmentStats.getSpawnAngle</a></div><div class="ttdeci">static float getSpawnAngle(ShipAPI ship)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d23/ChiralFigmentStats_8java_source.html#l00054">ChiralFigmentStats.java:54</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ace473d311fd3041401f422788851834c" name="ace473d311fd3041401f422788851834c"></a>
@@ -311,17 +266,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/d23/ChiralFigmentStats_8java_source.html#l00054">54</a> of file <a class="el" href="../../df/d23/ChiralFigmentStats_8java_source.html">ChiralFigmentStats.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   54</span>                                                    {</div>
-<div class="line"><span class="lineno">   55</span>        String variant = <a class="code hl_variable" href="../../db/d76/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1ChiralFigmentStats.html#a81c709e979a92588584a91750b46ed9d">FIGMENTS</a>.get(ship.getVariant().getHullVariantId());</div>
-<div class="line"><span class="lineno">   56</span>        <span class="keywordflow">if</span> (ship.getVariant().getOriginalVariant() != <span class="keyword">null</span> &amp;&amp; variant == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   57</span>            variant = <a class="code hl_variable" href="../../db/d76/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1ChiralFigmentStats.html#a81c709e979a92588584a91750b46ed9d">FIGMENTS</a>.get(ship.getVariant().getOriginalVariant());</div>
-<div class="line"><span class="lineno">   58</span>        }</div>
-<div class="line"><span class="lineno">   59</span>        <span class="keywordflow">if</span> (variant != <span class="keyword">null</span> &amp;&amp; variant.contains(<span class="stringliteral">&quot;_left&quot;</span>)) {</div>
-<div class="line"><span class="lineno">   60</span>            <span class="keywordflow">return</span> 90f;</div>
-<div class="line"><span class="lineno">   61</span>        }</div>
-<div class="line"><span class="lineno">   62</span>        <span class="keywordflow">return</span> -90f;</div>
-<div class="line"><span class="lineno">   63</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a67e6cef16779770d8b358e466e9e54a5" name="a67e6cef16779770d8b358e466e9e54a5"></a>
@@ -353,9 +298,7 @@ Static Public Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseShipSystemScript.html#a020712b9bb37e9ece4fbfd4c865c4037">com.fs.starfarer.api.impl.combat.BaseShipSystemScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/d23/ChiralFigmentStats_8java_source.html#l00109">109</a> of file <a class="el" href="../../df/d23/ChiralFigmentStats_8java_source.html">ChiralFigmentStats.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  109</span>                                                              {</div>
-<div class="line"><span class="lineno">  110</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

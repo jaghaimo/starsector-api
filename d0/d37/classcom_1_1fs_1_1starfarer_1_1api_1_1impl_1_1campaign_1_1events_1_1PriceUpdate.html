@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -164,26 +165,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/de1/PriceUpdate_8java_source.html#l00019">19</a> of file <a class="el" href="../../d4/de1/PriceUpdate_8java_source.html">PriceUpdate.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   19</span>                                                       {</div>
-<div class="line"><span class="lineno">   20</span>        <span class="comment">//this.commodity = commodity;</span></div>
-<div class="line"><span class="lineno">   21</span>        marketId = commodity.getMarket().getId();</div>
-<div class="line"><span class="lineno">   22</span>        commodityId = commodity.getId();</div>
-<div class="line"><span class="lineno">   23</span>        supplyPrice = Math.round(commodity.getMarket().getSupplyPrice(commodity.getId(), 1, <span class="keyword">true</span>));</div>
-<div class="line"><span class="lineno">   24</span>        demandPrice = Math.round(commodity.getMarket().getDemandPrice(commodity.getId(), 1, <span class="keyword">true</span>));</div>
-<div class="line"><span class="lineno">   25</span>        <span class="comment">//priceMult = commodity.getPlayerPriceMult().getModifiedValue();</span></div>
-<div class="line"><span class="lineno">   26</span>        </div>
-<div class="line"><span class="lineno">   27</span><span class="comment">//      if (commodityId.equals(&quot;food&quot;)) {</span></div>
-<div class="line"><span class="lineno">   28</span><span class="comment">//          System.out.println(&quot;dsfsdfsdf&quot;);</span></div>
-<div class="line"><span class="lineno">   29</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">   30</span>        <a class="code hl_function" href="../../d0/d37/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1PriceUpdate.html#a39fa24f653a040a4e4e1a68252a16d68">updateType</a>();</div>
-<div class="line"><span class="lineno">   31</span>        timestamp = Global.getSector().getClock().getTimestamp();</div>
-<div class="line"><span class="lineno">   32</span>        </div>
-<div class="line"><span class="lineno">   33</span><span class="comment">//      float f = Global.getSettings().getFloat(&quot;economyAverageFractionOfStockpilePlayerCanBuy&quot;);</span></div>
-<div class="line"><span class="lineno">   34</span><span class="comment">//      available = commodity.getAverageStockpileAfterDemand() * f;</span></div>
-<div class="line"><span class="lineno">   35</span>        demand  = commodity.getDemand().getDemandValue();</div>
-<div class="line"><span class="lineno">   36</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1PriceUpdate_html_a39fa24f653a040a4e4e1a68252a16d68"><div class="ttname"><a href="../../d0/d37/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1PriceUpdate.html#a39fa24f653a040a4e4e1a68252a16d68">com.fs.starfarer.api.impl.campaign.events.PriceUpdate.updateType</a></div><div class="ttdeci">void updateType()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/de1/PriceUpdate_8java_source.html#l00119">PriceUpdate.java:119</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -203,17 +185,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/de1/PriceUpdate_8java_source.html#l00111">111</a> of file <a class="el" href="../../d4/de1/PriceUpdate_8java_source.html">PriceUpdate.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  111</span>                                {</div>
-<div class="line"><span class="lineno">  112</span>        <span class="comment">//float f = Global.getSettings().getFloat(&quot;economyAverageFractionOfStockpilePlayerCanBuy&quot;);</span></div>
-<div class="line"><span class="lineno">  113</span>        CommodityOnMarketAPI com = <a class="code hl_function" href="../../d0/d37/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1PriceUpdate.html#af8b1b7b771eac83993e98bf8c06423a0">getMarket</a>().<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a6186b555a108bee51ba3ee878d07032d">getCommodityData</a>(commodityId);</div>
-<div class="line"><span class="lineno">  114</span>        <span class="comment">//float available = com.getMaxPlayerFacingStockpile(f, com.getAverageStockpileAfterDemand());</span></div>
-<div class="line"><span class="lineno">  115</span>        <span class="keywordtype">float</span> available = com.<a class="code hl_function" href="../../d3/dd7/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommodityOnMarketAPI.html#a43a885ee4a1344011a25972553527e74">getStockpile</a>();</div>
-<div class="line"><span class="lineno">  116</span>        <span class="keywordflow">return</span> available;</div>
-<div class="line"><span class="lineno">  117</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1PriceUpdate_html_af8b1b7b771eac83993e98bf8c06423a0"><div class="ttname"><a href="../../d0/d37/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1PriceUpdate.html#af8b1b7b771eac83993e98bf8c06423a0">com.fs.starfarer.api.impl.campaign.events.PriceUpdate.getMarket</a></div><div class="ttdeci">MarketAPI getMarket()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/de1/PriceUpdate_8java_source.html#l00184">PriceUpdate.java:184</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommodityOnMarketAPI_html_a43a885ee4a1344011a25972553527e74"><div class="ttname"><a href="../../d3/dd7/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommodityOnMarketAPI.html#a43a885ee4a1344011a25972553527e74">com.fs.starfarer.api.campaign.econ.CommodityOnMarketAPI.getStockpile</a></div><div class="ttdeci">float getStockpile()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a6186b555a108bee51ba3ee878d07032d"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a6186b555a108bee51ba3ee878d07032d">com.fs.starfarer.api.campaign.econ.MarketAPI.getCommodityData</a></div><div class="ttdeci">CommodityOnMarketAPI getCommodityData(String commodityId)</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a4c694ba50b55a4d15e8eeae2f695908d" name="a4c694ba50b55a4d15e8eeae2f695908d"></a>
@@ -232,12 +204,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/de1/PriceUpdate_8java_source.html#l00187">187</a> of file <a class="el" href="../../d4/de1/PriceUpdate_8java_source.html">PriceUpdate.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  187</span>                                               {</div>
-<div class="line"><span class="lineno">  188</span>        MarketAPI market = <a class="code hl_function" href="../../d0/d37/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1PriceUpdate.html#af8b1b7b771eac83993e98bf8c06423a0">getMarket</a>();</div>
-<div class="line"><span class="lineno">  189</span>        <span class="keywordflow">if</span> (market == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  190</span>        <span class="keywordflow">return</span> market.getCommodityData(commodityId);</div>
-<div class="line"><span class="lineno">  191</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a05c1bd6e66874eb09effc04a71318822" name="a05c1bd6e66874eb09effc04a71318822"></a>
@@ -256,10 +223,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/de1/PriceUpdate_8java_source.html#l00107">107</a> of file <a class="el" href="../../d4/de1/PriceUpdate_8java_source.html">PriceUpdate.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  107</span>                             {</div>
-<div class="line"><span class="lineno">  108</span>        <span class="keywordflow">return</span> demand;</div>
-<div class="line"><span class="lineno">  109</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a7ef33ad1c898b6318fe0e4f8dcf6ac69" name="a7ef33ad1c898b6318fe0e4f8dcf6ac69"></a>
@@ -278,10 +242,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/de1/PriceUpdate_8java_source.html#l00195">195</a> of file <a class="el" href="../../d4/de1/PriceUpdate_8java_source.html">PriceUpdate.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  195</span>                                  {</div>
-<div class="line"><span class="lineno">  196</span>        <span class="keywordflow">return</span> demandPrice;</div>
-<div class="line"><span class="lineno">  197</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af8b1b7b771eac83993e98bf8c06423a0" name="af8b1b7b771eac83993e98bf8c06423a0"></a>
@@ -300,10 +261,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/de1/PriceUpdate_8java_source.html#l00184">184</a> of file <a class="el" href="../../d4/de1/PriceUpdate_8java_source.html">PriceUpdate.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  184</span>                                 {</div>
-<div class="line"><span class="lineno">  185</span>        <span class="keywordflow">return</span> Global.getSector().getEconomy().getMarket(marketId);</div>
-<div class="line"><span class="lineno">  186</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a64f60efc4f953e311e575691ba2c016c" name="a64f60efc4f953e311e575691ba2c016c"></a>
@@ -322,11 +280,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/de1/PriceUpdate_8java_source.html#l00053">53</a> of file <a class="el" href="../../d4/de1/PriceUpdate_8java_source.html">PriceUpdate.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   53</span>                                           {</div>
-<div class="line"><span class="lineno">   54</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../d0/d37/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1PriceUpdate.html#a64f60efc4f953e311e575691ba2c016c">getRoundedPriceForDisplay</a>(0, 0);</div>
-<div class="line"><span class="lineno">   55</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1PriceUpdate_html_a64f60efc4f953e311e575691ba2c016c"><div class="ttname"><a href="../../d0/d37/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1PriceUpdate.html#a64f60efc4f953e311e575691ba2c016c">com.fs.starfarer.api.impl.campaign.events.PriceUpdate.getRoundedPriceForDisplay</a></div><div class="ttdeci">int getRoundedPriceForDisplay()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/de1/PriceUpdate_8java_source.html#l00053">PriceUpdate.java:53</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a3fa6d58b2cbb76b1433372758d431e9d" name="a3fa6d58b2cbb76b1433372758d431e9d"></a>
@@ -364,50 +318,7 @@ Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/de1/PriceUpdate_8java_source.html#l00063">63</a> of file <a class="el" href="../../d4/de1/PriceUpdate_8java_source.html">PriceUpdate.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   63</span>                                                                              {</div>
-<div class="line"><span class="lineno">   64</span>        <span class="keywordtype">float</span> testSupplyPrice = supplyPrice;</div>
-<div class="line"><span class="lineno">   65</span>        <span class="keywordtype">float</span> testDemandPrice = demandPrice;</div>
-<div class="line"><span class="lineno">   66</span>        <span class="comment">//getCommodity().getMarket().getDemandPrice(getCommodity().getId(), 1, true)</span></div>
-<div class="line"><span class="lineno">   67</span>        <span class="comment">// if params are non-0, then the curr price may already include a player-facing modifier - so, discount it</span></div>
-<div class="line"><span class="lineno">   68</span>        <span class="comment">// this won&#39;t work for multiple sources modifying the same price, though</span></div>
-<div class="line"><span class="lineno">   69</span>        <span class="comment">// never mind that - only call this method when the bonus you want to ignore is not already applied.</span></div>
-<div class="line"><span class="lineno">   70</span>        <span class="keywordflow">if</span> (priceFlat != 0 || pricePercent != 0) {</div>
-<div class="line"><span class="lineno">   71</span>            CommodityOnMarketAPI commodity = <a class="code hl_function" href="../../d0/d37/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1PriceUpdate.html#a4c694ba50b55a4d15e8eeae2f695908d">getCommodity</a>();</div>
-<div class="line"><span class="lineno">   72</span>            testSupplyPrice = Math.round(commodity.getMarket().getSupplyPrice(commodity.getId(), 1, <span class="keyword">true</span>) * (1f + pricePercent / 100f) + priceFlat);</div>
-<div class="line"><span class="lineno">   73</span>            testDemandPrice = Math.round(commodity.getMarket().getDemandPrice(commodity.getId(), 1, <span class="keyword">true</span>) * (1f + pricePercent / 100f) + priceFlat);</div>
-<div class="line"><span class="lineno">   74</span>        }</div>
-<div class="line"><span class="lineno">   75</span>        <span class="keywordflow">if</span> (<span class="keyword">true</span>) {</div>
-<div class="line"><span class="lineno">   76</span>            <span class="comment">// for now, cheat and grab real prices from market</span></div>
-<div class="line"><span class="lineno">   77</span>            CommodityOnMarketAPI commodity = <a class="code hl_function" href="../../d0/d37/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1PriceUpdate.html#a4c694ba50b55a4d15e8eeae2f695908d">getCommodity</a>();</div>
-<div class="line"><span class="lineno">   78</span><span class="comment">//          if (commodity.getId().equals(Commodities.HAND_WEAPONS) &amp;&amp; commodity.getMarket().getId().equals(&quot;ogma&quot;)) {</span></div>
-<div class="line"><span class="lineno">   79</span><span class="comment">//              System.out.println(&quot;q23sdfsdf&quot;);</span></div>
-<div class="line"><span class="lineno">   80</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">   81</span>            testSupplyPrice = Math.round(commodity.getMarket().getSupplyPrice(commodity.getId(), 1, <span class="keyword">true</span>));</div>
-<div class="line"><span class="lineno">   82</span>            testDemandPrice = Math.round(commodity.getMarket().getDemandPrice(commodity.getId(), 1, <span class="keyword">true</span>));</div>
-<div class="line"><span class="lineno">   83</span>            </div>
-<div class="line"><span class="lineno">   84</span>            supplyPrice = testSupplyPrice;</div>
-<div class="line"><span class="lineno">   85</span>            demandPrice = testDemandPrice;</div>
-<div class="line"><span class="lineno">   86</span>            <a class="code hl_function" href="../../d0/d37/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1PriceUpdate.html#a39fa24f653a040a4e4e1a68252a16d68">updateType</a>();</div>
-<div class="line"><span class="lineno">   87</span>        }</div>
-<div class="line"><span class="lineno">   88</span>        </div>
-<div class="line"><span class="lineno">   89</span>        <span class="keywordtype">int</span> amt = 0;</div>
-<div class="line"><span class="lineno">   90</span>        <span class="keywordflow">switch</span> (<a class="code hl_function" href="../../d0/d37/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1PriceUpdate.html#a3df167c59330d3008ed21cefa105ea5b">getType</a>()) {</div>
-<div class="line"><span class="lineno">   91</span>        <span class="keywordflow">case</span> NORMAL:</div>
-<div class="line"><span class="lineno">   92</span>            amt = (int) (testSupplyPrice + testDemandPrice) / 2;</div>
-<div class="line"><span class="lineno">   93</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   94</span>        <span class="keywordflow">case</span> CHEAP:</div>
-<div class="line"><span class="lineno">   95</span>            amt = (int) testSupplyPrice;</div>
-<div class="line"><span class="lineno">   96</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   97</span>        <span class="keywordflow">case</span> EXPENSIVE:</div>
-<div class="line"><span class="lineno">   98</span>            amt = (int) testDemandPrice;</div>
-<div class="line"><span class="lineno">   99</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  100</span>        }</div>
-<div class="line"><span class="lineno">  101</span>        amt = (int) Misc.getRounded(amt);</div>
-<div class="line"><span class="lineno">  102</span>        <span class="keywordflow">return</span> amt;</div>
-<div class="line"><span class="lineno">  103</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1PriceUpdate_html_a3df167c59330d3008ed21cefa105ea5b"><div class="ttname"><a href="../../d0/d37/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1PriceUpdate.html#a3df167c59330d3008ed21cefa105ea5b">com.fs.starfarer.api.impl.campaign.events.PriceUpdate.getType</a></div><div class="ttdeci">PriceType getType()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/de1/PriceUpdate_8java_source.html#l00198">PriceUpdate.java:198</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1PriceUpdate_html_a4c694ba50b55a4d15e8eeae2f695908d"><div class="ttname"><a href="../../d0/d37/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1PriceUpdate.html#a4c694ba50b55a4d15e8eeae2f695908d">com.fs.starfarer.api.impl.campaign.events.PriceUpdate.getCommodity</a></div><div class="ttdeci">CommodityOnMarketAPI getCommodity()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/de1/PriceUpdate_8java_source.html#l00187">PriceUpdate.java:187</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aea82c32572ec30511611a05104707ff6" name="aea82c32572ec30511611a05104707ff6"></a>
@@ -426,10 +337,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/de1/PriceUpdate_8java_source.html#l00192">192</a> of file <a class="el" href="../../d4/de1/PriceUpdate_8java_source.html">PriceUpdate.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  192</span>                                  {</div>
-<div class="line"><span class="lineno">  193</span>        <span class="keywordflow">return</span> supplyPrice;</div>
-<div class="line"><span class="lineno">  194</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9623306d0df661016453102f7b88340d" name="a9623306d0df661016453102f7b88340d"></a>
@@ -448,10 +356,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/de1/PriceUpdate_8java_source.html#l00153">153</a> of file <a class="el" href="../../d4/de1/PriceUpdate_8java_source.html">PriceUpdate.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  153</span>                               {</div>
-<div class="line"><span class="lineno">  154</span>        <span class="keywordflow">return</span> timestamp;</div>
-<div class="line"><span class="lineno">  155</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a3df167c59330d3008ed21cefa105ea5b" name="a3df167c59330d3008ed21cefa105ea5b"></a>
@@ -470,10 +375,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/de1/PriceUpdate_8java_source.html#l00198">198</a> of file <a class="el" href="../../d4/de1/PriceUpdate_8java_source.html">PriceUpdate.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  198</span>                               {</div>
-<div class="line"><span class="lineno">  199</span>        <span class="keywordflow">return</span> type;</div>
-<div class="line"><span class="lineno">  200</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a1586f2c168e5021bde987538d1efb18a" name="a1586f2c168e5021bde987538d1efb18a"></a>
@@ -493,11 +395,7 @@ Public Member Functions</h2></td></tr>
 <p >Checks whether supply/demand is non-trivial. </p><dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/de1/PriceUpdate_8java_source.html#l00161">161</a> of file <a class="el" href="../../d4/de1/PriceUpdate_8java_source.html">PriceUpdate.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  161</span>                                   {</div>
-<div class="line"><span class="lineno">  162</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../d0/d37/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1PriceUpdate.html#a1586f2c168e5021bde987538d1efb18a">isSignificant</a>(0f, 0f);</div>
-<div class="line"><span class="lineno">  163</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1PriceUpdate_html_a1586f2c168e5021bde987538d1efb18a"><div class="ttname"><a href="../../d0/d37/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1PriceUpdate.html#a1586f2c168e5021bde987538d1efb18a">com.fs.starfarer.api.impl.campaign.events.PriceUpdate.isSignificant</a></div><div class="ttdeci">boolean isSignificant()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/de1/PriceUpdate_8java_source.html#l00161">PriceUpdate.java:161</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a7c2098ee2208a20736aa13eeb6225d6b" name="a7c2098ee2208a20736aa13eeb6225d6b"></a>
@@ -534,20 +432,7 @@ Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/de1/PriceUpdate_8java_source.html#l00170">170</a> of file <a class="el" href="../../d4/de1/PriceUpdate_8java_source.html">PriceUpdate.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  170</span>                                                                      {</div>
-<div class="line"><span class="lineno">  171</span>        <a class="code hl_function" href="../../d0/d37/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1PriceUpdate.html#a39fa24f653a040a4e4e1a68252a16d68">updateType</a>(priceFlat, pricePercent);</div>
-<div class="line"><span class="lineno">  172</span>        CommodityOnMarketAPI commodity = <a class="code hl_function" href="../../d0/d37/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1PriceUpdate.html#a4c694ba50b55a4d15e8eeae2f695908d">getCommodity</a>();</div>
-<div class="line"><span class="lineno">  173</span>        <span class="keywordflow">if</span> ((<a class="code hl_function" href="../../d0/d37/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1PriceUpdate.html#a3df167c59330d3008ed21cefa105ea5b">getType</a>() == PriceType.CHEAP)</div>
-<div class="line"><span class="lineno">  174</span>                &amp;&amp; commodity.getStockpile() &lt; 100) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  175</span>        </div>
-<div class="line"><span class="lineno">  176</span>        <span class="keywordflow">if</span> ((<a class="code hl_function" href="../../d0/d37/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1PriceUpdate.html#a3df167c59330d3008ed21cefa105ea5b">getType</a>() == PriceType.NORMAL)</div>
-<div class="line"><span class="lineno">  177</span>                &amp;&amp; commodity.getStockpile() + commodity.getDemand().getDemandValue() &lt; 100) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  178</span>        </div>
-<div class="line"><span class="lineno">  179</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d0/d37/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1PriceUpdate.html#a3df167c59330d3008ed21cefa105ea5b">getType</a>() == PriceType.EXPENSIVE &amp;&amp; commodity.getDemand().getDemandValue() &lt; 100) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  180</span>        </div>
-<div class="line"><span class="lineno">  181</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  182</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="acad36e741baf83b1c4b3818d2ae12c72" name="acad36e741baf83b1c4b3818d2ae12c72"></a>
@@ -567,20 +452,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/de1/PriceUpdate_8java_source.html#l00038">38</a> of file <a class="el" href="../../d4/de1/PriceUpdate_8java_source.html">PriceUpdate.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   38</span>                                                  {</div>
-<div class="line"><span class="lineno">   39</span>        CommodityOnMarketAPI com = <a class="code hl_function" href="../../d0/d37/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1PriceUpdate.html#a4c694ba50b55a4d15e8eeae2f695908d">getCommodity</a>();</div>
-<div class="line"><span class="lineno">   40</span>        <span class="keywordtype">float</span> stockpile = com.getStockpile();</div>
-<div class="line"><span class="lineno">   41</span>        <span class="keywordtype">float</span> after = stockpile * stockpileMult;</div>
-<div class="line"><span class="lineno">   42</span>        </div>
-<div class="line"><span class="lineno">   43</span>        <span class="keywordtype">float</span> diff = (after - stockpile) * com.getUtilityOnMarket();</div>
-<div class="line"><span class="lineno">   44</span>        </div>
-<div class="line"><span class="lineno">   45</span>        supplyPrice = Math.round(com.getMarket().getSupplyPriceAssumingExistingTransaction(</div>
-<div class="line"><span class="lineno">   46</span>                com.getId(), 1, diff, <span class="keyword">true</span>));</div>
-<div class="line"><span class="lineno">   47</span>        demandPrice = Math.round(com.getMarket().getDemandPriceAssumingExistingTransaction(</div>
-<div class="line"><span class="lineno">   48</span>                com.getId(), 1, diff, <span class="keyword">true</span>));</div>
-<div class="line"><span class="lineno">   49</span>        </div>
-<div class="line"><span class="lineno">   50</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a39fa24f653a040a4e4e1a68252a16d68" name="a39fa24f653a040a4e4e1a68252a16d68"></a>
@@ -599,10 +471,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/de1/PriceUpdate_8java_source.html#l00119">119</a> of file <a class="el" href="../../d4/de1/PriceUpdate_8java_source.html">PriceUpdate.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  119</span>                             {</div>
-<div class="line"><span class="lineno">  120</span>        <a class="code hl_function" href="../../d0/d37/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1PriceUpdate.html#a39fa24f653a040a4e4e1a68252a16d68">updateType</a>(0f, 0f);</div>
-<div class="line"><span class="lineno">  121</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a57ed4f0060e7e55e15a596bb9c2f1db4" name="a57ed4f0060e7e55e15a596bb9c2f1db4"></a>
@@ -640,30 +509,7 @@ Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/de1/PriceUpdate_8java_source.html#l00129">129</a> of file <a class="el" href="../../d4/de1/PriceUpdate_8java_source.html">PriceUpdate.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  129</span>                                                                {</div>
-<div class="line"><span class="lineno">  130</span>        CommodityOnMarketAPI commodity = <a class="code hl_function" href="../../d0/d37/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1PriceUpdate.html#a4c694ba50b55a4d15e8eeae2f695908d">getCommodity</a>();</div>
-<div class="line"><span class="lineno">  131</span>        <span class="comment">//CommodityStatTracker stats = SharedData.getData().getActivityTracker().getCommodityTracker();</span></div>
-<div class="line"><span class="lineno">  132</span>        CommodityStatTracker stats = <span class="keyword">new</span> CommodityStatTracker();</div>
-<div class="line"><span class="lineno">  133</span>        <span class="keywordtype">float</span> testSupplyPrice = supplyPrice;</div>
-<div class="line"><span class="lineno">  134</span>        <span class="keywordtype">float</span> testDemandPrice = demandPrice;</div>
-<div class="line"><span class="lineno">  135</span>        </div>
-<div class="line"><span class="lineno">  136</span>        <span class="comment">// if params are non-0, then the curr price may already include a player-facing modifier - so, discount it</span></div>
-<div class="line"><span class="lineno">  137</span>        <span class="comment">// this won&#39;t work for multiple sources modifying the same price, though</span></div>
-<div class="line"><span class="lineno">  138</span>        <span class="comment">// never mind - only call this method when the bonus you want to ignore is not already applied.</span></div>
-<div class="line"><span class="lineno">  139</span>        <span class="keywordflow">if</span> (priceFlat != 0 || pricePercent != 0) {</div>
-<div class="line"><span class="lineno">  140</span>            testSupplyPrice = Math.round(commodity.getMarket().getSupplyPrice(commodity.getId(), 1, <span class="keyword">true</span>) * (1f + pricePercent / 100f) + priceFlat);</div>
-<div class="line"><span class="lineno">  141</span>            testDemandPrice = Math.round(commodity.getMarket().getDemandPrice(commodity.getId(), 1, <span class="keyword">true</span>) * (1f + pricePercent / 100f) + priceFlat);</div>
-<div class="line"><span class="lineno">  142</span>        }</div>
-<div class="line"><span class="lineno">  143</span>        </div>
-<div class="line"><span class="lineno">  144</span>        <span class="keywordflow">if</span> (stats.isSupplyPriceSignificant(commodity, Misc.getRounded(testSupplyPrice))) {</div>
-<div class="line"><span class="lineno">  145</span>            type = PriceType.CHEAP;</div>
-<div class="line"><span class="lineno">  146</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (stats.isDemandPriceSignificant(commodity, Misc.getRounded(testDemandPrice))) {</div>
-<div class="line"><span class="lineno">  147</span>            type = PriceType.EXPENSIVE;</div>
-<div class="line"><span class="lineno">  148</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  149</span>            type = PriceType.NORMAL;</div>
-<div class="line"><span class="lineno">  150</span>        }</div>
-<div class="line"><span class="lineno">  151</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

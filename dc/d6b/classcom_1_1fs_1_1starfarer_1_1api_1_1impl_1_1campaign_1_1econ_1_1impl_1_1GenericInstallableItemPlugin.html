@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -241,11 +242,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/df6/GenericInstallableItemPlugin_8java_source.html#l00019">19</a> of file <a class="el" href="../../da/df6/GenericInstallableItemPlugin_8java_source.html">GenericInstallableItemPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   19</span>                                                           {</div>
-<div class="line"><span class="lineno">   20</span>        this.industry = <a class="code hl_variable" href="../../dc/d6b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1GenericInstallableItemPlugin.html#a9a86aaa42bcf4f1cfb2b55b28d1bdfcf">industry</a>;</div>
-<div class="line"><span class="lineno">   21</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1GenericInstallableItemPlugin_html_a9a86aaa42bcf4f1cfb2b55b28d1bdfcf"><div class="ttname"><a href="../../dc/d6b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1GenericInstallableItemPlugin.html#a9a86aaa42bcf4f1cfb2b55b28d1bdfcf">com.fs.starfarer.api.impl.campaign.econ.impl.GenericInstallableItemPlugin.industry</a></div><div class="ttdeci">Industry industry</div><div class="ttdef"><b>Definition:</b> <a href="../../da/df6/GenericInstallableItemPlugin_8java_source.html#l00017">GenericInstallableItemPlugin.java:17</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -284,19 +281,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d0/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseInstallableIndustryItemPlugin.html#a551d1bd35054f4335e2b9810be3d072a">com.fs.starfarer.api.impl.campaign.econ.impl.BaseInstallableIndustryItemPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/df6/GenericInstallableItemPlugin_8java_source.html#l00097">97</a> of file <a class="el" href="../../da/df6/GenericInstallableItemPlugin_8java_source.html">GenericInstallableItemPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   98</span>                                                                        {</div>
-<div class="line"><span class="lineno">   99</span>        InstallableItemEffect effect = ItemEffectsRepo.ITEM_EFFECTS.get(data.getId());</div>
-<div class="line"><span class="lineno">  100</span>        <span class="keywordflow">if</span> (effect != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  101</span>            List&lt;String&gt; unmet = effect.getUnmetRequirements(<a class="code hl_variable" href="../../dc/d6b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1GenericInstallableItemPlugin.html#a9a86aaa42bcf4f1cfb2b55b28d1bdfcf">industry</a>);</div>
-<div class="line"><span class="lineno">  102</span>            <span class="keywordtype">boolean</span> canInstall = unmet == <span class="keyword">null</span> || unmet.isEmpty();</div>
-<div class="line"><span class="lineno">  103</span>            <span class="keywordflow">if</span> (!canInstall) {</div>
-<div class="line"><span class="lineno">  104</span>                GenericSpecialItemPlugin.addReqsSection(<a class="code hl_variable" href="../../dc/d6b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1GenericInstallableItemPlugin.html#a9a86aaa42bcf4f1cfb2b55b28d1bdfcf">industry</a>, effect, text, <span class="keyword">true</span>, 0f);</div>
-<div class="line"><span class="lineno">  105</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  106</span>                effect.addItemDescription(<a class="code hl_variable" href="../../dc/d6b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1GenericInstallableItemPlugin.html#a9a86aaa42bcf4f1cfb2b55b28d1bdfcf">industry</a>, text, data, mode);</div>
-<div class="line"><span class="lineno">  107</span>            }</div>
-<div class="line"><span class="lineno">  108</span>        }</div>
-<div class="line"><span class="lineno">  109</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5901c46f365c921d54472f83892355da" name="a5901c46f365c921d54472f83892355da"></a>
@@ -318,16 +303,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d0/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseInstallableIndustryItemPlugin.html#a09c39938fd27904cada6aded4f11f546">com.fs.starfarer.api.impl.campaign.econ.impl.BaseInstallableIndustryItemPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/df6/GenericInstallableItemPlugin_8java_source.html#l00085">85</a> of file <a class="el" href="../../da/df6/GenericInstallableItemPlugin_8java_source.html">GenericInstallableItemPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   85</span>                                                        {</div>
-<div class="line"><span class="lineno">   86</span>        InstallableItemEffect effect = ItemEffectsRepo.ITEM_EFFECTS.get(data.getId());</div>
-<div class="line"><span class="lineno">   87</span>        <span class="keywordflow">if</span> (effect != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   88</span>            <span class="comment">//return effect.canBeInstalledIn(industry);</span></div>
-<div class="line"><span class="lineno">   89</span>            List&lt;String&gt; unmet = effect.getUnmetRequirements(<a class="code hl_variable" href="../../dc/d6b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1GenericInstallableItemPlugin.html#a9a86aaa42bcf4f1cfb2b55b28d1bdfcf">industry</a>);</div>
-<div class="line"><span class="lineno">   90</span>            <span class="keywordflow">return</span> unmet == <span class="keyword">null</span> || unmet.isEmpty();</div>
-<div class="line"><span class="lineno">   91</span>        }</div>
-<div class="line"><span class="lineno">   92</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   93</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a70609d546ba31a3183cd8f854dd29442" name="a70609d546ba31a3183cd8f854dd29442"></a>
@@ -359,31 +335,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d0/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseInstallableIndustryItemPlugin.html#a83bc9e1917f2486390587ce108e6a653">com.fs.starfarer.api.impl.campaign.econ.impl.BaseInstallableIndustryItemPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/df6/GenericInstallableItemPlugin_8java_source.html#l00127">127</a> of file <a class="el" href="../../da/df6/GenericInstallableItemPlugin_8java_source.html">GenericInstallableItemPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  127</span>                                                                                 {</div>
-<div class="line"><span class="lineno">  128</span>        <span class="keywordtype">float</span> pad = 3f;</div>
-<div class="line"><span class="lineno">  129</span>        <span class="keywordtype">float</span> opad = 10f;</div>
-<div class="line"><span class="lineno">  130</span>        </div>
-<div class="line"><span class="lineno">  131</span><span class="comment">//      tooltip.addPara(&quot;A likely Domain-era item improving the colony&#39;s infrastructure. &quot; +</span></div>
-<div class="line"><span class="lineno">  132</span><span class="comment">//                      &quot;Only one such item may be installed at a colony at a time.&quot;, 0f);</span></div>
-<div class="line"><span class="lineno">  133</span>        tooltip.addPara(<span class="stringliteral">&quot;Certain Domain-era artifacts might be installed here to improve the colony. &quot;</span> +</div>
-<div class="line"><span class="lineno">  134</span>                        <span class="stringliteral">&quot;Only one such artifact may be installed at an industry at a time.&quot;</span>, 0f);</div>
-<div class="line"><span class="lineno">  135</span> </div>
-<div class="line"><span class="lineno">  136</span>        SpecialItemData data = <a class="code hl_variable" href="../../dc/d6b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1GenericInstallableItemPlugin.html#a9a86aaa42bcf4f1cfb2b55b28d1bdfcf">industry</a>.<a class="code hl_function" href="../../db/d10/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1Industry.html#af9147bd9a57e1d80d04f9e1d65fb8c09">getSpecialItem</a>();</div>
-<div class="line"><span class="lineno">  137</span>        <span class="keywordflow">if</span> (data == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  138</span>            tooltip.addPara(<a class="code hl_function" href="../../dc/d6b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1GenericInstallableItemPlugin.html#aa59831ebc92a87108f2a4445fc4d6889">getNoItemCurrentlyInstalledText</a>() + <span class="stringliteral">&quot;.&quot;</span>, opad);</div>
-<div class="line"><span class="lineno">  139</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  140</span>            InstallableItemEffect effect = ItemEffectsRepo.ITEM_EFFECTS.get(data.getId());</div>
-<div class="line"><span class="lineno">  141</span><span class="comment">//          effect.addItemDescription(industry, tooltip, data, InstallableItemDescriptionMode.INDUSTRY_MENU_TOOLTIP);</span></div>
-<div class="line"><span class="lineno">  142</span>            </div>
-<div class="line"><span class="lineno">  143</span>            SpecialItemSpecAPI spec = Global.getSettings().getSpecialItemSpec(data.getId());</div>
-<div class="line"><span class="lineno">  144</span>            TooltipMakerAPI text = tooltip.beginImageWithText(spec.getIconName(), 48);</div>
-<div class="line"><span class="lineno">  145</span>            effect.addItemDescription(<a class="code hl_variable" href="../../dc/d6b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1GenericInstallableItemPlugin.html#a9a86aaa42bcf4f1cfb2b55b28d1bdfcf">industry</a>, text, data, InstallableItemDescriptionMode.INDUSTRY_MENU_TOOLTIP);</div>
-<div class="line"><span class="lineno">  146</span>            tooltip.addImageWithText(opad);</div>
-<div class="line"><span class="lineno">  147</span>        }</div>
-<div class="line"><span class="lineno">  148</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1GenericInstallableItemPlugin_html_aa59831ebc92a87108f2a4445fc4d6889"><div class="ttname"><a href="../../dc/d6b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1GenericInstallableItemPlugin.html#aa59831ebc92a87108f2a4445fc4d6889">com.fs.starfarer.api.impl.campaign.econ.impl.GenericInstallableItemPlugin.getNoItemCurrentlyInstalledText</a></div><div class="ttdeci">String getNoItemCurrentlyInstalledText()</div><div class="ttdef"><b>Definition:</b> <a href="../../da/df6/GenericInstallableItemPlugin_8java_source.html#l00066">GenericInstallableItemPlugin.java:66</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1Industry_html_af9147bd9a57e1d80d04f9e1d65fb8c09"><div class="ttname"><a href="../../db/d10/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1Industry.html#af9147bd9a57e1d80d04f9e1d65fb8c09">com.fs.starfarer.api.campaign.econ.Industry.getSpecialItem</a></div><div class="ttdeci">SpecialItemData getSpecialItem()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a3afce64210c0b71697bf694607507583" name="a3afce64210c0b71697bf694607507583"></a>
@@ -404,10 +356,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d0/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseInstallableIndustryItemPlugin.html#a83548c5b653801b993f5ed6954356c37">com.fs.starfarer.api.impl.campaign.econ.impl.BaseInstallableIndustryItemPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/df6/GenericInstallableItemPlugin_8java_source.html#l00056">56</a> of file <a class="el" href="../../da/df6/GenericInstallableItemPlugin_8java_source.html">GenericInstallableItemPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   56</span>                                                           {</div>
-<div class="line"><span class="lineno">   57</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../dc/d6b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1GenericInstallableItemPlugin.html#a9a86aaa42bcf4f1cfb2b55b28d1bdfcf">industry</a>.<a class="code hl_function" href="../../db/d10/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1Industry.html#af9147bd9a57e1d80d04f9e1d65fb8c09">getSpecialItem</a>();</div>
-<div class="line"><span class="lineno">   58</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="adbbf0bc2e1a1ec3f1d70be62af8d8630" name="adbbf0bc2e1a1ec3f1d70be62af8d8630"></a>
@@ -428,14 +377,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d0/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseInstallableIndustryItemPlugin.html#a6ba7acb9c2e539333df6747c7ae1ed9e">com.fs.starfarer.api.impl.campaign.econ.impl.BaseInstallableIndustryItemPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/df6/GenericInstallableItemPlugin_8java_source.html#l00024">24</a> of file <a class="el" href="../../da/df6/GenericInstallableItemPlugin_8java_source.html">GenericInstallableItemPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   24</span>                                     {</div>
-<div class="line"><span class="lineno">   25</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../dc/d6b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1GenericInstallableItemPlugin.html#a3afce64210c0b71697bf694607507583">getCurrentlyInstalledItemData</a>() == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   26</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;Install item...&quot;</span>;</div>
-<div class="line"><span class="lineno">   27</span>        }</div>
-<div class="line"><span class="lineno">   28</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Manage item...&quot;</span>;</div>
-<div class="line"><span class="lineno">   29</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1GenericInstallableItemPlugin_html_a3afce64210c0b71697bf694607507583"><div class="ttname"><a href="../../dc/d6b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1GenericInstallableItemPlugin.html#a3afce64210c0b71697bf694607507583">com.fs.starfarer.api.impl.campaign.econ.impl.GenericInstallableItemPlugin.getCurrentlyInstalledItemData</a></div><div class="ttdeci">SpecialItemData getCurrentlyInstalledItemData()</div><div class="ttdef"><b>Definition:</b> <a href="../../da/df6/GenericInstallableItemPlugin_8java_source.html#l00056">GenericInstallableItemPlugin.java:56</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a192b61871a95ca157ab2aea1463e7c0b" name="a192b61871a95ca157ab2aea1463e7c0b"></a>
@@ -456,10 +398,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d0/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseInstallableIndustryItemPlugin.html#a349628b0cf8ecaf9e0b2fa96f368b896">com.fs.starfarer.api.impl.campaign.econ.impl.BaseInstallableIndustryItemPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/df6/GenericInstallableItemPlugin_8java_source.html#l00117">117</a> of file <a class="el" href="../../da/df6/GenericInstallableItemPlugin_8java_source.html">GenericInstallableItemPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  117</span>                                           {</div>
-<div class="line"><span class="lineno">  118</span>        <span class="keywordflow">return</span> super.getMenuItemTooltipWidth();</div>
-<div class="line"><span class="lineno">  119</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa59831ebc92a87108f2a4445fc4d6889" name="aa59831ebc92a87108f2a4445fc4d6889"></a>
@@ -480,10 +419,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d0/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseInstallableIndustryItemPlugin.html#a4be616a0f6b58b08a1a8b20d6de6d5dc">com.fs.starfarer.api.impl.campaign.econ.impl.BaseInstallableIndustryItemPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/df6/GenericInstallableItemPlugin_8java_source.html#l00066">66</a> of file <a class="el" href="../../da/df6/GenericInstallableItemPlugin_8java_source.html">GenericInstallableItemPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   66</span>                                                    {</div>
-<div class="line"><span class="lineno">   67</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;No item currently installed&quot;</span>;</div>
-<div class="line"><span class="lineno">   68</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aea9c3e089ea54503170faf3ef17ce1ee" name="aea9c3e089ea54503170faf3ef17ce1ee"></a>
@@ -504,10 +440,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d0/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseInstallableIndustryItemPlugin.html#adc39832cc0069520156b3d63f40cef49">com.fs.starfarer.api.impl.campaign.econ.impl.BaseInstallableIndustryItemPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/df6/GenericInstallableItemPlugin_8java_source.html#l00071">71</a> of file <a class="el" href="../../da/df6/GenericInstallableItemPlugin_8java_source.html">GenericInstallableItemPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   71</span>                                            {</div>
-<div class="line"><span class="lineno">   72</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;No suitable items available&quot;</span>;</div>
-<div class="line"><span class="lineno">   73</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a1309d9c5f9b46485120f3ec388ba98c1" name="a1309d9c5f9b46485120f3ec388ba98c1"></a>
@@ -528,10 +461,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d0/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseInstallableIndustryItemPlugin.html#a35bbb5ee358c9ca42582baecf069ace6">com.fs.starfarer.api.impl.campaign.econ.impl.BaseInstallableIndustryItemPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/df6/GenericInstallableItemPlugin_8java_source.html#l00076">76</a> of file <a class="el" href="../../da/df6/GenericInstallableItemPlugin_8java_source.html">GenericInstallableItemPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   76</span>                                                  {</div>
-<div class="line"><span class="lineno">   77</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;No suitable items available in storage&quot;</span>;</div>
-<div class="line"><span class="lineno">   78</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aeaea12f9f8d875a7f347fd96fdc2ad0d" name="aeaea12f9f8d875a7f347fd96fdc2ad0d"></a>
@@ -552,11 +482,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d0/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseInstallableIndustryItemPlugin.html#a4ebcf3a1486ba796b3ae766f9e4b6129">com.fs.starfarer.api.impl.campaign.econ.impl.BaseInstallableIndustryItemPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/df6/GenericInstallableItemPlugin_8java_source.html#l00081">81</a> of file <a class="el" href="../../da/df6/GenericInstallableItemPlugin_8java_source.html">GenericInstallableItemPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   81</span>                                                        {</div>
-<div class="line"><span class="lineno">   82</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Select item to install for &quot;</span> + <a class="code hl_variable" href="../../dc/d6b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1GenericInstallableItemPlugin.html#a9a86aaa42bcf4f1cfb2b55b28d1bdfcf">industry</a>.<a class="code hl_function" href="../../db/d10/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1Industry.html#acba868f3853fc0d10ff639e1763efeb4">getCurrentName</a>();</div>
-<div class="line"><span class="lineno">   83</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1Industry_html_acba868f3853fc0d10ff639e1763efeb4"><div class="ttname"><a href="../../db/d10/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1Industry.html#acba868f3853fc0d10ff639e1763efeb4">com.fs.starfarer.api.campaign.econ.Industry.getCurrentName</a></div><div class="ttdeci">String getCurrentName()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af9cdc0c963b1729a0ffda46941cecd3a" name="af9cdc0c963b1729a0ffda46941cecd3a"></a>
@@ -577,10 +503,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d0/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseInstallableIndustryItemPlugin.html#ab5dc011da0e3a3e671308645a31eed63">com.fs.starfarer.api.impl.campaign.econ.impl.BaseInstallableIndustryItemPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/df6/GenericInstallableItemPlugin_8java_source.html#l00032">32</a> of file <a class="el" href="../../da/df6/GenericInstallableItemPlugin_8java_source.html">GenericInstallableItemPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   32</span>                                           {</div>
-<div class="line"><span class="lineno">   33</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Uninstall item&quot;</span>;</div>
-<div class="line"><span class="lineno">   34</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2920709e51a1d898fc0012828d75f327" name="a2920709e51a1d898fc0012828d75f327"></a>
@@ -601,10 +524,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d0/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseInstallableIndustryItemPlugin.html#a7cd44f8d1720055cdae42d6e86a9b33a">com.fs.starfarer.api.impl.campaign.econ.impl.BaseInstallableIndustryItemPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/df6/GenericInstallableItemPlugin_8java_source.html#l00122">122</a> of file <a class="el" href="../../da/df6/GenericInstallableItemPlugin_8java_source.html">GenericInstallableItemPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  122</span>                                        {</div>
-<div class="line"><span class="lineno">  123</span>        <span class="keywordflow">return</span> super.hasMenuItemTooltip();</div>
-<div class="line"><span class="lineno">  124</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a3d1d726e8dc0bba6342a9b5b5e266919" name="a3d1d726e8dc0bba6342a9b5b5e266919"></a>
@@ -626,24 +546,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d0/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseInstallableIndustryItemPlugin.html#afaae4bea757432b18020cf133f3fd006">com.fs.starfarer.api.impl.campaign.econ.impl.BaseInstallableIndustryItemPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/df6/GenericInstallableItemPlugin_8java_source.html#l00038">38</a> of file <a class="el" href="../../da/df6/GenericInstallableItemPlugin_8java_source.html">GenericInstallableItemPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   38</span>                                                          {</div>
-<div class="line"><span class="lineno">   39</span>        <span class="keywordflow">if</span> (!stack.isSpecialStack()) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   40</span>        </div>
-<div class="line"><span class="lineno">   41</span>        <span class="comment">//String industryId = ItemEffectsRepo.ITEM_TO_INDUSTRY.get(stack.getSpecialDataIfSpecial().getId());</span></div>
-<div class="line"><span class="lineno">   42</span><span class="comment">//      String industryId = stack.getPlugin().getSpec().getParams();</span></div>
-<div class="line"><span class="lineno">   43</span><span class="comment">//      if (industryId == null || industryId.isEmpty() || !industryId.equals(industry.getId())) {</span></div>
-<div class="line"><span class="lineno">   44</span><span class="comment">//          return false;</span></div>
-<div class="line"><span class="lineno">   45</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">   46</span>        </div>
-<div class="line"><span class="lineno">   47</span>        String [] industries = stack.getPlugin().getSpec().getParams().split(<span class="stringliteral">&quot;,&quot;</span>);</div>
-<div class="line"><span class="lineno">   48</span>        Set&lt;String&gt; all = <span class="keyword">new</span> HashSet&lt;String&gt;();</div>
-<div class="line"><span class="lineno">   49</span>        <span class="keywordflow">for</span> (String ind: industries) all.add(ind.trim());</div>
-<div class="line"><span class="lineno">   50</span>        <span class="keywordflow">if</span> (!all.contains(<a class="code hl_variable" href="../../dc/d6b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1GenericInstallableItemPlugin.html#a9a86aaa42bcf4f1cfb2b55b28d1bdfcf">industry</a>.<a class="code hl_function" href="../../db/d10/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1Industry.html#a677cb2dcd0497d25aaac5ff9689c38f1">getId</a>())) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   51</span>        </div>
-<div class="line"><span class="lineno">   52</span>        <span class="keywordflow">return</span> ItemEffectsRepo.ITEM_EFFECTS.containsKey(stack.getSpecialDataIfSpecial().getId());</div>
-<div class="line"><span class="lineno">   53</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1Industry_html_a677cb2dcd0497d25aaac5ff9689c38f1"><div class="ttname"><a href="../../db/d10/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1Industry.html#a677cb2dcd0497d25aaac5ff9689c38f1">com.fs.starfarer.api.campaign.econ.Industry.getId</a></div><div class="ttdeci">String getId()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aad811451ee51d7ad8fd4a26333633242" name="aad811451ee51d7ad8fd4a26333633242"></a>
@@ -664,10 +567,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d0/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseInstallableIndustryItemPlugin.html#aa29484651bb38cfc37c53bd14f4d6506">com.fs.starfarer.api.impl.campaign.econ.impl.BaseInstallableIndustryItemPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/df6/GenericInstallableItemPlugin_8java_source.html#l00112">112</a> of file <a class="el" href="../../da/df6/GenericInstallableItemPlugin_8java_source.html">GenericInstallableItemPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  112</span>                                                 {</div>
-<div class="line"><span class="lineno">  113</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  114</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa5ba73613af844a7b32fa1241b8898a4" name="aa5ba73613af844a7b32fa1241b8898a4"></a>
@@ -689,11 +589,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d0/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseInstallableIndustryItemPlugin.html#a0fada6b0282161554c819c719ed67d65">com.fs.starfarer.api.impl.campaign.econ.impl.BaseInstallableIndustryItemPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/df6/GenericInstallableItemPlugin_8java_source.html#l00061">61</a> of file <a class="el" href="../../da/df6/GenericInstallableItemPlugin_8java_source.html">GenericInstallableItemPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   61</span>                                                                    {</div>
-<div class="line"><span class="lineno">   62</span>        <a class="code hl_variable" href="../../dc/d6b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1GenericInstallableItemPlugin.html#a9a86aaa42bcf4f1cfb2b55b28d1bdfcf">industry</a>.<a class="code hl_function" href="../../db/d10/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1Industry.html#accd5c9c0c7845c0e611bce5c90fdb20e">setSpecialItem</a>(data);</div>
-<div class="line"><span class="lineno">   63</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1Industry_html_accd5c9c0c7845c0e611bce5c90fdb20e"><div class="ttname"><a href="../../db/d10/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1Industry.html#accd5c9c0c7845c0e611bce5c90fdb20e">com.fs.starfarer.api.campaign.econ.Industry.setSpecialItem</a></div><div class="ttdeci">void setSpecialItem(SpecialItemData special)</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

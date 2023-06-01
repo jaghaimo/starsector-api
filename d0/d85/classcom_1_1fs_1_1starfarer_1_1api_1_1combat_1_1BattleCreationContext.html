@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -204,27 +205,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d21/BattleCreationContext_8java_source.html#l00040">40</a> of file <a class="el" href="../../d5/d21/BattleCreationContext_8java_source.html">BattleCreationContext.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   42</span>                                 {</div>
-<div class="line"><span class="lineno">   43</span>        this.playerFleet = playerFleet;</div>
-<div class="line"><span class="lineno">   44</span>        this.playerGoal = playerGoal;</div>
-<div class="line"><span class="lineno">   45</span>        this.otherFleet = otherFleet;</div>
-<div class="line"><span class="lineno">   46</span>        this.otherGoal = otherGoal;</div>
-<div class="line"><span class="lineno">   47</span>        </div>
-<div class="line"><span class="lineno">   48</span>        <span class="keywordflow">if</span> (otherFleet != <span class="keyword">null</span> &amp;&amp; otherFleet.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#afb72bc74f75ccbbf240564b26b94e17b">getFaction</a>() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   49</span>            <span class="keywordtype">boolean</span> ftl = otherFleet.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#afb72bc74f75ccbbf240564b26b94e17b">getFaction</a>().<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a6c7212fb43925a3c2663863f8cead8b8">getCustomBoolean</a>(Factions.CUSTOM_FIGHT_TO_THE_LAST);</div>
-<div class="line"><span class="lineno">   50</span>            <span class="keywordflow">if</span> (otherFleet.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#adcd558c1d95f9755066ddaf9a77311c1">getMemoryWithoutUpdate</a>().<a class="code hl_function" href="../../d0/de7/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html#a60c59adbba73fd159e49e3563116e6f1">contains</a>(MemFlags.FLEET_FIGHT_TO_THE_LAST)) {</div>
-<div class="line"><span class="lineno">   51</span>                ftl = otherFleet.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#adcd558c1d95f9755066ddaf9a77311c1">getMemoryWithoutUpdate</a>().<a class="code hl_function" href="../../d0/de7/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html#adb833cc81359cc239a89eae309480fc9">getBoolean</a>(MemFlags.FLEET_FIGHT_TO_THE_LAST);</div>
-<div class="line"><span class="lineno">   52</span>            }</div>
-<div class="line"><span class="lineno">   53</span>            <a class="code hl_variable" href="../../d0/d85/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BattleCreationContext.html#a88e26ef21206ee1d24957403fb876a52">fightToTheLast</a> = ftl;</div>
-<div class="line"><span class="lineno">   54</span>        }</div>
-<div class="line"><span class="lineno">   55</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BattleCreationContext_html_a88e26ef21206ee1d24957403fb876a52"><div class="ttname"><a href="../../d0/d85/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BattleCreationContext.html#a88e26ef21206ee1d24957403fb876a52">com.fs.starfarer.api.combat.BattleCreationContext.fightToTheLast</a></div><div class="ttdeci">boolean fightToTheLast</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d21/BattleCreationContext_8java_source.html#l00038">BattleCreationContext.java:38</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI_html_a6c7212fb43925a3c2663863f8cead8b8"><div class="ttname"><a href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a6c7212fb43925a3c2663863f8cead8b8">com.fs.starfarer.api.campaign.FactionAPI.getCustomBoolean</a></div><div class="ttdeci">boolean getCustomBoolean(String key)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_adcd558c1d95f9755066ddaf9a77311c1"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#adcd558c1d95f9755066ddaf9a77311c1">com.fs.starfarer.api.campaign.SectorEntityToken.getMemoryWithoutUpdate</a></div><div class="ttdeci">MemoryAPI getMemoryWithoutUpdate()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_afb72bc74f75ccbbf240564b26b94e17b"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#afb72bc74f75ccbbf240564b26b94e17b">com.fs.starfarer.api.campaign.SectorEntityToken.getFaction</a></div><div class="ttdeci">FactionAPI getFaction()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI_html_a60c59adbba73fd159e49e3563116e6f1"><div class="ttname"><a href="../../d0/de7/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html#a60c59adbba73fd159e49e3563116e6f1">com.fs.starfarer.api.campaign.rules.MemoryAPI.contains</a></div><div class="ttdeci">boolean contains(String key)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI_html_adb833cc81359cc239a89eae309480fc9"><div class="ttname"><a href="../../d0/de7/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html#adb833cc81359cc239a89eae309480fc9">com.fs.starfarer.api.campaign.rules.MemoryAPI.getBoolean</a></div><div class="ttdeci">boolean getBoolean(String key)</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -244,10 +225,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d21/BattleCreationContext_8java_source.html#l00105">105</a> of file <a class="el" href="../../d5/d21/BattleCreationContext_8java_source.html">BattleCreationContext.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  105</span>                                                   {</div>
-<div class="line"><span class="lineno">  106</span>        <span class="keywordflow">return</span> escapeDeploymentBurnDuration;</div>
-<div class="line"><span class="lineno">  107</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="acd76b3fb0c96dc134504ef55fff5cc65" name="acd76b3fb0c96dc134504ef55fff5cc65"></a>
@@ -266,10 +244,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d21/BattleCreationContext_8java_source.html#l00129">129</a> of file <a class="el" href="../../d5/d21/BattleCreationContext_8java_source.html">BattleCreationContext.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  129</span>                                              {</div>
-<div class="line"><span class="lineno">  130</span>        <span class="keywordflow">return</span> flankDeploymentDistance;</div>
-<div class="line"><span class="lineno">  131</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a29048646438e742cedb7e2abf6ac1f27" name="a29048646438e742cedb7e2abf6ac1f27"></a>
@@ -288,10 +263,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d21/BattleCreationContext_8java_source.html#l00089">89</a> of file <a class="el" href="../../d5/d21/BattleCreationContext_8java_source.html">BattleCreationContext.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   89</span>                                                    {</div>
-<div class="line"><span class="lineno">   90</span>        <span class="keywordflow">return</span> initialDeploymentBurnDuration;</div>
-<div class="line"><span class="lineno">   91</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a0271fb4db41005d8bcc7cf0a4b9eab10" name="a0271fb4db41005d8bcc7cf0a4b9eab10"></a>
@@ -310,10 +282,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d21/BattleCreationContext_8java_source.html#l00121">121</a> of file <a class="el" href="../../d5/d21/BattleCreationContext_8java_source.html">BattleCreationContext.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  121</span>                                         {</div>
-<div class="line"><span class="lineno">  122</span>        <span class="keywordflow">return</span> initialEscapeRange;</div>
-<div class="line"><span class="lineno">  123</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="adb88024093054278de6c6a8530b0d2eb" name="adb88024093054278de6c6a8530b0d2eb"></a>
@@ -332,10 +301,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d21/BattleCreationContext_8java_source.html#l00145">145</a> of file <a class="el" href="../../d5/d21/BattleCreationContext_8java_source.html">BattleCreationContext.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  145</span>                                      {</div>
-<div class="line"><span class="lineno">  146</span>        <span class="keywordflow">return</span> initialNumSteps;</div>
-<div class="line"><span class="lineno">  147</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a02edf2ac82b477cc83d006ebb7f68e4c" name="a02edf2ac82b477cc83d006ebb7f68e4c"></a>
@@ -354,10 +320,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d21/BattleCreationContext_8java_source.html#l00137">137</a> of file <a class="el" href="../../d5/d21/BattleCreationContext_8java_source.html">BattleCreationContext.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  137</span>                                      {</div>
-<div class="line"><span class="lineno">  138</span>        <span class="keywordflow">return</span> initialStepSize;</div>
-<div class="line"><span class="lineno">  139</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5e3977aa586f2d8b1771ab1df874b31d" name="a5e3977aa586f2d8b1771ab1df874b31d"></a>
@@ -376,10 +339,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d21/BattleCreationContext_8java_source.html#l00097">97</a> of file <a class="el" href="../../d5/d21/BattleCreationContext_8java_source.html">BattleCreationContext.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   97</span>                                                   {</div>
-<div class="line"><span class="lineno">   98</span>        <span class="keywordflow">return</span> normalDeploymentBurnDuration;</div>
-<div class="line"><span class="lineno">   99</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a1dc9b87c249fb72a056de05d1f03d058" name="a1dc9b87c249fb72a056de05d1f03d058"></a>
@@ -398,10 +358,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d21/BattleCreationContext_8java_source.html#l00073">73</a> of file <a class="el" href="../../d5/d21/BattleCreationContext_8java_source.html">BattleCreationContext.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   73</span>                                            {</div>
-<div class="line"><span class="lineno">   74</span>        <span class="keywordflow">return</span> otherFleet;</div>
-<div class="line"><span class="lineno">   75</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a7b73e5a6ac28267c1882bb982aa59e04" name="a7b73e5a6ac28267c1882bb982aa59e04"></a>
@@ -420,10 +377,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d21/BattleCreationContext_8java_source.html#l00077">77</a> of file <a class="el" href="../../d5/d21/BattleCreationContext_8java_source.html">BattleCreationContext.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   77</span>                                    {</div>
-<div class="line"><span class="lineno">   78</span>        <span class="keywordflow">return</span> otherGoal;</div>
-<div class="line"><span class="lineno">   79</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a7b97c00aac1282f42c1e864e1d149ea8" name="a7b97c00aac1282f42c1e864e1d149ea8"></a>
@@ -442,10 +396,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d21/BattleCreationContext_8java_source.html#l00057">57</a> of file <a class="el" href="../../d5/d21/BattleCreationContext_8java_source.html">BattleCreationContext.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   57</span>                                        {</div>
-<div class="line"><span class="lineno">   58</span>        <span class="keywordflow">return</span> playerCommandPoints;</div>
-<div class="line"><span class="lineno">   59</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab300431ae366c42bea3c0a9a3b9b972d" name="ab300431ae366c42bea3c0a9a3b9b972d"></a>
@@ -464,10 +415,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d21/BattleCreationContext_8java_source.html#l00065">65</a> of file <a class="el" href="../../d5/d21/BattleCreationContext_8java_source.html">BattleCreationContext.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   65</span>                                             {</div>
-<div class="line"><span class="lineno">   66</span>        <span class="keywordflow">return</span> playerFleet;</div>
-<div class="line"><span class="lineno">   67</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a61744dd851d64d7bdf7d9ea1f86aeed5" name="a61744dd851d64d7bdf7d9ea1f86aeed5"></a>
@@ -486,10 +434,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d21/BattleCreationContext_8java_source.html#l00069">69</a> of file <a class="el" href="../../d5/d21/BattleCreationContext_8java_source.html">BattleCreationContext.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   69</span>                                     {</div>
-<div class="line"><span class="lineno">   70</span>        <span class="keywordflow">return</span> playerGoal;</div>
-<div class="line"><span class="lineno">   71</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a7842ef30e3f8926519c7081e7c589809" name="a7842ef30e3f8926519c7081e7c589809"></a>
@@ -508,10 +453,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d21/BattleCreationContext_8java_source.html#l00081">81</a> of file <a class="el" href="../../d5/d21/BattleCreationContext_8java_source.html">BattleCreationContext.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   81</span>                                           {</div>
-<div class="line"><span class="lineno">   82</span>        <span class="keywordflow">return</span> pursuitRangeModifier;</div>
-<div class="line"><span class="lineno">   83</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a775c4b21bd29698860b10da27da07899" name="a775c4b21bd29698860b10da27da07899"></a>
@@ -530,10 +472,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d21/BattleCreationContext_8java_source.html#l00113">113</a> of file <a class="el" href="../../d5/d21/BattleCreationContext_8java_source.html">BattleCreationContext.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  113</span>                                    {</div>
-<div class="line"><span class="lineno">  114</span>        <span class="keywordflow">return</span> standoffRange;</div>
-<div class="line"><span class="lineno">  115</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8f80cafa9987f84d655d72bb4e5fc3ee" name="a8f80cafa9987f84d655d72bb4e5fc3ee"></a>
@@ -553,10 +492,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d21/BattleCreationContext_8java_source.html#l00109">109</a> of file <a class="el" href="../../d5/d21/BattleCreationContext_8java_source.html">BattleCreationContext.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  109</span>                                                                                    {</div>
-<div class="line"><span class="lineno">  110</span>        this.escapeDeploymentBurnDuration = escapeDeploymentBurnDuration;</div>
-<div class="line"><span class="lineno">  111</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af870b4f1e48ab959959d41e65a193425" name="af870b4f1e48ab959959d41e65a193425"></a>
@@ -576,10 +512,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d21/BattleCreationContext_8java_source.html#l00133">133</a> of file <a class="el" href="../../d5/d21/BattleCreationContext_8java_source.html">BattleCreationContext.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  133</span>                                                                         {</div>
-<div class="line"><span class="lineno">  134</span>        this.flankDeploymentDistance = sideDeploymentDistance;</div>
-<div class="line"><span class="lineno">  135</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a1045c9c8fb565436a02c2eb43165838f" name="a1045c9c8fb565436a02c2eb43165838f"></a>
@@ -599,10 +532,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d21/BattleCreationContext_8java_source.html#l00093">93</a> of file <a class="el" href="../../d5/d21/BattleCreationContext_8java_source.html">BattleCreationContext.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   93</span>                                                                                      {</div>
-<div class="line"><span class="lineno">   94</span>        this.initialDeploymentBurnDuration = initialDeploymentBurnDuration;</div>
-<div class="line"><span class="lineno">   95</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af4784d17961da0f7ccb7e1c4ab4269ba" name="af4784d17961da0f7ccb7e1c4ab4269ba"></a>
@@ -622,10 +552,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d21/BattleCreationContext_8java_source.html#l00125">125</a> of file <a class="el" href="../../d5/d21/BattleCreationContext_8java_source.html">BattleCreationContext.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  125</span>                                                                {</div>
-<div class="line"><span class="lineno">  126</span>        this.initialEscapeRange = initialEscapeRange;</div>
-<div class="line"><span class="lineno">  127</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5efd317841b8e04d75cfbe1007360d9f" name="a5efd317841b8e04d75cfbe1007360d9f"></a>
@@ -645,10 +572,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d21/BattleCreationContext_8java_source.html#l00149">149</a> of file <a class="el" href="../../d5/d21/BattleCreationContext_8java_source.html">BattleCreationContext.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  149</span>                                                          {</div>
-<div class="line"><span class="lineno">  150</span>        this.initialNumSteps = initialNumSteps;</div>
-<div class="line"><span class="lineno">  151</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a0c4a49cc7766f4b3d21baf414b8361a6" name="a0c4a49cc7766f4b3d21baf414b8361a6"></a>
@@ -668,10 +592,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d21/BattleCreationContext_8java_source.html#l00141">141</a> of file <a class="el" href="../../d5/d21/BattleCreationContext_8java_source.html">BattleCreationContext.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  141</span>                                                          {</div>
-<div class="line"><span class="lineno">  142</span>        this.initialStepSize = initialStepSize;</div>
-<div class="line"><span class="lineno">  143</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a1a11be04f84d6c2cd767227f778b4025" name="a1a11be04f84d6c2cd767227f778b4025"></a>
@@ -691,10 +612,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d21/BattleCreationContext_8java_source.html#l00101">101</a> of file <a class="el" href="../../d5/d21/BattleCreationContext_8java_source.html">BattleCreationContext.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  101</span>                                                                                    {</div>
-<div class="line"><span class="lineno">  102</span>        this.normalDeploymentBurnDuration = normalDeploymentBurnDuration;</div>
-<div class="line"><span class="lineno">  103</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa625cd25ac99a4a94fc9e3c83970ddc5" name="aa625cd25ac99a4a94fc9e3c83970ddc5"></a>
@@ -714,10 +632,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d21/BattleCreationContext_8java_source.html#l00061">61</a> of file <a class="el" href="../../d5/d21/BattleCreationContext_8java_source.html">BattleCreationContext.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   61</span>                                                                {</div>
-<div class="line"><span class="lineno">   62</span>        this.playerCommandPoints = playerCommandPoints;</div>
-<div class="line"><span class="lineno">   63</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="acada14dd25b7f1d2770d62ef0f97e47a" name="acada14dd25b7f1d2770d62ef0f97e47a"></a>
@@ -737,10 +652,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d21/BattleCreationContext_8java_source.html#l00085">85</a> of file <a class="el" href="../../d5/d21/BattleCreationContext_8java_source.html">BattleCreationContext.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   85</span>                                                                    {</div>
-<div class="line"><span class="lineno">   86</span>        this.pursuitRangeModifier = pursuitRangeModifier;</div>
-<div class="line"><span class="lineno">   87</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9d39837aca3e0db7b38eb4c715be9799" name="a9d39837aca3e0db7b38eb4c715be9799"></a>
@@ -760,10 +672,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d21/BattleCreationContext_8java_source.html#l00117">117</a> of file <a class="el" href="../../d5/d21/BattleCreationContext_8java_source.html">BattleCreationContext.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  117</span>                                                      {</div>
-<div class="line"><span class="lineno">  118</span>        this.standoffRange = standoffRange;</div>
-<div class="line"><span class="lineno">  119</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

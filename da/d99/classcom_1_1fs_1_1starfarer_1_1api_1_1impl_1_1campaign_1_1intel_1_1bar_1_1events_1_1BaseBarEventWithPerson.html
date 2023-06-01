@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -243,11 +244,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d2f/BaseBarEventWithPerson_8java_source.html#l00019">19</a> of file <a class="el" href="../../d2/d2f/BaseBarEventWithPerson_8java_source.html">BaseBarEventWithPerson.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   19</span>                                    {</div>
-<div class="line"><span class="lineno">   20</span>        <a class="code hl_variable" href="../../da/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventWithPerson.html#a9b098654629867229fa56051e551189c">seed</a> = Misc.random.nextLong();</div>
-<div class="line"><span class="lineno">   21</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventWithPerson_html_a9b098654629867229fa56051e551189c"><div class="ttname"><a href="../../da/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventWithPerson.html#a9b098654629867229fa56051e551189c">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseBarEventWithPerson.seed</a></div><div class="ttdeci">long seed</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d2f/BaseBarEventWithPerson_8java_source.html#l00015">BaseBarEventWithPerson.java:15</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -277,27 +274,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../d6/dc3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1LuddicPathBaseBarEvent.html#aa659163fdf8e2d6a3730fd25d3389694">com.fs.starfarer.api.impl.campaign.intel.bar.events.LuddicPathBaseBarEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d2f/BaseBarEventWithPerson_8java_source.html#l00031">31</a> of file <a class="el" href="../../d2/d2f/BaseBarEventWithPerson_8java_source.html">BaseBarEventWithPerson.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   31</span>                                       {</div>
-<div class="line"><span class="lineno">   32</span>        PersonAPI <a class="code hl_variable" href="../../da/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventWithPerson.html#a623901b58546328d6e952b845c433404">person</a> = Global.getSector().<a class="code hl_function" href="../../d9/df0/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#aad58bbad15a1cf74cd9203af72f9a2d6">getFaction</a>(<a class="code hl_function" href="../../da/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventWithPerson.html#a26591e037e121d6933308c69c458d5bc">getPersonFaction</a>()).<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#aaf61f79ed3cf41528798d36c81a43801">createRandomPerson</a>(<a class="code hl_function" href="../../da/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventWithPerson.html#a655841e4841699763503f20461aa0d49">getPersonGender</a>(), <a class="code hl_variable" href="../../da/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventWithPerson.html#ae11d105cb09ee05d25fe8e6fe4ef0924">random</a>);</div>
-<div class="line"><span class="lineno">   33</span>        String p = <a class="code hl_function" href="../../da/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventWithPerson.html#adc04a9d50a2d72b8087ecd549b8fc39e">getPersonPortrait</a>();</div>
-<div class="line"><span class="lineno">   34</span>        <span class="keywordflow">if</span> (p != <span class="keyword">null</span>) <a class="code hl_variable" href="../../da/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventWithPerson.html#a623901b58546328d6e952b845c433404">person</a>.<a class="code hl_function" href="../../d9/df0/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#a3b830aaa56c0583e657faa94f9c609dd">setPortraitSprite</a>(p);</div>
-<div class="line"><span class="lineno">   35</span>        <a class="code hl_variable" href="../../da/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventWithPerson.html#a623901b58546328d6e952b845c433404">person</a>.<a class="code hl_function" href="../../d9/df0/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#a9cbf6ad6b7f10d00ccaaf4965ce08424">setRankId</a>(<a class="code hl_function" href="../../da/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventWithPerson.html#ad237618317cb9af6647993018f944c79">getPersonRank</a>());</div>
-<div class="line"><span class="lineno">   36</span>        <a class="code hl_variable" href="../../da/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventWithPerson.html#a623901b58546328d6e952b845c433404">person</a>.<a class="code hl_function" href="../../d9/df0/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#ae0276d02f3cc74ba8bbe9d20cebfc3c7">setPostId</a>(<a class="code hl_function" href="../../da/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventWithPerson.html#ab2e348e0eb6af8b2250bf0f56c0aee10">getPersonPost</a>());</div>
-<div class="line"><span class="lineno">   37</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../da/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventWithPerson.html#a623901b58546328d6e952b845c433404">person</a>;</div>
-<div class="line"><span class="lineno">   38</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventWithPerson_html_a26591e037e121d6933308c69c458d5bc"><div class="ttname"><a href="../../da/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventWithPerson.html#a26591e037e121d6933308c69c458d5bc">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseBarEventWithPerson.getPersonFaction</a></div><div class="ttdeci">String getPersonFaction()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d2f/BaseBarEventWithPerson_8java_source.html#l00044">BaseBarEventWithPerson.java:44</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventWithPerson_html_a623901b58546328d6e952b845c433404"><div class="ttname"><a href="../../da/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventWithPerson.html#a623901b58546328d6e952b845c433404">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseBarEventWithPerson.person</a></div><div class="ttdeci">PersonAPI person</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d2f/BaseBarEventWithPerson_8java_source.html#l00014">BaseBarEventWithPerson.java:14</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventWithPerson_html_a655841e4841699763503f20461aa0d49"><div class="ttname"><a href="../../da/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventWithPerson.html#a655841e4841699763503f20461aa0d49">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseBarEventWithPerson.getPersonGender</a></div><div class="ttdeci">Gender getPersonGender()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d2f/BaseBarEventWithPerson_8java_source.html#l00050">BaseBarEventWithPerson.java:50</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventWithPerson_html_ab2e348e0eb6af8b2250bf0f56c0aee10"><div class="ttname"><a href="../../da/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventWithPerson.html#ab2e348e0eb6af8b2250bf0f56c0aee10">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseBarEventWithPerson.getPersonPost</a></div><div class="ttdeci">String getPersonPost()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d2f/BaseBarEventWithPerson_8java_source.html#l00053">BaseBarEventWithPerson.java:53</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventWithPerson_html_ad237618317cb9af6647993018f944c79"><div class="ttname"><a href="../../da/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventWithPerson.html#ad237618317cb9af6647993018f944c79">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseBarEventWithPerson.getPersonRank</a></div><div class="ttdeci">String getPersonRank()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d2f/BaseBarEventWithPerson_8java_source.html#l00047">BaseBarEventWithPerson.java:47</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventWithPerson_html_adc04a9d50a2d72b8087ecd549b8fc39e"><div class="ttname"><a href="../../da/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventWithPerson.html#adc04a9d50a2d72b8087ecd549b8fc39e">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseBarEventWithPerson.getPersonPortrait</a></div><div class="ttdeci">String getPersonPortrait()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d2f/BaseBarEventWithPerson_8java_source.html#l00040">BaseBarEventWithPerson.java:40</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventWithPerson_html_ae11d105cb09ee05d25fe8e6fe4ef0924"><div class="ttname"><a href="../../da/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventWithPerson.html#ae11d105cb09ee05d25fe8e6fe4ef0924">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseBarEventWithPerson.random</a></div><div class="ttdeci">transient Random random</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d2f/BaseBarEventWithPerson_8java_source.html#l00017">BaseBarEventWithPerson.java:17</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI_html_aaf61f79ed3cf41528798d36c81a43801"><div class="ttname"><a href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#aaf61f79ed3cf41528798d36c81a43801">com.fs.starfarer.api.campaign.FactionAPI.createRandomPerson</a></div><div class="ttdeci">PersonAPI createRandomPerson()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI_html_a3b830aaa56c0583e657faa94f9c609dd"><div class="ttname"><a href="../../d9/df0/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#a3b830aaa56c0583e657faa94f9c609dd">com.fs.starfarer.api.characters.PersonAPI.setPortraitSprite</a></div><div class="ttdeci">void setPortraitSprite(String portraitSprite)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI_html_a9cbf6ad6b7f10d00ccaaf4965ce08424"><div class="ttname"><a href="../../d9/df0/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#a9cbf6ad6b7f10d00ccaaf4965ce08424">com.fs.starfarer.api.characters.PersonAPI.setRankId</a></div><div class="ttdeci">void setRankId(String rank)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI_html_aad58bbad15a1cf74cd9203af72f9a2d6"><div class="ttname"><a href="../../d9/df0/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#aad58bbad15a1cf74cd9203af72f9a2d6">com.fs.starfarer.api.characters.PersonAPI.getFaction</a></div><div class="ttdeci">FactionAPI getFaction()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI_html_ae0276d02f3cc74ba8bbe9d20cebfc3c7"><div class="ttname"><a href="../../d9/df0/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#ae0276d02f3cc74ba8bbe9d20cebfc3c7">com.fs.starfarer.api.characters.PersonAPI.setPostId</a></div><div class="ttdeci">void setPostId(String postId)</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ad8274ce72f86fd76048793a8d4f38d98" name="ad8274ce72f86fd76048793a8d4f38d98"></a>
@@ -324,15 +301,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d2f/BaseBarEventWithPerson_8java_source.html#l00063">63</a> of file <a class="el" href="../../d2/d2f/BaseBarEventWithPerson_8java_source.html">BaseBarEventWithPerson.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   63</span>                                  {</div>
-<div class="line"><span class="lineno">   64</span>        String heOrShe = <span class="stringliteral">&quot;he&quot;</span>;</div>
-<div class="line"><span class="lineno">   65</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventWithPerson.html#a623901b58546328d6e952b845c433404">person</a>.<a class="code hl_function" href="../../d9/df0/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#ae570defd266826457f552329af959bfd">getGender</a>() == Gender.FEMALE) {</div>
-<div class="line"><span class="lineno">   66</span>            heOrShe = <span class="stringliteral">&quot;she&quot;</span>;</div>
-<div class="line"><span class="lineno">   67</span>        }</div>
-<div class="line"><span class="lineno">   68</span>        <span class="keywordflow">return</span> heOrShe;</div>
-<div class="line"><span class="lineno">   69</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI_html_ae570defd266826457f552329af959bfd"><div class="ttname"><a href="../../d9/df0/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#ae570defd266826457f552329af959bfd">com.fs.starfarer.api.characters.PersonAPI.getGender</a></div><div class="ttdeci">Gender getGender()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a7063f6e7fd5d26330da742bf2e2d72ee" name="a7063f6e7fd5d26330da742bf2e2d72ee"></a>
@@ -359,14 +328,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d2f/BaseBarEventWithPerson_8java_source.html#l00071">71</a> of file <a class="el" href="../../d2/d2f/BaseBarEventWithPerson_8java_source.html">BaseBarEventWithPerson.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   71</span>                                   {</div>
-<div class="line"><span class="lineno">   72</span>        String himOrHer = <span class="stringliteral">&quot;him&quot;</span>;</div>
-<div class="line"><span class="lineno">   73</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventWithPerson.html#a623901b58546328d6e952b845c433404">person</a>.<a class="code hl_function" href="../../d9/df0/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#ae570defd266826457f552329af959bfd">getGender</a>() == Gender.FEMALE) {</div>
-<div class="line"><span class="lineno">   74</span>            himOrHer = <span class="stringliteral">&quot;her&quot;</span>;</div>
-<div class="line"><span class="lineno">   75</span>        }</div>
-<div class="line"><span class="lineno">   76</span>        <span class="keywordflow">return</span> himOrHer;</div>
-<div class="line"><span class="lineno">   77</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9fd5d9dd47d7081796126fb31bc0705f" name="a9fd5d9dd47d7081796126fb31bc0705f"></a>
@@ -393,14 +355,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d2f/BaseBarEventWithPerson_8java_source.html#l00079">79</a> of file <a class="el" href="../../d2/d2f/BaseBarEventWithPerson_8java_source.html">BaseBarEventWithPerson.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   79</span>                                       {</div>
-<div class="line"><span class="lineno">   80</span>        String himOrHer = <span class="stringliteral">&quot;himself&quot;</span>;</div>
-<div class="line"><span class="lineno">   81</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventWithPerson.html#a623901b58546328d6e952b845c433404">person</a>.<a class="code hl_function" href="../../d9/df0/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#ae570defd266826457f552329af959bfd">getGender</a>() == Gender.FEMALE) {</div>
-<div class="line"><span class="lineno">   82</span>            himOrHer = <span class="stringliteral">&quot;herself&quot;</span>;</div>
-<div class="line"><span class="lineno">   83</span>        }</div>
-<div class="line"><span class="lineno">   84</span>        <span class="keywordflow">return</span> himOrHer;</div>
-<div class="line"><span class="lineno">   85</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af17f97b4c3765e92b0081af21103b459" name="af17f97b4c3765e92b0081af21103b459"></a>
@@ -427,14 +382,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d2f/BaseBarEventWithPerson_8java_source.html#l00087">87</a> of file <a class="el" href="../../d2/d2f/BaseBarEventWithPerson_8java_source.html">BaseBarEventWithPerson.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   87</span>                                   {</div>
-<div class="line"><span class="lineno">   88</span>        String hisOrHer = <span class="stringliteral">&quot;his&quot;</span>;</div>
-<div class="line"><span class="lineno">   89</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventWithPerson.html#a623901b58546328d6e952b845c433404">person</a>.<a class="code hl_function" href="../../d9/df0/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#ae570defd266826457f552329af959bfd">getGender</a>() == Gender.FEMALE) {</div>
-<div class="line"><span class="lineno">   90</span>            hisOrHer = <span class="stringliteral">&quot;her&quot;</span>;</div>
-<div class="line"><span class="lineno">   91</span>        }</div>
-<div class="line"><span class="lineno">   92</span>        <span class="keywordflow">return</span> hisOrHer;</div>
-<div class="line"><span class="lineno">   93</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9bc5f62ebc7968a7103a4926a2822928" name="a9bc5f62ebc7968a7103a4926a2822928"></a>
@@ -461,12 +409,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d2f/BaseBarEventWithPerson_8java_source.html#l00057">57</a> of file <a class="el" href="../../d2/d2f/BaseBarEventWithPerson_8java_source.html">BaseBarEventWithPerson.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   57</span>                                     {</div>
-<div class="line"><span class="lineno">   58</span>        String manOrWoman = <span class="stringliteral">&quot;man&quot;</span>;</div>
-<div class="line"><span class="lineno">   59</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventWithPerson.html#a623901b58546328d6e952b845c433404">person</a>.<a class="code hl_function" href="../../d9/df0/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#ae570defd266826457f552329af959bfd">getGender</a>() == Gender.FEMALE) manOrWoman = <span class="stringliteral">&quot;woman&quot;</span>;</div>
-<div class="line"><span class="lineno">   60</span>        <span class="keywordflow">return</span> manOrWoman;</div>
-<div class="line"><span class="lineno">   61</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a281eb550469622b848c425a5a36940aa" name="a281eb550469622b848c425a5a36940aa"></a>
@@ -485,11 +428,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d2f/BaseBarEventWithPerson_8java_source.html#l00104">104</a> of file <a class="el" href="../../d2/d2f/BaseBarEventWithPerson_8java_source.html">BaseBarEventWithPerson.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  104</span>                                 {</div>
-<div class="line"><span class="lineno">  105</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../da/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventWithPerson.html#a0fa89e3da1a5271deef8f0a1587523b2">market</a>;</div>
-<div class="line"><span class="lineno">  106</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventWithPerson_html_a0fa89e3da1a5271deef8f0a1587523b2"><div class="ttname"><a href="../../da/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventWithPerson.html#a0fa89e3da1a5271deef8f0a1587523b2">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseBarEventWithPerson.market</a></div><div class="ttdeci">MarketAPI market</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d2f/BaseBarEventWithPerson_8java_source.html#l00016">BaseBarEventWithPerson.java:16</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5c59fa802df7174535deeb4fe4b8d78a" name="a5c59fa802df7174535deeb4fe4b8d78a"></a>
@@ -508,10 +447,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d2f/BaseBarEventWithPerson_8java_source.html#l00100">100</a> of file <a class="el" href="../../d2/d2f/BaseBarEventWithPerson_8java_source.html">BaseBarEventWithPerson.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  100</span>                                 {</div>
-<div class="line"><span class="lineno">  101</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../da/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventWithPerson.html#a623901b58546328d6e952b845c433404">person</a>;</div>
-<div class="line"><span class="lineno">  102</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a26591e037e121d6933308c69c458d5bc" name="a26591e037e121d6933308c69c458d5bc"></a>
@@ -540,10 +476,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../d6/dc3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1LuddicPathBaseBarEvent.html#a6c144589f9493c8755b1003fddb880c3">com.fs.starfarer.api.impl.campaign.intel.bar.events.LuddicPathBaseBarEvent</a>, and <a class="el" href="../../dd/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PlanetaryShieldBarEvent.html#a9bff7fbcf19cdc9ab605cc28d9d0ec98">com.fs.starfarer.api.impl.campaign.intel.bar.events.PlanetaryShieldBarEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d2f/BaseBarEventWithPerson_8java_source.html#l00044">44</a> of file <a class="el" href="../../d2/d2f/BaseBarEventWithPerson_8java_source.html">BaseBarEventWithPerson.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   44</span>                                        {</div>
-<div class="line"><span class="lineno">   45</span>        <span class="keywordflow">return</span> Factions.INDEPENDENT;</div>
-<div class="line"><span class="lineno">   46</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a655841e4841699763503f20461aa0d49" name="a655841e4841699763503f20461aa0d49"></a>
@@ -572,10 +505,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../d6/dc3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1LuddicPathBaseBarEvent.html#a2f7a6126091cac056c4a6a6991380c55">com.fs.starfarer.api.impl.campaign.intel.bar.events.LuddicPathBaseBarEvent</a>, and <a class="el" href="../../dd/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PlanetaryShieldBarEvent.html#a30d84fed122de3b5cf66591db74a7f2e">com.fs.starfarer.api.impl.campaign.intel.bar.events.PlanetaryShieldBarEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d2f/BaseBarEventWithPerson_8java_source.html#l00050">50</a> of file <a class="el" href="../../d2/d2f/BaseBarEventWithPerson_8java_source.html">BaseBarEventWithPerson.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   50</span>                                       {</div>
-<div class="line"><span class="lineno">   51</span>        <span class="keywordflow">return</span> Gender.ANY;</div>
-<div class="line"><span class="lineno">   52</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="adc04a9d50a2d72b8087ecd549b8fc39e" name="adc04a9d50a2d72b8087ecd549b8fc39e"></a>
@@ -604,10 +534,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../d6/dc3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1LuddicPathBaseBarEvent.html#a9fb41694dc00db5355992f922187865c">com.fs.starfarer.api.impl.campaign.intel.bar.events.LuddicPathBaseBarEvent</a>, and <a class="el" href="../../dd/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PlanetaryShieldBarEvent.html#a55d52e34c9ccbed908dae5fe3a3c3b40">com.fs.starfarer.api.impl.campaign.intel.bar.events.PlanetaryShieldBarEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d2f/BaseBarEventWithPerson_8java_source.html#l00040">40</a> of file <a class="el" href="../../d2/d2f/BaseBarEventWithPerson_8java_source.html">BaseBarEventWithPerson.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   40</span>                                         {</div>
-<div class="line"><span class="lineno">   41</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   42</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab2e348e0eb6af8b2250bf0f56c0aee10" name="ab2e348e0eb6af8b2250bf0f56c0aee10"></a>
@@ -636,10 +563,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../d6/dc3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1LuddicPathBaseBarEvent.html#a78b29978193492104db72303ff49f194">com.fs.starfarer.api.impl.campaign.intel.bar.events.LuddicPathBaseBarEvent</a>, and <a class="el" href="../../dd/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PlanetaryShieldBarEvent.html#a720f857f7d84f0b0142d47e5cac661de">com.fs.starfarer.api.impl.campaign.intel.bar.events.PlanetaryShieldBarEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d2f/BaseBarEventWithPerson_8java_source.html#l00053">53</a> of file <a class="el" href="../../d2/d2f/BaseBarEventWithPerson_8java_source.html">BaseBarEventWithPerson.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   53</span>                                     {</div>
-<div class="line"><span class="lineno">   54</span>        <span class="keywordflow">return</span> Ranks.CITIZEN;</div>
-<div class="line"><span class="lineno">   55</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ad237618317cb9af6647993018f944c79" name="ad237618317cb9af6647993018f944c79"></a>
@@ -668,10 +592,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../d6/dc3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1LuddicPathBaseBarEvent.html#a2fb7c0dd1320f1af695f9935f3c45361">com.fs.starfarer.api.impl.campaign.intel.bar.events.LuddicPathBaseBarEvent</a>, and <a class="el" href="../../dd/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PlanetaryShieldBarEvent.html#a06d1df01fd94e418b5c336a2dc88ef1a">com.fs.starfarer.api.impl.campaign.intel.bar.events.PlanetaryShieldBarEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d2f/BaseBarEventWithPerson_8java_source.html#l00047">47</a> of file <a class="el" href="../../d2/d2f/BaseBarEventWithPerson_8java_source.html">BaseBarEventWithPerson.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   47</span>                                     {</div>
-<div class="line"><span class="lineno">   48</span>        <span class="keywordflow">return</span> Ranks.CITIZEN;</div>
-<div class="line"><span class="lineno">   49</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a3553ba22e386e8cfb360bff01348127e" name="a3553ba22e386e8cfb360bff01348127e"></a>
@@ -690,10 +611,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d2f/BaseBarEventWithPerson_8java_source.html#l00108">108</a> of file <a class="el" href="../../d2/d2f/BaseBarEventWithPerson_8java_source.html">BaseBarEventWithPerson.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  108</span>                              {</div>
-<div class="line"><span class="lineno">  109</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../da/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventWithPerson.html#ae11d105cb09ee05d25fe8e6fe4ef0924">random</a>;</div>
-<div class="line"><span class="lineno">  110</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5d1673bacbd3a45a3168a9d04e5ab357" name="a5d1673bacbd3a45a3168a9d04e5ab357"></a>
@@ -714,11 +632,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../dc/da0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEvent.html#af2acd706296a05f8d3d7f9b061b45971">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseBarEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d2f/BaseBarEventWithPerson_8java_source.html#l00096">96</a> of file <a class="el" href="../../d2/d2f/BaseBarEventWithPerson_8java_source.html">BaseBarEventWithPerson.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   96</span>                                      {</div>
-<div class="line"><span class="lineno">   97</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../dc/da0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEvent.html#acde5966400243c25024ee911caa3de95">done</a>;</div>
-<div class="line"><span class="lineno">   98</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEvent_html_acde5966400243c25024ee911caa3de95"><div class="ttname"><a href="../../dc/da0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEvent.html#acde5966400243c25024ee911caa3de95">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseBarEvent.done</a></div><div class="ttdeci">transient boolean done</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d7d/BaseBarEvent_8java_source.html#l00041">BaseBarEvent.java:41</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ad7ac36edf2351b75d3adfebf6fc83ba6" name="ad7ac36edf2351b75d3adfebf6fc83ba6"></a>
@@ -748,16 +662,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../d6/dc3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1LuddicPathBaseBarEvent.html#a3d9371f9523549ffed824954bf63850c">com.fs.starfarer.api.impl.campaign.intel.bar.events.LuddicPathBaseBarEvent</a>, and <a class="el" href="../../dd/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PlanetaryShieldBarEvent.html#a9776a1782a2dc3aad1129a626eecbbb3">com.fs.starfarer.api.impl.campaign.intel.bar.events.PlanetaryShieldBarEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d2f/BaseBarEventWithPerson_8java_source.html#l00023">23</a> of file <a class="el" href="../../d2/d2f/BaseBarEventWithPerson_8java_source.html">BaseBarEventWithPerson.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   23</span>                                           {</div>
-<div class="line"><span class="lineno">   24</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="../../da/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventWithPerson.html#a0fa89e3da1a5271deef8f0a1587523b2">market</a> == <a class="code hl_variable" href="../../da/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventWithPerson.html#a0fa89e3da1a5271deef8f0a1587523b2">market</a>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   25</span>        this.market = <a class="code hl_variable" href="../../da/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventWithPerson.html#a0fa89e3da1a5271deef8f0a1587523b2">market</a>;</div>
-<div class="line"><span class="lineno">   26</span>        </div>
-<div class="line"><span class="lineno">   27</span>        <a class="code hl_variable" href="../../da/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventWithPerson.html#ae11d105cb09ee05d25fe8e6fe4ef0924">random</a> = <span class="keyword">new</span> Random(<a class="code hl_variable" href="../../da/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventWithPerson.html#a9b098654629867229fa56051e551189c">seed</a> + <a class="code hl_variable" href="../../da/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventWithPerson.html#a0fa89e3da1a5271deef8f0a1587523b2">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a1c2b30198b83f80a06c4943c81c203d5">getId</a>().hashCode());</div>
-<div class="line"><span class="lineno">   28</span>        <a class="code hl_variable" href="../../da/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventWithPerson.html#a623901b58546328d6e952b845c433404">person</a> = <a class="code hl_function" href="../../da/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventWithPerson.html#a2e619c851ceba7f5aefa6c2c4dff9858">createPerson</a>();</div>
-<div class="line"><span class="lineno">   29</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventWithPerson_html_a2e619c851ceba7f5aefa6c2c4dff9858"><div class="ttname"><a href="../../da/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventWithPerson.html#a2e619c851ceba7f5aefa6c2c4dff9858">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseBarEventWithPerson.createPerson</a></div><div class="ttdeci">PersonAPI createPerson()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d2f/BaseBarEventWithPerson_8java_source.html#l00031">BaseBarEventWithPerson.java:31</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a1c2b30198b83f80a06c4943c81c203d5"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a1c2b30198b83f80a06c4943c81c203d5">com.fs.starfarer.api.campaign.econ.MarketAPI.getId</a></div><div class="ttdeci">String getId()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -308,24 +309,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d17/EconomyFleetAssignmentAI_8java_source.html#l00106">106</a> of file <a class="el" href="../../d8/d17/EconomyFleetAssignmentAI_8java_source.html">EconomyFleetAssignmentAI.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  106</span>                                                                             {</div>
-<div class="line"><span class="lineno">  107</span>        super(<a class="code hl_variable" href="../../d4/d1d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseAssignmentAI.html#a96fc86996c04db66a9691482293ce2d7">fleet</a>, <a class="code hl_variable" href="../../d3/d55/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RouteFleetAssignmentAI.html#a5dcb74ef0726bd260a6a30ef97626635">route</a>);</div>
-<div class="line"><span class="lineno">  108</span>        <span class="comment">//origFaction = fleet.getFaction().getId();</span></div>
-<div class="line"><span class="lineno">  109</span>        origFaction = <a class="code hl_variable" href="../../d3/d55/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RouteFleetAssignmentAI.html#a5dcb74ef0726bd260a6a30ef97626635">route</a>.getFactionId();</div>
-<div class="line"><span class="lineno">  110</span>        <span class="keywordflow">if</span> (!<a class="code hl_function" href="../../dc/dac/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetAssignmentAI.html#af87403f76e8f1c90e34eb8ae865cd7ce">getData</a>().smuggling) {</div>
-<div class="line"><span class="lineno">  111</span>            origFaction = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  112</span>            factionChangeTracker = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  113</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  114</span>            factionChangeTracker.<a class="code hl_function" href="../../da/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html#a27094391cb3987033d1189ff0e93a6fb">forceIntervalElapsed</a>();</div>
-<div class="line"><span class="lineno">  115</span>            <a class="code hl_function" href="../../dc/dac/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetAssignmentAI.html#acc599c2aa312640263ef64789d428b67">doSmugglingFactionChangeCheck</a>(0.1f);</div>
-<div class="line"><span class="lineno">  116</span>        }</div>
-<div class="line"><span class="lineno">  117</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetAssignmentAI_html_acc599c2aa312640263ef64789d428b67"><div class="ttname"><a href="../../dc/dac/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetAssignmentAI.html#acc599c2aa312640263ef64789d428b67">com.fs.starfarer.api.impl.campaign.fleets.EconomyFleetAssignmentAI.doSmugglingFactionChangeCheck</a></div><div class="ttdeci">void doSmugglingFactionChangeCheck(float amount)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d17/EconomyFleetAssignmentAI_8java_source.html#l00353">EconomyFleetAssignmentAI.java:353</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetAssignmentAI_html_af87403f76e8f1c90e34eb8ae865cd7ce"><div class="ttname"><a href="../../dc/dac/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetAssignmentAI.html#af87403f76e8f1c90e34eb8ae865cd7ce">com.fs.starfarer.api.impl.campaign.fleets.EconomyFleetAssignmentAI.getData</a></div><div class="ttdeci">EconomyRouteData getData()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d17/EconomyFleetAssignmentAI_8java_source.html#l00340">EconomyFleetAssignmentAI.java:340</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseAssignmentAI_html_a96fc86996c04db66a9691482293ce2d7"><div class="ttname"><a href="../../d4/d1d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseAssignmentAI.html#a96fc86996c04db66a9691482293ce2d7">com.fs.starfarer.api.impl.campaign.procgen.themes.BaseAssignmentAI.fleet</a></div><div class="ttdeci">CampaignFleetAPI fleet</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dd7/BaseAssignmentAI_8java_source.html#l00042">BaseAssignmentAI.java:42</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RouteFleetAssignmentAI_html_a5dcb74ef0726bd260a6a30ef97626635"><div class="ttname"><a href="../../d3/d55/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RouteFleetAssignmentAI.html#a5dcb74ef0726bd260a6a30ef97626635">com.fs.starfarer.api.impl.campaign.procgen.themes.RouteFleetAssignmentAI.route</a></div><div class="ttdeci">RouteData route</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d3c/RouteFleetAssignmentAI_8java_source.html#l00029">RouteFleetAssignmentAI.java:29</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil_html_a27094391cb3987033d1189ff0e93a6fb"><div class="ttname"><a href="../../da/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html#a27094391cb3987033d1189ff0e93a6fb">com.fs.starfarer.api.util.IntervalUtil.forceIntervalElapsed</a></div><div class="ttdeci">void forceIntervalElapsed()</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de3/IntervalUtil_8java_source.html#l00024">IntervalUtil.java:24</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -366,12 +350,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/d55/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RouteFleetAssignmentAI.html#a8edc456c080ff2ebda9f3871f115af66">com.fs.starfarer.api.impl.campaign.procgen.themes.RouteFleetAssignmentAI</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d17/EconomyFleetAssignmentAI_8java_source.html#l00316">316</a> of file <a class="el" href="../../d8/d17/EconomyFleetAssignmentAI_8java_source.html">EconomyFleetAssignmentAI.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  316</span>                                                                                  {</div>
-<div class="line"><span class="lineno">  317</span>        super.addEndingAssignment(current, justSpawned);</div>
-<div class="line"><span class="lineno">  318</span>        <a class="code hl_function" href="../../dc/dac/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetAssignmentAI.html#a86689a3632fc718b031a0c5af2e86e41">updateCargo</a>(current);</div>
-<div class="line"><span class="lineno">  319</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetAssignmentAI_html_a86689a3632fc718b031a0c5af2e86e41"><div class="ttname"><a href="../../dc/dac/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetAssignmentAI.html#a86689a3632fc718b031a0c5af2e86e41">com.fs.starfarer.api.impl.campaign.fleets.EconomyFleetAssignmentAI.updateCargo</a></div><div class="ttdeci">void updateCargo(RouteSegment segment)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d17/EconomyFleetAssignmentAI_8java_source.html#l00140">EconomyFleetAssignmentAI.java:140</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="afa6359f038dac5e98e8228f3349dd171" name="afa6359f038dac5e98e8228f3349dd171"></a>
@@ -411,11 +390,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/d55/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RouteFleetAssignmentAI.html#aa82616b698530234868369ca601cd1e9">com.fs.starfarer.api.impl.campaign.procgen.themes.RouteFleetAssignmentAI</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d17/EconomyFleetAssignmentAI_8java_source.html#l00322">322</a> of file <a class="el" href="../../d8/d17/EconomyFleetAssignmentAI_8java_source.html">EconomyFleetAssignmentAI.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  322</span>                                                                                 {</div>
-<div class="line"><span class="lineno">  323</span>        super.addLocalAssignment(current, justSpawned);</div>
-<div class="line"><span class="lineno">  324</span>        <a class="code hl_function" href="../../dc/dac/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetAssignmentAI.html#a86689a3632fc718b031a0c5af2e86e41">updateCargo</a>(current);</div>
-<div class="line"><span class="lineno">  325</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="abb4bba8cb7d76010a105c3684c6fe0f1" name="abb4bba8cb7d76010a105c3684c6fe0f1"></a>
@@ -455,11 +430,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/d55/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RouteFleetAssignmentAI.html#aaad82c5bb6d65f82dadd4a5372d5ecec">com.fs.starfarer.api.impl.campaign.procgen.themes.RouteFleetAssignmentAI</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d17/EconomyFleetAssignmentAI_8java_source.html#l00328">328</a> of file <a class="el" href="../../d8/d17/EconomyFleetAssignmentAI_8java_source.html">EconomyFleetAssignmentAI.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  328</span>                                                                                    {</div>
-<div class="line"><span class="lineno">  329</span>        super.addStartingAssignment(current, justSpawned);</div>
-<div class="line"><span class="lineno">  330</span>        <a class="code hl_function" href="../../dc/dac/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetAssignmentAI.html#a86689a3632fc718b031a0c5af2e86e41">updateCargo</a>(current);</div>
-<div class="line"><span class="lineno">  331</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a1ecbdc7a72d9d7f774f4a8f0c2b0916c" name="a1ecbdc7a72d9d7f774f4a8f0c2b0916c"></a>
@@ -499,11 +470,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/d55/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RouteFleetAssignmentAI.html#a70b7c48299533b9de07b387cfb6135e8">com.fs.starfarer.api.impl.campaign.procgen.themes.RouteFleetAssignmentAI</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d17/EconomyFleetAssignmentAI_8java_source.html#l00334">334</a> of file <a class="el" href="../../d8/d17/EconomyFleetAssignmentAI_8java_source.html">EconomyFleetAssignmentAI.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  334</span>                                                                                  {</div>
-<div class="line"><span class="lineno">  335</span>        super.addTravelAssignment(current, justSpawned);</div>
-<div class="line"><span class="lineno">  336</span>        <a class="code hl_function" href="../../dc/dac/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetAssignmentAI.html#a86689a3632fc718b031a0c5af2e86e41">updateCargo</a>(current);</div>
-<div class="line"><span class="lineno">  337</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aaeac81c2add5c01b9cb50ca7a1ab4a30" name="aaeac81c2add5c01b9cb50ca7a1ab4a30"></a>
@@ -531,11 +498,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/d55/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RouteFleetAssignmentAI.html#abe2f2dd575e5a04719f49f674414f85a">com.fs.starfarer.api.impl.campaign.procgen.themes.RouteFleetAssignmentAI</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d17/EconomyFleetAssignmentAI_8java_source.html#l00347">347</a> of file <a class="el" href="../../d8/d17/EconomyFleetAssignmentAI_8java_source.html">EconomyFleetAssignmentAI.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  347</span>                                      {</div>
-<div class="line"><span class="lineno">  348</span>        super.advance(amount);</div>
-<div class="line"><span class="lineno">  349</span>        <a class="code hl_function" href="../../dc/dac/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetAssignmentAI.html#acc599c2aa312640263ef64789d428b67">doSmugglingFactionChangeCheck</a>(amount);</div>
-<div class="line"><span class="lineno">  350</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="acc599c2aa312640263ef64789d428b67" name="acc599c2aa312640263ef64789d428b67"></a>
@@ -555,78 +518,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d17/EconomyFleetAssignmentAI_8java_source.html#l00353">353</a> of file <a class="el" href="../../d8/d17/EconomyFleetAssignmentAI_8java_source.html">EconomyFleetAssignmentAI.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  353</span>                                                            {</div>
-<div class="line"><span class="lineno">  354</span>        EconomyRouteData data = <a class="code hl_function" href="../../dc/dac/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetAssignmentAI.html#af87403f76e8f1c90e34eb8ae865cd7ce">getData</a>();</div>
-<div class="line"><span class="lineno">  355</span>        <span class="keywordflow">if</span> (!data.smuggling) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  356</span>        <span class="keywordtype">float</span> days = Global.getSector().getClock().convertToDays(amount);</div>
-<div class="line"><span class="lineno">  357</span>        </div>
-<div class="line"><span class="lineno">  358</span><span class="comment">//      if (fleet.isInCurrentLocation()) {</span></div>
-<div class="line"><span class="lineno">  359</span><span class="comment">//          System.out.println(&quot;23wefwf23&quot;);</span></div>
-<div class="line"><span class="lineno">  360</span><span class="comment">//          days *= 100000f;</span></div>
-<div class="line"><span class="lineno">  361</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  362</span>        </div>
-<div class="line"><span class="lineno">  363</span>        factionChangeTracker.<a class="code hl_function" href="../../da/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html#a61881d44415cda2c50c3354c3f0a4d8a">advance</a>(days);</div>
-<div class="line"><span class="lineno">  364</span>        <span class="keywordflow">if</span> (factionChangeTracker.intervalElapsed() &amp;&amp; <a class="code hl_variable" href="../../d4/d1d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseAssignmentAI.html#a96fc86996c04db66a9691482293ce2d7">fleet</a>.<a class="code hl_function" href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a33bfcfbc5371e5c5736058a57ac8c7ad">getAI</a>() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  365</span>            MarketAPI align = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  366</span>            <span class="keywordflow">if</span> (data.from.getStarSystem() == <a class="code hl_variable" href="../../d4/d1d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseAssignmentAI.html#a96fc86996c04db66a9691482293ce2d7">fleet</a>.<a class="code hl_function" href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a07c10e046f23b4bb24b32eeadbeab5f9">getContainingLocation</a>()) {</div>
-<div class="line"><span class="lineno">  367</span>                align = data.from;</div>
-<div class="line"><span class="lineno">  368</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (data.to.getStarSystem() == <a class="code hl_variable" href="../../d4/d1d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseAssignmentAI.html#a96fc86996c04db66a9691482293ce2d7">fleet</a>.<a class="code hl_function" href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a07c10e046f23b4bb24b32eeadbeab5f9">getContainingLocation</a>()) {</div>
-<div class="line"><span class="lineno">  369</span>                align = data.to;</div>
-<div class="line"><span class="lineno">  370</span>            }</div>
-<div class="line"><span class="lineno">  371</span>            </div>
-<div class="line"><span class="lineno">  372</span>            <span class="keywordflow">if</span> (align != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  373</span>                String targetFac = origFaction;</div>
-<div class="line"><span class="lineno">  374</span>                <span class="keywordtype">boolean</span> hostile = align.getFaction().isHostileTo(targetFac);</div>
-<div class="line"><span class="lineno">  375</span>                <span class="keywordflow">if</span> (hostile) {</div>
-<div class="line"><span class="lineno">  376</span>                    targetFac = Factions.INDEPENDENT;</div>
-<div class="line"><span class="lineno">  377</span>                    hostile = align.getFaction().isHostileTo(targetFac);</div>
-<div class="line"><span class="lineno">  378</span>                }</div>
-<div class="line"><span class="lineno">  379</span>                <span class="keywordflow">if</span> (hostile) {</div>
-<div class="line"><span class="lineno">  380</span>                    targetFac = align.getFactionId();</div>
-<div class="line"><span class="lineno">  381</span>                }</div>
-<div class="line"><span class="lineno">  382</span>                <span class="keywordflow">if</span> (!<a class="code hl_variable" href="../../d4/d1d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseAssignmentAI.html#a96fc86996c04db66a9691482293ce2d7">fleet</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#afb72bc74f75ccbbf240564b26b94e17b">getFaction</a>().<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a7edcdc203f5ab26478e89e5d31e3bf85">getId</a>().equals(targetFac)) {</div>
-<div class="line"><span class="lineno">  383</span>                    <a class="code hl_variable" href="../../d4/d1d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseAssignmentAI.html#a96fc86996c04db66a9691482293ce2d7">fleet</a>.<a class="code hl_function" href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a4d56a49fb30b82f2e444f4764fc0ae17">setFaction</a>(targetFac, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  384</span>                }</div>
-<div class="line"><span class="lineno">  385</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  386</span>                String targetFac = origFaction;</div>
-<div class="line"><span class="lineno">  387</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d4/d1d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseAssignmentAI.html#a96fc86996c04db66a9691482293ce2d7">fleet</a>.<a class="code hl_function" href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a6cdef0efd31d52321de0991182154e01">isInHyperspace</a>()) {</div>
-<div class="line"><span class="lineno">  388</span>                    targetFac = Factions.INDEPENDENT;</div>
-<div class="line"><span class="lineno">  389</span>                }</div>
-<div class="line"><span class="lineno">  390</span>                <span class="keywordflow">if</span> (!<a class="code hl_variable" href="../../d4/d1d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseAssignmentAI.html#a96fc86996c04db66a9691482293ce2d7">fleet</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#afb72bc74f75ccbbf240564b26b94e17b">getFaction</a>().<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a7edcdc203f5ab26478e89e5d31e3bf85">getId</a>().equals(targetFac)) {</div>
-<div class="line"><span class="lineno">  391</span>                    <a class="code hl_variable" href="../../d4/d1d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseAssignmentAI.html#a96fc86996c04db66a9691482293ce2d7">fleet</a>.<a class="code hl_function" href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a4d56a49fb30b82f2e444f4764fc0ae17">setFaction</a>(targetFac, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  392</span>                }</div>
-<div class="line"><span class="lineno">  393</span>            }</div>
-<div class="line"><span class="lineno">  394</span>            </div>
-<div class="line"><span class="lineno">  395</span><span class="comment">//          SectorEntityToken target = route.getMarket().getPrimaryEntity();</span></div>
-<div class="line"><span class="lineno">  396</span><span class="comment">//          FleetAssignmentDataAPI assignment = fleet.getAI().getCurrentAssignment();</span></div>
-<div class="line"><span class="lineno">  397</span><span class="comment">//          if (assignment != null &amp;&amp; assignment.getAssignment() != FleetAssignment.STANDING_DOWN) {</span></div>
-<div class="line"><span class="lineno">  398</span><span class="comment">//              target = assignment.getTarget();</span></div>
-<div class="line"><span class="lineno">  399</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">  400</span><span class="comment">//          if (target != null &amp;&amp; target.getFaction() != null) {</span></div>
-<div class="line"><span class="lineno">  401</span><span class="comment">//              boolean targetHostile = target.getFaction().isHostileTo(origFaction);</span></div>
-<div class="line"><span class="lineno">  402</span><span class="comment">//              boolean mathchesTarget = fleet.getFaction().getId().equals(target.getFaction().getId());</span></div>
-<div class="line"><span class="lineno">  403</span><span class="comment">//              boolean mathchesOrig = fleet.getFaction().getId().equals(origFaction);</span></div>
-<div class="line"><span class="lineno">  404</span><span class="comment">//              float dist = Misc.getDistance(fleet.getLocation(), target.getLocation());</span></div>
-<div class="line"><span class="lineno">  405</span><span class="comment">//              if (dist &lt; target.getRadius() + fleet.getRadius() + 1000) {</span></div>
-<div class="line"><span class="lineno">  406</span><span class="comment">//                  if (targetHostile &amp;&amp; !mathchesTarget) {</span></div>
-<div class="line"><span class="lineno">  407</span><span class="comment">//                      fleet.setFaction(target.getFaction().getId(), true);</span></div>
-<div class="line"><span class="lineno">  408</span><span class="comment">//                  }</span></div>
-<div class="line"><span class="lineno">  409</span><span class="comment">//              } else {</span></div>
-<div class="line"><span class="lineno">  410</span><span class="comment">//                  if (!mathchesOrig) {</span></div>
-<div class="line"><span class="lineno">  411</span><span class="comment">//                      fleet.setFaction(origFaction, true);</span></div>
-<div class="line"><span class="lineno">  412</span><span class="comment">//                  }</span></div>
-<div class="line"><span class="lineno">  413</span><span class="comment">//              }</span></div>
-<div class="line"><span class="lineno">  414</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">  415</span>        }</div>
-<div class="line"><span class="lineno">  416</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil_html_a61881d44415cda2c50c3354c3f0a4d8a"><div class="ttname"><a href="../../da/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html#a61881d44415cda2c50c3354c3f0a4d8a">com.fs.starfarer.api.util.IntervalUtil.advance</a></div><div class="ttdeci">void advance(float amount)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de3/IntervalUtil_8java_source.html#l00039">IntervalUtil.java:39</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI_html_a07c10e046f23b4bb24b32eeadbeab5f9"><div class="ttname"><a href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a07c10e046f23b4bb24b32eeadbeab5f9">com.fs.starfarer.api.campaign.CampaignFleetAPI.getContainingLocation</a></div><div class="ttdeci">LocationAPI getContainingLocation()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI_html_a33bfcfbc5371e5c5736058a57ac8c7ad"><div class="ttname"><a href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a33bfcfbc5371e5c5736058a57ac8c7ad">com.fs.starfarer.api.campaign.CampaignFleetAPI.getAI</a></div><div class="ttdeci">CampaignFleetAIAPI getAI()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI_html_a4d56a49fb30b82f2e444f4764fc0ae17"><div class="ttname"><a href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a4d56a49fb30b82f2e444f4764fc0ae17">com.fs.starfarer.api.campaign.CampaignFleetAPI.setFaction</a></div><div class="ttdeci">void setFaction(String factionId, boolean includeCaptains)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI_html_a6cdef0efd31d52321de0991182154e01"><div class="ttname"><a href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a6cdef0efd31d52321de0991182154e01">com.fs.starfarer.api.campaign.CampaignFleetAPI.isInHyperspace</a></div><div class="ttdeci">boolean isInHyperspace()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI_html_a7edcdc203f5ab26478e89e5d31e3bf85"><div class="ttname"><a href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a7edcdc203f5ab26478e89e5d31e3bf85">com.fs.starfarer.api.campaign.FactionAPI.getId</a></div><div class="ttdeci">String getId()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_afb72bc74f75ccbbf240564b26b94e17b"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#afb72bc74f75ccbbf240564b26b94e17b">com.fs.starfarer.api.campaign.SectorEntityToken.getFaction</a></div><div class="ttdeci">FactionAPI getFaction()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ad36f3bc118d8c01ce9f00957e729a16d" name="ad36f3bc118d8c01ce9f00957e729a16d"></a>
@@ -664,18 +556,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d17/EconomyFleetAssignmentAI_8java_source.html#l00125">125</a> of file <a class="el" href="../../d8/d17/EconomyFleetAssignmentAI_8java_source.html">EconomyFleetAssignmentAI.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  125</span>                                                                             {</div>
-<div class="line"><span class="lineno">  126</span><span class="comment">//      int index = route.getSegments().indexOf(segment);</span></div>
-<div class="line"><span class="lineno">  127</span>        EconomyRouteData data = (EconomyRouteData) <a class="code hl_variable" href="../../d3/d55/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RouteFleetAssignmentAI.html#a5dcb74ef0726bd260a6a30ef97626635">route</a>.getCustom();</div>
-<div class="line"><span class="lineno">  128</span>        </div>
-<div class="line"><span class="lineno">  129</span>        Integer <span class="keywordtype">id</span> = segment.getId();</div>
-<div class="line"><span class="lineno">  130</span>        </div>
-<div class="line"><span class="lineno">  131</span>        <span class="keywordflow">if</span> (<span class="keywordtype">id</span> &lt;= EconomyFleetRouteManager.ROUTE_DST_UNLOAD) {</div>
-<div class="line"><span class="lineno">  132</span>            <span class="keywordflow">return</span> EconomyRouteData.getCargoList(data.cargoDeliver);</div>
-<div class="line"><span class="lineno">  133</span>        }</div>
-<div class="line"><span class="lineno">  134</span>        <span class="keywordflow">return</span> EconomyRouteData.getCargoList(data.cargoReturn);</div>
-<div class="line"><span class="lineno">  135</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a806da6d156d379c0c3b3649c748e052b" name="a806da6d156d379c0c3b3649c748e052b"></a>
@@ -703,11 +584,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d17/EconomyFleetAssignmentAI_8java_source.html#l00136">136</a> of file <a class="el" href="../../d8/d17/EconomyFleetAssignmentAI_8java_source.html">EconomyFleetAssignmentAI.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  136</span>                                                        {</div>
-<div class="line"><span class="lineno">  137</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../dc/dac/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetAssignmentAI.html#ad36f3bc118d8c01ce9f00957e729a16d">getCargoList</a>(<a class="code hl_variable" href="../../d3/d55/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RouteFleetAssignmentAI.html#a5dcb74ef0726bd260a6a30ef97626635">route</a>, segment);</div>
-<div class="line"><span class="lineno">  138</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetAssignmentAI_html_ad36f3bc118d8c01ce9f00957e729a16d"><div class="ttname"><a href="../../dc/dac/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetAssignmentAI.html#ad36f3bc118d8c01ce9f00957e729a16d">com.fs.starfarer.api.impl.campaign.fleets.EconomyFleetAssignmentAI.getCargoList</a></div><div class="ttdeci">static String getCargoList(RouteData route, RouteSegment segment)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d17/EconomyFleetAssignmentAI_8java_source.html#l00125">EconomyFleetAssignmentAI.java:125</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af9de0c04bf896c1759df02610451bf5c" name="af9de0c04bf896c1759df02610451bf5c"></a>
@@ -735,10 +612,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d17/EconomyFleetAssignmentAI_8java_source.html#l00119">119</a> of file <a class="el" href="../../d8/d17/EconomyFleetAssignmentAI_8java_source.html">EconomyFleetAssignmentAI.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  119</span>                                                              {</div>
-<div class="line"><span class="lineno">  120</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../dc/dac/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetAssignmentAI.html#ad36f3bc118d8c01ce9f00957e729a16d">getCargoList</a>(<a class="code hl_variable" href="../../d3/d55/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RouteFleetAssignmentAI.html#a5dcb74ef0726bd260a6a30ef97626635">route</a>, <a class="code hl_variable" href="../../d3/d55/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RouteFleetAssignmentAI.html#a5dcb74ef0726bd260a6a30ef97626635">route</a>.getSegments().get(0));</div>
-<div class="line"><span class="lineno">  121</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af2d8e2632a2ff03ae559c3935c794fde" name="af2d8e2632a2ff03ae559c3935c794fde"></a>
@@ -766,10 +640,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d17/EconomyFleetAssignmentAI_8java_source.html#l00122">122</a> of file <a class="el" href="../../d8/d17/EconomyFleetAssignmentAI_8java_source.html">EconomyFleetAssignmentAI.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  122</span>                                                             {</div>
-<div class="line"><span class="lineno">  123</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../dc/dac/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetAssignmentAI.html#ad36f3bc118d8c01ce9f00957e729a16d">getCargoList</a>(<a class="code hl_variable" href="../../d3/d55/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RouteFleetAssignmentAI.html#a5dcb74ef0726bd260a6a30ef97626635">route</a>, <a class="code hl_variable" href="../../d3/d55/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RouteFleetAssignmentAI.html#a5dcb74ef0726bd260a6a30ef97626635">route</a>.getSegments().get(3));</div>
-<div class="line"><span class="lineno">  124</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af87403f76e8f1c90e34eb8ae865cd7ce" name="af87403f76e8f1c90e34eb8ae865cd7ce"></a>
@@ -796,11 +667,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d17/EconomyFleetAssignmentAI_8java_source.html#l00340">340</a> of file <a class="el" href="../../d8/d17/EconomyFleetAssignmentAI_8java_source.html">EconomyFleetAssignmentAI.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  340</span>                                         {</div>
-<div class="line"><span class="lineno">  341</span>        EconomyRouteData data = (EconomyRouteData) <a class="code hl_variable" href="../../d3/d55/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RouteFleetAssignmentAI.html#a5dcb74ef0726bd260a6a30ef97626635">route</a>.getCustom();</div>
-<div class="line"><span class="lineno">  342</span>        <span class="keywordflow">return</span> data;</div>
-<div class="line"><span class="lineno">  343</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a6b35c0e67a9f875825763a134f047bd9" name="a6b35c0e67a9f875825763a134f047bd9"></a>
@@ -830,14 +697,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/d55/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RouteFleetAssignmentAI.html#a9e4e61d08b35659678fdfcd63e2ecf58">com.fs.starfarer.api.impl.campaign.procgen.themes.RouteFleetAssignmentAI</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d17/EconomyFleetAssignmentAI_8java_source.html#l00263">263</a> of file <a class="el" href="../../d8/d17/EconomyFleetAssignmentAI_8java_source.html">EconomyFleetAssignmentAI.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  263</span>                                                               {</div>
-<div class="line"><span class="lineno">  264</span>        String list = <a class="code hl_function" href="../../dc/dac/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetAssignmentAI.html#ad36f3bc118d8c01ce9f00957e729a16d">getCargoList</a>(segment);</div>
-<div class="line"><span class="lineno">  265</span>        <span class="keywordflow">if</span> (list.isEmpty()) {</div>
-<div class="line"><span class="lineno">  266</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;orbiting &quot;</span> + <a class="code hl_function" href="../../dc/dac/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetAssignmentAI.html#af87403f76e8f1c90e34eb8ae865cd7ce">getData</a>().from.getName();</div>
-<div class="line"><span class="lineno">  267</span>        }</div>
-<div class="line"><span class="lineno">  268</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;unloading &quot;</span> + list + <span class="stringliteral">&quot; at &quot;</span> + <a class="code hl_function" href="../../dc/dac/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetAssignmentAI.html#af87403f76e8f1c90e34eb8ae865cd7ce">getData</a>().from.getName();</div>
-<div class="line"><span class="lineno">  269</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a922ea9d5f1002ba5cfcf785b0d98e7a4" name="a922ea9d5f1002ba5cfcf785b0d98e7a4"></a>
@@ -867,28 +727,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/d55/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RouteFleetAssignmentAI.html#abcac6650fd0396e7e6d89e079d953ad2">com.fs.starfarer.api.impl.campaign.procgen.themes.RouteFleetAssignmentAI</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d17/EconomyFleetAssignmentAI_8java_source.html#l00292">292</a> of file <a class="el" href="../../d8/d17/EconomyFleetAssignmentAI_8java_source.html">EconomyFleetAssignmentAI.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  292</span>                                                                 {</div>
-<div class="line"><span class="lineno">  293</span>        String list = <a class="code hl_function" href="../../dc/dac/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetAssignmentAI.html#ad36f3bc118d8c01ce9f00957e729a16d">getCargoList</a>(segment);</div>
-<div class="line"><span class="lineno">  294</span>        <span class="comment">//int index = route.getSegments().indexOf(segment);</span></div>
-<div class="line"><span class="lineno">  295</span>        Integer <span class="keywordtype">id</span> = segment.getId();</div>
-<div class="line"><span class="lineno">  296</span>        </div>
-<div class="line"><span class="lineno">  297</span>        <span class="keywordflow">if</span> (<span class="keywordtype">id</span> == EconomyFleetRouteManager.ROUTE_DST_UNLOAD) {</div>
-<div class="line"><span class="lineno">  298</span>            <span class="keywordflow">if</span> (list.isEmpty()) {</div>
-<div class="line"><span class="lineno">  299</span>                <span class="keywordflow">return</span> <span class="stringliteral">&quot;orbiting &quot;</span> + <a class="code hl_function" href="../../dc/dac/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetAssignmentAI.html#af87403f76e8f1c90e34eb8ae865cd7ce">getData</a>().to.getName();</div>
-<div class="line"><span class="lineno">  300</span>            }</div>
-<div class="line"><span class="lineno">  301</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;unloading &quot;</span> + list + <span class="stringliteral">&quot; at &quot;</span> + <a class="code hl_function" href="../../dc/dac/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetAssignmentAI.html#af87403f76e8f1c90e34eb8ae865cd7ce">getData</a>().to.getName();</div>
-<div class="line"><span class="lineno">  302</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keywordtype">id</span> == EconomyFleetRouteManager.ROUTE_DST_LOAD) {</div>
-<div class="line"><span class="lineno">  303</span>            <span class="keywordflow">if</span> (list.isEmpty()) {</div>
-<div class="line"><span class="lineno">  304</span>                <span class="keywordflow">return</span> <span class="stringliteral">&quot;orbiting &quot;</span> + <a class="code hl_function" href="../../dc/dac/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetAssignmentAI.html#af87403f76e8f1c90e34eb8ae865cd7ce">getData</a>().to.getName();</div>
-<div class="line"><span class="lineno">  305</span>            }</div>
-<div class="line"><span class="lineno">  306</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;loading &quot;</span> + list + <span class="stringliteral">&quot; at &quot;</span> + <a class="code hl_function" href="../../dc/dac/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetAssignmentAI.html#af87403f76e8f1c90e34eb8ae865cd7ce">getData</a>().to.getName();</div>
-<div class="line"><span class="lineno">  307</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keywordtype">id</span> == EconomyFleetRouteManager.ROUTE_RESUPPLY_WS || <span class="keywordtype">id</span> == EconomyFleetRouteManager.ROUTE_RESUPPLY_BACK_WS) {</div>
-<div class="line"><span class="lineno">  308</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;resupplying&quot;</span>;</div>
-<div class="line"><span class="lineno">  309</span>        }</div>
-<div class="line"><span class="lineno">  310</span>        </div>
-<div class="line"><span class="lineno">  311</span>        <span class="keywordflow">return</span> super.getInSystemActionText(segment);</div>
-<div class="line"><span class="lineno">  312</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="acd11d622f376bd6f94c4a918ecf87a61" name="acd11d622f376bd6f94c4a918ecf87a61"></a>
@@ -918,14 +757,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/d55/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RouteFleetAssignmentAI.html#a23f66794c48013e30e5a7956653ecb87">com.fs.starfarer.api.impl.campaign.procgen.themes.RouteFleetAssignmentAI</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d17/EconomyFleetAssignmentAI_8java_source.html#l00255">255</a> of file <a class="el" href="../../d8/d17/EconomyFleetAssignmentAI_8java_source.html">EconomyFleetAssignmentAI.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  255</span>                                                                 {</div>
-<div class="line"><span class="lineno">  256</span>        String list = <a class="code hl_function" href="../../dc/dac/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetAssignmentAI.html#ad36f3bc118d8c01ce9f00957e729a16d">getCargoList</a>(segment);</div>
-<div class="line"><span class="lineno">  257</span>        <span class="keywordflow">if</span> (list.isEmpty()) {</div>
-<div class="line"><span class="lineno">  258</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;preparing for a voyage to &quot;</span> + <a class="code hl_function" href="../../dc/dac/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetAssignmentAI.html#af87403f76e8f1c90e34eb8ae865cd7ce">getData</a>().to.getName();</div>
-<div class="line"><span class="lineno">  259</span>        }</div>
-<div class="line"><span class="lineno">  260</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;loading &quot;</span> + list + <span class="stringliteral">&quot; at &quot;</span> + <a class="code hl_function" href="../../dc/dac/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetAssignmentAI.html#af87403f76e8f1c90e34eb8ae865cd7ce">getData</a>().from.getName();</div>
-<div class="line"><span class="lineno">  261</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac148d5f758edf714a972bcdc1a978d7d" name="ac148d5f758edf714a972bcdc1a978d7d"></a>
@@ -955,25 +787,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/d55/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RouteFleetAssignmentAI.html#a50eb04378260fec2e62b2b9534b27fe6">com.fs.starfarer.api.impl.campaign.procgen.themes.RouteFleetAssignmentAI</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d17/EconomyFleetAssignmentAI_8java_source.html#l00272">272</a> of file <a class="el" href="../../d8/d17/EconomyFleetAssignmentAI_8java_source.html">EconomyFleetAssignmentAI.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  272</span>                                                               {</div>
-<div class="line"><span class="lineno">  273</span>        String list = <a class="code hl_function" href="../../dc/dac/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetAssignmentAI.html#ad36f3bc118d8c01ce9f00957e729a16d">getCargoList</a>(segment);</div>
-<div class="line"><span class="lineno">  274</span>        </div>
-<div class="line"><span class="lineno">  275</span>        <span class="comment">//int index = route.getSegments().indexOf(segment);</span></div>
-<div class="line"><span class="lineno">  276</span>        Integer <span class="keywordtype">id</span> = segment.getId();</div>
-<div class="line"><span class="lineno">  277</span>        <span class="keywordflow">if</span> (<span class="keywordtype">id</span> == EconomyFleetRouteManager.ROUTE_TRAVEL_DST || <span class="keywordtype">id</span> == EconomyFleetRouteManager.ROUTE_TRAVEL_WS) {</div>
-<div class="line"><span class="lineno">  278</span>            <span class="keywordflow">if</span> (list.isEmpty()) {</div>
-<div class="line"><span class="lineno">  279</span>                <span class="keywordflow">return</span> <span class="stringliteral">&quot;traveling to &quot;</span> + <a class="code hl_function" href="../../dc/dac/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetAssignmentAI.html#af87403f76e8f1c90e34eb8ae865cd7ce">getData</a>().to.getName();</div>
-<div class="line"><span class="lineno">  280</span>            }</div>
-<div class="line"><span class="lineno">  281</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;delivering &quot;</span> + list + <span class="stringliteral">&quot; to &quot;</span> + <a class="code hl_function" href="../../dc/dac/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetAssignmentAI.html#af87403f76e8f1c90e34eb8ae865cd7ce">getData</a>().to.getName(); </div>
-<div class="line"><span class="lineno">  282</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keywordtype">id</span> == EconomyFleetRouteManager.ROUTE_TRAVEL_SRC || <span class="keywordtype">id</span> == EconomyFleetRouteManager.ROUTE_TRAVEL_BACK_WS) {</div>
-<div class="line"><span class="lineno">  283</span>            <span class="keywordflow">if</span> (list.isEmpty()) {</div>
-<div class="line"><span class="lineno">  284</span>                <span class="keywordflow">return</span> <span class="stringliteral">&quot;returning to &quot;</span> + <a class="code hl_function" href="../../dc/dac/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetAssignmentAI.html#af87403f76e8f1c90e34eb8ae865cd7ce">getData</a>().from.getName();</div>
-<div class="line"><span class="lineno">  285</span>            }</div>
-<div class="line"><span class="lineno">  286</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;returning to &quot;</span> + <a class="code hl_function" href="../../dc/dac/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetAssignmentAI.html#af87403f76e8f1c90e34eb8ae865cd7ce">getData</a>().from.getName() + <span class="stringliteral">&quot; with &quot;</span> + list;</div>
-<div class="line"><span class="lineno">  287</span>        }</div>
-<div class="line"><span class="lineno">  288</span>        <span class="keywordflow">return</span> super.getTravelActionText(segment);</div>
-<div class="line"><span class="lineno">  289</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a0219410e39cd2fe21c8b4411376bcc78" name="a0219410e39cd2fe21c8b4411376bcc78"></a>
@@ -1011,58 +825,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d17/EconomyFleetAssignmentAI_8java_source.html#l00206">206</a> of file <a class="el" href="../../d8/d17/EconomyFleetAssignmentAI_8java_source.html">EconomyFleetAssignmentAI.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  206</span>                                                                      {</div>
-<div class="line"><span class="lineno">  207</span>        <span class="keywordflow">for</span> (FleetMemberAPI member : <a class="code hl_variable" href="../../d4/d1d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseAssignmentAI.html#a96fc86996c04db66a9691482293ce2d7">fleet</a>.<a class="code hl_function" href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#aa3e90e08c7029f5dae7bc1d4d59e3285">getFleetData</a>().<a class="code hl_function" href="../../d2/dfb/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetDataAPI.html#aea5feaf14b5a26ae6ffca7abf9af0a09">getMembersListCopy</a>()) {</div>
-<div class="line"><span class="lineno">  208</span>            <span class="keywordflow">if</span> (member.isMothballed()) {</div>
-<div class="line"><span class="lineno">  209</span>                <a class="code hl_variable" href="../../d4/d1d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseAssignmentAI.html#a96fc86996c04db66a9691482293ce2d7">fleet</a>.<a class="code hl_function" href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#aa3e90e08c7029f5dae7bc1d4d59e3285">getFleetData</a>().<a class="code hl_function" href="../../d2/dfb/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetDataAPI.html#ac672b758ab99500a6dc92470d1215429">removeFleetMember</a>(member);</div>
-<div class="line"><span class="lineno">  210</span>            }</div>
-<div class="line"><span class="lineno">  211</span>        }</div>
-<div class="line"><span class="lineno">  212</span>        </div>
-<div class="line"><span class="lineno">  213</span>        <span class="keywordflow">if</span> (units &lt;= 0) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  214</span>        </div>
-<div class="line"><span class="lineno">  215</span>        </div>
-<div class="line"><span class="lineno">  216</span>        Random random = <span class="keyword">new</span> Random();</div>
-<div class="line"><span class="lineno">  217</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d3/d55/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RouteFleetAssignmentAI.html#a5dcb74ef0726bd260a6a30ef97626635">route</a>.getSeed() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  218</span>            random = <span class="keyword">new</span> Random(<a class="code hl_variable" href="../../d3/d55/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RouteFleetAssignmentAI.html#a5dcb74ef0726bd260a6a30ef97626635">route</a>.getSeed());</div>
-<div class="line"><span class="lineno">  219</span>        }</div>
-<div class="line"><span class="lineno">  220</span> </div>
-<div class="line"><span class="lineno">  221</span>        <span class="keywordtype">float</span> add = units * 1.5f + random.nextInt(3);</div>
-<div class="line"><span class="lineno">  222</span>        </div>
-<div class="line"><span class="lineno">  223</span>        EconomyRouteData data = <a class="code hl_function" href="../../dc/dac/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetAssignmentAI.html#af87403f76e8f1c90e34eb8ae865cd7ce">getData</a>();</div>
-<div class="line"><span class="lineno">  224</span>        <span class="keywordtype">boolean</span> sameFaction = data.from.getFaction() == data.to.getFaction();</div>
-<div class="line"><span class="lineno">  225</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; add; i++) {</div>
-<div class="line"><span class="lineno">  226</span>            WeightedRandomPicker&lt;String&gt; roles = <span class="keyword">new</span> WeightedRandomPicker&lt;String&gt;(random);</div>
-<div class="line"><span class="lineno">  227</span>            roles.add(ShipRoles.COMBAT_FREIGHTER_SMALL, 20f);</div>
-<div class="line"><span class="lineno">  228</span>            roles.add(ShipRoles.FREIGHTER_SMALL, 20f);</div>
-<div class="line"><span class="lineno">  229</span>            roles.add(ShipRoles.TANKER_SMALL, 10f);</div>
-<div class="line"><span class="lineno">  230</span>            <span class="keywordflow">if</span> (i &gt;= 2) {</div>
-<div class="line"><span class="lineno">  231</span>                roles.add(ShipRoles.COMBAT_FREIGHTER_MEDIUM, 20f * (i - 1));</div>
-<div class="line"><span class="lineno">  232</span>                roles.add(ShipRoles.FREIGHTER_MEDIUM, 20f * (i - 1));</div>
-<div class="line"><span class="lineno">  233</span>                roles.add(ShipRoles.TANKER_MEDIUM, 10f * (i - 1));</div>
-<div class="line"><span class="lineno">  234</span>            }</div>
-<div class="line"><span class="lineno">  235</span>            <span class="keywordflow">if</span> (i &gt;= 5) {</div>
-<div class="line"><span class="lineno">  236</span>                roles.add(ShipRoles.COMBAT_FREIGHTER_LARGE, 20f * (i - 2));</div>
-<div class="line"><span class="lineno">  237</span>                roles.add(ShipRoles.FREIGHTER_LARGE, 20f * (i - 2));</div>
-<div class="line"><span class="lineno">  238</span>                roles.add(ShipRoles.TANKER_LARGE, 10f * (i - 2));</div>
-<div class="line"><span class="lineno">  239</span>            }</div>
-<div class="line"><span class="lineno">  240</span>            </div>
-<div class="line"><span class="lineno">  241</span>            String role = roles.pick();</div>
-<div class="line"><span class="lineno">  242</span>            ShipPickParams params = ShipPickParams.priority();</div>
-<div class="line"><span class="lineno">  243</span>            <span class="keywordflow">if</span> (!sameFaction) params = ShipPickParams.imported();</div>
-<div class="line"><span class="lineno">  244</span>            List&lt;ShipRolePick&gt; picks = market.pickShipsForRole(role, params, random, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  245</span>            <span class="keywordflow">for</span> (ShipRolePick pick : picks) {</div>
-<div class="line"><span class="lineno">  246</span>                FleetMemberAPI member = <a class="code hl_variable" href="../../d4/d1d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseAssignmentAI.html#a96fc86996c04db66a9691482293ce2d7">fleet</a>.<a class="code hl_function" href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#aa3e90e08c7029f5dae7bc1d4d59e3285">getFleetData</a>().<a class="code hl_function" href="../../d2/dfb/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetDataAPI.html#aae3057dba1c046f7e1bbe35de5f20119">addFleetMember</a>(pick.variantId);</div>
-<div class="line"><span class="lineno">  247</span>                member.getRepairTracker().setMothballed(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  248</span>            }</div>
-<div class="line"><span class="lineno">  249</span>        }</div>
-<div class="line"><span class="lineno">  250</span>        <a class="code hl_variable" href="../../d4/d1d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseAssignmentAI.html#a96fc86996c04db66a9691482293ce2d7">fleet</a>.<a class="code hl_function" href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#aa3e90e08c7029f5dae7bc1d4d59e3285">getFleetData</a>().<a class="code hl_function" href="../../d2/dfb/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetDataAPI.html#a2da2a3e378c6aaeb7ac39cbbc02b15c9">sort</a>();</div>
-<div class="line"><span class="lineno">  251</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI_html_aa3e90e08c7029f5dae7bc1d4d59e3285"><div class="ttname"><a href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#aa3e90e08c7029f5dae7bc1d4d59e3285">com.fs.starfarer.api.campaign.CampaignFleetAPI.getFleetData</a></div><div class="ttdeci">FleetDataAPI getFleetData()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetDataAPI_html_a2da2a3e378c6aaeb7ac39cbbc02b15c9"><div class="ttname"><a href="../../d2/dfb/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetDataAPI.html#a2da2a3e378c6aaeb7ac39cbbc02b15c9">com.fs.starfarer.api.campaign.FleetDataAPI.sort</a></div><div class="ttdeci">void sort()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetDataAPI_html_aae3057dba1c046f7e1bbe35de5f20119"><div class="ttname"><a href="../../d2/dfb/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetDataAPI.html#aae3057dba1c046f7e1bbe35de5f20119">com.fs.starfarer.api.campaign.FleetDataAPI.addFleetMember</a></div><div class="ttdeci">void addFleetMember(FleetMemberAPI member)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetDataAPI_html_ac672b758ab99500a6dc92470d1215429"><div class="ttname"><a href="../../d2/dfb/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetDataAPI.html#ac672b758ab99500a6dc92470d1215429">com.fs.starfarer.api.campaign.FleetDataAPI.removeFleetMember</a></div><div class="ttdeci">void removeFleetMember(FleetMemberAPI member)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetDataAPI_html_aea5feaf14b5a26ae6ffca7abf9af0a09"><div class="ttname"><a href="../../d2/dfb/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetDataAPI.html#aea5feaf14b5a26ae6ffca7abf9af0a09">com.fs.starfarer.api.campaign.FleetDataAPI.getMembersListCopy</a></div><div class="ttdeci">List&lt; FleetMemberAPI &gt; getMembersListCopy()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a86689a3632fc718b031a0c5af2e86e41" name="a86689a3632fc718b031a0c5af2e86e41"></a>
@@ -1090,75 +853,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d17/EconomyFleetAssignmentAI_8java_source.html#l00140">140</a> of file <a class="el" href="../../d8/d17/EconomyFleetAssignmentAI_8java_source.html">EconomyFleetAssignmentAI.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  140</span>                                                     {</div>
-<div class="line"><span class="lineno">  141</span>        <span class="comment">//int index = route.getSegments().indexOf(segment);</span></div>
-<div class="line"><span class="lineno">  142</span>        </div>
-<div class="line"><span class="lineno">  143</span>        <span class="comment">// 0: loading from</span></div>
-<div class="line"><span class="lineno">  144</span>        <span class="comment">// 1: moving to</span></div>
-<div class="line"><span class="lineno">  145</span>        <span class="comment">// 2: unloading to</span></div>
-<div class="line"><span class="lineno">  146</span>        <span class="comment">// 3: loading to</span></div>
-<div class="line"><span class="lineno">  147</span>        <span class="comment">// 4: moving from</span></div>
-<div class="line"><span class="lineno">  148</span>        <span class="comment">// 5: unloading from</span></div>
-<div class="line"><span class="lineno">  149</span>        </div>
-<div class="line"><span class="lineno">  150</span>        Integer <span class="keywordtype">id</span> = segment.getId();</div>
-<div class="line"><span class="lineno">  151</span>        </div>
-<div class="line"><span class="lineno">  152</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d3/d55/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RouteFleetAssignmentAI.html#a5dcb74ef0726bd260a6a30ef97626635">route</a>.isExpired() || <span class="keywordtype">id</span> == EconomyFleetRouteManager.ROUTE_SRC_LOAD || </div>
-<div class="line"><span class="lineno">  153</span>                                 <span class="keywordtype">id</span> == EconomyFleetRouteManager.ROUTE_DST_LOAD) { </div>
-<div class="line"><span class="lineno">  154</span>            <a class="code hl_variable" href="../../d4/d1d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseAssignmentAI.html#a96fc86996c04db66a9691482293ce2d7">fleet</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#ab219cada372a13654e8e912aba977b05">getCargo</a>().<a class="code hl_function" href="../../dc/d7b/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a61edb30742c45d85507b457bd73206a7">clear</a>();</div>
-<div class="line"><span class="lineno">  155</span>            <a class="code hl_function" href="../../dc/dac/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetAssignmentAI.html#a0219410e39cd2fe21c8b4411376bcc78">syncMothballedShips</a>(0f, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  156</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  157</span>        }</div>
-<div class="line"><span class="lineno">  158</span>        </div>
-<div class="line"><span class="lineno">  159</span>        EconomyRouteData data = <a class="code hl_function" href="../../dc/dac/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetAssignmentAI.html#af87403f76e8f1c90e34eb8ae865cd7ce">getData</a>();</div>
-<div class="line"><span class="lineno">  160</span>        MarketAPI cargoSource = data.from;</div>
-<div class="line"><span class="lineno">  161</span>        List&lt;CargoQuantityData&gt; list = data.cargoDeliver;</div>
-<div class="line"><span class="lineno">  162</span>        <span class="keywordflow">if</span> (<span class="keywordtype">id</span> &gt; EconomyFleetRouteManager.ROUTE_DST_LOAD) {</div>
-<div class="line"><span class="lineno">  163</span>            cargoSource = data.to;</div>
-<div class="line"><span class="lineno">  164</span>            list = data.cargoReturn;</div>
-<div class="line"><span class="lineno">  165</span>        }</div>
-<div class="line"><span class="lineno">  166</span>        </div>
-<div class="line"><span class="lineno">  167</span>        CargoAPI cargo = <a class="code hl_variable" href="../../d4/d1d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseAssignmentAI.html#a96fc86996c04db66a9691482293ce2d7">fleet</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#ab219cada372a13654e8e912aba977b05">getCargo</a>();</div>
-<div class="line"><span class="lineno">  168</span>        cargo.<a class="code hl_function" href="../../dc/d7b/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a61edb30742c45d85507b457bd73206a7">clear</a>();</div>
-<div class="line"><span class="lineno">  169</span>        </div>
-<div class="line"><span class="lineno">  170</span>        <span class="keywordtype">float</span> total = 0f;</div>
-<div class="line"><span class="lineno">  171</span>        Map&lt;String, Float&gt; target = <span class="keyword">new</span> LinkedHashMap&lt;String, Float&gt;();</div>
-<div class="line"><span class="lineno">  172</span>        <span class="keywordtype">float</span> ships = 0f;</div>
-<div class="line"><span class="lineno">  173</span>        <span class="keywordflow">for</span> (CargoQuantityData curr : list) {</div>
-<div class="line"><span class="lineno">  174</span>            CommoditySpecAPI spec = Global.getSettings().getCommoditySpec(curr.cargo);</div>
-<div class="line"><span class="lineno">  175</span>            <span class="keywordtype">float</span> qty = (int) (BaseIndustry.getSizeMult(curr.units) * spec.getEconUnit());</div>
-<div class="line"><span class="lineno">  176</span>            </div>
-<div class="line"><span class="lineno">  177</span>            <span class="keywordflow">if</span> (curr.cargo.equals(Commodities.SHIPS)) {</div>
-<div class="line"><span class="lineno">  178</span>                ships = Math.max(ships, curr.units);</div>
-<div class="line"><span class="lineno">  179</span>                <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  180</span>            }</div>
-<div class="line"><span class="lineno">  181</span>            </div>
-<div class="line"><span class="lineno">  182</span>            <span class="keywordflow">if</span> (curr.cargo.equals(Commodities.FUEL)) {</div>
-<div class="line"><span class="lineno">  183</span>                cargo.addFuel(Math.min(qty, cargo.getMaxFuel()));</div>
-<div class="line"><span class="lineno">  184</span>                <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  185</span>            }</div>
-<div class="line"><span class="lineno">  186</span>            </div>
-<div class="line"><span class="lineno">  187</span>            <span class="keywordflow">if</span> (curr.cargo.equals(Commodities.CREW)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  188</span>            <span class="keywordflow">if</span> (curr.cargo.equals(Commodities.MARINES)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  189</span> </div>
-<div class="line"><span class="lineno">  190</span>            total += qty;</div>
-<div class="line"><span class="lineno">  191</span>            target.put(curr.cargo, qty);</div>
-<div class="line"><span class="lineno">  192</span>        }</div>
-<div class="line"><span class="lineno">  193</span>        </div>
-<div class="line"><span class="lineno">  194</span>        <a class="code hl_function" href="../../dc/dac/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetAssignmentAI.html#a0219410e39cd2fe21c8b4411376bcc78">syncMothballedShips</a>(ships, cargoSource);</div>
-<div class="line"><span class="lineno">  195</span>        </div>
-<div class="line"><span class="lineno">  196</span>        <span class="keywordflow">if</span> (total &lt;= 0) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  197</span>        </div>
-<div class="line"><span class="lineno">  198</span>        <span class="keywordtype">float</span> maxCargo = cargo.getMaxCapacity();</div>
-<div class="line"><span class="lineno">  199</span>        <span class="keywordflow">for</span> (String cid : target.keySet()) {</div>
-<div class="line"><span class="lineno">  200</span>            <span class="keywordtype">float</span> qty = target.get(cid);</div>
-<div class="line"><span class="lineno">  201</span>            </div>
-<div class="line"><span class="lineno">  202</span>            cargo.addCommodity(cid, ((<span class="keywordtype">int</span>) qty * Math.min(1f, maxCargo / total)));</div>
-<div class="line"><span class="lineno">  203</span>        }</div>
-<div class="line"><span class="lineno">  204</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetAssignmentAI_html_a0219410e39cd2fe21c8b4411376bcc78"><div class="ttname"><a href="../../dc/dac/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetAssignmentAI.html#a0219410e39cd2fe21c8b4411376bcc78">com.fs.starfarer.api.impl.campaign.fleets.EconomyFleetAssignmentAI.syncMothballedShips</a></div><div class="ttdeci">void syncMothballedShips(float units, MarketAPI market)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d17/EconomyFleetAssignmentAI_8java_source.html#l00206">EconomyFleetAssignmentAI.java:206</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI_html_a61edb30742c45d85507b457bd73206a7"><div class="ttname"><a href="../../dc/d7b/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a61edb30742c45d85507b457bd73206a7">com.fs.starfarer.api.campaign.CargoAPI.clear</a></div><div class="ttdeci">void clear()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_ab219cada372a13654e8e912aba977b05"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#ab219cada372a13654e8e912aba977b05">com.fs.starfarer.api.campaign.SectorEntityToken.getCargo</a></div><div class="ttdeci">CargoAPI getCargo()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

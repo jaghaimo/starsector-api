@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -184,53 +185,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="../../d0/d5c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1CommandPlugin.html#a72a44c5127e60136b87d3b37613fd0e0">com.fs.starfarer.api.campaign.rules.CommandPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/d44/ShowResCost_8java_source.html#l00026">26</a> of file <a class="el" href="../../df/d44/ShowResCost_8java_source.html">ShowResCost.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   26</span>                                                                                                                             {</div>
-<div class="line"><span class="lineno">   27</span>        List&lt;ResData&gt; data = <span class="keyword">new</span> ArrayList&lt;ResData&gt;();</div>
-<div class="line"><span class="lineno">   28</span> </div>
-<div class="line"><span class="lineno">   29</span>        <span class="keywordtype">float</span> widthOverride = -1f;</div>
-<div class="line"><span class="lineno">   30</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; params.size(); i++) {</div>
-<div class="line"><span class="lineno">   31</span>            Token t = params.get(i);</div>
-<div class="line"><span class="lineno">   32</span>            </div>
-<div class="line"><span class="lineno">   33</span>            <span class="keywordtype">boolean</span> commodityId = !t.isBoolean(memoryMap) &amp;&amp; !t.isFloat(memoryMap);</div>
-<div class="line"><span class="lineno">   34</span>            <span class="keywordflow">if</span> (commodityId) {</div>
-<div class="line"><span class="lineno">   35</span>                ResData curr = <span class="keyword">new</span> ResData();</div>
-<div class="line"><span class="lineno">   36</span>                curr.id = t.getString(memoryMap);</div>
-<div class="line"><span class="lineno">   37</span>                </div>
-<div class="line"><span class="lineno">   38</span>                i++;</div>
-<div class="line"><span class="lineno">   39</span>                t = params.get(i);</div>
-<div class="line"><span class="lineno">   40</span>                curr.qty = (int) t.getFloat(memoryMap);</div>
-<div class="line"><span class="lineno">   41</span>                </div>
-<div class="line"><span class="lineno">   42</span>                <span class="keywordflow">if</span> (params.size() &gt; i + 1) {</div>
-<div class="line"><span class="lineno">   43</span>                    t = params.get(i + 1);</div>
-<div class="line"><span class="lineno">   44</span>                    <span class="keywordflow">if</span> (t.isBoolean(memoryMap)) {</div>
-<div class="line"><span class="lineno">   45</span>                        curr.consumed = t.getBoolean(memoryMap);</div>
-<div class="line"><span class="lineno">   46</span>                        i++;</div>
-<div class="line"><span class="lineno">   47</span>                    }</div>
-<div class="line"><span class="lineno">   48</span>                }</div>
-<div class="line"><span class="lineno">   49</span>                data.add(curr);</div>
-<div class="line"><span class="lineno">   50</span>                <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   51</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (t.isFloat(memoryMap)) {</div>
-<div class="line"><span class="lineno">   52</span>                widthOverride = t.getFloat(memoryMap);</div>
-<div class="line"><span class="lineno">   53</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   54</span>            }</div>
-<div class="line"><span class="lineno">   55</span>        }</div>
-<div class="line"><span class="lineno">   56</span>        </div>
-<div class="line"><span class="lineno">   57</span>        String [] ids = <span class="keyword">new</span> String [data.size()];</div>
-<div class="line"><span class="lineno">   58</span>        <span class="keywordtype">int</span> [] qty = <span class="keyword">new</span> <span class="keywordtype">int</span> [data.size()];</div>
-<div class="line"><span class="lineno">   59</span>        <span class="keywordtype">boolean</span> [] consumed = <span class="keyword">new</span> <span class="keywordtype">boolean</span> [data.size()];</div>
-<div class="line"><span class="lineno">   60</span>        </div>
-<div class="line"><span class="lineno">   61</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; data.size(); i++) {</div>
-<div class="line"><span class="lineno">   62</span>            ResData curr = data.get(i);</div>
-<div class="line"><span class="lineno">   63</span>            ids[i] = curr.id;</div>
-<div class="line"><span class="lineno">   64</span>            qty[i] = curr.qty;</div>
-<div class="line"><span class="lineno">   65</span>            consumed[i] = curr.consumed;</div>
-<div class="line"><span class="lineno">   66</span>        }</div>
-<div class="line"><span class="lineno">   67</span>        </div>
-<div class="line"><span class="lineno">   68</span>        Misc.showCost(dialog.getTextPanel(), <span class="stringliteral">&quot;Resources: required (available)&quot;</span>, <span class="keyword">true</span>, widthOverride, <span class="keyword">null</span>, <span class="keyword">null</span>, ids, qty, consumed);</div>
-<div class="line"><span class="lineno">   69</span>        </div>
-<div class="line"><span class="lineno">   70</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   71</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

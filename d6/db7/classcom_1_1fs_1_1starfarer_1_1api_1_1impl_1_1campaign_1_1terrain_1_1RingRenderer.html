@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -134,10 +135,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/dea/RingRenderer_8java_source.html#l00018">18</a> of file <a class="el" href="../../d6/dea/RingRenderer_8java_source.html">RingRenderer.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   18</span>                                                {</div>
-<div class="line"><span class="lineno">   19</span>        texture = Global.getSettings().getSprite(cat, key);</div>
-<div class="line"><span class="lineno">   20</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -198,176 +196,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/dea/RingRenderer_8java_source.html#l00023">23</a> of file <a class="el" href="../../d6/dea/RingRenderer_8java_source.html">RingRenderer.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   23</span>                                                                                                                         {</div>
-<div class="line"><span class="lineno">   24</span>        </div>
-<div class="line"><span class="lineno">   25</span>        <span class="keywordtype">float</span> middleRadius = minR + (maxR - minR) / 2f;</div>
-<div class="line"><span class="lineno">   26</span>        middleRadius *= factor;</div>
-<div class="line"><span class="lineno">   27</span>        </div>
-<div class="line"><span class="lineno">   28</span>        <span class="keywordtype">float</span> angle = 0f;</div>
-<div class="line"><span class="lineno">   29</span>        </div>
-<div class="line"><span class="lineno">   30</span>        <span class="keywordtype">float</span> circ = (float) (Math.PI * 2f * middleRadius);</div>
-<div class="line"><span class="lineno">   31</span>        <span class="keywordtype">float</span> pixelsPerSegment = 5f;</div>
-<div class="line"><span class="lineno">   32</span>        <span class="comment">//float segments = circ / pixelsPerSegment;</span></div>
-<div class="line"><span class="lineno">   33</span>        <span class="keywordtype">float</span> segments = Math.round(circ / pixelsPerSegment);</div>
-<div class="line"><span class="lineno">   34</span>        </div>
-<div class="line"><span class="lineno">   35</span>        <span class="keywordtype">float</span> startRad = (float) Math.toRadians(0);</div>
-<div class="line"><span class="lineno">   36</span>        <span class="keywordtype">float</span> endRad = (float) Math.toRadians(360f);</div>
-<div class="line"><span class="lineno">   37</span>        <span class="keywordtype">float</span> spanRad = Misc.normalizeAngle(endRad - startRad);</div>
-<div class="line"><span class="lineno">   38</span>        <span class="keywordtype">float</span> anglePerSegment = spanRad / segments;</div>
-<div class="line"><span class="lineno">   39</span>        </div>
-<div class="line"><span class="lineno">   40</span>        <span class="keywordtype">float</span> x = loc.x;</div>
-<div class="line"><span class="lineno">   41</span>        <span class="keywordtype">float</span> y = loc.y;</div>
-<div class="line"><span class="lineno">   42</span>        </div>
-<div class="line"><span class="lineno">   43</span>        GL11.glPushMatrix();</div>
-<div class="line"><span class="lineno">   44</span>        GL11.glTranslatef(x * factor, y * factor, 0);</div>
-<div class="line"><span class="lineno">   45</span>        GL11.glRotatef(angle, 0, 0, 1);</div>
-<div class="line"><span class="lineno">   46</span>        </div>
-<div class="line"><span class="lineno">   47</span>        GL11.glEnable(GL11.GL_TEXTURE_2D);</div>
-<div class="line"><span class="lineno">   48</span>        texture.<a class="code hl_function" href="../../db/d53/interfacecom_1_1fs_1_1starfarer_1_1api_1_1graphics_1_1SpriteAPI.html#a7945443a356bf91aee5dced6cba20b38">bindTexture</a>();</div>
-<div class="line"><span class="lineno">   49</span>        <span class="comment">//GL11.glDisable(GL11.GL_TEXTURE_2D);</span></div>
-<div class="line"><span class="lineno">   50</span>        </div>
-<div class="line"><span class="lineno">   51</span>        GL11.glEnable(GL11.GL_BLEND);</div>
-<div class="line"><span class="lineno">   52</span>        GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA);</div>
-<div class="line"><span class="lineno">   53</span>        </div>
-<div class="line"><span class="lineno">   54</span>        GL11.glColor4ub((<span class="keywordtype">byte</span>)color.getRed(),</div>
-<div class="line"><span class="lineno">   55</span>                        (byte)color.getGreen(),</div>
-<div class="line"><span class="lineno">   56</span>                        (byte)color.getBlue(),</div>
-<div class="line"><span class="lineno">   57</span>                        (byte)((<span class="keywordtype">float</span>) color.getAlpha() * alphaMult));</div>
-<div class="line"><span class="lineno">   58</span>        </div>
-<div class="line"><span class="lineno">   59</span>        </div>
-<div class="line"><span class="lineno">   60</span>        <span class="keywordtype">float</span> texWidth = texture.<a class="code hl_function" href="../../db/d53/interfacecom_1_1fs_1_1starfarer_1_1api_1_1graphics_1_1SpriteAPI.html#ad7f7b49dd905a41e2a77b033147f53cc">getTextureWidth</a>();</div>
-<div class="line"><span class="lineno">   61</span>        <span class="keywordtype">float</span> imageWidth = texture.<a class="code hl_function" href="../../db/d53/interfacecom_1_1fs_1_1starfarer_1_1api_1_1graphics_1_1SpriteAPI.html#abefa8f17a0739eb572fb20a6d4fc38b3">getWidth</a>();</div>
-<div class="line"><span class="lineno">   62</span>        <span class="keywordtype">float</span> bandWidthInTexture = imageWidth;</div>
-<div class="line"><span class="lineno">   63</span>        </div>
-<div class="line"><span class="lineno">   64</span>        <span class="keywordtype">float</span> thickness = (maxR - minR) * 1f * factor;</div>
-<div class="line"><span class="lineno">   65</span>        <span class="keywordtype">float</span> radius = middleRadius - thickness / 2f;</div>
-<div class="line"><span class="lineno">   66</span>        <span class="keywordflow">if</span> (spiral) {</div>
-<div class="line"><span class="lineno">   67</span>            <span class="keywordtype">float</span> prev = (radius + thickness);</div>
-<div class="line"><span class="lineno">   68</span>            thickness = Math.min(thickness, (radius + thickness) * 0.25f);</div>
-<div class="line"><span class="lineno">   69</span>            radius = prev - thickness;</div>
-<div class="line"><span class="lineno">   70</span>        }</div>
-<div class="line"><span class="lineno">   71</span>        </div>
-<div class="line"><span class="lineno">   72</span>        <span class="keywordtype">float</span> texProgress = 0f;</div>
-<div class="line"><span class="lineno">   73</span>        <span class="keywordtype">float</span> texHeight = texture.<a class="code hl_function" href="../../db/d53/interfacecom_1_1fs_1_1starfarer_1_1api_1_1graphics_1_1SpriteAPI.html#afaf556c3a005c18b6aca85739162b87a">getTextureHeight</a>();</div>
-<div class="line"><span class="lineno">   74</span>        <span class="keywordtype">float</span> imageHeight = texture.<a class="code hl_function" href="../../db/d53/interfacecom_1_1fs_1_1starfarer_1_1api_1_1graphics_1_1SpriteAPI.html#ab3834491cdbf575bac739f5b5683e504">getHeight</a>();</div>
-<div class="line"><span class="lineno">   75</span>        <span class="keywordtype">float</span> texPerSegment = pixelsPerSegment * texHeight / imageHeight * bandWidthInTexture / thickness;</div>
-<div class="line"><span class="lineno">   76</span>        </div>
-<div class="line"><span class="lineno">   77</span>        <span class="comment">//texPerSegment = 0.01f;</span></div>
-<div class="line"><span class="lineno">   78</span>        <span class="keywordtype">float</span> totalTex = Math.max(1f, Math.round(texPerSegment * segments));</div>
-<div class="line"><span class="lineno">   79</span>        texPerSegment = totalTex / segments;</div>
-<div class="line"><span class="lineno">   80</span>        </div>
-<div class="line"><span class="lineno">   81</span> </div>
-<div class="line"><span class="lineno">   82</span>        <span class="keywordtype">float</span> leftTX = 0;</div>
-<div class="line"><span class="lineno">   83</span>        <span class="keywordtype">float</span> rightTX = 1;</div>
-<div class="line"><span class="lineno">   84</span><span class="comment">//      float bandIndex = 0;</span></div>
-<div class="line"><span class="lineno">   85</span><span class="comment">//      float leftTX = (float) bandIndex * texWidth * bandWidthInTexture / imageWidth;</span></div>
-<div class="line"><span class="lineno">   86</span><span class="comment">//      float rightTX = (float) (bandIndex + 1f) * texWidth * bandWidthInTexture / imageWidth - 0.001f;</span></div>
-<div class="line"><span class="lineno">   87</span> </div>
-<div class="line"><span class="lineno">   88</span>        <span class="keywordtype">float</span> minSpiralRadius = radius * 0.01f;</div>
-<div class="line"><span class="lineno">   89</span>        <span class="keywordtype">float</span> spiralFactor = 1.25f;</div>
-<div class="line"><span class="lineno">   90</span>        <span class="comment">//System.out.println(hashCode());</span></div>
-<div class="line"><span class="lineno">   91</span><span class="comment">//      if (!GLListManager.callList(token)) {</span></div>
-<div class="line"><span class="lineno">   92</span><span class="comment">//          token = GLListManager.beginList();</span></div>
-<div class="line"><span class="lineno">   93</span>            GL11.glBegin(GL11.GL_QUAD_STRIP);</div>
-<div class="line"><span class="lineno">   94</span>            </div>
-<div class="line"><span class="lineno">   95</span>            <span class="keywordflow">if</span> (!spiral) {</div>
-<div class="line"><span class="lineno">   96</span>                <span class="keywordflow">for</span> (<span class="keywordtype">float</span> i = 0; i &lt; segments; i++) {</div>
-<div class="line"><span class="lineno">   97</span>                    <span class="keywordtype">float</span> theta = anglePerSegment * i;<span class="comment">// + (float) Math.toRadians(angle);</span></div>
-<div class="line"><span class="lineno">   98</span>                    <span class="keywordtype">float</span> cos = (float) Math.cos(theta);</div>
-<div class="line"><span class="lineno">   99</span>                    <span class="keywordtype">float</span> sin = (float) Math.sin(theta);</div>
-<div class="line"><span class="lineno">  100</span>                    <span class="keywordtype">float</span> x1 = cos * radius;</div>
-<div class="line"><span class="lineno">  101</span>                    <span class="keywordtype">float</span> y1 = sin * radius;</div>
-<div class="line"><span class="lineno">  102</span>                    <span class="keywordtype">float</span> x2 = cos * (radius + thickness);</div>
-<div class="line"><span class="lineno">  103</span>                    <span class="keywordtype">float</span> y2 = sin * (radius + thickness);</div>
-<div class="line"><span class="lineno">  104</span>                    </div>
-<div class="line"><span class="lineno">  105</span>                    GL11.glTexCoord2f(leftTX, texProgress);</div>
-<div class="line"><span class="lineno">  106</span>                    GL11.glVertex2f(x1, y1);</div>
-<div class="line"><span class="lineno">  107</span>                    GL11.glTexCoord2f(rightTX, texProgress);</div>
-<div class="line"><span class="lineno">  108</span>                    GL11.glVertex2f(x2, y2);</div>
-<div class="line"><span class="lineno">  109</span>                    </div>
-<div class="line"><span class="lineno">  110</span>                    texProgress += texPerSegment;</div>
-<div class="line"><span class="lineno">  111</span>                }</div>
-<div class="line"><span class="lineno">  112</span>                </div>
-<div class="line"><span class="lineno">  113</span>                {</div>
-<div class="line"><span class="lineno">  114</span>                    <span class="keywordtype">int</span> i = 0;</div>
-<div class="line"><span class="lineno">  115</span>                    <span class="keywordtype">float</span> theta = anglePerSegment * i; <span class="comment">// + (float) Math.toRadians(angle);</span></div>
-<div class="line"><span class="lineno">  116</span>                    <span class="keywordtype">float</span> cos = (float) Math.cos(theta);</div>
-<div class="line"><span class="lineno">  117</span>                    <span class="keywordtype">float</span> sin = (float) Math.sin(theta);</div>
-<div class="line"><span class="lineno">  118</span>                    <span class="keywordtype">float</span> x1 = cos * radius;</div>
-<div class="line"><span class="lineno">  119</span>                    <span class="keywordtype">float</span> y1 = sin * radius;</div>
-<div class="line"><span class="lineno">  120</span>                    <span class="keywordtype">float</span> x2 = cos * (radius + thickness);</div>
-<div class="line"><span class="lineno">  121</span>                    <span class="keywordtype">float</span> y2 = sin * (radius + thickness);</div>
-<div class="line"><span class="lineno">  122</span>                    </div>
-<div class="line"><span class="lineno">  123</span>                    GL11.glTexCoord2f(leftTX, texProgress);</div>
-<div class="line"><span class="lineno">  124</span>                    GL11.glVertex2f(x1, y1);</div>
-<div class="line"><span class="lineno">  125</span>                    GL11.glTexCoord2f(rightTX, texProgress);</div>
-<div class="line"><span class="lineno">  126</span>                    GL11.glVertex2f(x2, y2);</div>
-<div class="line"><span class="lineno">  127</span>                }</div>
-<div class="line"><span class="lineno">  128</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  129</span>                <span class="comment">//System.out.println(radius);</span></div>
-<div class="line"><span class="lineno">  130</span>                <span class="comment">//minSpiralRadius = 850f;</span></div>
-<div class="line"><span class="lineno">  131</span>                <span class="keywordtype">float</span> numSpirals = (radius - minSpiralRadius) / (thickness * spiralFactor);</div>
-<div class="line"><span class="lineno">  132</span>                <span class="keywordflow">if</span> (numSpirals &lt; 2) numSpirals = 2;</div>
-<div class="line"><span class="lineno">  133</span>                <span class="keywordtype">float</span> distMult = 1f;</div>
-<div class="line"><span class="lineno">  134</span>                <span class="keywordtype">float</span> thicknessMult = 10f;</div>
-<div class="line"><span class="lineno">  135</span>                <span class="keywordtype">float</span> theta = 0f;</div>
-<div class="line"><span class="lineno">  136</span>                <span class="keywordflow">for</span> (<span class="keywordtype">float</span> i = 0; i &lt; segments * numSpirals; i++) {</div>
-<div class="line"><span class="lineno">  137</span>                    distMult = 1f - (i / (segments * numSpirals));</div>
-<div class="line"><span class="lineno">  138</span>                    <span class="comment">//distMult *= distMult;</span></div>
-<div class="line"><span class="lineno">  139</span>                    distMult = (float) Math.sqrt(distMult);</div>
-<div class="line"><span class="lineno">  140</span>                    <span class="comment">//thicknessMult = 0.5f + 0.5f * (1f - (i / (segments * numSpirals)));</span></div>
-<div class="line"><span class="lineno">  141</span>                    thicknessMult = 1f;</div>
-<div class="line"><span class="lineno">  142</span>                    <span class="keywordtype">float</span> alpha = i / segments;</div>
-<div class="line"><span class="lineno">  143</span>                    <span class="keywordflow">if</span> (i &gt; segments * (numSpirals - 1)) {</div>
-<div class="line"><span class="lineno">  144</span>                        alpha = (segments * numSpirals - i) / segments;</div>
-<div class="line"><span class="lineno">  145</span>                    }</div>
-<div class="line"><span class="lineno">  146</span>                    <span class="keywordflow">if</span> (alpha &gt; 1) alpha = 1;</div>
-<div class="line"><span class="lineno">  147</span>                    <span class="keywordflow">if</span> (alpha &lt; 0) alpha = 0;</div>
-<div class="line"><span class="lineno">  148</span>                    </div>
-<div class="line"><span class="lineno">  149</span>                    GL11.glColor4ub((<span class="keywordtype">byte</span>)color.getRed(),</div>
-<div class="line"><span class="lineno">  150</span>                            (byte)color.getGreen(),</div>
-<div class="line"><span class="lineno">  151</span>                            (byte)color.getBlue(),</div>
-<div class="line"><span class="lineno">  152</span>                            (byte)((<span class="keywordtype">float</span>) color.getAlpha() * alpha * alphaMult));</div>
-<div class="line"><span class="lineno">  153</span>                    </div>
-<div class="line"><span class="lineno">  154</span>                    </div>
-<div class="line"><span class="lineno">  155</span>                    theta = anglePerSegment * i;<span class="comment">// + (float) Math.toRadians(angle);</span></div>
-<div class="line"><span class="lineno">  156</span>                    <span class="keywordtype">float</span> cos = (float) Math.cos(theta);</div>
-<div class="line"><span class="lineno">  157</span>                    <span class="keywordtype">float</span> sin = (float) Math.sin(theta);</div>
-<div class="line"><span class="lineno">  158</span>                    <span class="keywordtype">float</span> x1 = cos * ((radius - minSpiralRadius) * distMult + minSpiralRadius);</div>
-<div class="line"><span class="lineno">  159</span>                    <span class="keywordtype">float</span> y1 = sin * ((radius - minSpiralRadius) * distMult + minSpiralRadius);</div>
-<div class="line"><span class="lineno">  160</span>                    <span class="keywordtype">float</span> x2 = cos * (((radius - minSpiralRadius) * distMult + thickness * thicknessMult) + minSpiralRadius);</div>
-<div class="line"><span class="lineno">  161</span>                    <span class="keywordtype">float</span> y2 = sin * (((radius - minSpiralRadius) * distMult + thickness * thicknessMult) + minSpiralRadius);</div>
-<div class="line"><span class="lineno">  162</span>                    </div>
-<div class="line"><span class="lineno">  163</span>                    GL11.glTexCoord2f(leftTX, texProgress);</div>
-<div class="line"><span class="lineno">  164</span>                    GL11.glVertex2f(x1, y1);</div>
-<div class="line"><span class="lineno">  165</span>                    GL11.glTexCoord2f(rightTX, texProgress);</div>
-<div class="line"><span class="lineno">  166</span>                    GL11.glVertex2f(x2, y2);</div>
-<div class="line"><span class="lineno">  167</span>                    </div>
-<div class="line"><span class="lineno">  168</span>                    <span class="keywordtype">float</span> circumferenceMult = ((radius - minSpiralRadius) * distMult + minSpiralRadius) / radius;</div>
-<div class="line"><span class="lineno">  169</span>                    texProgress += texPerSegment * circumferenceMult;</div>
-<div class="line"><span class="lineno">  170</span>                    </div>
-<div class="line"><span class="lineno">  171</span>                    <span class="keywordflow">if</span> (i == 0) {</div>
-<div class="line"><span class="lineno">  172</span>                        GL11.glColor4ub((<span class="keywordtype">byte</span>)color.getRed(),</div>
-<div class="line"><span class="lineno">  173</span>                                (byte)color.getGreen(),</div>
-<div class="line"><span class="lineno">  174</span>                                (byte)color.getBlue(),</div>
-<div class="line"><span class="lineno">  175</span>                                (byte)((<span class="keywordtype">float</span>) color.getAlpha() * alphaMult));</div>
-<div class="line"><span class="lineno">  176</span>                    }</div>
-<div class="line"><span class="lineno">  177</span>                }</div>
-<div class="line"><span class="lineno">  178</span>            }</div>
-<div class="line"><span class="lineno">  179</span> </div>
-<div class="line"><span class="lineno">  180</span>            </div>
-<div class="line"><span class="lineno">  181</span>            GL11.glEnd();</div>
-<div class="line"><span class="lineno">  182</span>            <span class="comment">//GLListManager.endList();</span></div>
-<div class="line"><span class="lineno">  183</span>        <span class="comment">//}</span></div>
-<div class="line"><span class="lineno">  184</span>        GL11.glPopMatrix();</div>
-<div class="line"><span class="lineno">  185</span>        </div>
-<div class="line"><span class="lineno">  186</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1graphics_1_1SpriteAPI_html_a7945443a356bf91aee5dced6cba20b38"><div class="ttname"><a href="../../db/d53/interfacecom_1_1fs_1_1starfarer_1_1api_1_1graphics_1_1SpriteAPI.html#a7945443a356bf91aee5dced6cba20b38">com.fs.starfarer.api.graphics.SpriteAPI.bindTexture</a></div><div class="ttdeci">void bindTexture()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1graphics_1_1SpriteAPI_html_ab3834491cdbf575bac739f5b5683e504"><div class="ttname"><a href="../../db/d53/interfacecom_1_1fs_1_1starfarer_1_1api_1_1graphics_1_1SpriteAPI.html#ab3834491cdbf575bac739f5b5683e504">com.fs.starfarer.api.graphics.SpriteAPI.getHeight</a></div><div class="ttdeci">float getHeight()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1graphics_1_1SpriteAPI_html_abefa8f17a0739eb572fb20a6d4fc38b3"><div class="ttname"><a href="../../db/d53/interfacecom_1_1fs_1_1starfarer_1_1api_1_1graphics_1_1SpriteAPI.html#abefa8f17a0739eb572fb20a6d4fc38b3">com.fs.starfarer.api.graphics.SpriteAPI.getWidth</a></div><div class="ttdeci">float getWidth()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1graphics_1_1SpriteAPI_html_ad7f7b49dd905a41e2a77b033147f53cc"><div class="ttname"><a href="../../db/d53/interfacecom_1_1fs_1_1starfarer_1_1api_1_1graphics_1_1SpriteAPI.html#ad7f7b49dd905a41e2a77b033147f53cc">com.fs.starfarer.api.graphics.SpriteAPI.getTextureWidth</a></div><div class="ttdeci">float getTextureWidth()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1graphics_1_1SpriteAPI_html_afaf556c3a005c18b6aca85739162b87a"><div class="ttname"><a href="../../db/d53/interfacecom_1_1fs_1_1starfarer_1_1api_1_1graphics_1_1SpriteAPI.html#afaf556c3a005c18b6aca85739162b87a">com.fs.starfarer.api.graphics.SpriteAPI.getTextureHeight</a></div><div class="ttdeci">float getTextureHeight()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

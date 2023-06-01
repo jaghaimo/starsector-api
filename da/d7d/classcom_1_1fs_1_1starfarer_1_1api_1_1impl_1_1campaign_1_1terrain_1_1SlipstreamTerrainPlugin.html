@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -396,65 +397,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a820be4dfb8c152daef470bf6a2c933b5">com.fs.starfarer.api.impl.campaign.terrain.BaseTerrain</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d1/db3/SlipstreamTerrainPlugin_8java_source.html#l00147">147</a> of file <a class="el" href="../../d1/db3/SlipstreamTerrainPlugin_8java_source.html">SlipstreamTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  147</span>                                      {</div>
-<div class="line"><span class="lineno">  148</span>        super.advance(amount);</div>
-<div class="line"><span class="lineno">  149</span>        <span class="keywordflow">if</span> (<span class="keyword">true</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  150</span>        </div>
-<div class="line"><span class="lineno">  151</span>        <a class="code hl_variable" href="../../da/d7d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SlipstreamTerrainPlugin.html#a64f916370cb0772aac2904fbcab1ef55">containsCache</a>.clear();</div>
-<div class="line"><span class="lineno">  152</span>        </div>
-<div class="line"><span class="lineno">  153</span>        <span class="keywordtype">float</span> days = Global.getSector().getClock().convertToDays(amount);</div>
-<div class="line"><span class="lineno">  154</span>        </div>
-<div class="line"><span class="lineno">  155</span>        <a class="code hl_variable" href="../../da/d7d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SlipstreamTerrainPlugin.html#a0bbb7e7b2c2c62842c59776f70233e2f">disrupted</a>.advance(days);</div>
-<div class="line"><span class="lineno">  156</span>        </div>
-<div class="line"><span class="lineno">  157</span>        <span class="keywordflow">for</span> (CampaignFleetAPI fleet : <a class="code hl_variable" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a98ba084e2722ae038b3961e580dbc821">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a06362480c6a17326650354460c6d7442">getContainingLocation</a>().<a class="code hl_function" href="../../d2/d2c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI.html#af3a8e070e561639b6e96be1f5ba6813a">getFleets</a>()) {</div>
-<div class="line"><span class="lineno">  158</span>            <span class="comment">//if (!fleet.isPlayerFleet()) continue;</span></div>
-<div class="line"><span class="lineno">  159</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/d7d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SlipstreamTerrainPlugin.html#a0bbb7e7b2c2c62842c59776f70233e2f">disrupted</a>.contains(fleet)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  160</span>            </div>
-<div class="line"><span class="lineno">  161</span>            <span class="keywordtype">float</span> burnLevel = fleet.getCurrBurnLevel();</div>
-<div class="line"><span class="lineno">  162</span>            <span class="keywordflow">if</span> (burnLevel &gt;= 1) {</div>
-<div class="line"><span class="lineno">  163</span>                Stream s = <a class="code hl_function" href="../../da/d7d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SlipstreamTerrainPlugin.html#a6ece93470259eaa1a26d0a83f0e60670">getStream</a>(fleet);</div>
-<div class="line"><span class="lineno">  164</span>                Vector2f loc = fleet.getLocation();</div>
-<div class="line"><span class="lineno">  165</span>                <span class="keywordtype">boolean</span> addPoint = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  166</span>                <span class="keywordflow">if</span> (s.isEmpty()) {</div>
-<div class="line"><span class="lineno">  167</span>                    addPoint = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  168</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  169</span>                    StreamPoint last = s.getLastPoint();</div>
-<div class="line"><span class="lineno">  170</span>                    <span class="keywordtype">float</span> dist = Misc.getDistance(loc.x, loc.y, last.x, last.y);</div>
-<div class="line"><span class="lineno">  171</span>                    <span class="keywordflow">if</span> (dist &gt; <a class="code hl_variable" href="../../da/d7d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SlipstreamTerrainPlugin.html#af730a80f01119ee8d4b822c77556ba65">MIN_POINT_DIST</a>) {</div>
-<div class="line"><span class="lineno">  172</span>                        addPoint = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  173</span>                    }</div>
-<div class="line"><span class="lineno">  174</span>                }</div>
-<div class="line"><span class="lineno">  175</span>                <span class="keywordflow">if</span> (addPoint) {</div>
-<div class="line"><span class="lineno">  176</span>                    StreamPoint p = <span class="keyword">new</span> StreamPoint(loc.x, loc.y, 0.25f,</div>
-<div class="line"><span class="lineno">  177</span>                                                    burnLevel, </div>
-<div class="line"><span class="lineno">  178</span>                                                    Math.max(<a class="code hl_variable" href="../../da/d7d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SlipstreamTerrainPlugin.html#af730a80f01119ee8d4b822c77556ba65">MIN_POINT_DIST</a> * 2f, fleet.getRadius()));</div>
-<div class="line"><span class="lineno">  179</span>                    s.addPoint(p);</div>
-<div class="line"><span class="lineno">  180</span>                }</div>
-<div class="line"><span class="lineno">  181</span>            }</div>
-<div class="line"><span class="lineno">  182</span>        }</div>
-<div class="line"><span class="lineno">  183</span>        </div>
-<div class="line"><span class="lineno">  184</span>        Iterator&lt;Stream&gt; iter1 = <a class="code hl_variable" href="../../da/d7d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SlipstreamTerrainPlugin.html#a1b776fb08bbf6d45bece7feb077087f7">streams</a>.values().iterator();</div>
-<div class="line"><span class="lineno">  185</span>        <span class="keywordflow">while</span> (iter1.hasNext()) {</div>
-<div class="line"><span class="lineno">  186</span>            Stream s = iter1.next();</div>
-<div class="line"><span class="lineno">  187</span> </div>
-<div class="line"><span class="lineno">  188</span>            advancePoints(s, days);</div>
-<div class="line"><span class="lineno">  189</span>            <span class="comment">//advanceParticles(s, days);</span></div>
-<div class="line"><span class="lineno">  190</span>            <span class="comment">//addNewParticles(s, days);</span></div>
-<div class="line"><span class="lineno">  191</span>            </div>
-<div class="line"><span class="lineno">  192</span>            <span class="keywordflow">if</span> (s.isEmpty()) {<span class="comment">// &amp;&amp; s.particles.isEmpty()) {</span></div>
-<div class="line"><span class="lineno">  193</span>                iter1.remove();</div>
-<div class="line"><span class="lineno">  194</span>            } </div>
-<div class="line"><span class="lineno">  195</span>        }</div>
-<div class="line"><span class="lineno">  196</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain_html_a98ba084e2722ae038b3961e580dbc821"><div class="ttname"><a href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a98ba084e2722ae038b3961e580dbc821">com.fs.starfarer.api.impl.campaign.terrain.BaseTerrain.entity</a></div><div class="ttdeci">SectorEntityToken entity</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/daa/BaseTerrain_8java_source.html#l00025">BaseTerrain.java:25</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SlipstreamTerrainPlugin_html_a0bbb7e7b2c2c62842c59776f70233e2f"><div class="ttname"><a href="../../da/d7d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SlipstreamTerrainPlugin.html#a0bbb7e7b2c2c62842c59776f70233e2f">com.fs.starfarer.api.impl.campaign.terrain.SlipstreamTerrainPlugin.disrupted</a></div><div class="ttdeci">TimeoutTracker&lt; SectorEntityToken &gt; disrupted</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/db3/SlipstreamTerrainPlugin_8java_source.html#l00140">SlipstreamTerrainPlugin.java:140</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SlipstreamTerrainPlugin_html_a1b776fb08bbf6d45bece7feb077087f7"><div class="ttname"><a href="../../da/d7d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SlipstreamTerrainPlugin.html#a1b776fb08bbf6d45bece7feb077087f7">com.fs.starfarer.api.impl.campaign.terrain.SlipstreamTerrainPlugin.streams</a></div><div class="ttdeci">Map&lt; SectorEntityToken, Stream &gt; streams</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/db3/SlipstreamTerrainPlugin_8java_source.html#l00136">SlipstreamTerrainPlugin.java:136</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SlipstreamTerrainPlugin_html_a64f916370cb0772aac2904fbcab1ef55"><div class="ttname"><a href="../../da/d7d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SlipstreamTerrainPlugin.html#a64f916370cb0772aac2904fbcab1ef55">com.fs.starfarer.api.impl.campaign.terrain.SlipstreamTerrainPlugin.containsCache</a></div><div class="ttdeci">transient Map&lt; SectorEntityToken, StreamPoint &gt; containsCache</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/db3/SlipstreamTerrainPlugin_8java_source.html#l00137">SlipstreamTerrainPlugin.java:137</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SlipstreamTerrainPlugin_html_a6ece93470259eaa1a26d0a83f0e60670"><div class="ttname"><a href="../../da/d7d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SlipstreamTerrainPlugin.html#a6ece93470259eaa1a26d0a83f0e60670">com.fs.starfarer.api.impl.campaign.terrain.SlipstreamTerrainPlugin.getStream</a></div><div class="ttdeci">Stream getStream(SectorEntityToken key)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/db3/SlipstreamTerrainPlugin_8java_source.html#l00218">SlipstreamTerrainPlugin.java:218</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SlipstreamTerrainPlugin_html_af730a80f01119ee8d4b822c77556ba65"><div class="ttname"><a href="../../da/d7d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SlipstreamTerrainPlugin.html#af730a80f01119ee8d4b822c77556ba65">com.fs.starfarer.api.impl.campaign.terrain.SlipstreamTerrainPlugin.MIN_POINT_DIST</a></div><div class="ttdeci">static final float MIN_POINT_DIST</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/db3/SlipstreamTerrainPlugin_8java_source.html#l00029">SlipstreamTerrainPlugin.java:29</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI_html_af3a8e070e561639b6e96be1f5ba6813a"><div class="ttname"><a href="../../d2/d2c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI.html#af3a8e070e561639b6e96be1f5ba6813a">com.fs.starfarer.api.campaign.LocationAPI.getFleets</a></div><div class="ttdeci">List&lt; CampaignFleetAPI &gt; getFleets()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_a06362480c6a17326650354460c6d7442"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a06362480c6a17326650354460c6d7442">com.fs.starfarer.api.campaign.SectorEntityToken.getContainingLocation</a></div><div class="ttdeci">LocationAPI getContainingLocation()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa16a660189ff058c59e990c657b471c3" name="aa16a660189ff058c59e990c657b471c3"></a>
@@ -486,25 +429,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a2e05e8288a8a1fad8cdcda3caaa03342">com.fs.starfarer.api.impl.campaign.terrain.BaseTerrain</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d1/db3/SlipstreamTerrainPlugin_8java_source.html#l00228">228</a> of file <a class="el" href="../../d1/db3/SlipstreamTerrainPlugin_8java_source.html">SlipstreamTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  228</span>                                                                  {</div>
-<div class="line"><span class="lineno">  229</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a98ba084e2722ae038b3961e580dbc821">entity</a> instanceof CampaignFleetAPI) {</div>
-<div class="line"><span class="lineno">  230</span>            CampaignFleetAPI fleet = (CampaignFleetAPI) <a class="code hl_variable" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a98ba084e2722ae038b3961e580dbc821">entity</a>;</div>
-<div class="line"><span class="lineno">  231</span>            containsPointCaching(fleet, fleet.getLocation(), fleet.getRadius());</div>
-<div class="line"><span class="lineno">  232</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/d7d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SlipstreamTerrainPlugin.html#a64f916370cb0772aac2904fbcab1ef55">containsCache</a>.containsKey(fleet)) {</div>
-<div class="line"><span class="lineno">  233</span>                StreamPoint point = <a class="code hl_variable" href="../../da/d7d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SlipstreamTerrainPlugin.html#a64f916370cb0772aac2904fbcab1ef55">containsCache</a>.get(fleet);</div>
-<div class="line"><span class="lineno">  234</span>                <span class="keywordtype">float</span> fleetBurn = fleet.getFleetData().getBurnLevel();</div>
-<div class="line"><span class="lineno">  235</span>                <span class="keywordflow">if</span> (point.burn &gt; fleetBurn || <span class="keyword">true</span>) {</div>
-<div class="line"><span class="lineno">  236</span>                    <span class="keywordtype">float</span> diff = point.burn - fleetBurn;</div>
-<div class="line"><span class="lineno">  237</span>                    <span class="keywordflow">if</span> (diff &gt; 2) diff = 2;</div>
-<div class="line"><span class="lineno">  238</span>                    diff = (int) diff;</div>
-<div class="line"><span class="lineno">  239</span>                    diff = 2;</div>
-<div class="line"><span class="lineno">  240</span>                    fleet.getStats().addTemporaryModFlat(0.1f, <a class="code hl_function" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#ad9dda3f05df5e1af8babd85bd4685df4">getModId</a>(), <span class="stringliteral">&quot;In slipstream&quot;</span>, diff, fleet.getStats().getFleetwideMaxBurnMod());</div>
-<div class="line"><span class="lineno">  241</span>                }</div>
-<div class="line"><span class="lineno">  242</span>            }</div>
-<div class="line"><span class="lineno">  243</span>        }</div>
-<div class="line"><span class="lineno">  244</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain_html_ad9dda3f05df5e1af8babd85bd4685df4"><div class="ttname"><a href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#ad9dda3f05df5e1af8babd85bd4685df4">com.fs.starfarer.api.impl.campaign.terrain.BaseTerrain.getModId</a></div><div class="ttdeci">String getModId()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/daa/BaseTerrain_8java_source.html#l00174">BaseTerrain.java:174</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a56c4ab1acee7ba6c0c3d355e1b424537" name="a56c4ab1acee7ba6c0c3d355e1b424537"></a>
@@ -526,11 +451,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a4edd98cbb55afb61bc9ee3768c25273c">com.fs.starfarer.api.impl.campaign.terrain.BaseTerrain</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d1/db3/SlipstreamTerrainPlugin_8java_source.html#l00247">247</a> of file <a class="el" href="../../d1/db3/SlipstreamTerrainPlugin_8java_source.html">SlipstreamTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  247</span>                                                           {</div>
-<div class="line"><span class="lineno">  248</span>        <span class="keywordflow">return</span> containsPointCaching(other, other.getLocation(), other.getRadius()) &amp;&amp; !<a class="code hl_function" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#ab6f4a7ead0fbcf6793856f4c90d4eeb0">isPreventedFromAffecting</a>(other);</div>
-<div class="line"><span class="lineno">  249</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain_html_ab6f4a7ead0fbcf6793856f4c90d4eeb0"><div class="ttname"><a href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#ab6f4a7ead0fbcf6793856f4c90d4eeb0">com.fs.starfarer.api.impl.campaign.terrain.BaseTerrain.isPreventedFromAffecting</a></div><div class="ttdeci">boolean isPreventedFromAffecting(SectorEntityToken other)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/daa/BaseTerrain_8java_source.html#l00362">BaseTerrain.java:362</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a7c599d26aba5af3e597ab3eae9d593f9" name="a7c599d26aba5af3e597ab3eae9d593f9"></a>
@@ -562,10 +483,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a0ae00bc131ce695377b7d864d855596b">com.fs.starfarer.api.impl.campaign.terrain.BaseTerrain</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d1/db3/SlipstreamTerrainPlugin_8java_source.html#l00252">252</a> of file <a class="el" href="../../d1/db3/SlipstreamTerrainPlugin_8java_source.html">SlipstreamTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  252</span>                                                               {</div>
-<div class="line"><span class="lineno">  253</span>        <span class="keywordflow">return</span> containsPointCaching(<span class="keyword">null</span>, point, radius);</div>
-<div class="line"><span class="lineno">  254</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a67c9b65a25696dd84a57780c9df4d33d" name="a67c9b65a25696dd84a57780c9df4d33d"></a>
@@ -597,22 +515,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a88ad23e734055396eac133fe98844b7e">com.fs.starfarer.api.impl.campaign.terrain.BaseTerrain</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d1/db3/SlipstreamTerrainPlugin_8java_source.html#l00325">325</a> of file <a class="el" href="../../d1/db3/SlipstreamTerrainPlugin_8java_source.html">SlipstreamTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  325</span>                                                                         {</div>
-<div class="line"><span class="lineno">  326</span>        <span class="keywordtype">float</span> pad = 10f;</div>
-<div class="line"><span class="lineno">  327</span>        Color gray = Misc.getGrayColor();</div>
-<div class="line"><span class="lineno">  328</span>        Color highlight = Misc.getHighlightColor();</div>
-<div class="line"><span class="lineno">  329</span>        Color fuel = Global.getSettings().getColor(<span class="stringliteral">&quot;progressBarFuelColor&quot;</span>);</div>
-<div class="line"><span class="lineno">  330</span>        Color bad = Misc.getNegativeHighlightColor();</div>
-<div class="line"><span class="lineno">  331</span>        </div>
-<div class="line"><span class="lineno">  332</span>        tooltip.addTitle(<a class="code hl_function" href="../../da/d7d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SlipstreamTerrainPlugin.html#a4b3e0ee2d0cfb79574f4d54a9cdb5844">getTerrainName</a>());</div>
-<div class="line"><span class="lineno">  333</span>        tooltip.addPara(<span class="stringliteral">&quot;Reduces the range at which fleets inside it can be detected by %s.&quot;</span>, pad,</div>
-<div class="line"><span class="lineno">  334</span>                highlight, </div>
-<div class="line"><span class="lineno">  335</span>                <span class="stringliteral">&quot;50%&quot;</span></div>
-<div class="line"><span class="lineno">  336</span>        );</div>
-<div class="line"><span class="lineno">  337</span>        tooltip.addPara(<span class="stringliteral">&quot;Does not stack with other similar terrain effects.&quot;</span>, pad);</div>
-<div class="line"><span class="lineno">  338</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SlipstreamTerrainPlugin_html_a4b3e0ee2d0cfb79574f4d54a9cdb5844"><div class="ttname"><a href="../../da/d7d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SlipstreamTerrainPlugin.html#a4b3e0ee2d0cfb79574f4d54a9cdb5844">com.fs.starfarer.api.impl.campaign.terrain.SlipstreamTerrainPlugin.getTerrainName</a></div><div class="ttdeci">String getTerrainName()</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/db3/SlipstreamTerrainPlugin_8java_source.html#l00348">SlipstreamTerrainPlugin.java:348</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a6df2ae315df29d19eb4b333cc408c165" name="a6df2ae315df29d19eb4b333cc408c165"></a>
@@ -642,10 +545,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/db3/SlipstreamTerrainPlugin_8java_source.html#l00202">202</a> of file <a class="el" href="../../d1/db3/SlipstreamTerrainPlugin_8java_source.html">SlipstreamTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  202</span>                                                           {</div>
-<div class="line"><span class="lineno">  203</span>        <a class="code hl_variable" href="../../da/d7d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SlipstreamTerrainPlugin.html#a0bbb7e7b2c2c62842c59776f70233e2f">disrupted</a>.set(fleet, dur);</div>
-<div class="line"><span class="lineno">  204</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a563db963f780803ff8efac05de24660a" name="a563db963f780803ff8efac05de24660a"></a>
@@ -667,10 +567,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a5022e6189fb7032a4be3ee4e3a7bd769">com.fs.starfarer.api.impl.campaign.terrain.BaseTerrain</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d1/db3/SlipstreamTerrainPlugin_8java_source.html#l00307">307</a> of file <a class="el" href="../../d1/db3/SlipstreamTerrainPlugin_8java_source.html">SlipstreamTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  307</span>                                                           {</div>
-<div class="line"><span class="lineno">  308</span>        <span class="keywordflow">return</span> layers;</div>
-<div class="line"><span class="lineno">  309</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a6c1d12ff987272bb4fd569d6df737efe" name="a6c1d12ff987272bb4fd569d6df737efe"></a>
@@ -689,10 +586,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/db3/SlipstreamTerrainPlugin_8java_source.html#l00198">198</a> of file <a class="el" href="../../d1/db3/SlipstreamTerrainPlugin_8java_source.html">SlipstreamTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  198</span>                                                            {</div>
-<div class="line"><span class="lineno">  199</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../da/d7d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SlipstreamTerrainPlugin.html#a0bbb7e7b2c2c62842c59776f70233e2f">disrupted</a>;</div>
-<div class="line"><span class="lineno">  200</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="abaa8af140f215d112fd67d1265de6d13" name="abaa8af140f215d112fd67d1265de6d13"></a>
@@ -713,10 +607,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a7bafc952258dfb4adc5c4e5a8d59206f">com.fs.starfarer.api.impl.campaign.terrain.BaseTerrain</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d1/db3/SlipstreamTerrainPlugin_8java_source.html#l00356">356</a> of file <a class="el" href="../../d1/db3/SlipstreamTerrainPlugin_8java_source.html">SlipstreamTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  356</span>                                      {</div>
-<div class="line"><span class="lineno">  357</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;slipstream&quot;</span>;</div>
-<div class="line"><span class="lineno">  358</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a323a70435ece6feffebdb2c6bb0f296f" name="a323a70435ece6feffebdb2c6bb0f296f"></a>
@@ -737,10 +628,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a02089efe190ff0330d552e38ee04b8f1">com.fs.starfarer.api.impl.campaign.terrain.BaseTerrain</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d1/db3/SlipstreamTerrainPlugin_8java_source.html#l00352">352</a> of file <a class="el" href="../../d1/db3/SlipstreamTerrainPlugin_8java_source.html">SlipstreamTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  352</span>                                      {</div>
-<div class="line"><span class="lineno">  353</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Slipstream&quot;</span>;</div>
-<div class="line"><span class="lineno">  354</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a0d3564f54249f05b5ee8fa9934a915d7" name="a0d3564f54249f05b5ee8fa9934a915d7"></a>
@@ -762,10 +650,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a912548a036a8e92c7452d0aa589f9b97">com.fs.starfarer.api.impl.campaign.terrain.BaseTerrain</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d1/db3/SlipstreamTerrainPlugin_8java_source.html#l00317">317</a> of file <a class="el" href="../../d1/db3/SlipstreamTerrainPlugin_8java_source.html">SlipstreamTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  317</span>                                  {</div>
-<div class="line"><span class="lineno">  318</span>        <span class="keywordflow">return</span> Float.MAX_VALUE;</div>
-<div class="line"><span class="lineno">  319</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae421834dfc7e412e098a159d50b84d0e" name="ae421834dfc7e412e098a159d50b84d0e"></a>
@@ -793,12 +678,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/db3/SlipstreamTerrainPlugin_8java_source.html#l00035">35</a> of file <a class="el" href="../../d1/db3/SlipstreamTerrainPlugin_8java_source.html">SlipstreamTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   35</span>                                                                         {</div>
-<div class="line"><span class="lineno">   36</span>        <span class="keywordflow">if</span> (location == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   37</span>        <span class="keywordflow">return</span> (CampaignTerrainAPI) location.getPersistentData().get(<a class="code hl_variable" href="../../da/d7d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SlipstreamTerrainPlugin.html#aeb1bf8f4e52669bb2807c207b4713acb">LOCATION_SLIPSTREAM_KEY</a>);</div>
-<div class="line"><span class="lineno">   38</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SlipstreamTerrainPlugin_html_aeb1bf8f4e52669bb2807c207b4713acb"><div class="ttname"><a href="../../da/d7d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SlipstreamTerrainPlugin.html#aeb1bf8f4e52669bb2807c207b4713acb">com.fs.starfarer.api.impl.campaign.terrain.SlipstreamTerrainPlugin.LOCATION_SLIPSTREAM_KEY</a></div><div class="ttdeci">static final String LOCATION_SLIPSTREAM_KEY</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/db3/SlipstreamTerrainPlugin_8java_source.html#l00027">SlipstreamTerrainPlugin.java:27</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2951b4eb9c3a41d068ae2c755451af6c" name="a2951b4eb9c3a41d068ae2c755451af6c"></a>
@@ -826,15 +706,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/db3/SlipstreamTerrainPlugin_8java_source.html#l00040">40</a> of file <a class="el" href="../../d1/db3/SlipstreamTerrainPlugin_8java_source.html">SlipstreamTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   40</span>                                                                                    {</div>
-<div class="line"><span class="lineno">   41</span>        CampaignTerrainAPI slipstream = <a class="code hl_function" href="../../da/d7d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SlipstreamTerrainPlugin.html#ae421834dfc7e412e098a159d50b84d0e">getSlipstream</a>(location);</div>
-<div class="line"><span class="lineno">   42</span>        <span class="keywordflow">if</span> (slipstream != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   43</span>            <span class="keywordflow">return</span> (SlipstreamTerrainPlugin)slipstream.getPlugin();</div>
-<div class="line"><span class="lineno">   44</span>        }</div>
-<div class="line"><span class="lineno">   45</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   46</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SlipstreamTerrainPlugin_html_ae421834dfc7e412e098a159d50b84d0e"><div class="ttname"><a href="../../da/d7d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SlipstreamTerrainPlugin.html#ae421834dfc7e412e098a159d50b84d0e">com.fs.starfarer.api.impl.campaign.terrain.SlipstreamTerrainPlugin.getSlipstream</a></div><div class="ttdeci">static CampaignTerrainAPI getSlipstream(LocationAPI location)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/db3/SlipstreamTerrainPlugin_8java_source.html#l00035">SlipstreamTerrainPlugin.java:35</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a6ece93470259eaa1a26d0a83f0e60670" name="a6ece93470259eaa1a26d0a83f0e60670"></a>
@@ -862,15 +734,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/db3/SlipstreamTerrainPlugin_8java_source.html#l00218">218</a> of file <a class="el" href="../../d1/db3/SlipstreamTerrainPlugin_8java_source.html">SlipstreamTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  218</span>                                                      {</div>
-<div class="line"><span class="lineno">  219</span>        Stream s = <a class="code hl_variable" href="../../da/d7d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SlipstreamTerrainPlugin.html#a1b776fb08bbf6d45bece7feb077087f7">streams</a>.get(key);</div>
-<div class="line"><span class="lineno">  220</span>        <span class="keywordflow">if</span> (s == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  221</span>            s = <span class="keyword">new</span> Stream(key, 50);</div>
-<div class="line"><span class="lineno">  222</span>            <a class="code hl_variable" href="../../da/d7d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SlipstreamTerrainPlugin.html#a1b776fb08bbf6d45bece7feb077087f7">streams</a>.put(key, s);</div>
-<div class="line"><span class="lineno">  223</span>        }</div>
-<div class="line"><span class="lineno">  224</span>        <span class="keywordflow">return</span> s;</div>
-<div class="line"><span class="lineno">  225</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a4b3e0ee2d0cfb79574f4d54a9cdb5844" name="a4b3e0ee2d0cfb79574f4d54a9cdb5844"></a>
@@ -891,10 +755,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#ab849b7f53f512cab317440f32af61695">com.fs.starfarer.api.impl.campaign.terrain.BaseTerrain</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d1/db3/SlipstreamTerrainPlugin_8java_source.html#l00348">348</a> of file <a class="el" href="../../d1/db3/SlipstreamTerrainPlugin_8java_source.html">SlipstreamTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  348</span>                                   {</div>
-<div class="line"><span class="lineno">  349</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Slipstream&quot;</span>;</div>
-<div class="line"><span class="lineno">  350</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aed744096292e5074ab25182c0b1c49ae" name="aed744096292e5074ab25182c0b1c49ae"></a>
@@ -915,10 +776,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a9d84199f96d4f75a9807113cea23dd61">com.fs.starfarer.api.impl.campaign.terrain.BaseTerrain</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d1/db3/SlipstreamTerrainPlugin_8java_source.html#l00344">344</a> of file <a class="el" href="../../d1/db3/SlipstreamTerrainPlugin_8java_source.html">SlipstreamTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  344</span>                                   {</div>
-<div class="line"><span class="lineno">  345</span>        <span class="keywordflow">return</span> 350f;</div>
-<div class="line"><span class="lineno">  346</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a492cefe6231f3e45754bf38dfbe44adf" name="a492cefe6231f3e45754bf38dfbe44adf"></a>
@@ -939,10 +797,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a27e7fc8cc4b3d1882800b49c03d3abb3">com.fs.starfarer.api.impl.campaign.terrain.BaseTerrain</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d1/db3/SlipstreamTerrainPlugin_8java_source.html#l00321">321</a> of file <a class="el" href="../../d1/db3/SlipstreamTerrainPlugin_8java_source.html">SlipstreamTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  321</span>                                {</div>
-<div class="line"><span class="lineno">  322</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  323</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a672ad91daf1480a9bed764a0e2a63d82" name="a672ad91daf1480a9bed764a0e2a63d82"></a>
@@ -980,12 +835,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#ab2b6d515ce4e668b14123fa9d0fac1f1">com.fs.starfarer.api.impl.campaign.terrain.BaseTerrain</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d1/db3/SlipstreamTerrainPlugin_8java_source.html#l00142">142</a> of file <a class="el" href="../../d1/db3/SlipstreamTerrainPlugin_8java_source.html">SlipstreamTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  142</span>                                                                               {</div>
-<div class="line"><span class="lineno">  143</span>        super.init(<a class="code hl_variable" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a075ff680d11a0f394d9f399d13129c2d">terrainId</a>, <a class="code hl_variable" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a98ba084e2722ae038b3961e580dbc821">entity</a>, param);</div>
-<div class="line"><span class="lineno">  144</span>        readResolve();</div>
-<div class="line"><span class="lineno">  145</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain_html_a075ff680d11a0f394d9f399d13129c2d"><div class="ttname"><a href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a075ff680d11a0f394d9f399d13129c2d">com.fs.starfarer.api.impl.campaign.terrain.BaseTerrain.terrainId</a></div><div class="ttdeci">String terrainId</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/daa/BaseTerrain_8java_source.html#l00026">BaseTerrain.java:26</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2c123fb996e515be48f7f553b45c96af" name="a2c123fb996e515be48f7f553b45c96af"></a>
@@ -1006,10 +856,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a299a5fba052249b61751a713596209d8">com.fs.starfarer.api.impl.campaign.terrain.BaseTerrain</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d1/db3/SlipstreamTerrainPlugin_8java_source.html#l00340">340</a> of file <a class="el" href="../../d1/db3/SlipstreamTerrainPlugin_8java_source.html">SlipstreamTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  340</span>                                         {</div>
-<div class="line"><span class="lineno">  341</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  342</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a59ea34f25b5e14bb1e1b3d0305f48b26" name="a59ea34f25b5e14bb1e1b3d0305f48b26"></a>
@@ -1030,10 +877,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a14be381a865264eb8ad95b2475b08038">com.fs.starfarer.api.impl.campaign.terrain.BaseTerrain</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d1/db3/SlipstreamTerrainPlugin_8java_source.html#l00312">312</a> of file <a class="el" href="../../d1/db3/SlipstreamTerrainPlugin_8java_source.html">SlipstreamTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  312</span>                                    {</div>
-<div class="line"><span class="lineno">  313</span>        <span class="keywordflow">return</span> super.stacksWithSelf();</div>
-<div class="line"><span class="lineno">  314</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

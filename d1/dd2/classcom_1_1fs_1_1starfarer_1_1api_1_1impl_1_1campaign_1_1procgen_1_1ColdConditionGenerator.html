@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -150,44 +151,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/dde/ColdConditionGenerator_8java_source.html#l00012">12</a> of file <a class="el" href="../../df/dde/ColdConditionGenerator_8java_source.html">ColdConditionGenerator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   12</span>                                                                                                 {</div>
-<div class="line"><span class="lineno">   13</span> </div>
-<div class="line"><span class="lineno">   14</span>        <span class="keywordtype">int</span> orbitIndex = context.orbitIndex;</div>
-<div class="line"><span class="lineno">   15</span>        <span class="keywordflow">if</span> (context.parent != <span class="keyword">null</span>) orbitIndex = context.parentOrbitIndex;</div>
-<div class="line"><span class="lineno">   16</span>        </div>
-<div class="line"><span class="lineno">   17</span>        <span class="keywordtype">float</span> normalIndex = context.starData.getHabZoneStart() + 2;</div>
-<div class="line"><span class="lineno">   18</span>        <span class="keywordtype">float</span> veryIndex = context.starData.getHabZoneStart() + 4;</div>
-<div class="line"><span class="lineno">   19</span>        <span class="keywordtype">float</span> eitherIndex = context.starData.getHabZoneStart() + 3;</div>
-<div class="line"><span class="lineno">   20</span>        </div>
-<div class="line"><span class="lineno">   21</span>        <span class="keywordtype">boolean</span> matchVery = orbitIndex &gt;= veryIndex;</div>
-<div class="line"><span class="lineno">   22</span>        <span class="keywordtype">boolean</span> matchNormal = !matchVery &amp;&amp; orbitIndex &gt;= normalIndex;</div>
-<div class="line"><span class="lineno">   23</span>        <span class="keywordtype">boolean</span> matchEither = orbitIndex == eitherIndex;</div>
-<div class="line"><span class="lineno">   24</span>        <span class="keywordflow">if</span> (matchEither) {</div>
-<div class="line"><span class="lineno">   25</span>            matchNormal = StarSystemGenerator.random.nextFloat() &lt; 0.5f;</div>
-<div class="line"><span class="lineno">   26</span>            matchVery = !matchNormal;</div>
-<div class="line"><span class="lineno">   27</span>        }</div>
-<div class="line"><span class="lineno">   28</span> </div>
-<div class="line"><span class="lineno">   29</span>        <span class="keywordtype">boolean</span> hasNormal = conditionsSoFar.contains(Conditions.COLD);</div>
-<div class="line"><span class="lineno">   30</span>        <span class="keywordtype">boolean</span> hasVery = conditionsSoFar.contains(Conditions.VERY_COLD);</div>
-<div class="line"><span class="lineno">   31</span>        </div>
-<div class="line"><span class="lineno">   32</span>        </div>
-<div class="line"><span class="lineno">   33</span>        <span class="comment">// if there&#39;s a baked-in &quot;very cold&quot; condition, don&#39;t downgrade it to &quot;cold&quot;</span></div>
-<div class="line"><span class="lineno">   34</span>        <span class="keywordflow">if</span> (matchNormal &amp;&amp; !hasVery &amp;&amp; !hasNormal &amp;&amp;</div>
-<div class="line"><span class="lineno">   35</span>                 PlanetConditionGenerator.preconditionsMet(Conditions.COLD, conditionsSoFar)) {</div>
-<div class="line"><span class="lineno">   36</span>            conditionsSoFar.add(Conditions.COLD);</div>
-<div class="line"><span class="lineno">   37</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   38</span>        }</div>
-<div class="line"><span class="lineno">   39</span>        </div>
-<div class="line"><span class="lineno">   40</span>        <span class="comment">// can, howeved, upgrade a &quot;cold&quot; to a &quot;very cold&quot; provided preconditions are met</span></div>
-<div class="line"><span class="lineno">   41</span>        <span class="comment">// (i.e. can&#39;t upgrade a tundra to &quot;very cold&quot; because &quot;very cold&quot; requires not habitable)</span></div>
-<div class="line"><span class="lineno">   42</span>        <span class="keywordflow">if</span> (matchVery &amp;&amp; !hasVery &amp;&amp; </div>
-<div class="line"><span class="lineno">   43</span>                PlanetConditionGenerator.preconditionsMet(Conditions.VERY_COLD, conditionsSoFar)) {</div>
-<div class="line"><span class="lineno">   44</span>            conditionsSoFar.remove(Conditions.COLD);</div>
-<div class="line"><span class="lineno">   45</span>            conditionsSoFar.add(Conditions.VERY_COLD);</div>
-<div class="line"><span class="lineno">   46</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   47</span>        }</div>
-<div class="line"><span class="lineno">   48</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -273,23 +274,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html#l00228">228</a> of file <a class="el" href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html">PlayerFleetPersonnelTracker.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  228</span>                                         {</div>
-<div class="line"><span class="lineno">  229</span>        super();</div>
-<div class="line"><span class="lineno">  230</span>        </div>
-<div class="line"><span class="lineno">  231</span>        GenericPluginManagerAPI plugins = Global.getSector().getGenericPlugins();</div>
-<div class="line"><span class="lineno">  232</span>        <span class="comment">//if (!plugins.hasPlugin(PlayerFleetPersonnelTracker.class)) {</span></div>
-<div class="line"><span class="lineno">  233</span>            plugins.addPlugin(<span class="keyword">this</span>, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  234</span>        <span class="comment">//}</span></div>
-<div class="line"><span class="lineno">  235</span>        </div>
-<div class="line"><span class="lineno">  236</span>        <span class="comment">//Global.getSector().getMemoryWithoutUpdate().set(KEY, this);</span></div>
-<div class="line"><span class="lineno">  237</span>        Global.getSector().getListenerManager().addListener(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  238</span>        </div>
-<div class="line"><span class="lineno">  239</span>        <span class="comment">//marineData.xp = 2600 * 0.7f;</span></div>
-<div class="line"><span class="lineno">  240</span>        <span class="comment">//marineData.num = 2600;</span></div>
-<div class="line"><span class="lineno">  241</span>        <a class="code hl_function" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a581db730d1f9b0dde327b62a1edb998d">update</a>();</div>
-<div class="line"><span class="lineno">  242</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker_html_a581db730d1f9b0dde327b62a1edb998d"><div class="ttname"><a href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a581db730d1f9b0dde327b62a1edb998d">com.fs.starfarer.api.impl.PlayerFleetPersonnelTracker.update</a></div><div class="ttdeci">void update()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html#l00364">PlayerFleetPersonnelTracker.java:364</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -334,100 +319,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d2/d18/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1CommodityTooltipModifier.html#a6aaf634038d9850054cb221b7102ace3">com.fs.starfarer.api.campaign.listeners.CommodityTooltipModifier</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html#l00417">417</a> of file <a class="el" href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html">PlayerFleetPersonnelTracker.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  417</span>                                                                                                               {</div>
-<div class="line"><span class="lineno">  418</span>        <span class="keywordflow">if</span> (Commodities.MARINES.equals(stack.getCommodityId()) &amp;&amp; !expanded) {</div>
-<div class="line"><span class="lineno">  419</span>            <a class="code hl_function" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a1f038fbdeb79c067ffcc3ff6ec7c720e">saveData</a>();</div>
-<div class="line"><span class="lineno">  420</span>            <a class="code hl_function" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a581db730d1f9b0dde327b62a1edb998d">update</a>(<span class="keyword">true</span>, <span class="keyword">true</span>, stack);</div>
-<div class="line"><span class="lineno">  421</span> </div>
-<div class="line"><span class="lineno">  422</span>            PersonnelData data = <a class="code hl_variable" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a030914f04b57734d93009e447c525aa3">marineData</a>;</div>
-<div class="line"><span class="lineno">  423</span>            <span class="keywordtype">boolean</span> nonPlayer = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  424</span>            <span class="keywordflow">if</span> (!stack.isInPlayerCargo()) {</div>
-<div class="line"><span class="lineno">  425</span>                nonPlayer = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  426</span>                PersonnelAtEntity atLoc = <a class="code hl_function" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a9e8d16facf79356e394a4426e012faa3">getPersonnelAtLocation</a>(stack.getCommodityId(), <a class="code hl_function" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a732f4fb90f397f254fbadf09499ee005">getSubmarketFor</a>(stack));</div>
-<div class="line"><span class="lineno">  427</span>                <span class="keywordflow">if</span> (atLoc != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  428</span>                    data = atLoc.data;</div>
-<div class="line"><span class="lineno">  429</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  430</span>                    data = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  431</span>                }</div>
-<div class="line"><span class="lineno">  432</span>            }</div>
-<div class="line"><span class="lineno">  433</span>            <span class="comment">//if (stack.isInPlayerCargo()) {</span></div>
-<div class="line"><span class="lineno">  434</span>            <span class="keywordflow">if</span> (data != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  435</span>                <span class="keywordflow">if</span> (data.num &lt;= 0) {</div>
-<div class="line"><span class="lineno">  436</span>                    <a class="code hl_function" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a5944ac4745a9e979dc0d8b445f833f3b">restoreData</a>();</div>
-<div class="line"><span class="lineno">  437</span>                    <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  438</span>                }</div>
-<div class="line"><span class="lineno">  439</span>                </div>
-<div class="line"><span class="lineno">  440</span>                <span class="keywordtype">float</span> opad = 10f;</div>
-<div class="line"><span class="lineno">  441</span>                <span class="keywordtype">float</span> pad = 3f;</div>
-<div class="line"><span class="lineno">  442</span>                Color h = Misc.getHighlightColor();</div>
-<div class="line"><span class="lineno">  443</span>    </div>
-<div class="line"><span class="lineno">  444</span>                PersonnelRank rank = data.getRank();</div>
-<div class="line"><span class="lineno">  445</span>                </div>
-<div class="line"><span class="lineno">  446</span>                LabelAPI heading = info.addSectionHeading(rank.name + <span class="stringliteral">&quot; Marines&quot;</span>, </div>
-<div class="line"><span class="lineno">  447</span>                                    Misc.getBasePlayerColor(), Misc.getDarkPlayerColor(), Alignment.MID, opad);</div>
-<div class="line"><span class="lineno">  448</span>                heading.autoSizeToWidth(info.getTextWidthOverride());</div>
-<div class="line"><span class="lineno">  449</span>                PositionAPI p = heading.getPosition();</div>
-<div class="line"><span class="lineno">  450</span>                p.setSize(p.getWidth(), p.getHeight() + 3f);</div>
-<div class="line"><span class="lineno">  451</span>                </div>
-<div class="line"><span class="lineno">  452</span>                </div>
-<div class="line"><span class="lineno">  453</span>                <span class="keywordflow">switch</span> (rank) {</div>
-<div class="line"><span class="lineno">  454</span>                <span class="keywordflow">case</span> REGULAR:</div>
-<div class="line"><span class="lineno">  455</span>                    <span class="keywordflow">if</span> (nonPlayer) {</div>
-<div class="line"><span class="lineno">  456</span>                        info.addPara(<span class="stringliteral">&quot;Regular marines - tough, competent, and disciplined.&quot;</span>, opad);</div>
-<div class="line"><span class="lineno">  457</span>                    } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  458</span>                        info.addPara(<span class="stringliteral">&quot;These marines are mostly regulars and have seen some combat, &quot;</span> +</div>
-<div class="line"><span class="lineno">  459</span>                                <span class="stringliteral">&quot;but are not, overall, accustomed to your style of command.&quot;</span>, opad); </div>
-<div class="line"><span class="lineno">  460</span>                    }</div>
-<div class="line"><span class="lineno">  461</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  462</span>                <span class="keywordflow">case</span> EXPERIENCED:</div>
-<div class="line"><span class="lineno">  463</span>                    <span class="keywordflow">if</span> (nonPlayer) {</div>
-<div class="line"><span class="lineno">  464</span>                        info.addPara(<span class="stringliteral">&quot;Experienced marines with substantial training and a number of &quot;</span> +</div>
-<div class="line"><span class="lineno">  465</span>                                     <span class="stringliteral">&quot;operations under their belts.&quot;</span>, opad);</div>
-<div class="line"><span class="lineno">  466</span>                    } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  467</span>                        info.addPara(<span class="stringliteral">&quot;You&#39;ve led these marines on several operations, and &quot;</span> +</div>
-<div class="line"><span class="lineno">  468</span>                                <span class="stringliteral">&quot;the experience gained by both parties is beginning to show concrete benefits.&quot;</span>, opad);</div>
-<div class="line"><span class="lineno">  469</span>                    }</div>
-<div class="line"><span class="lineno">  470</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  471</span>                <span class="keywordflow">case</span> VETERAN:</div>
-<div class="line"><span class="lineno">  472</span>                    <span class="keywordflow">if</span> (nonPlayer) {</div>
-<div class="line"><span class="lineno">  473</span>                        info.addPara(<span class="stringliteral">&quot;These marines are veterans of many ground operations. &quot;</span> +</div>
-<div class="line"><span class="lineno">  474</span>                                <span class="stringliteral">&quot;Well-motivated and highly effective.&quot;</span>, opad);</div>
-<div class="line"><span class="lineno">  475</span>                    } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  476</span>                        info.addPara(<span class="stringliteral">&quot;These marines are veterans of many ground operations under your leadership; &quot;</span> +</div>
-<div class="line"><span class="lineno">  477</span>                                <span class="stringliteral">&quot;the command structure is well established and highly effective.&quot;</span>, opad);</div>
-<div class="line"><span class="lineno">  478</span>                    }</div>
-<div class="line"><span class="lineno">  479</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  480</span>                <span class="keywordflow">case</span> ELITE:</div>
-<div class="line"><span class="lineno">  481</span>                    <span class="keywordflow">if</span> (nonPlayer) {</div>
-<div class="line"><span class="lineno">  482</span>                        info.addPara(<span class="stringliteral">&quot;These marines are an elite force, equipped, led, and motivated well &quot;</span> +</div>
-<div class="line"><span class="lineno">  483</span>                                    <span class="stringliteral">&quot;above the standards of even the professional militaries in the Sector.&quot;</span>, opad);</div>
-<div class="line"><span class="lineno">  484</span>                    } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  485</span>                        info.addPara(<span class="stringliteral">&quot;These marines are an elite force, equipped, led, and motivated well &quot;</span> +</div>
-<div class="line"><span class="lineno">  486</span>                                    <span class="stringliteral">&quot;above the standards of even the professional militaries in the Sector.&quot;</span>, opad);</div>
-<div class="line"><span class="lineno">  487</span>                    }</div>
-<div class="line"><span class="lineno">  488</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  489</span>                </div>
-<div class="line"><span class="lineno">  490</span>                }</div>
-<div class="line"><span class="lineno">  491</span>                </div>
-<div class="line"><span class="lineno">  492</span>                <span class="keywordtype">float</span> effectBonus = <a class="code hl_function" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a5fdee7e7633074c1eb000b34ac9acf2d">getMarineEffectBonus</a>(data);</div>
-<div class="line"><span class="lineno">  493</span>                <span class="keywordtype">float</span> casualtyReduction = <a class="code hl_function" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a4c591e8a288c00b334dc551fe357eb66">getMarineLossesReductionPercent</a>(data);</div>
-<div class="line"><span class="lineno">  494</span>                MutableStat fake = <span class="keyword">new</span> MutableStat(1f);</div>
-<div class="line"><span class="lineno">  495</span>                fake.modifyPercentAlways(<span class="stringliteral">&quot;1&quot;</span>, effectBonus, <span class="stringliteral">&quot;increased effectiveness of ground operations&quot;</span>);</div>
-<div class="line"><span class="lineno">  496</span>                fake.modifyPercentAlways(<span class="stringliteral">&quot;2&quot;</span>, -casualtyReduction, <span class="stringliteral">&quot;reduction to marine casualties suffered during ground operations&quot;</span>);</div>
-<div class="line"><span class="lineno">  497</span>                info.addStatModGrid(width, 50f, 10f, opad, fake, <span class="keyword">true</span>, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  498</span>                </div>
-<div class="line"><span class="lineno">  499</span>            }</div>
-<div class="line"><span class="lineno">  500</span>            <a class="code hl_function" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a5944ac4745a9e979dc0d8b445f833f3b">restoreData</a>();</div>
-<div class="line"><span class="lineno">  501</span>        }</div>
-<div class="line"><span class="lineno">  502</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker_html_a030914f04b57734d93009e447c525aa3"><div class="ttname"><a href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a030914f04b57734d93009e447c525aa3">com.fs.starfarer.api.impl.PlayerFleetPersonnelTracker.marineData</a></div><div class="ttdeci">PersonnelData marineData</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html#l00222">PlayerFleetPersonnelTracker.java:222</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker_html_a1f038fbdeb79c067ffcc3ff6ec7c720e"><div class="ttname"><a href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a1f038fbdeb79c067ffcc3ff6ec7c720e">com.fs.starfarer.api.impl.PlayerFleetPersonnelTracker.saveData</a></div><div class="ttdeci">void saveData()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html#l00582">PlayerFleetPersonnelTracker.java:582</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker_html_a4c591e8a288c00b334dc551fe357eb66"><div class="ttname"><a href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a4c591e8a288c00b334dc551fe357eb66">com.fs.starfarer.api.impl.PlayerFleetPersonnelTracker.getMarineLossesReductionPercent</a></div><div class="ttdeci">float getMarineLossesReductionPercent(PersonnelData data)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html#l00411">PlayerFleetPersonnelTracker.java:411</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker_html_a5944ac4745a9e979dc0d8b445f833f3b"><div class="ttname"><a href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a5944ac4745a9e979dc0d8b445f833f3b">com.fs.starfarer.api.impl.PlayerFleetPersonnelTracker.restoreData</a></div><div class="ttdeci">void restoreData()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html#l00592">PlayerFleetPersonnelTracker.java:592</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker_html_a5fdee7e7633074c1eb000b34ac9acf2d"><div class="ttname"><a href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a5fdee7e7633074c1eb000b34ac9acf2d">com.fs.starfarer.api.impl.PlayerFleetPersonnelTracker.getMarineEffectBonus</a></div><div class="ttdeci">float getMarineEffectBonus(PersonnelData data)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html#l00406">PlayerFleetPersonnelTracker.java:406</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker_html_a732f4fb90f397f254fbadf09499ee005"><div class="ttname"><a href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a732f4fb90f397f254fbadf09499ee005">com.fs.starfarer.api.impl.PlayerFleetPersonnelTracker.getSubmarketFor</a></div><div class="ttdeci">SubmarketAPI getSubmarketFor(CargoStackAPI stack)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html#l00642">PlayerFleetPersonnelTracker.java:642</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker_html_a9e8d16facf79356e394a4426e012faa3"><div class="ttname"><a href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a9e8d16facf79356e394a4426e012faa3">com.fs.starfarer.api.impl.PlayerFleetPersonnelTracker.getPersonnelAtLocation</a></div><div class="ttdeci">PersonnelAtEntity getPersonnelAtLocation(String commodityId, SubmarketAPI sub)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html#l00672">PlayerFleetPersonnelTracker.java:672</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac308233b1d823405914b7596640de7f7" name="ac308233b1d823405914b7596640de7f7"></a>
@@ -455,24 +347,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html#l00609">609</a> of file <a class="el" href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html">PlayerFleetPersonnelTracker.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  609</span>                                                     {</div>
-<div class="line"><span class="lineno">  610</span>        marineData.savedNum = <a class="code hl_variable" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a030914f04b57734d93009e447c525aa3">marineData</a>.num;</div>
-<div class="line"><span class="lineno">  611</span>        marineData.savedXP = <a class="code hl_variable" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a030914f04b57734d93009e447c525aa3">marineData</a>.xp;</div>
-<div class="line"><span class="lineno">  612</span>        <a class="code hl_variable" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a4f5de05c3af17edcc7215e734dc08fc5">pods</a> = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  613</span>        </div>
-<div class="line"><span class="lineno">  614</span>        <span class="keywordflow">if</span> (withDroppedOff) {</div>
-<div class="line"><span class="lineno">  615</span>            Iterator&lt;PersonnelAtEntity&gt; iter = <a class="code hl_variable" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#aebb0f831c51862f5350dc51241717b0c">droppedOff</a>.iterator();</div>
-<div class="line"><span class="lineno">  616</span>            <span class="keywordflow">while</span> (iter.hasNext()) {</div>
-<div class="line"><span class="lineno">  617</span>                PersonnelAtEntity pae = iter.next();</div>
-<div class="line"><span class="lineno">  618</span>                <span class="keywordflow">if</span> (!pae.entity.isAlive() || pae.data.num &lt;= 0 || pae.data.xp &lt;= 0) {</div>
-<div class="line"><span class="lineno">  619</span>                    iter.remove();</div>
-<div class="line"><span class="lineno">  620</span>                }</div>
-<div class="line"><span class="lineno">  621</span>            }</div>
-<div class="line"><span class="lineno">  622</span>        }</div>
-<div class="line"><span class="lineno">  623</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker_html_a4f5de05c3af17edcc7215e734dc08fc5"><div class="ttname"><a href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a4f5de05c3af17edcc7215e734dc08fc5">com.fs.starfarer.api.impl.PlayerFleetPersonnelTracker.pods</a></div><div class="ttdeci">transient SectorEntityToken pods</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html#l00225">PlayerFleetPersonnelTracker.java:225</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker_html_aebb0f831c51862f5350dc51241717b0c"><div class="ttname"><a href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#aebb0f831c51862f5350dc51241717b0c">com.fs.starfarer.api.impl.PlayerFleetPersonnelTracker.droppedOff</a></div><div class="ttdeci">List&lt; PersonnelAtEntity &gt; droppedOff</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html#l00223">PlayerFleetPersonnelTracker.java:223</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="abe607c8562bfae199cb4d44b2da1a8bd" name="abe607c8562bfae199cb4d44b2da1a8bd"></a>
@@ -491,10 +366,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html#l00682">682</a> of file <a class="el" href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html">PlayerFleetPersonnelTracker.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  682</span>                                                   {</div>
-<div class="line"><span class="lineno">  683</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#aebb0f831c51862f5350dc51241717b0c">droppedOff</a>;</div>
-<div class="line"><span class="lineno">  684</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5da3774ace3aa4a08da0c3fb542c3617" name="a5da3774ace3aa4a08da0c3fb542c3617"></a>
@@ -536,23 +408,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html#l00655">655</a> of file <a class="el" href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html">PlayerFleetPersonnelTracker.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  655</span>                                                                                                                                   {</div>
-<div class="line"><span class="lineno">  656</span>        String submarketId = sub == <span class="keyword">null</span> ? <span class="stringliteral">&quot;&quot;</span> : sub.getSpecId();</div>
-<div class="line"><span class="lineno">  657</span>        <span class="keywordflow">for</span> (PersonnelAtEntity pae : <a class="code hl_variable" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#aebb0f831c51862f5350dc51241717b0c">droppedOff</a>) {</div>
-<div class="line"><span class="lineno">  658</span>            String otherSubmarketId = pae.submarketId == <span class="keyword">null</span> ? <span class="stringliteral">&quot;&quot;</span> : pae.submarketId;</div>
-<div class="line"><span class="lineno">  659</span>            <span class="keywordflow">if</span> (entity == pae.entity &amp;&amp; commodityId.equals(pae.data.id) &amp;&amp; submarketId.equals(otherSubmarketId)) {</div>
-<div class="line"><span class="lineno">  660</span>                <span class="keywordflow">return</span> pae;</div>
-<div class="line"><span class="lineno">  661</span>            }</div>
-<div class="line"><span class="lineno">  662</span>        }</div>
-<div class="line"><span class="lineno">  663</span>        <span class="keywordflow">if</span> (createIfNull) {</div>
-<div class="line"><span class="lineno">  664</span>            <span class="keywordflow">if</span> (submarketId.isEmpty()) submarketId = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  665</span>            PersonnelAtEntity pae = <span class="keyword">new</span> PersonnelAtEntity(entity, commodityId, submarketId);</div>
-<div class="line"><span class="lineno">  666</span>            <a class="code hl_variable" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#aebb0f831c51862f5350dc51241717b0c">droppedOff</a>.add(pae);</div>
-<div class="line"><span class="lineno">  667</span>            <span class="keywordflow">return</span> pae;</div>
-<div class="line"><span class="lineno">  668</span>        }</div>
-<div class="line"><span class="lineno">  669</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  670</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa5ae20fd334fcdfe7eacd17f70d5ce76" name="aa5ae20fd334fcdfe7eacd17f70d5ce76"></a>
@@ -572,24 +428,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html#l00518">518</a> of file <a class="el" href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html">PlayerFleetPersonnelTracker.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  518</span>                                                  {</div>
-<div class="line"><span class="lineno">  519</span>        <span class="keywordflow">if</span> (params instanceof CommodityIconProviderWrapper) {</div>
-<div class="line"><span class="lineno">  520</span>            CargoStackAPI stack = ((CommodityIconProviderWrapper) params).stack;</div>
-<div class="line"><span class="lineno">  521</span>            <span class="keywordflow">if</span> (Commodities.MARINES.equals(stack.getCommodityId())) {</div>
-<div class="line"><span class="lineno">  522</span>                <span class="keywordflow">if</span> (stack.isInPlayerCargo()) {</div>
-<div class="line"><span class="lineno">  523</span>                    <span class="keywordflow">return</span> GenericPluginManagerAPI.CORE_GENERAL;</div>
-<div class="line"><span class="lineno">  524</span>                }</div>
-<div class="line"><span class="lineno">  525</span>                </div>
-<div class="line"><span class="lineno">  526</span>                SubmarketAPI sub = <a class="code hl_function" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a732f4fb90f397f254fbadf09499ee005">getSubmarketFor</a>(stack);</div>
-<div class="line"><span class="lineno">  527</span>                PersonnelAtEntity atLocation = <a class="code hl_function" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a9e8d16facf79356e394a4426e012faa3">getPersonnelAtLocation</a>(stack.getCommodityId(), sub);</div>
-<div class="line"><span class="lineno">  528</span>                <span class="keywordflow">if</span> (atLocation != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  529</span>                    <span class="keywordflow">return</span> GenericPluginManagerAPI.CORE_GENERAL;</div>
-<div class="line"><span class="lineno">  530</span>                }</div>
-<div class="line"><span class="lineno">  531</span>            }</div>
-<div class="line"><span class="lineno">  532</span>        }</div>
-<div class="line"><span class="lineno">  533</span>        <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno">  534</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a92050d6898cb940e6acc550793267b1c" name="a92050d6898cb940e6acc550793267b1c"></a>
@@ -608,10 +447,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html#l00513">513</a> of file <a class="el" href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html">PlayerFleetPersonnelTracker.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  513</span>                                {</div>
-<div class="line"><span class="lineno">  514</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  515</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8b3b7e322f7426e576394a918afbc84c" name="a8b3b7e322f7426e576394a918afbc84c"></a>
@@ -633,10 +469,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d6/d08/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1CommodityIconProvider.html#a673e95acb69a9c7c5ffd88fc8371c942">com.fs.starfarer.api.campaign.listeners.CommodityIconProvider</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html#l00574">574</a> of file <a class="el" href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html">PlayerFleetPersonnelTracker.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  574</span>                                                   {</div>
-<div class="line"><span class="lineno">  575</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  576</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ad1b3f9e732448b621df287f12f87d749" name="ad1b3f9e732448b621df287f12f87d749"></a>
@@ -663,17 +496,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html#l00213">213</a> of file <a class="el" href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html">PlayerFleetPersonnelTracker.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  213</span>                                                            {</div>
-<div class="line"><span class="lineno">  214</span>        Object test = Global.getSector().getMemoryWithoutUpdate().get(<a class="code hl_variable" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#ac80524ddb7dc610959c633d9a01ad27d">KEY</a>);</div>
-<div class="line"><span class="lineno">  215</span>        <span class="keywordflow">if</span> (test == <span class="keyword">null</span>) {<span class="comment">// || true) {</span></div>
-<div class="line"><span class="lineno">  216</span>            test = <span class="keyword">new</span> <a class="code hl_function" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a3844344f12ae020befb6fe54316cc839">PlayerFleetPersonnelTracker</a>();</div>
-<div class="line"><span class="lineno">  217</span>            Global.getSector().getMemoryWithoutUpdate().set(<a class="code hl_variable" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#ac80524ddb7dc610959c633d9a01ad27d">KEY</a>, test);</div>
-<div class="line"><span class="lineno">  218</span>        }</div>
-<div class="line"><span class="lineno">  219</span>        <span class="keywordflow">return</span> (<a class="code hl_function" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a3844344f12ae020befb6fe54316cc839">PlayerFleetPersonnelTracker</a>) test; </div>
-<div class="line"><span class="lineno">  220</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker_html_a3844344f12ae020befb6fe54316cc839"><div class="ttname"><a href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a3844344f12ae020befb6fe54316cc839">com.fs.starfarer.api.impl.PlayerFleetPersonnelTracker.PlayerFleetPersonnelTracker</a></div><div class="ttdeci">PlayerFleetPersonnelTracker()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html#l00228">PlayerFleetPersonnelTracker.java:228</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker_html_ac80524ddb7dc610959c633d9a01ad27d"><div class="ttname"><a href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#ac80524ddb7dc610959c633d9a01ad27d">com.fs.starfarer.api.impl.PlayerFleetPersonnelTracker.KEY</a></div><div class="ttdeci">static final String KEY</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html#l00211">PlayerFleetPersonnelTracker.java:211</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a08b488f7c8636addc04d8052793d86fd" name="a08b488f7c8636addc04d8052793d86fd"></a>
@@ -692,18 +515,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html#l00625">625</a> of file <a class="el" href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html">PlayerFleetPersonnelTracker.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  625</span>                                                    {</div>
-<div class="line"><span class="lineno">  626</span>        InteractionDialogAPI dialog = Global.getSector().getCampaignUI().getCurrentInteractionDialog();</div>
-<div class="line"><span class="lineno">  627</span>        SectorEntityToken entity = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  628</span>        <span class="keywordflow">if</span> (dialog != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  629</span>            entity = dialog.getInteractionTarget();</div>
-<div class="line"><span class="lineno">  630</span>            <span class="keywordflow">if</span> (entity != <span class="keyword">null</span> &amp;&amp; entity.getMarket() != <span class="keyword">null</span> &amp;&amp; entity.getMarket().getPrimaryEntity() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  631</span>                entity = entity.getMarket().getPrimaryEntity();</div>
-<div class="line"><span class="lineno">  632</span>            }</div>
-<div class="line"><span class="lineno">  633</span>        }</div>
-<div class="line"><span class="lineno">  634</span>        <span class="keywordflow">return</span> entity;</div>
-<div class="line"><span class="lineno">  635</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ace5d5d103385c679be7d0f7b19bb48e8" name="ace5d5d103385c679be7d0f7b19bb48e8"></a>
@@ -722,10 +534,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html#l00678">678</a> of file <a class="el" href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html">PlayerFleetPersonnelTracker.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  678</span>                                         {</div>
-<div class="line"><span class="lineno">  679</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a030914f04b57734d93009e447c525aa3">marineData</a>;</div>
-<div class="line"><span class="lineno">  680</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5fdee7e7633074c1eb000b34ac9acf2d" name="a5fdee7e7633074c1eb000b34ac9acf2d"></a>
@@ -745,13 +554,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html#l00406">406</a> of file <a class="el" href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html">PlayerFleetPersonnelTracker.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  406</span>                                                          {</div>
-<div class="line"><span class="lineno">  407</span>        <span class="keywordtype">float</span> f =  data.getXPLevel();</div>
-<div class="line"><span class="lineno">  408</span>        <span class="comment">//if (true) return 30f;</span></div>
-<div class="line"><span class="lineno">  409</span>        <span class="keywordflow">return</span> Math.round(f * <a class="code hl_variable" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a65ee7a068929af0d65caf1d4d92b9212">MAX_EFFECTIVENESS_PERCENT</a>);</div>
-<div class="line"><span class="lineno">  410</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker_html_a65ee7a068929af0d65caf1d4d92b9212"><div class="ttname"><a href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a65ee7a068929af0d65caf1d4d92b9212">com.fs.starfarer.api.impl.PlayerFleetPersonnelTracker.MAX_EFFECTIVENESS_PERCENT</a></div><div class="ttdeci">static float MAX_EFFECTIVENESS_PERCENT</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html#l00046">PlayerFleetPersonnelTracker.java:46</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a4c591e8a288c00b334dc551fe357eb66" name="a4c591e8a288c00b334dc551fe357eb66"></a>
@@ -771,13 +574,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html#l00411">411</a> of file <a class="el" href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html">PlayerFleetPersonnelTracker.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  411</span>                                                                     {</div>
-<div class="line"><span class="lineno">  412</span>        <span class="keywordtype">float</span> f =  data.getXPLevel();</div>
-<div class="line"><span class="lineno">  413</span>        <span class="comment">//if (true) return 30f;</span></div>
-<div class="line"><span class="lineno">  414</span>        <span class="keywordflow">return</span> Math.round(f * <a class="code hl_variable" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a50fa3eabe64264e54e1084806fc8d69a">MAX_LOSS_REDUCTION_PERCENT</a>);</div>
-<div class="line"><span class="lineno">  415</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker_html_a50fa3eabe64264e54e1084806fc8d69a"><div class="ttname"><a href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a50fa3eabe64264e54e1084806fc8d69a">com.fs.starfarer.api.impl.PlayerFleetPersonnelTracker.MAX_LOSS_REDUCTION_PERCENT</a></div><div class="ttdeci">static float MAX_LOSS_REDUCTION_PERCENT</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html#l00047">PlayerFleetPersonnelTracker.java:47</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9e8d16facf79356e394a4426e012faa3" name="a9e8d16facf79356e394a4426e012faa3"></a>
@@ -807,14 +604,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html#l00672">672</a> of file <a class="el" href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html">PlayerFleetPersonnelTracker.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  672</span>                                                                                          {</div>
-<div class="line"><span class="lineno">  673</span>        SectorEntityToken entity = <a class="code hl_function" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a08b488f7c8636addc04d8052793d86fd">getInteractionEntity</a>();</div>
-<div class="line"><span class="lineno">  674</span>        PersonnelAtEntity atLocation = entity == <span class="keyword">null</span> ? null : <a class="code hl_function" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a5da3774ace3aa4a08da0c3fb542c3617">getDroppedOffAt</a>(commodityId, entity, sub, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  675</span>        <span class="keywordflow">return</span> atLocation;</div>
-<div class="line"><span class="lineno">  676</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker_html_a08b488f7c8636addc04d8052793d86fd"><div class="ttname"><a href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a08b488f7c8636addc04d8052793d86fd">com.fs.starfarer.api.impl.PlayerFleetPersonnelTracker.getInteractionEntity</a></div><div class="ttdeci">SectorEntityToken getInteractionEntity()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html#l00625">PlayerFleetPersonnelTracker.java:625</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker_html_a5da3774ace3aa4a08da0c3fb542c3617"><div class="ttname"><a href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a5da3774ace3aa4a08da0c3fb542c3617">com.fs.starfarer.api.impl.PlayerFleetPersonnelTracker.getDroppedOffAt</a></div><div class="ttdeci">PersonnelAtEntity getDroppedOffAt(String commodityId, SectorEntityToken entity, SubmarketAPI sub, boolean createIfNull)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html#l00655">PlayerFleetPersonnelTracker.java:655</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aaae75063e455dfc3fb58b72aaa8e2c13" name="aaae75063e455dfc3fb58b72aaa8e2c13"></a>
@@ -836,37 +626,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d6/d08/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1CommodityIconProvider.html#a9bf7a8eab413b0035aa8efaf191db48b">com.fs.starfarer.api.campaign.listeners.CommodityIconProvider</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html#l00543">543</a> of file <a class="el" href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html">PlayerFleetPersonnelTracker.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  543</span>                                                       {</div>
-<div class="line"><span class="lineno">  544</span>        <span class="keywordflow">if</span> (stack.isPickedUp()) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  545</span>        <a class="code hl_function" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a1f038fbdeb79c067ffcc3ff6ec7c720e">saveData</a>();</div>
-<div class="line"><span class="lineno">  546</span>        <a class="code hl_function" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a581db730d1f9b0dde327b62a1edb998d">update</a>(<span class="keyword">true</span>, <span class="keyword">true</span>, stack);</div>
-<div class="line"><span class="lineno">  547</span>        PersonnelData data = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  548</span>        </div>
-<div class="line"><span class="lineno">  549</span>        <span class="keywordflow">if</span> (stack.isMarineStack()) {</div>
-<div class="line"><span class="lineno">  550</span>            data = <a class="code hl_variable" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a030914f04b57734d93009e447c525aa3">marineData</a>;</div>
-<div class="line"><span class="lineno">  551</span>            <span class="keywordflow">if</span> (!stack.isInPlayerCargo()) {</div>
-<div class="line"><span class="lineno">  552</span>                SubmarketAPI sub = <a class="code hl_function" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a732f4fb90f397f254fbadf09499ee005">getSubmarketFor</a>(stack);</div>
-<div class="line"><span class="lineno">  553</span>                PersonnelAtEntity atLocation = <a class="code hl_function" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a9e8d16facf79356e394a4426e012faa3">getPersonnelAtLocation</a>(stack.getCommodityId(), sub);</div>
-<div class="line"><span class="lineno">  554</span>                <span class="keywordflow">if</span> (atLocation != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  555</span>                    data = atLocation.data;</div>
-<div class="line"><span class="lineno">  556</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  557</span>                    <a class="code hl_function" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a5944ac4745a9e979dc0d8b445f833f3b">restoreData</a>();</div>
-<div class="line"><span class="lineno">  558</span>                    <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  559</span>                }</div>
-<div class="line"><span class="lineno">  560</span>            }</div>
-<div class="line"><span class="lineno">  561</span>        }</div>
-<div class="line"><span class="lineno">  562</span>        </div>
-<div class="line"><span class="lineno">  563</span>        </div>
-<div class="line"><span class="lineno">  564</span>        <span class="keywordflow">if</span> (data == <span class="keyword">null</span> || data.num &lt;= 0) {</div>
-<div class="line"><span class="lineno">  565</span>            <a class="code hl_function" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a5944ac4745a9e979dc0d8b445f833f3b">restoreData</a>();</div>
-<div class="line"><span class="lineno">  566</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  567</span>        }</div>
-<div class="line"><span class="lineno">  568</span>        </div>
-<div class="line"><span class="lineno">  569</span>        PersonnelRank rank = data.getRank();</div>
-<div class="line"><span class="lineno">  570</span>        <a class="code hl_function" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a5944ac4745a9e979dc0d8b445f833f3b">restoreData</a>();</div>
-<div class="line"><span class="lineno">  571</span>        <span class="keywordflow">return</span> Global.getSettings().getSpriteName(<span class="stringliteral">&quot;ui&quot;</span>, rank.iconKey);</div>
-<div class="line"><span class="lineno">  572</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a732f4fb90f397f254fbadf09499ee005" name="a732f4fb90f397f254fbadf09499ee005"></a>
@@ -893,20 +653,7 @@ Protected Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html#l00642">642</a> of file <a class="el" href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html">PlayerFleetPersonnelTracker.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  642</span>                                                             {</div>
-<div class="line"><span class="lineno">  643</span>        <span class="keywordflow">if</span> (stack.getCargo() == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  644</span>        SectorEntityToken entity = <a class="code hl_function" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a08b488f7c8636addc04d8052793d86fd">getInteractionEntity</a>();</div>
-<div class="line"><span class="lineno">  645</span>        <span class="keywordflow">if</span> (entity == <span class="keyword">null</span> || entity.getMarket() == <span class="keyword">null</span> || entity.getMarket().getSubmarketsCopy() == <span class="keyword">null</span>) <span class="keywordflow">return</span> <a class="code hl_variable" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a489376f69ce2a989c08f097d1cb6fe88">currSubmarket</a>;</div>
-<div class="line"><span class="lineno">  646</span>        </div>
-<div class="line"><span class="lineno">  647</span>        <span class="keywordflow">for</span> (SubmarketAPI sub : entity.getMarket().getSubmarketsCopy()) {</div>
-<div class="line"><span class="lineno">  648</span>            <span class="keywordflow">if</span> (sub.getCargo() == stack.getCargo()) {</div>
-<div class="line"><span class="lineno">  649</span>                <span class="keywordflow">return</span> sub;</div>
-<div class="line"><span class="lineno">  650</span>            }</div>
-<div class="line"><span class="lineno">  651</span>        }</div>
-<div class="line"><span class="lineno">  652</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a489376f69ce2a989c08f097d1cb6fe88">currSubmarket</a>;</div>
-<div class="line"><span class="lineno">  653</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker_html_a489376f69ce2a989c08f097d1cb6fe88"><div class="ttname"><a href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a489376f69ce2a989c08f097d1cb6fe88">com.fs.starfarer.api.impl.PlayerFleetPersonnelTracker.currSubmarket</a></div><div class="ttdeci">transient SubmarketAPI currSubmarket</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html#l00226">PlayerFleetPersonnelTracker.java:226</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a68c7b0bdab925a1b169617c13502898d" name="a68c7b0bdab925a1b169617c13502898d"></a>
@@ -970,10 +717,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../da/dea/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1GroundRaidObjectivesListener.html#ae7525f60e1a9b3fb303276dd5c3d2d17">com.fs.starfarer.api.campaign.listeners.GroundRaidObjectivesListener</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html#l00605">605</a> of file <a class="el" href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html">PlayerFleetPersonnelTracker.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  605</span>                                                                                                                                                                            {</div>
-<div class="line"><span class="lineno">  606</span>        </div>
-<div class="line"><span class="lineno">  607</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a4282b18c8cf3a0739b150a5ab4be0c84" name="a4282b18c8cf3a0739b150a5ab4be0c84"></a>
@@ -1003,43 +747,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html#l00283">283</a> of file <a class="el" href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html">PlayerFleetPersonnelTracker.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  283</span>                                                                                                  {</div>
-<div class="line"><span class="lineno">  284</span>        <span class="keywordflow">if</span> (entity == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  285</span>        </div>
-<div class="line"><span class="lineno">  286</span>        SubmarketAPI sub = transaction.getSubmarket();</div>
-<div class="line"><span class="lineno">  287</span>        </div>
-<div class="line"><span class="lineno">  288</span><span class="comment">//      // when ejecting cargo, there&#39;s a fake &quot;storage&quot; submarket, but when interacting with the pods, there&#39;s</span></div>
-<div class="line"><span class="lineno">  289</span><span class="comment">//      // no submarket - so for pods to display rank correctly, set the submarket when dropping off pods to null</span></div>
-<div class="line"><span class="lineno">  290</span><span class="comment">//      if (pods != null) {</span></div>
-<div class="line"><span class="lineno">  291</span><span class="comment">//          sub = null;</span></div>
-<div class="line"><span class="lineno">  292</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  293</span>        </div>
-<div class="line"><span class="lineno">  294</span>        <span class="keywordflow">for</span> (CargoStackAPI stack : transaction.getSold().getStacksCopy()) {</div>
-<div class="line"><span class="lineno">  295</span>            <span class="keywordflow">if</span> (!stack.isPersonnelStack()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  296</span>            <span class="keywordflow">if</span> (stack.isMarineStack()) {</div>
-<div class="line"><span class="lineno">  297</span>                PersonnelAtEntity at = <a class="code hl_function" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a5da3774ace3aa4a08da0c3fb542c3617">getDroppedOffAt</a>(stack.getCommodityId(), entity, sub, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  298</span>                </div>
-<div class="line"><span class="lineno">  299</span>                <span class="keywordtype">int</span> num = (int) stack.getSize();</div>
-<div class="line"><span class="lineno">  300</span>                <a class="code hl_function" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#ac60ce7612f6b69f46cca76e4995a8f18">transferPersonnel</a>(<a class="code hl_variable" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a030914f04b57734d93009e447c525aa3">marineData</a>, at.data, num, <a class="code hl_variable" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a030914f04b57734d93009e447c525aa3">marineData</a>);</div>
-<div class="line"><span class="lineno">  301</span>            }</div>
-<div class="line"><span class="lineno">  302</span>        }</div>
-<div class="line"><span class="lineno">  303</span>        </div>
-<div class="line"><span class="lineno">  304</span>        <span class="keywordflow">for</span> (CargoStackAPI stack : transaction.getBought().getStacksCopy()) {</div>
-<div class="line"><span class="lineno">  305</span>            <span class="keywordflow">if</span> (!stack.isPersonnelStack()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  306</span>            <span class="keywordflow">if</span> (stack.isMarineStack()) {</div>
-<div class="line"><span class="lineno">  307</span>                PersonnelAtEntity at = <a class="code hl_function" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a5da3774ace3aa4a08da0c3fb542c3617">getDroppedOffAt</a>(stack.getCommodityId(), entity, sub, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  308</span>                </div>
-<div class="line"><span class="lineno">  309</span>                <span class="keywordtype">int</span> num = (int) stack.getSize();</div>
-<div class="line"><span class="lineno">  310</span>                <a class="code hl_function" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#ac60ce7612f6b69f46cca76e4995a8f18">transferPersonnel</a>(at.data, <a class="code hl_variable" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a030914f04b57734d93009e447c525aa3">marineData</a>, num, <a class="code hl_variable" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a030914f04b57734d93009e447c525aa3">marineData</a>);</div>
-<div class="line"><span class="lineno">  311</span>            }</div>
-<div class="line"><span class="lineno">  312</span>        }</div>
-<div class="line"><span class="lineno">  313</span>        </div>
-<div class="line"><span class="lineno">  314</span>        <a class="code hl_function" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#ac308233b1d823405914b7596640de7f7">doCleanup</a>(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  315</span>        <a class="code hl_function" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a581db730d1f9b0dde327b62a1edb998d">update</a>();</div>
-<div class="line"><span class="lineno">  316</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker_html_ac308233b1d823405914b7596640de7f7"><div class="ttname"><a href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#ac308233b1d823405914b7596640de7f7">com.fs.starfarer.api.impl.PlayerFleetPersonnelTracker.doCleanup</a></div><div class="ttdeci">void doCleanup(boolean withDroppedOff)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html#l00609">PlayerFleetPersonnelTracker.java:609</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker_html_ac60ce7612f6b69f46cca76e4995a8f18"><div class="ttname"><a href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#ac60ce7612f6b69f46cca76e4995a8f18">com.fs.starfarer.api.impl.PlayerFleetPersonnelTracker.transferPersonnel</a></div><div class="ttdeci">static void transferPersonnel(PersonnelData from, PersonnelData to, int num, PersonnelData keepsXP)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html#l00318">PlayerFleetPersonnelTracker.java:318</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a69b75658b44357b32f55058320fc8e73" name="a69b75658b44357b32f55058320fc8e73"></a>
@@ -1060,14 +768,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d9/d6f/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1CargoScreenListener.html#a01bd004c80c8b563beb97cf3866c4ece">com.fs.starfarer.api.campaign.listeners.CargoScreenListener</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html#l00244">244</a> of file <a class="el" href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html">PlayerFleetPersonnelTracker.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  244</span>                                          {</div>
-<div class="line"><span class="lineno">  245</span>        <a class="code hl_function" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#ac308233b1d823405914b7596640de7f7">doCleanup</a>(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  246</span>        <a class="code hl_function" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a581db730d1f9b0dde327b62a1edb998d">update</a>();</div>
-<div class="line"><span class="lineno">  247</span>        <a class="code hl_variable" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a489376f69ce2a989c08f097d1cb6fe88">currSubmarket</a> = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  248</span>        </div>
-<div class="line"><span class="lineno">  249</span>        <span class="comment">//marineData.xp = marineData.num * 0.7f;</span></div>
-<div class="line"><span class="lineno">  250</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a1f7e4cb212eb10bc8a4987907aaf0ac2" name="a1f7e4cb212eb10bc8a4987907aaf0ac2"></a>
@@ -1089,10 +790,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d4/d25/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1ColonyInteractionListener.html#ab830282059e107d674f9b65d42bac4f2">com.fs.starfarer.api.campaign.listeners.ColonyInteractionListener</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html#l00505">505</a> of file <a class="el" href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html">PlayerFleetPersonnelTracker.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  505</span>                                                           {</div>
-<div class="line"><span class="lineno">  506</span>        <a class="code hl_function" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a581db730d1f9b0dde327b62a1edb998d">update</a>();</div>
-<div class="line"><span class="lineno">  507</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a95539813a08d2a7374f39311294ef909" name="a95539813a08d2a7374f39311294ef909"></a>
@@ -1114,10 +812,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d9/d6f/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1CargoScreenListener.html#a3808594986a6f8d6081dcec54fa12c8f">com.fs.starfarer.api.campaign.listeners.CargoScreenListener</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html#l00257">257</a> of file <a class="el" href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html">PlayerFleetPersonnelTracker.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  257</span>                                                                    {</div>
-<div class="line"><span class="lineno">  258</span>        <a class="code hl_variable" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a4f5de05c3af17edcc7215e734dc08fc5">pods</a> = entity;</div>
-<div class="line"><span class="lineno">  259</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ad777a2666518e21fa48bfbd009a56814" name="ad777a2666518e21fa48bfbd009a56814"></a>
@@ -1139,19 +834,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d4/d25/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1ColonyInteractionListener.html#a8288b7e31d0ccb9a52bec024c07ea444">com.fs.starfarer.api.campaign.listeners.ColonyInteractionListener</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html#l00271">271</a> of file <a class="el" href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html">PlayerFleetPersonnelTracker.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  271</span>                                                                                   {</div>
-<div class="line"><span class="lineno">  272</span>        <span class="keywordflow">if</span> (transaction.getMarket() == <span class="keyword">null</span> || </div>
-<div class="line"><span class="lineno">  273</span>                transaction.getMarket().getPrimaryEntity() == <span class="keyword">null</span> ||</div>
-<div class="line"><span class="lineno">  274</span>                transaction.getSubmarket() == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  275</span>        <span class="keywordflow">if</span> (!transaction.getSubmarket().getSpecId().equals(Submarkets.SUBMARKET_STORAGE)) {</div>
-<div class="line"><span class="lineno">  276</span>            <a class="code hl_function" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#ac308233b1d823405914b7596640de7f7">doCleanup</a>(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  277</span>            <a class="code hl_function" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a581db730d1f9b0dde327b62a1edb998d">update</a>(<span class="keyword">false</span>, <span class="keyword">true</span>, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  278</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  279</span>        }</div>
-<div class="line"><span class="lineno">  280</span>        <a class="code hl_function" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a4282b18c8cf3a0739b150a5ab4be0c84">processTransaction</a>(transaction, transaction.getMarket().getPrimaryEntity());</div>
-<div class="line"><span class="lineno">  281</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker_html_a4282b18c8cf3a0739b150a5ab4be0c84"><div class="ttname"><a href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a4282b18c8cf3a0739b150a5ab4be0c84">com.fs.starfarer.api.impl.PlayerFleetPersonnelTracker.processTransaction</a></div><div class="ttdeci">void processTransaction(PlayerMarketTransaction transaction, SectorEntityToken entity)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html#l00283">PlayerFleetPersonnelTracker.java:283</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="abd0586bc203725ceabdd5d8fe786a31b" name="abd0586bc203725ceabdd5d8fe786a31b"></a>
@@ -1183,16 +866,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d9/d6f/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1CargoScreenListener.html#accad2a4184b88ab110449f8abc7a14f5">com.fs.starfarer.api.campaign.listeners.CargoScreenListener</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html#l00261">261</a> of file <a class="el" href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html">PlayerFleetPersonnelTracker.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  261</span>                                                                                                                   {</div>
-<div class="line"><span class="lineno">  262</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a4f5de05c3af17edcc7215e734dc08fc5">pods</a> == <span class="keyword">null</span> &amp;&amp; dialog != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  263</span>            SectorEntityToken target = dialog.getInteractionTarget();</div>
-<div class="line"><span class="lineno">  264</span>            <span class="keywordflow">if</span> (target != <span class="keyword">null</span> &amp;&amp; target.getCustomPlugin() instanceof CargoPodsEntityPlugin) {</div>
-<div class="line"><span class="lineno">  265</span>                <a class="code hl_variable" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a4f5de05c3af17edcc7215e734dc08fc5">pods</a> = target;</div>
-<div class="line"><span class="lineno">  266</span>            }</div>
-<div class="line"><span class="lineno">  267</span>        }</div>
-<div class="line"><span class="lineno">  268</span>        <a class="code hl_function" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a4282b18c8cf3a0739b150a5ab4be0c84">processTransaction</a>(transaction, <a class="code hl_variable" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a4f5de05c3af17edcc7215e734dc08fc5">pods</a>);</div>
-<div class="line"><span class="lineno">  269</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="abc141bb08301c10d9e23c1dae006dc03" name="abc141bb08301c10d9e23c1dae006dc03"></a>
@@ -1214,10 +888,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d4/d25/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1ColonyInteractionListener.html#a61de7993a7b38a92d8b1d05fa366aeaa">com.fs.starfarer.api.campaign.listeners.ColonyInteractionListener</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html#l00508">508</a> of file <a class="el" href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html">PlayerFleetPersonnelTracker.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  508</span>                                                           {</div>
-<div class="line"><span class="lineno">  509</span>        <a class="code hl_function" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a581db730d1f9b0dde327b62a1edb998d">update</a>();</div>
-<div class="line"><span class="lineno">  510</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="abaf8645c7d5eefd1abfd0374691b689a" name="abaf8645c7d5eefd1abfd0374691b689a"></a>
@@ -1239,9 +910,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d4/d25/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1ColonyInteractionListener.html#a15a28115c34ad95c01900405ac1fdb5b">com.fs.starfarer.api.campaign.listeners.ColonyInteractionListener</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html#l00602">602</a> of file <a class="el" href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html">PlayerFleetPersonnelTracker.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  602</span>                                                                          {</div>
-<div class="line"><span class="lineno">  603</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8c732921cf171e855dbeb33323b38308" name="a8c732921cf171e855dbeb33323b38308"></a>
@@ -1279,24 +948,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../da/dea/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1GroundRaidObjectivesListener.html#a4439ba3924f5285bb7957b51a47397be">com.fs.starfarer.api.campaign.listeners.GroundRaidObjectivesListener</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html#l00347">347</a> of file <a class="el" href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html">PlayerFleetPersonnelTracker.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  347</span>                                                                                                                                 {</div>
-<div class="line"><span class="lineno">  348</span>        CampaignFleetAPI fleet = Global.getSector().getPlayerFleet();</div>
-<div class="line"><span class="lineno">  349</span>        CargoAPI cargo = fleet.getCargo();</div>
-<div class="line"><span class="lineno">  350</span>        <span class="keywordtype">float</span> marines = cargo.getMarines();</div>
-<div class="line"><span class="lineno">  351</span>        </div>
-<div class="line"><span class="lineno">  352</span>        <a class="code hl_variable" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a030914f04b57734d93009e447c525aa3">marineData</a>.remove(data.marinesLost, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  353</span>        </div>
-<div class="line"><span class="lineno">  354</span>        <span class="keywordtype">float</span> total = marines + data.marinesLost;</div>
-<div class="line"><span class="lineno">  355</span>        <span class="keywordtype">float</span> xpGain = 1f - data.raidEffectiveness;</div>
-<div class="line"><span class="lineno">  356</span>        xpGain *= total;</div>
-<div class="line"><span class="lineno">  357</span>        xpGain *= <a class="code hl_variable" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a1a63e2d08dad1401ab1bd86a4d18466e">XP_PER_RAID_MULT</a>;</div>
-<div class="line"><span class="lineno">  358</span>        <span class="keywordflow">if</span> (xpGain &lt; 0) xpGain = 0;</div>
-<div class="line"><span class="lineno">  359</span>        <a class="code hl_variable" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a030914f04b57734d93009e447c525aa3">marineData</a>.addXP(xpGain);</div>
-<div class="line"><span class="lineno">  360</span>        </div>
-<div class="line"><span class="lineno">  361</span>        <a class="code hl_function" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a581db730d1f9b0dde327b62a1edb998d">update</a>();</div>
-<div class="line"><span class="lineno">  362</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker_html_a1a63e2d08dad1401ab1bd86a4d18466e"><div class="ttname"><a href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a1a63e2d08dad1401ab1bd86a4d18466e">com.fs.starfarer.api.impl.PlayerFleetPersonnelTracker.XP_PER_RAID_MULT</a></div><div class="ttdeci">static float XP_PER_RAID_MULT</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html#l00045">PlayerFleetPersonnelTracker.java:45</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a078f85df0acde8d65e8d04082a6414c5" name="a078f85df0acde8d65e8d04082a6414c5"></a>
@@ -1318,11 +970,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d9/d6f/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1CargoScreenListener.html#a6b7f18ef96dfa11712c66038a50abb65">com.fs.starfarer.api.campaign.listeners.CargoScreenListener</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html#l00252">252</a> of file <a class="el" href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html">PlayerFleetPersonnelTracker.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  252</span>                                                              {</div>
-<div class="line"><span class="lineno">  253</span>        <a class="code hl_function" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#ac308233b1d823405914b7596640de7f7">doCleanup</a>(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  254</span>        <a class="code hl_variable" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a489376f69ce2a989c08f097d1cb6fe88">currSubmarket</a> = submarket;</div>
-<div class="line"><span class="lineno">  255</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5944ac4745a9e979dc0d8b445f833f3b" name="a5944ac4745a9e979dc0d8b445f833f3b"></a>
@@ -1341,17 +989,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html#l00592">592</a> of file <a class="el" href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html">PlayerFleetPersonnelTracker.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  592</span>                              {</div>
-<div class="line"><span class="lineno">  593</span>        <a class="code hl_variable" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a030914f04b57734d93009e447c525aa3">marineData</a> = <a class="code hl_variable" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a062a745171324f13defce864aa9fcbc5">savedMarineData</a>;</div>
-<div class="line"><span class="lineno">  594</span>        <a class="code hl_variable" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a062a745171324f13defce864aa9fcbc5">savedMarineData</a> = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  595</span>        </div>
-<div class="line"><span class="lineno">  596</span>        <a class="code hl_variable" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#aebb0f831c51862f5350dc51241717b0c">droppedOff</a>.clear();</div>
-<div class="line"><span class="lineno">  597</span>        <a class="code hl_variable" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#aebb0f831c51862f5350dc51241717b0c">droppedOff</a>.addAll(<a class="code hl_variable" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#aaaf5b38bc0767c84d070a3c2eceaca6b">savedPersonnelData</a>);</div>
-<div class="line"><span class="lineno">  598</span>        <a class="code hl_variable" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#aaaf5b38bc0767c84d070a3c2eceaca6b">savedPersonnelData</a>.clear();</div>
-<div class="line"><span class="lineno">  599</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker_html_a062a745171324f13defce864aa9fcbc5"><div class="ttname"><a href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a062a745171324f13defce864aa9fcbc5">com.fs.starfarer.api.impl.PlayerFleetPersonnelTracker.savedMarineData</a></div><div class="ttdeci">transient PersonnelData savedMarineData</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html#l00579">PlayerFleetPersonnelTracker.java:579</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker_html_aaaf5b38bc0767c84d070a3c2eceaca6b"><div class="ttname"><a href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#aaaf5b38bc0767c84d070a3c2eceaca6b">com.fs.starfarer.api.impl.PlayerFleetPersonnelTracker.savedPersonnelData</a></div><div class="ttdeci">transient List&lt; PersonnelAtEntity &gt; savedPersonnelData</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html#l00580">PlayerFleetPersonnelTracker.java:580</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a1f038fbdeb79c067ffcc3ff6ec7c720e" name="a1f038fbdeb79c067ffcc3ff6ec7c720e"></a>
@@ -1370,16 +1008,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html#l00582">582</a> of file <a class="el" href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html">PlayerFleetPersonnelTracker.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  582</span>                           {</div>
-<div class="line"><span class="lineno">  583</span>        <a class="code hl_variable" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a062a745171324f13defce864aa9fcbc5">savedMarineData</a> = <a class="code hl_variable" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a030914f04b57734d93009e447c525aa3">marineData</a>;</div>
-<div class="line"><span class="lineno">  584</span>        <a class="code hl_variable" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a030914f04b57734d93009e447c525aa3">marineData</a> = <a class="code hl_variable" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a030914f04b57734d93009e447c525aa3">marineData</a>.clone();</div>
-<div class="line"><span class="lineno">  585</span>        </div>
-<div class="line"><span class="lineno">  586</span>        <a class="code hl_variable" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#aaaf5b38bc0767c84d070a3c2eceaca6b">savedPersonnelData</a> = <span class="keyword">new</span> ArrayList&lt;PersonnelAtEntity&gt;();</div>
-<div class="line"><span class="lineno">  587</span>        <span class="keywordflow">for</span> (PersonnelAtEntity curr : <a class="code hl_variable" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#aebb0f831c51862f5350dc51241717b0c">droppedOff</a>) {</div>
-<div class="line"><span class="lineno">  588</span>            <a class="code hl_variable" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#aaaf5b38bc0767c84d070a3c2eceaca6b">savedPersonnelData</a>.add(curr.clone());</div>
-<div class="line"><span class="lineno">  589</span>        }</div>
-<div class="line"><span class="lineno">  590</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac60ce7612f6b69f46cca76e4995a8f18" name="ac60ce7612f6b69f46cca76e4995a8f18"></a>
@@ -1429,35 +1058,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html#l00318">318</a> of file <a class="el" href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html">PlayerFleetPersonnelTracker.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  318</span>                                                                                                               {</div>
-<div class="line"><span class="lineno">  319</span>        <span class="keywordflow">if</span> (num &gt; from.num) {</div>
-<div class="line"><span class="lineno">  320</span>            num = (int) from.num;</div>
-<div class="line"><span class="lineno">  321</span>        }</div>
-<div class="line"><span class="lineno">  322</span>        <span class="keywordflow">if</span> (num &lt;= 0) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  323</span>        </div>
-<div class="line"><span class="lineno">  324</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a088c1dd0ec13536d5328487d4bbd932b">KEEP_XP_DURING_TRANSFERS</a> &amp;&amp; keepsXP != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  325</span>            to.add(num);</div>
-<div class="line"><span class="lineno">  326</span>            from.remove(num, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  327</span>            </div>
-<div class="line"><span class="lineno">  328</span>            <span class="keywordtype">float</span> totalXP = to.xp + from.xp;</div>
-<div class="line"><span class="lineno">  329</span>            <span class="keywordflow">if</span> (keepsXP == from) {</div>
-<div class="line"><span class="lineno">  330</span>                from.xp = Math.min(totalXP, from.num);</div>
-<div class="line"><span class="lineno">  331</span>                to.xp = Math.max(0f, totalXP - from.num);</div>
-<div class="line"><span class="lineno">  332</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (keepsXP == to) {</div>
-<div class="line"><span class="lineno">  333</span>                to.xp = Math.min(totalXP, to.num);</div>
-<div class="line"><span class="lineno">  334</span>                from.xp = Math.max(0f, totalXP - to.num);</div>
-<div class="line"><span class="lineno">  335</span>            }</div>
-<div class="line"><span class="lineno">  336</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  337</span>            <span class="keywordtype">float</span> xp = from.xp * num / from.num;</div>
-<div class="line"><span class="lineno">  338</span>            </div>
-<div class="line"><span class="lineno">  339</span>            to.add(num);</div>
-<div class="line"><span class="lineno">  340</span>            to.addXP(xp);</div>
-<div class="line"><span class="lineno">  341</span>            </div>
-<div class="line"><span class="lineno">  342</span>            from.remove(num, <span class="keyword">true</span>); <span class="comment">// also removes XP</span></div>
-<div class="line"><span class="lineno">  343</span>        }</div>
-<div class="line"><span class="lineno">  344</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker_html_a088c1dd0ec13536d5328487d4bbd932b"><div class="ttname"><a href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a088c1dd0ec13536d5328487d4bbd932b">com.fs.starfarer.api.impl.PlayerFleetPersonnelTracker.KEEP_XP_DURING_TRANSFERS</a></div><div class="ttdeci">static boolean KEEP_XP_DURING_TRANSFERS</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html#l00049">PlayerFleetPersonnelTracker.java:49</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a581db730d1f9b0dde327b62a1edb998d" name="a581db730d1f9b0dde327b62a1edb998d"></a>
@@ -1476,10 +1077,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html#l00364">364</a> of file <a class="el" href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html">PlayerFleetPersonnelTracker.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  364</span>                         {</div>
-<div class="line"><span class="lineno">  365</span>        <a class="code hl_function" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a581db730d1f9b0dde327b62a1edb998d">update</a>(<span class="keyword">false</span>, <span class="keyword">false</span>, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  366</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="abf2f3a7d0ce35934310fb0449ebecedb" name="abf2f3a7d0ce35934310fb0449ebecedb"></a>
@@ -1515,42 +1113,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html#l00367">367</a> of file <a class="el" href="../../d0/d9b/PlayerFleetPersonnelTracker_8java_source.html">PlayerFleetPersonnelTracker.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  367</span>                                                                                                        {</div>
-<div class="line"><span class="lineno">  368</span>        CampaignFleetAPI fleet = Global.getSector().getPlayerFleet();</div>
-<div class="line"><span class="lineno">  369</span>        <span class="keywordflow">if</span> (fleet == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  370</span>        CargoAPI cargo = fleet.getCargo();</div>
-<div class="line"><span class="lineno">  371</span>        </div>
-<div class="line"><span class="lineno">  372</span>        </div>
-<div class="line"><span class="lineno">  373</span>        <span class="keywordtype">float</span> marines = cargo.getMarines();</div>
-<div class="line"><span class="lineno">  374</span>        <a class="code hl_variable" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a030914f04b57734d93009e447c525aa3">marineData</a>.numMayHaveChanged(marines, keepXP);</div>
-<div class="line"><span class="lineno">  375</span>        </div>
-<div class="line"><span class="lineno">  376</span>        <span class="keywordflow">if</span> (withIntegrationFromCurrentLocation) {</div>
-<div class="line"><span class="lineno">  377</span>            <span class="comment">//getDroppedOffAt(Commodities.MARINES, getInteractionEntity(), currSubmarket, true);</span></div>
-<div class="line"><span class="lineno">  378</span>            PersonnelAtEntity atLocation = <a class="code hl_function" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a9e8d16facf79356e394a4426e012faa3">getPersonnelAtLocation</a>(Commodities.MARINES, <a class="code hl_variable" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a489376f69ce2a989c08f097d1cb6fe88">currSubmarket</a>);</div>
-<div class="line"><span class="lineno">  379</span>            <a class="code hl_variable" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a030914f04b57734d93009e447c525aa3">marineData</a>.integrateWithCurrentLocation(atLocation);</div>
-<div class="line"><span class="lineno">  380</span>        }</div>
-<div class="line"><span class="lineno">  381</span>        </div>
-<div class="line"><span class="lineno">  382</span>        </div>
-<div class="line"><span class="lineno">  383</span>        MutableFleetStatsAPI stats = fleet.getStats();</div>
-<div class="line"><span class="lineno">  384</span>        </div>
-<div class="line"><span class="lineno">  385</span>        String <span class="keywordtype">id</span> = <span class="stringliteral">&quot;marineXP&quot;</span>;</div>
-<div class="line"><span class="lineno">  386</span>        PersonnelRank rank = <a class="code hl_variable" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a030914f04b57734d93009e447c525aa3">marineData</a>.getRank();</div>
-<div class="line"><span class="lineno">  387</span>        <span class="keywordtype">float</span> effectBonus = <a class="code hl_function" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a5fdee7e7633074c1eb000b34ac9acf2d">getMarineEffectBonus</a>(<a class="code hl_variable" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a030914f04b57734d93009e447c525aa3">marineData</a>);</div>
-<div class="line"><span class="lineno">  388</span>        <span class="keywordtype">float</span> casualtyReduction = <a class="code hl_function" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a4c591e8a288c00b334dc551fe357eb66">getMarineLossesReductionPercent</a>(<a class="code hl_variable" href="../../df/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a030914f04b57734d93009e447c525aa3">marineData</a>);</div>
-<div class="line"><span class="lineno">  389</span>        <span class="keywordflow">if</span> (effectBonus &gt; 0) {</div>
-<div class="line"><span class="lineno">  390</span>            <span class="comment">//stats.getDynamic().getMod(Stats.PLANETARY_OPERATIONS_MOD).modifyMult(id, 1f + effectBonus * 0.01f, rank.name + &quot; marines&quot;);</span></div>
-<div class="line"><span class="lineno">  391</span>            stats.getDynamic().getMod(Stats.PLANETARY_OPERATIONS_MOD).modifyPercent(<span class="keywordtype">id</span>, effectBonus, rank.name + <span class="stringliteral">&quot; marines&quot;</span>);</div>
-<div class="line"><span class="lineno">  392</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  393</span>            <span class="comment">//stats.getDynamic().getMod(Stats.PLANETARY_OPERATIONS_MOD).unmodifyMult(id);</span></div>
-<div class="line"><span class="lineno">  394</span>            stats.getDynamic().getMod(Stats.PLANETARY_OPERATIONS_MOD).unmodifyPercent(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  395</span>        }</div>
-<div class="line"><span class="lineno">  396</span>        <span class="keywordflow">if</span> (casualtyReduction &gt; 0) {</div>
-<div class="line"><span class="lineno">  397</span>            stats.getDynamic().getStat(Stats.PLANETARY_OPERATIONS_CASUALTIES_MULT).modifyMult(<span class="keywordtype">id</span>, 1f - casualtyReduction * 0.01f, rank.name + <span class="stringliteral">&quot; marines&quot;</span>);</div>
-<div class="line"><span class="lineno">  398</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  399</span>            stats.getDynamic().getStat(Stats.PLANETARY_OPERATIONS_CASUALTIES_MULT).unmodifyMult(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  400</span>        }</div>
-<div class="line"><span class="lineno">  401</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

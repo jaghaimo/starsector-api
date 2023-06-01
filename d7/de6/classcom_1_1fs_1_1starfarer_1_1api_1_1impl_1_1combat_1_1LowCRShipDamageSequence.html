@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -171,35 +172,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/de6/LowCRShipDamageSequence_8java_source.html#l00027">27</a> of file <a class="el" href="../../d3/de6/LowCRShipDamageSequence_8java_source.html">LowCRShipDamageSequence.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   27</span>                                                                 {</div>
-<div class="line"><span class="lineno">   28</span>        this.ship = ship;</div>
-<div class="line"><span class="lineno">   29</span>        this.severity = severity;</div>
-<div class="line"><span class="lineno">   30</span>        </div>
-<div class="line"><span class="lineno">   31</span>        beforeDamage = 1f + 2f * (float) Math.random();</div>
-<div class="line"><span class="lineno">   32</span>        </div>
-<div class="line"><span class="lineno">   33</span>        List&lt;WeaponAPI&gt; weapons = ship.<a class="code hl_function" href="../../d4/de6/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI.html#a6dff404a9e23c25bcb2d816ed79710e8">getUsableWeapons</a>();</div>
-<div class="line"><span class="lineno">   34</span>        <span class="keywordflow">for</span> (WeaponAPI weapon : weapons) {</div>
-<div class="line"><span class="lineno">   35</span>            disableTargets.<a class="code hl_function" href="../../df/d90/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1WeightedRandomPicker.html#a208270a6df0e8d484033d2d4a2bf15fb">add</a>(weapon);</div>
-<div class="line"><span class="lineno">   36</span>        }</div>
-<div class="line"><span class="lineno">   37</span>        List&lt;ShipEngineAPI&gt; engines = ship.<a class="code hl_function" href="../../d4/de6/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI.html#adbb0d28fba8eb4fe954ab07cb3528f41">getEngineController</a>().<a class="code hl_function" href="../../d7/d23/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipEngineControllerAPI.html#a401a1a2d160cd27623d9d7e53786ddb0">getShipEngines</a>();</div>
-<div class="line"><span class="lineno">   38</span>        <span class="keywordflow">for</span> (ShipEngineAPI engine : engines) {</div>
-<div class="line"><span class="lineno">   39</span>            <span class="keywordflow">if</span> (!engine.isSystemActivated()) {</div>
-<div class="line"><span class="lineno">   40</span>                disableTargets.<a class="code hl_function" href="../../df/d90/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1WeightedRandomPicker.html#a208270a6df0e8d484033d2d4a2bf15fb">add</a>(engine);</div>
-<div class="line"><span class="lineno">   41</span>            }</div>
-<div class="line"><span class="lineno">   42</span>        }</div>
-<div class="line"><span class="lineno">   43</span>        </div>
-<div class="line"><span class="lineno">   44</span>        disableAttempts = Math.max(1, Math.round((0.25f + 0.75f * severity) * (<span class="keywordtype">float</span>) disableTargets.<a class="code hl_function" href="../../df/d90/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1WeightedRandomPicker.html#a80644bc192a44cee131215406b3a61c6">getItems</a>().size() * 0.25f));</div>
-<div class="line"><span class="lineno">   45</span>        </div>
-<div class="line"><span class="lineno">   46</span>        <span class="keywordflow">if</span> (severity &gt;= 1) {</div>
-<div class="line"><span class="lineno">   47</span>            disableAttempts *= 2f;</div>
-<div class="line"><span class="lineno">   48</span>        }</div>
-<div class="line"><span class="lineno">   49</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1WeightedRandomPicker_html_a208270a6df0e8d484033d2d4a2bf15fb"><div class="ttname"><a href="../../df/d90/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1WeightedRandomPicker.html#a208270a6df0e8d484033d2d4a2bf15fb">com.fs.starfarer.api.util.WeightedRandomPicker.add</a></div><div class="ttdeci">void add(T item)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d28/WeightedRandomPicker_8java_source.html#l00103">WeightedRandomPicker.java:103</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1WeightedRandomPicker_html_a80644bc192a44cee131215406b3a61c6"><div class="ttname"><a href="../../df/d90/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1WeightedRandomPicker.html#a80644bc192a44cee131215406b3a61c6">com.fs.starfarer.api.util.WeightedRandomPicker.getItems</a></div><div class="ttdeci">List&lt; T &gt; getItems()</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d28/WeightedRandomPicker_8java_source.html#l00127">WeightedRandomPicker.java:127</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI_html_a6dff404a9e23c25bcb2d816ed79710e8"><div class="ttname"><a href="../../d4/de6/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI.html#a6dff404a9e23c25bcb2d816ed79710e8">com.fs.starfarer.api.combat.ShipAPI.getUsableWeapons</a></div><div class="ttdeci">List&lt; WeaponAPI &gt; getUsableWeapons()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI_html_adbb0d28fba8eb4fe954ab07cb3528f41"><div class="ttname"><a href="../../d4/de6/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI.html#adbb0d28fba8eb4fe954ab07cb3528f41">com.fs.starfarer.api.combat.ShipAPI.getEngineController</a></div><div class="ttdeci">ShipEngineControllerAPI getEngineController()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipEngineControllerAPI_html_a401a1a2d160cd27623d9d7e53786ddb0"><div class="ttname"><a href="../../d7/d23/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipEngineControllerAPI.html#a401a1a2d160cd27623d9d7e53786ddb0">com.fs.starfarer.api.combat.ShipEngineControllerAPI.getShipEngines</a></div><div class="ttdeci">List&lt; ShipEngineAPI &gt; getShipEngines()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -232,32 +205,7 @@ Public Member Functions</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d8/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseEveryFrameCombatPlugin.html#a2369838995a799560103a0f44690f80b">com.fs.starfarer.api.combat.BaseEveryFrameCombatPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/de6/LowCRShipDamageSequence_8java_source.html#l00090">90</a> of file <a class="el" href="../../d3/de6/LowCRShipDamageSequence_8java_source.html">LowCRShipDamageSequence.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   90</span>                                                                  {</div>
-<div class="line"><span class="lineno">   91</span>        <span class="keywordflow">if</span> (engine.<a class="code hl_function" href="../../df/d5a/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#ac2d9d76c6da9658515697f7af682e5d2">isPaused</a>()) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   92</span>    </div>
-<div class="line"><span class="lineno">   93</span>        <span class="keywordflow">if</span> (!engine.<a class="code hl_function" href="../../df/d5a/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a7d80c4631e75a4527992bf9a013944d3">isEntityInPlay</a>(ship)) <span class="keywordflow">return</span>; <span class="comment">// ship is in refit screen</span></div>
-<div class="line"><span class="lineno">   94</span>        </div>
-<div class="line"><span class="lineno">   95</span><span class="comment">//      System.out.println(&quot;Advance: &quot; + amount);</span></div>
-<div class="line"><span class="lineno">   96</span>        elapsed += amount;</div>
-<div class="line"><span class="lineno">   97</span>        </div>
-<div class="line"><span class="lineno">   98</span>        <span class="keywordflow">if</span> (elapsed &gt; beforeDamage) {</div>
-<div class="line"><span class="lineno">   99</span>            tracker.<a class="code hl_function" href="../../da/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html#a61881d44415cda2c50c3354c3f0a4d8a">advance</a>(amount);</div>
-<div class="line"><span class="lineno">  100</span>            <span class="keywordflow">if</span> (tracker.intervalElapsed()) {</div>
-<div class="line"><span class="lineno">  101</span>                <a class="code hl_function" href="../../d7/de6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1LowCRShipDamageSequence.html#a643384eb9c116883c2c6884ba85ad65c">disableNext</a>();</div>
-<div class="line"><span class="lineno">  102</span>                </div>
-<div class="line"><span class="lineno">  103</span>            }</div>
-<div class="line"><span class="lineno">  104</span>            <span class="keywordflow">if</span> (ship.<a class="code hl_function" href="../../d4/de6/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI.html#a5041c7f681fef8adeba7987d7ae54150">isHulk</a>() || disableAttempts &lt;= 0) {</div>
-<div class="line"><span class="lineno">  105</span>                engine.<a class="code hl_function" href="../../df/d5a/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a6965250e8f607a78de4c3844e637fe4f">removePlugin</a>(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  106</span>            }</div>
-<div class="line"><span class="lineno">  107</span>        }</div>
-<div class="line"><span class="lineno">  108</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1LowCRShipDamageSequence_html_a643384eb9c116883c2c6884ba85ad65c"><div class="ttname"><a href="../../d7/de6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1LowCRShipDamageSequence.html#a643384eb9c116883c2c6884ba85ad65c">com.fs.starfarer.api.impl.combat.LowCRShipDamageSequence.disableNext</a></div><div class="ttdeci">void disableNext()</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/de6/LowCRShipDamageSequence_8java_source.html#l00051">LowCRShipDamageSequence.java:51</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil_html_a61881d44415cda2c50c3354c3f0a4d8a"><div class="ttname"><a href="../../da/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html#a61881d44415cda2c50c3354c3f0a4d8a">com.fs.starfarer.api.util.IntervalUtil.advance</a></div><div class="ttdeci">void advance(float amount)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de3/IntervalUtil_8java_source.html#l00039">IntervalUtil.java:39</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI_html_a6965250e8f607a78de4c3844e637fe4f"><div class="ttname"><a href="../../df/d5a/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a6965250e8f607a78de4c3844e637fe4f">com.fs.starfarer.api.combat.CombatEngineAPI.removePlugin</a></div><div class="ttdeci">void removePlugin(EveryFrameCombatPlugin plugin)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI_html_a7d80c4631e75a4527992bf9a013944d3"><div class="ttname"><a href="../../df/d5a/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a7d80c4631e75a4527992bf9a013944d3">com.fs.starfarer.api.combat.CombatEngineAPI.isEntityInPlay</a></div><div class="ttdeci">boolean isEntityInPlay(CombatEntityAPI entity)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI_html_ac2d9d76c6da9658515697f7af682e5d2"><div class="ttname"><a href="../../df/d5a/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#ac2d9d76c6da9658515697f7af682e5d2">com.fs.starfarer.api.combat.CombatEngineAPI.isPaused</a></div><div class="ttdeci">boolean isPaused()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI_html_a5041c7f681fef8adeba7987d7ae54150"><div class="ttname"><a href="../../d4/de6/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI.html#a5041c7f681fef8adeba7987d7ae54150">com.fs.starfarer.api.combat.ShipAPI.isHulk</a></div><div class="ttdeci">boolean isHulk()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a643384eb9c116883c2c6884ba85ad65c" name="a643384eb9c116883c2c6884ba85ad65c"></a>
@@ -276,42 +224,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/de6/LowCRShipDamageSequence_8java_source.html#l00051">51</a> of file <a class="el" href="../../d3/de6/LowCRShipDamageSequence_8java_source.html">LowCRShipDamageSequence.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   51</span>                              {</div>
-<div class="line"><span class="lineno">   52</span>        <span class="keywordflow">if</span> (disableAttempts &lt;= 0) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   53</span>        disableAttempts--;</div>
-<div class="line"><span class="lineno">   54</span>        List&lt;Object&gt; <span class="keyword">remove</span> = <span class="keyword">new</span> ArrayList&lt;Object&gt;();</div>
-<div class="line"><span class="lineno">   55</span><span class="comment">//      List&lt;Object&gt; usableWeapons = new ArrayList&lt;Object&gt;();</span></div>
-<div class="line"><span class="lineno">   56</span>        <span class="keywordflow">for</span> (Object target : disableTargets.<a class="code hl_function" href="../../df/d90/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1WeightedRandomPicker.html#a80644bc192a44cee131215406b3a61c6">getItems</a>()) {</div>
-<div class="line"><span class="lineno">   57</span><span class="comment">//          if (target instanceof ShipEngineAPI) {</span></div>
-<div class="line"><span class="lineno">   58</span><span class="comment">//              float fractionIfDisabled = ((ShipEngineAPI) target).getContribution() + ship.getEngineFractionPermanentlyDisabled();</span></div>
-<div class="line"><span class="lineno">   59</span><span class="comment">//              if (fractionIfDisabled &gt; 0.5f) {</span></div>
-<div class="line"><span class="lineno">   60</span><span class="comment">//                  remove.add(target);</span></div>
-<div class="line"><span class="lineno">   61</span><span class="comment">//              }</span></div>
-<div class="line"><span class="lineno">   62</span><span class="comment">//          } else if (target instanceof WeaponAPI) {</span></div>
-<div class="line"><span class="lineno">   63</span><span class="comment">//              WeaponAPI weapon = (WeaponAPI) target;</span></div>
-<div class="line"><span class="lineno">   64</span><span class="comment">//              if (weapon.getAmmo() &gt; 0) {</span></div>
-<div class="line"><span class="lineno">   65</span><span class="comment">//                  usableWeapons.add(target);</span></div>
-<div class="line"><span class="lineno">   66</span><span class="comment">//              }</span></div>
-<div class="line"><span class="lineno">   67</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">   68</span>            <span class="keywordflow">if</span> (!CRPluginImpl.isOkToPermanentlyDisableStatic(ship, target)) {</div>
-<div class="line"><span class="lineno">   69</span>                <span class="keyword">remove</span>.add(target);</div>
-<div class="line"><span class="lineno">   70</span>            }</div>
-<div class="line"><span class="lineno">   71</span>        }</div>
-<div class="line"><span class="lineno">   72</span><span class="comment">//      if (usableWeapons.size() &lt;= 1) remove.addAll(usableWeapons);</span></div>
-<div class="line"><span class="lineno">   73</span>        <span class="keywordflow">for</span> (Object target : <span class="keyword">remove</span>) {</div>
-<div class="line"><span class="lineno">   74</span>            disableTargets.<a class="code hl_function" href="../../df/d90/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1WeightedRandomPicker.html#ac7249a7ca153428c2628a07e75676985">remove</a>(target);</div>
-<div class="line"><span class="lineno">   75</span>        }</div>
-<div class="line"><span class="lineno">   76</span>        </div>
-<div class="line"><span class="lineno">   77</span>        Object module = disableTargets.<a class="code hl_function" href="../../df/d90/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1WeightedRandomPicker.html#a272ec6eb3c16a66abbf5203dfd34f7d6">pick</a>();</div>
-<div class="line"><span class="lineno">   78</span>        <span class="keywordflow">if</span> (module != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   79</span>            disableTargets.<a class="code hl_function" href="../../df/d90/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1WeightedRandomPicker.html#ac7249a7ca153428c2628a07e75676985">remove</a>(module);</div>
-<div class="line"><span class="lineno">   80</span>            ship.<a class="code hl_function" href="../../d4/de6/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI.html#ad9a5ad3858f60486385b112dd94afac8">applyCriticalMalfunction</a>(module);</div>
-<div class="line"><span class="lineno">   81</span>        }</div>
-<div class="line"><span class="lineno">   82</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1WeightedRandomPicker_html_a272ec6eb3c16a66abbf5203dfd34f7d6"><div class="ttname"><a href="../../df/d90/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1WeightedRandomPicker.html#a272ec6eb3c16a66abbf5203dfd34f7d6">com.fs.starfarer.api.util.WeightedRandomPicker.pick</a></div><div class="ttdeci">T pick(Random random)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d28/WeightedRandomPicker_8java_source.html#l00152">WeightedRandomPicker.java:152</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1WeightedRandomPicker_html_ac7249a7ca153428c2628a07e75676985"><div class="ttname"><a href="../../df/d90/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1WeightedRandomPicker.html#ac7249a7ca153428c2628a07e75676985">com.fs.starfarer.api.util.WeightedRandomPicker.remove</a></div><div class="ttdeci">void remove(T item)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d28/WeightedRandomPicker_8java_source.html#l00114">WeightedRandomPicker.java:114</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI_html_ad9a5ad3858f60486385b112dd94afac8"><div class="ttname"><a href="../../d4/de6/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI.html#ad9a5ad3858f60486385b112dd94afac8">com.fs.starfarer.api.combat.ShipAPI.applyCriticalMalfunction</a></div><div class="ttdeci">void applyCriticalMalfunction(Object module)</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa8980e762a63bbf4a101e627faf0d7f6" name="aa8980e762a63bbf4a101e627faf0d7f6"></a>
@@ -339,10 +252,7 @@ Public Member Functions</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d8/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseEveryFrameCombatPlugin.html#addec3dedcaa837bfdb0712c36d17e060">com.fs.starfarer.api.combat.BaseEveryFrameCombatPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/de6/LowCRShipDamageSequence_8java_source.html#l00086">86</a> of file <a class="el" href="../../d3/de6/LowCRShipDamageSequence_8java_source.html">LowCRShipDamageSequence.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   86</span>                                             {</div>
-<div class="line"><span class="lineno">   87</span>        this.engine = engine;</div>
-<div class="line"><span class="lineno">   88</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

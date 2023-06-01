@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -164,12 +165,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/d03/TurbulenceCalc_8java_source.html#l00115">115</a> of file <a class="el" href="../../d1/d03/TurbulenceCalc_8java_source.html">TurbulenceCalc.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  115</span>                                                                            {</div>
-<div class="line"><span class="lineno">  116</span>        <span class="keywordtype">float</span> dot = Vector2f.dot(cell, dir);</div>
-<div class="line"><span class="lineno">  117</span>        delta.x += dir.x * dot;</div>
-<div class="line"><span class="lineno">  118</span>        delta.y += dir.y * dot;</div>
-<div class="line"><span class="lineno">  119</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a677fe35a9876b3486880ac615f8bff22" name="a677fe35a9876b3486880ac615f8bff22"></a>
@@ -243,20 +239,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/d03/TurbulenceCalc_8java_source.html#l00102">102</a> of file <a class="el" href="../../d1/d03/TurbulenceCalc_8java_source.html">TurbulenceCalc.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  102</span>                                                                                                                                                {</div>
-<div class="line"><span class="lineno">  103</span>        Vector2f cell = <a class="code hl_function" href="../../df/dac/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1TurbulenceCalc.html#aee24a019c0814234079331dac9a7107a">getCell</a>(field, fromX, fromY);</div>
-<div class="line"><span class="lineno">  104</span>        Vector2f d = <a class="code hl_function" href="../../df/dac/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1TurbulenceCalc.html#aee24a019c0814234079331dac9a7107a">getCell</a>(delta, x, y);</div>
-<div class="line"><span class="lineno">  105</span>        Vector2f dFrom = <a class="code hl_function" href="../../df/dac/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1TurbulenceCalc.html#aee24a019c0814234079331dac9a7107a">getCell</a>(delta, fromX, fromY);</div>
-<div class="line"><span class="lineno">  106</span>        <span class="keywordtype">float</span> dot = Vector2f.dot(cell, dir);</div>
-<div class="line"><span class="lineno">  107</span>        </div>
-<div class="line"><span class="lineno">  108</span>        d.x += dir.x * dot * propagationMult;</div>
-<div class="line"><span class="lineno">  109</span>        d.y += dir.y * dot * propagationMult;</div>
-<div class="line"><span class="lineno">  110</span>        </div>
-<div class="line"><span class="lineno">  111</span>        dFrom.x -= dir.x * dot * propagationMult;</div>
-<div class="line"><span class="lineno">  112</span>        dFrom.y -= dir.y * dot * propagationMult;</div>
-<div class="line"><span class="lineno">  113</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1TurbulenceCalc_html_aee24a019c0814234079331dac9a7107a"><div class="ttname"><a href="../../df/dac/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1TurbulenceCalc.html#aee24a019c0814234079331dac9a7107a">com.fs.starfarer.api.impl.campaign.velfield.TurbulenceCalc.getCell</a></div><div class="ttdeci">static Vector2f getCell(Vector2f[][] data, int i, int j)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d03/TurbulenceCalc_8java_source.html#l00096">TurbulenceCalc.java:96</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af80526487901304720b9dff9bd1f6b6f" name="af80526487901304720b9dff9bd1f6b6f"></a>
@@ -300,78 +283,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/d03/TurbulenceCalc_8java_source.html#l00026">26</a> of file <a class="el" href="../../d1/d03/TurbulenceCalc_8java_source.html">TurbulenceCalc.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   26</span>                                                                                          {</div>
-<div class="line"><span class="lineno">   27</span>        </div>
-<div class="line"><span class="lineno">   28</span>        Vector2f[][] f = field.getField();</div>
-<div class="line"><span class="lineno">   29</span>        </div>
-<div class="line"><span class="lineno">   30</span>        Vector2f[][] delta = <span class="keyword">new</span> Vector2f[f.length][f[0].length];</div>
-<div class="line"><span class="lineno">   31</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; f.length; i++) {</div>
-<div class="line"><span class="lineno">   32</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; f[0].length; j++) {</div>
-<div class="line"><span class="lineno">   33</span>                delta[i][j] = <span class="keyword">new</span> Vector2f();</div>
-<div class="line"><span class="lineno">   34</span>            }</div>
-<div class="line"><span class="lineno">   35</span>        }</div>
-<div class="line"><span class="lineno">   36</span>        Vector2f[][] delta2 = <span class="keyword">new</span> Vector2f[f.length][f[0].length];</div>
-<div class="line"><span class="lineno">   37</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; f.length; i++) {</div>
-<div class="line"><span class="lineno">   38</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; f[0].length; j++) {</div>
-<div class="line"><span class="lineno">   39</span>                delta2[i][j] = <span class="keyword">new</span> Vector2f();</div>
-<div class="line"><span class="lineno">   40</span>            }</div>
-<div class="line"><span class="lineno">   41</span>        }</div>
-<div class="line"><span class="lineno">   42</span>        </div>
-<div class="line"><span class="lineno">   43</span>        <span class="comment">//Vector2f[][] d = field.getDelta();</span></div>
-<div class="line"><span class="lineno">   44</span>        </div>
-<div class="line"><span class="lineno">   45</span>        <span class="keywordtype">float</span> mult = propagationSpeed * amount;</div>
-<div class="line"><span class="lineno">   46</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; f.length; i++) {</div>
-<div class="line"><span class="lineno">   47</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; f[0].length; j++) {</div>
-<div class="line"><span class="lineno">   48</span>                </div>
-<div class="line"><span class="lineno">   49</span>                <a class="code hl_function" href="../../df/dac/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1TurbulenceCalc.html#a677fe35a9876b3486880ac615f8bff22">addCell</a>(f, delta, i + 1, j + 0, i, j, <a class="code hl_variable" href="../../df/dac/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1TurbulenceCalc.html#a3962d5622c4799493dcaa677927ad532">DIRECTIONS</a>[0], mult);</div>
-<div class="line"><span class="lineno">   50</span>                <a class="code hl_function" href="../../df/dac/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1TurbulenceCalc.html#a677fe35a9876b3486880ac615f8bff22">addCell</a>(f, delta, i + 1, j + 1, i, j, <a class="code hl_variable" href="../../df/dac/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1TurbulenceCalc.html#a3962d5622c4799493dcaa677927ad532">DIRECTIONS</a>[1], mult);</div>
-<div class="line"><span class="lineno">   51</span>                <a class="code hl_function" href="../../df/dac/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1TurbulenceCalc.html#a677fe35a9876b3486880ac615f8bff22">addCell</a>(f, delta, i + 0, j + 1, i, j, <a class="code hl_variable" href="../../df/dac/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1TurbulenceCalc.html#a3962d5622c4799493dcaa677927ad532">DIRECTIONS</a>[2], mult);</div>
-<div class="line"><span class="lineno">   52</span>                <a class="code hl_function" href="../../df/dac/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1TurbulenceCalc.html#a677fe35a9876b3486880ac615f8bff22">addCell</a>(f, delta, i - 1, j + 1, i, j, <a class="code hl_variable" href="../../df/dac/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1TurbulenceCalc.html#a3962d5622c4799493dcaa677927ad532">DIRECTIONS</a>[3], mult);</div>
-<div class="line"><span class="lineno">   53</span>                <a class="code hl_function" href="../../df/dac/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1TurbulenceCalc.html#a677fe35a9876b3486880ac615f8bff22">addCell</a>(f, delta, i - 1, j + 0, i, j, <a class="code hl_variable" href="../../df/dac/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1TurbulenceCalc.html#a3962d5622c4799493dcaa677927ad532">DIRECTIONS</a>[4], mult);</div>
-<div class="line"><span class="lineno">   54</span>                <a class="code hl_function" href="../../df/dac/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1TurbulenceCalc.html#a677fe35a9876b3486880ac615f8bff22">addCell</a>(f, delta, i - 1, j - 1, i, j, <a class="code hl_variable" href="../../df/dac/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1TurbulenceCalc.html#a3962d5622c4799493dcaa677927ad532">DIRECTIONS</a>[5], mult);</div>
-<div class="line"><span class="lineno">   55</span>                <a class="code hl_function" href="../../df/dac/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1TurbulenceCalc.html#a677fe35a9876b3486880ac615f8bff22">addCell</a>(f, delta, i - 0, j - 1, i, j, <a class="code hl_variable" href="../../df/dac/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1TurbulenceCalc.html#a3962d5622c4799493dcaa677927ad532">DIRECTIONS</a>[6], mult);</div>
-<div class="line"><span class="lineno">   56</span>                <a class="code hl_function" href="../../df/dac/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1TurbulenceCalc.html#a677fe35a9876b3486880ac615f8bff22">addCell</a>(f, delta, i + 1, j - 1, i, j, <a class="code hl_variable" href="../../df/dac/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1TurbulenceCalc.html#a3962d5622c4799493dcaa677927ad532">DIRECTIONS</a>[7], mult);</div>
-<div class="line"><span class="lineno">   57</span>                <span class="comment">//Misc.wiggle(d[i][j], d[i][j].length() * 0.1f);</span></div>
-<div class="line"><span class="lineno">   58</span>            }</div>
-<div class="line"><span class="lineno">   59</span>        }</div>
-<div class="line"><span class="lineno">   60</span>        </div>
-<div class="line"><span class="lineno">   61</span>        mult = -1f;</div>
-<div class="line"><span class="lineno">   62</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; f.length; i++) {</div>
-<div class="line"><span class="lineno">   63</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; f[0].length; j++) {</div>
-<div class="line"><span class="lineno">   64</span>                <a class="code hl_function" href="../../df/dac/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1TurbulenceCalc.html#a677fe35a9876b3486880ac615f8bff22">addCell</a>(delta, delta2, i + 1, j + 0, i, j, <a class="code hl_variable" href="../../df/dac/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1TurbulenceCalc.html#a3962d5622c4799493dcaa677927ad532">DIRECTIONS</a>[0], mult);</div>
-<div class="line"><span class="lineno">   65</span>                <a class="code hl_function" href="../../df/dac/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1TurbulenceCalc.html#a677fe35a9876b3486880ac615f8bff22">addCell</a>(delta, delta2, i + 1, j + 1, i, j, <a class="code hl_variable" href="../../df/dac/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1TurbulenceCalc.html#a3962d5622c4799493dcaa677927ad532">DIRECTIONS</a>[1], mult);</div>
-<div class="line"><span class="lineno">   66</span>                <a class="code hl_function" href="../../df/dac/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1TurbulenceCalc.html#a677fe35a9876b3486880ac615f8bff22">addCell</a>(delta, delta2, i + 0, j + 1, i, j, <a class="code hl_variable" href="../../df/dac/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1TurbulenceCalc.html#a3962d5622c4799493dcaa677927ad532">DIRECTIONS</a>[2], mult);</div>
-<div class="line"><span class="lineno">   67</span>                <a class="code hl_function" href="../../df/dac/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1TurbulenceCalc.html#a677fe35a9876b3486880ac615f8bff22">addCell</a>(delta, delta2, i - 1, j + 1, i, j, <a class="code hl_variable" href="../../df/dac/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1TurbulenceCalc.html#a3962d5622c4799493dcaa677927ad532">DIRECTIONS</a>[3], mult);</div>
-<div class="line"><span class="lineno">   68</span>                <a class="code hl_function" href="../../df/dac/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1TurbulenceCalc.html#a677fe35a9876b3486880ac615f8bff22">addCell</a>(delta, delta2, i - 1, j + 0, i, j, <a class="code hl_variable" href="../../df/dac/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1TurbulenceCalc.html#a3962d5622c4799493dcaa677927ad532">DIRECTIONS</a>[4], mult);</div>
-<div class="line"><span class="lineno">   69</span>                <a class="code hl_function" href="../../df/dac/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1TurbulenceCalc.html#a677fe35a9876b3486880ac615f8bff22">addCell</a>(delta, delta2, i - 1, j - 1, i, j, <a class="code hl_variable" href="../../df/dac/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1TurbulenceCalc.html#a3962d5622c4799493dcaa677927ad532">DIRECTIONS</a>[5], mult);</div>
-<div class="line"><span class="lineno">   70</span>                <a class="code hl_function" href="../../df/dac/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1TurbulenceCalc.html#a677fe35a9876b3486880ac615f8bff22">addCell</a>(delta, delta2, i - 0, j - 1, i, j, <a class="code hl_variable" href="../../df/dac/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1TurbulenceCalc.html#a3962d5622c4799493dcaa677927ad532">DIRECTIONS</a>[6], mult);</div>
-<div class="line"><span class="lineno">   71</span>                <a class="code hl_function" href="../../df/dac/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1TurbulenceCalc.html#a677fe35a9876b3486880ac615f8bff22">addCell</a>(delta, delta2, i + 1, j - 1, i, j, <a class="code hl_variable" href="../../df/dac/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1TurbulenceCalc.html#a3962d5622c4799493dcaa677927ad532">DIRECTIONS</a>[7], mult);</div>
-<div class="line"><span class="lineno">   72</span>                <span class="comment">//Misc.wiggle(d[i][j], d[i][j].length() * 0.1f);</span></div>
-<div class="line"><span class="lineno">   73</span>            }</div>
-<div class="line"><span class="lineno">   74</span>        }</div>
-<div class="line"><span class="lineno">   75</span> </div>
-<div class="line"><span class="lineno">   76</span><span class="comment">//      for (int i = 0; i &lt; f.length; i++) {</span></div>
-<div class="line"><span class="lineno">   77</span><span class="comment">//          for (int j = 0; j &lt; f[0].length; j++) {</span></div>
-<div class="line"><span class="lineno">   78</span><span class="comment">//              Misc.wiggle(delta[i][j], delta[i][j].length() * 0.1f);</span></div>
-<div class="line"><span class="lineno">   79</span><span class="comment">//              Misc.wiggle(delta2[i][j], delta2[i][j].length() * 0.1f);</span></div>
-<div class="line"><span class="lineno">   80</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">   81</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">   82</span>        </div>
-<div class="line"><span class="lineno">   83</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; f.length; i++) {</div>
-<div class="line"><span class="lineno">   84</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; f[0].length; j++) {</div>
-<div class="line"><span class="lineno">   85</span>                Vector2f.add(f[i][j], delta[i][j], f[i][j]);</div>
-<div class="line"><span class="lineno">   86</span><span class="comment">//              Vector2f.add(f[i][j], delta2[i][j], f[i][j]);</span></div>
-<div class="line"><span class="lineno">   87</span><span class="comment">//              float len = f[i][j].length();</span></div>
-<div class="line"><span class="lineno">   88</span><span class="comment">//              if (len &gt; 70f) {</span></div>
-<div class="line"><span class="lineno">   89</span><span class="comment">//                  f[i][j].scale(70f/len);</span></div>
-<div class="line"><span class="lineno">   90</span><span class="comment">//              }</span></div>
-<div class="line"><span class="lineno">   91</span>            }</div>
-<div class="line"><span class="lineno">   92</span>        }</div>
-<div class="line"><span class="lineno">   93</span>        </div>
-<div class="line"><span class="lineno">   94</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1TurbulenceCalc_html_a3962d5622c4799493dcaa677927ad532"><div class="ttname"><a href="../../df/dac/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1TurbulenceCalc.html#a3962d5622c4799493dcaa677927ad532">com.fs.starfarer.api.impl.campaign.velfield.TurbulenceCalc.DIRECTIONS</a></div><div class="ttdeci">static Vector2f[] DIRECTIONS</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d03/TurbulenceCalc_8java_source.html#l00009">TurbulenceCalc.java:9</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1TurbulenceCalc_html_a677fe35a9876b3486880ac615f8bff22"><div class="ttname"><a href="../../df/dac/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1TurbulenceCalc.html#a677fe35a9876b3486880ac615f8bff22">com.fs.starfarer.api.impl.campaign.velfield.TurbulenceCalc.addCell</a></div><div class="ttdeci">static void addCell(Vector2f[][] field, Vector2f[][] delta, int fromX, int fromY, int x, int y, Vector2f dir, float propagationMult)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d03/TurbulenceCalc_8java_source.html#l00102">TurbulenceCalc.java:102</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aee24a019c0814234079331dac9a7107a" name="aee24a019c0814234079331dac9a7107a"></a>
@@ -415,12 +327,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/d03/TurbulenceCalc_8java_source.html#l00096">96</a> of file <a class="el" href="../../d1/d03/TurbulenceCalc_8java_source.html">TurbulenceCalc.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   96</span>                                                                     {</div>
-<div class="line"><span class="lineno">   97</span>        <span class="keywordflow">if</span> (i &lt; 0 || j &lt; 0) <span class="keywordflow">return</span> <span class="keyword">new</span> Vector2f();</div>
-<div class="line"><span class="lineno">   98</span>        <span class="keywordflow">if</span> (i &gt;= data.length || j &gt;= data[0].length) <span class="keywordflow">return</span> <span class="keyword">new</span> Vector2f();</div>
-<div class="line"><span class="lineno">   99</span>        <span class="keywordflow">return</span> data[i][j];</div>
-<div class="line"><span class="lineno">  100</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

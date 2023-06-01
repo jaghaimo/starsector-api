@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -241,11 +242,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/dcb/EconomyFleetRouteManager_8java_source.html#l00069">69</a> of file <a class="el" href="../../d0/dcb/EconomyFleetRouteManager_8java_source.html">EconomyFleetRouteManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   69</span>                                      {</div>
-<div class="line"><span class="lineno">   70</span>        <span class="comment">//super(1f, 14f);</span></div>
-<div class="line"><span class="lineno">   71</span>        super(0.2f, 0.3f);</div>
-<div class="line"><span class="lineno">   72</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -275,128 +272,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d1/ddd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseRouteFleetManager.html#aab8855e529c5f3e374e6b6b626ef190f">com.fs.starfarer.api.impl.campaign.fleets.BaseRouteFleetManager</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/dcb/EconomyFleetRouteManager_8java_source.html#l00103">103</a> of file <a class="el" href="../../d0/dcb/EconomyFleetRouteManager_8java_source.html">EconomyFleetRouteManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  103</span>                                             {</div>
-<div class="line"><span class="lineno">  104</span>        MarketAPI from = <a class="code hl_function" href="../../d9/dfc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetRouteManager.html#a7f18cdc8f55c1bf54987329589ce362c">pickSourceMarket</a>();</div>
-<div class="line"><span class="lineno">  105</span>        MarketAPI to = <a class="code hl_function" href="../../d9/dfc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetRouteManager.html#a04d24a9031254cbc174e7f9458a72266">pickDestMarket</a>(from);</div>
-<div class="line"><span class="lineno">  106</span>        <span class="keywordflow">if</span> (from != <span class="keyword">null</span> &amp;&amp; to != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  107</span>            </div>
-<div class="line"><span class="lineno">  108</span>            EconomyRouteData data = <a class="code hl_function" href="../../d9/dfc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetRouteManager.html#acc7aeb5076415af62b7e9db03807ca8a">createData</a>(from, to);</div>
-<div class="line"><span class="lineno">  109</span>            <span class="keywordflow">if</span> (data == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  110</span>            </div>
-<div class="line"><span class="lineno">  111</span>            <a class="code hl_variable" href="../../d9/dfc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetRouteManager.html#a1a5fa5b2a05782b3069a3f74005635ea">log</a>.info(<span class="stringliteral">&quot;Added trade fleet route from &quot;</span> + from.getName() + <span class="stringliteral">&quot; to &quot;</span> + to.getName());</div>
-<div class="line"><span class="lineno">  112</span>            </div>
-<div class="line"><span class="lineno">  113</span>            Long seed = Misc.genRandomSeed();</div>
-<div class="line"><span class="lineno">  114</span>            String <span class="keywordtype">id</span> = <a class="code hl_function" href="../../d9/dfc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetRouteManager.html#a006d50bdf1f9e7f029ea7fd08fc66c45">getRouteSourceId</a>();</div>
-<div class="line"><span class="lineno">  115</span>            </div>
-<div class="line"><span class="lineno">  116</span>            OptionalFleetData extra = <span class="keyword">new</span> OptionalFleetData(from);</div>
-<div class="line"><span class="lineno">  117</span>            <span class="keywordtype">float</span> tier = data.size;</div>
-<div class="line"><span class="lineno">  118</span>            <span class="keywordtype">float</span> stability = from.getStabilityValue();</div>
-<div class="line"><span class="lineno">  119</span>            String factionId = from.getFactionId();</div>
-<div class="line"><span class="lineno">  120</span>            <span class="keywordflow">if</span> (!from.getFaction().isHostileTo(Factions.INDEPENDENT) &amp;&amp; </div>
-<div class="line"><span class="lineno">  121</span>                    !to.getFaction().isHostileTo(Factions.INDEPENDENT)) {</div>
-<div class="line"><span class="lineno">  122</span>                <span class="keywordflow">if</span> ((<span class="keywordtype">float</span>) Math.random() * 10f &gt; stability + tier) {</div>
-<div class="line"><span class="lineno">  123</span>                    factionId = Factions.INDEPENDENT;</div>
-<div class="line"><span class="lineno">  124</span>                }</div>
-<div class="line"><span class="lineno">  125</span>            }</div>
-<div class="line"><span class="lineno">  126</span>            <span class="keywordflow">if</span> (data.smuggling) {</div>
-<div class="line"><span class="lineno">  127</span>                factionId = Factions.INDEPENDENT;</div>
-<div class="line"><span class="lineno">  128</span>            }</div>
-<div class="line"><span class="lineno">  129</span>            extra.factionId = factionId;</div>
-<div class="line"><span class="lineno">  130</span>            </div>
-<div class="line"><span class="lineno">  131</span>            RouteData route = RouteManager.getInstance().addRoute(<span class="keywordtype">id</span>, from, seed, extra, <span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  132</span>            route.setCustom(data);</div>
-<div class="line"><span class="lineno">  133</span>            </div>
-<div class="line"><span class="lineno">  134</span>            </div>
-<div class="line"><span class="lineno">  135</span>            StarSystemAPI sysFrom = data.from.getStarSystem();</div>
-<div class="line"><span class="lineno">  136</span>            StarSystemAPI sysTo = data.to.getStarSystem();</div>
-<div class="line"><span class="lineno">  137</span>            </div>
-<div class="line"><span class="lineno">  138</span><span class="comment">//          if (sysFrom.getName().startsWith(&quot;Rama&quot;) ||</span></div>
-<div class="line"><span class="lineno">  139</span><span class="comment">//                  sysTo.getName().startsWith(&quot;Rama&quot;)) {</span></div>
-<div class="line"><span class="lineno">  140</span><span class="comment">//              System.out.println(&quot;32ff32f23&quot;);</span></div>
-<div class="line"><span class="lineno">  141</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">  142</span>            </div>
-<div class="line"><span class="lineno">  143</span>            LocationDanger dFrom = WarSimScript.getDangerFor(factionId, sysFrom);</div>
-<div class="line"><span class="lineno">  144</span>            LocationDanger dTo = WarSimScript.getDangerFor(factionId, sysTo);</div>
-<div class="line"><span class="lineno">  145</span>            </div>
-<div class="line"><span class="lineno">  146</span>            LocationDanger danger = dFrom.ordinal() &gt; dTo.ordinal() ? dFrom : dTo;</div>
-<div class="line"><span class="lineno">  147</span>            </div>
-<div class="line"><span class="lineno">  148</span>            <span class="keywordflow">if</span> (sysFrom != <span class="keyword">null</span> &amp;&amp; sysFrom.isCurrentLocation()) {</div>
-<div class="line"><span class="lineno">  149</span>                <span class="comment">// the player is in the from location, don&#39;t auto-lose the trade fleet</span></div>
-<div class="line"><span class="lineno">  150</span>                <span class="comment">// let it get destroyed by actual fleets, if it does</span></div>
-<div class="line"><span class="lineno">  151</span>                danger = LocationDanger.NONE;</div>
-<div class="line"><span class="lineno">  152</span>            }</div>
-<div class="line"><span class="lineno">  153</span>            </div>
-<div class="line"><span class="lineno">  154</span><span class="comment">//          if (danger != LocationDanger.NONE) {</span></div>
-<div class="line"><span class="lineno">  155</span><span class="comment">//              System.out.println(&quot;efwe234523fwe &quot; + danger.name());</span></div>
-<div class="line"><span class="lineno">  156</span><span class="comment">//              dFrom = WarSimScript.getDangerFor(factionId, sysFrom);</span></div>
-<div class="line"><span class="lineno">  157</span><span class="comment">//              dTo = WarSimScript.getDangerFor(factionId, sysTo);</span></div>
-<div class="line"><span class="lineno">  158</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">  159</span>            <span class="keywordtype">float</span> pLoss = <a class="code hl_variable" href="../../d9/dfc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetRouteManager.html#ac71f9708bd71795123e58fdc9200ba4b">DANGER_LOSS_PROB</a>.get(danger);</div>
-<div class="line"><span class="lineno">  160</span>            <span class="keywordflow">if</span> (data.smuggling) pLoss *= 0.5;</div>
-<div class="line"><span class="lineno">  161</span>            <span class="keywordflow">if</span> ((<span class="keywordtype">float</span>) Math.random() &lt; pLoss) {</div>
-<div class="line"><span class="lineno">  162</span>                <span class="keywordtype">boolean</span> returning = (float) Math.random() &lt; 0.5f; </div>
-<div class="line"><span class="lineno">  163</span>                <a class="code hl_function" href="../../d9/dfc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetRouteManager.html#af387525dd8ea0f59d332253302edcdf2">applyLostShipping</a>(data, returning, <span class="keyword">true</span>, <span class="keyword">true</span>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  164</span>                RouteManager.getInstance().removeRoute(route);</div>
-<div class="line"><span class="lineno">  165</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  166</span>            }</div>
-<div class="line"><span class="lineno">  167</span>            </div>
-<div class="line"><span class="lineno">  168</span>            </div>
-<div class="line"><span class="lineno">  169</span>            <span class="comment">//float distLY = Misc.getDistanceLY(from.getLocationInHyperspace(), to.getLocation());</span></div>
-<div class="line"><span class="lineno">  170</span>            </div>
-<div class="line"><span class="lineno">  171</span>            <span class="keywordtype">float</span> orbitDays = 2f + (float) Math.random() * 3f;</div>
-<div class="line"><span class="lineno">  172</span>            <span class="comment">//float endDays = 8f + (float) Math.random() * 3f; // longer since includes time from jump-point to source</span></div>
-<div class="line"><span class="lineno">  173</span>    </div>
-<div class="line"><span class="lineno">  174</span>            <span class="comment">//orbitDays = 1f;</span></div>
-<div class="line"><span class="lineno">  175</span>            orbitDays = data.size * (0.75f + (float) Math.random() * 0.5f);</div>
-<div class="line"><span class="lineno">  176</span>            </div>
-<div class="line"><span class="lineno">  177</span><span class="comment">//          endDays = 0.5f;</span></div>
-<div class="line"><span class="lineno">  178</span><span class="comment">//          float totalTravelTime = orbitDays + endDays + travelDays * 2f;</span></div>
-<div class="line"><span class="lineno">  179</span> </div>
-<div class="line"><span class="lineno">  180</span>            <span class="comment">//boolean inSystem = from.getContainingLocation() == to.getContainingLocation();</span></div>
-<div class="line"><span class="lineno">  181</span>            </div>
-<div class="line"><span class="lineno">  182</span><span class="comment">//          WaystationBonus ws = Misc.getWaystation(from, to);</span></div>
-<div class="line"><span class="lineno">  183</span><span class="comment">//          if (ws != null &amp;&amp; !data.smuggling) {</span></div>
-<div class="line"><span class="lineno">  184</span><span class="comment">//              route.addSegment(new RouteSegment(ROUTE_SRC_LOAD, orbitDays, from.getPrimaryEntity()));</span></div>
-<div class="line"><span class="lineno">  185</span><span class="comment">//              route.addSegment(new RouteSegment(ROUTE_TRAVEL_WS, from.getPrimaryEntity(), ws.market.getPrimaryEntity()));</span></div>
-<div class="line"><span class="lineno">  186</span><span class="comment">//              route.addSegment(new RouteSegment(ROUTE_RESUPPLY_WS, orbitDays, ws.market.getPrimaryEntity()));</span></div>
-<div class="line"><span class="lineno">  187</span><span class="comment">//              route.addSegment(new RouteSegment(ROUTE_TRAVEL_DST, ws.market.getPrimaryEntity(), to.getPrimaryEntity()));</span></div>
-<div class="line"><span class="lineno">  188</span><span class="comment">//              route.addSegment(new RouteSegment(ROUTE_DST_UNLOAD, orbitDays * 0.5f, to.getPrimaryEntity()));</span></div>
-<div class="line"><span class="lineno">  189</span><span class="comment">//              route.addSegment(new RouteSegment(ROUTE_DST_LOAD, orbitDays * 0.5f, to.getPrimaryEntity()));</span></div>
-<div class="line"><span class="lineno">  190</span><span class="comment">//              route.addSegment(new RouteSegment(ROUTE_TRAVEL_BACK_WS, to.getPrimaryEntity(), ws.market.getPrimaryEntity()));</span></div>
-<div class="line"><span class="lineno">  191</span><span class="comment">//              route.addSegment(new RouteSegment(ROUTE_RESUPPLY_BACK_WS, orbitDays, ws.market.getPrimaryEntity()));</span></div>
-<div class="line"><span class="lineno">  192</span><span class="comment">//              route.addSegment(new RouteSegment(ROUTE_TRAVEL_SRC, ws.market.getPrimaryEntity(), from.getPrimaryEntity()));</span></div>
-<div class="line"><span class="lineno">  193</span><span class="comment">//              route.addSegment(new RouteSegment(ROUTE_SRC_UNLOAD, orbitDays, from.getPrimaryEntity()));</span></div>
-<div class="line"><span class="lineno">  194</span><span class="comment">//          } else {</span></div>
-<div class="line"><span class="lineno">  195</span>                route.addSegment(<span class="keyword">new</span> RouteSegment(<a class="code hl_variable" href="../../d9/dfc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetRouteManager.html#a20390ff518962e22a1b5b89b5535d1f4">ROUTE_SRC_LOAD</a>, orbitDays, from.getPrimaryEntity()));</div>
-<div class="line"><span class="lineno">  196</span>                route.addSegment(<span class="keyword">new</span> RouteSegment(<a class="code hl_variable" href="../../d9/dfc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetRouteManager.html#a484ee54e6a0c0a8831b88351ba8695f9">ROUTE_TRAVEL_DST</a>, from.getPrimaryEntity(), to.getPrimaryEntity()));</div>
-<div class="line"><span class="lineno">  197</span>                route.addSegment(<span class="keyword">new</span> RouteSegment(<a class="code hl_variable" href="../../d9/dfc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetRouteManager.html#a808cd535fef76de13d81b3a395e0f069">ROUTE_DST_UNLOAD</a>, orbitDays * 0.5f, to.getPrimaryEntity()));</div>
-<div class="line"><span class="lineno">  198</span>                route.addSegment(<span class="keyword">new</span> RouteSegment(<a class="code hl_variable" href="../../d9/dfc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetRouteManager.html#a8eac6882f257e21d39d3631682522378">ROUTE_DST_LOAD</a>, orbitDays * 0.5f, to.getPrimaryEntity()));</div>
-<div class="line"><span class="lineno">  199</span>                route.addSegment(<span class="keyword">new</span> RouteSegment(<a class="code hl_variable" href="../../d9/dfc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetRouteManager.html#ac2c662859ffad2bf177feee1198d6e3e">ROUTE_TRAVEL_SRC</a>, to.getPrimaryEntity(), from.getPrimaryEntity()));</div>
-<div class="line"><span class="lineno">  200</span>                route.addSegment(<span class="keyword">new</span> RouteSegment(<a class="code hl_variable" href="../../d9/dfc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetRouteManager.html#ac0175ef7d76a0434b1947e4138984915">ROUTE_SRC_UNLOAD</a>, orbitDays, from.getPrimaryEntity()));</div>
-<div class="line"><span class="lineno">  201</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">  202</span>            </div>
-<div class="line"><span class="lineno">  203</span>            <a class="code hl_function" href="../../d9/dfc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetRouteManager.html#a82d25b6cbe0317eaf812fe104f97cbdc">setDelayAndSendMessage</a>(route);</div>
-<div class="line"><span class="lineno">  204</span>            </div>
-<div class="line"><span class="lineno">  205</span>            <a class="code hl_variable" href="../../d9/dfc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetRouteManager.html#a279bcb3a5ffdbe2decfda9b784cf877e">recentlySentTradeFleet</a>.<a class="code hl_function" href="../../dd/df5/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTracker.html#aa63bae77983b72131b0522c039d5d11a">add</a>(from.getId(), Global.getSettings().getFloat(<span class="stringliteral">&quot;minEconSpawnIntervalPerMarket&quot;</span>));</div>
-<div class="line"><span class="lineno">  206</span>        }</div>
-<div class="line"><span class="lineno">  207</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetRouteManager_html_a006d50bdf1f9e7f029ea7fd08fc66c45"><div class="ttname"><a href="../../d9/dfc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetRouteManager.html#a006d50bdf1f9e7f029ea7fd08fc66c45">com.fs.starfarer.api.impl.campaign.fleets.EconomyFleetRouteManager.getRouteSourceId</a></div><div class="ttdeci">String getRouteSourceId()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dcb/EconomyFleetRouteManager_8java_source.html#l00092">EconomyFleetRouteManager.java:92</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetRouteManager_html_a04d24a9031254cbc174e7f9458a72266"><div class="ttname"><a href="../../d9/dfc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetRouteManager.html#a04d24a9031254cbc174e7f9458a72266">com.fs.starfarer.api.impl.campaign.fleets.EconomyFleetRouteManager.pickDestMarket</a></div><div class="ttdeci">MarketAPI pickDestMarket(MarketAPI from)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dcb/EconomyFleetRouteManager_8java_source.html#l00261">EconomyFleetRouteManager.java:261</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetRouteManager_html_a1a5fa5b2a05782b3069a3f74005635ea"><div class="ttname"><a href="../../d9/dfc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetRouteManager.html#a1a5fa5b2a05782b3069a3f74005635ea">com.fs.starfarer.api.impl.campaign.fleets.EconomyFleetRouteManager.log</a></div><div class="ttdeci">static Logger log</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dcb/EconomyFleetRouteManager_8java_source.html#l00054">EconomyFleetRouteManager.java:54</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetRouteManager_html_a20390ff518962e22a1b5b89b5535d1f4"><div class="ttname"><a href="../../d9/dfc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetRouteManager.html#a20390ff518962e22a1b5b89b5535d1f4">com.fs.starfarer.api.impl.campaign.fleets.EconomyFleetRouteManager.ROUTE_SRC_LOAD</a></div><div class="ttdeci">static final Integer ROUTE_SRC_LOAD</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dcb/EconomyFleetRouteManager_8java_source.html#l00042">EconomyFleetRouteManager.java:42</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetRouteManager_html_a279bcb3a5ffdbe2decfda9b784cf877e"><div class="ttname"><a href="../../d9/dfc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetRouteManager.html#a279bcb3a5ffdbe2decfda9b784cf877e">com.fs.starfarer.api.impl.campaign.fleets.EconomyFleetRouteManager.recentlySentTradeFleet</a></div><div class="ttdeci">TimeoutTracker&lt; String &gt; recentlySentTradeFleet</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dcb/EconomyFleetRouteManager_8java_source.html#l00067">EconomyFleetRouteManager.java:67</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetRouteManager_html_a484ee54e6a0c0a8831b88351ba8695f9"><div class="ttname"><a href="../../d9/dfc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetRouteManager.html#a484ee54e6a0c0a8831b88351ba8695f9">com.fs.starfarer.api.impl.campaign.fleets.EconomyFleetRouteManager.ROUTE_TRAVEL_DST</a></div><div class="ttdeci">static final Integer ROUTE_TRAVEL_DST</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dcb/EconomyFleetRouteManager_8java_source.html#l00043">EconomyFleetRouteManager.java:43</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetRouteManager_html_a7f18cdc8f55c1bf54987329589ce362c"><div class="ttname"><a href="../../d9/dfc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetRouteManager.html#a7f18cdc8f55c1bf54987329589ce362c">com.fs.starfarer.api.impl.campaign.fleets.EconomyFleetRouteManager.pickSourceMarket</a></div><div class="ttdeci">MarketAPI pickSourceMarket()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dcb/EconomyFleetRouteManager_8java_source.html#l00234">EconomyFleetRouteManager.java:234</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetRouteManager_html_a808cd535fef76de13d81b3a395e0f069"><div class="ttname"><a href="../../d9/dfc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetRouteManager.html#a808cd535fef76de13d81b3a395e0f069">com.fs.starfarer.api.impl.campaign.fleets.EconomyFleetRouteManager.ROUTE_DST_UNLOAD</a></div><div class="ttdeci">static final Integer ROUTE_DST_UNLOAD</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dcb/EconomyFleetRouteManager_8java_source.html#l00046">EconomyFleetRouteManager.java:46</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetRouteManager_html_a82d25b6cbe0317eaf812fe104f97cbdc"><div class="ttname"><a href="../../d9/dfc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetRouteManager.html#a82d25b6cbe0317eaf812fe104f97cbdc">com.fs.starfarer.api.impl.campaign.fleets.EconomyFleetRouteManager.setDelayAndSendMessage</a></div><div class="ttdeci">void setDelayAndSendMessage(RouteData route)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dcb/EconomyFleetRouteManager_8java_source.html#l00209">EconomyFleetRouteManager.java:209</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetRouteManager_html_a8eac6882f257e21d39d3631682522378"><div class="ttname"><a href="../../d9/dfc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetRouteManager.html#a8eac6882f257e21d39d3631682522378">com.fs.starfarer.api.impl.campaign.fleets.EconomyFleetRouteManager.ROUTE_DST_LOAD</a></div><div class="ttdeci">static final Integer ROUTE_DST_LOAD</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dcb/EconomyFleetRouteManager_8java_source.html#l00047">EconomyFleetRouteManager.java:47</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetRouteManager_html_ac0175ef7d76a0434b1947e4138984915"><div class="ttname"><a href="../../d9/dfc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetRouteManager.html#ac0175ef7d76a0434b1947e4138984915">com.fs.starfarer.api.impl.campaign.fleets.EconomyFleetRouteManager.ROUTE_SRC_UNLOAD</a></div><div class="ttdeci">static final Integer ROUTE_SRC_UNLOAD</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dcb/EconomyFleetRouteManager_8java_source.html#l00051">EconomyFleetRouteManager.java:51</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetRouteManager_html_ac2c662859ffad2bf177feee1198d6e3e"><div class="ttname"><a href="../../d9/dfc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetRouteManager.html#ac2c662859ffad2bf177feee1198d6e3e">com.fs.starfarer.api.impl.campaign.fleets.EconomyFleetRouteManager.ROUTE_TRAVEL_SRC</a></div><div class="ttdeci">static final Integer ROUTE_TRAVEL_SRC</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dcb/EconomyFleetRouteManager_8java_source.html#l00050">EconomyFleetRouteManager.java:50</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetRouteManager_html_ac71f9708bd71795123e58fdc9200ba4b"><div class="ttname"><a href="../../d9/dfc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetRouteManager.html#ac71f9708bd71795123e58fdc9200ba4b">com.fs.starfarer.api.impl.campaign.fleets.EconomyFleetRouteManager.DANGER_LOSS_PROB</a></div><div class="ttdeci">static Map&lt; LocationDanger, Float &gt; DANGER_LOSS_PROB</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dcb/EconomyFleetRouteManager_8java_source.html#l00056">EconomyFleetRouteManager.java:56</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetRouteManager_html_acc7aeb5076415af62b7e9db03807ca8a"><div class="ttname"><a href="../../d9/dfc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetRouteManager.html#acc7aeb5076415af62b7e9db03807ca8a">com.fs.starfarer.api.impl.campaign.fleets.EconomyFleetRouteManager.createData</a></div><div class="ttdeci">static EconomyRouteData createData(MarketAPI from, MarketAPI to)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dcb/EconomyFleetRouteManager_8java_source.html#l00339">EconomyFleetRouteManager.java:339</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetRouteManager_html_af387525dd8ea0f59d332253302edcdf2"><div class="ttname"><a href="../../d9/dfc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetRouteManager.html#af387525dd8ea0f59d332253302edcdf2">com.fs.starfarer.api.impl.campaign.fleets.EconomyFleetRouteManager.applyLostShipping</a></div><div class="ttdeci">static void applyLostShipping(EconomyRouteData data, boolean returning, boolean cargo, boolean fuel, boolean personnel)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dcb/EconomyFleetRouteManager_8java_source.html#l00718">EconomyFleetRouteManager.java:718</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTracker_html_aa63bae77983b72131b0522c039d5d11a"><div class="ttname"><a href="../../dd/df5/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTracker.html#aa63bae77983b72131b0522c039d5d11a">com.fs.starfarer.api.util.TimeoutTracker.add</a></div><div class="ttdeci">void add(T item, float time)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dcf/TimeoutTracker_8java_source.html#l00030">TimeoutTracker.java:30</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a766e72ef11b2249a798033733eebe78d" name="a766e72ef11b2249a798033733eebe78d"></a>
@@ -424,17 +300,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d1/ddd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseRouteFleetManager.html#a172d51f87995399d0dd99ba674b3359f">com.fs.starfarer.api.impl.campaign.fleets.BaseRouteFleetManager</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/dcb/EconomyFleetRouteManager_8java_source.html#l00082">82</a> of file <a class="el" href="../../d0/dcb/EconomyFleetRouteManager_8java_source.html">EconomyFleetRouteManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   82</span>                                      {</div>
-<div class="line"><span class="lineno">   83</span>        super.advance(amount);</div>
-<div class="line"><span class="lineno">   84</span>        </div>
-<div class="line"><span class="lineno">   85</span>        <span class="keywordtype">float</span> days = Global.getSector().getClock().convertToDays(amount);</div>
-<div class="line"><span class="lineno">   86</span>        <a class="code hl_variable" href="../../d9/dfc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetRouteManager.html#a279bcb3a5ffdbe2decfda9b784cf877e">recentlySentTradeFleet</a>.<a class="code hl_function" href="../../dd/df5/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTracker.html#a841c73d428617df86cca633e7640f439">advance</a>(days);</div>
-<div class="line"><span class="lineno">   87</span>        </div>
-<div class="line"><span class="lineno">   88</span><span class="comment">//      MarketAPI from = pickSourceMarket();</span></div>
-<div class="line"><span class="lineno">   89</span><span class="comment">//      MarketAPI to = pickDestMarket(from);</span></div>
-<div class="line"><span class="lineno">   90</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTracker_html_a841c73d428617df86cca633e7640f439"><div class="ttname"><a href="../../dd/df5/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTracker.html#a841c73d428617df86cca633e7640f439">com.fs.starfarer.api.util.TimeoutTracker.advance</a></div><div class="ttdeci">void advance(float amount)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dcf/TimeoutTracker_8java_source.html#l00093">TimeoutTracker.java:93</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af387525dd8ea0f59d332253302edcdf2" name="af387525dd8ea0f59d332253302edcdf2"></a>
@@ -490,39 +356,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/dcb/EconomyFleetRouteManager_8java_source.html#l00718">718</a> of file <a class="el" href="../../d0/dcb/EconomyFleetRouteManager_8java_source.html">EconomyFleetRouteManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  718</span>                                                                                                                                   {</div>
-<div class="line"><span class="lineno">  719</span>        <span class="keywordflow">if</span> (!cargo &amp;&amp; !fuel &amp;&amp; !personnel) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  720</span>        </div>
-<div class="line"><span class="lineno">  721</span>        <span class="keywordtype">int</span> penalty = 1;</div>
-<div class="line"><span class="lineno">  722</span>        <span class="keywordtype">int</span> penalty2 = 2;</div>
-<div class="line"><span class="lineno">  723</span>        <span class="keywordflow">if</span> (!returning) {</div>
-<div class="line"><span class="lineno">  724</span>            <span class="keywordflow">for</span> (CargoQuantityData curr : data.cargoDeliver) {</div>
-<div class="line"><span class="lineno">  725</span>                CommodityOnMarketAPI com = data.to.getCommodityData(curr.cargo);</div>
-<div class="line"><span class="lineno">  726</span>                <span class="keywordflow">if</span> (!fuel &amp;&amp; com.isFuel()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  727</span>                <span class="keywordflow">if</span> (!personnel &amp;&amp; com.isPersonnel()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  728</span>                <span class="keywordflow">if</span> (!cargo &amp;&amp; !com.isFuel() &amp;&amp; !com.isPersonnel()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  729</span>                </div>
-<div class="line"><span class="lineno">  730</span>                com.getAvailableStat().addTemporaryModFlat(</div>
-<div class="line"><span class="lineno">  731</span>                        ShippingDisruption.ACCESS_LOSS_DURATION,</div>
-<div class="line"><span class="lineno">  732</span>                        ShippingDisruption.COMMODITY_LOSS_PREFIX + Misc.genUID(), <span class="stringliteral">&quot;Recent incoming shipment lost&quot;</span>, -penalty2);</div>
-<div class="line"><span class="lineno">  733</span>                </div>
-<div class="line"><span class="lineno">  734</span>                ShippingDisruption.getDisruption(data.to).notifyDisrupted(ShippingDisruption.ACCESS_LOSS_DURATION);</div>
-<div class="line"><span class="lineno">  735</span>            }</div>
-<div class="line"><span class="lineno">  736</span>        }</div>
-<div class="line"><span class="lineno">  737</span>        <span class="keywordflow">for</span> (CargoQuantityData curr : data.cargoReturn) {</div>
-<div class="line"><span class="lineno">  738</span>            CommodityOnMarketAPI com = data.from.getCommodityData(curr.cargo);</div>
-<div class="line"><span class="lineno">  739</span>            <span class="keywordflow">if</span> (!fuel &amp;&amp; com.isFuel()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  740</span>            <span class="keywordflow">if</span> (!personnel &amp;&amp; com.isPersonnel()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  741</span>            <span class="keywordflow">if</span> (!cargo &amp;&amp; !com.isFuel() &amp;&amp; !com.isPersonnel()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  742</span>            </div>
-<div class="line"><span class="lineno">  743</span>            com.getAvailableStat().addTemporaryModFlat(</div>
-<div class="line"><span class="lineno">  744</span>                    ShippingDisruption.ACCESS_LOSS_DURATION, </div>
-<div class="line"><span class="lineno">  745</span>                    ShippingDisruption.COMMODITY_LOSS_PREFIX + Misc.genUID(), <span class="stringliteral">&quot;Recent incoming shipment lost&quot;</span>, -penalty2);</div>
-<div class="line"><span class="lineno">  746</span>            </div>
-<div class="line"><span class="lineno">  747</span>            ShippingDisruption.getDisruption(data.from).notifyDisrupted(ShippingDisruption.ACCESS_LOSS_DURATION);</div>
-<div class="line"><span class="lineno">  748</span>        }</div>
-<div class="line"><span class="lineno">  749</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="acc7aeb5076415af62b7e9db03807ca8a" name="acc7aeb5076415af62b7e9db03807ca8a"></a>
@@ -560,143 +394,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/dcb/EconomyFleetRouteManager_8java_source.html#l00339">339</a> of file <a class="el" href="../../d0/dcb/EconomyFleetRouteManager_8java_source.html">EconomyFleetRouteManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  339</span>                                                                            {</div>
-<div class="line"><span class="lineno">  340</span>        EconomyRouteData smuggling = <span class="keyword">new</span> EconomyRouteData();</div>
-<div class="line"><span class="lineno">  341</span>        smuggling.from = from;</div>
-<div class="line"><span class="lineno">  342</span>        smuggling.to = to;</div>
-<div class="line"><span class="lineno">  343</span>        smuggling.smuggling = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  344</span>        </div>
-<div class="line"><span class="lineno">  345</span>        EconomyRouteData legal = <span class="keyword">new</span> EconomyRouteData();</div>
-<div class="line"><span class="lineno">  346</span>        legal.from = from;</div>
-<div class="line"><span class="lineno">  347</span>        legal.to = to;</div>
-<div class="line"><span class="lineno">  348</span>        legal.smuggling = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  349</span>        </div>
-<div class="line"><span class="lineno">  350</span>        <span class="keywordtype">float</span> legalTotal = 0;</div>
-<div class="line"><span class="lineno">  351</span>        <span class="keywordtype">float</span> smugglingTotal = 0;</div>
-<div class="line"><span class="lineno">  352</span>        </div>
-<div class="line"><span class="lineno">  353</span>        </div>
-<div class="line"><span class="lineno">  354</span>        List&lt;CommodityOnMarketAPI&gt; relevant = <span class="keyword">new</span> ArrayList&lt;CommodityOnMarketAPI&gt;();</div>
-<div class="line"><span class="lineno">  355</span>        <span class="keywordflow">for</span> (CommodityOnMarketAPI com : from.getAllCommodities()) {</div>
-<div class="line"><span class="lineno">  356</span>            <span class="keywordflow">if</span> (com.isNonEcon()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  357</span>            CommodityOnMarketAPI orig = com;</div>
-<div class="line"><span class="lineno">  358</span>            <span class="keywordtype">int</span> exported = Math.min(com.getAvailable(), com.getMaxSupply());</div>
-<div class="line"><span class="lineno">  359</span>            <span class="keywordflow">if</span> (!com.getCommodity().isPrimary()) {</div>
-<div class="line"><span class="lineno">  360</span>                com = from.getCommodityData(com.getCommodity().getDemandClass());</div>
-<div class="line"><span class="lineno">  361</span>            }</div>
-<div class="line"><span class="lineno">  362</span>                </div>
-<div class="line"><span class="lineno">  363</span>            <span class="keywordtype">int</span> imported = Math.max(0, com.getMaxDemand() - exported);</div>
-<div class="line"><span class="lineno">  364</span>            <span class="keywordflow">if</span> (imported &gt; 0 || exported &gt; 0) {</div>
-<div class="line"><span class="lineno">  365</span>                relevant.add(orig);</div>
-<div class="line"><span class="lineno">  366</span>            }</div>
-<div class="line"><span class="lineno">  367</span>        }</div>
-<div class="line"><span class="lineno">  368</span>        </div>
-<div class="line"><span class="lineno">  369</span>        <span class="keywordtype">int</span> shipping = Misc.getShippingCapacity(from, to.getFaction() == from.getFaction());</div>
-<div class="line"><span class="lineno">  370</span>        <span class="keywordflow">for</span> (CommodityOnMarketAPI com : relevant) {</div>
-<div class="line"><span class="lineno">  371</span>            CommodityOnMarketAPI orig = com;</div>
-<div class="line"><span class="lineno">  372</span>            <span class="keywordtype">int</span> exported = Math.min(com.getAvailable(), com.getMaxSupply());</div>
-<div class="line"><span class="lineno">  373</span>            exported = Math.min(exported, shipping);</div>
-<div class="line"><span class="lineno">  374</span>            </div>
-<div class="line"><span class="lineno">  375</span>            <span class="keywordflow">if</span> (!com.getCommodity().isPrimary()) {</div>
-<div class="line"><span class="lineno">  376</span>                com = from.getCommodityData(com.getCommodity().getDemandClass());</div>
-<div class="line"><span class="lineno">  377</span>            }</div>
-<div class="line"><span class="lineno">  378</span>            </div>
-<div class="line"><span class="lineno">  379</span>            <span class="keywordtype">int</span> imported = Math.max(0, com.getMaxDemand() - exported);</div>
-<div class="line"><span class="lineno">  380</span>            imported = Math.min(imported, shipping);</div>
-<div class="line"><span class="lineno">  381</span>            <span class="keywordflow">if</span> (orig != com) imported = 0;</div>
-<div class="line"><span class="lineno">  382</span>            </div>
-<div class="line"><span class="lineno">  383</span>            CommodityOnMarketAPI other = to.getCommodityData(com.getId());</div>
-<div class="line"><span class="lineno">  384</span>            exported = Math.min(exported, other.getMaxDemand() - other.getMaxSupply());</div>
-<div class="line"><span class="lineno">  385</span>            <span class="keywordflow">if</span> (exported &lt; 0) exported = 0;</div>
-<div class="line"><span class="lineno">  386</span>            imported = Math.min(imported, Math.min(other.getAvailable(), other.getMaxSupply()));</div>
-<div class="line"><span class="lineno">  387</span>            </div>
-<div class="line"><span class="lineno">  388</span>            <span class="keywordflow">if</span> (imported &lt; 0) imported = 0;</div>
-<div class="line"><span class="lineno">  389</span>            </div>
-<div class="line"><span class="lineno">  390</span>            <span class="keywordflow">if</span> (imported &lt;= 0 &amp;&amp; exported &lt;= 0) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  391</span>            </div>
-<div class="line"><span class="lineno">  392</span>            <span class="keywordtype">boolean</span> illegal = com.getCommodityMarketData().getMarketShareData(from).isSourceIsIllegal() ||</div>
-<div class="line"><span class="lineno">  393</span>                              com.getCommodityMarketData().getMarketShareData(to).isSourceIsIllegal() ||</div>
-<div class="line"><span class="lineno">  394</span>                              from.getFaction().isHostileTo(to.getFaction());</div>
-<div class="line"><span class="lineno">  395</span>            </div>
-<div class="line"><span class="lineno">  396</span>            <span class="keywordflow">if</span> (imported &gt; exported) {</div>
-<div class="line"><span class="lineno">  397</span>                <span class="keywordflow">if</span> (illegal) {</div>
-<div class="line"><span class="lineno">  398</span>                    smuggling.addReturn(orig.getId(), imported);</div>
-<div class="line"><span class="lineno">  399</span>                    smugglingTotal += imported;</div>
-<div class="line"><span class="lineno">  400</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  401</span>                    legal.addReturn(orig.getId(), imported);</div>
-<div class="line"><span class="lineno">  402</span>                    legalTotal += imported;</div>
-<div class="line"><span class="lineno">  403</span>                }</div>
-<div class="line"><span class="lineno">  404</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  405</span>                <span class="keywordflow">if</span> (illegal) {</div>
-<div class="line"><span class="lineno">  406</span>                    smuggling.addDeliver(orig.getId(), exported);</div>
-<div class="line"><span class="lineno">  407</span>                    smugglingTotal += exported;</div>
-<div class="line"><span class="lineno">  408</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  409</span>                    legal.addDeliver(orig.getId(), exported);</div>
-<div class="line"><span class="lineno">  410</span>                    legalTotal += exported;</div>
-<div class="line"><span class="lineno">  411</span>                }</div>
-<div class="line"><span class="lineno">  412</span>            }</div>
-<div class="line"><span class="lineno">  413</span>        }</div>
-<div class="line"><span class="lineno">  414</span> </div>
-<div class="line"><span class="lineno">  415</span>        Comparator&lt;CargoQuantityData&gt; comp = <span class="keyword">new</span> Comparator&lt;CargoQuantityData&gt;() {</div>
-<div class="line"><span class="lineno">  416</span>            <span class="keyword">public</span> <span class="keywordtype">int</span> compare(CargoQuantityData o1, CargoQuantityData o2) {</div>
-<div class="line"><span class="lineno">  417</span>                <span class="keywordflow">if</span> (o1.getCommodity().isPersonnel() &amp;&amp; !o2.getCommodity().isPersonnel()) {</div>
-<div class="line"><span class="lineno">  418</span>                    <span class="keywordflow">return</span> 1;</div>
-<div class="line"><span class="lineno">  419</span>                }</div>
-<div class="line"><span class="lineno">  420</span>                <span class="keywordflow">if</span> (o2.getCommodity().isPersonnel() &amp;&amp; !o1.getCommodity().isPersonnel()) {</div>
-<div class="line"><span class="lineno">  421</span>                    <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno">  422</span>                }</div>
-<div class="line"><span class="lineno">  423</span>                <span class="keywordflow">return</span> o2.units - o1.units;</div>
-<div class="line"><span class="lineno">  424</span>            }</div>
-<div class="line"><span class="lineno">  425</span>        };</div>
-<div class="line"><span class="lineno">  426</span>        Collections.sort(legal.cargoDeliver, comp); </div>
-<div class="line"><span class="lineno">  427</span>        Collections.sort(legal.cargoReturn, comp); </div>
-<div class="line"><span class="lineno">  428</span>        Collections.sort(smuggling.cargoDeliver, comp); </div>
-<div class="line"><span class="lineno">  429</span>        Collections.sort(smuggling.cargoReturn, comp);</div>
-<div class="line"><span class="lineno">  430</span>        </div>
-<div class="line"><span class="lineno">  431</span>        <span class="keywordflow">if</span> (smugglingTotal &lt;= 0 &amp;&amp; legalTotal &lt;= 0) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  432</span>        </div>
-<div class="line"><span class="lineno">  433</span>        EconomyRouteData data = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  434</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">float</span>) Math.random() * (smugglingTotal + legalTotal) &lt; smugglingTotal) {</div>
-<div class="line"><span class="lineno">  435</span>            data = smuggling;</div>
-<div class="line"><span class="lineno">  436</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  437</span>            data = legal;</div>
-<div class="line"><span class="lineno">  438</span>        }</div>
-<div class="line"><span class="lineno">  439</span>        </div>
-<div class="line"><span class="lineno">  440</span>        <span class="keywordflow">while</span> (data.cargoDeliver.size() &gt; 4) {</div>
-<div class="line"><span class="lineno">  441</span>            data.cargoDeliver.remove(4);</div>
-<div class="line"><span class="lineno">  442</span>        }</div>
-<div class="line"><span class="lineno">  443</span>        <span class="keywordflow">while</span> (data.cargoReturn.size() &gt; 4) {</div>
-<div class="line"><span class="lineno">  444</span>            data.cargoReturn.remove(4);</div>
-<div class="line"><span class="lineno">  445</span>        }</div>
-<div class="line"><span class="lineno">  446</span>        </div>
-<div class="line"><span class="lineno">  447</span><span class="comment">//      data.cargoDeliver = data.cargoDeliver.subList(0, Math.min(data.cargoDeliver.size(), 4));</span></div>
-<div class="line"><span class="lineno">  448</span><span class="comment">//      data.cargoReturn = data.cargoReturn.subList(0, Math.min(data.cargoReturn.size(), 4));</span></div>
-<div class="line"><span class="lineno">  449</span>        </div>
-<div class="line"><span class="lineno">  450</span><span class="comment">//      data.cargoDeliver.clear();</span></div>
-<div class="line"><span class="lineno">  451</span><span class="comment">//      data.cargoReturn.clear();</span></div>
-<div class="line"><span class="lineno">  452</span><span class="comment">//      data.addDeliver(Commodities.SHIPS, 5);</span></div>
-<div class="line"><span class="lineno">  453</span>        </div>
-<div class="line"><span class="lineno">  454</span>        <span class="keywordtype">float</span> max = 0f;</div>
-<div class="line"><span class="lineno">  455</span>        <span class="keywordflow">for</span> (CargoQuantityData curr : data.cargoDeliver) {</div>
-<div class="line"><span class="lineno">  456</span>            <span class="keywordflow">if</span> (curr.units &gt; max) max = curr.units;</div>
-<div class="line"><span class="lineno">  457</span>        }</div>
-<div class="line"><span class="lineno">  458</span>        <span class="keywordflow">for</span> (CargoQuantityData curr : data.cargoReturn) {</div>
-<div class="line"><span class="lineno">  459</span>            <span class="keywordflow">if</span> (curr.units &gt; max) max = curr.units;</div>
-<div class="line"><span class="lineno">  460</span>        }</div>
-<div class="line"><span class="lineno">  461</span>        </div>
-<div class="line"><span class="lineno">  462</span>        <span class="keywordtype">int</span> types = Math.max(data.cargoDeliver.size(), data.cargoReturn.size());</div>
-<div class="line"><span class="lineno">  463</span>        <span class="keywordflow">if</span> (types &gt;= 3) {</div>
-<div class="line"><span class="lineno">  464</span>            data.size++;</div>
-<div class="line"><span class="lineno">  465</span>        }</div>
-<div class="line"><span class="lineno">  466</span>        <span class="keywordflow">if</span> (types &gt;= 4) {</div>
-<div class="line"><span class="lineno">  467</span>            data.size++;</div>
-<div class="line"><span class="lineno">  468</span>        }</div>
-<div class="line"><span class="lineno">  469</span>        </div>
-<div class="line"><span class="lineno">  470</span>        data.size = max;</div>
-<div class="line"><span class="lineno">  471</span>        </div>
-<div class="line"><span class="lineno">  472</span>        </div>
-<div class="line"><span class="lineno">  473</span>        <span class="keywordflow">return</span> data;</div>
-<div class="line"><span class="lineno">  474</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a1fc3bb91390512a605d602019bdae646" name="a1fc3bb91390512a605d602019bdae646"></a>
@@ -734,152 +432,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/dcb/EconomyFleetRouteManager_8java_source.html#l00521">521</a> of file <a class="el" href="../../d0/dcb/EconomyFleetRouteManager_8java_source.html">EconomyFleetRouteManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  521</span>                                                                                         {</div>
-<div class="line"><span class="lineno">  522</span>        EconomyRouteData data = (EconomyRouteData) route.getCustom();</div>
-<div class="line"><span class="lineno">  523</span> </div>
-<div class="line"><span class="lineno">  524</span>        MarketAPI from = data.from;</div>
-<div class="line"><span class="lineno">  525</span>        MarketAPI to = data.to;</div>
-<div class="line"><span class="lineno">  526</span>        </div>
-<div class="line"><span class="lineno">  527</span><span class="comment">//      if (from.getId().equals(&quot;umbra&quot;)) {</span></div>
-<div class="line"><span class="lineno">  528</span><span class="comment">//          System.out.println(&quot;wefwefw&quot;);</span></div>
-<div class="line"><span class="lineno">  529</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  530</span>        </div>
-<div class="line"><span class="lineno">  531</span>        <span class="keywordtype">float</span> tier = data.size;</div>
-<div class="line"><span class="lineno">  532</span>        </div>
-<div class="line"><span class="lineno">  533</span>        <span class="keywordflow">if</span> (data.smuggling &amp;&amp; tier &gt; 4) {</div>
-<div class="line"><span class="lineno">  534</span>            tier = 4;</div>
-<div class="line"><span class="lineno">  535</span>        }</div>
-<div class="line"><span class="lineno">  536</span>        </div>
-<div class="line"><span class="lineno">  537</span><span class="comment">//      data.smuggling = false;</span></div>
-<div class="line"><span class="lineno">  538</span><span class="comment">//      tier = 4;</span></div>
-<div class="line"><span class="lineno">  539</span>        </div>
-<div class="line"><span class="lineno">  540</span><span class="comment">//      float stability = from.getStabilityValue();</span></div>
-<div class="line"><span class="lineno">  541</span><span class="comment">//      String factionId = from.getFactionId();</span></div>
-<div class="line"><span class="lineno">  542</span><span class="comment">//      if (!from.getFaction().isHostileTo(Factions.INDEPENDENT) &amp;&amp; </span></div>
-<div class="line"><span class="lineno">  543</span><span class="comment">//              !to.getFaction().isHostileTo(Factions.INDEPENDENT)) {</span></div>
-<div class="line"><span class="lineno">  544</span><span class="comment">//          if ((float) Math.random() * 10f &gt; stability + tier) {</span></div>
-<div class="line"><span class="lineno">  545</span><span class="comment">//              factionId = Factions.INDEPENDENT;</span></div>
-<div class="line"><span class="lineno">  546</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">  547</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  548</span><span class="comment">//      </span></div>
-<div class="line"><span class="lineno">  549</span><span class="comment">//      if (data.smuggling) {</span></div>
-<div class="line"><span class="lineno">  550</span><span class="comment">//          factionId = Factions.INDEPENDENT;</span></div>
-<div class="line"><span class="lineno">  551</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  552</span>        String factionId = route.getFactionId();</div>
-<div class="line"><span class="lineno">  553</span> </div>
-<div class="line"><span class="lineno">  554</span>        <span class="keywordtype">float</span> total = 0f;</div>
-<div class="line"><span class="lineno">  555</span>        <span class="keywordtype">float</span> fuel = 0f;</div>
-<div class="line"><span class="lineno">  556</span>        <span class="keywordtype">float</span> cargo = 0f;</div>
-<div class="line"><span class="lineno">  557</span>        <span class="keywordtype">float</span> personnel = 0f;</div>
-<div class="line"><span class="lineno">  558</span>        <span class="comment">//float ships = 0f;</span></div>
-<div class="line"><span class="lineno">  559</span>        </div>
-<div class="line"><span class="lineno">  560</span>        List&lt;CargoQuantityData&gt; all = <span class="keyword">new</span> ArrayList&lt;CargoQuantityData&gt;();</div>
-<div class="line"><span class="lineno">  561</span>        all.addAll(data.cargoDeliver);</div>
-<div class="line"><span class="lineno">  562</span>        all.addAll(data.cargoReturn);</div>
-<div class="line"><span class="lineno">  563</span>        <span class="keywordflow">for</span> (CargoQuantityData curr : all) {</div>
-<div class="line"><span class="lineno">  564</span>            CommoditySpecAPI spec = curr.getCommodity();</div>
-<div class="line"><span class="lineno">  565</span><span class="comment">//          if (spec.getId().equals(Commodities.SHIPS)) {</span></div>
-<div class="line"><span class="lineno">  566</span><span class="comment">//              ships = Math.max(ships, curr.units);</span></div>
-<div class="line"><span class="lineno">  567</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">  568</span>            <span class="keywordflow">if</span> (spec.isMeta()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  569</span>            </div>
-<div class="line"><span class="lineno">  570</span>            total += curr.units;</div>
-<div class="line"><span class="lineno">  571</span>            <span class="keywordflow">if</span> (spec.hasTag(Commodities.TAG_PERSONNEL)) {</div>
-<div class="line"><span class="lineno">  572</span>                personnel += curr.units;</div>
-<div class="line"><span class="lineno">  573</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (spec.getId().equals(Commodities.FUEL)) {</div>
-<div class="line"><span class="lineno">  574</span>                fuel += curr.units;</div>
-<div class="line"><span class="lineno">  575</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  576</span>                cargo += curr.units;</div>
-<div class="line"><span class="lineno">  577</span>            }</div>
-<div class="line"><span class="lineno">  578</span>        }</div>
-<div class="line"><span class="lineno">  579</span> </div>
-<div class="line"><span class="lineno">  580</span><span class="comment">//      System.out.println(&quot;Ships: &quot; + ships);</span></div>
-<div class="line"><span class="lineno">  581</span>        <span class="keywordflow">if</span> (total &lt; 1f) total = 1f;</div>
-<div class="line"><span class="lineno">  582</span>        </div>
-<div class="line"><span class="lineno">  583</span>        <span class="keywordtype">float</span> fuelFraction = fuel / total;</div>
-<div class="line"><span class="lineno">  584</span>        <span class="keywordtype">float</span> personnelFraction = personnel / total;</div>
-<div class="line"><span class="lineno">  585</span>        <span class="keywordtype">float</span> cargoFraction = cargo / total;</div>
-<div class="line"><span class="lineno">  586</span>        </div>
-<div class="line"><span class="lineno">  587</span><span class="comment">//      fuelFraction = 0.33f;</span></div>
-<div class="line"><span class="lineno">  588</span><span class="comment">//      personnelFraction = 0.33f;</span></div>
-<div class="line"><span class="lineno">  589</span><span class="comment">//      cargoFraction = 0.33f;</span></div>
-<div class="line"><span class="lineno">  590</span>        </div>
-<div class="line"><span class="lineno">  591</span>        <span class="keywordflow">if</span> (fuelFraction + personnelFraction + cargoFraction &gt; 0) {</div>
-<div class="line"><span class="lineno">  592</span>            <span class="keywordtype">float</span> mult = 1f / (fuelFraction + personnelFraction + cargoFraction);</div>
-<div class="line"><span class="lineno">  593</span>            fuelFraction *= mult;</div>
-<div class="line"><span class="lineno">  594</span>            personnelFraction *= mult;</div>
-<div class="line"><span class="lineno">  595</span>            cargoFraction *= mult;</div>
-<div class="line"><span class="lineno">  596</span>        }</div>
-<div class="line"><span class="lineno">  597</span>        </div>
-<div class="line"><span class="lineno">  598</span>        <a class="code hl_variable" href="../../d9/dfc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetRouteManager.html#a1a5fa5b2a05782b3069a3f74005635ea">log</a>.info(<span class="stringliteral">&quot;Creating trade fleet of tier &quot;</span> + tier + <span class="stringliteral">&quot; for market [&quot;</span> + from.getName() + <span class="stringliteral">&quot;]&quot;</span>);</div>
-<div class="line"><span class="lineno">  599</span>        </div>
-<div class="line"><span class="lineno">  600</span>        <span class="keywordtype">float</span> stabilityFactor = 1f + from.getStabilityValue() / 20f;</div>
-<div class="line"><span class="lineno">  601</span>        </div>
-<div class="line"><span class="lineno">  602</span>        <span class="keywordtype">float</span> combat = Math.max(1f, tier * stabilityFactor * 0.5f) * 10f;</div>
-<div class="line"><span class="lineno">  603</span>        <span class="keywordtype">float</span> freighter = tier * 2f * cargoFraction * 3f;</div>
-<div class="line"><span class="lineno">  604</span>        <span class="keywordtype">float</span> tanker = tier * 2f * fuelFraction * 3f;</div>
-<div class="line"><span class="lineno">  605</span>        <span class="keywordtype">float</span> transport = tier * 2f * personnelFraction * 3f;</div>
-<div class="line"><span class="lineno">  606</span>        <span class="keywordtype">float</span> liner = 0f;</div>
-<div class="line"><span class="lineno">  607</span>        </div>
-<div class="line"><span class="lineno">  608</span>        <span class="comment">//float utility = 1f + tier * 0.25f;</span></div>
-<div class="line"><span class="lineno">  609</span>        <span class="keywordtype">float</span> utility = 0f;</div>
-<div class="line"><span class="lineno">  610</span>        </div>
-<div class="line"><span class="lineno">  611</span>        String type = <a class="code hl_function" href="../../d9/dfc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetRouteManager.html#a8ebed475a1eae801c9afffd18580f28f">getFleetTypeIdForTier</a>(tier, data.smuggling);</div>
-<div class="line"><span class="lineno">  612</span>        <span class="keywordflow">if</span> (data.smuggling) {</div>
-<div class="line"><span class="lineno">  613</span>            <span class="comment">//combat *= 2f;</span></div>
-<div class="line"><span class="lineno">  614</span>            freighter *= 0.5f;</div>
-<div class="line"><span class="lineno">  615</span>            tanker *= 0.5f;</div>
-<div class="line"><span class="lineno">  616</span>            transport *= 0.5f;</div>
-<div class="line"><span class="lineno">  617</span>            liner *= 0.5f;</div>
-<div class="line"><span class="lineno">  618</span>        }</div>
-<div class="line"><span class="lineno">  619</span>        </div>
-<div class="line"><span class="lineno">  620</span>        FleetParamsV3 params = <span class="keyword">new</span> FleetParamsV3(</div>
-<div class="line"><span class="lineno">  621</span>                from,</div>
-<div class="line"><span class="lineno">  622</span>                <span class="keyword">null</span>, <span class="comment">// locInHyper</span></div>
-<div class="line"><span class="lineno">  623</span>                factionId,</div>
-<div class="line"><span class="lineno">  624</span>                route.getQualityOverride(), <span class="comment">// qualityOverride</span></div>
-<div class="line"><span class="lineno">  625</span>                type,</div>
-<div class="line"><span class="lineno">  626</span>                combat, <span class="comment">// combatPts</span></div>
-<div class="line"><span class="lineno">  627</span>                freighter, <span class="comment">// freighterPts </span></div>
-<div class="line"><span class="lineno">  628</span>                tanker, <span class="comment">// tankerPts</span></div>
-<div class="line"><span class="lineno">  629</span>                transport, <span class="comment">// transportPts</span></div>
-<div class="line"><span class="lineno">  630</span>                liner, <span class="comment">// linerPts</span></div>
-<div class="line"><span class="lineno">  631</span>                utility, <span class="comment">// utilityPts</span></div>
-<div class="line"><span class="lineno">  632</span>                0f <span class="comment">//-0.5f // qualityBonus</span></div>
-<div class="line"><span class="lineno">  633</span>        );</div>
-<div class="line"><span class="lineno">  634</span>        params.timestamp = route.getTimestamp();</div>
-<div class="line"><span class="lineno">  635</span>        params.onlyApplyFleetSizeToCombatShips = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  636</span>        params.maxShipSize = 3;</div>
-<div class="line"><span class="lineno">  637</span>        params.officerLevelBonus = -2;</div>
-<div class="line"><span class="lineno">  638</span>        params.officerNumberMult = 0.5f;</div>
-<div class="line"><span class="lineno">  639</span>        params.random = random;</div>
-<div class="line"><span class="lineno">  640</span>        CampaignFleetAPI fleet = FleetFactoryV3.createFleet(params);</div>
-<div class="line"><span class="lineno">  641</span>        </div>
-<div class="line"><span class="lineno">  642</span>        <span class="keywordflow">if</span> (fleet == <span class="keyword">null</span> || fleet.isEmpty()) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  643</span>        </div>
-<div class="line"><span class="lineno">  644</span>        <span class="keywordflow">if</span> (Misc.isPirateFaction(fleet.getFaction())) {</div>
-<div class="line"><span class="lineno">  645</span>            fleet.getMemoryWithoutUpdate().set(MemFlags.MEMORY_KEY_FORCE_TRANSPONDER_OFF, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  646</span>        }</div>
-<div class="line"><span class="lineno">  647</span>        </div>
-<div class="line"><span class="lineno">  648</span>        <span class="keywordflow">if</span> (data.smuggling) {</div>
-<div class="line"><span class="lineno">  649</span>            fleet.getMemoryWithoutUpdate().set(MemFlags.MEMORY_KEY_SMUGGLER, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  650</span>            Misc.makeLowRepImpact(fleet, <span class="stringliteral">&quot;smuggler&quot;</span>);</div>
-<div class="line"><span class="lineno">  651</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  652</span>            fleet.getMemoryWithoutUpdate().set(MemFlags.MEMORY_KEY_TRADE_FLEET, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  653</span>        }</div>
-<div class="line"><span class="lineno">  654</span>        </div>
-<div class="line"><span class="lineno">  655</span>        <span class="comment">//cargoCap, fuelCap, personnelCap;</span></div>
-<div class="line"><span class="lineno">  656</span>        data.cargoCap = fleet.getCargo().getMaxCapacity();</div>
-<div class="line"><span class="lineno">  657</span>        data.fuelCap = fleet.getCargo().getMaxFuel();</div>
-<div class="line"><span class="lineno">  658</span>        data.personnelCap = fleet.getCargo().getMaxPersonnel();</div>
-<div class="line"><span class="lineno">  659</span>        </div>
-<div class="line"><span class="lineno">  660</span>        <span class="comment">//ShippingDisruption.getShippingDisruption(from).getShippingPenalty().addTemporaryModFlat(1f, &quot;fwefwe&quot;, 1f);</span></div>
-<div class="line"><span class="lineno">  661</span>        </div>
-<div class="line"><span class="lineno">  662</span>        <span class="keywordflow">return</span> fleet;</div>
-<div class="line"><span class="lineno">  663</span>        </div>
-<div class="line"><span class="lineno">  664</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetRouteManager_html_a8ebed475a1eae801c9afffd18580f28f"><div class="ttname"><a href="../../d9/dfc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetRouteManager.html#a8ebed475a1eae801c9afffd18580f28f">com.fs.starfarer.api.impl.campaign.fleets.EconomyFleetRouteManager.getFleetTypeIdForTier</a></div><div class="ttdeci">static String getFleetTypeIdForTier(float tier, boolean smuggling)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dcb/EconomyFleetRouteManager_8java_source.html#l00512">EconomyFleetRouteManager.java:512</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8ebed475a1eae801c9afffd18580f28f" name="a8ebed475a1eae801c9afffd18580f28f"></a>
@@ -917,15 +470,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/dcb/EconomyFleetRouteManager_8java_source.html#l00512">512</a> of file <a class="el" href="../../d0/dcb/EconomyFleetRouteManager_8java_source.html">EconomyFleetRouteManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  512</span>                                                                              {</div>
-<div class="line"><span class="lineno">  513</span>        String type = FleetTypes.TRADE;</div>
-<div class="line"><span class="lineno">  514</span>        <span class="keywordflow">if</span> (tier &lt;= 3) type = FleetTypes.TRADE_SMALL; </div>
-<div class="line"><span class="lineno">  515</span>        <span class="keywordflow">if</span> (smuggling) {</div>
-<div class="line"><span class="lineno">  516</span>            type = FleetTypes.TRADE_SMUGGLER;</div>
-<div class="line"><span class="lineno">  517</span>        }</div>
-<div class="line"><span class="lineno">  518</span>        <span class="keywordflow">return</span> type;</div>
-<div class="line"><span class="lineno">  519</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a76e266ac64d538d84c25355a927d5eaf" name="a76e266ac64d538d84c25355a927d5eaf"></a>
@@ -954,12 +499,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d1/ddd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseRouteFleetManager.html#a4762547515fd5bfae1227b7a0ed32df1">com.fs.starfarer.api.impl.campaign.fleets.BaseRouteFleetManager</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/dcb/EconomyFleetRouteManager_8java_source.html#l00096">96</a> of file <a class="el" href="../../d0/dcb/EconomyFleetRouteManager_8java_source.html">EconomyFleetRouteManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   96</span>                                 {</div>
-<div class="line"><span class="lineno">   97</span>        <span class="keywordtype">int</span> numMarkets = Global.getSector().getEconomy().getNumMarkets();</div>
-<div class="line"><span class="lineno">   98</span>        <span class="keywordtype">int</span> maxBasedOnMarkets = numMarkets * 2;</div>
-<div class="line"><span class="lineno">   99</span>        <span class="keywordflow">return</span> Math.min(maxBasedOnMarkets, Global.getSettings().getInt(<span class="stringliteral">&quot;maxEconFleets&quot;</span>));</div>
-<div class="line"><span class="lineno">  100</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a006d50bdf1f9e7f029ea7fd08fc66c45" name="a006d50bdf1f9e7f029ea7fd08fc66c45"></a>
@@ -988,11 +528,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d1/ddd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseRouteFleetManager.html#ab674f97e4ac62276babbe21b4afec1f0">com.fs.starfarer.api.impl.campaign.fleets.BaseRouteFleetManager</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/dcb/EconomyFleetRouteManager_8java_source.html#l00092">92</a> of file <a class="el" href="../../d0/dcb/EconomyFleetRouteManager_8java_source.html">EconomyFleetRouteManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   92</span>                                        {</div>
-<div class="line"><span class="lineno">   93</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d9/dfc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetRouteManager.html#a0a50ba18082957e33a2fb03e48853824">SOURCE_ID</a>;</div>
-<div class="line"><span class="lineno">   94</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetRouteManager_html_a0a50ba18082957e33a2fb03e48853824"><div class="ttname"><a href="../../d9/dfc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetRouteManager.html#a0a50ba18082957e33a2fb03e48853824">com.fs.starfarer.api.impl.campaign.fleets.EconomyFleetRouteManager.SOURCE_ID</a></div><div class="ttdeci">static final String SOURCE_ID</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dcb/EconomyFleetRouteManager_8java_source.html#l00053">EconomyFleetRouteManager.java:53</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a04d24a9031254cbc174e7f9458a72266" name="a04d24a9031254cbc174e7f9458a72266"></a>
@@ -1012,84 +548,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/dcb/EconomyFleetRouteManager_8java_source.html#l00261">261</a> of file <a class="el" href="../../d0/dcb/EconomyFleetRouteManager_8java_source.html">EconomyFleetRouteManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  261</span>                                                    {</div>
-<div class="line"><span class="lineno">  262</span>        <span class="comment">//return Global.getSector().getEconomy().getMarket(&quot;asharu&quot;);</span></div>
-<div class="line"><span class="lineno">  263</span>        <span class="comment">//return Global.getSector().getEconomy().getMarket(&quot;chicomoztoc&quot;);</span></div>
-<div class="line"><span class="lineno">  264</span>        <span class="comment">//if (true) return Global.getSector().getEconomy().getMarket(&quot;sindria&quot;);</span></div>
-<div class="line"><span class="lineno">  265</span>        <span class="keywordflow">if</span> (from == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  266</span>        </div>
-<div class="line"><span class="lineno">  267</span>        WeightedRandomPicker&lt;MarketAPI&gt; markets = <span class="keyword">new</span> WeightedRandomPicker&lt;MarketAPI&gt;();</div>
-<div class="line"><span class="lineno">  268</span>        </div>
-<div class="line"><span class="lineno">  269</span><span class="comment">//      com.getCommodityMarketData().getMarkets()</span></div>
-<div class="line"><span class="lineno">  270</span><span class="comment">//      for (MarketAPI market : Global.getSector().getEconomy().getMarketsCopy()) {</span></div>
-<div class="line"><span class="lineno">  271</span><span class="comment">//          if ((from.getEconGroup() == null &amp;&amp; market.getEconGroup() != null) ||</span></div>
-<div class="line"><span class="lineno">  272</span><span class="comment">//                  (from.getEconGroup() != null &amp;&amp; !from.getEconGroup().equals(market.getEconGroup()))) {</span></div>
-<div class="line"><span class="lineno">  273</span><span class="comment">//              continue;</span></div>
-<div class="line"><span class="lineno">  274</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">  275</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  276</span>        </div>
-<div class="line"><span class="lineno">  277</span>        List&lt;CommodityOnMarketAPI&gt; relevant = <span class="keyword">new</span> ArrayList&lt;CommodityOnMarketAPI&gt;();</div>
-<div class="line"><span class="lineno">  278</span>        <span class="keywordflow">for</span> (CommodityOnMarketAPI com : from.getAllCommodities()) {</div>
-<div class="line"><span class="lineno">  279</span>            <span class="keywordflow">if</span> (com.isNonEcon()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  280</span>            </div>
-<div class="line"><span class="lineno">  281</span>            <span class="keywordtype">int</span> exported = Math.min(com.getAvailable(), com.getMaxSupply());</div>
-<div class="line"><span class="lineno">  282</span>            <span class="keywordtype">int</span> imported = Math.max(0, com.getMaxDemand() - exported);</div>
-<div class="line"><span class="lineno">  283</span>            <span class="keywordflow">if</span> (imported &gt; 0 || exported &gt; 0) {</div>
-<div class="line"><span class="lineno">  284</span>                relevant.add(com);</div>
-<div class="line"><span class="lineno">  285</span>            }</div>
-<div class="line"><span class="lineno">  286</span>        }</div>
-<div class="line"><span class="lineno">  287</span>        </div>
-<div class="line"><span class="lineno">  288</span>        <span class="keywordflow">for</span> (MarketAPI market : Global.getSector().getEconomy().getMarketsInGroup(from.getEconGroup())) {</div>
-<div class="line"><span class="lineno">  289</span>            <span class="keywordflow">if</span> (market.isHidden()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  290</span>            <span class="keywordflow">if</span> (!market.hasSpaceport()) <span class="keywordflow">continue</span>; <span class="comment">// markets w/o spaceports don&#39;t launch fleets</span></div>
-<div class="line"><span class="lineno">  291</span>            <span class="keywordflow">if</span> (SharedData.getData().getMarketsWithoutTradeFleetSpawn().contains(market.getId())) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  292</span>            <span class="keywordflow">if</span> (market == from) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  293</span>            </div>
-<div class="line"><span class="lineno">  294</span>            <span class="keywordtype">int</span> shipping = Misc.getShippingCapacity(market, market.getFaction() == from.getFaction());</div>
-<div class="line"><span class="lineno">  295</span>            <span class="keywordflow">if</span> (shipping &lt;= 0) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  296</span>            </div>
-<div class="line"><span class="lineno">  297</span>            <span class="keywordtype">float</span> w = 0f;</div>
-<div class="line"><span class="lineno">  298</span>            <span class="keywordflow">for</span> (CommodityOnMarketAPI com : relevant) {</div>
-<div class="line"><span class="lineno">  299</span>                <span class="keywordtype">int</span> exported = Math.min(com.getAvailable(), com.getMaxSupply());</div>
-<div class="line"><span class="lineno">  300</span>                exported = Math.min(exported, shipping);</div>
-<div class="line"><span class="lineno">  301</span>                <span class="keywordtype">int</span> imported = Math.max(0, com.getMaxDemand() - exported);</div>
-<div class="line"><span class="lineno">  302</span>                imported = Math.min(imported, shipping);</div>
-<div class="line"><span class="lineno">  303</span>                </div>
-<div class="line"><span class="lineno">  304</span>                CommodityOnMarketAPI other = market.getCommodityData(com.getId());</div>
-<div class="line"><span class="lineno">  305</span>                exported = Math.min(exported, other.getMaxDemand() - other.getMaxSupply());</div>
-<div class="line"><span class="lineno">  306</span>                <span class="keywordflow">if</span> (exported &lt; 0) exported = 0;</div>
-<div class="line"><span class="lineno">  307</span>                imported = Math.min(imported, Math.min(other.getAvailable(), other.getMaxSupply()));</div>
-<div class="line"><span class="lineno">  308</span>                </div>
-<div class="line"><span class="lineno">  309</span>                w += imported;</div>
-<div class="line"><span class="lineno">  310</span>                w += exported;</div>
-<div class="line"><span class="lineno">  311</span>            }</div>
-<div class="line"><span class="lineno">  312</span>            </div>
-<div class="line"><span class="lineno">  313</span>            <span class="keywordflow">if</span> (from.getFaction().isHostileTo(market.getFaction())) {</div>
-<div class="line"><span class="lineno">  314</span>                w *= 0.25f;</div>
-<div class="line"><span class="lineno">  315</span>            }</div>
-<div class="line"><span class="lineno">  316</span>            markets.add(market, w);</div>
-<div class="line"><span class="lineno">  317</span>        }</div>
-<div class="line"><span class="lineno">  318</span>        </div>
-<div class="line"><span class="lineno">  319</span>        <span class="keywordflow">return</span> markets.pick();</div>
-<div class="line"><span class="lineno">  320</span>        </div>
-<div class="line"><span class="lineno">  321</span><span class="comment">//      for (CommodityOnMarketAPI com : from.getCommoditiesCopy()) {</span></div>
-<div class="line"><span class="lineno">  322</span><span class="comment">//          </span></div>
-<div class="line"><span class="lineno">  323</span><span class="comment">//          SupplierData sd = com.getSupplier();</span></div>
-<div class="line"><span class="lineno">  324</span><span class="comment">//          if (sd != null) {</span></div>
-<div class="line"><span class="lineno">  325</span><span class="comment">//              if (sd.getMarket() == from) continue;</span></div>
-<div class="line"><span class="lineno">  326</span><span class="comment">//              if (SharedData.getData().getMarketsWithoutTradeFleetSpawn().contains(sd.getMarket().getId())) continue;</span></div>
-<div class="line"><span class="lineno">  327</span><span class="comment">//              markets.add(sd.getMarket(), sd.getQuantity());</span></div>
-<div class="line"><span class="lineno">  328</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">  329</span><span class="comment">//          for (SupplierData curr : com.getExports()) {</span></div>
-<div class="line"><span class="lineno">  330</span><span class="comment">//              if (curr.getMarket() == from) continue;</span></div>
-<div class="line"><span class="lineno">  331</span><span class="comment">//              if (SharedData.getData().getMarketsWithoutTradeFleetSpawn().contains(sd.getMarket().getId())) continue;</span></div>
-<div class="line"><span class="lineno">  332</span><span class="comment">//              markets.add(curr.getMarket(), curr.getQuantity());</span></div>
-<div class="line"><span class="lineno">  333</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">  334</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  335</span><span class="comment">//      return markets.pick();</span></div>
-<div class="line"><span class="lineno">  336</span>        </div>
-<div class="line"><span class="lineno">  337</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a7f18cdc8f55c1bf54987329589ce362c" name="a7f18cdc8f55c1bf54987329589ce362c"></a>
@@ -1108,34 +567,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/dcb/EconomyFleetRouteManager_8java_source.html#l00234">234</a> of file <a class="el" href="../../d0/dcb/EconomyFleetRouteManager_8java_source.html">EconomyFleetRouteManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  234</span>                                        {</div>
-<div class="line"><span class="lineno">  235</span>        <span class="comment">//return Global.getSector().getEconomy().getMarket(&quot;jangala&quot;);</span></div>
-<div class="line"><span class="lineno">  236</span>        <span class="comment">//return Global.getSector().getEconomy().getMarket(&quot;sindria&quot;);</span></div>
-<div class="line"><span class="lineno">  237</span>        <span class="comment">//if (true) return Global.getSector().getEconomy().getMarket(&quot;chicomoztoc&quot;);</span></div>
-<div class="line"><span class="lineno">  238</span>        </div>
-<div class="line"><span class="lineno">  239</span>        WeightedRandomPicker&lt;MarketAPI&gt; markets = <span class="keyword">new</span> WeightedRandomPicker&lt;MarketAPI&gt;();</div>
-<div class="line"><span class="lineno">  240</span>        <span class="keywordflow">for</span> (MarketAPI market : Global.getSector().getEconomy().getMarketsCopy()) {</div>
-<div class="line"><span class="lineno">  241</span>            <span class="keywordflow">if</span> (market.isHidden()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  242</span>            <span class="comment">//float distLY = Misc.getDistanceToPlayerLY(market.getPrimaryEntity());</span></div>
-<div class="line"><span class="lineno">  243</span>            <span class="keywordflow">if</span> (!market.hasSpaceport()) <span class="keywordflow">continue</span>; <span class="comment">// markets w/o spaceports don&#39;t launch fleets</span></div>
-<div class="line"><span class="lineno">  244</span>            <span class="keywordflow">if</span> (SharedData.getData().getMarketsWithoutTradeFleetSpawn().contains(market.getId())) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  245</span>            </div>
-<div class="line"><span class="lineno">  246</span><span class="comment">//          if (market.getId().equals(&quot;volturn&quot;)) {</span></div>
-<div class="line"><span class="lineno">  247</span><span class="comment">//              return market;</span></div>
-<div class="line"><span class="lineno">  248</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">  249</span>            </div>
-<div class="line"><span class="lineno">  250</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d9/dfc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetRouteManager.html#a279bcb3a5ffdbe2decfda9b784cf877e">recentlySentTradeFleet</a>.<a class="code hl_function" href="../../dd/df5/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTracker.html#ab246103a8a3f46bc7645f1647f32393b">contains</a>(market.getId())) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  251</span>            </div>
-<div class="line"><span class="lineno">  252</span>            markets.add(market, market.getSize());</div>
-<div class="line"><span class="lineno">  253</span>            </div>
-<div class="line"><span class="lineno">  254</span><span class="comment">//          if (market.getName().toLowerCase().equals(&quot;jannow&quot;)) {</span></div>
-<div class="line"><span class="lineno">  255</span><span class="comment">//              markets.add(market, 100000f);</span></div>
-<div class="line"><span class="lineno">  256</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">  257</span>        }</div>
-<div class="line"><span class="lineno">  258</span>        <span class="keywordflow">return</span> markets.pick();</div>
-<div class="line"><span class="lineno">  259</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTracker_html_ab246103a8a3f46bc7645f1647f32393b"><div class="ttname"><a href="../../dd/df5/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTracker.html#ab246103a8a3f46bc7645f1647f32393b">com.fs.starfarer.api.util.TimeoutTracker.contains</a></div><div class="ttdeci">boolean contains(T item)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dcf/TimeoutTracker_8java_source.html#l00108">TimeoutTracker.java:108</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="adb66908a2e31ff4b36f1e43eb340f6bc" name="adb66908a2e31ff4b36f1e43eb340f6bc"></a>
@@ -1162,13 +594,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/dcb/EconomyFleetRouteManager_8java_source.html#l00074">74</a> of file <a class="el" href="../../d0/dcb/EconomyFleetRouteManager_8java_source.html">EconomyFleetRouteManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   74</span>                                   {</div>
-<div class="line"><span class="lineno">   75</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d9/dfc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetRouteManager.html#a279bcb3a5ffdbe2decfda9b784cf877e">recentlySentTradeFleet</a> == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   76</span>            <a class="code hl_variable" href="../../d9/dfc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetRouteManager.html#a279bcb3a5ffdbe2decfda9b784cf877e">recentlySentTradeFleet</a> = <span class="keyword">new</span> TimeoutTracker&lt;String&gt;();</div>
-<div class="line"><span class="lineno">   77</span>        }</div>
-<div class="line"><span class="lineno">   78</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">   79</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8649da474e10f4d49b9497f96bcc4043" name="a8649da474e10f4d49b9497f96bcc4043"></a>
@@ -1188,10 +614,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/dcb/EconomyFleetRouteManager_8java_source.html#l00760">760</a> of file <a class="el" href="../../d0/dcb/EconomyFleetRouteManager_8java_source.html">EconomyFleetRouteManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  760</span>                                                                        {</div>
-<div class="line"><span class="lineno">  761</span>        </div>
-<div class="line"><span class="lineno">  762</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ad886650234fa6d3f168d06030f5723b2" name="ad886650234fa6d3f168d06030f5723b2"></a>
@@ -1237,57 +660,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d5/d7b/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1FleetEventListener.html#a6dff203922d9929930959967dfddb927">com.fs.starfarer.api.campaign.listeners.FleetEventListener</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/dcb/EconomyFleetRouteManager_8java_source.html#l00666">666</a> of file <a class="el" href="../../d0/dcb/EconomyFleetRouteManager_8java_source.html">EconomyFleetRouteManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  666</span>                                                                                                               {</div>
-<div class="line"><span class="lineno">  667</span>        <span class="comment">// already reduced by losses taken</span></div>
-<div class="line"><span class="lineno">  668</span>        <span class="comment">//System.out.println(&quot;Cargo: &quot; + fleet.getCargo().getMaxCapacity());</span></div>
-<div class="line"><span class="lineno">  669</span>        </div>
-<div class="line"><span class="lineno">  670</span>        RouteData route = RouteManager.getInstance().getRoute(<a class="code hl_function" href="../../d9/dfc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetRouteManager.html#a006d50bdf1f9e7f029ea7fd08fc66c45">getRouteSourceId</a>(), fleet);</div>
-<div class="line"><span class="lineno">  671</span>        <span class="keywordflow">if</span> (route == <span class="keyword">null</span> || !(route.getCustom() instanceof EconomyRouteData)) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  672</span>        </div>
-<div class="line"><span class="lineno">  673</span>        <span class="keywordflow">if</span> (route.isExpired()) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  674</span>        </div>
-<div class="line"><span class="lineno">  675</span>        EconomyRouteData data = (EconomyRouteData) route.getCustom();</div>
-<div class="line"><span class="lineno">  676</span>        </div>
-<div class="line"><span class="lineno">  677</span>        <span class="keywordtype">float</span> cargoCap = fleet.getCargo().getMaxCapacity();</div>
-<div class="line"><span class="lineno">  678</span>        <span class="keywordtype">float</span> fuelCap = fleet.getCargo().getMaxFuel();</div>
-<div class="line"><span class="lineno">  679</span>        <span class="keywordtype">float</span> personnelCap = fleet.getCargo().getMaxPersonnel();</div>
-<div class="line"><span class="lineno">  680</span>        </div>
-<div class="line"><span class="lineno">  681</span>        <span class="keywordtype">float</span> lossFraction = 0.34f;</div>
-<div class="line"><span class="lineno">  682</span>        </div>
-<div class="line"><span class="lineno">  683</span>        <span class="comment">//boolean returning = route.getCurrentIndex() &gt;= 3;</span></div>
-<div class="line"><span class="lineno">  684</span>        <span class="keywordtype">boolean</span> returning = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  685</span>        <span class="keywordflow">if</span> (route.getCurrent() != <span class="keyword">null</span> &amp;&amp; route.getCurrentSegmentId() &gt;= <a class="code hl_variable" href="../../d9/dfc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetRouteManager.html#a8eac6882f257e21d39d3631682522378">ROUTE_DST_LOAD</a>) {</div>
-<div class="line"><span class="lineno">  686</span>            returning = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  687</span>        }</div>
-<div class="line"><span class="lineno">  688</span> </div>
-<div class="line"><span class="lineno">  689</span>        <span class="comment">// whether it lost enough carrying capacity to count as an economic loss </span></div>
-<div class="line"><span class="lineno">  690</span>        <span class="comment">// of that commodity at destination markets</span></div>
-<div class="line"><span class="lineno">  691</span>        <span class="keywordtype">boolean</span> lostCargo = data.cargoCap * lossFraction &gt; cargoCap; </div>
-<div class="line"><span class="lineno">  692</span>        <span class="keywordtype">boolean</span> lostFuel = data.fuelCap * lossFraction &gt; fuelCap; </div>
-<div class="line"><span class="lineno">  693</span>        <span class="keywordtype">boolean</span> lostPersonnel = data.personnelCap * lossFraction &gt; personnelCap;</div>
-<div class="line"><span class="lineno">  694</span>        </div>
-<div class="line"><span class="lineno">  695</span>        <span class="comment">// set to 0f so that the loss doesn&#39;t happen multiple times for a commodity</span></div>
-<div class="line"><span class="lineno">  696</span>        <span class="keywordflow">if</span> (lostCargo) data.cargoCap = 0f;</div>
-<div class="line"><span class="lineno">  697</span>        <span class="keywordflow">if</span> (lostFuel) data.fuelCap = 0f;</div>
-<div class="line"><span class="lineno">  698</span>        <span class="keywordflow">if</span> (lostPersonnel) data.personnelCap = 0f;</div>
-<div class="line"><span class="lineno">  699</span>        </div>
-<div class="line"><span class="lineno">  700</span>        <a class="code hl_function" href="../../d9/dfc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetRouteManager.html#af387525dd8ea0f59d332253302edcdf2">applyLostShipping</a>(data, returning, lostCargo, lostFuel, lostPersonnel);</div>
-<div class="line"><span class="lineno">  701</span>        </div>
-<div class="line"><span class="lineno">  702</span>        <span class="comment">// if it&#39;s lost all 3 capacities, also trigger a general shipping capacity loss at market</span></div>
-<div class="line"><span class="lineno">  703</span>        <span class="keywordtype">boolean</span> allThreeLost = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  704</span>        allThreeLost &amp;= data.cargoCap &lt;= 0f || lostCargo;</div>
-<div class="line"><span class="lineno">  705</span>        allThreeLost &amp;= data.fuelCap &lt;= 0f || lostFuel;</div>
-<div class="line"><span class="lineno">  706</span>        allThreeLost &amp;= data.personnelCap &lt;= 0f || lostPersonnel;</div>
-<div class="line"><span class="lineno">  707</span><span class="comment">//      if (fullyLost) {</span></div>
-<div class="line"><span class="lineno">  708</span>        </div>
-<div class="line"><span class="lineno">  709</span>        <span class="keywordtype">boolean</span> applyAccessLoss = allThreeLost;</div>
-<div class="line"><span class="lineno">  710</span>        <span class="keywordflow">if</span> (applyAccessLoss) {</div>
-<div class="line"><span class="lineno">  711</span>            ShippingDisruption.getDisruption(data.from).addShippingLost(data.size);</div>
-<div class="line"><span class="lineno">  712</span>            ShippingDisruption.getDisruption(data.from).notifyDisrupted(ShippingDisruption.ACCESS_LOSS_DURATION);</div>
-<div class="line"><span class="lineno">  713</span>        }</div>
-<div class="line"><span class="lineno">  714</span>        </div>
-<div class="line"><span class="lineno">  715</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="addd4e5211f2b100f058499a454a6adcb" name="addd4e5211f2b100f058499a454a6adcb"></a>
@@ -1325,10 +698,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d5/d7b/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1FleetEventListener.html#a80bf021b96aa1c0f11ee40000e5d3666">com.fs.starfarer.api.campaign.listeners.FleetEventListener</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/dcb/EconomyFleetRouteManager_8java_source.html#l00752">752</a> of file <a class="el" href="../../d0/dcb/EconomyFleetRouteManager_8java_source.html">EconomyFleetRouteManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  752</span>                                                                                                                {</div>
-<div class="line"><span class="lineno">  753</span>        </div>
-<div class="line"><span class="lineno">  754</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a82d25b6cbe0317eaf812fe104f97cbdc" name="a82d25b6cbe0317eaf812fe104f97cbdc"></a>
@@ -1356,28 +726,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/dcb/EconomyFleetRouteManager_8java_source.html#l00209">209</a> of file <a class="el" href="../../d0/dcb/EconomyFleetRouteManager_8java_source.html">EconomyFleetRouteManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  209</span>                                                           {</div>
-<div class="line"><span class="lineno">  210</span>        EconomyRouteData data = (EconomyRouteData) route.getCustom();</div>
-<div class="line"><span class="lineno">  211</span>        </div>
-<div class="line"><span class="lineno">  212</span>        <span class="keywordtype">float</span> delay = 0.1f;</div>
-<div class="line"><span class="lineno">  213</span>        delay = 10f;</div>
-<div class="line"><span class="lineno">  214</span>        <span class="keywordflow">if</span> (data.size &lt;= 4f) {</div>
-<div class="line"><span class="lineno">  215</span>            delay = 5f;</div>
-<div class="line"><span class="lineno">  216</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (data.size &lt;= 6f) {</div>
-<div class="line"><span class="lineno">  217</span>            delay = 10f;</div>
-<div class="line"><span class="lineno">  218</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  219</span>            delay = 15f;</div>
-<div class="line"><span class="lineno">  220</span>        }</div>
-<div class="line"><span class="lineno">  221</span>        delay *= 0.75f + (float) Math.random() * 0.5f;</div>
-<div class="line"><span class="lineno">  222</span>        delay = (int) delay;</div>
-<div class="line"><span class="lineno">  223</span>        route.setDelay(delay);</div>
-<div class="line"><span class="lineno">  224</span> </div>
-<div class="line"><span class="lineno">  225</span>        <span class="keywordflow">if</span> (!Factions.PLAYER.equals(route.getFactionId())) {</div>
-<div class="line"><span class="lineno">  226</span>            <span class="comment">// queues itself</span></div>
-<div class="line"><span class="lineno">  227</span>            <span class="keyword">new</span> TradeFleetDepartureIntel(route);</div>
-<div class="line"><span class="lineno">  228</span>        }</div>
-<div class="line"><span class="lineno">  229</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac3722c0886f8abf99c81d5fef43641ac" name="ac3722c0886f8abf99c81d5fef43641ac"></a>
@@ -1397,21 +746,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/dcb/EconomyFleetRouteManager_8java_source.html#l00478">478</a> of file <a class="el" href="../../d0/dcb/EconomyFleetRouteManager_8java_source.html">EconomyFleetRouteManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  478</span>                                                                     {</div>
-<div class="line"><span class="lineno">  479</span>        String factionId = route.getFactionId();</div>
-<div class="line"><span class="lineno">  480</span>        </div>
-<div class="line"><span class="lineno">  481</span>        <span class="keywordtype">boolean</span> smuggling = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  482</span>        <span class="keywordflow">if</span> (route.getCustom() instanceof EconomyRouteData) {</div>
-<div class="line"><span class="lineno">  483</span>            smuggling = ((EconomyRouteData) route.getCustom()).smuggling;</div>
-<div class="line"><span class="lineno">  484</span>        }</div>
-<div class="line"><span class="lineno">  485</span>        </div>
-<div class="line"><span class="lineno">  486</span>        <span class="keywordflow">if</span> (factionId != <span class="keyword">null</span> &amp;&amp; route.getMarket() != <span class="keyword">null</span> &amp;&amp; !smuggling &amp;&amp; </div>
-<div class="line"><span class="lineno">  487</span>                route.getMarket().getFaction().isHostileTo(factionId)) {</div>
-<div class="line"><span class="lineno">  488</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  489</span>        }</div>
-<div class="line"><span class="lineno">  490</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  491</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ad4e272ca6688fdd1b921b1f33888e3f0" name="ad4e272ca6688fdd1b921b1f33888e3f0"></a>
@@ -1431,10 +766,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/dcb/EconomyFleetRouteManager_8java_source.html#l00756">756</a> of file <a class="el" href="../../d0/dcb/EconomyFleetRouteManager_8java_source.html">EconomyFleetRouteManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  756</span>                                                 {</div>
-<div class="line"><span class="lineno">  757</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  758</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aeed3bcb4e8e56e8c1a61ce1605c3dd61" name="aeed3bcb4e8e56e8c1a61ce1605c3dd61"></a>
@@ -1454,24 +786,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/dcb/EconomyFleetRouteManager_8java_source.html#l00494">494</a> of file <a class="el" href="../../d0/dcb/EconomyFleetRouteManager_8java_source.html">EconomyFleetRouteManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  494</span>                                                        {</div>
-<div class="line"><span class="lineno">  495</span>        Random random = <span class="keyword">new</span> Random();</div>
-<div class="line"><span class="lineno">  496</span>        <span class="keywordflow">if</span> (route.getSeed() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  497</span>            random = <span class="keyword">new</span> Random(route.getSeed());</div>
-<div class="line"><span class="lineno">  498</span>        }</div>
-<div class="line"><span class="lineno">  499</span>        </div>
-<div class="line"><span class="lineno">  500</span>        CampaignFleetAPI fleet = <a class="code hl_function" href="../../d9/dfc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetRouteManager.html#a1fc3bb91390512a605d602019bdae646">createTradeRouteFleet</a>(route, random);</div>
-<div class="line"><span class="lineno">  501</span>        <span class="keywordflow">if</span> (fleet == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">null</span>;;</div>
-<div class="line"><span class="lineno">  502</span>        </div>
-<div class="line"><span class="lineno">  503</span>        <span class="comment">//fleet.getMemoryWithoutUpdate().set(MemFlags.MEMORY_KEY_TRADE_FLEET, true);</span></div>
-<div class="line"><span class="lineno">  504</span>        </div>
-<div class="line"><span class="lineno">  505</span>        fleet.addEventListener(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  506</span>        </div>
-<div class="line"><span class="lineno">  507</span>        fleet.addScript(<span class="keyword">new</span> EconomyFleetAssignmentAI(fleet, route));</div>
-<div class="line"><span class="lineno">  508</span>        <span class="keywordflow">return</span> fleet;</div>
-<div class="line"><span class="lineno">  509</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetRouteManager_html_a1fc3bb91390512a605d602019bdae646"><div class="ttname"><a href="../../d9/dfc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetRouteManager.html#a1fc3bb91390512a605d602019bdae646">com.fs.starfarer.api.impl.campaign.fleets.EconomyFleetRouteManager.createTradeRouteFleet</a></div><div class="ttdeci">static CampaignFleetAPI createTradeRouteFleet(RouteData route, Random random)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dcb/EconomyFleetRouteManager_8java_source.html#l00521">EconomyFleetRouteManager.java:521</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -465,30 +466,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#a1b79c85d7032a24bea4a4b599f765f52">com.fs.starfarer.api.impl.campaign.abilities.BaseDurationAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d5e/SensorBurstAbility_8java_source.html#l00031">31</a> of file <a class="el" href="../../d0/d5e/SensorBurstAbility_8java_source.html">SensorBurstAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   31</span>                                  {</div>
-<div class="line"><span class="lineno">   32</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a9d2408f6489b56d90a93b2a21ea0f340">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a0dfd224c22bfc35f7dda6f8a1c913472">isInCurrentLocation</a>()) {</div>
-<div class="line"><span class="lineno">   33</span>            <span class="comment">//entity.addFloatingText(&quot;Active sensor burst&quot;, entity.getFaction().getBaseUIColor(), 0.5f);</span></div>
-<div class="line"><span class="lineno">   34</span>            </div>
-<div class="line"><span class="lineno">   35</span>            VisibilityLevel <a class="code hl_variable" href="../../d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#a74548753f66b57cc2bcc46a8288c459f">level</a> = <a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a9d2408f6489b56d90a93b2a21ea0f340">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a8d10997c36455c4f2caf02c76dfcbe5f">getVisibilityLevelToPlayerFleet</a>();</div>
-<div class="line"><span class="lineno">   36</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#a74548753f66b57cc2bcc46a8288c459f">level</a> != VisibilityLevel.NONE) {</div>
-<div class="line"><span class="lineno">   37</span>                Global.getSector().addPing(<a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a9d2408f6489b56d90a93b2a21ea0f340">entity</a>, Pings.SENSOR_BURST);</div>
-<div class="line"><span class="lineno">   38</span>            }</div>
-<div class="line"><span class="lineno">   39</span>        }</div>
-<div class="line"><span class="lineno">   40</span>        </div>
-<div class="line"><span class="lineno">   41</span><span class="comment">//      AbilityPlugin goDark = entity.getAbility(Abilities.GO_DARK);</span></div>
-<div class="line"><span class="lineno">   42</span><span class="comment">//      if (goDark != null &amp;&amp; goDark.isActive()) {</span></div>
-<div class="line"><span class="lineno">   43</span><span class="comment">//          goDark.deactivate();</span></div>
-<div class="line"><span class="lineno">   44</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">   45</span><span class="comment">//      AbilityPlugin sb = entity.getAbility(Abilities.SUSTAINED_BURN);</span></div>
-<div class="line"><span class="lineno">   46</span><span class="comment">//      if (sb != null &amp;&amp; sb.isActive()) {</span></div>
-<div class="line"><span class="lineno">   47</span><span class="comment">//          sb.deactivate();</span></div>
-<div class="line"><span class="lineno">   48</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">   49</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin_html_a9d2408f6489b56d90a93b2a21ea0f340"><div class="ttname"><a href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a9d2408f6489b56d90a93b2a21ea0f340">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin.entity</a></div><div class="ttdeci">SectorEntityToken entity</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00024">BaseAbilityPlugin.java:24</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility_html_a74548753f66b57cc2bcc46a8288c459f"><div class="ttname"><a href="../../d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#a74548753f66b57cc2bcc46a8288c459f">com.fs.starfarer.api.impl.campaign.abilities.BaseDurationAbility.level</a></div><div class="ttdeci">float level</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d40/BaseDurationAbility_8java_source.html#l00065">BaseDurationAbility.java:65</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_a0dfd224c22bfc35f7dda6f8a1c913472"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a0dfd224c22bfc35f7dda6f8a1c913472">com.fs.starfarer.api.campaign.SectorEntityToken.isInCurrentLocation</a></div><div class="ttdeci">boolean isInCurrentLocation()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_a8d10997c36455c4f2caf02c76dfcbe5f"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a8d10997c36455c4f2caf02c76dfcbe5f">com.fs.starfarer.api.campaign.SectorEntityToken.getVisibilityLevelToPlayerFleet</a></div><div class="ttdeci">VisibilityLevel getVisibilityLevelToPlayerFleet()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a400bd2be1f38706a739950c8c840e7af" name="a400bd2be1f38706a739950c8c840e7af"></a>
@@ -534,47 +512,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#aee269ddd5f701aa11a8acd69c9bd434f">com.fs.starfarer.api.impl.campaign.abilities.BaseDurationAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d5e/SensorBurstAbility_8java_source.html#l00052">52</a> of file <a class="el" href="../../d0/d5e/SensorBurstAbility_8java_source.html">SensorBurstAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   52</span>                                                          {</div>
-<div class="line"><span class="lineno">   53</span><span class="comment">//      if (level &gt; 0) {</span></div>
-<div class="line"><span class="lineno">   54</span><span class="comment">//          AbilityPlugin goDark = entity.getAbility(Abilities.GO_DARK);</span></div>
-<div class="line"><span class="lineno">   55</span><span class="comment">//          if (goDark != null) goDark.forceDisable();</span></div>
-<div class="line"><span class="lineno">   56</span><span class="comment">//          AbilityPlugin eb = entity.getAbility(Abilities.EMERGENCY_BURN);</span></div>
-<div class="line"><span class="lineno">   57</span><span class="comment">//          if (eb != null) eb.forceDisable();</span></div>
-<div class="line"><span class="lineno">   58</span><span class="comment">//          AbilityPlugin sb = entity.getAbility(Abilities.SUSTAINED_BURN);</span></div>
-<div class="line"><span class="lineno">   59</span><span class="comment">//          if (sb != null) sb.forceDisable();</span></div>
-<div class="line"><span class="lineno">   60</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">   61</span>        </div>
-<div class="line"><span class="lineno">   62</span>        </div>
-<div class="line"><span class="lineno">   63</span>        CampaignFleetAPI fleet = <a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#abdc51d7defc6b6bf60924a01ec361d2d">getFleet</a>();</div>
-<div class="line"><span class="lineno">   64</span>        <span class="keywordflow">if</span> (fleet == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   65</span>        </div>
-<div class="line"><span class="lineno">   66</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a9d2408f6489b56d90a93b2a21ea0f340">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a0dfd224c22bfc35f7dda6f8a1c913472">isInCurrentLocation</a>()) {</div>
-<div class="line"><span class="lineno">   67</span>            Global.getSector().getMemoryWithoutUpdate().set(MemFlags.GLOBAL_SENSOR_BURST_JUST_USED_IN_CURRENT_LOCATION, <span class="keyword">true</span>, 0.1f);</div>
-<div class="line"><span class="lineno">   68</span>        }</div>
-<div class="line"><span class="lineno">   69</span>        fleet.getMemoryWithoutUpdate().set(MemFlags.JUST_DID_SENSOR_BURST, <span class="keyword">true</span>, 0.1f);</div>
-<div class="line"><span class="lineno">   70</span>        </div>
-<div class="line"><span class="lineno">   71</span><span class="comment">//      if (fleet.isPlayerFleet()) {</span></div>
-<div class="line"><span class="lineno">   72</span><span class="comment">//          System.out.println(&quot;Level: &quot; + level);</span></div>
-<div class="line"><span class="lineno">   73</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">   74</span>        </div>
-<div class="line"><span class="lineno">   75</span>        <span class="comment">//float b = fleet.getStats().getDynamic().getValue(Stats.SENSOR_BURST_BURN_PENALTY_MULT);</span></div>
-<div class="line"><span class="lineno">   76</span>        </div>
-<div class="line"><span class="lineno">   77</span>        <span class="comment">//fleet.getStats().getFleetwideMaxBurnMod().modifyMult(getModId(), 1f + (0f - 1f * level) * b, &quot;Active sensor burst&quot;);</span></div>
-<div class="line"><span class="lineno">   78</span>        <span class="comment">//fleet.getStats().getFleetwideMaxBurnMod().modifyMult(getModId(), 1f + (0f - 1f * 1f) * b, &quot;Active sensor burst&quot;);</span></div>
-<div class="line"><span class="lineno">   79</span>        <span class="comment">//fleet.getStats().getFleetwideMaxBurnMod().modifyMult(getModId(), 0, &quot;Active sensor burst&quot;);</span></div>
-<div class="line"><span class="lineno">   80</span>        </div>
-<div class="line"><span class="lineno">   81</span>        fleet.getStats().getSensorRangeMod().modifyFlat(<a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a2e9e39ccbd5d39ae13b255974fef719c">getModId</a>(), <a class="code hl_variable" href="../../d1/d02/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1SensorBurstAbility.html#a4038f70e0ab07b72f47aee3410b53f40">SENSOR_RANGE_BONUS</a> * <a class="code hl_variable" href="../../d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#a74548753f66b57cc2bcc46a8288c459f">level</a>, <span class="stringliteral">&quot;Active sensor burst&quot;</span>);</div>
-<div class="line"><span class="lineno">   82</span>        fleet.getStats().getDetectedRangeMod().modifyFlat(<a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a2e9e39ccbd5d39ae13b255974fef719c">getModId</a>(), <a class="code hl_variable" href="../../d1/d02/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1SensorBurstAbility.html#a22be30a282a4eba24e49219102bc5e2b">DETECTABILITY_RANGE_BONUS</a> * <a class="code hl_variable" href="../../d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#a74548753f66b57cc2bcc46a8288c459f">level</a>, <span class="stringliteral">&quot;Active sensor burst&quot;</span>);</div>
-<div class="line"><span class="lineno">   83</span>        </div>
-<div class="line"><span class="lineno">   84</span>        <span class="comment">//fleet.getStats().getAccelerationMult().modifyMult(getModId(), 1f + (ACCELERATION_MULT - 1f) * level);</span></div>
-<div class="line"><span class="lineno">   85</span>        </div>
-<div class="line"><span class="lineno">   86</span>        fleet.goSlowOneFrame();</div>
-<div class="line"><span class="lineno">   87</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin_html_a2e9e39ccbd5d39ae13b255974fef719c"><div class="ttname"><a href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a2e9e39ccbd5d39ae13b255974fef719c">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin.getModId</a></div><div class="ttdeci">String getModId()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00140">BaseAbilityPlugin.java:140</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin_html_abdc51d7defc6b6bf60924a01ec361d2d"><div class="ttname"><a href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#abdc51d7defc6b6bf60924a01ec361d2d">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin.getFleet</a></div><div class="ttdeci">CampaignFleetAPI getFleet()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00144">BaseAbilityPlugin.java:144</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1SensorBurstAbility_html_a22be30a282a4eba24e49219102bc5e2b"><div class="ttname"><a href="../../d1/d02/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1SensorBurstAbility.html#a22be30a282a4eba24e49219102bc5e2b">com.fs.starfarer.api.impl.campaign.abilities.SensorBurstAbility.DETECTABILITY_RANGE_BONUS</a></div><div class="ttdeci">static final float DETECTABILITY_RANGE_BONUS</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d5e/SensorBurstAbility_8java_source.html#l00017">SensorBurstAbility.java:17</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1SensorBurstAbility_html_a4038f70e0ab07b72f47aee3410b53f40"><div class="ttname"><a href="../../d1/d02/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1SensorBurstAbility.html#a4038f70e0ab07b72f47aee3410b53f40">com.fs.starfarer.api.impl.campaign.abilities.SensorBurstAbility.SENSOR_RANGE_BONUS</a></div><div class="ttdeci">static final float SENSOR_RANGE_BONUS</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d5e/SensorBurstAbility_8java_source.html#l00016">SensorBurstAbility.java:16</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8a1edd245d5c15098a86f4f648059286" name="a8a1edd245d5c15098a86f4f648059286"></a>
@@ -603,16 +541,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#a95552e19a3ed75bafe0ccc9501302145">com.fs.starfarer.api.impl.campaign.abilities.BaseDurationAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d5e/SensorBurstAbility_8java_source.html#l00095">95</a> of file <a class="el" href="../../d0/d5e/SensorBurstAbility_8java_source.html">SensorBurstAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   95</span>                                 {</div>
-<div class="line"><span class="lineno">   96</span>        CampaignFleetAPI fleet = <a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#abdc51d7defc6b6bf60924a01ec361d2d">getFleet</a>();</div>
-<div class="line"><span class="lineno">   97</span>        <span class="keywordflow">if</span> (fleet == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   98</span>        </div>
-<div class="line"><span class="lineno">   99</span>        fleet.getStats().getSensorRangeMod().unmodify(<a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a2e9e39ccbd5d39ae13b255974fef719c">getModId</a>());</div>
-<div class="line"><span class="lineno">  100</span>        fleet.getStats().getDetectedRangeMod().unmodify(<a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a2e9e39ccbd5d39ae13b255974fef719c">getModId</a>());</div>
-<div class="line"><span class="lineno">  101</span>        <span class="comment">//fleet.getStats().getFleetwideMaxBurnMod().unmodify(getModId());</span></div>
-<div class="line"><span class="lineno">  102</span>        <span class="comment">//fleet.getStats().getAccelerationMult().unmodify(getModId());</span></div>
-<div class="line"><span class="lineno">  103</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a640a82857767f7ce40bc3aba34c05c2e" name="a640a82857767f7ce40bc3aba34c05c2e"></a>
@@ -651,38 +580,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a524c99aa9c5d81332f100b0bf6e8c699">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d5e/SensorBurstAbility_8java_source.html#l00126">126</a> of file <a class="el" href="../../d0/d5e/SensorBurstAbility_8java_source.html">SensorBurstAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  126</span>                                                                         {</div>
-<div class="line"><span class="lineno">  127</span>        Color gray = Misc.getGrayColor();</div>
-<div class="line"><span class="lineno">  128</span>        Color highlight = Misc.getHighlightColor();</div>
-<div class="line"><span class="lineno">  129</span>        </div>
-<div class="line"><span class="lineno">  130</span>        LabelAPI title = tooltip.addTitle(<a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a15549d8a5c8c5b5c0bffda444f5098ea">spec</a>.<a class="code hl_function" href="../../d4/df9/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1AbilitySpecAPI.html#a8cc28775697361fae5481df4bb39cf69">getName</a>());</div>
-<div class="line"><span class="lineno">  131</span><span class="comment">//      title.highlightLast(status);</span></div>
-<div class="line"><span class="lineno">  132</span><span class="comment">//      title.setHighlightColor(gray);</span></div>
-<div class="line"><span class="lineno">  133</span> </div>
-<div class="line"><span class="lineno">  134</span>        <span class="keywordtype">float</span> pad = 10f;</div>
-<div class="line"><span class="lineno">  135</span>        tooltip.addPara(<span class="stringliteral">&quot;Turn off engines to reduce interference and link all sensors in the fleet into a single network.&quot;</span>, pad);</div>
-<div class="line"><span class="lineno">  136</span>        tooltip.addPara(<span class="stringliteral">&quot;Increases sensor range by %s* units and&quot;</span> +</div>
-<div class="line"><span class="lineno">  137</span>                <span class="stringliteral">&quot; increases the range at which the fleet can be detected by %s* units.&quot;</span> +</div>
-<div class="line"><span class="lineno">  138</span>                <span class="stringliteral">&quot; The fleet is only able to %s** while the ability is active.&quot;</span>,</div>
-<div class="line"><span class="lineno">  139</span>                pad, highlight,</div>
-<div class="line"><span class="lineno">  140</span>                <span class="stringliteral">&quot;&quot;</span> + (<span class="keywordtype">int</span>)<a class="code hl_variable" href="../../d1/d02/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1SensorBurstAbility.html#a4038f70e0ab07b72f47aee3410b53f40">SENSOR_RANGE_BONUS</a>,</div>
-<div class="line"><span class="lineno">  141</span>                <span class="stringliteral">&quot;&quot;</span> + (<span class="keywordtype">int</span>)<a class="code hl_variable" href="../../d1/d02/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1SensorBurstAbility.html#a22be30a282a4eba24e49219102bc5e2b">DETECTABILITY_RANGE_BONUS</a>,</div>
-<div class="line"><span class="lineno">  142</span>                <span class="stringliteral">&quot;move slowly&quot;</span></div>
-<div class="line"><span class="lineno">  143</span>        );</div>
-<div class="line"><span class="lineno">  144</span>        <span class="comment">//tooltip.addPara(&quot;Disables \&quot;Go Dark\&quot; when activated.&quot;, pad);</span></div>
-<div class="line"><span class="lineno">  145</span>        tooltip.addPara(<span class="stringliteral">&quot;*2000 units = 1 map grid cell&quot;</span>, gray, pad);</div>
-<div class="line"><span class="lineno">  146</span>        tooltip.addPara(<span class="stringliteral">&quot;**A fleet is considered slow-moving at a burn level of half that of its slowest ship.&quot;</span>, gray, 0f);</div>
-<div class="line"><span class="lineno">  147</span><span class="comment">//      tooltip.addPara(&quot;**Maximum burn level of %s&quot;, 0f, gray, </span></div>
-<div class="line"><span class="lineno">  148</span><span class="comment">//              Misc.getDarkHighlightColor(), </span></div>
-<div class="line"><span class="lineno">  149</span><span class="comment">//              &quot;&quot; + Misc.getGoSlowBurnLevel(getFleet()));</span></div>
-<div class="line"><span class="lineno">  150</span>        </div>
-<div class="line"><span class="lineno">  151</span>        <a class="code hl_function" href="../../d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#aca01e068aef63af5241219b9aa33c5d0">addIncompatibleToTooltip</a>(tooltip, expanded);</div>
-<div class="line"><span class="lineno">  152</span>        </div>
-<div class="line"><span class="lineno">  153</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin_html_a15549d8a5c8c5b5c0bffda444f5098ea"><div class="ttname"><a href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a15549d8a5c8c5b5c0bffda444f5098ea">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin.spec</a></div><div class="ttdeci">transient AbilitySpecAPI spec</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00029">BaseAbilityPlugin.java:29</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility_html_aca01e068aef63af5241219b9aa33c5d0"><div class="ttname"><a href="../../d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#aca01e068aef63af5241219b9aa33c5d0">com.fs.starfarer.api.impl.campaign.abilities.BaseDurationAbility.addIncompatibleToTooltip</a></div><div class="ttdeci">void addIncompatibleToTooltip(TooltipMakerAPI tooltip, boolean expanded)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d40/BaseDurationAbility_8java_source.html#l00153">BaseDurationAbility.java:153</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1AbilitySpecAPI_html_a8cc28775697361fae5481df4bb39cf69"><div class="ttname"><a href="../../d4/df9/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1AbilitySpecAPI.html#a8cc28775697361fae5481df4bb39cf69">com.fs.starfarer.api.loading.AbilitySpecAPI.getName</a></div><div class="ttdeci">String getName()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a6b853f95dcedcc231ba4e741ce192ac0" name="a6b853f95dcedcc231ba4e741ce192ac0"></a>
@@ -711,11 +609,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#a598f0df48bcfc1718427ad8cee13cdc6">com.fs.starfarer.api.impl.campaign.abilities.BaseDurationAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d5e/SensorBurstAbility_8java_source.html#l00090">90</a> of file <a class="el" href="../../d0/d5e/SensorBurstAbility_8java_source.html">SensorBurstAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   90</span>                                    {</div>
-<div class="line"><span class="lineno">   91</span>        <a class="code hl_function" href="../../d1/d02/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1SensorBurstAbility.html#a8a1edd245d5c15098a86f4f648059286">cleanupImpl</a>();</div>
-<div class="line"><span class="lineno">   92</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1SensorBurstAbility_html_a8a1edd245d5c15098a86f4f648059286"><div class="ttname"><a href="../../d1/d02/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1SensorBurstAbility.html#a8a1edd245d5c15098a86f4f648059286">com.fs.starfarer.api.impl.campaign.abilities.SensorBurstAbility.cleanupImpl</a></div><div class="ttdeci">void cleanupImpl()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d5e/SensorBurstAbility_8java_source.html#l00095">SensorBurstAbility.java:95</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a140b501dca1b062ec1f0122eb8ecc14a" name="a140b501dca1b062ec1f0122eb8ecc14a"></a>
@@ -736,10 +630,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a35207ab01150d1c1521fa7ebf0ef4a75">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d5e/SensorBurstAbility_8java_source.html#l00155">155</a> of file <a class="el" href="../../d0/d5e/SensorBurstAbility_8java_source.html">SensorBurstAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  155</span>                                {</div>
-<div class="line"><span class="lineno">  156</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  157</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

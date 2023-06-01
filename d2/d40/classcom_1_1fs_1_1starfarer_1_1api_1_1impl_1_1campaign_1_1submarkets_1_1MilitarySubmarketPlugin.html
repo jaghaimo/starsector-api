@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -461,26 +462,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a101a393492d319dd426173a019a94782">com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d06/MilitarySubmarketPlugin_8java_source.html#l00180">180</a> of file <a class="el" href="../../d0/d06/MilitarySubmarketPlugin_8java_source.html">MilitarySubmarketPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  180</span>                                                                                     {</div>
-<div class="line"><span class="lineno">  181</span>        RepLevel req = getRequiredLevelAssumingLegal(stack, action);</div>
-<div class="line"><span class="lineno">  182</span> </div>
-<div class="line"><span class="lineno">  183</span>        <span class="keywordflow">if</span> (req != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  184</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d2/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1MilitarySubmarketPlugin.html#a8d69d48c033813abfe3d70ff330cf9a0">requiresCommission</a>(req)) {</div>
-<div class="line"><span class="lineno">  185</span>                <span class="keywordflow">return</span> <span class="stringliteral">&quot;Req: &quot;</span> +</div>
-<div class="line"><span class="lineno">  186</span>                        <a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a7cfc4316a62889640e1f1dc1cc157ad6">submarket</a>.<a class="code hl_function" href="../../d4/d17/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1SubmarketAPI.html#afdeedbda4953a92e3c6780377148fecb">getFaction</a>().<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a152197efac6967a0a459e4579b8ab1ef">getDisplayName</a>() + <span class="stringliteral">&quot; - &quot;</span> + req.getDisplayName().toLowerCase() + <span class="stringliteral">&quot;, &quot;</span> +</div>
-<div class="line"><span class="lineno">  187</span>                        <span class="stringliteral">&quot; commission&quot;</span>;</div>
-<div class="line"><span class="lineno">  188</span>            }</div>
-<div class="line"><span class="lineno">  189</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;Req: &quot;</span> + </div>
-<div class="line"><span class="lineno">  190</span>                    <a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a7cfc4316a62889640e1f1dc1cc157ad6">submarket</a>.<a class="code hl_function" href="../../d4/d17/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1SubmarketAPI.html#afdeedbda4953a92e3c6780377148fecb">getFaction</a>().<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a152197efac6967a0a459e4579b8ab1ef">getDisplayName</a>() + <span class="stringliteral">&quot; - &quot;</span> + req.getDisplayName().toLowerCase();</div>
-<div class="line"><span class="lineno">  191</span>        }</div>
-<div class="line"><span class="lineno">  192</span>        </div>
-<div class="line"><span class="lineno">  193</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Illegal to trade in &quot;</span> + stack.getDisplayName() + <span class="stringliteral">&quot; here&quot;</span>;</div>
-<div class="line"><span class="lineno">  194</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin_html_a7cfc4316a62889640e1f1dc1cc157ad6"><div class="ttname"><a href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a7cfc4316a62889640e1f1dc1cc157ad6">com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin.submarket</a></div><div class="ttdeci">SubmarketAPI submarket</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dc2/BaseSubmarketPlugin_8java_source.html#l00074">BaseSubmarketPlugin.java:74</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1MilitarySubmarketPlugin_html_a8d69d48c033813abfe3d70ff330cf9a0"><div class="ttname"><a href="../../d2/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1MilitarySubmarketPlugin.html#a8d69d48c033813abfe3d70ff330cf9a0">com.fs.starfarer.api.impl.campaign.submarkets.MilitarySubmarketPlugin.requiresCommission</a></div><div class="ttdeci">boolean requiresCommission(RepLevel req)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d06/MilitarySubmarketPlugin_8java_source.html#l00107">MilitarySubmarketPlugin.java:107</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI_html_a152197efac6967a0a459e4579b8ab1ef"><div class="ttname"><a href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a152197efac6967a0a459e4579b8ab1ef">com.fs.starfarer.api.campaign.FactionAPI.getDisplayName</a></div><div class="ttdeci">String getDisplayName()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1SubmarketAPI_html_afdeedbda4953a92e3c6780377148fecb"><div class="ttname"><a href="../../d4/d17/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1SubmarketAPI.html#afdeedbda4953a92e3c6780377148fecb">com.fs.starfarer.api.campaign.econ.SubmarketAPI.getFaction</a></div><div class="ttdeci">FactionAPI getFaction()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab77eda88de5f57859a07fc89b2889a09" name="ab77eda88de5f57859a07fc89b2889a09"></a>
@@ -512,37 +494,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a5a9dc0265593a954cdc0090aaa6995e2">com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d06/MilitarySubmarketPlugin_8java_source.html#l00278">278</a> of file <a class="el" href="../../d0/d06/MilitarySubmarketPlugin_8java_source.html">MilitarySubmarketPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  278</span>                                                                                       {</div>
-<div class="line"><span class="lineno">  279</span>        RepLevel req = getRequiredLevelAssumingLegal(member, action);</div>
-<div class="line"><span class="lineno">  280</span>        <span class="keywordflow">if</span> (req != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  281</span>            String str = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">  282</span>            RepLevel level = <a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a7cfc4316a62889640e1f1dc1cc157ad6">submarket</a>.<a class="code hl_function" href="../../d4/d17/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1SubmarketAPI.html#afdeedbda4953a92e3c6780377148fecb">getFaction</a>().<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#aad3990d52250d5cc6cb1faf21569e56f">getRelationshipLevel</a>(Global.getSector().getFaction(Factions.PLAYER));</div>
-<div class="line"><span class="lineno">  283</span>            <span class="keywordflow">if</span> (!level.isAtWorst(req)) {</div>
-<div class="line"><span class="lineno">  284</span>                str += <span class="stringliteral">&quot;Req: &quot;</span> + <a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a7cfc4316a62889640e1f1dc1cc157ad6">submarket</a>.<a class="code hl_function" href="../../d4/d17/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1SubmarketAPI.html#afdeedbda4953a92e3c6780377148fecb">getFaction</a>().<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a152197efac6967a0a459e4579b8ab1ef">getDisplayName</a>() + <span class="stringliteral">&quot; - &quot;</span> + req.getDisplayName().toLowerCase();              </div>
-<div class="line"><span class="lineno">  285</span>            }</div>
-<div class="line"><span class="lineno">  286</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d2/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1MilitarySubmarketPlugin.html#a8d69d48c033813abfe3d70ff330cf9a0">requiresCommission</a>(req) &amp;&amp; !<a class="code hl_function" href="../../d2/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1MilitarySubmarketPlugin.html#ad4ef4e3d2048f4efb8e0bbdb5f005c3d">hasCommission</a>()) {</div>
-<div class="line"><span class="lineno">  287</span>                <span class="keywordflow">if</span> (!str.isEmpty()) str += <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><span class="lineno">  288</span>                str += <span class="stringliteral">&quot;Req: &quot;</span> + <a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a7cfc4316a62889640e1f1dc1cc157ad6">submarket</a>.<a class="code hl_function" href="../../d4/d17/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1SubmarketAPI.html#afdeedbda4953a92e3c6780377148fecb">getFaction</a>().<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a152197efac6967a0a459e4579b8ab1ef">getDisplayName</a>() + <span class="stringliteral">&quot; - &quot;</span> + <span class="stringliteral">&quot;commission&quot;</span>;</div>
-<div class="line"><span class="lineno">  289</span>            }</div>
-<div class="line"><span class="lineno">  290</span>            <span class="keywordflow">return</span> str;</div>
-<div class="line"><span class="lineno">  291</span><span class="comment">//          if (requiresCommission(req)) {</span></div>
-<div class="line"><span class="lineno">  292</span><span class="comment">//              return //&quot;Requires:\n&quot; +</span></div>
-<div class="line"><span class="lineno">  293</span><span class="comment">//                      &quot;Req: &quot; + submarket.getFaction().getDisplayName() + &quot; - &quot; + req.getDisplayName().toLowerCase() + &quot;\n&quot; +</span></div>
-<div class="line"><span class="lineno">  294</span><span class="comment">//                      &quot;Req: &quot; + submarket.getFaction().getDisplayName() + &quot; - &quot; + &quot;commission&quot;;</span></div>
-<div class="line"><span class="lineno">  295</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">  296</span><span class="comment">//          return &quot;Requires: &quot; + </span></div>
-<div class="line"><span class="lineno">  297</span><span class="comment">//                  submarket.getFaction().getDisplayName() + &quot; - &quot; + req.getDisplayName().toLowerCase();</span></div>
-<div class="line"><span class="lineno">  298</span>        }</div>
-<div class="line"><span class="lineno">  299</span>        </div>
-<div class="line"><span class="lineno">  300</span>        <span class="keywordflow">if</span> (action == TransferAction.PLAYER_BUY) {</div>
-<div class="line"><span class="lineno">  301</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;Illegal to buy&quot;</span>; <span class="comment">// this shouldn&#39;t happen</span></div>
-<div class="line"><span class="lineno">  302</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  303</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;Illegal to sell&quot;</span>;</div>
-<div class="line"><span class="lineno">  304</span>        }</div>
-<div class="line"><span class="lineno">  305</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1MilitarySubmarketPlugin_html_ad4ef4e3d2048f4efb8e0bbdb5f005c3d"><div class="ttname"><a href="../../d2/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1MilitarySubmarketPlugin.html#ad4ef4e3d2048f4efb8e0bbdb5f005c3d">com.fs.starfarer.api.impl.campaign.submarkets.MilitarySubmarketPlugin.hasCommission</a></div><div class="ttdeci">boolean hasCommission()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d06/MilitarySubmarketPlugin_8java_source.html#l00114">MilitarySubmarketPlugin.java:114</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI_html_aad3990d52250d5cc6cb1faf21569e56f"><div class="ttname"><a href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#aad3990d52250d5cc6cb1faf21569e56f">com.fs.starfarer.api.campaign.FactionAPI.getRelationshipLevel</a></div><div class="ttdeci">RepLevel getRelationshipLevel(FactionAPI faction)</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ad1c37bf0d14b6a160c423ed8c7c8698e" name="ad1c37bf0d14b6a160c423ed8c7c8698e"></a>
@@ -574,23 +526,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a8b8f1b4b76d30c48b7ac2d7998f533f9">com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d06/MilitarySubmarketPlugin_8java_source.html#l00197">197</a> of file <a class="el" href="../../d0/d06/MilitarySubmarketPlugin_8java_source.html">MilitarySubmarketPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  197</span>                                                                                                   {</div>
-<div class="line"><span class="lineno">  198</span>        RepLevel req = getRequiredLevelAssumingLegal(stack, action);</div>
-<div class="line"><span class="lineno">  199</span>        <span class="keywordflow">if</span> (req != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  200</span>            Color c = Misc.getNegativeHighlightColor();</div>
-<div class="line"><span class="lineno">  201</span>            Highlights h = <span class="keyword">new</span> Highlights();</div>
-<div class="line"><span class="lineno">  202</span>            RepLevel level = <a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a7cfc4316a62889640e1f1dc1cc157ad6">submarket</a>.<a class="code hl_function" href="../../d4/d17/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1SubmarketAPI.html#afdeedbda4953a92e3c6780377148fecb">getFaction</a>().<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#aad3990d52250d5cc6cb1faf21569e56f">getRelationshipLevel</a>(Global.getSector().getFaction(Factions.PLAYER));</div>
-<div class="line"><span class="lineno">  203</span>            <span class="keywordflow">if</span> (!level.isAtWorst(req)) {</div>
-<div class="line"><span class="lineno">  204</span>                h.append(<a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a7cfc4316a62889640e1f1dc1cc157ad6">submarket</a>.<a class="code hl_function" href="../../d4/d17/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1SubmarketAPI.html#afdeedbda4953a92e3c6780377148fecb">getFaction</a>().<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a152197efac6967a0a459e4579b8ab1ef">getDisplayName</a>() + <span class="stringliteral">&quot; - &quot;</span> + req.getDisplayName().toLowerCase(), c);</div>
-<div class="line"><span class="lineno">  205</span>            }</div>
-<div class="line"><span class="lineno">  206</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d2/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1MilitarySubmarketPlugin.html#a8d69d48c033813abfe3d70ff330cf9a0">requiresCommission</a>(req) &amp;&amp; !<a class="code hl_function" href="../../d2/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1MilitarySubmarketPlugin.html#ad4ef4e3d2048f4efb8e0bbdb5f005c3d">hasCommission</a>()) {</div>
-<div class="line"><span class="lineno">  207</span>                h.append(<span class="stringliteral">&quot;commission&quot;</span>, c);</div>
-<div class="line"><span class="lineno">  208</span>            }</div>
-<div class="line"><span class="lineno">  209</span>            <span class="keywordflow">return</span> h;</div>
-<div class="line"><span class="lineno">  210</span>        }</div>
-<div class="line"><span class="lineno">  211</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  212</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8556d0a8be518b1556cb2adc66211448" name="a8556d0a8be518b1556cb2adc66211448"></a>
@@ -622,26 +558,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#aa3b86d5441c316799273e11cfca767dd">com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d06/MilitarySubmarketPlugin_8java_source.html#l00307">307</a> of file <a class="el" href="../../d0/d06/MilitarySubmarketPlugin_8java_source.html">MilitarySubmarketPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  307</span>                                                                                                     {</div>
-<div class="line"><span class="lineno">  308</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d2/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1MilitarySubmarketPlugin.html#ae33d0b1977716dc6b23573582f4a6564">isIllegalOnSubmarket</a>(member, action)) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  309</span>        </div>
-<div class="line"><span class="lineno">  310</span>        RepLevel req = getRequiredLevelAssumingLegal(member, action);</div>
-<div class="line"><span class="lineno">  311</span>        <span class="keywordflow">if</span> (req != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  312</span>            Color c = Misc.getNegativeHighlightColor();</div>
-<div class="line"><span class="lineno">  313</span>            Highlights h = <span class="keyword">new</span> Highlights();</div>
-<div class="line"><span class="lineno">  314</span>            RepLevel level = <a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a7cfc4316a62889640e1f1dc1cc157ad6">submarket</a>.<a class="code hl_function" href="../../d4/d17/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1SubmarketAPI.html#afdeedbda4953a92e3c6780377148fecb">getFaction</a>().<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#aad3990d52250d5cc6cb1faf21569e56f">getRelationshipLevel</a>(Global.getSector().getFaction(Factions.PLAYER));</div>
-<div class="line"><span class="lineno">  315</span>            <span class="keywordflow">if</span> (!level.isAtWorst(req)) {</div>
-<div class="line"><span class="lineno">  316</span>                h.append(<span class="stringliteral">&quot;Req: &quot;</span> + <a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a7cfc4316a62889640e1f1dc1cc157ad6">submarket</a>.<a class="code hl_function" href="../../d4/d17/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1SubmarketAPI.html#afdeedbda4953a92e3c6780377148fecb">getFaction</a>().<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a152197efac6967a0a459e4579b8ab1ef">getDisplayName</a>() + <span class="stringliteral">&quot; - &quot;</span> + req.getDisplayName().toLowerCase(), c);</div>
-<div class="line"><span class="lineno">  317</span>            }</div>
-<div class="line"><span class="lineno">  318</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d2/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1MilitarySubmarketPlugin.html#a8d69d48c033813abfe3d70ff330cf9a0">requiresCommission</a>(req) &amp;&amp; !<a class="code hl_function" href="../../d2/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1MilitarySubmarketPlugin.html#ad4ef4e3d2048f4efb8e0bbdb5f005c3d">hasCommission</a>()) {</div>
-<div class="line"><span class="lineno">  319</span>                h.append(<span class="stringliteral">&quot;Req: &quot;</span> + <a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a7cfc4316a62889640e1f1dc1cc157ad6">submarket</a>.<a class="code hl_function" href="../../d4/d17/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1SubmarketAPI.html#afdeedbda4953a92e3c6780377148fecb">getFaction</a>().<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a152197efac6967a0a459e4579b8ab1ef">getDisplayName</a>() + <span class="stringliteral">&quot; - commission&quot;</span>, c);</div>
-<div class="line"><span class="lineno">  320</span>            }</div>
-<div class="line"><span class="lineno">  321</span>            <span class="keywordflow">return</span> h;</div>
-<div class="line"><span class="lineno">  322</span>        }</div>
-<div class="line"><span class="lineno">  323</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  324</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1MilitarySubmarketPlugin_html_ae33d0b1977716dc6b23573582f4a6564"><div class="ttname"><a href="../../d2/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1MilitarySubmarketPlugin.html#ae33d0b1977716dc6b23573582f4a6564">com.fs.starfarer.api.impl.campaign.submarkets.MilitarySubmarketPlugin.isIllegalOnSubmarket</a></div><div class="ttdeci">boolean isIllegalOnSubmarket(String commodityId, TransferAction action)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d06/MilitarySubmarketPlugin_8java_source.html#l00147">MilitarySubmarketPlugin.java:147</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a853b1ba8b797f403e32ea939285e4ff1" name="a853b1ba8b797f403e32ea939285e4ff1"></a>
@@ -662,15 +579,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a6e305dbc110878dd8141dbac20cfd72b">com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d06/MilitarySubmarketPlugin_8java_source.html#l00100">100</a> of file <a class="el" href="../../d0/d06/MilitarySubmarketPlugin_8java_source.html">MilitarySubmarketPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  100</span>                            {</div>
-<div class="line"><span class="lineno">  101</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a7cfc4316a62889640e1f1dc1cc157ad6">submarket</a>.<a class="code hl_function" href="../../d4/d17/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1SubmarketAPI.html#afdeedbda4953a92e3c6780377148fecb">getFaction</a>().<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a7edcdc203f5ab26478e89e5d31e3bf85">getId</a>().equals(Factions.LUDDIC_CHURCH)) {</div>
-<div class="line"><span class="lineno">  102</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;Knights of Ludd&quot;</span>;</div>
-<div class="line"><span class="lineno">  103</span>        }</div>
-<div class="line"><span class="lineno">  104</span>        <span class="keywordflow">return</span> Misc.ucFirst(<a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a7cfc4316a62889640e1f1dc1cc157ad6">submarket</a>.<a class="code hl_function" href="../../d4/d17/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1SubmarketAPI.html#afdeedbda4953a92e3c6780377148fecb">getFaction</a>().<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a7bdac222bb9ef69c1163e927ada02606">getPersonNamePrefix</a>()) + <span class="stringliteral">&quot;\n&quot;</span> + <span class="stringliteral">&quot;Military&quot;</span>;</div>
-<div class="line"><span class="lineno">  105</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI_html_a7bdac222bb9ef69c1163e927ada02606"><div class="ttname"><a href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a7bdac222bb9ef69c1163e927ada02606">com.fs.starfarer.api.campaign.FactionAPI.getPersonNamePrefix</a></div><div class="ttdeci">String getPersonNamePrefix()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI_html_a7edcdc203f5ab26478e89e5d31e3bf85"><div class="ttname"><a href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a7edcdc203f5ab26478e89e5d31e3bf85">com.fs.starfarer.api.campaign.FactionAPI.getId</a></div><div class="ttdeci">String getId()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2367b5f73138dc4908b2605ac2a69885" name="a2367b5f73138dc4908b2605ac2a69885"></a>
@@ -692,10 +601,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a21400d90ab851fc7372a08c8569f059d">com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d06/MilitarySubmarketPlugin_8java_source.html#l00350">350</a> of file <a class="el" href="../../d0/d06/MilitarySubmarketPlugin_8java_source.html">MilitarySubmarketPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  350</span>                                                        {</div>
-<div class="line"><span class="lineno">  351</span>        <span class="keywordflow">return</span> OnClickAction.OPEN_SUBMARKET;</div>
-<div class="line"><span class="lineno">  352</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aae2eb8ad938b5e7c3db984863cef6bb1" name="aae2eb8ad938b5e7c3db984863cef6bb1"></a>
@@ -716,10 +622,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#ad20dd613e4cac4f068d9b2db823ef3fc">com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d06/MilitarySubmarketPlugin_8java_source.html#l00375">375</a> of file <a class="el" href="../../d0/d06/MilitarySubmarketPlugin_8java_source.html">MilitarySubmarketPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  375</span>                                                                {</div>
-<div class="line"><span class="lineno">  376</span>        <span class="keywordflow">return</span> PlayerEconomyImpactMode.PLAYER_SELL_ONLY;</div>
-<div class="line"><span class="lineno">  377</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a67523207e9720ae9ba0200e9c66e0974" name="a67523207e9720ae9ba0200e9c66e0974"></a>
@@ -741,32 +644,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a1eeac991599f51bd081b345d3914e4d2">com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d06/MilitarySubmarketPlugin_8java_source.html#l00125">125</a> of file <a class="el" href="../../d0/d06/MilitarySubmarketPlugin_8java_source.html">MilitarySubmarketPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  125</span>                                                           {</div>
-<div class="line"><span class="lineno">  126</span><span class="comment">//      int demand = com.getMaxDemand();</span></div>
-<div class="line"><span class="lineno">  127</span><span class="comment">//      int available = com.getAvailable();</span></div>
-<div class="line"><span class="lineno">  128</span><span class="comment">//      </span></div>
-<div class="line"><span class="lineno">  129</span><span class="comment">//      float limit = BaseIndustry.getSizeMult(available) - BaseIndustry.getSizeMult(Math.max(0, demand - 2));</span></div>
-<div class="line"><span class="lineno">  130</span><span class="comment">//      limit *= com.getCommodity().getEconUnit();</span></div>
-<div class="line"><span class="lineno">  131</span>        </div>
-<div class="line"><span class="lineno">  132</span>        <span class="keywordtype">float</span> limit = OpenMarketPlugin.getBaseStockpileLimit(com);</div>
-<div class="line"><span class="lineno">  133</span>        </div>
-<div class="line"><span class="lineno">  134</span>        <span class="comment">//limit *= com.getMarket().getStockpileMult().getModifiedValue();</span></div>
-<div class="line"><span class="lineno">  135</span>        </div>
-<div class="line"><span class="lineno">  136</span>        Random random = <span class="keyword">new</span> Random(<a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a539f0c8b6b8eacec192f3fb246c860c3">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a1c2b30198b83f80a06c4943c81c203d5">getId</a>().hashCode() + <a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a7cfc4316a62889640e1f1dc1cc157ad6">submarket</a>.<a class="code hl_function" href="../../d4/d17/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1SubmarketAPI.html#aaa2336969f5c5ab9ea184907911634a5">getSpecId</a>().hashCode() + Global.getSector().getClock().getMonth() * 170000);</div>
-<div class="line"><span class="lineno">  137</span>        limit *= 0.9f + 0.2f * random.nextFloat();</div>
-<div class="line"><span class="lineno">  138</span>        </div>
-<div class="line"><span class="lineno">  139</span>        <span class="keywordtype">float</span> sm = <a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a539f0c8b6b8eacec192f3fb246c860c3">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a2632307f40c3a4bc2dba30e35eca2284">getStabilityValue</a>() / 10f;</div>
-<div class="line"><span class="lineno">  140</span>        limit *= (0.25f + 0.75f * sm);</div>
-<div class="line"><span class="lineno">  141</span>        </div>
-<div class="line"><span class="lineno">  142</span>        <span class="keywordflow">if</span> (limit &lt; 0) limit = 0;</div>
-<div class="line"><span class="lineno">  143</span>        </div>
-<div class="line"><span class="lineno">  144</span>        <span class="keywordflow">return</span> (<span class="keywordtype">int</span>) limit;</div>
-<div class="line"><span class="lineno">  145</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin_html_a539f0c8b6b8eacec192f3fb246c860c3"><div class="ttname"><a href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a539f0c8b6b8eacec192f3fb246c860c3">com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin.market</a></div><div class="ttdeci">MarketAPI market</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dc2/BaseSubmarketPlugin_8java_source.html#l00073">BaseSubmarketPlugin.java:73</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a1c2b30198b83f80a06c4943c81c203d5"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a1c2b30198b83f80a06c4943c81c203d5">com.fs.starfarer.api.campaign.econ.MarketAPI.getId</a></div><div class="ttdeci">String getId()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a2632307f40c3a4bc2dba30e35eca2284"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a2632307f40c3a4bc2dba30e35eca2284">com.fs.starfarer.api.campaign.econ.MarketAPI.getStabilityValue</a></div><div class="ttdeci">float getStabilityValue()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1SubmarketAPI_html_aaa2336969f5c5ab9ea184907911634a5"><div class="ttname"><a href="../../d4/d17/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1SubmarketAPI.html#aaa2336969f5c5ab9ea184907911634a5">com.fs.starfarer.api.campaign.econ.SubmarketAPI.getSpecId</a></div><div class="ttdeci">String getSpecId()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a26c738c19c2169814937662c45c51317" name="a26c738c19c2169814937662c45c51317"></a>
@@ -788,18 +666,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a3d95c856632b640e517702224fcb6bda">com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d06/MilitarySubmarketPlugin_8java_source.html#l00354">354</a> of file <a class="el" href="../../d0/d06/MilitarySubmarketPlugin_8java_source.html">MilitarySubmarketPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  354</span>                                                   {</div>
-<div class="line"><span class="lineno">  355</span>        <span class="keywordflow">if</span> (!<a class="code hl_function" href="../../d2/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1MilitarySubmarketPlugin.html#aff8169ec1834a4f6e905426f2c9fda87">isEnabled</a>(ui)) {</div>
-<div class="line"><span class="lineno">  356</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;Requires: &quot;</span> + <a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a7cfc4316a62889640e1f1dc1cc157ad6">submarket</a>.<a class="code hl_function" href="../../d4/d17/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1SubmarketAPI.html#afdeedbda4953a92e3c6780377148fecb">getFaction</a>().<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a152197efac6967a0a459e4579b8ab1ef">getDisplayName</a>() + <span class="stringliteral">&quot; - &quot;</span> + minStanding.<a class="code hl_function" href="../../d0/d7f/enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1RepLevel.html#a041f69cda06f6489421a5a7f269193e6">getDisplayName</a>().toLowerCase();</div>
-<div class="line"><span class="lineno">  357</span>        }</div>
-<div class="line"><span class="lineno">  358</span>        <span class="keywordflow">if</span> (ui.getTradeMode() == CoreUITradeMode.SNEAK) {</div>
-<div class="line"><span class="lineno">  359</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;Requires: proper docking authorization&quot;</span>;</div>
-<div class="line"><span class="lineno">  360</span>        }</div>
-<div class="line"><span class="lineno">  361</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  362</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1MilitarySubmarketPlugin_html_aff8169ec1834a4f6e905426f2c9fda87"><div class="ttname"><a href="../../d2/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1MilitarySubmarketPlugin.html#aff8169ec1834a4f6e905426f2c9fda87">com.fs.starfarer.api.impl.campaign.submarkets.MilitarySubmarketPlugin.isEnabled</a></div><div class="ttdeci">boolean isEnabled(CoreUIAPI ui)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d06/MilitarySubmarketPlugin_8java_source.html#l00342">MilitarySubmarketPlugin.java:342</a></div></div>
-<div class="ttc" id="aenumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1RepLevel_html_a041f69cda06f6489421a5a7f269193e6"><div class="ttname"><a href="../../d0/d7f/enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1RepLevel.html#a041f69cda06f6489421a5a7f269193e6">com.fs.starfarer.api.campaign.RepLevel.getDisplayName</a></div><div class="ttdeci">String getDisplayName()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d2b/RepLevel_8java_source.html#l00024">RepLevel.java:24</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af0986a3f39a95fbe98befceaf040a2da" name="af0986a3f39a95fbe98befceaf040a2da"></a>
@@ -821,17 +688,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a6dd824d351467055cef347d6bc71ebf3">com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d06/MilitarySubmarketPlugin_8java_source.html#l00364">364</a> of file <a class="el" href="../../d0/d06/MilitarySubmarketPlugin_8java_source.html">MilitarySubmarketPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  364</span>                                                                 {</div>
-<div class="line"><span class="lineno">  365</span>        String appendix = <a class="code hl_function" href="../../d2/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1MilitarySubmarketPlugin.html#a26c738c19c2169814937662c45c51317">getTooltipAppendix</a>(ui);</div>
-<div class="line"><span class="lineno">  366</span>        <span class="keywordflow">if</span> (appendix == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  367</span>        </div>
-<div class="line"><span class="lineno">  368</span>        Highlights h = <span class="keyword">new</span> Highlights();</div>
-<div class="line"><span class="lineno">  369</span>        h.setText(appendix);</div>
-<div class="line"><span class="lineno">  370</span>        h.setColors(Misc.getNegativeHighlightColor());</div>
-<div class="line"><span class="lineno">  371</span>        <span class="keywordflow">return</span> h;</div>
-<div class="line"><span class="lineno">  372</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1MilitarySubmarketPlugin_html_a26c738c19c2169814937662c45c51317"><div class="ttname"><a href="../../d2/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1MilitarySubmarketPlugin.html#a26c738c19c2169814937662c45c51317">com.fs.starfarer.api.impl.campaign.submarkets.MilitarySubmarketPlugin.getTooltipAppendix</a></div><div class="ttdeci">String getTooltipAppendix(CoreUIAPI ui)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d06/MilitarySubmarketPlugin_8java_source.html#l00354">MilitarySubmarketPlugin.java:354</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ad4ef4e3d2048f4efb8e0bbdb5f005c3d" name="ad4ef4e3d2048f4efb8e0bbdb5f005c3d"></a>
@@ -858,10 +715,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d06/MilitarySubmarketPlugin_8java_source.html#l00114">114</a> of file <a class="el" href="../../d0/d06/MilitarySubmarketPlugin_8java_source.html">MilitarySubmarketPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  114</span>                                      {</div>
-<div class="line"><span class="lineno">  115</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a7cfc4316a62889640e1f1dc1cc157ad6">submarket</a>.<a class="code hl_function" href="../../d4/d17/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1SubmarketAPI.html#afdeedbda4953a92e3c6780377148fecb">getFaction</a>().<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a7edcdc203f5ab26478e89e5d31e3bf85">getId</a>().equals(Misc.getCommissionFactionId());</div>
-<div class="line"><span class="lineno">  116</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a6d3fc659451521623dbda1eba7ef314d" name="a6d3fc659451521623dbda1eba7ef314d"></a>
@@ -883,10 +737,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#abc473c819dc620ea4378aac39e7b5112">com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d06/MilitarySubmarketPlugin_8java_source.html#l00030">30</a> of file <a class="el" href="../../d0/d06/MilitarySubmarketPlugin_8java_source.html">MilitarySubmarketPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   30</span>                                             {</div>
-<div class="line"><span class="lineno">   31</span>        super.init(<a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a7cfc4316a62889640e1f1dc1cc157ad6">submarket</a>);</div>
-<div class="line"><span class="lineno">   32</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aff8169ec1834a4f6e905426f2c9fda87" name="aff8169ec1834a4f6e905426f2c9fda87"></a>
@@ -908,15 +759,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#af5f0cd641af3443a4c14474c9f572671">com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d06/MilitarySubmarketPlugin_8java_source.html#l00342">342</a> of file <a class="el" href="../../d0/d06/MilitarySubmarketPlugin_8java_source.html">MilitarySubmarketPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  342</span>                                           {</div>
-<div class="line"><span class="lineno">  343</span>        <span class="comment">//if (mode == CoreUITradeMode.OPEN) return false;</span></div>
-<div class="line"><span class="lineno">  344</span>        <span class="keywordflow">if</span> (ui.getTradeMode() == CoreUITradeMode.SNEAK) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  345</span>        </div>
-<div class="line"><span class="lineno">  346</span>        RepLevel level = <a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a7cfc4316a62889640e1f1dc1cc157ad6">submarket</a>.<a class="code hl_function" href="../../d4/d17/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1SubmarketAPI.html#afdeedbda4953a92e3c6780377148fecb">getFaction</a>().<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#aad3990d52250d5cc6cb1faf21569e56f">getRelationshipLevel</a>(Global.getSector().getFaction(Factions.PLAYER));</div>
-<div class="line"><span class="lineno">  347</span>        <span class="keywordflow">return</span> level.<a class="code hl_function" href="../../d0/d7f/enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1RepLevel.html#a966b15bb6ce734c9e4802def2f8d067c">isAtWorst</a>(minStanding);</div>
-<div class="line"><span class="lineno">  348</span>    }</div>
-<div class="ttc" id="aenumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1RepLevel_html_a966b15bb6ce734c9e4802def2f8d067c"><div class="ttname"><a href="../../d0/d7f/enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1RepLevel.html#a966b15bb6ce734c9e4802def2f8d067c">com.fs.starfarer.api.campaign.RepLevel.isAtWorst</a></div><div class="ttdeci">boolean isAtWorst(RepLevel level)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d2b/RepLevel_8java_source.html#l00068">RepLevel.java:68</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a7b14da31bff8b2531dd3554d8a921504" name="a7b14da31bff8b2531dd3554d8a921504"></a>
@@ -948,24 +791,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a2ac99df1be9e2ec8d20aeea128741775">com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d06/MilitarySubmarketPlugin_8java_source.html#l00162">162</a> of file <a class="el" href="../../d0/d06/MilitarySubmarketPlugin_8java_source.html">MilitarySubmarketPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  162</span>                                                                                    {</div>
-<div class="line"><span class="lineno">  163</span>        <span class="keywordflow">if</span> (stack.isCommodityStack()) {</div>
-<div class="line"><span class="lineno">  164</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="../../d2/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1MilitarySubmarketPlugin.html#ae33d0b1977716dc6b23573582f4a6564">isIllegalOnSubmarket</a>((String) stack.getData(), action);</div>
-<div class="line"><span class="lineno">  165</span>        }</div>
-<div class="line"><span class="lineno">  166</span>        </div>
-<div class="line"><span class="lineno">  167</span>        RepLevel req = getRequiredLevelAssumingLegal(stack, action);</div>
-<div class="line"><span class="lineno">  168</span>        <span class="keywordflow">if</span> (req == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  169</span>        </div>
-<div class="line"><span class="lineno">  170</span>        RepLevel level = <a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a7cfc4316a62889640e1f1dc1cc157ad6">submarket</a>.<a class="code hl_function" href="../../d4/d17/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1SubmarketAPI.html#afdeedbda4953a92e3c6780377148fecb">getFaction</a>().<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#aad3990d52250d5cc6cb1faf21569e56f">getRelationshipLevel</a>(Global.getSector().getFaction(Factions.PLAYER));</div>
-<div class="line"><span class="lineno">  171</span>        </div>
-<div class="line"><span class="lineno">  172</span>        <span class="keywordtype">boolean</span> legal = level.<a class="code hl_function" href="../../d0/d7f/enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1RepLevel.html#a966b15bb6ce734c9e4802def2f8d067c">isAtWorst</a>(req);</div>
-<div class="line"><span class="lineno">  173</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d2/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1MilitarySubmarketPlugin.html#a8d69d48c033813abfe3d70ff330cf9a0">requiresCommission</a>(req)) {</div>
-<div class="line"><span class="lineno">  174</span>            legal &amp;= <a class="code hl_function" href="../../d2/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1MilitarySubmarketPlugin.html#ad4ef4e3d2048f4efb8e0bbdb5f005c3d">hasCommission</a>();</div>
-<div class="line"><span class="lineno">  175</span>        }</div>
-<div class="line"><span class="lineno">  176</span>        </div>
-<div class="line"><span class="lineno">  177</span>        <span class="keywordflow">return</span> !legal;</div>
-<div class="line"><span class="lineno">  178</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5a1098cce1bd871ed43316b587aec40f" name="a5a1098cce1bd871ed43316b587aec40f"></a>
@@ -997,24 +823,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a251ad66c9faa92b6880252e31cd80bd0">com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d06/MilitarySubmarketPlugin_8java_source.html#l00260">260</a> of file <a class="el" href="../../d0/d06/MilitarySubmarketPlugin_8java_source.html">MilitarySubmarketPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  260</span>                                                                                      {</div>
-<div class="line"><span class="lineno">  261</span>        <span class="keywordflow">if</span> (action == TransferAction.PLAYER_SELL &amp;&amp; Misc.isAutomated(member)) {</div>
-<div class="line"><span class="lineno">  262</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  263</span>        }</div>
-<div class="line"><span class="lineno">  264</span>        </div>
-<div class="line"><span class="lineno">  265</span>        RepLevel req = getRequiredLevelAssumingLegal(member, action);</div>
-<div class="line"><span class="lineno">  266</span>        <span class="keywordflow">if</span> (req == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  267</span>        </div>
-<div class="line"><span class="lineno">  268</span>        RepLevel level = <a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a7cfc4316a62889640e1f1dc1cc157ad6">submarket</a>.<a class="code hl_function" href="../../d4/d17/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1SubmarketAPI.html#afdeedbda4953a92e3c6780377148fecb">getFaction</a>().<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#aad3990d52250d5cc6cb1faf21569e56f">getRelationshipLevel</a>(Global.getSector().getFaction(Factions.PLAYER));</div>
-<div class="line"><span class="lineno">  269</span>        </div>
-<div class="line"><span class="lineno">  270</span>        <span class="keywordtype">boolean</span> legal = level.<a class="code hl_function" href="../../d0/d7f/enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1RepLevel.html#a966b15bb6ce734c9e4802def2f8d067c">isAtWorst</a>(req);</div>
-<div class="line"><span class="lineno">  271</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d2/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1MilitarySubmarketPlugin.html#a8d69d48c033813abfe3d70ff330cf9a0">requiresCommission</a>(req)) {</div>
-<div class="line"><span class="lineno">  272</span>            legal &amp;= <a class="code hl_function" href="../../d2/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1MilitarySubmarketPlugin.html#ad4ef4e3d2048f4efb8e0bbdb5f005c3d">hasCommission</a>();</div>
-<div class="line"><span class="lineno">  273</span>        }</div>
-<div class="line"><span class="lineno">  274</span>        </div>
-<div class="line"><span class="lineno">  275</span>        <span class="keywordflow">return</span> !legal;</div>
-<div class="line"><span class="lineno">  276</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae33d0b1977716dc6b23573582f4a6564" name="ae33d0b1977716dc6b23573582f4a6564"></a>
@@ -1046,22 +855,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#ad6f29bbf3f8898906cfdbdb3013b70ab">com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d06/MilitarySubmarketPlugin_8java_source.html#l00147">147</a> of file <a class="el" href="../../d0/d06/MilitarySubmarketPlugin_8java_source.html">MilitarySubmarketPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  147</span>                                                                                   {</div>
-<div class="line"><span class="lineno">  148</span>        <span class="comment">//boolean illegal = submarket.getFaction().isIllegal(commodityId);</span></div>
-<div class="line"><span class="lineno">  149</span>        <span class="keywordtype">boolean</span> illegal = <a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a539f0c8b6b8eacec192f3fb246c860c3">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a7bfbfe5dca481e733b81096553e8fa34">isIllegal</a>(commodityId);</div>
-<div class="line"><span class="lineno">  150</span>        RepLevel req = getRequiredLevelAssumingLegal(commodityId, action);</div>
-<div class="line"><span class="lineno">  151</span>        </div>
-<div class="line"><span class="lineno">  152</span>        <span class="keywordflow">if</span> (req == <span class="keyword">null</span>) <span class="keywordflow">return</span> illegal;</div>
-<div class="line"><span class="lineno">  153</span>        </div>
-<div class="line"><span class="lineno">  154</span>        RepLevel level = <a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a7cfc4316a62889640e1f1dc1cc157ad6">submarket</a>.<a class="code hl_function" href="../../d4/d17/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1SubmarketAPI.html#afdeedbda4953a92e3c6780377148fecb">getFaction</a>().<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#aad3990d52250d5cc6cb1faf21569e56f">getRelationshipLevel</a>(Global.getSector().getFaction(Factions.PLAYER));</div>
-<div class="line"><span class="lineno">  155</span>        <span class="keywordtype">boolean</span> legal = level.<a class="code hl_function" href="../../d0/d7f/enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1RepLevel.html#a966b15bb6ce734c9e4802def2f8d067c">isAtWorst</a>(req);</div>
-<div class="line"><span class="lineno">  156</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d2/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1MilitarySubmarketPlugin.html#a8d69d48c033813abfe3d70ff330cf9a0">requiresCommission</a>(req)) {</div>
-<div class="line"><span class="lineno">  157</span>            legal &amp;= <a class="code hl_function" href="../../d2/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1MilitarySubmarketPlugin.html#ad4ef4e3d2048f4efb8e0bbdb5f005c3d">hasCommission</a>();</div>
-<div class="line"><span class="lineno">  158</span>        }</div>
-<div class="line"><span class="lineno">  159</span>        <span class="keywordflow">return</span> !legal;</div>
-<div class="line"><span class="lineno">  160</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a7bfbfe5dca481e733b81096553e8fa34"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a7bfbfe5dca481e733b81096553e8fa34">com.fs.starfarer.api.campaign.econ.MarketAPI.isIllegal</a></div><div class="ttdeci">boolean isIllegal(String commodityId)</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a4defba2847dc34fc38665f153299f425" name="a4defba2847dc34fc38665f153299f425"></a>
@@ -1082,10 +876,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#adb2da4ad6462109cfae984cbffe5b87e">com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d06/MilitarySubmarketPlugin_8java_source.html#l00379">379</a> of file <a class="el" href="../../d0/d06/MilitarySubmarketPlugin_8java_source.html">MilitarySubmarketPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  379</span>                                      {</div>
-<div class="line"><span class="lineno">  380</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  381</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8d69d48c033813abfe3d70ff330cf9a0" name="a8d69d48c033813abfe3d70ff330cf9a0"></a>
@@ -1113,14 +904,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d06/MilitarySubmarketPlugin_8java_source.html#l00107">107</a> of file <a class="el" href="../../d0/d06/MilitarySubmarketPlugin_8java_source.html">MilitarySubmarketPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  107</span>                                                       {</div>
-<div class="line"><span class="lineno">  108</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a7cfc4316a62889640e1f1dc1cc157ad6">submarket</a>.<a class="code hl_function" href="../../d4/d17/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1SubmarketAPI.html#afdeedbda4953a92e3c6780377148fecb">getFaction</a>().<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a6c7212fb43925a3c2663863f8cead8b8">getCustomBoolean</a>(Factions.CUSTOM_OFFERS_COMMISSIONS)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  109</span>        </div>
-<div class="line"><span class="lineno">  110</span>        <span class="keywordflow">if</span> (req.isAtWorst(RepLevel.WELCOMING)) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  111</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  112</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI_html_a6c7212fb43925a3c2663863f8cead8b8"><div class="ttname"><a href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a6c7212fb43925a3c2663863f8cead8b8">com.fs.starfarer.api.campaign.FactionAPI.getCustomBoolean</a></div><div class="ttdeci">boolean getCustomBoolean(String key)</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa8d162b567a77bba1c06a81db5b6c51e" name="aa8d162b567a77bba1c06a81db5b6c51e"></a>
@@ -1142,11 +926,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a2c14f607456977f82809a95f8b33feab">com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d06/MilitarySubmarketPlugin_8java_source.html#l00119">119</a> of file <a class="el" href="../../d0/d06/MilitarySubmarketPlugin_8java_source.html">MilitarySubmarketPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  119</span>                                                                 {</div>
-<div class="line"><span class="lineno">  120</span>        <span class="keywordflow">if</span> (Commodities.CREW.equals(com.getId())) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  121</span>        <span class="keywordflow">return</span> com.getCommodity().hasTag(Commodities.TAG_MILITARY);</div>
-<div class="line"><span class="lineno">  122</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af87fb4176c3e685a0da42f336bce49ec" name="af87fb4176c3e685a0da42f336bce49ec"></a>
@@ -1167,82 +947,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#adf58d118cfe9fab16b766936c3cad70a">com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d06/MilitarySubmarketPlugin_8java_source.html#l00034">34</a> of file <a class="el" href="../../d0/d06/MilitarySubmarketPlugin_8java_source.html">MilitarySubmarketPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   34</span>                                                  {</div>
-<div class="line"><span class="lineno">   35</span>        <span class="keywordtype">float</span> seconds = Global.getSector().getClock().convertToSeconds(<a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a302e3ac05c2128f0f543f94eadef2720">sinceLastCargoUpdate</a>);</div>
-<div class="line"><span class="lineno">   36</span>        <a class="code hl_function" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#adbc0480363e547e267b089a2f34158e5">addAndRemoveStockpiledResources</a>(seconds, <span class="keyword">false</span>, <span class="keyword">true</span>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   37</span>        <a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a302e3ac05c2128f0f543f94eadef2720">sinceLastCargoUpdate</a> = 0f;</div>
-<div class="line"><span class="lineno">   38</span>        </div>
-<div class="line"><span class="lineno">   39</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a0cc1dc260a685440be10aaf34083b991">okToUpdateShipsAndWeapons</a>()) {</div>
-<div class="line"><span class="lineno">   40</span>            <a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a0a96ee0c82aac2af866bae6f7083a750">sinceSWUpdate</a> = 0f;</div>
-<div class="line"><span class="lineno">   41</span>            </div>
-<div class="line"><span class="lineno">   42</span>            <a class="code hl_function" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a0acf1aac4b7b20cd40fb12796023bc23">pruneWeapons</a>(0f);</div>
-<div class="line"><span class="lineno">   43</span>            </div>
-<div class="line"><span class="lineno">   44</span>            <span class="keywordtype">int</span> weapons = 7 + Math.max(0, <a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a539f0c8b6b8eacec192f3fb246c860c3">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af6f714c59a16687b5cde142091a54150">getSize</a>() - 1) * 2;</div>
-<div class="line"><span class="lineno">   45</span>            <span class="keywordtype">int</span> fighters = 2 + Math.max(0, <a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a539f0c8b6b8eacec192f3fb246c860c3">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af6f714c59a16687b5cde142091a54150">getSize</a>() - 3);</div>
-<div class="line"><span class="lineno">   46</span>            </div>
-<div class="line"><span class="lineno">   47</span>            <a class="code hl_function" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#af9c63923da90dc802caef6bee5612c66">addWeapons</a>(weapons, weapons + 2, 3, <a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a7cfc4316a62889640e1f1dc1cc157ad6">submarket</a>.<a class="code hl_function" href="../../d4/d17/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1SubmarketAPI.html#afdeedbda4953a92e3c6780377148fecb">getFaction</a>().<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a7edcdc203f5ab26478e89e5d31e3bf85">getId</a>());</div>
-<div class="line"><span class="lineno">   48</span>            <a class="code hl_function" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a9d464609a0c0f155039620f4e4ea8293">addFighters</a>(fighters, fighters + 2, 3, <a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a539f0c8b6b8eacec192f3fb246c860c3">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#aa132dbebb3e9e38ad71a576a4ea5ac9b">getFactionId</a>());</div>
-<div class="line"><span class="lineno">   49</span> </div>
-<div class="line"><span class="lineno">   50</span>            <span class="keywordtype">float</span> stability = <a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a539f0c8b6b8eacec192f3fb246c860c3">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a2632307f40c3a4bc2dba30e35eca2284">getStabilityValue</a>();</div>
-<div class="line"><span class="lineno">   51</span>            <span class="keywordtype">float</span> sMult = Math.max(0.1f, stability / 10f);</div>
-<div class="line"><span class="lineno">   52</span>            <a class="code hl_function" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a256022db9e47751a5097e95323e018cc">getCargo</a>().<a class="code hl_function" href="../../dc/d7b/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#ae573d9d99761dc40ad6a9df2fe618f8c">getMothballedShips</a>().<a class="code hl_function" href="../../d2/dfb/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetDataAPI.html#ac6b3b8239b188e657e7551c039c0cc06">clear</a>();</div>
-<div class="line"><span class="lineno">   53</span>            </div>
-<div class="line"><span class="lineno">   54</span>            <span class="comment">// larger ships at lower stability to compensate for the reduced number of ships</span></div>
-<div class="line"><span class="lineno">   55</span>            <span class="comment">// so that low stability doesn&#39;t restrict the options to more or less just frigates </span></div>
-<div class="line"><span class="lineno">   56</span>            <span class="comment">// and the occasional destroyer</span></div>
-<div class="line"><span class="lineno">   57</span>            <span class="keywordtype">int</span> size = <a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a7cfc4316a62889640e1f1dc1cc157ad6">submarket</a>.<a class="code hl_function" href="../../d4/d17/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1SubmarketAPI.html#afdeedbda4953a92e3c6780377148fecb">getFaction</a>().<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#adc4a714f64334e82790e6d2b93a1e132">getDoctrine</a>().<a class="code hl_function" href="../../da/d00/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionDoctrineAPI.html#af7d80067628dd5b1f79580b86174c1ed">getShipSize</a>();</div>
-<div class="line"><span class="lineno">   58</span>            <span class="keywordtype">int</span> add = 0;</div>
-<div class="line"><span class="lineno">   59</span>            <span class="keywordflow">if</span> (stability &lt;= 4) {</div>
-<div class="line"><span class="lineno">   60</span>                add = 2;</div>
-<div class="line"><span class="lineno">   61</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (stability &lt;= 6) {</div>
-<div class="line"><span class="lineno">   62</span>                add = 1;</div>
-<div class="line"><span class="lineno">   63</span>            }</div>
-<div class="line"><span class="lineno">   64</span>            </div>
-<div class="line"><span class="lineno">   65</span>            size += add;</div>
-<div class="line"><span class="lineno">   66</span>            <span class="keywordflow">if</span> (size &gt; 5) size = 5;</div>
-<div class="line"><span class="lineno">   67</span>            </div>
-<div class="line"><span class="lineno">   68</span>            FactionDoctrineAPI doctrineOverride = <a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a7cfc4316a62889640e1f1dc1cc157ad6">submarket</a>.<a class="code hl_function" href="../../d4/d17/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1SubmarketAPI.html#afdeedbda4953a92e3c6780377148fecb">getFaction</a>().<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#adc4a714f64334e82790e6d2b93a1e132">getDoctrine</a>().<a class="code hl_function" href="../../da/d00/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionDoctrineAPI.html#ac4fda2046e7c9fc3ae9b811435b8d1b1">clone</a>();</div>
-<div class="line"><span class="lineno">   69</span>            doctrineOverride.<a class="code hl_function" href="../../da/d00/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionDoctrineAPI.html#abd2b2fa538831bb1ae46d7c57d9203a8">setShipSize</a>(size);</div>
-<div class="line"><span class="lineno">   70</span>            </div>
-<div class="line"><span class="lineno">   71</span>            <a class="code hl_function" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a18f835ec56ab37375fdbd57cc85229a3">addShips</a>(<a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a7cfc4316a62889640e1f1dc1cc157ad6">submarket</a>.<a class="code hl_function" href="../../d4/d17/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1SubmarketAPI.html#afdeedbda4953a92e3c6780377148fecb">getFaction</a>().<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a7edcdc203f5ab26478e89e5d31e3bf85">getId</a>(),</div>
-<div class="line"><span class="lineno">   72</span>                    <span class="comment">//(150f + market.getSize() * 25f) * sMult, // combat</span></div>
-<div class="line"><span class="lineno">   73</span>                    200f * sMult, <span class="comment">// combat</span></div>
-<div class="line"><span class="lineno">   74</span>                    15f, <span class="comment">// freighter </span></div>
-<div class="line"><span class="lineno">   75</span>                    10f, <span class="comment">// tanker</span></div>
-<div class="line"><span class="lineno">   76</span>                    20f, <span class="comment">// transport</span></div>
-<div class="line"><span class="lineno">   77</span>                    10f, <span class="comment">// liner</span></div>
-<div class="line"><span class="lineno">   78</span>                    10f, <span class="comment">// utilityPts</span></div>
-<div class="line"><span class="lineno">   79</span>                    <span class="keyword">null</span>, <span class="comment">// qualityOverride</span></div>
-<div class="line"><span class="lineno">   80</span>                    0f, <span class="comment">// qualityMod</span></div>
-<div class="line"><span class="lineno">   81</span>                    <span class="keyword">null</span>,</div>
-<div class="line"><span class="lineno">   82</span>                    doctrineOverride);</div>
-<div class="line"><span class="lineno">   83</span>                </div>
-<div class="line"><span class="lineno">   84</span>            <a class="code hl_function" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a651d31ce54366b4082d2dc15b29e76be">addHullMods</a>(4, 2 + <a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a643e5520e4bbfb2460a3ac78a9e83285">itemGenRandom</a>.nextInt(4), <a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a7cfc4316a62889640e1f1dc1cc157ad6">submarket</a>.<a class="code hl_function" href="../../d4/d17/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1SubmarketAPI.html#afdeedbda4953a92e3c6780377148fecb">getFaction</a>().<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a7edcdc203f5ab26478e89e5d31e3bf85">getId</a>());</div>
-<div class="line"><span class="lineno">   85</span>        }</div>
-<div class="line"><span class="lineno">   86</span>        </div>
-<div class="line"><span class="lineno">   87</span>        <a class="code hl_function" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a256022db9e47751a5097e95323e018cc">getCargo</a>().<a class="code hl_function" href="../../dc/d7b/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a794c304a1bd710f6fd3ee16e39aecd6b">sort</a>();</div>
-<div class="line"><span class="lineno">   88</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin_html_a0a96ee0c82aac2af866bae6f7083a750"><div class="ttname"><a href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a0a96ee0c82aac2af866bae6f7083a750">com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin.sinceSWUpdate</a></div><div class="ttdeci">float sinceSWUpdate</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dc2/BaseSubmarketPlugin_8java_source.html#l00078">BaseSubmarketPlugin.java:78</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin_html_a0acf1aac4b7b20cd40fb12796023bc23"><div class="ttname"><a href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a0acf1aac4b7b20cd40fb12796023bc23">com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin.pruneWeapons</a></div><div class="ttdeci">void pruneWeapons(float keepFraction)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dc2/BaseSubmarketPlugin_8java_source.html#l00454">BaseSubmarketPlugin.java:454</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin_html_a0cc1dc260a685440be10aaf34083b991"><div class="ttname"><a href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a0cc1dc260a685440be10aaf34083b991">com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin.okToUpdateShipsAndWeapons</a></div><div class="ttdeci">boolean okToUpdateShipsAndWeapons()</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dc2/BaseSubmarketPlugin_8java_source.html#l00123">BaseSubmarketPlugin.java:123</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin_html_a18f835ec56ab37375fdbd57cc85229a3"><div class="ttname"><a href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a18f835ec56ab37375fdbd57cc85229a3">com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin.addShips</a></div><div class="ttdeci">void addShips(String factionId, float combat, float freighter, float tanker, float transport, float liner, float utility, Float qualityOverride, float qualityMod, ShipPickMode modeOverride, FactionDoctrineAPI doctrineOverride)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dc2/BaseSubmarketPlugin_8java_source.html#l00470">BaseSubmarketPlugin.java:470</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin_html_a256022db9e47751a5097e95323e018cc"><div class="ttname"><a href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a256022db9e47751a5097e95323e018cc">com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin.getCargo</a></div><div class="ttdeci">CargoAPI getCargo()</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dc2/BaseSubmarketPlugin_8java_source.html#l00097">BaseSubmarketPlugin.java:97</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin_html_a302e3ac05c2128f0f543f94eadef2720"><div class="ttname"><a href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a302e3ac05c2128f0f543f94eadef2720">com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin.sinceLastCargoUpdate</a></div><div class="ttdeci">float sinceLastCargoUpdate</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dc2/BaseSubmarketPlugin_8java_source.html#l00079">BaseSubmarketPlugin.java:79</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin_html_a643e5520e4bbfb2460a3ac78a9e83285"><div class="ttname"><a href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a643e5520e4bbfb2460a3ac78a9e83285">com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin.itemGenRandom</a></div><div class="ttdeci">Random itemGenRandom</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dc2/BaseSubmarketPlugin_8java_source.html#l00081">BaseSubmarketPlugin.java:81</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin_html_a651d31ce54366b4082d2dc15b29e76be"><div class="ttname"><a href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a651d31ce54366b4082d2dc15b29e76be">com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin.addHullMods</a></div><div class="ttdeci">void addHullMods(int maxTier, int num)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dc2/BaseSubmarketPlugin_8java_source.html#l00586">BaseSubmarketPlugin.java:586</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin_html_a9d464609a0c0f155039620f4e4ea8293"><div class="ttname"><a href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a9d464609a0c0f155039620f4e4ea8293">com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin.addFighters</a></div><div class="ttdeci">void addFighters(int min, int max, int maxTier, WeightedRandomPicker&lt; String &gt; factionPicker)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dc2/BaseSubmarketPlugin_8java_source.html#l00289">BaseSubmarketPlugin.java:289</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin_html_adbc0480363e547e267b089a2f34158e5"><div class="ttname"><a href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#adbc0480363e547e267b089a2f34158e5">com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin.addAndRemoveStockpiledResources</a></div><div class="ttdeci">void addAndRemoveStockpiledResources(float amount, boolean withShortageCountering, boolean withDecreaseToLimit, boolean withCargoUpdate)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dc2/BaseSubmarketPlugin_8java_source.html#l00771">BaseSubmarketPlugin.java:771</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin_html_af9c63923da90dc802caef6bee5612c66"><div class="ttname"><a href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#af9c63923da90dc802caef6bee5612c66">com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin.addWeapons</a></div><div class="ttdeci">void addWeapons(int min, int max, int maxTier, String factionId)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dc2/BaseSubmarketPlugin_8java_source.html#l00297">BaseSubmarketPlugin.java:297</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI_html_a794c304a1bd710f6fd3ee16e39aecd6b"><div class="ttname"><a href="../../dc/d7b/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a794c304a1bd710f6fd3ee16e39aecd6b">com.fs.starfarer.api.campaign.CargoAPI.sort</a></div><div class="ttdeci">void sort()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI_html_ae573d9d99761dc40ad6a9df2fe618f8c"><div class="ttname"><a href="../../dc/d7b/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#ae573d9d99761dc40ad6a9df2fe618f8c">com.fs.starfarer.api.campaign.CargoAPI.getMothballedShips</a></div><div class="ttdeci">FleetDataAPI getMothballedShips()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI_html_adc4a714f64334e82790e6d2b93a1e132"><div class="ttname"><a href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#adc4a714f64334e82790e6d2b93a1e132">com.fs.starfarer.api.campaign.FactionAPI.getDoctrine</a></div><div class="ttdeci">FactionDoctrineAPI getDoctrine()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionDoctrineAPI_html_abd2b2fa538831bb1ae46d7c57d9203a8"><div class="ttname"><a href="../../da/d00/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionDoctrineAPI.html#abd2b2fa538831bb1ae46d7c57d9203a8">com.fs.starfarer.api.campaign.FactionDoctrineAPI.setShipSize</a></div><div class="ttdeci">void setShipSize(int shipSize)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionDoctrineAPI_html_ac4fda2046e7c9fc3ae9b811435b8d1b1"><div class="ttname"><a href="../../da/d00/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionDoctrineAPI.html#ac4fda2046e7c9fc3ae9b811435b8d1b1">com.fs.starfarer.api.campaign.FactionDoctrineAPI.clone</a></div><div class="ttdeci">FactionDoctrineAPI clone()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionDoctrineAPI_html_af7d80067628dd5b1f79580b86174c1ed"><div class="ttname"><a href="../../da/d00/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionDoctrineAPI.html#af7d80067628dd5b1f79580b86174c1ed">com.fs.starfarer.api.campaign.FactionDoctrineAPI.getShipSize</a></div><div class="ttdeci">int getShipSize()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetDataAPI_html_ac6b3b8239b188e657e7551c039c0cc06"><div class="ttname"><a href="../../d2/dfb/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetDataAPI.html#ac6b3b8239b188e657e7551c039c0cc06">com.fs.starfarer.api.campaign.FleetDataAPI.clear</a></div><div class="ttdeci">void clear()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_aa132dbebb3e9e38ad71a576a4ea5ac9b"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#aa132dbebb3e9e38ad71a576a4ea5ac9b">com.fs.starfarer.api.campaign.econ.MarketAPI.getFactionId</a></div><div class="ttdeci">String getFactionId()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_af6f714c59a16687b5cde142091a54150"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af6f714c59a16687b5cde142091a54150">com.fs.starfarer.api.campaign.econ.MarketAPI.getSize</a></div><div class="ttdeci">int getSize()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a46ef2040cf70a85678ae4e3495020279" name="a46ef2040cf70a85678ae4e3495020279"></a>
@@ -1269,14 +974,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d06/MilitarySubmarketPlugin_8java_source.html#l00090">90</a> of file <a class="el" href="../../d0/d06/MilitarySubmarketPlugin_8java_source.html">MilitarySubmarketPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   90</span>                                    {</div>
-<div class="line"><span class="lineno">   91</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a0cc1dc260a685440be10aaf34083b991">okToUpdateShipsAndWeapons</a>()) {</div>
-<div class="line"><span class="lineno">   92</span>            <a class="code hl_function" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a0acf1aac4b7b20cd40fb12796023bc23">pruneWeapons</a>(0f);</div>
-<div class="line"><span class="lineno">   93</span>            <a class="code hl_function" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a256022db9e47751a5097e95323e018cc">getCargo</a>().<a class="code hl_function" href="../../dc/d7b/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#ae573d9d99761dc40ad6a9df2fe618f8c">getMothballedShips</a>().<a class="code hl_function" href="../../d2/dfb/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetDataAPI.html#ac6b3b8239b188e657e7551c039c0cc06">clear</a>();</div>
-<div class="line"><span class="lineno">   94</span>        }</div>
-<div class="line"><span class="lineno">   95</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">   96</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -157,14 +158,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d1a/SurveyPlanetIntelCreator_8java_source.html#l00019">19</a> of file <a class="el" href="../../d6/d1a/SurveyPlanetIntelCreator_8java_source.html">SurveyPlanetIntelCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   19</span>                                                 {</div>
-<div class="line"><span class="lineno">   20</span>        PlanetAPI planet = <a class="code hl_function" href="../../da/ddc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SurveyPlanetIntelCreator.html#a2e3a25651fa247b18a56ac0ce0a9e06f">pickPlanet</a>();</div>
-<div class="line"><span class="lineno">   21</span>        <span class="keywordflow">if</span> (planet == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   22</span>        </div>
-<div class="line"><span class="lineno">   23</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> SurveyPlanetMissionIntel(planet);</div>
-<div class="line"><span class="lineno">   24</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SurveyPlanetIntelCreator_html_a2e3a25651fa247b18a56ac0ce0a9e06f"><div class="ttname"><a href="../../da/ddc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SurveyPlanetIntelCreator.html#a2e3a25651fa247b18a56ac0ce0a9e06f">com.fs.starfarer.api.impl.campaign.intel.SurveyPlanetIntelCreator.pickPlanet</a></div><div class="ttdeci">PlanetAPI pickPlanet()</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d1a/SurveyPlanetIntelCreator_8java_source.html#l00078">SurveyPlanetIntelCreator.java:78</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a79b1653608d332b5c43f2c9dc563d4f3" name="a79b1653608d332b5c43f2c9dc563d4f3"></a>
@@ -183,10 +177,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d1a/SurveyPlanetIntelCreator_8java_source.html#l00026">26</a> of file <a class="el" href="../../d6/d1a/SurveyPlanetIntelCreator_8java_source.html">SurveyPlanetIntelCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   26</span>                                             {</div>
-<div class="line"><span class="lineno">   27</span>        <span class="keywordflow">return</span> 10f;</div>
-<div class="line"><span class="lineno">   28</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab8ecb474615a31d4f60edf2fba98b629" name="ab8ecb474615a31d4f60edf2fba98b629"></a>
@@ -213,32 +204,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d1a/SurveyPlanetIntelCreator_8java_source.html#l00034">34</a> of file <a class="el" href="../../d6/d1a/SurveyPlanetIntelCreator_8java_source.html">SurveyPlanetIntelCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   34</span>                                {</div>
-<div class="line"><span class="lineno">   35</span>        <a class="code hl_variable" href="../../da/ddc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SurveyPlanetIntelCreator.html#ab4a42a0fe208daf5db4287251d77b34b">planetPicker</a> = <span class="keyword">new</span> WeightedRandomPicker&lt;PlanetAPI&gt;();</div>
-<div class="line"><span class="lineno">   36</span>        OUTER: <span class="keywordflow">for</span> (StarSystemAPI system : Global.getSector().getStarSystems()) {</div>
-<div class="line"><span class="lineno">   37</span>            <span class="comment">//if (!Misc.getMarketsInLocation(system).isEmpty()) continue;</span></div>
-<div class="line"><span class="lineno">   38</span>            <span class="keywordflow">for</span> (MarketAPI market : Misc.getMarketsInLocation(system)) {</div>
-<div class="line"><span class="lineno">   39</span>                <span class="keywordflow">if</span> (!market.isHidden()) <span class="keywordflow">continue</span> OUTER;</div>
-<div class="line"><span class="lineno">   40</span>            }</div>
-<div class="line"><span class="lineno">   41</span>            </div>
-<div class="line"><span class="lineno">   42</span>            <span class="keywordflow">for</span> (PlanetAPI planet : system.getPlanets()) {</div>
-<div class="line"><span class="lineno">   43</span>                <span class="keywordflow">if</span> (!<a class="code hl_function" href="../../da/ddc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SurveyPlanetIntelCreator.html#a474dfb8d50f62110d0ffe5bf5a0ff7b9">isValidMissionTarget</a>(planet)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   44</span>                <span class="keywordflow">if</span> (Misc.isImportantForReason(planet.getMemoryWithoutUpdate(), <span class="stringliteral">&quot;spm&quot;</span>)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   45</span> </div>
-<div class="line"><span class="lineno">   46</span>                <span class="keywordtype">float</span> weight = 1f;</div>
-<div class="line"><span class="lineno">   47</span>                <span class="keywordflow">for</span> (MarketConditionAPI mc : planet.getMarket().getConditions()) {</div>
-<div class="line"><span class="lineno">   48</span>                    <span class="keywordflow">if</span> (mc.getGenSpec() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   49</span>                        weight += mc.getGenSpec().getXpMult();</div>
-<div class="line"><span class="lineno">   50</span>                    }</div>
-<div class="line"><span class="lineno">   51</span>                }</div>
-<div class="line"><span class="lineno">   52</span>                </div>
-<div class="line"><span class="lineno">   53</span>                <a class="code hl_variable" href="../../da/ddc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SurveyPlanetIntelCreator.html#ab4a42a0fe208daf5db4287251d77b34b">planetPicker</a>.add(planet);</div>
-<div class="line"><span class="lineno">   54</span>            }</div>
-<div class="line"><span class="lineno">   55</span>        }</div>
-<div class="line"><span class="lineno">   56</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SurveyPlanetIntelCreator_html_a474dfb8d50f62110d0ffe5bf5a0ff7b9"><div class="ttname"><a href="../../da/ddc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SurveyPlanetIntelCreator.html#a474dfb8d50f62110d0ffe5bf5a0ff7b9">com.fs.starfarer.api.impl.campaign.intel.SurveyPlanetIntelCreator.isValidMissionTarget</a></div><div class="ttdeci">static boolean isValidMissionTarget(PlanetAPI planet)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d1a/SurveyPlanetIntelCreator_8java_source.html#l00066">SurveyPlanetIntelCreator.java:66</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SurveyPlanetIntelCreator_html_ab4a42a0fe208daf5db4287251d77b34b"><div class="ttname"><a href="../../da/ddc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SurveyPlanetIntelCreator.html#ab4a42a0fe208daf5db4287251d77b34b">com.fs.starfarer.api.impl.campaign.intel.SurveyPlanetIntelCreator.planetPicker</a></div><div class="ttdeci">transient WeightedRandomPicker&lt; PlanetAPI &gt; planetPicker</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d1a/SurveyPlanetIntelCreator_8java_source.html#l00031">SurveyPlanetIntelCreator.java:31</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a474dfb8d50f62110d0ffe5bf5a0ff7b9" name="a474dfb8d50f62110d0ffe5bf5a0ff7b9"></a>
@@ -266,18 +232,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d1a/SurveyPlanetIntelCreator_8java_source.html#l00066">66</a> of file <a class="el" href="../../d6/d1a/SurveyPlanetIntelCreator_8java_source.html">SurveyPlanetIntelCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   66</span>                                                                 {</div>
-<div class="line"><span class="lineno">   67</span>        <span class="keywordflow">if</span> (planet.hasTag(Tags.NOT_RANDOM_MISSION_TARGET)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   68</span>        <span class="keywordflow">if</span> (planet.isStar() || planet.getMarket() == <span class="keyword">null</span> || !planet.getMarket().isPlanetConditionMarketOnly() ||</div>
-<div class="line"><span class="lineno">   69</span>                planet.getMarket().getSurveyLevel() == SurveyLevel.FULL) {</div>
-<div class="line"><span class="lineno">   70</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   71</span>        }</div>
-<div class="line"><span class="lineno">   72</span>        <span class="keywordflow">if</span> (planet.getContainingLocation() != <span class="keyword">null</span> &amp;&amp; planet.getContainingLocation().hasTag(Tags.THEME_HIDDEN)) {</div>
-<div class="line"><span class="lineno">   73</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   74</span>        }</div>
-<div class="line"><span class="lineno">   75</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   76</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2e3a25651fa247b18a56ac0ce0a9e06f" name="a2e3a25651fa247b18a56ac0ce0a9e06f"></a>
@@ -304,27 +259,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d1a/SurveyPlanetIntelCreator_8java_source.html#l00078">78</a> of file <a class="el" href="../../d6/d1a/SurveyPlanetIntelCreator_8java_source.html">SurveyPlanetIntelCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   78</span>                                     {</div>
-<div class="line"><span class="lineno">   79</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/ddc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SurveyPlanetIntelCreator.html#ab4a42a0fe208daf5db4287251d77b34b">planetPicker</a> == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   80</span>            <a class="code hl_function" href="../../da/ddc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SurveyPlanetIntelCreator.html#ab8ecb474615a31d4f60edf2fba98b629">initPicker</a>();</div>
-<div class="line"><span class="lineno">   81</span>        }</div>
-<div class="line"><span class="lineno">   82</span>        <a class="code hl_function" href="../../da/ddc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SurveyPlanetIntelCreator.html#a066c7f7140a96fe8a9b364d7894177a5">prunePicker</a>();</div>
-<div class="line"><span class="lineno">   83</span>        </div>
-<div class="line"><span class="lineno">   84</span>        PlanetAPI planet = <a class="code hl_variable" href="../../da/ddc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SurveyPlanetIntelCreator.html#ab4a42a0fe208daf5db4287251d77b34b">planetPicker</a>.pick();</div>
-<div class="line"><span class="lineno">   85</span>        <span class="keywordflow">for</span> (EveryFrameScript s : GenericMissionManager.getInstance().getActive()) {</div>
-<div class="line"><span class="lineno">   86</span>            <span class="keywordflow">if</span> (s instanceof SurveyPlanetMissionIntel) {</div>
-<div class="line"><span class="lineno">   87</span>                SurveyPlanetMissionIntel intel = (SurveyPlanetMissionIntel) s;</div>
-<div class="line"><span class="lineno">   88</span>                <span class="keywordflow">if</span> (planet == intel.getPlanet()) {</div>
-<div class="line"><span class="lineno">   89</span>                    <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   90</span>                }</div>
-<div class="line"><span class="lineno">   91</span>            }</div>
-<div class="line"><span class="lineno">   92</span>        }</div>
-<div class="line"><span class="lineno">   93</span>        </div>
-<div class="line"><span class="lineno">   94</span>        <span class="keywordflow">return</span> planet;</div>
-<div class="line"><span class="lineno">   95</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SurveyPlanetIntelCreator_html_a066c7f7140a96fe8a9b364d7894177a5"><div class="ttname"><a href="../../da/ddc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SurveyPlanetIntelCreator.html#a066c7f7140a96fe8a9b364d7894177a5">com.fs.starfarer.api.impl.campaign.intel.SurveyPlanetIntelCreator.prunePicker</a></div><div class="ttdeci">void prunePicker()</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d1a/SurveyPlanetIntelCreator_8java_source.html#l00058">SurveyPlanetIntelCreator.java:58</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SurveyPlanetIntelCreator_html_ab8ecb474615a31d4f60edf2fba98b629"><div class="ttname"><a href="../../da/ddc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SurveyPlanetIntelCreator.html#ab8ecb474615a31d4f60edf2fba98b629">com.fs.starfarer.api.impl.campaign.intel.SurveyPlanetIntelCreator.initPicker</a></div><div class="ttdeci">void initPicker()</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d1a/SurveyPlanetIntelCreator_8java_source.html#l00034">SurveyPlanetIntelCreator.java:34</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a066c7f7140a96fe8a9b364d7894177a5" name="a066c7f7140a96fe8a9b364d7894177a5"></a>
@@ -351,14 +286,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d1a/SurveyPlanetIntelCreator_8java_source.html#l00058">58</a> of file <a class="el" href="../../d6/d1a/SurveyPlanetIntelCreator_8java_source.html">SurveyPlanetIntelCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   58</span>                                 {</div>
-<div class="line"><span class="lineno">   59</span>        <span class="keywordflow">for</span> (PlanetAPI planet : <span class="keyword">new</span> ArrayList&lt;PlanetAPI&gt;(<a class="code hl_variable" href="../../da/ddc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SurveyPlanetIntelCreator.html#ab4a42a0fe208daf5db4287251d77b34b">planetPicker</a>.getItems())) {</div>
-<div class="line"><span class="lineno">   60</span>            <span class="keywordflow">if</span> (!<a class="code hl_function" href="../../da/ddc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SurveyPlanetIntelCreator.html#a474dfb8d50f62110d0ffe5bf5a0ff7b9">isValidMissionTarget</a>(planet)) {</div>
-<div class="line"><span class="lineno">   61</span>                <a class="code hl_variable" href="../../da/ddc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SurveyPlanetIntelCreator.html#ab4a42a0fe208daf5db4287251d77b34b">planetPicker</a>.remove(planet);</div>
-<div class="line"><span class="lineno">   62</span>            }</div>
-<div class="line"><span class="lineno">   63</span>        }</div>
-<div class="line"><span class="lineno">   64</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

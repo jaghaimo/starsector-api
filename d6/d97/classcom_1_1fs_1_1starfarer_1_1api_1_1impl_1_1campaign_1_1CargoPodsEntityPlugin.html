@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -224,50 +225,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d5/d0a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html#a925b3cae820facd4cbb446add6bd48af">com.fs.starfarer.api.impl.campaign.BaseCustomEntityPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/dff/CargoPodsEntityPlugin_8java_source.html#l00053">53</a> of file <a class="el" href="../../df/dff/CargoPodsEntityPlugin_8java_source.html">CargoPodsEntityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   53</span>                                      {</div>
-<div class="line"><span class="lineno">   54</span>        <span class="keywordtype">float</span> days = Global.getSector().getClock().convertToDays(amount);</div>
-<div class="line"><span class="lineno">   55</span>        <a class="code hl_variable" href="../../d6/d97/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CargoPodsEntityPlugin.html#aee3c8e2b740fad623458562e28e1cebf">elapsed</a> += days;</div>
-<div class="line"><span class="lineno">   56</span>        </div>
-<div class="line"><span class="lineno">   57</span>        <span class="keywordflow">if</span> (!<a class="code hl_function" href="../../d6/d97/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CargoPodsEntityPlugin.html#aee204ff45e3c5f82a5e6f44b1998450f">isNeverExpire</a>()) {</div>
-<div class="line"><span class="lineno">   58</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d6/d97/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CargoPodsEntityPlugin.html#aee3c8e2b740fad623458562e28e1cebf">elapsed</a> &gt;= <a class="code hl_variable" href="../../d6/d97/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CargoPodsEntityPlugin.html#a6956ac68a29113beb7c08e7bea283361">maxDays</a> + <a class="code hl_variable" href="../../d6/d97/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CargoPodsEntityPlugin.html#af768709505a6e6d8502614b043b61c9a">extraDays</a> &amp;&amp; <a class="code hl_variable" href="../../d6/d97/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CargoPodsEntityPlugin.html#a6956ac68a29113beb7c08e7bea283361">maxDays</a> &gt;= 0) {</div>
-<div class="line"><span class="lineno">   59</span>                VisibilityLevel vis = <a class="code hl_variable" href="../../d5/d0a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html#a4de611a62107d116dd5d3e8bc980fa6a">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a8d10997c36455c4f2caf02c76dfcbe5f">getVisibilityLevelToPlayerFleet</a>();</div>
-<div class="line"><span class="lineno">   60</span>                <span class="keywordtype">boolean</span> playerCanSee = <a class="code hl_variable" href="../../d5/d0a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html#a4de611a62107d116dd5d3e8bc980fa6a">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a0dfd224c22bfc35f7dda6f8a1c913472">isInCurrentLocation</a>() &amp;&amp; </div>
-<div class="line"><span class="lineno">   61</span>                                        (vis == VisibilityLevel.COMPOSITION_AND_FACTION_DETAILS ||</div>
-<div class="line"><span class="lineno">   62</span>                                         vis == VisibilityLevel.COMPOSITION_DETAILS);</div>
-<div class="line"><span class="lineno">   63</span>                <span class="keywordflow">if</span> (!playerCanSee) {</div>
-<div class="line"><span class="lineno">   64</span>                    <a class="code hl_variable" href="../../d6/d97/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CargoPodsEntityPlugin.html#a6956ac68a29113beb7c08e7bea283361">maxDays</a> = -1;</div>
-<div class="line"><span class="lineno">   65</span>                    Misc.fadeAndExpire(<a class="code hl_variable" href="../../d5/d0a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html#a4de611a62107d116dd5d3e8bc980fa6a">entity</a>);</div>
-<div class="line"><span class="lineno">   66</span>                    <a class="code hl_variable" href="../../d6/d97/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CargoPodsEntityPlugin.html#a868136e4b0a6d58d5a2d3254c1cb6f41">neverExpire</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   67</span>                }</div>
-<div class="line"><span class="lineno">   68</span>            }</div>
-<div class="line"><span class="lineno">   69</span>        }</div>
-<div class="line"><span class="lineno">   70</span>            </div>
-<div class="line"><span class="lineno">   71</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d5/d0a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html#a4de611a62107d116dd5d3e8bc980fa6a">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a0dfd224c22bfc35f7dda6f8a1c913472">isInCurrentLocation</a>()) {</div>
-<div class="line"><span class="lineno">   72</span>            <a class="code hl_function" href="../../d6/d97/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CargoPodsEntityPlugin.html#ae708db5811de791891c8c16b525f122d">updateBaseMaxDays</a>();</div>
-<div class="line"><span class="lineno">   73</span>            <span class="keywordtype">float</span> radius = 10f + 10f * (float) Math.sqrt(<a class="code hl_variable" href="../../d6/d97/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CargoPodsEntityPlugin.html#a977902fea2999fb0ff9b23ebea04b9a2">manager</a>.<a class="code hl_variable" href="../../db/d5a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1GenericFieldItemManager.html#ad7f4d263421261f2242f226bd9d83df4">numPieces</a>);</div>
-<div class="line"><span class="lineno">   74</span>            </div>
-<div class="line"><span class="lineno">   75</span>            <span class="keywordtype">float</span> range = <a class="code hl_function" href="../../d6/d97/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CargoPodsEntityPlugin.html#ac0644ce0c610b85e1d5844a489a7f92a">computeDetectionRange</a>(radius);</div>
-<div class="line"><span class="lineno">   76</span>            <a class="code hl_variable" href="../../d5/d0a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html#a4de611a62107d116dd5d3e8bc980fa6a">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a082c4b9255abb65f345d99bacb442258">getDetectedRangeMod</a>().<a class="code hl_function" href="../../dc/d19/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus.html#ad08aa246116d46809d4f55279eeb38e4">modifyFlat</a>(<span class="stringliteral">&quot;gen&quot;</span>, range);</div>
-<div class="line"><span class="lineno">   77</span>        }</div>
-<div class="line"><span class="lineno">   78</span>        </div>
-<div class="line"><span class="lineno">   79</span>        <a class="code hl_variable" href="../../d6/d97/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CargoPodsEntityPlugin.html#a977902fea2999fb0ff9b23ebea04b9a2">manager</a>.<a class="code hl_function" href="../../db/d5a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1GenericFieldItemManager.html#a7abf9957e66372e3f62e4bf2432fb097">advance</a>(amount);</div>
-<div class="line"><span class="lineno">   80</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus_html_ad08aa246116d46809d4f55279eeb38e4"><div class="ttname"><a href="../../dc/d19/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus.html#ad08aa246116d46809d4f55279eeb38e4">com.fs.starfarer.api.combat.StatBonus.modifyFlat</a></div><div class="ttdeci">void modifyFlat(String source, float value)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d6c/StatBonus_8java_source.html#l00121">StatBonus.java:121</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin_html_a4de611a62107d116dd5d3e8bc980fa6a"><div class="ttname"><a href="../../d5/d0a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html#a4de611a62107d116dd5d3e8bc980fa6a">com.fs.starfarer.api.impl.campaign.BaseCustomEntityPlugin.entity</a></div><div class="ttdeci">SectorEntityToken entity</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d0e/BaseCustomEntityPlugin_8java_source.html#l00012">BaseCustomEntityPlugin.java:12</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CargoPodsEntityPlugin_html_a6956ac68a29113beb7c08e7bea283361"><div class="ttname"><a href="../../d6/d97/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CargoPodsEntityPlugin.html#a6956ac68a29113beb7c08e7bea283361">com.fs.starfarer.api.impl.campaign.CargoPodsEntityPlugin.maxDays</a></div><div class="ttdeci">float maxDays</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dff/CargoPodsEntityPlugin_8java_source.html#l00025">CargoPodsEntityPlugin.java:25</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CargoPodsEntityPlugin_html_a868136e4b0a6d58d5a2d3254c1cb6f41"><div class="ttname"><a href="../../d6/d97/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CargoPodsEntityPlugin.html#a868136e4b0a6d58d5a2d3254c1cb6f41">com.fs.starfarer.api.impl.campaign.CargoPodsEntityPlugin.neverExpire</a></div><div class="ttdeci">Boolean neverExpire</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dff/CargoPodsEntityPlugin_8java_source.html#l00027">CargoPodsEntityPlugin.java:27</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CargoPodsEntityPlugin_html_a977902fea2999fb0ff9b23ebea04b9a2"><div class="ttname"><a href="../../d6/d97/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CargoPodsEntityPlugin.html#a977902fea2999fb0ff9b23ebea04b9a2">com.fs.starfarer.api.impl.campaign.CargoPodsEntityPlugin.manager</a></div><div class="ttdeci">transient GenericFieldItemManager manager</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dff/CargoPodsEntityPlugin_8java_source.html#l00022">CargoPodsEntityPlugin.java:22</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CargoPodsEntityPlugin_html_ac0644ce0c610b85e1d5844a489a7f92a"><div class="ttname"><a href="../../d6/d97/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CargoPodsEntityPlugin.html#ac0644ce0c610b85e1d5844a489a7f92a">com.fs.starfarer.api.impl.campaign.CargoPodsEntityPlugin.computeDetectionRange</a></div><div class="ttdeci">static float computeDetectionRange(float radius)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dff/CargoPodsEntityPlugin_8java_source.html#l00014">CargoPodsEntityPlugin.java:14</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CargoPodsEntityPlugin_html_ae708db5811de791891c8c16b525f122d"><div class="ttname"><a href="../../d6/d97/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CargoPodsEntityPlugin.html#ae708db5811de791891c8c16b525f122d">com.fs.starfarer.api.impl.campaign.CargoPodsEntityPlugin.updateBaseMaxDays</a></div><div class="ttdeci">void updateBaseMaxDays()</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dff/CargoPodsEntityPlugin_8java_source.html#l00082">CargoPodsEntityPlugin.java:82</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CargoPodsEntityPlugin_html_aee204ff45e3c5f82a5e6f44b1998450f"><div class="ttname"><a href="../../d6/d97/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CargoPodsEntityPlugin.html#aee204ff45e3c5f82a5e6f44b1998450f">com.fs.starfarer.api.impl.campaign.CargoPodsEntityPlugin.isNeverExpire</a></div><div class="ttdeci">Boolean isNeverExpire()</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dff/CargoPodsEntityPlugin_8java_source.html#l00123">CargoPodsEntityPlugin.java:123</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CargoPodsEntityPlugin_html_aee3c8e2b740fad623458562e28e1cebf"><div class="ttname"><a href="../../d6/d97/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CargoPodsEntityPlugin.html#aee3c8e2b740fad623458562e28e1cebf">com.fs.starfarer.api.impl.campaign.CargoPodsEntityPlugin.elapsed</a></div><div class="ttdeci">float elapsed</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dff/CargoPodsEntityPlugin_8java_source.html#l00024">CargoPodsEntityPlugin.java:24</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CargoPodsEntityPlugin_html_af768709505a6e6d8502614b043b61c9a"><div class="ttname"><a href="../../d6/d97/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CargoPodsEntityPlugin.html#af768709505a6e6d8502614b043b61c9a">com.fs.starfarer.api.impl.campaign.CargoPodsEntityPlugin.extraDays</a></div><div class="ttdeci">float extraDays</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dff/CargoPodsEntityPlugin_8java_source.html#l00026">CargoPodsEntityPlugin.java:26</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1GenericFieldItemManager_html_a7abf9957e66372e3f62e4bf2432fb097"><div class="ttname"><a href="../../db/d5a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1GenericFieldItemManager.html#a7abf9957e66372e3f62e4bf2432fb097">com.fs.starfarer.api.impl.campaign.GenericFieldItemManager.advance</a></div><div class="ttdeci">void advance(float amount)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d17/GenericFieldItemManager_8java_source.html#l00032">GenericFieldItemManager.java:32</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1GenericFieldItemManager_html_ad7f4d263421261f2242f226bd9d83df4"><div class="ttname"><a href="../../db/d5a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1GenericFieldItemManager.html#ad7f4d263421261f2242f226bd9d83df4">com.fs.starfarer.api.impl.campaign.GenericFieldItemManager.numPieces</a></div><div class="ttdeci">int numPieces</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d17/GenericFieldItemManager_8java_source.html#l00020">GenericFieldItemManager.java:20</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_a082c4b9255abb65f345d99bacb442258"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a082c4b9255abb65f345d99bacb442258">com.fs.starfarer.api.campaign.SectorEntityToken.getDetectedRangeMod</a></div><div class="ttdeci">StatBonus getDetectedRangeMod()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_a0dfd224c22bfc35f7dda6f8a1c913472"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a0dfd224c22bfc35f7dda6f8a1c913472">com.fs.starfarer.api.campaign.SectorEntityToken.isInCurrentLocation</a></div><div class="ttdeci">boolean isInCurrentLocation()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_a8d10997c36455c4f2caf02c76dfcbe5f"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a8d10997c36455c4f2caf02c76dfcbe5f">com.fs.starfarer.api.campaign.SectorEntityToken.getVisibilityLevelToPlayerFleet</a></div><div class="ttdeci">VisibilityLevel getVisibilityLevelToPlayerFleet()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac0644ce0c610b85e1d5844a489a7f92a" name="ac0644ce0c610b85e1d5844a489a7f92a"></a>
@@ -295,12 +253,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/dff/CargoPodsEntityPlugin_8java_source.html#l00014">14</a> of file <a class="el" href="../../df/dff/CargoPodsEntityPlugin_8java_source.html">CargoPodsEntityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   14</span>                                                            {</div>
-<div class="line"><span class="lineno">   15</span>        <span class="keywordtype">float</span> range = 500f + radius * 20f;</div>
-<div class="line"><span class="lineno">   16</span>        <span class="keywordflow">if</span> (range &gt; 2000) range = 2000;</div>
-<div class="line"><span class="lineno">   17</span>        <span class="keywordflow">return</span> range;</div>
-<div class="line"><span class="lineno">   18</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a406f2bd6e8db7b5077ad657574f95c0f" name="a406f2bd6e8db7b5077ad657574f95c0f"></a>
@@ -319,10 +272,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/dff/CargoPodsEntityPlugin_8java_source.html#l00127">127</a> of file <a class="el" href="../../df/dff/CargoPodsEntityPlugin_8java_source.html">CargoPodsEntityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  127</span>                               {</div>
-<div class="line"><span class="lineno">  128</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d6/d97/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CargoPodsEntityPlugin.html#a6956ac68a29113beb7c08e7bea283361">maxDays</a> + <a class="code hl_variable" href="../../d6/d97/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CargoPodsEntityPlugin.html#af768709505a6e6d8502614b043b61c9a">extraDays</a> - <a class="code hl_variable" href="../../d6/d97/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CargoPodsEntityPlugin.html#aee3c8e2b740fad623458562e28e1cebf">elapsed</a>;</div>
-<div class="line"><span class="lineno">  129</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae844208afe9619a9db7bc33c30b1fed1" name="ae844208afe9619a9db7bc33c30b1fed1"></a>
@@ -341,10 +291,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/dff/CargoPodsEntityPlugin_8java_source.html#l00132">132</a> of file <a class="el" href="../../df/dff/CargoPodsEntityPlugin_8java_source.html">CargoPodsEntityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  132</span>                              {</div>
-<div class="line"><span class="lineno">  133</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d6/d97/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CargoPodsEntityPlugin.html#aee3c8e2b740fad623458562e28e1cebf">elapsed</a>;</div>
-<div class="line"><span class="lineno">  134</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac2314b4b2a092be74bf05f95dde597ad" name="ac2314b4b2a092be74bf05f95dde597ad"></a>
@@ -363,10 +310,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/dff/CargoPodsEntityPlugin_8java_source.html#l00140">140</a> of file <a class="el" href="../../df/dff/CargoPodsEntityPlugin_8java_source.html">CargoPodsEntityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  140</span>                                {</div>
-<div class="line"><span class="lineno">  141</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d6/d97/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CargoPodsEntityPlugin.html#af768709505a6e6d8502614b043b61c9a">extraDays</a>;</div>
-<div class="line"><span class="lineno">  142</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab1442722240f881d252e7351a6dd6e13" name="ab1442722240f881d252e7351a6dd6e13"></a>
@@ -388,11 +332,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d5/d0a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html#a2ff76afdc7888a756f8bbfd3f4f7188b">com.fs.starfarer.api.impl.campaign.BaseCustomEntityPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/dff/CargoPodsEntityPlugin_8java_source.html#l00111">111</a> of file <a class="el" href="../../df/dff/CargoPodsEntityPlugin_8java_source.html">CargoPodsEntityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  111</span>                                  {</div>
-<div class="line"><span class="lineno">  112</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d5/d0a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html#a4de611a62107d116dd5d3e8bc980fa6a">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a6a79c7cc3a0ec97f24a9de5f6f904d96">getRadius</a>() + 100f;</div>
-<div class="line"><span class="lineno">  113</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_a6a79c7cc3a0ec97f24a9de5f6f904d96"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a6a79c7cc3a0ec97f24a9de5f6f904d96">com.fs.starfarer.api.campaign.SectorEntityToken.getRadius</a></div><div class="ttdeci">float getRadius()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab13e7f5d9140ba4f3b9c0d75904c5ec9" name="ab13e7f5d9140ba4f3b9c0d75904c5ec9"></a>
@@ -424,18 +364,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d5/d0a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html#aaca3cf8779de8f9fdbde9d5f29e4273a">com.fs.starfarer.api.impl.campaign.BaseCustomEntityPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/dff/CargoPodsEntityPlugin_8java_source.html#l00029">29</a> of file <a class="el" href="../../df/dff/CargoPodsEntityPlugin_8java_source.html">CargoPodsEntityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   29</span>                                                                    {</div>
-<div class="line"><span class="lineno">   30</span>        super.init(<a class="code hl_variable" href="../../d5/d0a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html#a4de611a62107d116dd5d3e8bc980fa6a">entity</a>, pluginParams);</div>
-<div class="line"><span class="lineno">   31</span>        <a class="code hl_variable" href="../../d5/d0a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html#a4de611a62107d116dd5d3e8bc980fa6a">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a1cb74ad75d238a1c600ece5ded5cc4d9">setDetectionRangeDetailsOverrideMult</a>(0.5f);</div>
-<div class="line"><span class="lineno">   32</span>        <span class="comment">//this.entity = (CustomCampaignEntityAPI) entity;</span></div>
-<div class="line"><span class="lineno">   33</span>        readResolve();</div>
-<div class="line"><span class="lineno">   34</span>        </div>
-<div class="line"><span class="lineno">   35</span><span class="comment">//      entity.getMemoryWithoutUpdate().set(&quot;$locked&quot;, true);</span></div>
-<div class="line"><span class="lineno">   36</span><span class="comment">//      entity.getMemoryWithoutUpdate().set(&quot;$canUnlock&quot;, true);</span></div>
-<div class="line"><span class="lineno">   37</span><span class="comment">//      entity.getMemoryWithoutUpdate().set(&quot;$trapped&quot;, true);</span></div>
-<div class="line"><span class="lineno">   38</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_a1cb74ad75d238a1c600ece5ded5cc4d9"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a1cb74ad75d238a1c600ece5ded5cc4d9">com.fs.starfarer.api.campaign.SectorEntityToken.setDetectionRangeDetailsOverrideMult</a></div><div class="ttdeci">void setDetectionRangeDetailsOverrideMult(Float detectionRangeDetailsOverrideMult)</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aee204ff45e3c5f82a5e6f44b1998450f" name="aee204ff45e3c5f82a5e6f44b1998450f"></a>
@@ -454,10 +383,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/dff/CargoPodsEntityPlugin_8java_source.html#l00123">123</a> of file <a class="el" href="../../df/dff/CargoPodsEntityPlugin_8java_source.html">CargoPodsEntityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  123</span>                                   {</div>
-<div class="line"><span class="lineno">  124</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d6/d97/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CargoPodsEntityPlugin.html#a868136e4b0a6d58d5a2d3254c1cb6f41">neverExpire</a> != <span class="keyword">null</span> &amp;&amp; <a class="code hl_variable" href="../../d6/d97/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CargoPodsEntityPlugin.html#a868136e4b0a6d58d5a2d3254c1cb6f41">neverExpire</a>;</div>
-<div class="line"><span class="lineno">  125</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2adc6f547f72bef4fd8b118232d50934" name="a2adc6f547f72bef4fd8b118232d50934"></a>
@@ -499,11 +425,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d5/d0a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html#abd301a7a5a32dda9f4166c3e11e036f4">com.fs.starfarer.api.impl.campaign.BaseCustomEntityPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/dff/CargoPodsEntityPlugin_8java_source.html#l00115">115</a> of file <a class="el" href="../../df/dff/CargoPodsEntityPlugin_8java_source.html">CargoPodsEntityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  115</span>                                                                         {</div>
-<div class="line"><span class="lineno">  116</span>        <a class="code hl_variable" href="../../d6/d97/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CargoPodsEntityPlugin.html#a977902fea2999fb0ff9b23ebea04b9a2">manager</a>.<a class="code hl_function" href="../../db/d5a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1GenericFieldItemManager.html#a70857efba109798f22125b6dd5bffbc3">render</a>(layer, viewport);</div>
-<div class="line"><span class="lineno">  117</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1GenericFieldItemManager_html_a70857efba109798f22125b6dd5bffbc3"><div class="ttname"><a href="../../db/d5a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1GenericFieldItemManager.html#a70857efba109798f22125b6dd5bffbc3">com.fs.starfarer.api.impl.campaign.GenericFieldItemManager.render</a></div><div class="ttdeci">void render(CampaignEngineLayers layer, ViewportAPI viewport)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d17/GenericFieldItemManager_8java_source.html#l00057">GenericFieldItemManager.java:57</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a4591d0bff6b9e486119b4996af1c0265" name="a4591d0bff6b9e486119b4996af1c0265"></a>
@@ -523,10 +445,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/dff/CargoPodsEntityPlugin_8java_source.html#l00136">136</a> of file <a class="el" href="../../df/dff/CargoPodsEntityPlugin_8java_source.html">CargoPodsEntityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  136</span>                                          {</div>
-<div class="line"><span class="lineno">  137</span>        this.elapsed = <a class="code hl_variable" href="../../d6/d97/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CargoPodsEntityPlugin.html#aee3c8e2b740fad623458562e28e1cebf">elapsed</a>;</div>
-<div class="line"><span class="lineno">  138</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae193576a7548edd021c33c9bc922385f" name="ae193576a7548edd021c33c9bc922385f"></a>
@@ -546,10 +465,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/dff/CargoPodsEntityPlugin_8java_source.html#l00144">144</a> of file <a class="el" href="../../df/dff/CargoPodsEntityPlugin_8java_source.html">CargoPodsEntityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  144</span>                                              {</div>
-<div class="line"><span class="lineno">  145</span>        this.extraDays = <a class="code hl_variable" href="../../d6/d97/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CargoPodsEntityPlugin.html#af768709505a6e6d8502614b043b61c9a">extraDays</a>;</div>
-<div class="line"><span class="lineno">  146</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="abf37887338bd245214ff9c5bbb4e6e4b" name="abf37887338bd245214ff9c5bbb4e6e4b"></a>
@@ -569,10 +485,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/dff/CargoPodsEntityPlugin_8java_source.html#l00119">119</a> of file <a class="el" href="../../df/dff/CargoPodsEntityPlugin_8java_source.html">CargoPodsEntityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  119</span>                                                    {</div>
-<div class="line"><span class="lineno">  120</span>        this.neverExpire = <a class="code hl_variable" href="../../d6/d97/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CargoPodsEntityPlugin.html#a868136e4b0a6d58d5a2d3254c1cb6f41">neverExpire</a>;</div>
-<div class="line"><span class="lineno">  121</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae708db5811de791891c8c16b525f122d" name="ae708db5811de791891c8c16b525f122d"></a>
@@ -591,41 +504,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/dff/CargoPodsEntityPlugin_8java_source.html#l00082">82</a> of file <a class="el" href="../../df/dff/CargoPodsEntityPlugin_8java_source.html">CargoPodsEntityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   82</span>                                    {</div>
-<div class="line"><span class="lineno">   83</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d5/d0a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html#a4de611a62107d116dd5d3e8bc980fa6a">entity</a> == <span class="keyword">null</span> || <a class="code hl_variable" href="../../d5/d0a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html#a4de611a62107d116dd5d3e8bc980fa6a">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#ab219cada372a13654e8e912aba977b05">getCargo</a>() == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   84</span>        </div>
-<div class="line"><span class="lineno">   85</span>        <span class="keywordtype">float</span> totalCapacity = <a class="code hl_variable" href="../../d5/d0a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html#a4de611a62107d116dd5d3e8bc980fa6a">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#ab219cada372a13654e8e912aba977b05">getCargo</a>().<a class="code hl_function" href="../../dc/d7b/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#ad11d0b08c583dfeab82e18d11c3e9040">getSpaceUsed</a>() + </div>
-<div class="line"><span class="lineno">   86</span>                              <a class="code hl_variable" href="../../d5/d0a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html#a4de611a62107d116dd5d3e8bc980fa6a">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#ab219cada372a13654e8e912aba977b05">getCargo</a>().<a class="code hl_function" href="../../dc/d7b/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a97474623007a342af2bedf0d00d2ccfb">getFuel</a>() + </div>
-<div class="line"><span class="lineno">   87</span>                              <a class="code hl_variable" href="../../d5/d0a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html#a4de611a62107d116dd5d3e8bc980fa6a">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#ab219cada372a13654e8e912aba977b05">getCargo</a>().<a class="code hl_function" href="../../dc/d7b/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a37be48e3c5ba6c70188e762d34669c35">getTotalPersonnel</a>();</div>
-<div class="line"><span class="lineno">   88</span> </div>
-<div class="line"><span class="lineno">   89</span>        <span class="keywordtype">int</span> minPieces = 5;</div>
-<div class="line"><span class="lineno">   90</span>        <span class="keywordtype">int</span> numPieces = (int) (Math.sqrt(totalCapacity) / 1);</div>
-<div class="line"><span class="lineno">   91</span>        <span class="keywordflow">if</span> (numPieces &lt; minPieces) numPieces = minPieces;</div>
-<div class="line"><span class="lineno">   92</span>        <span class="keywordflow">if</span> (numPieces &gt; 40) numPieces = 40;</div>
-<div class="line"><span class="lineno">   93</span> </div>
-<div class="line"><span class="lineno">   94</span>        <span class="keywordtype">boolean</span> cryo = <a class="code hl_variable" href="../../d5/d0a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html#a4de611a62107d116dd5d3e8bc980fa6a">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#ab219cada372a13654e8e912aba977b05">getCargo</a>().<a class="code hl_function" href="../../dc/d7b/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a37be48e3c5ba6c70188e762d34669c35">getTotalPersonnel</a>() &gt; <a class="code hl_variable" href="../../d5/d0a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html#a4de611a62107d116dd5d3e8bc980fa6a">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#ab219cada372a13654e8e912aba977b05">getCargo</a>().<a class="code hl_function" href="../../dc/d7b/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#ad11d0b08c583dfeab82e18d11c3e9040">getSpaceUsed</a>() + <a class="code hl_variable" href="../../d5/d0a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html#a4de611a62107d116dd5d3e8bc980fa6a">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#ab219cada372a13654e8e912aba977b05">getCargo</a>().<a class="code hl_function" href="../../dc/d7b/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a97474623007a342af2bedf0d00d2ccfb">getFuel</a>();</div>
-<div class="line"><span class="lineno">   95</span>        <span class="keywordflow">if</span> (cryo) {</div>
-<div class="line"><span class="lineno">   96</span>            <a class="code hl_variable" href="../../d5/d0a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html#a4de611a62107d116dd5d3e8bc980fa6a">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#aecb42f886bd832f9a183baf4b571977f">setCustomDescriptionId</a>(<span class="stringliteral">&quot;cryopods&quot;</span>);</div>
-<div class="line"><span class="lineno">   97</span>            <a class="code hl_variable" href="../../d5/d0a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html#a4de611a62107d116dd5d3e8bc980fa6a">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a9059f0979785fd2dba5333236367f3e3">setName</a>(<span class="stringliteral">&quot;Cryo Pods&quot;</span>);</div>
-<div class="line"><span class="lineno">   98</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   99</span>            <a class="code hl_variable" href="../../d5/d0a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html#a4de611a62107d116dd5d3e8bc980fa6a">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#aecb42f886bd832f9a183baf4b571977f">setCustomDescriptionId</a>(Entities.CARGO_PODS);</div>
-<div class="line"><span class="lineno">  100</span>            <a class="code hl_variable" href="../../d5/d0a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html#a4de611a62107d116dd5d3e8bc980fa6a">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a9059f0979785fd2dba5333236367f3e3">setName</a>(<span class="stringliteral">&quot;Cargo Pods&quot;</span>);</div>
-<div class="line"><span class="lineno">  101</span>        }</div>
-<div class="line"><span class="lineno">  102</span> </div>
-<div class="line"><span class="lineno">  103</span>        manager.numPieces = numPieces;</div>
-<div class="line"><span class="lineno">  104</span>        </div>
-<div class="line"><span class="lineno">  105</span>        <span class="keywordtype">float</span> radius = 10f + 10f * (float) Math.sqrt(<a class="code hl_variable" href="../../d6/d97/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CargoPodsEntityPlugin.html#a977902fea2999fb0ff9b23ebea04b9a2">manager</a>.<a class="code hl_variable" href="../../db/d5a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1GenericFieldItemManager.html#ad7f4d263421261f2242f226bd9d83df4">numPieces</a> - (minPieces - 1));</div>
-<div class="line"><span class="lineno">  106</span>        ((CustomCampaignEntityAPI)<a class="code hl_variable" href="../../d5/d0a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html#a4de611a62107d116dd5d3e8bc980fa6a">entity</a>).setRadius(radius);</div>
-<div class="line"><span class="lineno">  107</span> </div>
-<div class="line"><span class="lineno">  108</span>        <a class="code hl_variable" href="../../d6/d97/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CargoPodsEntityPlugin.html#a6956ac68a29113beb7c08e7bea283361">maxDays</a> = 5f + (numPieces - minPieces);</div>
-<div class="line"><span class="lineno">  109</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI_html_a37be48e3c5ba6c70188e762d34669c35"><div class="ttname"><a href="../../dc/d7b/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a37be48e3c5ba6c70188e762d34669c35">com.fs.starfarer.api.campaign.CargoAPI.getTotalPersonnel</a></div><div class="ttdeci">int getTotalPersonnel()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI_html_a97474623007a342af2bedf0d00d2ccfb"><div class="ttname"><a href="../../dc/d7b/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a97474623007a342af2bedf0d00d2ccfb">com.fs.starfarer.api.campaign.CargoAPI.getFuel</a></div><div class="ttdeci">float getFuel()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI_html_ad11d0b08c583dfeab82e18d11c3e9040"><div class="ttname"><a href="../../dc/d7b/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#ad11d0b08c583dfeab82e18d11c3e9040">com.fs.starfarer.api.campaign.CargoAPI.getSpaceUsed</a></div><div class="ttdeci">float getSpaceUsed()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_a9059f0979785fd2dba5333236367f3e3"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a9059f0979785fd2dba5333236367f3e3">com.fs.starfarer.api.campaign.SectorEntityToken.setName</a></div><div class="ttdeci">void setName(String name)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_ab219cada372a13654e8e912aba977b05"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#ab219cada372a13654e8e912aba977b05">com.fs.starfarer.api.campaign.SectorEntityToken.getCargo</a></div><div class="ttdeci">CargoAPI getCargo()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_aecb42f886bd832f9a183baf4b571977f"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#aecb42f886bd832f9a183baf4b571977f">com.fs.starfarer.api.campaign.SectorEntityToken.setCustomDescriptionId</a></div><div class="ttdeci">void setCustomDescriptionId(String customDescriptionId)</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

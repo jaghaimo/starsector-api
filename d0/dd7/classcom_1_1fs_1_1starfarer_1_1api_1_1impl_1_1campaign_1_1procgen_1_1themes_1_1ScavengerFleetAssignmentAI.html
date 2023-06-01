@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -286,14 +287,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d5a/ScavengerFleetAssignmentAI_8java_source.html#l00026">26</a> of file <a class="el" href="../../d4/d5a/ScavengerFleetAssignmentAI_8java_source.html">ScavengerFleetAssignmentAI.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   26</span>                                                                                               {</div>
-<div class="line"><span class="lineno">   27</span>        super(<a class="code hl_variable" href="../../d4/d1d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseAssignmentAI.html#a96fc86996c04db66a9691482293ce2d7">fleet</a>, <a class="code hl_variable" href="../../d3/d55/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RouteFleetAssignmentAI.html#a5dcb74ef0726bd260a6a30ef97626635">route</a>);</div>
-<div class="line"><span class="lineno">   28</span>        this.pirate = <a class="code hl_variable" href="../../d0/dd7/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1ScavengerFleetAssignmentAI.html#a7e13e8076035ea48c60f34f59858c0a4">pirate</a>;</div>
-<div class="line"><span class="lineno">   29</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseAssignmentAI_html_a96fc86996c04db66a9691482293ce2d7"><div class="ttname"><a href="../../d4/d1d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseAssignmentAI.html#a96fc86996c04db66a9691482293ce2d7">com.fs.starfarer.api.impl.campaign.procgen.themes.BaseAssignmentAI.fleet</a></div><div class="ttdeci">CampaignFleetAPI fleet</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dd7/BaseAssignmentAI_8java_source.html#l00042">BaseAssignmentAI.java:42</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RouteFleetAssignmentAI_html_a5dcb74ef0726bd260a6a30ef97626635"><div class="ttname"><a href="../../d3/d55/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RouteFleetAssignmentAI.html#a5dcb74ef0726bd260a6a30ef97626635">com.fs.starfarer.api.impl.campaign.procgen.themes.RouteFleetAssignmentAI.route</a></div><div class="ttdeci">RouteData route</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d3c/RouteFleetAssignmentAI_8java_source.html#l00029">RouteFleetAssignmentAI.java:29</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1ScavengerFleetAssignmentAI_html_a7e13e8076035ea48c60f34f59858c0a4"><div class="ttname"><a href="../../d0/dd7/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1ScavengerFleetAssignmentAI.html#a7e13e8076035ea48c60f34f59858c0a4">com.fs.starfarer.api.impl.campaign.procgen.themes.ScavengerFleetAssignmentAI.pirate</a></div><div class="ttdeci">boolean pirate</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d5a/ScavengerFleetAssignmentAI_8java_source.html#l00024">ScavengerFleetAssignmentAI.java:24</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -334,41 +328,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/d55/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RouteFleetAssignmentAI.html#aa82616b698530234868369ca601cd1e9">com.fs.starfarer.api.impl.campaign.procgen.themes.RouteFleetAssignmentAI</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d5a/ScavengerFleetAssignmentAI_8java_source.html#l00047">47</a> of file <a class="el" href="../../d4/d5a/ScavengerFleetAssignmentAI_8java_source.html">ScavengerFleetAssignmentAI.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   47</span>                                                                                 {</div>
-<div class="line"><span class="lineno">   48</span>        <span class="comment">//boolean pickSpecificEntity = (float) Math.random() &gt; 0.2f &amp;&amp; segment.systemFrom instanceof StarSystemAPI;</span></div>
-<div class="line"><span class="lineno">   49</span>        <span class="keywordtype">boolean</span> pickSpecificEntity = (float) Math.random() &gt; 0.2f &amp;&amp; !segment.from.getContainingLocation().isHyperspace();</div>
-<div class="line"><span class="lineno">   50</span>        <span class="keywordflow">if</span> (pickSpecificEntity) {</div>
-<div class="line"><span class="lineno">   51</span>            SectorEntityToken target = RemnantSeededFleetManager.pickEntityToGuard(<span class="keyword">new</span> Random(), (StarSystemAPI) segment.from.getContainingLocation(), <a class="code hl_variable" href="../../d4/d1d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseAssignmentAI.html#a96fc86996c04db66a9691482293ce2d7">fleet</a>);</div>
-<div class="line"><span class="lineno">   52</span>            <span class="keywordflow">if</span> (target != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   53</span>                <span class="keywordflow">if</span> (justSpawned) {</div>
-<div class="line"><span class="lineno">   54</span>                    Vector2f loc = Misc.getPointAtRadius(<span class="keyword">new</span> Vector2f(target.getLocation()), 500);</div>
-<div class="line"><span class="lineno">   55</span>                    <a class="code hl_variable" href="../../d4/d1d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseAssignmentAI.html#a96fc86996c04db66a9691482293ce2d7">fleet</a>.<a class="code hl_function" href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#ace05f3858a77d9f164ed7fc24590440f">setLocation</a>(loc.x, loc.y);</div>
-<div class="line"><span class="lineno">   56</span>                }</div>
-<div class="line"><span class="lineno">   57</span>                </div>
-<div class="line"><span class="lineno">   58</span>                <span class="keywordtype">float</span> speed = Misc.getSpeedForBurnLevel(8);</div>
-<div class="line"><span class="lineno">   59</span>                <span class="keywordtype">float</span> dist = Misc.getDistance(<a class="code hl_variable" href="../../d4/d1d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseAssignmentAI.html#a96fc86996c04db66a9691482293ce2d7">fleet</a>.<a class="code hl_function" href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a059da851c050a5b1c104809f4e700bef">getLocation</a>(), target.getLocation());</div>
-<div class="line"><span class="lineno">   60</span>                <span class="keywordtype">float</span> seconds = dist / speed;</div>
-<div class="line"><span class="lineno">   61</span>                <span class="keywordtype">float</span> days = seconds / Global.getSector().getClock().getSecondsPerDay();</div>
-<div class="line"><span class="lineno">   62</span>                days += 5f + 5f * (float) Math.random();</div>
-<div class="line"><span class="lineno">   63</span>                <a class="code hl_variable" href="../../d4/d1d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseAssignmentAI.html#a96fc86996c04db66a9691482293ce2d7">fleet</a>.<a class="code hl_function" href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#ac2560f0dc107b3b3a8fa3f6935243681">addAssignment</a>(FleetAssignment.PATROL_SYSTEM, target, days, <span class="stringliteral">&quot;investigating&quot;</span>);</div>
-<div class="line"><span class="lineno">   64</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   65</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   66</span>                <span class="keywordflow">if</span> (justSpawned) {</div>
-<div class="line"><span class="lineno">   67</span>                    Vector2f loc = Misc.getPointAtRadius(<span class="keyword">new</span> Vector2f(), 8000);</div>
-<div class="line"><span class="lineno">   68</span>                    <a class="code hl_variable" href="../../d4/d1d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseAssignmentAI.html#a96fc86996c04db66a9691482293ce2d7">fleet</a>.<a class="code hl_function" href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#ace05f3858a77d9f164ed7fc24590440f">setLocation</a>(loc.x, loc.y);</div>
-<div class="line"><span class="lineno">   69</span>                }</div>
-<div class="line"><span class="lineno">   70</span>                </div>
-<div class="line"><span class="lineno">   71</span>                <span class="keywordtype">float</span> days = 5f + 5f * (float) Math.random();</div>
-<div class="line"><span class="lineno">   72</span>                <a class="code hl_variable" href="../../d4/d1d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseAssignmentAI.html#a96fc86996c04db66a9691482293ce2d7">fleet</a>.<a class="code hl_function" href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#ac2560f0dc107b3b3a8fa3f6935243681">addAssignment</a>(FleetAssignment.PATROL_SYSTEM, <span class="keyword">null</span>, days, <span class="stringliteral">&quot;exploring&quot;</span>);</div>
-<div class="line"><span class="lineno">   73</span>            }</div>
-<div class="line"><span class="lineno">   74</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   75</span>            super.addLocalAssignment(segment, justSpawned);</div>
-<div class="line"><span class="lineno">   76</span>        }</div>
-<div class="line"><span class="lineno">   77</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI_html_a059da851c050a5b1c104809f4e700bef"><div class="ttname"><a href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a059da851c050a5b1c104809f4e700bef">com.fs.starfarer.api.campaign.CampaignFleetAPI.getLocation</a></div><div class="ttdeci">Vector2f getLocation()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI_html_ac2560f0dc107b3b3a8fa3f6935243681"><div class="ttname"><a href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#ac2560f0dc107b3b3a8fa3f6935243681">com.fs.starfarer.api.campaign.CampaignFleetAPI.addAssignment</a></div><div class="ttdeci">void addAssignment(FleetAssignment assignment, SectorEntityToken target, float maxDurationInDays)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI_html_ace05f3858a77d9f164ed7fc24590440f"><div class="ttname"><a href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#ace05f3858a77d9f164ed7fc24590440f">com.fs.starfarer.api.campaign.CampaignFleetAPI.setLocation</a></div><div class="ttdeci">void setLocation(float x, float y)</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a46a12d800365adb6b31678b96b90b24c" name="a46a12d800365adb6b31678b96b90b24c"></a>
@@ -396,21 +356,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/d55/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RouteFleetAssignmentAI.html#abe2f2dd575e5a04719f49f674414f85a">com.fs.starfarer.api.impl.campaign.procgen.themes.RouteFleetAssignmentAI</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d5a/ScavengerFleetAssignmentAI_8java_source.html#l00081">81</a> of file <a class="el" href="../../d4/d5a/ScavengerFleetAssignmentAI_8java_source.html">ScavengerFleetAssignmentAI.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   81</span>                                      {</div>
-<div class="line"><span class="lineno">   82</span>        super.advance(amount);</div>
-<div class="line"><span class="lineno">   83</span>        </div>
-<div class="line"><span class="lineno">   84</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d0/dd7/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1ScavengerFleetAssignmentAI.html#a7e13e8076035ea48c60f34f59858c0a4">pirate</a>) {</div>
-<div class="line"><span class="lineno">   85</span>            <span class="keywordtype">float</span> days = Global.getSector().getClock().convertToDays(amount);</div>
-<div class="line"><span class="lineno">   86</span>            <a class="code hl_variable" href="../../d0/dd7/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1ScavengerFleetAssignmentAI.html#a69e260e7f1670f901f6e6d1b9252968e">piracyCheck</a>.<a class="code hl_function" href="../../da/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html#a61881d44415cda2c50c3354c3f0a4d8a">advance</a>(days);</div>
-<div class="line"><span class="lineno">   87</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d0/dd7/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1ScavengerFleetAssignmentAI.html#a69e260e7f1670f901f6e6d1b9252968e">piracyCheck</a>.intervalElapsed()) {</div>
-<div class="line"><span class="lineno">   88</span>                <a class="code hl_function" href="../../d0/dd7/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1ScavengerFleetAssignmentAI.html#adb22863cffef65675c9aae5aa493c70a">doPiracyCheck</a>();</div>
-<div class="line"><span class="lineno">   89</span>            }</div>
-<div class="line"><span class="lineno">   90</span>        }</div>
-<div class="line"><span class="lineno">   91</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1ScavengerFleetAssignmentAI_html_a69e260e7f1670f901f6e6d1b9252968e"><div class="ttname"><a href="../../d0/dd7/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1ScavengerFleetAssignmentAI.html#a69e260e7f1670f901f6e6d1b9252968e">com.fs.starfarer.api.impl.campaign.procgen.themes.ScavengerFleetAssignmentAI.piracyCheck</a></div><div class="ttdeci">IntervalUtil piracyCheck</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d5a/ScavengerFleetAssignmentAI_8java_source.html#l00025">ScavengerFleetAssignmentAI.java:25</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1ScavengerFleetAssignmentAI_html_adb22863cffef65675c9aae5aa493c70a"><div class="ttname"><a href="../../d0/dd7/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1ScavengerFleetAssignmentAI.html#adb22863cffef65675c9aae5aa493c70a">com.fs.starfarer.api.impl.campaign.procgen.themes.ScavengerFleetAssignmentAI.doPiracyCheck</a></div><div class="ttdeci">void doPiracyCheck()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d5a/ScavengerFleetAssignmentAI_8java_source.html#l00093">ScavengerFleetAssignmentAI.java:93</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil_html_a61881d44415cda2c50c3354c3f0a4d8a"><div class="ttname"><a href="../../da/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html#a61881d44415cda2c50c3354c3f0a4d8a">com.fs.starfarer.api.util.IntervalUtil.advance</a></div><div class="ttdeci">void advance(float amount)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de3/IntervalUtil_8java_source.html#l00039">IntervalUtil.java:39</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="adb22863cffef65675c9aae5aa493c70a" name="adb22863cffef65675c9aae5aa493c70a"></a>
@@ -437,64 +383,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d5a/ScavengerFleetAssignmentAI_8java_source.html#l00093">93</a> of file <a class="el" href="../../d4/d5a/ScavengerFleetAssignmentAI_8java_source.html">ScavengerFleetAssignmentAI.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   93</span>                                   {</div>
-<div class="line"><span class="lineno">   94</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d4/d1d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseAssignmentAI.html#a96fc86996c04db66a9691482293ce2d7">fleet</a>.<a class="code hl_function" href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#ab4d48b3ff75e9432c85c3b510dba7aab">getBattle</a>() != <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   95</span>        </div>
-<div class="line"><span class="lineno">   96</span>        </div>
-<div class="line"><span class="lineno">   97</span>        <span class="keywordtype">boolean</span> isCurrentlyPirate = <a class="code hl_variable" href="../../d4/d1d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseAssignmentAI.html#a96fc86996c04db66a9691482293ce2d7">fleet</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#afb72bc74f75ccbbf240564b26b94e17b">getFaction</a>().<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a7edcdc203f5ab26478e89e5d31e3bf85">getId</a>().equals(Factions.PIRATES);</div>
-<div class="line"><span class="lineno">   98</span>        </div>
-<div class="line"><span class="lineno">   99</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d4/d1d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseAssignmentAI.html#a96fc86996c04db66a9691482293ce2d7">fleet</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#af3dc3601bdcdbcf6f8c28034f2c1125c">isTransponderOn</a>() &amp;&amp; !isCurrentlyPirate) {</div>
-<div class="line"><span class="lineno">  100</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  101</span>        }</div>
-<div class="line"><span class="lineno">  102</span>        </div>
-<div class="line"><span class="lineno">  103</span>        <span class="keywordflow">if</span> (isCurrentlyPirate) {</div>
-<div class="line"><span class="lineno">  104</span>            List&lt;CampaignFleetAPI&gt; visible = Misc.getVisibleFleets(<a class="code hl_variable" href="../../d4/d1d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseAssignmentAI.html#a96fc86996c04db66a9691482293ce2d7">fleet</a>, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  105</span>            <span class="keywordflow">if</span> (visible.isEmpty()) {</div>
-<div class="line"><span class="lineno">  106</span>                <a class="code hl_variable" href="../../d4/d1d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseAssignmentAI.html#a96fc86996c04db66a9691482293ce2d7">fleet</a>.<a class="code hl_function" href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a4d56a49fb30b82f2e444f4764fc0ae17">setFaction</a>(Factions.INDEPENDENT, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  107</span>                Misc.clearTarget(<a class="code hl_variable" href="../../d4/d1d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseAssignmentAI.html#a96fc86996c04db66a9691482293ce2d7">fleet</a>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  108</span>            }</div>
-<div class="line"><span class="lineno">  109</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  110</span>        }</div>
-<div class="line"><span class="lineno">  111</span>        </div>
-<div class="line"><span class="lineno">  112</span>        List&lt;CampaignFleetAPI&gt; visible = Misc.getVisibleFleets(<a class="code hl_variable" href="../../d4/d1d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseAssignmentAI.html#a96fc86996c04db66a9691482293ce2d7">fleet</a>, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  113</span>        <span class="keywordflow">if</span> (visible.size() == 1) {</div>
-<div class="line"><span class="lineno">  114</span>            <span class="keywordtype">int</span> weakerCount = 0;</div>
-<div class="line"><span class="lineno">  115</span>            <span class="keywordflow">for</span> (CampaignFleetAPI other : visible) {</div>
-<div class="line"><span class="lineno">  116</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d4/d1d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseAssignmentAI.html#a96fc86996c04db66a9691482293ce2d7">fleet</a>.<a class="code hl_function" href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a33bfcfbc5371e5c5736058a57ac8c7ad">getAI</a>() != <span class="keyword">null</span> &amp;&amp; </div>
-<div class="line"><span class="lineno">  117</span>                        Global.getSector().getFaction(Factions.PIRATES).<a class="code hl_function" href="../../d4/d22/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1CampaignFleetAIAPI.html#a5da3f4e6f96cbc957d5e6df8753665f0">isHostileTo</a>(other.getFaction())) {</div>
-<div class="line"><span class="lineno">  118</span>                    EncounterOption option = <a class="code hl_variable" href="../../d4/d1d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseAssignmentAI.html#a96fc86996c04db66a9691482293ce2d7">fleet</a>.<a class="code hl_function" href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a33bfcfbc5371e5c5736058a57ac8c7ad">getAI</a>().<a class="code hl_function" href="../../d4/d22/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1CampaignFleetAIAPI.html#a22eea3515c1764e2b5b84b320bdf9fcc">pickEncounterOption</a>(<span class="keyword">null</span>, other, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  119</span>                    <span class="keywordflow">if</span> (option == EncounterOption.ENGAGE || option == EncounterOption.HOLD) {</div>
-<div class="line"><span class="lineno">  120</span>                        <span class="keywordtype">float</span> dist = Misc.getDistance(<a class="code hl_variable" href="../../d4/d1d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseAssignmentAI.html#a96fc86996c04db66a9691482293ce2d7">fleet</a>.<a class="code hl_function" href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a059da851c050a5b1c104809f4e700bef">getLocation</a>(), other.getLocation());</div>
-<div class="line"><span class="lineno">  121</span>                        VisibilityLevel level = other.getVisibilityLevelTo(<a class="code hl_variable" href="../../d4/d1d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseAssignmentAI.html#a96fc86996c04db66a9691482293ce2d7">fleet</a>);</div>
-<div class="line"><span class="lineno">  122</span>                        <span class="keywordtype">boolean</span> seesComp = level == VisibilityLevel.COMPOSITION_AND_FACTION_DETAILS ||</div>
-<div class="line"><span class="lineno">  123</span>                                           level == VisibilityLevel.COMPOSITION_DETAILS;</div>
-<div class="line"><span class="lineno">  124</span>                        <span class="keywordflow">if</span> (dist &lt; 800f &amp;&amp; seesComp) {</div>
-<div class="line"><span class="lineno">  125</span>                            weakerCount++;</div>
-<div class="line"><span class="lineno">  126</span>                        }</div>
-<div class="line"><span class="lineno">  127</span>                    }</div>
-<div class="line"><span class="lineno">  128</span>                }</div>
-<div class="line"><span class="lineno">  129</span>            }</div>
-<div class="line"><span class="lineno">  130</span>        </div>
-<div class="line"><span class="lineno">  131</span>            <span class="keywordflow">if</span> (weakerCount == 1) {</div>
-<div class="line"><span class="lineno">  132</span>                <a class="code hl_variable" href="../../d4/d1d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseAssignmentAI.html#a96fc86996c04db66a9691482293ce2d7">fleet</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#adcd558c1d95f9755066ddaf9a77311c1">getMemoryWithoutUpdate</a>().<a class="code hl_function" href="../../d0/de7/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html#aacefa8e06571ecfc9a37897cbb61d2cf">set</a>(MemFlags.MEMORY_KEY_PIRATE, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  133</span>                <a class="code hl_variable" href="../../d4/d1d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseAssignmentAI.html#a96fc86996c04db66a9691482293ce2d7">fleet</a>.<a class="code hl_function" href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#abbac63a951c857e659eb8a52d6a27167">setNoFactionInName</a>(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  134</span>                <a class="code hl_variable" href="../../d4/d1d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseAssignmentAI.html#a96fc86996c04db66a9691482293ce2d7">fleet</a>.<a class="code hl_function" href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a4d56a49fb30b82f2e444f4764fc0ae17">setFaction</a>(Factions.PIRATES, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  135</span>            }</div>
-<div class="line"><span class="lineno">  136</span>        }</div>
-<div class="line"><span class="lineno">  137</span>        </div>
-<div class="line"><span class="lineno">  138</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI_html_a33bfcfbc5371e5c5736058a57ac8c7ad"><div class="ttname"><a href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a33bfcfbc5371e5c5736058a57ac8c7ad">com.fs.starfarer.api.campaign.CampaignFleetAPI.getAI</a></div><div class="ttdeci">CampaignFleetAIAPI getAI()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI_html_a4d56a49fb30b82f2e444f4764fc0ae17"><div class="ttname"><a href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a4d56a49fb30b82f2e444f4764fc0ae17">com.fs.starfarer.api.campaign.CampaignFleetAPI.setFaction</a></div><div class="ttdeci">void setFaction(String factionId, boolean includeCaptains)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI_html_ab4d48b3ff75e9432c85c3b510dba7aab"><div class="ttname"><a href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#ab4d48b3ff75e9432c85c3b510dba7aab">com.fs.starfarer.api.campaign.CampaignFleetAPI.getBattle</a></div><div class="ttdeci">BattleAPI getBattle()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI_html_abbac63a951c857e659eb8a52d6a27167"><div class="ttname"><a href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#abbac63a951c857e659eb8a52d6a27167">com.fs.starfarer.api.campaign.CampaignFleetAPI.setNoFactionInName</a></div><div class="ttdeci">void setNoFactionInName(boolean noFactionInName)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI_html_a7edcdc203f5ab26478e89e5d31e3bf85"><div class="ttname"><a href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a7edcdc203f5ab26478e89e5d31e3bf85">com.fs.starfarer.api.campaign.FactionAPI.getId</a></div><div class="ttdeci">String getId()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_adcd558c1d95f9755066ddaf9a77311c1"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#adcd558c1d95f9755066ddaf9a77311c1">com.fs.starfarer.api.campaign.SectorEntityToken.getMemoryWithoutUpdate</a></div><div class="ttdeci">MemoryAPI getMemoryWithoutUpdate()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_af3dc3601bdcdbcf6f8c28034f2c1125c"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#af3dc3601bdcdbcf6f8c28034f2c1125c">com.fs.starfarer.api.campaign.SectorEntityToken.isTransponderOn</a></div><div class="ttdeci">boolean isTransponderOn()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_afb72bc74f75ccbbf240564b26b94e17b"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#afb72bc74f75ccbbf240564b26b94e17b">com.fs.starfarer.api.campaign.SectorEntityToken.getFaction</a></div><div class="ttdeci">FactionAPI getFaction()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1CampaignFleetAIAPI_html_a22eea3515c1764e2b5b84b320bdf9fcc"><div class="ttname"><a href="../../d4/d22/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1CampaignFleetAIAPI.html#a22eea3515c1764e2b5b84b320bdf9fcc">com.fs.starfarer.api.campaign.ai.CampaignFleetAIAPI.pickEncounterOption</a></div><div class="ttdeci">EncounterOption pickEncounterOption(FleetEncounterContextPlugin context, CampaignFleetAPI otherFleet)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1CampaignFleetAIAPI_html_a5da3f4e6f96cbc957d5e6df8753665f0"><div class="ttname"><a href="../../d4/d22/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1CampaignFleetAIAPI.html#a5da3f4e6f96cbc957d5e6df8753665f0">com.fs.starfarer.api.campaign.ai.CampaignFleetAIAPI.isHostileTo</a></div><div class="ttdeci">boolean isHostileTo(CampaignFleetAPI other)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI_html_aacefa8e06571ecfc9a37897cbb61d2cf"><div class="ttname"><a href="../../d0/de7/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html#aacefa8e06571ecfc9a37897cbb61d2cf">com.fs.starfarer.api.campaign.rules.MemoryAPI.set</a></div><div class="ttdeci">void set(String key, Object value)</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af988ce125d7cf427492a68dd6e75e2a0" name="af988ce125d7cf427492a68dd6e75e2a0"></a>
@@ -524,10 +413,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/d55/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RouteFleetAssignmentAI.html#abcac6650fd0396e7e6d89e079d953ad2">com.fs.starfarer.api.impl.campaign.procgen.themes.RouteFleetAssignmentAI</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d5a/ScavengerFleetAssignmentAI_8java_source.html#l00041">41</a> of file <a class="el" href="../../d4/d5a/ScavengerFleetAssignmentAI_8java_source.html">ScavengerFleetAssignmentAI.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   41</span>                                                                 {</div>
-<div class="line"><span class="lineno">   42</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;exploring&quot;</span>;</div>
-<div class="line"><span class="lineno">   43</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="afd9deef1026d0aeb017317d7d847c019" name="afd9deef1026d0aeb017317d7d847c019"></a>
@@ -557,14 +443,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/d55/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RouteFleetAssignmentAI.html#a50eb04378260fec2e62b2b9534b27fe6">com.fs.starfarer.api.impl.campaign.procgen.themes.RouteFleetAssignmentAI</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d5a/ScavengerFleetAssignmentAI_8java_source.html#l00032">32</a> of file <a class="el" href="../../d4/d5a/ScavengerFleetAssignmentAI_8java_source.html">ScavengerFleetAssignmentAI.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   32</span>                                                               {</div>
-<div class="line"><span class="lineno">   33</span>        <span class="comment">//if (segment.systemTo == route.getMarket().getContainingLocation()) {</span></div>
-<div class="line"><span class="lineno">   34</span>        <span class="keywordflow">if</span> (segment.to == <a class="code hl_variable" href="../../d3/d55/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RouteFleetAssignmentAI.html#a5dcb74ef0726bd260a6a30ef97626635">route</a>.getMarket().getPrimaryEntity()) {</div>
-<div class="line"><span class="lineno">   35</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;returning to &quot;</span> + <a class="code hl_variable" href="../../d3/d55/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RouteFleetAssignmentAI.html#a5dcb74ef0726bd260a6a30ef97626635">route</a>.getMarket().getName();</div>
-<div class="line"><span class="lineno">   36</span>        }</div>
-<div class="line"><span class="lineno">   37</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;on a salvage expedition&quot;</span>;</div>
-<div class="line"><span class="lineno">   38</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

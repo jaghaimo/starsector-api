@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -355,122 +356,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a33c67bf29e82daaad9e6a6ffcf0ee0b2">com.fs.starfarer.api.combat.BaseHullMod</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d16/ConvertedHangar_8java_source.html#l00267">267</a> of file <a class="el" href="../../d8/d16/ConvertedHangar_8java_source.html">ConvertedHangar.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  267</span>                                                                                                                                             {</div>
-<div class="line"><span class="lineno">  268</span>        <span class="keywordtype">float</span> pad = 3f;</div>
-<div class="line"><span class="lineno">  269</span>        <span class="keywordtype">float</span> opad = 10f;</div>
-<div class="line"><span class="lineno">  270</span>        Color h = Misc.getHighlightColor();</div>
-<div class="line"><span class="lineno">  271</span>        Color bad = Misc.getNegativeHighlightColor();</div>
-<div class="line"><span class="lineno">  272</span>        </div>
-<div class="line"><span class="lineno">  273</span>        </div>
-<div class="line"><span class="lineno">  274</span>        tooltip.addPara(<span class="stringliteral">&quot;Converts the ship&#39;s standard shuttle hangar to house a fighter bay. &quot;</span></div>
-<div class="line"><span class="lineno">  275</span>                + <span class="stringliteral">&quot;The improvised flight deck, its crew, and the related machinery all function &quot;</span></div>
-<div class="line"><span class="lineno">  276</span>                + <span class="stringliteral">&quot;at a pace below that of a dedicated carrier.&quot;</span>, opad);</div>
-<div class="line"><span class="lineno">  277</span> </div>
-<div class="line"><span class="lineno">  278</span> </div>
-<div class="line"><span class="lineno">  279</span><span class="comment">//      tooltip.addPara(&quot;Increases fighter refit time by %s, &quot;</span></div>
-<div class="line"><span class="lineno">  280</span><span class="comment">//              + &quot;and the fighter replacement rate both decays and recovers %s more slowly. &quot;</span></div>
-<div class="line"><span class="lineno">  281</span><span class="comment">//              + &quot;In addition, bombers returning to rearm take %s seconds longer to relaunch. &quot;</span></div>
-<div class="line"><span class="lineno">  282</span><span class="comment">//              + &quot;Increases the minimum crew by %s to account for pilots and flight crews.&quot;, opad, h,</span></div>
-<div class="line"><span class="lineno">  283</span><span class="comment">//              &quot;&quot; + Misc.getRoundedValueMaxOneAfterDecimal(REPLACEMENT_TIME_MULT) + Strings.X,</span></div>
-<div class="line"><span class="lineno">  284</span><span class="comment">//              &quot;&quot; + Misc.getRoundedValueMaxOneAfterDecimal(REPLACEMENT_TIME_MULT) + Strings.X,</span></div>
-<div class="line"><span class="lineno">  285</span><span class="comment">//              &quot;&quot; + (int) EXTRA_REARM_TIME,</span></div>
-<div class="line"><span class="lineno">  286</span><span class="comment">//              &quot;&quot; + (int) CREW_REQ);</span></div>
-<div class="line"><span class="lineno">  287</span>        tooltip.addPara(<span class="stringliteral">&quot;Increases fighter refit time by %s, &quot;</span></div>
-<div class="line"><span class="lineno">  288</span>                + <span class="stringliteral">&quot;and the fighter replacement rate both decays and recovers %s more slowly. &quot;</span></div>
-<div class="line"><span class="lineno">  289</span>                + <span class="stringliteral">&quot;In addition, bombers returning to rearm (or fighters returning for repairs) &quot;</span></div>
-<div class="line"><span class="lineno">  290</span>                + <span class="stringliteral">&quot;take %s of their base refit time to relaunch, &quot;</span></div>
-<div class="line"><span class="lineno">  291</span>                + <span class="stringliteral">&quot;where normally it takes under a second. &quot;</span></div>
-<div class="line"><span class="lineno">  292</span>                + <span class="stringliteral">&quot;&quot;</span>, opad, h,</div>
-<div class="line"><span class="lineno">  293</span>                <span class="stringliteral">&quot;&quot;</span> + Misc.getRoundedValueMaxOneAfterDecimal(<a class="code hl_variable" href="../../d3/dee/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar.html#a60527f78f6573c47756875405d4b5719">REPLACEMENT_TIME_MULT</a>) + Strings.X,</div>
-<div class="line"><span class="lineno">  294</span>                <span class="stringliteral">&quot;&quot;</span> + Misc.getRoundedValueMaxOneAfterDecimal(<a class="code hl_variable" href="../../d3/dee/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar.html#a60527f78f6573c47756875405d4b5719">REPLACEMENT_TIME_MULT</a>) + Strings.X,</div>
-<div class="line"><span class="lineno">  295</span>                <span class="stringliteral">&quot;&quot;</span> + (<span class="keywordtype">int</span>) Math.round(<a class="code hl_variable" href="../../d3/dee/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar.html#a684f68790194e5810910d082be0fef22">REARM_TIME_FRACTION</a> * 100f) + <span class="stringliteral">&quot;%&quot;</span>);</div>
-<div class="line"><span class="lineno">  296</span>        </div>
-<div class="line"><span class="lineno">  297</span>        </div>
-<div class="line"><span class="lineno">  298</span>        tooltip.addPara(<span class="stringliteral">&quot;Increases the minimum crew by %s to account for pilots and flight crews. &quot;</span></div>
-<div class="line"><span class="lineno">  299</span>                + <span class="stringliteral">&quot;Increases the ship&#39;s deployment points and supply cost to recover &quot;</span></div>
-<div class="line"><span class="lineno">  300</span>                + <span class="stringliteral">&quot;from deployment by %s for every %s ordnance points spent on &quot;</span></div>
-<div class="line"><span class="lineno">  301</span>                + <span class="stringliteral">&quot;fighters, or by at least %s point. This comes with a proportional increase &quot;</span></div>
-<div class="line"><span class="lineno">  302</span>                + <span class="stringliteral">&quot;in combat readiness lost per deployment.&quot;</span>, opad, h,</div>
-<div class="line"><span class="lineno">  303</span>                <span class="stringliteral">&quot;&quot;</span> + (<span class="keywordtype">int</span>) <a class="code hl_variable" href="../../d3/dee/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar.html#aff0d7b36df380b87b480ac881705dc6f">CREW_REQ</a>,</div>
-<div class="line"><span class="lineno">  304</span>                <span class="stringliteral">&quot;1&quot;</span>,</div>
-<div class="line"><span class="lineno">  305</span>                <span class="stringliteral">&quot;&quot;</span> + (<span class="keywordtype">int</span>) + <a class="code hl_variable" href="../../d3/dee/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar.html#a0eb029f8b23299a65b3ecbb4a8fdeb30">FIGHTER_OP_PER_DP</a>,</div>
-<div class="line"><span class="lineno">  306</span>                <span class="stringliteral">&quot;&quot;</span> + (<span class="keywordtype">int</span>) + <a class="code hl_variable" href="../../d3/dee/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar.html#a407a51002da92ffcb05d36e2cbdfdb2e">MIN_DP</a>);</div>
-<div class="line"><span class="lineno">  307</span>        </div>
-<div class="line"><span class="lineno">  308</span>        <span class="keywordflow">if</span> (isForModSpec || ship == <span class="keyword">null</span> || ship.getMutableStats() == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  309</span>        </div>
-<div class="line"><span class="lineno">  310</span>        MutableShipStatsAPI stats = ship.getMutableStats();</div>
-<div class="line"><span class="lineno">  311</span>        <span class="keywordtype">boolean</span> crewIncrease = stats.getDynamic().getMod(Stats.CONVERTED_HANGAR_NO_CREW_INCREASE).computeEffective(0f) &lt;= 0;</div>
-<div class="line"><span class="lineno">  312</span>        <span class="keywordtype">boolean</span> rearmIncrease = stats.getDynamic().getMod(Stats.CONVERTED_HANGAR_NO_REARM_INCREASE).computeEffective(0f) &lt;= 0;</div>
-<div class="line"><span class="lineno">  313</span>        <span class="keywordtype">boolean</span> dpIncrease = stats.getDynamic().getMod(Stats.CONVERTED_HANGAR_NO_DP_INCREASE).computeEffective(0f) &lt;= 0;</div>
-<div class="line"><span class="lineno">  314</span>        <span class="keywordtype">boolean</span> refitPenalty = stats.getDynamic().getMod(Stats.CONVERTED_HANGAR_NO_REFIT_PENALTY).computeEffective(0f) &lt;= 0;</div>
-<div class="line"><span class="lineno">  315</span>        </div>
-<div class="line"><span class="lineno">  316</span>        <span class="keywordtype">int</span> dpMod = <a class="code hl_function" href="../../d3/dee/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar.html#a4b4334ee837b28fa0e9674e172f87514">computeDPModifier</a>(<a class="code hl_function" href="../../d3/dee/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar.html#ac2f20a82721e8990f757704d5205c15d">getFighterOPCost</a>(stats));</div>
-<div class="line"><span class="lineno">  317</span>        <span class="keywordflow">if</span> (dpMod &gt; 0) {</div>
-<div class="line"><span class="lineno">  318</span>            <span class="comment">//tooltip.addSectionHeading(&quot;Fighter wings&quot;, Alignment.MID, opad);</span></div>
-<div class="line"><span class="lineno">  319</span>            <span class="comment">//tooltip.addPara(&quot;%s points for the currently installed fighter wing.&quot;, opad, h, &quot;+&quot; + dpMod);</span></div>
-<div class="line"><span class="lineno">  320</span>            <span class="keywordflow">if</span> (dpIncrease) {</div>
-<div class="line"><span class="lineno">  321</span><span class="comment">//              float perDep = stats.getFleetMember().getHullSpec().getCRToDeploy();</span></div>
-<div class="line"><span class="lineno">  322</span><span class="comment">//              1f + dpMod / perDep);</span></div>
-<div class="line"><span class="lineno">  323</span>                tooltip.addPara(<span class="stringliteral">&quot;Deployment cost: %s&quot;</span>, opad, h, <span class="stringliteral">&quot;+&quot;</span> + dpMod);</div>
-<div class="line"><span class="lineno">  324</span>            }</div>
-<div class="line"><span class="lineno">  325</span> </div>
-<div class="line"><span class="lineno">  326</span>            <span class="keywordtype">float</span> numW = 160f;</div>
-<div class="line"><span class="lineno">  327</span>            <span class="keywordtype">float</span> sizeW = width - numW - 10f;</div>
-<div class="line"><span class="lineno">  328</span>            </div>
-<div class="line"><span class="lineno">  329</span>            <span class="keywordflow">if</span> (!<a class="code hl_function" href="../../d3/dee/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar.html#a7528d03ff04792f090b39c27e48ff6aa">getFighterWings</a>(stats).isEmpty() &amp;&amp; rearmIncrease) {</div>
-<div class="line"><span class="lineno">  330</span>                tooltip.beginTable(Misc.getBasePlayerColor(), Misc.getDarkPlayerColor(), Misc.getBrightPlayerColor(),</div>
-<div class="line"><span class="lineno">  331</span>                           20f, <span class="keyword">true</span>, <span class="keyword">true</span>, </div>
-<div class="line"><span class="lineno">  332</span>                           <span class="keyword">new</span> Object [] {<span class="stringliteral">&quot;Wing&quot;</span>, sizeW, <span class="stringliteral">&quot;Seconds to relaunch&quot;</span>, numW});</div>
-<div class="line"><span class="lineno">  333</span>                </div>
-<div class="line"><span class="lineno">  334</span>                <span class="keywordflow">for</span> (String wingId : <a class="code hl_function" href="../../d3/dee/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar.html#a7528d03ff04792f090b39c27e48ff6aa">getFighterWings</a>(stats)) {</div>
-<div class="line"><span class="lineno">  335</span>                    FighterWingSpecAPI <a class="code hl_variable" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#ac9399ad6c42e88aad34841da9e87d5cc">spec</a> = Global.getSettings().getFighterWingSpec(wingId);</div>
-<div class="line"><span class="lineno">  336</span>                    <span class="keywordtype">float</span> refitPortion = <a class="code hl_variable" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#ac9399ad6c42e88aad34841da9e87d5cc">spec</a>.getRefitTime() * </div>
-<div class="line"><span class="lineno">  337</span>                            ship.getMutableStats().getDynamic().getValue(Stats.FIGHTER_REARM_TIME_EXTRA_FRACTION_OF_BASE_REFIT_TIME_MOD, 0f);</div>
-<div class="line"><span class="lineno">  338</span>    </div>
-<div class="line"><span class="lineno">  339</span>                    Color c = Misc.getTextColor();</div>
-<div class="line"><span class="lineno">  340</span>                    <span class="comment">//c = Misc.getHighlightColor();</span></div>
-<div class="line"><span class="lineno">  341</span>                    tooltip.addRow(Alignment.MID, c, <a class="code hl_variable" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#ac9399ad6c42e88aad34841da9e87d5cc">spec</a>.getWingName(),</div>
-<div class="line"><span class="lineno">  342</span>                                   Alignment.MID, h, Misc.getRoundedValueOneAfterDecimalIfNotWhole(refitPortion)</div>
-<div class="line"><span class="lineno">  343</span>                                   );</div>
-<div class="line"><span class="lineno">  344</span>                }</div>
-<div class="line"><span class="lineno">  345</span>                tooltip.addTable(<span class="stringliteral">&quot;&quot;</span>, 0, opad);</div>
-<div class="line"><span class="lineno">  346</span>            }</div>
-<div class="line"><span class="lineno">  347</span>            </div>
-<div class="line"><span class="lineno">  348</span>        }</div>
-<div class="line"><span class="lineno">  349</span>        </div>
-<div class="line"><span class="lineno">  350</span><span class="comment">//      boolean crewIncrease = stats.getDynamic().getMod(Stats.CONVERTED_HANGAR_NO_CREW_INCREASE).computeEffective(0f) &lt;= 0;</span></div>
-<div class="line"><span class="lineno">  351</span><span class="comment">//      boolean rearmIncrease = stats.getDynamic().getMod(Stats.CONVERTED_HANGAR_NO_REARM_INCREASE).computeEffective(0f) &lt;= 0;</span></div>
-<div class="line"><span class="lineno">  352</span><span class="comment">//      boolean dpIncrease = stats.getDynamic().getMod(Stats.CONVERTED_HANGAR_NO_DP_INCREASE).computeEffective(0f) &lt;= 0;</span></div>
-<div class="line"><span class="lineno">  353</span><span class="comment">//      boolean refitPenalty = stats.getDynamic().getMod(Stats.CONVERTED_HANGAR_NO_REFIT_PENALTY).computeEffective(0f) &lt;= 0;</span></div>
-<div class="line"><span class="lineno">  354</span>        </div>
-<div class="line"><span class="lineno">  355</span>        List&lt;String&gt; negated = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
-<div class="line"><span class="lineno">  356</span>        <span class="keywordflow">if</span> (!refitPenalty) negated.add(<span class="stringliteral">&quot;refit time and rate recovery modifiers&quot;</span>);</div>
-<div class="line"><span class="lineno">  357</span>        <span class="keywordflow">if</span> (!rearmIncrease) negated.add(<span class="stringliteral">&quot;relaunch delay&quot;</span>);</div>
-<div class="line"><span class="lineno">  358</span>        <span class="keywordflow">if</span> (!crewIncrease) negated.add(<span class="stringliteral">&quot;increased crew requirement&quot;</span>);</div>
-<div class="line"><span class="lineno">  359</span>        <span class="keywordflow">if</span> (!dpIncrease) negated.add(<span class="stringliteral">&quot;deployment cost increase&quot;</span>);</div>
-<div class="line"><span class="lineno">  360</span>        </div>
-<div class="line"><span class="lineno">  361</span>        <span class="keywordflow">if</span> (!negated.isEmpty()) {</div>
-<div class="line"><span class="lineno">  362</span>            Color c = Misc.getPositiveHighlightColor();</div>
-<div class="line"><span class="lineno">  363</span>            String isOrAre = <span class="stringliteral">&quot;is&quot;</span>;</div>
-<div class="line"><span class="lineno">  364</span>            <span class="keywordflow">if</span> (negated.size() &gt; 1) isOrAre = <span class="stringliteral">&quot;are&quot;</span>;</div>
-<div class="line"><span class="lineno">  365</span>            <span class="keywordflow">if</span> (negated.size() &gt;= 4) isOrAre += <span class="stringliteral">&quot; all&quot;</span>;</div>
-<div class="line"><span class="lineno">  366</span>            tooltip.addPara(<span class="stringliteral">&quot;The &quot;</span> + Misc.getAndJoined(negated) + <span class="stringliteral">&quot; &quot;</span> + isOrAre + <span class="stringliteral">&quot; negated on this ship.&quot;</span>, c, opad);</div>
-<div class="line"><span class="lineno">  367</span>        }</div>
-<div class="line"><span class="lineno">  368</span>        </div>
-<div class="line"><span class="lineno">  369</span>        <span class="comment">//tooltip.setBgAlpha(0.9f);</span></div>
-<div class="line"><span class="lineno">  370</span>        </div>
-<div class="line"><span class="lineno">  371</span> </div>
-<div class="line"><span class="lineno">  372</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod_html_ac9399ad6c42e88aad34841da9e87d5cc"><div class="ttname"><a href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#ac9399ad6c42e88aad34841da9e87d5cc">com.fs.starfarer.api.combat.BaseHullMod.spec</a></div><div class="ttdeci">HullModSpecAPI spec</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/da7/BaseHullMod_8java_source.html#l00022">BaseHullMod.java:22</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar_html_a0eb029f8b23299a65b3ecbb4a8fdeb30"><div class="ttname"><a href="../../d3/dee/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar.html#a0eb029f8b23299a65b3ecbb4a8fdeb30">com.fs.starfarer.api.impl.hullmods.ConvertedHangar.FIGHTER_OP_PER_DP</a></div><div class="ttdeci">static float FIGHTER_OP_PER_DP</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d16/ConvertedHangar_8java_source.html#l00025">ConvertedHangar.java:25</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar_html_a407a51002da92ffcb05d36e2cbdfdb2e"><div class="ttname"><a href="../../d3/dee/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar.html#a407a51002da92ffcb05d36e2cbdfdb2e">com.fs.starfarer.api.impl.hullmods.ConvertedHangar.MIN_DP</a></div><div class="ttdeci">static int MIN_DP</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d16/ConvertedHangar_8java_source.html#l00026">ConvertedHangar.java:26</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar_html_a4b4334ee837b28fa0e9674e172f87514"><div class="ttname"><a href="../../d3/dee/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar.html#a4b4334ee837b28fa0e9674e172f87514">com.fs.starfarer.api.impl.hullmods.ConvertedHangar.computeDPModifier</a></div><div class="ttdeci">static int computeDPModifier(float fighterOPCost)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d16/ConvertedHangar_8java_source.html#l00052">ConvertedHangar.java:52</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar_html_a60527f78f6573c47756875405d4b5719"><div class="ttname"><a href="../../d3/dee/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar.html#a60527f78f6573c47756875405d4b5719">com.fs.starfarer.api.impl.hullmods.ConvertedHangar.REPLACEMENT_TIME_MULT</a></div><div class="ttdeci">static float REPLACEMENT_TIME_MULT</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d16/ConvertedHangar_8java_source.html#l00027">ConvertedHangar.java:27</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar_html_a684f68790194e5810910d082be0fef22"><div class="ttname"><a href="../../d3/dee/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar.html#a684f68790194e5810910d082be0fef22">com.fs.starfarer.api.impl.hullmods.ConvertedHangar.REARM_TIME_FRACTION</a></div><div class="ttdeci">static float REARM_TIME_FRACTION</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d16/ConvertedHangar_8java_source.html#l00031">ConvertedHangar.java:31</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar_html_a7528d03ff04792f090b39c27e48ff6aa"><div class="ttname"><a href="../../d3/dee/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar.html#a7528d03ff04792f090b39c27e48ff6aa">com.fs.starfarer.api.impl.hullmods.ConvertedHangar.getFighterWings</a></div><div class="ttdeci">static List&lt; String &gt; getFighterWings(MutableShipStatsAPI stats)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d16/ConvertedHangar_8java_source.html#l00067">ConvertedHangar.java:67</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar_html_ac2f20a82721e8990f757704d5205c15d"><div class="ttname"><a href="../../d3/dee/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar.html#ac2f20a82721e8990f757704d5205c15d">com.fs.starfarer.api.impl.hullmods.ConvertedHangar.getFighterOPCost</a></div><div class="ttdeci">static float getFighterOPCost(MutableShipStatsAPI stats)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d16/ConvertedHangar_8java_source.html#l00058">ConvertedHangar.java:58</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar_html_aff0d7b36df380b87b480ac881705dc6f"><div class="ttname"><a href="../../d3/dee/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar.html#aff0d7b36df380b87b480ac881705dc6f">com.fs.starfarer.api.impl.hullmods.ConvertedHangar.CREW_REQ</a></div><div class="ttdeci">static int CREW_REQ</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d16/ConvertedHangar_8java_source.html#l00028">ConvertedHangar.java:28</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ad4cc9678985f2bf7caf560eefc808576" name="ad4cc9678985f2bf7caf560eefc808576"></a>
@@ -508,75 +394,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a3859215f6c3408946bf590a2ce5c0e74">com.fs.starfarer.api.combat.BaseHullMod</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d16/ConvertedHangar_8java_source.html#l00083">83</a> of file <a class="el" href="../../d8/d16/ConvertedHangar_8java_source.html">ConvertedHangar.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   83</span>                                                                                                        {</div>
-<div class="line"><span class="lineno">   84</span>        <span class="comment">//stats.getFighterRefitTimeMult().modifyPercent(id, ((Float) mag.get(hullSize)));</span></div>
-<div class="line"><span class="lineno">   85</span>        <span class="keywordtype">float</span> numBays = 1f;</div>
-<div class="line"><span class="lineno">   86</span>        numBays += stats.getDynamic().getMod(Stats.CONVERTED_HANGAR_MOD).computeEffective(0f);</div>
-<div class="line"><span class="lineno">   87</span>        stats.getNumFighterBays().modifyFlat(<span class="keywordtype">id</span>, numBays);</div>
-<div class="line"><span class="lineno">   88</span>        </div>
-<div class="line"><span class="lineno">   89</span>        <span class="keywordtype">boolean</span> sMod = <a class="code hl_function" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a17449d5c7699039330e0d40d7f51dcd3">isSMod</a>(stats);</div>
-<div class="line"><span class="lineno">   90</span>        <span class="keywordflow">if</span> (sMod) {</div>
-<div class="line"><span class="lineno">   91</span>            <span class="keywordtype">float</span> bonus = 0f;</div>
-<div class="line"><span class="lineno">   92</span>            <span class="keywordflow">if</span> (hullSize == HullSize.CRUISER) bonus = <a class="code hl_variable" href="../../d3/dee/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar.html#a5c5764ffa867d111bb18ded492800ab8">SMOD_CRUISER</a>;</div>
-<div class="line"><span class="lineno">   93</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (hullSize == HullSize.CAPITAL_SHIP) bonus = <a class="code hl_variable" href="../../d3/dee/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar.html#a2639f94b0614698f833a881428bc8303">SMOD_CAPITAL</a>;</div>
-<div class="line"><span class="lineno">   94</span>            <span class="keywordflow">if</span> (bonus != 0) {</div>
-<div class="line"><span class="lineno">   95</span>                stats.getDynamic().getStat(Stats.REPLACEMENT_RATE_INCREASE_MULT).modifyPercent(<span class="keywordtype">id</span>, bonus);</div>
-<div class="line"><span class="lineno">   96</span>            }</div>
-<div class="line"><span class="lineno">   97</span>        }</div>
-<div class="line"><span class="lineno">   98</span>        </div>
-<div class="line"><span class="lineno">   99</span>        <span class="keywordtype">boolean</span> crewIncrease = stats.getDynamic().getMod(Stats.CONVERTED_HANGAR_NO_CREW_INCREASE).computeEffective(0f) &lt;= 0;</div>
-<div class="line"><span class="lineno">  100</span>        <span class="keywordtype">boolean</span> rearmIncrease = stats.getDynamic().getMod(Stats.CONVERTED_HANGAR_NO_REARM_INCREASE).computeEffective(0f) &lt;= 0;</div>
-<div class="line"><span class="lineno">  101</span>        <span class="keywordtype">boolean</span> dpIncrease = stats.getDynamic().getMod(Stats.CONVERTED_HANGAR_NO_DP_INCREASE).computeEffective(0f) &lt;= 0;</div>
-<div class="line"><span class="lineno">  102</span>        <span class="keywordtype">boolean</span> refitPenalty = stats.getDynamic().getMod(Stats.CONVERTED_HANGAR_NO_REFIT_PENALTY).computeEffective(0f) &lt;= 0;</div>
-<div class="line"><span class="lineno">  103</span>        </div>
-<div class="line"><span class="lineno">  104</span>        <span class="keywordflow">if</span> (refitPenalty) {</div>
-<div class="line"><span class="lineno">  105</span>            stats.getFighterRefitTimeMult().modifyMult(<span class="keywordtype">id</span>, <a class="code hl_variable" href="../../d3/dee/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar.html#a60527f78f6573c47756875405d4b5719">REPLACEMENT_TIME_MULT</a>);</div>
-<div class="line"><span class="lineno">  106</span>            stats.getDynamic().getStat(Stats.REPLACEMENT_RATE_DECREASE_MULT).modifyMult(<span class="keywordtype">id</span>, 1f / <a class="code hl_variable" href="../../d3/dee/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar.html#a60527f78f6573c47756875405d4b5719">REPLACEMENT_TIME_MULT</a>);</div>
-<div class="line"><span class="lineno">  107</span>            stats.getDynamic().getStat(Stats.REPLACEMENT_RATE_INCREASE_MULT).modifyMult(<span class="keywordtype">id</span>, 1f / <a class="code hl_variable" href="../../d3/dee/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar.html#a60527f78f6573c47756875405d4b5719">REPLACEMENT_TIME_MULT</a>);</div>
-<div class="line"><span class="lineno">  108</span>        }</div>
-<div class="line"><span class="lineno">  109</span>        </div>
-<div class="line"><span class="lineno">  110</span>        <span class="keywordflow">if</span> (rearmIncrease) {</div>
-<div class="line"><span class="lineno">  111</span>            <span class="comment">//stats.getDynamic().getMod(Stats.FIGHTER_REARM_TIME_EXTRA_FLAT_MOD).modifyFlat(id, EXTRA_REARM_TIME);</span></div>
-<div class="line"><span class="lineno">  112</span>            stats.getDynamic().getMod(Stats.FIGHTER_REARM_TIME_EXTRA_FRACTION_OF_BASE_REFIT_TIME_MOD).modifyFlat(<span class="keywordtype">id</span>, <a class="code hl_variable" href="../../d3/dee/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar.html#a684f68790194e5810910d082be0fef22">REARM_TIME_FRACTION</a>);</div>
-<div class="line"><span class="lineno">  113</span>        }</div>
-<div class="line"><span class="lineno">  114</span>        </div>
-<div class="line"><span class="lineno">  115</span>        <span class="keywordflow">if</span> (dpIncrease) {</div>
-<div class="line"><span class="lineno">  116</span>            <span class="keywordtype">float</span> dpMod = <a class="code hl_function" href="../../d3/dee/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar.html#a4b4334ee837b28fa0e9674e172f87514">computeDPModifier</a>(<a class="code hl_function" href="../../d3/dee/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar.html#ac2f20a82721e8990f757704d5205c15d">getFighterOPCost</a>(stats));</div>
-<div class="line"><span class="lineno">  117</span>            <span class="keywordflow">if</span> (dpMod &gt; 0) {</div>
-<div class="line"><span class="lineno">  118</span>                stats.getDynamic().getMod(Stats.DEPLOYMENT_POINTS_MOD).modifyFlat(<span class="keywordtype">id</span>, dpMod);</div>
-<div class="line"><span class="lineno">  119</span>                </div>
-<div class="line"><span class="lineno">  120</span>                <span class="keywordflow">if</span> (stats.getFleetMember() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  121</span>                    <span class="keywordtype">float</span> perDep = stats.getFleetMember().getHullSpec().getSuppliesToRecover();</div>
-<div class="line"><span class="lineno">  122</span>                    <span class="keywordtype">float</span> mult = <a class="code hl_function" href="../../d3/dee/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar.html#ab3a3ef7f42329b83a1196062f4ac0843">computeCRMult</a>(perDep, dpMod);</div>
-<div class="line"><span class="lineno">  123</span>                    stats.getCRPerDeploymentPercent().modifyMult(<span class="keywordtype">id</span>, mult);</div>
-<div class="line"><span class="lineno">  124</span>                }</div>
-<div class="line"><span class="lineno">  125</span>                </div>
-<div class="line"><span class="lineno">  126</span>                stats.getSuppliesToRecover().modifyFlat(<span class="keywordtype">id</span>, dpMod);</div>
-<div class="line"><span class="lineno">  127</span>            }</div>
-<div class="line"><span class="lineno">  128</span>        }</div>
-<div class="line"><span class="lineno">  129</span>        </div>
-<div class="line"><span class="lineno">  130</span>        <span class="keywordflow">if</span> (crewIncrease) {</div>
-<div class="line"><span class="lineno">  131</span>            stats.getMinCrewMod().modifyFlat(<span class="keywordtype">id</span>, <a class="code hl_variable" href="../../d3/dee/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar.html#aff0d7b36df380b87b480ac881705dc6f">CREW_REQ</a>);</div>
-<div class="line"><span class="lineno">  132</span>        }</div>
-<div class="line"><span class="lineno">  133</span>        </div>
-<div class="line"><span class="lineno">  134</span>        </div>
-<div class="line"><span class="lineno">  135</span><span class="comment">//      boolean costIncrease = stats.getDynamic().getMod(Stats.CONVERTED_HANGAR_NO_COST_INCREASE).computeEffective(0f) &lt;= 0;</span></div>
-<div class="line"><span class="lineno">  136</span><span class="comment">//      //costIncrease = false;</span></div>
-<div class="line"><span class="lineno">  137</span><span class="comment">//      if (costIncrease) {</span></div>
-<div class="line"><span class="lineno">  138</span><span class="comment">//          stats.getMinCrewMod().modifyFlat(id, CREW_REQ);</span></div>
-<div class="line"><span class="lineno">  139</span><span class="comment">//          //stats.getDynamic().getMod(Stats.ALL_FIGHTER_COST_MOD).modifyPercent(id, ALL_FIGHTER_COST_PERCENT);</span></div>
-<div class="line"><span class="lineno">  140</span><span class="comment">//          stats.getDynamic().getMod(Stats.BOMBER_COST_MOD).modifyPercent(id, BOMBER_COST_PERCENT);</span></div>
-<div class="line"><span class="lineno">  141</span><span class="comment">//          stats.getDynamic().getMod(Stats.FIGHTER_COST_MOD).modifyPercent(id, ALL_FIGHTER_COST_PERCENT);</span></div>
-<div class="line"><span class="lineno">  142</span><span class="comment">//          stats.getDynamic().getMod(Stats.INTERCEPTOR_COST_MOD).modifyPercent(id, ALL_FIGHTER_COST_PERCENT);</span></div>
-<div class="line"><span class="lineno">  143</span><span class="comment">//          stats.getDynamic().getMod(Stats.SUPPORT_COST_MOD).modifyPercent(id, ALL_FIGHTER_COST_PERCENT);</span></div>
-<div class="line"><span class="lineno">  144</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  145</span>        <span class="comment">//stats.getCargoMod().modifyFlat(id, -CARGO_REQ);</span></div>
-<div class="line"><span class="lineno">  146</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod_html_a17449d5c7699039330e0d40d7f51dcd3"><div class="ttname"><a href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a17449d5c7699039330e0d40d7f51dcd3">com.fs.starfarer.api.combat.BaseHullMod.isSMod</a></div><div class="ttdeci">boolean isSMod(MutableShipStatsAPI stats)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/da7/BaseHullMod_8java_source.html#l00029">BaseHullMod.java:29</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar_html_a2639f94b0614698f833a881428bc8303"><div class="ttname"><a href="../../d3/dee/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar.html#a2639f94b0614698f833a881428bc8303">com.fs.starfarer.api.impl.hullmods.ConvertedHangar.SMOD_CAPITAL</a></div><div class="ttdeci">static float SMOD_CAPITAL</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d16/ConvertedHangar_8java_source.html#l00034">ConvertedHangar.java:34</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar_html_a5c5764ffa867d111bb18ded492800ab8"><div class="ttname"><a href="../../d3/dee/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar.html#a5c5764ffa867d111bb18ded492800ab8">com.fs.starfarer.api.impl.hullmods.ConvertedHangar.SMOD_CRUISER</a></div><div class="ttdeci">static float SMOD_CRUISER</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d16/ConvertedHangar_8java_source.html#l00033">ConvertedHangar.java:33</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar_html_ab3a3ef7f42329b83a1196062f4ac0843"><div class="ttname"><a href="../../d3/dee/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar.html#ab3a3ef7f42329b83a1196062f4ac0843">com.fs.starfarer.api.impl.hullmods.ConvertedHangar.computeCRMult</a></div><div class="ttdeci">float computeCRMult(float suppliesPerDep, float dpMod)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d16/ConvertedHangar_8java_source.html#l00079">ConvertedHangar.java:79</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a1fdac6e718116cb38aaceeb1fd0bc453" name="a1fdac6e718116cb38aaceeb1fd0bc453"></a>
@@ -614,15 +432,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a2618f88ad207fe4bc6a9b767aa4c1dfd">com.fs.starfarer.api.combat.BaseHullMod</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d16/ConvertedHangar_8java_source.html#l00171">171</a> of file <a class="el" href="../../d8/d16/ConvertedHangar_8java_source.html">ConvertedHangar.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  171</span>                                                                                             {</div>
-<div class="line"><span class="lineno">  172</span>        <span class="comment">//setFighterSkin(fighter, ship);</span></div>
-<div class="line"><span class="lineno">  173</span><span class="comment">//      boolean statsPenalty = ship.getMutableStats().getDynamic().getMod(Stats.CONVERTED_HANGAR_NO_PERFORMANCE_PENALTY).computeEffective(0f) &lt;= 0;</span></div>
-<div class="line"><span class="lineno">  174</span><span class="comment">//      boolean sMod = isSMod(ship);</span></div>
-<div class="line"><span class="lineno">  175</span><span class="comment">//      if (statsPenalty &amp;&amp; !sMod) {</span></div>
-<div class="line"><span class="lineno">  176</span><span class="comment">//          new DefectiveManufactory().applyEffectsToFighterSpawnedByShip(fighter, ship, id);</span></div>
-<div class="line"><span class="lineno">  177</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  178</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab3a3ef7f42329b83a1196062f4ac0843" name="ab3a3ef7f42329b83a1196062f4ac0843"></a>
@@ -652,10 +462,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d16/ConvertedHangar_8java_source.html#l00079">79</a> of file <a class="el" href="../../d8/d16/ConvertedHangar_8java_source.html">ConvertedHangar.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   79</span>                                                                  {</div>
-<div class="line"><span class="lineno">   80</span>        <span class="keywordflow">return</span> 1f + dpMod / suppliesPerDep;</div>
-<div class="line"><span class="lineno">   81</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a4b4334ee837b28fa0e9674e172f87514" name="a4b4334ee837b28fa0e9674e172f87514"></a>
@@ -683,12 +490,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d16/ConvertedHangar_8java_source.html#l00052">52</a> of file <a class="el" href="../../d8/d16/ConvertedHangar_8java_source.html">ConvertedHangar.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   52</span>                                                             {</div>
-<div class="line"><span class="lineno">   53</span>        <span class="keywordtype">int</span> mod = (int) Math.ceil(fighterOPCost / <a class="code hl_variable" href="../../d3/dee/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar.html#a0eb029f8b23299a65b3ecbb4a8fdeb30">FIGHTER_OP_PER_DP</a>);</div>
-<div class="line"><span class="lineno">   54</span>        <span class="keywordflow">if</span> (mod &lt; <a class="code hl_variable" href="../../d3/dee/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar.html#a407a51002da92ffcb05d36e2cbdfdb2e">MIN_DP</a>) mod = <a class="code hl_variable" href="../../d3/dee/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar.html#a407a51002da92ffcb05d36e2cbdfdb2e">MIN_DP</a>;</div>
-<div class="line"><span class="lineno">   55</span>        <span class="keywordflow">return</span> mod;</div>
-<div class="line"><span class="lineno">   56</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac2f20a82721e8990f757704d5205c15d" name="ac2f20a82721e8990f757704d5205c15d"></a>
@@ -716,15 +518,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d16/ConvertedHangar_8java_source.html#l00058">58</a> of file <a class="el" href="../../d8/d16/ConvertedHangar_8java_source.html">ConvertedHangar.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   58</span>                                                                    {</div>
-<div class="line"><span class="lineno">   59</span>        <span class="keywordtype">float</span> cost = 0;</div>
-<div class="line"><span class="lineno">   60</span>        <span class="keywordflow">for</span> (String wingId : <a class="code hl_function" href="../../d3/dee/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar.html#a7528d03ff04792f090b39c27e48ff6aa">getFighterWings</a>(stats)) {</div>
-<div class="line"><span class="lineno">   61</span>            FighterWingSpecAPI <a class="code hl_variable" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#ac9399ad6c42e88aad34841da9e87d5cc">spec</a> = Global.getSettings().getFighterWingSpec(wingId);</div>
-<div class="line"><span class="lineno">   62</span>            cost += <a class="code hl_variable" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#ac9399ad6c42e88aad34841da9e87d5cc">spec</a>.getOpCost(stats);</div>
-<div class="line"><span class="lineno">   63</span>        }</div>
-<div class="line"><span class="lineno">   64</span>        <span class="keywordflow">return</span> cost;</div>
-<div class="line"><span class="lineno">   65</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2497d906b583b6a9454d6bd7d4e0e956" name="a2497d906b583b6a9454d6bd7d4e0e956"></a>
@@ -762,24 +556,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d16/ConvertedHangar_8java_source.html#l00188">188</a> of file <a class="el" href="../../d8/d16/ConvertedHangar_8java_source.html">ConvertedHangar.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  188</span>                                                                             {</div>
-<div class="line"><span class="lineno">  189</span>        <span class="keywordflow">if</span> (carrier.getHullStyleId().equals(fighter.getHullStyleId())) {</div>
-<div class="line"><span class="lineno">  190</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  191</span>        }</div>
-<div class="line"><span class="lineno">  192</span>        String cat = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  193</span>        SpriteAPI skin = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  194</span>        <span class="keywordflow">if</span> (carrier.getOwner() == 0 || carrier.getOriginalOwner() == 0) {</div>
-<div class="line"><span class="lineno">  195</span>            cat = <span class="stringliteral">&quot;fighterSkinsPlayerOnly&quot;</span>;</div>
-<div class="line"><span class="lineno">  196</span>            skin = <a class="code hl_function" href="../../d3/dee/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar.html#a2497d906b583b6a9454d6bd7d4e0e956">getFighterSkin</a>(cat, fighter, carrier);</div>
-<div class="line"><span class="lineno">  197</span>        }</div>
-<div class="line"><span class="lineno">  198</span>        <span class="keywordflow">if</span> (skin != <span class="keyword">null</span>) <span class="keywordflow">return</span> skin;</div>
-<div class="line"><span class="lineno">  199</span>        </div>
-<div class="line"><span class="lineno">  200</span>        cat = <span class="stringliteral">&quot;fighterSkinsPlayerAndNPC&quot;</span>;</div>
-<div class="line"><span class="lineno">  201</span>        skin = <a class="code hl_function" href="../../d3/dee/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar.html#a2497d906b583b6a9454d6bd7d4e0e956">getFighterSkin</a>(cat, fighter, carrier);</div>
-<div class="line"><span class="lineno">  202</span>        <span class="keywordflow">return</span> skin;</div>
-<div class="line"><span class="lineno">  203</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar_html_a2497d906b583b6a9454d6bd7d4e0e956"><div class="ttname"><a href="../../d3/dee/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar.html#a2497d906b583b6a9454d6bd7d4e0e956">com.fs.starfarer.api.impl.hullmods.ConvertedHangar.getFighterSkin</a></div><div class="ttdeci">static SpriteAPI getFighterSkin(ShipAPI fighter, ShipAPI carrier)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d16/ConvertedHangar_8java_source.html#l00188">ConvertedHangar.java:188</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a67699e9283adcf5346e5247e93f003fd" name="a67699e9283adcf5346e5247e93f003fd"></a>
@@ -823,41 +600,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d16/ConvertedHangar_8java_source.html#l00206">206</a> of file <a class="el" href="../../d8/d16/ConvertedHangar_8java_source.html">ConvertedHangar.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  206</span>                                                                                         {</div>
-<div class="line"><span class="lineno">  207</span>        </div>
-<div class="line"><span class="lineno">  208</span>        String exclude = <span class="stringliteral">&quot;fighterSkinsExcludeFromSharing&quot;</span>;</div>
-<div class="line"><span class="lineno">  209</span>        String <span class="keywordtype">id</span> = fighter.getHullSpec().getHullId();</div>
-<div class="line"><span class="lineno">  210</span>        String style = carrier.getHullStyleId();</div>
-<div class="line"><span class="lineno">  211</span>        </div>
-<div class="line"><span class="lineno">  212</span>        List&lt;String&gt; skins = Global.getSettings().getSpriteKeys(cat);</div>
-<div class="line"><span class="lineno">  213</span>        Set&lt;String&gt; noSharing = <span class="keyword">new</span> LinkedHashSet&lt;String&gt;(Global.getSettings().getSpriteKeys(exclude));</div>
-<div class="line"><span class="lineno">  214</span>        </div>
-<div class="line"><span class="lineno">  215</span>        List&lt;SpriteAPI&gt; matching = <span class="keyword">new</span> ArrayList&lt;SpriteAPI&gt;();</div>
-<div class="line"><span class="lineno">  216</span>        <span class="keywordflow">for</span> (String key : skins) {</div>
-<div class="line"><span class="lineno">  217</span>            <span class="keywordflow">if</span> (key.equals(<span class="keywordtype">id</span> + <span class="stringliteral">&quot;_&quot;</span> + style)) {</div>
-<div class="line"><span class="lineno">  218</span>                <span class="keywordflow">return</span> Global.getSettings().getSprite(cat, key);</div>
-<div class="line"><span class="lineno">  219</span>            }</div>
-<div class="line"><span class="lineno">  220</span>            <span class="keywordflow">if</span> (key.startsWith(<span class="keywordtype">id</span>) &amp;&amp; !noSharing.contains(key)) {</div>
-<div class="line"><span class="lineno">  221</span>                matching.add(Global.getSettings().getSprite(cat, key));</div>
-<div class="line"><span class="lineno">  222</span>            }</div>
-<div class="line"><span class="lineno">  223</span>        }</div>
-<div class="line"><span class="lineno">  224</span>        </div>
-<div class="line"><span class="lineno">  225</span>        <span class="keywordflow">if</span> (!matching.isEmpty()) {</div>
-<div class="line"><span class="lineno">  226</span>            SpriteAPI best = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  227</span>            <span class="keywordtype">float</span> minDist = Float.MAX_VALUE;</div>
-<div class="line"><span class="lineno">  228</span>            </div>
-<div class="line"><span class="lineno">  229</span>            <span class="keywordflow">for</span> (SpriteAPI curr : matching) {</div>
-<div class="line"><span class="lineno">  230</span>                <span class="keywordtype">float</span> dist = Misc.getColorDist(carrier.getSpriteAPI().getAverageBrightColor(), curr.getAverageBrightColor());</div>
-<div class="line"><span class="lineno">  231</span>                <span class="keywordflow">if</span> (dist &lt; minDist) {</div>
-<div class="line"><span class="lineno">  232</span>                    best = curr;</div>
-<div class="line"><span class="lineno">  233</span>                    minDist = dist;</div>
-<div class="line"><span class="lineno">  234</span>                }</div>
-<div class="line"><span class="lineno">  235</span>            }</div>
-<div class="line"><span class="lineno">  236</span>            <span class="keywordflow">return</span> best;</div>
-<div class="line"><span class="lineno">  237</span>        }</div>
-<div class="line"><span class="lineno">  238</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  239</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a7528d03ff04792f090b39c27e48ff6aa" name="a7528d03ff04792f090b39c27e48ff6aa"></a>
@@ -885,18 +628,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d16/ConvertedHangar_8java_source.html#l00067">67</a> of file <a class="el" href="../../d8/d16/ConvertedHangar_8java_source.html">ConvertedHangar.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   67</span>                                                                          {</div>
-<div class="line"><span class="lineno">   68</span>        <span class="keywordflow">if</span> (stats.getVariant() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   69</span>            <span class="keywordflow">return</span> stats.getVariant().getFittedWings();</div>
-<div class="line"><span class="lineno">   70</span>        }</div>
-<div class="line"><span class="lineno">   71</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
-<div class="line"><span class="lineno">   72</span><span class="comment">//      if (stats.getEntity() instanceof ShipAPI) {</span></div>
-<div class="line"><span class="lineno">   73</span><span class="comment">//          ShipAPI ship = (ShipAPI) stats.getEntity();</span></div>
-<div class="line"><span class="lineno">   74</span><span class="comment">//      } else {</span></div>
-<div class="line"><span class="lineno">   75</span><span class="comment">//          FleetMemberAPI member = stats.getFleetMember();</span></div>
-<div class="line"><span class="lineno">   76</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">   77</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a3d546b9824db218fef20612f2ad57509" name="a3d546b9824db218fef20612f2ad57509"></a>
@@ -934,12 +666,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#aa8f3ff90c8a5a6d287ee8fc09529a0a4">com.fs.starfarer.api.combat.BaseHullMod</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d16/ConvertedHangar_8java_source.html#l00375">375</a> of file <a class="el" href="../../d8/d16/ConvertedHangar_8java_source.html">ConvertedHangar.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  375</span>                                                                                      {</div>
-<div class="line"><span class="lineno">  376</span>        <span class="keywordflow">if</span> (index == 0) <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span> + (int) <a class="code hl_variable" href="../../d3/dee/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar.html#a5c5764ffa867d111bb18ded492800ab8">SMOD_CRUISER</a> + <span class="stringliteral">&quot;%&quot;</span>;</div>
-<div class="line"><span class="lineno">  377</span>        <span class="keywordflow">if</span> (index == 1) <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span> + (int) <a class="code hl_variable" href="../../d3/dee/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar.html#a2639f94b0614698f833a881428bc8303">SMOD_CAPITAL</a> + <span class="stringliteral">&quot;%&quot;</span>;</div>
-<div class="line"><span class="lineno">  378</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  379</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aec2b48361074102e50db9b8d2aa1631b" name="aec2b48361074102e50db9b8d2aa1631b"></a>
@@ -961,18 +688,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a1e372e808b9fc3e1aa3da1002c5bf9c8">com.fs.starfarer.api.combat.BaseHullMod</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d16/ConvertedHangar_8java_source.html#l00160">160</a> of file <a class="el" href="../../d8/d16/ConvertedHangar_8java_source.html">ConvertedHangar.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  160</span>                                                      {</div>
-<div class="line"><span class="lineno">  161</span>        <span class="keywordflow">if</span> (ship != <span class="keyword">null</span> &amp;&amp; ship.getHullSpec().getCRToDeploy() &gt; <a class="code hl_variable" href="../../d3/dee/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar.html#a910ec429507b5af3f87c4b82bb92aa64">CR_THRESHOLD_UNINSTALLABLE</a>) {</div>
-<div class="line"><span class="lineno">  162</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;Ship&#39;s combat readiness lost per deployment is too high&quot;</span>;</div>
-<div class="line"><span class="lineno">  163</span>        }</div>
-<div class="line"><span class="lineno">  164</span>        <span class="keywordflow">if</span> (ship != <span class="keyword">null</span> &amp;&amp; ship.isFrigate()) <span class="keywordflow">return</span> <span class="stringliteral">&quot;Can not be installed on a frigate&quot;</span>;</div>
-<div class="line"><span class="lineno">  165</span>        <span class="keywordflow">if</span> (ship != <span class="keyword">null</span> &amp;&amp; ship.getHullSpec().getFighterBays() &gt; 0) <span class="keywordflow">return</span> <span class="stringliteral">&quot;Ship has standard fighter bays&quot;</span>;</div>
-<div class="line"><span class="lineno">  166</span>        <span class="keywordflow">if</span> (ship != <span class="keyword">null</span> &amp;&amp; ship.getVariant().hasHullMod(HullMods.CONVERTED_BAY)) <span class="keywordflow">return</span> <span class="stringliteral">&quot;Ship has fighter bays&quot;</span>;</div>
-<div class="line"><span class="lineno">  167</span>        <span class="comment">//if (ship != null &amp;&amp; ship.getNumFighterBays() &gt; 0) return &quot;Ship has fighter bays&quot;;</span></div>
-<div class="line"><span class="lineno">  168</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Can not be installed on a phase ship&quot;</span>;</div>
-<div class="line"><span class="lineno">  169</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar_html_a910ec429507b5af3f87c4b82bb92aa64"><div class="ttname"><a href="../../d3/dee/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar.html#a910ec429507b5af3f87c4b82bb92aa64">com.fs.starfarer.api.impl.hullmods.ConvertedHangar.CR_THRESHOLD_UNINSTALLABLE</a></div><div class="ttdeci">static float CR_THRESHOLD_UNINSTALLABLE</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d16/ConvertedHangar_8java_source.html#l00036">ConvertedHangar.java:36</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a495d87ab69709f272453b3f4df28b1ee" name="a495d87ab69709f272453b3f4df28b1ee"></a>
@@ -994,18 +710,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#aba110c18a85c975b063efdf40ac482a7">com.fs.starfarer.api.combat.BaseHullMod</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d16/ConvertedHangar_8java_source.html#l00148">148</a> of file <a class="el" href="../../d8/d16/ConvertedHangar_8java_source.html">ConvertedHangar.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  148</span>                                                    {</div>
-<div class="line"><span class="lineno">  149</span>        <span class="comment">//if (ship.getMutableStats().getCargoMod().computeEffective(ship.getHullSpec().getCargo()) &lt; CARGO_REQ) return false;</span></div>
-<div class="line"><span class="lineno">  150</span>        <span class="keywordflow">if</span> (ship != <span class="keyword">null</span> &amp;&amp; ship.getHullSpec().getCRToDeploy() &gt; <a class="code hl_variable" href="../../d3/dee/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar.html#a910ec429507b5af3f87c4b82bb92aa64">CR_THRESHOLD_UNINSTALLABLE</a>) {</div>
-<div class="line"><span class="lineno">  151</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  152</span>        }</div>
-<div class="line"><span class="lineno">  153</span>        <span class="keywordflow">return</span> ship != <span class="keyword">null</span> &amp;&amp; !ship.isFrigate() &amp;&amp; ship.getHullSpec().getFighterBays() &lt;= 0 &amp;&amp;</div>
-<div class="line"><span class="lineno">  154</span>                                <span class="comment">//ship.getNumFighterBays() &lt;= 0 &amp;&amp;</span></div>
-<div class="line"><span class="lineno">  155</span>                                !ship.getVariant().hasHullMod(HullMods.CONVERTED_BAY) &amp;&amp;</div>
-<div class="line"><span class="lineno">  156</span>                                !ship.getVariant().hasHullMod(HullMods.PHASE_FIELD);</div>
-<div class="line"><span class="lineno">  157</span>                                <span class="comment">//ship.getHullSpec().getShieldType() != ShieldType.PHASE;       </span></div>
-<div class="line"><span class="lineno">  158</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a59c9b09c638016baf808770dd23a53f2" name="a59c9b09c638016baf808770dd23a53f2"></a>
@@ -1043,13 +748,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d16/ConvertedHangar_8java_source.html#l00181">181</a> of file <a class="el" href="../../d8/d16/ConvertedHangar_8java_source.html">ConvertedHangar.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  181</span>                                                                        {</div>
-<div class="line"><span class="lineno">  182</span>        SpriteAPI sprite = <a class="code hl_function" href="../../d3/dee/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar.html#a2497d906b583b6a9454d6bd7d4e0e956">getFighterSkin</a>(fighter, carrier);</div>
-<div class="line"><span class="lineno">  183</span>        <span class="keywordflow">if</span> (sprite != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  184</span>            fighter.setSprite(sprite);</div>
-<div class="line"><span class="lineno">  185</span>        }</div>
-<div class="line"><span class="lineno">  186</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a720767f7920627b3499d0f4fad104f43" name="a720767f7920627b3499d0f4fad104f43"></a>
@@ -1096,10 +795,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a3ea50f57642925029054d03f5362630b">com.fs.starfarer.api.combat.BaseHullMod</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d16/ConvertedHangar_8java_source.html#l00262">262</a> of file <a class="el" href="../../d8/d16/ConvertedHangar_8java_source.html">ConvertedHangar.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  262</span>                                                                                                        {</div>
-<div class="line"><span class="lineno">  263</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  264</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

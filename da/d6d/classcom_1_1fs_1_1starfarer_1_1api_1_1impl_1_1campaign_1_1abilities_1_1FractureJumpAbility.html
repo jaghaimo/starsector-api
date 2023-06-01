@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -508,40 +509,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#a1b79c85d7032a24bea4a4b599f765f52">com.fs.starfarer.api.impl.campaign.abilities.BaseDurationAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d2b/FractureJumpAbility_8java_source.html#l00049">49</a> of file <a class="el" href="../../d6/d2b/FractureJumpAbility_8java_source.html">FractureJumpAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   49</span>                                  {</div>
-<div class="line"><span class="lineno">   50</span>        <span class="comment">//if (Global.getSector().isPaused()) return;</span></div>
-<div class="line"><span class="lineno">   51</span>        </div>
-<div class="line"><span class="lineno">   52</span>        CampaignFleetAPI fleet = <a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#abdc51d7defc6b6bf60924a01ec361d2d">getFleet</a>();</div>
-<div class="line"><span class="lineno">   53</span>        <span class="keywordflow">if</span> (fleet == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   54</span>        </div>
-<div class="line"><span class="lineno">   55</span>        <span class="keywordflow">if</span> (fleet.isInHyperspaceTransition()) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   56</span>        </div>
-<div class="line"><span class="lineno">   57</span>        <span class="keywordflow">if</span> (fleet.isInHyperspace() &amp;&amp; <a class="code hl_function" href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a91e5a2b3cf2998a389836a4f8e87ca0a">canUseToJumpToSystem</a>()) { </div>
-<div class="line"><span class="lineno">   58</span>            NascentGravityWellAPI <a class="code hl_variable" href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a7ef90584dbac8675e3debb3bddbfd0f1">well</a> = <a class="code hl_function" href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#ad01e93eba6fe5f8f3abd9dd9cb2bbb33">getNearestWell</a>(<a class="code hl_variable" href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#afec227524d279b2fca9a684eb18207f6">NASCENT_JUMP_DIST</a>);</div>
-<div class="line"><span class="lineno">   59</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a7ef90584dbac8675e3debb3bddbfd0f1">well</a> == <span class="keyword">null</span> || <a class="code hl_variable" href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a7ef90584dbac8675e3debb3bddbfd0f1">well</a>.<a class="code hl_function" href="../../db/de3/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1NascentGravityWellAPI.html#a6e63b7f5e086d3583cd0ce0633e85b05">getTarget</a>() == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   60</span>            </div>
-<div class="line"><span class="lineno">   61</span>            this.well = <a class="code hl_variable" href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a7ef90584dbac8675e3debb3bddbfd0f1">well</a>;</div>
-<div class="line"><span class="lineno">   62</span>            <a class="code hl_variable" href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a3f00fa9fdee23c312546363e8b2531a2">ping</a> = Global.getSector().addPing(fleet, Pings.TRANSVERSE_JUMP);</div>
-<div class="line"><span class="lineno">   63</span>            <a class="code hl_variable" href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a1f716f49b3c0215ec6f32a939762d379">primed</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   64</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!fleet.isInHyperspace() &amp;&amp; <a class="code hl_function" href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#aadb9d9b1f169c42f8e1becc4c777494c">canUseToJumpToHyper</a>() &amp;&amp;</div>
-<div class="line"><span class="lineno">   65</span>                fleet.getContainingLocation() instanceof StarSystemAPI) {</div>
-<div class="line"><span class="lineno">   66</span>            <a class="code hl_variable" href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a3f00fa9fdee23c312546363e8b2531a2">ping</a> = Global.getSector().addPing(fleet, Pings.TRANSVERSE_JUMP);</div>
-<div class="line"><span class="lineno">   67</span>            <a class="code hl_variable" href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a1f716f49b3c0215ec6f32a939762d379">primed</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   68</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   69</span>            <a class="code hl_function" href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a9a5cb6be806d7730babcd13bd4370387">deactivate</a>();</div>
-<div class="line"><span class="lineno">   70</span>        }</div>
-<div class="line"><span class="lineno">   71</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin_html_abdc51d7defc6b6bf60924a01ec361d2d"><div class="ttname"><a href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#abdc51d7defc6b6bf60924a01ec361d2d">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin.getFleet</a></div><div class="ttdeci">CampaignFleetAPI getFleet()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00144">BaseAbilityPlugin.java:144</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility_html_a1f716f49b3c0215ec6f32a939762d379"><div class="ttname"><a href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a1f716f49b3c0215ec6f32a939762d379">com.fs.starfarer.api.impl.campaign.abilities.FractureJumpAbility.primed</a></div><div class="ttdeci">Boolean primed</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d2b/FractureJumpAbility_8java_source.html#l00044">FractureJumpAbility.java:44</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility_html_a3f00fa9fdee23c312546363e8b2531a2"><div class="ttname"><a href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a3f00fa9fdee23c312546363e8b2531a2">com.fs.starfarer.api.impl.campaign.abilities.FractureJumpAbility.ping</a></div><div class="ttdeci">EveryFrameScript ping</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d2b/FractureJumpAbility_8java_source.html#l00046">FractureJumpAbility.java:46</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility_html_a7ef90584dbac8675e3debb3bddbfd0f1"><div class="ttname"><a href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a7ef90584dbac8675e3debb3bddbfd0f1">com.fs.starfarer.api.impl.campaign.abilities.FractureJumpAbility.well</a></div><div class="ttdeci">NascentGravityWellAPI well</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d2b/FractureJumpAbility_8java_source.html#l00045">FractureJumpAbility.java:45</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility_html_a91e5a2b3cf2998a389836a4f8e87ca0a"><div class="ttname"><a href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a91e5a2b3cf2998a389836a4f8e87ca0a">com.fs.starfarer.api.impl.campaign.abilities.FractureJumpAbility.canUseToJumpToSystem</a></div><div class="ttdeci">boolean canUseToJumpToSystem()</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d2b/FractureJumpAbility_8java_source.html#l00040">FractureJumpAbility.java:40</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility_html_a9a5cb6be806d7730babcd13bd4370387"><div class="ttname"><a href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a9a5cb6be806d7730babcd13bd4370387">com.fs.starfarer.api.impl.campaign.abilities.FractureJumpAbility.deactivate</a></div><div class="ttdeci">void deactivate()</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d2b/FractureJumpAbility_8java_source.html#l00074">FractureJumpAbility.java:74</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility_html_aadb9d9b1f169c42f8e1becc4c777494c"><div class="ttname"><a href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#aadb9d9b1f169c42f8e1becc4c777494c">com.fs.starfarer.api.impl.campaign.abilities.FractureJumpAbility.canUseToJumpToHyper</a></div><div class="ttdeci">boolean canUseToJumpToHyper()</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d2b/FractureJumpAbility_8java_source.html#l00036">FractureJumpAbility.java:36</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility_html_ad01e93eba6fe5f8f3abd9dd9cb2bbb33"><div class="ttname"><a href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#ad01e93eba6fe5f8f3abd9dd9cb2bbb33">com.fs.starfarer.api.impl.campaign.abilities.FractureJumpAbility.getNearestWell</a></div><div class="ttdeci">NascentGravityWellAPI getNearestWell(float maxDist)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d2b/FractureJumpAbility_8java_source.html#l00195">FractureJumpAbility.java:195</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility_html_afec227524d279b2fca9a684eb18207f6"><div class="ttname"><a href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#afec227524d279b2fca9a684eb18207f6">com.fs.starfarer.api.impl.campaign.abilities.FractureJumpAbility.NASCENT_JUMP_DIST</a></div><div class="ttdeci">static final float NASCENT_JUMP_DIST</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d2b/FractureJumpAbility_8java_source.html#l00034">FractureJumpAbility.java:34</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1NascentGravityWellAPI_html_a6e63b7f5e086d3583cd0ce0633e85b05"><div class="ttname"><a href="../../db/de3/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1NascentGravityWellAPI.html#a6e63b7f5e086d3583cd0ce0633e85b05">com.fs.starfarer.api.campaign.NascentGravityWellAPI.getTarget</a></div><div class="ttdeci">SectorEntityToken getTarget()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a367fec0c0bddf064aa6444fbb776b6d7" name="a367fec0c0bddf064aa6444fbb776b6d7"></a>
@@ -587,84 +555,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#aee269ddd5f701aa11a8acd69c9bd434f">com.fs.starfarer.api.impl.campaign.abilities.BaseDurationAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d2b/FractureJumpAbility_8java_source.html#l00083">83</a> of file <a class="el" href="../../d6/d2b/FractureJumpAbility_8java_source.html">FractureJumpAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   83</span>                                                          {</div>
-<div class="line"><span class="lineno">   84</span>        CampaignFleetAPI fleet = <a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#abdc51d7defc6b6bf60924a01ec361d2d">getFleet</a>();</div>
-<div class="line"><span class="lineno">   85</span>        <span class="keywordflow">if</span> (fleet == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   86</span>        </div>
-<div class="line"><span class="lineno">   87</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#a74548753f66b57cc2bcc46a8288c459f">level</a> &gt; 0 &amp;&amp; level &lt; 1 &amp;&amp; amount &gt; 0) {</div>
-<div class="line"><span class="lineno">   88</span>            <span class="keywordtype">float</span> activateSeconds = <a class="code hl_function" href="../../d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#a0a5890f9ca871b20a00d1b8c534f3388">getActivationDays</a>() * Global.getSector().getClock().getSecondsPerDay();</div>
-<div class="line"><span class="lineno">   89</span>            <span class="keywordtype">float</span> speed = fleet.getVelocity().length();</div>
-<div class="line"><span class="lineno">   90</span>            <span class="keywordtype">float</span> acc = Math.max(speed, 200f)/activateSeconds + fleet.getAcceleration();</div>
-<div class="line"><span class="lineno">   91</span>            <span class="keywordtype">float</span> ds = acc * amount;</div>
-<div class="line"><span class="lineno">   92</span>            <span class="keywordflow">if</span> (ds &gt; speed) ds = speed;</div>
-<div class="line"><span class="lineno">   93</span>            Vector2f dv = Misc.getUnitVectorAtDegreeAngle(Misc.getAngleInDegrees(fleet.getVelocity()));</div>
-<div class="line"><span class="lineno">   94</span>            dv.scale(ds);</div>
-<div class="line"><span class="lineno">   95</span>            fleet.setVelocity(fleet.getVelocity().x - dv.x, fleet.getVelocity().y - dv.y);</div>
-<div class="line"><span class="lineno">   96</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   97</span>        }</div>
-<div class="line"><span class="lineno">   98</span>        </div>
-<div class="line"><span class="lineno">   99</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#a74548753f66b57cc2bcc46a8288c459f">level</a> == 1 &amp;&amp; <a class="code hl_variable" href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a1f716f49b3c0215ec6f32a939762d379">primed</a> != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  100</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a7ef90584dbac8675e3debb3bddbfd0f1">well</a> != <span class="keyword">null</span> &amp;&amp; fleet.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#aca208794671c1be979d665d374deaa94">isInHyperspace</a>() &amp;&amp; <a class="code hl_function" href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a91e5a2b3cf2998a389836a4f8e87ca0a">canUseToJumpToSystem</a>()) { </div>
-<div class="line"><span class="lineno">  101</span>                SectorEntityToken planet = <a class="code hl_variable" href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a7ef90584dbac8675e3debb3bddbfd0f1">well</a>.<a class="code hl_function" href="../../db/de3/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1NascentGravityWellAPI.html#a6e63b7f5e086d3583cd0ce0633e85b05">getTarget</a>();</div>
-<div class="line"><span class="lineno">  102</span>                Vector2f loc = Misc.getPointAtRadius(planet.getLocation(), planet.getRadius() + 200f + fleet.getRadius());</div>
-<div class="line"><span class="lineno">  103</span>                SectorEntityToken token = planet.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a06362480c6a17326650354460c6d7442">getContainingLocation</a>().<a class="code hl_function" href="../../d2/d2c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI.html#ab88ac95582125ad9137b08d417c62805">createToken</a>(loc.x, loc.y);</div>
-<div class="line"><span class="lineno">  104</span>                </div>
-<div class="line"><span class="lineno">  105</span>                JumpDestination dest = <span class="keyword">new</span> JumpDestination(token, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  106</span>                Global.getSector().doHyperspaceTransition(fleet, fleet, dest);</div>
-<div class="line"><span class="lineno">  107</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!fleet.isInHyperspace() &amp;&amp; <a class="code hl_function" href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#aadb9d9b1f169c42f8e1becc4c777494c">canUseToJumpToHyper</a>() &amp;&amp;</div>
-<div class="line"><span class="lineno">  108</span>                    fleet.getContainingLocation() instanceof StarSystemAPI) {</div>
-<div class="line"><span class="lineno">  109</span>                <span class="keywordtype">float</span> crCostFleetMult = fleet.getStats().getDynamic().getValue(Stats.DIRECT_JUMP_CR_MULT);</div>
-<div class="line"><span class="lineno">  110</span>                <span class="keywordflow">if</span> (crCostFleetMult &gt; 0) {</div>
-<div class="line"><span class="lineno">  111</span>                    <span class="keywordflow">for</span> (FleetMemberAPI member : <a class="code hl_function" href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#ad6f73292819032764dca348929a7475a">getNonReadyShips</a>()) {</div>
-<div class="line"><span class="lineno">  112</span>                        <span class="keywordflow">if</span> ((<span class="keywordtype">float</span>) Math.random() &lt; EmergencyBurnAbility.ACTIVATION_DAMAGE_PROB) {</div>
-<div class="line"><span class="lineno">  113</span>                            Misc.applyDamage(member, <span class="keyword">null</span>, FleetMemberDamageLevel.LOW, <span class="keyword">false</span>, <span class="keyword">null</span>, <span class="keyword">null</span>,</div>
-<div class="line"><span class="lineno">  114</span>                                    <span class="keyword">true</span>, <span class="keyword">null</span>, member.getShipName() + <span class="stringliteral">&quot; suffers damage from Transverse Jump activation&quot;</span>);</div>
-<div class="line"><span class="lineno">  115</span>                        }</div>
-<div class="line"><span class="lineno">  116</span>                    }</div>
-<div class="line"><span class="lineno">  117</span>                    <span class="keywordflow">for</span> (FleetMemberAPI member : fleet.getFleetData().getMembersListCopy()) {</div>
-<div class="line"><span class="lineno">  118</span>                        <span class="keywordtype">float</span> crLoss = member.getDeployCost() * <a class="code hl_variable" href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a7fe0b1533d754e20df9d4b4f9062aa58">CR_COST_MULT</a> * crCostFleetMult;</div>
-<div class="line"><span class="lineno">  119</span>                        member.getRepairTracker().applyCREvent(-crLoss, <span class="stringliteral">&quot;Transverse jump&quot;</span>);</div>
-<div class="line"><span class="lineno">  120</span>                    }</div>
-<div class="line"><span class="lineno">  121</span>                }</div>
-<div class="line"><span class="lineno">  122</span>                </div>
-<div class="line"><span class="lineno">  123</span>                <span class="keywordtype">float</span> cost = <a class="code hl_function" href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a2fc0423eb111a300fe38e7f65c83f21d">computeFuelCost</a>();</div>
-<div class="line"><span class="lineno">  124</span>                fleet.getCargo().removeFuel(cost);</div>
-<div class="line"><span class="lineno">  125</span>                </div>
-<div class="line"><span class="lineno">  126</span>                </div>
-<div class="line"><span class="lineno">  127</span>                StarSystemAPI system = (StarSystemAPI) fleet.getContainingLocation();</div>
-<div class="line"><span class="lineno">  128</span>                </div>
-<div class="line"><span class="lineno">  129</span>                Vector2f offset = Vector2f.sub(fleet.getLocation(), system.getCenter().getLocation(), <span class="keyword">new</span> Vector2f());</div>
-<div class="line"><span class="lineno">  130</span>                <span class="keywordtype">float</span> maxInSystem = 20000f;</div>
-<div class="line"><span class="lineno">  131</span>                <span class="keywordtype">float</span> maxInHyper = 2000f;</div>
-<div class="line"><span class="lineno">  132</span>                <span class="keywordtype">float</span> f = offset.length() / maxInSystem;</div>
-<div class="line"><span class="lineno">  133</span>                <span class="comment">//if (f &gt; 1) f = 1;</span></div>
-<div class="line"><span class="lineno">  134</span>                <span class="keywordflow">if</span> (f &gt; 0.5f) f = 0.5f;</div>
-<div class="line"><span class="lineno">  135</span>                </div>
-<div class="line"><span class="lineno">  136</span>                <span class="keywordtype">float</span> angle = Misc.getAngleInDegreesStrict(offset);</div>
-<div class="line"><span class="lineno">  137</span>                </div>
-<div class="line"><span class="lineno">  138</span>                Vector2f destOffset = Misc.getUnitVectorAtDegreeAngle(angle);</div>
-<div class="line"><span class="lineno">  139</span>                destOffset.scale(f * maxInHyper);</div>
-<div class="line"><span class="lineno">  140</span>                </div>
-<div class="line"><span class="lineno">  141</span>                Vector2f.add(system.getLocation(), destOffset, destOffset);</div>
-<div class="line"><span class="lineno">  142</span>                SectorEntityToken token = Global.getSector().getHyperspace().createToken(destOffset.x, destOffset.y);</div>
-<div class="line"><span class="lineno">  143</span>                </div>
-<div class="line"><span class="lineno">  144</span>                JumpDestination dest = <span class="keyword">new</span> JumpDestination(token, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  145</span>                Global.getSector().doHyperspaceTransition(fleet, fleet, dest);</div>
-<div class="line"><span class="lineno">  146</span>            }</div>
-<div class="line"><span class="lineno">  147</span>            </div>
-<div class="line"><span class="lineno">  148</span>            <a class="code hl_variable" href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a1f716f49b3c0215ec6f32a939762d379">primed</a> = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  149</span>            <a class="code hl_variable" href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a7ef90584dbac8675e3debb3bddbfd0f1">well</a> = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  150</span>        }</div>
-<div class="line"><span class="lineno">  151</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility_html_a0a5890f9ca871b20a00d1b8c534f3388"><div class="ttname"><a href="../../d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#a0a5890f9ca871b20a00d1b8c534f3388">com.fs.starfarer.api.impl.campaign.abilities.BaseDurationAbility.getActivationDays</a></div><div class="ttdeci">float getActivationDays()</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d40/BaseDurationAbility_8java_source.html#l00047">BaseDurationAbility.java:47</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility_html_a74548753f66b57cc2bcc46a8288c459f"><div class="ttname"><a href="../../d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#a74548753f66b57cc2bcc46a8288c459f">com.fs.starfarer.api.impl.campaign.abilities.BaseDurationAbility.level</a></div><div class="ttdeci">float level</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d40/BaseDurationAbility_8java_source.html#l00065">BaseDurationAbility.java:65</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility_html_a2fc0423eb111a300fe38e7f65c83f21d"><div class="ttname"><a href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a2fc0423eb111a300fe38e7f65c83f21d">com.fs.starfarer.api.impl.campaign.abilities.FractureJumpAbility.computeFuelCost</a></div><div class="ttdeci">float computeFuelCost()</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d2b/FractureJumpAbility_8java_source.html#l00363">FractureJumpAbility.java:363</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility_html_a7fe0b1533d754e20df9d4b4f9062aa58"><div class="ttname"><a href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a7fe0b1533d754e20df9d4b4f9062aa58">com.fs.starfarer.api.impl.campaign.abilities.FractureJumpAbility.CR_COST_MULT</a></div><div class="ttdeci">static final float CR_COST_MULT</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d2b/FractureJumpAbility_8java_source.html#l00030">FractureJumpAbility.java:30</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility_html_ad6f73292819032764dca348929a7475a"><div class="ttname"><a href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#ad6f73292819032764dca348929a7475a">com.fs.starfarer.api.impl.campaign.abilities.FractureJumpAbility.getNonReadyShips</a></div><div class="ttdeci">List&lt; FleetMemberAPI &gt; getNonReadyShips()</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d2b/FractureJumpAbility_8java_source.html#l00346">FractureJumpAbility.java:346</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI_html_ab88ac95582125ad9137b08d417c62805"><div class="ttname"><a href="../../d2/d2c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI.html#ab88ac95582125ad9137b08d417c62805">com.fs.starfarer.api.campaign.LocationAPI.createToken</a></div><div class="ttdeci">SectorEntityToken createToken(float x, float y)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_a06362480c6a17326650354460c6d7442"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a06362480c6a17326650354460c6d7442">com.fs.starfarer.api.campaign.SectorEntityToken.getContainingLocation</a></div><div class="ttdeci">LocationAPI getContainingLocation()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_aca208794671c1be979d665d374deaa94"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#aca208794671c1be979d665d374deaa94">com.fs.starfarer.api.campaign.SectorEntityToken.isInHyperspace</a></div><div class="ttdeci">boolean isInHyperspace()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aadb9d9b1f169c42f8e1becc4c777494c" name="aadb9d9b1f169c42f8e1becc4c777494c"></a>
@@ -691,10 +582,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d2b/FractureJumpAbility_8java_source.html#l00036">36</a> of file <a class="el" href="../../d6/d2b/FractureJumpAbility_8java_source.html">FractureJumpAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   36</span>                                            {</div>
-<div class="line"><span class="lineno">   37</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   38</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a91e5a2b3cf2998a389836a4f8e87ca0a" name="a91e5a2b3cf2998a389836a4f8e87ca0a"></a>
@@ -721,10 +609,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d2b/FractureJumpAbility_8java_source.html#l00040">40</a> of file <a class="el" href="../../d6/d2b/FractureJumpAbility_8java_source.html">FractureJumpAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   40</span>                                             {</div>
-<div class="line"><span class="lineno">   41</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   42</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac0fdd05ac7a2ff5437e53ac89fbb3642" name="ac0fdd05ac7a2ff5437e53ac89fbb3642"></a>
@@ -753,11 +638,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#a95552e19a3ed75bafe0ccc9501302145">com.fs.starfarer.api.impl.campaign.abilities.BaseDurationAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d2b/FractureJumpAbility_8java_source.html#l00166">166</a> of file <a class="el" href="../../d6/d2b/FractureJumpAbility_8java_source.html">FractureJumpAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  166</span>                                 {</div>
-<div class="line"><span class="lineno">  167</span>        CampaignFleetAPI fleet = <a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#abdc51d7defc6b6bf60924a01ec361d2d">getFleet</a>();</div>
-<div class="line"><span class="lineno">  168</span>        <span class="keywordflow">if</span> (fleet == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  169</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2fc0423eb111a300fe38e7f65c83f21d" name="a2fc0423eb111a300fe38e7f65c83f21d"></a>
@@ -784,15 +665,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d2b/FractureJumpAbility_8java_source.html#l00363">363</a> of file <a class="el" href="../../d6/d2b/FractureJumpAbility_8java_source.html">FractureJumpAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  363</span>                                      {</div>
-<div class="line"><span class="lineno">  364</span>        CampaignFleetAPI fleet = <a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#abdc51d7defc6b6bf60924a01ec361d2d">getFleet</a>();</div>
-<div class="line"><span class="lineno">  365</span>        <span class="keywordflow">if</span> (fleet == <span class="keyword">null</span>) <span class="keywordflow">return</span> 0f;</div>
-<div class="line"><span class="lineno">  366</span>        </div>
-<div class="line"><span class="lineno">  367</span>        <span class="keywordtype">float</span> cost = fleet.getLogistics().getFuelCostPerLightYear() * <a class="code hl_variable" href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#aba1e96b9779786ab880034be884d2015">FUEL_USE_MULT</a>;</div>
-<div class="line"><span class="lineno">  368</span>        <span class="keywordflow">return</span> cost;</div>
-<div class="line"><span class="lineno">  369</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility_html_aba1e96b9779786ab880034be884d2015"><div class="ttname"><a href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#aba1e96b9779786ab880034be884d2015">com.fs.starfarer.api.impl.campaign.abilities.FractureJumpAbility.FUEL_USE_MULT</a></div><div class="ttdeci">static final float FUEL_USE_MULT</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d2b/FractureJumpAbility_8java_source.html#l00031">FractureJumpAbility.java:31</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a88018eb5df48546e6515ce50e6e4ab95" name="a88018eb5df48546e6515ce50e6e4ab95"></a>
@@ -819,20 +692,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d2b/FractureJumpAbility_8java_source.html#l00371">371</a> of file <a class="el" href="../../d6/d2b/FractureJumpAbility_8java_source.html">FractureJumpAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  371</span>                                        {</div>
-<div class="line"><span class="lineno">  372</span>        CampaignFleetAPI fleet = <a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#abdc51d7defc6b6bf60924a01ec361d2d">getFleet</a>();</div>
-<div class="line"><span class="lineno">  373</span>        <span class="keywordflow">if</span> (fleet == <span class="keyword">null</span>) <span class="keywordflow">return</span> 0f;</div>
-<div class="line"><span class="lineno">  374</span>        </div>
-<div class="line"><span class="lineno">  375</span>        <span class="comment">//float crCostFleetMult = fleet.getStats().getDynamic().getValue(Stats.EMERGENCY_BURN_CR_MULT);</span></div>
-<div class="line"><span class="lineno">  376</span>        <span class="keywordtype">float</span> crCostFleetMult = 1f;</div>
-<div class="line"><span class="lineno">  377</span>        </div>
-<div class="line"><span class="lineno">  378</span>        <span class="keywordtype">float</span> cost = 0f;</div>
-<div class="line"><span class="lineno">  379</span>        <span class="keywordflow">for</span> (FleetMemberAPI member : fleet.getFleetData().getMembersListCopy()) {</div>
-<div class="line"><span class="lineno">  380</span>            cost += member.getDeploymentPointsCost() * <a class="code hl_variable" href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a7fe0b1533d754e20df9d4b4f9062aa58">CR_COST_MULT</a> * crCostFleetMult;</div>
-<div class="line"><span class="lineno">  381</span>        }</div>
-<div class="line"><span class="lineno">  382</span>        <span class="keywordflow">return</span> cost;</div>
-<div class="line"><span class="lineno">  383</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab23334fb5a6ba37931df1020b522dbfe" name="ab23334fb5a6ba37931df1020b522dbfe"></a>
@@ -871,119 +731,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a524c99aa9c5d81332f100b0bf6e8c699">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d2b/FractureJumpAbility_8java_source.html#l00218">218</a> of file <a class="el" href="../../d6/d2b/FractureJumpAbility_8java_source.html">FractureJumpAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  218</span>                                                                         {</div>
-<div class="line"><span class="lineno">  219</span>        CampaignFleetAPI fleet = <a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#abdc51d7defc6b6bf60924a01ec361d2d">getFleet</a>();</div>
-<div class="line"><span class="lineno">  220</span>        <span class="keywordflow">if</span> (fleet == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  221</span>        </div>
-<div class="line"><span class="lineno">  222</span>        Color gray = Misc.getGrayColor();</div>
-<div class="line"><span class="lineno">  223</span>        Color highlight = Misc.getHighlightColor();</div>
-<div class="line"><span class="lineno">  224</span>        Color fuel = Global.getSettings().getColor(<span class="stringliteral">&quot;progressBarFuelColor&quot;</span>);</div>
-<div class="line"><span class="lineno">  225</span>        Color bad = Misc.getNegativeHighlightColor();</div>
-<div class="line"><span class="lineno">  226</span>        </div>
-<div class="line"><span class="lineno">  227</span>        LabelAPI title = tooltip.addTitle(<span class="stringliteral">&quot;Transverse Jump&quot;</span>);</div>
-<div class="line"><span class="lineno">  228</span> </div>
-<div class="line"><span class="lineno">  229</span>        <span class="keywordtype">float</span> pad = 10f;</div>
-<div class="line"><span class="lineno">  230</span> </div>
-<div class="line"><span class="lineno">  231</span>        NascentGravityWellAPI <a class="code hl_variable" href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a7ef90584dbac8675e3debb3bddbfd0f1">well</a> = <a class="code hl_function" href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#ad01e93eba6fe5f8f3abd9dd9cb2bbb33">getNearestWell</a>(<a class="code hl_variable" href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#afec227524d279b2fca9a684eb18207f6">NASCENT_JUMP_DIST</a>);</div>
-<div class="line"><span class="lineno">  232</span>        </div>
-<div class="line"><span class="lineno">  233</span>        tooltip.addPara(<span class="stringliteral">&quot;Jump into hyperspace without the use of a jump-point, or &quot;</span> +</div>
-<div class="line"><span class="lineno">  234</span>                        <span class="stringliteral">&quot;jump into a star system across the hyperspace boundary near a nascent gravity well, &quot;</span> +</div>
-<div class="line"><span class="lineno">  235</span>                        <span class="stringliteral">&quot;emerging near the entity corresponding to the gravity well.&quot;</span>, pad);</div>
-<div class="line"><span class="lineno">  236</span>        </div>
-<div class="line"><span class="lineno">  237</span>        <span class="keywordtype">float</span> fuelCost = <a class="code hl_function" href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a2fc0423eb111a300fe38e7f65c83f21d">computeFuelCost</a>();</div>
-<div class="line"><span class="lineno">  238</span>        <span class="keywordtype">float</span> supplyCost = <a class="code hl_function" href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a88018eb5df48546e6515ce50e6e4ab95">computeSupplyCost</a>();</div>
-<div class="line"><span class="lineno">  239</span>        </div>
-<div class="line"><span class="lineno">  240</span>        <span class="keywordflow">if</span> (supplyCost &gt; 0) {</div>
-<div class="line"><span class="lineno">  241</span>            tooltip.addPara(<span class="stringliteral">&quot;Jumping into hyperspace consumes %s fuel and slightly reduces the combat readiness&quot;</span> +</div>
-<div class="line"><span class="lineno">  242</span>                        <span class="stringliteral">&quot; of all ships, costing up to %s supplies to recover. Jumping into a star system is free.&quot;</span>, pad, </div>
-<div class="line"><span class="lineno">  243</span>                        highlight,</div>
-<div class="line"><span class="lineno">  244</span>                        Misc.getRoundedValueMaxOneAfterDecimal(fuelCost),</div>
-<div class="line"><span class="lineno">  245</span>                        Misc.getRoundedValueMaxOneAfterDecimal(supplyCost));</div>
-<div class="line"><span class="lineno">  246</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  247</span>            tooltip.addPara(<span class="stringliteral">&quot;Jumping into hyperspace consumes %s fuel. Jumping into a star system is free.&quot;</span>, pad, </div>
-<div class="line"><span class="lineno">  248</span>                    highlight,</div>
-<div class="line"><span class="lineno">  249</span>                    Misc.getRoundedValueMaxOneAfterDecimal(fuelCost));</div>
-<div class="line"><span class="lineno">  250</span>        }</div>
-<div class="line"><span class="lineno">  251</span>        </div>
-<div class="line"><span class="lineno">  252</span>        </div>
-<div class="line"><span class="lineno">  253</span>        <span class="keywordflow">if</span> (TutorialMissionIntel.isTutorialInProgress()) { </div>
-<div class="line"><span class="lineno">  254</span>            tooltip.addPara(<span class="stringliteral">&quot;Can not be used right now.&quot;</span>, bad, pad);</div>
-<div class="line"><span class="lineno">  255</span>        }</div>
-<div class="line"><span class="lineno">  256</span>        </div>
-<div class="line"><span class="lineno">  257</span>        <span class="keywordflow">if</span> (!fleet.isInHyperspace()) {</div>
-<div class="line"><span class="lineno">  258</span>            <span class="keywordflow">if</span> (fuelCost &gt; fleet.getCargo().getFuel()) {</div>
-<div class="line"><span class="lineno">  259</span>                tooltip.addPara(<span class="stringliteral">&quot;Not enough fuel.&quot;</span>, bad, pad);</div>
-<div class="line"><span class="lineno">  260</span>            }</div>
-<div class="line"><span class="lineno">  261</span>        </div>
-<div class="line"><span class="lineno">  262</span>            List&lt;FleetMemberAPI&gt; nonReady = <a class="code hl_function" href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#ad6f73292819032764dca348929a7475a">getNonReadyShips</a>();</div>
-<div class="line"><span class="lineno">  263</span>            <span class="keywordflow">if</span> (!nonReady.isEmpty()) {</div>
-<div class="line"><span class="lineno">  264</span>                <span class="comment">//tooltip.addPara(&quot;Not all ships have enough combat readiness to initiate an emergency burn. Ships that require higher CR:&quot;, pad);</span></div>
-<div class="line"><span class="lineno">  265</span>                tooltip.addPara(<span class="stringliteral">&quot;Some ships don&#39;t have enough combat readiness to safely initiate a transverse jump &quot;</span> +</div>
-<div class="line"><span class="lineno">  266</span>                                <span class="stringliteral">&quot;and may suffer damage if the ability is activated:&quot;</span>, pad, </div>
-<div class="line"><span class="lineno">  267</span>                                Misc.getNegativeHighlightColor(), <span class="stringliteral">&quot;may suffer damage&quot;</span>);</div>
-<div class="line"><span class="lineno">  268</span>                <span class="keywordtype">int</span> j = 0;</div>
-<div class="line"><span class="lineno">  269</span>                <span class="keywordtype">int</span> max = 7;</div>
-<div class="line"><span class="lineno">  270</span>                <span class="keywordtype">float</span> initPad = 5f;</div>
-<div class="line"><span class="lineno">  271</span>                <span class="keywordflow">for</span> (FleetMemberAPI member : nonReady) {</div>
-<div class="line"><span class="lineno">  272</span>                    <span class="keywordflow">if</span> (j &gt;= max) {</div>
-<div class="line"><span class="lineno">  273</span>                        <span class="keywordflow">if</span> (nonReady.size() &gt; max + 1) {</div>
-<div class="line"><span class="lineno">  274</span>                            tooltip.addToGrid(0, j++, <span class="stringliteral">&quot;... and several other ships&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, bad);</div>
-<div class="line"><span class="lineno">  275</span>                            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  276</span>                        }</div>
-<div class="line"><span class="lineno">  277</span>                    }</div>
-<div class="line"><span class="lineno">  278</span>                    String str = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">  279</span>                    <span class="keywordflow">if</span> (!member.isFighterWing()) {</div>
-<div class="line"><span class="lineno">  280</span>                        str += member.getShipName() + <span class="stringliteral">&quot;, &quot;</span>;</div>
-<div class="line"><span class="lineno">  281</span>                        str += member.getHullSpec().getHullNameWithDashClass();</div>
-<div class="line"><span class="lineno">  282</span>                    } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  283</span>                        str += member.getVariant().getFullDesignationWithHullName();</div>
-<div class="line"><span class="lineno">  284</span>                    }</div>
-<div class="line"><span class="lineno">  285</span>                    </div>
-<div class="line"><span class="lineno">  286</span>                    tooltip.addPara(BaseIntelPlugin.INDENT + str, initPad);</div>
-<div class="line"><span class="lineno">  287</span>                    initPad = 0f;</div>
-<div class="line"><span class="lineno">  288</span>                }</div>
-<div class="line"><span class="lineno">  289</span>            }</div>
-<div class="line"><span class="lineno">  290</span>            </div>
-<div class="line"><span class="lineno">  291</span><span class="comment">//          List&lt;FleetMemberAPI&gt; nonReady = getNonReadyShips();</span></div>
-<div class="line"><span class="lineno">  292</span><span class="comment">//          if (!nonReady.isEmpty()) {</span></div>
-<div class="line"><span class="lineno">  293</span><span class="comment">//              tooltip.addPara(&quot;Not all ships have enough combat readiness to initiate a transverse jump. Ships that require higher CR:&quot;, pad);</span></div>
-<div class="line"><span class="lineno">  294</span><span class="comment">//              tooltip.beginGridFlipped(getTooltipWidth(), 1, 30, pad);</span></div>
-<div class="line"><span class="lineno">  295</span><span class="comment">//              //tooltip.setGridLabelColor(bad);</span></div>
-<div class="line"><span class="lineno">  296</span><span class="comment">//              int j = 0;</span></div>
-<div class="line"><span class="lineno">  297</span><span class="comment">//              int max = 7;</span></div>
-<div class="line"><span class="lineno">  298</span><span class="comment">//              for (FleetMemberAPI member : nonReady) {</span></div>
-<div class="line"><span class="lineno">  299</span><span class="comment">//                  if (j &gt;= max) {</span></div>
-<div class="line"><span class="lineno">  300</span><span class="comment">//                      if (nonReady.size() &gt; max + 1) {</span></div>
-<div class="line"><span class="lineno">  301</span><span class="comment">//                          tooltip.addToGrid(0, j++, &quot;... and several other ships&quot;, &quot;&quot;, bad);</span></div>
-<div class="line"><span class="lineno">  302</span><span class="comment">//                          break;</span></div>
-<div class="line"><span class="lineno">  303</span><span class="comment">//                      }</span></div>
-<div class="line"><span class="lineno">  304</span><span class="comment">//                  }</span></div>
-<div class="line"><span class="lineno">  305</span><span class="comment">//                  float crLoss = member.getDeployCost() * CR_COST_MULT;</span></div>
-<div class="line"><span class="lineno">  306</span><span class="comment">//                  String cost = &quot;&quot; + Math.round(crLoss * 100) + &quot;%&quot;;</span></div>
-<div class="line"><span class="lineno">  307</span><span class="comment">//                  String str = &quot;&quot;;</span></div>
-<div class="line"><span class="lineno">  308</span><span class="comment">//                  if (!member.isFighterWing()) {</span></div>
-<div class="line"><span class="lineno">  309</span><span class="comment">//                      str += member.getShipName() + &quot;, &quot;;</span></div>
-<div class="line"><span class="lineno">  310</span><span class="comment">//                      str += member.getHullSpec().getHullNameWithDashClass();</span></div>
-<div class="line"><span class="lineno">  311</span><span class="comment">//                  } else {</span></div>
-<div class="line"><span class="lineno">  312</span><span class="comment">//                      str += member.getVariant().getFullDesignationWithHullName();</span></div>
-<div class="line"><span class="lineno">  313</span><span class="comment">//                  }</span></div>
-<div class="line"><span class="lineno">  314</span><span class="comment">//                  tooltip.addToGrid(0, j++, str, cost, bad);</span></div>
-<div class="line"><span class="lineno">  315</span><span class="comment">//              }</span></div>
-<div class="line"><span class="lineno">  316</span><span class="comment">//              tooltip.addGrid(3f);</span></div>
-<div class="line"><span class="lineno">  317</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">  318</span>        }</div>
-<div class="line"><span class="lineno">  319</span> </div>
-<div class="line"><span class="lineno">  320</span>        <span class="keywordflow">if</span> (fleet.isInHyperspace()) {</div>
-<div class="line"><span class="lineno">  321</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a7ef90584dbac8675e3debb3bddbfd0f1">well</a> == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  322</span>                tooltip.addPara(<span class="stringliteral">&quot;Must be near a nascent gravity well.&quot;</span>, bad, pad);</div>
-<div class="line"><span class="lineno">  323</span>            }</div>
-<div class="line"><span class="lineno">  324</span>        }</div>
-<div class="line"><span class="lineno">  325</span>        </div>
-<div class="line"><span class="lineno">  326</span>        <a class="code hl_function" href="../../d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#aca01e068aef63af5241219b9aa33c5d0">addIncompatibleToTooltip</a>(tooltip, expanded);</div>
-<div class="line"><span class="lineno">  327</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility_html_aca01e068aef63af5241219b9aa33c5d0"><div class="ttname"><a href="../../d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#aca01e068aef63af5241219b9aa33c5d0">com.fs.starfarer.api.impl.campaign.abilities.BaseDurationAbility.addIncompatibleToTooltip</a></div><div class="ttdeci">void addIncompatibleToTooltip(TooltipMakerAPI tooltip, boolean expanded)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d40/BaseDurationAbility_8java_source.html#l00153">BaseDurationAbility.java:153</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility_html_a88018eb5df48546e6515ce50e6e4ab95"><div class="ttname"><a href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a88018eb5df48546e6515ce50e6e4ab95">com.fs.starfarer.api.impl.campaign.abilities.FractureJumpAbility.computeSupplyCost</a></div><div class="ttdeci">float computeSupplyCost()</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d2b/FractureJumpAbility_8java_source.html#l00371">FractureJumpAbility.java:371</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9a5cb6be806d7730babcd13bd4370387" name="a9a5cb6be806d7730babcd13bd4370387"></a>
@@ -1006,14 +754,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#a4c645f917e0db75e7ba759eddb0898f2">com.fs.starfarer.api.impl.campaign.abilities.BaseDurationAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d2b/FractureJumpAbility_8java_source.html#l00074">74</a> of file <a class="el" href="../../d6/d2b/FractureJumpAbility_8java_source.html">FractureJumpAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   74</span>                             {</div>
-<div class="line"><span class="lineno">   75</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a3f00fa9fdee23c312546363e8b2531a2">ping</a> != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   76</span>            Global.getSector().removeScript(<a class="code hl_variable" href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a3f00fa9fdee23c312546363e8b2531a2">ping</a>);</div>
-<div class="line"><span class="lineno">   77</span>            <a class="code hl_variable" href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a3f00fa9fdee23c312546363e8b2531a2">ping</a> = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   78</span>        }</div>
-<div class="line"><span class="lineno">   79</span>        super.deactivate();</div>
-<div class="line"><span class="lineno">   80</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9bcaba561b66f1ebdb2f4a061b2e477d" name="a9bcaba561b66f1ebdb2f4a061b2e477d"></a>
@@ -1042,11 +783,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#a598f0df48bcfc1718427ad8cee13cdc6">com.fs.starfarer.api.impl.campaign.abilities.BaseDurationAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d2b/FractureJumpAbility_8java_source.html#l00161">161</a> of file <a class="el" href="../../d6/d2b/FractureJumpAbility_8java_source.html">FractureJumpAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  161</span>                                    {</div>
-<div class="line"><span class="lineno">  162</span>        <a class="code hl_function" href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#ac0fdd05ac7a2ff5437e53ac89fbb3642">cleanupImpl</a>();</div>
-<div class="line"><span class="lineno">  163</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility_html_ac0fdd05ac7a2ff5437e53ac89fbb3642"><div class="ttname"><a href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#ac0fdd05ac7a2ff5437e53ac89fbb3642">com.fs.starfarer.api.impl.campaign.abilities.FractureJumpAbility.cleanupImpl</a></div><div class="ttdeci">void cleanupImpl()</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d2b/FractureJumpAbility_8java_source.html#l00166">FractureJumpAbility.java:166</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae5823e67f061fae57513d751b871da46" name="ae5823e67f061fae57513d751b871da46"></a>
@@ -1078,12 +815,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a9807387360d315e712b48e2da5af0741">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d2b/FractureJumpAbility_8java_source.html#l00334">334</a> of file <a class="el" href="../../d6/d2b/FractureJumpAbility_8java_source.html">FractureJumpAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  334</span>                                                                                {</div>
-<div class="line"><span class="lineno">  335</span>        <span class="keywordflow">if</span> (engagedInHostilities) {</div>
-<div class="line"><span class="lineno">  336</span>            <a class="code hl_function" href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a9a5cb6be806d7730babcd13bd4370387">deactivate</a>();</div>
-<div class="line"><span class="lineno">  337</span>        }</div>
-<div class="line"><span class="lineno">  338</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a4c1dcc1a14ac3e0626f9f4af8e9f6505" name="a4c1dcc1a14ac3e0626f9f4af8e9f6505"></a>
@@ -1111,10 +843,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#ac17f98876df21077a7e38da52149ea01">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d2b/FractureJumpAbility_8java_source.html#l00341">341</a> of file <a class="el" href="../../d6/d2b/FractureJumpAbility_8java_source.html">FractureJumpAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  341</span>                                                    {</div>
-<div class="line"><span class="lineno">  342</span>        <a class="code hl_function" href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a9a5cb6be806d7730babcd13bd4370387">deactivate</a>();</div>
-<div class="line"><span class="lineno">  343</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a116100cbd71a33f1387cb1a5df2df4a8" name="a116100cbd71a33f1387cb1a5df2df4a8"></a>
@@ -1143,11 +872,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a3be04ce2cf4b54d260d06d126bca0d7a">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d2b/FractureJumpAbility_8java_source.html#l00154">154</a> of file <a class="el" href="../../d6/d2b/FractureJumpAbility_8java_source.html">FractureJumpAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  154</span>                                         {</div>
-<div class="line"><span class="lineno">  155</span>        <span class="keywordflow">return</span> super.getActivationText();</div>
-<div class="line"><span class="lineno">  156</span>        <span class="comment">//return &quot;Initiating jump&quot;;</span></div>
-<div class="line"><span class="lineno">  157</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a05adcd3625a637570f7dd4f292d0e263" name="a05adcd3625a637570f7dd4f292d0e263"></a>
@@ -1168,15 +893,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a2b7beaafff07fa48cea7e315d15012b1">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d2b/FractureJumpAbility_8java_source.html#l00417">417</a> of file <a class="el" href="../../d6/d2b/FractureJumpAbility_8java_source.html">FractureJumpAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  417</span>                                    {</div>
-<div class="line"><span class="lineno">  418</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a6edd57c81b481c85c33f2cf1f38dedae">showAlarm</a>()) {</div>
-<div class="line"><span class="lineno">  419</span>            Color color = Misc.getNegativeHighlightColor();</div>
-<div class="line"><span class="lineno">  420</span>            <span class="keywordflow">return</span> Misc.scaleAlpha(color, Global.getSector().getCampaignUI().getSharedFader().getBrightness() * 0.5f);</div>
-<div class="line"><span class="lineno">  421</span>        }</div>
-<div class="line"><span class="lineno">  422</span>        <span class="keywordflow">return</span> super.getCooldownColor();</div>
-<div class="line"><span class="lineno">  423</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility_html_a6edd57c81b481c85c33f2cf1f38dedae"><div class="ttname"><a href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a6edd57c81b481c85c33f2cf1f38dedae">com.fs.starfarer.api.impl.campaign.abilities.FractureJumpAbility.showAlarm</a></div><div class="ttdeci">boolean showAlarm()</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d2b/FractureJumpAbility_8java_source.html#l00387">FractureJumpAbility.java:387</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac72f675e1e5ad6759087616cbd093f42" name="ac72f675e1e5ad6759087616cbd093f42"></a>
@@ -1198,13 +915,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#aa41cf4e32a02c6e63625dbc2a70c3e73">com.fs.starfarer.api.impl.campaign.abilities.BaseDurationAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d2b/FractureJumpAbility_8java_source.html#l00401">401</a> of file <a class="el" href="../../d6/d2b/FractureJumpAbility_8java_source.html">FractureJumpAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  401</span>                                       {</div>
-<div class="line"><span class="lineno">  402</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a6edd57c81b481c85c33f2cf1f38dedae">showAlarm</a>()) {</div>
-<div class="line"><span class="lineno">  403</span>            <span class="keywordflow">return</span> 0f;</div>
-<div class="line"><span class="lineno">  404</span>        }</div>
-<div class="line"><span class="lineno">  405</span>        <span class="keywordflow">return</span> super.getCooldownFraction();</div>
-<div class="line"><span class="lineno">  406</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ad01e93eba6fe5f8f3abd9dd9cb2bbb33" name="ad01e93eba6fe5f8f3abd9dd9cb2bbb33"></a>
@@ -1224,29 +935,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d2b/FractureJumpAbility_8java_source.html#l00195">195</a> of file <a class="el" href="../../d6/d2b/FractureJumpAbility_8java_source.html">FractureJumpAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  195</span>                                                               {</div>
-<div class="line"><span class="lineno">  196</span>        CampaignFleetAPI fleet = <a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#abdc51d7defc6b6bf60924a01ec361d2d">getFleet</a>();</div>
-<div class="line"><span class="lineno">  197</span>        <span class="keywordflow">if</span> (fleet == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  198</span>        <span class="keywordflow">if</span> (!fleet.isInHyperspace()) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  199</span>        </div>
-<div class="line"><span class="lineno">  200</span>        <span class="keywordtype">float</span> minDist = Float.MAX_VALUE;</div>
-<div class="line"><span class="lineno">  201</span>        NascentGravityWellAPI closest = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  202</span>        List&lt;Object&gt; wells = fleet.getContainingLocation().getEntities(NascentGravityWellAPI.class);</div>
-<div class="line"><span class="lineno">  203</span>        <span class="keywordflow">for</span> (Object o : wells) {</div>
-<div class="line"><span class="lineno">  204</span>            NascentGravityWellAPI <a class="code hl_variable" href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a7ef90584dbac8675e3debb3bddbfd0f1">well</a> = (NascentGravityWellAPI) o;</div>
-<div class="line"><span class="lineno">  205</span>            <span class="keywordtype">float</span> dist = Misc.getDistance(<a class="code hl_variable" href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a7ef90584dbac8675e3debb3bddbfd0f1">well</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#aedf9cd58593dcb6afd4d488bb017eafc">getLocation</a>(), fleet.getLocation());</div>
-<div class="line"><span class="lineno">  206</span>            dist -= <a class="code hl_variable" href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a7ef90584dbac8675e3debb3bddbfd0f1">well</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a6a79c7cc3a0ec97f24a9de5f6f904d96">getRadius</a>() + fleet.getRadius();</div>
-<div class="line"><span class="lineno">  207</span>            <span class="keywordflow">if</span> (dist &gt; maxDist) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  208</span>            <span class="keywordflow">if</span> (dist &lt; minDist) {</div>
-<div class="line"><span class="lineno">  209</span>                minDist = dist;</div>
-<div class="line"><span class="lineno">  210</span>                closest = <a class="code hl_variable" href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a7ef90584dbac8675e3debb3bddbfd0f1">well</a>;</div>
-<div class="line"><span class="lineno">  211</span>            }</div>
-<div class="line"><span class="lineno">  212</span>        }</div>
-<div class="line"><span class="lineno">  213</span>        <span class="keywordflow">return</span> closest;</div>
-<div class="line"><span class="lineno">  214</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_a6a79c7cc3a0ec97f24a9de5f6f904d96"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a6a79c7cc3a0ec97f24a9de5f6f904d96">com.fs.starfarer.api.campaign.SectorEntityToken.getRadius</a></div><div class="ttdeci">float getRadius()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_aedf9cd58593dcb6afd4d488bb017eafc"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#aedf9cd58593dcb6afd4d488bb017eafc">com.fs.starfarer.api.campaign.SectorEntityToken.getLocation</a></div><div class="ttdeci">Vector2f getLocation()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ad6f73292819032764dca348929a7475a" name="ad6f73292819032764dca348929a7475a"></a>
@@ -1273,23 +962,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d2b/FractureJumpAbility_8java_source.html#l00346">346</a> of file <a class="el" href="../../d6/d2b/FractureJumpAbility_8java_source.html">FractureJumpAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  346</span>                                                      {</div>
-<div class="line"><span class="lineno">  347</span>        List&lt;FleetMemberAPI&gt; result = <span class="keyword">new</span> ArrayList&lt;FleetMemberAPI&gt;();</div>
-<div class="line"><span class="lineno">  348</span>        CampaignFleetAPI fleet = <a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#abdc51d7defc6b6bf60924a01ec361d2d">getFleet</a>();</div>
-<div class="line"><span class="lineno">  349</span>        <span class="keywordflow">if</span> (fleet == <span class="keyword">null</span>) <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">  350</span>        </div>
-<div class="line"><span class="lineno">  351</span>        <span class="comment">//float crCostFleetMult = fleet.getStats().getDynamic().getValue(Stats.EMERGENCY_BURN_CR_MULT);</span></div>
-<div class="line"><span class="lineno">  352</span>        <span class="keywordtype">float</span> crCostFleetMult = 1f;</div>
-<div class="line"><span class="lineno">  353</span>        <span class="keywordflow">for</span> (FleetMemberAPI member : fleet.getFleetData().getMembersListCopy()) {</div>
-<div class="line"><span class="lineno">  354</span>            <span class="comment">//if (member.isMothballed()) continue;</span></div>
-<div class="line"><span class="lineno">  355</span>            <span class="keywordtype">float</span> crLoss = member.getDeployCost() * <a class="code hl_variable" href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a7fe0b1533d754e20df9d4b4f9062aa58">CR_COST_MULT</a> * crCostFleetMult;</div>
-<div class="line"><span class="lineno">  356</span>            <span class="keywordflow">if</span> (Math.round(member.getRepairTracker().getCR() * 100) &lt; Math.round(crLoss * 100)) {</div>
-<div class="line"><span class="lineno">  357</span>                result.add(member);</div>
-<div class="line"><span class="lineno">  358</span>            }</div>
-<div class="line"><span class="lineno">  359</span>        }</div>
-<div class="line"><span class="lineno">  360</span>        <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">  361</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a43211831ed98f5579abca31e98b29f6b" name="a43211831ed98f5579abca31e98b29f6b"></a>
@@ -1310,10 +983,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a35207ab01150d1c1521fa7ebf0ef4a75">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d2b/FractureJumpAbility_8java_source.html#l00329">329</a> of file <a class="el" href="../../d6/d2b/FractureJumpAbility_8java_source.html">FractureJumpAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  329</span>                                {</div>
-<div class="line"><span class="lineno">  330</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  331</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9fef09b56f3d65902ca9aab5e8bcb14c" name="a9fef09b56f3d65902ca9aab5e8bcb14c"></a>
@@ -1334,13 +1004,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#ad6e3605521c9a92989384500fd02ef3b">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d2b/FractureJumpAbility_8java_source.html#l00426">426</a> of file <a class="el" href="../../d6/d2b/FractureJumpAbility_8java_source.html">FractureJumpAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  426</span>                                                 {</div>
-<div class="line"><span class="lineno">  427</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a6edd57c81b481c85c33f2cf1f38dedae">showAlarm</a>()) {</div>
-<div class="line"><span class="lineno">  428</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  429</span>        }</div>
-<div class="line"><span class="lineno">  430</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  431</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a386879b42c22c8eb870480014dd2eaaf" name="a386879b42c22c8eb870480014dd2eaaf"></a>
@@ -1361,10 +1025,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a735b1d3fa7cefe6db074838fc9ab19ea">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d2b/FractureJumpAbility_8java_source.html#l00412">412</a> of file <a class="el" href="../../d6/d2b/FractureJumpAbility_8java_source.html">FractureJumpAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  412</span>                                  {</div>
-<div class="line"><span class="lineno">  413</span>        <span class="keywordflow">return</span> super.getCooldownFraction() &lt; 1f;</div>
-<div class="line"><span class="lineno">  414</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a4e7e4ac01a607fc1fb3c5f514fd49c6f" name="a4e7e4ac01a607fc1fb3c5f514fd49c6f"></a>
@@ -1386,30 +1047,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#ac04092fe5109fdf398792cb01f739ae7">com.fs.starfarer.api.impl.campaign.abilities.BaseDurationAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d2b/FractureJumpAbility_8java_source.html#l00171">171</a> of file <a class="el" href="../../d6/d2b/FractureJumpAbility_8java_source.html">FractureJumpAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  171</span>                              {</div>
-<div class="line"><span class="lineno">  172</span>        <span class="keywordflow">if</span> (!super.isUsable()) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  173</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#abdc51d7defc6b6bf60924a01ec361d2d">getFleet</a>() == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  174</span>        </div>
-<div class="line"><span class="lineno">  175</span>        CampaignFleetAPI fleet = <a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#abdc51d7defc6b6bf60924a01ec361d2d">getFleet</a>();</div>
-<div class="line"><span class="lineno">  176</span>        </div>
-<div class="line"><span class="lineno">  177</span>        <span class="keywordflow">if</span> (fleet.isInHyperspaceTransition()) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  178</span>        </div>
-<div class="line"><span class="lineno">  179</span>        <span class="keywordflow">if</span> (TutorialMissionIntel.isTutorialInProgress()) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  180</span>        </div>
-<div class="line"><span class="lineno">  181</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a91e5a2b3cf2998a389836a4f8e87ca0a">canUseToJumpToSystem</a>() &amp;&amp; fleet.isInHyperspace() &amp;&amp; <a class="code hl_function" href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#ad01e93eba6fe5f8f3abd9dd9cb2bbb33">getNearestWell</a>(<a class="code hl_variable" href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#afec227524d279b2fca9a684eb18207f6">NASCENT_JUMP_DIST</a>) != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  182</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  183</span>        }</div>
-<div class="line"><span class="lineno">  184</span>        </div>
-<div class="line"><span class="lineno">  185</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#aadb9d9b1f169c42f8e1becc4c777494c">canUseToJumpToHyper</a>() &amp;&amp; !fleet.isInHyperspace()) {</div>
-<div class="line"><span class="lineno">  186</span>            <span class="comment">//if (getNonReadyShips().isEmpty() &amp;&amp;</span></div>
-<div class="line"><span class="lineno">  187</span>            <span class="keywordflow">if</span> ((<a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#abdc51d7defc6b6bf60924a01ec361d2d">getFleet</a>().isAIMode() || <a class="code hl_function" href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a2fc0423eb111a300fe38e7f65c83f21d">computeFuelCost</a>() &lt;= <a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#abdc51d7defc6b6bf60924a01ec361d2d">getFleet</a>().getCargo().getFuel())) {</div>
-<div class="line"><span class="lineno">  188</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  189</span>            }</div>
-<div class="line"><span class="lineno">  190</span>        }</div>
-<div class="line"><span class="lineno">  191</span>        </div>
-<div class="line"><span class="lineno">  192</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  193</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a6edd57c81b481c85c33f2cf1f38dedae" name="a6edd57c81b481c85c33f2cf1f38dedae"></a>
@@ -1436,14 +1074,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d2b/FractureJumpAbility_8java_source.html#l00387">387</a> of file <a class="el" href="../../d6/d2b/FractureJumpAbility_8java_source.html">FractureJumpAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  387</span>                                  {</div>
-<div class="line"><span class="lineno">  388</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#abdc51d7defc6b6bf60924a01ec361d2d">getFleet</a>() != <span class="keyword">null</span> &amp;&amp; <a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#abdc51d7defc6b6bf60924a01ec361d2d">getFleet</a>().isInHyperspace()) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  389</span>        <span class="keywordflow">return</span> !<a class="code hl_function" href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#ad6f73292819032764dca348929a7475a">getNonReadyShips</a>().isEmpty() &amp;&amp; !<a class="code hl_function" href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a386879b42c22c8eb870480014dd2eaaf">isOnCooldown</a>() &amp;&amp; !<a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a62da104c1ab0ba015a0a193cad0a549b">isActiveOrInProgress</a>() &amp;&amp; <a class="code hl_function" href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a4e7e4ac01a607fc1fb3c5f514fd49c6f">isUsable</a>();</div>
-<div class="line"><span class="lineno">  390</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin_html_a62da104c1ab0ba015a0a193cad0a549b"><div class="ttname"><a href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a62da104c1ab0ba015a0a193cad0a549b">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin.isActiveOrInProgress</a></div><div class="ttdeci">boolean isActiveOrInProgress()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00253">BaseAbilityPlugin.java:253</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility_html_a386879b42c22c8eb870480014dd2eaaf"><div class="ttname"><a href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a386879b42c22c8eb870480014dd2eaaf">com.fs.starfarer.api.impl.campaign.abilities.FractureJumpAbility.isOnCooldown</a></div><div class="ttdeci">boolean isOnCooldown()</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d2b/FractureJumpAbility_8java_source.html#l00412">FractureJumpAbility.java:412</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility_html_a4e7e4ac01a607fc1fb3c5f514fd49c6f"><div class="ttname"><a href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a4e7e4ac01a607fc1fb3c5f514fd49c6f">com.fs.starfarer.api.impl.campaign.abilities.FractureJumpAbility.isUsable</a></div><div class="ttdeci">boolean isUsable()</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d2b/FractureJumpAbility_8java_source.html#l00171">FractureJumpAbility.java:171</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a20dc63004fba4813e4124c8ba6ea60fb" name="a20dc63004fba4813e4124c8ba6ea60fb"></a>
@@ -1464,10 +1095,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#af8e51571a1c0c6f4a0f7e42dc141ba27">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d2b/FractureJumpAbility_8java_source.html#l00408">408</a> of file <a class="el" href="../../d6/d2b/FractureJumpAbility_8java_source.html">FractureJumpAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  408</span>                                           {</div>
-<div class="line"><span class="lineno">  409</span>        <span class="keywordflow">return</span> super.showCooldownIndicator();</div>
-<div class="line"><span class="lineno">  410</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

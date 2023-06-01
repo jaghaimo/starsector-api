@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -155,10 +156,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/dd6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1BaseCommandPlugin.html#ae859f2f32964a8a7bf504be999e3f7fe">com.fs.starfarer.api.impl.campaign.rulecmd.BaseCommandPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d2f/AddSelector_8java_source.html#l00058">58</a> of file <a class="el" href="../../d4/d2f/AddSelector_8java_source.html">AddSelector.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   58</span>                                           {</div>
-<div class="line"><span class="lineno">   59</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   60</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9e65880c149fff1310a28a6b0ca31584" name="a9e65880c149fff1310a28a6b0ca31584"></a>
@@ -202,42 +200,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="../../d0/d5c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1CommandPlugin.html#a72a44c5127e60136b87d3b37613fd0e0">com.fs.starfarer.api.campaign.rules.CommandPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d2f/AddSelector_8java_source.html#l00021">21</a> of file <a class="el" href="../../d4/d2f/AddSelector_8java_source.html">AddSelector.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   21</span>                                                                                                                                         {</div>
-<div class="line"><span class="lineno">   22</span>        <span class="keywordflow">if</span> (dialog == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   23</span>        </div>
-<div class="line"><span class="lineno">   24</span>        <span class="keyword">final</span> VarAndMemory resultVar = params.get(1).getVarNameAndMemory(memoryMap);</div>
-<div class="line"><span class="lineno">   25</span>        <span class="keyword">final</span> String text = params.get(2).getStringWithTokenReplacement(ruleId, dialog, memoryMap);</div>
-<div class="line"><span class="lineno">   26</span>        <span class="keyword">final</span> Color color = params.get(3).getColor(memoryMap);</div>
-<div class="line"><span class="lineno">   27</span>        <span class="keyword">final</span> <span class="keywordtype">float</span> min = params.get(4).getFloat(memoryMap);</div>
-<div class="line"><span class="lineno">   28</span>        <span class="keyword">final</span> <span class="keywordtype">float</span> max = params.get(5).getFloat(memoryMap);</div>
-<div class="line"><span class="lineno">   29</span>        </div>
-<div class="line"><span class="lineno">   30</span>        <span class="keyword">final</span> String <span class="keywordtype">id</span> = Misc.genUID();</div>
-<div class="line"><span class="lineno">   31</span>        <span class="keyword">final</span> OptionPanelAPI options = dialog.getOptionPanel();</div>
-<div class="line"><span class="lineno">   32</span>        options.addSelector(text, <span class="keywordtype">id</span>, color, 250, 50, min, max, ValueDisplayMode.VALUE, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   33</span>        </div>
-<div class="line"><span class="lineno">   34</span>        Global.getSector().addTransientScript(<span class="keyword">new</span> EveryFrameScript() {</div>
-<div class="line"><span class="lineno">   35</span>            <span class="keyword">public</span> <span class="keywordtype">boolean</span> runWhilePaused() {</div>
-<div class="line"><span class="lineno">   36</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   37</span>            }</div>
-<div class="line"><span class="lineno">   38</span>            <span class="keyword">private</span> <span class="keywordtype">boolean</span> done = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   39</span>            <span class="keyword">public</span> <span class="keywordtype">boolean</span> isDone() {</div>
-<div class="line"><span class="lineno">   40</span>                <span class="keywordflow">return</span> done;</div>
-<div class="line"><span class="lineno">   41</span>            }</div>
-<div class="line"><span class="lineno">   42</span>            <span class="keyword">public</span> <span class="keywordtype">void</span> advance(<span class="keywordtype">float</span> amount) {</div>
-<div class="line"><span class="lineno">   43</span>                <span class="keywordflow">if</span> (done ||</div>
-<div class="line"><span class="lineno">   44</span>                        !options.hasSelector(<span class="keywordtype">id</span>) || </div>
-<div class="line"><span class="lineno">   45</span>                        !Global.getSector().isPaused() ||</div>
-<div class="line"><span class="lineno">   46</span>                        !Global.getSector().getCampaignUI().isShowingDialog()) {</div>
-<div class="line"><span class="lineno">   47</span>                    done = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   48</span>                    <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   49</span>                }</div>
-<div class="line"><span class="lineno">   50</span>                resultVar.memory.set(resultVar.name, Math.round(options.getSelectorValue(<span class="keywordtype">id</span>)), 0);</div>
-<div class="line"><span class="lineno">   51</span>            }</div>
-<div class="line"><span class="lineno">   52</span>        });</div>
-<div class="line"><span class="lineno">   53</span>        </div>
-<div class="line"><span class="lineno">   54</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   55</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a6a57ea360a5a919ab035953b0b594e59" name="a6a57ea360a5a919ab035953b0b594e59"></a>
@@ -269,11 +232,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/dd6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1BaseCommandPlugin.html#a5e1c8624b65d26f63dbd53bf2e35016b">com.fs.starfarer.api.impl.campaign.rulecmd.BaseCommandPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d2f/AddSelector_8java_source.html#l00063">63</a> of file <a class="el" href="../../d4/d2f/AddSelector_8java_source.html">AddSelector.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   63</span>                                                                                          {</div>
-<div class="line"><span class="lineno">   64</span>        <span class="keywordtype">int</span> order = (int) params.get(0).getFloat(memoryMap);</div>
-<div class="line"><span class="lineno">   65</span>        <span class="keywordflow">return</span> order;</div>
-<div class="line"><span class="lineno">   66</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -156,11 +157,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d70/DelayedActionScript_8java_source.html#l00010">10</a> of file <a class="el" href="../../d7/d70/DelayedActionScript_8java_source.html">DelayedActionScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   10</span>                                               {</div>
-<div class="line"><span class="lineno">   11</span>        this.daysLeft = <a class="code hl_variable" href="../../d9/dd1/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1DelayedActionScript.html#ada6f304ec1078880a7695772fdc5c0d5">daysLeft</a>;</div>
-<div class="line"><span class="lineno">   12</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1DelayedActionScript_html_ada6f304ec1078880a7695772fdc5c0d5"><div class="ttname"><a href="../../d9/dd1/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1DelayedActionScript.html#ada6f304ec1078880a7695772fdc5c0d5">com.fs.starfarer.api.util.DelayedActionScript.daysLeft</a></div><div class="ttdeci">float daysLeft</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d70/DelayedActionScript_8java_source.html#l00008">DelayedActionScript.java:8</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -189,17 +186,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d7/d63/interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html#a3a97090ca8cfdc230e9ad7e633407af6">com.fs.starfarer.api.EveryFrameScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d70/DelayedActionScript_8java_source.html#l00014">14</a> of file <a class="el" href="../../d7/d70/DelayedActionScript_8java_source.html">DelayedActionScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   14</span>                                      {</div>
-<div class="line"><span class="lineno">   15</span>        <span class="keywordtype">float</span> days = Global.getSector().getClock().convertToDays(amount);</div>
-<div class="line"><span class="lineno">   16</span>        <a class="code hl_variable" href="../../d9/dd1/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1DelayedActionScript.html#ada6f304ec1078880a7695772fdc5c0d5">daysLeft</a> -= days;</div>
-<div class="line"><span class="lineno">   17</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d9/dd1/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1DelayedActionScript.html#ada6f304ec1078880a7695772fdc5c0d5">daysLeft</a> &lt;= 0) {</div>
-<div class="line"><span class="lineno">   18</span>            <a class="code hl_function" href="../../d9/dd1/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1DelayedActionScript.html#ac25c623a412e21645e9c6b7fda77ba80">doAction</a>();</div>
-<div class="line"><span class="lineno">   19</span>            <a class="code hl_variable" href="../../d9/dd1/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1DelayedActionScript.html#ae1cc93e4d0cfe9a8212c930f12e2cab3">done</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   20</span>        }</div>
-<div class="line"><span class="lineno">   21</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1DelayedActionScript_html_ac25c623a412e21645e9c6b7fda77ba80"><div class="ttname"><a href="../../d9/dd1/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1DelayedActionScript.html#ac25c623a412e21645e9c6b7fda77ba80">com.fs.starfarer.api.util.DelayedActionScript.doAction</a></div><div class="ttdeci">abstract void doAction()</div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1DelayedActionScript_html_ae1cc93e4d0cfe9a8212c930f12e2cab3"><div class="ttname"><a href="../../d9/dd1/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1DelayedActionScript.html#ae1cc93e4d0cfe9a8212c930f12e2cab3">com.fs.starfarer.api.util.DelayedActionScript.done</a></div><div class="ttdeci">Boolean done</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d70/DelayedActionScript_8java_source.html#l00009">DelayedActionScript.java:9</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac25c623a412e21645e9c6b7fda77ba80" name="ac25c623a412e21645e9c6b7fda77ba80"></a>
@@ -248,10 +235,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d7/d63/interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html#a2b9a206acf99d1cdc1511885d14bb58c">com.fs.starfarer.api.EveryFrameScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d70/DelayedActionScript_8java_source.html#l00025">25</a> of file <a class="el" href="../../d7/d70/DelayedActionScript_8java_source.html">DelayedActionScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   25</span>                            {</div>
-<div class="line"><span class="lineno">   26</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d9/dd1/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1DelayedActionScript.html#ae1cc93e4d0cfe9a8212c930f12e2cab3">done</a> != <span class="keyword">null</span> &amp;&amp; <a class="code hl_variable" href="../../d9/dd1/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1DelayedActionScript.html#ae1cc93e4d0cfe9a8212c930f12e2cab3">done</a> == <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   27</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab4204e9c2098b13c64f1fb543e7ad150" name="ab4204e9c2098b13c64f1fb543e7ad150"></a>
@@ -273,10 +257,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d7/d63/interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html#a6397d6c1c19a4dd0b58099219c0e0173">com.fs.starfarer.api.EveryFrameScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d70/DelayedActionScript_8java_source.html#l00029">29</a> of file <a class="el" href="../../d7/d70/DelayedActionScript_8java_source.html">DelayedActionScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   29</span>                                    {</div>
-<div class="line"><span class="lineno">   30</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   31</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -166,19 +167,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d94/ProcgenUsedNames_8java_source.html#l00129">129</a> of file <a class="el" href="../../d7/d94/ProcgenUsedNames_8java_source.html">ProcgenUsedNames.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  129</span>                                                                                                    {</div>
-<div class="line"><span class="lineno">  130</span>        <span class="keywordflow">if</span> (parent != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  131</span>            name = name.replaceAll(<span class="stringliteral">&quot;\\$parent&quot;</span>, parent);</div>
-<div class="line"><span class="lineno">  132</span>            name = name.replaceAll(<span class="stringliteral">&quot;s&#39;s&quot;</span>, <span class="stringliteral">&quot;s&#39;&quot;</span>);</div>
-<div class="line"><span class="lineno">  133</span>        }</div>
-<div class="line"><span class="lineno">  134</span>        <span class="keywordflow">if</span> (lagrange != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  135</span>            name = name.replaceAll(<span class="stringliteral">&quot;\\$L&quot;</span>, lagrange.name());</div>
-<div class="line"><span class="lineno">  136</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  137</span>            name = name.replaceAll(<span class="stringliteral">&quot;\\$L &quot;</span>, <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><span class="lineno">  138</span>        }</div>
-<div class="line"><span class="lineno">  139</span>        <span class="keywordflow">return</span> name;</div>
-<div class="line"><span class="lineno">  140</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a71f1efee4549ebd950a88bd42dd2a7fb" name="a71f1efee4549ebd950a88bd42dd2a7fb"></a>
@@ -205,16 +194,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d94/ProcgenUsedNames_8java_source.html#l00037">37</a> of file <a class="el" href="../../d7/d94/ProcgenUsedNames_8java_source.html">ProcgenUsedNames.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   37</span>                                             { <span class="comment">//for (String name : ((ProcgenUsedNames) test).names) System.out.println(name);</span></div>
-<div class="line"><span class="lineno">   38</span>        Object test = Global.getSector().getPersistentData().get(<a class="code hl_variable" href="../../d9/d64/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ProcgenUsedNames.html#a6f0f0d5794ea700d776f6a37f0a4d81a">KEY</a>);</div>
-<div class="line"><span class="lineno">   39</span>        <span class="keywordflow">if</span> (test == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   40</span>            test = <span class="keyword">new</span> ProcgenUsedNames();</div>
-<div class="line"><span class="lineno">   41</span>            Global.getSector().getPersistentData().put(<a class="code hl_variable" href="../../d9/d64/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ProcgenUsedNames.html#a6f0f0d5794ea700d776f6a37f0a4d81a">KEY</a>, test);</div>
-<div class="line"><span class="lineno">   42</span>        }</div>
-<div class="line"><span class="lineno">   43</span>        <span class="keywordflow">return</span> (ProcgenUsedNames) test;</div>
-<div class="line"><span class="lineno">   44</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ProcgenUsedNames_html_a6f0f0d5794ea700d776f6a37f0a4d81a"><div class="ttname"><a href="../../d9/d64/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ProcgenUsedNames.html#a6f0f0d5794ea700d776f6a37f0a4d81a">com.fs.starfarer.api.impl.campaign.procgen.ProcgenUsedNames.KEY</a></div><div class="ttdeci">static final String KEY</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d94/ProcgenUsedNames_8java_source.html#l00026">ProcgenUsedNames.java:26</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2e5997a998fd2885da52678cc3b315eb" name="a2e5997a998fd2885da52678cc3b315eb"></a>
@@ -242,11 +222,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d94/ProcgenUsedNames_8java_source.html#l00033">33</a> of file <a class="el" href="../../d7/d94/ProcgenUsedNames_8java_source.html">ProcgenUsedNames.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   33</span>                                              {</div>
-<div class="line"><span class="lineno">   34</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../d9/d64/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ProcgenUsedNames.html#a71f1efee4549ebd950a88bd42dd2a7fb">getUsed</a>().names.contains(name);</div>
-<div class="line"><span class="lineno">   35</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ProcgenUsedNames_html_a71f1efee4549ebd950a88bd42dd2a7fb"><div class="ttname"><a href="../../d9/d64/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ProcgenUsedNames.html#a71f1efee4549ebd950a88bd42dd2a7fb">com.fs.starfarer.api.impl.campaign.procgen.ProcgenUsedNames.getUsed</a></div><div class="ttdeci">static ProcgenUsedNames getUsed()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d94/ProcgenUsedNames_8java_source.html#l00037">ProcgenUsedNames.java:37</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="acf29f98783f62332c786a8ee969e1a22" name="acf29f98783f62332c786a8ee969e1a22"></a>
@@ -274,10 +250,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d94/ProcgenUsedNames_8java_source.html#l00029">29</a> of file <a class="el" href="../../d7/d94/ProcgenUsedNames_8java_source.html">ProcgenUsedNames.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   29</span>                                               {</div>
-<div class="line"><span class="lineno">   30</span>        <a class="code hl_function" href="../../d9/d64/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ProcgenUsedNames.html#a71f1efee4549ebd950a88bd42dd2a7fb">getUsed</a>().names.add(name);</div>
-<div class="line"><span class="lineno">   31</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2e6cb5bc1907aa557d33da14030d122a" name="a2e6cb5bc1907aa557d33da14030d122a"></a>
@@ -321,90 +294,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d94/ProcgenUsedNames_8java_source.html#l00047">47</a> of file <a class="el" href="../../d7/d94/ProcgenUsedNames_8java_source.html">ProcgenUsedNames.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   47</span>                                                                                                {</div>
-<div class="line"><span class="lineno">   48</span>        WeightedRandomPicker&lt;NamePick&gt; picker = <span class="keyword">new</span> WeightedRandomPicker&lt;NamePick&gt;(StarSystemGenerator.random);</div>
-<div class="line"><span class="lineno">   49</span>        </div>
-<div class="line"><span class="lineno">   50</span>        </div>
-<div class="line"><span class="lineno">   51</span>        Collection&lt;NameGenData&gt; all = Global.getSettings().getAllSpecs(NameGenData.class);</div>
-<div class="line"><span class="lineno">   52</span>        </div>
-<div class="line"><span class="lineno">   53</span>        <span class="comment">// names for child of parent, if any</span></div>
-<div class="line"><span class="lineno">   54</span>        <span class="keywordflow">if</span> (parent != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   55</span>            <span class="keywordflow">for</span> (NameGenData spec : all) {</div>
-<div class="line"><span class="lineno">   56</span>                <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d9/d64/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ProcgenUsedNames.html#a2e5997a998fd2885da52678cc3b315eb">isUsed</a>(spec.getName())) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   57</span>                <span class="keywordflow">if</span> (!spec.hasTag(tag)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   58</span>                <span class="keywordflow">if</span> (parent == <span class="keyword">null</span> &amp;&amp; spec.getName().contains(<span class="stringliteral">&quot;$parent&quot;</span>)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   59</span>                <span class="keywordflow">if</span> (spec.hasParent(parent)) {</div>
-<div class="line"><span class="lineno">   60</span>                    picker.add(<span class="keyword">new</span> NamePick(spec, spec.getName(), spec.getSecondary()), spec.getFrequency());</div>
-<div class="line"><span class="lineno">   61</span>                }</div>
-<div class="line"><span class="lineno">   62</span>            }</div>
-<div class="line"><span class="lineno">   63</span>        }</div>
-<div class="line"><span class="lineno">   64</span>        </div>
-<div class="line"><span class="lineno">   65</span>        <span class="comment">// if needed, add names w/o parent</span></div>
-<div class="line"><span class="lineno">   66</span>        <span class="keywordflow">if</span> (picker.isEmpty()) {</div>
-<div class="line"><span class="lineno">   67</span>            <span class="keywordflow">for</span> (NameGenData spec : all) {</div>
-<div class="line"><span class="lineno">   68</span>                <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d9/d64/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ProcgenUsedNames.html#a2e5997a998fd2885da52678cc3b315eb">isUsed</a>(spec.getName())) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   69</span>                <span class="keywordflow">if</span> (!spec.hasTag(tag)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   70</span>                <span class="keywordflow">if</span> (!spec.getParents().isEmpty()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   71</span>                <span class="keywordflow">if</span> (parent == <span class="keyword">null</span> &amp;&amp; spec.getName().contains(<span class="stringliteral">&quot;$parent&quot;</span>)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   72</span>                picker.add(<span class="keyword">new</span> NamePick(spec, spec.getName(), spec.getSecondary()), spec.getFrequency());</div>
-<div class="line"><span class="lineno">   73</span>            }</div>
-<div class="line"><span class="lineno">   74</span>        }</div>
-<div class="line"><span class="lineno">   75</span>        </div>
-<div class="line"><span class="lineno">   76</span>        <span class="comment">// if there&#39;s nothing, try to create a name using markov chains</span></div>
-<div class="line"><span class="lineno">   77</span>        <span class="comment">// before moving on to roman numerals</span></div>
-<div class="line"><span class="lineno">   78</span>        <span class="keywordflow">if</span> (picker.isEmpty()) {</div>
-<div class="line"><span class="lineno">   79</span>            <span class="keywordtype">int</span> attempts = 10;</div>
-<div class="line"><span class="lineno">   80</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; attempts; i++) {</div>
-<div class="line"><span class="lineno">   81</span>                MarkovNameResult name = MarkovNames.generate(picker.getRandom());</div>
-<div class="line"><span class="lineno">   82</span>                <span class="keywordflow">if</span> (name == <span class="keyword">null</span> || name.name == <span class="keyword">null</span>) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   83</span>                <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d9/d64/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ProcgenUsedNames.html#a2e5997a998fd2885da52678cc3b315eb">isUsed</a>(name.name)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   84</span>                </div>
-<div class="line"><span class="lineno">   85</span>                NameGenData data = <span class="keyword">new</span> NameGenData(name.name, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   86</span>                NamePick pick = <span class="keyword">new</span> NamePick(data, name.name, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   87</span>                <span class="keywordflow">return</span> pick;</div>
-<div class="line"><span class="lineno">   88</span>            }</div>
-<div class="line"><span class="lineno">   89</span>        }</div>
-<div class="line"><span class="lineno">   90</span>        </div>
-<div class="line"><span class="lineno">   91</span>        </div>
-<div class="line"><span class="lineno">   92</span>        </div>
-<div class="line"><span class="lineno">   93</span>        <span class="comment">// if still no names, we&#39;re out of names. start adding roman numerals.</span></div>
-<div class="line"><span class="lineno">   94</span>        <span class="comment">// (or there&#39;s nothing at all for the tag, but that&#39;s a bug elsewhere)</span></div>
-<div class="line"><span class="lineno">   95</span>        <span class="keywordflow">if</span> (picker.isEmpty()) {</div>
-<div class="line"><span class="lineno">   96</span>            OUTER: <span class="keywordflow">for</span> (Object obj : all) {</div>
-<div class="line"><span class="lineno">   97</span>                NameGenData spec = (NameGenData) obj;</div>
-<div class="line"><span class="lineno">   98</span>                <span class="keywordflow">if</span> (!spec.hasTag(tag)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   99</span>                </div>
-<div class="line"><span class="lineno">  100</span>                String base = spec.getName();</div>
-<div class="line"><span class="lineno">  101</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 2; i &lt; 4000; i++) {</div>
-<div class="line"><span class="lineno">  102</span>                    String name = base + <span class="stringliteral">&quot; &quot;</span> + Global.getSettings().getRoman(i);</div>
-<div class="line"><span class="lineno">  103</span>                    <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d9/d64/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ProcgenUsedNames.html#a2e5997a998fd2885da52678cc3b315eb">isUsed</a>(name)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  104</span>                    <span class="keywordflow">if</span> (parent == <span class="keyword">null</span> &amp;&amp; spec.getName().contains(<span class="stringliteral">&quot;$parent&quot;</span>)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  105</span>                    </div>
-<div class="line"><span class="lineno">  106</span>                    String secondary = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  107</span>                    <span class="keywordflow">if</span> (spec.getSecondary() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  108</span>                        secondary = spec.getSecondary() + <span class="stringliteral">&quot; &quot;</span> + Global.getSettings().getRoman(i);</div>
-<div class="line"><span class="lineno">  109</span>                    }</div>
-<div class="line"><span class="lineno">  110</span>                    picker.add(<span class="keyword">new</span> NamePick(spec, name, secondary), (4000f - i) * spec.getFrequency()); <span class="comment">// lower numbers more likely to be picked</span></div>
-<div class="line"><span class="lineno">  111</span>                    <span class="keywordflow">continue</span> OUTER;</div>
-<div class="line"><span class="lineno">  112</span>                }</div>
-<div class="line"><span class="lineno">  113</span>            }</div>
-<div class="line"><span class="lineno">  114</span>        }</div>
-<div class="line"><span class="lineno">  115</span>        </div>
-<div class="line"><span class="lineno">  116</span>        NamePick pick = picker.pick();</div>
-<div class="line"><span class="lineno">  117</span>        </div>
-<div class="line"><span class="lineno">  118</span>        <span class="keywordflow">if</span> (pick != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  119</span>            pick.nameWithRomanSuffixIfAny = <a class="code hl_function" href="../../d9/d64/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ProcgenUsedNames.html#a22b4e8b09c51bb44197cae2c7ead8daf">doTokenReplacement</a>(pick.nameWithRomanSuffixIfAny, parent, lagrangePoint);</div>
-<div class="line"><span class="lineno">  120</span>            <span class="keywordflow">if</span> (pick.secondaryWithRomanSuffixIfAny != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  121</span>                pick.secondaryWithRomanSuffixIfAny = <a class="code hl_function" href="../../d9/d64/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ProcgenUsedNames.html#a22b4e8b09c51bb44197cae2c7ead8daf">doTokenReplacement</a>(pick.secondaryWithRomanSuffixIfAny, parent, lagrangePoint);</div>
-<div class="line"><span class="lineno">  122</span>            }</div>
-<div class="line"><span class="lineno">  123</span>            </div>
-<div class="line"><span class="lineno">  124</span>        }</div>
-<div class="line"><span class="lineno">  125</span>        </div>
-<div class="line"><span class="lineno">  126</span>        <span class="keywordflow">return</span> pick;</div>
-<div class="line"><span class="lineno">  127</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ProcgenUsedNames_html_a22b4e8b09c51bb44197cae2c7ead8daf"><div class="ttname"><a href="../../d9/d64/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ProcgenUsedNames.html#a22b4e8b09c51bb44197cae2c7ead8daf">com.fs.starfarer.api.impl.campaign.procgen.ProcgenUsedNames.doTokenReplacement</a></div><div class="ttdeci">static String doTokenReplacement(String name, String parent, LagrangePointType lagrange)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d94/ProcgenUsedNames_8java_source.html#l00129">ProcgenUsedNames.java:129</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ProcgenUsedNames_html_a2e5997a998fd2885da52678cc3b315eb"><div class="ttname"><a href="../../d9/d64/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ProcgenUsedNames.html#a2e5997a998fd2885da52678cc3b315eb">com.fs.starfarer.api.impl.campaign.procgen.ProcgenUsedNames.isUsed</a></div><div class="ttdeci">static boolean isUsed(String name)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d94/ProcgenUsedNames_8java_source.html#l00033">ProcgenUsedNames.java:33</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

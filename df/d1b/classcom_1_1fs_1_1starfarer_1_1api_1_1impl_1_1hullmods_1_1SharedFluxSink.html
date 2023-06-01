@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -302,71 +303,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a107100a4b58129790cba1a26265c1ad8">com.fs.starfarer.api.combat.BaseHullMod</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d33/SharedFluxSink_8java_source.html#l00028">28</a> of file <a class="el" href="../../d7/d33/SharedFluxSink_8java_source.html">SharedFluxSink.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   28</span>                                                            {</div>
-<div class="line"><span class="lineno">   29</span>        super.advanceInCombat(ship, amount);</div>
-<div class="line"><span class="lineno">   30</span> </div>
-<div class="line"><span class="lineno">   31</span>        <span class="keywordflow">if</span> (!ship.isAlive()) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   32</span>        </div>
-<div class="line"><span class="lineno">   33</span>        CombatEngineAPI engine = Global.getCombatEngine();</div>
-<div class="line"><span class="lineno">   34</span>        </div>
-<div class="line"><span class="lineno">   35</span>        String key = <a class="code hl_variable" href="../../df/d1b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1SharedFluxSink.html#a3e3e6d2a79f3170b65588108d43ae189">SINK_DATA_KEY</a> + <span class="stringliteral">&quot;_&quot;</span> + ship.getId();</div>
-<div class="line"><span class="lineno">   36</span>        FluxSinkData data = (FluxSinkData) engine.getCustomData().get(key);</div>
-<div class="line"><span class="lineno">   37</span>        <span class="keywordflow">if</span> (data == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   38</span>            data = <span class="keyword">new</span> FluxSinkData();</div>
-<div class="line"><span class="lineno">   39</span>            engine.getCustomData().put(key, data);</div>
-<div class="line"><span class="lineno">   40</span>            </div>
-<div class="line"><span class="lineno">   41</span>            <span class="keywordflow">for</span> (ShipAPI module : ship.getChildModulesCopy()) {</div>
-<div class="line"><span class="lineno">   42</span>                <span class="keywordflow">if</span> (module.getStationSlot() == <span class="keyword">null</span> || !module.isAlive() || !Misc.isActiveModule(module)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   43</span>                <span class="keywordtype">float</span> d = module.getMutableStats().getFluxDissipation().getModifiedValue();</div>
-<div class="line"><span class="lineno">   44</span>                d *= <a class="code hl_variable" href="../../df/d1b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1SharedFluxSink.html#a83b742f371858f6603315b90b8409267">FLUX_FRACTION</a>;</div>
-<div class="line"><span class="lineno">   45</span>                data.dissipation.put(module, d);</div>
-<div class="line"><span class="lineno">   46</span>            }</div>
-<div class="line"><span class="lineno">   47</span>        }</div>
-<div class="line"><span class="lineno">   48</span>        </div>
-<div class="line"><span class="lineno">   49</span>        </div>
-<div class="line"><span class="lineno">   50</span>        List&lt;ShipAPI&gt; losses = <span class="keyword">new</span> ArrayList&lt;ShipAPI&gt;(data.dissipation.keySet());</div>
-<div class="line"><span class="lineno">   51</span>        List&lt;ShipAPI&gt; remaining = <span class="keyword">new</span> ArrayList&lt;ShipAPI&gt;();</div>
-<div class="line"><span class="lineno">   52</span>        <span class="keywordtype">float</span> totalLiveDissipation = 0f;</div>
-<div class="line"><span class="lineno">   53</span>        <span class="keywordflow">for</span> (ShipAPI module : ship.getChildModulesCopy()) {</div>
-<div class="line"><span class="lineno">   54</span>            <span class="keywordflow">if</span> (module.getStationSlot() == <span class="keyword">null</span> || !module.isAlive() || !Misc.isActiveModule(module)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   55</span>            losses.remove(module);</div>
-<div class="line"><span class="lineno">   56</span>            remaining.add(module);</div>
-<div class="line"><span class="lineno">   57</span>            <span class="keywordflow">if</span> (data.dissipation.containsKey(module)) { <span class="comment">// always should, but failsafe</span></div>
-<div class="line"><span class="lineno">   58</span>                totalLiveDissipation += data.dissipation.get(module);</div>
-<div class="line"><span class="lineno">   59</span>            } </div>
-<div class="line"><span class="lineno">   60</span>        }</div>
-<div class="line"><span class="lineno">   61</span>        </div>
-<div class="line"><span class="lineno">   62</span>        <span class="keywordtype">float</span> extraDissipation = 0f;</div>
-<div class="line"><span class="lineno">   63</span>        <span class="keywordflow">for</span> (ShipAPI lost : losses) {</div>
-<div class="line"><span class="lineno">   64</span>            <span class="keywordflow">if</span> (data.dissipation.containsKey(lost)) { <span class="comment">// always should, but failsafe</span></div>
-<div class="line"><span class="lineno">   65</span>                extraDissipation += data.dissipation.get(lost);</div>
-<div class="line"><span class="lineno">   66</span>            }</div>
-<div class="line"><span class="lineno">   67</span>        }</div>
-<div class="line"><span class="lineno">   68</span>        </div>
-<div class="line"><span class="lineno">   69</span>        <span class="keywordflow">for</span> (ShipAPI module : remaining) {</div>
-<div class="line"><span class="lineno">   70</span>            <span class="keywordflow">if</span> (!data.dissipation.containsKey(module)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   71</span>        </div>
-<div class="line"><span class="lineno">   72</span>            <span class="keywordtype">float</span> currBonus = 0f;</div>
-<div class="line"><span class="lineno">   73</span>            <span class="keywordflow">if</span> (totalLiveDissipation &gt; 0) {</div>
-<div class="line"><span class="lineno">   74</span>                currBonus = data.dissipation.get(module) / totalLiveDissipation * extraDissipation; </div>
-<div class="line"><span class="lineno">   75</span>            }</div>
-<div class="line"><span class="lineno">   76</span>            </div>
-<div class="line"><span class="lineno">   77</span>            module.getMutableStats().getFluxDissipation().modifyFlat(<span class="stringliteral">&quot;shared_flux_sink&quot;</span>, currBonus);</div>
-<div class="line"><span class="lineno">   78</span>            </div>
-<div class="line"><span class="lineno">   79</span>            <span class="keywordtype">float</span> hardFluxFraction = 0f;</div>
-<div class="line"><span class="lineno">   80</span>            <span class="keywordtype">float</span> totalDissipation = module.getMutableStats().getFluxDissipation().getModifiedValue();</div>
-<div class="line"><span class="lineno">   81</span>            <span class="keywordflow">if</span> (totalDissipation &gt; 0) {</div>
-<div class="line"><span class="lineno">   82</span>                hardFluxFraction = currBonus / totalDissipation * <a class="code hl_variable" href="../../df/d1b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1SharedFluxSink.html#ac37475bac0f87aa8a0c94c6137c389d6">HARD_FLUX_FRACTION</a>;</div>
-<div class="line"><span class="lineno">   83</span>            }</div>
-<div class="line"><span class="lineno">   84</span>            </div>
-<div class="line"><span class="lineno">   85</span>            module.getMutableStats().getHardFluxDissipationFraction().modifyFlat(<span class="stringliteral">&quot;shared_flux_sink&quot;</span>, hardFluxFraction);</div>
-<div class="line"><span class="lineno">   86</span>        }</div>
-<div class="line"><span class="lineno">   87</span>        </div>
-<div class="line"><span class="lineno">   88</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1SharedFluxSink_html_a3e3e6d2a79f3170b65588108d43ae189"><div class="ttname"><a href="../../df/d1b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1SharedFluxSink.html#a3e3e6d2a79f3170b65588108d43ae189">com.fs.starfarer.api.impl.hullmods.SharedFluxSink.SINK_DATA_KEY</a></div><div class="ttdeci">static String SINK_DATA_KEY</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d33/SharedFluxSink_8java_source.html#l00019">SharedFluxSink.java:19</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1SharedFluxSink_html_a83b742f371858f6603315b90b8409267"><div class="ttname"><a href="../../df/d1b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1SharedFluxSink.html#a83b742f371858f6603315b90b8409267">com.fs.starfarer.api.impl.hullmods.SharedFluxSink.FLUX_FRACTION</a></div><div class="ttdeci">static float FLUX_FRACTION</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d33/SharedFluxSink_8java_source.html#l00017">SharedFluxSink.java:17</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1SharedFluxSink_html_ac37475bac0f87aa8a0c94c6137c389d6"><div class="ttname"><a href="../../df/d1b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1SharedFluxSink.html#ac37475bac0f87aa8a0c94c6137c389d6">com.fs.starfarer.api.impl.hullmods.SharedFluxSink.HARD_FLUX_FRACTION</a></div><div class="ttdeci">static float HARD_FLUX_FRACTION</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d33/SharedFluxSink_8java_source.html#l00018">SharedFluxSink.java:18</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a26870188d1f91f9b4e94d453f8b9ff9e" name="a26870188d1f91f9b4e94d453f8b9ff9e"></a>
@@ -404,12 +341,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a81fc41471bf3bff9e51db9106e2e1bd2">com.fs.starfarer.api.combat.BaseHullMod</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d33/SharedFluxSink_8java_source.html#l00090">90</a> of file <a class="el" href="../../d7/d33/SharedFluxSink_8java_source.html">SharedFluxSink.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   90</span>                                                                                  {</div>
-<div class="line"><span class="lineno">   91</span>        <span class="keywordflow">if</span> (index == 0) <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span> + (int) Math.round(<a class="code hl_variable" href="../../df/d1b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1SharedFluxSink.html#a83b742f371858f6603315b90b8409267">FLUX_FRACTION</a> * 100f) + <span class="stringliteral">&quot;%&quot;</span>;</div>
-<div class="line"><span class="lineno">   92</span>        <span class="keywordflow">if</span> (index == 1) <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span> + (int) Math.round(<a class="code hl_variable" href="../../df/d1b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1SharedFluxSink.html#ac37475bac0f87aa8a0c94c6137c389d6">HARD_FLUX_FRACTION</a> * 100f) + <span class="stringliteral">&quot;%&quot;</span>;</div>
-<div class="line"><span class="lineno">   93</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   94</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

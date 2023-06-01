@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -160,15 +161,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d4c/SaveNagScript_8java_source.html#l00023">23</a> of file <a class="el" href="../../dd/d4c/SaveNagScript_8java_source.html">SaveNagScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   23</span>                                         {</div>
-<div class="line"><span class="lineno">   24</span>        this.duration = <a class="code hl_variable" href="../../df/d66/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1SaveNagScript.html#a34c8fa2d4278fab7d9c309bf1ae3672a">duration</a>;</div>
-<div class="line"><span class="lineno">   25</span>        HintPanelAPI hints = Global.getSector().getCampaignUI().getHintPanel();</div>
-<div class="line"><span class="lineno">   26</span>        hints.clearHints();</div>
-<div class="line"><span class="lineno">   27</span>        String control = Global.getSettings().getControlStringForEnumName(<span class="stringliteral">&quot;QUICK_SAVE&quot;</span>);</div>
-<div class="line"><span class="lineno">   28</span>        hints.setHint(0, <span class="stringliteral">&quot;- Press %s to quick-save&quot;</span>, <span class="keyword">true</span>, Misc.getHighlightColor(), control);</div>
-<div class="line"><span class="lineno">   29</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1SaveNagScript_html_a34c8fa2d4278fab7d9c309bf1ae3672a"><div class="ttname"><a href="../../df/d66/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1SaveNagScript.html#a34c8fa2d4278fab7d9c309bf1ae3672a">com.fs.starfarer.api.impl.campaign.tutorial.SaveNagScript.duration</a></div><div class="ttdeci">float duration</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d4c/SaveNagScript_8java_source.html#l00010">SaveNagScript.java:10</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -197,16 +190,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d7/d63/interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html#a3a97090ca8cfdc230e9ad7e633407af6">com.fs.starfarer.api.EveryFrameScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d4c/SaveNagScript_8java_source.html#l00031">31</a> of file <a class="el" href="../../dd/d4c/SaveNagScript_8java_source.html">SaveNagScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   31</span>                                      {</div>
-<div class="line"><span class="lineno">   32</span>        <span class="keywordflow">if</span> (Global.getSector().getCampaignUI().isShowingDialog()) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   33</span>        </div>
-<div class="line"><span class="lineno">   34</span>        <a class="code hl_variable" href="../../df/d66/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1SaveNagScript.html#a34c8fa2d4278fab7d9c309bf1ae3672a">duration</a> -= amount;</div>
-<div class="line"><span class="lineno">   35</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../df/d66/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1SaveNagScript.html#a34c8fa2d4278fab7d9c309bf1ae3672a">duration</a> &lt;= 0) {</div>
-<div class="line"><span class="lineno">   36</span>            HintPanelAPI hints = Global.getSector().getCampaignUI().getHintPanel();</div>
-<div class="line"><span class="lineno">   37</span>            hints.clearHints();</div>
-<div class="line"><span class="lineno">   38</span>        }</div>
-<div class="line"><span class="lineno">   39</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5543a51c7bafc85b4b6a5f77db4f4617" name="a5543a51c7bafc85b4b6a5f77db4f4617"></a>
@@ -228,10 +212,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d7/d63/interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html#a2b9a206acf99d1cdc1511885d14bb58c">com.fs.starfarer.api.EveryFrameScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d4c/SaveNagScript_8java_source.html#l00041">41</a> of file <a class="el" href="../../dd/d4c/SaveNagScript_8java_source.html">SaveNagScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   41</span>                            {</div>
-<div class="line"><span class="lineno">   42</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../df/d66/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1SaveNagScript.html#a34c8fa2d4278fab7d9c309bf1ae3672a">duration</a> &lt;= 0;</div>
-<div class="line"><span class="lineno">   43</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aea954cd5a6f1d6baf01232bddde7888c" name="aea954cd5a6f1d6baf01232bddde7888c"></a>
@@ -253,10 +234,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d7/d63/interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html#a6397d6c1c19a4dd0b58099219c0e0173">com.fs.starfarer.api.EveryFrameScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d4c/SaveNagScript_8java_source.html#l00045">45</a> of file <a class="el" href="../../dd/d4c/SaveNagScript_8java_source.html">SaveNagScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   45</span>                                    {</div>
-<div class="line"><span class="lineno">   46</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   47</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a903216a009a2e11bc31664b0e71acb5a" name="a903216a009a2e11bc31664b0e71acb5a"></a>
@@ -283,16 +261,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d4c/SaveNagScript_8java_source.html#l00013">13</a> of file <a class="el" href="../../dd/d4c/SaveNagScript_8java_source.html">SaveNagScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   13</span>                                    {</div>
-<div class="line"><span class="lineno">   14</span>        <a class="code hl_variable" href="../../df/d66/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1SaveNagScript.html#ac3ffca026867013a3422eb9540614a8a">playerSaved</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   15</span>        HintPanelAPI hints = Global.getSector().getCampaignUI().getHintPanel();</div>
-<div class="line"><span class="lineno">   16</span>        <span class="keywordflow">if</span> (hints != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   17</span>            hints.clearHints(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   18</span>        }</div>
-<div class="line"><span class="lineno">   19</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">   20</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1SaveNagScript_html_ac3ffca026867013a3422eb9540614a8a"><div class="ttname"><a href="../../df/d66/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1SaveNagScript.html#ac3ffca026867013a3422eb9540614a8a">com.fs.starfarer.api.impl.campaign.tutorial.SaveNagScript.playerSaved</a></div><div class="ttdeci">boolean playerSaved</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d4c/SaveNagScript_8java_source.html#l00011">SaveNagScript.java:11</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -146,21 +147,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d9d/FleetLog_8java_source.html#l00065">65</a> of file <a class="el" href="../../d7/d9d/FleetLog_8java_source.html">FleetLog.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   65</span>                                                                            {</div>
-<div class="line"><span class="lineno">   66</span><span class="comment">//      message.setShowInCampaignList(panel == null);</span></div>
-<div class="line"><span class="lineno">   67</span><span class="comment">//      message.setAddToIntelTab(true);</span></div>
-<div class="line"><span class="lineno">   68</span><span class="comment">//      message.setAction(MessageClickAction.INTEL_TAB);</span></div>
-<div class="line"><span class="lineno">   69</span><span class="comment">//      message.addTag(Tags.FLEET_LOG);</span></div>
-<div class="line"><span class="lineno">   70</span><span class="comment">//      </span></div>
-<div class="line"><span class="lineno">   71</span><span class="comment">//      Global.getSector().getCampaignUI().addMessage(message);</span></div>
-<div class="line"><span class="lineno">   72</span><span class="comment">//      </span></div>
-<div class="line"><span class="lineno">   73</span><span class="comment">//      if (panel != null) {</span></div>
-<div class="line"><span class="lineno">   74</span><span class="comment">//          panel.setFontSmallInsignia();</span></div>
-<div class="line"><span class="lineno">   75</span><span class="comment">//          panel.addParagraph(&quot;Fleet log entry added&quot;, Misc.getTooltipTitleAndLightHighlightColor());</span></div>
-<div class="line"><span class="lineno">   76</span><span class="comment">//          panel.setFontInsignia();</span></div>
-<div class="line"><span class="lineno">   77</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">   78</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8a041b5ffe7b440617e3765dff8eaa83" name="a8a041b5ffe7b440617e3765dff8eaa83"></a>
@@ -198,11 +185,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d9d/FleetLog_8java_source.html#l00011">11</a> of file <a class="el" href="../../d7/d9d/FleetLog_8java_source.html">FleetLog.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   11</span>                                                                                      {</div>
-<div class="line"><span class="lineno">   12</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../d9/d6e/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1FleetLog.html#a8a041b5ffe7b440617e3765dff8eaa83">beginEntry</a>(subject, target, <span class="keyword">null</span>, (String []) <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   13</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1FleetLog_html_a8a041b5ffe7b440617e3765dff8eaa83"><div class="ttname"><a href="../../d9/d6e/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1FleetLog.html#a8a041b5ffe7b440617e3765dff8eaa83">com.fs.starfarer.api.util.FleetLog.beginEntry</a></div><div class="ttdeci">static CommMessageAPI beginEntry(String subject, SectorEntityToken target)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d9d/FleetLog_8java_source.html#l00011">FleetLog.java:11</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a17b6e9f343a9f5bf15900d4df1db9fae" name="a17b6e9f343a9f5bf15900d4df1db9fae"></a>
@@ -258,49 +241,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d9d/FleetLog_8java_source.html#l00019">19</a> of file <a class="el" href="../../d7/d9d/FleetLog_8java_source.html">FleetLog.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   19</span>                                                                                                                                          {</div>
-<div class="line"><span class="lineno">   20</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   21</span><span class="comment">//      CommMessageAPI message = Global.getFactory().createMessage();</span></div>
-<div class="line"><span class="lineno">   22</span><span class="comment">//      message.setSubject(subject);</span></div>
-<div class="line"><span class="lineno">   23</span><span class="comment">//      if (color != null) {</span></div>
-<div class="line"><span class="lineno">   24</span><span class="comment">//          message.setSubjectColor(color);</span></div>
-<div class="line"><span class="lineno">   25</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">   26</span><span class="comment">//      if (highlight != null) {</span></div>
-<div class="line"><span class="lineno">   27</span><span class="comment">//          Highlights h = new Highlights();</span></div>
-<div class="line"><span class="lineno">   28</span><span class="comment">//          for (String curr : highlights) {</span></div>
-<div class="line"><span class="lineno">   29</span><span class="comment">//              h.append(curr, highlight);</span></div>
-<div class="line"><span class="lineno">   30</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">   31</span><span class="comment">//          message.setSubjectHighlights(h);</span></div>
-<div class="line"><span class="lineno">   32</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">   33</span><span class="comment">//      </span></div>
-<div class="line"><span class="lineno">   34</span><span class="comment">//      </span></div>
-<div class="line"><span class="lineno">   35</span><span class="comment">//      message.getSection1().setTitle(&quot;Summary&quot;);</span></div>
-<div class="line"><span class="lineno">   36</span><span class="comment">//      </span></div>
-<div class="line"><span class="lineno">   37</span><span class="comment">//      //message.setDeliveredBy(&quot;Delivered by&quot;);</span></div>
-<div class="line"><span class="lineno">   38</span><span class="comment">//      </span></div>
-<div class="line"><span class="lineno">   39</span><span class="comment">//      CampaignFleetAPI player = Global.getSector().getPlayerFleet();</span></div>
-<div class="line"><span class="lineno">   40</span><span class="comment">//      if (target == null) target = player;</span></div>
-<div class="line"><span class="lineno">   41</span><span class="comment">//      message.setLocationString(target.getContainingLocation().getNameWithLowercaseType());</span></div>
-<div class="line"><span class="lineno">   42</span><span class="comment">//      if (target.getContainingLocation() instanceof StarSystemAPI) {</span></div>
-<div class="line"><span class="lineno">   43</span><span class="comment">//          message.setStarSystemId(target.getContainingLocation().getId());</span></div>
-<div class="line"><span class="lineno">   44</span><span class="comment">//          if (target != player) message.setCenterMapOnEntity(target);</span></div>
-<div class="line"><span class="lineno">   45</span><span class="comment">//      } else {</span></div>
-<div class="line"><span class="lineno">   46</span><span class="comment">//          message.setLocInHyper(target.getLocationInHyperspace());</span></div>
-<div class="line"><span class="lineno">   47</span><span class="comment">//          if (target != player) message.setCenterMapOnEntity(target);</span></div>
-<div class="line"><span class="lineno">   48</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">   49</span><span class="comment">//      </span></div>
-<div class="line"><span class="lineno">   50</span><span class="comment">//      </span></div>
-<div class="line"><span class="lineno">   51</span><span class="comment">//      message.setType(&quot;Log Entry&quot;);</span></div>
-<div class="line"><span class="lineno">   52</span><span class="comment">//      message.setShortType(&quot;Fleet log&quot;);</span></div>
-<div class="line"><span class="lineno">   53</span><span class="comment">//      //message.setSender(&quot;Exploration&quot;);</span></div>
-<div class="line"><span class="lineno">   54</span><span class="comment">//      </span></div>
-<div class="line"><span class="lineno">   55</span><span class="comment">//      message.setTimeReceived(Global.getSector().getClock().getTimestamp());</span></div>
-<div class="line"><span class="lineno">   56</span><span class="comment">//      message.setTimeSent(Global.getSector().getClock().getTimestamp());</span></div>
-<div class="line"><span class="lineno">   57</span><span class="comment">//      </span></div>
-<div class="line"><span class="lineno">   60</span><span class="comment"></span><span class="comment">//      message.setSmallIcon(Global.getSettings().getSpriteName(&quot;intel_categories&quot;, &quot;star_systems&quot;));</span></div>
-<div class="line"><span class="lineno">   61</span><span class="comment">//      return message;</span></div>
-<div class="line"><span class="lineno">   62</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a4268b53f0e8b04e7b91bd4f31ec270e0" name="a4268b53f0e8b04e7b91bd4f31ec270e0"></a>
@@ -350,10 +291,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d9d/FleetLog_8java_source.html#l00015">15</a> of file <a class="el" href="../../d7/d9d/FleetLog_8java_source.html">FleetLog.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   15</span>                                                                                                                             {</div>
-<div class="line"><span class="lineno">   16</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../d9/d6e/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1FleetLog.html#a8a041b5ffe7b440617e3765dff8eaa83">beginEntry</a>(subject, target, Misc.getTextColor(), highlight, highlights);</div>
-<div class="line"><span class="lineno">   17</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

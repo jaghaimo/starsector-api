@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -172,14 +173,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d61/MoteParticleScript_8java_source.html#l00018">18</a> of file <a class="el" href="../../d3/d61/MoteParticleScript_8java_source.html">MoteParticleScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   18</span>                                                                             {</div>
-<div class="line"><span class="lineno">   19</span>        super();</div>
-<div class="line"><span class="lineno">   20</span>        this.entity = <a class="code hl_variable" href="../../da/d61/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1world_1_1MoteParticleScript.html#a5d35002cea0cf075dc1049ea145b186f">entity</a>;</div>
-<div class="line"><span class="lineno">   21</span>        this.moteSpawnRate = <a class="code hl_variable" href="../../da/d61/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1world_1_1MoteParticleScript.html#adbef3c8e90f912140e6c24e5c5e696c5">moteSpawnRate</a>;</div>
-<div class="line"><span class="lineno">   22</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1world_1_1MoteParticleScript_html_a5d35002cea0cf075dc1049ea145b186f"><div class="ttname"><a href="../../da/d61/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1world_1_1MoteParticleScript.html#a5d35002cea0cf075dc1049ea145b186f">com.fs.starfarer.api.impl.campaign.world.MoteParticleScript.entity</a></div><div class="ttdeci">SectorEntityToken entity</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d61/MoteParticleScript_8java_source.html#l00015">MoteParticleScript.java:15</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1world_1_1MoteParticleScript_html_adbef3c8e90f912140e6c24e5c5e696c5"><div class="ttname"><a href="../../da/d61/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1world_1_1MoteParticleScript.html#adbef3c8e90f912140e6c24e5c5e696c5">com.fs.starfarer.api.impl.campaign.world.MoteParticleScript.moteSpawnRate</a></div><div class="ttdeci">float moteSpawnRate</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d61/MoteParticleScript_8java_source.html#l00014">MoteParticleScript.java:14</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -208,17 +202,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d7/d63/interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html#a3a97090ca8cfdc230e9ad7e633407af6">com.fs.starfarer.api.EveryFrameScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d61/MoteParticleScript_8java_source.html#l00024">24</a> of file <a class="el" href="../../d3/d61/MoteParticleScript_8java_source.html">MoteParticleScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   24</span>                                      {</div>
-<div class="line"><span class="lineno">   25</span>        <span class="keywordtype">float</span> days = Misc.getDays(amount);</div>
-<div class="line"><span class="lineno">   26</span>        <a class="code hl_variable" href="../../da/d61/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1world_1_1MoteParticleScript.html#a06d1eff229b3414009c2accd07b6edf2">moteSpawn</a>.<a class="code hl_function" href="../../da/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html#a61881d44415cda2c50c3354c3f0a4d8a">advance</a>(days * <a class="code hl_variable" href="../../da/d61/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1world_1_1MoteParticleScript.html#adbef3c8e90f912140e6c24e5c5e696c5">moteSpawnRate</a>);</div>
-<div class="line"><span class="lineno">   27</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/d61/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1world_1_1MoteParticleScript.html#a06d1eff229b3414009c2accd07b6edf2">moteSpawn</a>.intervalElapsed()) {</div>
-<div class="line"><span class="lineno">   28</span>            <a class="code hl_function" href="../../da/d61/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1world_1_1MoteParticleScript.html#a2958e4f2f0a1113427e9cfd70fee4c79">spawnMote</a>(<a class="code hl_variable" href="../../da/d61/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1world_1_1MoteParticleScript.html#a5d35002cea0cf075dc1049ea145b186f">entity</a>);</div>
-<div class="line"><span class="lineno">   29</span>        }</div>
-<div class="line"><span class="lineno">   30</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1world_1_1MoteParticleScript_html_a06d1eff229b3414009c2accd07b6edf2"><div class="ttname"><a href="../../da/d61/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1world_1_1MoteParticleScript.html#a06d1eff229b3414009c2accd07b6edf2">com.fs.starfarer.api.impl.campaign.world.MoteParticleScript.moteSpawn</a></div><div class="ttdeci">IntervalUtil moteSpawn</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d61/MoteParticleScript_8java_source.html#l00016">MoteParticleScript.java:16</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1world_1_1MoteParticleScript_html_a2958e4f2f0a1113427e9cfd70fee4c79"><div class="ttname"><a href="../../da/d61/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1world_1_1MoteParticleScript.html#a2958e4f2f0a1113427e9cfd70fee4c79">com.fs.starfarer.api.impl.campaign.world.MoteParticleScript.spawnMote</a></div><div class="ttdeci">static void spawnMote(SectorEntityToken from)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d61/MoteParticleScript_8java_source.html#l00033">MoteParticleScript.java:33</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil_html_a61881d44415cda2c50c3354c3f0a4d8a"><div class="ttname"><a href="../../da/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html#a61881d44415cda2c50c3354c3f0a4d8a">com.fs.starfarer.api.util.IntervalUtil.advance</a></div><div class="ttdeci">void advance(float amount)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de3/IntervalUtil_8java_source.html#l00039">IntervalUtil.java:39</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aba6520ec9a0501670cd8951072d6f22d" name="aba6520ec9a0501670cd8951072d6f22d"></a>
@@ -240,10 +224,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d7/d63/interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html#a2b9a206acf99d1cdc1511885d14bb58c">com.fs.starfarer.api.EveryFrameScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d61/MoteParticleScript_8java_source.html#l00049">49</a> of file <a class="el" href="../../d3/d61/MoteParticleScript_8java_source.html">MoteParticleScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   49</span>                            {</div>
-<div class="line"><span class="lineno">   50</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   51</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a7df0391d972b11957489635f6e4d6aed" name="a7df0391d972b11957489635f6e4d6aed"></a>
@@ -265,10 +246,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d7/d63/interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html#a6397d6c1c19a4dd0b58099219c0e0173">com.fs.starfarer.api.EveryFrameScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d61/MoteParticleScript_8java_source.html#l00053">53</a> of file <a class="el" href="../../d3/d61/MoteParticleScript_8java_source.html">MoteParticleScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   53</span>                                    {</div>
-<div class="line"><span class="lineno">   54</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   55</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2958e4f2f0a1113427e9cfd70fee4c79" name="a2958e4f2f0a1113427e9cfd70fee4c79"></a>
@@ -296,22 +274,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d61/MoteParticleScript_8java_source.html#l00033">33</a> of file <a class="el" href="../../d3/d61/MoteParticleScript_8java_source.html">MoteParticleScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   33</span>                                                         {</div>
-<div class="line"><span class="lineno">   34</span>        <span class="keywordflow">if</span> (!from.isInCurrentLocation()) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   35</span>        <span class="keywordtype">float</span> dur = 1f + 2f * (float) Math.random();</div>
-<div class="line"><span class="lineno">   36</span>        dur *= 2f;</div>
-<div class="line"><span class="lineno">   37</span>        <span class="keywordtype">float</span> size = 3f + (float) Math.random() * 5f;</div>
-<div class="line"><span class="lineno">   38</span>        size *= 3f;</div>
-<div class="line"><span class="lineno">   39</span>        Color color = <span class="keyword">new</span> Color(255,100,255,175);</div>
-<div class="line"><span class="lineno">   40</span>        </div>
-<div class="line"><span class="lineno">   41</span>        Vector2f loc = Misc.getPointWithinRadius(from.getLocation(), from.getRadius());</div>
-<div class="line"><span class="lineno">   42</span>        Vector2f vel = Misc.getUnitVectorAtDegreeAngle((<span class="keywordtype">float</span>) Math.random() * 360f);</div>
-<div class="line"><span class="lineno">   43</span>        vel.scale(5f + (<span class="keywordtype">float</span>) Math.random() * 10f);</div>
-<div class="line"><span class="lineno">   44</span>        vel.scale(0.25f);</div>
-<div class="line"><span class="lineno">   45</span>        Vector2f.add(vel, from.getVelocity(), vel);</div>
-<div class="line"><span class="lineno">   46</span>        Misc.addGlowyParticle(from.getContainingLocation(), loc, vel, size, 0.5f, dur, color);</div>
-<div class="line"><span class="lineno">   47</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -424,56 +425,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a970f0999c5520b6b5a37678ca674824d">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/dc5/BaseToggleAbility_8java_source.html#l00175">175</a> of file <a class="el" href="../../d2/dc5/BaseToggleAbility_8java_source.html">BaseToggleAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  175</span>                           {</div>
-<div class="line"><span class="lineno">  176</span>        <span class="keywordflow">if</span> (!<a class="code hl_function" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#af91d6e2ffa81c95835cfd099c0b7c579">isActive</a>() &amp;&amp; <a class="code hl_function" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a206fef8ef4f4dba10d8ba3f71e4e9c90">isUsable</a>()) {</div>
-<div class="line"><span class="lineno">  177</span>            <a class="code hl_variable" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a08ac4457340a4ab3d6bc7a6b09512348">turnedOn</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  178</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a9d2408f6489b56d90a93b2a21ea0f340">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a0dfd224c22bfc35f7dda6f8a1c913472">isInCurrentLocation</a>() &amp;&amp; <a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a9d2408f6489b56d90a93b2a21ea0f340">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a535f1e15c5bcf56712d2dadbedf5e712">isVisibleToPlayerFleet</a>() &amp;&amp; !<a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a9d2408f6489b56d90a93b2a21ea0f340">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a297539315e815b0edc7a70c09c4d4652">isPlayerFleet</a>()) {</div>
-<div class="line"><span class="lineno">  179</span>                String soundId = <a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a3bf989eb2236666788a75b122d864392">getOnSoundWorld</a>();</div>
-<div class="line"><span class="lineno">  180</span>                <span class="keywordflow">if</span> (soundId != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  181</span>                    Global.getSoundPlayer().playSound(soundId, 1f, 1f, <a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a9d2408f6489b56d90a93b2a21ea0f340">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#aedf9cd58593dcb6afd4d488bb017eafc">getLocation</a>(), <a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a9d2408f6489b56d90a93b2a21ea0f340">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a4c0905407d9e3aae7fa3df85516ada9a">getVelocity</a>());</div>
-<div class="line"><span class="lineno">  182</span>                }</div>
-<div class="line"><span class="lineno">  183</span>            }</div>
-<div class="line"><span class="lineno">  184</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#adec74f8a823cc7659b404b2ad8671df8">getActivationDays</a>() &lt;= 0) {</div>
-<div class="line"><span class="lineno">  185</span>                <a class="code hl_variable" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#aac08e4b110b4b9c2b9d00dd035158553">level</a> = 1;</div>
-<div class="line"><span class="lineno">  186</span>            }</div>
-<div class="line"><span class="lineno">  187</span>            </div>
-<div class="line"><span class="lineno">  188</span>            <a class="code hl_variable" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a74192905e74961103f2f38ec94da533a">cooldownLeft</a> = <a class="code hl_function" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a6660cd1f7c73d05a9b8cf5c1ca59bfaa">getActivateCooldownDays</a>();</div>
-<div class="line"><span class="lineno">  189</span>            <a class="code hl_variable" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a015c84d4b9a5b93dbf7c6eee63449d19">isActivateCooldown</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  190</span>            </div>
-<div class="line"><span class="lineno">  191</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a9d2408f6489b56d90a93b2a21ea0f340">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a0dfd224c22bfc35f7dda6f8a1c913472">isInCurrentLocation</a>()) {</div>
-<div class="line"><span class="lineno">  192</span>                <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a3be04ce2cf4b54d260d06d126bca0d7a">getActivationText</a>() != <span class="keyword">null</span> &amp;&amp; <a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a9d2408f6489b56d90a93b2a21ea0f340">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a535f1e15c5bcf56712d2dadbedf5e712">isVisibleToPlayerFleet</a>()) {</div>
-<div class="line"><span class="lineno">  193</span>                    <a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a9d2408f6489b56d90a93b2a21ea0f340">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a885a0a44f7923765ffa74af31a200f3b">addFloatingText</a>(<a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a3be04ce2cf4b54d260d06d126bca0d7a">getActivationText</a>(), Misc.setAlpha(<a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a9d2408f6489b56d90a93b2a21ea0f340">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a4ad8fff3638f4418a45477fbbb79ac1b">getIndicatorColor</a>(), 255), 0.5f);</div>
-<div class="line"><span class="lineno">  194</span>                }</div>
-<div class="line"><span class="lineno">  195</span>            }</div>
-<div class="line"><span class="lineno">  196</span>            <a class="code hl_function" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a12adf882423877632cedb6d50fbbe2f4">activateImpl</a>();</div>
-<div class="line"><span class="lineno">  197</span>            <a class="code hl_function" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a2324a0cbf8a7db75371a93495b16f520">applyEffect</a>(0f, <a class="code hl_variable" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#aac08e4b110b4b9c2b9d00dd035158553">level</a>);</div>
-<div class="line"><span class="lineno">  198</span>            <a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a0f72446d839019d50feb583f4952cbb7">interruptIncompatible</a>();</div>
-<div class="line"><span class="lineno">  199</span>            </div>
-<div class="line"><span class="lineno">  200</span>            super.activate();</div>
-<div class="line"><span class="lineno">  201</span>        }</div>
-<div class="line"><span class="lineno">  202</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin_html_a0f72446d839019d50feb583f4952cbb7"><div class="ttname"><a href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a0f72446d839019d50feb583f4952cbb7">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin.interruptIncompatible</a></div><div class="ttdeci">void interruptIncompatible()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00061">BaseAbilityPlugin.java:61</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin_html_a3be04ce2cf4b54d260d06d126bca0d7a"><div class="ttname"><a href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a3be04ce2cf4b54d260d06d126bca0d7a">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin.getActivationText</a></div><div class="ttdeci">String getActivationText()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00285">BaseAbilityPlugin.java:285</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin_html_a3bf989eb2236666788a75b122d864392"><div class="ttname"><a href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a3bf989eb2236666788a75b122d864392">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin.getOnSoundWorld</a></div><div class="ttdeci">String getOnSoundWorld()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00046">BaseAbilityPlugin.java:46</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin_html_a9d2408f6489b56d90a93b2a21ea0f340"><div class="ttname"><a href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a9d2408f6489b56d90a93b2a21ea0f340">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin.entity</a></div><div class="ttdeci">SectorEntityToken entity</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00024">BaseAbilityPlugin.java:24</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility_html_a015c84d4b9a5b93dbf7c6eee63449d19"><div class="ttname"><a href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a015c84d4b9a5b93dbf7c6eee63449d19">com.fs.starfarer.api.impl.campaign.abilities.BaseToggleAbility.isActivateCooldown</a></div><div class="ttdeci">boolean isActivateCooldown</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dc5/BaseToggleAbility_8java_source.html#l00047">BaseToggleAbility.java:47</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility_html_a08ac4457340a4ab3d6bc7a6b09512348"><div class="ttname"><a href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a08ac4457340a4ab3d6bc7a6b09512348">com.fs.starfarer.api.impl.campaign.abilities.BaseToggleAbility.turnedOn</a></div><div class="ttdeci">boolean turnedOn</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dc5/BaseToggleAbility_8java_source.html#l00045">BaseToggleAbility.java:45</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility_html_a12adf882423877632cedb6d50fbbe2f4"><div class="ttname"><a href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a12adf882423877632cedb6d50fbbe2f4">com.fs.starfarer.api.impl.campaign.abilities.BaseToggleAbility.activateImpl</a></div><div class="ttdeci">abstract void activateImpl()</div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility_html_a206fef8ef4f4dba10d8ba3f71e4e9c90"><div class="ttname"><a href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a206fef8ef4f4dba10d8ba3f71e4e9c90">com.fs.starfarer.api.impl.campaign.abilities.BaseToggleAbility.isUsable</a></div><div class="ttdeci">boolean isUsable()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dc5/BaseToggleAbility_8java_source.html#l00114">BaseToggleAbility.java:114</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility_html_a2324a0cbf8a7db75371a93495b16f520"><div class="ttname"><a href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a2324a0cbf8a7db75371a93495b16f520">com.fs.starfarer.api.impl.campaign.abilities.BaseToggleAbility.applyEffect</a></div><div class="ttdeci">abstract void applyEffect(float amount, float level)</div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility_html_a6660cd1f7c73d05a9b8cf5c1ca59bfaa"><div class="ttname"><a href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a6660cd1f7c73d05a9b8cf5c1ca59bfaa">com.fs.starfarer.api.impl.campaign.abilities.BaseToggleAbility.getActivateCooldownDays</a></div><div class="ttdeci">float getActivateCooldownDays()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dc5/BaseToggleAbility_8java_source.html#l00027">BaseToggleAbility.java:27</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility_html_a74192905e74961103f2f38ec94da533a"><div class="ttname"><a href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a74192905e74961103f2f38ec94da533a">com.fs.starfarer.api.impl.campaign.abilities.BaseToggleAbility.cooldownLeft</a></div><div class="ttdeci">float cooldownLeft</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dc5/BaseToggleAbility_8java_source.html#l00046">BaseToggleAbility.java:46</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility_html_aac08e4b110b4b9c2b9d00dd035158553"><div class="ttname"><a href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#aac08e4b110b4b9c2b9d00dd035158553">com.fs.starfarer.api.impl.campaign.abilities.BaseToggleAbility.level</a></div><div class="ttdeci">float level</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dc5/BaseToggleAbility_8java_source.html#l00049">BaseToggleAbility.java:49</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility_html_adec74f8a823cc7659b404b2ad8671df8"><div class="ttname"><a href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#adec74f8a823cc7659b404b2ad8671df8">com.fs.starfarer.api.impl.campaign.abilities.BaseToggleAbility.getActivationDays</a></div><div class="ttdeci">float getActivationDays()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dc5/BaseToggleAbility_8java_source.html#l00030">BaseToggleAbility.java:30</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility_html_af91d6e2ffa81c95835cfd099c0b7c579"><div class="ttname"><a href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#af91d6e2ffa81c95835cfd099c0b7c579">com.fs.starfarer.api.impl.campaign.abilities.BaseToggleAbility.isActive</a></div><div class="ttdeci">boolean isActive()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dc5/BaseToggleAbility_8java_source.html#l00242">BaseToggleAbility.java:242</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_a0dfd224c22bfc35f7dda6f8a1c913472"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a0dfd224c22bfc35f7dda6f8a1c913472">com.fs.starfarer.api.campaign.SectorEntityToken.isInCurrentLocation</a></div><div class="ttdeci">boolean isInCurrentLocation()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_a297539315e815b0edc7a70c09c4d4652"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a297539315e815b0edc7a70c09c4d4652">com.fs.starfarer.api.campaign.SectorEntityToken.isPlayerFleet</a></div><div class="ttdeci">boolean isPlayerFleet()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_a4ad8fff3638f4418a45477fbbb79ac1b"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a4ad8fff3638f4418a45477fbbb79ac1b">com.fs.starfarer.api.campaign.SectorEntityToken.getIndicatorColor</a></div><div class="ttdeci">Color getIndicatorColor()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_a4c0905407d9e3aae7fa3df85516ada9a"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a4c0905407d9e3aae7fa3df85516ada9a">com.fs.starfarer.api.campaign.SectorEntityToken.getVelocity</a></div><div class="ttdeci">Vector2f getVelocity()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_a535f1e15c5bcf56712d2dadbedf5e712"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a535f1e15c5bcf56712d2dadbedf5e712">com.fs.starfarer.api.campaign.SectorEntityToken.isVisibleToPlayerFleet</a></div><div class="ttdeci">boolean isVisibleToPlayerFleet()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_a885a0a44f7923765ffa74af31a200f3b"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a885a0a44f7923765ffa74af31a200f3b">com.fs.starfarer.api.campaign.SectorEntityToken.addFloatingText</a></div><div class="ttdeci">void addFloatingText(String text, Color color, float duration)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_aedf9cd58593dcb6afd4d488bb017eafc"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#aedf9cd58593dcb6afd4d488bb017eafc">com.fs.starfarer.api.campaign.SectorEntityToken.getLocation</a></div><div class="ttdeci">Vector2f getLocation()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a12adf882423877632cedb6d50fbbe2f4" name="a12adf882423877632cedb6d50fbbe2f4"></a>
@@ -538,13 +490,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/dc5/BaseToggleAbility_8java_source.html#l00107">107</a> of file <a class="el" href="../../d2/dc5/BaseToggleAbility_8java_source.html">BaseToggleAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  107</span>                                                                                       {</div>
-<div class="line"><span class="lineno">  108</span>        <a class="code hl_function" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a3e8ae9f4c6f68275ae9a1762df54e158">addIncompatibleToTooltip</a>(tooltip, <span class="stringliteral">&quot;Interrupts the following abilities when activated:&quot;</span>,</div>
-<div class="line"><span class="lineno">  109</span>                                          <span class="stringliteral">&quot;Expand tooltip to view conflicting abilities&quot;</span>,</div>
-<div class="line"><span class="lineno">  110</span>                                          expanded);</div>
-<div class="line"><span class="lineno">  111</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility_html_a3e8ae9f4c6f68275ae9a1762df54e158"><div class="ttname"><a href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a3e8ae9f4c6f68275ae9a1762df54e158">com.fs.starfarer.api.impl.campaign.abilities.BaseToggleAbility.addIncompatibleToTooltip</a></div><div class="ttdeci">void addIncompatibleToTooltip(TooltipMakerAPI tooltip, boolean expanded)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dc5/BaseToggleAbility_8java_source.html#l00107">BaseToggleAbility.java:107</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa9b81f5e0282a31da0a801b7d85c680e" name="aa9b81f5e0282a31da0a801b7d85c680e"></a>
@@ -574,62 +520,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../d5/d41/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1GraviticScanAbility.html#ae134d46d826973b0002d4b3900ea40a7">com.fs.starfarer.api.impl.campaign.abilities.GraviticScanAbility</a>, and <a class="el" href="../../d0/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#a5406b6bb4c0fe50fcca0b949ae08ad46">com.fs.starfarer.api.impl.campaign.abilities.TransponderAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/dc5/BaseToggleAbility_8java_source.html#l00060">60</a> of file <a class="el" href="../../d2/dc5/BaseToggleAbility_8java_source.html">BaseToggleAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   60</span>                                      {</div>
-<div class="line"><span class="lineno">   61</span>        super.advance(amount);</div>
-<div class="line"><span class="lineno">   62</span>        </div>
-<div class="line"><span class="lineno">   63</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a9d2408f6489b56d90a93b2a21ea0f340">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a0dfd224c22bfc35f7dda6f8a1c913472">isInCurrentLocation</a>() &amp;&amp; <a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a9d2408f6489b56d90a93b2a21ea0f340">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a535f1e15c5bcf56712d2dadbedf5e712">isVisibleToPlayerFleet</a>() &amp;&amp;</div>
-<div class="line"><span class="lineno">   64</span>                <a class="code hl_function" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a1053bc9856da0485a675780940a2a272">getLoopSoundWorldVolume</a>() &gt; 0 &amp;&amp; !Global.getSector().isPaused()) {</div>
-<div class="line"><span class="lineno">   65</span>            String soundId = <a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a752a22690f477e3fb2c0ee29bce8bfe2">getLoopSoundWorld</a>();</div>
-<div class="line"><span class="lineno">   66</span>            <span class="keywordflow">if</span> (soundId != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   67</span>                Global.getSector().getCampaignUI().suppressMusic(<a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a15549d8a5c8c5b5c0bffda444f5098ea">spec</a>.<a class="code hl_function" href="../../d4/df9/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1AbilitySpecAPI.html#a6bd38261dbe91d5e6f478ba87df9b221">getMusicSuppression</a>() * <a class="code hl_function" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a1053bc9856da0485a675780940a2a272">getLoopSoundWorldVolume</a>());</div>
-<div class="line"><span class="lineno">   68</span>                Global.getSoundPlayer().playLoop(soundId, <a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a9d2408f6489b56d90a93b2a21ea0f340">entity</a>, </div>
-<div class="line"><span class="lineno">   69</span>                            <a class="code hl_function" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a46eec76eab013e869ec7b72ca0e6daf3">getLoopSoundWorldPitch</a>(), <a class="code hl_function" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a1053bc9856da0485a675780940a2a272">getLoopSoundWorldVolume</a>(),</div>
-<div class="line"><span class="lineno">   70</span>                            <a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a9d2408f6489b56d90a93b2a21ea0f340">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#aedf9cd58593dcb6afd4d488bb017eafc">getLocation</a>(), <a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a9d2408f6489b56d90a93b2a21ea0f340">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a4c0905407d9e3aae7fa3df85516ada9a">getVelocity</a>());</div>
-<div class="line"><span class="lineno">   71</span>            }</div>
-<div class="line"><span class="lineno">   72</span>        }</div>
-<div class="line"><span class="lineno">   73</span>        </div>
-<div class="line"><span class="lineno">   74</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a9d2408f6489b56d90a93b2a21ea0f340">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a297539315e815b0edc7a70c09c4d4652">isPlayerFleet</a>() &amp;&amp; <a class="code hl_function" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a99f944c081cdd1abf51a1405539008c5">getLoopSoundUIVolume</a>() &gt; 0 &amp;&amp; !Global.getSector().isPaused()) {</div>
-<div class="line"><span class="lineno">   75</span>            String soundId = <a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a477b09a39d7f23ad432e4cdf57615285">getLoopSoundUI</a>();</div>
-<div class="line"><span class="lineno">   76</span>            <span class="keywordflow">if</span> (soundId != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   77</span>                Global.getSector().getCampaignUI().suppressMusic(<a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a15549d8a5c8c5b5c0bffda444f5098ea">spec</a>.<a class="code hl_function" href="../../d4/df9/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1AbilitySpecAPI.html#a6bd38261dbe91d5e6f478ba87df9b221">getMusicSuppression</a>() * <a class="code hl_function" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a99f944c081cdd1abf51a1405539008c5">getLoopSoundUIVolume</a>());</div>
-<div class="line"><span class="lineno">   78</span>                Global.getSoundPlayer().playLoop(soundId, <a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a9d2408f6489b56d90a93b2a21ea0f340">entity</a>, </div>
-<div class="line"><span class="lineno">   79</span>                            <a class="code hl_function" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#ab05eca8563fdfb275a102f52e8cffa7e">getLoopSoundUIPitch</a>(), <a class="code hl_function" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a99f944c081cdd1abf51a1405539008c5">getLoopSoundUIVolume</a>(),</div>
-<div class="line"><span class="lineno">   80</span>                            <a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a9d2408f6489b56d90a93b2a21ea0f340">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#aedf9cd58593dcb6afd4d488bb017eafc">getLocation</a>(), <a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a9d2408f6489b56d90a93b2a21ea0f340">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a4c0905407d9e3aae7fa3df85516ada9a">getVelocity</a>());</div>
-<div class="line"><span class="lineno">   81</span>            }</div>
-<div class="line"><span class="lineno">   82</span>        }</div>
-<div class="line"><span class="lineno">   83</span>        </div>
-<div class="line"><span class="lineno">   84</span>        </div>
-<div class="line"><span class="lineno">   85</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a74192905e74961103f2f38ec94da533a">cooldownLeft</a> &gt; 0) {</div>
-<div class="line"><span class="lineno">   86</span>            <span class="keywordtype">float</span> days = Global.getSector().getClock().convertToDays(amount);</div>
-<div class="line"><span class="lineno">   87</span>            <a class="code hl_variable" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a74192905e74961103f2f38ec94da533a">cooldownLeft</a> -= days;</div>
-<div class="line"><span class="lineno">   88</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a74192905e74961103f2f38ec94da533a">cooldownLeft</a> &lt; 0) <a class="code hl_variable" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a74192905e74961103f2f38ec94da533a">cooldownLeft</a> = 0;</div>
-<div class="line"><span class="lineno">   89</span>        }</div>
-<div class="line"><span class="lineno">   90</span>        </div>
-<div class="line"><span class="lineno">   91</span>        <span class="keywordtype">float</span> prevLevel = <a class="code hl_variable" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#aac08e4b110b4b9c2b9d00dd035158553">level</a>;</div>
-<div class="line"><span class="lineno">   92</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a08ac4457340a4ab3d6bc7a6b09512348">turnedOn</a> &amp;&amp; <a class="code hl_variable" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#aac08e4b110b4b9c2b9d00dd035158553">level</a> &lt; 1) {</div>
-<div class="line"><span class="lineno">   93</span>            <span class="keywordtype">float</span> days = Global.getSector().getClock().convertToDays(amount);</div>
-<div class="line"><span class="lineno">   94</span>            <a class="code hl_variable" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#aac08e4b110b4b9c2b9d00dd035158553">level</a> += days / <a class="code hl_function" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#adec74f8a823cc7659b404b2ad8671df8">getActivationDays</a>();</div>
-<div class="line"><span class="lineno">   95</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#aac08e4b110b4b9c2b9d00dd035158553">level</a> &gt; 1) <a class="code hl_variable" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#aac08e4b110b4b9c2b9d00dd035158553">level</a> = 1;</div>
-<div class="line"><span class="lineno">   96</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!<a class="code hl_variable" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a08ac4457340a4ab3d6bc7a6b09512348">turnedOn</a> &amp;&amp; <a class="code hl_variable" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#aac08e4b110b4b9c2b9d00dd035158553">level</a> &gt; 0) {</div>
-<div class="line"><span class="lineno">   97</span>            <span class="keywordtype">float</span> days = Global.getSector().getClock().convertToDays(amount);</div>
-<div class="line"><span class="lineno">   98</span>            <a class="code hl_variable" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#aac08e4b110b4b9c2b9d00dd035158553">level</a> -= days / <a class="code hl_function" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#abb9d00c72871965c82b159296f3fcd1b">getDeactivationDays</a>();</div>
-<div class="line"><span class="lineno">   99</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#aac08e4b110b4b9c2b9d00dd035158553">level</a> &lt; 0) <a class="code hl_variable" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#aac08e4b110b4b9c2b9d00dd035158553">level</a> = 0;</div>
-<div class="line"><span class="lineno">  100</span>        }</div>
-<div class="line"><span class="lineno">  101</span>        <span class="keywordflow">if</span> (prevLevel != <a class="code hl_variable" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#aac08e4b110b4b9c2b9d00dd035158553">level</a> || <a class="code hl_variable" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#aac08e4b110b4b9c2b9d00dd035158553">level</a> &gt; 0) {</div>
-<div class="line"><span class="lineno">  102</span>            <a class="code hl_function" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a2324a0cbf8a7db75371a93495b16f520">applyEffect</a>(amount, <a class="code hl_variable" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#aac08e4b110b4b9c2b9d00dd035158553">level</a>);</div>
-<div class="line"><span class="lineno">  103</span>            <span class="comment">//disableIncompatible();</span></div>
-<div class="line"><span class="lineno">  104</span>        }</div>
-<div class="line"><span class="lineno">  105</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin_html_a15549d8a5c8c5b5c0bffda444f5098ea"><div class="ttname"><a href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a15549d8a5c8c5b5c0bffda444f5098ea">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin.spec</a></div><div class="ttdeci">transient AbilitySpecAPI spec</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00029">BaseAbilityPlugin.java:29</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin_html_a477b09a39d7f23ad432e4cdf57615285"><div class="ttname"><a href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a477b09a39d7f23ad432e4cdf57615285">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin.getLoopSoundUI</a></div><div class="ttdeci">String getLoopSoundUI()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00052">BaseAbilityPlugin.java:52</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin_html_a752a22690f477e3fb2c0ee29bce8bfe2"><div class="ttname"><a href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a752a22690f477e3fb2c0ee29bce8bfe2">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin.getLoopSoundWorld</a></div><div class="ttdeci">String getLoopSoundWorld()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00056">BaseAbilityPlugin.java:56</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility_html_a1053bc9856da0485a675780940a2a272"><div class="ttname"><a href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a1053bc9856da0485a675780940a2a272">com.fs.starfarer.api.impl.campaign.abilities.BaseToggleAbility.getLoopSoundWorldVolume</a></div><div class="ttdeci">float getLoopSoundWorldVolume()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dc5/BaseToggleAbility_8java_source.html#l00023">BaseToggleAbility.java:23</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility_html_a46eec76eab013e869ec7b72ca0e6daf3"><div class="ttname"><a href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a46eec76eab013e869ec7b72ca0e6daf3">com.fs.starfarer.api.impl.campaign.abilities.BaseToggleAbility.getLoopSoundWorldPitch</a></div><div class="ttdeci">float getLoopSoundWorldPitch()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dc5/BaseToggleAbility_8java_source.html#l00024">BaseToggleAbility.java:24</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility_html_a99f944c081cdd1abf51a1405539008c5"><div class="ttname"><a href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a99f944c081cdd1abf51a1405539008c5">com.fs.starfarer.api.impl.campaign.abilities.BaseToggleAbility.getLoopSoundUIVolume</a></div><div class="ttdeci">float getLoopSoundUIVolume()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dc5/BaseToggleAbility_8java_source.html#l00020">BaseToggleAbility.java:20</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility_html_ab05eca8563fdfb275a102f52e8cffa7e"><div class="ttname"><a href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#ab05eca8563fdfb275a102f52e8cffa7e">com.fs.starfarer.api.impl.campaign.abilities.BaseToggleAbility.getLoopSoundUIPitch</a></div><div class="ttdeci">float getLoopSoundUIPitch()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dc5/BaseToggleAbility_8java_source.html#l00021">BaseToggleAbility.java:21</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility_html_abb9d00c72871965c82b159296f3fcd1b"><div class="ttname"><a href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#abb9d00c72871965c82b159296f3fcd1b">com.fs.starfarer.api.impl.campaign.abilities.BaseToggleAbility.getDeactivationDays</a></div><div class="ttdeci">float getDeactivationDays()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dc5/BaseToggleAbility_8java_source.html#l00031">BaseToggleAbility.java:31</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1AbilitySpecAPI_html_a6bd38261dbe91d5e6f478ba87df9b221"><div class="ttname"><a href="../../d4/df9/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1AbilitySpecAPI.html#a6bd38261dbe91d5e6f478ba87df9b221">com.fs.starfarer.api.loading.AbilitySpecAPI.getMusicSuppression</a></div><div class="ttdeci">float getMusicSuppression()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2324a0cbf8a7db75371a93495b16f520" name="a2324a0cbf8a7db75371a93495b16f520"></a>
@@ -695,15 +586,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#ab9303678cbf9abde1e6aa8f8e99038be">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/dc5/BaseToggleAbility_8java_source.html#l00234">234</a> of file <a class="el" href="../../d2/dc5/BaseToggleAbility_8java_source.html">BaseToggleAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  234</span>                          {</div>
-<div class="line"><span class="lineno">  235</span>        super.cleanup();</div>
-<div class="line"><span class="lineno">  236</span>        </div>
-<div class="line"><span class="lineno">  237</span>        <a class="code hl_function" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a2324a0cbf8a7db75371a93495b16f520">applyEffect</a>(0, 0);</div>
-<div class="line"><span class="lineno">  238</span>        </div>
-<div class="line"><span class="lineno">  239</span>        <a class="code hl_function" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#afd746bf8322ded78a2365c6f9301bb49">cleanupImpl</a>();</div>
-<div class="line"><span class="lineno">  240</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility_html_afd746bf8322ded78a2365c6f9301bb49"><div class="ttname"><a href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#afd746bf8322ded78a2365c6f9301bb49">com.fs.starfarer.api.impl.campaign.abilities.BaseToggleAbility.cleanupImpl</a></div><div class="ttdeci">abstract void cleanupImpl()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="afd746bf8322ded78a2365c6f9301bb49" name="afd746bf8322ded78a2365c6f9301bb49"></a>
@@ -755,38 +638,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../d0/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#ae9f306799059457470ce756052efbf2b">com.fs.starfarer.api.impl.campaign.abilities.TransponderAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/dc5/BaseToggleAbility_8java_source.html#l00204">204</a> of file <a class="el" href="../../d2/dc5/BaseToggleAbility_8java_source.html">BaseToggleAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  204</span>                             {</div>
-<div class="line"><span class="lineno">  205</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#af91d6e2ffa81c95835cfd099c0b7c579">isActive</a>()) {<span class="comment">// &amp;&amp; isUsable()) {</span></div>
-<div class="line"><span class="lineno">  206</span>            <a class="code hl_variable" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a08ac4457340a4ab3d6bc7a6b09512348">turnedOn</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  207</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a9d2408f6489b56d90a93b2a21ea0f340">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a0dfd224c22bfc35f7dda6f8a1c913472">isInCurrentLocation</a>() &amp;&amp; <a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a9d2408f6489b56d90a93b2a21ea0f340">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a535f1e15c5bcf56712d2dadbedf5e712">isVisibleToPlayerFleet</a>() &amp;&amp; !<a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a9d2408f6489b56d90a93b2a21ea0f340">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a297539315e815b0edc7a70c09c4d4652">isPlayerFleet</a>()) {</div>
-<div class="line"><span class="lineno">  208</span>                String soundId = <a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#ac0602a702124071d5e44f493b559b3dd">getOffSoundWorld</a>();</div>
-<div class="line"><span class="lineno">  209</span>                <span class="keywordflow">if</span> (soundId != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  210</span>                    Global.getSoundPlayer().playSound(soundId, 1f, 1f, <a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a9d2408f6489b56d90a93b2a21ea0f340">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#aedf9cd58593dcb6afd4d488bb017eafc">getLocation</a>(), <a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a9d2408f6489b56d90a93b2a21ea0f340">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a4c0905407d9e3aae7fa3df85516ada9a">getVelocity</a>());</div>
-<div class="line"><span class="lineno">  211</span>                }</div>
-<div class="line"><span class="lineno">  212</span>            }</div>
-<div class="line"><span class="lineno">  213</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#abb9d00c72871965c82b159296f3fcd1b">getDeactivationDays</a>() &lt;= 0) {</div>
-<div class="line"><span class="lineno">  214</span>                <a class="code hl_variable" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#aac08e4b110b4b9c2b9d00dd035158553">level</a> = 0;</div>
-<div class="line"><span class="lineno">  215</span>            }</div>
-<div class="line"><span class="lineno">  216</span>            <a class="code hl_variable" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a74192905e74961103f2f38ec94da533a">cooldownLeft</a> = <a class="code hl_function" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#ad7a80098d6565709b0269d098111be9f">getDeactivateCooldownDays</a>();</div>
-<div class="line"><span class="lineno">  217</span>            <a class="code hl_variable" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a015c84d4b9a5b93dbf7c6eee63449d19">isActivateCooldown</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  218</span>            </div>
-<div class="line"><span class="lineno">  219</span>            <a class="code hl_function" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a2324a0cbf8a7db75371a93495b16f520">applyEffect</a>(0f, <a class="code hl_variable" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#aac08e4b110b4b9c2b9d00dd035158553">level</a>);</div>
-<div class="line"><span class="lineno">  220</span>            </div>
-<div class="line"><span class="lineno">  221</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a9d2408f6489b56d90a93b2a21ea0f340">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a0dfd224c22bfc35f7dda6f8a1c913472">isInCurrentLocation</a>()) {</div>
-<div class="line"><span class="lineno">  222</span>                <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a1f2ac4740a59ea1dc8fdf983f2227139">getDeactivationText</a>() != <span class="keyword">null</span> &amp;&amp; <a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a9d2408f6489b56d90a93b2a21ea0f340">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a535f1e15c5bcf56712d2dadbedf5e712">isVisibleToPlayerFleet</a>()) {</div>
-<div class="line"><span class="lineno">  223</span>                    <a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a9d2408f6489b56d90a93b2a21ea0f340">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a885a0a44f7923765ffa74af31a200f3b">addFloatingText</a>(<a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a1f2ac4740a59ea1dc8fdf983f2227139">getDeactivationText</a>(), Misc.setAlpha(<a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a9d2408f6489b56d90a93b2a21ea0f340">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a4ad8fff3638f4418a45477fbbb79ac1b">getIndicatorColor</a>(), 255), 0.5f);</div>
-<div class="line"><span class="lineno">  224</span>                }</div>
-<div class="line"><span class="lineno">  225</span>            }</div>
-<div class="line"><span class="lineno">  226</span>            <a class="code hl_function" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#af75816a5c3940f89f16bc77c8a8eaf8d">deactivateImpl</a>();</div>
-<div class="line"><span class="lineno">  227</span>            </div>
-<div class="line"><span class="lineno">  228</span>            super.deactivate();</div>
-<div class="line"><span class="lineno">  229</span>        }</div>
-<div class="line"><span class="lineno">  230</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin_html_a1f2ac4740a59ea1dc8fdf983f2227139"><div class="ttname"><a href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a1f2ac4740a59ea1dc8fdf983f2227139">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin.getDeactivationText</a></div><div class="ttdeci">String getDeactivationText()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00290">BaseAbilityPlugin.java:290</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin_html_ac0602a702124071d5e44f493b559b3dd"><div class="ttname"><a href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#ac0602a702124071d5e44f493b559b3dd">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin.getOffSoundWorld</a></div><div class="ttdeci">String getOffSoundWorld()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00048">BaseAbilityPlugin.java:48</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility_html_ad7a80098d6565709b0269d098111be9f"><div class="ttname"><a href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#ad7a80098d6565709b0269d098111be9f">com.fs.starfarer.api.impl.campaign.abilities.BaseToggleAbility.getDeactivateCooldownDays</a></div><div class="ttdeci">float getDeactivateCooldownDays()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dc5/BaseToggleAbility_8java_source.html#l00028">BaseToggleAbility.java:28</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility_html_af75816a5c3940f89f16bc77c8a8eaf8d"><div class="ttname"><a href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#af75816a5c3940f89f16bc77c8a8eaf8d">com.fs.starfarer.api.impl.campaign.abilities.BaseToggleAbility.deactivateImpl</a></div><div class="ttdeci">abstract void deactivateImpl()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af75816a5c3940f89f16bc77c8a8eaf8d" name="af75816a5c3940f89f16bc77c8a8eaf8d"></a>
@@ -832,9 +684,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/dc5/BaseToggleAbility_8java_source.html#l00027">27</a> of file <a class="el" href="../../d2/dc5/BaseToggleAbility_8java_source.html">BaseToggleAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   27</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a15549d8a5c8c5b5c0bffda444f5098ea">spec</a>.<a class="code hl_function" href="../../d4/df9/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1AbilitySpecAPI.html#abc1a2d37b4fda1628130c3752edfee72">getActivationCooldown</a>(); }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1AbilitySpecAPI_html_abc1a2d37b4fda1628130c3752edfee72"><div class="ttname"><a href="../../d4/df9/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1AbilitySpecAPI.html#abc1a2d37b4fda1628130c3752edfee72">com.fs.starfarer.api.loading.AbilitySpecAPI.getActivationCooldown</a></div><div class="ttdeci">float getActivationCooldown()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="adec74f8a823cc7659b404b2ad8671df8" name="adec74f8a823cc7659b404b2ad8671df8"></a>
@@ -853,9 +703,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/dc5/BaseToggleAbility_8java_source.html#l00030">30</a> of file <a class="el" href="../../d2/dc5/BaseToggleAbility_8java_source.html">BaseToggleAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   30</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a15549d8a5c8c5b5c0bffda444f5098ea">spec</a>.<a class="code hl_function" href="../../d4/df9/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1AbilitySpecAPI.html#a460ef834db5c68babc773c1bdbb19e09">getActivationDays</a>(); }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1AbilitySpecAPI_html_a460ef834db5c68babc773c1bdbb19e09"><div class="ttname"><a href="../../d4/df9/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1AbilitySpecAPI.html#a460ef834db5c68babc773c1bdbb19e09">com.fs.starfarer.api.loading.AbilitySpecAPI.getActivationDays</a></div><div class="ttdeci">float getActivationDays()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa4e0d4b04f25dd1404cf1162620e4e64" name="aa4e0d4b04f25dd1404cf1162620e4e64"></a>
@@ -879,23 +727,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../d0/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#a0a19a71c69bcfc49b4474a9d7cf6323b">com.fs.starfarer.api.impl.campaign.abilities.TransponderAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/dc5/BaseToggleAbility_8java_source.html#l00122">122</a> of file <a class="el" href="../../d2/dc5/BaseToggleAbility_8java_source.html">BaseToggleAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  122</span>                                       {</div>
-<div class="line"><span class="lineno">  123</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a74192905e74961103f2f38ec94da533a">cooldownLeft</a> &lt;= 0) <span class="keywordflow">return</span> 1f;</div>
-<div class="line"><span class="lineno">  124</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a015c84d4b9a5b93dbf7c6eee63449d19">isActivateCooldown</a>) {</div>
-<div class="line"><span class="lineno">  125</span>            <span class="keywordtype">float</span> max = <a class="code hl_function" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a6660cd1f7c73d05a9b8cf5c1ca59bfaa">getActivateCooldownDays</a>();</div>
-<div class="line"><span class="lineno">  126</span>            <span class="keywordflow">if</span> (max &lt;= 0f) {</div>
-<div class="line"><span class="lineno">  127</span>                <span class="keywordflow">return</span> 1f - <a class="code hl_variable" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a74192905e74961103f2f38ec94da533a">cooldownLeft</a> / 1f;</div>
-<div class="line"><span class="lineno">  128</span>            }</div>
-<div class="line"><span class="lineno">  129</span>            <span class="keywordflow">return</span> 1f - <a class="code hl_variable" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a74192905e74961103f2f38ec94da533a">cooldownLeft</a> / max;</div>
-<div class="line"><span class="lineno">  130</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  131</span>            <span class="keywordtype">float</span> max = <a class="code hl_function" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#ad7a80098d6565709b0269d098111be9f">getDeactivateCooldownDays</a>();</div>
-<div class="line"><span class="lineno">  132</span>            <span class="keywordflow">if</span> (max &lt;= 0f) {</div>
-<div class="line"><span class="lineno">  133</span>                <span class="keywordflow">return</span> 1f - <a class="code hl_variable" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a74192905e74961103f2f38ec94da533a">cooldownLeft</a> / 1f;</div>
-<div class="line"><span class="lineno">  134</span>            }</div>
-<div class="line"><span class="lineno">  135</span>            <span class="keywordflow">return</span> 1f - <a class="code hl_variable" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a74192905e74961103f2f38ec94da533a">cooldownLeft</a> / max;</div>
-<div class="line"><span class="lineno">  136</span>        }</div>
-<div class="line"><span class="lineno">  137</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae1e3f8cf138ba64edc15b74f5662cc79" name="ae1e3f8cf138ba64edc15b74f5662cc79"></a>
@@ -916,10 +748,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#aa0c7060cc2d72705818823c7d0c39877">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/dc5/BaseToggleAbility_8java_source.html#l00051">51</a> of file <a class="el" href="../../d2/dc5/BaseToggleAbility_8java_source.html">BaseToggleAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   51</span>                                   {</div>
-<div class="line"><span class="lineno">   52</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a74192905e74961103f2f38ec94da533a">cooldownLeft</a>;</div>
-<div class="line"><span class="lineno">   53</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ad7a80098d6565709b0269d098111be9f" name="ad7a80098d6565709b0269d098111be9f"></a>
@@ -938,9 +767,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/dc5/BaseToggleAbility_8java_source.html#l00028">28</a> of file <a class="el" href="../../d2/dc5/BaseToggleAbility_8java_source.html">BaseToggleAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   28</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a15549d8a5c8c5b5c0bffda444f5098ea">spec</a>.<a class="code hl_function" href="../../d4/df9/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1AbilitySpecAPI.html#ab00d56ff362d901437a7ba585e08193d">getDeactivationCooldown</a>(); }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1AbilitySpecAPI_html_ab00d56ff362d901437a7ba585e08193d"><div class="ttname"><a href="../../d4/df9/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1AbilitySpecAPI.html#ab00d56ff362d901437a7ba585e08193d">com.fs.starfarer.api.loading.AbilitySpecAPI.getDeactivationCooldown</a></div><div class="ttdeci">float getDeactivationCooldown()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="abb9d00c72871965c82b159296f3fcd1b" name="abb9d00c72871965c82b159296f3fcd1b"></a>
@@ -959,9 +786,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/dc5/BaseToggleAbility_8java_source.html#l00031">31</a> of file <a class="el" href="../../d2/dc5/BaseToggleAbility_8java_source.html">BaseToggleAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   31</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a15549d8a5c8c5b5c0bffda444f5098ea">spec</a>.<a class="code hl_function" href="../../d4/df9/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1AbilitySpecAPI.html#a7ee779281b46626a3a5d6717ef8f08a9">getDeactivationDays</a>(); }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1AbilitySpecAPI_html_a7ee779281b46626a3a5d6717ef8f08a9"><div class="ttname"><a href="../../d4/df9/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1AbilitySpecAPI.html#a7ee779281b46626a3a5d6717ef8f08a9">com.fs.starfarer.api.loading.AbilitySpecAPI.getDeactivationDays</a></div><div class="ttdeci">float getDeactivationDays()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a125c235acccac4028f1123e8bfe277e2" name="a125c235acccac4028f1123e8bfe277e2"></a>
@@ -982,10 +807,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#aacb9fbb53c324287571edbb94af69d87">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/dc5/BaseToggleAbility_8java_source.html#l00254">254</a> of file <a class="el" href="../../d2/dc5/BaseToggleAbility_8java_source.html">BaseToggleAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  254</span>                            {</div>
-<div class="line"><span class="lineno">  255</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#aac08e4b110b4b9c2b9d00dd035158553">level</a>;</div>
-<div class="line"><span class="lineno">  256</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab05eca8563fdfb275a102f52e8cffa7e" name="ab05eca8563fdfb275a102f52e8cffa7e"></a>
@@ -1006,8 +828,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a82414a57a0409f46adb12cd9cbbd1e42">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/dc5/BaseToggleAbility_8java_source.html#l00021">21</a> of file <a class="el" href="../../d2/dc5/BaseToggleAbility_8java_source.html">BaseToggleAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   21</span>{ <span class="keywordflow">return</span> 1f; }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a99f944c081cdd1abf51a1405539008c5" name="a99f944c081cdd1abf51a1405539008c5"></a>
@@ -1028,8 +849,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a45d75b25a98d5cb9b43fb88cfb2f3804">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/dc5/BaseToggleAbility_8java_source.html#l00020">20</a> of file <a class="el" href="../../d2/dc5/BaseToggleAbility_8java_source.html">BaseToggleAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   20</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#aac08e4b110b4b9c2b9d00dd035158553">level</a>; }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a46eec76eab013e869ec7b72ca0e6daf3" name="a46eec76eab013e869ec7b72ca0e6daf3"></a>
@@ -1050,8 +870,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#ab50c4bdb8bcb37566d638e4c1feaacfd">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/dc5/BaseToggleAbility_8java_source.html#l00024">24</a> of file <a class="el" href="../../d2/dc5/BaseToggleAbility_8java_source.html">BaseToggleAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   24</span>{ <span class="keywordflow">return</span> 1f; }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a1053bc9856da0485a675780940a2a272" name="a1053bc9856da0485a675780940a2a272"></a>
@@ -1072,8 +891,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a7d5aea893cd12e2c7031911f5bbb302e">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/dc5/BaseToggleAbility_8java_source.html#l00023">23</a> of file <a class="el" href="../../d2/dc5/BaseToggleAbility_8java_source.html">BaseToggleAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   23</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#aac08e4b110b4b9c2b9d00dd035158553">level</a>; }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2ce592aecdfd219c19d7424a40946d6a" name="a2ce592aecdfd219c19d7424a40946d6a"></a>
@@ -1097,10 +915,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../d0/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#a95b736d1772c5e3a8fd7dcfbb76e6936">com.fs.starfarer.api.impl.campaign.abilities.TransponderAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/dc5/BaseToggleAbility_8java_source.html#l00140">140</a> of file <a class="el" href="../../d2/dc5/BaseToggleAbility_8java_source.html">BaseToggleAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  140</span>                                       {</div>
-<div class="line"><span class="lineno">  141</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#aac08e4b110b4b9c2b9d00dd035158553">level</a>;</div>
-<div class="line"><span class="lineno">  142</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9de869853b7a8a1635c0635162f6f402" name="a9de869853b7a8a1635c0635162f6f402"></a>
@@ -1121,11 +936,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#adbeb36fa95bac2d4f44715d32404672f">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/dc5/BaseToggleAbility_8java_source.html#l00246">246</a> of file <a class="el" href="../../d2/dc5/BaseToggleAbility_8java_source.html">BaseToggleAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  246</span>                                                {</div>
-<div class="line"><span class="lineno">  247</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a1f5ec97ccc4b6158e89475b353f5c242">getOnSoundUI</a>() != <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  248</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin_html_a1f5ec97ccc4b6158e89475b353f5c242"><div class="ttname"><a href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a1f5ec97ccc4b6158e89475b353f5c242">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin.getOnSoundUI</a></div><div class="ttdeci">String getOnSoundUI()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00045">BaseAbilityPlugin.java:45</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af91d6e2ffa81c95835cfd099c0b7c579" name="af91d6e2ffa81c95835cfd099c0b7c579"></a>
@@ -1147,10 +958,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#ab9652440c6c6ef10d1893168f636c121">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/dc5/BaseToggleAbility_8java_source.html#l00242">242</a> of file <a class="el" href="../../d2/dc5/BaseToggleAbility_8java_source.html">BaseToggleAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  242</span>                              {</div>
-<div class="line"><span class="lineno">  243</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a08ac4457340a4ab3d6bc7a6b09512348">turnedOn</a>;</div>
-<div class="line"><span class="lineno">  244</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a206fef8ef4f4dba10d8ba3f71e4e9c90" name="a206fef8ef4f4dba10d8ba3f71e4e9c90"></a>
@@ -1174,14 +982,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../d5/d41/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1GraviticScanAbility.html#a84487a9a83b68de9c51c466f5928e76c">com.fs.starfarer.api.impl.campaign.abilities.GraviticScanAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/dc5/BaseToggleAbility_8java_source.html#l00114">114</a> of file <a class="el" href="../../d2/dc5/BaseToggleAbility_8java_source.html">BaseToggleAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  114</span>                              {</div>
-<div class="line"><span class="lineno">  115</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a015c84d4b9a5b93dbf7c6eee63449d19">isActivateCooldown</a> &amp;&amp; </div>
-<div class="line"><span class="lineno">  116</span>                <a class="code hl_function" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a2ce592aecdfd219c19d7424a40946d6a">getProgressFraction</a>() &gt; 0 &amp;&amp; <a class="code hl_function" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a2ce592aecdfd219c19d7424a40946d6a">getProgressFraction</a>() &lt; 1 &amp;&amp; </div>
-<div class="line"><span class="lineno">  117</span>                <a class="code hl_function" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#abb9d00c72871965c82b159296f3fcd1b">getDeactivationDays</a>() &gt; 0) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  118</span>        <span class="keywordflow">return</span> super.isUsable();</div>
-<div class="line"><span class="lineno">  119</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility_html_a2ce592aecdfd219c19d7424a40946d6a"><div class="ttname"><a href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a2ce592aecdfd219c19d7424a40946d6a">com.fs.starfarer.api.impl.campaign.abilities.BaseToggleAbility.getProgressFraction</a></div><div class="ttdeci">float getProgressFraction()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dc5/BaseToggleAbility_8java_source.html#l00140">BaseToggleAbility.java:140</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9b3c71fcb3b733099b79393aada2ea7f" name="a9b3c71fcb3b733099b79393aada2ea7f"></a>
@@ -1205,30 +1006,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../d0/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#aa9f4865b51b3dd7fafaa2e2586a48ae2">com.fs.starfarer.api.impl.campaign.abilities.TransponderAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/dc5/BaseToggleAbility_8java_source.html#l00154">154</a> of file <a class="el" href="../../d2/dc5/BaseToggleAbility_8java_source.html">BaseToggleAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  154</span>                              {</div>
-<div class="line"><span class="lineno">  155</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#af91d6e2ffa81c95835cfd099c0b7c579">isActive</a>()) {</div>
-<div class="line"><span class="lineno">  156</span>            <a class="code hl_function" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a86af14d884d633297c911dadd52924c8">deactivate</a>();</div>
-<div class="line"><span class="lineno">  157</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  158</span>            <a class="code hl_function" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a6f23d39da4af9512392890d804613bde">activate</a>();</div>
-<div class="line"><span class="lineno">  159</span>        }</div>
-<div class="line"><span class="lineno">  160</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a9d2408f6489b56d90a93b2a21ea0f340">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a297539315e815b0edc7a70c09c4d4652">isPlayerFleet</a>()) {</div>
-<div class="line"><span class="lineno">  161</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#af91d6e2ffa81c95835cfd099c0b7c579">isActive</a>()) {</div>
-<div class="line"><span class="lineno">  162</span>                String soundId = <a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a1f5ec97ccc4b6158e89475b353f5c242">getOnSoundUI</a>();</div>
-<div class="line"><span class="lineno">  163</span>                <span class="keywordflow">if</span> (soundId != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  164</span>                    Global.getSoundPlayer().playUISound(soundId, 1f, 1f);</div>
-<div class="line"><span class="lineno">  165</span>                }</div>
-<div class="line"><span class="lineno">  166</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  167</span>                String soundId = <a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#ae569eb91cd9a8c43041ef5ccfc2c954e">getOffSoundUI</a>();</div>
-<div class="line"><span class="lineno">  168</span>                <span class="keywordflow">if</span> (soundId != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  169</span>                    Global.getSoundPlayer().playUISound(soundId, 1f, 1f);</div>
-<div class="line"><span class="lineno">  170</span>                }</div>
-<div class="line"><span class="lineno">  171</span>            }</div>
-<div class="line"><span class="lineno">  172</span>        }</div>
-<div class="line"><span class="lineno">  173</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin_html_ae569eb91cd9a8c43041ef5ccfc2c954e"><div class="ttname"><a href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#ae569eb91cd9a8c43041ef5ccfc2c954e">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin.getOffSoundUI</a></div><div class="ttdeci">String getOffSoundUI()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00047">BaseAbilityPlugin.java:47</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility_html_a6f23d39da4af9512392890d804613bde"><div class="ttname"><a href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a6f23d39da4af9512392890d804613bde">com.fs.starfarer.api.impl.campaign.abilities.BaseToggleAbility.activate</a></div><div class="ttdeci">void activate()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dc5/BaseToggleAbility_8java_source.html#l00175">BaseToggleAbility.java:175</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility_html_a86af14d884d633297c911dadd52924c8"><div class="ttname"><a href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a86af14d884d633297c911dadd52924c8">com.fs.starfarer.api.impl.campaign.abilities.BaseToggleAbility.deactivate</a></div><div class="ttdeci">void deactivate()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dc5/BaseToggleAbility_8java_source.html#l00204">BaseToggleAbility.java:204</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a0cc2a432f934a4a2d755e8283c5653d0" name="a0cc2a432f934a4a2d755e8283c5653d0"></a>
@@ -1252,10 +1030,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../d0/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#a3e78fb350363a1cb6415bcce38fb42cc">com.fs.starfarer.api.impl.campaign.abilities.TransponderAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/dc5/BaseToggleAbility_8java_source.html#l00251">251</a> of file <a class="el" href="../../d2/dc5/BaseToggleAbility_8java_source.html">BaseToggleAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  251</span>                                    {</div>
-<div class="line"><span class="lineno">  252</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  253</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aee3f33265143f6b33c490c27d3321114" name="aee3f33265143f6b33c490c27d3321114"></a>
@@ -1277,10 +1052,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#aff67f5bf25f16e73a51d55aa6ee9bef1">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/dc5/BaseToggleAbility_8java_source.html#l00054">54</a> of file <a class="el" href="../../d2/dc5/BaseToggleAbility_8java_source.html">BaseToggleAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   54</span>                                                    {</div>
-<div class="line"><span class="lineno">   55</span>        this.cooldownLeft = <a class="code hl_variable" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a74192905e74961103f2f38ec94da533a">cooldownLeft</a>;</div>
-<div class="line"><span class="lineno">   56</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aee19795994d3c0a0cb44c5908fdbba51" name="aee19795994d3c0a0cb44c5908fdbba51"></a>
@@ -1303,10 +1075,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../d2/d8e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1GoDarkAbility.html#a3900bdc72d61aa48a315c6ca05ea6475">com.fs.starfarer.api.impl.campaign.abilities.GoDarkAbility</a>, <a class="el" href="../../d5/d41/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1GraviticScanAbility.html#acd692346fa000207a1bb40611ae4d311">com.fs.starfarer.api.impl.campaign.abilities.GraviticScanAbility</a>, and <a class="el" href="../../da/da2/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1SustainedBurnAbility.html#a1cfbda7e86291f26da881774247e2834">com.fs.starfarer.api.impl.campaign.abilities.SustainedBurnAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/dc5/BaseToggleAbility_8java_source.html#l00150">150</a> of file <a class="el" href="../../d2/dc5/BaseToggleAbility_8java_source.html">BaseToggleAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  150</span>                                         {</div>
-<div class="line"><span class="lineno">  151</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#af91d6e2ffa81c95835cfd099c0b7c579">isActive</a>() &amp;&amp; <a class="code hl_variable" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#aac08e4b110b4b9c2b9d00dd035158553">level</a> &gt;= 1;</div>
-<div class="line"><span class="lineno">  152</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9452c3fb21490f2df87b01217bc0ebb9" name="a9452c3fb21490f2df87b01217bc0ebb9"></a>
@@ -1329,10 +1098,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../d2/d8e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1GoDarkAbility.html#ab7a30abf57908d30fe67b32c184310e0">com.fs.starfarer.api.impl.campaign.abilities.GoDarkAbility</a>, <a class="el" href="../../d5/d41/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1GraviticScanAbility.html#a78f8d798261f2f9cf1723c04a3569803">com.fs.starfarer.api.impl.campaign.abilities.GraviticScanAbility</a>, <a class="el" href="../../da/da2/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1SustainedBurnAbility.html#ad66c7bef084caa7d579066e4b4bc3530">com.fs.starfarer.api.impl.campaign.abilities.SustainedBurnAbility</a>, and <a class="el" href="../../d0/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#a4cfa6023b8355cabf30de6d5ca69f6f9">com.fs.starfarer.api.impl.campaign.abilities.TransponderAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/dc5/BaseToggleAbility_8java_source.html#l00145">145</a> of file <a class="el" href="../../d2/dc5/BaseToggleAbility_8java_source.html">BaseToggleAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  145</span>                                           {</div>
-<div class="line"><span class="lineno">  146</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#aac08e4b110b4b9c2b9d00dd035158553">level</a> &gt; 0 &amp;&amp; (!<a class="code hl_variable" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a08ac4457340a4ab3d6bc7a6b09512348">turnedOn</a> || <a class="code hl_variable" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#aac08e4b110b4b9c2b9d00dd035158553">level</a> &lt; 1);</div>
-<div class="line"><span class="lineno">  147</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

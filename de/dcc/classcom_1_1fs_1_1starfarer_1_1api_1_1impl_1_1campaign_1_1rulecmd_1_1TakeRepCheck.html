@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -176,35 +177,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="../../d0/d5c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1CommandPlugin.html#a72a44c5127e60136b87d3b37613fd0e0">com.fs.starfarer.api.campaign.rules.CommandPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d7a/TakeRepCheck_8java_source.html#l00037">37</a> of file <a class="el" href="../../dd/d7a/TakeRepCheck_8java_source.html">TakeRepCheck.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   37</span>                                                                                                                             {</div>
-<div class="line"><span class="lineno">   38</span>        </div>
-<div class="line"><span class="lineno">   39</span>        String factionId = params.get(0).getString(memoryMap);</div>
-<div class="line"><span class="lineno">   40</span>        VarAndMemory result = params.get(1).getVarNameAndMemory(memoryMap);</div>
-<div class="line"><span class="lineno">   41</span>        </div>
-<div class="line"><span class="lineno">   42</span>        FactionAPI faction = Global.getSector().getFaction(factionId);</div>
-<div class="line"><span class="lineno">   43</span>        FactionAPI player = Global.getSector().getFaction(Factions.PLAYER);</div>
-<div class="line"><span class="lineno">   44</span>        RepLevel level = player.getRelationshipLevel(faction);</div>
-<div class="line"><span class="lineno">   45</span>        <span class="keywordflow">if</span> (level.isAtBest(RepLevel.SUSPICIOUS)) {</div>
-<div class="line"><span class="lineno">   46</span>            <span class="comment">//result.memory.set(result.name, RepCheckResult.R0.name(), 0);</span></div>
-<div class="line"><span class="lineno">   47</span>            result.memory.set(result.name, 0f, 0);</div>
-<div class="line"><span class="lineno">   48</span>        }</div>
-<div class="line"><span class="lineno">   49</span>        </div>
-<div class="line"><span class="lineno">   50</span>        <span class="keywordtype">float</span> rel = player.getRelationship(factionId);</div>
-<div class="line"><span class="lineno">   51</span>        </div>
-<div class="line"><span class="lineno">   52</span>        <span class="keywordtype">float</span> r = (float) Math.random();</div>
-<div class="line"><span class="lineno">   53</span>        r *= r;</div>
-<div class="line"><span class="lineno">   54</span>        <span class="keywordtype">float</span> roll = rel * 0.2f + rel * 0.8f * (float) Math.random() + (1f - rel) * r;</div>
-<div class="line"><span class="lineno">   55</span>        </div>
-<div class="line"><span class="lineno">   56</span>        result.memory.set(result.name, roll, 0);</div>
-<div class="line"><span class="lineno">   57</span>        <span class="comment">//result.memory.set(result.name, 1f, 0);</span></div>
-<div class="line"><span class="lineno">   58</span><span class="comment">//      RepCheckResult max = RepCheckResult.R0;</span></div>
-<div class="line"><span class="lineno">   59</span><span class="comment">//      float minDiff = Float.MAX_VALUE;</span></div>
-<div class="line"><span class="lineno">   60</span><span class="comment">//      for (RepCheckResult r : EnumSet.allOf(RepCheckResult.class)) {</span></div>
-<div class="line"><span class="lineno">   61</span><span class="comment">//          float diff = 2f - </span></div>
-<div class="line"><span class="lineno">   62</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">   63</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   64</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

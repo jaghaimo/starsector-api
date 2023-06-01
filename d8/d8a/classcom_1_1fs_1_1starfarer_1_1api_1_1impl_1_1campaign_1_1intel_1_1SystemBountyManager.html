@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -225,12 +226,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/dad/SystemBountyManager_8java_source.html#l00024">24</a> of file <a class="el" href="../../d3/dad/SystemBountyManager_8java_source.html">SystemBountyManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   24</span>                                 {</div>
-<div class="line"><span class="lineno">   25</span>        super();</div>
-<div class="line"><span class="lineno">   26</span>        Global.getSector().getMemoryWithoutUpdate().set(<a class="code hl_variable" href="../../d8/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SystemBountyManager.html#a96f7195ddeb2ee3fe86d4f93684726f0">KEY</a>, <span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">   27</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SystemBountyManager_html_a96f7195ddeb2ee3fe86d4f93684726f0"><div class="ttname"><a href="../../d8/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SystemBountyManager.html#a96f7195ddeb2ee3fe86d4f93684726f0">com.fs.starfarer.api.impl.campaign.intel.SystemBountyManager.KEY</a></div><div class="ttdeci">static final String KEY</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dad/SystemBountyManager_8java_source.html#l00017">SystemBountyManager.java:17</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -251,20 +247,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/dad/SystemBountyManager_8java_source.html#l00067">67</a> of file <a class="el" href="../../d3/dad/SystemBountyManager_8java_source.html">SystemBountyManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   67</span>                                                   {</div>
-<div class="line"><span class="lineno">   68</span>        <span class="keywordflow">if</span> (market != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   69</span>            SystemBountyIntel <a class="code hl_variable" href="../../d9/d36/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseEventManager.html#a632394ea13a2b01db108ea4025a6c5e2">active</a> = <a class="code hl_function" href="../../d9/d36/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseEventManager.html#a1b01338559086fd3ed6c5803e06c900e">getActive</a>(market);</div>
-<div class="line"><span class="lineno">   70</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d9/d36/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseEventManager.html#a632394ea13a2b01db108ea4025a6c5e2">active</a> != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   71</span>                <a class="code hl_variable" href="../../d9/d36/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseEventManager.html#a632394ea13a2b01db108ea4025a6c5e2">active</a>.reset();</div>
-<div class="line"><span class="lineno">   72</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   73</span>                <a class="code hl_function" href="../../d9/d36/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseEventManager.html#a36a5f4857cf1ac50ce44e31b85280f7b">addActive</a>(<span class="keyword">new</span> SystemBountyIntel(market));</div>
-<div class="line"><span class="lineno">   74</span>            }</div>
-<div class="line"><span class="lineno">   75</span>        }</div>
-<div class="line"><span class="lineno">   76</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseEventManager_html_a1b01338559086fd3ed6c5803e06c900e"><div class="ttname"><a href="../../d9/d36/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseEventManager.html#a1b01338559086fd3ed6c5803e06c900e">com.fs.starfarer.api.impl.campaign.intel.BaseEventManager.getActive</a></div><div class="ttdeci">List&lt; EveryFrameScript &gt; getActive()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d4c/BaseEventManager_8java_source.html#l00189">BaseEventManager.java:189</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseEventManager_html_a36a5f4857cf1ac50ce44e31b85280f7b"><div class="ttname"><a href="../../d9/d36/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseEventManager.html#a36a5f4857cf1ac50ce44e31b85280f7b">com.fs.starfarer.api.impl.campaign.intel.BaseEventManager.addActive</a></div><div class="ttdeci">void addActive(EveryFrameScript event)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d4c/BaseEventManager_8java_source.html#l00176">BaseEventManager.java:176</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseEventManager_html_a632394ea13a2b01db108ea4025a6c5e2"><div class="ttname"><a href="../../d9/d36/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseEventManager.html#a632394ea13a2b01db108ea4025a6c5e2">com.fs.starfarer.api.impl.campaign.intel.BaseEventManager.active</a></div><div class="ttdeci">List&lt; EveryFrameScript &gt; active</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d4c/BaseEventManager_8java_source.html#l00017">BaseEventManager.java:17</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac2d3fd5396678a94021447cbdfae5de0" name="ac2d3fd5396678a94021447cbdfae5de0"></a>
@@ -293,17 +276,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d36/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseEventManager.html#aff41483fc015b11cb473023197410855">com.fs.starfarer.api.impl.campaign.intel.BaseEventManager</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/dad/SystemBountyManager_8java_source.html#l00039">39</a> of file <a class="el" href="../../d3/dad/SystemBountyManager_8java_source.html">SystemBountyManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   39</span>                                             {</div>
-<div class="line"><span class="lineno">   40</span>        <span class="comment">//if ((float) Math.random() &lt; 0.1f) return null;</span></div>
-<div class="line"><span class="lineno">   41</span>        </div>
-<div class="line"><span class="lineno">   42</span>        MarketAPI market = <a class="code hl_function" href="../../d8/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SystemBountyManager.html#a731d9c2d0048f03cc73c2dc28655aa9c">pickMarket</a>();</div>
-<div class="line"><span class="lineno">   43</span>        <span class="keywordflow">if</span> (market == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   44</span>        </div>
-<div class="line"><span class="lineno">   45</span>        SystemBountyIntel intel = <span class="keyword">new</span> SystemBountyIntel(market);</div>
-<div class="line"><span class="lineno">   46</span>        <span class="keywordflow">return</span> intel;</div>
-<div class="line"><span class="lineno">   47</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SystemBountyManager_html_a731d9c2d0048f03cc73c2dc28655aa9c"><div class="ttname"><a href="../../d8/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SystemBountyManager.html#a731d9c2d0048f03cc73c2dc28655aa9c">com.fs.starfarer.api.impl.campaign.intel.SystemBountyManager.pickMarket</a></div><div class="ttdeci">MarketAPI pickMarket()</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dad/SystemBountyManager_8java_source.html#l00078">SystemBountyManager.java:78</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2e6e72b5ef38e123b522d96f67951c18" name="a2e6e72b5ef38e123b522d96f67951c18"></a>
@@ -323,16 +296,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/dad/SystemBountyManager_8java_source.html#l00057">57</a> of file <a class="el" href="../../d3/dad/SystemBountyManager_8java_source.html">SystemBountyManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   57</span>                                                         {</div>
-<div class="line"><span class="lineno">   58</span>        <span class="keywordflow">for</span> (EveryFrameScript s : <a class="code hl_function" href="../../d9/d36/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseEventManager.html#a1b01338559086fd3ed6c5803e06c900e">getActive</a>()) {</div>
-<div class="line"><span class="lineno">   59</span>            SystemBountyIntel intel = (SystemBountyIntel) s;</div>
-<div class="line"><span class="lineno">   60</span>            <span class="keywordflow">if</span> (intel.isDone()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   61</span>            </div>
-<div class="line"><span class="lineno">   62</span>            <span class="keywordflow">if</span> (market == intel.getMarket()) <span class="keywordflow">return</span> intel;</div>
-<div class="line"><span class="lineno">   63</span>        }</div>
-<div class="line"><span class="lineno">   64</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   65</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5f3ab41cbf3b3d6cc74a6cdb1de60569" name="a5f3ab41cbf3b3d6cc74a6cdb1de60569"></a>
@@ -359,12 +323,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/dad/SystemBountyManager_8java_source.html#l00019">19</a> of file <a class="el" href="../../d3/dad/SystemBountyManager_8java_source.html">SystemBountyManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   19</span>                                                    {</div>
-<div class="line"><span class="lineno">   20</span>        Object test = Global.getSector().getMemoryWithoutUpdate().get(<a class="code hl_variable" href="../../d8/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SystemBountyManager.html#a96f7195ddeb2ee3fe86d4f93684726f0">KEY</a>);</div>
-<div class="line"><span class="lineno">   21</span>        <span class="keywordflow">return</span> (<a class="code hl_function" href="../../d8/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SystemBountyManager.html#a7ce66c4f13ce38f6ce64245105be68b3">SystemBountyManager</a>) test; </div>
-<div class="line"><span class="lineno">   22</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SystemBountyManager_html_a7ce66c4f13ce38f6ce64245105be68b3"><div class="ttname"><a href="../../d8/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SystemBountyManager.html#a7ce66c4f13ce38f6ce64245105be68b3">com.fs.starfarer.api.impl.campaign.intel.SystemBountyManager.SystemBountyManager</a></div><div class="ttdeci">SystemBountyManager()</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dad/SystemBountyManager_8java_source.html#l00024">SystemBountyManager.java:24</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a952fc5b4c8f5b34818f52d124916b73a" name="a952fc5b4c8f5b34818f52d124916b73a"></a>
@@ -393,10 +352,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d36/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseEventManager.html#a08642feced6cb3a8677ddc8e0285a539">com.fs.starfarer.api.impl.campaign.intel.BaseEventManager</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/dad/SystemBountyManager_8java_source.html#l00034">34</a> of file <a class="el" href="../../d3/dad/SystemBountyManager_8java_source.html">SystemBountyManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   34</span>                                     {</div>
-<div class="line"><span class="lineno">   35</span>        <span class="keywordflow">return</span> Global.getSettings().getInt(<span class="stringliteral">&quot;maxSystemBounties&quot;</span>);</div>
-<div class="line"><span class="lineno">   36</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a795c1e8397cd106de0b3cc2176bbf73f" name="a795c1e8397cd106de0b3cc2176bbf73f"></a>
@@ -425,10 +381,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d36/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseEventManager.html#a6053e09f1cca81ae7ca762190c4b4778">com.fs.starfarer.api.impl.campaign.intel.BaseEventManager</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/dad/SystemBountyManager_8java_source.html#l00030">30</a> of file <a class="el" href="../../d3/dad/SystemBountyManager_8java_source.html">SystemBountyManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   30</span>                                     {</div>
-<div class="line"><span class="lineno">   31</span>        <span class="keywordflow">return</span> Global.getSettings().getInt(<span class="stringliteral">&quot;minSystemBounties&quot;</span>);</div>
-<div class="line"><span class="lineno">   32</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a53f84f5d5d72f1d004e497e103cbdf73" name="a53f84f5d5d72f1d004e497e103cbdf73"></a>
@@ -448,13 +401,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/dad/SystemBountyManager_8java_source.html#l00050">50</a> of file <a class="el" href="../../d3/dad/SystemBountyManager_8java_source.html">SystemBountyManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   50</span>                                              {</div>
-<div class="line"><span class="lineno">   51</span>        <span class="keywordflow">for</span> (EveryFrameScript s : <a class="code hl_function" href="../../d9/d36/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseEventManager.html#a1b01338559086fd3ed6c5803e06c900e">getActive</a>()) {</div>
-<div class="line"><span class="lineno">   52</span>            <span class="keywordflow">if</span> (market == ((SystemBountyIntel)s).getMarket()) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   53</span>        }</div>
-<div class="line"><span class="lineno">   54</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   55</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a731d9c2d0048f03cc73c2dc28655aa9c" name="a731d9c2d0048f03cc73c2dc28655aa9c"></a>
@@ -481,89 +428,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/dad/SystemBountyManager_8java_source.html#l00078">78</a> of file <a class="el" href="../../d3/dad/SystemBountyManager_8java_source.html">SystemBountyManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   78</span>                                     {</div>
-<div class="line"><span class="lineno">   79</span>        Set&lt;MarketAPI&gt; already = <span class="keyword">new</span> HashSet&lt;MarketAPI&gt;();</div>
-<div class="line"><span class="lineno">   80</span>        <span class="keywordflow">for</span> (EveryFrameScript s : <a class="code hl_function" href="../../d9/d36/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseEventManager.html#a1b01338559086fd3ed6c5803e06c900e">getActive</a>()) {</div>
-<div class="line"><span class="lineno">   81</span>            already.add(((SystemBountyIntel)s).getMarket());</div>
-<div class="line"><span class="lineno">   82</span>        }</div>
-<div class="line"><span class="lineno">   83</span>        </div>
-<div class="line"><span class="lineno">   84</span>        ListMap&lt;MarketAPI&gt; locationIdToMarket = <span class="keyword">new</span> ListMap&lt;MarketAPI&gt;();</div>
-<div class="line"><span class="lineno">   85</span>        <span class="keywordflow">for</span> (MarketAPI market : Global.getSector().getEconomy().getMarketsCopy()) {</div>
-<div class="line"><span class="lineno">   86</span>            <span class="keywordflow">if</span> (market.isHidden()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   87</span>            locationIdToMarket.add(market.getContainingLocation().getId(), market);</div>
-<div class="line"><span class="lineno">   88</span>        }</div>
-<div class="line"><span class="lineno">   89</span>        </div>
-<div class="line"><span class="lineno">   90</span>        WeightedRandomPicker&lt;MarketAPI&gt; pickerWithPirateActivity = <span class="keyword">new</span> WeightedRandomPicker&lt;MarketAPI&gt;();</div>
-<div class="line"><span class="lineno">   91</span>        WeightedRandomPicker&lt;MarketAPI&gt; picker = <span class="keyword">new</span> WeightedRandomPicker&lt;MarketAPI&gt;();</div>
-<div class="line"><span class="lineno">   92</span>        OUTER: <span class="keywordflow">for</span> (MarketAPI market : Global.getSector().getEconomy().getMarketsCopy()) {</div>
-<div class="line"><span class="lineno">   93</span>            <span class="keywordflow">if</span> (market.isHidden()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   94</span>            <span class="keywordflow">if</span> (market.getSize() &lt;= 4) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   95</span>            <span class="keywordflow">if</span> (market.isPlayerOwned()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   96</span>            <span class="keywordflow">if</span> (already.contains(market)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   97</span>            </div>
-<div class="line"><span class="lineno">   98</span>            <span class="keywordflow">if</span> (market.getFaction().getCustom().optBoolean(Factions.CUSTOM_POSTS_NO_BOUNTIES)) {</div>
-<div class="line"><span class="lineno">   99</span>                <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  100</span>            }</div>
-<div class="line"><span class="lineno">  101</span>            </div>
-<div class="line"><span class="lineno">  102</span>            <span class="keywordflow">if</span> (Global.getSector().isInNewGameAdvance() &amp;&amp; market.getId().equals(<span class="stringliteral">&quot;jangala&quot;</span>)) {</div>
-<div class="line"><span class="lineno">  103</span>                <span class="keywordflow">continue</span>; <span class="comment">// want a fresh one to be auto-started there on game start</span></div>
-<div class="line"><span class="lineno">  104</span>            }</div>
-<div class="line"><span class="lineno">  105</span> </div>
-<div class="line"><span class="lineno">  106</span>            <span class="keywordflow">for</span> (MarketAPI other : locationIdToMarket.getList(market.getContainingLocation().getId())) {</div>
-<div class="line"><span class="lineno">  107</span>                <span class="keywordflow">if</span> (market.getFaction() == other.getFaction() &amp;&amp; already.contains(other)) {</div>
-<div class="line"><span class="lineno">  108</span>                    <span class="keywordflow">continue</span> OUTER;</div>
-<div class="line"><span class="lineno">  109</span>                }</div>
-<div class="line"><span class="lineno">  110</span>            }</div>
-<div class="line"><span class="lineno">  111</span>            </div>
-<div class="line"><span class="lineno">  112</span>            <span class="keywordtype">float</span> w = market.getSize() * 0.25f;</div>
-<div class="line"><span class="lineno">  113</span>            <span class="keywordflow">for</span> (MarketAPI other : locationIdToMarket.getList(market.getContainingLocation().getId())) {</div>
-<div class="line"><span class="lineno">  114</span>                <span class="keywordflow">if</span> (market.getFaction().isHostileTo(other.getFaction())) {</div>
-<div class="line"><span class="lineno">  115</span><span class="comment">//                  w += other.getSize() * 25f;</span></div>
-<div class="line"><span class="lineno">  116</span><span class="comment">//                  if (other.getMemoryWithoutUpdate().getBoolean(MemFlags.MARKET_MILITARY) ||</span></div>
-<div class="line"><span class="lineno">  117</span><span class="comment">//                          other.getMemoryWithoutUpdate().getBoolean(MemFlags.MARKET_PATROL)) {</span></div>
-<div class="line"><span class="lineno">  118</span><span class="comment">//                      w += other.getSize() * 25f;</span></div>
-<div class="line"><span class="lineno">  119</span><span class="comment">//                  }</span></div>
-<div class="line"><span class="lineno">  120</span>                    w += 10f;</div>
-<div class="line"><span class="lineno">  121</span>                    <span class="keywordflow">if</span> (other.getMemoryWithoutUpdate().getBoolean(MemFlags.MARKET_MILITARY) ||</div>
-<div class="line"><span class="lineno">  122</span>                            other.getMemoryWithoutUpdate().getBoolean(MemFlags.MARKET_PATROL)) {</div>
-<div class="line"><span class="lineno">  123</span>                        w += 10f;</div>
-<div class="line"><span class="lineno">  124</span>                    }</div>
-<div class="line"><span class="lineno">  125</span>                    <span class="keywordflow">if</span> (market.getMemoryWithoutUpdate().getBoolean(MemFlags.MARKET_MILITARY)) {</div>
-<div class="line"><span class="lineno">  126</span>                        w += 10f;</div>
-<div class="line"><span class="lineno">  127</span>                    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (market.getMemoryWithoutUpdate().getBoolean(MemFlags.MARKET_PATROL)) {</div>
-<div class="line"><span class="lineno">  128</span>                        w += 5f;</div>
-<div class="line"><span class="lineno">  129</span>                    }</div>
-<div class="line"><span class="lineno">  130</span>                }</div>
-<div class="line"><span class="lineno">  131</span>            }</div>
-<div class="line"><span class="lineno">  132</span>            </div>
-<div class="line"><span class="lineno">  133</span>            <span class="keywordflow">if</span> (market.hasCondition(Conditions.PIRATE_ACTIVITY)) {</div>
-<div class="line"><span class="lineno">  134</span>                w += 10f;</div>
-<div class="line"><span class="lineno">  135</span>                pickerWithPirateActivity.add(market, w);</div>
-<div class="line"><span class="lineno">  136</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  137</span>                picker.add(market, w);</div>
-<div class="line"><span class="lineno">  138</span>            }</div>
-<div class="line"><span class="lineno">  139</span>        }</div>
-<div class="line"><span class="lineno">  140</span>        </div>
-<div class="line"><span class="lineno">  141</span>        <span class="comment">//picker.print(&quot;Bounty weights: &quot;);</span></div>
-<div class="line"><span class="lineno">  142</span>        </div>
-<div class="line"><span class="lineno">  143</span>        MarketAPI market = pickerWithPirateActivity.pick();</div>
-<div class="line"><span class="lineno">  144</span>        <span class="keywordtype">float</span> w = pickerWithPirateActivity.getWeight(market);</div>
-<div class="line"><span class="lineno">  145</span>        <span class="keywordflow">if</span> (market == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  146</span>            market = picker.pick();</div>
-<div class="line"><span class="lineno">  147</span>            w = picker.getWeight(market);</div>
-<div class="line"><span class="lineno">  148</span>        }</div>
-<div class="line"><span class="lineno">  149</span>        </div>
-<div class="line"><span class="lineno">  150</span>        <span class="keywordtype">float</span> probMult = 1f / (<a class="code hl_function" href="../../d9/d36/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseEventManager.html#ab55272fb07763c9c56e9bf09a74fa4e6">getOngoing</a>() + 1f);</div>
-<div class="line"><span class="lineno">  151</span>        </div>
-<div class="line"><span class="lineno">  152</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">float</span>) Math.random() &gt; w * 0.01f * probMult) {</div>
-<div class="line"><span class="lineno">  153</span>            market = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  154</span>        }</div>
-<div class="line"><span class="lineno">  155</span>        </div>
-<div class="line"><span class="lineno">  156</span>        <span class="keywordflow">return</span> market;</div>
-<div class="line"><span class="lineno">  157</span>        </div>
-<div class="line"><span class="lineno">  158</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseEventManager_html_ab55272fb07763c9c56e9bf09a74fa4e6"><div class="ttname"><a href="../../d9/d36/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseEventManager.html#ab55272fb07763c9c56e9bf09a74fa4e6">com.fs.starfarer.api.impl.campaign.intel.BaseEventManager.getOngoing</a></div><div class="ttdeci">int getOngoing()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d4c/BaseEventManager_8java_source.html#l00164">BaseEventManager.java:164</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

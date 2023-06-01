@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -233,53 +234,7 @@ Static Public Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseShipSystemScript.html#a4bc8ac2999423cda8da369b8498bd43a">com.fs.starfarer.api.impl.combat.BaseShipSystemScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d4c/ReserveWingStats_8java_source.html#l00027">27</a> of file <a class="el" href="../../d7/d4c/ReserveWingStats_8java_source.html">ReserveWingStats.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   27</span>                                                                                            {</div>
-<div class="line"><span class="lineno">   28</span>        ShipAPI ship = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   29</span>        <span class="keywordflow">if</span> (stats.getEntity() instanceof ShipAPI) {</div>
-<div class="line"><span class="lineno">   30</span>            ship = (ShipAPI) stats.getEntity();</div>
-<div class="line"><span class="lineno">   31</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   32</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   33</span>        }</div>
-<div class="line"><span class="lineno">   34</span>        </div>
-<div class="line"><span class="lineno">   35</span>        <span class="keywordflow">if</span> (effectLevel == 1) {</div>
-<div class="line"><span class="lineno">   36</span>            </div>
-<div class="line"><span class="lineno">   37</span>            <span class="comment">//need to make this more balanced</span></div>
-<div class="line"><span class="lineno">   38</span>            <span class="comment">//possibly don&#39;t count the &quot;added&quot; fighters to helping restore the replacement rate?</span></div>
-<div class="line"><span class="lineno">   39</span>            <span class="comment">//also: need to adjust the AI to be more conservative using this</span></div>
-<div class="line"><span class="lineno">   40</span> </div>
-<div class="line"><span class="lineno">   41</span>            </div>
-<div class="line"><span class="lineno">   42</span>            <span class="keywordtype">float</span> minRate = Global.getSettings().getFloat(<span class="stringliteral">&quot;minFighterReplacementRate&quot;</span>);</div>
-<div class="line"><span class="lineno">   43</span>            </div>
-<div class="line"><span class="lineno">   44</span>            <span class="keywordtype">int</span> bays = ship.getLaunchBaysCopy().size();</div>
-<div class="line"><span class="lineno">   45</span>            <span class="keywordtype">float</span> cost = <a class="code hl_function" href="../../d6/dc9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1ReserveWingStats.html#a543eaabfa40f229e0e48bc220d0fed62">getRateCost</a>(bays);</div>
-<div class="line"><span class="lineno">   46</span>            <span class="keywordflow">for</span> (FighterLaunchBayAPI bay : ship.getLaunchBaysCopy()) {</div>
-<div class="line"><span class="lineno">   47</span>                <span class="keywordflow">if</span> (bay.getWing() == <span class="keyword">null</span>) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   48</span>                </div>
-<div class="line"><span class="lineno">   49</span>                <span class="keywordtype">float</span> rate = Math.max(minRate, bay.getCurrRate() - cost);</div>
-<div class="line"><span class="lineno">   50</span>                bay.setCurrRate(rate);</div>
-<div class="line"><span class="lineno">   51</span>                </div>
-<div class="line"><span class="lineno">   52</span>                bay.makeCurrentIntervalFast();</div>
-<div class="line"><span class="lineno">   53</span>                FighterWingSpecAPI spec = bay.getWing().getSpec();</div>
-<div class="line"><span class="lineno">   54</span>                </div>
-<div class="line"><span class="lineno">   55</span>                <span class="keywordtype">int</span> addForWing = <a class="code hl_function" href="../../d6/dc9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1ReserveWingStats.html#a4282a3a9bd38a5ae1ddf8de3c197afa0">getAdditionalFor</a>(spec, bays);</div>
-<div class="line"><span class="lineno">   56</span>                <span class="keywordtype">int</span> maxTotal = spec.getNumFighters() + addForWing;</div>
-<div class="line"><span class="lineno">   57</span>                <span class="keywordtype">int</span> actualAdd = maxTotal - bay.getWing().getWingMembers().size();</div>
-<div class="line"><span class="lineno">   58</span>                <span class="comment">//int actualAdd = addForWing;</span></div>
-<div class="line"><span class="lineno">   59</span>                <span class="comment">//actualAdd = Math.min(spec.getNumFighters(), actualAdd);</span></div>
-<div class="line"><span class="lineno">   60</span>                <span class="keywordflow">if</span> (actualAdd &gt; 0) {</div>
-<div class="line"><span class="lineno">   61</span>                    bay.setFastReplacements(bay.getFastReplacements() + addForWing);</div>
-<div class="line"><span class="lineno">   62</span>                    bay.setExtraDeployments(actualAdd);</div>
-<div class="line"><span class="lineno">   63</span>                    bay.setExtraDeploymentLimit(maxTotal);</div>
-<div class="line"><span class="lineno">   64</span>                    bay.setExtraDuration(<a class="code hl_variable" href="../../d6/dc9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1ReserveWingStats.html#a9da3418d473ba81c6e61f33eedf804ed">EXTRA_FIGHTER_DURATION</a>);</div>
-<div class="line"><span class="lineno">   65</span>                    <span class="comment">//bay.setExtraDuration(99999999999f);</span></div>
-<div class="line"><span class="lineno">   66</span>                }</div>
-<div class="line"><span class="lineno">   67</span>            }</div>
-<div class="line"><span class="lineno">   68</span>        }</div>
-<div class="line"><span class="lineno">   69</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1ReserveWingStats_html_a4282a3a9bd38a5ae1ddf8de3c197afa0"><div class="ttname"><a href="../../d6/dc9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1ReserveWingStats.html#a4282a3a9bd38a5ae1ddf8de3c197afa0">com.fs.starfarer.api.impl.combat.ReserveWingStats.getAdditionalFor</a></div><div class="ttdeci">static int getAdditionalFor(FighterWingSpecAPI spec, int bays)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d4c/ReserveWingStats_8java_source.html#l00071">ReserveWingStats.java:71</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1ReserveWingStats_html_a543eaabfa40f229e0e48bc220d0fed62"><div class="ttname"><a href="../../d6/dc9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1ReserveWingStats.html#a543eaabfa40f229e0e48bc220d0fed62">com.fs.starfarer.api.impl.combat.ReserveWingStats.getRateCost</a></div><div class="ttdeci">static float getRateCost(int bays)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d4c/ReserveWingStats_8java_source.html#l00022">ReserveWingStats.java:22</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1ReserveWingStats_html_a9da3418d473ba81c6e61f33eedf804ed"><div class="ttname"><a href="../../d6/dc9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1ReserveWingStats.html#a9da3418d473ba81c6e61f33eedf804ed">com.fs.starfarer.api.impl.combat.ReserveWingStats.EXTRA_FIGHTER_DURATION</a></div><div class="ttdeci">static float EXTRA_FIGHTER_DURATION</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d4c/ReserveWingStats_8java_source.html#l00018">ReserveWingStats.java:18</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a4282a3a9bd38a5ae1ddf8de3c197afa0" name="a4282a3a9bd38a5ae1ddf8de3c197afa0"></a>
@@ -317,25 +272,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d4c/ReserveWingStats_8java_source.html#l00071">71</a> of file <a class="el" href="../../d7/d4c/ReserveWingStats_8java_source.html">ReserveWingStats.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   71</span>                                                                          {</div>
-<div class="line"><span class="lineno">   72</span>        <span class="comment">//if (spec.isBomber() &amp;&amp; !spec.hasTag(RD_FORCE_EXTRA_CRAFT)) return 0;</span></div>
-<div class="line"><span class="lineno">   73</span>        <span class="keywordflow">if</span> (spec.hasTag(<a class="code hl_variable" href="../../d6/dc9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1ReserveWingStats.html#a40c7a346bc89e1abf7535c2460cd4d4b">RD_NO_EXTRA_CRAFT</a>)) <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">   74</span>        </div>
-<div class="line"><span class="lineno">   75</span>        <span class="keywordtype">int</span> size = spec.getNumFighters();</div>
-<div class="line"><span class="lineno">   76</span>        <span class="keywordflow">if</span> (<span class="keyword">true</span>) <span class="keywordflow">return</span> size;</div>
-<div class="line"><span class="lineno">   77</span>        </div>
-<div class="line"><span class="lineno">   78</span>        <span class="keywordflow">if</span> (bays == 1) {</div>
-<div class="line"><span class="lineno">   79</span>            <span class="keywordflow">return</span> Math.max(size, 2);</div>
-<div class="line"><span class="lineno">   80</span>        }</div>
-<div class="line"><span class="lineno">   81</span>        </div>
-<div class="line"><span class="lineno">   82</span><span class="comment">//      if (size &lt;= 3) return 1;</span></div>
-<div class="line"><span class="lineno">   83</span><span class="comment">//      return 2;</span></div>
-<div class="line"><span class="lineno">   84</span>        <span class="keywordflow">if</span> (size &lt;= 3) <span class="keywordflow">return</span> 1;</div>
-<div class="line"><span class="lineno">   85</span>        <span class="keywordflow">if</span> (size &lt;= 5) <span class="keywordflow">return</span> 2;</div>
-<div class="line"><span class="lineno">   86</span>        <span class="keywordflow">return</span> 3;</div>
-<div class="line"><span class="lineno">   87</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1ReserveWingStats_html_a40c7a346bc89e1abf7535c2460cd4d4b"><div class="ttname"><a href="../../d6/dc9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1ReserveWingStats.html#a40c7a346bc89e1abf7535c2460cd4d4b">com.fs.starfarer.api.impl.combat.ReserveWingStats.RD_NO_EXTRA_CRAFT</a></div><div class="ttdeci">static String RD_NO_EXTRA_CRAFT</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d4c/ReserveWingStats_8java_source.html#l00012">ReserveWingStats.java:12</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a543eaabfa40f229e0e48bc220d0fed62" name="a543eaabfa40f229e0e48bc220d0fed62"></a>
@@ -363,13 +300,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d4c/ReserveWingStats_8java_source.html#l00022">22</a> of file <a class="el" href="../../d7/d4c/ReserveWingStats_8java_source.html">ReserveWingStats.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   22</span>                                              {</div>
-<div class="line"><span class="lineno">   23</span>        <span class="keywordflow">if</span> (bays &lt;= 1) <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d6/dc9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1ReserveWingStats.html#aa6f8076b995f4c9a2172a752dbec5224">RATE_COST_1_BAY</a>;</div>
-<div class="line"><span class="lineno">   24</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d6/dc9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1ReserveWingStats.html#a5277476e551dcf3259fab569cbf1f77a">RATE_COST</a>;</div>
-<div class="line"><span class="lineno">   25</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1ReserveWingStats_html_a5277476e551dcf3259fab569cbf1f77a"><div class="ttname"><a href="../../d6/dc9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1ReserveWingStats.html#a5277476e551dcf3259fab569cbf1f77a">com.fs.starfarer.api.impl.combat.ReserveWingStats.RATE_COST</a></div><div class="ttdeci">static float RATE_COST</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d4c/ReserveWingStats_8java_source.html#l00019">ReserveWingStats.java:19</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1ReserveWingStats_html_aa6f8076b995f4c9a2172a752dbec5224"><div class="ttname"><a href="../../d6/dc9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1ReserveWingStats.html#aa6f8076b995f4c9a2172a752dbec5224">com.fs.starfarer.api.impl.combat.ReserveWingStats.RATE_COST_1_BAY</a></div><div class="ttdeci">static float RATE_COST_1_BAY</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d4c/ReserveWingStats_8java_source.html#l00020">ReserveWingStats.java:20</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab0ed64411f321f4a71731aeed9e9c0b0" name="ab0ed64411f321f4a71731aeed9e9c0b0"></a>
@@ -407,13 +338,7 @@ Static Public Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseShipSystemScript.html#ab328cae8df05d23ccc045f4e32f5f9f0">com.fs.starfarer.api.impl.combat.BaseShipSystemScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d4c/ReserveWingStats_8java_source.html#l00095">95</a> of file <a class="el" href="../../d7/d4c/ReserveWingStats_8java_source.html">ReserveWingStats.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   95</span>                                                                               {</div>
-<div class="line"><span class="lineno">   96</span><span class="comment">//      if (index == 0) {</span></div>
-<div class="line"><span class="lineno">   97</span><span class="comment">//          return new StatusData(&quot;deploying additional fighters&quot;, false);</span></div>
-<div class="line"><span class="lineno">   98</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">   99</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  100</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a00a95e34b748c694f8127f49bf9502b6" name="a00a95e34b748c694f8127f49bf9502b6"></a>
@@ -445,10 +370,7 @@ Static Public Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseShipSystemScript.html#a2def38e794e68628fbd36c90dc210018">com.fs.starfarer.api.impl.combat.BaseShipSystemScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d4c/ReserveWingStats_8java_source.html#l00104">104</a> of file <a class="el" href="../../d7/d4c/ReserveWingStats_8java_source.html">ReserveWingStats.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  104</span>                                                                {</div>
-<div class="line"><span class="lineno">  105</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  106</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa2c1d24bb4dd3f1f41b15f9beaa12503" name="aa2c1d24bb4dd3f1f41b15f9beaa12503"></a>
@@ -480,9 +402,7 @@ Static Public Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseShipSystemScript.html#a020712b9bb37e9ece4fbfd4c865c4037">com.fs.starfarer.api.impl.combat.BaseShipSystemScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d4c/ReserveWingStats_8java_source.html#l00090">90</a> of file <a class="el" href="../../d7/d4c/ReserveWingStats_8java_source.html">ReserveWingStats.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   90</span>                                                              {</div>
-<div class="line"><span class="lineno">   91</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

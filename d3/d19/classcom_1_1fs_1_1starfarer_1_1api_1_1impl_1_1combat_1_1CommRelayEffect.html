@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -187,19 +188,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="../../d6/dfd/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BattleObjectiveEffect.html#a0b0f9b4ef9ab38e0ba6e82b8a4729e2e">com.fs.starfarer.api.combat.BattleObjectiveEffect</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/dc6/CommRelayEffect_8java_source.html#l00035">35</a> of file <a class="el" href="../../d0/dc6/CommRelayEffect_8java_source.html">CommRelayEffect.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   35</span>                                      {</div>
-<div class="line"><span class="lineno">   36</span><span class="comment">//      for (ShipAPI ship : engine.getShips()) {</span></div>
-<div class="line"><span class="lineno">   37</span><span class="comment">//          if (ship.getOwner() == objective.getOwner()) {</span></div>
-<div class="line"><span class="lineno">   38</span><span class="comment">//          } else {</span></div>
-<div class="line"><span class="lineno">   39</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">   40</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">   41</span>        </div>
-<div class="line"><span class="lineno">   42</span>        <span class="comment">//giveCommandPointsForCapturing(COMM_RELAY_COMMAND_POINTS);</span></div>
-<div class="line"><span class="lineno">   43</span>        <a class="code hl_function" href="../../dc/de1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseBattleObjectiveEffect.html#a9cf48b19d25e04a9c6fba42180962bc6">revealArea</a>(<a class="code hl_variable" href="../../d3/d19/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CommRelayEffect.html#a6373bbc7497d2af6a8dfaac53cac938e">COMM_RELAY_FOG_LIFT_RADIUS</a>);</div>
-<div class="line"><span class="lineno">   44</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseBattleObjectiveEffect_html_a9cf48b19d25e04a9c6fba42180962bc6"><div class="ttname"><a href="../../dc/de1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseBattleObjectiveEffect.html#a9cf48b19d25e04a9c6fba42180962bc6">com.fs.starfarer.api.impl.combat.BaseBattleObjectiveEffect.revealArea</a></div><div class="ttdeci">void revealArea(float radius)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d70/BaseBattleObjectiveEffect_8java_source.html#l00057">BaseBattleObjectiveEffect.java:57</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CommRelayEffect_html_a6373bbc7497d2af6a8dfaac53cac938e"><div class="ttname"><a href="../../d3/d19/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CommRelayEffect.html#a6373bbc7497d2af6a8dfaac53cac938e">com.fs.starfarer.api.impl.combat.CommRelayEffect.COMM_RELAY_FOG_LIFT_RADIUS</a></div><div class="ttdeci">static final float COMM_RELAY_FOG_LIFT_RADIUS</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dc6/CommRelayEffect_8java_source.html#l00013">CommRelayEffect.java:13</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2aa3570e54108b42b19075e29c0760d3" name="a2aa3570e54108b42b19075e29c0760d3"></a>
@@ -220,19 +209,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="../../d6/dfd/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BattleObjectiveEffect.html#a8c1701f353e50da525bda76fce35bc9f">com.fs.starfarer.api.combat.BattleObjectiveEffect</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/dc6/CommRelayEffect_8java_source.html#l00047">47</a> of file <a class="el" href="../../d0/dc6/CommRelayEffect_8java_source.html">CommRelayEffect.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   47</span>                                       {</div>
-<div class="line"><span class="lineno">   48</span>        <span class="keywordtype">float</span> min = Global.getSettings().getFloat(<span class="stringliteral">&quot;minFractionOfBattleSizeForSmallerSide&quot;</span>);</div>
-<div class="line"><span class="lineno">   49</span>        <span class="keywordtype">int</span> total = Global.getSettings().getBattleSize();</div>
-<div class="line"><span class="lineno">   50</span>        <span class="keywordtype">int</span> maxPoints = (int)Math.round(total * (1f - min));</div>
-<div class="line"><span class="lineno">   51</span>        <span class="keywordflow">return</span> String.format(</div>
-<div class="line"><span class="lineno">   52</span>                   <span class="stringliteral">&quot;&quot;</span> + (<span class="keywordtype">int</span>) CommRelayScript.RATE_BONUS_PER_COMM_RELAY + <span class="stringliteral">&quot;%% faster command point recovery\n\n&quot;</span> +</div>
-<div class="line"><span class="lineno">   53</span>                    <span class="stringliteral">&quot;+%d bonus deployment points\n&quot;</span> + </div>
-<div class="line"><span class="lineno">   54</span>                    <span class="stringliteral">&quot;up to a maximum of &quot;</span> + maxPoints + <span class="stringliteral">&quot; points&quot;</span>,</div>
-<div class="line"><span class="lineno">   55</span>                    <a class="code hl_function" href="../../dc/de1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseBattleObjectiveEffect.html#a0f38cbb986657cd044086698bc03df67">getBonusDeploymentPoints</a>()</div>
-<div class="line"><span class="lineno">   56</span>                   );</div>
-<div class="line"><span class="lineno">   57</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseBattleObjectiveEffect_html_a0f38cbb986657cd044086698bc03df67"><div class="ttname"><a href="../../dc/de1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseBattleObjectiveEffect.html#a0f38cbb986657cd044086698bc03df67">com.fs.starfarer.api.impl.combat.BaseBattleObjectiveEffect.getBonusDeploymentPoints</a></div><div class="ttdeci">int getBonusDeploymentPoints()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d70/BaseBattleObjectiveEffect_8java_source.html#l00035">BaseBattleObjectiveEffect.java:35</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a69b93fb585bdc519d71e056273951c8b" name="a69b93fb585bdc519d71e056273951c8b"></a>
@@ -261,13 +238,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="../../d6/dfd/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BattleObjectiveEffect.html#ab11f7c229ebdd36865f487b0ead98cf7">com.fs.starfarer.api.combat.BattleObjectiveEffect</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/dc6/CommRelayEffect_8java_source.html#l00059">59</a> of file <a class="el" href="../../d0/dc6/CommRelayEffect_8java_source.html">CommRelayEffect.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   59</span>                                                                {</div>
-<div class="line"><span class="lineno">   60</span><span class="comment">//      if (ship.getOwner() == objective.getOwner()) {</span></div>
-<div class="line"><span class="lineno">   61</span><span class="comment">//          return items;</span></div>
-<div class="line"><span class="lineno">   62</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">   63</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   64</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af5ba58ed3830b50bccfb0fa5c5ffb740" name="af5ba58ed3830b50bccfb0fa5c5ffb740"></a>
@@ -299,19 +270,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../dc/de1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseBattleObjectiveEffect.html#a676c15e270e64eef94e4c5db21f3344e">com.fs.starfarer.api.impl.combat.BaseBattleObjectiveEffect</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/dc6/CommRelayEffect_8java_source.html#l00022">22</a> of file <a class="el" href="../../d0/dc6/CommRelayEffect_8java_source.html">CommRelayEffect.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   22</span>                                                                           {</div>
-<div class="line"><span class="lineno">   23</span>        super.init(engine, objective);</div>
-<div class="line"><span class="lineno">   24</span>        this.engine = engine;</div>
-<div class="line"><span class="lineno">   25</span>        this.objective = objective;</div>
-<div class="line"><span class="lineno">   26</span>        <span class="keywordtype">id</span> = <span class="stringliteral">&quot;sensor_array_boost_&quot;</span> + objective.toString();</div>
-<div class="line"><span class="lineno">   27</span>        </div>
-<div class="line"><span class="lineno">   28</span><span class="comment">//      ShipStatusItem item = new ShipStatusItem(&quot;Comm Relay&quot;, </span></div>
-<div class="line"><span class="lineno">   29</span><span class="comment">//              String.format(&quot;+%d%% weapon range&quot;,</span></div>
-<div class="line"><span class="lineno">   30</span><span class="comment">//                  (int) SENSOR_ARRAY_RANGE_BONUS), </span></div>
-<div class="line"><span class="lineno">   31</span><span class="comment">//              false);</span></div>
-<div class="line"><span class="lineno">   32</span><span class="comment">//      items.add(item);</span></div>
-<div class="line"><span class="lineno">   33</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

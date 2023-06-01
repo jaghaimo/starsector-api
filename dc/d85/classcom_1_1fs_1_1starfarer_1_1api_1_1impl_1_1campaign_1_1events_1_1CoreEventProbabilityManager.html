@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -254,10 +255,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/de7/CoreEventProbabilityManager_8java_source.html#l00016">16</a> of file <a class="el" href="../../dd/de7/CoreEventProbabilityManager_8java_source.html">CoreEventProbabilityManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   16</span>                                         {</div>
-<div class="line"><span class="lineno">   17</span>        super(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   18</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -286,22 +284,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d7/d63/interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html#a3a97090ca8cfdc230e9ad7e633407af6">com.fs.starfarer.api.EveryFrameScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/de7/CoreEventProbabilityManager_8java_source.html#l00025">25</a> of file <a class="el" href="../../dd/de7/CoreEventProbabilityManager_8java_source.html">CoreEventProbabilityManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   25</span>                                      {</div>
-<div class="line"><span class="lineno">   26</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dc/d85/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1CoreEventProbabilityManager.html#a889c0314b164117c83f4b1f344326299">eventManager</a> == <span class="keyword">null</span>) <a class="code hl_variable" href="../../dc/d85/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1CoreEventProbabilityManager.html#a889c0314b164117c83f4b1f344326299">eventManager</a> = Global.getSector().getEventManager();</div>
-<div class="line"><span class="lineno">   27</span>        <span class="comment">//float days = Global.getSector().getClock().convertToDays(amount);</span></div>
-<div class="line"><span class="lineno">   28</span>        </div>
-<div class="line"><span class="lineno">   29</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dc/d85/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1CoreEventProbabilityManager.html#a0cfd7bd4602fffd5e8d15cb4fcb94caa">firstFrame</a>) {</div>
-<div class="line"><span class="lineno">   30</span>            <a class="code hl_variable" href="../../dc/d85/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1CoreEventProbabilityManager.html#a889c0314b164117c83f4b1f344326299">eventManager</a>.<a class="code hl_function" href="../../d4/dc2/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventManagerAPI.html#a4da01c26317abdb2dffc512136d8ccd7">startEvent</a>(<span class="keyword">null</span>, Events.REP_TRACKER, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   31</span>            <span class="comment">//eventManager.startEvent(null, Events.TRADE_INFO, null);</span></div>
-<div class="line"><span class="lineno">   32</span>            <span class="comment">//eventManager.startEvent(null, Events.OFFICER_MANAGER, null);</span></div>
-<div class="line"><span class="lineno">   33</span>            <a class="code hl_variable" href="../../dc/d85/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1CoreEventProbabilityManager.html#a889c0314b164117c83f4b1f344326299">eventManager</a>.<a class="code hl_function" href="../../d4/dc2/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventManagerAPI.html#a4da01c26317abdb2dffc512136d8ccd7">startEvent</a>(<span class="keyword">null</span>, Events.NEARBY_EVENTS, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   34</span>            <a class="code hl_variable" href="../../dc/d85/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1CoreEventProbabilityManager.html#a0cfd7bd4602fffd5e8d15cb4fcb94caa">firstFrame</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   35</span>        }</div>
-<div class="line"><span class="lineno">   36</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1CoreEventProbabilityManager_html_a0cfd7bd4602fffd5e8d15cb4fcb94caa"><div class="ttname"><a href="../../dc/d85/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1CoreEventProbabilityManager.html#a0cfd7bd4602fffd5e8d15cb4fcb94caa">com.fs.starfarer.api.impl.campaign.events.CoreEventProbabilityManager.firstFrame</a></div><div class="ttdeci">boolean firstFrame</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de7/CoreEventProbabilityManager_8java_source.html#l00024">CoreEventProbabilityManager.java:24</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1CoreEventProbabilityManager_html_a889c0314b164117c83f4b1f344326299"><div class="ttname"><a href="../../dc/d85/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1CoreEventProbabilityManager.html#a889c0314b164117c83f4b1f344326299">com.fs.starfarer.api.impl.campaign.events.CoreEventProbabilityManager.eventManager</a></div><div class="ttdeci">CampaignEventManagerAPI eventManager</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de7/CoreEventProbabilityManager_8java_source.html#l00014">CoreEventProbabilityManager.java:14</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventManagerAPI_html_a4da01c26317abdb2dffc512136d8ccd7"><div class="ttname"><a href="../../d4/dc2/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventManagerAPI.html#a4da01c26317abdb2dffc512136d8ccd7">com.fs.starfarer.api.campaign.events.CampaignEventManagerAPI.startEvent</a></div><div class="ttdeci">CampaignEventPlugin startEvent(CampaignEventTarget eventTarget, String eventType, Object param)</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a0c349cdbcadcdb2d99652cfa417a4dce" name="a0c349cdbcadcdb2d99652cfa417a4dce"></a>
@@ -323,10 +306,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d7/d63/interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html#a2b9a206acf99d1cdc1511885d14bb58c">com.fs.starfarer.api.EveryFrameScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/de7/CoreEventProbabilityManager_8java_source.html#l00038">38</a> of file <a class="el" href="../../dd/de7/CoreEventProbabilityManager_8java_source.html">CoreEventProbabilityManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   38</span>                            {</div>
-<div class="line"><span class="lineno">   39</span>        <span class="keywordflow">return</span> !<a class="code hl_variable" href="../../dc/d85/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1CoreEventProbabilityManager.html#a0cfd7bd4602fffd5e8d15cb4fcb94caa">firstFrame</a>;</div>
-<div class="line"><span class="lineno">   40</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aea99696fee32b0dfc9308ea5c5e18ee4" name="aea99696fee32b0dfc9308ea5c5e18ee4"></a>
@@ -353,10 +333,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/de7/CoreEventProbabilityManager_8java_source.html#l00020">20</a> of file <a class="el" href="../../dd/de7/CoreEventProbabilityManager_8java_source.html">CoreEventProbabilityManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   20</span>                                   {</div>
-<div class="line"><span class="lineno">   21</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">   22</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af517817c8f33f79fe1e3cc91814655c9" name="af517817c8f33f79fe1e3cc91814655c9"></a>
@@ -378,10 +355,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d7/d63/interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html#a6397d6c1c19a4dd0b58099219c0e0173">com.fs.starfarer.api.EveryFrameScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/de7/CoreEventProbabilityManager_8java_source.html#l00042">42</a> of file <a class="el" href="../../dd/de7/CoreEventProbabilityManager_8java_source.html">CoreEventProbabilityManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   42</span>                                    {</div>
-<div class="line"><span class="lineno">   43</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   44</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

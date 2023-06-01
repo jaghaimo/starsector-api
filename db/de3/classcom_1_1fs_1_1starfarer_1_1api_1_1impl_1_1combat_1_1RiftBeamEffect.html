@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -157,13 +158,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/da1/RiftBeamEffect_8java_source.html#l00028">28</a> of file <a class="el" href="../../d2/da1/RiftBeamEffect_8java_source.html">RiftBeamEffect.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   28</span>                            {</div>
-<div class="line"><span class="lineno">   29</span>        <a class="code hl_variable" href="../../db/de3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RiftBeamEffect.html#a9a5d749fd993c672148b9ae17bb08ac6">interval</a>.<a class="code hl_function" href="../../da/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html#a6af5c0aef9f27121987fbded1573a801">setElapsed</a>((<span class="keywordtype">float</span>) Math.random() * <a class="code hl_variable" href="../../db/de3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RiftBeamEffect.html#a9a5d749fd993c672148b9ae17bb08ac6">interval</a>.<a class="code hl_function" href="../../da/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html#a4f5cb3c75b41ad5f6cf8b569dd096e0b">getIntervalDuration</a>());</div>
-<div class="line"><span class="lineno">   30</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RiftBeamEffect_html_a9a5d749fd993c672148b9ae17bb08ac6"><div class="ttname"><a href="../../db/de3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RiftBeamEffect.html#a9a5d749fd993c672148b9ae17bb08ac6">com.fs.starfarer.api.impl.combat.RiftBeamEffect.interval</a></div><div class="ttdeci">IntervalUtil interval</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/da1/RiftBeamEffect_8java_source.html#l00026">RiftBeamEffect.java:26</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil_html_a4f5cb3c75b41ad5f6cf8b569dd096e0b"><div class="ttname"><a href="../../da/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html#a4f5cb3c75b41ad5f6cf8b569dd096e0b">com.fs.starfarer.api.util.IntervalUtil.getIntervalDuration</a></div><div class="ttdeci">float getIntervalDuration()</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de3/IntervalUtil_8java_source.html#l00058">IntervalUtil.java:58</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil_html_a6af5c0aef9f27121987fbded1573a801"><div class="ttname"><a href="../../da/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html#a6af5c0aef9f27121987fbded1573a801">com.fs.starfarer.api.util.IntervalUtil.setElapsed</a></div><div class="ttdeci">void setElapsed(float elapsed)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de3/IntervalUtil_8java_source.html#l00068">IntervalUtil.java:68</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -210,43 +205,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../da/d61/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1EveryFrameWeaponEffectPlugin.html#a3b32dda6d3d8c3fcf5a13d84447791e1">com.fs.starfarer.api.combat.EveryFrameWeaponEffectPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/da1/RiftBeamEffect_8java_source.html#l00033">33</a> of file <a class="el" href="../../d2/da1/RiftBeamEffect_8java_source.html">RiftBeamEffect.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   33</span>                                                                                {</div>
-<div class="line"><span class="lineno">   34</span>        List&lt;BeamAPI&gt; beams = weapon.getBeams();</div>
-<div class="line"><span class="lineno">   35</span>        <span class="keywordflow">if</span> (beams.isEmpty()) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   36</span>        BeamAPI beam = beams.get(0);</div>
-<div class="line"><span class="lineno">   37</span>        <span class="keywordflow">if</span> (beam.getBrightness() &lt; 1f) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   38</span>    </div>
-<div class="line"><span class="lineno">   39</span>        <a class="code hl_variable" href="../../db/de3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RiftBeamEffect.html#a9a5d749fd993c672148b9ae17bb08ac6">interval</a>.<a class="code hl_function" href="../../da/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html#a61881d44415cda2c50c3354c3f0a4d8a">advance</a>(amount * 2f);</div>
-<div class="line"><span class="lineno">   40</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../db/de3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RiftBeamEffect.html#a9a5d749fd993c672148b9ae17bb08ac6">interval</a>.intervalElapsed()) {</div>
-<div class="line"><span class="lineno">   41</span>            <span class="keywordflow">if</span> (beam.getLengthPrevFrame() &lt; 10) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   42</span>            </div>
-<div class="line"><span class="lineno">   43</span>            Vector2f loc;</div>
-<div class="line"><span class="lineno">   44</span>            CombatEntityAPI target = <a class="code hl_function" href="../../db/de3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RiftBeamEffect.html#aec0a671ec1dcf457a9c333b3acf3fec3">findTarget</a>(beam, beam.getWeapon(), engine);</div>
-<div class="line"><span class="lineno">   45</span>            <span class="keywordflow">if</span> (target == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   46</span>                loc = <a class="code hl_function" href="../../db/de3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RiftBeamEffect.html#a0bc962d7ce5ab97d53709884f91f4251">pickNoTargetDest</a>(beam, beam.getWeapon(), engine);</div>
-<div class="line"><span class="lineno">   47</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   48</span>                loc = target.getLocation();</div>
-<div class="line"><span class="lineno">   49</span>            }</div>
-<div class="line"><span class="lineno">   50</span>            </div>
-<div class="line"><span class="lineno">   51</span>            Vector2f from = Misc.closestPointOnSegmentToPoint(beam.getFrom(), beam.getRayEndPrevFrame(), loc);</div>
-<div class="line"><span class="lineno">   52</span>            Vector2f to = Misc.getUnitVectorAtDegreeAngle(Misc.getAngleInDegrees(from, loc));</div>
-<div class="line"><span class="lineno">   53</span>            <span class="comment">//to.scale(Math.max(RIFT_RANGE * 0.5f, Math.min(Misc.getDistance(from, loc), RIFT_RANGE)));</span></div>
-<div class="line"><span class="lineno">   54</span>            to.scale(Math.min(Misc.getDistance(from, loc), <a class="code hl_variable" href="../../db/de3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RiftBeamEffect.html#a803ea25aff099a626d3d210a093cb2e3">RIFT_RANGE</a>));</div>
-<div class="line"><span class="lineno">   55</span>            Vector2f.add(from, to, to);</div>
-<div class="line"><span class="lineno">   56</span>            </div>
-<div class="line"><span class="lineno">   57</span>            <a class="code hl_function" href="../../db/de3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RiftBeamEffect.html#a05b9367fdff345431690de6ce55f358d">spawnMine</a>(beam.getSource(), to);</div>
-<div class="line"><span class="lineno">   58</span><span class="comment">//          float thickness = beam.getWidth();</span></div>
-<div class="line"><span class="lineno">   59</span><span class="comment">//          EmpArcEntityAPI arc = engine.spawnEmpArcVisual(from, null, to, null, thickness, beam.getFringeColor(), Color.white);</span></div>
-<div class="line"><span class="lineno">   60</span><span class="comment">//          arc.setCoreWidthOverride(Math.max(20f, thickness * 0.67f));</span></div>
-<div class="line"><span class="lineno">   61</span>            <span class="comment">//Global.getSoundPlayer().playSound(&quot;tachyon_lance_emp_impact&quot;, 1f, 1f, arc.getLocation(), arc.getVelocity());</span></div>
-<div class="line"><span class="lineno">   62</span>        }</div>
-<div class="line"><span class="lineno">   63</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RiftBeamEffect_html_a05b9367fdff345431690de6ce55f358d"><div class="ttname"><a href="../../db/de3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RiftBeamEffect.html#a05b9367fdff345431690de6ce55f358d">com.fs.starfarer.api.impl.combat.RiftBeamEffect.spawnMine</a></div><div class="ttdeci">void spawnMine(ShipAPI source, Vector2f mineLoc)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/da1/RiftBeamEffect_8java_source.html#l00065">RiftBeamEffect.java:65</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RiftBeamEffect_html_a0bc962d7ce5ab97d53709884f91f4251"><div class="ttname"><a href="../../db/de3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RiftBeamEffect.html#a0bc962d7ce5ab97d53709884f91f4251">com.fs.starfarer.api.impl.combat.RiftBeamEffect.pickNoTargetDest</a></div><div class="ttdeci">Vector2f pickNoTargetDest(BeamAPI beam, WeaponAPI weapon, CombatEngineAPI engine)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/da1/RiftBeamEffect_8java_source.html#l00091">RiftBeamEffect.java:91</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RiftBeamEffect_html_a803ea25aff099a626d3d210a093cb2e3"><div class="ttname"><a href="../../db/de3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RiftBeamEffect.html#a803ea25aff099a626d3d210a093cb2e3">com.fs.starfarer.api.impl.combat.RiftBeamEffect.RIFT_RANGE</a></div><div class="ttdeci">static float RIFT_RANGE</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/da1/RiftBeamEffect_8java_source.html#l00024">RiftBeamEffect.java:24</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RiftBeamEffect_html_aec0a671ec1dcf457a9c333b3acf3fec3"><div class="ttname"><a href="../../db/de3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RiftBeamEffect.html#aec0a671ec1dcf457a9c333b3acf3fec3">com.fs.starfarer.api.impl.combat.RiftBeamEffect.findTarget</a></div><div class="ttdeci">CombatEntityAPI findTarget(BeamAPI beam, WeaponAPI weapon, CombatEngineAPI engine)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/da1/RiftBeamEffect_8java_source.html#l00104">RiftBeamEffect.java:104</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil_html_a61881d44415cda2c50c3354c3f0a4d8a"><div class="ttname"><a href="../../da/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html#a61881d44415cda2c50c3354c3f0a4d8a">com.fs.starfarer.api.util.IntervalUtil.advance</a></div><div class="ttdeci">void advance(float amount)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de3/IntervalUtil_8java_source.html#l00039">IntervalUtil.java:39</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aec0a671ec1dcf457a9c333b3acf3fec3" name="aec0a671ec1dcf457a9c333b3acf3fec3"></a>
@@ -282,36 +241,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/da1/RiftBeamEffect_8java_source.html#l00104">104</a> of file <a class="el" href="../../d2/da1/RiftBeamEffect_8java_source.html">RiftBeamEffect.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  104</span>                                                                                              {</div>
-<div class="line"><span class="lineno">  105</span>        Vector2f to = beam.getRayEndPrevFrame();</div>
-<div class="line"><span class="lineno">  106</span>        </div>
-<div class="line"><span class="lineno">  107</span>        Iterator&lt;Object&gt; iter = Global.getCombatEngine().getAllObjectGrid().getCheckIterator(to,</div>
-<div class="line"><span class="lineno">  108</span>                                                                            <a class="code hl_variable" href="../../db/de3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RiftBeamEffect.html#a803ea25aff099a626d3d210a093cb2e3">RIFT_RANGE</a> * 2f, <a class="code hl_variable" href="../../db/de3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RiftBeamEffect.html#a803ea25aff099a626d3d210a093cb2e3">RIFT_RANGE</a> * 2f);</div>
-<div class="line"><span class="lineno">  109</span>        <span class="keywordtype">int</span> owner = weapon.getShip().getOwner();</div>
-<div class="line"><span class="lineno">  110</span>        WeightedRandomPicker&lt;CombatEntityAPI&gt; picker = <span class="keyword">new</span> WeightedRandomPicker&lt;CombatEntityAPI&gt;();</div>
-<div class="line"><span class="lineno">  111</span>        <span class="keywordflow">while</span> (iter.hasNext()) {</div>
-<div class="line"><span class="lineno">  112</span>            Object o = iter.next();</div>
-<div class="line"><span class="lineno">  113</span>            <span class="keywordflow">if</span> (!(o instanceof MissileAPI) &amp;&amp;</div>
-<div class="line"><span class="lineno">  114</span>                    !(o instanceof ShipAPI)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  115</span>            CombatEntityAPI other = (CombatEntityAPI) o;</div>
-<div class="line"><span class="lineno">  116</span>            <span class="keywordflow">if</span> (other.getOwner() == owner) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  117</span>            <span class="keywordflow">if</span> (other instanceof ShipAPI) {</div>
-<div class="line"><span class="lineno">  118</span>                ShipAPI ship = (ShipAPI) other;</div>
-<div class="line"><span class="lineno">  119</span>                <span class="keywordflow">if</span> (!ship.isFighter() &amp;&amp; !ship.isDrone()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  120</span>            }</div>
-<div class="line"><span class="lineno">  121</span>            </div>
-<div class="line"><span class="lineno">  122</span>            <span class="keywordtype">float</span> radius = Misc.getTargetingRadius(to, other, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  123</span>            Vector2f p = Misc.closestPointOnSegmentToPoint(beam.getFrom(), beam.getRayEndPrevFrame(), other.getLocation());</div>
-<div class="line"><span class="lineno">  124</span>            <span class="keywordtype">float</span> dist = Misc.getDistance(p, other.getLocation()) - radius;</div>
-<div class="line"><span class="lineno">  125</span>            <span class="keywordflow">if</span> (dist &gt; <a class="code hl_variable" href="../../db/de3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RiftBeamEffect.html#a57099bad46bcda31b5ea4d87fc25c7eb">TARGET_RANGE</a>) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  126</span>            </div>
-<div class="line"><span class="lineno">  127</span>            picker.add(other);</div>
-<div class="line"><span class="lineno">  128</span>            </div>
-<div class="line"><span class="lineno">  129</span>        }</div>
-<div class="line"><span class="lineno">  130</span>        <span class="keywordflow">return</span> picker.pick();</div>
-<div class="line"><span class="lineno">  131</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RiftBeamEffect_html_a57099bad46bcda31b5ea4d87fc25c7eb"><div class="ttname"><a href="../../db/de3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RiftBeamEffect.html#a57099bad46bcda31b5ea4d87fc25c7eb">com.fs.starfarer.api.impl.combat.RiftBeamEffect.TARGET_RANGE</a></div><div class="ttdeci">static float TARGET_RANGE</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/da1/RiftBeamEffect_8java_source.html#l00023">RiftBeamEffect.java:23</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a0bc962d7ce5ab97d53709884f91f4251" name="a0bc962d7ce5ab97d53709884f91f4251"></a>
@@ -347,19 +277,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/da1/RiftBeamEffect_8java_source.html#l00091">91</a> of file <a class="el" href="../../d2/da1/RiftBeamEffect_8java_source.html">RiftBeamEffect.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   91</span>                                                                                             {</div>
-<div class="line"><span class="lineno">   92</span>        Vector2f from = beam.getFrom();</div>
-<div class="line"><span class="lineno">   93</span>        Vector2f to = beam.getRayEndPrevFrame();</div>
-<div class="line"><span class="lineno">   94</span>        <span class="keywordtype">float</span> length = beam.getLengthPrevFrame();</div>
-<div class="line"><span class="lineno">   95</span>        </div>
-<div class="line"><span class="lineno">   96</span>        <span class="keywordtype">float</span> f = 0.25f + (float) Math.random() * 0.75f;</div>
-<div class="line"><span class="lineno">   97</span>        Vector2f loc = Misc.getUnitVectorAtDegreeAngle(Misc.getAngleInDegrees(from, to));</div>
-<div class="line"><span class="lineno">   98</span>        loc.scale(length * f);</div>
-<div class="line"><span class="lineno">   99</span>        Vector2f.add(from, loc, loc);</div>
-<div class="line"><span class="lineno">  100</span>        </div>
-<div class="line"><span class="lineno">  101</span>        <span class="keywordflow">return</span> Misc.getPointWithinRadius(loc, <a class="code hl_variable" href="../../db/de3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RiftBeamEffect.html#a803ea25aff099a626d3d210a093cb2e3">RIFT_RANGE</a>);</div>
-<div class="line"><span class="lineno">  102</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a05b9367fdff345431690de6ce55f358d" name="a05b9367fdff345431690de6ce55f358d"></a>
@@ -389,32 +307,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/da1/RiftBeamEffect_8java_source.html#l00065">65</a> of file <a class="el" href="../../d2/da1/RiftBeamEffect_8java_source.html">RiftBeamEffect.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   65</span>                                                            {</div>
-<div class="line"><span class="lineno">   66</span>        CombatEngineAPI engine = Global.getCombatEngine();</div>
-<div class="line"><span class="lineno">   67</span>        </div>
-<div class="line"><span class="lineno">   68</span>        </div>
-<div class="line"><span class="lineno">   69</span>        <span class="comment">//Vector2f currLoc = mineLoc;</span></div>
-<div class="line"><span class="lineno">   70</span>        MissileAPI mine = (MissileAPI) engine.spawnProjectile(source, <span class="keyword">null</span>, </div>
-<div class="line"><span class="lineno">   71</span>                                                              <span class="stringliteral">&quot;riftbeam_minelayer&quot;</span>, </div>
-<div class="line"><span class="lineno">   72</span>                                                              mineLoc, </div>
-<div class="line"><span class="lineno">   73</span>                                                              (<span class="keywordtype">float</span>) Math.random() * 360f, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   74</span>        <span class="keywordflow">if</span> (source != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   75</span>            Global.getCombatEngine().applyDamageModifiersToSpawnedProjectileWithNullWeapon(</div>
-<div class="line"><span class="lineno">   76</span>                                            source, WeaponType.MISSILE, <span class="keyword">false</span>, mine.getDamage());</div>
-<div class="line"><span class="lineno">   77</span>        }</div>
-<div class="line"><span class="lineno">   78</span>        </div>
-<div class="line"><span class="lineno">   79</span>        </div>
-<div class="line"><span class="lineno">   80</span>        <span class="keywordtype">float</span> fadeInTime = 0.05f;</div>
-<div class="line"><span class="lineno">   81</span>        mine.getVelocity().scale(0);</div>
-<div class="line"><span class="lineno">   82</span>        mine.fadeOutThenIn(fadeInTime);</div>
-<div class="line"><span class="lineno">   83</span>        </div>
-<div class="line"><span class="lineno">   84</span>        <span class="keywordtype">float</span> liveTime = 0f;</div>
-<div class="line"><span class="lineno">   85</span>        <span class="comment">//liveTime = 0.01f;</span></div>
-<div class="line"><span class="lineno">   86</span>        mine.setFlightTime(mine.getMaxFlightTime() - liveTime);</div>
-<div class="line"><span class="lineno">   87</span>        mine.addDamagedAlready(source);</div>
-<div class="line"><span class="lineno">   88</span>        mine.setNoMineFFConcerns(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   89</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

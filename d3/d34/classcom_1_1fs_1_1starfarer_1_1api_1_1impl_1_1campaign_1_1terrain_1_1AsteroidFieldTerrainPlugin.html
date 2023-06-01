@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -441,15 +442,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/de4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidBeltTerrainPlugin.html#a9d56b9707afede73b5c869287372731e">com.fs.starfarer.api.impl.campaign.terrain.AsteroidBeltTerrainPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/d52/AsteroidFieldTerrainPlugin_8java_source.html#l00106">106</a> of file <a class="el" href="../../df/d52/AsteroidFieldTerrainPlugin_8java_source.html">AsteroidFieldTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  106</span>                                      {</div>
-<div class="line"><span class="lineno">  107</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/de4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidBeltTerrainPlugin.html#ae56495dfb8aa02fdb67395eeddccf264">needToCreateAsteroids</a>) {</div>
-<div class="line"><span class="lineno">  108</span>            <a class="code hl_function" href="../../d3/d34/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidFieldTerrainPlugin.html#adb72c9f6a92548257eb0161b468d423c">createAsteroidField</a>();</div>
-<div class="line"><span class="lineno">  109</span>        }</div>
-<div class="line"><span class="lineno">  110</span>        super.advance(amount);</div>
-<div class="line"><span class="lineno">  111</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidBeltTerrainPlugin_html_ae56495dfb8aa02fdb67395eeddccf264"><div class="ttname"><a href="../../da/de4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidBeltTerrainPlugin.html#ae56495dfb8aa02fdb67395eeddccf264">com.fs.starfarer.api.impl.campaign.terrain.AsteroidBeltTerrainPlugin.needToCreateAsteroids</a></div><div class="ttdeci">boolean needToCreateAsteroids</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d99/AsteroidBeltTerrainPlugin_8java_source.html#l00074">AsteroidBeltTerrainPlugin.java:74</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidFieldTerrainPlugin_html_adb72c9f6a92548257eb0161b468d423c"><div class="ttname"><a href="../../d3/d34/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidFieldTerrainPlugin.html#adb72c9f6a92548257eb0161b468d423c">com.fs.starfarer.api.impl.campaign.terrain.AsteroidFieldTerrainPlugin.createAsteroidField</a></div><div class="ttdeci">void createAsteroidField()</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d52/AsteroidFieldTerrainPlugin_8java_source.html#l00073">AsteroidFieldTerrainPlugin.java:73</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="adb72c9f6a92548257eb0161b468d423c" name="adb72c9f6a92548257eb0161b468d423c"></a>
@@ -476,45 +469,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/d52/AsteroidFieldTerrainPlugin_8java_source.html#l00073">73</a> of file <a class="el" href="../../df/d52/AsteroidFieldTerrainPlugin_8java_source.html">AsteroidFieldTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   73</span>                                         {</div>
-<div class="line"><span class="lineno">   74</span>        <span class="keywordflow">if</span> (!(<a class="code hl_variable" href="../../d3/d34/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidFieldTerrainPlugin.html#af3f4761f19c9431d82fba6de514bceb2">params</a> instanceof AsteroidFieldParams)) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   75</span>        </div>
-<div class="line"><span class="lineno">   76</span>        Random rand = <span class="keyword">new</span> Random(Global.getSector().getClock().getTimestamp() + <a class="code hl_variable" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a98ba084e2722ae038b3961e580dbc821">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a8e791da6811cee24af4a1c3c30496ba8">getId</a>().hashCode());</div>
-<div class="line"><span class="lineno">   77</span>        </div>
-<div class="line"><span class="lineno">   78</span>        <span class="keywordtype">float</span> fieldRadius = params.minRadius + (params.maxRadius - <a class="code hl_variable" href="../../d3/d34/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidFieldTerrainPlugin.html#af3f4761f19c9431d82fba6de514bceb2">params</a>.minRadius) * rand.nextFloat();</div>
-<div class="line"><span class="lineno">   79</span>        params.bandWidthInEngine = fieldRadius;</div>
-<div class="line"><span class="lineno">   80</span>        params.middleRadius = fieldRadius / 2f;</div>
-<div class="line"><span class="lineno">   81</span>        </div>
-<div class="line"><span class="lineno">   82</span>        </div>
-<div class="line"><span class="lineno">   83</span>        LocationAPI location = <a class="code hl_variable" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a98ba084e2722ae038b3961e580dbc821">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a06362480c6a17326650354460c6d7442">getContainingLocation</a>();</div>
-<div class="line"><span class="lineno">   84</span>        <span class="keywordflow">if</span> (location == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   85</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="../../d3/d34/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidFieldTerrainPlugin.html#af3f4761f19c9431d82fba6de514bceb2">params</a>.numAsteroids; i++) {</div>
-<div class="line"><span class="lineno">   86</span>            <span class="keywordtype">float</span> size = params.minSize + (params.maxSize - <a class="code hl_variable" href="../../d3/d34/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidFieldTerrainPlugin.html#af3f4761f19c9431d82fba6de514bceb2">params</a>.minSize) * rand.nextFloat();</div>
-<div class="line"><span class="lineno">   87</span>            AsteroidAPI asteroid = location.<a class="code hl_function" href="../../d2/d2c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI.html#a9c3af796f2bf6dc5b57f3ed2673ad336">addAsteroid</a>(size);</div>
-<div class="line"><span class="lineno">   88</span>            asteroid.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a8eaab410ba35f355edcae98529bb6d55">setFacing</a>(rand.nextFloat() * 360f);</div>
-<div class="line"><span class="lineno">   89</span>            </div>
-<div class="line"><span class="lineno">   90</span>            <span class="keywordtype">float</span> r = rand.nextFloat();</div>
-<div class="line"><span class="lineno">   91</span>            r = 1f - r * r;</div>
-<div class="line"><span class="lineno">   92</span>            </div>
-<div class="line"><span class="lineno">   93</span>            <span class="keywordtype">float</span> currRadius = fieldRadius * r;</div>
-<div class="line"><span class="lineno">   94</span>            </div>
-<div class="line"><span class="lineno">   95</span>            <span class="keywordtype">float</span> minOrbitDays = Math.max(1f, currRadius * 0.05f);</div>
-<div class="line"><span class="lineno">   96</span>            <span class="keywordtype">float</span> maxOrbitDays = Math.max(2f, currRadius * 2f * 0.05f);</div>
-<div class="line"><span class="lineno">   97</span>            <span class="keywordtype">float</span> orbitDays = minOrbitDays + rand.nextFloat() * (maxOrbitDays - minOrbitDays);</div>
-<div class="line"><span class="lineno">   98</span>            </div>
-<div class="line"><span class="lineno">   99</span>            <span class="keywordtype">float</span> angle = rand.nextFloat() * 360f;</div>
-<div class="line"><span class="lineno">  100</span>            asteroid.setCircularOrbit(this.<a class="code hl_variable" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a98ba084e2722ae038b3961e580dbc821">entity</a>, angle, currRadius, orbitDays);</div>
-<div class="line"><span class="lineno">  101</span>            Misc.setAsteroidSource(asteroid, <span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  102</span>        }</div>
-<div class="line"><span class="lineno">  103</span>        <a class="code hl_variable" href="../../da/de4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidBeltTerrainPlugin.html#ae56495dfb8aa02fdb67395eeddccf264">needToCreateAsteroids</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  104</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidFieldTerrainPlugin_html_af3f4761f19c9431d82fba6de514bceb2"><div class="ttname"><a href="../../d3/d34/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidFieldTerrainPlugin.html#af3f4761f19c9431d82fba6de514bceb2">com.fs.starfarer.api.impl.campaign.terrain.AsteroidFieldTerrainPlugin.params</a></div><div class="ttdeci">AsteroidFieldParams params</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d52/AsteroidFieldTerrainPlugin_8java_source.html#l00036">AsteroidFieldTerrainPlugin.java:36</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain_html_a98ba084e2722ae038b3961e580dbc821"><div class="ttname"><a href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a98ba084e2722ae038b3961e580dbc821">com.fs.starfarer.api.impl.campaign.terrain.BaseTerrain.entity</a></div><div class="ttdeci">SectorEntityToken entity</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/daa/BaseTerrain_8java_source.html#l00025">BaseTerrain.java:25</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI_html_a9c3af796f2bf6dc5b57f3ed2673ad336"><div class="ttname"><a href="../../d2/d2c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI.html#a9c3af796f2bf6dc5b57f3ed2673ad336">com.fs.starfarer.api.campaign.LocationAPI.addAsteroid</a></div><div class="ttdeci">AsteroidAPI addAsteroid(float radius)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_a06362480c6a17326650354460c6d7442"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a06362480c6a17326650354460c6d7442">com.fs.starfarer.api.campaign.SectorEntityToken.getContainingLocation</a></div><div class="ttdeci">LocationAPI getContainingLocation()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_a8e791da6811cee24af4a1c3c30496ba8"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a8e791da6811cee24af4a1c3c30496ba8">com.fs.starfarer.api.campaign.SectorEntityToken.getId</a></div><div class="ttdeci">String getId()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_a8eaab410ba35f355edcae98529bb6d55"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a8eaab410ba35f355edcae98529bb6d55">com.fs.starfarer.api.campaign.SectorEntityToken.setFacing</a></div><div class="ttdeci">void setFacing(float facing)</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac770126167af90c831c856fb4cda6a9d" name="ac770126167af90c831c856fb4cda6a9d"></a>
@@ -535,11 +490,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/de4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidBeltTerrainPlugin.html#a303591167447f49332450c421a25d7d3">com.fs.starfarer.api.impl.campaign.terrain.AsteroidBeltTerrainPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/d52/AsteroidFieldTerrainPlugin_8java_source.html#l00113">113</a> of file <a class="el" href="../../df/d52/AsteroidFieldTerrainPlugin_8java_source.html">AsteroidFieldTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  113</span>                                      {</div>
-<div class="line"><span class="lineno">  114</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Asteroid Field&quot;</span>;</div>
-<div class="line"><span class="lineno">  115</span>        <span class="comment">//return params.name;</span></div>
-<div class="line"><span class="lineno">  116</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a653ac0904db8a8a6fb9dd541b49e846c" name="a653ac0904db8a8a6fb9dd541b49e846c"></a>
@@ -577,21 +528,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/de4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidBeltTerrainPlugin.html#a89d18c3e10ca241be91e788a0f42436e">com.fs.starfarer.api.impl.campaign.terrain.AsteroidBeltTerrainPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/d52/AsteroidFieldTerrainPlugin_8java_source.html#l00037">37</a> of file <a class="el" href="../../df/d52/AsteroidFieldTerrainPlugin_8java_source.html">AsteroidFieldTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   37</span>                                                                               {</div>
-<div class="line"><span class="lineno">   38</span>        super.init(<a class="code hl_variable" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a075ff680d11a0f394d9f399d13129c2d">terrainId</a>, <a class="code hl_variable" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a98ba084e2722ae038b3961e580dbc821">entity</a>, param);</div>
-<div class="line"><span class="lineno">   39</span>        <a class="code hl_variable" href="../../d3/d34/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidFieldTerrainPlugin.html#af3f4761f19c9431d82fba6de514bceb2">params</a> = (AsteroidFieldParams) param;</div>
-<div class="line"><span class="lineno">   40</span>        <a class="code hl_variable" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a6e7b52077a0f438b0dc442ef0084a222">name</a> = <a class="code hl_variable" href="../../d3/d34/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidFieldTerrainPlugin.html#af3f4761f19c9431d82fba6de514bceb2">params</a>.name;</div>
-<div class="line"><span class="lineno">   41</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a6e7b52077a0f438b0dc442ef0084a222">name</a> == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   42</span>            <a class="code hl_variable" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a6e7b52077a0f438b0dc442ef0084a222">name</a> = <span class="stringliteral">&quot;Asteroid Field&quot;</span>;</div>
-<div class="line"><span class="lineno">   43</span>        }</div>
-<div class="line"><span class="lineno">   44</span>        params.numAsteroids = <a class="code hl_variable" href="../../d3/d34/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidFieldTerrainPlugin.html#af3f4761f19c9431d82fba6de514bceb2">params</a>.minAsteroids;</div>
-<div class="line"><span class="lineno">   45</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d3/d34/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidFieldTerrainPlugin.html#af3f4761f19c9431d82fba6de514bceb2">params</a>.maxAsteroids &gt; <a class="code hl_variable" href="../../d3/d34/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidFieldTerrainPlugin.html#af3f4761f19c9431d82fba6de514bceb2">params</a>.minAsteroids) {</div>
-<div class="line"><span class="lineno">   46</span>            params.numAsteroids += <span class="keyword">new</span> Random().nextInt(<a class="code hl_variable" href="../../d3/d34/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidFieldTerrainPlugin.html#af3f4761f19c9431d82fba6de514bceb2">params</a>.maxAsteroids - <a class="code hl_variable" href="../../d3/d34/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidFieldTerrainPlugin.html#af3f4761f19c9431d82fba6de514bceb2">params</a>.minAsteroids);</div>
-<div class="line"><span class="lineno">   47</span>        }</div>
-<div class="line"><span class="lineno">   48</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain_html_a075ff680d11a0f394d9f399d13129c2d"><div class="ttname"><a href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a075ff680d11a0f394d9f399d13129c2d">com.fs.starfarer.api.impl.campaign.terrain.BaseTerrain.terrainId</a></div><div class="ttdeci">String terrainId</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/daa/BaseTerrain_8java_source.html#l00026">BaseTerrain.java:26</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain_html_a6e7b52077a0f438b0dc442ef0084a222"><div class="ttname"><a href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a6e7b52077a0f438b0dc442ef0084a222">com.fs.starfarer.api.impl.campaign.terrain.BaseTerrain.name</a></div><div class="ttdeci">String name</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/daa/BaseTerrain_8java_source.html#l00027">BaseTerrain.java:27</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a824b8875e7c80e4ba0e1a7f906fae9a2" name="a824b8875e7c80e4ba0e1a7f906fae9a2"></a>
@@ -613,10 +550,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/de4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidBeltTerrainPlugin.html#a4a0dc25961ccee8f9de43094087953c8">com.fs.starfarer.api.impl.campaign.terrain.AsteroidBeltTerrainPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/d52/AsteroidFieldTerrainPlugin_8java_source.html#l00068">68</a> of file <a class="el" href="../../df/d52/AsteroidFieldTerrainPlugin_8java_source.html">AsteroidFieldTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   68</span>                                      {</div>
-<div class="line"><span class="lineno">   69</span>        <a class="code hl_function" href="../../d3/d34/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidFieldTerrainPlugin.html#adb72c9f6a92548257eb0161b468d423c">createAsteroidField</a>();</div>
-<div class="line"><span class="lineno">   70</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a4a35729108cd3233375d8c1eeb7a1acc" name="a4a35729108cd3233375d8c1eeb7a1acc"></a>
@@ -655,19 +589,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/de4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidBeltTerrainPlugin.html#a2fb55ee740d683e66c3be5b733b327a0">com.fs.starfarer.api.impl.campaign.terrain.AsteroidBeltTerrainPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/d52/AsteroidFieldTerrainPlugin_8java_source.html#l00053">53</a> of file <a class="el" href="../../df/d52/AsteroidFieldTerrainPlugin_8java_source.html">AsteroidFieldTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   53</span>                                                           {</div>
-<div class="line"><span class="lineno">   54</span><span class="comment">//      if (params == null) return;</span></div>
-<div class="line"><span class="lineno">   55</span><span class="comment">//      if (icon == null) {</span></div>
-<div class="line"><span class="lineno">   56</span><span class="comment">//          icon = Global.getSettings().getSprite(&quot;systemMap&quot;, &quot;asteroid_field&quot;);</span></div>
-<div class="line"><span class="lineno">   57</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">   58</span><span class="comment">//      </span></div>
-<div class="line"><span class="lineno">   59</span><span class="comment">//      float size = 64;</span></div>
-<div class="line"><span class="lineno">   60</span><span class="comment">//      icon.setSize(size, size);</span></div>
-<div class="line"><span class="lineno">   61</span><span class="comment">//      icon.setAlphaMult(alphaMult);</span></div>
-<div class="line"><span class="lineno">   62</span><span class="comment">//      Vector2f loc = entity.getLocation();</span></div>
-<div class="line"><span class="lineno">   63</span><span class="comment">//      icon.renderAtCenter(loc.x * factor, loc.y * factor);</span></div>
-<div class="line"><span class="lineno">   64</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a788863d4bb160a3cfc96b3319c07a9be" name="a788863d4bb160a3cfc96b3319c07a9be"></a>
@@ -695,12 +617,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/de4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidBeltTerrainPlugin.html#a8d602b5b8cdb3564afd13271fd918d1b">com.fs.starfarer.api.impl.campaign.terrain.AsteroidBeltTerrainPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/d52/AsteroidFieldTerrainPlugin_8java_source.html#l00119">119</a> of file <a class="el" href="../../df/d52/AsteroidFieldTerrainPlugin_8java_source.html">AsteroidFieldTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  119</span>                                                                    {</div>
-<div class="line"><span class="lineno">  120</span>        <span class="keywordflow">if</span> (Misc.getAsteroidSource(asteroid) == <span class="keyword">this</span>) {</div>
-<div class="line"><span class="lineno">  121</span>            <a class="code hl_variable" href="../../d3/d34/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidFieldTerrainPlugin.html#af3f4761f19c9431d82fba6de514bceb2">params</a>.numAsteroids--;</div>
-<div class="line"><span class="lineno">  122</span>        }</div>
-<div class="line"><span class="lineno">  123</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

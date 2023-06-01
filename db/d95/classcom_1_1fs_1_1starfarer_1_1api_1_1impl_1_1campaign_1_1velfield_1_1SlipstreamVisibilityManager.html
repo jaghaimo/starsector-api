@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -154,21 +155,7 @@ Static Public Member Functions</h2></td></tr>
 <p>Implements <a class="el" href="../../d2/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1CoreUITabListener.html#a91ddeeedd59f66f424cb57da6b64f350">com.fs.starfarer.api.campaign.listeners.CoreUITabListener</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d0e/SlipstreamVisibilityManager_8java_source.html#l00040">40</a> of file <a class="el" href="../../d4/d0e/SlipstreamVisibilityManager_8java_source.html">SlipstreamVisibilityManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   40</span>                                                                        {</div>
-<div class="line"><span class="lineno">   41</span>        <span class="keywordflow">if</span> (tab == CoreUITabId.MAP) {</div>
-<div class="line"><span class="lineno">   42</span>            </div>
-<div class="line"><span class="lineno">   43</span>            HyperspaceTopographyEventIntel intel = HyperspaceTopographyEventIntel.get();</div>
-<div class="line"><span class="lineno">   44</span>            <span class="keywordflow">if</span> (intel != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   45</span>                intel.updateMarketDetectionRanges();</div>
-<div class="line"><span class="lineno">   46</span>            }</div>
-<div class="line"><span class="lineno">   47</span>            <span class="comment">//System.out.println(&quot;OPENING MAP&quot;);</span></div>
-<div class="line"><span class="lineno">   48</span>            <span class="comment">//for (int i = 0; i &lt; 100; i++) {</span></div>
-<div class="line"><span class="lineno">   49</span>                <a class="code hl_function" href="../../db/d95/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamVisibilityManager.html#a5a76502ff5c4083b3d4ea5fbdf730367">updateSlipstreamVisibility</a>(<span class="keyword">null</span>, 0f);</div>
-<div class="line"><span class="lineno">   50</span>            <span class="comment">//}</span></div>
-<div class="line"><span class="lineno">   51</span>        }</div>
-<div class="line"><span class="lineno">   52</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamVisibilityManager_html_a5a76502ff5c4083b3d4ea5fbdf730367"><div class="ttname"><a href="../../db/d95/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamVisibilityManager.html#a5a76502ff5c4083b3d4ea5fbdf730367">com.fs.starfarer.api.impl.campaign.velfield.SlipstreamVisibilityManager.updateSlipstreamVisibility</a></div><div class="ttdeci">static void updateSlipstreamVisibility(Vector2f extraPoint, float extraRangeLY)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d0e/SlipstreamVisibilityManager_8java_source.html#l00054">SlipstreamVisibilityManager.java:54</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5a76502ff5c4083b3d4ea5fbdf730367" name="a5a76502ff5c4083b3d4ea5fbdf730367"></a>
@@ -206,77 +193,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d0e/SlipstreamVisibilityManager_8java_source.html#l00054">54</a> of file <a class="el" href="../../d4/d0e/SlipstreamVisibilityManager_8java_source.html">SlipstreamVisibilityManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   54</span>                                                                                           {</div>
-<div class="line"><span class="lineno">   55</span>        <span class="keywordtype">float</span> sw = Global.getSettings().getFloat(<span class="stringliteral">&quot;sectorWidth&quot;</span>);</div>
-<div class="line"><span class="lineno">   56</span>        <span class="keywordtype">float</span> sh = Global.getSettings().getFloat(<span class="stringliteral">&quot;sectorHeight&quot;</span>);</div>
-<div class="line"><span class="lineno">   57</span>        <span class="keywordtype">float</span> minCellSize = 12000f;</div>
-<div class="line"><span class="lineno">   58</span>        <span class="keywordtype">float</span> cellSize = Math.max(minCellSize, sw * 0.05f);</div>
-<div class="line"><span class="lineno">   59</span>        </div>
-<div class="line"><span class="lineno">   60</span>        CollisionGridUtil grid = <span class="keyword">new</span> CollisionGridUtil(-sw/2f, sw/2f, -sh/2f, sh/2f, cellSize);</div>
-<div class="line"><span class="lineno">   61</span>        </div>
-<div class="line"><span class="lineno">   62</span>        <span class="keywordflow">for</span> (MarketAPI market : Global.getSector().getEconomy().getMarketsCopy()) {</div>
-<div class="line"><span class="lineno">   63</span>            <span class="keywordflow">if</span> (market.isHidden()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   64</span>            <span class="keywordflow">if</span> (market.getContainingLocation() == <span class="keyword">null</span>) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   65</span>            <span class="keywordflow">if</span> (!market.isPlayerOwned()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   66</span>            </div>
-<div class="line"><span class="lineno">   67</span>            <span class="keywordtype">float</span> range = market.getStats().getDynamic().getMod(Stats.SLIPSTREAM_REVEAL_RANGE_LY_MOD).computeEffective(0f);</div>
-<div class="line"><span class="lineno">   68</span>            range *= Misc.getUnitsPerLightYear();</div>
-<div class="line"><span class="lineno">   69</span>            <span class="keywordflow">if</span> (range &lt;= 0) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   70</span>            </div>
-<div class="line"><span class="lineno">   71</span><span class="comment">//          Industry spaceport = market.getIndustry(Industries.SPACEPORT);</span></div>
-<div class="line"><span class="lineno">   72</span><span class="comment">//          if (spaceport == null || !spaceport.isFunctional()) continue;</span></div>
-<div class="line"><span class="lineno">   73</span>            </div>
-<div class="line"><span class="lineno">   74</span>            Vector2f loc = market.getLocationInHyperspace();</div>
-<div class="line"><span class="lineno">   75</span>            CustomStreamRevealer revealer = <span class="keyword">new</span> CustomStreamRevealer(loc, range);</div>
-<div class="line"><span class="lineno">   76</span>            grid.addObject(revealer, loc, range * 2f, range * 2f);</div>
-<div class="line"><span class="lineno">   77</span>        }</div>
-<div class="line"><span class="lineno">   78</span>        </div>
-<div class="line"><span class="lineno">   79</span>        <span class="keywordflow">if</span> (extraPoint != <span class="keyword">null</span> &amp;&amp; extraRangeLY &gt; 0) {</div>
-<div class="line"><span class="lineno">   80</span>            <span class="keywordtype">float</span> range = extraRangeLY * Misc.getUnitsPerLightYear();</div>
-<div class="line"><span class="lineno">   81</span>            CustomStreamRevealer revealer = <span class="keyword">new</span> CustomStreamRevealer(extraPoint, range);</div>
-<div class="line"><span class="lineno">   82</span>            grid.addObject(revealer, extraPoint, range * 2f, range * 2f);</div>
-<div class="line"><span class="lineno">   83</span>        }</div>
-<div class="line"><span class="lineno">   84</span>        </div>
-<div class="line"><span class="lineno">   85</span>        <span class="comment">//System.out.println(&quot;BEGIN&quot;);</span></div>
-<div class="line"><span class="lineno">   86</span>        <span class="keywordtype">float</span> maxDist = 0f;</div>
-<div class="line"><span class="lineno">   87</span>        List&lt;CampaignTerrainAPI&gt; terrainList = Global.getSector().getHyperspace().getTerrainCopy();</div>
-<div class="line"><span class="lineno">   88</span>        <span class="keywordflow">for</span> (CampaignTerrainAPI terrain : terrainList) {</div>
-<div class="line"><span class="lineno">   89</span>            <span class="keywordflow">if</span> (terrain.getPlugin() instanceof SlipstreamTerrainPlugin2) {</div>
-<div class="line"><span class="lineno">   90</span>                <span class="comment">//System.out.println(&quot;Processing: &quot; + terrain.getId());</span></div>
-<div class="line"><span class="lineno">   91</span>                SlipstreamTerrainPlugin2 stream = (SlipstreamTerrainPlugin2) terrain.getPlugin();</div>
-<div class="line"><span class="lineno">   92</span>                <span class="keywordflow">if</span> (stream.isDynamic()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   93</span>                </div>
-<div class="line"><span class="lineno">   94</span>                <span class="keywordflow">for</span> (SlipstreamSegment curr : stream.getSegments()) {</div>
-<div class="line"><span class="lineno">   95</span>                    <span class="keywordflow">if</span> (curr.discovered) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   96</span>                    Iterator&lt;Object&gt; iter = grid.getCheckIterator(curr.loc, curr.width / 2f, curr.width / 2f);</div>
-<div class="line"><span class="lineno">   97</span>                    <span class="comment">//Iterator&lt;Object&gt; iter = grid.getCheckIterator(curr.loc, 100f, 100f);</span></div>
-<div class="line"><span class="lineno">   98</span>                    <span class="keywordflow">while</span> (iter.hasNext()) {</div>
-<div class="line"><span class="lineno">   99</span>                        Object obj = iter.next();</div>
-<div class="line"><span class="lineno">  100</span>                        <span class="keywordflow">if</span> (obj instanceof CustomStreamRevealer) {</div>
-<div class="line"><span class="lineno">  101</span>                            CustomStreamRevealer rev = (CustomStreamRevealer) obj;</div>
-<div class="line"><span class="lineno">  102</span>                            Vector2f loc = rev.loc;</div>
-<div class="line"><span class="lineno">  103</span>                            <span class="keywordtype">float</span> radius = rev.radius;</div>
-<div class="line"><span class="lineno">  104</span>                            </div>
-<div class="line"><span class="lineno">  105</span>                            <span class="keywordtype">float</span> dist = Misc.getDistance(loc, curr.loc);</div>
-<div class="line"><span class="lineno">  106</span>                            <span class="keywordflow">if</span> (dist &gt; maxDist) {</div>
-<div class="line"><span class="lineno">  107</span>                                maxDist = dist;</div>
-<div class="line"><span class="lineno">  108</span><span class="comment">//                              if (dist &gt;= 32500) {</span></div>
-<div class="line"><span class="lineno">  109</span><span class="comment">//                                  System.out.println(&quot;Rev loc: &quot; + rev.loc);</span></div>
-<div class="line"><span class="lineno">  110</span><span class="comment">//                                  //grid.getCheckIterator(curr.loc, 100f, 100f);</span></div>
-<div class="line"><span class="lineno">  111</span><span class="comment">//                              }</span></div>
-<div class="line"><span class="lineno">  112</span>                            }</div>
-<div class="line"><span class="lineno">  113</span>                            <span class="keywordflow">if</span> (dist &lt; radius) {</div>
-<div class="line"><span class="lineno">  114</span>                                curr.discovered = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  115</span>                                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  116</span>                            }</div>
-<div class="line"><span class="lineno">  117</span>                        }</div>
-<div class="line"><span class="lineno">  118</span>                    }</div>
-<div class="line"><span class="lineno">  119</span>                }</div>
-<div class="line"><span class="lineno">  120</span>                <span class="comment">//break;</span></div>
-<div class="line"><span class="lineno">  121</span>            }</div>
-<div class="line"><span class="lineno">  122</span>        }</div>
-<div class="line"><span class="lineno">  123</span>    }   </div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

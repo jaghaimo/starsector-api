@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -194,72 +195,7 @@ Static Public Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d0/d5c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1CommandPlugin.html#a72a44c5127e60136b87d3b37613fd0e0">com.fs.starfarer.api.campaign.rules.CommandPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d84/HT__CMD_8java_source.html#l00037">37</a> of file <a class="el" href="../../d6/d84/HT__CMD_8java_source.html">HT_CMD.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   37</span>                                                                                                                             {</div>
-<div class="line"><span class="lineno">   38</span>        <span class="keywordflow">if</span> (dialog == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   39</span>        </div>
-<div class="line"><span class="lineno">   40</span>        OptionPanelAPI options = dialog.getOptionPanel();</div>
-<div class="line"><span class="lineno">   41</span>        TextPanelAPI text = dialog.getTextPanel();</div>
-<div class="line"><span class="lineno">   42</span>        CampaignFleetAPI pf = Global.getSector().getPlayerFleet();</div>
-<div class="line"><span class="lineno">   43</span>        CargoAPI cargo = pf.getCargo();</div>
-<div class="line"><span class="lineno">   44</span>        </div>
-<div class="line"><span class="lineno">   45</span>        SectorEntityToken entity = dialog.getInteractionTarget();</div>
-<div class="line"><span class="lineno">   46</span>        <span class="keywordflow">if</span> (entity == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   47</span>        </div>
-<div class="line"><span class="lineno">   48</span>        String action = params.get(0).getString(memoryMap);</div>
-<div class="line"><span class="lineno">   49</span>        </div>
-<div class="line"><span class="lineno">   50</span>        MemoryAPI memory = memoryMap.get(MemKeys.LOCAL);</div>
-<div class="line"><span class="lineno">   51</span>        <span class="keywordflow">if</span> (memory == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">false</span>; <span class="comment">// should not be possible unless there are other big problems already</span></div>
-<div class="line"><span class="lineno">   52</span>        </div>
-<div class="line"><span class="lineno">   53</span>        </div>
-<div class="line"><span class="lineno">   54</span>        <span class="comment">//MarketAPI market = dialog.getInteractionTarget().getMarket();</span></div>
-<div class="line"><span class="lineno">   55</span>        StarSystemAPI system = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   56</span>        <span class="keywordflow">if</span> (dialog.getInteractionTarget().getContainingLocation() instanceof StarSystemAPI) {</div>
-<div class="line"><span class="lineno">   57</span>            system = (StarSystemAPI) dialog.getInteractionTarget().getContainingLocation();</div>
-<div class="line"><span class="lineno">   58</span>        }</div>
-<div class="line"><span class="lineno">   59</span>                </div>
-<div class="line"><span class="lineno">   60</span>        <span class="comment">//HyperspaceTopographyEventIntel intel = HyperspaceTopographyEventIntel.get();</span></div>
-<div class="line"><span class="lineno">   61</span>        <span class="comment">//if (intel == null) return false;</span></div>
-<div class="line"><span class="lineno">   62</span>        </div>
-<div class="line"><span class="lineno">   63</span>        <span class="keywordflow">if</span> (<span class="stringliteral">&quot;hasRecentReadingsNearby&quot;</span>.equals(action)) {</div>
-<div class="line"><span class="lineno">   64</span>            <span class="keywordflow">return</span> HyperspaceTopographyEventIntel.hasRecentReadingsNearPlayer();</div>
-<div class="line"><span class="lineno">   65</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="stringliteral">&quot;computeDataStats&quot;</span>.equals(action)) {</div>
-<div class="line"><span class="lineno">   66</span>            <span class="keywordflow">if</span> (entity instanceof CampaignFleetAPI) {</div>
-<div class="line"><span class="lineno">   67</span>                CampaignFleetAPI fleet = (CampaignFleetAPI) entity;</div>
-<div class="line"><span class="lineno">   68</span>                <span class="keywordtype">float</span> fp = fleet.getFleetPoints();</div>
-<div class="line"><span class="lineno">   69</span>                <span class="keywordtype">int</span> cost = <a class="code hl_function" href="../../d6/de0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HT__CMD.html#a82eb0a398408f404fc3b1276b1e7ef17">getDataCost</a>(fp);</div>
-<div class="line"><span class="lineno">   70</span>                <span class="keywordtype">float</span> range = <a class="code hl_function" href="../../d6/de0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HT__CMD.html#ae34fb2d3dafcde69e5ace99ca8cdeb42">getRevealRange</a>(fp);</div>
-<div class="line"><span class="lineno">   71</span>                memory.set(<span class="stringliteral">&quot;$ht_dataCost&quot;</span>, Misc.getWithDGS(cost));</div>
-<div class="line"><span class="lineno">   72</span>                memory.set(<span class="stringliteral">&quot;$ht_dataRange&quot;</span>, <span class="stringliteral">&quot;&quot;</span> + (<span class="keywordtype">int</span>) range);</div>
-<div class="line"><span class="lineno">   73</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   74</span>            }</div>
-<div class="line"><span class="lineno">   75</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   76</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="stringliteral">&quot;getScavengerData&quot;</span>.equals(action)) {</div>
-<div class="line"><span class="lineno">   77</span>            <span class="keywordflow">if</span> (entity instanceof CampaignFleetAPI) {</div>
-<div class="line"><span class="lineno">   78</span>                CampaignFleetAPI fleet = (CampaignFleetAPI) entity;</div>
-<div class="line"><span class="lineno">   79</span>                <span class="keywordtype">float</span> fp = fleet.getFleetPoints();</div>
-<div class="line"><span class="lineno">   80</span>                <span class="keywordtype">float</span> range = <a class="code hl_function" href="../../d6/de0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HT__CMD.html#ae34fb2d3dafcde69e5ace99ca8cdeb42">getRevealRange</a>(fp);</div>
-<div class="line"><span class="lineno">   81</span>                </div>
-<div class="line"><span class="lineno">   82</span>                SlipstreamVisibilityManager.updateSlipstreamVisibility(entity.getLocationInHyperspace(), range);</div>
-<div class="line"><span class="lineno">   83</span>                </div>
-<div class="line"><span class="lineno">   84</span>                <span class="keywordtype">int</span> points = <a class="code hl_function" href="../../d6/de0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HT__CMD.html#ab0d25790106c946db066f4518e94d787">getDataPoints</a>(fp);</div>
-<div class="line"><span class="lineno">   85</span>                <span class="keywordtype">boolean</span> hasRecent = HyperspaceTopographyEventIntel.hasRecentReadingsNearPlayer();</div>
-<div class="line"><span class="lineno">   86</span>                <span class="keywordflow">if</span> (!hasRecent &amp;&amp; points &gt; 0) {</div>
-<div class="line"><span class="lineno">   87</span>                    HyperspaceTopographyEventIntel.addFactorCreateIfNecessary(<span class="keyword">new</span> HTScavengerDataFactor(points), dialog);</div>
-<div class="line"><span class="lineno">   88</span>                    <span class="keywordflow">if</span> (HyperspaceTopographyEventIntel.get() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   89</span>                        HyperspaceTopographyEventIntel.get().addRecentReadings(entity.getLocationInHyperspace());</div>
-<div class="line"><span class="lineno">   90</span>                    }</div>
-<div class="line"><span class="lineno">   91</span>                }</div>
-<div class="line"><span class="lineno">   92</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   93</span>            }</div>
-<div class="line"><span class="lineno">   94</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   95</span>        }</div>
-<div class="line"><span class="lineno">   96</span>        </div>
-<div class="line"><span class="lineno">   97</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   98</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HT__CMD_html_a82eb0a398408f404fc3b1276b1e7ef17"><div class="ttname"><a href="../../d6/de0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HT__CMD.html#a82eb0a398408f404fc3b1276b1e7ef17">com.fs.starfarer.api.impl.campaign.rulecmd.HT_CMD.getDataCost</a></div><div class="ttdeci">static int getDataCost(float fp)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d84/HT__CMD_8java_source.html#l00102">HT_CMD.java:102</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HT__CMD_html_ab0d25790106c946db066f4518e94d787"><div class="ttname"><a href="../../d6/de0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HT__CMD.html#ab0d25790106c946db066f4518e94d787">com.fs.starfarer.api.impl.campaign.rulecmd.HT_CMD.getDataPoints</a></div><div class="ttdeci">static int getDataPoints(float fp)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d84/HT__CMD_8java_source.html#l00117">HT_CMD.java:117</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HT__CMD_html_ae34fb2d3dafcde69e5ace99ca8cdeb42"><div class="ttname"><a href="../../d6/de0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HT__CMD.html#ae34fb2d3dafcde69e5ace99ca8cdeb42">com.fs.starfarer.api.impl.campaign.rulecmd.HT_CMD.getRevealRange</a></div><div class="ttdeci">static int getRevealRange(float fp)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d84/HT__CMD_8java_source.html#l00106">HT_CMD.java:106</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a82eb0a398408f404fc3b1276b1e7ef17" name="a82eb0a398408f404fc3b1276b1e7ef17"></a>
@@ -287,11 +223,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d84/HT__CMD_8java_source.html#l00102">102</a> of file <a class="el" href="../../d6/d84/HT__CMD_8java_source.html">HT_CMD.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  102</span>                                            {</div>
-<div class="line"><span class="lineno">  103</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../d6/de0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HT__CMD.html#ab0d25790106c946db066f4518e94d787">getDataPoints</a>(fp) * <a class="code hl_variable" href="../../d6/de0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HT__CMD.html#aeb8b281bcd7fafecc08e176831c1c5fc">CREDITS_PER_TD_POINT</a>;</div>
-<div class="line"><span class="lineno">  104</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HT__CMD_html_aeb8b281bcd7fafecc08e176831c1c5fc"><div class="ttname"><a href="../../d6/de0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HT__CMD.html#aeb8b281bcd7fafecc08e176831c1c5fc">com.fs.starfarer.api.impl.campaign.rulecmd.HT_CMD.CREDITS_PER_TD_POINT</a></div><div class="ttdeci">static int CREDITS_PER_TD_POINT</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d84/HT__CMD_8java_source.html#l00031">HT_CMD.java:31</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab0d25790106c946db066f4518e94d787" name="ab0d25790106c946db066f4518e94d787"></a>
@@ -319,20 +251,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d84/HT__CMD_8java_source.html#l00117">117</a> of file <a class="el" href="../../d6/d84/HT__CMD_8java_source.html">HT_CMD.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  117</span>                                              {</div>
-<div class="line"><span class="lineno">  118</span>        <span class="keywordtype">float</span> min = HTPoints.SCAVENGER_MIN;</div>
-<div class="line"><span class="lineno">  119</span>        <span class="keywordtype">float</span> max = HTPoints.SCAVENGER_MAX;</div>
-<div class="line"><span class="lineno">  120</span>        </div>
-<div class="line"><span class="lineno">  121</span>        <span class="keywordtype">float</span> f = Math.max(fp - <a class="code hl_variable" href="../../d6/de0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HT__CMD.html#a6be53ee6db706a9eb0869e97d83d2604">MIN_SCAVENGER_FP</a>, 0) / (<a class="code hl_variable" href="../../d6/de0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HT__CMD.html#a91ee0c7e98daa58cf7aae17bc79664be">MAX_SCAVENGER_FP</a> - <a class="code hl_variable" href="../../d6/de0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HT__CMD.html#a6be53ee6db706a9eb0869e97d83d2604">MIN_SCAVENGER_FP</a>);</div>
-<div class="line"><span class="lineno">  122</span>        <span class="keywordflow">if</span> (f &gt; 1f) f = 1f;</div>
-<div class="line"><span class="lineno">  123</span>        <span class="keywordflow">if</span> (f &lt; 0f) f = 0f;</div>
-<div class="line"><span class="lineno">  124</span>        </div>
-<div class="line"><span class="lineno">  125</span>        <span class="keywordtype">int</span> result = Math.round(min + (max - min) * f);</div>
-<div class="line"><span class="lineno">  126</span>        <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">  127</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HT__CMD_html_a6be53ee6db706a9eb0869e97d83d2604"><div class="ttname"><a href="../../d6/de0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HT__CMD.html#a6be53ee6db706a9eb0869e97d83d2604">com.fs.starfarer.api.impl.campaign.rulecmd.HT_CMD.MIN_SCAVENGER_FP</a></div><div class="ttdeci">static float MIN_SCAVENGER_FP</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d84/HT__CMD_8java_source.html#l00033">HT_CMD.java:33</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HT__CMD_html_a91ee0c7e98daa58cf7aae17bc79664be"><div class="ttname"><a href="../../d6/de0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HT__CMD.html#a91ee0c7e98daa58cf7aae17bc79664be">com.fs.starfarer.api.impl.campaign.rulecmd.HT_CMD.MAX_SCAVENGER_FP</a></div><div class="ttdeci">static float MAX_SCAVENGER_FP</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d84/HT__CMD_8java_source.html#l00034">HT_CMD.java:34</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae34fb2d3dafcde69e5ace99ca8cdeb42" name="ae34fb2d3dafcde69e5ace99ca8cdeb42"></a>
@@ -360,18 +279,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d84/HT__CMD_8java_source.html#l00106">106</a> of file <a class="el" href="../../d6/d84/HT__CMD_8java_source.html">HT_CMD.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  106</span>                                               {</div>
-<div class="line"><span class="lineno">  107</span>        <span class="keywordtype">float</span> min = Objectives.BURST_RANGE_SCAVENGER_MIN;</div>
-<div class="line"><span class="lineno">  108</span>        <span class="keywordtype">float</span> max = Objectives.BURST_RANGE_SCAVENGER_MAX;</div>
-<div class="line"><span class="lineno">  109</span>        </div>
-<div class="line"><span class="lineno">  110</span>        <span class="keywordtype">float</span> f = Math.max(fp - <a class="code hl_variable" href="../../d6/de0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HT__CMD.html#a6be53ee6db706a9eb0869e97d83d2604">MIN_SCAVENGER_FP</a>, 0) / (<a class="code hl_variable" href="../../d6/de0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HT__CMD.html#a91ee0c7e98daa58cf7aae17bc79664be">MAX_SCAVENGER_FP</a> - <a class="code hl_variable" href="../../d6/de0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HT__CMD.html#a6be53ee6db706a9eb0869e97d83d2604">MIN_SCAVENGER_FP</a>);</div>
-<div class="line"><span class="lineno">  111</span>        <span class="keywordflow">if</span> (f &gt; 1f) f = 1f;</div>
-<div class="line"><span class="lineno">  112</span>        <span class="keywordflow">if</span> (f &lt; 0f) f = 0f;</div>
-<div class="line"><span class="lineno">  113</span>        </div>
-<div class="line"><span class="lineno">  114</span>        <span class="keywordtype">int</span> result = Math.round(min + (max - min) * f);</div>
-<div class="line"><span class="lineno">  115</span>        <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">  116</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

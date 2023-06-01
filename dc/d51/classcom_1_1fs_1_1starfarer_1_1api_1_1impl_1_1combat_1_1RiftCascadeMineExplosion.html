@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -170,33 +171,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/d01/RiftCascadeMineExplosion_8java_source.html#l00080">80</a> of file <a class="el" href="../../df/d01/RiftCascadeMineExplosion_8java_source.html">RiftCascadeMineExplosion.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   80</span>                                                                                     {</div>
-<div class="line"><span class="lineno">   81</span>        NEParams p = <span class="keyword">new</span> NEParams();</div>
-<div class="line"><span class="lineno">   82</span>        <span class="comment">//p.radius = 50f;</span></div>
-<div class="line"><span class="lineno">   83</span>        p.hitGlowSizeMult = .75f;</div>
-<div class="line"><span class="lineno">   84</span>        <span class="comment">//p.hitGlowSizeMult = .67f;</span></div>
-<div class="line"><span class="lineno">   85</span>        p.spawnHitGlowAt = 0f;</div>
-<div class="line"><span class="lineno">   86</span>        p.noiseMag = 1f;</div>
-<div class="line"><span class="lineno">   87</span>        <span class="comment">//p.fadeIn = 0f;</span></div>
-<div class="line"><span class="lineno">   88</span>        <span class="comment">//p.fadeOut = 0.25f;</span></div>
-<div class="line"><span class="lineno">   89</span>        </div>
-<div class="line"><span class="lineno">   90</span>        <span class="comment">//p.color = new Color(175,100,255,255);</span></div>
-<div class="line"><span class="lineno">   91</span>        </div>
-<div class="line"><span class="lineno">   92</span>        <span class="comment">//p.hitGlowSizeMult = .75f;</span></div>
-<div class="line"><span class="lineno">   93</span>        p.fadeIn = 0.1f;</div>
-<div class="line"><span class="lineno">   94</span>        <span class="comment">//p.noisePeriod = 0.05f;</span></div>
-<div class="line"><span class="lineno">   95</span>        p.underglow = RiftCascadeEffect.EXPLOSION_UNDERCOLOR;</div>
-<div class="line"><span class="lineno">   96</span>        <span class="comment">//p.withHitGlow = i == 0;</span></div>
-<div class="line"><span class="lineno">   97</span>        p.withHitGlow = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   98</span>        </div>
-<div class="line"><span class="lineno">   99</span>        <span class="comment">//p.radius = 20f;</span></div>
-<div class="line"><span class="lineno">  100</span>        p.radius = radius;</div>
-<div class="line"><span class="lineno">  101</span>        <span class="comment">//p.radius *= 0.75f + 0.5f * (float) Math.random();</span></div>
-<div class="line"><span class="lineno">  102</span>        </div>
-<div class="line"><span class="lineno">  103</span>        p.color = borderColor;</div>
-<div class="line"><span class="lineno">  104</span>        <span class="keywordflow">return</span> p;</div>
-<div class="line"><span class="lineno">  105</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a318c0ee9ec99e8f9d50f143c3d304f0d" name="a318c0ee9ec99e8f9d50f143c3d304f0d"></a>
@@ -234,18 +209,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/d01/RiftCascadeMineExplosion_8java_source.html#l00069">69</a> of file <a class="el" href="../../df/d01/RiftCascadeMineExplosion_8java_source.html">RiftCascadeMineExplosion.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   69</span>                                                                                          {</div>
-<div class="line"><span class="lineno">   70</span>        Color color = <span class="keyword">new</span> Color(100,100,255,255);</div>
-<div class="line"><span class="lineno">   71</span>        Object o = Global.getSettings().getWeaponSpec(minelayerId).getProjectileSpec();</div>
-<div class="line"><span class="lineno">   72</span>        <span class="keywordflow">if</span> (o instanceof MissileSpecAPI) {</div>
-<div class="line"><span class="lineno">   73</span>            MissileSpecAPI spec = (MissileSpecAPI) o;</div>
-<div class="line"><span class="lineno">   74</span>            color = spec.getGlowColor();</div>
-<div class="line"><span class="lineno">   75</span>        }</div>
-<div class="line"><span class="lineno">   76</span>        NEParams p = <a class="code hl_function" href="../../dc/d51/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RiftCascadeMineExplosion.html#a318c0ee9ec99e8f9d50f143c3d304f0d">createStandardRiftParams</a>(color, baseRadius);</div>
-<div class="line"><span class="lineno">   77</span>        <span class="keywordflow">return</span> p;</div>
-<div class="line"><span class="lineno">   78</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RiftCascadeMineExplosion_html_a318c0ee9ec99e8f9d50f143c3d304f0d"><div class="ttname"><a href="../../dc/d51/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RiftCascadeMineExplosion.html#a318c0ee9ec99e8f9d50f143c3d304f0d">com.fs.starfarer.api.impl.combat.RiftCascadeMineExplosion.createStandardRiftParams</a></div><div class="ttdeci">static NEParams createStandardRiftParams(String minelayerId, float baseRadius)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d01/RiftCascadeMineExplosion_8java_source.html#l00069">RiftCascadeMineExplosion.java:69</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a7cada14d37c15dbde32b45832da10503" name="a7cada14d37c15dbde32b45832da10503"></a>
@@ -277,21 +241,7 @@ Static Public Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../db/dca/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ProximityExplosionEffect.html#ac301137ffb5111705eb1d6dd0c0f1e28">com.fs.starfarer.api.combat.ProximityExplosionEffect</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/d01/RiftCascadeMineExplosion_8java_source.html#l00020">20</a> of file <a class="el" href="../../df/d01/RiftCascadeMineExplosion_8java_source.html">RiftCascadeMineExplosion.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   20</span>                                                                                                       {</div>
-<div class="line"><span class="lineno">   21</span>        Float sizeMult = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   22</span>        <span class="keywordflow">if</span> (originalProjectile.getCustomData() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   23</span>            sizeMult = (Float) originalProjectile.getCustomData().get(<a class="code hl_variable" href="../../dc/d51/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RiftCascadeMineExplosion.html#a428369193f1097df7086f06fcfd65c9a">SIZE_MULT_KEY</a>);</div>
-<div class="line"><span class="lineno">   24</span>        }</div>
-<div class="line"><span class="lineno">   25</span>        <span class="keywordflow">if</span> (sizeMult == <span class="keyword">null</span>) sizeMult = 1f;</div>
-<div class="line"><span class="lineno">   26</span>        </div>
-<div class="line"><span class="lineno">   27</span>        NEParams p = <a class="code hl_function" href="../../dc/d51/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RiftCascadeMineExplosion.html#a318c0ee9ec99e8f9d50f143c3d304f0d">createStandardRiftParams</a>(<span class="stringliteral">&quot;riftcascade_minelayer&quot;</span>, 25f * sizeMult);</div>
-<div class="line"><span class="lineno">   28</span>        p.fadeOut = 1f;</div>
-<div class="line"><span class="lineno">   29</span>        <span class="comment">//p.hitGlowSizeMult = 0.5f;</span></div>
-<div class="line"><span class="lineno">   30</span>        <a class="code hl_function" href="../../dc/d51/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RiftCascadeMineExplosion.html#a249069942b04e16e7c3de3cf4800fd38">spawnStandardRift</a>(explosion, p);</div>
-<div class="line"><span class="lineno">   31</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RiftCascadeMineExplosion_html_a249069942b04e16e7c3de3cf4800fd38"><div class="ttname"><a href="../../dc/d51/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RiftCascadeMineExplosion.html#a249069942b04e16e7c3de3cf4800fd38">com.fs.starfarer.api.impl.combat.RiftCascadeMineExplosion.spawnStandardRift</a></div><div class="ttdeci">static void spawnStandardRift(DamagingProjectileAPI explosion, NEParams params)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d01/RiftCascadeMineExplosion_8java_source.html#l00038">RiftCascadeMineExplosion.java:38</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RiftCascadeMineExplosion_html_a428369193f1097df7086f06fcfd65c9a"><div class="ttname"><a href="../../dc/d51/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RiftCascadeMineExplosion.html#a428369193f1097df7086f06fcfd65c9a">com.fs.starfarer.api.impl.combat.RiftCascadeMineExplosion.SIZE_MULT_KEY</a></div><div class="ttdeci">static String SIZE_MULT_KEY</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d01/RiftCascadeMineExplosion_8java_source.html#l00018">RiftCascadeMineExplosion.java:18</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a249069942b04e16e7c3de3cf4800fd38" name="a249069942b04e16e7c3de3cf4800fd38"></a>
@@ -329,36 +279,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/d01/RiftCascadeMineExplosion_8java_source.html#l00038">38</a> of file <a class="el" href="../../df/d01/RiftCascadeMineExplosion_8java_source.html">RiftCascadeMineExplosion.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   38</span>                                                                                           {</div>
-<div class="line"><span class="lineno">   39</span>        CombatEngineAPI engine = Global.getCombatEngine();</div>
-<div class="line"><span class="lineno">   40</span>        explosion.addDamagedAlready(explosion.getSource());</div>
-<div class="line"><span class="lineno">   41</span>        </div>
-<div class="line"><span class="lineno">   42</span>        CombatEntityAPI prev = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   43</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 2; i++) {</div>
-<div class="line"><span class="lineno">   44</span>            NEParams p = params.clone();</div>
-<div class="line"><span class="lineno">   45</span>            p.radius *= 0.75f + 0.5f * (float) Math.random();</div>
-<div class="line"><span class="lineno">   46</span> </div>
-<div class="line"><span class="lineno">   47</span>            p.withHitGlow = prev == <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   48</span>            </div>
-<div class="line"><span class="lineno">   49</span>            Vector2f loc = <span class="keyword">new</span> Vector2f(explosion.getLocation());</div>
-<div class="line"><span class="lineno">   50</span>            <span class="comment">//loc = Misc.getPointWithinRadius(loc, p.radius * 1f);</span></div>
-<div class="line"><span class="lineno">   51</span>            loc = Misc.getPointAtRadius(loc, p.radius * 0.4f);</div>
-<div class="line"><span class="lineno">   52</span>            </div>
-<div class="line"><span class="lineno">   53</span>            CombatEntityAPI e = engine.addLayeredRenderingPlugin(<span class="keyword">new</span> NegativeExplosionVisual(p));</div>
-<div class="line"><span class="lineno">   54</span>            e.getLocation().set(loc);</div>
-<div class="line"><span class="lineno">   55</span>            </div>
-<div class="line"><span class="lineno">   56</span>            <span class="keywordflow">if</span> (prev != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   57</span>                <span class="keywordtype">float</span> dist = Misc.getDistance(prev.getLocation(), loc);</div>
-<div class="line"><span class="lineno">   58</span>                Vector2f vel = Misc.getUnitVectorAtDegreeAngle(Misc.getAngleInDegrees(loc, prev.getLocation()));</div>
-<div class="line"><span class="lineno">   59</span>                vel.scale(dist / (p.fadeIn + p.fadeOut) * 0.7f);</div>
-<div class="line"><span class="lineno">   60</span>                e.getVelocity().set(vel);</div>
-<div class="line"><span class="lineno">   61</span>            }</div>
-<div class="line"><span class="lineno">   62</span>            </div>
-<div class="line"><span class="lineno">   63</span>            prev = e;</div>
-<div class="line"><span class="lineno">   64</span>        }</div>
-<div class="line"><span class="lineno">   65</span>        </div>
-<div class="line"><span class="lineno">   66</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

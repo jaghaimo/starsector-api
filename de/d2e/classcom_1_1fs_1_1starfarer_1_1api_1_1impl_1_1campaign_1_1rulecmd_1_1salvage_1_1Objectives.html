@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -263,10 +264,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d97/Objectives_8java_source.html#l00073">73</a> of file <a class="el" href="../../d4/d97/Objectives_8java_source.html">Objectives.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   73</span>                        {</div>
-<div class="line"><span class="lineno">   74</span>        </div>
-<div class="line"><span class="lineno">   75</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a19641f93c13631338ecb260a4341e808" name="a19641f93c13631338ecb260a4341e808"></a>
@@ -286,12 +284,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d97/Objectives_8java_source.html#l00077">77</a> of file <a class="el" href="../../d4/d97/Objectives_8java_source.html">Objectives.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   77</span>                                                {</div>
-<div class="line"><span class="lineno">   78</span>        <a class="code hl_function" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a60b064f58e867a5d12edf3ef7995f859">init</a>(<a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#add0e483b32d0317d47548d43f3443b9e">entity</a>);</div>
-<div class="line"><span class="lineno">   79</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives_html_a60b064f58e867a5d12edf3ef7995f859"><div class="ttname"><a href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a60b064f58e867a5d12edf3ef7995f859">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.Objectives.init</a></div><div class="ttdeci">void init(SectorEntityToken entity)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d97/Objectives_8java_source.html#l00081">Objectives.java:81</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives_html_add0e483b32d0317d47548d43f3443b9e"><div class="ttname"><a href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#add0e483b32d0317d47548d43f3443b9e">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.Objectives.entity</a></div><div class="ttdeci">SectorEntityToken entity</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d97/Objectives_8java_source.html#l00062">Objectives.java:62</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -322,35 +315,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d97/Objectives_8java_source.html#l00342">342</a> of file <a class="el" href="../../d4/d97/Objectives_8java_source.html">Objectives.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  342</span>                                                     {</div>
-<div class="line"><span class="lineno">  343</span>        LocationAPI loc = <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#add0e483b32d0317d47548d43f3443b9e">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a06362480c6a17326650354460c6d7442">getContainingLocation</a>();</div>
-<div class="line"><span class="lineno">  344</span>        SectorEntityToken built = loc.<a class="code hl_function" href="../../d2/d2c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI.html#ad115797b2f1f1e37ff78cd389200a314">addCustomEntity</a>(<span class="keyword">null</span>,</div>
-<div class="line"><span class="lineno">  345</span>                                                     <span class="keyword">null</span>,</div>
-<div class="line"><span class="lineno">  346</span>                 type, <span class="comment">// type of object, defined in custom_entities.json</span></div>
-<div class="line"><span class="lineno">  347</span>                 factionId); <span class="comment">// faction</span></div>
-<div class="line"><span class="lineno">  348</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#add0e483b32d0317d47548d43f3443b9e">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#aaae4bf0a2fb8fd4036e72dd8d65f9593">getOrbit</a>() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  349</span>            built.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a935dcc6387bfda0c16fc38d31b2cb545">setOrbit</a>(<a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#add0e483b32d0317d47548d43f3443b9e">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#aaae4bf0a2fb8fd4036e72dd8d65f9593">getOrbit</a>().<a class="code hl_function" href="../../db/d6c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OrbitAPI.html#a5761bc0d550d5961f83b5030241d9cb1">makeCopy</a>());</div>
-<div class="line"><span class="lineno">  350</span>        }</div>
-<div class="line"><span class="lineno">  351</span>        built.setLocation(<a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#add0e483b32d0317d47548d43f3443b9e">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#aedf9cd58593dcb6afd4d488bb017eafc">getLocation</a>().x, <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#add0e483b32d0317d47548d43f3443b9e">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#aedf9cd58593dcb6afd4d488bb017eafc">getLocation</a>().y);</div>
-<div class="line"><span class="lineno">  352</span>        loc.removeEntity(<a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#add0e483b32d0317d47548d43f3443b9e">entity</a>);</div>
-<div class="line"><span class="lineno">  353</span>        </div>
-<div class="line"><span class="lineno">  354</span>        <span class="comment">//entity.setContainingLocation(null);</span></div>
-<div class="line"><span class="lineno">  355</span>        built.getMemoryWithoutUpdate().set(<span class="stringliteral">&quot;$originalStableLocation&quot;</span>, <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#add0e483b32d0317d47548d43f3443b9e">entity</a>);</div>
-<div class="line"><span class="lineno">  356</span>        </div>
-<div class="line"><span class="lineno">  357</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a7517fc90b87f8f1de8438d4d8cdbe1cf">text</a> != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  358</span>            <a class="code hl_function" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#aecc3147ebe4c0c333f0c57ca453b53e4">removeBuildCosts</a>();</div>
-<div class="line"><span class="lineno">  359</span>            Global.getSoundPlayer().playUISound(<span class="stringliteral">&quot;ui_objective_constructed&quot;</span>, 1f, 1f);</div>
-<div class="line"><span class="lineno">  360</span>        }</div>
-<div class="line"><span class="lineno">  361</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives_html_a7517fc90b87f8f1de8438d4d8cdbe1cf"><div class="ttname"><a href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a7517fc90b87f8f1de8438d4d8cdbe1cf">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.Objectives.text</a></div><div class="ttdeci">TextPanelAPI text</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d97/Objectives_8java_source.html#l00065">Objectives.java:65</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives_html_aecc3147ebe4c0c333f0c57ca453b53e4"><div class="ttname"><a href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#aecc3147ebe4c0c333f0c57ca453b53e4">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.Objectives.removeBuildCosts</a></div><div class="ttdeci">void removeBuildCosts()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d97/Objectives_8java_source.html#l00382">Objectives.java:382</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI_html_ad115797b2f1f1e37ff78cd389200a314"><div class="ttname"><a href="../../d2/d2c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI.html#ad115797b2f1f1e37ff78cd389200a314">com.fs.starfarer.api.campaign.LocationAPI.addCustomEntity</a></div><div class="ttdeci">CustomCampaignEntityAPI addCustomEntity(String id, String name, String type, String factionId)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OrbitAPI_html_a5761bc0d550d5961f83b5030241d9cb1"><div class="ttname"><a href="../../db/d6c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OrbitAPI.html#a5761bc0d550d5961f83b5030241d9cb1">com.fs.starfarer.api.campaign.OrbitAPI.makeCopy</a></div><div class="ttdeci">OrbitAPI makeCopy()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_a06362480c6a17326650354460c6d7442"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a06362480c6a17326650354460c6d7442">com.fs.starfarer.api.campaign.SectorEntityToken.getContainingLocation</a></div><div class="ttdeci">LocationAPI getContainingLocation()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_a935dcc6387bfda0c16fc38d31b2cb545"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a935dcc6387bfda0c16fc38d31b2cb545">com.fs.starfarer.api.campaign.SectorEntityToken.setOrbit</a></div><div class="ttdeci">void setOrbit(OrbitAPI orbit)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_aaae4bf0a2fb8fd4036e72dd8d65f9593"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#aaae4bf0a2fb8fd4036e72dd8d65f9593">com.fs.starfarer.api.campaign.SectorEntityToken.getOrbit</a></div><div class="ttdeci">OrbitAPI getOrbit()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_aedf9cd58593dcb6afd4d488bb017eafc"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#aedf9cd58593dcb6afd4d488bb017eafc">com.fs.starfarer.api.campaign.SectorEntityToken.getLocation</a></div><div class="ttdeci">Vector2f getLocation()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="acbb20a5968617cd04ddb5f7fd6806f6a" name="acbb20a5968617cd04ddb5f7fd6806f6a"></a>
@@ -370,27 +335,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d97/Objectives_8java_source.html#l00413">413</a> of file <a class="el" href="../../d4/d97/Objectives_8java_source.html">Objectives.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  413</span>                                            {</div>
-<div class="line"><span class="lineno">  414</span>        <span class="keywordflow">if</span> (DebugFlags.OBJECTIVES_DEBUG) {</div>
-<div class="line"><span class="lineno">  415</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  416</span>        }</div>
-<div class="line"><span class="lineno">  417</span>        </div>
-<div class="line"><span class="lineno">  418</span>        CargoAPI cargo = <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a2a2535e1bf15b8ddd7025e89ded9417a">playerCargo</a>;</div>
-<div class="line"><span class="lineno">  419</span>        String [] res = <a class="code hl_function" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#aa53c98bdb7b828872bca16e94199d1e4">getRepairResources</a>();</div>
-<div class="line"><span class="lineno">  420</span>        <span class="keywordtype">int</span> [] quantities = <a class="code hl_function" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a7ff538ed1ecf07cf18dd80a9b6b09c7c">getRepairQuantities</a>();</div>
-<div class="line"><span class="lineno">  421</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; res.length; i++) {</div>
-<div class="line"><span class="lineno">  422</span>            String commodityId = res[i];</div>
-<div class="line"><span class="lineno">  423</span>            <span class="keywordtype">int</span> quantity = quantities[i];</div>
-<div class="line"><span class="lineno">  424</span>            <span class="keywordflow">if</span> (quantity &gt; cargo.getQuantity(CargoItemType.RESOURCES, commodityId)) {</div>
-<div class="line"><span class="lineno">  425</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  426</span>            }</div>
-<div class="line"><span class="lineno">  427</span>        }</div>
-<div class="line"><span class="lineno">  428</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  429</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives_html_a2a2535e1bf15b8ddd7025e89ded9417a"><div class="ttname"><a href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a2a2535e1bf15b8ddd7025e89ded9417a">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.Objectives.playerCargo</a></div><div class="ttdeci">CargoAPI playerCargo</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d97/Objectives_8java_source.html#l00067">Objectives.java:67</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives_html_a7ff538ed1ecf07cf18dd80a9b6b09c7c"><div class="ttname"><a href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a7ff538ed1ecf07cf18dd80a9b6b09c7c">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.Objectives.getRepairQuantities</a></div><div class="ttdeci">int[] getRepairQuantities()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d97/Objectives_8java_source.html#l00621">Objectives.java:621</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives_html_aa53c98bdb7b828872bca16e94199d1e4"><div class="ttname"><a href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#aa53c98bdb7b828872bca16e94199d1e4">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.Objectives.getRepairResources</a></div><div class="ttdeci">String[] getRepairResources()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d97/Objectives_8java_source.html#l00616">Objectives.java:616</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a26cf5a73c401d7880d08685a0731ed8b" name="a26cf5a73c401d7880d08685a0731ed8b"></a>
@@ -410,26 +355,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d97/Objectives_8java_source.html#l00364">364</a> of file <a class="el" href="../../d4/d97/Objectives_8java_source.html">Objectives.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  364</span>                                         {</div>
-<div class="line"><span class="lineno">  365</span>        <span class="keywordflow">if</span> (DebugFlags.OBJECTIVES_DEBUG) {</div>
-<div class="line"><span class="lineno">  366</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  367</span>        }</div>
-<div class="line"><span class="lineno">  368</span>        </div>
-<div class="line"><span class="lineno">  369</span>        CargoAPI cargo = <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a2a2535e1bf15b8ddd7025e89ded9417a">playerCargo</a>;</div>
-<div class="line"><span class="lineno">  370</span>        String [] res = <a class="code hl_function" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#ae8897c0b87543d8e4e2bb45106b8d88c">getResources</a>();</div>
-<div class="line"><span class="lineno">  371</span>        <span class="keywordtype">int</span> [] quantities = <a class="code hl_function" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a3d993a6509709b36a14912e2cd27f91f">getQuantities</a>();</div>
-<div class="line"><span class="lineno">  372</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; res.length; i++) {</div>
-<div class="line"><span class="lineno">  373</span>            String commodityId = res[i];</div>
-<div class="line"><span class="lineno">  374</span>            <span class="keywordtype">int</span> quantity = quantities[i];</div>
-<div class="line"><span class="lineno">  375</span>            <span class="keywordflow">if</span> (quantity &gt; cargo.getQuantity(CargoItemType.RESOURCES, commodityId)) {</div>
-<div class="line"><span class="lineno">  376</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  377</span>            }</div>
-<div class="line"><span class="lineno">  378</span>        }</div>
-<div class="line"><span class="lineno">  379</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  380</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives_html_a3d993a6509709b36a14912e2cd27f91f"><div class="ttname"><a href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a3d993a6509709b36a14912e2cd27f91f">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.Objectives.getQuantities</a></div><div class="ttdeci">int[] getQuantities()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d97/Objectives_8java_source.html#l00609">Objectives.java:609</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives_html_ae8897c0b87543d8e4e2bb45106b8d88c"><div class="ttname"><a href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#ae8897c0b87543d8e4e2bb45106b8d88c">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.Objectives.getResources</a></div><div class="ttdeci">String[] getResources()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d97/Objectives_8java_source.html#l00592">Objectives.java:592</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5bddabca6adb436f4c1e31bd0a12fe09" name="a5bddabca6adb436f4c1e31bd0a12fe09"></a>
@@ -448,26 +374,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d97/Objectives_8java_source.html#l00431">431</a> of file <a class="el" href="../../d4/d97/Objectives_8java_source.html">Objectives.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  431</span>                              {</div>
-<div class="line"><span class="lineno">  432</span>        <span class="keywordflow">if</span> (DebugFlags.OBJECTIVES_DEBUG) {</div>
-<div class="line"><span class="lineno">  433</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  434</span>        }</div>
-<div class="line"><span class="lineno">  435</span>        </div>
-<div class="line"><span class="lineno">  436</span>        CargoAPI cargo = <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a2a2535e1bf15b8ddd7025e89ded9417a">playerCargo</a>;</div>
-<div class="line"><span class="lineno">  437</span>        String [] res = <a class="code hl_function" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a9b41dfae23d6f4aca20e3c0e71594185">getBurstResources</a>();</div>
-<div class="line"><span class="lineno">  438</span>        <span class="keywordtype">int</span> [] quantities = <a class="code hl_function" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a412e5c7cf04ded059ea60d8a9eb449d1">getBurstQuantities</a>();</div>
-<div class="line"><span class="lineno">  439</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; res.length; i++) {</div>
-<div class="line"><span class="lineno">  440</span>            String commodityId = res[i];</div>
-<div class="line"><span class="lineno">  441</span>            <span class="keywordtype">int</span> quantity = quantities[i];</div>
-<div class="line"><span class="lineno">  442</span>            <span class="keywordflow">if</span> (quantity &gt; cargo.getQuantity(CargoItemType.RESOURCES, commodityId)) {</div>
-<div class="line"><span class="lineno">  443</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  444</span>            }</div>
-<div class="line"><span class="lineno">  445</span>        }</div>
-<div class="line"><span class="lineno">  446</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  447</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives_html_a412e5c7cf04ded059ea60d8a9eb449d1"><div class="ttname"><a href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a412e5c7cf04ded059ea60d8a9eb449d1">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.Objectives.getBurstQuantities</a></div><div class="ttdeci">int[] getBurstQuantities()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d97/Objectives_8java_source.html#l00626">Objectives.java:626</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives_html_a9b41dfae23d6f4aca20e3c0e71594185"><div class="ttname"><a href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a9b41dfae23d6f4aca20e3c0e71594185">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.Objectives.getBurstResources</a></div><div class="ttdeci">String[] getBurstResources()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d97/Objectives_8java_source.html#l00630">Objectives.java:630</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9ff63e0918ea565cf11f76c88f13d26d" name="a9ff63e0918ea565cf11f76c88f13d26d"></a>
@@ -487,58 +394,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d97/Objectives_8java_source.html#l00262">262</a> of file <a class="el" href="../../d4/d97/Objectives_8java_source.html">Objectives.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  262</span>                                          {</div>
-<div class="line"><span class="lineno">  263</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#ae668dbe3f09f57f41f5a91e79df381ad">dialog</a> != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  264</span>            <span class="keywordflow">if</span> (Factions.PLAYER.equals(factionId) &amp;&amp; <a class="code hl_function" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#ab76746d828877919bbca69ca74ecf16a">isNonFunctional</a>()) {</div>
-<div class="line"><span class="lineno">  265</span>                <a class="code hl_function" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a15dd51e203f69c2cf263fb25b5aa3fe0">removeRepairCosts</a>(<a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a7517fc90b87f8f1de8438d4d8cdbe1cf">text</a>);</div>
-<div class="line"><span class="lineno">  266</span>            }</div>
-<div class="line"><span class="lineno">  267</span>            <span class="keywordflow">if</span> (Factions.PLAYER.equals(factionId) &amp;&amp; <a class="code hl_function" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a3985a0193473489882ff28ebd3c2660d">hasRepImpact</a>() &amp;&amp;</div>
-<div class="line"><span class="lineno">  268</span>                    !<a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#add0e483b32d0317d47548d43f3443b9e">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#afb72bc74f75ccbbf240564b26b94e17b">getFaction</a>().<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#af016cc513682eb015b85966bd6af4162">isPlayerFaction</a>() &amp;&amp; !<a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#add0e483b32d0317d47548d43f3443b9e">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#afb72bc74f75ccbbf240564b26b94e17b">getFaction</a>().<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#adacb688941524346625413acdc0008f7">isNeutralFaction</a>()) {</div>
-<div class="line"><span class="lineno">  269</span>                RepActions action = RepActions.COMBAT_AGGRESSIVE;</div>
-<div class="line"><span class="lineno">  270</span>                <span class="comment">//action = RepActions.COMBAT_AGGRESSIVE_TOFF;</span></div>
-<div class="line"><span class="lineno">  271</span>                Global.getSector().adjustPlayerReputation(</div>
-<div class="line"><span class="lineno">  272</span>                        <span class="keyword">new</span> RepActionEnvelope(action, <span class="keyword">null</span>, <span class="keyword">null</span>, <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a7517fc90b87f8f1de8438d4d8cdbe1cf">text</a>, <span class="keyword">false</span>, <span class="keyword">true</span>), </div>
-<div class="line"><span class="lineno">  273</span>                        <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#afbbbac80f1cddf1eb6b7cd1b3d857dce">faction</a>.<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a7edcdc203f5ab26478e89e5d31e3bf85">getId</a>());</div>
-<div class="line"><span class="lineno">  274</span>            }</div>
-<div class="line"><span class="lineno">  275</span>        }</div>
-<div class="line"><span class="lineno">  276</span>        FactionAPI prev = <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#add0e483b32d0317d47548d43f3443b9e">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#afb72bc74f75ccbbf240564b26b94e17b">getFaction</a>();</div>
-<div class="line"><span class="lineno">  277</span>        <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#add0e483b32d0317d47548d43f3443b9e">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a2f73844e14072776e21aa8a0d9e1f061">setFaction</a>(factionId);</div>
-<div class="line"><span class="lineno">  278</span>        <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#afbbbac80f1cddf1eb6b7cd1b3d857dce">faction</a> = <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#add0e483b32d0317d47548d43f3443b9e">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#afb72bc74f75ccbbf240564b26b94e17b">getFaction</a>();</div>
-<div class="line"><span class="lineno">  279</span> </div>
-<div class="line"><span class="lineno">  280</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#add0e483b32d0317d47548d43f3443b9e">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#abed0787f3c057816961d1a07f2c55662">hasTag</a>(Tags.COMM_RELAY) &amp;&amp; <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#afbbbac80f1cddf1eb6b7cd1b3d857dce">faction</a>.<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#af016cc513682eb015b85966bd6af4162">isPlayerFaction</a>()) {</div>
-<div class="line"><span class="lineno">  281</span>            <a class="code hl_function" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a9a59481cecae777e6b3fab31e946082e">unhack</a>();</div>
-<div class="line"><span class="lineno">  282</span>        }</div>
-<div class="line"><span class="lineno">  283</span>        </div>
-<div class="line"><span class="lineno">  284</span>        <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#add0e483b32d0317d47548d43f3443b9e">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#adcd558c1d95f9755066ddaf9a77311c1">getMemoryWithoutUpdate</a>().<a class="code hl_function" href="../../d0/de7/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html#a1187125b9f4fe3913d1ef3fb7c9fb211">unset</a>(MemFlags.OBJECTIVE_NON_FUNCTIONAL);</div>
-<div class="line"><span class="lineno">  285</span>        </div>
-<div class="line"><span class="lineno">  286</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#ae668dbe3f09f57f41f5a91e79df381ad">dialog</a> != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  287</span>            ((RuleBasedDialog) <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#ae668dbe3f09f57f41f5a91e79df381ad">dialog</a>.<a class="code hl_function" href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#a63868370ebcb7aa6823f89065fe567d9">getPlugin</a>()).<a class="code hl_function" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a09b0a0c4b35a5172f74030fa8ade3e61">updateMemory</a>();</div>
-<div class="line"><span class="lineno">  288</span>            <a class="code hl_function" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a09b0a0c4b35a5172f74030fa8ade3e61">updateMemory</a>();</div>
-<div class="line"><span class="lineno">  289</span>            </div>
-<div class="line"><span class="lineno">  290</span>            <a class="code hl_function" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a74959193e23b96c7a041b38f0f962126">printOwner</a>();</div>
-<div class="line"><span class="lineno">  291</span>        }</div>
-<div class="line"><span class="lineno">  292</span>        </div>
-<div class="line"><span class="lineno">  293</span>        </div>
-<div class="line"><span class="lineno">  294</span>        ListenerUtil.reportObjectiveChangedHands(<a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#add0e483b32d0317d47548d43f3443b9e">entity</a>, prev, <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#afbbbac80f1cddf1eb6b7cd1b3d857dce">faction</a>);</div>
-<div class="line"><span class="lineno">  295</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives_html_a09b0a0c4b35a5172f74030fa8ade3e61"><div class="ttname"><a href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a09b0a0c4b35a5172f74030fa8ade3e61">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.Objectives.updateMemory</a></div><div class="ttdeci">void updateMemory()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d97/Objectives_8java_source.html#l00450">Objectives.java:450</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives_html_a15dd51e203f69c2cf263fb25b5aa3fe0"><div class="ttname"><a href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a15dd51e203f69c2cf263fb25b5aa3fe0">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.Objectives.removeRepairCosts</a></div><div class="ttdeci">void removeRepairCosts(TextPanelAPI text)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d97/Objectives_8java_source.html#l00397">Objectives.java:397</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives_html_a3985a0193473489882ff28ebd3c2660d"><div class="ttname"><a href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a3985a0193473489882ff28ebd3c2660d">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.Objectives.hasRepImpact</a></div><div class="ttdeci">boolean hasRepImpact()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d97/Objectives_8java_source.html#l00199">Objectives.java:199</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives_html_a74959193e23b96c7a041b38f0f962126"><div class="ttname"><a href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a74959193e23b96c7a041b38f0f962126">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.Objectives.printOwner</a></div><div class="ttdeci">void printOwner()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d97/Objectives_8java_source.html#l00517">Objectives.java:517</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives_html_a9a59481cecae777e6b3fab31e946082e"><div class="ttname"><a href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a9a59481cecae777e6b3fab31e946082e">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.Objectives.unhack</a></div><div class="ttdeci">void unhack()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d97/Objectives_8java_source.html#l00297">Objectives.java:297</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives_html_ab76746d828877919bbca69ca74ecf16a"><div class="ttname"><a href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#ab76746d828877919bbca69ca74ecf16a">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.Objectives.isNonFunctional</a></div><div class="ttdeci">boolean isNonFunctional()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d97/Objectives_8java_source.html#l00258">Objectives.java:258</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives_html_ae668dbe3f09f57f41f5a91e79df381ad"><div class="ttname"><a href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#ae668dbe3f09f57f41f5a91e79df381ad">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.Objectives.dialog</a></div><div class="ttdeci">InteractionDialogAPI dialog</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d97/Objectives_8java_source.html#l00069">Objectives.java:69</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives_html_afbbbac80f1cddf1eb6b7cd1b3d857dce"><div class="ttname"><a href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#afbbbac80f1cddf1eb6b7cd1b3d857dce">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.Objectives.faction</a></div><div class="ttdeci">FactionAPI faction</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d97/Objectives_8java_source.html#l00071">Objectives.java:71</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI_html_a7edcdc203f5ab26478e89e5d31e3bf85"><div class="ttname"><a href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a7edcdc203f5ab26478e89e5d31e3bf85">com.fs.starfarer.api.campaign.FactionAPI.getId</a></div><div class="ttdeci">String getId()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI_html_adacb688941524346625413acdc0008f7"><div class="ttname"><a href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#adacb688941524346625413acdc0008f7">com.fs.starfarer.api.campaign.FactionAPI.isNeutralFaction</a></div><div class="ttdeci">boolean isNeutralFaction()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI_html_af016cc513682eb015b85966bd6af4162"><div class="ttname"><a href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#af016cc513682eb015b85966bd6af4162">com.fs.starfarer.api.campaign.FactionAPI.isPlayerFaction</a></div><div class="ttdeci">boolean isPlayerFaction()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI_html_a63868370ebcb7aa6823f89065fe567d9"><div class="ttname"><a href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#a63868370ebcb7aa6823f89065fe567d9">com.fs.starfarer.api.campaign.InteractionDialogAPI.getPlugin</a></div><div class="ttdeci">InteractionDialogPlugin getPlugin()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_a2f73844e14072776e21aa8a0d9e1f061"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a2f73844e14072776e21aa8a0d9e1f061">com.fs.starfarer.api.campaign.SectorEntityToken.setFaction</a></div><div class="ttdeci">void setFaction(String factionId)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_abed0787f3c057816961d1a07f2c55662"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#abed0787f3c057816961d1a07f2c55662">com.fs.starfarer.api.campaign.SectorEntityToken.hasTag</a></div><div class="ttdeci">boolean hasTag(String tag)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_adcd558c1d95f9755066ddaf9a77311c1"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#adcd558c1d95f9755066ddaf9a77311c1">com.fs.starfarer.api.campaign.SectorEntityToken.getMemoryWithoutUpdate</a></div><div class="ttdeci">MemoryAPI getMemoryWithoutUpdate()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_afb72bc74f75ccbbf240564b26b94e17b"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#afb72bc74f75ccbbf240564b26b94e17b">com.fs.starfarer.api.campaign.SectorEntityToken.getFaction</a></div><div class="ttdeci">FactionAPI getFaction()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI_html_a1187125b9f4fe3913d1ef3fb7c9fb211"><div class="ttname"><a href="../../d0/de7/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html#a1187125b9f4fe3913d1ef3fb7c9fb211">com.fs.starfarer.api.campaign.rules.MemoryAPI.unset</a></div><div class="ttdeci">void unset(String key)</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab9b3413398f7fbda24bc6471fa03b898" name="ab9b3413398f7fbda24bc6471fa03b898"></a>
@@ -565,41 +421,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d97/Objectives_8java_source.html#l00168">168</a> of file <a class="el" href="../../d4/d97/Objectives_8java_source.html">Objectives.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  168</span>                             {</div>
-<div class="line"><span class="lineno">  169</span>        CargoAPI cargo = <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a2a2535e1bf15b8ddd7025e89ded9417a">playerCargo</a>;</div>
-<div class="line"><span class="lineno">  170</span>        String [] res = <a class="code hl_function" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a9b41dfae23d6f4aca20e3c0e71594185">getBurstResources</a>();</div>
-<div class="line"><span class="lineno">  171</span>        <span class="keywordtype">int</span> [] quantities = <a class="code hl_function" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a412e5c7cf04ded059ea60d8a9eb449d1">getBurstQuantities</a>();</div>
-<div class="line"><span class="lineno">  172</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; res.length; i++) {</div>
-<div class="line"><span class="lineno">  173</span>            String commodityId = res[i];</div>
-<div class="line"><span class="lineno">  174</span>            <span class="keywordtype">int</span> quantity = quantities[i];</div>
-<div class="line"><span class="lineno">  175</span>            cargo.removeCommodity(commodityId, quantity);</div>
-<div class="line"><span class="lineno">  176</span>            AddRemoveCommodity.addCommodityLossText(commodityId, quantity, <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a7517fc90b87f8f1de8438d4d8cdbe1cf">text</a>);</div>
-<div class="line"><span class="lineno">  177</span>        }</div>
-<div class="line"><span class="lineno">  178</span>        </div>
-<div class="line"><span class="lineno">  179</span>        <span class="keywordtype">float</span> range = <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a608e83866c37864ea13be95433a058e5">memory</a>.<a class="code hl_function" href="../../d0/de7/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html#a05b35540afe94a1b3ce12ec761ee38e4">getFloat</a>(<a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a74c39de4b35768ef879c4452267b4214">BURST_RANGE</a>);</div>
-<div class="line"><span class="lineno">  180</span>        SlipstreamVisibilityManager.updateSlipstreamVisibility(<a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#add0e483b32d0317d47548d43f3443b9e">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#ad373e58a550382cbf5be116191a67569">getLocationInHyperspace</a>(), range);</div>
-<div class="line"><span class="lineno">  181</span>        </div>
-<div class="line"><span class="lineno">  182</span>        <span class="keywordtype">int</span> points = 0;</div>
-<div class="line"><span class="lineno">  183</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#add0e483b32d0317d47548d43f3443b9e">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#abed0787f3c057816961d1a07f2c55662">hasTag</a>(Tags.MAKESHIFT)) {</div>
-<div class="line"><span class="lineno">  184</span>            points = HTPoints.NEUTRINO_BURST_MAKESHIFT;</div>
-<div class="line"><span class="lineno">  185</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  186</span>            points = HTPoints.NEUTRINO_BURST_DOMAIN;</div>
-<div class="line"><span class="lineno">  187</span>        }</div>
-<div class="line"><span class="lineno">  188</span>        </div>
-<div class="line"><span class="lineno">  189</span>        </div>
-<div class="line"><span class="lineno">  190</span>        <span class="keywordtype">boolean</span> hasRecent = HyperspaceTopographyEventIntel.hasRecentReadingsNearPlayer();</div>
-<div class="line"><span class="lineno">  191</span>        <span class="keywordflow">if</span> (!hasRecent &amp;&amp; points &gt; 0) {</div>
-<div class="line"><span class="lineno">  192</span>            HyperspaceTopographyEventIntel.addFactorCreateIfNecessary(<span class="keyword">new</span> HTNeutrinoBurstFactor(points), <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#ae668dbe3f09f57f41f5a91e79df381ad">dialog</a>);</div>
-<div class="line"><span class="lineno">  193</span>            <span class="keywordflow">if</span> (HyperspaceTopographyEventIntel.get() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  194</span>                HyperspaceTopographyEventIntel.get().addRecentReadings(<a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#add0e483b32d0317d47548d43f3443b9e">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#ad373e58a550382cbf5be116191a67569">getLocationInHyperspace</a>());</div>
-<div class="line"><span class="lineno">  195</span>            }</div>
-<div class="line"><span class="lineno">  196</span>        }</div>
-<div class="line"><span class="lineno">  197</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives_html_a608e83866c37864ea13be95433a058e5"><div class="ttname"><a href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a608e83866c37864ea13be95433a058e5">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.Objectives.memory</a></div><div class="ttdeci">MemoryAPI memory</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d97/Objectives_8java_source.html#l00068">Objectives.java:68</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives_html_a74c39de4b35768ef879c4452267b4214"><div class="ttname"><a href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a74c39de4b35768ef879c4452267b4214">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.Objectives.BURST_RANGE</a></div><div class="ttdeci">static String BURST_RANGE</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d97/Objectives_8java_source.html#l00052">Objectives.java:52</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_ad373e58a550382cbf5be116191a67569"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#ad373e58a550382cbf5be116191a67569">com.fs.starfarer.api.campaign.SectorEntityToken.getLocationInHyperspace</a></div><div class="ttdeci">Vector2f getLocationInHyperspace()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI_html_a05b35540afe94a1b3ce12ec761ee38e4"><div class="ttname"><a href="../../d0/de7/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html#a05b35540afe94a1b3ce12ec761ee38e4">com.fs.starfarer.api.campaign.rules.MemoryAPI.getFloat</a></div><div class="ttdeci">float getFloat(String key)</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a26a8476f532ffe6a6ec932cdc1a86514" name="a26a8476f532ffe6a6ec932cdc1a86514"></a>
@@ -643,96 +465,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="../../d0/d5c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1CommandPlugin.html#a72a44c5127e60136b87d3b37613fd0e0">com.fs.starfarer.api.campaign.rules.CommandPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d97/Objectives_8java_source.html#l00101">101</a> of file <a class="el" href="../../d4/d97/Objectives_8java_source.html">Objectives.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  101</span>                                                                                                                             {</div>
-<div class="line"><span class="lineno">  102</span>        </div>
-<div class="line"><span class="lineno">  103</span>        this.dialog = <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#ae668dbe3f09f57f41f5a91e79df381ad">dialog</a>;</div>
-<div class="line"><span class="lineno">  104</span>        this.memoryMap = <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a5aef21ca86e53addd16387455fc4279e">memoryMap</a>;</div>
-<div class="line"><span class="lineno">  105</span>        </div>
-<div class="line"><span class="lineno">  106</span>        String command = params.get(0).getString(<a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a5aef21ca86e53addd16387455fc4279e">memoryMap</a>);</div>
-<div class="line"><span class="lineno">  107</span>        <span class="keywordflow">if</span> (command == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  108</span>        </div>
-<div class="line"><span class="lineno">  109</span>        <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#add0e483b32d0317d47548d43f3443b9e">entity</a> = <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#ae668dbe3f09f57f41f5a91e79df381ad">dialog</a>.<a class="code hl_function" href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#aab8d898bf278af177dcaa802e64135be">getInteractionTarget</a>();</div>
-<div class="line"><span class="lineno">  110</span>        <a class="code hl_function" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a60b064f58e867a5d12edf3ef7995f859">init</a>(<a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#add0e483b32d0317d47548d43f3443b9e">entity</a>);</div>
-<div class="line"><span class="lineno">  111</span>        </div>
-<div class="line"><span class="lineno">  112</span>        <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a608e83866c37864ea13be95433a058e5">memory</a> = <a class="code hl_function" href="../../d7/dd6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1BaseCommandPlugin.html#af355b9be7db57d00eaf6a6f0637f2edb">getEntityMemory</a>(<a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a5aef21ca86e53addd16387455fc4279e">memoryMap</a>);</div>
-<div class="line"><span class="lineno">  113</span>        </div>
-<div class="line"><span class="lineno">  114</span>        <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a7517fc90b87f8f1de8438d4d8cdbe1cf">text</a> = <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#ae668dbe3f09f57f41f5a91e79df381ad">dialog</a>.<a class="code hl_function" href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#a52d00add8a9c52795f652f493ac37244">getTextPanel</a>();</div>
-<div class="line"><span class="lineno">  115</span>        <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#ade0538cbabbc3b7136a1c7343de44245">options</a> = <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#ae668dbe3f09f57f41f5a91e79df381ad">dialog</a>.<a class="code hl_function" href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#af4f0b5fdb66110b1d0565b433abaf65c">getOptionPanel</a>();</div>
-<div class="line"><span class="lineno">  116</span> </div>
-<div class="line"><span class="lineno">  117</span>        <span class="keywordflow">if</span> (command.equals(<span class="stringliteral">&quot;printCost&quot;</span>)) {</div>
-<div class="line"><span class="lineno">  118</span>            String type = params.get(1).getString(<a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a5aef21ca86e53addd16387455fc4279e">memoryMap</a>);</div>
-<div class="line"><span class="lineno">  119</span>            <a class="code hl_function" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a2872ae052f695fc6b5c3952b7b8669d6">printCost</a>(type);</div>
-<div class="line"><span class="lineno">  120</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (command.equals(<span class="stringliteral">&quot;showSalvage&quot;</span>)) {</div>
-<div class="line"><span class="lineno">  121</span>            <a class="code hl_function" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a46040a96c45665659f4c69b9fcaf60e9">printSalvage</a>();</div>
-<div class="line"><span class="lineno">  122</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (command.equals(<span class="stringliteral">&quot;hasRepImpact&quot;</span>)) {</div>
-<div class="line"><span class="lineno">  123</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a3985a0193473489882ff28ebd3c2660d">hasRepImpact</a>();</div>
-<div class="line"><span class="lineno">  124</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (command.equals(<span class="stringliteral">&quot;showRepairCost&quot;</span>)) {</div>
-<div class="line"><span class="lineno">  125</span>            <a class="code hl_function" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a8ef7b228c4a81278ac2ac7f3508b9781">printRepairCost</a>(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  126</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (command.equals(<span class="stringliteral">&quot;showBurstCost&quot;</span>)) {</div>
-<div class="line"><span class="lineno">  127</span>            <span class="keywordtype">boolean</span> hasRecent = HyperspaceTopographyEventIntel.hasRecentReadingsNearPlayer();</div>
-<div class="line"><span class="lineno">  128</span>            <a class="code hl_function" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a66db775e3cfd4cec1281f42e2aeb010e">printBurstCost</a>(<a class="code hl_function" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a5bddabca6adb436f4c1e31bd0a12fe09">canBurst</a>() &amp;&amp; !hasRecent);</div>
-<div class="line"><span class="lineno">  129</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (command.equals(<span class="stringliteral">&quot;showRepairCostNoPrompt&quot;</span>)) {</div>
-<div class="line"><span class="lineno">  130</span>            <a class="code hl_function" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a8ef7b228c4a81278ac2ac7f3508b9781">printRepairCost</a>(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  131</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (command.equals(<span class="stringliteral">&quot;printHackDesc&quot;</span>)) {</div>
-<div class="line"><span class="lineno">  132</span>            <a class="code hl_function" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#afe889412720ff03e279124e47fbf1b2d">printHackDesc</a>();</div>
-<div class="line"><span class="lineno">  133</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (command.equals(<span class="stringliteral">&quot;canBuild&quot;</span>)) {</div>
-<div class="line"><span class="lineno">  134</span>            String type = params.get(1).getString(<a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a5aef21ca86e53addd16387455fc4279e">memoryMap</a>);</div>
-<div class="line"><span class="lineno">  135</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a26cf5a73c401d7880d08685a0731ed8b">canBuild</a>(type);</div>
-<div class="line"><span class="lineno">  136</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (command.equals(<span class="stringliteral">&quot;canActivate&quot;</span>)) {</div>
-<div class="line"><span class="lineno">  137</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#acbb20a5968617cd04ddb5f7fd6806f6a">canActivate</a>(<a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#add0e483b32d0317d47548d43f3443b9e">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a21a8f4a44cea7d5591c228b1ff1fc9fc">getCustomEntityType</a>());</div>
-<div class="line"><span class="lineno">  138</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (command.equals(<span class="stringliteral">&quot;canBurst&quot;</span>)) {</div>
-<div class="line"><span class="lineno">  139</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a5bddabca6adb436f4c1e31bd0a12fe09">canBurst</a>();</div>
-<div class="line"><span class="lineno">  140</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (command.equals(<span class="stringliteral">&quot;build&quot;</span>)) {</div>
-<div class="line"><span class="lineno">  141</span>            String type = params.get(1).getString(<a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a5aef21ca86e53addd16387455fc4279e">memoryMap</a>);</div>
-<div class="line"><span class="lineno">  142</span>            <a class="code hl_function" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a234a5993720153898f7625da5612bd43">build</a>(type, Factions.PLAYER);</div>
-<div class="line"><span class="lineno">  143</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (command.equals(<span class="stringliteral">&quot;printDescription&quot;</span>)) {</div>
-<div class="line"><span class="lineno">  144</span>            <a class="code hl_function" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a09b0a0c4b35a5172f74030fa8ade3e61">updateMemory</a>();</div>
-<div class="line"><span class="lineno">  145</span>            String type = <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#add0e483b32d0317d47548d43f3443b9e">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a21a8f4a44cea7d5591c228b1ff1fc9fc">getCustomEntityType</a>();</div>
-<div class="line"><span class="lineno">  146</span>            <a class="code hl_function" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a5c932ba6efc011ed4a33120ba51ac482">printDescription</a>(type);</div>
-<div class="line"><span class="lineno">  147</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (command.equals(<span class="stringliteral">&quot;isHacked&quot;</span>)) {</div>
-<div class="line"><span class="lineno">  148</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a8d992b6980b7ae8e3de674a4e4c61a67">isHacked</a>();</div>
-<div class="line"><span class="lineno">  149</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (command.equals(<span class="stringliteral">&quot;doAction&quot;</span>)) {</div>
-<div class="line"><span class="lineno">  150</span>            String action = params.get(1).getString(<a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a5aef21ca86e53addd16387455fc4279e">memoryMap</a>);</div>
-<div class="line"><span class="lineno">  151</span>            <span class="keywordflow">if</span> (action.equals(<span class="stringliteral">&quot;hack&quot;</span>)) {</div>
-<div class="line"><span class="lineno">  152</span>                <a class="code hl_function" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#abca55263b119636c7e78f474a5a9d771">hack</a>();</div>
-<div class="line"><span class="lineno">  153</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (action.equals(<span class="stringliteral">&quot;reset&quot;</span>)) {</div>
-<div class="line"><span class="lineno">  154</span>                <a class="code hl_function" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a0706914bb9f6fb5125146f3f5fd0bcf4">reset</a>();</div>
-<div class="line"><span class="lineno">  155</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (action.equals(<span class="stringliteral">&quot;unhack&quot;</span>)) {</div>
-<div class="line"><span class="lineno">  156</span>                <a class="code hl_function" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a9a59481cecae777e6b3fab31e946082e">unhack</a>();</div>
-<div class="line"><span class="lineno">  157</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (action.equals(<span class="stringliteral">&quot;control&quot;</span>)) {</div>
-<div class="line"><span class="lineno">  158</span>                <a class="code hl_function" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a9ff63e0918ea565cf11f76c88f13d26d">control</a>(Factions.PLAYER);</div>
-<div class="line"><span class="lineno">  159</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (action.equals(<span class="stringliteral">&quot;salvage&quot;</span>)) {</div>
-<div class="line"><span class="lineno">  160</span>                <a class="code hl_function" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a14c2b592dd12bde7188d1717a2bcf9f1">salvage</a>(Factions.PLAYER);</div>
-<div class="line"><span class="lineno">  161</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (action.equals(<span class="stringliteral">&quot;burst&quot;</span>)) {</div>
-<div class="line"><span class="lineno">  162</span>                <a class="code hl_function" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#ab9b3413398f7fbda24bc6471fa03b898">doBurst</a>();</div>
-<div class="line"><span class="lineno">  163</span>            }</div>
-<div class="line"><span class="lineno">  164</span>        }</div>
-<div class="line"><span class="lineno">  165</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  166</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1BaseCommandPlugin_html_af355b9be7db57d00eaf6a6f0637f2edb"><div class="ttname"><a href="../../d7/dd6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1BaseCommandPlugin.html#af355b9be7db57d00eaf6a6f0637f2edb">com.fs.starfarer.api.impl.campaign.rulecmd.BaseCommandPlugin.getEntityMemory</a></div><div class="ttdeci">static MemoryAPI getEntityMemory(Map&lt; String, MemoryAPI &gt; memoryMap)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dbe/BaseCommandPlugin_8java_source.html#l00020">BaseCommandPlugin.java:20</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives_html_a0706914bb9f6fb5125146f3f5fd0bcf4"><div class="ttname"><a href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a0706914bb9f6fb5125146f3f5fd0bcf4">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.Objectives.reset</a></div><div class="ttdeci">void reset()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d97/Objectives_8java_source.html#l00321">Objectives.java:321</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives_html_a14c2b592dd12bde7188d1717a2bcf9f1"><div class="ttname"><a href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a14c2b592dd12bde7188d1717a2bcf9f1">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.Objectives.salvage</a></div><div class="ttdeci">void salvage(final String factionId)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d97/Objectives_8java_source.html#l00210">Objectives.java:210</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives_html_a234a5993720153898f7625da5612bd43"><div class="ttname"><a href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a234a5993720153898f7625da5612bd43">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.Objectives.build</a></div><div class="ttdeci">void build(String type, String factionId)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d97/Objectives_8java_source.html#l00342">Objectives.java:342</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives_html_a26cf5a73c401d7880d08685a0731ed8b"><div class="ttname"><a href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a26cf5a73c401d7880d08685a0731ed8b">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.Objectives.canBuild</a></div><div class="ttdeci">boolean canBuild(String type)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d97/Objectives_8java_source.html#l00364">Objectives.java:364</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives_html_a2872ae052f695fc6b5c3952b7b8669d6"><div class="ttname"><a href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a2872ae052f695fc6b5c3952b7b8669d6">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.Objectives.printCost</a></div><div class="ttdeci">void printCost(String type)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d97/Objectives_8java_source.html#l00580">Objectives.java:580</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives_html_a46040a96c45665659f4c69b9fcaf60e9"><div class="ttname"><a href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a46040a96c45665659f4c69b9fcaf60e9">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.Objectives.printSalvage</a></div><div class="ttdeci">void printSalvage()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d97/Objectives_8java_source.html#l00574">Objectives.java:574</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives_html_a5aef21ca86e53addd16387455fc4279e"><div class="ttname"><a href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a5aef21ca86e53addd16387455fc4279e">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.Objectives.memoryMap</a></div><div class="ttdeci">Map&lt; String, MemoryAPI &gt; memoryMap</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d97/Objectives_8java_source.html#l00070">Objectives.java:70</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives_html_a5bddabca6adb436f4c1e31bd0a12fe09"><div class="ttname"><a href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a5bddabca6adb436f4c1e31bd0a12fe09">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.Objectives.canBurst</a></div><div class="ttdeci">boolean canBurst()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d97/Objectives_8java_source.html#l00431">Objectives.java:431</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives_html_a5c932ba6efc011ed4a33120ba51ac482"><div class="ttname"><a href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a5c932ba6efc011ed4a33120ba51ac482">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.Objectives.printDescription</a></div><div class="ttdeci">void printDescription(String type)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d97/Objectives_8java_source.html#l00455">Objectives.java:455</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives_html_a66db775e3cfd4cec1281f42e2aeb010e"><div class="ttname"><a href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a66db775e3cfd4cec1281f42e2aeb010e">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.Objectives.printBurstCost</a></div><div class="ttdeci">void printBurstCost(boolean withPrompt)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d97/Objectives_8java_source.html#l00554">Objectives.java:554</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives_html_a8d992b6980b7ae8e3de674a4e4c61a67"><div class="ttname"><a href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a8d992b6980b7ae8e3de674a4e4c61a67">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.Objectives.isHacked</a></div><div class="ttdeci">boolean isHacked()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d97/Objectives_8java_source.html#l00333">Objectives.java:333</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives_html_a8ef7b228c4a81278ac2ac7f3508b9781"><div class="ttname"><a href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a8ef7b228c4a81278ac2ac7f3508b9781">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.Objectives.printRepairCost</a></div><div class="ttdeci">void printRepairCost(boolean withPrompt)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d97/Objectives_8java_source.html#l00547">Objectives.java:547</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives_html_a9ff63e0918ea565cf11f76c88f13d26d"><div class="ttname"><a href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a9ff63e0918ea565cf11f76c88f13d26d">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.Objectives.control</a></div><div class="ttdeci">void control(String factionId)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d97/Objectives_8java_source.html#l00262">Objectives.java:262</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives_html_ab9b3413398f7fbda24bc6471fa03b898"><div class="ttname"><a href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#ab9b3413398f7fbda24bc6471fa03b898">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.Objectives.doBurst</a></div><div class="ttdeci">void doBurst()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d97/Objectives_8java_source.html#l00168">Objectives.java:168</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives_html_abca55263b119636c7e78f474a5a9d771"><div class="ttname"><a href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#abca55263b119636c7e78f474a5a9d771">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.Objectives.hack</a></div><div class="ttdeci">void hack()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d97/Objectives_8java_source.html#l00312">Objectives.java:312</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives_html_acbb20a5968617cd04ddb5f7fd6806f6a"><div class="ttname"><a href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#acbb20a5968617cd04ddb5f7fd6806f6a">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.Objectives.canActivate</a></div><div class="ttdeci">boolean canActivate(String type)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d97/Objectives_8java_source.html#l00413">Objectives.java:413</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives_html_ade0538cbabbc3b7136a1c7343de44245"><div class="ttname"><a href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#ade0538cbabbc3b7136a1c7343de44245">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.Objectives.options</a></div><div class="ttdeci">OptionPanelAPI options</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d97/Objectives_8java_source.html#l00066">Objectives.java:66</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives_html_afe889412720ff03e279124e47fbf1b2d"><div class="ttname"><a href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#afe889412720ff03e279124e47fbf1b2d">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.Objectives.printHackDesc</a></div><div class="ttdeci">void printHackDesc()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d97/Objectives_8java_source.html#l00536">Objectives.java:536</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI_html_a52d00add8a9c52795f652f493ac37244"><div class="ttname"><a href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#a52d00add8a9c52795f652f493ac37244">com.fs.starfarer.api.campaign.InteractionDialogAPI.getTextPanel</a></div><div class="ttdeci">TextPanelAPI getTextPanel()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI_html_aab8d898bf278af177dcaa802e64135be"><div class="ttname"><a href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#aab8d898bf278af177dcaa802e64135be">com.fs.starfarer.api.campaign.InteractionDialogAPI.getInteractionTarget</a></div><div class="ttdeci">SectorEntityToken getInteractionTarget()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI_html_af4f0b5fdb66110b1d0565b433abaf65c"><div class="ttname"><a href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#af4f0b5fdb66110b1d0565b433abaf65c">com.fs.starfarer.api.campaign.InteractionDialogAPI.getOptionPanel</a></div><div class="ttdeci">OptionPanelAPI getOptionPanel()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_a21a8f4a44cea7d5591c228b1ff1fc9fc"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a21a8f4a44cea7d5591c228b1ff1fc9fc">com.fs.starfarer.api.campaign.SectorEntityToken.getCustomEntityType</a></div><div class="ttdeci">String getCustomEntityType()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a412e5c7cf04ded059ea60d8a9eb449d1" name="a412e5c7cf04ded059ea60d8a9eb449d1"></a>
@@ -751,10 +484,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d97/Objectives_8java_source.html#l00626">626</a> of file <a class="el" href="../../d4/d97/Objectives_8java_source.html">Objectives.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  626</span>                                       {</div>
-<div class="line"><span class="lineno">  627</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <span class="keywordtype">int</span>[] {HTPoints.NEUTRINO_BURST_VOLATILES_COST};</div>
-<div class="line"><span class="lineno">  628</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9b41dfae23d6f4aca20e3c0e71594185" name="a9b41dfae23d6f4aca20e3c0e71594185"></a>
@@ -773,10 +503,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d97/Objectives_8java_source.html#l00630">630</a> of file <a class="el" href="../../d4/d97/Objectives_8java_source.html">Objectives.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  630</span>                                         {</div>
-<div class="line"><span class="lineno">  631</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> String[] {Commodities.VOLATILES};</div>
-<div class="line"><span class="lineno">  632</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a3d993a6509709b36a14912e2cd27f91f" name="a3d993a6509709b36a14912e2cd27f91f"></a>
@@ -795,13 +522,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d97/Objectives_8java_source.html#l00609">609</a> of file <a class="el" href="../../d4/d97/Objectives_8java_source.html">Objectives.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  609</span>                                  {</div>
-<div class="line"><span class="lineno">  610</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#add0e483b32d0317d47548d43f3443b9e">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#abed0787f3c057816961d1a07f2c55662">hasTag</a>(Tags.MAKESHIFT) || <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#add0e483b32d0317d47548d43f3443b9e">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#abed0787f3c057816961d1a07f2c55662">hasTag</a>(Tags.STABLE_LOCATION)) {</div>
-<div class="line"><span class="lineno">  611</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> <span class="keywordtype">int</span>[] {15, 30, 5};</div>
-<div class="line"><span class="lineno">  612</span>        }</div>
-<div class="line"><span class="lineno">  613</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <span class="keywordtype">int</span>[] {50, 200, 20, 20};</div>
-<div class="line"><span class="lineno">  614</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a7ff538ed1ecf07cf18dd80a9b6b09c7c" name="a7ff538ed1ecf07cf18dd80a9b6b09c7c"></a>
@@ -820,10 +541,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d97/Objectives_8java_source.html#l00621">621</a> of file <a class="el" href="../../d4/d97/Objectives_8java_source.html">Objectives.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  621</span>                                        {</div>
-<div class="line"><span class="lineno">  622</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <span class="keywordtype">int</span>[] {5};</div>
-<div class="line"><span class="lineno">  623</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa53c98bdb7b828872bca16e94199d1e4" name="aa53c98bdb7b828872bca16e94199d1e4"></a>
@@ -842,10 +560,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d97/Objectives_8java_source.html#l00616">616</a> of file <a class="el" href="../../d4/d97/Objectives_8java_source.html">Objectives.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  616</span>                                          {</div>
-<div class="line"><span class="lineno">  617</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> String[] {Commodities.HEAVY_MACHINERY };</div>
-<div class="line"><span class="lineno">  618</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae8897c0b87543d8e4e2bb45106b8d88c" name="ae8897c0b87543d8e4e2bb45106b8d88c"></a>
@@ -864,13 +579,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d97/Objectives_8java_source.html#l00592">592</a> of file <a class="el" href="../../d4/d97/Objectives_8java_source.html">Objectives.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  592</span>                                    {</div>
-<div class="line"><span class="lineno">  593</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#add0e483b32d0317d47548d43f3443b9e">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#abed0787f3c057816961d1a07f2c55662">hasTag</a>(Tags.MAKESHIFT) || <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#add0e483b32d0317d47548d43f3443b9e">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#abed0787f3c057816961d1a07f2c55662">hasTag</a>(Tags.STABLE_LOCATION)) {</div>
-<div class="line"><span class="lineno">  594</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> String[] {Commodities.HEAVY_MACHINERY, Commodities.METALS, Commodities.RARE_METALS};</div>
-<div class="line"><span class="lineno">  595</span>        }</div>
-<div class="line"><span class="lineno">  596</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> String[] {Commodities.HEAVY_MACHINERY, Commodities.METALS, Commodities.RARE_METALS, Commodities.VOLATILES};</div>
-<div class="line"><span class="lineno">  597</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8928aa0cc13f1912a159a1045895918e" name="a8928aa0cc13f1912a159a1045895918e"></a>
@@ -889,17 +598,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d97/Objectives_8java_source.html#l00600">600</a> of file <a class="el" href="../../d4/d97/Objectives_8java_source.html">Objectives.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  600</span>                                         {</div>
-<div class="line"><span class="lineno">  601</span>        <span class="keywordtype">int</span> [] q = <a class="code hl_function" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a3d993a6509709b36a14912e2cd27f91f">getQuantities</a>();</div>
-<div class="line"><span class="lineno">  602</span>        <span class="keywordtype">int</span> [] result = <span class="keyword">new</span> <span class="keywordtype">int</span> [q.length];</div>
-<div class="line"><span class="lineno">  603</span>        </div>
-<div class="line"><span class="lineno">  604</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; result.length; i++) {</div>
-<div class="line"><span class="lineno">  605</span>            result[i] = (int) (q[i] * <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#aeed26b199ff86864abdfd8882fb8f5ac">SALVAGE_FRACTION</a>);</div>
-<div class="line"><span class="lineno">  606</span>        }</div>
-<div class="line"><span class="lineno">  607</span>        <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">  608</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives_html_aeed26b199ff86864abdfd8882fb8f5ac"><div class="ttname"><a href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#aeed26b199ff86864abdfd8882fb8f5ac">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.Objectives.SALVAGE_FRACTION</a></div><div class="ttdeci">static float SALVAGE_FRACTION</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d97/Objectives_8java_source.html#l00059">Objectives.java:59</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="abca55263b119636c7e78f474a5a9d771" name="abca55263b119636c7e78f474a5a9d771"></a>
@@ -918,16 +617,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d97/Objectives_8java_source.html#l00312">312</a> of file <a class="el" href="../../d4/d97/Objectives_8java_source.html">Objectives.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  312</span>                       {</div>
-<div class="line"><span class="lineno">  313</span>        CustomCampaignEntityPlugin plugin = <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#add0e483b32d0317d47548d43f3443b9e">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a0bd8783c7dc6da12c6befaf2e4bcbe3d">getCustomPlugin</a>();</div>
-<div class="line"><span class="lineno">  314</span>        <span class="keywordflow">if</span> (plugin instanceof CampaignObjective) {</div>
-<div class="line"><span class="lineno">  315</span>            CampaignObjective o = (CampaignObjective) plugin;</div>
-<div class="line"><span class="lineno">  316</span>            o.setHacked(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  317</span>        }</div>
-<div class="line"><span class="lineno">  318</span>        <a class="code hl_function" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a09b0a0c4b35a5172f74030fa8ade3e61">updateMemory</a>();</div>
-<div class="line"><span class="lineno">  319</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_a0bd8783c7dc6da12c6befaf2e4bcbe3d"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a0bd8783c7dc6da12c6befaf2e4bcbe3d">com.fs.starfarer.api.campaign.SectorEntityToken.getCustomPlugin</a></div><div class="ttdeci">CustomCampaignEntityPlugin getCustomPlugin()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a3985a0193473489882ff28ebd3c2660d" name="a3985a0193473489882ff28ebd3c2660d"></a>
@@ -954,17 +644,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d97/Objectives_8java_source.html#l00199">199</a> of file <a class="el" href="../../d4/d97/Objectives_8java_source.html">Objectives.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  199</span>                                     {</div>
-<div class="line"><span class="lineno">  200</span>        <span class="keywordflow">for</span> (MarketAPI curr : Global.getSector().getEconomy().getMarkets(<a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#add0e483b32d0317d47548d43f3443b9e">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a06362480c6a17326650354460c6d7442">getContainingLocation</a>())) {</div>
-<div class="line"><span class="lineno">  201</span>            <span class="keywordflow">if</span> (curr.getFaction() == <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#add0e483b32d0317d47548d43f3443b9e">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#afb72bc74f75ccbbf240564b26b94e17b">getFaction</a>() &amp;&amp; </div>
-<div class="line"><span class="lineno">  202</span>                    !curr.getFaction().<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#adacb688941524346625413acdc0008f7">isNeutralFaction</a>() &amp;&amp;</div>
-<div class="line"><span class="lineno">  203</span>                    !curr.getFaction().isPlayerFaction()) {</div>
-<div class="line"><span class="lineno">  204</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  205</span>            }</div>
-<div class="line"><span class="lineno">  206</span>        }</div>
-<div class="line"><span class="lineno">  207</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  208</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a60b064f58e867a5d12edf3ef7995f859" name="a60b064f58e867a5d12edf3ef7995f859"></a>
@@ -992,33 +672,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d97/Objectives_8java_source.html#l00081">81</a> of file <a class="el" href="../../d4/d97/Objectives_8java_source.html">Objectives.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   81</span>                                                  {</div>
-<div class="line"><span class="lineno">   82</span>        <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a608e83866c37864ea13be95433a058e5">memory</a> = <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#add0e483b32d0317d47548d43f3443b9e">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#adcd558c1d95f9755066ddaf9a77311c1">getMemoryWithoutUpdate</a>();</div>
-<div class="line"><span class="lineno">   83</span>        this.entity = <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#add0e483b32d0317d47548d43f3443b9e">entity</a>;</div>
-<div class="line"><span class="lineno">   84</span>        <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a0b5c8029289f2737913153705928c79d">playerFleet</a> = Global.getSector().getPlayerFleet();</div>
-<div class="line"><span class="lineno">   85</span>        <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a2a2535e1bf15b8ddd7025e89ded9417a">playerCargo</a> = <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a0b5c8029289f2737913153705928c79d">playerFleet</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#ab219cada372a13654e8e912aba977b05">getCargo</a>();</div>
-<div class="line"><span class="lineno">   86</span>        </div>
-<div class="line"><span class="lineno">   87</span>        <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a77a617d942aef0e6bf58d6503bf14d18">playerFaction</a> = Global.getSector().getPlayerFaction();</div>
-<div class="line"><span class="lineno">   88</span>        <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#ac08094c6993905a5e159f7acc5ecab22">entityFaction</a> = <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#add0e483b32d0317d47548d43f3443b9e">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#afb72bc74f75ccbbf240564b26b94e17b">getFaction</a>();</div>
-<div class="line"><span class="lineno">   89</span>        </div>
-<div class="line"><span class="lineno">   90</span>        <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#afbbbac80f1cddf1eb6b7cd1b3d857dce">faction</a> = <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#add0e483b32d0317d47548d43f3443b9e">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#afb72bc74f75ccbbf240564b26b94e17b">getFaction</a>();</div>
-<div class="line"><span class="lineno">   91</span>        </div>
-<div class="line"><span class="lineno">   92</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#add0e483b32d0317d47548d43f3443b9e">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#abed0787f3c057816961d1a07f2c55662">hasTag</a>(Tags.MAKESHIFT)) {</div>
-<div class="line"><span class="lineno">   93</span>            <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a608e83866c37864ea13be95433a058e5">memory</a>.<a class="code hl_function" href="../../d0/de7/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html#aacefa8e06571ecfc9a37897cbb61d2cf">set</a>(<a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a74c39de4b35768ef879c4452267b4214">BURST_RANGE</a>, (<span class="keywordtype">int</span>)<a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a1df296e8dcce6fe3c5123c85f88a5c3e">BURST_RANGE_MAKESHIFT</a>, 0);</div>
-<div class="line"><span class="lineno">   94</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   95</span>            <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a608e83866c37864ea13be95433a058e5">memory</a>.<a class="code hl_function" href="../../d0/de7/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html#aacefa8e06571ecfc9a37897cbb61d2cf">set</a>(<a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a74c39de4b35768ef879c4452267b4214">BURST_RANGE</a>, (<span class="keywordtype">int</span>)<a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a61886b65640f90b8fe7e42dff9fd0d43">BURST_RANGE_DOMAIN</a>, 0);</div>
-<div class="line"><span class="lineno">   96</span>        }</div>
-<div class="line"><span class="lineno">   97</span>        </div>
-<div class="line"><span class="lineno">   98</span>        <span class="comment">//DebugFlags.OBJECTIVES_DEBUG = false;</span></div>
-<div class="line"><span class="lineno">   99</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives_html_a0b5c8029289f2737913153705928c79d"><div class="ttname"><a href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a0b5c8029289f2737913153705928c79d">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.Objectives.playerFleet</a></div><div class="ttdeci">CampaignFleetAPI playerFleet</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d97/Objectives_8java_source.html#l00061">Objectives.java:61</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives_html_a1df296e8dcce6fe3c5123c85f88a5c3e"><div class="ttname"><a href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a1df296e8dcce6fe3c5123c85f88a5c3e">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.Objectives.BURST_RANGE_MAKESHIFT</a></div><div class="ttdeci">static float BURST_RANGE_MAKESHIFT</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d97/Objectives_8java_source.html#l00054">Objectives.java:54</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives_html_a61886b65640f90b8fe7e42dff9fd0d43"><div class="ttname"><a href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a61886b65640f90b8fe7e42dff9fd0d43">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.Objectives.BURST_RANGE_DOMAIN</a></div><div class="ttdeci">static float BURST_RANGE_DOMAIN</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d97/Objectives_8java_source.html#l00055">Objectives.java:55</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives_html_a77a617d942aef0e6bf58d6503bf14d18"><div class="ttname"><a href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a77a617d942aef0e6bf58d6503bf14d18">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.Objectives.playerFaction</a></div><div class="ttdeci">FactionAPI playerFaction</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d97/Objectives_8java_source.html#l00063">Objectives.java:63</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives_html_ac08094c6993905a5e159f7acc5ecab22"><div class="ttname"><a href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#ac08094c6993905a5e159f7acc5ecab22">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.Objectives.entityFaction</a></div><div class="ttdeci">FactionAPI entityFaction</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d97/Objectives_8java_source.html#l00064">Objectives.java:64</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_ab219cada372a13654e8e912aba977b05"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#ab219cada372a13654e8e912aba977b05">com.fs.starfarer.api.campaign.SectorEntityToken.getCargo</a></div><div class="ttdeci">CargoAPI getCargo()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI_html_aacefa8e06571ecfc9a37897cbb61d2cf"><div class="ttname"><a href="../../d0/de7/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html#aacefa8e06571ecfc9a37897cbb61d2cf">com.fs.starfarer.api.campaign.rules.MemoryAPI.set</a></div><div class="ttdeci">void set(String key, Object value)</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8d992b6980b7ae8e3de674a4e4c61a67" name="a8d992b6980b7ae8e3de674a4e4c61a67"></a>
@@ -1037,15 +691,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d97/Objectives_8java_source.html#l00333">333</a> of file <a class="el" href="../../d4/d97/Objectives_8java_source.html">Objectives.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  333</span>                              {</div>
-<div class="line"><span class="lineno">  334</span>        CustomCampaignEntityPlugin plugin = <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#add0e483b32d0317d47548d43f3443b9e">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a0bd8783c7dc6da12c6befaf2e4bcbe3d">getCustomPlugin</a>();</div>
-<div class="line"><span class="lineno">  335</span>        <span class="keywordflow">if</span> (plugin instanceof CampaignObjective) {</div>
-<div class="line"><span class="lineno">  336</span>            CampaignObjective o = (CampaignObjective) plugin;</div>
-<div class="line"><span class="lineno">  337</span>            <span class="keywordflow">return</span> o.isHacked();</div>
-<div class="line"><span class="lineno">  338</span>        }</div>
-<div class="line"><span class="lineno">  339</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  340</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab76746d828877919bbca69ca74ecf16a" name="ab76746d828877919bbca69ca74ecf16a"></a>
@@ -1064,11 +710,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d97/Objectives_8java_source.html#l00258">258</a> of file <a class="el" href="../../d4/d97/Objectives_8java_source.html">Objectives.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  258</span>                                     {</div>
-<div class="line"><span class="lineno">  259</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#add0e483b32d0317d47548d43f3443b9e">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#adcd558c1d95f9755066ddaf9a77311c1">getMemoryWithoutUpdate</a>().<a class="code hl_function" href="../../d0/de7/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html#adb833cc81359cc239a89eae309480fc9">getBoolean</a>(MemFlags.OBJECTIVE_NON_FUNCTIONAL);</div>
-<div class="line"><span class="lineno">  260</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI_html_adb833cc81359cc239a89eae309480fc9"><div class="ttname"><a href="../../d0/de7/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html#adb833cc81359cc239a89eae309480fc9">com.fs.starfarer.api.campaign.rules.MemoryAPI.getBoolean</a></div><div class="ttdeci">boolean getBoolean(String key)</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a66db775e3cfd4cec1281f42e2aeb010e" name="a66db775e3cfd4cec1281f42e2aeb010e"></a>
@@ -1088,28 +730,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d97/Objectives_8java_source.html#l00554">554</a> of file <a class="el" href="../../d4/d97/Objectives_8java_source.html">Objectives.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  554</span>                                                   {</div>
-<div class="line"><span class="lineno">  555</span>        Misc.showCost(<a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a7517fc90b87f8f1de8438d4d8cdbe1cf">text</a>, <span class="keyword">null</span>, <span class="keyword">null</span>, <a class="code hl_function" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a9b41dfae23d6f4aca20e3c0e71594185">getBurstResources</a>(), <a class="code hl_function" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a412e5c7cf04ded059ea60d8a9eb449d1">getBurstQuantities</a>());</div>
-<div class="line"><span class="lineno">  556</span>        <span class="keywordtype">boolean</span> hasRecent = HyperspaceTopographyEventIntel.hasRecentReadingsNearPlayer();</div>
-<div class="line"><span class="lineno">  557</span>        <span class="keywordflow">if</span> (hasRecent) {</div>
-<div class="line"><span class="lineno">  558</span>            LabelAPI label = <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a7517fc90b87f8f1de8438d4d8cdbe1cf">text</a>.<a class="code hl_function" href="../../d4/ddc/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1TextPanelAPI.html#a0ef96007fc183cddf8dce605e19a98bf">addPara</a>(<span class="stringliteral">&quot;You&#39;ve recently acquired topographic data within %s light-years of your current location,&quot;</span></div>
-<div class="line"><span class="lineno">  559</span>                    + <span class="stringliteral">&quot; and a neutrino burst here &quot;</span></div>
-<div class="line"><span class="lineno">  560</span>                    + <span class="stringliteral">&quot;will not meaningfully contribute to your understanding of &quot;</span></div>
-<div class="line"><span class="lineno">  561</span>                    + <span class="stringliteral">&quot;hyperspace topology. It will, however, still &quot;</span></div>
-<div class="line"><span class="lineno">  562</span>                    + <span class="stringliteral">&quot;reveal all nearby slipstreams.&quot;</span>, Misc.getHighlightColor(),</div>
-<div class="line"><span class="lineno">  563</span>                    <span class="stringliteral">&quot;&quot;</span> + (<span class="keywordtype">int</span>)HyperspaceTopographyEventIntel.RECENT_READINGS_RANGE_LY);</div>
-<div class="line"><span class="lineno">  564</span>            label.<a class="code hl_function" href="../../d9/d63/interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1LabelAPI.html#adee0c86a5b792cac86a2a310c5d6e14c">setHighlightColors</a>(Misc.getHighlightColor(), Misc.getNegativeHighlightColor(), Misc.getNegativeHighlightColor());</div>
-<div class="line"><span class="lineno">  565</span>            label.setHighlight(<span class="stringliteral">&quot;&quot;</span> + (<span class="keywordtype">int</span>)HyperspaceTopographyEventIntel.RECENT_READINGS_RANGE_LY,</div>
-<div class="line"><span class="lineno">  566</span>                            <span class="stringliteral">&quot;will not meaningfully contribute&quot;</span>, <span class="stringliteral">&quot;hyperspace topology&quot;</span>);</div>
-<div class="line"><span class="lineno">  567</span>        }</div>
-<div class="line"><span class="lineno">  568</span>        <span class="comment">//RECENT_READINGS_RANGE_LY</span></div>
-<div class="line"><span class="lineno">  569</span>        <span class="keywordflow">if</span> (withPrompt) {</div>
-<div class="line"><span class="lineno">  570</span>            <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a7517fc90b87f8f1de8438d4d8cdbe1cf">text</a>.<a class="code hl_function" href="../../d4/ddc/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1TextPanelAPI.html#a0ef96007fc183cddf8dce605e19a98bf">addPara</a>(<span class="stringliteral">&quot;Proceed with neutrino burst?&quot;</span>);</div>
-<div class="line"><span class="lineno">  571</span>        }</div>
-<div class="line"><span class="lineno">  572</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1TextPanelAPI_html_a0ef96007fc183cddf8dce605e19a98bf"><div class="ttname"><a href="../../d4/ddc/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1TextPanelAPI.html#a0ef96007fc183cddf8dce605e19a98bf">com.fs.starfarer.api.campaign.TextPanelAPI.addPara</a></div><div class="ttdeci">LabelAPI addPara(String text)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1LabelAPI_html_adee0c86a5b792cac86a2a310c5d6e14c"><div class="ttname"><a href="../../d9/d63/interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1LabelAPI.html#adee0c86a5b792cac86a2a310c5d6e14c">com.fs.starfarer.api.ui.LabelAPI.setHighlightColors</a></div><div class="ttdeci">void setHighlightColors(Color ... colors)</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2872ae052f695fc6b5c3952b7b8669d6" name="a2872ae052f695fc6b5c3952b7b8669d6"></a>
@@ -1129,18 +750,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d97/Objectives_8java_source.html#l00580">580</a> of file <a class="el" href="../../d4/d97/Objectives_8java_source.html">Objectives.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  580</span>                                       {</div>
-<div class="line"><span class="lineno">  581</span>        <a class="code hl_function" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a5c932ba6efc011ed4a33120ba51ac482">printDescription</a>(type);</div>
-<div class="line"><span class="lineno">  582</span>        </div>
-<div class="line"><span class="lineno">  583</span>        Misc.showCost(<a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a7517fc90b87f8f1de8438d4d8cdbe1cf">text</a>, <span class="keyword">null</span>, <span class="keyword">null</span>, <a class="code hl_function" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#ae8897c0b87543d8e4e2bb45106b8d88c">getResources</a>(), <a class="code hl_function" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a3d993a6509709b36a14912e2cd27f91f">getQuantities</a>());</div>
-<div class="line"><span class="lineno">  584</span>        </div>
-<div class="line"><span class="lineno">  585</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a26cf5a73c401d7880d08685a0731ed8b">canBuild</a>(type)) {</div>
-<div class="line"><span class="lineno">  586</span>            <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a7517fc90b87f8f1de8438d4d8cdbe1cf">text</a>.<a class="code hl_function" href="../../d4/ddc/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1TextPanelAPI.html#a0ef96007fc183cddf8dce605e19a98bf">addPara</a>(<span class="stringliteral">&quot;Proceed with construction?&quot;</span>);</div>
-<div class="line"><span class="lineno">  587</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  588</span>            <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a7517fc90b87f8f1de8438d4d8cdbe1cf">text</a>.<a class="code hl_function" href="../../d4/ddc/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1TextPanelAPI.html#a0ef96007fc183cddf8dce605e19a98bf">addPara</a>(<span class="stringliteral">&quot;You do not have the necessary resources to build this structure.&quot;</span>);</div>
-<div class="line"><span class="lineno">  589</span>        }</div>
-<div class="line"><span class="lineno">  590</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5c932ba6efc011ed4a33120ba51ac482" name="a5c932ba6efc011ed4a33120ba51ac482"></a>
@@ -1160,74 +770,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d97/Objectives_8java_source.html#l00455">455</a> of file <a class="el" href="../../d4/d97/Objectives_8java_source.html">Objectives.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  455</span>                                              {</div>
-<div class="line"><span class="lineno">  456</span>        Description desc = Global.getSettings().getDescription(type, Type.CUSTOM);</div>
-<div class="line"><span class="lineno">  457</span>        <span class="keywordflow">if</span> (desc != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  458</span>            <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a7517fc90b87f8f1de8438d4d8cdbe1cf">text</a>.<a class="code hl_function" href="../../d4/ddc/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1TextPanelAPI.html#a984f6aa6cc7da2f39c9d3a2193fc1d58">addParagraph</a>(desc.getText1());</div>
-<div class="line"><span class="lineno">  459</span>        }</div>
-<div class="line"><span class="lineno">  460</span>        </div>
-<div class="line"><span class="lineno">  461</span>        CustomEntitySpecAPI spec = Global.getSettings().getCustomEntitySpec(type);</div>
-<div class="line"><span class="lineno">  462</span>        CustomCampaignEntityPlugin plugin = spec.getPlugin();</div>
-<div class="line"><span class="lineno">  463</span>        SectorEntityToken temp = <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#add0e483b32d0317d47548d43f3443b9e">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a06362480c6a17326650354460c6d7442">getContainingLocation</a>().<a class="code hl_function" href="../../d2/d2c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI.html#ab88ac95582125ad9137b08d417c62805">createToken</a>(0, 0);</div>
-<div class="line"><span class="lineno">  464</span>        <span class="keywordflow">for</span> (String tag : spec.getTags()) {</div>
-<div class="line"><span class="lineno">  465</span>            temp.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a4c0bda108809b07521d936455ce388e1">addTag</a>(tag);</div>
-<div class="line"><span class="lineno">  466</span>        }</div>
-<div class="line"><span class="lineno">  467</span>        plugin.init(temp, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  468</span>        </div>
-<div class="line"><span class="lineno">  469</span>        <span class="keywordtype">boolean</span> objective = <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#add0e483b32d0317d47548d43f3443b9e">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#abed0787f3c057816961d1a07f2c55662">hasTag</a>(Tags.OBJECTIVE);</div>
-<div class="line"><span class="lineno">  470</span>        <span class="keywordflow">if</span> (objective) {</div>
-<div class="line"><span class="lineno">  471</span>            plugin = <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#add0e483b32d0317d47548d43f3443b9e">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a0bd8783c7dc6da12c6befaf2e4bcbe3d">getCustomPlugin</a>();</div>
-<div class="line"><span class="lineno">  472</span>        }</div>
-<div class="line"><span class="lineno">  473</span>        </div>
-<div class="line"><span class="lineno">  474</span>        Class c = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  475</span>        <span class="keywordflow">if</span> (plugin instanceof CampaignObjective) {</div>
-<div class="line"><span class="lineno">  476</span>            CampaignObjective o = (CampaignObjective) plugin;</div>
-<div class="line"><span class="lineno">  477</span>            c = o.getClass();</div>
-<div class="line"><span class="lineno">  478</span>            </div>
-<div class="line"><span class="lineno">  479</span>            TooltipMakerAPI info = <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a7517fc90b87f8f1de8438d4d8cdbe1cf">text</a>.<a class="code hl_function" href="../../d4/ddc/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1TextPanelAPI.html#aeefefa3a2345b5470fc2549b7611f0dd">beginTooltip</a>();</div>
-<div class="line"><span class="lineno">  480</span>            o.printEffect(info, 0f);</div>
-<div class="line"><span class="lineno">  481</span>            <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a7517fc90b87f8f1de8438d4d8cdbe1cf">text</a>.<a class="code hl_function" href="../../d4/ddc/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1TextPanelAPI.html#a44b2150e432b0c2deb0b264e076b11f4">addTooltip</a>();</div>
-<div class="line"><span class="lineno">  482</span>            </div>
-<div class="line"><span class="lineno">  483</span>            o.printNonFunctionalAndHackDescription(<a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a7517fc90b87f8f1de8438d4d8cdbe1cf">text</a>);</div>
-<div class="line"><span class="lineno">  484</span>        }</div>
-<div class="line"><span class="lineno">  485</span>        </div>
-<div class="line"><span class="lineno">  486</span>        <a class="code hl_function" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a74959193e23b96c7a041b38f0f962126">printOwner</a>();</div>
-<div class="line"><span class="lineno">  487</span>        </div>
-<div class="line"><span class="lineno">  488</span>        <span class="keywordflow">for</span> (SectorEntityToken curr : <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#add0e483b32d0317d47548d43f3443b9e">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a06362480c6a17326650354460c6d7442">getContainingLocation</a>().<a class="code hl_function" href="../../d2/d2c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI.html#a6ddf6aa73e6e8428003a6ce8dd3168e2">getEntitiesWithTag</a>(Tags.OBJECTIVE)) {</div>
-<div class="line"><span class="lineno">  489</span>            <span class="keywordflow">if</span> (curr.hasTag(Tags.OBJECTIVE)) {</div>
-<div class="line"><span class="lineno">  490</span>                <span class="keywordflow">if</span> (curr.getFaction() == <span class="keyword">null</span> || !curr.getFaction().isPlayerFaction() ||</div>
-<div class="line"><span class="lineno">  491</span>                        curr.getCustomEntitySpec() == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  492</span>                    <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  493</span>                }</div>
-<div class="line"><span class="lineno">  494</span>                </div>
-<div class="line"><span class="lineno">  495</span>                CustomCampaignEntityPlugin ccep = curr.getCustomPlugin();</div>
-<div class="line"><span class="lineno">  496</span>                <span class="keywordflow">if</span> (ccep instanceof CampaignObjective) {</div>
-<div class="line"><span class="lineno">  497</span>                    CampaignObjective o = (CampaignObjective) ccep;</div>
-<div class="line"><span class="lineno">  498</span>                    <span class="keywordflow">if</span> (c == o.getClass()) {</div>
-<div class="line"><span class="lineno">  499</span>                        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#add0e483b32d0317d47548d43f3443b9e">entity</a> == curr) {</div>
-<div class="line"><span class="lineno">  500</span>                            <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a7517fc90b87f8f1de8438d4d8cdbe1cf">text</a>.<a class="code hl_function" href="../../d4/ddc/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1TextPanelAPI.html#a0ef96007fc183cddf8dce605e19a98bf">addPara</a>(<span class="stringliteral">&quot;Another one in this star system would have no effect &quot;</span> +</div>
-<div class="line"><span class="lineno">  501</span>                                            <span class="stringliteral">&quot;beyond providing redundancy in case this one is lost.&quot;</span>);</div>
-<div class="line"><span class="lineno">  502</span>                        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  503</span>                            <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a7517fc90b87f8f1de8438d4d8cdbe1cf">text</a>.<a class="code hl_function" href="../../d4/ddc/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1TextPanelAPI.html#a0ef96007fc183cddf8dce605e19a98bf">addPara</a>(<span class="stringliteral">&quot;There&#39;s already &quot;</span> +</div>
-<div class="line"><span class="lineno">  504</span>                                    curr.getCustomEntitySpec().getAOrAn() + <span class="stringliteral">&quot; &quot;</span> + </div>
-<div class="line"><span class="lineno">  505</span>                                    curr.getCustomEntitySpec().getNameInText() + <span class="stringliteral">&quot; under your control &quot;</span> +</div>
-<div class="line"><span class="lineno">  506</span>                                            <span class="stringliteral">&quot;in this star system. Another one would have no effect &quot;</span> +</div>
-<div class="line"><span class="lineno">  507</span>                                            <span class="stringliteral">&quot;beyond providing redundancy if one is lost.&quot;</span>);</div>
-<div class="line"><span class="lineno">  508</span>                        }</div>
-<div class="line"><span class="lineno">  509</span>                        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  510</span>                    }</div>
-<div class="line"><span class="lineno">  511</span>                }</div>
-<div class="line"><span class="lineno">  512</span>            }</div>
-<div class="line"><span class="lineno">  513</span>        }</div>
-<div class="line"><span class="lineno">  514</span>        </div>
-<div class="line"><span class="lineno">  515</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI_html_a6ddf6aa73e6e8428003a6ce8dd3168e2"><div class="ttname"><a href="../../d2/d2c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI.html#a6ddf6aa73e6e8428003a6ce8dd3168e2">com.fs.starfarer.api.campaign.LocationAPI.getEntitiesWithTag</a></div><div class="ttdeci">List&lt; SectorEntityToken &gt; getEntitiesWithTag(String tag)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI_html_ab88ac95582125ad9137b08d417c62805"><div class="ttname"><a href="../../d2/d2c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI.html#ab88ac95582125ad9137b08d417c62805">com.fs.starfarer.api.campaign.LocationAPI.createToken</a></div><div class="ttdeci">SectorEntityToken createToken(float x, float y)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_a4c0bda108809b07521d936455ce388e1"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a4c0bda108809b07521d936455ce388e1">com.fs.starfarer.api.campaign.SectorEntityToken.addTag</a></div><div class="ttdeci">void addTag(String tag)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1TextPanelAPI_html_a44b2150e432b0c2deb0b264e076b11f4"><div class="ttname"><a href="../../d4/ddc/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1TextPanelAPI.html#a44b2150e432b0c2deb0b264e076b11f4">com.fs.starfarer.api.campaign.TextPanelAPI.addTooltip</a></div><div class="ttdeci">void addTooltip()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1TextPanelAPI_html_a984f6aa6cc7da2f39c9d3a2193fc1d58"><div class="ttname"><a href="../../d4/ddc/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1TextPanelAPI.html#a984f6aa6cc7da2f39c9d3a2193fc1d58">com.fs.starfarer.api.campaign.TextPanelAPI.addParagraph</a></div><div class="ttdeci">LabelAPI addParagraph(String text)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1TextPanelAPI_html_aeefefa3a2345b5470fc2549b7611f0dd"><div class="ttname"><a href="../../d4/ddc/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1TextPanelAPI.html#aeefefa3a2345b5470fc2549b7611f0dd">com.fs.starfarer.api.campaign.TextPanelAPI.beginTooltip</a></div><div class="ttdeci">TooltipMakerAPI beginTooltip()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="afe889412720ff03e279124e47fbf1b2d" name="afe889412720ff03e279124e47fbf1b2d"></a>
@@ -1246,17 +789,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d97/Objectives_8java_source.html#l00536">536</a> of file <a class="el" href="../../d4/d97/Objectives_8java_source.html">Objectives.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  536</span>                                {</div>
-<div class="line"><span class="lineno">  537</span><span class="comment">//      if (entity.hasTag(Tags.COMM_RELAY)) {</span></div>
-<div class="line"><span class="lineno">  538</span><span class="comment">//          text.addPara(&quot;The comm sniffer will remain active until it is detected and cleared out by the &quot; +</span></div>
-<div class="line"><span class="lineno">  539</span><span class="comment">//                  &quot;maintenance subroutines. The odds of this happening increase drastically when &quot; +</span></div>
-<div class="line"><span class="lineno">  540</span><span class="comment">//                  &quot;multiple comm sniffers are installed on different relays in the comm network.&quot;);</span></div>
-<div class="line"><span class="lineno">  541</span><span class="comment">//      } else {</span></div>
-<div class="line"><span class="lineno">  542</span><span class="comment">//          text.addPara(&quot;The hack will eventually be picked up and cleared out by the maintenance subroutines, but should &quot; +</span></div>
-<div class="line"><span class="lineno">  543</span><span class="comment">//                  &quot;remain effective for at least three months.&quot;);</span></div>
-<div class="line"><span class="lineno">  544</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  545</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a74959193e23b96c7a041b38f0f962126" name="a74959193e23b96c7a041b38f0f962126"></a>
@@ -1275,27 +808,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d97/Objectives_8java_source.html#l00517">517</a> of file <a class="el" href="../../d4/d97/Objectives_8java_source.html">Objectives.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  517</span>                             {</div>
-<div class="line"><span class="lineno">  518</span>        <span class="keywordtype">boolean</span> objective = <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#add0e483b32d0317d47548d43f3443b9e">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#abed0787f3c057816961d1a07f2c55662">hasTag</a>(Tags.OBJECTIVE);</div>
-<div class="line"><span class="lineno">  519</span>        <span class="keywordflow">if</span> (objective) {</div>
-<div class="line"><span class="lineno">  520</span>            <span class="keywordflow">if</span> (!<a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#afbbbac80f1cddf1eb6b7cd1b3d857dce">faction</a>.<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#adacb688941524346625413acdc0008f7">isNeutralFaction</a>()) {</div>
-<div class="line"><span class="lineno">  521</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#add0e483b32d0317d47548d43f3443b9e">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#afb72bc74f75ccbbf240564b26b94e17b">getFaction</a>().<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#af016cc513682eb015b85966bd6af4162">isPlayerFaction</a>() &amp;&amp; !Misc.isPlayerFactionSetUp()) {</div>
-<div class="line"><span class="lineno">  522</span>                    <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a7517fc90b87f8f1de8438d4d8cdbe1cf">text</a>.<a class="code hl_function" href="../../d4/ddc/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1TextPanelAPI.html#a0ef96007fc183cddf8dce605e19a98bf">addPara</a>(<span class="stringliteral">&quot;This &quot;</span> + <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#add0e483b32d0317d47548d43f3443b9e">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#afeabec88c6e0973ed2078f2ec45bd647">getCustomEntitySpec</a>().<a class="code hl_function" href="../../d1/dca/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CustomEntitySpecAPI.html#a71d7cf90c5f78fd5636301511af223ab">getShortName</a>() + <span class="stringliteral">&quot; is under your control.&quot;</span>, </div>
-<div class="line"><span class="lineno">  523</span>                            <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#add0e483b32d0317d47548d43f3443b9e">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#afb72bc74f75ccbbf240564b26b94e17b">getFaction</a>().<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a0213b272fbf9c2669316aa25c775ad60">getBaseUIColor</a>(), <span class="stringliteral">&quot;your&quot;</span>);</div>
-<div class="line"><span class="lineno">  524</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  525</span>                    <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a7517fc90b87f8f1de8438d4d8cdbe1cf">text</a>.<a class="code hl_function" href="../../d4/ddc/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1TextPanelAPI.html#a0ef96007fc183cddf8dce605e19a98bf">addPara</a>(<span class="stringliteral">&quot;This &quot;</span> + <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#add0e483b32d0317d47548d43f3443b9e">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#afeabec88c6e0973ed2078f2ec45bd647">getCustomEntitySpec</a>().<a class="code hl_function" href="../../d1/dca/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CustomEntitySpecAPI.html#a71d7cf90c5f78fd5636301511af223ab">getShortName</a>() + <span class="stringliteral">&quot; is under %s control.&quot;</span>,</div>
-<div class="line"><span class="lineno">  526</span>                            <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#add0e483b32d0317d47548d43f3443b9e">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#afb72bc74f75ccbbf240564b26b94e17b">getFaction</a>().<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a0213b272fbf9c2669316aa25c775ad60">getBaseUIColor</a>(), <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#add0e483b32d0317d47548d43f3443b9e">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#afb72bc74f75ccbbf240564b26b94e17b">getFaction</a>().<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a7bdac222bb9ef69c1163e927ada02606">getPersonNamePrefix</a>());</div>
-<div class="line"><span class="lineno">  527</span>                }</div>
-<div class="line"><span class="lineno">  528</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  529</span>                <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a7517fc90b87f8f1de8438d4d8cdbe1cf">text</a>.<a class="code hl_function" href="../../d4/ddc/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1TextPanelAPI.html#a0ef96007fc183cddf8dce605e19a98bf">addPara</a>(<span class="stringliteral">&quot;This &quot;</span> + <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#add0e483b32d0317d47548d43f3443b9e">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#afeabec88c6e0973ed2078f2ec45bd647">getCustomEntitySpec</a>().<a class="code hl_function" href="../../d1/dca/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CustomEntitySpecAPI.html#a71d7cf90c5f78fd5636301511af223ab">getShortName</a>() + <span class="stringliteral">&quot; is not claimed by any faction.&quot;</span>);</div>
-<div class="line"><span class="lineno">  530</span>            }</div>
-<div class="line"><span class="lineno">  531</span>        }</div>
-<div class="line"><span class="lineno">  532</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CustomEntitySpecAPI_html_a71d7cf90c5f78fd5636301511af223ab"><div class="ttname"><a href="../../d1/dca/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CustomEntitySpecAPI.html#a71d7cf90c5f78fd5636301511af223ab">com.fs.starfarer.api.campaign.CustomEntitySpecAPI.getShortName</a></div><div class="ttdeci">String getShortName()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI_html_a0213b272fbf9c2669316aa25c775ad60"><div class="ttname"><a href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a0213b272fbf9c2669316aa25c775ad60">com.fs.starfarer.api.campaign.FactionAPI.getBaseUIColor</a></div><div class="ttdeci">Color getBaseUIColor()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI_html_a7bdac222bb9ef69c1163e927ada02606"><div class="ttname"><a href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a7bdac222bb9ef69c1163e927ada02606">com.fs.starfarer.api.campaign.FactionAPI.getPersonNamePrefix</a></div><div class="ttdeci">String getPersonNamePrefix()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_afeabec88c6e0973ed2078f2ec45bd647"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#afeabec88c6e0973ed2078f2ec45bd647">com.fs.starfarer.api.campaign.SectorEntityToken.getCustomEntitySpec</a></div><div class="ttdeci">CustomEntitySpecAPI getCustomEntitySpec()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8ef7b228c4a81278ac2ac7f3508b9781" name="a8ef7b228c4a81278ac2ac7f3508b9781"></a>
@@ -1315,13 +828,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d97/Objectives_8java_source.html#l00547">547</a> of file <a class="el" href="../../d4/d97/Objectives_8java_source.html">Objectives.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  547</span>                                                    {</div>
-<div class="line"><span class="lineno">  548</span>        Misc.showCost(<a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a7517fc90b87f8f1de8438d4d8cdbe1cf">text</a>, <span class="keyword">null</span>, <span class="keyword">null</span>, <a class="code hl_function" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#aa53c98bdb7b828872bca16e94199d1e4">getRepairResources</a>(), <a class="code hl_function" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a7ff538ed1ecf07cf18dd80a9b6b09c7c">getRepairQuantities</a>());</div>
-<div class="line"><span class="lineno">  549</span>        <span class="keywordflow">if</span> (withPrompt) {</div>
-<div class="line"><span class="lineno">  550</span>            <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a7517fc90b87f8f1de8438d4d8cdbe1cf">text</a>.<a class="code hl_function" href="../../d4/ddc/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1TextPanelAPI.html#a0ef96007fc183cddf8dce605e19a98bf">addPara</a>(<span class="stringliteral">&quot;Proceed with reactivation?&quot;</span>);</div>
-<div class="line"><span class="lineno">  551</span>        }</div>
-<div class="line"><span class="lineno">  552</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a46040a96c45665659f4c69b9fcaf60e9" name="a46040a96c45665659f4c69b9fcaf60e9"></a>
@@ -1340,13 +847,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d97/Objectives_8java_source.html#l00574">574</a> of file <a class="el" href="../../d4/d97/Objectives_8java_source.html">Objectives.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  574</span>                               {</div>
-<div class="line"><span class="lineno">  575</span>        Misc.showCost(<a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a7517fc90b87f8f1de8438d4d8cdbe1cf">text</a>, <span class="stringliteral">&quot;Potential salvage&quot;</span>, <span class="keyword">false</span>, <span class="keyword">null</span>, <span class="keyword">null</span>, <a class="code hl_function" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#ae8897c0b87543d8e4e2bb45106b8d88c">getResources</a>(), <a class="code hl_function" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a8928aa0cc13f1912a159a1045895918e">getSalvageQuantities</a>());</div>
-<div class="line"><span class="lineno">  576</span>        </div>
-<div class="line"><span class="lineno">  577</span>        <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a7517fc90b87f8f1de8438d4d8cdbe1cf">text</a>.<a class="code hl_function" href="../../d4/ddc/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1TextPanelAPI.html#a0ef96007fc183cddf8dce605e19a98bf">addPara</a>(<span class="stringliteral">&quot;Proceed with salvage operation?&quot;</span>);</div>
-<div class="line"><span class="lineno">  578</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives_html_a8928aa0cc13f1912a159a1045895918e"><div class="ttname"><a href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a8928aa0cc13f1912a159a1045895918e">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.Objectives.getSalvageQuantities</a></div><div class="ttdeci">int[] getSalvageQuantities()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d97/Objectives_8java_source.html#l00600">Objectives.java:600</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aecc3147ebe4c0c333f0c57ca453b53e4" name="aecc3147ebe4c0c333f0c57ca453b53e4"></a>
@@ -1365,21 +866,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d97/Objectives_8java_source.html#l00382">382</a> of file <a class="el" href="../../d4/d97/Objectives_8java_source.html">Objectives.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  382</span>                                   {</div>
-<div class="line"><span class="lineno">  383</span>        <span class="keywordflow">if</span> (DebugFlags.OBJECTIVES_DEBUG) {</div>
-<div class="line"><span class="lineno">  384</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  385</span>        }</div>
-<div class="line"><span class="lineno">  386</span>        </div>
-<div class="line"><span class="lineno">  387</span>        CargoAPI cargo = <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a2a2535e1bf15b8ddd7025e89ded9417a">playerCargo</a>;</div>
-<div class="line"><span class="lineno">  388</span>        String [] res = <a class="code hl_function" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#ae8897c0b87543d8e4e2bb45106b8d88c">getResources</a>();</div>
-<div class="line"><span class="lineno">  389</span>        <span class="keywordtype">int</span> [] quantities = <a class="code hl_function" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a3d993a6509709b36a14912e2cd27f91f">getQuantities</a>();</div>
-<div class="line"><span class="lineno">  390</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; res.length; i++) {</div>
-<div class="line"><span class="lineno">  391</span>            String commodityId = res[i];</div>
-<div class="line"><span class="lineno">  392</span>            <span class="keywordtype">int</span> quantity = quantities[i];</div>
-<div class="line"><span class="lineno">  393</span>            cargo.removeCommodity(commodityId, quantity);</div>
-<div class="line"><span class="lineno">  394</span>        }</div>
-<div class="line"><span class="lineno">  395</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a15dd51e203f69c2cf263fb25b5aa3fe0" name="a15dd51e203f69c2cf263fb25b5aa3fe0"></a>
@@ -1399,22 +886,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d97/Objectives_8java_source.html#l00397">397</a> of file <a class="el" href="../../d4/d97/Objectives_8java_source.html">Objectives.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  397</span>                                                     {</div>
-<div class="line"><span class="lineno">  398</span>        <span class="keywordflow">if</span> (DebugFlags.OBJECTIVES_DEBUG) {</div>
-<div class="line"><span class="lineno">  399</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  400</span>        }</div>
-<div class="line"><span class="lineno">  401</span>        </div>
-<div class="line"><span class="lineno">  402</span>        CargoAPI cargo = <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a2a2535e1bf15b8ddd7025e89ded9417a">playerCargo</a>;</div>
-<div class="line"><span class="lineno">  403</span>        String [] res = <a class="code hl_function" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#aa53c98bdb7b828872bca16e94199d1e4">getRepairResources</a>();</div>
-<div class="line"><span class="lineno">  404</span>        <span class="keywordtype">int</span> [] quantities = <a class="code hl_function" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a7ff538ed1ecf07cf18dd80a9b6b09c7c">getRepairQuantities</a>();</div>
-<div class="line"><span class="lineno">  405</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; res.length; i++) {</div>
-<div class="line"><span class="lineno">  406</span>            String commodityId = res[i];</div>
-<div class="line"><span class="lineno">  407</span>            <span class="keywordtype">int</span> quantity = quantities[i];</div>
-<div class="line"><span class="lineno">  408</span>            cargo.removeCommodity(commodityId, quantity);</div>
-<div class="line"><span class="lineno">  409</span>            AddRemoveCommodity.addCommodityLossText(commodityId, quantity, <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a7517fc90b87f8f1de8438d4d8cdbe1cf">text</a>);</div>
-<div class="line"><span class="lineno">  410</span>        }</div>
-<div class="line"><span class="lineno">  411</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a0706914bb9f6fb5125146f3f5fd0bcf4" name="a0706914bb9f6fb5125146f3f5fd0bcf4"></a>
@@ -1433,18 +905,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d97/Objectives_8java_source.html#l00321">321</a> of file <a class="el" href="../../d4/d97/Objectives_8java_source.html">Objectives.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  321</span>                        {</div>
-<div class="line"><span class="lineno">  322</span>        CustomCampaignEntityPlugin plugin = <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#add0e483b32d0317d47548d43f3443b9e">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a0bd8783c7dc6da12c6befaf2e4bcbe3d">getCustomPlugin</a>();</div>
-<div class="line"><span class="lineno">  323</span>        <span class="keywordflow">if</span> (plugin instanceof CampaignObjective) {</div>
-<div class="line"><span class="lineno">  324</span>            CampaignObjective o = (CampaignObjective) plugin;</div>
-<div class="line"><span class="lineno">  325</span>            o.setReset(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  326</span>        }</div>
-<div class="line"><span class="lineno">  327</span>        <span class="comment">// so that a false sensor reading doesn&#39;t spawn immediately after &quot;introducing false readings&quot;</span></div>
-<div class="line"><span class="lineno">  328</span>        Global.getSector().getPlayerFleet().getMemoryWithoutUpdate().set(MemFlags.FLEET_NOT_CHASING_GHOST, <span class="keyword">true</span>,</div>
-<div class="line"><span class="lineno">  329</span>                                0.5f +Misc.random.nextFloat() * 1f);</div>
-<div class="line"><span class="lineno">  330</span>        <a class="code hl_function" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a09b0a0c4b35a5172f74030fa8ade3e61">updateMemory</a>();</div>
-<div class="line"><span class="lineno">  331</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a14c2b592dd12bde7188d1717a2bcf9f1" name="a14c2b592dd12bde7188d1717a2bcf9f1"></a>
@@ -1464,62 +925,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d97/Objectives_8java_source.html#l00210">210</a> of file <a class="el" href="../../d4/d97/Objectives_8java_source.html">Objectives.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  210</span>                                                {</div>
-<div class="line"><span class="lineno">  211</span>        </div>
-<div class="line"><span class="lineno">  212</span>        CargoAPI <a class="code hl_function" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a14c2b592dd12bde7188d1717a2bcf9f1">salvage</a> = Global.getFactory().createCargo(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  213</span>        String [] r = <a class="code hl_function" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#ae8897c0b87543d8e4e2bb45106b8d88c">getResources</a>();</div>
-<div class="line"><span class="lineno">  214</span>        <span class="keywordtype">int</span> [] q = <a class="code hl_function" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a8928aa0cc13f1912a159a1045895918e">getSalvageQuantities</a>();</div>
-<div class="line"><span class="lineno">  215</span>        </div>
-<div class="line"><span class="lineno">  216</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; r.length; i++) {</div>
-<div class="line"><span class="lineno">  217</span>            salvage.addCommodity(r[i], q[i]);</div>
-<div class="line"><span class="lineno">  218</span>        }</div>
-<div class="line"><span class="lineno">  219</span>        </div>
-<div class="line"><span class="lineno">  220</span>        <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#ae668dbe3f09f57f41f5a91e79df381ad">dialog</a>.<a class="code hl_function" href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#a5619d9b7c7aec96fff1afb09c47fff1c">getVisualPanel</a>().<a class="code hl_function" href="../../d1/d60/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1VisualPanelAPI.html#a7190a80e2efed93e51aa00c8a2c2763b">showLoot</a>(<span class="stringliteral">&quot;Salvaged&quot;</span>, salvage, <span class="keyword">false</span>, <span class="keyword">true</span>, <span class="keyword">true</span>, <span class="keyword">new</span> CoreInteractionListener() {</div>
-<div class="line"><span class="lineno">  221</span>            <span class="keyword">public</span> <span class="keywordtype">void</span> coreUIDismissed() {</div>
-<div class="line"><span class="lineno">  222</span>                <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#ae668dbe3f09f57f41f5a91e79df381ad">dialog</a>.<a class="code hl_function" href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#ae9c683962601d07e56898cab5a223d2f">dismiss</a>();</div>
-<div class="line"><span class="lineno">  223</span>                <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#ae668dbe3f09f57f41f5a91e79df381ad">dialog</a>.<a class="code hl_function" href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#a2dfe33c4582f9b4194ec6fbe10edd957">hideTextPanel</a>();</div>
-<div class="line"><span class="lineno">  224</span>                <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#ae668dbe3f09f57f41f5a91e79df381ad">dialog</a>.<a class="code hl_function" href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#a187a64edb36e83e4af6cc4a999f9911c">hideVisualPanel</a>();</div>
-<div class="line"><span class="lineno">  225</span>                </div>
-<div class="line"><span class="lineno">  226</span>                LocationAPI loc = <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#add0e483b32d0317d47548d43f3443b9e">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a06362480c6a17326650354460c6d7442">getContainingLocation</a>();</div>
-<div class="line"><span class="lineno">  227</span>                SectorEntityToken built = loc.<a class="code hl_function" href="../../d2/d2c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI.html#ad115797b2f1f1e37ff78cd389200a314">addCustomEntity</a>(<span class="keyword">null</span>,</div>
-<div class="line"><span class="lineno">  228</span>                                                             <span class="keyword">null</span>,</div>
-<div class="line"><span class="lineno">  229</span>                         Entities.STABLE_LOCATION, <span class="comment">// type of object, defined in custom_entities.json</span></div>
-<div class="line"><span class="lineno">  230</span>                         Factions.NEUTRAL); <span class="comment">// faction</span></div>
-<div class="line"><span class="lineno">  231</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#add0e483b32d0317d47548d43f3443b9e">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#aaae4bf0a2fb8fd4036e72dd8d65f9593">getOrbit</a>() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  232</span>                    built.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a935dcc6387bfda0c16fc38d31b2cb545">setOrbit</a>(<a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#add0e483b32d0317d47548d43f3443b9e">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#aaae4bf0a2fb8fd4036e72dd8d65f9593">getOrbit</a>().<a class="code hl_function" href="../../db/d6c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OrbitAPI.html#a5761bc0d550d5961f83b5030241d9cb1">makeCopy</a>());</div>
-<div class="line"><span class="lineno">  233</span>                }</div>
-<div class="line"><span class="lineno">  234</span>                loc.removeEntity(<a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#add0e483b32d0317d47548d43f3443b9e">entity</a>);</div>
-<div class="line"><span class="lineno">  235</span>                </div>
-<div class="line"><span class="lineno">  236</span>                built.getMemoryWithoutUpdate().set(MemFlags.RECENTLY_SALVAGED, <span class="keyword">true</span>, 30f);</div>
-<div class="line"><span class="lineno">  237</span>                </div>
-<div class="line"><span class="lineno">  238</span>                <span class="keywordflow">if</span> (Factions.PLAYER.equals(factionId) &amp;&amp; <a class="code hl_function" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a3985a0193473489882ff28ebd3c2660d">hasRepImpact</a>() &amp;&amp;</div>
-<div class="line"><span class="lineno">  239</span>                        !<a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#add0e483b32d0317d47548d43f3443b9e">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#afb72bc74f75ccbbf240564b26b94e17b">getFaction</a>().<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#af016cc513682eb015b85966bd6af4162">isPlayerFaction</a>() &amp;&amp; </div>
-<div class="line"><span class="lineno">  240</span>                        !<a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#add0e483b32d0317d47548d43f3443b9e">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#afb72bc74f75ccbbf240564b26b94e17b">getFaction</a>().<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#adacb688941524346625413acdc0008f7">isNeutralFaction</a>()) {</div>
-<div class="line"><span class="lineno">  241</span>                    RepActions action = RepActions.COMBAT_AGGRESSIVE;</div>
-<div class="line"><span class="lineno">  242</span>                    <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#add0e483b32d0317d47548d43f3443b9e">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#abed0787f3c057816961d1a07f2c55662">hasTag</a>(Tags.MAKESHIFT)) {</div>
-<div class="line"><span class="lineno">  243</span>                        action = RepActions.COMBAT_AGGRESSIVE_TOFF;</div>
-<div class="line"><span class="lineno">  244</span>                    }</div>
-<div class="line"><span class="lineno">  245</span>                    Global.getSector().adjustPlayerReputation(</div>
-<div class="line"><span class="lineno">  246</span>                            <span class="keyword">new</span> RepActionEnvelope(action, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">false</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;Change caused by destruction of &quot;</span> + <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#add0e483b32d0317d47548d43f3443b9e">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#afeabec88c6e0973ed2078f2ec45bd647">getCustomEntitySpec</a>().<a class="code hl_function" href="../../d1/dca/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CustomEntitySpecAPI.html#acc3eb31683511ec3b18798fb6873fe18">getDefaultName</a>().toLowerCase()), </div>
-<div class="line"><span class="lineno">  247</span>                            <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#afbbbac80f1cddf1eb6b7cd1b3d857dce">faction</a>.<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a7edcdc203f5ab26478e89e5d31e3bf85">getId</a>());</div>
-<div class="line"><span class="lineno">  248</span>                }</div>
-<div class="line"><span class="lineno">  249</span>                </div>
-<div class="line"><span class="lineno">  250</span>                ListenerUtil.reportObjectiveDestroyed(<a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#add0e483b32d0317d47548d43f3443b9e">entity</a>, built, Global.getSector().<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#afb72bc74f75ccbbf240564b26b94e17b">getFaction</a>(factionId));</div>
-<div class="line"><span class="lineno">  251</span>            }</div>
-<div class="line"><span class="lineno">  252</span>        });</div>
-<div class="line"><span class="lineno">  253</span>        <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#ade0538cbabbc3b7136a1c7343de44245">options</a>.<a class="code hl_function" href="../../da/d65/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OptionPanelAPI.html#a72ccab6cc04270d28959f8175d0821cb">clearOptions</a>();</div>
-<div class="line"><span class="lineno">  254</span>        <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#ae668dbe3f09f57f41f5a91e79df381ad">dialog</a>.<a class="code hl_function" href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#abbd45e6a4cc9c44288e4a51bd2eb5efb">setPromptText</a>(<span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><span class="lineno">  255</span>        </div>
-<div class="line"><span class="lineno">  256</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CustomEntitySpecAPI_html_acc3eb31683511ec3b18798fb6873fe18"><div class="ttname"><a href="../../d1/dca/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CustomEntitySpecAPI.html#acc3eb31683511ec3b18798fb6873fe18">com.fs.starfarer.api.campaign.CustomEntitySpecAPI.getDefaultName</a></div><div class="ttdeci">String getDefaultName()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI_html_a187a64edb36e83e4af6cc4a999f9911c"><div class="ttname"><a href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#a187a64edb36e83e4af6cc4a999f9911c">com.fs.starfarer.api.campaign.InteractionDialogAPI.hideVisualPanel</a></div><div class="ttdeci">void hideVisualPanel()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI_html_a2dfe33c4582f9b4194ec6fbe10edd957"><div class="ttname"><a href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#a2dfe33c4582f9b4194ec6fbe10edd957">com.fs.starfarer.api.campaign.InteractionDialogAPI.hideTextPanel</a></div><div class="ttdeci">void hideTextPanel()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI_html_a5619d9b7c7aec96fff1afb09c47fff1c"><div class="ttname"><a href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#a5619d9b7c7aec96fff1afb09c47fff1c">com.fs.starfarer.api.campaign.InteractionDialogAPI.getVisualPanel</a></div><div class="ttdeci">VisualPanelAPI getVisualPanel()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI_html_abbd45e6a4cc9c44288e4a51bd2eb5efb"><div class="ttname"><a href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#abbd45e6a4cc9c44288e4a51bd2eb5efb">com.fs.starfarer.api.campaign.InteractionDialogAPI.setPromptText</a></div><div class="ttdeci">void setPromptText(String promptText)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI_html_ae9c683962601d07e56898cab5a223d2f"><div class="ttname"><a href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#ae9c683962601d07e56898cab5a223d2f">com.fs.starfarer.api.campaign.InteractionDialogAPI.dismiss</a></div><div class="ttdeci">void dismiss()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OptionPanelAPI_html_a72ccab6cc04270d28959f8175d0821cb"><div class="ttname"><a href="../../da/d65/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OptionPanelAPI.html#a72ccab6cc04270d28959f8175d0821cb">com.fs.starfarer.api.campaign.OptionPanelAPI.clearOptions</a></div><div class="ttdeci">void clearOptions()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1VisualPanelAPI_html_a7190a80e2efed93e51aa00c8a2c2763b"><div class="ttname"><a href="../../d1/d60/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1VisualPanelAPI.html#a7190a80e2efed93e51aa00c8a2c2763b">com.fs.starfarer.api.campaign.VisualPanelAPI.showLoot</a></div><div class="ttdeci">void showLoot(String title, CargoAPI otherCargo, boolean generatePods, CoreInteractionListener listener)</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9a59481cecae777e6b3fab31e946082e" name="a9a59481cecae777e6b3fab31e946082e"></a>
@@ -1538,21 +944,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d97/Objectives_8java_source.html#l00297">297</a> of file <a class="el" href="../../d4/d97/Objectives_8java_source.html">Objectives.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  297</span>                         {</div>
-<div class="line"><span class="lineno">  298</span>        CommSnifferIntel intel = CommSnifferIntel.getExistingSnifferIntelForRelay(<a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#add0e483b32d0317d47548d43f3443b9e">entity</a>);</div>
-<div class="line"><span class="lineno">  299</span>        <span class="keywordflow">if</span> (intel != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  300</span>            intel.uninstall();</div>
-<div class="line"><span class="lineno">  301</span>            <a class="code hl_function" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a09b0a0c4b35a5172f74030fa8ade3e61">updateMemory</a>();</div>
-<div class="line"><span class="lineno">  302</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  303</span>            CustomCampaignEntityPlugin plugin = <a class="code hl_variable" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#add0e483b32d0317d47548d43f3443b9e">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a0bd8783c7dc6da12c6befaf2e4bcbe3d">getCustomPlugin</a>();</div>
-<div class="line"><span class="lineno">  304</span>            <span class="keywordflow">if</span> (plugin instanceof CampaignObjective) {</div>
-<div class="line"><span class="lineno">  305</span>                CampaignObjective o = (CampaignObjective) plugin;</div>
-<div class="line"><span class="lineno">  306</span>                o.setHacked(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  307</span>            }</div>
-<div class="line"><span class="lineno">  308</span>            <a class="code hl_function" href="../../de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a09b0a0c4b35a5172f74030fa8ade3e61">updateMemory</a>();</div>
-<div class="line"><span class="lineno">  309</span>        }</div>
-<div class="line"><span class="lineno">  310</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a09b0a0c4b35a5172f74030fa8ade3e61" name="a09b0a0c4b35a5172f74030fa8ade3e61"></a>
@@ -1571,11 +963,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d97/Objectives_8java_source.html#l00450">450</a> of file <a class="el" href="../../d4/d97/Objectives_8java_source.html">Objectives.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  450</span>                               {</div>
-<div class="line"><span class="lineno">  451</span>        <span class="comment">//memory.set(&quot;$cob_hacked&quot;, isHacked(), 0f);</span></div>
-<div class="line"><span class="lineno">  452</span>        <span class="comment">//memory.set(BaseCampaignObjectivePlugin.HACKED, isHacked(), 0f);</span></div>
-<div class="line"><span class="lineno">  453</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

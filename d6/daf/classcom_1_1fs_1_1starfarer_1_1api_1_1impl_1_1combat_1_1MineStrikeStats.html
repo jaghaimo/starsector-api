@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -255,59 +256,7 @@ Static Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseShipSystemScript.html#a4bc8ac2999423cda8da369b8498bd43a">com.fs.starfarer.api.impl.combat.BaseShipSystemScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d97/MineStrikeStats_8java_source.html#l00042">42</a> of file <a class="el" href="../../d2/d97/MineStrikeStats_8java_source.html">MineStrikeStats.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   42</span>                                                                                            {</div>
-<div class="line"><span class="lineno">   43</span>        ShipAPI ship = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   44</span>        <span class="comment">//boolean player = false;</span></div>
-<div class="line"><span class="lineno">   45</span>        <span class="keywordflow">if</span> (stats.getEntity() instanceof ShipAPI) {</div>
-<div class="line"><span class="lineno">   46</span>            ship = (ShipAPI) stats.getEntity();</div>
-<div class="line"><span class="lineno">   47</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   48</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   49</span>        }</div>
-<div class="line"><span class="lineno">   50</span>        </div>
-<div class="line"><span class="lineno">   51</span>        </div>
-<div class="line"><span class="lineno">   52</span>        <span class="keywordtype">float</span> jitterLevel = effectLevel;</div>
-<div class="line"><span class="lineno">   53</span>        <span class="keywordflow">if</span> (state == State.OUT) {</div>
-<div class="line"><span class="lineno">   54</span>            jitterLevel *= jitterLevel;</div>
-<div class="line"><span class="lineno">   55</span>        }</div>
-<div class="line"><span class="lineno">   56</span>        <span class="keywordtype">float</span> maxRangeBonus = 25f;</div>
-<div class="line"><span class="lineno">   57</span>        <span class="keywordtype">float</span> jitterRangeBonus = jitterLevel * maxRangeBonus;</div>
-<div class="line"><span class="lineno">   58</span>        <span class="keywordflow">if</span> (state == State.OUT) {</div>
-<div class="line"><span class="lineno">   59</span>        }</div>
-<div class="line"><span class="lineno">   60</span>        </div>
-<div class="line"><span class="lineno">   61</span>        ship.setJitterUnder(<span class="keyword">this</span>, <a class="code hl_variable" href="../../d6/daf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MineStrikeStats.html#a0f55c3d973b707098b7d51da815205d9">JITTER_UNDER_COLOR</a>, jitterLevel, 11, 0f, 3f + jitterRangeBonus);</div>
-<div class="line"><span class="lineno">   62</span>        ship.setJitter(<span class="keyword">this</span>, <a class="code hl_variable" href="../../d6/daf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MineStrikeStats.html#adfe322ebc312196faeadd8242d218ddc">JITTER_COLOR</a>, jitterLevel, 4, 0f, 0 + jitterRangeBonus);</div>
-<div class="line"><span class="lineno">   63</span>        </div>
-<div class="line"><span class="lineno">   64</span>        <span class="keywordflow">if</span> (state == State.IN) {</div>
-<div class="line"><span class="lineno">   65</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (effectLevel &gt;= 1) {</div>
-<div class="line"><span class="lineno">   66</span>            Vector2f target = ship.getMouseTarget();</div>
-<div class="line"><span class="lineno">   67</span>            <span class="keywordflow">if</span> (ship.getShipAI() != <span class="keyword">null</span> &amp;&amp; ship.getAIFlags().hasFlag(AIFlags.SYSTEM_TARGET_COORDS)){</div>
-<div class="line"><span class="lineno">   68</span>                target = (Vector2f) ship.getAIFlags().getCustom(AIFlags.SYSTEM_TARGET_COORDS);</div>
-<div class="line"><span class="lineno">   69</span>            }</div>
-<div class="line"><span class="lineno">   70</span>            <span class="keywordflow">if</span> (target != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   71</span>                <span class="keywordtype">float</span> dist = Misc.getDistance(ship.getLocation(), target);</div>
-<div class="line"><span class="lineno">   72</span>                <span class="keywordtype">float</span> max = <a class="code hl_function" href="../../d6/daf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MineStrikeStats.html#a27306be0a2c50feb644821416c75872b">getMaxRange</a>(ship) + ship.getCollisionRadius();</div>
-<div class="line"><span class="lineno">   73</span>                <span class="keywordflow">if</span> (dist &gt; max) {</div>
-<div class="line"><span class="lineno">   74</span>                    <span class="keywordtype">float</span> dir = Misc.getAngleInDegrees(ship.getLocation(), target);</div>
-<div class="line"><span class="lineno">   75</span>                    target = Misc.getUnitVectorAtDegreeAngle(dir);</div>
-<div class="line"><span class="lineno">   76</span>                    target.scale(max);</div>
-<div class="line"><span class="lineno">   77</span>                    Vector2f.add(target, ship.getLocation(), target);</div>
-<div class="line"><span class="lineno">   78</span>                }</div>
-<div class="line"><span class="lineno">   79</span>                </div>
-<div class="line"><span class="lineno">   80</span>                target = findClearLocation(ship, target);</div>
-<div class="line"><span class="lineno">   81</span>                </div>
-<div class="line"><span class="lineno">   82</span>                <span class="keywordflow">if</span> (target != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   83</span>                    <a class="code hl_function" href="../../d6/daf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MineStrikeStats.html#a2cac21c89d70ff897ab365101e390932">spawnMine</a>(ship, target);</div>
-<div class="line"><span class="lineno">   84</span>                }</div>
-<div class="line"><span class="lineno">   85</span>            }</div>
-<div class="line"><span class="lineno">   86</span>            </div>
-<div class="line"><span class="lineno">   87</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (state == State.OUT ) {</div>
-<div class="line"><span class="lineno">   88</span>        }</div>
-<div class="line"><span class="lineno">   89</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MineStrikeStats_html_a0f55c3d973b707098b7d51da815205d9"><div class="ttname"><a href="../../d6/daf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MineStrikeStats.html#a0f55c3d973b707098b7d51da815205d9">com.fs.starfarer.api.impl.combat.MineStrikeStats.JITTER_UNDER_COLOR</a></div><div class="ttdeci">static final Color JITTER_UNDER_COLOR</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d97/MineStrikeStats_8java_source.html#l00034">MineStrikeStats.java:34</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MineStrikeStats_html_a27306be0a2c50feb644821416c75872b"><div class="ttname"><a href="../../d6/daf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MineStrikeStats.html#a27306be0a2c50feb644821416c75872b">com.fs.starfarer.api.impl.combat.MineStrikeStats.getMaxRange</a></div><div class="ttdeci">float getMaxRange(ShipAPI ship)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d97/MineStrikeStats_8java_source.html#l00185">MineStrikeStats.java:185</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MineStrikeStats_html_a2cac21c89d70ff897ab365101e390932"><div class="ttname"><a href="../../d6/daf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MineStrikeStats.html#a2cac21c89d70ff897ab365101e390932">com.fs.starfarer.api.impl.combat.MineStrikeStats.spawnMine</a></div><div class="ttdeci">void spawnMine(ShipAPI source, Vector2f mineLoc)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d97/MineStrikeStats_8java_source.html#l00095">MineStrikeStats.java:95</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MineStrikeStats_html_adfe322ebc312196faeadd8242d218ddc"><div class="ttname"><a href="../../d6/daf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MineStrikeStats.html#adfe322ebc312196faeadd8242d218ddc">com.fs.starfarer.api.impl.combat.MineStrikeStats.JITTER_COLOR</a></div><div class="ttdeci">static final Color JITTER_COLOR</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d97/MineStrikeStats_8java_source.html#l00033">MineStrikeStats.java:33</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a4b7ac8fceb0e4163af6c9273f48bb6dc" name="a4b7ac8fceb0e4163af6c9273f48bb6dc"></a>
@@ -345,38 +294,7 @@ Static Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d97/MineStrikeStats_8java_source.html#l00152">152</a> of file <a class="el" href="../../d2/d97/MineStrikeStats_8java_source.html">MineStrikeStats.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  152</span>                                                                                                              {</div>
-<div class="line"><span class="lineno">  153</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> BaseEveryFrameCombatPlugin() {</div>
-<div class="line"><span class="lineno">  154</span>            <span class="keywordtype">float</span> elapsed = 0f;</div>
-<div class="line"><span class="lineno">  155</span>            @Override</div>
-<div class="line"><span class="lineno">  156</span>            <span class="keyword">public</span> <span class="keywordtype">void</span> advance(<span class="keywordtype">float</span> amount, List&lt;InputEventAPI&gt; events) {</div>
-<div class="line"><span class="lineno">  157</span>                <span class="keywordflow">if</span> (Global.getCombatEngine().isPaused()) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  158</span>            </div>
-<div class="line"><span class="lineno">  159</span>                elapsed += amount;</div>
-<div class="line"><span class="lineno">  160</span>                </div>
-<div class="line"><span class="lineno">  161</span>                <span class="keywordtype">float</span> jitterLevel = mine.getCurrentBaseAlpha();</div>
-<div class="line"><span class="lineno">  162</span>                <span class="keywordflow">if</span> (jitterLevel &lt; 0.5f) {</div>
-<div class="line"><span class="lineno">  163</span>                    jitterLevel *= 2f;</div>
-<div class="line"><span class="lineno">  164</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  165</span>                    jitterLevel = (1f - jitterLevel) * 2f;</div>
-<div class="line"><span class="lineno">  166</span>                }</div>
-<div class="line"><span class="lineno">  167</span>                </div>
-<div class="line"><span class="lineno">  168</span>                <span class="keywordtype">float</span> jitterRange = 1f - mine.getCurrentBaseAlpha();</div>
-<div class="line"><span class="lineno">  169</span>                <span class="comment">//jitterRange = (float) Math.sqrt(jitterRange);</span></div>
-<div class="line"><span class="lineno">  170</span>                <span class="keywordtype">float</span> maxRangeBonus = 50f;</div>
-<div class="line"><span class="lineno">  171</span>                <span class="keywordtype">float</span> jitterRangeBonus = jitterRange * maxRangeBonus;</div>
-<div class="line"><span class="lineno">  172</span>                Color c = <a class="code hl_variable" href="../../d6/daf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MineStrikeStats.html#a0f55c3d973b707098b7d51da815205d9">JITTER_UNDER_COLOR</a>;</div>
-<div class="line"><span class="lineno">  173</span>                c = Misc.setAlpha(c, 70);</div>
-<div class="line"><span class="lineno">  174</span>                <span class="comment">//mine.setJitter(this, c, jitterLevel, 15, jitterRangeBonus * 0.1f, jitterRangeBonus);</span></div>
-<div class="line"><span class="lineno">  175</span>                mine.setJitter(<span class="keyword">this</span>, c, jitterLevel, 15, jitterRangeBonus * 0, jitterRangeBonus);</div>
-<div class="line"><span class="lineno">  176</span>                </div>
-<div class="line"><span class="lineno">  177</span>                <span class="keywordflow">if</span> (jitterLevel &gt;= 1 || elapsed &gt; fadeInTime) {</div>
-<div class="line"><span class="lineno">  178</span>                    Global.getCombatEngine().removePlugin(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  179</span>                }</div>
-<div class="line"><span class="lineno">  180</span>            }</div>
-<div class="line"><span class="lineno">  181</span>        };</div>
-<div class="line"><span class="lineno">  182</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a83131cc4b6530cdeb9055669437a7ab7" name="a83131cc4b6530cdeb9055669437a7ab7"></a>
@@ -397,10 +315,7 @@ Static Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d0/db5/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MineStrikeStatsAIInfoProvider.html#a7067600d7510c9b224e697bad9f8c2b7">com.fs.starfarer.api.impl.combat.MineStrikeStatsAIInfoProvider</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d97/MineStrikeStats_8java_source.html#l00280">280</a> of file <a class="el" href="../../d2/d97/MineStrikeStats_8java_source.html">MineStrikeStats.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  280</span>                               {</div>
-<div class="line"><span class="lineno">  281</span>        <span class="keywordflow">return</span> 3f;</div>
-<div class="line"><span class="lineno">  282</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac3c223478b0d3246d8f3a30ce7deeb5b" name="ac3c223478b0d3246d8f3a30ce7deeb5b"></a>
@@ -433,23 +348,7 @@ Static Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseShipSystemScript.html#a1b15ba8346c1deeaabf3dde34d5edc31">com.fs.starfarer.api.impl.combat.BaseShipSystemScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d97/MineStrikeStats_8java_source.html#l00191">191</a> of file <a class="el" href="../../d2/d97/MineStrikeStats_8java_source.html">MineStrikeStats.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  191</span>                                                                  {</div>
-<div class="line"><span class="lineno">  192</span>        <span class="keywordflow">if</span> (system.isOutOfAmmo()) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  193</span>        <span class="keywordflow">if</span> (system.getState() != SystemState.IDLE) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  194</span>        </div>
-<div class="line"><span class="lineno">  195</span>        Vector2f target = ship.getMouseTarget();</div>
-<div class="line"><span class="lineno">  196</span>        <span class="keywordflow">if</span> (target != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  197</span>            <span class="keywordtype">float</span> dist = Misc.getDistance(ship.getLocation(), target);</div>
-<div class="line"><span class="lineno">  198</span>            <span class="keywordtype">float</span> max = <a class="code hl_function" href="../../d6/daf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MineStrikeStats.html#a27306be0a2c50feb644821416c75872b">getMaxRange</a>(ship) + ship.getCollisionRadius();</div>
-<div class="line"><span class="lineno">  199</span>            <span class="keywordflow">if</span> (dist &gt; max) {</div>
-<div class="line"><span class="lineno">  200</span>                <span class="keywordflow">return</span> <span class="stringliteral">&quot;OUT OF RANGE&quot;</span>;</div>
-<div class="line"><span class="lineno">  201</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  202</span>                <span class="keywordflow">return</span> <span class="stringliteral">&quot;READY&quot;</span>;</div>
-<div class="line"><span class="lineno">  203</span>            }</div>
-<div class="line"><span class="lineno">  204</span>        }</div>
-<div class="line"><span class="lineno">  205</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  206</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a27306be0a2c50feb644821416c75872b" name="a27306be0a2c50feb644821416c75872b"></a>
@@ -477,11 +376,7 @@ Static Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d97/MineStrikeStats_8java_source.html#l00185">185</a> of file <a class="el" href="../../d2/d97/MineStrikeStats_8java_source.html">MineStrikeStats.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  185</span>                                              {</div>
-<div class="line"><span class="lineno">  186</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../d6/daf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MineStrikeStats.html#a55d9271c4719b282634e52eb1632d954">getMineRange</a>(ship);</div>
-<div class="line"><span class="lineno">  187</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MineStrikeStats_html_a55d9271c4719b282634e52eb1632d954"><div class="ttname"><a href="../../d6/daf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MineStrikeStats.html#a55d9271c4719b282634e52eb1632d954">com.fs.starfarer.api.impl.combat.MineStrikeStats.getMineRange</a></div><div class="ttdeci">float getMineRange(ShipAPI ship)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d97/MineStrikeStats_8java_source.html#l00285">MineStrikeStats.java:285</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a55d9271c4719b282634e52eb1632d954" name="a55d9271c4719b282634e52eb1632d954"></a>
@@ -505,12 +400,7 @@ Static Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../d3/d18/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MineStrikeStationStats.html#a779a6541907c25efde496958c1be3f52">com.fs.starfarer.api.impl.combat.MineStrikeStationStats</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d97/MineStrikeStats_8java_source.html#l00285">285</a> of file <a class="el" href="../../d2/d97/MineStrikeStats_8java_source.html">MineStrikeStats.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  285</span>                                            {</div>
-<div class="line"><span class="lineno">  286</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../d6/daf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MineStrikeStats.html#a4d7649ca298ea6046c71ec6ae0ebbdbd">getRange</a>(ship);</div>
-<div class="line"><span class="lineno">  287</span>        <span class="comment">//return MINE_RANGE;</span></div>
-<div class="line"><span class="lineno">  288</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MineStrikeStats_html_a4d7649ca298ea6046c71ec6ae0ebbdbd"><div class="ttname"><a href="../../d6/daf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MineStrikeStats.html#a4d7649ca298ea6046c71ec6ae0ebbdbd">com.fs.starfarer.api.impl.combat.MineStrikeStats.getRange</a></div><div class="ttdeci">static float getRange(ShipAPI ship)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d97/MineStrikeStats_8java_source.html#l00037">MineStrikeStats.java:37</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a4d7649ca298ea6046c71ec6ae0ebbdbd" name="a4d7649ca298ea6046c71ec6ae0ebbdbd"></a>
@@ -538,12 +428,7 @@ Static Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d97/MineStrikeStats_8java_source.html#l00037">37</a> of file <a class="el" href="../../d2/d97/MineStrikeStats_8java_source.html">MineStrikeStats.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   37</span>                                               {</div>
-<div class="line"><span class="lineno">   38</span>        <span class="keywordflow">if</span> (ship == <span class="keyword">null</span>) <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d6/daf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MineStrikeStats.html#a71cf27239386a58291a5958547e590d9">MINE_RANGE</a>;</div>
-<div class="line"><span class="lineno">   39</span>        <span class="keywordflow">return</span> ship.getMutableStats().getSystemRangeBonus().computeEffective(<a class="code hl_variable" href="../../d6/daf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MineStrikeStats.html#a71cf27239386a58291a5958547e590d9">MINE_RANGE</a>);</div>
-<div class="line"><span class="lineno">   40</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MineStrikeStats_html_a71cf27239386a58291a5958547e590d9"><div class="ttname"><a href="../../d6/daf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MineStrikeStats.html#a71cf27239386a58291a5958547e590d9">com.fs.starfarer.api.impl.combat.MineStrikeStats.MINE_RANGE</a></div><div class="ttdeci">static float MINE_RANGE</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d97/MineStrikeStats_8java_source.html#l00026">MineStrikeStats.java:26</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aef0a13a8ba470839dc9d78fd62640ec7" name="aef0a13a8ba470839dc9d78fd62640ec7"></a>
@@ -575,10 +460,7 @@ Static Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseShipSystemScript.html#a2def38e794e68628fbd36c90dc210018">com.fs.starfarer.api.impl.combat.BaseShipSystemScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d97/MineStrikeStats_8java_source.html#l00210">210</a> of file <a class="el" href="../../d2/d97/MineStrikeStats_8java_source.html">MineStrikeStats.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  210</span>                                                                {</div>
-<div class="line"><span class="lineno">  211</span>        <span class="keywordflow">return</span> ship.getMouseTarget() != <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  212</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2cac21c89d70ff897ab365101e390932" name="a2cac21c89d70ff897ab365101e390932"></a>
@@ -608,65 +490,7 @@ Static Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d97/MineStrikeStats_8java_source.html#l00095">95</a> of file <a class="el" href="../../d2/d97/MineStrikeStats_8java_source.html">MineStrikeStats.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   95</span>                                                            {</div>
-<div class="line"><span class="lineno">   96</span>        CombatEngineAPI engine = Global.getCombatEngine();</div>
-<div class="line"><span class="lineno">   97</span>        Vector2f currLoc = Misc.getPointAtRadius(mineLoc, 30f + (<span class="keywordtype">float</span>) Math.random() * 30f);</div>
-<div class="line"><span class="lineno">   98</span>        <span class="comment">//Vector2f currLoc = null;</span></div>
-<div class="line"><span class="lineno">   99</span>        <span class="keywordtype">float</span> start = (float) Math.random() * 360f;</div>
-<div class="line"><span class="lineno">  100</span>        <span class="keywordflow">for</span> (<span class="keywordtype">float</span> angle = start; angle &lt; start + 390; angle += 30f) {</div>
-<div class="line"><span class="lineno">  101</span>            <span class="keywordflow">if</span> (angle != start) {</div>
-<div class="line"><span class="lineno">  102</span>                Vector2f loc = Misc.getUnitVectorAtDegreeAngle(angle);</div>
-<div class="line"><span class="lineno">  103</span>                loc.scale(50f + (<span class="keywordtype">float</span>) Math.random() * 30f);</div>
-<div class="line"><span class="lineno">  104</span>                currLoc = Vector2f.add(mineLoc, loc, <span class="keyword">new</span> Vector2f());</div>
-<div class="line"><span class="lineno">  105</span>            }</div>
-<div class="line"><span class="lineno">  106</span>            <span class="keywordflow">for</span> (MissileAPI other : Global.getCombatEngine().getMissiles()) {</div>
-<div class="line"><span class="lineno">  107</span>                <span class="keywordflow">if</span> (!other.isMine()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  108</span>                </div>
-<div class="line"><span class="lineno">  109</span>                <span class="keywordtype">float</span> dist = Misc.getDistance(currLoc, other.getLocation());</div>
-<div class="line"><span class="lineno">  110</span>                <span class="keywordflow">if</span> (dist &lt; other.getCollisionRadius() + 40f) {</div>
-<div class="line"><span class="lineno">  111</span>                    currLoc = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  112</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  113</span>                }</div>
-<div class="line"><span class="lineno">  114</span>            }</div>
-<div class="line"><span class="lineno">  115</span>            <span class="keywordflow">if</span> (currLoc != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  116</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  117</span>            }</div>
-<div class="line"><span class="lineno">  118</span>        }</div>
-<div class="line"><span class="lineno">  119</span>        <span class="keywordflow">if</span> (currLoc == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  120</span>            currLoc = Misc.getPointAtRadius(mineLoc, 30f + (<span class="keywordtype">float</span>) Math.random() * 30f);</div>
-<div class="line"><span class="lineno">  121</span>        }</div>
-<div class="line"><span class="lineno">  122</span>        </div>
-<div class="line"><span class="lineno">  123</span>        </div>
-<div class="line"><span class="lineno">  124</span>        </div>
-<div class="line"><span class="lineno">  125</span>        <span class="comment">//Vector2f currLoc = mineLoc;</span></div>
-<div class="line"><span class="lineno">  126</span>        MissileAPI mine = (MissileAPI) engine.spawnProjectile(source, <span class="keyword">null</span>, </div>
-<div class="line"><span class="lineno">  127</span>                                                              <span class="stringliteral">&quot;minelayer2&quot;</span>, </div>
-<div class="line"><span class="lineno">  128</span>                                                              currLoc, </div>
-<div class="line"><span class="lineno">  129</span>                                                              (<span class="keywordtype">float</span>) Math.random() * 360f, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  130</span>        <span class="keywordflow">if</span> (source != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  131</span>            Global.getCombatEngine().applyDamageModifiersToSpawnedProjectileWithNullWeapon(</div>
-<div class="line"><span class="lineno">  132</span>                                            source, WeaponType.MISSILE, <span class="keyword">false</span>, mine.getDamage());</div>
-<div class="line"><span class="lineno">  133</span><span class="comment">//          float extraDamageMult = source.getMutableStats().getMissileWeaponDamageMult().getModifiedValue();</span></div>
-<div class="line"><span class="lineno">  134</span><span class="comment">//          mine.getDamage().setMultiplier(mine.getDamage().getMultiplier() * extraDamageMult);</span></div>
-<div class="line"><span class="lineno">  135</span>        }</div>
-<div class="line"><span class="lineno">  136</span>        </div>
-<div class="line"><span class="lineno">  137</span>        </div>
-<div class="line"><span class="lineno">  138</span>        <span class="keywordtype">float</span> fadeInTime = 0.5f;</div>
-<div class="line"><span class="lineno">  139</span>        mine.getVelocity().scale(0);</div>
-<div class="line"><span class="lineno">  140</span>        mine.fadeOutThenIn(fadeInTime);</div>
-<div class="line"><span class="lineno">  141</span>        </div>
-<div class="line"><span class="lineno">  142</span>        Global.getCombatEngine().addPlugin(<a class="code hl_function" href="../../d6/daf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MineStrikeStats.html#a4b7ac8fceb0e4163af6c9273f48bb6dc">createMissileJitterPlugin</a>(mine, fadeInTime));</div>
-<div class="line"><span class="lineno">  143</span>        </div>
-<div class="line"><span class="lineno">  144</span>        <span class="comment">//mine.setFlightTime((float) Math.random());</span></div>
-<div class="line"><span class="lineno">  145</span>        <span class="keywordtype">float</span> liveTime = <a class="code hl_variable" href="../../d6/daf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MineStrikeStats.html#a870df08581600aabed7bfe03644c61de">LIVE_TIME</a>;</div>
-<div class="line"><span class="lineno">  146</span>        <span class="comment">//liveTime = 0.01f;</span></div>
-<div class="line"><span class="lineno">  147</span>        mine.setFlightTime(mine.getMaxFlightTime() - liveTime);</div>
-<div class="line"><span class="lineno">  148</span>        </div>
-<div class="line"><span class="lineno">  149</span>        Global.getSoundPlayer().playSound(<span class="stringliteral">&quot;mine_teleport&quot;</span>, 1f, 1f, mine.getLocation(), mine.getVelocity());</div>
-<div class="line"><span class="lineno">  150</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MineStrikeStats_html_a4b7ac8fceb0e4163af6c9273f48bb6dc"><div class="ttname"><a href="../../d6/daf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MineStrikeStats.html#a4b7ac8fceb0e4163af6c9273f48bb6dc">com.fs.starfarer.api.impl.combat.MineStrikeStats.createMissileJitterPlugin</a></div><div class="ttdeci">EveryFrameCombatPlugin createMissileJitterPlugin(final MissileAPI mine, final float fadeInTime)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d97/MineStrikeStats_8java_source.html#l00152">MineStrikeStats.java:152</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MineStrikeStats_html_a870df08581600aabed7bfe03644c61de"><div class="ttname"><a href="../../d6/daf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MineStrikeStats.html#a870df08581600aabed7bfe03644c61de">com.fs.starfarer.api.impl.combat.MineStrikeStats.LIVE_TIME</a></div><div class="ttdeci">static final float LIVE_TIME</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d97/MineStrikeStats_8java_source.html#l00031">MineStrikeStats.java:31</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2f2333efda2515a29bed7f88481f4174" name="a2f2333efda2515a29bed7f88481f4174"></a>
@@ -698,9 +522,7 @@ Static Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseShipSystemScript.html#a020712b9bb37e9ece4fbfd4c865c4037">com.fs.starfarer.api.impl.combat.BaseShipSystemScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d97/MineStrikeStats_8java_source.html#l00092">92</a> of file <a class="el" href="../../d2/d97/MineStrikeStats_8java_source.html">MineStrikeStats.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   92</span>                                                              {</div>
-<div class="line"><span class="lineno">   93</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

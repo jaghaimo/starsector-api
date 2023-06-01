@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -234,119 +235,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d56/PersonMissionSpec_8java_source.html#l00059">59</a> of file <a class="el" href="../../d3/d56/PersonMissionSpec_8java_source.html">PersonMissionSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   59</span>                                                                  {</div>
-<div class="line"><span class="lineno">   60</span>        </div>
-<div class="line"><span class="lineno">   61</span>        <a class="code hl_variable" href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#a71814a83f6c5c723919553cf8c284316">missionId</a> = row.getString(<span class="stringliteral">&quot;mission id&quot;</span>);</div>
-<div class="line"><span class="lineno">   62</span>        <a class="code hl_variable" href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#a8dbdfbc49a391ac500088928aba02301">personId</a> = row.optString(<span class="stringliteral">&quot;person id&quot;</span>, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   63</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#a8dbdfbc49a391ac500088928aba02301">personId</a> != <span class="keyword">null</span> &amp;&amp; <a class="code hl_variable" href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#a8dbdfbc49a391ac500088928aba02301">personId</a>.isEmpty()) <a class="code hl_variable" href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#a8dbdfbc49a391ac500088928aba02301">personId</a> = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   64</span>        </div>
-<div class="line"><span class="lineno">   65</span><span class="comment">//      min = Misc.mapToEnum(row, &quot;minRep&quot;, RepLevel.class, null, false);</span></div>
-<div class="line"><span class="lineno">   66</span><span class="comment">//      max = Misc.mapToEnum(row, &quot;maxRep&quot;, RepLevel.class, null, false);</span></div>
-<div class="line"><span class="lineno">   67</span>        <a class="code hl_variable" href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#a45b7f9defe9fd79a5408a72543bd672e">min</a> = Misc.mapToEnum(row, <span class="stringliteral">&quot;min rep&quot;</span>, RepLevel.class, RepLevel.VENGEFUL);</div>
-<div class="line"><span class="lineno">   68</span>        <a class="code hl_variable" href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#a479c75e40e83abd9343f4938705f872a">max</a> = Misc.mapToEnum(row, <span class="stringliteral">&quot;max rep&quot;</span>, RepLevel.class, RepLevel.COOPERATIVE);</div>
-<div class="line"><span class="lineno">   69</span>        </div>
-<div class="line"><span class="lineno">   70</span>        <a class="code hl_variable" href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#af0eb709a25964ec9e7212031dd78e3cf">freq</a> = (float)row.optDouble(<span class="stringliteral">&quot;freq&quot;</span>, 10f);</div>
-<div class="line"><span class="lineno">   71</span>        <a class="code hl_variable" href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#a8e7896698e6629629e30a01a5522b8e5">minTimeout</a> = (float)row.optDouble(<span class="stringliteral">&quot;min timeout&quot;</span>, 10f);</div>
-<div class="line"><span class="lineno">   72</span>        <a class="code hl_variable" href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#a83cfb9882089f7d785379be76327b50b">maxTimeout</a> = (float)row.optDouble(<span class="stringliteral">&quot;max timeout&quot;</span>, 10f);</div>
-<div class="line"><span class="lineno">   73</span>        <span class="comment">//importance = (float)row.optDouble(&quot;importance&quot;, 0f);</span></div>
-<div class="line"><span class="lineno">   74</span>        <a class="code hl_variable" href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#abd3db537d72b83479a882b96337465e5">importance</a> = Misc.mapToEnum(row, <span class="stringliteral">&quot;importance&quot;</span>, PersonImportance.class, PersonImportance.VERY_LOW);</div>
-<div class="line"><span class="lineno">   75</span>        </div>
-<div class="line"><span class="lineno">   76</span>        <a class="code hl_variable" href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#a70005f769a95bb244efe3fa61cc95613">pluginClass</a> = row.getString(<span class="stringliteral">&quot;plugin&quot;</span>);</div>
-<div class="line"><span class="lineno">   77</span>        </div>
-<div class="line"><span class="lineno">   78</span>        <a class="code hl_variable" href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#a0f889ffaef0518c911585b3d02de19f8">icon</a> = row.optString(<span class="stringliteral">&quot;icon&quot;</span>);</div>
-<div class="line"><span class="lineno">   79</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#a0f889ffaef0518c911585b3d02de19f8">icon</a> == <span class="keyword">null</span> || <a class="code hl_variable" href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#a0f889ffaef0518c911585b3d02de19f8">icon</a>.isEmpty()) {</div>
-<div class="line"><span class="lineno">   80</span>            <a class="code hl_variable" href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#a0f889ffaef0518c911585b3d02de19f8">icon</a> = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   81</span>        }</div>
-<div class="line"><span class="lineno">   82</span>        </div>
-<div class="line"><span class="lineno">   83</span>        String requiresAllStr = row.optString(<span class="stringliteral">&quot;tagsAll&quot;</span>, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   84</span>        <span class="keywordflow">if</span> (requiresAllStr != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   85</span>            String [] split = requiresAllStr.split(<span class="stringliteral">&quot;,&quot;</span>);</div>
-<div class="line"><span class="lineno">   86</span>            <span class="keywordflow">for</span> (String tag : split) {</div>
-<div class="line"><span class="lineno">   87</span>                tag = tag.trim();</div>
-<div class="line"><span class="lineno">   88</span>                <span class="keywordflow">if</span> (tag.isEmpty()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   89</span>                <a class="code hl_variable" href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#a1b7ca2f5c58e1967e7575c14c777ba94">tagsAll</a>.add(tag);</div>
-<div class="line"><span class="lineno">   90</span>            }</div>
-<div class="line"><span class="lineno">   91</span>        }</div>
-<div class="line"><span class="lineno">   92</span>        </div>
-<div class="line"><span class="lineno">   93</span>        String requiresAnyStr = row.optString(<span class="stringliteral">&quot;tagsAny&quot;</span>, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   94</span>        <span class="keywordflow">if</span> (requiresAnyStr != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   95</span>            String [] split = requiresAnyStr.split(<span class="stringliteral">&quot;,&quot;</span>);</div>
-<div class="line"><span class="lineno">   96</span>            <span class="keywordflow">for</span> (String tag : split) {</div>
-<div class="line"><span class="lineno">   97</span>                tag = tag.trim();</div>
-<div class="line"><span class="lineno">   98</span>                <span class="keywordflow">if</span> (tag.isEmpty()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   99</span>                <a class="code hl_variable" href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#a3337764fed062e615733b6b3c15608cb">tagsAny</a>.add(tag);</div>
-<div class="line"><span class="lineno">  100</span>            }</div>
-<div class="line"><span class="lineno">  101</span>        }</div>
-<div class="line"><span class="lineno">  102</span>        </div>
-<div class="line"><span class="lineno">  103</span>        String requiresNotAny = row.optString(<span class="stringliteral">&quot;tagsNotAny&quot;</span>, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  104</span>        <span class="keywordflow">if</span> (requiresNotAny != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  105</span>            String [] split = requiresNotAny.split(<span class="stringliteral">&quot;,&quot;</span>);</div>
-<div class="line"><span class="lineno">  106</span>            <span class="keywordflow">for</span> (String tag : split) {</div>
-<div class="line"><span class="lineno">  107</span>                tag = tag.trim();</div>
-<div class="line"><span class="lineno">  108</span>                <span class="keywordflow">if</span> (tag.isEmpty()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  109</span>                <a class="code hl_variable" href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#a7c98edc59e39fc13a054687e6ee8dca9">tagsNotAny</a>.add(tag);</div>
-<div class="line"><span class="lineno">  110</span>            }</div>
-<div class="line"><span class="lineno">  111</span>        }</div>
-<div class="line"><span class="lineno">  112</span>        </div>
-<div class="line"><span class="lineno">  113</span>        String tagsStr = row.optString(<span class="stringliteral">&quot;tags&quot;</span>, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  114</span>        <span class="keywordflow">if</span> (tagsStr != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  115</span>            String [] split = tagsStr.split(<span class="stringliteral">&quot;,&quot;</span>);</div>
-<div class="line"><span class="lineno">  116</span>            <span class="keywordflow">for</span> (String tag : split) {</div>
-<div class="line"><span class="lineno">  117</span>                tag = tag.trim();</div>
-<div class="line"><span class="lineno">  118</span>                <span class="keywordflow">if</span> (tag.isEmpty()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  119</span>                <a class="code hl_variable" href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#a8ba4395e6f780b388c09f8dccdea1a0c">tags</a>.add(tag);</div>
-<div class="line"><span class="lineno">  120</span>            }</div>
-<div class="line"><span class="lineno">  121</span>        }</div>
-<div class="line"><span class="lineno">  122</span>        </div>
-<div class="line"><span class="lineno">  123</span>        <span class="comment">//reqMissionAny reqMissionAll   reqMissionNone</span></div>
-<div class="line"><span class="lineno">  124</span>        String reqs = row.optString(<span class="stringliteral">&quot;reqMissionAny&quot;</span>, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  125</span>        <span class="keywordflow">if</span> (reqs != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  126</span>            String [] split = reqs.split(<span class="stringliteral">&quot;,&quot;</span>);</div>
-<div class="line"><span class="lineno">  127</span>            <span class="keywordflow">for</span> (String tag : split) {</div>
-<div class="line"><span class="lineno">  128</span>                tag = tag.trim();</div>
-<div class="line"><span class="lineno">  129</span>                <span class="keywordflow">if</span> (tag.isEmpty()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  130</span>                <a class="code hl_variable" href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#a36db65ed419f958bcc379e196b680078">reqMissionAny</a>.add(tag);</div>
-<div class="line"><span class="lineno">  131</span>            }</div>
-<div class="line"><span class="lineno">  132</span>        }</div>
-<div class="line"><span class="lineno">  133</span>        </div>
-<div class="line"><span class="lineno">  134</span>        reqs = row.optString(<span class="stringliteral">&quot;reqMissionAll&quot;</span>, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  135</span>        <span class="keywordflow">if</span> (reqs != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  136</span>            String [] split = reqs.split(<span class="stringliteral">&quot;,&quot;</span>);</div>
-<div class="line"><span class="lineno">  137</span>            <span class="keywordflow">for</span> (String tag : split) {</div>
-<div class="line"><span class="lineno">  138</span>                tag = tag.trim();</div>
-<div class="line"><span class="lineno">  139</span>                <span class="keywordflow">if</span> (tag.isEmpty()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  140</span>                <a class="code hl_variable" href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#a78919701bc33468e2b86078112bb36af">reqMissionAll</a>.add(tag);</div>
-<div class="line"><span class="lineno">  141</span>            }</div>
-<div class="line"><span class="lineno">  142</span>        }</div>
-<div class="line"><span class="lineno">  143</span>        </div>
-<div class="line"><span class="lineno">  144</span>        reqs = row.optString(<span class="stringliteral">&quot;reqMissionNone&quot;</span>, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  145</span>        <span class="keywordflow">if</span> (reqs != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  146</span>            String [] split = reqs.split(<span class="stringliteral">&quot;,&quot;</span>);</div>
-<div class="line"><span class="lineno">  147</span>            <span class="keywordflow">for</span> (String tag : split) {</div>
-<div class="line"><span class="lineno">  148</span>                tag = tag.trim();</div>
-<div class="line"><span class="lineno">  149</span>                <span class="keywordflow">if</span> (tag.isEmpty()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  150</span>                <a class="code hl_variable" href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#a7b08f4f9a42b764e0fd1ab94bed802a0">reqMissionNone</a>.add(tag);</div>
-<div class="line"><span class="lineno">  151</span>            }</div>
-<div class="line"><span class="lineno">  152</span>        }</div>
-<div class="line"><span class="lineno">  153</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec_html_a0f889ffaef0518c911585b3d02de19f8"><div class="ttname"><a href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#a0f889ffaef0518c911585b3d02de19f8">com.fs.starfarer.api.loading.PersonMissionSpec.icon</a></div><div class="ttdeci">String icon</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d56/PersonMissionSpec_8java_source.html#l00056">PersonMissionSpec.java:56</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec_html_a1b7ca2f5c58e1967e7575c14c777ba94"><div class="ttname"><a href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#a1b7ca2f5c58e1967e7575c14c777ba94">com.fs.starfarer.api.loading.PersonMissionSpec.tagsAll</a></div><div class="ttdeci">Set&lt; String &gt; tagsAll</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d56/PersonMissionSpec_8java_source.html#l00038">PersonMissionSpec.java:38</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec_html_a3337764fed062e615733b6b3c15608cb"><div class="ttname"><a href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#a3337764fed062e615733b6b3c15608cb">com.fs.starfarer.api.loading.PersonMissionSpec.tagsAny</a></div><div class="ttdeci">Set&lt; String &gt; tagsAny</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d56/PersonMissionSpec_8java_source.html#l00037">PersonMissionSpec.java:37</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec_html_a36db65ed419f958bcc379e196b680078"><div class="ttname"><a href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#a36db65ed419f958bcc379e196b680078">com.fs.starfarer.api.loading.PersonMissionSpec.reqMissionAny</a></div><div class="ttdeci">Set&lt; String &gt; reqMissionAny</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d56/PersonMissionSpec_8java_source.html#l00041">PersonMissionSpec.java:41</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec_html_a45b7f9defe9fd79a5408a72543bd672e"><div class="ttname"><a href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#a45b7f9defe9fd79a5408a72543bd672e">com.fs.starfarer.api.loading.PersonMissionSpec.min</a></div><div class="ttdeci">RepLevel min</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d56/PersonMissionSpec_8java_source.html#l00045">PersonMissionSpec.java:45</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec_html_a479c75e40e83abd9343f4938705f872a"><div class="ttname"><a href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#a479c75e40e83abd9343f4938705f872a">com.fs.starfarer.api.loading.PersonMissionSpec.max</a></div><div class="ttdeci">RepLevel max</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d56/PersonMissionSpec_8java_source.html#l00046">PersonMissionSpec.java:46</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec_html_a70005f769a95bb244efe3fa61cc95613"><div class="ttname"><a href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#a70005f769a95bb244efe3fa61cc95613">com.fs.starfarer.api.loading.PersonMissionSpec.pluginClass</a></div><div class="ttdeci">String pluginClass</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d56/PersonMissionSpec_8java_source.html#l00055">PersonMissionSpec.java:55</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec_html_a71814a83f6c5c723919553cf8c284316"><div class="ttname"><a href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#a71814a83f6c5c723919553cf8c284316">com.fs.starfarer.api.loading.PersonMissionSpec.missionId</a></div><div class="ttdeci">String missionId</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d56/PersonMissionSpec_8java_source.html#l00033">PersonMissionSpec.java:33</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec_html_a78919701bc33468e2b86078112bb36af"><div class="ttname"><a href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#a78919701bc33468e2b86078112bb36af">com.fs.starfarer.api.loading.PersonMissionSpec.reqMissionAll</a></div><div class="ttdeci">Set&lt; String &gt; reqMissionAll</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d56/PersonMissionSpec_8java_source.html#l00042">PersonMissionSpec.java:42</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec_html_a7b08f4f9a42b764e0fd1ab94bed802a0"><div class="ttname"><a href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#a7b08f4f9a42b764e0fd1ab94bed802a0">com.fs.starfarer.api.loading.PersonMissionSpec.reqMissionNone</a></div><div class="ttdeci">Set&lt; String &gt; reqMissionNone</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d56/PersonMissionSpec_8java_source.html#l00043">PersonMissionSpec.java:43</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec_html_a7c98edc59e39fc13a054687e6ee8dca9"><div class="ttname"><a href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#a7c98edc59e39fc13a054687e6ee8dca9">com.fs.starfarer.api.loading.PersonMissionSpec.tagsNotAny</a></div><div class="ttdeci">Set&lt; String &gt; tagsNotAny</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d56/PersonMissionSpec_8java_source.html#l00039">PersonMissionSpec.java:39</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec_html_a83cfb9882089f7d785379be76327b50b"><div class="ttname"><a href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#a83cfb9882089f7d785379be76327b50b">com.fs.starfarer.api.loading.PersonMissionSpec.maxTimeout</a></div><div class="ttdeci">float maxTimeout</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d56/PersonMissionSpec_8java_source.html#l00050">PersonMissionSpec.java:50</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec_html_a8ba4395e6f780b388c09f8dccdea1a0c"><div class="ttname"><a href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#a8ba4395e6f780b388c09f8dccdea1a0c">com.fs.starfarer.api.loading.PersonMissionSpec.tags</a></div><div class="ttdeci">Set&lt; String &gt; tags</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d56/PersonMissionSpec_8java_source.html#l00036">PersonMissionSpec.java:36</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec_html_a8dbdfbc49a391ac500088928aba02301"><div class="ttname"><a href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#a8dbdfbc49a391ac500088928aba02301">com.fs.starfarer.api.loading.PersonMissionSpec.personId</a></div><div class="ttdeci">String personId</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d56/PersonMissionSpec_8java_source.html#l00034">PersonMissionSpec.java:34</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec_html_a8e7896698e6629629e30a01a5522b8e5"><div class="ttname"><a href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#a8e7896698e6629629e30a01a5522b8e5">com.fs.starfarer.api.loading.PersonMissionSpec.minTimeout</a></div><div class="ttdeci">float minTimeout</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d56/PersonMissionSpec_8java_source.html#l00049">PersonMissionSpec.java:49</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec_html_abd3db537d72b83479a882b96337465e5"><div class="ttname"><a href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#abd3db537d72b83479a882b96337465e5">com.fs.starfarer.api.loading.PersonMissionSpec.importance</a></div><div class="ttdeci">PersonImportance importance</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d56/PersonMissionSpec_8java_source.html#l00053">PersonMissionSpec.java:53</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec_html_af0eb709a25964ec9e7212031dd78e3cf"><div class="ttname"><a href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#af0eb709a25964ec9e7212031dd78e3cf">com.fs.starfarer.api.loading.PersonMissionSpec.freq</a></div><div class="ttdeci">float freq</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d56/PersonMissionSpec_8java_source.html#l00048">PersonMissionSpec.java:48</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -367,10 +256,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d56/PersonMissionSpec_8java_source.html#l00275">275</a> of file <a class="el" href="../../d3/d56/PersonMissionSpec_8java_source.html">PersonMissionSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  275</span>                                   {</div>
-<div class="line"><span class="lineno">  276</span>        <a class="code hl_variable" href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#a8ba4395e6f780b388c09f8dccdea1a0c">tags</a>.add(tag);</div>
-<div class="line"><span class="lineno">  277</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5387e0df19130c420caafc61f30dddec" name="a5387e0df19130c420caafc61f30dddec"></a>
@@ -390,43 +276,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d56/PersonMissionSpec_8java_source.html#l00318">318</a> of file <a class="el" href="../../d3/d56/PersonMissionSpec_8java_source.html">PersonMissionSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  318</span>                                                                 {</div>
-<div class="line"><span class="lineno">  319</span>        </div>
-<div class="line"><span class="lineno">  320</span>        <span class="keywordtype">boolean</span> foundAll = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  321</span>        <span class="keywordflow">for</span> (String <span class="keywordtype">id</span> : <a class="code hl_function" href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#ab9f5372102cc3602836e40ad9a592234">getReqMissionAll</a>()) {</div>
-<div class="line"><span class="lineno">  322</span>            <span class="keywordflow">if</span> (!completed.contains(<span class="keywordtype">id</span>)) {</div>
-<div class="line"><span class="lineno">  323</span>                foundAll = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  324</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  325</span>            }</div>
-<div class="line"><span class="lineno">  326</span>        }</div>
-<div class="line"><span class="lineno">  327</span>        <span class="keywordflow">if</span> (!foundAll &amp;&amp; !<a class="code hl_function" href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#ab9f5372102cc3602836e40ad9a592234">getReqMissionAll</a>().isEmpty()) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  328</span>        </div>
-<div class="line"><span class="lineno">  329</span> </div>
-<div class="line"><span class="lineno">  330</span>        <span class="keywordtype">boolean</span> foundOne = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  331</span>        <span class="keywordflow">for</span> (String <span class="keywordtype">id</span> : <a class="code hl_function" href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#a425ac21c199ad3cf5b3441625de1aef8">getReqMissionAny</a>()) {</div>
-<div class="line"><span class="lineno">  332</span>            <span class="keywordflow">if</span> (completed.contains(<span class="keywordtype">id</span>)) {</div>
-<div class="line"><span class="lineno">  333</span>                foundOne = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  334</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  335</span>            }</div>
-<div class="line"><span class="lineno">  336</span>        }</div>
-<div class="line"><span class="lineno">  337</span>        <span class="keywordflow">if</span> (!foundOne &amp;&amp; !<a class="code hl_function" href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#a425ac21c199ad3cf5b3441625de1aef8">getReqMissionAny</a>().isEmpty()) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  338</span>        </div>
-<div class="line"><span class="lineno">  339</span>        </div>
-<div class="line"><span class="lineno">  340</span>        foundOne = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  341</span>        <span class="keywordflow">for</span> (String tag : <a class="code hl_function" href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#a801090c6e0b14d8d1485268971533921">getReqMissionNone</a>()) {</div>
-<div class="line"><span class="lineno">  342</span>            <span class="keywordflow">if</span> (completed.contains(tag)) {</div>
-<div class="line"><span class="lineno">  343</span>                foundOne = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  344</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  345</span>            }</div>
-<div class="line"><span class="lineno">  346</span>        }</div>
-<div class="line"><span class="lineno">  347</span>        <span class="keywordflow">if</span> (foundOne) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  348</span>        </div>
-<div class="line"><span class="lineno">  349</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  350</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec_html_a425ac21c199ad3cf5b3441625de1aef8"><div class="ttname"><a href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#a425ac21c199ad3cf5b3441625de1aef8">com.fs.starfarer.api.loading.PersonMissionSpec.getReqMissionAny</a></div><div class="ttdeci">Set&lt; String &gt; getReqMissionAny()</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d56/PersonMissionSpec_8java_source.html#l00163">PersonMissionSpec.java:163</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec_html_a801090c6e0b14d8d1485268971533921"><div class="ttname"><a href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#a801090c6e0b14d8d1485268971533921">com.fs.starfarer.api.loading.PersonMissionSpec.getReqMissionNone</a></div><div class="ttdeci">Set&lt; String &gt; getReqMissionNone()</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d56/PersonMissionSpec_8java_source.html#l00171">PersonMissionSpec.java:171</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec_html_ab9f5372102cc3602836e40ad9a592234"><div class="ttname"><a href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#ab9f5372102cc3602836e40ad9a592234">com.fs.starfarer.api.loading.PersonMissionSpec.getReqMissionAll</a></div><div class="ttdeci">Set&lt; String &gt; getReqMissionAll()</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d56/PersonMissionSpec_8java_source.html#l00167">PersonMissionSpec.java:167</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a81c8be9696bf79deb802161f8368a54a" name="a81c8be9696bf79deb802161f8368a54a"></a>
@@ -445,16 +295,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d56/PersonMissionSpec_8java_source.html#l00261">261</a> of file <a class="el" href="../../d3/d56/PersonMissionSpec_8java_source.html">PersonMissionSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  261</span>                                      {</div>
-<div class="line"><span class="lineno">  262</span>        HubMission mission = (HubMission) Global.getSettings().getInstanceOfScript(<a class="code hl_variable" href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#a70005f769a95bb244efe3fa61cc95613">pluginClass</a>);</div>
-<div class="line"><span class="lineno">  263</span>        mission.setMissionId(<a class="code hl_variable" href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#a71814a83f6c5c723919553cf8c284316">missionId</a>);</div>
-<div class="line"><span class="lineno">  264</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#a0f889ffaef0518c911585b3d02de19f8">icon</a> != <span class="keyword">null</span> &amp;&amp; mission instanceof BaseHubMission) {</div>
-<div class="line"><span class="lineno">  265</span>            BaseHubMission bhm = (BaseHubMission) mission;</div>
-<div class="line"><span class="lineno">  266</span>            bhm.setIconName(<a class="code hl_variable" href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#a0f889ffaef0518c911585b3d02de19f8">icon</a>);</div>
-<div class="line"><span class="lineno">  267</span>        }</div>
-<div class="line"><span class="lineno">  268</span>        <span class="keywordflow">return</span> mission;</div>
-<div class="line"><span class="lineno">  269</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a693d03b023cc90ccab9b993d90809ad6" name="a693d03b023cc90ccab9b993d90809ad6"></a>
@@ -473,10 +314,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d56/PersonMissionSpec_8java_source.html#l00209">209</a> of file <a class="el" href="../../d3/d56/PersonMissionSpec_8java_source.html">PersonMissionSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  209</span>                           {</div>
-<div class="line"><span class="lineno">  210</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#af0eb709a25964ec9e7212031dd78e3cf">freq</a>;</div>
-<div class="line"><span class="lineno">  211</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a68feeeee862d117a7089d2f317e9c9a0" name="a68feeeee862d117a7089d2f317e9c9a0"></a>
@@ -495,10 +333,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d56/PersonMissionSpec_8java_source.html#l00155">155</a> of file <a class="el" href="../../d3/d56/PersonMissionSpec_8java_source.html">PersonMissionSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  155</span>                            {</div>
-<div class="line"><span class="lineno">  156</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#a0f889ffaef0518c911585b3d02de19f8">icon</a>;</div>
-<div class="line"><span class="lineno">  157</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a47f0f0f1675da095141c40aff5dca3f4" name="a47f0f0f1675da095141c40aff5dca3f4"></a>
@@ -517,10 +352,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d56/PersonMissionSpec_8java_source.html#l00233">233</a> of file <a class="el" href="../../d3/d56/PersonMissionSpec_8java_source.html">PersonMissionSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  233</span>                                            {</div>
-<div class="line"><span class="lineno">  234</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#abd3db537d72b83479a882b96337465e5">importance</a>;</div>
-<div class="line"><span class="lineno">  235</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="adc1ecfdbbee14d3635983a742aee8883" name="adc1ecfdbbee14d3635983a742aee8883"></a>
@@ -539,10 +371,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d56/PersonMissionSpec_8java_source.html#l00201">201</a> of file <a class="el" href="../../d3/d56/PersonMissionSpec_8java_source.html">PersonMissionSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  201</span>                                {</div>
-<div class="line"><span class="lineno">  202</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#a479c75e40e83abd9343f4938705f872a">max</a>;</div>
-<div class="line"><span class="lineno">  203</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a6ebe389d628702f1aabaed60cc2c1e44" name="a6ebe389d628702f1aabaed60cc2c1e44"></a>
@@ -561,10 +390,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d56/PersonMissionSpec_8java_source.html#l00225">225</a> of file <a class="el" href="../../d3/d56/PersonMissionSpec_8java_source.html">PersonMissionSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  225</span>                                 {</div>
-<div class="line"><span class="lineno">  226</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#a83cfb9882089f7d785379be76327b50b">maxTimeout</a>;</div>
-<div class="line"><span class="lineno">  227</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8bc7725c412ef9f0a6a7a338d4d2ade6" name="a8bc7725c412ef9f0a6a7a338d4d2ade6"></a>
@@ -583,10 +409,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d56/PersonMissionSpec_8java_source.html#l00193">193</a> of file <a class="el" href="../../d3/d56/PersonMissionSpec_8java_source.html">PersonMissionSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  193</span>                                {</div>
-<div class="line"><span class="lineno">  194</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#a45b7f9defe9fd79a5408a72543bd672e">min</a>;</div>
-<div class="line"><span class="lineno">  195</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="adbd10fd574f809a086c6e00c28c6b414" name="adbd10fd574f809a086c6e00c28c6b414"></a>
@@ -605,10 +428,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d56/PersonMissionSpec_8java_source.html#l00217">217</a> of file <a class="el" href="../../d3/d56/PersonMissionSpec_8java_source.html">PersonMissionSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  217</span>                                 {</div>
-<div class="line"><span class="lineno">  218</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#a8e7896698e6629629e30a01a5522b8e5">minTimeout</a>;</div>
-<div class="line"><span class="lineno">  219</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a23b239459a6e99e1bc2bf9885ffe44ca" name="a23b239459a6e99e1bc2bf9885ffe44ca"></a>
@@ -627,10 +447,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d56/PersonMissionSpec_8java_source.html#l00177">177</a> of file <a class="el" href="../../d3/d56/PersonMissionSpec_8java_source.html">PersonMissionSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  177</span>                                 {</div>
-<div class="line"><span class="lineno">  178</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#a71814a83f6c5c723919553cf8c284316">missionId</a>;</div>
-<div class="line"><span class="lineno">  179</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5a68aa04a3f5424d14905aa0477e3caa" name="a5a68aa04a3f5424d14905aa0477e3caa"></a>
@@ -649,10 +466,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d56/PersonMissionSpec_8java_source.html#l00185">185</a> of file <a class="el" href="../../d3/d56/PersonMissionSpec_8java_source.html">PersonMissionSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  185</span>                                {</div>
-<div class="line"><span class="lineno">  186</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#a8dbdfbc49a391ac500088928aba02301">personId</a>;</div>
-<div class="line"><span class="lineno">  187</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae0af21fb8b86ae00bc7139d72139b993" name="ae0af21fb8b86ae00bc7139d72139b993"></a>
@@ -671,10 +485,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d56/PersonMissionSpec_8java_source.html#l00241">241</a> of file <a class="el" href="../../d3/d56/PersonMissionSpec_8java_source.html">PersonMissionSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  241</span>                                   {</div>
-<div class="line"><span class="lineno">  242</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#a70005f769a95bb244efe3fa61cc95613">pluginClass</a>;</div>
-<div class="line"><span class="lineno">  243</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab9f5372102cc3602836e40ad9a592234" name="ab9f5372102cc3602836e40ad9a592234"></a>
@@ -693,10 +504,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d56/PersonMissionSpec_8java_source.html#l00167">167</a> of file <a class="el" href="../../d3/d56/PersonMissionSpec_8java_source.html">PersonMissionSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  167</span>                                          {</div>
-<div class="line"><span class="lineno">  168</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#a78919701bc33468e2b86078112bb36af">reqMissionAll</a>;</div>
-<div class="line"><span class="lineno">  169</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a425ac21c199ad3cf5b3441625de1aef8" name="a425ac21c199ad3cf5b3441625de1aef8"></a>
@@ -715,10 +523,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d56/PersonMissionSpec_8java_source.html#l00163">163</a> of file <a class="el" href="../../d3/d56/PersonMissionSpec_8java_source.html">PersonMissionSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  163</span>                                          {</div>
-<div class="line"><span class="lineno">  164</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#a36db65ed419f958bcc379e196b680078">reqMissionAny</a>;</div>
-<div class="line"><span class="lineno">  165</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a801090c6e0b14d8d1485268971533921" name="a801090c6e0b14d8d1485268971533921"></a>
@@ -737,10 +542,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d56/PersonMissionSpec_8java_source.html#l00171">171</a> of file <a class="el" href="../../d3/d56/PersonMissionSpec_8java_source.html">PersonMissionSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  171</span>                                           {</div>
-<div class="line"><span class="lineno">  172</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#a7b08f4f9a42b764e0fd1ab94bed802a0">reqMissionNone</a>;</div>
-<div class="line"><span class="lineno">  173</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab567012a40a0cbbe924541f914ed543d" name="ab567012a40a0cbbe924541f914ed543d"></a>
@@ -759,10 +561,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d56/PersonMissionSpec_8java_source.html#l00271">271</a> of file <a class="el" href="../../d3/d56/PersonMissionSpec_8java_source.html">PersonMissionSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  271</span>                                 {</div>
-<div class="line"><span class="lineno">  272</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#a8ba4395e6f780b388c09f8dccdea1a0c">tags</a>;</div>
-<div class="line"><span class="lineno">  273</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae873e41e16003858819dae15513a8ab1" name="ae873e41e16003858819dae15513a8ab1"></a>
@@ -781,10 +580,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d56/PersonMissionSpec_8java_source.html#l00253">253</a> of file <a class="el" href="../../d3/d56/PersonMissionSpec_8java_source.html">PersonMissionSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  253</span>                                    {</div>
-<div class="line"><span class="lineno">  254</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#a1b7ca2f5c58e1967e7575c14c777ba94">tagsAll</a>;</div>
-<div class="line"><span class="lineno">  255</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af04a7f68873b44aa5b7f472509d6e214" name="af04a7f68873b44aa5b7f472509d6e214"></a>
@@ -803,10 +599,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d56/PersonMissionSpec_8java_source.html#l00249">249</a> of file <a class="el" href="../../d3/d56/PersonMissionSpec_8java_source.html">PersonMissionSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  249</span>                                    {</div>
-<div class="line"><span class="lineno">  250</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#a3337764fed062e615733b6b3c15608cb">tagsAny</a>;</div>
-<div class="line"><span class="lineno">  251</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aaabbe0efb49c61eaf0f40b69dc264ccf" name="aaabbe0efb49c61eaf0f40b69dc264ccf"></a>
@@ -825,10 +618,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d56/PersonMissionSpec_8java_source.html#l00257">257</a> of file <a class="el" href="../../d3/d56/PersonMissionSpec_8java_source.html">PersonMissionSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  257</span>                                       {</div>
-<div class="line"><span class="lineno">  258</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#a7c98edc59e39fc13a054687e6ee8dca9">tagsNotAny</a>;</div>
-<div class="line"><span class="lineno">  259</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a61041434a8d71aa635ac322de0664f31" name="a61041434a8d71aa635ac322de0664f31"></a>
@@ -848,10 +638,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d56/PersonMissionSpec_8java_source.html#l00279">279</a> of file <a class="el" href="../../d3/d56/PersonMissionSpec_8java_source.html">PersonMissionSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  279</span>                                      {</div>
-<div class="line"><span class="lineno">  280</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#a8ba4395e6f780b388c09f8dccdea1a0c">tags</a>.contains(tag);</div>
-<div class="line"><span class="lineno">  281</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa9a60e173cd8b19b85c474c237a92029" name="aa9a60e173cd8b19b85c474c237a92029"></a>
@@ -871,10 +658,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d56/PersonMissionSpec_8java_source.html#l00213">213</a> of file <a class="el" href="../../d3/d56/PersonMissionSpec_8java_source.html">PersonMissionSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  213</span>                                    {</div>
-<div class="line"><span class="lineno">  214</span>        this.freq = <a class="code hl_variable" href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#af0eb709a25964ec9e7212031dd78e3cf">freq</a>;</div>
-<div class="line"><span class="lineno">  215</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac3090e07cb0fcf172b7efac4574fbe0f" name="ac3090e07cb0fcf172b7efac4574fbe0f"></a>
@@ -894,10 +678,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d56/PersonMissionSpec_8java_source.html#l00159">159</a> of file <a class="el" href="../../d3/d56/PersonMissionSpec_8java_source.html">PersonMissionSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  159</span>                                     {</div>
-<div class="line"><span class="lineno">  160</span>        this.icon = <a class="code hl_variable" href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#a0f889ffaef0518c911585b3d02de19f8">icon</a>;</div>
-<div class="line"><span class="lineno">  161</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a7c4b786a3215877cee01d52d3906f326" name="a7c4b786a3215877cee01d52d3906f326"></a>
@@ -917,10 +698,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d56/PersonMissionSpec_8java_source.html#l00237">237</a> of file <a class="el" href="../../d3/d56/PersonMissionSpec_8java_source.html">PersonMissionSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  237</span>                                                           {</div>
-<div class="line"><span class="lineno">  238</span>        this.importance = <a class="code hl_variable" href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#abd3db537d72b83479a882b96337465e5">importance</a>;</div>
-<div class="line"><span class="lineno">  239</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a80dcfe573d090319548ae103849f7172" name="a80dcfe573d090319548ae103849f7172"></a>
@@ -940,10 +718,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d56/PersonMissionSpec_8java_source.html#l00205">205</a> of file <a class="el" href="../../d3/d56/PersonMissionSpec_8java_source.html">PersonMissionSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  205</span>                                        {</div>
-<div class="line"><span class="lineno">  206</span>        this.max = <a class="code hl_variable" href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#a479c75e40e83abd9343f4938705f872a">max</a>;</div>
-<div class="line"><span class="lineno">  207</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a39624ce32b006b5ee305a10e83c286d6" name="a39624ce32b006b5ee305a10e83c286d6"></a>
@@ -963,10 +738,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d56/PersonMissionSpec_8java_source.html#l00229">229</a> of file <a class="el" href="../../d3/d56/PersonMissionSpec_8java_source.html">PersonMissionSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  229</span>                                                {</div>
-<div class="line"><span class="lineno">  230</span>        this.maxTimeout = <a class="code hl_variable" href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#a83cfb9882089f7d785379be76327b50b">maxTimeout</a>;</div>
-<div class="line"><span class="lineno">  231</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a870b69b7efd0c53852a1b81e51224a44" name="a870b69b7efd0c53852a1b81e51224a44"></a>
@@ -986,10 +758,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d56/PersonMissionSpec_8java_source.html#l00197">197</a> of file <a class="el" href="../../d3/d56/PersonMissionSpec_8java_source.html">PersonMissionSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  197</span>                                        {</div>
-<div class="line"><span class="lineno">  198</span>        this.min = <a class="code hl_variable" href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#a45b7f9defe9fd79a5408a72543bd672e">min</a>;</div>
-<div class="line"><span class="lineno">  199</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae41eb23509e77e143e22377a99f3c3c5" name="ae41eb23509e77e143e22377a99f3c3c5"></a>
@@ -1009,10 +778,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d56/PersonMissionSpec_8java_source.html#l00221">221</a> of file <a class="el" href="../../d3/d56/PersonMissionSpec_8java_source.html">PersonMissionSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  221</span>                                                {</div>
-<div class="line"><span class="lineno">  222</span>        this.minTimeout = <a class="code hl_variable" href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#a8e7896698e6629629e30a01a5522b8e5">minTimeout</a>;</div>
-<div class="line"><span class="lineno">  223</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a058e11ac893c02e8250cc5f46ef80df5" name="a058e11ac893c02e8250cc5f46ef80df5"></a>
@@ -1032,10 +798,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d56/PersonMissionSpec_8java_source.html#l00181">181</a> of file <a class="el" href="../../d3/d56/PersonMissionSpec_8java_source.html">PersonMissionSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  181</span>                                               {</div>
-<div class="line"><span class="lineno">  182</span>        this.missionId = <a class="code hl_variable" href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#a71814a83f6c5c723919553cf8c284316">missionId</a>;</div>
-<div class="line"><span class="lineno">  183</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a144a231fff30c3b8bb0da28d2cb7a108" name="a144a231fff30c3b8bb0da28d2cb7a108"></a>
@@ -1055,10 +818,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d56/PersonMissionSpec_8java_source.html#l00189">189</a> of file <a class="el" href="../../d3/d56/PersonMissionSpec_8java_source.html">PersonMissionSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  189</span>                                             {</div>
-<div class="line"><span class="lineno">  190</span>        this.personId = <a class="code hl_variable" href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#a8dbdfbc49a391ac500088928aba02301">personId</a>;</div>
-<div class="line"><span class="lineno">  191</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a74ab0a7fb0fbd941a155305d0af1522d" name="a74ab0a7fb0fbd941a155305d0af1522d"></a>
@@ -1078,10 +838,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d56/PersonMissionSpec_8java_source.html#l00245">245</a> of file <a class="el" href="../../d3/d56/PersonMissionSpec_8java_source.html">PersonMissionSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  245</span>                                                   {</div>
-<div class="line"><span class="lineno">  246</span>        this.pluginClass = <a class="code hl_variable" href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#a70005f769a95bb244efe3fa61cc95613">pluginClass</a>;</div>
-<div class="line"><span class="lineno">  247</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ad9976bd76f0cec7c8b15c8eb451f82de" name="ad9976bd76f0cec7c8b15c8eb451f82de"></a>
@@ -1101,43 +858,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d56/PersonMissionSpec_8java_source.html#l00284">284</a> of file <a class="el" href="../../d3/d56/PersonMissionSpec_8java_source.html">PersonMissionSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  284</span>                                               {</div>
-<div class="line"><span class="lineno">  285</span>        </div>
-<div class="line"><span class="lineno">  286</span>        <span class="keywordtype">boolean</span> foundAll = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  287</span>        <span class="keywordflow">for</span> (String tag : <a class="code hl_function" href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#ae873e41e16003858819dae15513a8ab1">getTagsAll</a>()) {</div>
-<div class="line"><span class="lineno">  288</span>            <span class="keywordflow">if</span> (!<a class="code hl_variable" href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#a8ba4395e6f780b388c09f8dccdea1a0c">tags</a>.contains(tag)) {</div>
-<div class="line"><span class="lineno">  289</span>                foundAll = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  290</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  291</span>            }</div>
-<div class="line"><span class="lineno">  292</span>        }</div>
-<div class="line"><span class="lineno">  293</span>        <span class="keywordflow">if</span> (!foundAll &amp;&amp; !<a class="code hl_function" href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#ae873e41e16003858819dae15513a8ab1">getTagsAll</a>().isEmpty()) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  294</span>        </div>
-<div class="line"><span class="lineno">  295</span> </div>
-<div class="line"><span class="lineno">  296</span>        <span class="keywordtype">boolean</span> foundOne = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  297</span>        <span class="keywordflow">for</span> (String tag : <a class="code hl_function" href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#af04a7f68873b44aa5b7f472509d6e214">getTagsAny</a>()) {</div>
-<div class="line"><span class="lineno">  298</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#a8ba4395e6f780b388c09f8dccdea1a0c">tags</a>.contains(tag)) {</div>
-<div class="line"><span class="lineno">  299</span>                foundOne = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  300</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  301</span>            }</div>
-<div class="line"><span class="lineno">  302</span>        }</div>
-<div class="line"><span class="lineno">  303</span>        <span class="keywordflow">if</span> (!foundOne &amp;&amp; !<a class="code hl_function" href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#af04a7f68873b44aa5b7f472509d6e214">getTagsAny</a>().isEmpty()) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  304</span>        </div>
-<div class="line"><span class="lineno">  305</span>        </div>
-<div class="line"><span class="lineno">  306</span>        foundOne = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  307</span>        <span class="keywordflow">for</span> (String tag : <a class="code hl_function" href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#aaabbe0efb49c61eaf0f40b69dc264ccf">getTagsNotAny</a>()) {</div>
-<div class="line"><span class="lineno">  308</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#a8ba4395e6f780b388c09f8dccdea1a0c">tags</a>.contains(tag)) {</div>
-<div class="line"><span class="lineno">  309</span>                foundOne = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  310</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  311</span>            }</div>
-<div class="line"><span class="lineno">  312</span>        }</div>
-<div class="line"><span class="lineno">  313</span>        <span class="keywordflow">if</span> (foundOne) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  314</span>        </div>
-<div class="line"><span class="lineno">  315</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  316</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec_html_aaabbe0efb49c61eaf0f40b69dc264ccf"><div class="ttname"><a href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#aaabbe0efb49c61eaf0f40b69dc264ccf">com.fs.starfarer.api.loading.PersonMissionSpec.getTagsNotAny</a></div><div class="ttdeci">Set&lt; String &gt; getTagsNotAny()</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d56/PersonMissionSpec_8java_source.html#l00257">PersonMissionSpec.java:257</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec_html_ae873e41e16003858819dae15513a8ab1"><div class="ttname"><a href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#ae873e41e16003858819dae15513a8ab1">com.fs.starfarer.api.loading.PersonMissionSpec.getTagsAll</a></div><div class="ttdeci">Set&lt; String &gt; getTagsAll()</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d56/PersonMissionSpec_8java_source.html#l00253">PersonMissionSpec.java:253</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec_html_af04a7f68873b44aa5b7f472509d6e214"><div class="ttname"><a href="../../d3/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html#af04a7f68873b44aa5b7f472509d6e214">com.fs.starfarer.api.loading.PersonMissionSpec.getTagsAny</a></div><div class="ttdeci">Set&lt; String &gt; getTagsAny()</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d56/PersonMissionSpec_8java_source.html#l00249">PersonMissionSpec.java:249</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

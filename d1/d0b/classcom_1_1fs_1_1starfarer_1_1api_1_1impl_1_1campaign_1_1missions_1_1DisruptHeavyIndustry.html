@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -2377,21 +2378,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/da5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1BaseDisruptIndustry.html#a77f7347ac1458612752b0c1164d7239f">com.fs.starfarer.api.impl.campaign.missions.BaseDisruptIndustry</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../de/da0/DisruptHeavyIndustry_8java_source.html#l00053">53</a> of file <a class="el" href="../../de/da0/DisruptHeavyIndustry_8java_source.html">DisruptHeavyIndustry.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   53</span>                                                         {</div>
-<div class="line"><span class="lineno">   54</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d6/da5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1BaseDisruptIndustry.html#a035f231647f65e77db63e365548c7ca2">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af6f714c59a16687b5cde142091a54150">getSize</a>() &lt;= 4) {</div>
-<div class="line"><span class="lineno">   55</span>            <a class="code hl_function" href="../../d3/d81/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers.html#a02d15b7a36a04da8aab7e07ab665d833">triggerCreateMediumPatrolAroundMarket</a>(<a class="code hl_variable" href="../../d6/da5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1BaseDisruptIndustry.html#a035f231647f65e77db63e365548c7ca2">market</a>, Stage.DISRUPT, 0f);</div>
-<div class="line"><span class="lineno">   56</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d6/da5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1BaseDisruptIndustry.html#a035f231647f65e77db63e365548c7ca2">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af6f714c59a16687b5cde142091a54150">getSize</a>() &lt;= 6) {</div>
-<div class="line"><span class="lineno">   57</span>            <a class="code hl_function" href="../../d3/d81/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers.html#a8c51a9461cb7258e75b08d65360b0223">triggerCreateLargePatrolAroundMarket</a>(<a class="code hl_variable" href="../../d6/da5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1BaseDisruptIndustry.html#a035f231647f65e77db63e365548c7ca2">market</a>, Stage.DISRUPT, 0f);</div>
-<div class="line"><span class="lineno">   58</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   59</span>            <a class="code hl_function" href="../../d3/d81/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers.html#a02d15b7a36a04da8aab7e07ab665d833">triggerCreateMediumPatrolAroundMarket</a>(<a class="code hl_variable" href="../../d6/da5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1BaseDisruptIndustry.html#a035f231647f65e77db63e365548c7ca2">market</a>, Stage.DISRUPT, 0f);</div>
-<div class="line"><span class="lineno">   60</span>            <a class="code hl_function" href="../../d3/d81/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers.html#a8c51a9461cb7258e75b08d65360b0223">triggerCreateLargePatrolAroundMarket</a>(<a class="code hl_variable" href="../../d6/da5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1BaseDisruptIndustry.html#a035f231647f65e77db63e365548c7ca2">market</a>, Stage.DISRUPT, 0f);</div>
-<div class="line"><span class="lineno">   61</span>        }</div>
-<div class="line"><span class="lineno">   62</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1BaseDisruptIndustry_html_a035f231647f65e77db63e365548c7ca2"><div class="ttname"><a href="../../d6/da5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1BaseDisruptIndustry.html#a035f231647f65e77db63e365548c7ca2">com.fs.starfarer.api.impl.campaign.missions.BaseDisruptIndustry.market</a></div><div class="ttdeci">MarketAPI market</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dba/BaseDisruptIndustry_8java_source.html#l00033">BaseDisruptIndustry.java:33</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_html_a02d15b7a36a04da8aab7e07ab665d833"><div class="ttname"><a href="../../d3/d81/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers.html#a02d15b7a36a04da8aab7e07ab665d833">com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.triggerCreateMediumPatrolAroundMarket</a></div><div class="ttdeci">void triggerCreateMediumPatrolAroundMarket(MarketAPI market, Object stage, float extraSuspicion)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d41/HubMissionWithTriggers_8java_source.html#l03268">HubMissionWithTriggers.java:3268</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_html_a8c51a9461cb7258e75b08d65360b0223"><div class="ttname"><a href="../../d3/d81/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers.html#a8c51a9461cb7258e75b08d65360b0223">com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.triggerCreateLargePatrolAroundMarket</a></div><div class="ttdeci">void triggerCreateLargePatrolAroundMarket(MarketAPI market, Object stage, float extraSuspicion)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d41/HubMissionWithTriggers_8java_source.html#l03271">HubMissionWithTriggers.java:3271</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_af6f714c59a16687b5cde142091a54150"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af6f714c59a16687b5cde142091a54150">com.fs.starfarer.api.campaign.econ.MarketAPI.getSize</a></div><div class="ttdeci">int getSize()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="acb16042e909d7744d1ddd666e4685df9" name="acb16042e909d7744d1ddd666e4685df9"></a>
@@ -2421,10 +2408,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/da5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1BaseDisruptIndustry.html#a13f74568d895f7ed243c64dbfa8e3e14">com.fs.starfarer.api.impl.campaign.missions.BaseDisruptIndustry</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../de/da0/DisruptHeavyIndustry_8java_source.html#l00040">40</a> of file <a class="el" href="../../de/da0/DisruptHeavyIndustry_8java_source.html">DisruptHeavyIndustry.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   40</span>                                                             {</div>
-<div class="line"><span class="lineno">   41</span>        <span class="keywordflow">return</span> Misc.isMilitary(createdAt);</div>
-<div class="line"><span class="lineno">   42</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa5130029b9623705c10ca4f24a584172" name="aa5130029b9623705c10ca4f24a584172"></a>
@@ -2454,38 +2438,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/da5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1BaseDisruptIndustry.html#a3f62b9beb51463be027cbb3cf02edbdb">com.fs.starfarer.api.impl.campaign.missions.BaseDisruptIndustry</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../de/da0/DisruptHeavyIndustry_8java_source.html#l00014">14</a> of file <a class="el" href="../../de/da0/DisruptHeavyIndustry_8java_source.html">DisruptHeavyIndustry.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   14</span>                                                       {</div>
-<div class="line"><span class="lineno">   15</span>        List&lt;String&gt; posts = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
-<div class="line"><span class="lineno">   16</span>        posts.add(Ranks.POST_AGENT);</div>
-<div class="line"><span class="lineno">   17</span>        <span class="keywordflow">if</span> (createdAt.getSize() &gt;= 6) {</div>
-<div class="line"><span class="lineno">   18</span>            posts.add(Ranks.POST_ADMINISTRATOR);</div>
-<div class="line"><span class="lineno">   19</span>        }</div>
-<div class="line"><span class="lineno">   20</span>        <span class="keywordflow">if</span> (Misc.isMilitary(createdAt)) {</div>
-<div class="line"><span class="lineno">   21</span>            posts.add(Ranks.POST_BASE_COMMANDER);</div>
-<div class="line"><span class="lineno">   22</span>        }</div>
-<div class="line"><span class="lineno">   23</span>        <span class="keywordflow">if</span> (Misc.hasOrbitalStation(createdAt)) {</div>
-<div class="line"><span class="lineno">   24</span>            posts.add(Ranks.POST_STATION_COMMANDER);</div>
-<div class="line"><span class="lineno">   25</span>        }</div>
-<div class="line"><span class="lineno">   26</span>        String post = <a class="code hl_function" href="../../d5/dd1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission.html#ab1b70c8d09b41d5259c7c6ca4b6f9a7d">pickOne</a>(posts);</div>
-<div class="line"><span class="lineno">   27</span>        <span class="keywordflow">if</span> (post == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   28</span>        </div>
-<div class="line"><span class="lineno">   29</span>        <span class="comment">// rank used only when it&#39;s an agent, since the other posts mean the person already exists</span></div>
-<div class="line"><span class="lineno">   30</span>        <span class="comment">// and doesn&#39;t need to be created</span></div>
-<div class="line"><span class="lineno">   31</span>        <a class="code hl_function" href="../../d5/dd1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission.html#a5cdf4afb2410c09f75275fecad12c7b6">setGiverRank</a>(<a class="code hl_function" href="../../d5/dd1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission.html#ab1b70c8d09b41d5259c7c6ca4b6f9a7d">pickOne</a>(Ranks.GROUND_CAPTAIN, Ranks.GROUND_COLONEL, Ranks.GROUND_MAJOR,</div>
-<div class="line"><span class="lineno">   32</span>                     Ranks.SPACE_COMMANDER, Ranks.SPACE_CAPTAIN, Ranks.SPACE_ADMIRAL));</div>
-<div class="line"><span class="lineno">   33</span>        <a class="code hl_function" href="../../d5/dd1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission.html#a6e8fa744d32180f635459e4631277af8">setGiverTags</a>(Tags.CONTACT_MILITARY);</div>
-<div class="line"><span class="lineno">   34</span>        <a class="code hl_function" href="../../d5/dd1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission.html#a3c454d1368b61db991f266d8462bcfca">setGiverPost</a>(post);</div>
-<div class="line"><span class="lineno">   35</span>        <a class="code hl_function" href="../../d5/dd1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission.html#a66e038f9ee3bab919f39c9eda5f53cd2">setGiverImportance</a>(<a class="code hl_function" href="../../d5/dd1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission.html#aa7d99befb516117ae284164779d06577">pickHighImportance</a>());</div>
-<div class="line"><span class="lineno">   36</span>        <a class="code hl_function" href="../../d5/dd1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission.html#a8f0e0a3fd390830c8586ea0f4d701010">findOrCreateGiver</a>(createdAt, <span class="keyword">false</span>, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   37</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_html_a3c454d1368b61db991f266d8462bcfca"><div class="ttname"><a href="../../d5/dd1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission.html#a3c454d1368b61db991f266d8462bcfca">com.fs.starfarer.api.impl.campaign.missions.hub.BaseHubMission.setGiverPost</a></div><div class="ttdeci">void setGiverPost(String giverPost)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d9d/BaseHubMission_8java_source.html#l02928">BaseHubMission.java:2928</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_html_a5cdf4afb2410c09f75275fecad12c7b6"><div class="ttname"><a href="../../d5/dd1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission.html#a5cdf4afb2410c09f75275fecad12c7b6">com.fs.starfarer.api.impl.campaign.missions.hub.BaseHubMission.setGiverRank</a></div><div class="ttdeci">void setGiverRank(String giverRank)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d9d/BaseHubMission_8java_source.html#l02924">BaseHubMission.java:2924</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_html_a66e038f9ee3bab919f39c9eda5f53cd2"><div class="ttname"><a href="../../d5/dd1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission.html#a66e038f9ee3bab919f39c9eda5f53cd2">com.fs.starfarer.api.impl.campaign.missions.hub.BaseHubMission.setGiverImportance</a></div><div class="ttdeci">void setGiverImportance(PersonImportance giverImportance)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d9d/BaseHubMission_8java_source.html#l02936">BaseHubMission.java:2936</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_html_a6e8fa744d32180f635459e4631277af8"><div class="ttname"><a href="../../d5/dd1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission.html#a6e8fa744d32180f635459e4631277af8">com.fs.starfarer.api.impl.campaign.missions.hub.BaseHubMission.setGiverTags</a></div><div class="ttdeci">void setGiverTags(String ... giverTags)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d9d/BaseHubMission_8java_source.html#l02940">BaseHubMission.java:2940</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_html_a8f0e0a3fd390830c8586ea0f4d701010"><div class="ttname"><a href="../../d5/dd1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission.html#a8f0e0a3fd390830c8586ea0f4d701010">com.fs.starfarer.api.impl.campaign.missions.hub.BaseHubMission.findOrCreateGiver</a></div><div class="ttdeci">void findOrCreateGiver(MarketAPI market, boolean addToCommDirectory, boolean cleanUpOnMissionOverIfWasNewPerson)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d9d/BaseHubMission_8java_source.html#l02945">BaseHubMission.java:2945</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_html_aa7d99befb516117ae284164779d06577"><div class="ttname"><a href="../../d5/dd1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission.html#aa7d99befb516117ae284164779d06577">com.fs.starfarer.api.impl.campaign.missions.hub.BaseHubMission.pickHighImportance</a></div><div class="ttdeci">PersonImportance pickHighImportance()</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d9d/BaseHubMission_8java_source.html#l03003">BaseHubMission.java:3003</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_html_ab1b70c8d09b41d5259c7c6ca4b6f9a7d"><div class="ttname"><a href="../../d5/dd1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission.html#ab1b70c8d09b41d5259c7c6ca4b6f9a7d">com.fs.starfarer.api.impl.campaign.missions.hub.BaseHubMission.pickOne</a></div><div class="ttdeci">String pickOne(List&lt; String &gt; options)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d9d/BaseHubMission_8java_source.html#l02479">BaseHubMission.java:2479</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af75859298abad0162b45697daa580eb9" name="af75859298abad0162b45697daa580eb9"></a>
@@ -2514,10 +2467,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/da5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1BaseDisruptIndustry.html#a6251a45611d26afc9644d4d32c48d113">com.fs.starfarer.api.impl.campaign.missions.BaseDisruptIndustry</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../de/da0/DisruptHeavyIndustry_8java_source.html#l00048">48</a> of file <a class="el" href="../../de/da0/DisruptHeavyIndustry_8java_source.html">DisruptHeavyIndustry.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   48</span>                                           {</div>
-<div class="line"><span class="lineno">   49</span>        <span class="keywordflow">return</span> CreditReward.HIGH;</div>
-<div class="line"><span class="lineno">   50</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8f82056f049d15c90dd81f59a052d512" name="a8f82056f049d15c90dd81f59a052d512"></a>
@@ -2546,10 +2496,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/da5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1BaseDisruptIndustry.html#a19ac741e6bc626e4a0a564e9f239cc61">com.fs.starfarer.api.impl.campaign.missions.BaseDisruptIndustry</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../de/da0/DisruptHeavyIndustry_8java_source.html#l00044">44</a> of file <a class="el" href="../../de/da0/DisruptHeavyIndustry_8java_source.html">DisruptHeavyIndustry.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   44</span>                                              {</div>
-<div class="line"><span class="lineno">   45</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> String[] {Industries.HEAVYINDUSTRY, Industries.ORBITALWORKS};</div>
-<div class="line"><span class="lineno">   46</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

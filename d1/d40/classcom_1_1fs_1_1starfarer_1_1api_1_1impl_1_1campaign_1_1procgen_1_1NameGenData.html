@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -190,13 +191,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d11/NameGenData_8java_source.html#l00030">30</a> of file <a class="el" href="../../d8/d11/NameGenData_8java_source.html">NameGenData.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   30</span>                                                      {</div>
-<div class="line"><span class="lineno">   31</span>        this.name = name;</div>
-<div class="line"><span class="lineno">   32</span>        this.secondary = secondary;</div>
-<div class="line"><span class="lineno">   33</span>        this.reusable = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   34</span>        this.frequency = 1;</div>
-<div class="line"><span class="lineno">   35</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa2404f7f30c9aed9e553f5ca3d053f34" name="aa2404f7f30c9aed9e553f5ca3d053f34"></a>
@@ -216,41 +211,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d11/NameGenData_8java_source.html#l00037">37</a> of file <a class="el" href="../../d8/d11/NameGenData_8java_source.html">NameGenData.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   37</span>                                                            {</div>
-<div class="line"><span class="lineno">   38</span>        name = row.getString(<span class="stringliteral">&quot;name&quot;</span>);</div>
-<div class="line"><span class="lineno">   39</span>        secondary = row.optString(<span class="stringliteral">&quot;secondary&quot;</span>);</div>
-<div class="line"><span class="lineno">   40</span>        </div>
-<div class="line"><span class="lineno">   41</span>        <span class="keywordflow">if</span> (name != <span class="keyword">null</span>) name = name.trim();</div>
-<div class="line"><span class="lineno">   42</span>        <span class="keywordflow">if</span> (secondary != <span class="keyword">null</span>) secondary = secondary.trim();</div>
-<div class="line"><span class="lineno">   43</span>        </div>
-<div class="line"><span class="lineno">   44</span>        frequency = (float) row.optDouble(<span class="stringliteral">&quot;frequency&quot;</span>, 1);</div>
-<div class="line"><span class="lineno">   45</span>        reusable = row.optBoolean(<span class="stringliteral">&quot;reusable&quot;</span>, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   46</span>        </div>
-<div class="line"><span class="lineno">   47</span>        <span class="keywordflow">if</span> (secondary != <span class="keyword">null</span> &amp;&amp; secondary.isEmpty()) secondary = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   48</span>        </div>
-<div class="line"><span class="lineno">   49</span>        String tags = row.optString(<span class="stringliteral">&quot;tags&quot;</span>, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   50</span>        <span class="keywordflow">if</span> (tags != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   51</span>            String [] split = tags.split(<span class="stringliteral">&quot;,&quot;</span>);</div>
-<div class="line"><span class="lineno">   52</span>            <span class="keywordflow">for</span> (String tag : split) {</div>
-<div class="line"><span class="lineno">   53</span>                tag = tag.trim();</div>
-<div class="line"><span class="lineno">   54</span>                <span class="keywordflow">if</span> (tag.isEmpty()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   55</span>                <a class="code hl_function" href="../../d1/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1NameGenData.html#afd49d78086268a81c799aa04be18b553">addTag</a>(tag);</div>
-<div class="line"><span class="lineno">   56</span>            }</div>
-<div class="line"><span class="lineno">   57</span>        }</div>
-<div class="line"><span class="lineno">   58</span>        </div>
-<div class="line"><span class="lineno">   59</span>        String parents = row.optString(<span class="stringliteral">&quot;parents&quot;</span>, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   60</span>        <span class="keywordflow">if</span> (parents != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   61</span>            String [] split = parents.split(<span class="stringliteral">&quot;,&quot;</span>);</div>
-<div class="line"><span class="lineno">   62</span>            <span class="keywordflow">for</span> (String parent : split) {</div>
-<div class="line"><span class="lineno">   63</span>                parent = parent.trim();</div>
-<div class="line"><span class="lineno">   64</span>                <span class="keywordflow">if</span> (parent.isEmpty()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   65</span>                <a class="code hl_function" href="../../d1/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1NameGenData.html#aa44e2f1fa7e1e523fe3d3ea86013191d">addParent</a>(parent);</div>
-<div class="line"><span class="lineno">   66</span>            }</div>
-<div class="line"><span class="lineno">   67</span>        }</div>
-<div class="line"><span class="lineno">   68</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1NameGenData_html_aa44e2f1fa7e1e523fe3d3ea86013191d"><div class="ttname"><a href="../../d1/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1NameGenData.html#aa44e2f1fa7e1e523fe3d3ea86013191d">com.fs.starfarer.api.impl.campaign.procgen.NameGenData.addParent</a></div><div class="ttdeci">void addParent(String parent)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d11/NameGenData_8java_source.html#l00094">NameGenData.java:94</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1NameGenData_html_afd49d78086268a81c799aa04be18b553"><div class="ttname"><a href="../../d1/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1NameGenData.html#afd49d78086268a81c799aa04be18b553">com.fs.starfarer.api.impl.campaign.procgen.NameGenData.addTag</a></div><div class="ttdeci">void addTag(String tag)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d11/NameGenData_8java_source.html#l00078">NameGenData.java:78</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -271,10 +232,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d11/NameGenData_8java_source.html#l00094">94</a> of file <a class="el" href="../../d8/d11/NameGenData_8java_source.html">NameGenData.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   94</span>                                         {</div>
-<div class="line"><span class="lineno">   95</span>        parents.add(parent);</div>
-<div class="line"><span class="lineno">   96</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="afd49d78086268a81c799aa04be18b553" name="afd49d78086268a81c799aa04be18b553"></a>
@@ -294,10 +252,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d11/NameGenData_8java_source.html#l00078">78</a> of file <a class="el" href="../../d8/d11/NameGenData_8java_source.html">NameGenData.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   78</span>                                   {</div>
-<div class="line"><span class="lineno">   79</span>        tags.add(tag);</div>
-<div class="line"><span class="lineno">   80</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a97ce14ce6803631ce3f47bff0c638296" name="a97ce14ce6803631ce3f47bff0c638296"></a>
@@ -316,10 +271,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d11/NameGenData_8java_source.html#l00118">118</a> of file <a class="el" href="../../d8/d11/NameGenData_8java_source.html">NameGenData.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  118</span>                                {</div>
-<div class="line"><span class="lineno">  119</span>        <span class="keywordflow">return</span> frequency;</div>
-<div class="line"><span class="lineno">  120</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a6c0315f436e67ea72db6ac916ccc6166" name="a6c0315f436e67ea72db6ac916ccc6166"></a>
@@ -338,10 +290,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d11/NameGenData_8java_source.html#l00102">102</a> of file <a class="el" href="../../d8/d11/NameGenData_8java_source.html">NameGenData.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  102</span>                            {</div>
-<div class="line"><span class="lineno">  103</span>        <span class="keywordflow">return</span> name;</div>
-<div class="line"><span class="lineno">  104</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac413f90761baa1832992ee601602aae6" name="ac413f90761baa1832992ee601602aae6"></a>
@@ -360,10 +309,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d11/NameGenData_8java_source.html#l00090">90</a> of file <a class="el" href="../../d8/d11/NameGenData_8java_source.html">NameGenData.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   90</span>                                    {</div>
-<div class="line"><span class="lineno">   91</span>        <span class="keywordflow">return</span> parents;</div>
-<div class="line"><span class="lineno">   92</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a69ba3400a78c983155527374b29c60ae" name="a69ba3400a78c983155527374b29c60ae"></a>
@@ -382,10 +328,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d11/NameGenData_8java_source.html#l00110">110</a> of file <a class="el" href="../../d8/d11/NameGenData_8java_source.html">NameGenData.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  110</span>                                 {</div>
-<div class="line"><span class="lineno">  111</span>        <span class="keywordflow">return</span> secondary;</div>
-<div class="line"><span class="lineno">  112</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af745ea16fbd13ace9bcd0c3567f501b6" name="af745ea16fbd13ace9bcd0c3567f501b6"></a>
@@ -404,10 +347,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d11/NameGenData_8java_source.html#l00074">74</a> of file <a class="el" href="../../d8/d11/NameGenData_8java_source.html">NameGenData.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   74</span>                                 {</div>
-<div class="line"><span class="lineno">   75</span>        <span class="keywordflow">return</span> tags;</div>
-<div class="line"><span class="lineno">   76</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a06f89e38440dbd949df467dc0fe577dd" name="a06f89e38440dbd949df467dc0fe577dd"></a>
@@ -427,10 +367,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d11/NameGenData_8java_source.html#l00098">98</a> of file <a class="el" href="../../d8/d11/NameGenData_8java_source.html">NameGenData.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   98</span>                                            {</div>
-<div class="line"><span class="lineno">   99</span>        <span class="keywordflow">return</span> parents.contains(parent);</div>
-<div class="line"><span class="lineno">  100</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ad8ca3e9f54047a7c0ddb3924586bad1c" name="ad8ca3e9f54047a7c0ddb3924586bad1c"></a>
@@ -450,10 +387,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d11/NameGenData_8java_source.html#l00082">82</a> of file <a class="el" href="../../d8/d11/NameGenData_8java_source.html">NameGenData.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   82</span>                                      {</div>
-<div class="line"><span class="lineno">   83</span>        <span class="keywordflow">return</span> tags.contains(tag);</div>
-<div class="line"><span class="lineno">   84</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a786bc334fdf3ebb1f1d329cdeb5fd3ee" name="a786bc334fdf3ebb1f1d329cdeb5fd3ee"></a>
@@ -472,10 +406,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d11/NameGenData_8java_source.html#l00126">126</a> of file <a class="el" href="../../d8/d11/NameGenData_8java_source.html">NameGenData.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  126</span>                                {</div>
-<div class="line"><span class="lineno">  127</span>        <span class="keywordflow">return</span> reusable;</div>
-<div class="line"><span class="lineno">  128</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a74b6763dc60921689eb207659fc5bff3" name="a74b6763dc60921689eb207659fc5bff3"></a>
@@ -495,10 +426,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d11/NameGenData_8java_source.html#l00122">122</a> of file <a class="el" href="../../d8/d11/NameGenData_8java_source.html">NameGenData.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  122</span>                                              {</div>
-<div class="line"><span class="lineno">  123</span>        this.frequency = frequency;</div>
-<div class="line"><span class="lineno">  124</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a6423fae194fa42de42425260dd9b869e" name="a6423fae194fa42de42425260dd9b869e"></a>
@@ -518,10 +446,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d11/NameGenData_8java_source.html#l00106">106</a> of file <a class="el" href="../../d8/d11/NameGenData_8java_source.html">NameGenData.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  106</span>                                     {</div>
-<div class="line"><span class="lineno">  107</span>        this.name = name;</div>
-<div class="line"><span class="lineno">  108</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a3054e7abbf021b6b3cef52bb4198e733" name="a3054e7abbf021b6b3cef52bb4198e733"></a>
@@ -541,10 +466,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d11/NameGenData_8java_source.html#l00086">86</a> of file <a class="el" href="../../d8/d11/NameGenData_8java_source.html">NameGenData.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   86</span>                                                {</div>
-<div class="line"><span class="lineno">   87</span>        this.parents = parents;</div>
-<div class="line"><span class="lineno">   88</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a48590ed1fabdee541fdd849a45303d1a" name="a48590ed1fabdee541fdd849a45303d1a"></a>
@@ -564,10 +486,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d11/NameGenData_8java_source.html#l00130">130</a> of file <a class="el" href="../../d8/d11/NameGenData_8java_source.html">NameGenData.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  130</span>                                              {</div>
-<div class="line"><span class="lineno">  131</span>        this.reusable = reusable;</div>
-<div class="line"><span class="lineno">  132</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a36884e09e0cbec0970017b883b2829e2" name="a36884e09e0cbec0970017b883b2829e2"></a>
@@ -587,10 +506,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d11/NameGenData_8java_source.html#l00114">114</a> of file <a class="el" href="../../d8/d11/NameGenData_8java_source.html">NameGenData.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  114</span>                                               {</div>
-<div class="line"><span class="lineno">  115</span>        this.secondary = secondary;</div>
-<div class="line"><span class="lineno">  116</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a433a844df2235c1be8d0771dc1fd2c8f" name="a433a844df2235c1be8d0771dc1fd2c8f"></a>
@@ -610,10 +526,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d11/NameGenData_8java_source.html#l00070">70</a> of file <a class="el" href="../../d8/d11/NameGenData_8java_source.html">NameGenData.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   70</span>                                          {</div>
-<div class="line"><span class="lineno">   71</span>        this.tags = tags;</div>
-<div class="line"><span class="lineno">   72</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

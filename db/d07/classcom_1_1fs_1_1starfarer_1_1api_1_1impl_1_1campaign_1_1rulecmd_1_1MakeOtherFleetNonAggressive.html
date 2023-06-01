@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -175,38 +176,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="../../d0/d5c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1CommandPlugin.html#a72a44c5127e60136b87d3b37613fd0e0">com.fs.starfarer.api.campaign.rules.CommandPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/dc9/MakeOtherFleetNonAggressive_8java_source.html#l00016">16</a> of file <a class="el" href="../../d3/dc9/MakeOtherFleetNonAggressive_8java_source.html">MakeOtherFleetNonAggressive.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   16</span>                                                                                                                             {</div>
-<div class="line"><span class="lineno">   17</span> </div>
-<div class="line"><span class="lineno">   18</span>        <span class="keywordflow">if</span> (dialog == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   19</span>        <span class="keywordflow">if</span> (!(dialog.getInteractionTarget() instanceof CampaignFleetAPI)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   20</span>        </div>
-<div class="line"><span class="lineno">   21</span>        String reason = <span class="stringliteral">&quot;generic&quot;</span>;</div>
-<div class="line"><span class="lineno">   22</span>        <span class="keywordtype">boolean</span> value;</div>
-<div class="line"><span class="lineno">   23</span>        <span class="keywordtype">float</span> expire = 0f;</div>
-<div class="line"><span class="lineno">   24</span>        <span class="keywordflow">if</span> (params.size() &gt;= 2) {</div>
-<div class="line"><span class="lineno">   25</span>            reason = params.get(0).getString(memoryMap);</div>
-<div class="line"><span class="lineno">   26</span>            value = params.get(1).getBoolean(memoryMap);</div>
-<div class="line"><span class="lineno">   27</span>            <span class="keywordflow">if</span> (params.size() &gt;= 3) {</div>
-<div class="line"><span class="lineno">   28</span>                expire = params.get(2).getFloat(memoryMap);</div>
-<div class="line"><span class="lineno">   29</span>            }</div>
-<div class="line"><span class="lineno">   30</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (params.size() &lt; 1) {</div>
-<div class="line"><span class="lineno">   31</span>            value = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   32</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   33</span>            value = params.get(0).getBoolean(memoryMap);</div>
-<div class="line"><span class="lineno">   34</span>        }</div>
-<div class="line"><span class="lineno">   35</span>        </div>
-<div class="line"><span class="lineno">   36</span>        MemoryAPI memory = dialog.getInteractionTarget().getMemoryWithoutUpdate();</div>
-<div class="line"><span class="lineno">   37</span>        Misc.setFlagWithReason(memory, MemFlags.MEMORY_KEY_MAKE_NON_AGGRESSIVE, reason, value, expire);</div>
-<div class="line"><span class="lineno">   38</span> </div>
-<div class="line"><span class="lineno">   39</span>        CampaignFleetAPI fleet = (CampaignFleetAPI) dialog.getInteractionTarget();</div>
-<div class="line"><span class="lineno">   40</span>        <span class="keywordflow">if</span> (fleet.getAI() instanceof ModularFleetAIAPI) {</div>
-<div class="line"><span class="lineno">   41</span>            ModularFleetAIAPI mAI = (ModularFleetAIAPI) fleet.getAI();</div>
-<div class="line"><span class="lineno">   42</span>            mAI.getTacticalModule().forceTargetReEval();</div>
-<div class="line"><span class="lineno">   43</span>        }</div>
-<div class="line"><span class="lineno">   44</span>        </div>
-<div class="line"><span class="lineno">   45</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   46</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

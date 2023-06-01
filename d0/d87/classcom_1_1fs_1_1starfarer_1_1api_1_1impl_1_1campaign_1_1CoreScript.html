@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -294,13 +295,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/dc8/CoreScript_8java_source.html#l00103">103</a> of file <a class="el" href="../../d1/dc8/CoreScript_8java_source.html">CoreScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  103</span>                        {</div>
-<div class="line"><span class="lineno">  104</span>        super(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  105</span><span class="comment">//      shared = new SharedData();</span></div>
-<div class="line"><span class="lineno">  106</span>        shared = SharedData.<a class="code hl_function" href="../../d6/dbd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1SharedData.html#ab9b74f1788d9bad9735eff6db628c370">getData</a>();</div>
-<div class="line"><span class="lineno">  107</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1SharedData_html_ab9b74f1788d9bad9735eff6db628c370"><div class="ttname"><a href="../../d6/dbd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1SharedData.html#ab9b74f1788d9bad9735eff6db628c370">com.fs.starfarer.api.impl.campaign.shared.SharedData.getData</a></div><div class="ttdeci">static SharedData getData()</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/df5/SharedData_8java_source.html#l00139">SharedData.java:139</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -351,25 +346,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/dc8/CoreScript_8java_source.html#l01428">1428</a> of file <a class="el" href="../../d1/dc8/CoreScript_8java_source.html">CoreScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1428</span>                                                                                                                {</div>
-<div class="line"><span class="lineno"> 1429</span>        <span class="keywordflow">for</span> (CommodityOnMarketAPI com : market.getCommoditiesCopy()) {</div>
-<div class="line"><span class="lineno"> 1430</span>            FDNode eNode = report.getNode(parent, com.getId());</div>
-<div class="line"><span class="lineno"> 1431</span>            eNode.name = com.getCommodity().getName();</div>
-<div class="line"><span class="lineno"> 1432</span>            eNode.income += com.getExportIncome() * f;</div>
-<div class="line"><span class="lineno"> 1433</span>            eNode.custom = com;</div>
-<div class="line"><span class="lineno"> 1434</span>            eNode.mapEntity = market.getPrimaryEntity();</div>
-<div class="line"><span class="lineno"> 1435</span>        }</div>
-<div class="line"><span class="lineno"> 1436</span>        </div>
-<div class="line"><span class="lineno"> 1437</span><span class="comment">//      List&lt;FDNode&gt; sorted = new ArrayList&lt;FDNode&gt;(parent.getChildren().values());</span></div>
-<div class="line"><span class="lineno"> 1438</span><span class="comment">//      Collections.sort(sorted, new Comparator&lt;FDNode&gt;() {</span></div>
-<div class="line"><span class="lineno"> 1439</span><span class="comment">//          public int compare(FDNode o1, FDNode o2) {</span></div>
-<div class="line"><span class="lineno"> 1440</span><span class="comment">//              return o2.income - o1.income;</span></div>
-<div class="line"><span class="lineno"> 1441</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno"> 1442</span><span class="comment">//      });</span></div>
-<div class="line"><span class="lineno"> 1443</span><span class="comment">//      parent.getChildren().clear();</span></div>
-<div class="line"><span class="lineno"> 1444</span><span class="comment">//      parent.getChildren().</span></div>
-<div class="line"><span class="lineno"> 1445</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="add216ecfbc68144cd0b582ff6bd6dec1" name="add216ecfbc68144cd0b582ff6bd6dec1"></a>
@@ -425,40 +402,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/dc8/CoreScript_8java_source.html#l00461">461</a> of file <a class="el" href="../../d1/dc8/CoreScript_8java_source.html">CoreScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  462</span>                                                                                           {</div>
-<div class="line"><span class="lineno">  463</span>        ShipVariantAPI variant = member.getVariant();</div>
-<div class="line"><span class="lineno">  464</span>        </div>
-<div class="line"><span class="lineno">  465</span>        <span class="keywordflow">if</span> (weapons) {</div>
-<div class="line"><span class="lineno">  466</span>            <span class="keywordtype">float</span> p = Global.getSettings().getFloat(<span class="stringliteral">&quot;salvageWeaponProb&quot;</span>);</div>
-<div class="line"><span class="lineno">  467</span>            <span class="keywordflow">for</span> (String slotId : variant.getNonBuiltInWeaponSlots()) {</div>
-<div class="line"><span class="lineno">  468</span>                String weaponId = variant.getWeaponId(slotId);</div>
-<div class="line"><span class="lineno">  469</span>                data.addWeapon(weaponId, 1f * p);</div>
-<div class="line"><span class="lineno">  470</span>            }</div>
-<div class="line"><span class="lineno">  471</span>        }</div>
-<div class="line"><span class="lineno">  472</span>        </div>
-<div class="line"><span class="lineno">  473</span>        <span class="keywordflow">if</span> (mods) {</div>
-<div class="line"><span class="lineno">  474</span>            <span class="keywordtype">float</span> p = Global.getSettings().getFloat(<span class="stringliteral">&quot;salvageHullmodProb&quot;</span>);</div>
-<div class="line"><span class="lineno">  475</span>            <span class="keywordflow">for</span> (String <span class="keywordtype">id</span> : member.getVariant().getHullMods()) {</div>
-<div class="line"><span class="lineno">  476</span>                HullModSpecAPI spec = Global.getSettings().getHullModSpec(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  477</span>                <span class="keywordflow">if</span> (spec.isHidden() || spec.isHiddenEverywhere()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  478</span>                <span class="keywordflow">if</span> (spec.hasTag(Tags.HULLMOD_NO_DROP)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  479</span>                data.addHullMod(<span class="keywordtype">id</span>, 1f * p);</div>
-<div class="line"><span class="lineno">  480</span>            }</div>
-<div class="line"><span class="lineno">  481</span>        }</div>
-<div class="line"><span class="lineno">  482</span>        </div>
-<div class="line"><span class="lineno">  483</span>        <span class="keywordflow">if</span> (fighters) {</div>
-<div class="line"><span class="lineno">  484</span>            <span class="keywordtype">float</span> p = Global.getSettings().getFloat(<span class="stringliteral">&quot;salvageWingProb&quot;</span>);</div>
-<div class="line"><span class="lineno">  485</span>            </div>
-<div class="line"><span class="lineno">  486</span>            <span class="keywordflow">for</span> (String <span class="keywordtype">id</span> : member.getVariant().getFittedWings()) {</div>
-<div class="line"><span class="lineno">  487</span>                FighterWingSpecAPI spec = Global.getSettings().getFighterWingSpec(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  488</span>                <span class="keywordflow">if</span> (spec.hasTag(Tags.WING_NO_DROP)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  489</span>                data.addFighterChip(<span class="keywordtype">id</span>, 1f * p);</div>
-<div class="line"><span class="lineno">  490</span>            }</div>
-<div class="line"><span class="lineno">  491</span>        }</div>
-<div class="line"><span class="lineno">  492</span>        </div>
-<div class="line"><span class="lineno">  493</span>        data.valueMult = Global.getSettings().getFloat(<span class="stringliteral">&quot;salvageDebrisFieldFraction&quot;</span>);</div>
-<div class="line"><span class="lineno">  494</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a06404a1ca9587c447926898ed69cd273" name="a06404a1ca9587c447926898ed69cd273"></a>
@@ -486,38 +430,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d7/d63/interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html#a3a97090ca8cfdc230e9ad7e633407af6">com.fs.starfarer.api.EveryFrameScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d1/dc8/CoreScript_8java_source.html#l00110">110</a> of file <a class="el" href="../../d1/dc8/CoreScript_8java_source.html">CoreScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  110</span>                                      {</div>
-<div class="line"><span class="lineno">  111</span>        SectorAPI sector = Global.getSector();</div>
-<div class="line"><span class="lineno">  112</span>        playRepChangeSoundsIfNeeded();</div>
-<div class="line"><span class="lineno">  113</span>        </div>
-<div class="line"><span class="lineno">  114</span>        <span class="keywordflow">if</span> (sector.isPaused()) {</div>
-<div class="line"><span class="lineno">  115</span>            <span class="keywordflow">if</span> (Global.getSettings().isDevMode()) {</div>
-<div class="line"><span class="lineno">  116</span>                <span class="comment">//RouteManager.getInstance().advance(amount);</span></div>
-<div class="line"><span class="lineno">  117</span>                RouteManager.getInstance().advance(0f);</div>
-<div class="line"><span class="lineno">  118</span>            }</div>
-<div class="line"><span class="lineno">  119</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  120</span>        }</div>
-<div class="line"><span class="lineno">  121</span>        </div>
-<div class="line"><span class="lineno">  122</span>        <span class="keywordflow">if</span> (firstFrame) {</div>
-<div class="line"><span class="lineno">  123</span>            firstFrame = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  124</span>        }</div>
-<div class="line"><span class="lineno">  125</span>        </div>
-<div class="line"><span class="lineno">  126</span>        <span class="keywordtype">float</span> days = sector.getClock().convertToDays(amount);</div>
-<div class="line"><span class="lineno">  127</span>        shared.<a class="code hl_function" href="../../d6/dbd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1SharedData.html#a5cc3aeea137c6bbbaee4ddf6ccfd309e">advance</a>(amount);</div>
-<div class="line"><span class="lineno">  128</span>        </div>
-<div class="line"><span class="lineno">  129</span>        timer.<a class="code hl_function" href="../../da/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html#a61881d44415cda2c50c3354c3f0a4d8a">advance</a>(days);</div>
-<div class="line"><span class="lineno">  130</span>        <span class="keywordflow">if</span> (timer.intervalElapsed()) {</div>
-<div class="line"><span class="lineno">  131</span>        }</div>
-<div class="line"><span class="lineno">  132</span>        </div>
-<div class="line"><span class="lineno">  133</span>        RouteManager.getInstance().advance(amount);</div>
-<div class="line"><span class="lineno">  134</span>        </div>
-<div class="line"><span class="lineno">  135</span>        Misc.computeCoreWorldsExtent();</div>
-<div class="line"><span class="lineno">  136</span>        </div>
-<div class="line"><span class="lineno">  137</span>        <span class="comment">//updateSlipstreamVisibility(amount);</span></div>
-<div class="line"><span class="lineno">  138</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1SharedData_html_a5cc3aeea137c6bbbaee4ddf6ccfd309e"><div class="ttname"><a href="../../d6/dbd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1SharedData.html#a5cc3aeea137c6bbbaee4ddf6ccfd309e">com.fs.starfarer.api.impl.campaign.shared.SharedData.advance</a></div><div class="ttdeci">void advance(float amount)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/df5/SharedData_8java_source.html#l00102">SharedData.java:102</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil_html_a61881d44415cda2c50c3354c3f0a4d8a"><div class="ttname"><a href="../../da/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html#a61881d44415cda2c50c3354c3f0a4d8a">com.fs.starfarer.api.util.IntervalUtil.advance</a></div><div class="ttdeci">void advance(float amount)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de3/IntervalUtil_8java_source.html#l00039">IntervalUtil.java:39</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a0eb4342881fba7546396c68136e5a61f" name="a0eb4342881fba7546396c68136e5a61f"></a>
@@ -536,231 +449,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/dc8/CoreScript_8java_source.html#l00830">830</a> of file <a class="el" href="../../d1/dc8/CoreScript_8java_source.html">CoreScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  830</span>                                     {</div>
-<div class="line"><span class="lineno">  831</span>        FactionAPI pf = Global.getSector().getPlayerFaction();</div>
-<div class="line"><span class="lineno">  832</span>        FactionProductionAPI prod = pf.getProduction();</div>
-<div class="line"><span class="lineno">  833</span>        </div>
-<div class="line"><span class="lineno">  834</span>        MarketAPI gatheringPoint = prod.getGatheringPoint();</div>
-<div class="line"><span class="lineno">  835</span>        <span class="keywordflow">if</span> (gatheringPoint == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  836</span> </div>
-<div class="line"><span class="lineno">  837</span>        <span class="comment">//CargoAPI local = Misc.getLocalResourcesCargo(gatheringPoint);</span></div>
-<div class="line"><span class="lineno">  838</span>        CargoAPI local = Misc.getStorageCargo(gatheringPoint);</div>
-<div class="line"><span class="lineno">  839</span>        <span class="keywordflow">if</span> (local == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  840</span>        </div>
-<div class="line"><span class="lineno">  841</span>        CampaignFleetAPI playerFleet = Global.getSector().getPlayerFleet();</div>
-<div class="line"><span class="lineno">  842</span>        MonthlyReport report = SharedData.getData().getCurrentReport();</div>
-<div class="line"><span class="lineno">  843</span>        report.computeTotals();</div>
-<div class="line"><span class="lineno">  844</span>        </div>
-<div class="line"><span class="lineno">  845</span>        <span class="comment">// limit production capacity by available credits - the net coming in this month plus what the player has</span></div>
-<div class="line"><span class="lineno">  846</span>        <span class="keywordtype">int</span> total = (int) (report.getRoot().totalIncome - report.getRoot().totalUpkeep);</div>
-<div class="line"><span class="lineno">  847</span>        <span class="keywordtype">int</span> credits = (int) playerFleet.getCargo().getCredits().get();</div>
-<div class="line"><span class="lineno">  848</span>        credits += total;</div>
-<div class="line"><span class="lineno">  849</span>        <span class="keywordflow">if</span> (credits &lt; 0) credits = 0;</div>
-<div class="line"><span class="lineno">  850</span>        </div>
-<div class="line"><span class="lineno">  851</span>        <span class="keywordtype">int</span> capacity = prod.getMonthlyProductionCapacity();</div>
-<div class="line"><span class="lineno">  852</span>        capacity = Math.min(capacity, credits);</div>
-<div class="line"><span class="lineno">  853</span>        <span class="comment">//capacity = 1000000;</span></div>
-<div class="line"><span class="lineno">  854</span>        </div>
-<div class="line"><span class="lineno">  855</span>        <span class="keywordtype">int</span> remainingValue = capacity + prod.getAccruedProduction();</div>
-<div class="line"><span class="lineno">  856</span>        <span class="comment">//if (remainingValue &lt;= 0) return;</span></div>
-<div class="line"><span class="lineno">  857</span>        </div>
-<div class="line"><span class="lineno">  858</span>        </div>
-<div class="line"><span class="lineno">  859</span>        </div>
-<div class="line"><span class="lineno">  860</span>        <span class="comment">//Random random = new Random();</span></div>
-<div class="line"><span class="lineno">  861</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d0/d87/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CoreScript.html#ab1d08b797254cfb35f0602e4f59e6c82">prodRandom</a> == <span class="keyword">null</span>) <a class="code hl_variable" href="../../d0/d87/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CoreScript.html#ab1d08b797254cfb35f0602e4f59e6c82">prodRandom</a> = <span class="keyword">new</span> Random();</div>
-<div class="line"><span class="lineno">  862</span>        Random random = <a class="code hl_variable" href="../../d0/d87/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CoreScript.html#ab1d08b797254cfb35f0602e4f59e6c82">prodRandom</a>;</div>
-<div class="line"><span class="lineno">  863</span>        </div>
-<div class="line"><span class="lineno">  864</span>        WeightedRandomPicker&lt;ItemInProductionAPI&gt; picker = <span class="keyword">new</span> WeightedRandomPicker&lt;ItemInProductionAPI&gt;(random);</div>
-<div class="line"><span class="lineno">  865</span>        <span class="keywordflow">for</span> (ItemInProductionAPI item : prod.getCurrent()) {</div>
-<div class="line"><span class="lineno">  866</span>            <span class="keywordflow">if</span> (item.getBuildDelay() &gt; 0 &amp;&amp; !Global.getSettings().isDevMode()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  867</span>            picker.add(item, item.getQuantity());</div>
-<div class="line"><span class="lineno">  868</span>        }</div>
-<div class="line"><span class="lineno">  869</span>        <span class="keywordtype">int</span> accrued = 0;</div>
-<div class="line"><span class="lineno">  870</span>        </div>
-<div class="line"><span class="lineno">  871</span>        <span class="keywordtype">boolean</span> wantedToDoProduction = !picker.isEmpty();</div>
-<div class="line"><span class="lineno">  872</span>        <span class="keywordtype">boolean</span> unableToDoProduction = capacity &lt;= 0;</div>
-<div class="line"><span class="lineno">  873</span> </div>
-<div class="line"><span class="lineno">  874</span>        ProductionData data = <span class="keyword">new</span> ProductionData();</div>
-<div class="line"><span class="lineno">  875</span>        <span class="comment">//CargoAPI cargo = Global.getFactory().createCargo(true);</span></div>
-<div class="line"><span class="lineno">  876</span>        <span class="comment">//cargo.initMothballedShips(Factions.PLAYER);</span></div>
-<div class="line"><span class="lineno">  877</span>        CargoAPI cargo = data.getCargo(<span class="stringliteral">&quot;Heavy Industry - Custom Production&quot;</span>);</div>
-<div class="line"><span class="lineno">  878</span>        </div>
-<div class="line"><span class="lineno">  879</span>        <span class="keywordtype">float</span> quality = -1f;</div>
-<div class="line"><span class="lineno">  880</span>        <span class="keywordflow">for</span> (MarketAPI market : Global.getSector().getEconomy().getMarketsCopy()) {</div>
-<div class="line"><span class="lineno">  881</span>            <span class="keywordflow">if</span> (!market.isPlayerOwned()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  882</span>            <span class="comment">//quality = Math.max(quality, ShipQuality.getShipQuality(market, Factions.PLAYER));</span></div>
-<div class="line"><span class="lineno">  883</span>            <span class="keywordtype">float</span> currQuality = market.getStats().getDynamic().getMod(Stats.PRODUCTION_QUALITY_MOD).computeEffective(0f);</div>
-<div class="line"><span class="lineno">  884</span>            currQuality += market.getStats().getDynamic().getMod(Stats.FLEET_QUALITY_MOD).computeEffective(0f);</div>
-<div class="line"><span class="lineno">  885</span>            quality = Math.max(quality, currQuality);</div>
-<div class="line"><span class="lineno">  886</span>        }</div>
-<div class="line"><span class="lineno">  887</span>        quality -= Global.getSector().getFaction(Factions.PLAYER).getDoctrine().getShipQualityContribution();</div>
-<div class="line"><span class="lineno">  888</span>        quality += 4f * Global.getSettings().getFloat(<span class="stringliteral">&quot;doctrineFleetQualityPerPoint&quot;</span>);</div>
-<div class="line"><span class="lineno">  889</span>        </div>
-<div class="line"><span class="lineno">  890</span>        CampaignFleetAPI ships = Global.getFactory().createEmptyFleet(Factions.PLAYER, <span class="stringliteral">&quot;temp&quot;</span>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  891</span>        ships.setCommander(Global.getSector().getPlayerPerson());</div>
-<div class="line"><span class="lineno">  892</span>        DefaultFleetInflaterParams p = <span class="keyword">new</span> DefaultFleetInflaterParams();</div>
-<div class="line"><span class="lineno">  893</span>        p.quality = quality;</div>
-<div class="line"><span class="lineno">  894</span>        p.mode = ShipPickMode.PRIORITY_THEN_ALL;</div>
-<div class="line"><span class="lineno">  895</span>        p.persistent = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  896</span>        p.seed = random.nextLong();</div>
-<div class="line"><span class="lineno">  897</span>        p.timestamp = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  898</span>        </div>
-<div class="line"><span class="lineno">  899</span>        FleetInflater inflater = Misc.getInflater(ships, p);</div>
-<div class="line"><span class="lineno">  900</span>        ships.setInflater(inflater);</div>
-<div class="line"><span class="lineno">  901</span>        </div>
-<div class="line"><span class="lineno">  902</span>        <span class="keywordtype">int</span> totalCost = 0;</div>
-<div class="line"><span class="lineno">  903</span>        <span class="keywordflow">while</span> (remainingValue &gt; 0 &amp;&amp; !picker.isEmpty()) {</div>
-<div class="line"><span class="lineno">  904</span>            ItemInProductionAPI pick = picker.pick();</div>
-<div class="line"><span class="lineno">  905</span>            <span class="keywordtype">int</span> baseCost = pick.getBaseCost();</div>
-<div class="line"><span class="lineno">  906</span>            </div>
-<div class="line"><span class="lineno">  907</span>            <span class="keywordtype">int</span> count = Math.min(pick.getQuantity(), remainingValue / Math.max(1, baseCost));</div>
-<div class="line"><span class="lineno">  908</span>            <span class="keywordflow">if</span> (count &gt; 0) {</div>
-<div class="line"><span class="lineno">  909</span>                count = random.nextInt(count) + 1;</div>
-<div class="line"><span class="lineno">  910</span>            }</div>
-<div class="line"><span class="lineno">  911</span>            <span class="keywordflow">if</span> (count &lt;= 0) {</div>
-<div class="line"><span class="lineno">  912</span>                accrued = remainingValue;</div>
-<div class="line"><span class="lineno">  913</span>                remainingValue = 0;</div>
-<div class="line"><span class="lineno">  914</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  915</span>                <span class="keywordtype">int</span> currCost = count * baseCost;</div>
-<div class="line"><span class="lineno">  916</span>                totalCost += currCost;</div>
-<div class="line"><span class="lineno">  917</span>                remainingValue -= currCost;</div>
-<div class="line"><span class="lineno">  918</span>                </div>
-<div class="line"><span class="lineno">  919</span>                <span class="keywordflow">if</span> (pick.getType() == ProductionItemType.SHIP) {</div>
-<div class="line"><span class="lineno">  920</span>                    List&lt;String&gt; variants = Global.getSettings().getHullIdToVariantListMap().get(pick.getSpecId());</div>
-<div class="line"><span class="lineno">  921</span>                    <span class="keywordflow">if</span> (variants.isEmpty()) {</div>
-<div class="line"><span class="lineno">  922</span>                        variants.add(pick.getSpecId() + <span class="stringliteral">&quot;_Hull&quot;</span>);</div>
-<div class="line"><span class="lineno">  923</span>                        <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  924</span>                    }</div>
-<div class="line"><span class="lineno">  925</span>                    </div>
-<div class="line"><span class="lineno">  926</span>                    <span class="keywordtype">int</span> index = random.nextInt(variants.size());</div>
-<div class="line"><span class="lineno">  927</span>                    <span class="comment">//cargo.addMothballedShip(FleetMemberType.SHIP, variants.get(index), null);</span></div>
-<div class="line"><span class="lineno">  928</span>                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; count; i++) {</div>
-<div class="line"><span class="lineno">  929</span>                        ships.getFleetData().addFleetMember(variants.get(index));</div>
-<div class="line"><span class="lineno">  930</span>                    }</div>
-<div class="line"><span class="lineno">  931</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (pick.getType() == ProductionItemType.FIGHTER) {</div>
-<div class="line"><span class="lineno">  932</span>                    cargo.addFighters(pick.getSpecId(), count);</div>
-<div class="line"><span class="lineno">  933</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (pick.getType() == ProductionItemType.WEAPON) {</div>
-<div class="line"><span class="lineno">  934</span>                    cargo.addWeapons(pick.getSpecId(), count);</div>
-<div class="line"><span class="lineno">  935</span>                }</div>
-<div class="line"><span class="lineno">  936</span>                </div>
-<div class="line"><span class="lineno">  937</span>                prod.removeItem(pick.getType(), pick.getSpecId(), count);</div>
-<div class="line"><span class="lineno">  938</span>                <span class="keywordflow">if</span> (pick.getQuantity() &lt;= 0) {</div>
-<div class="line"><span class="lineno">  939</span>                    picker.remove(pick);</div>
-<div class="line"><span class="lineno">  940</span>                }</div>
-<div class="line"><span class="lineno">  941</span>            }</div>
-<div class="line"><span class="lineno">  942</span>        }</div>
-<div class="line"><span class="lineno">  943</span>        </div>
-<div class="line"><span class="lineno">  944</span>        <span class="keywordtype">int</span> weaponCost = 0;</div>
-<div class="line"><span class="lineno">  945</span>        ships.inflateIfNeeded();</div>
-<div class="line"><span class="lineno">  946</span>        <span class="keywordflow">for</span> (FleetMemberAPI member : ships.getFleetData().getMembersListCopy()) {</div>
-<div class="line"><span class="lineno">  947</span>            cargo.getMothballedShips().addFleetMember(member);</div>
-<div class="line"><span class="lineno">  948</span>            <span class="keywordflow">for</span> (String wingId : member.getVariant().getNonBuiltInWings()) {</div>
-<div class="line"><span class="lineno">  949</span>                FighterWingSpecAPI spec = Global.getSettings().getFighterWingSpec(wingId);</div>
-<div class="line"><span class="lineno">  950</span>                weaponCost += spec.getBaseValue();</div>
-<div class="line"><span class="lineno">  951</span>            }</div>
-<div class="line"><span class="lineno">  952</span>            <span class="keywordflow">for</span> (String slotId : member.getVariant().getNonBuiltInWeaponSlots()) {</div>
-<div class="line"><span class="lineno">  953</span>                WeaponSpecAPI spec = member.getVariant().getWeaponSpec(slotId);</div>
-<div class="line"><span class="lineno">  954</span>                weaponCost += spec.getBaseValue();</div>
-<div class="line"><span class="lineno">  955</span>            }</div>
-<div class="line"><span class="lineno">  956</span>        }</div>
-<div class="line"><span class="lineno">  957</span>        <span class="keywordflow">if</span> (!DebugFlags.WEAPONS_HAVE_COST) {</div>
-<div class="line"><span class="lineno">  958</span>            weaponCost = 0;</div>
-<div class="line"><span class="lineno">  959</span>        }</div>
-<div class="line"><span class="lineno">  960</span>        </div>
-<div class="line"><span class="lineno">  961</span>        <span class="comment">// add some supplies, fuel, and crew</span></div>
-<div class="line"><span class="lineno">  962</span>        <span class="keywordtype">int</span> addedValue = (int) (totalCost * Global.getSettings().getFloat(<span class="stringliteral">&quot;productionSuppliesBonusFraction&quot;</span>));</div>
-<div class="line"><span class="lineno">  963</span>        <span class="keywordtype">int</span> sCost = (int) Global.getSettings().getCommoditySpec(Commodities.SUPPLIES).getBasePrice();</div>
-<div class="line"><span class="lineno">  964</span>        <span class="keywordtype">int</span> fCost = (int) Global.getSettings().getCommoditySpec(Commodities.FUEL).getBasePrice();</div>
-<div class="line"><span class="lineno">  965</span>        <span class="keywordtype">int</span> cCost = (int) Global.getSettings().getCommoditySpec(Commodities.CREW).getBasePrice();</div>
-<div class="line"><span class="lineno">  966</span>        </div>
-<div class="line"><span class="lineno">  967</span>        <span class="keywordtype">int</span> supplies = (int) (addedValue * (0.5f * (0.5f + random.nextFloat() * 0.5f))) / sCost;</div>
-<div class="line"><span class="lineno">  968</span>        <span class="keywordtype">int</span> fuel = (int) (addedValue * (0.3f * (0.5f + random.nextFloat() * 0.5f))) / fCost;</div>
-<div class="line"><span class="lineno">  969</span>        <span class="keywordtype">int</span> crew = (addedValue - sCost * supplies - fCost * fuel) / cCost;</div>
-<div class="line"><span class="lineno">  970</span>        </div>
-<div class="line"><span class="lineno">  971</span>        supplies = supplies / 10 * 10;</div>
-<div class="line"><span class="lineno">  972</span>        fuel = fuel / 10 * 10;</div>
-<div class="line"><span class="lineno">  973</span>        crew = crew / 10 * 10;</div>
-<div class="line"><span class="lineno">  974</span>        </div>
-<div class="line"><span class="lineno">  975</span>        cargo.addSupplies(supplies);</div>
-<div class="line"><span class="lineno">  976</span>        cargo.addFuel(fuel);</div>
-<div class="line"><span class="lineno">  977</span>        cargo.addCrew(crew);</div>
-<div class="line"><span class="lineno">  978</span>        </div>
-<div class="line"><span class="lineno">  979</span>        <span class="comment">//accrued += remainingValue; // don&#39;t do that, only want to accrue when trying to produce something</span></div>
-<div class="line"><span class="lineno">  980</span> </div>
-<div class="line"><span class="lineno">  981</span>        totalCost -= prod.getAccruedProduction();</div>
-<div class="line"><span class="lineno">  982</span>        totalCost += accrued;</div>
-<div class="line"><span class="lineno">  983</span>        <span class="keywordflow">if</span> (totalCost &lt; 0) totalCost = 0;</div>
-<div class="line"><span class="lineno">  984</span>        prod.setAccruedProduction(accrued);</div>
-<div class="line"><span class="lineno">  985</span>        </div>
-<div class="line"><span class="lineno">  986</span>        <span class="keywordflow">for</span> (MarketAPI market : Global.getSector().getEconomy().getMarketsCopy()) {</div>
-<div class="line"><span class="lineno">  987</span>            <span class="keywordflow">if</span> (!market.isPlayerOwned()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  988</span>        </div>
-<div class="line"><span class="lineno">  989</span>            <span class="keywordflow">for</span> (Industry ind : market.getIndustries()) {</div>
-<div class="line"><span class="lineno">  990</span>                Random curr = Misc.getRandom(random.nextLong(), 11);</div>
-<div class="line"><span class="lineno">  991</span>                CargoAPI added = ind.generateCargoForGatheringPoint(curr);</div>
-<div class="line"><span class="lineno">  992</span>                <span class="keywordflow">if</span> (added != <span class="keyword">null</span> &amp;&amp; (!added.isEmpty() || </div>
-<div class="line"><span class="lineno">  993</span>                        (added.getMothballedShips() != <span class="keyword">null</span> &amp;&amp; !added.getMothballedShips().getMembersListCopy().isEmpty()))) {</div>
-<div class="line"><span class="lineno">  994</span>                    String title = ind.getCargoTitleForGatheringPoint();</div>
-<div class="line"><span class="lineno">  995</span>                    data.getCargo(title).addAll(added, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  996</span>                }</div>
-<div class="line"><span class="lineno">  997</span>            }</div>
-<div class="line"><span class="lineno">  998</span>        }</div>
-<div class="line"><span class="lineno">  999</span>        </div>
-<div class="line"><span class="lineno"> 1000</span>        </div>
-<div class="line"><span class="lineno"> 1001</span>        <span class="comment">// done with production</span></div>
-<div class="line"><span class="lineno"> 1002</span>        </div>
-<div class="line"><span class="lineno"> 1003</span>        </div>
-<div class="line"><span class="lineno"> 1004</span>        </div>
-<div class="line"><span class="lineno"> 1005</span>        <span class="keywordflow">if</span> (!data.isEmpty() || totalCost &gt; 0 || (wantedToDoProduction &amp;&amp; unableToDoProduction)) {</div>
-<div class="line"><span class="lineno"> 1006</span>            <span class="keywordflow">if</span> (totalCost &gt; 0) {</div>
-<div class="line"><span class="lineno"> 1007</span>                <span class="comment">//MonthlyReport report = SharedData.getData().getCurrentReport();</span></div>
-<div class="line"><span class="lineno"> 1008</span>                </div>
-<div class="line"><span class="lineno"> 1009</span>                FDNode marketsNode = report.getNode(MonthlyReport.OUTPOSTS);</div>
-<div class="line"><span class="lineno"> 1010</span>                <span class="keywordflow">if</span> (marketsNode.name == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno"> 1011</span>                    marketsNode.name = <span class="stringliteral">&quot;Colonies&quot;</span>;</div>
-<div class="line"><span class="lineno"> 1012</span>                    marketsNode.custom = MonthlyReport.OUTPOSTS;</div>
-<div class="line"><span class="lineno"> 1013</span>                    marketsNode.tooltipCreator = report.getMonthlyReportTooltip();</div>
-<div class="line"><span class="lineno"> 1014</span>                }</div>
-<div class="line"><span class="lineno"> 1015</span>                </div>
-<div class="line"><span class="lineno"> 1016</span>                FDNode production = report.getNode(marketsNode, MonthlyReport.PRODUCTION);</div>
-<div class="line"><span class="lineno"> 1017</span>                production.name = <span class="stringliteral">&quot;Custom production orders&quot;</span>;</div>
-<div class="line"><span class="lineno"> 1018</span>                production.custom = MonthlyReport.PRODUCTION;</div>
-<div class="line"><span class="lineno"> 1019</span>                production.custom2 = cargo;</div>
-<div class="line"><span class="lineno"> 1020</span>                production.tooltipCreator = report.getMonthlyReportTooltip();</div>
-<div class="line"><span class="lineno"> 1021</span>                </div>
-<div class="line"><span class="lineno"> 1022</span>                production.upkeep += totalCost;</div>
-<div class="line"><span class="lineno"> 1023</span>                </div>
-<div class="line"><span class="lineno"> 1024</span>                <span class="keywordflow">if</span> (weaponCost &gt; 0) {</div>
-<div class="line"><span class="lineno"> 1025</span>                    FDNode productionWeapons = report.getNode(marketsNode, MonthlyReport.PRODUCTION_WEAPONS);</div>
-<div class="line"><span class="lineno"> 1026</span>                    productionWeapons.name = <span class="stringliteral">&quot;Weapons &amp; fighter LPCs for produced ships&quot;</span>;</div>
-<div class="line"><span class="lineno"> 1027</span>                    productionWeapons.custom = MonthlyReport.PRODUCTION_WEAPONS;</div>
-<div class="line"><span class="lineno"> 1028</span>                    productionWeapons.tooltipCreator = report.getMonthlyReportTooltip();</div>
-<div class="line"><span class="lineno"> 1029</span>                    productionWeapons.upkeep += weaponCost;</div>
-<div class="line"><span class="lineno"> 1030</span>                }</div>
-<div class="line"><span class="lineno"> 1031</span>            }</div>
-<div class="line"><span class="lineno"> 1032</span>        </div>
-<div class="line"><span class="lineno"> 1033</span>            <span class="keywordflow">for</span> (CargoAPI curr : data.data.values()) {</div>
-<div class="line"><span class="lineno"> 1034</span>                local.addAll(curr);</div>
-<div class="line"><span class="lineno"> 1035</span>                local.initMothballedShips(Factions.PLAYER);</div>
-<div class="line"><span class="lineno"> 1036</span>                <span class="keywordflow">for</span> (FleetMemberAPI member : curr.getMothballedShips().getMembersListCopy()) {</div>
-<div class="line"><span class="lineno"> 1037</span><span class="comment">//                  member.getRepairTracker().setCR(0f);</span></div>
-<div class="line"><span class="lineno"> 1038</span><span class="comment">//                  member.getRepairTracker().setMothballed(true);</span></div>
-<div class="line"><span class="lineno"> 1039</span>                    member.getRepairTracker().setMothballed(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno"> 1040</span>                    member.getRepairTracker().setCR(0.5f);</div>
-<div class="line"><span class="lineno"> 1041</span>                    local.getMothballedShips().addFleetMember(member);</div>
-<div class="line"><span class="lineno"> 1042</span>                }</div>
-<div class="line"><span class="lineno"> 1043</span>            }</div>
-<div class="line"><span class="lineno"> 1044</span>            local.sort();</div>
-<div class="line"><span class="lineno"> 1045</span>            </div>
-<div class="line"><span class="lineno"> 1046</span>            ProductionReportIntel intel = <span class="keyword">new</span> ProductionReportIntel(gatheringPoint, data, </div>
-<div class="line"><span class="lineno"> 1047</span>                                                    totalCost + weaponCost, prod.getAccruedProduction(),</div>
-<div class="line"><span class="lineno"> 1048</span>                                                    wantedToDoProduction &amp;&amp; unableToDoProduction);</div>
-<div class="line"><span class="lineno"> 1049</span>            Global.getSector().getIntelManager().addIntel(intel);</div>
-<div class="line"><span class="lineno"> 1050</span>        }</div>
-<div class="line"><span class="lineno"> 1051</span>        </div>
-<div class="line"><span class="lineno"> 1052</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CoreScript_html_ab1d08b797254cfb35f0602e4f59e6c82"><div class="ttname"><a href="../../d0/d87/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CoreScript.html#ab1d08b797254cfb35f0602e4f59e6c82">com.fs.starfarer.api.impl.campaign.CoreScript.prodRandom</a></div><div class="ttdeci">Random prodRandom</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dc8/CoreScript_8java_source.html#l00829">CoreScript.java:829</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa94535a6e5951d9bcd1c80dc46cde3bb" name="aa94535a6e5951d9bcd1c80dc46cde3bb"></a>
@@ -798,296 +487,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/dc8/CoreScript_8java_source.html#l00506">506</a> of file <a class="el" href="../../d1/dc8/CoreScript_8java_source.html">CoreScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  506</span>                                                                                                              {</div>
-<div class="line"><span class="lineno">  507</span>        </div>
-<div class="line"><span class="lineno">  508</span>        <span class="keywordflow">if</span> (primaryWinner == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  509</span>        LocationAPI location = primaryWinner.getContainingLocation();</div>
-<div class="line"><span class="lineno">  510</span>        <span class="keywordflow">if</span> (location == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  511</span>        </div>
-<div class="line"><span class="lineno">  512</span>        <span class="comment">//if (location.isHyperspace()) return;</span></div>
-<div class="line"><span class="lineno">  513</span>        </div>
-<div class="line"><span class="lineno">  514</span>        <span class="keywordtype">boolean</span> allowDebris = !location.isHyperspace(); </div>
-<div class="line"><span class="lineno">  515</span>        </div>
-<div class="line"><span class="lineno">  516</span>        </div>
-<div class="line"><span class="lineno">  517</span>        <span class="keywordtype">boolean</span> playerInvolved = battle.isPlayerInvolved();</div>
-<div class="line"><span class="lineno">  518</span>        </div>
-<div class="line"><span class="lineno">  519</span>        DropData misc = <span class="keyword">new</span> DropData();</div>
-<div class="line"><span class="lineno">  520</span>        <span class="keywordtype">int</span> miscChances = 0;</div>
-<div class="line"><span class="lineno">  521</span>        </div>
-<div class="line"><span class="lineno">  522</span>        List&lt;DropData&gt; cargoList = <span class="keyword">new</span> ArrayList&lt;DropData&gt;();</div>
-<div class="line"><span class="lineno">  523</span>        </div>
-<div class="line"><span class="lineno">  524</span>        WeightedRandomPicker&lt;FleetMemberAPI&gt; recoverySpecialChoices = <span class="keyword">new</span> WeightedRandomPicker&lt;FleetMemberAPI&gt;();</div>
-<div class="line"><span class="lineno">  525</span>        </div>
-<div class="line"><span class="lineno">  526</span>        Vector2f com = <span class="keyword">new</span> Vector2f();</div>
-<div class="line"><span class="lineno">  527</span>        <span class="keywordtype">float</span> count = 0f;</div>
-<div class="line"><span class="lineno">  528</span>        <span class="keywordtype">float</span> fpDestroyed = 0;</div>
-<div class="line"><span class="lineno">  529</span>        <span class="keywordflow">for</span> (CampaignFleetAPI fleet : battle.getSnapshotSideOne()) {</div>
-<div class="line"><span class="lineno">  530</span>            count++;</div>
-<div class="line"><span class="lineno">  531</span>            com.x += fleet.getLocation().x;</div>
-<div class="line"><span class="lineno">  532</span>            com.y += fleet.getLocation().y;</div>
-<div class="line"><span class="lineno">  533</span>            </div>
-<div class="line"><span class="lineno">  534</span>            <span class="keywordtype">float</span> fpForThisFleet = 0;</div>
-<div class="line"><span class="lineno">  535</span>            <span class="keywordflow">for</span> (FleetMemberAPI loss : Misc.getSnapshotMembersLost(fleet)) {</div>
-<div class="line"><span class="lineno">  536</span>                <span class="comment">//if (loss.getVariant().isStockVariant()) {</span></div>
-<div class="line"><span class="lineno">  537</span>                <span class="keywordflow">if</span> (!loss.getVariant().hasTag(Tags.SHIP_RECOVERABLE)) { <span class="comment">// was not recoverable by player</span></div>
-<div class="line"><span class="lineno">  538</span>                    <span class="keywordflow">if</span> (!loss.isStation() &amp;&amp; !fleet.getMemoryWithoutUpdate().getBoolean(MemFlags.MEMORY_KEY_NO_SHIP_RECOVERY)) {</div>
-<div class="line"><span class="lineno">  539</span>                        recoverySpecialChoices.add(loss);</div>
-<div class="line"><span class="lineno">  540</span>                    }</div>
-<div class="line"><span class="lineno">  541</span>                }</div>
-<div class="line"><span class="lineno">  542</span>                fpDestroyed += loss.getFleetPointCost();</div>
-<div class="line"><span class="lineno">  543</span>                fpForThisFleet += loss.getFleetPointCost();</div>
-<div class="line"><span class="lineno">  544</span>                <span class="keywordflow">if</span> (allowDebris &amp;&amp; !fleet.isPlayerFleet()) {</div>
-<div class="line"><span class="lineno">  545</span>                    <a class="code hl_function" href="../../d0/d87/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CoreScript.html#add216ecfbc68144cd0b582ff6bd6dec1">addMiscToDropData</a>(misc, loss, <span class="keyword">true</span>, <span class="keyword">true</span>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  546</span>                    miscChances++;</div>
-<div class="line"><span class="lineno">  547</span>                }</div>
-<div class="line"><span class="lineno">  548</span>            }</div>
-<div class="line"><span class="lineno">  549</span>            <span class="keywordflow">if</span> (allowDebris &amp;&amp; !fleet.isPlayerFleet()) {</div>
-<div class="line"><span class="lineno">  550</span>                DropData cargo = <span class="keyword">new</span> DropData();</div>
-<div class="line"><span class="lineno">  551</span>                <span class="keywordtype">float</span> cargoValue = fpForThisFleet * Global.getSettings().getFloat(<span class="stringliteral">&quot;salvageValuePerFP&quot;</span>);</div>
-<div class="line"><span class="lineno">  552</span>                cargoValue *= Global.getSettings().getFloat(<span class="stringliteral">&quot;salvageDebrisFieldFraction&quot;</span>);</div>
-<div class="line"><span class="lineno">  553</span>                <span class="keywordflow">if</span> (cargoValue &gt;= 1) {</div>
-<div class="line"><span class="lineno">  554</span>                    <span class="keywordflow">for</span> (String cid : <a class="code hl_function" href="../../d0/d87/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CoreScript.html#aff28e0cf920fb2e2ba2f8c53a6d72ebe">getCargoCommodities</a>(fleet.getCargo())) {</div>
-<div class="line"><span class="lineno">  555</span>                        cargo.addCommodity(cid, 1f);</div>
-<div class="line"><span class="lineno">  556</span>                    }</div>
-<div class="line"><span class="lineno">  557</span>                    cargo.value = (int) cargoValue;</div>
-<div class="line"><span class="lineno">  558</span>                    cargo.chances = 1;</div>
-<div class="line"><span class="lineno">  559</span>                    cargoList.add(cargo);</div>
-<div class="line"><span class="lineno">  560</span>                }</div>
-<div class="line"><span class="lineno">  561</span>            }</div>
-<div class="line"><span class="lineno">  562</span>        }</div>
-<div class="line"><span class="lineno">  563</span>        <span class="keywordflow">for</span> (CampaignFleetAPI fleet : battle.getSnapshotSideTwo()) {</div>
-<div class="line"><span class="lineno">  564</span>            count++;</div>
-<div class="line"><span class="lineno">  565</span>            com.x += fleet.getLocation().x;</div>
-<div class="line"><span class="lineno">  566</span>            com.y += fleet.getLocation().y;</div>
-<div class="line"><span class="lineno">  567</span>            </div>
-<div class="line"><span class="lineno">  568</span>            <span class="keywordtype">float</span> fpForThisFleet = 0;</div>
-<div class="line"><span class="lineno">  569</span>            <span class="keywordflow">for</span> (FleetMemberAPI loss : Misc.getSnapshotMembersLost(fleet)) {</div>
-<div class="line"><span class="lineno">  570</span>                <span class="comment">//if (loss.getVariant().isStockVariant()) {</span></div>
-<div class="line"><span class="lineno">  571</span>                <span class="keywordflow">if</span> (!loss.getVariant().hasTag(Tags.SHIP_RECOVERABLE)) { <span class="comment">// was not recoverable by player</span></div>
-<div class="line"><span class="lineno">  572</span>                    <span class="keywordflow">if</span> (!loss.isStation() &amp;&amp; !fleet.getMemoryWithoutUpdate().getBoolean(MemFlags.MEMORY_KEY_NO_SHIP_RECOVERY)) {</div>
-<div class="line"><span class="lineno">  573</span>                        recoverySpecialChoices.add(loss);</div>
-<div class="line"><span class="lineno">  574</span>                    }</div>
-<div class="line"><span class="lineno">  575</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  576</span>                    loss.getVariant().removeTag(Tags.SHIP_RECOVERABLE);</div>
-<div class="line"><span class="lineno">  577</span>                }</div>
-<div class="line"><span class="lineno">  578</span>                </div>
-<div class="line"><span class="lineno">  579</span>                fpDestroyed += loss.getFleetPointCost();</div>
-<div class="line"><span class="lineno">  580</span>                fpForThisFleet += loss.getFleetPointCost();</div>
-<div class="line"><span class="lineno">  581</span>                <span class="keywordflow">if</span> (allowDebris &amp;&amp; !fleet.isPlayerFleet()) {</div>
-<div class="line"><span class="lineno">  582</span>                    <a class="code hl_function" href="../../d0/d87/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CoreScript.html#add216ecfbc68144cd0b582ff6bd6dec1">addMiscToDropData</a>(misc, loss, <span class="keyword">true</span>, <span class="keyword">true</span>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  583</span>                    miscChances++;</div>
-<div class="line"><span class="lineno">  584</span>                }</div>
-<div class="line"><span class="lineno">  585</span>            }</div>
-<div class="line"><span class="lineno">  586</span>            <span class="keywordflow">if</span> (allowDebris &amp;&amp; !fleet.isPlayerFleet()) {</div>
-<div class="line"><span class="lineno">  587</span>                DropData cargo = <span class="keyword">new</span> DropData();</div>
-<div class="line"><span class="lineno">  588</span>                <span class="keywordtype">float</span> cargoValue = fpForThisFleet * Global.getSettings().getFloat(<span class="stringliteral">&quot;salvageValuePerFP&quot;</span>);</div>
-<div class="line"><span class="lineno">  589</span>                cargoValue *= Global.getSettings().getFloat(<span class="stringliteral">&quot;salvageDebrisFieldFraction&quot;</span>);</div>
-<div class="line"><span class="lineno">  590</span>                <span class="keywordflow">if</span> (cargoValue &gt;= 1) {</div>
-<div class="line"><span class="lineno">  591</span>                    <span class="keywordflow">for</span> (String cid : <a class="code hl_function" href="../../d0/d87/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CoreScript.html#aff28e0cf920fb2e2ba2f8c53a6d72ebe">getCargoCommodities</a>(fleet.getCargo())) {</div>
-<div class="line"><span class="lineno">  592</span>                        cargo.addCommodity(cid, 1f);</div>
-<div class="line"><span class="lineno">  593</span>                    }</div>
-<div class="line"><span class="lineno">  594</span>                    cargo.value = (int) cargoValue;</div>
-<div class="line"><span class="lineno">  595</span>                    cargo.chances = 1;</div>
-<div class="line"><span class="lineno">  596</span>                    cargoList.add(cargo);</div>
-<div class="line"><span class="lineno">  597</span>                }</div>
-<div class="line"><span class="lineno">  598</span>            }</div>
-<div class="line"><span class="lineno">  599</span>        }</div>
-<div class="line"><span class="lineno">  600</span>        <span class="comment">//Global.getSector().getPlayerFleet().getLocation()</span></div>
-<div class="line"><span class="lineno">  601</span>        <span class="keywordflow">if</span> (count &lt;= 0) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  602</span>        </div>
-<div class="line"><span class="lineno">  603</span>        com.scale(1f / count);</div>
-<div class="line"><span class="lineno">  604</span>        </div>
-<div class="line"><span class="lineno">  605</span>        <span class="comment">// spawn some derelict ships, maybe. do this here, regardless of whether the value is enough to</span></div>
-<div class="line"><span class="lineno">  606</span>        <span class="comment">// warrant a debris field</span></div>
-<div class="line"><span class="lineno">  607</span>        <span class="keywordtype">float</span> numShips = recoverySpecialChoices.getItems().size();</div>
-<div class="line"><span class="lineno">  608</span>        <span class="keywordtype">float</span> chanceDerelict = 1f - 10f / (numShips + 10f);</div>
-<div class="line"><span class="lineno">  609</span>        <span class="comment">//chanceNothing = 0f;</span></div>
-<div class="line"><span class="lineno">  610</span>        <span class="comment">//Vector2f com = battle.computeCenterOfMass();</span></div>
-<div class="line"><span class="lineno">  611</span>        </div>
-<div class="line"><span class="lineno">  612</span>        <span class="comment">// in a battle that involves the player, recoverable ships are non-stock variants</span></div>
-<div class="line"><span class="lineno">  613</span>        <span class="comment">// (due to being prepared for recovery; dmods etc) and so don&#39;t show up as possible recovery choices here</span></div>
-<div class="line"><span class="lineno">  614</span>        <span class="comment">// which is good! since 1) they could&#39;ve been actually recovered, and 2) they already contributed to player salvage</span></div>
-<div class="line"><span class="lineno">  615</span>        <span class="comment">// replaced this with Tags.SHIP_RECOVERABLE tag in recoverable variant for cleanness</span></div>
-<div class="line"><span class="lineno">  616</span>        <span class="keywordtype">int</span> max = 3;</div>
-<div class="line"><span class="lineno">  617</span>        <span class="keywordflow">if</span> (playerInvolved) {</div>
-<div class="line"><span class="lineno">  618</span>            max = 2;</div>
-<div class="line"><span class="lineno">  619</span>            chanceDerelict *= 0.25f;</div>
-<div class="line"><span class="lineno">  620</span>        }</div>
-<div class="line"><span class="lineno">  621</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; max &amp;&amp; !recoverySpecialChoices.isEmpty(); i++) {</div>
-<div class="line"><span class="lineno">  622</span>            <span class="keywordtype">boolean</span> spawnShip = Math.random() &lt; chanceDerelict;</div>
-<div class="line"><span class="lineno">  623</span>            <span class="keywordflow">if</span> (spawnShip) {</div>
-<div class="line"><span class="lineno">  624</span>                FleetMemberAPI member = recoverySpecialChoices.pickAndRemove();</div>
-<div class="line"><span class="lineno">  625</span>                String variantId = member.getVariant().getHullVariantId();</div>
-<div class="line"><span class="lineno">  626</span>                <span class="keywordflow">if</span> (!member.getVariant().isStockVariant()) variantId = member.getVariant().getOriginalVariant();</div>
-<div class="line"><span class="lineno">  627</span>                <span class="keywordflow">if</span> (variantId == <span class="keyword">null</span>) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  628</span>                DerelictShipData params = <span class="keyword">new</span> DerelictShipData(<span class="keyword">new</span> PerShipData(variantId,</div>
-<div class="line"><span class="lineno">  629</span>                                        DerelictShipEntityPlugin.pickBadCondition(<span class="keyword">null</span>), 0f), <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  630</span>                params.durationDays = DerelictShipEntityPlugin.getBaseDuration(member.getHullSpec().getHullSize());</div>
-<div class="line"><span class="lineno">  631</span>                CustomCampaignEntityAPI entity = (CustomCampaignEntityAPI) BaseThemeGenerator.addSalvageEntity(</div>
-<div class="line"><span class="lineno">  632</span>                                                 primaryWinner.getContainingLocation(),</div>
-<div class="line"><span class="lineno">  633</span>                                                 Entities.WRECK, Factions.NEUTRAL, params);</div>
-<div class="line"><span class="lineno">  634</span>                entity.addTag(Tags.EXPIRES);</div>
-<div class="line"><span class="lineno">  635</span>                SalvageSpecialAssigner.assignSpecialForBattleWreck(entity);</div>
-<div class="line"><span class="lineno">  636</span>                </div>
-<div class="line"><span class="lineno">  637</span><span class="comment">//              entity.getLocation().x = com.x + (50f - (float) Math.random() * 100f);</span></div>
-<div class="line"><span class="lineno">  638</span><span class="comment">//              entity.getLocation().y = com.y + (50f - (float) Math.random() * 100f);</span></div>
-<div class="line"><span class="lineno">  639</span>                </div>
-<div class="line"><span class="lineno">  640</span>                <span class="keywordtype">float</span> angle = (float) Math.random() * 360f;</div>
-<div class="line"><span class="lineno">  641</span>                <span class="keywordtype">float</span> speed = 10f + 10f * (float) Math.random();</div>
-<div class="line"><span class="lineno">  642</span>                Vector2f vel = Misc.getUnitVectorAtDegreeAngle(angle);</div>
-<div class="line"><span class="lineno">  643</span>                vel.scale(speed);</div>
-<div class="line"><span class="lineno">  644</span>                entity.getVelocity().set(vel);</div>
-<div class="line"><span class="lineno">  645</span>                </div>
-<div class="line"><span class="lineno">  646</span>                entity.getLocation().x = com.x + vel.x * 3f;</div>
-<div class="line"><span class="lineno">  647</span>                entity.getLocation().y = com.y + vel.y * 3f;</div>
-<div class="line"><span class="lineno">  648</span>            }</div>
-<div class="line"><span class="lineno">  649</span>        }</div>
-<div class="line"><span class="lineno">  650</span>        </div>
-<div class="line"><span class="lineno">  651</span>        </div>
-<div class="line"><span class="lineno">  652</span>        </div>
-<div class="line"><span class="lineno">  653</span>        <span class="keywordtype">float</span> salvageValue = fpDestroyed * Global.getSettings().getFloat(<span class="stringliteral">&quot;salvageValuePerFP&quot;</span>);</div>
-<div class="line"><span class="lineno">  654</span>        <span class="keywordflow">if</span> (Misc.isEasy()) {</div>
-<div class="line"><span class="lineno">  655</span>            salvageValue *= Global.getSettings().getFloat(<span class="stringliteral">&quot;easySalvageMult&quot;</span>);</div>
-<div class="line"><span class="lineno">  656</span>        }</div>
-<div class="line"><span class="lineno">  657</span>        </div>
-<div class="line"><span class="lineno">  658</span>        </div>
-<div class="line"><span class="lineno">  659</span>        salvageValue *= Global.getSettings().getFloat(<span class="stringliteral">&quot;salvageDebrisFieldFraction&quot;</span>);</div>
-<div class="line"><span class="lineno">  660</span>        <span class="keywordtype">float</span> salvageXP = salvageValue * 0.1f;</div>
-<div class="line"><span class="lineno">  661</span>        </div>
-<div class="line"><span class="lineno">  662</span>        <span class="keywordtype">float</span> minForField = Global.getSettings().getFloat(<span class="stringliteral">&quot;minSalvageValueForDebrisField&quot;</span>);</div>
-<div class="line"><span class="lineno">  663</span>        <span class="comment">//if (playerInvolved) minForField *= 6f;</span></div>
-<div class="line"><span class="lineno">  664</span>        <span class="keywordflow">if</span> (playerInvolved) minForField = 2500f + (float) Math.random() * 1000f;</div>
-<div class="line"><span class="lineno">  665</span>        </div>
-<div class="line"><span class="lineno">  666</span>        <span class="keywordflow">if</span> (salvageValue &lt; minForField || !allowDebris) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  667</span>        </div>
-<div class="line"><span class="lineno">  668</span>        </div>
-<div class="line"><span class="lineno">  669</span>        CampaignTerrainAPI debris = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  670</span>        <span class="keywordflow">for</span> (CampaignTerrainAPI curr : primaryWinner.getContainingLocation().getTerrainCopy()) {</div>
-<div class="line"><span class="lineno">  671</span>            <span class="keywordflow">if</span> (curr.getPlugin() instanceof DebrisFieldTerrainPlugin) {</div>
-<div class="line"><span class="lineno">  672</span>                DebrisFieldTerrainPlugin plugin = (DebrisFieldTerrainPlugin) curr.getPlugin();</div>
-<div class="line"><span class="lineno">  673</span>                <span class="keywordflow">if</span> (plugin.params.source == DebrisFieldSource.BATTLE &amp;&amp; </div>
-<div class="line"><span class="lineno">  674</span>                        plugin.params.density &gt;= 1f &amp;&amp;</div>
-<div class="line"><span class="lineno">  675</span>                        plugin.containsPoint(com, 100f)) {</div>
-<div class="line"><span class="lineno">  676</span>                    debris = curr;</div>
-<div class="line"><span class="lineno">  677</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  678</span>                }</div>
-<div class="line"><span class="lineno">  679</span>            }</div>
-<div class="line"><span class="lineno">  680</span>        }</div>
-<div class="line"><span class="lineno">  681</span>        </div>
-<div class="line"><span class="lineno">  682</span>        <span class="keywordflow">if</span> (debris == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  683</span>            DebrisFieldParams params = <span class="keyword">new</span> DebrisFieldParams(</div>
-<div class="line"><span class="lineno">  684</span>                    200f, <span class="comment">// field radius - should not go above 1000 for performance reasons</span></div>
-<div class="line"><span class="lineno">  685</span>                    -1f, <span class="comment">// density, visual - affects number of debris pieces</span></div>
-<div class="line"><span class="lineno">  686</span>                    1f, <span class="comment">// duration in days </span></div>
-<div class="line"><span class="lineno">  687</span>                    1f); <span class="comment">// days the field will keep generating glowing pieces</span></div>
-<div class="line"><span class="lineno">  688</span>            params.source = DebrisFieldSource.BATTLE;</div>
-<div class="line"><span class="lineno">  689</span>            params.baseSalvageXP = (long) salvageXP; <span class="comment">// base XP for scavenging in field</span></div>
-<div class="line"><span class="lineno">  690</span>            </div>
-<div class="line"><span class="lineno">  691</span>            debris = (CampaignTerrainAPI) Misc.addDebrisField(location, params, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  692</span>            </div>
-<div class="line"><span class="lineno">  693</span>            <span class="comment">// makes the debris field always visible on map/sensors and not give any xp or notification on being discovered</span></div>
-<div class="line"><span class="lineno">  694</span>            <span class="comment">//debris.setSensorProfile(null);</span></div>
-<div class="line"><span class="lineno">  695</span>            <span class="comment">//debris.setDiscoverable(null);</span></div>
-<div class="line"><span class="lineno">  696</span>            </div>
-<div class="line"><span class="lineno">  697</span>            <span class="comment">// makes it discoverable and give 200 xp on being found</span></div>
-<div class="line"><span class="lineno">  698</span>            <span class="comment">// sets the range at which it can be detected (as a sensor contact) to 2000 units</span></div>
-<div class="line"><span class="lineno">  699</span>            <span class="comment">//debris.setDiscoverable(true);</span></div>
-<div class="line"><span class="lineno">  700</span>            <span class="comment">//debris.setDiscoveryXP(200f);</span></div>
-<div class="line"><span class="lineno">  701</span>            <span class="comment">//debris.setSensorProfile(1f);</span></div>
-<div class="line"><span class="lineno">  702</span>            <span class="comment">//debris.getDetectedRangeMod().modifyFlat(&quot;gen&quot;, 2000);</span></div>
-<div class="line"><span class="lineno">  703</span>            </div>
-<div class="line"><span class="lineno">  704</span>            debris.setDiscoverable(<span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  705</span>            debris.setDiscoveryXP(<span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  706</span>            <span class="comment">//debris.setSensorProfile(1f);</span></div>
-<div class="line"><span class="lineno">  707</span>            <span class="comment">//debris.getDetectedRangeMod().modifyFlat(&quot;gen&quot;, 1000);</span></div>
-<div class="line"><span class="lineno">  708</span>            </div>
-<div class="line"><span class="lineno">  709</span>            debris.getLocation().set(com);</div>
-<div class="line"><span class="lineno">  710</span>            </div>
-<div class="line"><span class="lineno">  711</span>            debris.getDropValue().clear();</div>
-<div class="line"><span class="lineno">  712</span>            debris.getDropRandom().clear();</div>
-<div class="line"><span class="lineno">  713</span>        }</div>
-<div class="line"><span class="lineno">  714</span>        </div>
-<div class="line"><span class="lineno">  715</span>        </div>
-<div class="line"><span class="lineno">  716</span>        DebrisFieldTerrainPlugin plugin = (DebrisFieldTerrainPlugin) debris.getPlugin();</div>
-<div class="line"><span class="lineno">  717</span>        DropData basicDrop = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  718</span>        <span class="keywordflow">for</span> (DropData data : debris.getDropValue()) {</div>
-<div class="line"><span class="lineno">  719</span>            <span class="keywordflow">if</span> (Drops.BASIC.equals(data.group)) {</div>
-<div class="line"><span class="lineno">  720</span>                basicDrop = data;</div>
-<div class="line"><span class="lineno">  721</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  722</span>            }</div>
-<div class="line"><span class="lineno">  723</span>        }</div>
-<div class="line"><span class="lineno">  724</span>        </div>
-<div class="line"><span class="lineno">  725</span>        <span class="comment">// since we&#39;re only adding to fields with density 1 (i.e. ones the player hasn&#39;t salvaged)</span></div>
-<div class="line"><span class="lineno">  726</span>        <span class="comment">// no need to worry about how density would affect the salvage value of what we&#39;re adding</span></div>
-<div class="line"><span class="lineno">  727</span>        <span class="keywordflow">if</span> (basicDrop == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  728</span>            basicDrop = <span class="keyword">new</span> DropData();</div>
-<div class="line"><span class="lineno">  729</span>            basicDrop.group = Drops.BASIC;</div>
-<div class="line"><span class="lineno">  730</span>            debris.addDropValue(basicDrop);</div>
-<div class="line"><span class="lineno">  731</span>        }</div>
-<div class="line"><span class="lineno">  732</span>        basicDrop.value += salvageValue;</div>
-<div class="line"><span class="lineno">  733</span>        </div>
-<div class="line"><span class="lineno">  734</span>        <span class="keywordflow">if</span> (misc.getCustom() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  735</span>            misc.chances = miscChances;</div>
-<div class="line"><span class="lineno">  736</span>            </div>
-<div class="line"><span class="lineno">  737</span>            <span class="keywordtype">float</span> total = misc.getCustom().getTotal();</div>
-<div class="line"><span class="lineno">  738</span>            <span class="keywordflow">if</span> (total &gt; 0) {</div>
-<div class="line"><span class="lineno">  739</span>                misc.addNothing(Math.max(1f, total));</div>
-<div class="line"><span class="lineno">  740</span>            }</div>
-<div class="line"><span class="lineno">  741</span>            debris.addDropRandom(misc);</div>
-<div class="line"><span class="lineno">  742</span>            <span class="comment">//misc.getCustom().print(&quot;MISC DROP&quot;);</span></div>
-<div class="line"><span class="lineno">  743</span>        }</div>
-<div class="line"><span class="lineno">  744</span>        </div>
-<div class="line"><span class="lineno">  745</span>        <span class="keywordflow">for</span> (DropData cargo : cargoList) {</div>
-<div class="line"><span class="lineno">  746</span>            debris.addDropRandom(cargo);</div>
-<div class="line"><span class="lineno">  747</span>        }</div>
-<div class="line"><span class="lineno">  748</span>        </div>
-<div class="line"><span class="lineno">  749</span>        </div>
-<div class="line"><span class="lineno">  750</span>        <span class="comment">//if (!battle.isPlayerInvolved()) {</span></div>
-<div class="line"><span class="lineno">  751</span>            ShipRecoverySpecialData data = ShipRecoverySpecial.getSpecialData(debris, <span class="keyword">null</span>, <span class="keyword">true</span>, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  752</span>            <span class="keywordflow">if</span> (data != <span class="keyword">null</span> &amp;&amp; data.ships.size() &lt; 3) {</div>
-<div class="line"><span class="lineno">  753</span>                <span class="keywordtype">float</span> items = recoverySpecialChoices.getTotal();</div>
-<div class="line"><span class="lineno">  754</span>                <span class="keywordtype">float</span> total = items + 25f;</div>
-<div class="line"><span class="lineno">  755</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 3; i++) {</div>
-<div class="line"><span class="lineno">  756</span>                    <span class="keywordflow">if</span> ((<span class="keywordtype">float</span>) Math.random() * total &lt; items) {</div>
-<div class="line"><span class="lineno">  757</span>                        FleetMemberAPI pick = recoverySpecialChoices.pick();</div>
-<div class="line"><span class="lineno">  758</span>                        <span class="keywordflow">if</span> (pick != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  759</span>                            String variantId = pick.getVariant().getHullVariantId();</div>
-<div class="line"><span class="lineno">  760</span>                            <span class="keywordflow">if</span> (!pick.getVariant().isStockVariant()) variantId = pick.getVariant().getOriginalVariant();</div>
-<div class="line"><span class="lineno">  761</span>                            data.addShip(variantId, ShipCondition.WRECKED, 0f);</div>
-<div class="line"><span class="lineno">  762</span>                        }</div>
-<div class="line"><span class="lineno">  763</span>                    }</div>
-<div class="line"><span class="lineno">  764</span>                }</div>
-<div class="line"><span class="lineno">  765</span>            }</div>
-<div class="line"><span class="lineno">  766</span>        <span class="comment">//}</span></div>
-<div class="line"><span class="lineno">  767</span>        </div>
-<div class="line"><span class="lineno">  768</span><span class="comment">//      basicDrop = new DropData();</span></div>
-<div class="line"><span class="lineno">  769</span><span class="comment">//      basicDrop.group = &quot;misc_test&quot;;</span></div>
-<div class="line"><span class="lineno">  770</span><span class="comment">//      basicDrop.value = 100000;</span></div>
-<div class="line"><span class="lineno">  771</span><span class="comment">//      existing.addDropValue(basicDrop);</span></div>
-<div class="line"><span class="lineno">  772</span>        </div>
-<div class="line"><span class="lineno">  773</span>        <span class="comment">// resize and adjust duration here</span></div>
-<div class="line"><span class="lineno">  774</span>        </div>
-<div class="line"><span class="lineno">  775</span>        <span class="keywordtype">float</span> radius = 100f + (float) Math.min(900, Math.sqrt(basicDrop.value));</div>
-<div class="line"><span class="lineno">  776</span>        <span class="keywordtype">float</span> durationExtra = (float) Math.sqrt(salvageValue) * 0.1f;</div>
-<div class="line"><span class="lineno">  777</span>        </div>
-<div class="line"><span class="lineno">  778</span>        <span class="keywordtype">float</span> minDays = DebrisFieldTerrainPlugin.DISSIPATE_DAYS + 1f;</div>
-<div class="line"><span class="lineno">  779</span>        <span class="keywordflow">if</span> (durationExtra &lt; minDays) durationExtra = minDays;</div>
-<div class="line"><span class="lineno">  780</span>        </div>
-<div class="line"><span class="lineno">  781</span>        <span class="keywordtype">float</span> time = durationExtra + plugin.params.lastsDays;</div>
-<div class="line"><span class="lineno">  782</span>        <span class="keywordflow">if</span> (time &gt; 30f) time = 30f;</div>
-<div class="line"><span class="lineno">  783</span>        </div>
-<div class="line"><span class="lineno">  784</span>        plugin.params.lastsDays = time;</div>
-<div class="line"><span class="lineno">  785</span>        plugin.params.glowsDays = time;</div>
-<div class="line"><span class="lineno">  786</span>        </div>
-<div class="line"><span class="lineno">  787</span>        plugin.params.bandWidthInEngine = radius;</div>
-<div class="line"><span class="lineno">  788</span>        plugin.params.middleRadius = plugin.params.bandWidthInEngine / 2f;</div>
-<div class="line"><span class="lineno">  789</span>        </div>
-<div class="line"><span class="lineno">  790</span>        <span class="keywordtype">float</span> range = DebrisFieldTerrainPlugin.computeDetectionRange(plugin.params.bandWidthInEngine);</div>
-<div class="line"><span class="lineno">  791</span>        debris.getDetectedRangeMod().modifyFlat(<span class="stringliteral">&quot;gen&quot;</span>, range);</div>
-<div class="line"><span class="lineno">  792</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CoreScript_html_add216ecfbc68144cd0b582ff6bd6dec1"><div class="ttname"><a href="../../d0/d87/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CoreScript.html#add216ecfbc68144cd0b582ff6bd6dec1">com.fs.starfarer.api.impl.campaign.CoreScript.addMiscToDropData</a></div><div class="ttdeci">static void addMiscToDropData(DropData data, FleetMemberAPI member, boolean weapons, boolean mods, boolean fighters)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dc8/CoreScript_8java_source.html#l00461">CoreScript.java:461</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CoreScript_html_aff28e0cf920fb2e2ba2f8c53a6d72ebe"><div class="ttname"><a href="../../d0/d87/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CoreScript.html#aff28e0cf920fb2e2ba2f8c53a6d72ebe">com.fs.starfarer.api.impl.campaign.CoreScript.getCargoCommodities</a></div><div class="ttdeci">static Set&lt; String &gt; getCargoCommodities(CargoAPI cargo)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dc8/CoreScript_8java_source.html#l00496">CoreScript.java:496</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aff28e0cf920fb2e2ba2f8c53a6d72ebe" name="aff28e0cf920fb2e2ba2f8c53a6d72ebe"></a>
@@ -1115,16 +515,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/dc8/CoreScript_8java_source.html#l00496">496</a> of file <a class="el" href="../../d1/dc8/CoreScript_8java_source.html">CoreScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  496</span>                                                                  {</div>
-<div class="line"><span class="lineno">  497</span>        Set&lt;String&gt; result = <span class="keyword">new</span> HashSet&lt;String&gt;();</div>
-<div class="line"><span class="lineno">  498</span>        <span class="keywordflow">for</span> (CargoStackAPI stack : cargo.getStacksCopy()) {</div>
-<div class="line"><span class="lineno">  499</span>            <span class="keywordflow">if</span> (stack.isCommodityStack()) {</div>
-<div class="line"><span class="lineno">  500</span>                result.add(stack.getCommodityId());</div>
-<div class="line"><span class="lineno">  501</span>            }</div>
-<div class="line"><span class="lineno">  502</span>        }</div>
-<div class="line"><span class="lineno">  503</span>        <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">  504</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab74ec7e571ec8c099c7e0676637be292" name="ab74ec7e571ec8c099c7e0676637be292"></a>
@@ -1146,10 +537,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d7/d63/interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html#a2b9a206acf99d1cdc1511885d14bb58c">com.fs.starfarer.api.EveryFrameScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d1/dc8/CoreScript_8java_source.html#l00263">263</a> of file <a class="el" href="../../d1/dc8/CoreScript_8java_source.html">CoreScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  263</span>                            {</div>
-<div class="line"><span class="lineno">  264</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  265</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a0dd5d037da22c52ab100a55b907349de" name="a0dd5d037da22c52ab100a55b907349de"></a>
@@ -1187,41 +575,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/dc8/CoreScript_8java_source.html#l00425">425</a> of file <a class="el" href="../../d1/dc8/CoreScript_8java_source.html">CoreScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  425</span>                                                                                       {</div>
-<div class="line"><span class="lineno">  426</span>        system.setEnteredByPlayer(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  427</span>        </div>
-<div class="line"><span class="lineno">  428</span>        <span class="keywordflow">for</span> (PlanetAPI planet : system.getPlanets()) {</div>
-<div class="line"><span class="lineno">  429</span>            <span class="keywordflow">if</span> (planet.isStar()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  430</span>            </div>
-<div class="line"><span class="lineno">  431</span>            MarketAPI market = planet.getMarket();</div>
-<div class="line"><span class="lineno">  432</span>            <span class="keywordflow">if</span> (market == <span class="keyword">null</span>) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  433</span>            <span class="keywordflow">if</span> (market.getSurveyLevel() == SurveyLevel.NONE) {</div>
-<div class="line"><span class="lineno">  434</span>                market.setSurveyLevel(SurveyLevel.SEEN);</div>
-<div class="line"><span class="lineno">  435</span>                String type = planet.getSpec().getName();</div>
-<div class="line"><span class="lineno">  436</span>                <span class="keywordflow">if</span> (!planet.isGasGiant()) type += <span class="stringliteral">&quot; World&quot;</span>;</div>
-<div class="line"><span class="lineno">  437</span><span class="comment">//                  Global.getSector().getCampaignUI().addMessage(</span></div>
-<div class="line"><span class="lineno">  438</span><span class="comment">//                          &quot;New planet data: &quot; + planet.getName() + &quot;, &quot; + type,</span></div>
-<div class="line"><span class="lineno">  439</span><span class="comment">//                          color);</span></div>
-<div class="line"><span class="lineno">  440</span>                </div>
-<div class="line"><span class="lineno">  441</span>                </div>
-<div class="line"><span class="lineno">  442</span>                <span class="keywordflow">if</span> (withMessages) {</div>
-<div class="line"><span class="lineno">  443</span><span class="comment">//                  CommMessageAPI message = Global.getFactory().createMessage();</span></div>
-<div class="line"><span class="lineno">  444</span><span class="comment">//                  message.setSubject(&quot;New planet data: &quot; + planet.getName() + &quot;, &quot; + type);</span></div>
-<div class="line"><span class="lineno">  445</span><span class="comment">//                  message.setAction(MessageClickAction.INTEL_TAB);</span></div>
-<div class="line"><span class="lineno">  446</span><span class="comment">//                  message.setCustomData(planet);</span></div>
-<div class="line"><span class="lineno">  447</span><span class="comment">//                  message.setAddToIntelTab(false);</span></div>
-<div class="line"><span class="lineno">  448</span><span class="comment">//                  message.setSmallIcon(Global.getSettings().getSpriteName(&quot;intel_categories&quot;, &quot;star_systems&quot;));</span></div>
-<div class="line"><span class="lineno">  449</span><span class="comment">//                  Global.getSector().getCampaignUI().addMessage(message);</span></div>
-<div class="line"><span class="lineno">  450</span>                    </div>
-<div class="line"><span class="lineno">  451</span>                    MessageIntel intel = <span class="keyword">new</span> MessageIntel(<span class="stringliteral">&quot;New planet data: &quot;</span> + planet.getName() + <span class="stringliteral">&quot;, &quot;</span> + type,</div>
-<div class="line"><span class="lineno">  452</span>                            Misc.getBasePlayerColor());<span class="comment">//, new String[] {&quot;&quot; + points}, Misc.getHighlightColor());</span></div>
-<div class="line"><span class="lineno">  453</span>                    intel.setIcon(Global.getSettings().getSpriteName(<span class="stringliteral">&quot;intel&quot;</span>, <span class="stringliteral">&quot;new_planet_info&quot;</span>));</div>
-<div class="line"><span class="lineno">  454</span>                    Global.getSector().getCampaignUI().addMessage(intel, MessageClickAction.INTEL_TAB, planet);</div>
-<div class="line"><span class="lineno">  455</span>                }</div>
-<div class="line"><span class="lineno">  456</span>            }</div>
-<div class="line"><span class="lineno">  457</span>        }</div>
-<div class="line"><span class="lineno">  458</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a01accdb49d7d79cf3794f3b952e487a7" name="a01accdb49d7d79cf3794f3b952e487a7"></a>
@@ -1260,68 +614,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d6b/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BaseCampaignEventListener.html#a6c5ef40ec180f154d38d1e60f0d6df60">com.fs.starfarer.api.campaign.BaseCampaignEventListener</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d1/dc8/CoreScript_8java_source.html#l00348">348</a> of file <a class="el" href="../../d1/dc8/CoreScript_8java_source.html">CoreScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  348</span>                                                                                       {</div>
-<div class="line"><span class="lineno">  349</span>        </div>
-<div class="line"><span class="lineno">  350</span>        <a class="code hl_function" href="../../d0/d87/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CoreScript.html#aa94535a6e5951d9bcd1c80dc46cde3bb">generateOrAddToDebrisFieldFromBattle</a>(primaryWinner, battle);</div>
-<div class="line"><span class="lineno">  351</span>        </div>
-<div class="line"><span class="lineno">  352</span>        <span class="keywordflow">if</span> (!battle.isPlayerInvolved()) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  353</span> </div>
-<div class="line"><span class="lineno">  354</span>        </div>
-<div class="line"><span class="lineno">  355</span>        CampaignFleetAPI playerFleet = Global.getSector().getPlayerFleet();</div>
-<div class="line"><span class="lineno">  356</span>        <span class="keywordflow">if</span> (!playerFleet.isValidPlayerFleet()) {</div>
-<div class="line"><span class="lineno">  357</span>            <span class="keywordtype">float</span> fp = 0;</div>
-<div class="line"><span class="lineno">  358</span>            <span class="keywordtype">float</span> crew = 0;</div>
-<div class="line"><span class="lineno">  359</span>            <span class="keywordflow">for</span> (FleetMemberAPI member : Misc.getSnapshotMembersLost(playerFleet)) {</div>
-<div class="line"><span class="lineno">  360</span>                fp += member.getFleetPointCost();</div>
-<div class="line"><span class="lineno">  361</span>                crew = member.getMinCrew();</div>
-<div class="line"><span class="lineno">  362</span>            }</div>
-<div class="line"><span class="lineno">  363</span>            shared.<a class="code hl_function" href="../../d6/dbd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1SharedData.html#a2817256fbe29a027391d7ed49e7dc377">setPlayerPreLosingBattleFP</a>(fp);</div>
-<div class="line"><span class="lineno">  364</span>            shared.<a class="code hl_function" href="../../d6/dbd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1SharedData.html#aa73c4d9456d83be4efd9bededfe064e1">setPlayerPreLosingBattleCrew</a>(crew);</div>
-<div class="line"><span class="lineno">  365</span>            shared.<a class="code hl_function" href="../../d6/dbd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1SharedData.html#a05ae0914d7fb256cd37e70d2877fdf04">setPlayerLosingBattleTimestamp</a>(Global.getSector().getClock().getTimestamp());</div>
-<div class="line"><span class="lineno">  366</span>        }</div>
-<div class="line"><span class="lineno">  367</span>        </div>
-<div class="line"><span class="lineno">  368</span>        </div>
-<div class="line"><span class="lineno">  369</span>        <span class="keywordflow">for</span> (<span class="keyword">final</span> CampaignFleetAPI otherFleet : battle.getNonPlayerSideSnapshot()) {</div>
-<div class="line"><span class="lineno">  370</span>            MemoryAPI memory = otherFleet.getMemoryWithoutUpdate();</div>
-<div class="line"><span class="lineno">  371</span>            <span class="comment">//if (!playerFleet.isTransponderOn()) {</span></div>
-<div class="line"><span class="lineno">  372</span>            <span class="comment">//if (!memory.getBoolean(MemFlags.MEMORY_KEY_LOW_REP_IMPACT)) {</span></div>
-<div class="line"><span class="lineno">  373</span>                Misc.setFlagWithReason(memory, MemFlags.MEMORY_KEY_MAKE_HOSTILE_WHILE_TOFF, <span class="stringliteral">&quot;battle&quot;</span>, <span class="keyword">true</span>, 7f + (<span class="keywordtype">float</span>) Math.random() * 7f);</div>
-<div class="line"><span class="lineno">  374</span>            <span class="comment">//}</span></div>
-<div class="line"><span class="lineno">  375</span>            <span class="comment">//}</span></div>
-<div class="line"><span class="lineno">  376</span>                </div>
-<div class="line"><span class="lineno">  377</span>            <span class="keywordflow">if</span> (!otherFleet.getMemoryWithoutUpdate().getBoolean(MemFlags.MEMORY_KEY_LOW_REP_IMPACT)) {</div>
-<div class="line"><span class="lineno">  378</span>                otherFleet.addScript(<span class="keyword">new</span> TOffAlarm(otherFleet));</div>
-<div class="line"><span class="lineno">  379</span>            }</div>
-<div class="line"><span class="lineno">  380</span>            </div>
-<div class="line"><span class="lineno">  381</span>            </div>
-<div class="line"><span class="lineno">  382</span>            <span class="keywordtype">float</span> fpLost = Misc.getSnapshotFPLost(otherFleet);</div>
-<div class="line"><span class="lineno">  383</span>    </div>
-<div class="line"><span class="lineno">  384</span>            List&lt;MarketAPI&gt; markets = Misc.findNearbyLocalMarkets(otherFleet,</div>
-<div class="line"><span class="lineno">  385</span>                    Global.getSettings().getFloat(<span class="stringliteral">&quot;sensorRangeMax&quot;</span>) + 500f,</div>
-<div class="line"><span class="lineno">  386</span>                <span class="keyword">new</span> MarketFilter() {</div>
-<div class="line"><span class="lineno">  387</span>                    <span class="keyword">public</span> <span class="keywordtype">boolean</span> acceptMarket(MarketAPI market) {</div>
-<div class="line"><span class="lineno">  388</span>                        <span class="keywordflow">return</span> market.getFaction().isAtWorst(otherFleet.getFaction(), RepLevel.COOPERATIVE);</div>
-<div class="line"><span class="lineno">  389</span>                    }</div>
-<div class="line"><span class="lineno">  390</span>                });</div>
-<div class="line"><span class="lineno">  391</span>            </div>
-<div class="line"><span class="lineno">  392</span>            <span class="keywordflow">for</span> (MarketAPI market : markets) {</div>
-<div class="line"><span class="lineno">  393</span>                MemoryAPI mem = market.getMemoryWithoutUpdate();</div>
-<div class="line"><span class="lineno">  394</span>                <span class="keywordtype">float</span> expire = fpLost;</div>
-<div class="line"><span class="lineno">  395</span>                <span class="keywordflow">if</span> (mem.contains(MemFlags.MEMORY_KEY_PLAYER_HOSTILE_ACTIVITY_NEAR_MARKET)) {</div>
-<div class="line"><span class="lineno">  396</span>                    expire += mem.getExpire(MemFlags.MEMORY_KEY_PLAYER_HOSTILE_ACTIVITY_NEAR_MARKET); </div>
-<div class="line"><span class="lineno">  397</span>                }</div>
-<div class="line"><span class="lineno">  398</span>                <span class="keywordflow">if</span> (expire &gt; 180) expire = 180;</div>
-<div class="line"><span class="lineno">  399</span>                <span class="keywordflow">if</span> (expire &gt; 0) {</div>
-<div class="line"><span class="lineno">  400</span>                    mem.set(MemFlags.MEMORY_KEY_PLAYER_HOSTILE_ACTIVITY_NEAR_MARKET, <span class="keyword">true</span>, expire);</div>
-<div class="line"><span class="lineno">  401</span>                }</div>
-<div class="line"><span class="lineno">  402</span>            }</div>
-<div class="line"><span class="lineno">  403</span>        }</div>
-<div class="line"><span class="lineno">  404</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CoreScript_html_aa94535a6e5951d9bcd1c80dc46cde3bb"><div class="ttname"><a href="../../d0/d87/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CoreScript.html#aa94535a6e5951d9bcd1c80dc46cde3bb">com.fs.starfarer.api.impl.campaign.CoreScript.generateOrAddToDebrisFieldFromBattle</a></div><div class="ttdeci">static void generateOrAddToDebrisFieldFromBattle(CampaignFleetAPI primaryWinner, BattleAPI battle)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dc8/CoreScript_8java_source.html#l00506">CoreScript.java:506</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1SharedData_html_a05ae0914d7fb256cd37e70d2877fdf04"><div class="ttname"><a href="../../d6/dbd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1SharedData.html#a05ae0914d7fb256cd37e70d2877fdf04">com.fs.starfarer.api.impl.campaign.shared.SharedData.setPlayerLosingBattleTimestamp</a></div><div class="ttdeci">void setPlayerLosingBattleTimestamp(long playerLosingBattleTimestamp)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/df5/SharedData_8java_source.html#l00068">SharedData.java:68</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1SharedData_html_a2817256fbe29a027391d7ed49e7dc377"><div class="ttname"><a href="../../d6/dbd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1SharedData.html#a2817256fbe29a027391d7ed49e7dc377">com.fs.starfarer.api.impl.campaign.shared.SharedData.setPlayerPreLosingBattleFP</a></div><div class="ttdeci">void setPlayerPreLosingBattleFP(float playerPreLosingBattleFP)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/df5/SharedData_8java_source.html#l00076">SharedData.java:76</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1SharedData_html_aa73c4d9456d83be4efd9bededfe064e1"><div class="ttname"><a href="../../d6/dbd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1SharedData.html#aa73c4d9456d83be4efd9bededfe064e1">com.fs.starfarer.api.impl.campaign.shared.SharedData.setPlayerPreLosingBattleCrew</a></div><div class="ttdeci">void setPlayerPreLosingBattleCrew(float playerPreLosingBattleCrew)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/df5/SharedData_8java_source.html#l00084">SharedData.java:84</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aaed7871411e65525aa5fa590ecae6613" name="aaed7871411e65525aa5fa590ecae6613"></a>
@@ -1342,124 +635,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d6b/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BaseCampaignEventListener.html#ad9e78d034db2f3888003a16afc4c8f71">com.fs.starfarer.api.campaign.BaseCampaignEventListener</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d1/dc8/CoreScript_8java_source.html#l01056">1056</a> of file <a class="el" href="../../d1/dc8/CoreScript_8java_source.html">CoreScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1056</span>                                        {</div>
-<div class="line"><span class="lineno"> 1057</span>        super.reportEconomyMonthEnd();</div>
-<div class="line"><span class="lineno"> 1058</span> </div>
-<div class="line"><span class="lineno"> 1059</span>        <span class="keywordflow">if</span> (TutorialMissionIntel.isTutorialInProgress()) {</div>
-<div class="line"><span class="lineno"> 1060</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno"> 1061</span>        }</div>
-<div class="line"><span class="lineno"> 1062</span>        </div>
-<div class="line"><span class="lineno"> 1063</span>        MonthlyReport report = SharedData.getData().getCurrentReport();</div>
-<div class="line"><span class="lineno"> 1064</span>        FDNode marketsNode = report.getNode(MonthlyReport.OUTPOSTS);</div>
-<div class="line"><span class="lineno"> 1065</span>        <span class="keywordflow">if</span> (marketsNode.custom != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno"> 1066</span>            <span class="keywordflow">for</span> (MarketAPI market : Global.getSector().getEconomy().getMarketsCopy()) {</div>
-<div class="line"><span class="lineno"> 1067</span>                <span class="keywordflow">if</span> (!market.isPlayerOwned()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno"> 1068</span>                </div>
-<div class="line"><span class="lineno"> 1069</span>                <span class="keywordtype">float</span> incentive = market.getIncentiveCredits();</div>
-<div class="line"><span class="lineno"> 1070</span>                <span class="keywordflow">if</span> (incentive &gt; 0) {</div>
-<div class="line"><span class="lineno"> 1071</span>                    FDNode mNode = report.getNode(marketsNode, market.getId());</div>
-<div class="line"><span class="lineno"> 1072</span>                    <span class="keywordflow">if</span> (mNode.custom != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno"> 1073</span>                        FDNode incNode = report.getNode(mNode, <span class="stringliteral">&quot;incentives&quot;</span>); </div>
-<div class="line"><span class="lineno"> 1074</span>                        incNode.name = <span class="stringliteral">&quot;Hazard pay&quot;</span>;</div>
-<div class="line"><span class="lineno"> 1075</span>                        incNode.custom = MonthlyReport.INCENTIVES;</div>
-<div class="line"><span class="lineno"> 1076</span>                        incNode.mapEntity = market.getPrimaryEntity();</div>
-<div class="line"><span class="lineno"> 1077</span>                        incNode.tooltipCreator = report.getMonthlyReportTooltip();</div>
-<div class="line"><span class="lineno"> 1078</span>                        incNode.upkeep += incentive;</div>
-<div class="line"><span class="lineno"> 1079</span>                    }</div>
-<div class="line"><span class="lineno"> 1080</span>                    market.setIncentiveCredits(0);</div>
-<div class="line"><span class="lineno"> 1081</span>                }</div>
-<div class="line"><span class="lineno"> 1082</span>            }</div>
-<div class="line"><span class="lineno"> 1083</span>        }</div>
-<div class="line"><span class="lineno"> 1084</span>        </div>
-<div class="line"><span class="lineno"> 1085</span>        </div>
-<div class="line"><span class="lineno"> 1086</span>        MonthlyReport previous = SharedData.getData().getPreviousReport();</div>
-<div class="line"><span class="lineno"> 1087</span>        <span class="keywordtype">float</span> debt = previous.getDebt();</div>
-<div class="line"><span class="lineno"> 1088</span>        <span class="keywordflow">if</span> (debt &gt; 0) {</div>
-<div class="line"><span class="lineno"> 1089</span>            MonthlyReport current = SharedData.getData().getCurrentReport();</div>
-<div class="line"><span class="lineno"> 1090</span>            current.getDebtNode().upkeep = debt;</div>
-<div class="line"><span class="lineno"> 1091</span>        }</div>
-<div class="line"><span class="lineno"> 1092</span>        </div>
-<div class="line"><span class="lineno"> 1093</span>        <a class="code hl_function" href="../../d0/d87/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CoreScript.html#a0eb4342881fba7546396c68136e5a61f">doCustomProduction</a>();</div>
-<div class="line"><span class="lineno"> 1094</span>        </div>
-<div class="line"><span class="lineno"> 1095</span>        CampaignFleetAPI playerFleet = Global.getSector().getPlayerFleet();</div>
-<div class="line"><span class="lineno"> 1096</span>        </div>
-<div class="line"><span class="lineno"> 1097</span>        <span class="comment">//MonthlyReport previous = SharedData.getData().getPreviousReport();</span></div>
-<div class="line"><span class="lineno"> 1098</span>        SharedData.getData().rollOverReport();</div>
-<div class="line"><span class="lineno"> 1099</span>        report = SharedData.getData().getPreviousReport();</div>
-<div class="line"><span class="lineno"> 1100</span>        report.setPreviousDebt(previous.getDebt());</div>
-<div class="line"><span class="lineno"> 1101</span>        report.setTimestamp(Global.getSector().getClock().getTimestamp());</div>
-<div class="line"><span class="lineno"> 1102</span>        </div>
-<div class="line"><span class="lineno"> 1103</span>        report.computeTotals();</div>
-<div class="line"><span class="lineno"> 1104</span>        <span class="keywordtype">int</span> total = (int) (report.getRoot().totalIncome - report.getRoot().totalUpkeep);</div>
-<div class="line"><span class="lineno"> 1105</span>        <span class="keywordtype">int</span> credits = (int) playerFleet.getCargo().getCredits().get();</div>
-<div class="line"><span class="lineno"> 1106</span>        </div>
-<div class="line"><span class="lineno"> 1107</span>        <span class="keywordtype">int</span> newCredits = credits + total;</div>
-<div class="line"><span class="lineno"> 1108</span>        <span class="keywordflow">if</span> (newCredits &lt; 0) {</div>
-<div class="line"><span class="lineno"> 1109</span>            report.setDebt(Math.abs(newCredits));</div>
-<div class="line"><span class="lineno"> 1110</span>            newCredits = 0;</div>
-<div class="line"><span class="lineno"> 1111</span>        }</div>
-<div class="line"><span class="lineno"> 1112</span>        playerFleet.getCargo().getCredits().set(newCredits);</div>
-<div class="line"><span class="lineno"> 1113</span>        </div>
-<div class="line"><span class="lineno"> 1114</span>        </div>
-<div class="line"><span class="lineno"> 1115</span>        String totalStr = Misc.getDGSCredits(Math.abs(total));</div>
-<div class="line"><span class="lineno"> 1116</span>        <span class="comment">//Global.getSector().getCampaignUI().showCoreUITab(CoreUITabId.OUTPOSTS);</span></div>
-<div class="line"><span class="lineno"> 1117</span>        </div>
-<div class="line"><span class="lineno"> 1118</span>        String title = <span class="stringliteral">&quot;Monthly income: &quot;</span> + totalStr;</div>
-<div class="line"><span class="lineno"> 1119</span>        Color highlight = Misc.getHighlightColor();</div>
-<div class="line"><span class="lineno"> 1120</span>        <span class="keywordflow">if</span> (total &lt; 0) {</div>
-<div class="line"><span class="lineno"> 1121</span>            title = <span class="stringliteral">&quot;Monthly expenses: &quot;</span> + totalStr;</div>
-<div class="line"><span class="lineno"> 1122</span>            highlight = Misc.getNegativeHighlightColor();</div>
-<div class="line"><span class="lineno"> 1123</span>        }</div>
-<div class="line"><span class="lineno"> 1124</span>        </div>
-<div class="line"><span class="lineno"> 1125</span>        MessageIntel intel = <span class="keyword">new</span> MessageIntel(title,</div>
-<div class="line"><span class="lineno"> 1126</span>                Misc.getBasePlayerColor(), <span class="keyword">new</span> String[] {totalStr}, highlight);</div>
-<div class="line"><span class="lineno"> 1127</span>        intel.setIcon(Global.getSettings().getSpriteName(<span class="stringliteral">&quot;intel&quot;</span>, <span class="stringliteral">&quot;monthly_income_report&quot;</span>));</div>
-<div class="line"><span class="lineno"> 1128</span>        </div>
-<div class="line"><span class="lineno"> 1129</span>        <span class="keywordflow">if</span> (total &gt;= 0) {</div>
-<div class="line"><span class="lineno"> 1130</span>            intel.setSound(<span class="stringliteral">&quot;ui_intel_monthly_income_positive&quot;</span>);</div>
-<div class="line"><span class="lineno"> 1131</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno"> 1132</span>            intel.setSound(<span class="stringliteral">&quot;ui_intel_monthly_income_negative&quot;</span>);</div>
-<div class="line"><span class="lineno"> 1133</span>        }</div>
-<div class="line"><span class="lineno"> 1134</span>        </div>
-<div class="line"><span class="lineno"> 1135</span>        Global.getSector().getCampaignUI().addMessage(intel, MessageClickAction.INCOME_TAB, Tags.INCOME_REPORT);</div>
-<div class="line"><span class="lineno"> 1136</span>        </div>
-<div class="line"><span class="lineno"> 1137</span>        </div>
-<div class="line"><span class="lineno"> 1138</span><span class="comment">//      CommMessageAPI message = FleetLog.beginEntry(</span></div>
-<div class="line"><span class="lineno"> 1139</span><span class="comment">//              title,</span></div>
-<div class="line"><span class="lineno"> 1140</span><span class="comment">//              playerFleet, </span></div>
-<div class="line"><span class="lineno"> 1141</span><span class="comment">//              highlight,</span></div>
-<div class="line"><span class="lineno"> 1142</span><span class="comment">//              totalStr</span></div>
-<div class="line"><span class="lineno"> 1143</span><span class="comment">//      );</span></div>
-<div class="line"><span class="lineno"> 1144</span><span class="comment">//      </span></div>
-<div class="line"><span class="lineno"> 1145</span><span class="comment">//      message.setSmallIcon(Global.getSettings().getSpriteName(&quot;intel_categories&quot;, &quot;bounties&quot;));</span></div>
-<div class="line"><span class="lineno"> 1146</span><span class="comment">//      if (total &gt;= 0) {</span></div>
-<div class="line"><span class="lineno"> 1147</span><span class="comment">//          message.getSection1().addPara(&quot;Over the last month, your fleet, outposts, and other ventures have&quot; +</span></div>
-<div class="line"><span class="lineno"> 1148</span><span class="comment">//                  &quot; produced an income of &quot; + totalStr + &quot;.&quot;);            </span></div>
-<div class="line"><span class="lineno"> 1149</span><span class="comment">//      } else {</span></div>
-<div class="line"><span class="lineno"> 1150</span><span class="comment">//          message.getSection1().addPara(&quot;Over the last month, your fleet, outposts, and other ventures have&quot; +</span></div>
-<div class="line"><span class="lineno"> 1151</span><span class="comment">//                  &quot; produced expenses of &quot; + totalStr + &quot;.&quot;);</span></div>
-<div class="line"><span class="lineno"> 1152</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno"> 1153</span><span class="comment">//      </span></div>
-<div class="line"><span class="lineno"> 1154</span><span class="comment">//      if (total &lt; 0 &amp;&amp; Math.abs(total) &gt; credits) {</span></div>
-<div class="line"><span class="lineno"> 1155</span><span class="comment">//          message.getSection1().addPara(&quot;Your expenses have exceeded your credit balance. If this continues for more than a month, &quot; +</span></div>
-<div class="line"><span class="lineno"> 1156</span><span class="comment">//                  &quot;some crew and officers may begin to leave, and other undertakings requiring credit expenditures may fail.&quot;);</span></div>
-<div class="line"><span class="lineno"> 1157</span><span class="comment">//          //message.getSection1().addPara(&quot;.&quot;);</span></div>
-<div class="line"><span class="lineno"> 1158</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno"> 1159</span><span class="comment">//      message.getSection1().addPara(&quot;See the \&quot;Income\&quot; tab in the command screen for a detailed breakdown.&quot;);</span></div>
-<div class="line"><span class="lineno"> 1160</span><span class="comment">//      </span></div>
-<div class="line"><span class="lineno"> 1161</span><span class="comment">//      message.getSection1().setHighlights(totalStr);</span></div>
-<div class="line"><span class="lineno"> 1162</span><span class="comment">//      message.getSection1().setHighlightColors(highlight);</span></div>
-<div class="line"><span class="lineno"> 1163</span><span class="comment">//      </span></div>
-<div class="line"><span class="lineno"> 1164</span><span class="comment">//      message.setShowInCampaignList(true);</span></div>
-<div class="line"><span class="lineno"> 1165</span><span class="comment">//      message.setAddToIntelTab(true);</span></div>
-<div class="line"><span class="lineno"> 1166</span><span class="comment">//      message.setAction(MessageClickAction.INCOME_TAB);</span></div>
-<div class="line"><span class="lineno"> 1167</span><span class="comment">//      message.addTag(Tags.FLEET_LOG);</span></div>
-<div class="line"><span class="lineno"> 1168</span><span class="comment">//      message.addTag(Tags.INCOME_REPORT);</span></div>
-<div class="line"><span class="lineno"> 1169</span><span class="comment">//      </span></div>
-<div class="line"><span class="lineno"> 1170</span><span class="comment">//      Global.getSector().getCampaignUI().addMessage(message);</span></div>
-<div class="line"><span class="lineno"> 1171</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CoreScript_html_a0eb4342881fba7546396c68136e5a61f"><div class="ttname"><a href="../../d0/d87/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CoreScript.html#a0eb4342881fba7546396c68136e5a61f">com.fs.starfarer.api.impl.campaign.CoreScript.doCustomProduction</a></div><div class="ttdeci">void doCustomProduction()</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dc8/CoreScript_8java_source.html#l00830">CoreScript.java:830</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab53f5ee9d5856e928d52a76d435edb0d" name="ab53f5ee9d5856e928d52a76d435edb0d"></a>
@@ -1481,208 +657,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d6b/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BaseCampaignEventListener.html#a747b8a7b4044094d60649a75f97b764c">com.fs.starfarer.api.campaign.BaseCampaignEventListener</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d1/dc8/CoreScript_8java_source.html#l01183">1183</a> of file <a class="el" href="../../d1/dc8/CoreScript_8java_source.html">CoreScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1183</span>                                                 {</div>
-<div class="line"><span class="lineno"> 1184</span>        super.reportEconomyTick(iterIndex);</div>
-<div class="line"><span class="lineno"> 1185</span>        </div>
-<div class="line"><span class="lineno"> 1186</span>        <span class="keywordflow">if</span> (TutorialMissionIntel.isTutorialInProgress()) {</div>
-<div class="line"><span class="lineno"> 1187</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno"> 1188</span>        }</div>
-<div class="line"><span class="lineno"> 1189</span>        </div>
-<div class="line"><span class="lineno"> 1190</span>        <span class="comment">//for (int i = 0; i &lt; 100; i++) {</span></div>
-<div class="line"><span class="lineno"> 1191</span>        <span class="keywordtype">int</span> crewSalary = Global.getSettings().getInt(<span class="stringliteral">&quot;crewSalary&quot;</span>);</div>
-<div class="line"><span class="lineno"> 1192</span>        <span class="keywordtype">int</span> marineSalary = Global.getSettings().getInt(<span class="stringliteral">&quot;marineSalary&quot;</span>);</div>
-<div class="line"><span class="lineno"> 1193</span>        </div>
-<div class="line"><span class="lineno"> 1194</span>        <span class="keywordtype">float</span> numIter = Global.getSettings().getFloat(<span class="stringliteral">&quot;economyIterPerMonth&quot;</span>);</div>
-<div class="line"><span class="lineno"> 1195</span>        <span class="keywordtype">float</span> f = 1f / numIter;</div>
-<div class="line"><span class="lineno"> 1196</span>        </div>
-<div class="line"><span class="lineno"> 1197</span>        <span class="comment">//f = 1f;</span></div>
-<div class="line"><span class="lineno"> 1198</span>        </div>
-<div class="line"><span class="lineno"> 1199</span>        CampaignFleetAPI playerFleet = Global.getSector().getPlayerFleet();</div>
-<div class="line"><span class="lineno"> 1200</span>        MonthlyReport report = SharedData.getData().getCurrentReport();</div>
-<div class="line"><span class="lineno"> 1201</span>        </div>
-<div class="line"><span class="lineno"> 1202</span>        </div>
-<div class="line"><span class="lineno"> 1203</span>        FDNode fleetNode = report.getNode(MonthlyReport.FLEET);</div>
-<div class="line"><span class="lineno"> 1204</span>        fleetNode.name = <span class="stringliteral">&quot;Fleet&quot;</span>;</div>
-<div class="line"><span class="lineno"> 1205</span>        fleetNode.custom = MonthlyReport.FLEET;</div>
-<div class="line"><span class="lineno"> 1206</span>        fleetNode.tooltipCreator = report.getMonthlyReportTooltip();</div>
-<div class="line"><span class="lineno"> 1207</span>        </div>
-<div class="line"><span class="lineno"> 1208</span>        <span class="keywordtype">int</span> crewCost = playerFleet.getCargo().getCrew() * crewSalary;</div>
-<div class="line"><span class="lineno"> 1209</span>        FDNode crewNode = report.getNode(fleetNode, MonthlyReport.CREW);</div>
-<div class="line"><span class="lineno"> 1210</span>        crewNode.upkeep += crewCost * f;</div>
-<div class="line"><span class="lineno"> 1211</span>        crewNode.name = <span class="stringliteral">&quot;Crew payroll&quot;</span>;</div>
-<div class="line"><span class="lineno"> 1212</span>        crewNode.custom = MonthlyReport.CREW;</div>
-<div class="line"><span class="lineno"> 1213</span>        crewNode.tooltipCreator = report.getMonthlyReportTooltip();</div>
-<div class="line"><span class="lineno"> 1214</span>        </div>
-<div class="line"><span class="lineno"> 1215</span>        <span class="keywordtype">int</span> marineCost = playerFleet.getCargo().getMarines() * marineSalary;</div>
-<div class="line"><span class="lineno"> 1216</span>        <span class="keywordflow">if</span> (marineSalary &gt; 0) {</div>
-<div class="line"><span class="lineno"> 1217</span>            FDNode marineNode = report.getNode(fleetNode, MonthlyReport.MARINES);</div>
-<div class="line"><span class="lineno"> 1218</span>            marineNode.upkeep += marineCost * f;</div>
-<div class="line"><span class="lineno"> 1219</span>            marineNode.name = <span class="stringliteral">&quot;Marine payroll&quot;</span>;</div>
-<div class="line"><span class="lineno"> 1220</span>            marineNode.custom = MonthlyReport.MARINES;</div>
-<div class="line"><span class="lineno"> 1221</span>            marineNode.tooltipCreator = report.getMonthlyReportTooltip();</div>
-<div class="line"><span class="lineno"> 1222</span>        }</div>
-<div class="line"><span class="lineno"> 1223</span>        </div>
-<div class="line"><span class="lineno"> 1224</span>        </div>
-<div class="line"><span class="lineno"> 1225</span><span class="comment">//      List&lt;PersonnelAtEntity&gt; droppedOffMarines = PlayerFleetPersonnelTracker.getInstance().getDroppedOff();</span></div>
-<div class="line"><span class="lineno"> 1226</span><span class="comment">//      for (PersonnelAtEntity curr : droppedOffMarines) {</span></div>
-<div class="line"><span class="lineno"> 1227</span><span class="comment">//          </span></div>
-<div class="line"><span class="lineno"> 1228</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno"> 1229</span><span class="comment">//      for (MarketAPI market : Global.getSector().getEconomy().getMarketsCopy()) {</span></div>
-<div class="line"><span class="lineno"> 1230</span><span class="comment">//          if (Misc.playerHasStorageAccess(market)) {</span></div>
-<div class="line"><span class="lineno"> 1231</span><span class="comment">//              </span></div>
-<div class="line"><span class="lineno"> 1232</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno"> 1233</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno"> 1234</span>        </div>
-<div class="line"><span class="lineno"> 1235</span>        </div>
-<div class="line"><span class="lineno"> 1236</span>        </div>
-<div class="line"><span class="lineno"> 1237</span>        <span class="comment">//FDNode officersNode = report.getNode(MonthlyReport.OFFICERS);</span></div>
-<div class="line"><span class="lineno"> 1238</span>        FDNode officersNode = report.getNode(fleetNode, MonthlyReport.OFFICERS);</div>
-<div class="line"><span class="lineno"> 1239</span>        officersNode.name = <span class="stringliteral">&quot;Officer payroll&quot;</span>;</div>
-<div class="line"><span class="lineno"> 1240</span>        officersNode.custom = MonthlyReport.OFFICERS;</div>
-<div class="line"><span class="lineno"> 1241</span>        officersNode.tooltipCreator = report.getMonthlyReportTooltip();</div>
-<div class="line"><span class="lineno"> 1242</span>        </div>
-<div class="line"><span class="lineno"> 1243</span>        </div>
-<div class="line"><span class="lineno"> 1244</span>        <span class="keywordflow">for</span> (OfficerDataAPI od : playerFleet.getFleetData().getOfficersCopy()) {</div>
-<div class="line"><span class="lineno"> 1245</span>            <span class="keywordtype">float</span> salary = Misc.getOfficerSalary(od.getPerson());</div>
-<div class="line"><span class="lineno"> 1246</span>            FDNode oNode = report.getNode(officersNode, od.getPerson().getId()); </div>
-<div class="line"><span class="lineno"> 1247</span>            oNode.name = od.getPerson().getName().getFullName();</div>
-<div class="line"><span class="lineno"> 1248</span>            oNode.upkeep += salary * f;</div>
-<div class="line"><span class="lineno"> 1249</span>            oNode.custom = od;</div>
-<div class="line"><span class="lineno"> 1250</span>        }</div>
-<div class="line"><span class="lineno"> 1251</span>        </div>
-<div class="line"><span class="lineno"> 1252</span>        FDNode marketsNode = report.getNode(MonthlyReport.OUTPOSTS);</div>
-<div class="line"><span class="lineno"> 1253</span>        marketsNode.name = <span class="stringliteral">&quot;Colonies&quot;</span>;</div>
-<div class="line"><span class="lineno"> 1254</span>        marketsNode.custom = MonthlyReport.OUTPOSTS;</div>
-<div class="line"><span class="lineno"> 1255</span>        marketsNode.tooltipCreator = report.getMonthlyReportTooltip();</div>
-<div class="line"><span class="lineno"> 1256</span>        </div>
-<div class="line"><span class="lineno"> 1257</span>        FDNode storageNode = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno"> 1258</span><span class="comment">//      storageNode = report.getNode(MonthlyReport.STORAGE);</span></div>
-<div class="line"><span class="lineno"> 1259</span><span class="comment">//      storageNode.name = &quot;Storage&quot;;</span></div>
-<div class="line"><span class="lineno"> 1260</span><span class="comment">//      storageNode.custom = MonthlyReport.STORAGE;</span></div>
-<div class="line"><span class="lineno"> 1261</span><span class="comment">//      storageNode.tooltipCreator = report.getMonthlyReportTooltip();</span></div>
-<div class="line"><span class="lineno"> 1262</span>        </div>
-<div class="line"><span class="lineno"> 1263</span>        <span class="keywordtype">float</span> storageFraction = Global.getSettings().getFloat(<span class="stringliteral">&quot;storageFreeFraction&quot;</span>);</div>
-<div class="line"><span class="lineno"> 1264</span>        </div>
-<div class="line"><span class="lineno"> 1265</span>        <span class="keywordtype">int</span> index = 0;</div>
-<div class="line"><span class="lineno"> 1266</span>        <span class="keywordflow">for</span> (MarketAPI market : Global.getSector().getEconomy().getMarketsCopy()) {</div>
-<div class="line"><span class="lineno"> 1267</span><span class="comment">//          if (index % 10 != 3 || index == 0) {</span></div>
-<div class="line"><span class="lineno"> 1268</span><span class="comment">//              index++;</span></div>
-<div class="line"><span class="lineno"> 1269</span><span class="comment">//              continue;</span></div>
-<div class="line"><span class="lineno"> 1270</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno"> 1271</span>            </div>
-<div class="line"><span class="lineno"> 1272</span>            <span class="keywordflow">if</span> (!market.isPlayerOwned() &amp;&amp; Misc.playerHasStorageAccess(market)) {</div>
-<div class="line"><span class="lineno"> 1273</span>                <span class="keywordtype">float</span> vc = Misc.getStorageCargoValue(market);</div>
-<div class="line"><span class="lineno"> 1274</span>                <span class="keywordtype">float</span> vs = Misc.getStorageShipValue(market);</div>
-<div class="line"><span class="lineno"> 1275</span>                </div>
-<div class="line"><span class="lineno"> 1276</span>                <span class="keywordtype">float</span> fc = (int) (vc * storageFraction);</div>
-<div class="line"><span class="lineno"> 1277</span>                <span class="keywordtype">float</span> fs = (int) (vs * storageFraction);</div>
-<div class="line"><span class="lineno"> 1278</span>                <span class="keywordflow">if</span> (fc &gt; 0 || fs &gt; 0) {</div>
-<div class="line"><span class="lineno"> 1279</span>                    <span class="keywordflow">if</span> (storageNode == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno"> 1280</span>                        storageNode = report.getNode(MonthlyReport.STORAGE);</div>
-<div class="line"><span class="lineno"> 1281</span>                        storageNode.name = <span class="stringliteral">&quot;Storage&quot;</span>;</div>
-<div class="line"><span class="lineno"> 1282</span>                        storageNode.custom = MonthlyReport.STORAGE;</div>
-<div class="line"><span class="lineno"> 1283</span>                        storageNode.tooltipCreator = report.getMonthlyReportTooltip();</div>
-<div class="line"><span class="lineno"> 1284</span>                    }</div>
-<div class="line"><span class="lineno"> 1285</span>                    FDNode mNode = report.getNode(storageNode, market.getId());</div>
-<div class="line"><span class="lineno"> 1286</span>                    String desc = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno"> 1287</span>                    <span class="keywordflow">if</span> (fc &gt; 0 &amp;&amp; fs &gt; 0) {</div>
-<div class="line"><span class="lineno"> 1288</span>                        desc = <span class="stringliteral">&quot;ships &amp; cargo&quot;</span>;</div>
-<div class="line"><span class="lineno"> 1289</span>                    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (fc &gt; 0) {</div>
-<div class="line"><span class="lineno"> 1290</span>                        desc = <span class="stringliteral">&quot;cargo&quot;</span>;</div>
-<div class="line"><span class="lineno"> 1291</span>                    } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno"> 1292</span>                        desc = <span class="stringliteral">&quot;ships&quot;</span>;</div>
-<div class="line"><span class="lineno"> 1293</span>                    }</div>
-<div class="line"><span class="lineno"> 1294</span>                    mNode.name = market.getName() + <span class="stringliteral">&quot; (&quot;</span> + desc + <span class="stringliteral">&quot;)&quot;</span>;</div>
-<div class="line"><span class="lineno"> 1295</span>                    mNode.custom = market;</div>
-<div class="line"><span class="lineno"> 1296</span>                    mNode.custom2 = MonthlyReport.STORAGE;</div>
-<div class="line"><span class="lineno"> 1297</span>                    <span class="comment">//mNode.tooltipCreator = report.getMonthlyReportTooltip();</span></div>
-<div class="line"><span class="lineno"> 1298</span>                    </div>
-<div class="line"><span class="lineno"> 1299</span>                    mNode.upkeep += (fc + fs) * f;</div>
-<div class="line"><span class="lineno"> 1300</span>                }</div>
-<div class="line"><span class="lineno"> 1301</span>                <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno"> 1302</span>            }</div>
-<div class="line"><span class="lineno"> 1303</span>            </div>
-<div class="line"><span class="lineno"> 1304</span>            </div>
-<div class="line"><span class="lineno"> 1305</span>            <span class="comment">//if (market.isHidden()) continue;</span></div>
-<div class="line"><span class="lineno"> 1306</span>            <span class="comment">//if (!Factions.DIKTAT.equals(market.getFaction().getId()) &amp;&amp; !market.isPlayerOwned()) continue;</span></div>
-<div class="line"><span class="lineno"> 1307</span>            <span class="keywordflow">if</span> (!market.isPlayerOwned()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno"> 1308</span>            </div>
-<div class="line"><span class="lineno"> 1309</span>            FDNode mNode = report.getNode(marketsNode, market.getId()); </div>
-<div class="line"><span class="lineno"> 1310</span>            mNode.name = market.getName() + <span class="stringliteral">&quot; (&quot;</span> + market.getSize() + <span class="stringliteral">&quot;)&quot;</span>;</div>
-<div class="line"><span class="lineno"> 1311</span>            mNode.custom = market;</div>
-<div class="line"><span class="lineno"> 1312</span>            </div>
-<div class="line"><span class="lineno"> 1313</span>            FDNode indNode = report.getNode(mNode, <span class="stringliteral">&quot;industries&quot;</span>); </div>
-<div class="line"><span class="lineno"> 1314</span>            indNode.name = <span class="stringliteral">&quot;Industries &amp; structures&quot;</span>;</div>
-<div class="line"><span class="lineno"> 1315</span>            indNode.custom = MonthlyReport.INDUSTRIES;</div>
-<div class="line"><span class="lineno"> 1316</span>            indNode.mapEntity = market.getPrimaryEntity();</div>
-<div class="line"><span class="lineno"> 1317</span>            indNode.tooltipCreator = report.getMonthlyReportTooltip();</div>
-<div class="line"><span class="lineno"> 1318</span><span class="comment">//          node.income += (int) market.getIndustryIncome();</span></div>
-<div class="line"><span class="lineno"> 1319</span><span class="comment">//          node.upkeep += (int) market.getIndustryUpkeep();</span></div>
-<div class="line"><span class="lineno"> 1320</span>            </div>
-<div class="line"><span class="lineno"> 1321</span>            <span class="keywordflow">for</span> (Industry curr : market.getIndustries()) {</div>
-<div class="line"><span class="lineno"> 1322</span>                FDNode iNode = report.getNode(indNode, curr.getId());</div>
-<div class="line"><span class="lineno"> 1323</span>                iNode.name = curr.getCurrentName();</div>
-<div class="line"><span class="lineno"> 1324</span>                iNode.income += curr.getIncome().getModifiedInt() * f;</div>
-<div class="line"><span class="lineno"> 1325</span>                iNode.upkeep += curr.getUpkeep().getModifiedInt() * f;</div>
-<div class="line"><span class="lineno"> 1326</span>                iNode.custom = curr;</div>
-<div class="line"><span class="lineno"> 1327</span>                iNode.mapEntity = market.getPrimaryEntity();</div>
-<div class="line"><span class="lineno"> 1328</span>            }</div>
-<div class="line"><span class="lineno"> 1329</span>            </div>
-<div class="line"><span class="lineno"> 1330</span>            FDNode exportNode = report.getNode(mNode, <span class="stringliteral">&quot;exports&quot;</span>); </div>
-<div class="line"><span class="lineno"> 1331</span>            exportNode.name = <span class="stringliteral">&quot;Exports&quot;</span>;</div>
-<div class="line"><span class="lineno"> 1332</span>            exportNode.custom = MonthlyReport.EXPORTS;</div>
-<div class="line"><span class="lineno"> 1333</span>            exportNode.mapEntity = market.getPrimaryEntity();</div>
-<div class="line"><span class="lineno"> 1334</span>            exportNode.tooltipCreator = report.getMonthlyReportTooltip();</div>
-<div class="line"><span class="lineno"> 1335</span>            </div>
-<div class="line"><span class="lineno"> 1336</span>            <a class="code hl_function" href="../../d0/d87/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CoreScript.html#a893d8a428dd1a1dba61f672b9ad5e24b">addExportsGroupedByCommodity</a>(report, exportNode, market, f);</div>
-<div class="line"><span class="lineno"> 1337</span>            <span class="comment">//addExportsGroupedByFaction(report, exportNode, market, f);</span></div>
-<div class="line"><span class="lineno"> 1338</span>            </div>
-<div class="line"><span class="lineno"> 1339</span>            </div>
-<div class="line"><span class="lineno"> 1340</span><span class="comment">//          FDNode overheadNode = report.getNode(exportNode, &quot;overhead&quot;);</span></div>
-<div class="line"><span class="lineno"> 1341</span><span class="comment">//          if (overheadNode.name == null) {</span></div>
-<div class="line"><span class="lineno"> 1342</span><span class="comment">//              overheadNode.name = &quot;Overhead&quot;;</span></div>
-<div class="line"><span class="lineno"> 1343</span><span class="comment">//              overheadNode.icon = Global.getSettings().getSpriteName(&quot;income_report&quot;, &quot;overhead&quot;);</span></div>
-<div class="line"><span class="lineno"> 1344</span><span class="comment">//              overheadNode.custom = market;</span></div>
-<div class="line"><span class="lineno"> 1345</span><span class="comment">//              overheadNode.mapEntity = market.getPrimaryEntity();</span></div>
-<div class="line"><span class="lineno"> 1346</span><span class="comment">//              overheadNode.tooltipCreator = new OverheadTooltipCreator();</span></div>
-<div class="line"><span class="lineno"> 1347</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno"> 1348</span><span class="comment">//          </span></div>
-<div class="line"><span class="lineno"> 1349</span><span class="comment">//          OverheadData overhead = computeOverhead(market);</span></div>
-<div class="line"><span class="lineno"> 1350</span><span class="comment">//          if (overhead.fraction &gt; 0) {</span></div>
-<div class="line"><span class="lineno"> 1351</span><span class="comment">//              float totalIncome = market.getExportIncome(false);</span></div>
-<div class="line"><span class="lineno"> 1352</span><span class="comment">//              overheadNode.upkeep += totalIncome * overhead.fraction * f; </span></div>
-<div class="line"><span class="lineno"> 1353</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno"> 1354</span>            </div>
-<div class="line"><span class="lineno"> 1355</span>            index++;</div>
-<div class="line"><span class="lineno"> 1356</span>        }</div>
-<div class="line"><span class="lineno"> 1357</span>        <span class="comment">//}</span></div>
-<div class="line"><span class="lineno"> 1358</span>        </div>
-<div class="line"><span class="lineno"> 1359</span>        </div>
-<div class="line"><span class="lineno"> 1360</span>        FDNode adminNode = report.getNode(marketsNode, MonthlyReport.ADMIN);</div>
-<div class="line"><span class="lineno"> 1361</span>        adminNode.name = <span class="stringliteral">&quot;Administrators&quot;</span>;</div>
-<div class="line"><span class="lineno"> 1362</span>        adminNode.custom = MonthlyReport.ADMIN;</div>
-<div class="line"><span class="lineno"> 1363</span>        adminNode.tooltipCreator = report.getMonthlyReportTooltip();</div>
-<div class="line"><span class="lineno"> 1364</span>        </div>
-<div class="line"><span class="lineno"> 1365</span>        <span class="keywordflow">for</span> (AdminData data : Global.getSector().getCharacterData().getAdmins()) {</div>
-<div class="line"><span class="lineno"> 1366</span>            <span class="keywordtype">float</span> salary = Misc.getAdminSalary(data.getPerson());</div>
-<div class="line"><span class="lineno"> 1367</span>            <span class="keywordflow">if</span> (salary &lt;= 0) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno"> 1368</span>            </div>
-<div class="line"><span class="lineno"> 1369</span>            FDNode aNode = report.getNode(adminNode, data.getPerson().getId()); </div>
-<div class="line"><span class="lineno"> 1370</span>            aNode.name = data.getPerson().getName().getFullName();</div>
-<div class="line"><span class="lineno"> 1371</span>            <span class="keywordflow">if</span> (data.getMarket() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno"> 1372</span>                aNode.name += <span class="stringliteral">&quot; (&quot;</span> + data.getMarket().getName() + <span class="stringliteral">&quot;)&quot;</span>;</div>
-<div class="line"><span class="lineno"> 1373</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno"> 1374</span>                aNode.name += <span class="stringliteral">&quot; (unassigned)&quot;</span>;</div>
-<div class="line"><span class="lineno"> 1375</span>                salary *= Global.getSettings().getFloat(<span class="stringliteral">&quot;idleAdminSalaryMult&quot;</span>);</div>
-<div class="line"><span class="lineno"> 1376</span>            }</div>
-<div class="line"><span class="lineno"> 1377</span>            aNode.upkeep += salary * f;</div>
-<div class="line"><span class="lineno"> 1378</span>            aNode.custom = data;</div>
-<div class="line"><span class="lineno"> 1379</span>        }</div>
-<div class="line"><span class="lineno"> 1380</span>        </div>
-<div class="line"><span class="lineno"> 1381</span>        <span class="comment">//reportEconomyMonthEnd();</span></div>
-<div class="line"><span class="lineno"> 1382</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CoreScript_html_a893d8a428dd1a1dba61f672b9ad5e24b"><div class="ttname"><a href="../../d0/d87/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CoreScript.html#a893d8a428dd1a1dba61f672b9ad5e24b">com.fs.starfarer.api.impl.campaign.CoreScript.addExportsGroupedByCommodity</a></div><div class="ttdeci">void addExportsGroupedByCommodity(MonthlyReport report, FDNode parent, MarketAPI market, float f)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dc8/CoreScript_8java_source.html#l01428">CoreScript.java:1428</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="afd3e0e9039a89245a95e3758d3e9d883" name="afd3e0e9039a89245a95e3758d3e9d883"></a>
@@ -1728,24 +703,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d6b/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BaseCampaignEventListener.html#ad9d450e100ae16c148556ee0509b44dc">com.fs.starfarer.api.campaign.BaseCampaignEventListener</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d1/dc8/CoreScript_8java_source.html#l00408">408</a> of file <a class="el" href="../../d1/dc8/CoreScript_8java_source.html">CoreScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  408</span>                                                                                                      {</div>
-<div class="line"><span class="lineno">  409</span>        super.reportFleetJumped(fleet, from, to);</div>
-<div class="line"><span class="lineno">  410</span>        </div>
-<div class="line"><span class="lineno">  411</span>        <span class="keywordflow">if</span> (!fleet.isPlayerFleet()) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  412</span> </div>
-<div class="line"><span class="lineno">  413</span>        FactionAPI faction = Global.getSector().getPlayerFaction();</div>
-<div class="line"><span class="lineno">  414</span>        Color color = faction.getBaseUIColor();</div>
-<div class="line"><span class="lineno">  415</span>        Color dark = faction.getDarkUIColor();</div>
-<div class="line"><span class="lineno">  416</span>        Color grid = faction.getGridUIColor();</div>
-<div class="line"><span class="lineno">  417</span>        Color bright = faction.getBrightUIColor();</div>
-<div class="line"><span class="lineno">  418</span>        </div>
-<div class="line"><span class="lineno">  419</span>        <span class="keywordflow">if</span> (fleet.getContainingLocation() instanceof StarSystemAPI) {</div>
-<div class="line"><span class="lineno">  420</span>            StarSystemAPI system = (StarSystemAPI) fleet.getContainingLocation();</div>
-<div class="line"><span class="lineno">  421</span>            <a class="code hl_function" href="../../d0/d87/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CoreScript.html#a0dd5d037da22c52ab100a55b907349de">markSystemAsEntered</a>(system, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  422</span>        }</div>
-<div class="line"><span class="lineno">  423</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CoreScript_html_a0dd5d037da22c52ab100a55b907349de"><div class="ttname"><a href="../../d0/d87/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CoreScript.html#a0dd5d037da22c52ab100a55b907349de">com.fs.starfarer.api.impl.campaign.CoreScript.markSystemAsEntered</a></div><div class="ttdeci">static void markSystemAsEntered(StarSystemAPI system, boolean withMessages)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dc8/CoreScript_8java_source.html#l00425">CoreScript.java:425</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af0e2bb9dc4eb99934591fae5740e2117" name="af0e2bb9dc4eb99934591fae5740e2117"></a>
@@ -1767,17 +725,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d6b/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BaseCampaignEventListener.html#a64e79788c2bab73c2bdedaa26fdd82a3">com.fs.starfarer.api.campaign.BaseCampaignEventListener</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d1/dc8/CoreScript_8java_source.html#l00818">818</a> of file <a class="el" href="../../d1/dc8/CoreScript_8java_source.html">CoreScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  818</span>                                                            {</div>
-<div class="line"><span class="lineno">  819</span>        super.reportPlayerDumpedCargo(cargo);</div>
-<div class="line"><span class="lineno">  820</span>        </div>
-<div class="line"><span class="lineno">  821</span>        CampaignFleetAPI playerFleet = Global.getSector().getPlayerFleet();</div>
-<div class="line"><span class="lineno">  822</span>        </div>
-<div class="line"><span class="lineno">  823</span>        CustomCampaignEntityAPI pods = Misc.addCargoPods(playerFleet.getContainingLocation(), playerFleet.getLocation());</div>
-<div class="line"><span class="lineno">  824</span>        pods.getCargo().addAll(cargo);</div>
-<div class="line"><span class="lineno">  825</span>        </div>
-<div class="line"><span class="lineno">  826</span>        ListenerUtil.reportPlayerLeftCargoPods(pods);</div>
-<div class="line"><span class="lineno">  827</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a6de164124917b34ae34b47605353b4d2" name="a6de164124917b34ae34b47605353b4d2"></a>
@@ -1799,25 +747,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d6b/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BaseCampaignEventListener.html#a60f3839040145918e3e87dbe448c946a">com.fs.starfarer.api.campaign.BaseCampaignEventListener</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d1/dc8/CoreScript_8java_source.html#l00798">798</a> of file <a class="el" href="../../d1/dc8/CoreScript_8java_source.html">CoreScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  798</span>                                                        {</div>
-<div class="line"><span class="lineno">  799</span>        super.reportPlayerDumpedCargo(cargo);</div>
-<div class="line"><span class="lineno">  800</span>        </div>
-<div class="line"><span class="lineno">  801</span>        </div>
-<div class="line"><span class="lineno">  802</span>        CampaignFleetAPI playerFleet = Global.getSector().getPlayerFleet();</div>
-<div class="line"><span class="lineno">  803</span>        </div>
-<div class="line"><span class="lineno">  804</span>        CustomCampaignEntityAPI pods = Misc.addCargoPods(playerFleet.getContainingLocation(), playerFleet.getLocation());</div>
-<div class="line"><span class="lineno">  805</span>        pods.getCargo().addAll(cargo);</div>
-<div class="line"><span class="lineno">  806</span>        </div>
-<div class="line"><span class="lineno">  807</span>        CargoPodsResponse script = <span class="keyword">new</span> CargoPodsResponse(pods);</div>
-<div class="line"><span class="lineno">  808</span>        pods.getContainingLocation().addScript(script);</div>
-<div class="line"><span class="lineno">  809</span>        ListenerUtil.reportPlayerLeftCargoPods(pods);</div>
-<div class="line"><span class="lineno">  810</span><span class="comment">//      pods.getMemoryWithoutUpdate().set(CargoPods.LOCKED, true);</span></div>
-<div class="line"><span class="lineno">  811</span><span class="comment">//      pods.getMemoryWithoutUpdate().set(CargoPods.CAN_UNLOCK, true);</span></div>
-<div class="line"><span class="lineno">  812</span>        <span class="comment">//pods.getMemoryWithoutUpdate().set(CargoPods.TRAPPED, true);</span></div>
-<div class="line"><span class="lineno">  813</span>        </div>
-<div class="line"><span class="lineno">  814</span>        <span class="comment">//pods.getDetectedRangeMod().modifyFlat(&quot;gen&quot;, 1000);</span></div>
-<div class="line"><span class="lineno">  815</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="afc0fd52e6ebaf700fad057b30948d139" name="afc0fd52e6ebaf700fad057b30948d139"></a>
@@ -1839,72 +769,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d6b/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BaseCampaignEventListener.html#af9a9da2133f1a18a179c477b5b036bf1">com.fs.starfarer.api.campaign.BaseCampaignEventListener</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d1/dc8/CoreScript_8java_source.html#l00273">273</a> of file <a class="el" href="../../d1/dc8/CoreScript_8java_source.html">CoreScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  273</span>                                                                                   {</div>
-<div class="line"><span class="lineno">  274</span>        super.reportPlayerMarketTransaction(transaction);</div>
-<div class="line"><span class="lineno">  275</span>        </div>
-<div class="line"><span class="lineno">  276</span>        <span class="keywordflow">for</span> (ShipSaleInfo info : transaction.getShipsBought()) {</div>
-<div class="line"><span class="lineno">  277</span>            FleetMemberAPI member = info.getMember();</div>
-<div class="line"><span class="lineno">  278</span>            <span class="keywordflow">if</span> (!member.getVariant().hasTag(Tags.VARIANT_ALLOW_EXCESS_OP_ETC)){ </div>
-<div class="line"><span class="lineno">  279</span>                SkillsChangeRemoveExcessOPEffect.clampOP(member, Global.getSector().getPlayerStats());</div>
-<div class="line"><span class="lineno">  280</span>                SkillsChangeRemoveVentsCapsEffect.clampNumVentsAndCaps(member, Global.getSector().getPlayerStats());</div>
-<div class="line"><span class="lineno">  281</span>            }</div>
-<div class="line"><span class="lineno">  282</span>        }</div>
-<div class="line"><span class="lineno">  283</span> </div>
-<div class="line"><span class="lineno">  284</span>        </div>
-<div class="line"><span class="lineno">  285</span>        </div>
-<div class="line"><span class="lineno">  286</span>        SubmarketAPI submarket = transaction.getSubmarket();</div>
-<div class="line"><span class="lineno">  287</span>        MarketAPI market = transaction.getMarket();</div>
-<div class="line"><span class="lineno">  288</span>        </div>
-<div class="line"><span class="lineno">  289</span>        <span class="keywordflow">if</span> (!market.isPlayerOwned() &amp;&amp; submarket.getPlugin().isParticipatesInEconomy() &amp;&amp;</div>
-<div class="line"><span class="lineno">  290</span>                !submarket.getPlugin().isBlackMarket() &amp;&amp; submarket.getFaction() == market.getFaction()) {</div>
-<div class="line"><span class="lineno">  291</span>            CargoAPI cargo = transaction.getSubmarket().getCargo();</div>
-<div class="line"><span class="lineno">  292</span>            <span class="keywordtype">boolean</span> didAnything = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  293</span>            OUTER: <span class="keywordflow">for</span> (CargoStackAPI stack : transaction.getSold().getStacksCopy()) {</div>
-<div class="line"><span class="lineno">  294</span>                SpecialItemPlugin plugin = stack.getPlugin();</div>
-<div class="line"><span class="lineno">  295</span>                <span class="keywordflow">if</span> (plugin == <span class="keyword">null</span>) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  296</span>                </div>
-<div class="line"><span class="lineno">  297</span>                SpecialItemData data = stack.getSpecialDataIfSpecial();</div>
-<div class="line"><span class="lineno">  298</span>                </div>
-<div class="line"><span class="lineno">  299</span>                InstallableItemEffect effect = ItemEffectsRepo.ITEM_EFFECTS.get(data.getId());</div>
-<div class="line"><span class="lineno">  300</span>                <span class="keywordflow">for</span> (Industry ind : market.getIndustries()) {</div>
-<div class="line"><span class="lineno">  301</span>                    <span class="keywordflow">if</span> (ind.wantsToUseSpecialItem(data)) {</div>
-<div class="line"><span class="lineno">  302</span>                        <span class="keywordflow">if</span> (effect != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  303</span>                            List&lt;String&gt; unmet = effect.getUnmetRequirements(ind);</div>
-<div class="line"><span class="lineno">  304</span>                            <span class="keywordflow">if</span> (unmet != <span class="keyword">null</span> &amp;&amp; !unmet.isEmpty()) {</div>
-<div class="line"><span class="lineno">  305</span>                                <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  306</span>                            }</div>
-<div class="line"><span class="lineno">  307</span>                        }</div>
-<div class="line"><span class="lineno">  308</span>                        </div>
-<div class="line"><span class="lineno">  309</span>                        <span class="keywordflow">if</span> (ind.getSpecialItem() != <span class="keyword">null</span>) { <span class="comment">// upgrade, put item into cargo</span></div>
-<div class="line"><span class="lineno">  310</span>                            cargo.addItems(CargoItemType.SPECIAL, ind.getSpecialItem(), 1);</div>
-<div class="line"><span class="lineno">  311</span>                        }</div>
-<div class="line"><span class="lineno">  312</span>                        cargo.removeItems(CargoItemType.SPECIAL, data, 1);</div>
-<div class="line"><span class="lineno">  313</span>                        ind.setSpecialItem(data);</div>
-<div class="line"><span class="lineno">  314</span>                        didAnything = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  315</span>                        <span class="keywordflow">continue</span> OUTER;</div>
-<div class="line"><span class="lineno">  316</span>                    }</div>
-<div class="line"><span class="lineno">  317</span>                }</div>
-<div class="line"><span class="lineno">  318</span>            }</div>
-<div class="line"><span class="lineno">  319</span>            </div>
-<div class="line"><span class="lineno">  320</span>            <span class="keywordflow">if</span> (didAnything) {</div>
-<div class="line"><span class="lineno">  321</span>                cargo.sort();</div>
-<div class="line"><span class="lineno">  322</span>            }</div>
-<div class="line"><span class="lineno">  323</span>            </div>
-<div class="line"><span class="lineno">  324</span>            <span class="comment">// not sure about doing this for major factions:</span></div>
-<div class="line"><span class="lineno">  325</span>            <span class="comment">// - it can mess with their flavor, unintentionally if the player just sells blueprints</span></div>
-<div class="line"><span class="lineno">  326</span>            <span class="comment">// - it can be a way to make their fleets weaker, by selling loads of blueprints for poor ships</span></div>
-<div class="line"><span class="lineno">  327</span>            <span class="comment">//BlackMarketPlugin.delayedLearnBlueprintsFromTransaction(submarket.getFaction(), cargo, transaction);</span></div>
-<div class="line"><span class="lineno">  328</span>        }</div>
-<div class="line"><span class="lineno">  329</span>        </div>
-<div class="line"><span class="lineno">  330</span>        <span class="comment">//SharedData.getData().getPlayerActivityTracker().updateLastVisit(transaction.getMarket());</span></div>
-<div class="line"><span class="lineno">  331</span> </div>
-<div class="line"><span class="lineno">  332</span>        <span class="comment">// moved below code to BaseSubmarketPlugin</span></div>
-<div class="line"><span class="lineno">  333</span><span class="comment">//      SubmarketAPI sub = transaction.getSubmarket();</span></div>
-<div class="line"><span class="lineno">  334</span><span class="comment">//      if (sub.getPlugin().isParticipatesInEconomy()) {</span></div>
-<div class="line"><span class="lineno">  335</span><span class="comment">//          SharedData.getData().getPlayerActivityTracker().getPlayerTradeData(sub).addTransaction(transaction);</span></div>
-<div class="line"><span class="lineno">  336</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  337</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a189bc073e1564f4eb86f060baed60aac" name="a189bc073e1564f4eb86f060baed60aac"></a>
@@ -1926,11 +791,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d6b/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BaseCampaignEventListener.html#a9a918bb56bce9e5c8cada48e1f7e477f">com.fs.starfarer.api.campaign.BaseCampaignEventListener</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d1/dc8/CoreScript_8java_source.html#l00340">340</a> of file <a class="el" href="../../d1/dc8/CoreScript_8java_source.html">CoreScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  340</span>                                                           {</div>
-<div class="line"><span class="lineno">  341</span>        super.reportPlayerOpenedMarket(market);</div>
-<div class="line"><span class="lineno">  342</span>        SharedData.getData().getPlayerActivityTracker().updateLastVisit(market);</div>
-<div class="line"><span class="lineno">  343</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9559c93ef871aba138f573dd10c09111" name="a9559c93ef871aba138f573dd10c09111"></a>
@@ -1962,14 +823,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d6b/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BaseCampaignEventListener.html#a46ad2e3d91124fa86c52915b186dbb8b">com.fs.starfarer.api.campaign.BaseCampaignEventListener</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d1/dc8/CoreScript_8java_source.html#l00254">254</a> of file <a class="el" href="../../d1/dc8/CoreScript_8java_source.html">CoreScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  254</span>                                                                            {</div>
-<div class="line"><span class="lineno">  255</span>        super.reportPlayerReputationChange(person, delta);</div>
-<div class="line"><span class="lineno">  256</span>        <span class="keywordflow">if</span> (Math.abs(delta) &gt; Math.abs(highestDelta)) {</div>
-<div class="line"><span class="lineno">  257</span>            highestDelta = delta;</div>
-<div class="line"><span class="lineno">  258</span>            deltaFaction = person.getFaction().getId();</div>
-<div class="line"><span class="lineno">  259</span>        }</div>
-<div class="line"><span class="lineno">  260</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a48acc4d497c5a0059ca5a5a4c9aad82f" name="a48acc4d497c5a0059ca5a5a4c9aad82f"></a>
@@ -2001,14 +855,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d6b/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BaseCampaignEventListener.html#ac05db5f5152675d41e5835f78542d6f1">com.fs.starfarer.api.campaign.BaseCampaignEventListener</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d1/dc8/CoreScript_8java_source.html#l00244">244</a> of file <a class="el" href="../../d1/dc8/CoreScript_8java_source.html">CoreScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  244</span>                                                                          {</div>
-<div class="line"><span class="lineno">  245</span>        super.reportPlayerReputationChange(faction, delta);</div>
-<div class="line"><span class="lineno">  246</span>        <span class="keywordflow">if</span> (Math.abs(delta) &gt; Math.abs(highestDelta)) {</div>
-<div class="line"><span class="lineno">  247</span>            highestDelta = delta;</div>
-<div class="line"><span class="lineno">  248</span>            deltaFaction = faction;</div>
-<div class="line"><span class="lineno">  249</span>        }</div>
-<div class="line"><span class="lineno">  250</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab4b0e93a5041c6218182290f20a7a8f8" name="ab4b0e93a5041c6218182290f20a7a8f8"></a>
@@ -2030,10 +877,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d7/d63/interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html#a6397d6c1c19a4dd0b58099219c0e0173">com.fs.starfarer.api.EveryFrameScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d1/dc8/CoreScript_8java_source.html#l00267">267</a> of file <a class="el" href="../../d1/dc8/CoreScript_8java_source.html">CoreScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  267</span>                                    {</div>
-<div class="line"><span class="lineno">  268</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  269</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

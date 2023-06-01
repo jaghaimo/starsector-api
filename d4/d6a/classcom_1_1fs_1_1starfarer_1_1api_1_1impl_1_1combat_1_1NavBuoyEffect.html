@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -185,40 +186,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="../../d6/dfd/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BattleObjectiveEffect.html#a0b0f9b4ef9ab38e0ba6e82b8a4729e2e">com.fs.starfarer.api.combat.BattleObjectiveEffect</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/db9/NavBuoyEffect_8java_source.html#l00047">47</a> of file <a class="el" href="../../d6/db9/NavBuoyEffect_8java_source.html">NavBuoyEffect.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   47</span>                                      {</div>
-<div class="line"><span class="lineno">   48</span><span class="comment">//      boolean zeroHasNav = false;</span></div>
-<div class="line"><span class="lineno">   49</span><span class="comment">//      boolean oneHasNav = false;</span></div>
-<div class="line"><span class="lineno">   50</span><span class="comment">//      for (BattleObjectiveAPI obj : engine.getObjectives()) {</span></div>
-<div class="line"><span class="lineno">   51</span><span class="comment">//          if (obj.getOwner() == 0 &amp;&amp; NAV_BUOY_ID.equals(obj.getType())) {</span></div>
-<div class="line"><span class="lineno">   52</span><span class="comment">//              zeroHasNav = true;</span></div>
-<div class="line"><span class="lineno">   53</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">   54</span><span class="comment">//          if (obj.getOwner() == 1 &amp;&amp; NAV_BUOY_ID.equals(obj.getType())) {</span></div>
-<div class="line"><span class="lineno">   55</span><span class="comment">//              oneHasNav = true;</span></div>
-<div class="line"><span class="lineno">   56</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">   57</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">   58</span><span class="comment">//      </span></div>
-<div class="line"><span class="lineno">   59</span><span class="comment">//      for (ShipAPI ship : engine.getShips()) {</span></div>
-<div class="line"><span class="lineno">   60</span><span class="comment">//          //if (ship.isFighter() || ship.isFrigate()) continue;</span></div>
-<div class="line"><span class="lineno">   61</span><span class="comment">//          if (ship.getOwner() == objective.getOwner()) {</span></div>
-<div class="line"><span class="lineno">   62</span><span class="comment">//              ship.getMutableStats().getMaxSpeed().modifyFlat(id, NAV_BUOY_TOP_SPEED_BONUS);</span></div>
-<div class="line"><span class="lineno">   63</span><span class="comment">//              ship.getMutableStats().getAcceleration().modifyPercent(id, NAV_BUOY_MANEUVERABILITY_BONUS);</span></div>
-<div class="line"><span class="lineno">   64</span><span class="comment">//              ship.getMutableStats().getDeceleration().modifyPercent(id, NAV_BUOY_MANEUVERABILITY_BONUS);</span></div>
-<div class="line"><span class="lineno">   65</span><span class="comment">//              ship.getMutableStats().getTurnAcceleration().modifyPercent(id,NAV_BUOY_MANEUVERABILITY_BONUS);</span></div>
-<div class="line"><span class="lineno">   66</span><span class="comment">//          } else {</span></div>
-<div class="line"><span class="lineno">   67</span><span class="comment">//              ship.getMutableStats().getMaxSpeed().unmodify(id);</span></div>
-<div class="line"><span class="lineno">   68</span><span class="comment">//              ship.getMutableStats().getAcceleration().unmodify(id);</span></div>
-<div class="line"><span class="lineno">   69</span><span class="comment">//              ship.getMutableStats().getDeceleration().unmodify(id);</span></div>
-<div class="line"><span class="lineno">   70</span><span class="comment">//              ship.getMutableStats().getTurnAcceleration().unmodify(id);</span></div>
-<div class="line"><span class="lineno">   71</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">   77</span><span class="comment"></span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">   78</span>        </div>
-<div class="line"><span class="lineno">   79</span><span class="comment">//      giveCommandPointsForCapturing(NAV_BUOY_COMMAND_POINTS);</span></div>
-<div class="line"><span class="lineno">   80</span>        </div>
-<div class="line"><span class="lineno">   81</span>        <a class="code hl_function" href="../../dc/de1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseBattleObjectiveEffect.html#a9cf48b19d25e04a9c6fba42180962bc6">revealArea</a>(<a class="code hl_variable" href="../../d4/d6a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1NavBuoyEffect.html#a059278fc5167e8168aeee24465f82a44">NAV_BUOY_FOG_LIFT_RADIUS</a>);</div>
-<div class="line"><span class="lineno">   82</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseBattleObjectiveEffect_html_a9cf48b19d25e04a9c6fba42180962bc6"><div class="ttname"><a href="../../dc/de1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseBattleObjectiveEffect.html#a9cf48b19d25e04a9c6fba42180962bc6">com.fs.starfarer.api.impl.combat.BaseBattleObjectiveEffect.revealArea</a></div><div class="ttdeci">void revealArea(float radius)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d70/BaseBattleObjectiveEffect_8java_source.html#l00057">BaseBattleObjectiveEffect.java:57</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1NavBuoyEffect_html_a059278fc5167e8168aeee24465f82a44"><div class="ttname"><a href="../../d4/d6a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1NavBuoyEffect.html#a059278fc5167e8168aeee24465f82a44">com.fs.starfarer.api.impl.combat.NavBuoyEffect.NAV_BUOY_FOG_LIFT_RADIUS</a></div><div class="ttdeci">static final float NAV_BUOY_FOG_LIFT_RADIUS</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/db9/NavBuoyEffect_8java_source.html#l00022">NavBuoyEffect.java:22</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab9bcaead9a7d211b33dbc96861875032" name="ab9bcaead9a7d211b33dbc96861875032"></a>
@@ -239,33 +207,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="../../d6/dfd/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BattleObjectiveEffect.html#a8c1701f353e50da525bda76fce35bc9f">com.fs.starfarer.api.combat.BattleObjectiveEffect</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/db9/NavBuoyEffect_8java_source.html#l00085">85</a> of file <a class="el" href="../../d6/db9/NavBuoyEffect_8java_source.html">NavBuoyEffect.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   85</span>                                       {</div>
-<div class="line"><span class="lineno">   86</span>        <span class="keywordtype">float</span> min = Global.getSettings().getFloat(<span class="stringliteral">&quot;minFractionOfBattleSizeForSmallerSide&quot;</span>);</div>
-<div class="line"><span class="lineno">   87</span>        <span class="keywordtype">int</span> total = Global.getSettings().getBattleSize();</div>
-<div class="line"><span class="lineno">   88</span>        <span class="keywordtype">int</span> maxPoints = (int)Math.round(total * (1f - min));</div>
-<div class="line"><span class="lineno">   89</span>        <span class="keywordflow">return</span> String.format(</div>
-<div class="line"><span class="lineno">   90</span>                <span class="stringliteral">&quot;+%d%% top speed\n&quot;</span> +</div>
-<div class="line"><span class="lineno">   91</span>                <span class="stringliteral">&quot;%d%% base total maximum\n&quot;</span> + </div>
-<div class="line"><span class="lineno">   92</span>                <span class="comment">//&quot;can be improved by skills\n\n&quot; +</span></div>
-<div class="line"><span class="lineno">   93</span>                <span class="stringliteral">&quot;+%d bonus deployment points\n&quot;</span> + </div>
-<div class="line"><span class="lineno">   94</span>                <span class="stringliteral">&quot;up to a maximum of &quot;</span> + maxPoints + <span class="stringliteral">&quot; points&quot;</span>,</div>
-<div class="line"><span class="lineno">   95</span>                (<span class="keywordtype">int</span>)CoordinatedManeuversScript.PER_BUOY,</div>
-<div class="line"><span class="lineno">   96</span>                (int)CoordinatedManeuversScript.BASE_MAXIMUM,</div>
-<div class="line"><span class="lineno">   97</span>                <a class="code hl_function" href="../../dc/de1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseBattleObjectiveEffect.html#a0f38cbb986657cd044086698bc03df67">getBonusDeploymentPoints</a>());</div>
-<div class="line"><span class="lineno">   98</span><span class="comment">//         return String.format(</span></div>
-<div class="line"><span class="lineno">   99</span><span class="comment">//                 &quot;command points: +%d\n&quot; +</span></div>
-<div class="line"><span class="lineno">  100</span><span class="comment">//                 &quot;\n&quot; +</span></div>
-<div class="line"><span class="lineno">  101</span><span class="comment">//                 &quot;ship maneuverability: +%d%%\n&quot; +</span></div>
-<div class="line"><span class="lineno">  102</span><span class="comment">//                 &quot;ship top speed: +%d\n&quot;,</span></div>
-<div class="line"><span class="lineno">  103</span><span class="comment">//                 //&quot;ships unaffected by nebula interference\n&quot;,</span></div>
-<div class="line"><span class="lineno">  104</span><span class="comment">//                 //&quot;no bonus to fighters\n&quot; +</span></div>
-<div class="line"><span class="lineno">  105</span><span class="comment">//                 //&quot;no bonus to frigates&quot;,</span></div>
-<div class="line"><span class="lineno">  106</span><span class="comment">//                 NAV_BUOY_COMMAND_POINTS,</span></div>
-<div class="line"><span class="lineno">  107</span><span class="comment">//                 (int) NAV_BUOY_TOP_SPEED_BONUS,</span></div>
-<div class="line"><span class="lineno">  108</span><span class="comment">//                 (int) NAV_BUOY_MANEUVERABILITY_BONUS);</span></div>
-<div class="line"><span class="lineno">  109</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseBattleObjectiveEffect_html_a0f38cbb986657cd044086698bc03df67"><div class="ttname"><a href="../../dc/de1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseBattleObjectiveEffect.html#a0f38cbb986657cd044086698bc03df67">com.fs.starfarer.api.impl.combat.BaseBattleObjectiveEffect.getBonusDeploymentPoints</a></div><div class="ttdeci">int getBonusDeploymentPoints()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d70/BaseBattleObjectiveEffect_8java_source.html#l00035">BaseBattleObjectiveEffect.java:35</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af4acd8df70df13b36ef6874d18a643a7" name="af4acd8df70df13b36ef6874d18a643a7"></a>
@@ -294,13 +236,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="../../d6/dfd/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BattleObjectiveEffect.html#ab11f7c229ebdd36865f487b0ead98cf7">com.fs.starfarer.api.combat.BattleObjectiveEffect</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/db9/NavBuoyEffect_8java_source.html#l00111">111</a> of file <a class="el" href="../../d6/db9/NavBuoyEffect_8java_source.html">NavBuoyEffect.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  111</span>                                                                {</div>
-<div class="line"><span class="lineno">  112</span><span class="comment">//      if (ship.getOwner() == objective.getOwner()) {</span></div>
-<div class="line"><span class="lineno">  119</span><span class="comment"></span><span class="comment">//          return items;</span></div>
-<div class="line"><span class="lineno">  120</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  121</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  122</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a810e4ac5448d37e8f16444d1c1459096" name="a810e4ac5448d37e8f16444d1c1459096"></a>
@@ -332,27 +268,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../dc/de1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseBattleObjectiveEffect.html#a676c15e270e64eef94e4c5db21f3344e">com.fs.starfarer.api.impl.combat.BaseBattleObjectiveEffect</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/db9/NavBuoyEffect_8java_source.html#l00028">28</a> of file <a class="el" href="../../d6/db9/NavBuoyEffect_8java_source.html">NavBuoyEffect.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   28</span>                                                                           {</div>
-<div class="line"><span class="lineno">   29</span>        super.init(<a class="code hl_variable" href="../../dc/de1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseBattleObjectiveEffect.html#adb4adda0a2a15e880180e7f1c8f9bc0c">engine</a>, <a class="code hl_variable" href="../../dc/de1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseBattleObjectiveEffect.html#a88f66f797da903c7cbf8b6291046b367">objective</a>);</div>
-<div class="line"><span class="lineno">   30</span>        </div>
-<div class="line"><span class="lineno">   31</span>        <span class="keywordtype">id</span> = <span class="stringliteral">&quot;nav_buoy_boost_&quot;</span> + <a class="code hl_variable" href="../../dc/de1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseBattleObjectiveEffect.html#a88f66f797da903c7cbf8b6291046b367">objective</a>.toString();</div>
-<div class="line"><span class="lineno">   32</span>        </div>
-<div class="line"><span class="lineno">   33</span><span class="comment">//      ShipStatusItem item = new ShipStatusItem(objective.getDisplayName(), </span></div>
-<div class="line"><span class="lineno">   34</span><span class="comment">//              String.format(&quot;+%d top speed, +%d%% maneuver&quot;,</span></div>
-<div class="line"><span class="lineno">   35</span><span class="comment">//                  (int) NAV_BUOY_TOP_SPEED_BONUS,</span></div>
-<div class="line"><span class="lineno">   36</span><span class="comment">//                  (int) NAV_BUOY_MANEUVERABILITY_BONUS), </span></div>
-<div class="line"><span class="lineno">   37</span><span class="comment">//              false);</span></div>
-<div class="line"><span class="lineno">   38</span><span class="comment">//      items.add(item);</span></div>
-<div class="line"><span class="lineno">   39</span>        </div>
-<div class="line"><span class="lineno">   40</span><span class="comment">//      item = new ShipStatusItem(&quot;Nav Buoy Deployed&quot;, </span></div>
-<div class="line"><span class="lineno">   41</span><span class="comment">//                              &quot;nebula navigation&quot;,</span></div>
-<div class="line"><span class="lineno">   42</span><span class="comment">//                              false);</span></div>
-<div class="line"><span class="lineno">   43</span><span class="comment">//      item.setKey(NEBULA_NAVIGATION_KEY);</span></div>
-<div class="line"><span class="lineno">   44</span><span class="comment">//      items.add(item);        </span></div>
-<div class="line"><span class="lineno">   45</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseBattleObjectiveEffect_html_a88f66f797da903c7cbf8b6291046b367"><div class="ttname"><a href="../../dc/de1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseBattleObjectiveEffect.html#a88f66f797da903c7cbf8b6291046b367">com.fs.starfarer.api.impl.combat.BaseBattleObjectiveEffect.objective</a></div><div class="ttdeci">BattleObjectiveAPI objective</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d70/BaseBattleObjectiveEffect_8java_source.html#l00021">BaseBattleObjectiveEffect.java:21</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseBattleObjectiveEffect_html_adb4adda0a2a15e880180e7f1c8f9bc0c"><div class="ttname"><a href="../../dc/de1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseBattleObjectiveEffect.html#adb4adda0a2a15e880180e7f1c8f9bc0c">com.fs.starfarer.api.impl.combat.BaseBattleObjectiveEffect.engine</a></div><div class="ttdeci">CombatEngineAPI engine</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d70/BaseBattleObjectiveEffect_8java_source.html#l00017">BaseBattleObjectiveEffect.java:17</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

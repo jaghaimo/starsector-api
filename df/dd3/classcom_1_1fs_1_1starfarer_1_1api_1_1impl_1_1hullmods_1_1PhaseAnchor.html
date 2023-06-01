@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -308,10 +309,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#aade4030b287b2c896f920683f0eead56">com.fs.starfarer.api.combat.BaseHullMod</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d37/PhaseAnchor_8java_source.html#l00154">154</a> of file <a class="el" href="../../d3/d37/PhaseAnchor_8java_source.html">PhaseAnchor.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  154</span>                                                                       {</div>
-<div class="line"><span class="lineno">  155</span>        ship.addListener(<span class="keyword">new</span> PhaseAnchorScript(ship));</div>
-<div class="line"><span class="lineno">  156</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a33c503653a66365b57b1b0f534d4a719" name="a33c503653a66365b57b1b0f534d4a719"></a>
@@ -349,10 +347,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a3859215f6c3408946bf590a2ce5c0e74">com.fs.starfarer.api.combat.BaseHullMod</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d37/PhaseAnchor_8java_source.html#l00158">158</a> of file <a class="el" href="../../d3/d37/PhaseAnchor_8java_source.html">PhaseAnchor.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  158</span>                                                                                                        {</div>
-<div class="line"><span class="lineno">  159</span>        stats.getPhaseCloakActivationCostBonus().modifyMult(<span class="keywordtype">id</span>, 0f);</div>
-<div class="line"><span class="lineno">  160</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8800159b8b4c20a71707cc3e9799f703" name="a8800159b8b4c20a71707cc3e9799f703"></a>
@@ -384,28 +379,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a5f6ac9583ca5b1606fda3e53f15c3d14">com.fs.starfarer.api.combat.BaseHullMod</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d37/PhaseAnchor_8java_source.html#l00162">162</a> of file <a class="el" href="../../d3/d37/PhaseAnchor_8java_source.html">PhaseAnchor.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  162</span>                                                                    {</div>
-<div class="line"><span class="lineno">  163</span>        <span class="keywordflow">if</span> (index == 0) <span class="keywordflow">return</span> <span class="stringliteral">&quot;zero&quot;</span>;</div>
-<div class="line"><span class="lineno">  164</span>        <span class="keywordflow">if</span> (index == 1) <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span> + (int)<a class="code hl_variable" href="../../df/dd3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1PhaseAnchor.html#a7603ad9b76dae00037d152ee9908bbc6">PHASE_DISSIPATION_MULT</a> + Strings.X;</div>
-<div class="line"><span class="lineno">  165</span>        if (index == 2) <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span> + (int)<a class="code hl_variable" href="../../df/dd3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1PhaseAnchor.html#a23fe3c405d06e6a26213121f42169513">CR_LOSS_MULT_FOR_EMERGENCY_DIVE</a> + Strings.X;</div>
-<div class="line"><span class="lineno">  166</span>        </div>
-<div class="line"><span class="lineno">  167</span>        <span class="comment">//      if (index == 1) return &quot;&quot; + (int) Math.round(PHASE_TIME_BONUS) + &quot;%&quot;;</span></div>
-<div class="line"><span class="lineno">  168</span><span class="comment">//      float multWithoutMod = PhaseCloakStats.MAX_TIME_MULT;</span></div>
-<div class="line"><span class="lineno">  169</span><span class="comment">//      float multWithMod = 1f + (multWithoutMod - 1f) * (1f + PHASE_TIME_BONUS/100f);</span></div>
-<div class="line"><span class="lineno">  170</span><span class="comment">//      if (index == 2) return &quot;&quot; + (int) Math.round(multWithoutMod) + Strings.X;</span></div>
-<div class="line"><span class="lineno">  171</span><span class="comment">//      if (index == 3) return &quot;&quot; + (int) Math.round(multWithMod) + Strings.X;</span></div>
-<div class="line"><span class="lineno">  172</span><span class="comment">//</span></div>
-<div class="line"><span class="lineno">  173</span><span class="comment">//      if (index == 4) return &quot;&quot; + (int) Math.round((1f - FLUX_THRESHOLD_DECREASE_MULT) * 100f) + &quot;%&quot;;</span></div>
-<div class="line"><span class="lineno">  174</span><span class="comment">//      if (index == 5) return &quot;&quot; + (int) Math.round(PhaseCloakStats.BASE_FLUX_LEVEL_FOR_MIN_SPEED * 100f) + &quot;%&quot;;</span></div>
-<div class="line"><span class="lineno">  175</span><span class="comment">//      if (index == 6) return &quot;&quot; + (int)Math.round(</span></div>
-<div class="line"><span class="lineno">  176</span><span class="comment">//              PhaseCloakStats.BASE_FLUX_LEVEL_FOR_MIN_SPEED * 100f * FLUX_THRESHOLD_DECREASE_MULT) + &quot;%&quot;;</span></div>
-<div class="line"><span class="lineno">  177</span><span class="comment">//      </span></div>
-<div class="line"><span class="lineno">  178</span>        <span class="comment">//if (index == 0) return &quot;&quot; + (int) Math.round(PHASE_COOLDOWN_REDUCTION) + &quot;%&quot;;</span></div>
-<div class="line"><span class="lineno">  179</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  180</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1PhaseAnchor_html_a23fe3c405d06e6a26213121f42169513"><div class="ttname"><a href="../../df/dd3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1PhaseAnchor.html#a23fe3c405d06e6a26213121f42169513">com.fs.starfarer.api.impl.hullmods.PhaseAnchor.CR_LOSS_MULT_FOR_EMERGENCY_DIVE</a></div><div class="ttdeci">static float CR_LOSS_MULT_FOR_EMERGENCY_DIVE</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d37/PhaseAnchor_8java_source.html#l00027">PhaseAnchor.java:27</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1PhaseAnchor_html_a7603ad9b76dae00037d152ee9908bbc6"><div class="ttname"><a href="../../df/dd3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1PhaseAnchor.html#a7603ad9b76dae00037d152ee9908bbc6">com.fs.starfarer.api.impl.hullmods.PhaseAnchor.PHASE_DISSIPATION_MULT</a></div><div class="ttdeci">static float PHASE_DISSIPATION_MULT</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d37/PhaseAnchor_8java_source.html#l00024">PhaseAnchor.java:24</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa6ed3d0c739950ff5ad34e25d7366a8a" name="aa6ed3d0c739950ff5ad34e25d7366a8a"></a>
@@ -427,16 +401,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a1e372e808b9fc3e1aa3da1002c5bf9c8">com.fs.starfarer.api.combat.BaseHullMod</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d37/PhaseAnchor_8java_source.html#l00189">189</a> of file <a class="el" href="../../d3/d37/PhaseAnchor_8java_source.html">PhaseAnchor.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  189</span>                                                      {</div>
-<div class="line"><span class="lineno">  190</span>        <span class="keywordflow">if</span> (ship.getVariant().hasHullMod(HullMods.ADAPTIVE_COILS)) {</div>
-<div class="line"><span class="lineno">  191</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;Incompatible with Adaptive Phase Coils&quot;</span>;</div>
-<div class="line"><span class="lineno">  192</span>        }</div>
-<div class="line"><span class="lineno">  193</span>        <span class="keywordflow">if</span> (!ship.getHullSpec().isPhase()) {</div>
-<div class="line"><span class="lineno">  194</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;Can only be installed on phase ships&quot;</span>;</div>
-<div class="line"><span class="lineno">  195</span>        }</div>
-<div class="line"><span class="lineno">  196</span>        <span class="keywordflow">return</span> super.getUnapplicableReason(ship);</div>
-<div class="line"><span class="lineno">  197</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae12695105129d8dac993a4e73e5e934f" name="ae12695105129d8dac993a4e73e5e934f"></a>
@@ -458,11 +423,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#aba110c18a85c975b063efdf40ac482a7">com.fs.starfarer.api.combat.BaseHullMod</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d37/PhaseAnchor_8java_source.html#l00183">183</a> of file <a class="el" href="../../d3/d37/PhaseAnchor_8java_source.html">PhaseAnchor.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  183</span>                                                    {</div>
-<div class="line"><span class="lineno">  184</span>        <span class="keywordflow">if</span> (ship.getVariant().hasHullMod(HullMods.ADAPTIVE_COILS)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  185</span>        <span class="keywordflow">return</span> ship.getHullSpec().isPhase();</div>
-<div class="line"><span class="lineno">  186</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

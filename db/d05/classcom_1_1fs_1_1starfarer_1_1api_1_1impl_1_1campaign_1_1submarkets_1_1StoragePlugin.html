@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -461,50 +462,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a3d835a133d005dc3f67375175695d9c2">com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/ddd/StoragePlugin_8java_source.html#l00166">166</a> of file <a class="el" href="../../d8/ddd/StoragePlugin_8java_source.html">StoragePlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  166</span>                                                                                            {</div>
-<div class="line"><span class="lineno">  167</span>        </div>
-<div class="line"><span class="lineno">  168</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a539f0c8b6b8eacec192f3fb246c860c3">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#aa90dca68abeb54f7f1da7a063111b281">isInEconomy</a>()) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  169</span>        </div>
-<div class="line"><span class="lineno">  170</span>        <span class="keywordtype">float</span> opad = 10f;</div>
-<div class="line"><span class="lineno">  171</span>        <span class="keywordtype">float</span> pad = 3f;</div>
-<div class="line"><span class="lineno">  172</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a539f0c8b6b8eacec192f3fb246c860c3">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a64c3437824f8a05ba3e6dc8a8ab61e62">isPlayerOwned</a>()) {</div>
-<div class="line"><span class="lineno">  173</span>            tooltip.addPara(Misc.getTokenReplaced(<span class="stringliteral">&quot;$market is under your control, and there &quot;</span> +</div>
-<div class="line"><span class="lineno">  174</span>                    <span class="stringliteral">&quot;are no storage fees or expenses.&quot;</span>, <a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a539f0c8b6b8eacec192f3fb246c860c3">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af1677b531fa1a657e17b732868c7b953">getPrimaryEntity</a>()), opad); </div>
-<div class="line"><span class="lineno">  175</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  176</span>        }</div>
-<div class="line"><span class="lineno">  177</span>        </div>
-<div class="line"><span class="lineno">  178</span>        <span class="keywordtype">float</span> f = Misc.getStorageFeeFraction();</div>
-<div class="line"><span class="lineno">  179</span>        <span class="keywordtype">int</span> percent = (int) (f * 100f);</div>
-<div class="line"><span class="lineno">  180</span>        </div>
-<div class="line"><span class="lineno">  181</span>        Color h = Misc.getHighlightColor();</div>
-<div class="line"><span class="lineno">  182</span>        </div>
-<div class="line"><span class="lineno">  183</span>        <span class="keywordflow">if</span> (!playerPaidToUnlock) {</div>
-<div class="line"><span class="lineno">  184</span>            tooltip.addPara(<span class="stringliteral">&quot;Requires a one-time access fee of %s, and a monthly fee equal to %s of the &quot;</span> +</div>
-<div class="line"><span class="lineno">  185</span>                    <span class="stringliteral">&quot;base value of the items in storage.&quot;</span>, opad, h, </div>
-<div class="line"><span class="lineno">  186</span>                    <span class="stringliteral">&quot;&quot;</span> + getUnlockCost() + Strings.C, <span class="stringliteral">&quot;&quot;</span> + percent + <span class="stringliteral">&quot;%&quot;</span>);</div>
-<div class="line"><span class="lineno">  187</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  188</span>        }</div>
-<div class="line"><span class="lineno">  189</span>        </div>
-<div class="line"><span class="lineno">  190</span>        <span class="keywordtype">int</span> cargoCost = (int) (Misc.getStorageCargoValue(<a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a539f0c8b6b8eacec192f3fb246c860c3">market</a>) * f);</div>
-<div class="line"><span class="lineno">  191</span>        <span class="keywordtype">int</span> shipCost = (int) (Misc.getStorageShipValue(<a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a539f0c8b6b8eacec192f3fb246c860c3">market</a>) * f);</div>
-<div class="line"><span class="lineno">  192</span>        </div>
-<div class="line"><span class="lineno">  193</span>        <span class="keywordflow">if</span> (cargoCost + shipCost &gt; 0) {</div>
-<div class="line"><span class="lineno">  194</span>            <span class="comment">//tooltip.beginGrid(150, 1);</span></div>
-<div class="line"><span class="lineno">  195</span>            tooltip.addPara(<span class="stringliteral">&quot;Monthly fees and expenses (%s of base value of stored items):&quot;</span>, opad, h, <span class="stringliteral">&quot;&quot;</span> + percent + <span class="stringliteral">&quot;%&quot;</span>);</div>
-<div class="line"><span class="lineno">  196</span>            tooltip.beginGridFlipped(300, 1, 80, 10);</div>
-<div class="line"><span class="lineno">  197</span>            <span class="keywordtype">int</span> j = 0;</div>
-<div class="line"><span class="lineno">  198</span>            tooltip.addToGrid(0, j++, <span class="stringliteral">&quot;Ships in storage&quot;</span>, Misc.getDGSCredits(shipCost));</div>
-<div class="line"><span class="lineno">  199</span>            tooltip.addToGrid(0, j++, <span class="stringliteral">&quot;Cargo in storage&quot;</span>, Misc.getDGSCredits(cargoCost));</div>
-<div class="line"><span class="lineno">  200</span>            tooltip.addGrid(pad);</div>
-<div class="line"><span class="lineno">  201</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  202</span>            tooltip.addPara(<span class="stringliteral">&quot;Monthly fees and expenses are equal to %s of base value of the stored items.&quot;</span>, opad, h, <span class="stringliteral">&quot;&quot;</span> + percent + <span class="stringliteral">&quot;%&quot;</span>);</div>
-<div class="line"><span class="lineno">  203</span>        }</div>
-<div class="line"><span class="lineno">  204</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin_html_a539f0c8b6b8eacec192f3fb246c860c3"><div class="ttname"><a href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a539f0c8b6b8eacec192f3fb246c860c3">com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin.market</a></div><div class="ttdeci">MarketAPI market</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dc2/BaseSubmarketPlugin_8java_source.html#l00073">BaseSubmarketPlugin.java:73</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a64c3437824f8a05ba3e6dc8a8ab61e62"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a64c3437824f8a05ba3e6dc8a8ab61e62">com.fs.starfarer.api.campaign.econ.MarketAPI.isPlayerOwned</a></div><div class="ttdeci">boolean isPlayerOwned()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_aa90dca68abeb54f7f1da7a063111b281"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#aa90dca68abeb54f7f1da7a063111b281">com.fs.starfarer.api.campaign.econ.MarketAPI.isInEconomy</a></div><div class="ttdeci">boolean isInEconomy()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_af1677b531fa1a657e17b732868c7b953"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af1677b531fa1a657e17b732868c7b953">com.fs.starfarer.api.campaign.econ.MarketAPI.getPrimaryEntity</a></div><div class="ttdeci">SectorEntityToken getPrimaryEntity()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a419cad50328669812d1d699efd93de9e" name="a419cad50328669812d1d699efd93de9e"></a>
@@ -525,10 +483,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a3f81aba45fb48cd048edab34039b30e8">com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/ddd/StoragePlugin_8java_source.html#l00062">62</a> of file <a class="el" href="../../d8/ddd/StoragePlugin_8java_source.html">StoragePlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   62</span>                               {</div>
-<div class="line"><span class="lineno">   63</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Take&quot;</span>;</div>
-<div class="line"><span class="lineno">   64</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a1e00bc7d61a3952325b5d31044953855" name="a1e00bc7d61a3952325b5d31044953855"></a>
@@ -550,25 +505,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a75daa031efc42df7b7fb19d29e3e2dd3">com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/ddd/StoragePlugin_8java_source.html#l00126">126</a> of file <a class="el" href="../../d8/ddd/StoragePlugin_8java_source.html">StoragePlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  126</span>                                                          {</div>
-<div class="line"><span class="lineno">  127</span>        <span class="keywordflow">if</span> (canPlayerAffordUnlock()) {</div>
-<div class="line"><span class="lineno">  128</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> DialogOption [] {</div>
-<div class="line"><span class="lineno">  129</span>                <span class="keyword">new</span> DialogOption(<span class="stringliteral">&quot;Pay&quot;</span>, <span class="keyword">new</span> Script() {</div>
-<div class="line"><span class="lineno">  130</span>                    <span class="keyword">public</span> <span class="keywordtype">void</span> run() {</div>
-<div class="line"><span class="lineno">  131</span>                        CampaignFleetAPI playerFleet = Global.getSector().getPlayerFleet();</div>
-<div class="line"><span class="lineno">  132</span>                        playerFleet.getCargo().getCredits().subtract(getUnlockCost());</div>
-<div class="line"><span class="lineno">  133</span>                        playerPaidToUnlock = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  134</span>                    }</div>
-<div class="line"><span class="lineno">  135</span>                }),</div>
-<div class="line"><span class="lineno">  136</span>                <span class="keyword">new</span> DialogOption(<span class="stringliteral">&quot;Never mind&quot;</span>, <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  137</span>            };</div>
-<div class="line"><span class="lineno">  138</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  139</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> DialogOption [] {</div>
-<div class="line"><span class="lineno">  140</span>                    <span class="keyword">new</span> DialogOption(<span class="stringliteral">&quot;Never mind&quot;</span>, <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  141</span>            };</div>
-<div class="line"><span class="lineno">  142</span>        }</div>
-<div class="line"><span class="lineno">  143</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a52db274f14c769ec4ad08bd219bd0d56" name="a52db274f14c769ec4ad08bd219bd0d56"></a>
@@ -590,14 +527,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a2a0ffde985b0f0e8d3951ee42aab4ed9">com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/ddd/StoragePlugin_8java_source.html#l00109">109</a> of file <a class="el" href="../../d8/ddd/StoragePlugin_8java_source.html">StoragePlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  109</span>                                              {</div>
-<div class="line"><span class="lineno">  110</span>        <span class="keywordflow">if</span> (canPlayerAffordUnlock()) {</div>
-<div class="line"><span class="lineno">  111</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;Gaining access to storage at this colony requires a one-time fee of &quot;</span> + getUnlockCost() + <span class="stringliteral">&quot; credits.&quot;</span>;</div>
-<div class="line"><span class="lineno">  112</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  113</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;Gaining access to storage at this colony requires a one-time fee of &quot;</span> + getUnlockCost() + <span class="stringliteral">&quot; credits, which you can&#39;t afford.&quot;</span>;</div>
-<div class="line"><span class="lineno">  114</span>        }</div>
-<div class="line"><span class="lineno">  115</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a620c558023d51e292d93d8c09ae3a67f" name="a620c558023d51e292d93d8c09ae3a67f"></a>
@@ -619,17 +549,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a5e47caa991e5453d9810862f7ca1806a">com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/ddd/StoragePlugin_8java_source.html#l00116">116</a> of file <a class="el" href="../../d8/ddd/StoragePlugin_8java_source.html">StoragePlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  116</span>                                                            {</div>
-<div class="line"><span class="lineno">  117</span>        Highlights h = <span class="keyword">new</span> Highlights();</div>
-<div class="line"><span class="lineno">  118</span>        h.setText(<span class="stringliteral">&quot;&quot;</span> + getUnlockCost());</div>
-<div class="line"><span class="lineno">  119</span>        <span class="keywordflow">if</span> (canPlayerAffordUnlock()) {</div>
-<div class="line"><span class="lineno">  120</span>            h.setColors(Misc.getHighlightColor());</div>
-<div class="line"><span class="lineno">  121</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  122</span>            h.setColors(Misc.getNegativeHighlightColor());</div>
-<div class="line"><span class="lineno">  123</span>        }</div>
-<div class="line"><span class="lineno">  124</span>        <span class="keywordflow">return</span> h;</div>
-<div class="line"><span class="lineno">  125</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af5aa203891cfd751d1c1b25f065e289a" name="af5aa203891cfd751d1c1b25f065e289a"></a>
@@ -661,10 +581,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a101a393492d319dd426173a019a94782">com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/ddd/StoragePlugin_8java_source.html#l00071">71</a> of file <a class="el" href="../../d8/ddd/StoragePlugin_8java_source.html">StoragePlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   71</span>                                                                                     {</div>
-<div class="line"><span class="lineno">   72</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Illegal to put into storage here&quot;</span>;</div>
-<div class="line"><span class="lineno">   73</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="abe187d102a9adb1f35a9467dcd0ac3a7" name="abe187d102a9adb1f35a9467dcd0ac3a7"></a>
@@ -686,11 +603,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a21400d90ab851fc7372a08c8569f059d">com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/ddd/StoragePlugin_8java_source.html#l00094">94</a> of file <a class="el" href="../../d8/ddd/StoragePlugin_8java_source.html">StoragePlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   94</span>                                                        {</div>
-<div class="line"><span class="lineno">   95</span>        <span class="keywordflow">if</span> (playerPaidToUnlock) <span class="keywordflow">return</span> OnClickAction.OPEN_SUBMARKET;</div>
-<div class="line"><span class="lineno">   96</span>        <span class="keywordflow">return</span> OnClickAction.SHOW_TEXT_DIALOG;</div>
-<div class="line"><span class="lineno">   97</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a354f85fa026b2beccfea7bd4e1f88805" name="a354f85fa026b2beccfea7bd4e1f88805"></a>
@@ -711,10 +624,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#aeab6e0d02a859e8cfee9ea811c578a14">com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/ddd/StoragePlugin_8java_source.html#l00067">67</a> of file <a class="el" href="../../d8/ddd/StoragePlugin_8java_source.html">StoragePlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   67</span>                                {</div>
-<div class="line"><span class="lineno">   68</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Leave&quot;</span>;</div>
-<div class="line"><span class="lineno">   69</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a564e9d798ae88c1183a4e6b228a69876" name="a564e9d798ae88c1183a4e6b228a69876"></a>
@@ -736,10 +646,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a395979e1eb5243883e4247722865c387">com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/ddd/StoragePlugin_8java_source.html#l00052">52</a> of file <a class="el" href="../../d8/ddd/StoragePlugin_8java_source.html">StoragePlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   52</span>                             {</div>
-<div class="line"><span class="lineno">   53</span>        <span class="keywordflow">return</span> 0f;</div>
-<div class="line"><span class="lineno">   54</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aee9c86cf9967da635fc652054bf0ac29" name="aee9c86cf9967da635fc652054bf0ac29"></a>
@@ -761,13 +668,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a3d95c856632b640e517702224fcb6bda">com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/ddd/StoragePlugin_8java_source.html#l00144">144</a> of file <a class="el" href="../../d8/ddd/StoragePlugin_8java_source.html">StoragePlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  144</span>                                                   {</div>
-<div class="line"><span class="lineno">  145</span><span class="comment">//      if (!playerPaidToUnlock) {</span></div>
-<div class="line"><span class="lineno">  146</span><span class="comment">//          return &quot;Requires a one-time access fee of &quot; + getUnlockCost() + &quot; credits.&quot;;</span></div>
-<div class="line"><span class="lineno">  147</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  148</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  149</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a1c34d39005034d90eec78013c294333f" name="a1c34d39005034d90eec78013c294333f"></a>
@@ -789,21 +690,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a6dd824d351467055cef347d6bc71ebf3">com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/ddd/StoragePlugin_8java_source.html#l00150">150</a> of file <a class="el" href="../../d8/ddd/StoragePlugin_8java_source.html">StoragePlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  150</span>                                                                 {</div>
-<div class="line"><span class="lineno">  151</span><span class="comment">//      String appendix = getTooltipAppendix(ui);</span></div>
-<div class="line"><span class="lineno">  152</span><span class="comment">//      if (appendix == null) return null;</span></div>
-<div class="line"><span class="lineno">  153</span><span class="comment">//      </span></div>
-<div class="line"><span class="lineno">  154</span><span class="comment">//      Highlights h = new Highlights();</span></div>
-<div class="line"><span class="lineno">  155</span><span class="comment">//      h.setText(&quot;&quot; + getUnlockCost());</span></div>
-<div class="line"><span class="lineno">  156</span><span class="comment">//      if (canPlayerAffordUnlock()) {</span></div>
-<div class="line"><span class="lineno">  157</span><span class="comment">//          h.setColors(Misc.getHighlightColor());</span></div>
-<div class="line"><span class="lineno">  158</span><span class="comment">//      } else {</span></div>
-<div class="line"><span class="lineno">  159</span><span class="comment">//          h.setColors(Misc.getNegativeHighlightColor());</span></div>
-<div class="line"><span class="lineno">  160</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  161</span><span class="comment">//      return h;</span></div>
-<div class="line"><span class="lineno">  162</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  163</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a664bb1d2f5c83e366fd58c3665422c46" name="a664bb1d2f5c83e366fd58c3665422c46"></a>
@@ -825,11 +712,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#abc473c819dc620ea4378aac39e7b5112">com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/ddd/StoragePlugin_8java_source.html#l00021">21</a> of file <a class="el" href="../../d8/ddd/StoragePlugin_8java_source.html">StoragePlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   21</span>                                             {</div>
-<div class="line"><span class="lineno">   22</span>        super.init(<a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a7cfc4316a62889640e1f1dc1cc157ad6">submarket</a>);</div>
-<div class="line"><span class="lineno">   23</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin_html_a7cfc4316a62889640e1f1dc1cc157ad6"><div class="ttname"><a href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a7cfc4316a62889640e1f1dc1cc157ad6">com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin.submarket</a></div><div class="ttdeci">SubmarketAPI submarket</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dc2/BaseSubmarketPlugin_8java_source.html#l00074">BaseSubmarketPlugin.java:74</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a63df0a167918eb1aeb11cb29ee177fd0" name="a63df0a167918eb1aeb11cb29ee177fd0"></a>
@@ -851,12 +734,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#af5f0cd641af3443a4c14474c9f572671">com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/ddd/StoragePlugin_8java_source.html#l00084">84</a> of file <a class="el" href="../../d8/ddd/StoragePlugin_8java_source.html">StoragePlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   84</span>                                           {</div>
-<div class="line"><span class="lineno">   85</span>        <span class="comment">//if (mode == CoreUITradeMode.SNEAK) return false;</span></div>
-<div class="line"><span class="lineno">   86</span>        <span class="comment">//return playerPaidToUnlock;</span></div>
-<div class="line"><span class="lineno">   87</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   88</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="acf7ad36324122e60880df1c4350f4a10" name="acf7ad36324122e60880df1c4350f4a10"></a>
@@ -877,10 +755,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a83076b03b5e784f62e19fdceed938f86">com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/ddd/StoragePlugin_8java_source.html#l00057">57</a> of file <a class="el" href="../../d8/ddd/StoragePlugin_8java_source.html">StoragePlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   57</span>                                    {</div>
-<div class="line"><span class="lineno">   58</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   59</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a985881d63821ab5277948b220953b3f5" name="a985881d63821ab5277948b220953b3f5"></a>
@@ -912,11 +787,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a2ac99df1be9e2ec8d20aeea128741775">com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/ddd/StoragePlugin_8java_source.html#l00030">30</a> of file <a class="el" href="../../d8/ddd/StoragePlugin_8java_source.html">StoragePlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   30</span>                                                                                    {</div>
-<div class="line"><span class="lineno">   31</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a539f0c8b6b8eacec192f3fb246c860c3">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a64c3437824f8a05ba3e6dc8a8ab61e62">isPlayerOwned</a>()) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   32</span>        <span class="keywordflow">return</span> super.isIllegalOnSubmarket(stack, action);</div>
-<div class="line"><span class="lineno">   33</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a34b256bc3bc43280633cdbd9407718be" name="a34b256bc3bc43280633cdbd9407718be"></a>
@@ -948,14 +819,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a251ad66c9faa92b6880252e31cd80bd0">com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/ddd/StoragePlugin_8java_source.html#l00042">42</a> of file <a class="el" href="../../d8/ddd/StoragePlugin_8java_source.html">StoragePlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   42</span>                                                                                      {</div>
-<div class="line"><span class="lineno">   43</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a539f0c8b6b8eacec192f3fb246c860c3">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a64c3437824f8a05ba3e6dc8a8ab61e62">isPlayerOwned</a>() || </div>
-<div class="line"><span class="lineno">   44</span>                (<a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a539f0c8b6b8eacec192f3fb246c860c3">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a97645caff4adca5efcf3a462fb13ca0f">getFaction</a>() != <span class="keyword">null</span> &amp;&amp; <a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a539f0c8b6b8eacec192f3fb246c860c3">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a97645caff4adca5efcf3a462fb13ca0f">getFaction</a>().<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#adacb688941524346625413acdc0008f7">isNeutralFaction</a>())) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   45</span>        <span class="keywordflow">return</span> super.isIllegalOnSubmarket(member, action);</div>
-<div class="line"><span class="lineno">   46</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI_html_adacb688941524346625413acdc0008f7"><div class="ttname"><a href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#adacb688941524346625413acdc0008f7">com.fs.starfarer.api.campaign.FactionAPI.isNeutralFaction</a></div><div class="ttdeci">boolean isNeutralFaction()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a97645caff4adca5efcf3a462fb13ca0f"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a97645caff4adca5efcf3a462fb13ca0f">com.fs.starfarer.api.campaign.econ.MarketAPI.getFaction</a></div><div class="ttdeci">FactionAPI getFaction()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="affd5e315f86e1fb12d3ed763dc07e8f7" name="affd5e315f86e1fb12d3ed763dc07e8f7"></a>
@@ -987,11 +851,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#ad6f29bbf3f8898906cfdbdb3013b70ab">com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/ddd/StoragePlugin_8java_source.html#l00036">36</a> of file <a class="el" href="../../d8/ddd/StoragePlugin_8java_source.html">StoragePlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   36</span>                                                                                   {</div>
-<div class="line"><span class="lineno">   37</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a539f0c8b6b8eacec192f3fb246c860c3">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a64c3437824f8a05ba3e6dc8a8ab61e62">isPlayerOwned</a>()) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   38</span>        <span class="keywordflow">return</span> super.isIllegalOnSubmarket(commodityId, action);</div>
-<div class="line"><span class="lineno">   39</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa46ffd002f8ccf809d4e583ccbe529ef" name="aa46ffd002f8ccf809d4e583ccbe529ef"></a>
@@ -1013,10 +873,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a82ef57f3d78c5fcf29dedb10bafb7e87">com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/ddd/StoragePlugin_8java_source.html#l00048">48</a> of file <a class="el" href="../../d8/ddd/StoragePlugin_8java_source.html">StoragePlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   48</span>                                             {</div>
-<div class="line"><span class="lineno">   49</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   50</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a858fdbd86b3882eb20863508113548ca" name="a858fdbd86b3882eb20863508113548ca"></a>
@@ -1036,10 +893,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/ddd/StoragePlugin_8java_source.html#l00090">90</a> of file <a class="el" href="../../d8/ddd/StoragePlugin_8java_source.html">StoragePlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   90</span>                                                                  {</div>
-<div class="line"><span class="lineno">   91</span>        this.playerPaidToUnlock = playerPaidToUnlock;</div>
-<div class="line"><span class="lineno">   92</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2f9bbe4156edc989ed4932f62fd74135" name="a2f9bbe4156edc989ed4932f62fd74135"></a>
@@ -1060,10 +914,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#adf58d118cfe9fab16b766936c3cad70a">com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/ddd/StoragePlugin_8java_source.html#l00025">25</a> of file <a class="el" href="../../d8/ddd/StoragePlugin_8java_source.html">StoragePlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   25</span>                                                  {</div>
-<div class="line"><span class="lineno">   26</span> </div>
-<div class="line"><span class="lineno">   27</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

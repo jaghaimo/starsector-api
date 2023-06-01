@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -217,16 +218,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/db6/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1BaseSkillsChangeEffect.html#ac263fc216e6112b6c473475e04c185d2">com.fs.starfarer.api.characters.BaseSkillsChangeEffect</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d93/SkillsChangeRemoveVentsCapsEffect_8java_source.html#l00119">119</a> of file <a class="el" href="../../d7/d93/SkillsChangeRemoveVentsCapsEffect_8java_source.html">SkillsChangeRemoveVentsCapsEffect.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  119</span>                                                                                                                      {</div>
-<div class="line"><span class="lineno">  120</span>        VentsCapsDataMap map = <a class="code hl_function" href="../../df/d78/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeRemoveVentsCapsEffect.html#a4bf344074bf96008b0c714eb9f20ebbf">getMap</a>(dataMap);</div>
-<div class="line"><span class="lineno">  121</span>        </div>
-<div class="line"><span class="lineno">  122</span>        <span class="keywordflow">for</span> (VentsCapsEffectData data : map.map.values()) {</div>
-<div class="line"><span class="lineno">  123</span>            <a class="code hl_function" href="../../df/d78/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeRemoveVentsCapsEffect.html#a2cd0cdfd4cde217fbfc1122d3af76cb7">clampNumVentsAndCaps</a>(data.member, to);</div>
-<div class="line"><span class="lineno">  124</span>        }</div>
-<div class="line"><span class="lineno">  125</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeRemoveVentsCapsEffect_html_a2cd0cdfd4cde217fbfc1122d3af76cb7"><div class="ttname"><a href="../../df/d78/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeRemoveVentsCapsEffect.html#a2cd0cdfd4cde217fbfc1122d3af76cb7">com.fs.starfarer.api.characters.SkillsChangeRemoveVentsCapsEffect.clampNumVentsAndCaps</a></div><div class="ttdeci">static void clampNumVentsAndCaps(FleetMemberAPI member, MutableCharacterStatsAPI stats)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d93/SkillsChangeRemoveVentsCapsEffect_8java_source.html#l00127">SkillsChangeRemoveVentsCapsEffect.java:127</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeRemoveVentsCapsEffect_html_a4bf344074bf96008b0c714eb9f20ebbf"><div class="ttname"><a href="../../df/d78/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeRemoveVentsCapsEffect.html#a4bf344074bf96008b0c714eb9f20ebbf">com.fs.starfarer.api.characters.SkillsChangeRemoveVentsCapsEffect.getMap</a></div><div class="ttdeci">VentsCapsDataMap getMap(Map&lt; String, Object &gt; dataMap)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d93/SkillsChangeRemoveVentsCapsEffect_8java_source.html#l00032">SkillsChangeRemoveVentsCapsEffect.java:32</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2cd0cdfd4cde217fbfc1122d3af76cb7" name="a2cd0cdfd4cde217fbfc1122d3af76cb7"></a>
@@ -264,21 +256,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d93/SkillsChangeRemoveVentsCapsEffect_8java_source.html#l00127">127</a> of file <a class="el" href="../../d7/d93/SkillsChangeRemoveVentsCapsEffect_8java_source.html">SkillsChangeRemoveVentsCapsEffect.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  127</span>                                                                                                   {</div>
-<div class="line"><span class="lineno">  128</span>        <span class="keywordtype">int</span> maxVents = <a class="code hl_function" href="../../df/d78/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeRemoveVentsCapsEffect.html#acdc75f19eb7bfd06d2b0920bb90169fe">getMaxVents</a>(member.getHullSpec().getHullSize(), stats);</div>
-<div class="line"><span class="lineno">  129</span>        <span class="keywordtype">int</span> maxCaps = <a class="code hl_function" href="../../df/d78/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeRemoveVentsCapsEffect.html#a8e281d0a935dad3f38379524b66a2952">getMaxCaps</a>(member.getHullSpec().getHullSize(), stats);</div>
-<div class="line"><span class="lineno">  130</span>        ShipVariantAPI variant = member.getVariant();</div>
-<div class="line"><span class="lineno">  131</span>        <span class="keywordflow">if</span> (variant.getNumFluxVents() &gt; maxVents || variant.getNumFluxCapacitors() &gt; maxCaps) {</div>
-<div class="line"><span class="lineno">  132</span>            variant = variant.clone();</div>
-<div class="line"><span class="lineno">  133</span>            variant.setSource(VariantSource.REFIT);</div>
-<div class="line"><span class="lineno">  134</span>            variant.setNumFluxVents(Math.min(variant.getNumFluxVents(), maxVents));</div>
-<div class="line"><span class="lineno">  135</span>            variant.setNumFluxCapacitors(Math.min(variant.getNumFluxCapacitors(), maxCaps));</div>
-<div class="line"><span class="lineno">  136</span>            member.setVariant(variant, <span class="keyword">false</span>, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  137</span>        }</div>
-<div class="line"><span class="lineno">  138</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeRemoveVentsCapsEffect_html_a8e281d0a935dad3f38379524b66a2952"><div class="ttname"><a href="../../df/d78/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeRemoveVentsCapsEffect.html#a8e281d0a935dad3f38379524b66a2952">com.fs.starfarer.api.characters.SkillsChangeRemoveVentsCapsEffect.getMaxCaps</a></div><div class="ttdeci">static int getMaxCaps(HullSize size, MutableCharacterStatsAPI stats)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d93/SkillsChangeRemoveVentsCapsEffect_8java_source.html#l00050">SkillsChangeRemoveVentsCapsEffect.java:50</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeRemoveVentsCapsEffect_html_acdc75f19eb7bfd06d2b0920bb90169fe"><div class="ttname"><a href="../../df/d78/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeRemoveVentsCapsEffect.html#acdc75f19eb7bfd06d2b0920bb90169fe">com.fs.starfarer.api.characters.SkillsChangeRemoveVentsCapsEffect.getMaxVents</a></div><div class="ttdeci">static int getMaxVents(HullSize size, MutableCharacterStatsAPI stats)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d93/SkillsChangeRemoveVentsCapsEffect_8java_source.html#l00042">SkillsChangeRemoveVentsCapsEffect.java:42</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a65103abe874f4070b3474abbb642acac" name="a65103abe874f4070b3474abbb642acac"></a>
@@ -308,39 +286,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d93/SkillsChangeRemoveVentsCapsEffect_8java_source.html#l00059">59</a> of file <a class="el" href="../../d7/d93/SkillsChangeRemoveVentsCapsEffect_8java_source.html">SkillsChangeRemoveVentsCapsEffect.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   59</span>                                                                                                   {</div>
-<div class="line"><span class="lineno">   60</span>        VentsCapsDataMap result = <span class="keyword">new</span> VentsCapsDataMap();</div>
-<div class="line"><span class="lineno">   61</span>        </div>
-<div class="line"><span class="lineno">   62</span>        </div>
-<div class="line"><span class="lineno">   63</span>        <span class="keywordflow">for</span> (FleetMemberAPI member : Global.getSector().getPlayerFleet().getFleetData().getMembersListCopy()) {</div>
-<div class="line"><span class="lineno">   64</span>            VentsCapsEffectData data = <span class="keyword">new</span> VentsCapsEffectData();</div>
-<div class="line"><span class="lineno">   65</span>            <span class="keywordtype">int</span> maxVentsPre = <a class="code hl_function" href="../../df/d78/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeRemoveVentsCapsEffect.html#acdc75f19eb7bfd06d2b0920bb90169fe">getMaxVents</a>(member.getHullSpec().getHullSize(), from);</div>
-<div class="line"><span class="lineno">   66</span>            <span class="keywordtype">int</span> maxCapsPre = <a class="code hl_function" href="../../df/d78/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeRemoveVentsCapsEffect.html#a8e281d0a935dad3f38379524b66a2952">getMaxCaps</a>(member.getHullSpec().getHullSize(), from);</div>
-<div class="line"><span class="lineno">   67</span>            </div>
-<div class="line"><span class="lineno">   68</span>            <span class="keywordtype">int</span> maxVentsPost = <a class="code hl_function" href="../../df/d78/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeRemoveVentsCapsEffect.html#acdc75f19eb7bfd06d2b0920bb90169fe">getMaxVents</a>(member.getHullSpec().getHullSize(), to);</div>
-<div class="line"><span class="lineno">   69</span>            <span class="keywordtype">int</span> maxCapsPost = <a class="code hl_function" href="../../df/d78/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeRemoveVentsCapsEffect.html#a8e281d0a935dad3f38379524b66a2952">getMaxCaps</a>(member.getHullSpec().getHullSize(), to);</div>
-<div class="line"><span class="lineno">   70</span>            </div>
-<div class="line"><span class="lineno">   71</span>            <span class="keywordtype">int</span> caps = member.getVariant().getNumFluxCapacitors();</div>
-<div class="line"><span class="lineno">   72</span>            <span class="keywordtype">int</span> vents = member.getVariant().getNumFluxVents();</div>
-<div class="line"><span class="lineno">   73</span>            </div>
-<div class="line"><span class="lineno">   74</span>            data.member = member;</div>
-<div class="line"><span class="lineno">   75</span>            data.maxVents = maxVentsPost;</div>
-<div class="line"><span class="lineno">   76</span>            data.maxCaps = maxCapsPost;</div>
-<div class="line"><span class="lineno">   77</span>            </div>
-<div class="line"><span class="lineno">   78</span>            <span class="keywordtype">boolean</span> add = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   79</span>            <span class="keywordflow">if</span> (maxVentsPre &gt; maxVentsPost &amp;&amp; vents &gt; maxVentsPost) {</div>
-<div class="line"><span class="lineno">   80</span>                add = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   81</span>            }</div>
-<div class="line"><span class="lineno">   82</span>            <span class="keywordflow">if</span> (maxCapsPre &gt; maxCapsPost &amp;&amp; caps &gt; maxCapsPost) {</div>
-<div class="line"><span class="lineno">   83</span>                add = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   84</span>            }</div>
-<div class="line"><span class="lineno">   85</span>            <span class="keywordflow">if</span> (add) {</div>
-<div class="line"><span class="lineno">   86</span>                result.map.put(member, data);</div>
-<div class="line"><span class="lineno">   87</span>            }</div>
-<div class="line"><span class="lineno">   88</span>        }</div>
-<div class="line"><span class="lineno">   89</span>        <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">   90</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a4bf344074bf96008b0c714eb9f20ebbf" name="a4bf344074bf96008b0c714eb9f20ebbf"></a>
@@ -360,16 +306,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d93/SkillsChangeRemoveVentsCapsEffect_8java_source.html#l00032">32</a> of file <a class="el" href="../../d7/d93/SkillsChangeRemoveVentsCapsEffect_8java_source.html">SkillsChangeRemoveVentsCapsEffect.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   32</span>                                                                {</div>
-<div class="line"><span class="lineno">   33</span>        String key = getClass().getSimpleName();</div>
-<div class="line"><span class="lineno">   34</span>        VentsCapsDataMap map = (VentsCapsDataMap)dataMap.get(key);</div>
-<div class="line"><span class="lineno">   35</span>        <span class="keywordflow">if</span> (map == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   36</span>            map = <span class="keyword">new</span> VentsCapsDataMap();</div>
-<div class="line"><span class="lineno">   37</span>            dataMap.put(key, map);</div>
-<div class="line"><span class="lineno">   38</span>        }</div>
-<div class="line"><span class="lineno">   39</span>        <span class="keywordflow">return</span> map;</div>
-<div class="line"><span class="lineno">   40</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8e281d0a935dad3f38379524b66a2952" name="a8e281d0a935dad3f38379524b66a2952"></a>
@@ -407,14 +344,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d93/SkillsChangeRemoveVentsCapsEffect_8java_source.html#l00050">50</a> of file <a class="el" href="../../d7/d93/SkillsChangeRemoveVentsCapsEffect_8java_source.html">SkillsChangeRemoveVentsCapsEffect.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   50</span>                                                                                {</div>
-<div class="line"><span class="lineno">   51</span>        <span class="keywordtype">int</span> maxCapacitors = CoreAutofitPlugin.getBaseMax(size);</div>
-<div class="line"><span class="lineno">   52</span>        <span class="keywordflow">if</span> (stats != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   53</span>            maxCapacitors = (int) stats.getMaxCapacitorsBonus().computeEffective(maxCapacitors);</div>
-<div class="line"><span class="lineno">   54</span>        }</div>
-<div class="line"><span class="lineno">   55</span>        <span class="keywordflow">return</span> maxCapacitors;</div>
-<div class="line"><span class="lineno">   56</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="acdc75f19eb7bfd06d2b0920bb90169fe" name="acdc75f19eb7bfd06d2b0920bb90169fe"></a>
@@ -452,14 +382,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d93/SkillsChangeRemoveVentsCapsEffect_8java_source.html#l00042">42</a> of file <a class="el" href="../../d7/d93/SkillsChangeRemoveVentsCapsEffect_8java_source.html">SkillsChangeRemoveVentsCapsEffect.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   42</span>                                                                                 {</div>
-<div class="line"><span class="lineno">   43</span>        <span class="keywordtype">int</span> maxVents = CoreAutofitPlugin.getBaseMax(size);</div>
-<div class="line"><span class="lineno">   44</span>        <span class="keywordflow">if</span> (stats != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   45</span>            maxVents = (int) stats.getMaxVentsBonus().computeEffective(maxVents);</div>
-<div class="line"><span class="lineno">   46</span>        }</div>
-<div class="line"><span class="lineno">   47</span>        <span class="keywordflow">return</span> maxVents;</div>
-<div class="line"><span class="lineno">   48</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a618c1772cb70f74a0c12e2f794e3501a" name="a618c1772cb70f74a0c12e2f794e3501a"></a>
@@ -491,11 +414,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/db6/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1BaseSkillsChangeEffect.html#a79eebc243149f67034d141f82b82c875">com.fs.starfarer.api.characters.BaseSkillsChangeEffect</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d93/SkillsChangeRemoveVentsCapsEffect_8java_source.html#l00094">94</a> of file <a class="el" href="../../d7/d93/SkillsChangeRemoveVentsCapsEffect_8java_source.html">SkillsChangeRemoveVentsCapsEffect.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   94</span>                                                                                          {</div>
-<div class="line"><span class="lineno">   95</span>        <span class="keywordflow">return</span> !<a class="code hl_function" href="../../df/d78/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeRemoveVentsCapsEffect.html#a65103abe874f4070b3474abbb642acac">getEffects</a>(from, to).map.isEmpty();</div>
-<div class="line"><span class="lineno">   96</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeRemoveVentsCapsEffect_html_a65103abe874f4070b3474abbb642acac"><div class="ttname"><a href="../../df/d78/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeRemoveVentsCapsEffect.html#a65103abe874f4070b3474abbb642acac">com.fs.starfarer.api.characters.SkillsChangeRemoveVentsCapsEffect.getEffects</a></div><div class="ttdeci">VentsCapsDataMap getEffects(MutableCharacterStatsAPI from, MutableCharacterStatsAPI to)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d93/SkillsChangeRemoveVentsCapsEffect_8java_source.html#l00059">SkillsChangeRemoveVentsCapsEffect.java:59</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac85d2f56ca3c4014b46d65fffe7d3f44" name="ac85d2f56ca3c4014b46d65fffe7d3f44"></a>
@@ -533,9 +452,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/db6/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1BaseSkillsChangeEffect.html#a015d204fd3a5b8eba2b91e1ac3e8c741">com.fs.starfarer.api.characters.BaseSkillsChangeEffect</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d93/SkillsChangeRemoveVentsCapsEffect_8java_source.html#l00115">115</a> of file <a class="el" href="../../d7/d93/SkillsChangeRemoveVentsCapsEffect_8java_source.html">SkillsChangeRemoveVentsCapsEffect.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  115</span>                                                                                               {</div>
-<div class="line"><span class="lineno">  116</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa6ecbb08ecc2468a1bfe78f15e4c9da7" name="aa6ecbb08ecc2468a1bfe78f15e4c9da7"></a>
@@ -579,24 +496,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/db6/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1BaseSkillsChangeEffect.html#a650c7aa391bb181d6c37ca6c43aac4eb">com.fs.starfarer.api.characters.BaseSkillsChangeEffect</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d93/SkillsChangeRemoveVentsCapsEffect_8java_source.html#l00099">99</a> of file <a class="el" href="../../d7/d93/SkillsChangeRemoveVentsCapsEffect_8java_source.html">SkillsChangeRemoveVentsCapsEffect.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   99</span>                                                                                                                                            {</div>
-<div class="line"><span class="lineno">  100</span>        super.prepare();</div>
-<div class="line"><span class="lineno">  101</span>        </div>
-<div class="line"><span class="lineno">  102</span>        VentsCapsDataMap map = <a class="code hl_function" href="../../df/d78/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeRemoveVentsCapsEffect.html#a65103abe874f4070b3474abbb642acac">getEffects</a>(from, to);</div>
-<div class="line"><span class="lineno">  103</span>        <a class="code hl_function" href="../../df/d78/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeRemoveVentsCapsEffect.html#aff0012c47744578f95ee720d5833a4e5">setMap</a>(map, dataMap);</div>
-<div class="line"><span class="lineno">  104</span>        </div>
-<div class="line"><span class="lineno">  105</span>        info.addSectionHeading(<span class="stringliteral">&quot;Excess vents and capacitors&quot;</span>, <a class="code hl_variable" href="../../da/db6/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1BaseSkillsChangeEffect.html#acb1c89c7c91884b6d0283fc58b24d173">base</a>, <a class="code hl_variable" href="../../da/db6/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1BaseSkillsChangeEffect.html#a3116342fe0a58237deb2a277ad9e17ad">dark</a>, Alignment.MID, 15f);</div>
-<div class="line"><span class="lineno">  106</span>        </div>
-<div class="line"><span class="lineno">  107</span>        info.addPara(<span class="stringliteral">&quot;Ships that have more than the new maximum number of flux vents &quot;</span></div>
-<div class="line"><span class="lineno">  108</span>                + <span class="stringliteral">&quot;and capacitors will have the excess vents and capacitors removed.&quot;</span>, 10f,</div>
-<div class="line"><span class="lineno">  109</span>                Misc.getNegativeHighlightColor(),</div>
-<div class="line"><span class="lineno">  110</span>                <span class="stringliteral">&quot;excess vents and capacitors removed&quot;</span></div>
-<div class="line"><span class="lineno">  111</span>                );</div>
-<div class="line"><span class="lineno">  112</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1BaseSkillsChangeEffect_html_a3116342fe0a58237deb2a277ad9e17ad"><div class="ttname"><a href="../../da/db6/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1BaseSkillsChangeEffect.html#a3116342fe0a58237deb2a277ad9e17ad">com.fs.starfarer.api.characters.BaseSkillsChangeEffect.dark</a></div><div class="ttdeci">Color dark</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dd0/BaseSkillsChangeEffect_8java_source.html#l00014">BaseSkillsChangeEffect.java:14</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1BaseSkillsChangeEffect_html_acb1c89c7c91884b6d0283fc58b24d173"><div class="ttname"><a href="../../da/db6/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1BaseSkillsChangeEffect.html#acb1c89c7c91884b6d0283fc58b24d173">com.fs.starfarer.api.characters.BaseSkillsChangeEffect.base</a></div><div class="ttdeci">Color base</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dd0/BaseSkillsChangeEffect_8java_source.html#l00013">BaseSkillsChangeEffect.java:13</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeRemoveVentsCapsEffect_html_aff0012c47744578f95ee720d5833a4e5"><div class="ttname"><a href="../../df/d78/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeRemoveVentsCapsEffect.html#aff0012c47744578f95ee720d5833a4e5">com.fs.starfarer.api.characters.SkillsChangeRemoveVentsCapsEffect.setMap</a></div><div class="ttdeci">void setMap(VentsCapsDataMap map, Map&lt; String, Object &gt; dataMap)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d93/SkillsChangeRemoveVentsCapsEffect_8java_source.html#l00028">SkillsChangeRemoveVentsCapsEffect.java:28</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aff0012c47744578f95ee720d5833a4e5" name="aff0012c47744578f95ee720d5833a4e5"></a>
@@ -626,11 +526,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d93/SkillsChangeRemoveVentsCapsEffect_8java_source.html#l00028">28</a> of file <a class="el" href="../../d7/d93/SkillsChangeRemoveVentsCapsEffect_8java_source.html">SkillsChangeRemoveVentsCapsEffect.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   28</span>                                                                          {</div>
-<div class="line"><span class="lineno">   29</span>        String key = getClass().getSimpleName();</div>
-<div class="line"><span class="lineno">   30</span>        dataMap.put(key, map);</div>
-<div class="line"><span class="lineno">   31</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

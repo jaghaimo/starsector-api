@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -204,224 +205,7 @@ Static Public Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d0/d5c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1CommandPlugin.html#a72a44c5127e60136b87d3b37613fd0e0">com.fs.starfarer.api.campaign.rules.CommandPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d0e/KantaCMD_8java_source.html#l00314">314</a> of file <a class="el" href="../../d5/d0e/KantaCMD_8java_source.html">KantaCMD.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  314</span>                                                                                                                             {</div>
-<div class="line"><span class="lineno">  315</span>        <span class="keywordflow">if</span> (dialog == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  316</span>        </div>
-<div class="line"><span class="lineno">  317</span>        OptionPanelAPI options = dialog.getOptionPanel();</div>
-<div class="line"><span class="lineno">  318</span>        TextPanelAPI text = dialog.getTextPanel();</div>
-<div class="line"><span class="lineno">  319</span>        CampaignFleetAPI pf = Global.getSector().getPlayerFleet();</div>
-<div class="line"><span class="lineno">  320</span>        CargoAPI cargo = pf.getCargo();</div>
-<div class="line"><span class="lineno">  321</span>        </div>
-<div class="line"><span class="lineno">  322</span>        String action = params.get(0).getString(memoryMap);</div>
-<div class="line"><span class="lineno">  323</span>        </div>
-<div class="line"><span class="lineno">  324</span>        MemoryAPI memory = memoryMap.get(MemKeys.LOCAL);</div>
-<div class="line"><span class="lineno">  325</span>        <span class="keywordflow">if</span> (memory == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">false</span>; <span class="comment">// should not be possible unless there are other big problems already</span></div>
-<div class="line"><span class="lineno">  326</span>        </div>
-<div class="line"><span class="lineno">  327</span>        MarketAPI market = dialog.getInteractionTarget().getMarket();</div>
-<div class="line"><span class="lineno">  328</span>        </div>
-<div class="line"><span class="lineno">  329</span>        <span class="keywordflow">if</span> (<span class="stringliteral">&quot;findLargeOmega&quot;</span>.equals(action)) {</div>
-<div class="line"><span class="lineno">  330</span>            <span class="keywordflow">for</span> (CargoStackAPI stack : cargo.getStacksCopy()) {</div>
-<div class="line"><span class="lineno">  331</span>                <span class="keywordflow">if</span> (!stack.isWeaponStack()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  332</span>                </div>
-<div class="line"><span class="lineno">  333</span>                WeaponSpecAPI spec = stack.getWeaponSpecIfWeapon();</div>
-<div class="line"><span class="lineno">  334</span>                <span class="keywordflow">if</span> (spec.getSize() != WeaponSize.LARGE) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  335</span>                </div>
-<div class="line"><span class="lineno">  336</span>                <span class="keywordflow">if</span> (!spec.hasTag(Tags.OMEGA)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  337</span>                </div>
-<div class="line"><span class="lineno">  338</span>                memory.set(<span class="stringliteral">&quot;$foundWeaponId&quot;</span>, spec.getWeaponId());               </div>
-<div class="line"><span class="lineno">  339</span>                memory.set(<span class="stringliteral">&quot;$foundWeaponName&quot;</span>, spec.getWeaponName());               </div>
-<div class="line"><span class="lineno">  340</span>                memory.set(<span class="stringliteral">&quot;$foundWeaponQuantity&quot;</span>, (<span class="keywordtype">int</span>) Math.round(stack.getSize()));</div>
-<div class="line"><span class="lineno">  341</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  342</span>            }</div>
-<div class="line"><span class="lineno">  343</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="stringliteral">&quot;findContactToBetray&quot;</span>.equals(action)) {</div>
-<div class="line"><span class="lineno">  344</span>            ContactIntel best = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  345</span>            <span class="keywordtype">int</span> bestImportance = 0;</div>
-<div class="line"><span class="lineno">  346</span>            <span class="keywordtype">float</span> bestRel = 0f;</div>
-<div class="line"><span class="lineno">  347</span>            <span class="keywordflow">for</span> (IntelInfoPlugin curr : Global.getSector().getIntelManager().getIntel(ContactIntel.class)) {</div>
-<div class="line"><span class="lineno">  348</span>                ContactIntel intel = (ContactIntel) curr;</div>
-<div class="line"><span class="lineno">  349</span>                <span class="keywordflow">if</span> (intel.isEnding() || intel.isEnded() || intel.getState() == ContactState.POTENTIAL) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  350</span>                </div>
-<div class="line"><span class="lineno">  351</span>                <span class="keywordtype">int</span> importance = intel.getPerson().getImportance().ordinal();</div>
-<div class="line"><span class="lineno">  352</span>                <span class="keywordtype">float</span> rel = intel.getPerson().getRelToPlayer().getRel();</div>
-<div class="line"><span class="lineno">  353</span>                </div>
-<div class="line"><span class="lineno">  354</span>                <span class="keywordflow">if</span> (intel.getPerson().getImportance().ordinal() &lt;= PersonImportance.MEDIUM.ordinal()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  355</span>                <span class="comment">//if (intel.getPerson().getRelToPlayer().isAtBest(RepLevel.WELCOMING)) continue;</span></div>
-<div class="line"><span class="lineno">  356</span>                </div>
-<div class="line"><span class="lineno">  357</span>                <span class="keywordflow">if</span> (importance &gt; bestImportance || (importance &gt;= bestImportance &amp;&amp; rel &gt; bestRel)) {</div>
-<div class="line"><span class="lineno">  358</span>                    best = intel;</div>
-<div class="line"><span class="lineno">  359</span>                    bestImportance = importance;</div>
-<div class="line"><span class="lineno">  360</span>                    bestRel = rel;</div>
-<div class="line"><span class="lineno">  361</span>                }</div>
-<div class="line"><span class="lineno">  362</span>            }</div>
-<div class="line"><span class="lineno">  363</span>                </div>
-<div class="line"><span class="lineno">  364</span>            <span class="keywordflow">if</span> (best == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  365</span>            </div>
-<div class="line"><span class="lineno">  366</span>            PersonAPI contact = best.getPerson();</div>
-<div class="line"><span class="lineno">  367</span>            memory.set(<span class="stringliteral">&quot;$foundContactName&quot;</span>, contact.getNameString());               </div>
-<div class="line"><span class="lineno">  368</span>            memory.set(<span class="stringliteral">&quot;$foundContactRank&quot;</span>, contact.getRank().toLowerCase());               </div>
-<div class="line"><span class="lineno">  369</span>            memory.set(<span class="stringliteral">&quot;$foundContactPost&quot;</span>, contact.getPost().toLowerCase());</div>
-<div class="line"><span class="lineno">  370</span>            memory.set(<span class="stringliteral">&quot;$foundContactFaction&quot;</span>, contact.getFaction().getPersonNamePrefixAOrAn() + <span class="stringliteral">&quot; &quot;</span> + contact.getFaction().getPersonNamePrefix());             </div>
-<div class="line"><span class="lineno">  371</span>            memory.set(<span class="stringliteral">&quot;$foundContactIntel&quot;</span>, best);             </div>
-<div class="line"><span class="lineno">  372</span>            </div>
-<div class="line"><span class="lineno">  373</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  374</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="stringliteral">&quot;betrayContact&quot;</span>.equals(action)) {</div>
-<div class="line"><span class="lineno">  375</span>            ContactIntel intel = (ContactIntel) memory.get(<span class="stringliteral">&quot;$foundContactIntel&quot;</span>);</div>
-<div class="line"><span class="lineno">  376</span>            CustomRepImpact impact = <span class="keyword">new</span> CustomRepImpact();</div>
-<div class="line"><span class="lineno">  377</span>            impact.delta = -0.75f;</div>
-<div class="line"><span class="lineno">  378</span>            Global.getSector().adjustPlayerReputation(</div>
-<div class="line"><span class="lineno">  379</span>                    <span class="keyword">new</span> RepActionEnvelope(RepActions.CUSTOM, </div>
-<div class="line"><span class="lineno">  380</span>                            impact, <span class="keyword">null</span>, text, <span class="keyword">true</span>, <span class="keyword">true</span>),</div>
-<div class="line"><span class="lineno">  381</span>                            intel.getPerson());</div>
-<div class="line"><span class="lineno">  382</span>            intel.loseContact(dialog);</div>
-<div class="line"><span class="lineno">  383</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="stringliteral">&quot;gaveHamatsu&quot;</span>.equals(action)) {</div>
-<div class="line"><span class="lineno">  384</span>            PersonAPI ibrahim = People.getPerson(People.IBRAHIM);</div>
-<div class="line"><span class="lineno">  385</span>            <span class="keywordflow">if</span> (ibrahim != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  386</span>                CustomRepImpact impact = <span class="keyword">new</span> CustomRepImpact();</div>
-<div class="line"><span class="lineno">  387</span>                impact.delta = -2f;</div>
-<div class="line"><span class="lineno">  388</span>                Global.getSector().adjustPlayerReputation(</div>
-<div class="line"><span class="lineno">  389</span>                        <span class="keyword">new</span> RepActionEnvelope(RepActions.CUSTOM, </div>
-<div class="line"><span class="lineno">  390</span>                                impact, <span class="keyword">null</span>, text, <span class="keyword">true</span>, <span class="keyword">true</span>),</div>
-<div class="line"><span class="lineno">  391</span>                                ibrahim);</div>
-<div class="line"><span class="lineno">  392</span>                ContactIntel intel = ContactIntel.getContactIntel(ibrahim);</div>
-<div class="line"><span class="lineno">  393</span>                <span class="keywordflow">if</span> (intel !=  <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  394</span>                    intel.loseContact(dialog);</div>
-<div class="line"><span class="lineno">  395</span>                }</div>
-<div class="line"><span class="lineno">  396</span>            }</div>
-<div class="line"><span class="lineno">  397</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="stringliteral">&quot;findRemnantCapital&quot;</span>.equals(action)) {</div>
-<div class="line"><span class="lineno">  398</span>            <span class="keywordflow">for</span> (FleetMemberAPI member : pf.getFleetData().getMembersListCopy()) {</div>
-<div class="line"><span class="lineno">  399</span>                <span class="keywordflow">if</span> (member.getHullSpec().hasTag(Tags.SHIP_REMNANTS) &amp;&amp; member.isCapital()) {</div>
-<div class="line"><span class="lineno">  400</span>                    memory.set(<span class="stringliteral">&quot;$foundShipId&quot;</span>, member.getId());             </div>
-<div class="line"><span class="lineno">  401</span>                    memory.set(<span class="stringliteral">&quot;$foundShipClass&quot;</span>, member.getHullSpec().getNameWithDesignationWithDashClass());              </div>
-<div class="line"><span class="lineno">  402</span>                    memory.set(<span class="stringliteral">&quot;$foundShipName&quot;</span>, member.getShipName());             </div>
-<div class="line"><span class="lineno">  403</span>                    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  404</span>                }</div>
-<div class="line"><span class="lineno">  405</span>            }</div>
-<div class="line"><span class="lineno">  406</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="stringliteral">&quot;findShieldBlueprint&quot;</span>.equals(action)) {</div>
-<div class="line"><span class="lineno">  407</span>            <span class="keywordflow">for</span> (CargoStackAPI stack : cargo.getStacksCopy()) {</div>
-<div class="line"><span class="lineno">  408</span>                <span class="keywordflow">if</span> (!stack.isSpecialStack()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  409</span>                </div>
-<div class="line"><span class="lineno">  410</span>                SpecialItemData data = stack.getSpecialDataIfSpecial();</div>
-<div class="line"><span class="lineno">  411</span>                <span class="keywordflow">if</span> (data.getData() == <span class="keyword">null</span>) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  412</span>                </div>
-<div class="line"><span class="lineno">  413</span>                <span class="keywordflow">if</span> (!data.getId().equals(Items.INDUSTRY_BP)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  414</span>                </div>
-<div class="line"><span class="lineno">  415</span>                IndustrySpecAPI spec = Global.getSettings().getIndustrySpec(data.getData());</div>
-<div class="line"><span class="lineno">  416</span>                </div>
-<div class="line"><span class="lineno">  417</span>                <span class="keywordflow">if</span> (spec.getId().equals(Industries.PLANETARYSHIELD)) {</div>
-<div class="line"><span class="lineno">  418</span>                    memory.set(<span class="stringliteral">&quot;$foundIndustryId&quot;</span>, spec.getId());</div>
-<div class="line"><span class="lineno">  419</span>                    String firstWord = stack.getDisplayName().split(<span class="stringliteral">&quot; &quot;</span>)[0];</div>
-<div class="line"><span class="lineno">  420</span>                    memory.set(<span class="stringliteral">&quot;$foundIndustryName&quot;</span>, Misc.ucFirst(Misc.getAOrAnFor(firstWord)) + <span class="stringliteral">&quot; &quot;</span> + stack.getDisplayName().replace(<span class="stringliteral">&quot;Blueprint&quot;</span>, <span class="stringliteral">&quot;blueprint&quot;</span>));               </div>
-<div class="line"><span class="lineno">  421</span>                    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  422</span>                }</div>
-<div class="line"><span class="lineno">  423</span>            }</div>
-<div class="line"><span class="lineno">  424</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="stringliteral">&quot;findShipBlueprint&quot;</span>.equals(action)) {</div>
-<div class="line"><span class="lineno">  425</span>            FactionAPI pirates = Global.getSector().getFaction(Factions.PIRATES);</div>
-<div class="line"><span class="lineno">  426</span>            <span class="keywordflow">for</span> (CargoStackAPI stack : cargo.getStacksCopy()) {</div>
-<div class="line"><span class="lineno">  427</span>                <span class="keywordflow">if</span> (!stack.isSpecialStack()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  428</span>                </div>
-<div class="line"><span class="lineno">  429</span>                SpecialItemData data = stack.getSpecialDataIfSpecial();</div>
-<div class="line"><span class="lineno">  430</span>                <span class="keywordflow">if</span> (data.getData() == <span class="keyword">null</span>) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  431</span>                </div>
-<div class="line"><span class="lineno">  432</span>                <span class="keywordflow">if</span> (!data.getId().equals(Items.SHIP_BP)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  433</span>                </div>
-<div class="line"><span class="lineno">  434</span>                <span class="keywordflow">if</span> (pirates.knowsShip(data.getData())) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  435</span>                </div>
-<div class="line"><span class="lineno">  436</span>                ShipHullSpecAPI spec = Global.getSettings().getHullSpec(data.getData());</div>
-<div class="line"><span class="lineno">  437</span>                </div>
-<div class="line"><span class="lineno">  438</span>                <span class="keywordtype">boolean</span> match = spec.hasTag(Tags.KANTA_GIFT);</div>
-<div class="line"><span class="lineno">  439</span>                match |= !spec.isCivilianNonCarrier() &amp;&amp; spec.getHullSize() == HullSize.CAPITAL_SHIP;</div>
-<div class="line"><span class="lineno">  440</span>                </div>
-<div class="line"><span class="lineno">  441</span>                <span class="keywordflow">if</span> (match) {</div>
-<div class="line"><span class="lineno">  442</span>                    memory.set(<span class="stringliteral">&quot;$foundShipBPId&quot;</span>, data.getData());</div>
-<div class="line"><span class="lineno">  443</span>                    String firstWord = stack.getDisplayName().split(<span class="stringliteral">&quot; &quot;</span>)[0];</div>
-<div class="line"><span class="lineno">  444</span>                    memory.set(<span class="stringliteral">&quot;$foundShipBPName&quot;</span>, Misc.ucFirst(Misc.getAOrAnFor(firstWord)) + <span class="stringliteral">&quot; &quot;</span> + stack.getDisplayName().replace(<span class="stringliteral">&quot;Blueprint&quot;</span>, <span class="stringliteral">&quot;blueprint&quot;</span>));             </div>
-<div class="line"><span class="lineno">  445</span>                    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  446</span>                }</div>
-<div class="line"><span class="lineno">  447</span>            }</div>
-<div class="line"><span class="lineno">  448</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="stringliteral">&quot;learnShipBP&quot;</span>.equals(action)) {</div>
-<div class="line"><span class="lineno">  449</span>            String hullId = params.get(1).getString(memoryMap);</div>
-<div class="line"><span class="lineno">  450</span>            <span class="keywordtype">float</span> daysDelay = params.get(2).getFloat(memoryMap);</div>
-<div class="line"><span class="lineno">  451</span>            DelayedBlueprintLearnScript script = <span class="keyword">new</span> DelayedBlueprintLearnScript(Factions.PIRATES, daysDelay);</div>
-<div class="line"><span class="lineno">  452</span>            script.getShips().add(hullId);</div>
-<div class="line"><span class="lineno">  453</span>            Global.getSector().addScript(script);</div>
-<div class="line"><span class="lineno">  454</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  455</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="stringliteral">&quot;oweKantaAFavor&quot;</span>.equals(action)) {</div>
-<div class="line"><span class="lineno">  456</span>            Global.getSector().addScript(<span class="keyword">new</span> KantaFavorTrigger());</div>
-<div class="line"><span class="lineno">  457</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="stringliteral">&quot;abortFavor&quot;</span>.equals(action)) {</div>
-<div class="line"><span class="lineno">  458</span>            Global.getSector().removeScriptsOfClass(KantaFavorTrigger.class);</div>
-<div class="line"><span class="lineno">  459</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="stringliteral">&quot;alreadyDidFavor&quot;</span>.equals(action)) {</div>
-<div class="line"><span class="lineno">  460</span>            <span class="keywordflow">return</span> !Global.getSector().hasScript(KantaFavorTrigger.class) &amp;&amp; <a class="code hl_function" href="../../d3/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1KantaCMD.html#a524b5019fccc4fda657ebe6fab26a86c">playerHasProtection</a>();</div>
-<div class="line"><span class="lineno">  462</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="stringliteral">&quot;installFusionLamp&quot;</span>.equals(action)) {</div>
-<div class="line"><span class="lineno">  463</span>            SpecialItemData data = <span class="keyword">new</span> SpecialItemData(Items.ORBITAL_FUSION_LAMP, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  464</span>            InstallableItemEffect effect = ItemEffectsRepo.ITEM_EFFECTS.get(data.getId());</div>
-<div class="line"><span class="lineno">  465</span>            Industry ind = market.getIndustry(Industries.POPULATION);</div>
-<div class="line"><span class="lineno">  466</span>            <span class="keywordflow">if</span> (ind != <span class="keyword">null</span> &amp;&amp; effect != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  467</span>                List&lt;String&gt; unmet = effect.getUnmetRequirements(ind);</div>
-<div class="line"><span class="lineno">  468</span>                <span class="keywordflow">if</span> (unmet == <span class="keyword">null</span> || unmet.isEmpty()) {</div>
-<div class="line"><span class="lineno">  469</span>                    ind.setSpecialItem(data);</div>
-<div class="line"><span class="lineno">  470</span>                    market.getPrimaryEntity().addScript(<span class="keyword">new</span> FusionLampColorChanger(market));</div>
-<div class="line"><span class="lineno">  471</span>                }</div>
-<div class="line"><span class="lineno">  472</span>            }</div>
-<div class="line"><span class="lineno">  473</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  474</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="stringliteral">&quot;buildPlanetaryShield&quot;</span>.equals(action)) {</div>
-<div class="line"><span class="lineno">  475</span>            Industry ind = market.getIndustry(Industries.PLANETARYSHIELD);</div>
-<div class="line"><span class="lineno">  476</span>            <span class="keywordflow">if</span> (ind == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  477</span>                market.addIndustry(Industries.PLANETARYSHIELD);</div>
-<div class="line"><span class="lineno">  478</span>                </div>
-<div class="line"><span class="lineno">  479</span>                <span class="comment">// not very promising - shield is under the station etc</span></div>
-<div class="line"><span class="lineno">  480</span><span class="comment">//              PlanetAPI planet = market.getContainingLocation().addPlanet(market.getId() + &quot;_fakeForShield&quot;, market.getPrimaryEntity(), &quot;&quot;, Planets.TUNDRA, 0, 100f, 0f, 1f);</span></div>
-<div class="line"><span class="lineno">  481</span><span class="comment">//              market.getConnectedEntities().add(planet);</span></div>
-<div class="line"><span class="lineno">  482</span><span class="comment">//              ind = market.getIndustry(Industries.PLANETARYSHIELD);</span></div>
-<div class="line"><span class="lineno">  483</span><span class="comment">//              if (ind != null) {</span></div>
-<div class="line"><span class="lineno">  484</span><span class="comment">//                  ind.startBuilding();</span></div>
-<div class="line"><span class="lineno">  485</span><span class="comment">//              }</span></div>
-<div class="line"><span class="lineno">  486</span>            }</div>
-<div class="line"><span class="lineno">  487</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  488</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="stringliteral">&quot;gavePristineNanoforge&quot;</span>.equals(action)) {</div>
-<div class="line"><span class="lineno">  489</span>            <span class="keywordtype">float</span> daysDelay = params.get(1).getFloat(memoryMap);</div>
-<div class="line"><span class="lineno">  490</span>            <span class="comment">//daysDelay = 0;</span></div>
-<div class="line"><span class="lineno">  491</span>            MarketAPI kapteyn = Global.getSector().getEconomy().getMarket(<span class="stringliteral">&quot;station_kapteyn&quot;</span>);</div>
-<div class="line"><span class="lineno">  492</span>            <span class="keywordflow">if</span> (kapteyn != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  493</span>                Global.getSector().addScript(</div>
-<div class="line"><span class="lineno">  494</span>                        <span class="keyword">new</span> DelayedInstallItemScript(daysDelay, </div>
-<div class="line"><span class="lineno">  495</span>                                kapteyn, Industries.ORBITALWORKS, Items.PRISTINE_NANOFORGE));</div>
-<div class="line"><span class="lineno">  496</span>                Global.getSector().getListenerManager().addListener(<span class="keyword">new</span> TakingBackTheNanoforgeChecker(kapteyn));</div>
-<div class="line"><span class="lineno">  497</span>            }</div>
-<div class="line"><span class="lineno">  498</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  499</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="stringliteral">&quot;kapteynHasForge&quot;</span>.equals(action)) {</div>
-<div class="line"><span class="lineno">  500</span>            MarketAPI kapteyn = Global.getSector().getEconomy().getMarket(<span class="stringliteral">&quot;station_kapteyn&quot;</span>);</div>
-<div class="line"><span class="lineno">  501</span>            <span class="keywordflow">if</span> (kapteyn == <span class="keyword">null</span> || kapteyn.hasCondition(Conditions.DECIVILIZED)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  502</span>            </div>
-<div class="line"><span class="lineno">  503</span>            Industry ind = market.getIndustry(Industries.ORBITALWORKS);</div>
-<div class="line"><span class="lineno">  504</span>            <span class="keywordflow">if</span> (ind == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  505</span>            </div>
-<div class="line"><span class="lineno">  506</span>            <span class="keywordflow">return</span> ind.getSpecialItem() != <span class="keyword">null</span> &amp;&amp; Items.PRISTINE_NANOFORGE.equals(ind.getSpecialItem().getId()); </div>
-<div class="line"><span class="lineno">  507</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="stringliteral">&quot;gainProtection&quot;</span>.equals(action)) {</div>
-<div class="line"><span class="lineno">  508</span>            Global.getSector().getCharacterData().getMemoryWithoutUpdate().set(<a class="code hl_variable" href="../../d3/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1KantaCMD.html#a6dd8a6467a62223a8c318a6409756101">KANTA_PROTECTION</a>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  509</span>            Global.getSector().getCharacterData().getMemoryWithoutUpdate().set(<a class="code hl_variable" href="../../d3/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1KantaCMD.html#a4dc415c2dc14c9fcc05e05eba6eec84d">EVER_HAD_KANTA_PROTECTION</a>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  510</span>            text.setFontSmallInsignia();</div>
-<div class="line"><span class="lineno">  511</span>            text.addPara(<span class="stringliteral">&quot;Kanta&#39;s Protection gained&quot;</span>, Misc.getPositiveHighlightColor());</div>
-<div class="line"><span class="lineno">  512</span>            text.setFontInsignia();</div>
-<div class="line"><span class="lineno">  513</span>            </div>
-<div class="line"><span class="lineno">  514</span>            Global.getSoundPlayer().playUISound(<span class="stringliteral">&quot;ui_rep_raise&quot;</span>, 1f, 1f);</div>
-<div class="line"><span class="lineno">  515</span>            </div>
-<div class="line"><span class="lineno">  516</span>            HostileActivityEventIntel intel = HostileActivityEventIntel.get();</div>
-<div class="line"><span class="lineno">  517</span>            <span class="keywordflow">if</span> (intel != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  518</span>                intel.addFactor(<span class="keyword">new</span> KantasProtectionOneTimeFactor(-Global.getSettings().getInt(<span class="stringliteral">&quot;HA_kantaProtection&quot;</span>)), dialog);</div>
-<div class="line"><span class="lineno">  519</span>            }</div>
-<div class="line"><span class="lineno">  520</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="stringliteral">&quot;loseProtection&quot;</span>.equals(action)) {</div>
-<div class="line"><span class="lineno">  521</span>            <a class="code hl_function" href="../../d3/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1KantaCMD.html#a730394665fdf50725f1466318cd5cc9e">loseProtection</a>(dialog);</div>
-<div class="line"><span class="lineno">  522</span>        }</div>
-<div class="line"><span class="lineno">  523</span>        </div>
-<div class="line"><span class="lineno">  524</span>        </div>
-<div class="line"><span class="lineno">  525</span>        </div>
-<div class="line"><span class="lineno">  526</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  527</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1KantaCMD_html_a4dc415c2dc14c9fcc05e05eba6eec84d"><div class="ttname"><a href="../../d3/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1KantaCMD.html#a4dc415c2dc14c9fcc05e05eba6eec84d">com.fs.starfarer.api.impl.campaign.rulecmd.KantaCMD.EVER_HAD_KANTA_PROTECTION</a></div><div class="ttdeci">static final String EVER_HAD_KANTA_PROTECTION</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d0e/KantaCMD_8java_source.html#l00072">KantaCMD.java:72</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1KantaCMD_html_a524b5019fccc4fda657ebe6fab26a86c"><div class="ttname"><a href="../../d3/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1KantaCMD.html#a524b5019fccc4fda657ebe6fab26a86c">com.fs.starfarer.api.impl.campaign.rulecmd.KantaCMD.playerHasProtection</a></div><div class="ttdeci">static boolean playerHasProtection()</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d0e/KantaCMD_8java_source.html#l00074">KantaCMD.java:74</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1KantaCMD_html_a6dd8a6467a62223a8c318a6409756101"><div class="ttname"><a href="../../d3/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1KantaCMD.html#a6dd8a6467a62223a8c318a6409756101">com.fs.starfarer.api.impl.campaign.rulecmd.KantaCMD.KANTA_PROTECTION</a></div><div class="ttdeci">static final String KANTA_PROTECTION</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d0e/KantaCMD_8java_source.html#l00071">KantaCMD.java:71</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1KantaCMD_html_a730394665fdf50725f1466318cd5cc9e"><div class="ttname"><a href="../../d3/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1KantaCMD.html#a730394665fdf50725f1466318cd5cc9e">com.fs.starfarer.api.impl.campaign.rulecmd.KantaCMD.loseProtection</a></div><div class="ttdeci">static void loseProtection(InteractionDialogAPI dialog)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d0e/KantaCMD_8java_source.html#l00529">KantaCMD.java:529</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a730394665fdf50725f1466318cd5cc9e" name="a730394665fdf50725f1466318cd5cc9e"></a>
@@ -449,30 +233,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d0e/KantaCMD_8java_source.html#l00529">529</a> of file <a class="el" href="../../d5/d0e/KantaCMD_8java_source.html">KantaCMD.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  529</span>                                                                   {</div>
-<div class="line"><span class="lineno">  530</span>        <span class="keywordflow">if</span> (!<a class="code hl_function" href="../../d3/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1KantaCMD.html#a524b5019fccc4fda657ebe6fab26a86c">playerHasProtection</a>()) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  531</span>        </div>
-<div class="line"><span class="lineno">  532</span>        PersonAPI kanta = People.getPerson(People.KANTA);</div>
-<div class="line"><span class="lineno">  533</span>        <span class="keywordflow">if</span> (kanta != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  534</span>            Misc.incrUntrustwortyCount();</div>
-<div class="line"><span class="lineno">  535</span>            </div>
-<div class="line"><span class="lineno">  536</span>            TextPanelAPI text = dialog == <span class="keyword">null</span> ? null : dialog.getTextPanel();</div>
-<div class="line"><span class="lineno">  537</span>            CustomRepImpact impact = <span class="keyword">new</span> CustomRepImpact();</div>
-<div class="line"><span class="lineno">  538</span>            impact.delta = -0.5f;</div>
-<div class="line"><span class="lineno">  539</span>            Global.getSector().adjustPlayerReputation(</div>
-<div class="line"><span class="lineno">  540</span>                    <span class="keyword">new</span> RepActionEnvelope(RepActions.CUSTOM, </div>
-<div class="line"><span class="lineno">  541</span>                            impact, <span class="keyword">null</span>, text, <span class="keyword">true</span>, <span class="keyword">true</span>),</div>
-<div class="line"><span class="lineno">  542</span>                            kanta);</div>
-<div class="line"><span class="lineno">  543</span>            Global.getSector().getCharacterData().getMemoryWithoutUpdate().unset(<a class="code hl_variable" href="../../d3/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1KantaCMD.html#a6dd8a6467a62223a8c318a6409756101">KANTA_PROTECTION</a>);</div>
-<div class="line"><span class="lineno">  544</span>            <span class="keywordflow">if</span> (text != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  545</span>                text.setFontSmallInsignia();</div>
-<div class="line"><span class="lineno">  546</span>                text.addPara(<span class="stringliteral">&quot;Kanta&#39;s Protection lost&quot;</span>, Misc.getNegativeHighlightColor());</div>
-<div class="line"><span class="lineno">  547</span>                text.setFontInsignia();</div>
-<div class="line"><span class="lineno">  548</span>            }</div>
-<div class="line"><span class="lineno">  549</span>            Global.getSoundPlayer().playUISound(<span class="stringliteral">&quot;ui_rep_drop&quot;</span>, 1f, 1f);</div>
-<div class="line"><span class="lineno">  550</span>        }</div>
-<div class="line"><span class="lineno">  551</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="afc6ac7bb2ceb234f36e6a3a74e699878" name="afc6ac7bb2ceb234f36e6a3a74e699878"></a>
@@ -499,10 +260,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d0e/KantaCMD_8java_source.html#l00078">78</a> of file <a class="el" href="../../d5/d0e/KantaCMD_8java_source.html">KantaCMD.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   78</span>                                                    {</div>
-<div class="line"><span class="lineno">   79</span>        <span class="keywordflow">return</span> Global.getSector().getCharacterData().getMemoryWithoutUpdate().getBoolean(<a class="code hl_variable" href="../../d3/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1KantaCMD.html#a4dc415c2dc14c9fcc05e05eba6eec84d">EVER_HAD_KANTA_PROTECTION</a>);</div>
-<div class="line"><span class="lineno">   80</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a524b5019fccc4fda657ebe6fab26a86c" name="a524b5019fccc4fda657ebe6fab26a86c"></a>
@@ -529,11 +287,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d0e/KantaCMD_8java_source.html#l00074">74</a> of file <a class="el" href="../../d5/d0e/KantaCMD_8java_source.html">KantaCMD.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   74</span>                                                {</div>
-<div class="line"><span class="lineno">   75</span>        <span class="comment">//if (true) return true;</span></div>
-<div class="line"><span class="lineno">   76</span>        <span class="keywordflow">return</span> Global.getSector().getCharacterData().getMemoryWithoutUpdate().getBoolean(<a class="code hl_variable" href="../../d3/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1KantaCMD.html#a6dd8a6467a62223a8c318a6409756101">KANTA_PROTECTION</a>);</div>
-<div class="line"><span class="lineno">   77</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -176,28 +177,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="../../d0/d5c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1CommandPlugin.html#a72a44c5127e60136b87d3b37613fd0e0">com.fs.starfarer.api.campaign.rules.CommandPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d50/SetPersonPortrait_8java_source.html#l00017">17</a> of file <a class="el" href="../../d5/d50/SetPersonPortrait_8java_source.html">SetPersonPortrait.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   17</span>                                                                                                                             {</div>
-<div class="line"><span class="lineno">   18</span> </div>
-<div class="line"><span class="lineno">   19</span>        </div>
-<div class="line"><span class="lineno">   20</span>        <span class="comment">// if you wanted to just pass in the person ID. The person has to have been</span></div>
-<div class="line"><span class="lineno">   21</span>        <span class="comment">// added to ImportantPeople at some point (as the people defined in People are)</span></div>
-<div class="line"><span class="lineno">   22</span>        String <span class="keywordtype">id</span> = params.get(0).getString(memoryMap);</div>
-<div class="line"><span class="lineno">   23</span>        PersonAPI person = Global.getSector().getImportantPeople().getPerson(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">   24</span> </div>
-<div class="line"><span class="lineno">   25</span>        <span class="comment">//VarAndMemory var = params.get(0).getVarNameAndMemory(memoryMap);</span></div>
-<div class="line"><span class="lineno">   26</span>        <span class="comment">//PersonAPI person = (PersonAPI) var.memory.get(var.name);</span></div>
-<div class="line"><span class="lineno">   27</span>        </div>
-<div class="line"><span class="lineno">   28</span>        String portrait_key = params.get(1).getString(memoryMap);</div>
-<div class="line"><span class="lineno">   29</span>        </div>
-<div class="line"><span class="lineno">   30</span>        <span class="keywordflow">if</span> (Global.getSettings().getSpriteName(<span class="stringliteral">&quot;characters&quot;</span>, portrait_key) == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   31</span>        <span class="keywordflow">if</span> (person.getMarket() == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   32</span>        <span class="keywordflow">if</span> (person.getMarket().getCommDirectory() == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   33</span>        <span class="keywordflow">if</span> (person.getMarket().getCommDirectory().getEntryForPerson(person.getId()) == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   34</span> </div>
-<div class="line"><span class="lineno">   35</span>        person.setPortraitSprite(Global.getSettings().getSpriteName(<span class="stringliteral">&quot;characters&quot;</span>, portrait_key));</div>
-<div class="line"><span class="lineno">   36</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   37</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

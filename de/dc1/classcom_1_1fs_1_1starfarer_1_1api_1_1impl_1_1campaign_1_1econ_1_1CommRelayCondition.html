@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -276,25 +277,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../db/d90/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1BaseMarketConditionPlugin.html#abaf727fa18bd05bdc39e674218ba3318">com.fs.starfarer.api.impl.campaign.econ.BaseMarketConditionPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/dc3/CommRelayCondition_8java_source.html#l00040">40</a> of file <a class="el" href="../../dd/dc3/CommRelayCondition_8java_source.html">CommRelayCondition.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   40</span>                                      {</div>
-<div class="line"><span class="lineno">   41</span>        Iterator&lt;SectorEntityToken&gt; iter = <a class="code hl_variable" href="../../de/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1CommRelayCondition.html#a830f0c36037523d3c2ad318a483a6070">relays</a>.iterator();</div>
-<div class="line"><span class="lineno">   42</span>        <span class="keywordflow">while</span> (iter.hasNext()) {</div>
-<div class="line"><span class="lineno">   43</span>            SectorEntityToken relay = iter.next();</div>
-<div class="line"><span class="lineno">   44</span>            <span class="keywordflow">if</span> (!relay.isAlive() || relay.getContainingLocation() != <a class="code hl_variable" href="../../db/d90/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1BaseMarketConditionPlugin.html#a1f1756ede82e9c512073a404efaeca55">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a12b6abba98638458d9e15e716da4c615">getContainingLocation</a>()) {</div>
-<div class="line"><span class="lineno">   45</span>                iter.remove();</div>
-<div class="line"><span class="lineno">   46</span>            }</div>
-<div class="line"><span class="lineno">   47</span>        }</div>
-<div class="line"><span class="lineno">   48</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../de/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1CommRelayCondition.html#a830f0c36037523d3c2ad318a483a6070">relays</a>.isEmpty()) {</div>
-<div class="line"><span class="lineno">   49</span>            <a class="code hl_variable" href="../../db/d90/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1BaseMarketConditionPlugin.html#a1f1756ede82e9c512073a404efaeca55">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a7a0423d961f92cd5d78decd8c09a5287">removeSpecificCondition</a>(<a class="code hl_variable" href="../../db/d90/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1BaseMarketConditionPlugin.html#a0903daf7242c4a477f001b8934cd3572">condition</a>.<a class="code hl_function" href="../../d4/db4/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketConditionAPI.html#a6772d300db1f1d08c2a1ec9394bc6b89">getIdForPluginModifications</a>());</div>
-<div class="line"><span class="lineno">   50</span>        }</div>
-<div class="line"><span class="lineno">   51</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1BaseMarketConditionPlugin_html_a0903daf7242c4a477f001b8934cd3572"><div class="ttname"><a href="../../db/d90/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1BaseMarketConditionPlugin.html#a0903daf7242c4a477f001b8934cd3572">com.fs.starfarer.api.impl.campaign.econ.BaseMarketConditionPlugin.condition</a></div><div class="ttdeci">MarketConditionAPI condition</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d56/BaseMarketConditionPlugin_8java_source.html#l00023">BaseMarketConditionPlugin.java:23</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1BaseMarketConditionPlugin_html_a1f1756ede82e9c512073a404efaeca55"><div class="ttname"><a href="../../db/d90/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1BaseMarketConditionPlugin.html#a1f1756ede82e9c512073a404efaeca55">com.fs.starfarer.api.impl.campaign.econ.BaseMarketConditionPlugin.market</a></div><div class="ttdeci">MarketAPI market</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d56/BaseMarketConditionPlugin_8java_source.html#l00022">BaseMarketConditionPlugin.java:22</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1CommRelayCondition_html_a830f0c36037523d3c2ad318a483a6070"><div class="ttname"><a href="../../de/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1CommRelayCondition.html#a830f0c36037523d3c2ad318a483a6070">com.fs.starfarer.api.impl.campaign.econ.CommRelayCondition.relays</a></div><div class="ttdeci">LinkedHashSet&lt; SectorEntityToken &gt; relays</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dc3/CommRelayCondition_8java_source.html#l00033">CommRelayCondition.java:33</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a12b6abba98638458d9e15e716da4c615"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a12b6abba98638458d9e15e716da4c615">com.fs.starfarer.api.campaign.econ.MarketAPI.getContainingLocation</a></div><div class="ttdeci">LocationAPI getContainingLocation()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a7a0423d961f92cd5d78decd8c09a5287"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a7a0423d961f92cd5d78decd8c09a5287">com.fs.starfarer.api.campaign.econ.MarketAPI.removeSpecificCondition</a></div><div class="ttdeci">void removeSpecificCondition(String token)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketConditionAPI_html_a6772d300db1f1d08c2a1ec9394bc6b89"><div class="ttname"><a href="../../d4/db4/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketConditionAPI.html#a6772d300db1f1d08c2a1ec9394bc6b89">com.fs.starfarer.api.campaign.econ.MarketConditionAPI.getIdForPluginModifications</a></div><div class="ttdeci">String getIdForPluginModifications()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a0aa9b7976082ff9e4285655887e8d347" name="a0aa9b7976082ff9e4285655887e8d347"></a>
@@ -316,29 +299,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../db/d90/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1BaseMarketConditionPlugin.html#a06536345c4ccb9cf0adf76ca9724dd65">com.fs.starfarer.api.impl.campaign.econ.BaseMarketConditionPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/dc3/CommRelayCondition_8java_source.html#l00075">75</a> of file <a class="el" href="../../dd/dc3/CommRelayCondition_8java_source.html">CommRelayCondition.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   75</span>                                 {</div>
-<div class="line"><span class="lineno">   76</span>        SectorEntityToken relay = <a class="code hl_function" href="../../de/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1CommRelayCondition.html#a23ef4b6a6239a7afbe9a4c9fc99104eb">getBestRelay</a>();</div>
-<div class="line"><span class="lineno">   77</span>        <span class="keywordflow">if</span> (relay == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   78</span>            <a class="code hl_function" href="../../de/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1CommRelayCondition.html#af4b0d452b9fd6789029d95ec22f0f9fe">unapply</a>(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">   79</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   80</span>        }</div>
-<div class="line"><span class="lineno">   81</span>        </div>
-<div class="line"><span class="lineno">   82</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../de/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1CommRelayCondition.html#ad0d0df69b7972e021f39769b01ce8fb8">isMakeshift</a>(relay)) {</div>
-<div class="line"><span class="lineno">   83</span>            <a class="code hl_variable" href="../../db/d90/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1BaseMarketConditionPlugin.html#a1f1756ede82e9c512073a404efaeca55">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a85471d119446dec6c1d5e53f3fe13cf1">getStability</a>().<a class="code hl_function" href="../../d4/d1a/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableStat.html#a3af420f08b9b78a54ab0e4c8fdc9184b">modifyFlat</a>(<a class="code hl_variable" href="../../de/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1CommRelayCondition.html#a7d2266e1139bc29a808ffa7e4990051f">COMM_RELAY_MOD_ID</a>, <a class="code hl_variable" href="../../de/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1CommRelayCondition.html#a0e7566ca40f6c78be222f4050dfe3285">MAKESHIFT_COMM_RELAY_BONUS</a>, <span class="stringliteral">&quot;Makeshift comm relay&quot;</span>);</div>
-<div class="line"><span class="lineno">   84</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   85</span>            <a class="code hl_variable" href="../../db/d90/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1BaseMarketConditionPlugin.html#a1f1756ede82e9c512073a404efaeca55">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a85471d119446dec6c1d5e53f3fe13cf1">getStability</a>().<a class="code hl_function" href="../../d4/d1a/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableStat.html#a3af420f08b9b78a54ab0e4c8fdc9184b">modifyFlat</a>(<a class="code hl_variable" href="../../de/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1CommRelayCondition.html#a7d2266e1139bc29a808ffa7e4990051f">COMM_RELAY_MOD_ID</a>, <a class="code hl_variable" href="../../de/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1CommRelayCondition.html#af5146aafe983a12ed1f798ad4fcbfaf2">COMM_RELAY_BONUS</a>, <span class="stringliteral">&quot;Comm relay&quot;</span>);</div>
-<div class="line"><span class="lineno">   86</span>        }</div>
-<div class="line"><span class="lineno">   87</span>            </div>
-<div class="line"><span class="lineno">   88</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableStat_html_a3af420f08b9b78a54ab0e4c8fdc9184b"><div class="ttname"><a href="../../d4/d1a/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableStat.html#a3af420f08b9b78a54ab0e4c8fdc9184b">com.fs.starfarer.api.combat.MutableStat.modifyFlat</a></div><div class="ttdeci">void modifyFlat(String source, float value)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d27/MutableStat_8java_source.html#l00176">MutableStat.java:176</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1CommRelayCondition_html_a0e7566ca40f6c78be222f4050dfe3285"><div class="ttname"><a href="../../de/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1CommRelayCondition.html#a0e7566ca40f6c78be222f4050dfe3285">com.fs.starfarer.api.impl.campaign.econ.CommRelayCondition.MAKESHIFT_COMM_RELAY_BONUS</a></div><div class="ttdeci">static float MAKESHIFT_COMM_RELAY_BONUS</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dc3/CommRelayCondition_8java_source.html#l00021">CommRelayCondition.java:21</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1CommRelayCondition_html_a23ef4b6a6239a7afbe9a4c9fc99104eb"><div class="ttname"><a href="../../de/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1CommRelayCondition.html#a23ef4b6a6239a7afbe9a4c9fc99104eb">com.fs.starfarer.api.impl.campaign.econ.CommRelayCondition.getBestRelay</a></div><div class="ttdeci">SectorEntityToken getBestRelay()</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dc3/CommRelayCondition_8java_source.html#l00057">CommRelayCondition.java:57</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1CommRelayCondition_html_a7d2266e1139bc29a808ffa7e4990051f"><div class="ttname"><a href="../../de/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1CommRelayCondition.html#a7d2266e1139bc29a808ffa7e4990051f">com.fs.starfarer.api.impl.campaign.econ.CommRelayCondition.COMM_RELAY_MOD_ID</a></div><div class="ttdeci">static String COMM_RELAY_MOD_ID</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dc3/CommRelayCondition_8java_source.html#l00017">CommRelayCondition.java:17</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1CommRelayCondition_html_ad0d0df69b7972e021f39769b01ce8fb8"><div class="ttname"><a href="../../de/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1CommRelayCondition.html#ad0d0df69b7972e021f39769b01ce8fb8">com.fs.starfarer.api.impl.campaign.econ.CommRelayCondition.isMakeshift</a></div><div class="ttdeci">boolean isMakeshift(SectorEntityToken relay)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dc3/CommRelayCondition_8java_source.html#l00053">CommRelayCondition.java:53</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1CommRelayCondition_html_af4b0d452b9fd6789029d95ec22f0f9fe"><div class="ttname"><a href="../../de/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1CommRelayCondition.html#af4b0d452b9fd6789029d95ec22f0f9fe">com.fs.starfarer.api.impl.campaign.econ.CommRelayCondition.unapply</a></div><div class="ttdeci">void unapply(String id)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dc3/CommRelayCondition_8java_source.html#l00090">CommRelayCondition.java:90</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1CommRelayCondition_html_af5146aafe983a12ed1f798ad4fcbfaf2"><div class="ttname"><a href="../../de/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1CommRelayCondition.html#af5146aafe983a12ed1f798ad4fcbfaf2">com.fs.starfarer.api.impl.campaign.econ.CommRelayCondition.COMM_RELAY_BONUS</a></div><div class="ttdeci">static float COMM_RELAY_BONUS</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dc3/CommRelayCondition_8java_source.html#l00020">CommRelayCondition.java:20</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a85471d119446dec6c1d5e53f3fe13cf1"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a85471d119446dec6c1d5e53f3fe13cf1">com.fs.starfarer.api.campaign.econ.MarketAPI.getStability</a></div><div class="ttdeci">MutableStatWithTempMods getStability()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a83ed1b54dd21a3aa2528d2ca4c22292d" name="a83ed1b54dd21a3aa2528d2ca4c22292d"></a>
@@ -366,16 +327,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/dc3/CommRelayCondition_8java_source.html#l00023">23</a> of file <a class="el" href="../../dd/dc3/CommRelayCondition_8java_source.html">CommRelayCondition.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   23</span>                                                           {</div>
-<div class="line"><span class="lineno">   24</span>        MarketConditionAPI mc = <a class="code hl_variable" href="../../db/d90/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1BaseMarketConditionPlugin.html#a1f1756ede82e9c512073a404efaeca55">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a7e20bc0a0eaa9be31aca0a2ce9089df0">getCondition</a>(Conditions.COMM_RELAY);</div>
-<div class="line"><span class="lineno">   25</span>        <span class="keywordflow">if</span> (mc != <span class="keyword">null</span> &amp;&amp; mc.getPlugin() instanceof CommRelayCondition) {</div>
-<div class="line"><span class="lineno">   26</span>            <span class="keywordflow">return</span> (CommRelayCondition) mc.<a class="code hl_function" href="../../d4/db4/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketConditionAPI.html#a72ec03b2e7650917d14c174f24d122c9">getPlugin</a>();</div>
-<div class="line"><span class="lineno">   27</span>        }</div>
-<div class="line"><span class="lineno">   28</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   29</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a7e20bc0a0eaa9be31aca0a2ce9089df0"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a7e20bc0a0eaa9be31aca0a2ce9089df0">com.fs.starfarer.api.campaign.econ.MarketAPI.getCondition</a></div><div class="ttdeci">MarketConditionAPI getCondition(String id)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketConditionAPI_html_a72ec03b2e7650917d14c174f24d122c9"><div class="ttname"><a href="../../d4/db4/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketConditionAPI.html#a72ec03b2e7650917d14c174f24d122c9">com.fs.starfarer.api.campaign.econ.MarketConditionAPI.getPlugin</a></div><div class="ttdeci">MarketConditionPlugin getPlugin()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a23ef4b6a6239a7afbe9a4c9fc99104eb" name="a23ef4b6a6239a7afbe9a4c9fc99104eb"></a>
@@ -402,24 +354,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/dc3/CommRelayCondition_8java_source.html#l00057">57</a> of file <a class="el" href="../../dd/dc3/CommRelayCondition_8java_source.html">CommRelayCondition.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   57</span>                                               {</div>
-<div class="line"><span class="lineno">   58</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../db/d90/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1BaseMarketConditionPlugin.html#a1f1756ede82e9c512073a404efaeca55">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a12b6abba98638458d9e15e716da4c615">getContainingLocation</a>() == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   59</span>        </div>
-<div class="line"><span class="lineno">   60</span>        SectorEntityToken best = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   61</span>        <span class="keywordflow">for</span> (SectorEntityToken relay : <a class="code hl_variable" href="../../de/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1CommRelayCondition.html#a830f0c36037523d3c2ad318a483a6070">relays</a>) {</div>
-<div class="line"><span class="lineno">   62</span>            <span class="keywordflow">if</span> (relay.getMemoryWithoutUpdate().getBoolean(MemFlags.OBJECTIVE_NON_FUNCTIONAL)) {</div>
-<div class="line"><span class="lineno">   63</span>                <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   64</span>            }</div>
-<div class="line"><span class="lineno">   65</span>            <span class="keywordflow">if</span> (relay.getFaction() == <a class="code hl_variable" href="../../db/d90/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1BaseMarketConditionPlugin.html#a1f1756ede82e9c512073a404efaeca55">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a97645caff4adca5efcf3a462fb13ca0f">getFaction</a>()) {</div>
-<div class="line"><span class="lineno">   66</span>                <span class="keywordflow">if</span> (best == <span class="keyword">null</span> || (<a class="code hl_function" href="../../de/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1CommRelayCondition.html#ad0d0df69b7972e021f39769b01ce8fb8">isMakeshift</a>(best) &amp;&amp; !<a class="code hl_function" href="../../de/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1CommRelayCondition.html#ad0d0df69b7972e021f39769b01ce8fb8">isMakeshift</a>(relay))) {</div>
-<div class="line"><span class="lineno">   67</span>                    best = relay;</div>
-<div class="line"><span class="lineno">   68</span>                }</div>
-<div class="line"><span class="lineno">   69</span>            }</div>
-<div class="line"><span class="lineno">   70</span>        }</div>
-<div class="line"><span class="lineno">   71</span>        <span class="keywordflow">return</span> best;</div>
-<div class="line"><span class="lineno">   72</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a97645caff4adca5efcf3a462fb13ca0f"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a97645caff4adca5efcf3a462fb13ca0f">com.fs.starfarer.api.campaign.econ.MarketAPI.getFaction</a></div><div class="ttdeci">FactionAPI getFaction()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ad25c077e4b18d02ae038c7388f405ff6" name="ad25c077e4b18d02ae038c7388f405ff6"></a>
@@ -438,10 +373,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/dc3/CommRelayCondition_8java_source.html#l00035">35</a> of file <a class="el" href="../../dd/dc3/CommRelayCondition_8java_source.html">CommRelayCondition.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   35</span>                                                        {</div>
-<div class="line"><span class="lineno">   36</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../de/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1CommRelayCondition.html#a830f0c36037523d3c2ad318a483a6070">relays</a>;</div>
-<div class="line"><span class="lineno">   37</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ad0d0df69b7972e021f39769b01ce8fb8" name="ad0d0df69b7972e021f39769b01ce8fb8"></a>
@@ -469,10 +401,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/dc3/CommRelayCondition_8java_source.html#l00053">53</a> of file <a class="el" href="../../dd/dc3/CommRelayCondition_8java_source.html">CommRelayCondition.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   53</span>                                                           {</div>
-<div class="line"><span class="lineno">   54</span>        <span class="keywordflow">return</span> relay.hasTag(Tags.MAKESHIFT);</div>
-<div class="line"><span class="lineno">   55</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a076a66a4771a2589ccb191a3fca329e2" name="a076a66a4771a2589ccb191a3fca329e2"></a>
@@ -493,10 +422,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../db/d90/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1BaseMarketConditionPlugin.html#ac49de45538a2e7fdabfbec45efd23025">com.fs.starfarer.api.impl.campaign.econ.BaseMarketConditionPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/dc3/CommRelayCondition_8java_source.html#l00095">95</a> of file <a class="el" href="../../dd/dc3/CommRelayCondition_8java_source.html">CommRelayCondition.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   95</span>                              {</div>
-<div class="line"><span class="lineno">   96</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   97</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af4b0d452b9fd6789029d95ec22f0f9fe" name="af4b0d452b9fd6789029d95ec22f0f9fe"></a>
@@ -518,11 +444,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../db/d90/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1BaseMarketConditionPlugin.html#a9711ad59f3f75e47ae15f5b3ff2be101">com.fs.starfarer.api.impl.campaign.econ.BaseMarketConditionPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/dc3/CommRelayCondition_8java_source.html#l00090">90</a> of file <a class="el" href="../../dd/dc3/CommRelayCondition_8java_source.html">CommRelayCondition.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   90</span>                                   {</div>
-<div class="line"><span class="lineno">   91</span>        <a class="code hl_variable" href="../../db/d90/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1BaseMarketConditionPlugin.html#a1f1756ede82e9c512073a404efaeca55">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a85471d119446dec6c1d5e53f3fe13cf1">getStability</a>().<a class="code hl_function" href="../../d4/d1a/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableStat.html#a7112151a5f8367e42ebade18b6ae9bd9">unmodifyFlat</a>(<a class="code hl_variable" href="../../de/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1CommRelayCondition.html#a7d2266e1139bc29a808ffa7e4990051f">COMM_RELAY_MOD_ID</a>);</div>
-<div class="line"><span class="lineno">   92</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableStat_html_a7112151a5f8367e42ebade18b6ae9bd9"><div class="ttname"><a href="../../d4/d1a/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableStat.html#a7112151a5f8367e42ebade18b6ae9bd9">com.fs.starfarer.api.combat.MutableStat.unmodifyFlat</a></div><div class="ttdeci">void unmodifyFlat(String source)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d27/MutableStat_8java_source.html#l00269">MutableStat.java:269</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

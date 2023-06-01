@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -398,13 +399,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/d84/CreditsGroundRaidObjectivePluginImpl_8java_source.html#l00024">24</a> of file <a class="el" href="../../de/d84/CreditsGroundRaidObjectivePluginImpl_8java_source.html">CreditsGroundRaidObjectivePluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   24</span>                                                                  {</div>
-<div class="line"><span class="lineno">   25</span>        super(<a class="code hl_variable" href="../../db/d0c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1BaseGroundRaidObjectivePluginImpl.html#af1bd841a761b0dceb518abd4365ef996">market</a>, Commodities.CREDITS);</div>
-<div class="line"><span class="lineno">   26</span>        <a class="code hl_function" href="../../db/d0c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1BaseGroundRaidObjectivePluginImpl.html#a76513d032da330745cae2fd36a5ab8a9">setSource</a>(<span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   27</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1BaseGroundRaidObjectivePluginImpl_html_a76513d032da330745cae2fd36a5ab8a9"><div class="ttname"><a href="../../db/d0c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1BaseGroundRaidObjectivePluginImpl.html#a76513d032da330745cae2fd36a5ab8a9">com.fs.starfarer.api.impl.campaign.graid.BaseGroundRaidObjectivePluginImpl.setSource</a></div><div class="ttdeci">void setSource(Industry source)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dca/BaseGroundRaidObjectivePluginImpl_8java_source.html#l00172">BaseGroundRaidObjectivePluginImpl.java:172</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1BaseGroundRaidObjectivePluginImpl_html_af1bd841a761b0dceb518abd4365ef996"><div class="ttname"><a href="../../db/d0c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1BaseGroundRaidObjectivePluginImpl.html#af1bd841a761b0dceb518abd4365ef996">com.fs.starfarer.api.impl.campaign.graid.BaseGroundRaidObjectivePluginImpl.market</a></div><div class="ttdeci">MarketAPI market</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dca/BaseGroundRaidObjectivePluginImpl_8java_source.html#l00022">BaseGroundRaidObjectivePluginImpl.java:22</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -427,29 +422,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../db/d0c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1BaseGroundRaidObjectivePluginImpl.html#adb37fcb875ef9c9a13f3dc8a0b986a5e">com.fs.starfarer.api.impl.campaign.graid.BaseGroundRaidObjectivePluginImpl</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../de/d84/CreditsGroundRaidObjectivePluginImpl_8java_source.html#l00029">29</a> of file <a class="el" href="../../de/d84/CreditsGroundRaidObjectivePluginImpl_8java_source.html">CreditsGroundRaidObjectivePluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   29</span>                                                 {</div>
-<div class="line"><span class="lineno">   30</span>        CommoditySpecAPI spec = <a class="code hl_function" href="../../de/d20/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGroundRaidObjectivePluginImpl.html#aa9790c01956ae1948bd98eba2a4e7826">getCommoditySpec</a>();</div>
-<div class="line"><span class="lineno">   31</span>        <span class="keywordflow">if</span> (spec == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   32</span>        </div>
-<div class="line"><span class="lineno">   33</span>        <span class="keywordtype">int</span> base = (int) Math.round(<a class="code hl_function" href="../../de/d20/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGroundRaidObjectivePluginImpl.html#a0fedfd5041e867e29ffcd7edef559106">getBaseSizeValue</a>());</div>
-<div class="line"><span class="lineno">   34</span>        <span class="keywordtype">int</span> minus = <a class="code hl_function" href="../../de/d20/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGroundRaidObjectivePluginImpl.html#ab289db8b5e1699ae7ce3743c1e5a8010">getNumMinusTokens</a>();</div>
-<div class="line"><span class="lineno">   35</span>        <span class="keywordtype">int</span> plus = <a class="code hl_function" href="../../de/d20/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGroundRaidObjectivePluginImpl.html#abb01e4946ecd22fabd4279c90e30fdb5">getNumPlusTokens</a>();</div>
-<div class="line"><span class="lineno">   36</span>        </div>
-<div class="line"><span class="lineno">   37</span>        <span class="keywordflow">if</span> (base &gt; 0) {</div>
-<div class="line"><span class="lineno">   38</span>            iconGroup.addIconGroup(<span class="keywordtype">id</span>, IconRenderMode.NORMAL, base, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   39</span>        }</div>
-<div class="line"><span class="lineno">   40</span>        <span class="keywordflow">if</span> (minus &gt; 0) {</div>
-<div class="line"><span class="lineno">   41</span>            iconGroup.addIconGroup(<span class="keywordtype">id</span>, IconRenderMode.RED, minus, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   42</span>        }</div>
-<div class="line"><span class="lineno">   43</span>        <span class="keywordflow">if</span> (plus &gt; 0) {</div>
-<div class="line"><span class="lineno">   44</span>            iconGroup.addIconGroup(<span class="keywordtype">id</span>, IconRenderMode.GREEN, plus, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   45</span>        }</div>
-<div class="line"><span class="lineno">   46</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGroundRaidObjectivePluginImpl_html_a0fedfd5041e867e29ffcd7edef559106"><div class="ttname"><a href="../../de/d20/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGroundRaidObjectivePluginImpl.html#a0fedfd5041e867e29ffcd7edef559106">com.fs.starfarer.api.impl.campaign.graid.CreditsGroundRaidObjectivePluginImpl.getBaseSizeValue</a></div><div class="ttdeci">float getBaseSizeValue()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d84/CreditsGroundRaidObjectivePluginImpl_8java_source.html#l00139">CreditsGroundRaidObjectivePluginImpl.java:139</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGroundRaidObjectivePluginImpl_html_aa9790c01956ae1948bd98eba2a4e7826"><div class="ttname"><a href="../../de/d20/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGroundRaidObjectivePluginImpl.html#aa9790c01956ae1948bd98eba2a4e7826">com.fs.starfarer.api.impl.campaign.graid.CreditsGroundRaidObjectivePluginImpl.getCommoditySpec</a></div><div class="ttdeci">CommoditySpecAPI getCommoditySpec()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d84/CreditsGroundRaidObjectivePluginImpl_8java_source.html#l00059">CreditsGroundRaidObjectivePluginImpl.java:59</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGroundRaidObjectivePluginImpl_html_ab289db8b5e1699ae7ce3743c1e5a8010"><div class="ttname"><a href="../../de/d20/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGroundRaidObjectivePluginImpl.html#ab289db8b5e1699ae7ce3743c1e5a8010">com.fs.starfarer.api.impl.campaign.graid.CreditsGroundRaidObjectivePluginImpl.getNumMinusTokens</a></div><div class="ttdeci">int getNumMinusTokens()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d84/CreditsGroundRaidObjectivePluginImpl_8java_source.html#l00115">CreditsGroundRaidObjectivePluginImpl.java:115</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGroundRaidObjectivePluginImpl_html_abb01e4946ecd22fabd4279c90e30fdb5"><div class="ttname"><a href="../../de/d20/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGroundRaidObjectivePluginImpl.html#abb01e4946ecd22fabd4279c90e30fdb5">com.fs.starfarer.api.impl.campaign.graid.CreditsGroundRaidObjectivePluginImpl.getNumPlusTokens</a></div><div class="ttdeci">int getNumPlusTokens()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d84/CreditsGroundRaidObjectivePluginImpl_8java_source.html#l00097">CreditsGroundRaidObjectivePluginImpl.java:97</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a3a6cbbdf0db53e0a94984bf135b4cbbb" name="a3a6cbbdf0db53e0a94984bf135b4cbbb"></a>
@@ -481,14 +454,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../db/d0c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1BaseGroundRaidObjectivePluginImpl.html#aa57dfea8f4f9fab308ee5b8a3f649126">com.fs.starfarer.api.impl.campaign.graid.BaseGroundRaidObjectivePluginImpl</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../de/d84/CreditsGroundRaidObjectivePluginImpl_8java_source.html#l00183">183</a> of file <a class="el" href="../../de/d84/CreditsGroundRaidObjectivePluginImpl_8java_source.html">CreditsGroundRaidObjectivePluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  183</span>                                                                   {</div>
-<div class="line"><span class="lineno">  184</span>        <span class="keywordtype">float</span> opad = 10f;</div>
-<div class="line"><span class="lineno">  185</span>        <span class="keywordtype">float</span> pad = 3f;</div>
-<div class="line"><span class="lineno">  186</span>        Color h = Misc.getHighlightColor();</div>
-<div class="line"><span class="lineno">  187</span>        Color bad = Misc.getNegativeHighlightColor();</div>
-<div class="line"><span class="lineno">  188</span>        Color good = Misc.getPositiveHighlightColor();</div>
-<div class="line"><span class="lineno">  189</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a3f4622edf84f758ccdc7b8302d18c682" name="a3f4622edf84f758ccdc7b8302d18c682"></a>
@@ -507,14 +473,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/d84/CreditsGroundRaidObjectivePluginImpl_8java_source.html#l00143">143</a> of file <a class="el" href="../../de/d84/CreditsGroundRaidObjectivePluginImpl_8java_source.html">CreditsGroundRaidObjectivePluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  143</span>                                       {</div>
-<div class="line"><span class="lineno">  144</span>        <span class="keywordtype">float</span> result = <a class="code hl_function" href="../../de/d20/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGroundRaidObjectivePluginImpl.html#a0fedfd5041e867e29ffcd7edef559106">getBaseSizeValue</a>() * <a class="code hl_variable" href="../../de/d20/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGroundRaidObjectivePluginImpl.html#aff30a5d193e38c52927c5eb0756c2b79">CREDITS_PER_MARKET_SIZE</a>;</div>
-<div class="line"><span class="lineno">  145</span>        result *= <a class="code hl_function" href="../../de/d20/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGroundRaidObjectivePluginImpl.html#a2b9c8edb0f9bac636b78cf5fa8a1061b">getCreditsLootedMult</a>();</div>
-<div class="line"><span class="lineno">  146</span>        <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">  147</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGroundRaidObjectivePluginImpl_html_a2b9c8edb0f9bac636b78cf5fa8a1061b"><div class="ttname"><a href="../../de/d20/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGroundRaidObjectivePluginImpl.html#a2b9c8edb0f9bac636b78cf5fa8a1061b">com.fs.starfarer.api.impl.campaign.graid.CreditsGroundRaidObjectivePluginImpl.getCreditsLootedMult</a></div><div class="ttdeci">float getCreditsLootedMult()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d84/CreditsGroundRaidObjectivePluginImpl_8java_source.html#l00131">CreditsGroundRaidObjectivePluginImpl.java:131</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGroundRaidObjectivePluginImpl_html_aff30a5d193e38c52927c5eb0756c2b79"><div class="ttname"><a href="../../de/d20/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGroundRaidObjectivePluginImpl.html#aff30a5d193e38c52927c5eb0756c2b79">com.fs.starfarer.api.impl.campaign.graid.CreditsGroundRaidObjectivePluginImpl.CREDITS_PER_MARKET_SIZE</a></div><div class="ttdeci">static float CREDITS_PER_MARKET_SIZE</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d84/CreditsGroundRaidObjectivePluginImpl_8java_source.html#l00022">CreditsGroundRaidObjectivePluginImpl.java:22</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a0fedfd5041e867e29ffcd7edef559106" name="a0fedfd5041e867e29ffcd7edef559106"></a>
@@ -533,11 +492,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/d84/CreditsGroundRaidObjectivePluginImpl_8java_source.html#l00139">139</a> of file <a class="el" href="../../de/d84/CreditsGroundRaidObjectivePluginImpl_8java_source.html">CreditsGroundRaidObjectivePluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  139</span>                                    {</div>
-<div class="line"><span class="lineno">  140</span>        <span class="keywordflow">return</span> Math.max(1, <a class="code hl_variable" href="../../db/d0c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1BaseGroundRaidObjectivePluginImpl.html#af1bd841a761b0dceb518abd4365ef996">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af6f714c59a16687b5cde142091a54150">getSize</a>() - 3);</div>
-<div class="line"><span class="lineno">  141</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_af6f714c59a16687b5cde142091a54150"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af6f714c59a16687b5cde142091a54150">com.fs.starfarer.api.campaign.econ.MarketAPI.getSize</a></div><div class="ttdeci">int getSize()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa9790c01956ae1948bd98eba2a4e7826" name="aa9790c01956ae1948bd98eba2a4e7826"></a>
@@ -556,11 +511,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/d84/CreditsGroundRaidObjectivePluginImpl_8java_source.html#l00059">59</a> of file <a class="el" href="../../de/d84/CreditsGroundRaidObjectivePluginImpl_8java_source.html">CreditsGroundRaidObjectivePluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   59</span>                                               {</div>
-<div class="line"><span class="lineno">   60</span>        <span class="keywordflow">return</span> Global.getSettings().getCommoditySpec(<a class="code hl_function" href="../../db/d0c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1BaseGroundRaidObjectivePluginImpl.html#aa07e6668614557a95ddf0477bbbd860d">getId</a>());</div>
-<div class="line"><span class="lineno">   61</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1BaseGroundRaidObjectivePluginImpl_html_aa07e6668614557a95ddf0477bbbd860d"><div class="ttname"><a href="../../db/d0c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1BaseGroundRaidObjectivePluginImpl.html#aa07e6668614557a95ddf0477bbbd860d">com.fs.starfarer.api.impl.campaign.graid.BaseGroundRaidObjectivePluginImpl.getId</a></div><div class="ttdeci">String getId()</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dca/BaseGroundRaidObjectivePluginImpl_8java_source.html#l00176">BaseGroundRaidObjectivePluginImpl.java:176</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2b9c8edb0f9bac636b78cf5fa8a1061b" name="a2b9c8edb0f9bac636b78cf5fa8a1061b"></a>
@@ -579,15 +530,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/d84/CreditsGroundRaidObjectivePluginImpl_8java_source.html#l00131">131</a> of file <a class="el" href="../../de/d84/CreditsGroundRaidObjectivePluginImpl_8java_source.html">CreditsGroundRaidObjectivePluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  131</span>                                        {</div>
-<div class="line"><span class="lineno">  132</span>        <span class="comment">//float mult = market.getIncomeMult().getModifiedValue();</span></div>
-<div class="line"><span class="lineno">  133</span>        <span class="comment">//float base = getBaseSizeValue();</span></div>
-<div class="line"><span class="lineno">  134</span>        <span class="keywordtype">float</span> mult = 1f + (<a class="code hl_function" href="../../de/d20/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGroundRaidObjectivePluginImpl.html#abb01e4946ecd22fabd4279c90e30fdb5">getNumPlusTokens</a>() - <a class="code hl_function" href="../../de/d20/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGroundRaidObjectivePluginImpl.html#ab289db8b5e1699ae7ce3743c1e5a8010">getNumMinusTokens</a>()) / (<a class="code hl_variable" href="../../de/d20/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGroundRaidObjectivePluginImpl.html#a2b6e510835138e1f4d1e3f2c2ce038bb">MAX_TOKENS</a> + 1f);</div>
-<div class="line"><span class="lineno">  135</span>        mult = Math.round(mult * 100f) / 100f;</div>
-<div class="line"><span class="lineno">  136</span>        <span class="keywordflow">return</span> mult;</div>
-<div class="line"><span class="lineno">  137</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGroundRaidObjectivePluginImpl_html_a2b6e510835138e1f4d1e3f2c2ce038bb"><div class="ttname"><a href="../../de/d20/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGroundRaidObjectivePluginImpl.html#a2b6e510835138e1f4d1e3f2c2ce038bb">com.fs.starfarer.api.impl.campaign.graid.CreditsGroundRaidObjectivePluginImpl.MAX_TOKENS</a></div><div class="ttdeci">static float MAX_TOKENS</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d84/CreditsGroundRaidObjectivePluginImpl_8java_source.html#l00096">CreditsGroundRaidObjectivePluginImpl.java:96</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ad11549028207455cbfa9509b7f76d845" name="ad11549028207455cbfa9509b7f76d845"></a>
@@ -608,19 +551,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../db/d0c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1BaseGroundRaidObjectivePluginImpl.html#acf0ce77ad7d71e29e71b39ad25406ed0">com.fs.starfarer.api.impl.campaign.graid.BaseGroundRaidObjectivePluginImpl</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../de/d84/CreditsGroundRaidObjectivePluginImpl_8java_source.html#l00063">63</a> of file <a class="el" href="../../de/d84/CreditsGroundRaidObjectivePluginImpl_8java_source.html">CreditsGroundRaidObjectivePluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   63</span>                                            {</div>
-<div class="line"><span class="lineno">   64</span>        RaidDangerLevel danger = <a class="code hl_function" href="../../de/d20/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGroundRaidObjectivePluginImpl.html#aa9790c01956ae1948bd98eba2a4e7826">getCommoditySpec</a>().<a class="code hl_function" href="../../db/d8a/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommoditySpecAPI.html#abb695c1703b0d4e318e1ad54e36d1d0f">getBaseDanger</a>();</div>
-<div class="line"><span class="lineno">   65</span>        </div>
-<div class="line"><span class="lineno">   66</span>        <span class="keywordtype">float</span> mult = <a class="code hl_function" href="../../de/d20/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGroundRaidObjectivePluginImpl.html#a2b9c8edb0f9bac636b78cf5fa8a1061b">getCreditsLootedMult</a>();</div>
-<div class="line"><span class="lineno">   67</span>        <span class="keywordflow">if</span> (mult &lt;= 0.75f) {</div>
-<div class="line"><span class="lineno">   68</span>            danger = danger.next();</div>
-<div class="line"><span class="lineno">   69</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (mult &gt;= 1.25f) {</div>
-<div class="line"><span class="lineno">   70</span>            danger = danger.prev();</div>
-<div class="line"><span class="lineno">   71</span>        }</div>
-<div class="line"><span class="lineno">   72</span>        <span class="keywordflow">return</span> danger;</div>
-<div class="line"><span class="lineno">   73</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommoditySpecAPI_html_abb695c1703b0d4e318e1ad54e36d1d0f"><div class="ttname"><a href="../../db/d8a/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommoditySpecAPI.html#abb695c1703b0d4e318e1ad54e36d1d0f">com.fs.starfarer.api.campaign.econ.CommoditySpecAPI.getBaseDanger</a></div><div class="ttdeci">RaidDangerLevel getBaseDanger()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a97363a84aac3f8f02259ebbb58e7b6f7" name="a97363a84aac3f8f02259ebbb58e7b6f7"></a>
@@ -641,11 +572,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="../../d5/d89/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1GroundRaidObjectivePlugin.html#a6fbbde12a0155e945be484eef808a152">com.fs.starfarer.api.impl.campaign.graid.GroundRaidObjectivePlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../de/d84/CreditsGroundRaidObjectivePluginImpl_8java_source.html#l00149">149</a> of file <a class="el" href="../../de/d84/CreditsGroundRaidObjectivePluginImpl_8java_source.html">CreditsGroundRaidObjectivePluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  149</span>                            {</div>
-<div class="line"><span class="lineno">  150</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../de/d20/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGroundRaidObjectivePluginImpl.html#aa9790c01956ae1948bd98eba2a4e7826">getCommoditySpec</a>().<a class="code hl_function" href="../../db/d8a/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommoditySpecAPI.html#ae098d2a57484c4130aa4a5df3477212c">getName</a>();</div>
-<div class="line"><span class="lineno">  151</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommoditySpecAPI_html_ae098d2a57484c4130aa4a5df3477212c"><div class="ttname"><a href="../../db/d8a/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommoditySpecAPI.html#ae098d2a57484c4130aa4a5df3477212c">com.fs.starfarer.api.campaign.econ.CommoditySpecAPI.getName</a></div><div class="ttdeci">String getName()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab289db8b5e1699ae7ce3743c1e5a8010" name="ab289db8b5e1699ae7ce3743c1e5a8010"></a>
@@ -664,25 +591,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/d84/CreditsGroundRaidObjectivePluginImpl_8java_source.html#l00115">115</a> of file <a class="el" href="../../de/d84/CreditsGroundRaidObjectivePluginImpl_8java_source.html">CreditsGroundRaidObjectivePluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  115</span>                                   {</div>
-<div class="line"><span class="lineno">  116</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../de/d20/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGroundRaidObjectivePluginImpl.html#abb01e4946ecd22fabd4279c90e30fdb5">getNumPlusTokens</a>() &gt; 0) <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  117</span>        </div>
-<div class="line"><span class="lineno">  118</span>        <span class="keywordtype">float</span> incomeMult = <a class="code hl_variable" href="../../db/d0c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1BaseGroundRaidObjectivePluginImpl.html#af1bd841a761b0dceb518abd4365ef996">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#aac8d0e88aca1c1d329123cadd20c29f5">getIncomeMult</a>().<a class="code hl_function" href="../../d4/d1a/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableStat.html#a6ae491ba70695a2098f790d7421d9ef2">getModifiedValue</a>();</div>
-<div class="line"><span class="lineno">  119</span>        <span class="keywordtype">int</span> num = 0;</div>
-<div class="line"><span class="lineno">  120</span>        <span class="keywordflow">if</span> (incomeMult &lt; 1f) num++;</div>
-<div class="line"><span class="lineno">  121</span>        <span class="keywordflow">if</span> (incomeMult &lt; 0.75f) num++;</div>
-<div class="line"><span class="lineno">  122</span>        </div>
-<div class="line"><span class="lineno">  123</span>        <span class="keywordtype">float</span> a = <a class="code hl_variable" href="../../db/d0c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1BaseGroundRaidObjectivePluginImpl.html#af1bd841a761b0dceb518abd4365ef996">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a8db1c2727d55b0aeddb14f2a2f446a4c">getAccessibilityMod</a>().<a class="code hl_function" href="../../dc/d19/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus.html#af16110c6c18625c9f384078ce824bdda">computeEffective</a>(0f);</div>
-<div class="line"><span class="lineno">  124</span>        num += Math.round((1f - a) / 0.1f);</div>
-<div class="line"><span class="lineno">  125</span>        num = Math.max(num, 0);</div>
-<div class="line"><span class="lineno">  126</span>        num = (int) Math.min(num, <a class="code hl_variable" href="../../de/d20/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGroundRaidObjectivePluginImpl.html#a2b6e510835138e1f4d1e3f2c2ce038bb">MAX_TOKENS</a>);</div>
-<div class="line"><span class="lineno">  127</span>        <span class="keywordflow">return</span> num;</div>
-<div class="line"><span class="lineno">  128</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableStat_html_a6ae491ba70695a2098f790d7421d9ef2"><div class="ttname"><a href="../../d4/d1a/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableStat.html#a6ae491ba70695a2098f790d7421d9ef2">com.fs.starfarer.api.combat.MutableStat.getModifiedValue</a></div><div class="ttdeci">float getModifiedValue()</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d27/MutableStat_8java_source.html#l00345">MutableStat.java:345</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus_html_af16110c6c18625c9f384078ce824bdda"><div class="ttname"><a href="../../dc/d19/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus.html#af16110c6c18625c9f384078ce824bdda">com.fs.starfarer.api.combat.StatBonus.computeEffective</a></div><div class="ttdeci">float computeEffective(float baseValue)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d6c/StatBonus_8java_source.html#l00250">StatBonus.java:250</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a8db1c2727d55b0aeddb14f2a2f446a4c"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a8db1c2727d55b0aeddb14f2a2f446a4c">com.fs.starfarer.api.campaign.econ.MarketAPI.getAccessibilityMod</a></div><div class="ttdeci">StatBonus getAccessibilityMod()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_aac8d0e88aca1c1d329123cadd20c29f5"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#aac8d0e88aca1c1d329123cadd20c29f5">com.fs.starfarer.api.campaign.econ.MarketAPI.getIncomeMult</a></div><div class="ttdeci">MutableStat getIncomeMult()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="abb01e4946ecd22fabd4279c90e30fdb5" name="abb01e4946ecd22fabd4279c90e30fdb5"></a>
@@ -701,24 +610,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/d84/CreditsGroundRaidObjectivePluginImpl_8java_source.html#l00097">97</a> of file <a class="el" href="../../de/d84/CreditsGroundRaidObjectivePluginImpl_8java_source.html">CreditsGroundRaidObjectivePluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   97</span>                                  {</div>
-<div class="line"><span class="lineno">   98</span>        <span class="keywordtype">float</span> incomeMult = <a class="code hl_variable" href="../../db/d0c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1BaseGroundRaidObjectivePluginImpl.html#af1bd841a761b0dceb518abd4365ef996">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#aac8d0e88aca1c1d329123cadd20c29f5">getIncomeMult</a>().<a class="code hl_function" href="../../d4/d1a/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableStat.html#a6ae491ba70695a2098f790d7421d9ef2">getModifiedValue</a>();</div>
-<div class="line"><span class="lineno">   99</span>        <span class="keywordtype">int</span> num = 0;</div>
-<div class="line"><span class="lineno">  100</span>        <span class="keywordflow">if</span> (incomeMult &gt; 1f) num++;</div>
-<div class="line"><span class="lineno">  101</span>        <span class="keywordflow">if</span> (incomeMult &gt; 1.25f) num++;</div>
-<div class="line"><span class="lineno">  102</span><span class="comment">//      </span></div>
-<div class="line"><span class="lineno">  103</span><span class="comment">//      float stability = market.getStabilityValue();</span></div>
-<div class="line"><span class="lineno">  104</span><span class="comment">//      if (stability &gt;= 8) num++;</span></div>
-<div class="line"><span class="lineno">  105</span><span class="comment">//      if (stability &gt;= 10) num++;</span></div>
-<div class="line"><span class="lineno">  106</span>        </div>
-<div class="line"><span class="lineno">  107</span>        <span class="keywordtype">float</span> a = <a class="code hl_variable" href="../../db/d0c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1BaseGroundRaidObjectivePluginImpl.html#af1bd841a761b0dceb518abd4365ef996">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a8db1c2727d55b0aeddb14f2a2f446a4c">getAccessibilityMod</a>().<a class="code hl_function" href="../../dc/d19/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus.html#af16110c6c18625c9f384078ce824bdda">computeEffective</a>(0f);</div>
-<div class="line"><span class="lineno">  108</span>        num += Math.round((a - 1f) / 0.2f);</div>
-<div class="line"><span class="lineno">  109</span>        num = Math.max(num, 0);</div>
-<div class="line"><span class="lineno">  110</span>        num = (int) Math.min(num, <a class="code hl_variable" href="../../de/d20/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGroundRaidObjectivePluginImpl.html#a2b6e510835138e1f4d1e3f2c2ce038bb">MAX_TOKENS</a>);</div>
-<div class="line"><span class="lineno">  111</span>        <span class="keywordflow">return</span> num;</div>
-<div class="line"><span class="lineno">  112</span>        </div>
-<div class="line"><span class="lineno">  113</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a11fc549338b18608f676163e7e20bfea" name="a11fc549338b18608f676163e7e20bfea"></a>
@@ -739,12 +631,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="../../d5/d89/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1GroundRaidObjectivePlugin.html#aea14544bb3b2d8e922271032edce3b44">com.fs.starfarer.api.impl.campaign.graid.GroundRaidObjectivePlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../de/d84/CreditsGroundRaidObjectivePluginImpl_8java_source.html#l00054">54</a> of file <a class="el" href="../../de/d84/CreditsGroundRaidObjectivePluginImpl_8java_source.html">CreditsGroundRaidObjectivePluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   54</span>                                          {</div>
-<div class="line"><span class="lineno">   55</span>        <span class="keywordflow">return</span> (<span class="keywordtype">int</span>) <a class="code hl_function" href="../../de/d20/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGroundRaidObjectivePluginImpl.html#acdc737316f5ef1d367d766d45e53dca9">getQuantity</a>(<a class="code hl_function" href="../../db/d0c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1BaseGroundRaidObjectivePluginImpl.html#ab446cb074385bc4443442e4a3550a9f7">getMarinesAssigned</a>());</div>
-<div class="line"><span class="lineno">   56</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1BaseGroundRaidObjectivePluginImpl_html_ab446cb074385bc4443442e4a3550a9f7"><div class="ttname"><a href="../../db/d0c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1BaseGroundRaidObjectivePluginImpl.html#ab446cb074385bc4443442e4a3550a9f7">com.fs.starfarer.api.impl.campaign.graid.BaseGroundRaidObjectivePluginImpl.getMarinesAssigned</a></div><div class="ttdeci">int getMarinesAssigned()</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dca/BaseGroundRaidObjectivePluginImpl_8java_source.html#l00145">BaseGroundRaidObjectivePluginImpl.java:145</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGroundRaidObjectivePluginImpl_html_acdc737316f5ef1d367d766d45e53dca9"><div class="ttname"><a href="../../de/d20/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGroundRaidObjectivePluginImpl.html#acdc737316f5ef1d367d766d45e53dca9">com.fs.starfarer.api.impl.campaign.graid.CreditsGroundRaidObjectivePluginImpl.getQuantity</a></div><div class="ttdeci">float getQuantity(int marines)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d84/CreditsGroundRaidObjectivePluginImpl_8java_source.html#l00090">CreditsGroundRaidObjectivePluginImpl.java:90</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="acdc737316f5ef1d367d766d45e53dca9" name="acdc737316f5ef1d367d766d45e53dca9"></a>
@@ -766,13 +653,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../db/d0c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1BaseGroundRaidObjectivePluginImpl.html#ae562c77cbaaae9dd7a1a335d4bdeca35">com.fs.starfarer.api.impl.campaign.graid.BaseGroundRaidObjectivePluginImpl</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../de/d84/CreditsGroundRaidObjectivePluginImpl_8java_source.html#l00090">90</a> of file <a class="el" href="../../de/d84/CreditsGroundRaidObjectivePluginImpl_8java_source.html">CreditsGroundRaidObjectivePluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   90</span>                                          {</div>
-<div class="line"><span class="lineno">   91</span>        <span class="comment">//marines = Math.max(1, marines);</span></div>
-<div class="line"><span class="lineno">   92</span>        <span class="keywordtype">float</span> base = <a class="code hl_function" href="../../de/d20/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGroundRaidObjectivePluginImpl.html#a3f4622edf84f758ccdc7b8302d18c682">getBaseRaidQuantity</a>();</div>
-<div class="line"><span class="lineno">   93</span>        <span class="keywordflow">return</span> base * marines;</div>
-<div class="line"><span class="lineno">   94</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGroundRaidObjectivePluginImpl_html_a3f4622edf84f758ccdc7b8302d18c682"><div class="ttname"><a href="../../de/d20/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGroundRaidObjectivePluginImpl.html#a3f4622edf84f758ccdc7b8302d18c682">com.fs.starfarer.api.impl.campaign.graid.CreditsGroundRaidObjectivePluginImpl.getBaseRaidQuantity</a></div><div class="ttdeci">float getBaseRaidQuantity()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d84/CreditsGroundRaidObjectivePluginImpl_8java_source.html#l00143">CreditsGroundRaidObjectivePluginImpl.java:143</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac08ff573bdd72797defac033fc3a0607" name="ac08ff573bdd72797defac033fc3a0607"></a>
@@ -793,11 +674,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="../../d5/d89/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1GroundRaidObjectivePlugin.html#a7a8afa55428b3dbb275b6891483845de">com.fs.starfarer.api.impl.campaign.graid.GroundRaidObjectivePlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../de/d84/CreditsGroundRaidObjectivePluginImpl_8java_source.html#l00075">75</a> of file <a class="el" href="../../de/d84/CreditsGroundRaidObjectivePluginImpl_8java_source.html">CreditsGroundRaidObjectivePluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   75</span>                                        {</div>
-<div class="line"><span class="lineno">   76</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d5/d89/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1GroundRaidObjectivePlugin.html#a891faffd161f68a714523d8908d0d1de">QUANTITY_SORT_TIER_0</a> + 100000f;</div>
-<div class="line"><span class="lineno">   77</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1GroundRaidObjectivePlugin_html_a891faffd161f68a714523d8908d0d1de"><div class="ttname"><a href="../../d5/d89/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1GroundRaidObjectivePlugin.html#a891faffd161f68a714523d8908d0d1de">com.fs.starfarer.api.impl.campaign.graid.GroundRaidObjectivePlugin.QUANTITY_SORT_TIER_0</a></div><div class="ttdeci">static float QUANTITY_SORT_TIER_0</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d95/GroundRaidObjectivePlugin_8java_source.html#l00023">GroundRaidObjectivePlugin.java:23</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a3fa7a12bf0e105a71f3fe42a0ad31a7e" name="a3fa7a12bf0e105a71f3fe42a0ad31a7e"></a>
@@ -819,12 +696,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../db/d0c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1BaseGroundRaidObjectivePluginImpl.html#a605838f57e197ca4041530f0d724049d">com.fs.starfarer.api.impl.campaign.graid.BaseGroundRaidObjectivePluginImpl</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../de/d84/CreditsGroundRaidObjectivePluginImpl_8java_source.html#l00080">80</a> of file <a class="el" href="../../de/d84/CreditsGroundRaidObjectivePluginImpl_8java_source.html">CreditsGroundRaidObjectivePluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   80</span>                                                 {</div>
-<div class="line"><span class="lineno">   81</span>        <span class="comment">//return Misc.getWithDGS(getQuantity(Math.max(1, marines)));</span></div>
-<div class="line"><span class="lineno">   82</span>        <span class="comment">//return Misc.getDGSCredits(getQuantity(Math.max(1, marines)));</span></div>
-<div class="line"><span class="lineno">   83</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">   84</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac5a167881174acd5b763a4bab2d986ec" name="ac5a167881174acd5b763a4bab2d986ec"></a>
@@ -845,11 +717,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../db/d0c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1BaseGroundRaidObjectivePluginImpl.html#a58c8db846929093df4786277b5c3e1b8">com.fs.starfarer.api.impl.campaign.graid.BaseGroundRaidObjectivePluginImpl</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../de/d84/CreditsGroundRaidObjectivePluginImpl_8java_source.html#l00049">49</a> of file <a class="el" href="../../de/d84/CreditsGroundRaidObjectivePluginImpl_8java_source.html">CreditsGroundRaidObjectivePluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   49</span>                                    {</div>
-<div class="line"><span class="lineno">   50</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   51</span>        <span class="comment">//return &quot;Colony&quot;;</span></div>
-<div class="line"><span class="lineno">   52</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a33eedb1cce8e8943a71d46368a4e9466" name="a33eedb1cce8e8943a71d46368a4e9466"></a>
@@ -870,11 +738,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../db/d0c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1BaseGroundRaidObjectivePluginImpl.html#ac387ecffbcd4d792ed55d1a8f003e17c">com.fs.starfarer.api.impl.campaign.graid.BaseGroundRaidObjectivePluginImpl</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../de/d84/CreditsGroundRaidObjectivePluginImpl_8java_source.html#l00153">153</a> of file <a class="el" href="../../de/d84/CreditsGroundRaidObjectivePluginImpl_8java_source.html">CreditsGroundRaidObjectivePluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  153</span>                                           {</div>
-<div class="line"><span class="lineno">  154</span>        CargoStackAPI stack = Global.getFactory().createCargoStack(CargoItemType.RESOURCES, <a class="code hl_function" href="../../db/d0c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1BaseGroundRaidObjectivePluginImpl.html#aa07e6668614557a95ddf0477bbbd860d">getId</a>(), <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  155</span>        <span class="keywordflow">return</span> stack;</div>
-<div class="line"><span class="lineno">  156</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac75ec6e6e780b79c5633f991882210da" name="ac75ec6e6e780b79c5633f991882210da"></a>
@@ -896,11 +760,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../db/d0c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1BaseGroundRaidObjectivePluginImpl.html#a59451a4323e8a440abfeccb08b476f17">com.fs.starfarer.api.impl.campaign.graid.BaseGroundRaidObjectivePluginImpl</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../de/d84/CreditsGroundRaidObjectivePluginImpl_8java_source.html#l00086">86</a> of file <a class="el" href="../../de/d84/CreditsGroundRaidObjectivePluginImpl_8java_source.html">CreditsGroundRaidObjectivePluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   86</span>                                     {</div>
-<div class="line"><span class="lineno">   87</span>        <span class="keywordflow">return</span> (<span class="keywordtype">int</span>) (<a class="code hl_function" href="../../de/d20/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGroundRaidObjectivePluginImpl.html#acdc737316f5ef1d367d766d45e53dca9">getQuantity</a>(marines) * <a class="code hl_function" href="../../de/d20/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGroundRaidObjectivePluginImpl.html#aa9790c01956ae1948bd98eba2a4e7826">getCommoditySpec</a>().<a class="code hl_function" href="../../db/d8a/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommoditySpecAPI.html#a667cad9d981a043d6a4870a5313f4028">getBasePrice</a>());</div>
-<div class="line"><span class="lineno">   88</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommoditySpecAPI_html_a667cad9d981a043d6a4870a5313f4028"><div class="ttname"><a href="../../db/d8a/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommoditySpecAPI.html#a667cad9d981a043d6a4870a5313f4028">com.fs.starfarer.api.campaign.econ.CommoditySpecAPI.getBasePrice</a></div><div class="ttdeci">float getBasePrice()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa1773ccb185fa991f6421447aefb80bc" name="aa1773ccb185fa991f6421447aefb80bc"></a>
@@ -921,10 +781,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../db/d0c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1BaseGroundRaidObjectivePluginImpl.html#a97a7f20323f3e5cb94904dcaf55705be">com.fs.starfarer.api.impl.campaign.graid.BaseGroundRaidObjectivePluginImpl</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../de/d84/CreditsGroundRaidObjectivePluginImpl_8java_source.html#l00178">178</a> of file <a class="el" href="../../de/d84/CreditsGroundRaidObjectivePluginImpl_8java_source.html">CreditsGroundRaidObjectivePluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  178</span>                                {</div>
-<div class="line"><span class="lineno">  179</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  180</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a6225f532aa3d5a567534bec40e2210b4" name="a6225f532aa3d5a567534bec40e2210b4"></a>
@@ -977,28 +834,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="../../d5/d89/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1GroundRaidObjectivePlugin.html#a8d6e515b1d9e2346613197b12ede3f73">com.fs.starfarer.api.impl.campaign.graid.GroundRaidObjectivePlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../de/d84/CreditsGroundRaidObjectivePluginImpl_8java_source.html#l00159">159</a> of file <a class="el" href="../../de/d84/CreditsGroundRaidObjectivePluginImpl_8java_source.html">CreditsGroundRaidObjectivePluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  159</span>                                                                                            {</div>
-<div class="line"><span class="lineno">  160</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../db/d0c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1BaseGroundRaidObjectivePluginImpl.html#a5f314720cfac324836ff7aa66f00f94e">marinesAssigned</a> &lt;= 0) <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  161</span>        </div>
-<div class="line"><span class="lineno">  162</span>        <span class="keywordtype">float</span> base = <a class="code hl_function" href="../../de/d20/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGroundRaidObjectivePluginImpl.html#acdc737316f5ef1d367d766d45e53dca9">getQuantity</a>(<a class="code hl_variable" href="../../db/d0c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1BaseGroundRaidObjectivePluginImpl.html#a5f314720cfac324836ff7aa66f00f94e">marinesAssigned</a>);</div>
-<div class="line"><span class="lineno">  163</span>        base *= lootMult;</div>
-<div class="line"><span class="lineno">  164</span>        </div>
-<div class="line"><span class="lineno">  165</span>        <span class="keywordtype">float</span> mult = 0.9f + random.nextFloat() * 0.2f;</div>
-<div class="line"><span class="lineno">  166</span>        base *= mult;</div>
-<div class="line"><span class="lineno">  167</span>        </div>
-<div class="line"><span class="lineno">  168</span>        <a class="code hl_variable" href="../../db/d0c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1BaseGroundRaidObjectivePluginImpl.html#a3182ea0ce489371175fa7e6eca432d45">quantityLooted</a> = (int) base;</div>
-<div class="line"><span class="lineno">  169</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../db/d0c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1BaseGroundRaidObjectivePluginImpl.html#a3182ea0ce489371175fa7e6eca432d45">quantityLooted</a> &lt; 1) <a class="code hl_variable" href="../../db/d0c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1BaseGroundRaidObjectivePluginImpl.html#a3182ea0ce489371175fa7e6eca432d45">quantityLooted</a> = 1;</div>
-<div class="line"><span class="lineno">  170</span>        </div>
-<div class="line"><span class="lineno">  171</span>        loot.getCredits().add(<a class="code hl_variable" href="../../db/d0c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1BaseGroundRaidObjectivePluginImpl.html#a3182ea0ce489371175fa7e6eca432d45">quantityLooted</a>);</div>
-<div class="line"><span class="lineno">  172</span>        </div>
-<div class="line"><span class="lineno">  173</span>        <a class="code hl_variable" href="../../db/d0c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1BaseGroundRaidObjectivePluginImpl.html#a2d9cfcaed7aebf4db3df874f7586d1e9">xpGained</a> = (int) (<a class="code hl_variable" href="../../db/d0c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1BaseGroundRaidObjectivePluginImpl.html#a3182ea0ce489371175fa7e6eca432d45">quantityLooted</a> * <a class="code hl_function" href="../../de/d20/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGroundRaidObjectivePluginImpl.html#aa9790c01956ae1948bd98eba2a4e7826">getCommoditySpec</a>().<a class="code hl_function" href="../../db/d8a/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommoditySpecAPI.html#a667cad9d981a043d6a4870a5313f4028">getBasePrice</a>() * <a class="code hl_variable" href="../../d5/d89/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1GroundRaidObjectivePlugin.html#a010f0a6eb4ef50586eb17e241e5638e7">XP_GAIN_VALUE_MULT</a> * 0.01f);</div>
-<div class="line"><span class="lineno">  174</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../db/d0c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1BaseGroundRaidObjectivePluginImpl.html#a2d9cfcaed7aebf4db3df874f7586d1e9">xpGained</a>;</div>
-<div class="line"><span class="lineno">  175</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1BaseGroundRaidObjectivePluginImpl_html_a2d9cfcaed7aebf4db3df874f7586d1e9"><div class="ttname"><a href="../../db/d0c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1BaseGroundRaidObjectivePluginImpl.html#a2d9cfcaed7aebf4db3df874f7586d1e9">com.fs.starfarer.api.impl.campaign.graid.BaseGroundRaidObjectivePluginImpl.xpGained</a></div><div class="ttdeci">int xpGained</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dca/BaseGroundRaidObjectivePluginImpl_8java_source.html#l00031">BaseGroundRaidObjectivePluginImpl.java:31</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1BaseGroundRaidObjectivePluginImpl_html_a3182ea0ce489371175fa7e6eca432d45"><div class="ttname"><a href="../../db/d0c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1BaseGroundRaidObjectivePluginImpl.html#a3182ea0ce489371175fa7e6eca432d45">com.fs.starfarer.api.impl.campaign.graid.BaseGroundRaidObjectivePluginImpl.quantityLooted</a></div><div class="ttdeci">int quantityLooted</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dca/BaseGroundRaidObjectivePluginImpl_8java_source.html#l00030">BaseGroundRaidObjectivePluginImpl.java:30</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1BaseGroundRaidObjectivePluginImpl_html_a5f314720cfac324836ff7aa66f00f94e"><div class="ttname"><a href="../../db/d0c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1BaseGroundRaidObjectivePluginImpl.html#a5f314720cfac324836ff7aa66f00f94e">com.fs.starfarer.api.impl.campaign.graid.BaseGroundRaidObjectivePluginImpl.marinesAssigned</a></div><div class="ttdeci">int marinesAssigned</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dca/BaseGroundRaidObjectivePluginImpl_8java_source.html#l00024">BaseGroundRaidObjectivePluginImpl.java:24</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1GroundRaidObjectivePlugin_html_a010f0a6eb4ef50586eb17e241e5638e7"><div class="ttname"><a href="../../d5/d89/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1GroundRaidObjectivePlugin.html#a010f0a6eb4ef50586eb17e241e5638e7">com.fs.starfarer.api.impl.campaign.graid.GroundRaidObjectivePlugin.XP_GAIN_VALUE_MULT</a></div><div class="ttdeci">static float XP_GAIN_VALUE_MULT</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d95/GroundRaidObjectivePlugin_8java_source.html#l00020">GroundRaidObjectivePlugin.java:20</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

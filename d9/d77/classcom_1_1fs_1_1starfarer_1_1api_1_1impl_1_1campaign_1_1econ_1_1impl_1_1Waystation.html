@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -784,39 +785,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a7ad841b8dafd9646dec64c9e2e43b9dc">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../db/dfc/Waystation_8java_source.html#l00201">201</a> of file <a class="el" href="../../db/dfc/Waystation_8java_source.html">Waystation.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  201</span>                                                                                                {</div>
-<div class="line"><span class="lineno">  202</span>        <span class="keywordtype">float</span> opad = 10f;</div>
-<div class="line"><span class="lineno">  203</span>        Color highlight = Misc.getHighlightColor();</div>
-<div class="line"><span class="lineno">  204</span>        </div>
-<div class="line"><span class="lineno">  205</span>        String pre = <span class="stringliteral">&quot;Alpha-level AI core currently assigned. &quot;</span>;</div>
-<div class="line"><span class="lineno">  206</span>        <span class="keywordflow">if</span> (mode == AICoreDescriptionMode.MANAGE_CORE_DIALOG_LIST || mode == AICoreDescriptionMode.INDUSTRY_TOOLTIP) {</div>
-<div class="line"><span class="lineno">  207</span>            pre = <span class="stringliteral">&quot;Alpha-level AI core. &quot;</span>;</div>
-<div class="line"><span class="lineno">  208</span>        }</div>
-<div class="line"><span class="lineno">  209</span>        <span class="keywordtype">float</span> a = <a class="code hl_variable" href="../../d9/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Waystation.html#a5912b82051c82ea84e9c49bef9777568">ALPHA_CORE_ACCESSIBILITY</a>;</div>
-<div class="line"><span class="lineno">  210</span>        String aStr = <span class="stringliteral">&quot;&quot;</span> + (int)Math.round(a * 100f) + <span class="stringliteral">&quot;%&quot;</span>;</div>
-<div class="line"><span class="lineno">  211</span>        </div>
-<div class="line"><span class="lineno">  212</span>        <span class="keywordflow">if</span> (mode == AICoreDescriptionMode.INDUSTRY_TOOLTIP) {</div>
-<div class="line"><span class="lineno">  213</span>            CommoditySpecAPI coreSpec = Global.getSettings().getCommoditySpec(<a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#acee5118b579b1ab038a7e766124ffaf2">aiCoreId</a>);</div>
-<div class="line"><span class="lineno">  214</span>            TooltipMakerAPI text = tooltip.beginImageWithText(coreSpec.getIconName(), 48);</div>
-<div class="line"><span class="lineno">  215</span>            text.addPara(pre + <span class="stringliteral">&quot;Reduces upkeep cost by %s. Reduces demand by %s unit. &quot;</span> +</div>
-<div class="line"><span class="lineno">  216</span>                    <span class="stringliteral">&quot;Greatly increases stockpiles.&quot;</span>, 0f, highlight,</div>
-<div class="line"><span class="lineno">  217</span>                    <span class="stringliteral">&quot;&quot;</span> + (<span class="keywordtype">int</span>)((1f - <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#aa0521cdb7d92e9aad3551fd60573293f">UPKEEP_MULT</a>) * 100f) + <span class="stringliteral">&quot;%&quot;</span>, <span class="stringliteral">&quot;&quot;</span> + <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a1034a17059a3e8a52163e7dc6a8d3a9e">DEMAND_REDUCTION</a>,</div>
-<div class="line"><span class="lineno">  218</span>                    aStr);</div>
-<div class="line"><span class="lineno">  219</span>            tooltip.addImageWithText(opad);</div>
-<div class="line"><span class="lineno">  220</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  221</span>        }</div>
-<div class="line"><span class="lineno">  222</span>        </div>
-<div class="line"><span class="lineno">  223</span>        tooltip.addPara(pre + <span class="stringliteral">&quot;Reduces upkeep cost by %s. Reduces demand by %s unit. &quot;</span> +</div>
-<div class="line"><span class="lineno">  224</span>                <span class="stringliteral">&quot;Greatly increases stockpiles.&quot;</span>, opad, highlight,</div>
-<div class="line"><span class="lineno">  225</span>                <span class="stringliteral">&quot;&quot;</span> + (<span class="keywordtype">int</span>)((1f - <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#aa0521cdb7d92e9aad3551fd60573293f">UPKEEP_MULT</a>) * 100f) + <span class="stringliteral">&quot;%&quot;</span>, <span class="stringliteral">&quot;&quot;</span> + <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a1034a17059a3e8a52163e7dc6a8d3a9e">DEMAND_REDUCTION</a>,</div>
-<div class="line"><span class="lineno">  226</span>                aStr);</div>
-<div class="line"><span class="lineno">  227</span>        </div>
-<div class="line"><span class="lineno">  228</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry_html_a1034a17059a3e8a52163e7dc6a8d3a9e"><div class="ttname"><a href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a1034a17059a3e8a52163e7dc6a8d3a9e">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry.DEMAND_REDUCTION</a></div><div class="ttdeci">static int DEMAND_REDUCTION</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8f/BaseIndustry_8java_source.html#l00060">BaseIndustry.java:60</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry_html_aa0521cdb7d92e9aad3551fd60573293f"><div class="ttname"><a href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#aa0521cdb7d92e9aad3551fd60573293f">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry.UPKEEP_MULT</a></div><div class="ttdeci">static float UPKEEP_MULT</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8f/BaseIndustry_8java_source.html#l00059">BaseIndustry.java:59</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry_html_acee5118b579b1ab038a7e766124ffaf2"><div class="ttname"><a href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#acee5118b579b1ab038a7e766124ffaf2">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry.aiCoreId</a></div><div class="ttdeci">String aiCoreId</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8f/BaseIndustry_8java_source.html#l00107">BaseIndustry.java:107</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Waystation_html_a5912b82051c82ea84e9c49bef9777568"><div class="ttname"><a href="../../d9/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Waystation.html#a5912b82051c82ea84e9c49bef9777568">com.fs.starfarer.api.impl.campaign.econ.impl.Waystation.ALPHA_CORE_ACCESSIBILITY</a></div><div class="ttdeci">static float ALPHA_CORE_ACCESSIBILITY</div><div class="ttdef"><b>Definition:</b> <a href="../../db/dfc/Waystation_8java_source.html#l00027">Waystation.java:27</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ad6c7b0d2388d4e0871e9b953e20f6337" name="ad6c7b0d2388d4e0871e9b953e20f6337"></a>
@@ -848,24 +817,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a08e54587596d8c0b4cf9b7cca0a21267">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../db/dfc/Waystation_8java_source.html#l00254">254</a> of file <a class="el" href="../../db/dfc/Waystation_8java_source.html">Waystation.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  254</span>                                                                                      {</div>
-<div class="line"><span class="lineno">  255</span>        <span class="keywordtype">float</span> opad = 10f;</div>
-<div class="line"><span class="lineno">  256</span>        Color highlight = Misc.getHighlightColor();</div>
-<div class="line"><span class="lineno">  257</span>        </div>
-<div class="line"><span class="lineno">  258</span>        <span class="keywordtype">float</span> a = <a class="code hl_variable" href="../../d9/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Waystation.html#a944e04c6395f7826016eb9f79c6da392">IMPROVE_ACCESSIBILITY</a>;</div>
-<div class="line"><span class="lineno">  259</span>        String aStr = <span class="stringliteral">&quot;&quot;</span> + (int)Math.round(a * 100f) + <span class="stringliteral">&quot;%&quot;</span>;</div>
-<div class="line"><span class="lineno">  260</span>        </div>
-<div class="line"><span class="lineno">  261</span>        <span class="keywordflow">if</span> (mode == ImprovementDescriptionMode.INDUSTRY_TOOLTIP) {</div>
-<div class="line"><span class="lineno">  262</span>            info.addPara(<span class="stringliteral">&quot;Accessibility increased by %s.&quot;</span>, 0f, highlight, aStr);</div>
-<div class="line"><span class="lineno">  263</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  264</span>            info.addPara(<span class="stringliteral">&quot;Increases accessibility by %s.&quot;</span>, 0f, highlight, aStr);</div>
-<div class="line"><span class="lineno">  265</span>        }</div>
-<div class="line"><span class="lineno">  266</span> </div>
-<div class="line"><span class="lineno">  267</span>        info.addSpacer(opad);</div>
-<div class="line"><span class="lineno">  268</span>        super.addImproveDesc(info, mode);</div>
-<div class="line"><span class="lineno">  269</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Waystation_html_a944e04c6395f7826016eb9f79c6da392"><div class="ttname"><a href="../../d9/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Waystation.html#a944e04c6395f7826016eb9f79c6da392">com.fs.starfarer.api.impl.campaign.econ.impl.Waystation.IMPROVE_ACCESSIBILITY</a></div><div class="ttdeci">static float IMPROVE_ACCESSIBILITY</div><div class="ttdef"><b>Definition:</b> <a href="../../db/dfc/Waystation_8java_source.html#l00025">Waystation.java:25</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a724d774670f2dbc70eb8476acb3c663a" name="a724d774670f2dbc70eb8476acb3c663a"></a>
@@ -911,39 +863,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a8686f09d9cee32e9ccc6fdcbf9df071c">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../db/dfc/Waystation_8java_source.html#l00140">140</a> of file <a class="el" href="../../db/dfc/Waystation_8java_source.html">Waystation.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  140</span>                                                                                                              {</div>
-<div class="line"><span class="lineno">  141</span>        <span class="keywordflow">if</span> (mode != IndustryTooltipMode.NORMAL || <a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a511613f792cac2306ff2ea5ba6be8407">isFunctional</a>()) {         </div>
-<div class="line"><span class="lineno">  142</span>            MutableStat fake = <span class="keyword">new</span> MutableStat(0);</div>
-<div class="line"><span class="lineno">  143</span>            </div>
-<div class="line"><span class="lineno">  144</span>            String desc = <a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#ae7fa4bd5c6ff749aa7a2fae48988657d">getNameForModifier</a>();</div>
-<div class="line"><span class="lineno">  145</span>            <span class="keywordtype">float</span> a = <a class="code hl_variable" href="../../d9/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Waystation.html#a8f187fd65c2f7e4f3c270cab2002c6d2">BASE_ACCESSIBILITY</a>;</div>
-<div class="line"><span class="lineno">  146</span>            <span class="keywordflow">if</span> (a &gt; 0) {</div>
-<div class="line"><span class="lineno">  147</span>                fake.modifyFlat(<a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a33413101f7f7479cfe98427bc31ec114">getModId</a>(0), a, desc);</div>
-<div class="line"><span class="lineno">  148</span>            }</div>
-<div class="line"><span class="lineno">  149</span>            <span class="keywordtype">float</span> total = a;</div>
-<div class="line"><span class="lineno">  150</span>            String totalStr = <span class="stringliteral">&quot;+&quot;</span> + (int)Math.round(total * 100f) + <span class="stringliteral">&quot;%&quot;</span>;</div>
-<div class="line"><span class="lineno">  151</span>            Color h = Misc.getHighlightColor();</div>
-<div class="line"><span class="lineno">  152</span>            <span class="keywordflow">if</span> (total &lt; 0) {</div>
-<div class="line"><span class="lineno">  153</span>                h = Misc.getNegativeHighlightColor();</div>
-<div class="line"><span class="lineno">  154</span>                totalStr = <span class="stringliteral">&quot;&quot;</span> + (int)Math.round(total * 100f) + <span class="stringliteral">&quot;%&quot;</span>;</div>
-<div class="line"><span class="lineno">  155</span>            }</div>
-<div class="line"><span class="lineno">  156</span>            <span class="keywordtype">float</span> opad = 10f;</div>
-<div class="line"><span class="lineno">  157</span>            <span class="keywordtype">float</span> pad = 3f;</div>
-<div class="line"><span class="lineno">  158</span>            <span class="keywordflow">if</span> (total &gt;= 0) {</div>
-<div class="line"><span class="lineno">  159</span>                tooltip.addPara(<span class="stringliteral">&quot;Accessibility bonus: %s&quot;</span>, opad, h, totalStr);</div>
-<div class="line"><span class="lineno">  160</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  161</span>                tooltip.addPara(<span class="stringliteral">&quot;Accessibility penalty: %s&quot;</span>, opad, h, totalStr);</div>
-<div class="line"><span class="lineno">  162</span>            }</div>
-<div class="line"><span class="lineno">  163</span>            </div>
-<div class="line"><span class="lineno">  164</span>            tooltip.addPara(<span class="stringliteral">&quot;As long as demand is met, allows the colony to stockpile fuel, supplies, and crew, even &quot;</span> +</div>
-<div class="line"><span class="lineno">  165</span>                            <span class="stringliteral">&quot;if it does not produce them locally. The stockpile levels exceed those generated by equivalent local production.&quot;</span>, opad);</div>
-<div class="line"><span class="lineno">  166</span>        }</div>
-<div class="line"><span class="lineno">  167</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry_html_a33413101f7f7479cfe98427bc31ec114"><div class="ttname"><a href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a33413101f7f7479cfe98427bc31ec114">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry.getModId</a></div><div class="ttdeci">String getModId()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8f/BaseIndustry_8java_source.html#l00259">BaseIndustry.java:259</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry_html_a511613f792cac2306ff2ea5ba6be8407"><div class="ttname"><a href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a511613f792cac2306ff2ea5ba6be8407">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry.isFunctional</a></div><div class="ttdeci">boolean isFunctional()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8f/BaseIndustry_8java_source.html#l00475">BaseIndustry.java:475</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry_html_ae7fa4bd5c6ff749aa7a2fae48988657d"><div class="ttname"><a href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#ae7fa4bd5c6ff749aa7a2fae48988657d">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry.getNameForModifier</a></div><div class="ttdeci">String getNameForModifier()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8f/BaseIndustry_8java_source.html#l01623">BaseIndustry.java:1623</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Waystation_html_a8f187fd65c2f7e4f3c270cab2002c6d2"><div class="ttname"><a href="../../d9/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Waystation.html#a8f187fd65c2f7e4f3c270cab2002c6d2">com.fs.starfarer.api.impl.campaign.econ.impl.Waystation.BASE_ACCESSIBILITY</a></div><div class="ttdeci">static float BASE_ACCESSIBILITY</div><div class="ttdef"><b>Definition:</b> <a href="../../db/dfc/Waystation_8java_source.html#l00023">Waystation.java:23</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a1fba89a2a2d2212ae1de38c0803c7a6a" name="a1fba89a2a2d2212ae1de38c0803c7a6a"></a>
@@ -983,21 +903,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#aa777ec6faecaf4bc584c53b11b60311c">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../db/dfc/Waystation_8java_source.html#l00122">122</a> of file <a class="el" href="../../db/dfc/Waystation_8java_source.html">Waystation.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  122</span>                                                                                                {</div>
-<div class="line"><span class="lineno">  123</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a64c3437824f8a05ba3e6dc8a8ab61e62">isPlayerOwned</a>()) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  124</span>            </div>
-<div class="line"><span class="lineno">  125</span>        <span class="keywordtype">float</span> opad = 10f;</div>
-<div class="line"><span class="lineno">  126</span>        </div>
-<div class="line"><span class="lineno">  127</span>        tooltip.addPara(<span class="stringliteral">&quot;Increases the range at which slipstreams are detected around the colony by %s, once &quot;</span></div>
-<div class="line"><span class="lineno">  128</span>                + <span class="stringliteral">&quot;the capability to do so is available.&quot;</span>, opad, Misc.getHighlightColor(),</div>
-<div class="line"><span class="lineno">  129</span>                <span class="stringliteral">&quot;&quot;</span> + (<span class="keywordtype">int</span>)HyperspaceTopographyEventIntel.WAYSTATION_BONUS); </div>
-<div class="line"><span class="lineno">  130</span>        </div>
-<div class="line"><span class="lineno">  131</span><span class="comment">//      tooltip.addPara(&quot;As long as demand is met, allows the colony to stockpile fuel, supplies, and crew, even &quot; +</span></div>
-<div class="line"><span class="lineno">  132</span><span class="comment">//                      &quot;if it does not produce them locally.&quot;, opad);</span></div>
-<div class="line"><span class="lineno">  133</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry_html_a3a6a42045fe8b527252be206b4d9f27c"><div class="ttname"><a href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry.market</a></div><div class="ttdeci">MarketAPI market</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8f/BaseIndustry_8java_source.html#l00095">BaseIndustry.java:95</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a64c3437824f8a05ba3e6dc8a8ab61e62"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a64c3437824f8a05ba3e6dc8a8ab61e62">com.fs.starfarer.api.campaign.econ.MarketAPI.isPlayerOwned</a></div><div class="ttdeci">boolean isPlayerOwned()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8848f684629dfc0cdefc7e2fffec9886" name="a8848f684629dfc0cdefc7e2fffec9886"></a>
@@ -1018,71 +924,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="../../db/d10/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1Industry.html#afec13f539610ffc411c4aa0074a3b767">com.fs.starfarer.api.campaign.econ.Industry</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../db/dfc/Waystation_8java_source.html#l00030">30</a> of file <a class="el" href="../../db/dfc/Waystation_8java_source.html">Waystation.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   30</span>                        {</div>
-<div class="line"><span class="lineno">   31</span>        super.apply(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   32</span>        </div>
-<div class="line"><span class="lineno">   33</span>        <span class="keywordtype">int</span> size = <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af6f714c59a16687b5cde142091a54150">getSize</a>();</div>
-<div class="line"><span class="lineno">   34</span>        </div>
-<div class="line"><span class="lineno">   35</span>        <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#ada1a3bcbe22df6e0198bf0612576c5b5">demand</a>(Commodities.FUEL, size);</div>
-<div class="line"><span class="lineno">   36</span>        <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#ada1a3bcbe22df6e0198bf0612576c5b5">demand</a>(Commodities.SUPPLIES, size);</div>
-<div class="line"><span class="lineno">   37</span>        <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#ada1a3bcbe22df6e0198bf0612576c5b5">demand</a>(Commodities.CREW, size);</div>
-<div class="line"><span class="lineno">   38</span>        </div>
-<div class="line"><span class="lineno">   39</span>        <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#ada1a3bcbe22df6e0198bf0612576c5b5">demand</a>(Commodities.VOLATILES, 1);</div>
-<div class="line"><span class="lineno">   40</span>        <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#ada1a3bcbe22df6e0198bf0612576c5b5">demand</a>(Commodities.RARE_METALS, 1);</div>
-<div class="line"><span class="lineno">   41</span>        </div>
-<div class="line"><span class="lineno">   42</span>        String desc = <a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#ae7fa4bd5c6ff749aa7a2fae48988657d">getNameForModifier</a>();</div>
-<div class="line"><span class="lineno">   43</span>        </div>
-<div class="line"><span class="lineno">   44</span><span class="comment">//      Pair&lt;String, Integer&gt; deficit = getUpkeepAffectingDeficit();</span></div>
-<div class="line"><span class="lineno">   45</span><span class="comment">//      if (deficit.two &gt; 0) {</span></div>
-<div class="line"><span class="lineno">   46</span><span class="comment">//          float loss = getUpkeepPenalty(deficit);</span></div>
-<div class="line"><span class="lineno">   47</span><span class="comment">//          getUpkeep().modifyMult(&quot;deficit&quot;, 1f + loss, getDeficitText(deficit.one));</span></div>
-<div class="line"><span class="lineno">   48</span><span class="comment">//      } else {</span></div>
-<div class="line"><span class="lineno">   49</span><span class="comment">//          getUpkeep().unmodifyMult(&quot;deficit&quot;);</span></div>
-<div class="line"><span class="lineno">   50</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">   51</span>        </div>
-<div class="line"><span class="lineno">   52</span>        <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#ae10b57cb9a904a68a915595a445a998f">setHasWaystation</a>(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   53</span>        </div>
-<div class="line"><span class="lineno">   54</span>        <span class="keywordtype">float</span> a = <a class="code hl_variable" href="../../d9/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Waystation.html#a8f187fd65c2f7e4f3c270cab2002c6d2">BASE_ACCESSIBILITY</a>;</div>
-<div class="line"><span class="lineno">   55</span>        <span class="keywordflow">if</span> (a &gt; 0) {</div>
-<div class="line"><span class="lineno">   56</span>            <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a8db1c2727d55b0aeddb14f2a2f446a4c">getAccessibilityMod</a>().<a class="code hl_function" href="../../dc/d19/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus.html#ad08aa246116d46809d4f55279eeb38e4">modifyFlat</a>(<a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a33413101f7f7479cfe98427bc31ec114">getModId</a>(0), a, desc);</div>
-<div class="line"><span class="lineno">   57</span>        }</div>
-<div class="line"><span class="lineno">   58</span>        </div>
-<div class="line"><span class="lineno">   59</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a64c3437824f8a05ba3e6dc8a8ab61e62">isPlayerOwned</a>()) {</div>
-<div class="line"><span class="lineno">   60</span>            SubmarketPlugin sub = Misc.getLocalResources(<a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">market</a>);</div>
-<div class="line"><span class="lineno">   61</span>            <span class="keywordflow">if</span> (sub instanceof LocalResourcesSubmarketPlugin) {</div>
-<div class="line"><span class="lineno">   62</span>                LocalResourcesSubmarketPlugin lr = (LocalResourcesSubmarketPlugin) sub;</div>
-<div class="line"><span class="lineno">   63</span>                <span class="keywordtype">float</span> mult = Global.getSettings().getFloat(<span class="stringliteral">&quot;stockpileMultExcess&quot;</span>);</div>
-<div class="line"><span class="lineno">   64</span>                lr.getStockpilingBonus(Commodities.FUEL).modifyFlat(<a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a33413101f7f7479cfe98427bc31ec114">getModId</a>(0), size * mult);</div>
-<div class="line"><span class="lineno">   65</span>                lr.getStockpilingBonus(Commodities.SUPPLIES).modifyFlat(<a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a33413101f7f7479cfe98427bc31ec114">getModId</a>(0), size * mult);</div>
-<div class="line"><span class="lineno">   66</span>                lr.getStockpilingBonus(Commodities.CREW).modifyFlat(<a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a33413101f7f7479cfe98427bc31ec114">getModId</a>(0), size * mult);</div>
-<div class="line"><span class="lineno">   67</span>                lr.getStockpilingBonus(Commodities.VOLATILES).modifyFlat(<a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a33413101f7f7479cfe98427bc31ec114">getModId</a>(0), 1f * mult);</div>
-<div class="line"><span class="lineno">   68</span>                lr.getStockpilingBonus(Commodities.RARE_METALS).modifyFlat(<a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a33413101f7f7479cfe98427bc31ec114">getModId</a>(0), 1f * mult);</div>
-<div class="line"><span class="lineno">   69</span>            }</div>
-<div class="line"><span class="lineno">   70</span>        }</div>
-<div class="line"><span class="lineno">   71</span>        </div>
-<div class="line"><span class="lineno">   72</span>        HyperspaceTopographyEventIntel intel = HyperspaceTopographyEventIntel.get();</div>
-<div class="line"><span class="lineno">   73</span>        <span class="keywordflow">if</span> (intel != <span class="keyword">null</span> &amp;&amp; intel.isStageActive(Stage.SLIPSTREAM_DETECTION)) {</div>
-<div class="line"><span class="lineno">   74</span>            <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a70323dd35f954c1be49bf2e8c43c9284">getStats</a>().<a class="code hl_function" href="../../d0/d6d/interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1MutableMarketStatsAPI.html#a07a35dc173333e48b78a68c47950280d">getDynamic</a>().<a class="code hl_function" href="../../db/dcf/interfacecom_1_1fs_1_1starfarer_1_1api_1_1util_1_1DynamicStatsAPI.html#a873b747b8989616c2da542355d167c79">getMod</a>(Stats.SLIPSTREAM_REVEAL_RANGE_LY_MOD).<a class="code hl_function" href="../../dc/d19/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus.html#ad08aa246116d46809d4f55279eeb38e4">modifyFlat</a>(</div>
-<div class="line"><span class="lineno">   75</span>                            <a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a33413101f7f7479cfe98427bc31ec114">getModId</a>(0), HyperspaceTopographyEventIntel.WAYSTATION_BONUS, <a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#ae7fa4bd5c6ff749aa7a2fae48988657d">getNameForModifier</a>());</div>
-<div class="line"><span class="lineno">   76</span>        }</div>
-<div class="line"><span class="lineno">   77</span>        </div>
-<div class="line"><span class="lineno">   78</span>        </div>
-<div class="line"><span class="lineno">   79</span>        <span class="keywordflow">if</span> (!<a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a511613f792cac2306ff2ea5ba6be8407">isFunctional</a>()) {</div>
-<div class="line"><span class="lineno">   80</span>            <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a2be46a5c977e13c63ef2b249999b89c1">supply</a>.clear();</div>
-<div class="line"><span class="lineno">   81</span>            <a class="code hl_function" href="../../d9/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Waystation.html#ac45a6de769fc060aef2ef2ce34f20b91">unapply</a>();</div>
-<div class="line"><span class="lineno">   82</span>        }</div>
-<div class="line"><span class="lineno">   83</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus_html_ad08aa246116d46809d4f55279eeb38e4"><div class="ttname"><a href="../../dc/d19/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus.html#ad08aa246116d46809d4f55279eeb38e4">com.fs.starfarer.api.combat.StatBonus.modifyFlat</a></div><div class="ttdeci">void modifyFlat(String source, float value)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d6c/StatBonus_8java_source.html#l00121">StatBonus.java:121</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry_html_a2be46a5c977e13c63ef2b249999b89c1"><div class="ttname"><a href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a2be46a5c977e13c63ef2b249999b89c1">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry.supply</a></div><div class="ttdeci">Map&lt; String, MutableCommodityQuantity &gt; supply</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8f/BaseIndustry_8java_source.html#l00090">BaseIndustry.java:90</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry_html_ada1a3bcbe22df6e0198bf0612576c5b5"><div class="ttname"><a href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#ada1a3bcbe22df6e0198bf0612576c5b5">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry.demand</a></div><div class="ttdeci">Map&lt; String, MutableCommodityQuantity &gt; demand</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8f/BaseIndustry_8java_source.html#l00091">BaseIndustry.java:91</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Waystation_html_ac45a6de769fc060aef2ef2ce34f20b91"><div class="ttname"><a href="../../d9/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Waystation.html#ac45a6de769fc060aef2ef2ce34f20b91">com.fs.starfarer.api.impl.campaign.econ.impl.Waystation.unapply</a></div><div class="ttdeci">void unapply()</div><div class="ttdef"><b>Definition:</b> <a href="../../db/dfc/Waystation_8java_source.html#l00086">Waystation.java:86</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a70323dd35f954c1be49bf2e8c43c9284"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a70323dd35f954c1be49bf2e8c43c9284">com.fs.starfarer.api.campaign.econ.MarketAPI.getStats</a></div><div class="ttdeci">MutableMarketStatsAPI getStats()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a8db1c2727d55b0aeddb14f2a2f446a4c"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a8db1c2727d55b0aeddb14f2a2f446a4c">com.fs.starfarer.api.campaign.econ.MarketAPI.getAccessibilityMod</a></div><div class="ttdeci">StatBonus getAccessibilityMod()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_ae10b57cb9a904a68a915595a445a998f"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#ae10b57cb9a904a68a915595a445a998f">com.fs.starfarer.api.campaign.econ.MarketAPI.setHasWaystation</a></div><div class="ttdeci">void setHasWaystation(boolean hasWaystation)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_af6f714c59a16687b5cde142091a54150"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af6f714c59a16687b5cde142091a54150">com.fs.starfarer.api.campaign.econ.MarketAPI.getSize</a></div><div class="ttdeci">int getSize()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1MutableMarketStatsAPI_html_a07a35dc173333e48b78a68c47950280d"><div class="ttname"><a href="../../d0/d6d/interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1MutableMarketStatsAPI.html#a07a35dc173333e48b78a68c47950280d">com.fs.starfarer.api.fleet.MutableMarketStatsAPI.getDynamic</a></div><div class="ttdeci">DynamicStatsAPI getDynamic()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1util_1_1DynamicStatsAPI_html_a873b747b8989616c2da542355d167c79"><div class="ttname"><a href="../../db/dcf/interfacecom_1_1fs_1_1starfarer_1_1api_1_1util_1_1DynamicStatsAPI.html#a873b747b8989616c2da542355d167c79">com.fs.starfarer.api.util.DynamicStatsAPI.getMod</a></div><div class="ttdeci">StatBonus getMod(String id)</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5c6e3db173e16903833b9c8695376811" name="a5c6e3db173e16903833b9c8695376811"></a>
@@ -1111,19 +953,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a9ec2923f1a2af4301bc295759a6763bd">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../db/dfc/Waystation_8java_source.html#l00170">170</a> of file <a class="el" href="../../db/dfc/Waystation_8java_source.html">Waystation.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  170</span>                                             {</div>
-<div class="line"><span class="lineno">  171</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a64c3437824f8a05ba3e6dc8a8ab61e62">isPlayerOwned</a>()) {</div>
-<div class="line"><span class="lineno">  172</span>            SubmarketPlugin sub = Misc.getLocalResources(<a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">market</a>);</div>
-<div class="line"><span class="lineno">  173</span>            <span class="keywordflow">if</span> (sub instanceof LocalResourcesSubmarketPlugin) {</div>
-<div class="line"><span class="lineno">  174</span>                <span class="keywordtype">float</span> bonus = <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af6f714c59a16687b5cde142091a54150">getSize</a>() * Global.getSettings().getFloat(<span class="stringliteral">&quot;stockpileMultExcess&quot;</span>);</div>
-<div class="line"><span class="lineno">  175</span>                LocalResourcesSubmarketPlugin lr = (LocalResourcesSubmarketPlugin) sub;</div>
-<div class="line"><span class="lineno">  176</span>                lr.getStockpilingBonus(Commodities.FUEL).modifyFlat(<a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a33413101f7f7479cfe98427bc31ec114">getModId</a>(1), bonus);</div>
-<div class="line"><span class="lineno">  177</span>                lr.getStockpilingBonus(Commodities.SUPPLIES).modifyFlat(<a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a33413101f7f7479cfe98427bc31ec114">getModId</a>(1), bonus);</div>
-<div class="line"><span class="lineno">  178</span>                lr.getStockpilingBonus(Commodities.CREW).modifyFlat(<a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a33413101f7f7479cfe98427bc31ec114">getModId</a>(1), bonus);</div>
-<div class="line"><span class="lineno">  179</span>            }</div>
-<div class="line"><span class="lineno">  180</span>        }</div>
-<div class="line"><span class="lineno">  181</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2de3f76034aab20655b03b28d22e6a76" name="a2de3f76034aab20655b03b28d22e6a76"></a>
@@ -1152,12 +982,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a70cda419e1144f15680791a1f7288d70">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../db/dfc/Waystation_8java_source.html#l00197">197</a> of file <a class="el" href="../../db/dfc/Waystation_8java_source.html">Waystation.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  197</span>                                                            {</div>
-<div class="line"><span class="lineno">  198</span>        <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#aed79018a72a2a032cb317bb3809ed4cb">demandReduction</a>.<a class="code hl_function" href="../../d4/d1a/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableStat.html#a3af420f08b9b78a54ab0e4c8fdc9184b">modifyFlat</a>(<a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a33413101f7f7479cfe98427bc31ec114">getModId</a>(0), <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a1034a17059a3e8a52163e7dc6a8d3a9e">DEMAND_REDUCTION</a>, <span class="stringliteral">&quot;Alpha core&quot;</span>);</div>
-<div class="line"><span class="lineno">  199</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableStat_html_a3af420f08b9b78a54ab0e4c8fdc9184b"><div class="ttname"><a href="../../d4/d1a/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableStat.html#a3af420f08b9b78a54ab0e4c8fdc9184b">com.fs.starfarer.api.combat.MutableStat.modifyFlat</a></div><div class="ttdeci">void modifyFlat(String source, float value)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d27/MutableStat_8java_source.html#l00176">MutableStat.java:176</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry_html_aed79018a72a2a032cb317bb3809ed4cb"><div class="ttname"><a href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#aed79018a72a2a032cb317bb3809ed4cb">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry.demandReduction</a></div><div class="ttdeci">MutableStat demandReduction</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8f/BaseIndustry_8java_source.html#l00111">BaseIndustry.java:111</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aeab74f4acfdce83a7c82a71d8b79c027" name="aeab74f4acfdce83a7c82a71d8b79c027"></a>
@@ -1186,18 +1011,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a65f7baa78d347ea52b02de05f3f913b8">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../db/dfc/Waystation_8java_source.html#l00245">245</a> of file <a class="el" href="../../db/dfc/Waystation_8java_source.html">Waystation.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  245</span>                                           {</div>
-<div class="line"><span class="lineno">  246</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a114bff8f3b74c4f7a5e0ed7d18004c67">isImproved</a>()) {</div>
-<div class="line"><span class="lineno">  247</span>            <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a8db1c2727d55b0aeddb14f2a2f446a4c">getAccessibilityMod</a>().<a class="code hl_function" href="../../dc/d19/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus.html#ad08aa246116d46809d4f55279eeb38e4">modifyFlat</a>(<a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a33413101f7f7479cfe98427bc31ec114">getModId</a>(3), <a class="code hl_variable" href="../../d9/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Waystation.html#a944e04c6395f7826016eb9f79c6da392">IMPROVE_ACCESSIBILITY</a>,</div>
-<div class="line"><span class="lineno">  248</span>                            <a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a418056b5886c29e142c4275ccc844373">getImprovementsDescForModifiers</a>() + <span class="stringliteral">&quot; (&quot;</span> + <a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#ae7fa4bd5c6ff749aa7a2fae48988657d">getNameForModifier</a>() + <span class="stringliteral">&quot;)&quot;</span>);</div>
-<div class="line"><span class="lineno">  249</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  250</span>            <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a8db1c2727d55b0aeddb14f2a2f446a4c">getAccessibilityMod</a>().<a class="code hl_function" href="../../dc/d19/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus.html#afb8cbd56006de48758f0081fc6b95bea">unmodifyFlat</a>(<a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a33413101f7f7479cfe98427bc31ec114">getModId</a>(3));</div>
-<div class="line"><span class="lineno">  251</span>        }</div>
-<div class="line"><span class="lineno">  252</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus_html_afb8cbd56006de48758f0081fc6b95bea"><div class="ttname"><a href="../../dc/d19/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus.html#afb8cbd56006de48758f0081fc6b95bea">com.fs.starfarer.api.combat.StatBonus.unmodifyFlat</a></div><div class="ttdeci">void unmodifyFlat(String source)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d6c/StatBonus_8java_source.html#l00202">StatBonus.java:202</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry_html_a114bff8f3b74c4f7a5e0ed7d18004c67"><div class="ttname"><a href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a114bff8f3b74c4f7a5e0ed7d18004c67">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry.isImproved</a></div><div class="ttdeci">boolean isImproved()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8f/BaseIndustry_8java_source.html#l01969">BaseIndustry.java:1969</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry_html_a418056b5886c29e142c4275ccc844373"><div class="ttname"><a href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a418056b5886c29e142c4275ccc844373">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry.getImprovementsDescForModifiers</a></div><div class="ttdeci">String getImprovementsDescForModifiers()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8f/BaseIndustry_8java_source.html#l02042">BaseIndustry.java:2042</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a85cdf18736a582b26565c9b47d38aceb" name="a85cdf18736a582b26565c9b47d38aceb"></a>
@@ -1226,18 +1040,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#aea28248ea34657af478e7322dd090c42">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../db/dfc/Waystation_8java_source.html#l00184">184</a> of file <a class="el" href="../../db/dfc/Waystation_8java_source.html">Waystation.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  184</span>                                            {</div>
-<div class="line"><span class="lineno">  185</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a64c3437824f8a05ba3e6dc8a8ab61e62">isPlayerOwned</a>()) {</div>
-<div class="line"><span class="lineno">  186</span>            SubmarketPlugin sub = Misc.getLocalResources(<a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">market</a>);</div>
-<div class="line"><span class="lineno">  187</span>            <span class="keywordflow">if</span> (sub instanceof LocalResourcesSubmarketPlugin) {</div>
-<div class="line"><span class="lineno">  188</span>                LocalResourcesSubmarketPlugin lr = (LocalResourcesSubmarketPlugin) sub;</div>
-<div class="line"><span class="lineno">  189</span>                lr.getStockpilingBonus(Commodities.FUEL).unmodifyFlat(<a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a33413101f7f7479cfe98427bc31ec114">getModId</a>(1));</div>
-<div class="line"><span class="lineno">  190</span>                lr.getStockpilingBonus(Commodities.SUPPLIES).unmodifyFlat(<a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a33413101f7f7479cfe98427bc31ec114">getModId</a>(1));</div>
-<div class="line"><span class="lineno">  191</span>                lr.getStockpilingBonus(Commodities.CREW).unmodifyFlat(<a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a33413101f7f7479cfe98427bc31ec114">getModId</a>(1));</div>
-<div class="line"><span class="lineno">  192</span>            }</div>
-<div class="line"><span class="lineno">  193</span>        }</div>
-<div class="line"><span class="lineno">  194</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a52c841559b761e2feecb595934d79e0f" name="a52c841559b761e2feecb595934d79e0f"></a>
@@ -1258,10 +1061,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#acdf9e1b2da8ccbdaeda1f10bdb7a1a88">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../db/dfc/Waystation_8java_source.html#l00241">241</a> of file <a class="el" href="../../db/dfc/Waystation_8java_source.html">Waystation.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  241</span>                                {</div>
-<div class="line"><span class="lineno">  242</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  243</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a58d640a0ee198226a9e19441918a979b" name="a58d640a0ee198226a9e19441918a979b"></a>
@@ -1282,10 +1082,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a72d87df6d16cc07579bf6a1043bcd0cb">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../db/dfc/Waystation_8java_source.html#l00235">235</a> of file <a class="el" href="../../db/dfc/Waystation_8java_source.html">Waystation.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  235</span>                                         {</div>
-<div class="line"><span class="lineno">  236</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Requires a functional spaceport&quot;</span>;</div>
-<div class="line"><span class="lineno">  237</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="abd03d61cd053177c122212ebeb3a1360" name="abd03d61cd053177c122212ebeb3a1360"></a>
@@ -1312,11 +1109,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../db/dfc/Waystation_8java_source.html#l00116">116</a> of file <a class="el" href="../../db/dfc/Waystation_8java_source.html">Waystation.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  116</span>                                                                {</div>
-<div class="line"><span class="lineno">  117</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#af9ae61ae0ee27d39832661c87a9d1567">getMaxDeficit</a>(Commodities.FUEL, Commodities.SUPPLIES, Commodities.CREW);</div>
-<div class="line"><span class="lineno">  118</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry_html_af9ae61ae0ee27d39832661c87a9d1567"><div class="ttname"><a href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#af9ae61ae0ee27d39832661c87a9d1567">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry.getMaxDeficit</a></div><div class="ttdeci">Pair&lt; String, Integer &gt; getMaxDeficit(String ... commodityIds)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8f/BaseIndustry_8java_source.html#l00799">BaseIndustry.java:799</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="abf674b5042d5ea8530977acc05ed6720" name="abf674b5042d5ea8530977acc05ed6720"></a>
@@ -1344,13 +1137,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../db/dfc/Waystation_8java_source.html#l00110">110</a> of file <a class="el" href="../../db/dfc/Waystation_8java_source.html">Waystation.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  110</span>                                                                    {</div>
-<div class="line"><span class="lineno">  111</span>        <span class="keywordtype">float</span> loss = deficit.two * <a class="code hl_variable" href="../../d9/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Waystation.html#a0d6b01fc3e0a3427fe65f4db7aad0b95">UPKEEP_MULT_PER_DEFICIT</a>;</div>
-<div class="line"><span class="lineno">  112</span>        <span class="keywordflow">if</span> (loss &lt; 0) loss = 0;</div>
-<div class="line"><span class="lineno">  113</span>        <span class="keywordflow">return</span> loss;</div>
-<div class="line"><span class="lineno">  114</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Waystation_html_a0d6b01fc3e0a3427fe65f4db7aad0b95"><div class="ttname"><a href="../../d9/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Waystation.html#a0d6b01fc3e0a3427fe65f4db7aad0b95">com.fs.starfarer.api.impl.campaign.econ.impl.Waystation.UPKEEP_MULT_PER_DEFICIT</a></div><div class="ttdeci">static float UPKEEP_MULT_PER_DEFICIT</div><div class="ttdef"><b>Definition:</b> <a href="../../db/dfc/Waystation_8java_source.html#l00022">Waystation.java:22</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ad29fefdd81af61eb54c8dd533834cedd" name="ad29fefdd81af61eb54c8dd533834cedd"></a>
@@ -1390,10 +1177,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a7a958826403867d88cdf08ef5257dfe2">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../db/dfc/Waystation_8java_source.html#l00135">135</a> of file <a class="el" href="../../db/dfc/Waystation_8java_source.html">Waystation.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  135</span>                                                                                        {</div>
-<div class="line"><span class="lineno">  136</span>        <span class="keywordflow">return</span> mode != IndustryTooltipMode.NORMAL || <a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a511613f792cac2306ff2ea5ba6be8407">isFunctional</a>();</div>
-<div class="line"><span class="lineno">  137</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a834bcb4bc52acc2d6a6c9884031efcc2" name="a834bcb4bc52acc2d6a6c9884031efcc2"></a>
@@ -1414,11 +1198,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a5572288890e72ad03aa2e70bdfb7e639">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../db/dfc/Waystation_8java_source.html#l00231">231</a> of file <a class="el" href="../../db/dfc/Waystation_8java_source.html">Waystation.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  231</span>                                        {</div>
-<div class="line"><span class="lineno">  232</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af8894b5c0bf821f6258ec19eb4b7783c">hasSpaceport</a>();</div>
-<div class="line"><span class="lineno">  233</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_af8894b5c0bf821f6258ec19eb4b7783c"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af8894b5c0bf821f6258ec19eb4b7783c">com.fs.starfarer.api.campaign.econ.MarketAPI.hasSpaceport</a></div><div class="ttdeci">boolean hasSpaceport()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac45a6de769fc060aef2ef2ce34f20b91" name="ac45a6de769fc060aef2ef2ce34f20b91"></a>
@@ -1439,30 +1219,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#af3f1bd9a049574f633533ece2a744e0c">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../db/dfc/Waystation_8java_source.html#l00086">86</a> of file <a class="el" href="../../db/dfc/Waystation_8java_source.html">Waystation.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   86</span>                          {</div>
-<div class="line"><span class="lineno">   87</span>        super.unapply();</div>
-<div class="line"><span class="lineno">   88</span>        </div>
-<div class="line"><span class="lineno">   89</span>        <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#ae10b57cb9a904a68a915595a445a998f">setHasWaystation</a>(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   90</span>        <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a8db1c2727d55b0aeddb14f2a2f446a4c">getAccessibilityMod</a>().<a class="code hl_function" href="../../dc/d19/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus.html#afb8cbd56006de48758f0081fc6b95bea">unmodifyFlat</a>(<a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a33413101f7f7479cfe98427bc31ec114">getModId</a>(0));</div>
-<div class="line"><span class="lineno">   91</span>        <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a8db1c2727d55b0aeddb14f2a2f446a4c">getAccessibilityMod</a>().<a class="code hl_function" href="../../dc/d19/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus.html#afb8cbd56006de48758f0081fc6b95bea">unmodifyFlat</a>(<a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a33413101f7f7479cfe98427bc31ec114">getModId</a>(1));</div>
-<div class="line"><span class="lineno">   92</span>        <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a8db1c2727d55b0aeddb14f2a2f446a4c">getAccessibilityMod</a>().<a class="code hl_function" href="../../dc/d19/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus.html#afb8cbd56006de48758f0081fc6b95bea">unmodifyFlat</a>(<a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a33413101f7f7479cfe98427bc31ec114">getModId</a>(2));</div>
-<div class="line"><span class="lineno">   93</span>        </div>
-<div class="line"><span class="lineno">   94</span>        <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a70323dd35f954c1be49bf2e8c43c9284">getStats</a>().<a class="code hl_function" href="../../d0/d6d/interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1MutableMarketStatsAPI.html#a07a35dc173333e48b78a68c47950280d">getDynamic</a>().<a class="code hl_function" href="../../db/dcf/interfacecom_1_1fs_1_1starfarer_1_1api_1_1util_1_1DynamicStatsAPI.html#a873b747b8989616c2da542355d167c79">getMod</a>(Stats.SLIPSTREAM_REVEAL_RANGE_LY_MOD).<a class="code hl_function" href="../../dc/d19/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus.html#afb8cbd56006de48758f0081fc6b95bea">unmodifyFlat</a>(<a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a33413101f7f7479cfe98427bc31ec114">getModId</a>(0));</div>
-<div class="line"><span class="lineno">   95</span>        </div>
-<div class="line"><span class="lineno">   96</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a64c3437824f8a05ba3e6dc8a8ab61e62">isPlayerOwned</a>()) {</div>
-<div class="line"><span class="lineno">   97</span>            SubmarketPlugin sub = Misc.getLocalResources(<a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">market</a>);</div>
-<div class="line"><span class="lineno">   98</span>            <span class="keywordflow">if</span> (sub instanceof LocalResourcesSubmarketPlugin) {</div>
-<div class="line"><span class="lineno">   99</span>                LocalResourcesSubmarketPlugin lr = (LocalResourcesSubmarketPlugin) sub;</div>
-<div class="line"><span class="lineno">  100</span>                <span class="comment">// base bonuses</span></div>
-<div class="line"><span class="lineno">  101</span>                lr.getStockpilingBonus(Commodities.FUEL).unmodifyFlat(<a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a33413101f7f7479cfe98427bc31ec114">getModId</a>(0));</div>
-<div class="line"><span class="lineno">  102</span>                lr.getStockpilingBonus(Commodities.SUPPLIES).unmodifyFlat(<a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a33413101f7f7479cfe98427bc31ec114">getModId</a>(0));</div>
-<div class="line"><span class="lineno">  103</span>                lr.getStockpilingBonus(Commodities.CREW).unmodifyFlat(<a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a33413101f7f7479cfe98427bc31ec114">getModId</a>(0));</div>
-<div class="line"><span class="lineno">  104</span>                lr.getStockpilingBonus(Commodities.VOLATILES).unmodifyFlat(<a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a33413101f7f7479cfe98427bc31ec114">getModId</a>(0));</div>
-<div class="line"><span class="lineno">  105</span>                lr.getStockpilingBonus(Commodities.RARE_METALS).unmodifyFlat(<a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a33413101f7f7479cfe98427bc31ec114">getModId</a>(0));</div>
-<div class="line"><span class="lineno">  106</span>            }</div>
-<div class="line"><span class="lineno">  107</span>        }</div>
-<div class="line"><span class="lineno">  108</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

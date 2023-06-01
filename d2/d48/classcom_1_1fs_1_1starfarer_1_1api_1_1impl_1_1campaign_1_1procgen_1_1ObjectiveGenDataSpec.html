@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -142,23 +143,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d51/ObjectiveGenDataSpec_8java_source.html#l00016">16</a> of file <a class="el" href="../../d9/d51/ObjectiveGenDataSpec_8java_source.html">ObjectiveGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   16</span>                                                                     {</div>
-<div class="line"><span class="lineno">   17</span>        <span class="keywordtype">id</span> = row.getString(<span class="stringliteral">&quot;id&quot;</span>);</div>
-<div class="line"><span class="lineno">   18</span>        category = row.getString(<span class="stringliteral">&quot;category&quot;</span>);</div>
-<div class="line"><span class="lineno">   19</span>        frequency = (float) row.optDouble(<span class="stringliteral">&quot;frequency&quot;</span>, 0);</div>
-<div class="line"><span class="lineno">   20</span>        </div>
-<div class="line"><span class="lineno">   21</span>        String tags = row.optString(<span class="stringliteral">&quot;tags&quot;</span>, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   22</span>        <span class="keywordflow">if</span> (tags != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   23</span>            String [] split = tags.split(<span class="stringliteral">&quot;,&quot;</span>);</div>
-<div class="line"><span class="lineno">   24</span>            <span class="keywordflow">for</span> (String tag : split) {</div>
-<div class="line"><span class="lineno">   25</span>                tag = tag.trim();</div>
-<div class="line"><span class="lineno">   26</span>                <span class="keywordflow">if</span> (tag.isEmpty()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   27</span>                <a class="code hl_function" href="../../d2/d48/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ObjectiveGenDataSpec.html#a95b94ee643a6b898fdfa5143f271cc84">addTag</a>(tag);</div>
-<div class="line"><span class="lineno">   28</span>            }</div>
-<div class="line"><span class="lineno">   29</span>        }</div>
-<div class="line"><span class="lineno">   30</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ObjectiveGenDataSpec_html_a95b94ee643a6b898fdfa5143f271cc84"><div class="ttname"><a href="../../d2/d48/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ObjectiveGenDataSpec.html#a95b94ee643a6b898fdfa5143f271cc84">com.fs.starfarer.api.impl.campaign.procgen.ObjectiveGenDataSpec.addTag</a></div><div class="ttdeci">void addTag(String tag)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d51/ObjectiveGenDataSpec_8java_source.html#l00064">ObjectiveGenDataSpec.java:64</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -179,10 +164,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d51/ObjectiveGenDataSpec_8java_source.html#l00064">64</a> of file <a class="el" href="../../d9/d51/ObjectiveGenDataSpec_8java_source.html">ObjectiveGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   64</span>                                   {</div>
-<div class="line"><span class="lineno">   65</span>        tags.add(tag);</div>
-<div class="line"><span class="lineno">   66</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af8b70faedb2e1893a96244be1b88d5cf" name="af8b70faedb2e1893a96244be1b88d5cf"></a>
@@ -201,10 +183,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d51/ObjectiveGenDataSpec_8java_source.html#l00040">40</a> of file <a class="el" href="../../d9/d51/ObjectiveGenDataSpec_8java_source.html">ObjectiveGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   40</span>                                {</div>
-<div class="line"><span class="lineno">   41</span>        <span class="keywordflow">return</span> category;</div>
-<div class="line"><span class="lineno">   42</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab608c88bb601be0866e23616afb09133" name="ab608c88bb601be0866e23616afb09133"></a>
@@ -223,10 +202,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d51/ObjectiveGenDataSpec_8java_source.html#l00048">48</a> of file <a class="el" href="../../d9/d51/ObjectiveGenDataSpec_8java_source.html">ObjectiveGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   48</span>                                {</div>
-<div class="line"><span class="lineno">   49</span>        <span class="keywordflow">return</span> frequency;</div>
-<div class="line"><span class="lineno">   50</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a4d2a8913fbf76bd848ff16774699b42b" name="a4d2a8913fbf76bd848ff16774699b42b"></a>
@@ -245,10 +221,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d51/ObjectiveGenDataSpec_8java_source.html#l00032">32</a> of file <a class="el" href="../../d9/d51/ObjectiveGenDataSpec_8java_source.html">ObjectiveGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   32</span>                          {</div>
-<div class="line"><span class="lineno">   33</span>        <span class="keywordflow">return</span> id;</div>
-<div class="line"><span class="lineno">   34</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a31aef09049f36dcf171676d6561d4b7a" name="a31aef09049f36dcf171676d6561d4b7a"></a>
@@ -267,10 +240,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d51/ObjectiveGenDataSpec_8java_source.html#l00060">60</a> of file <a class="el" href="../../d9/d51/ObjectiveGenDataSpec_8java_source.html">ObjectiveGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   60</span>                                 {</div>
-<div class="line"><span class="lineno">   61</span>        <span class="keywordflow">return</span> tags;</div>
-<div class="line"><span class="lineno">   62</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2acbc387bf431ca714e9aa8e61c51fc0" name="a2acbc387bf431ca714e9aa8e61c51fc0"></a>
@@ -290,10 +260,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d51/ObjectiveGenDataSpec_8java_source.html#l00068">68</a> of file <a class="el" href="../../d9/d51/ObjectiveGenDataSpec_8java_source.html">ObjectiveGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   68</span>                                      {</div>
-<div class="line"><span class="lineno">   69</span>        <span class="keywordflow">return</span> tags.contains(tag);</div>
-<div class="line"><span class="lineno">   70</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a69bb31598f6a57bec5e7ea19cf4a42fe" name="a69bb31598f6a57bec5e7ea19cf4a42fe"></a>
@@ -313,10 +280,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d51/ObjectiveGenDataSpec_8java_source.html#l00044">44</a> of file <a class="el" href="../../d9/d51/ObjectiveGenDataSpec_8java_source.html">ObjectiveGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   44</span>                                             {</div>
-<div class="line"><span class="lineno">   45</span>        this.category = category;</div>
-<div class="line"><span class="lineno">   46</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="afbb90655cdad7a22bab5955265ea6ee8" name="afbb90655cdad7a22bab5955265ea6ee8"></a>
@@ -336,10 +300,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d51/ObjectiveGenDataSpec_8java_source.html#l00052">52</a> of file <a class="el" href="../../d9/d51/ObjectiveGenDataSpec_8java_source.html">ObjectiveGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   52</span>                                              {</div>
-<div class="line"><span class="lineno">   53</span>        this.frequency = frequency;</div>
-<div class="line"><span class="lineno">   54</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a481c3bb5a95395d1f093eeb8aeb8b15b" name="a481c3bb5a95395d1f093eeb8aeb8b15b"></a>
@@ -359,10 +320,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d51/ObjectiveGenDataSpec_8java_source.html#l00036">36</a> of file <a class="el" href="../../d9/d51/ObjectiveGenDataSpec_8java_source.html">ObjectiveGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   36</span>                                 {</div>
-<div class="line"><span class="lineno">   37</span>        this.id = id;</div>
-<div class="line"><span class="lineno">   38</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac494bb332e2f16fbdccabb21e41e4c2b" name="ac494bb332e2f16fbdccabb21e41e4c2b"></a>
@@ -382,10 +340,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d51/ObjectiveGenDataSpec_8java_source.html#l00056">56</a> of file <a class="el" href="../../d9/d51/ObjectiveGenDataSpec_8java_source.html">ObjectiveGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   56</span>                                          {</div>
-<div class="line"><span class="lineno">   57</span>        this.tags = tags;</div>
-<div class="line"><span class="lineno">   58</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

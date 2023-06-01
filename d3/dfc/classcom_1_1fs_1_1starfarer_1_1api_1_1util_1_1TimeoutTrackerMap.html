@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -160,10 +161,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/de0/TimeoutTrackerMap_8java_source.html#l00019">19</a> of file <a class="el" href="../../d4/de0/TimeoutTrackerMap_8java_source.html">TimeoutTrackerMap.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   19</span>                                               {</div>
-<div class="line"><span class="lineno">   20</span>        getData(key, item).remaining += time;</div>
-<div class="line"><span class="lineno">   21</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a43f3ba27eb19e3a99ef16f12ca5b314f" name="a43f3ba27eb19e3a99ef16f12ca5b314f"></a>
@@ -205,17 +203,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/de0/TimeoutTrackerMap_8java_source.html#l00023">23</a> of file <a class="el" href="../../d4/de0/TimeoutTrackerMap_8java_source.html">TimeoutTrackerMap.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   23</span>                                                            {</div>
-<div class="line"><span class="lineno">   24</span>        ItemData&lt;K, V&gt; d = getData(key, item);</div>
-<div class="line"><span class="lineno">   25</span>        <span class="keywordflow">if</span> (time &gt; 0 &amp;&amp; d.remaining + time &gt; limit) {</div>
-<div class="line"><span class="lineno">   26</span>            time = Math.max(0, limit - d.remaining);</div>
-<div class="line"><span class="lineno">   27</span>        }</div>
-<div class="line"><span class="lineno">   28</span>        d.remaining += time;</div>
-<div class="line"><span class="lineno">   29</span>        <span class="keywordflow">if</span> (d.remaining &lt; 0) {</div>
-<div class="line"><span class="lineno">   30</span>            d.remaining = 0;</div>
-<div class="line"><span class="lineno">   31</span>        }</div>
-<div class="line"><span class="lineno">   32</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a6a1aee391ebf9fd50ec2dec4b89b8455" name="a6a1aee391ebf9fd50ec2dec4b89b8455"></a>
@@ -235,20 +223,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/de0/TimeoutTrackerMap_8java_source.html#l00067">67</a> of file <a class="el" href="../../d4/de0/TimeoutTrackerMap_8java_source.html">TimeoutTrackerMap.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   67</span>                                      {</div>
-<div class="line"><span class="lineno">   68</span>        List&lt;K&gt; <span class="keyword">remove</span> = <span class="keyword">new</span> ArrayList&lt;K&gt;();</div>
-<div class="line"><span class="lineno">   69</span>        Set&lt;Entry&lt;K, ItemData&lt;K, V&gt;&gt;&gt; entrySet = items.entrySet();</div>
-<div class="line"><span class="lineno">   70</span>        <span class="keywordflow">for</span> (Entry&lt;K, ItemData&lt;K, V&gt;&gt; entry : entrySet) {</div>
-<div class="line"><span class="lineno">   71</span>            entry.getValue().remaining -= amount;</div>
-<div class="line"><span class="lineno">   72</span>            <span class="keywordflow">if</span> (entry.getValue().remaining &lt;= 0) {</div>
-<div class="line"><span class="lineno">   73</span>                <span class="keyword">remove</span>.add(entry.getKey());</div>
-<div class="line"><span class="lineno">   74</span>            }</div>
-<div class="line"><span class="lineno">   75</span>        }</div>
-<div class="line"><span class="lineno">   76</span>        <span class="keywordflow">for</span> (K key : <span class="keyword">remove</span>) {</div>
-<div class="line"><span class="lineno">   77</span>            items.remove(key);</div>
-<div class="line"><span class="lineno">   78</span>        }</div>
-<div class="line"><span class="lineno">   79</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab87b799d3c5365c2bacad1bf9058fcc2" name="ab87b799d3c5365c2bacad1bf9058fcc2"></a>
@@ -267,10 +242,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/de0/TimeoutTrackerMap_8java_source.html#l00049">49</a> of file <a class="el" href="../../d4/de0/TimeoutTrackerMap_8java_source.html">TimeoutTrackerMap.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   49</span>                        {</div>
-<div class="line"><span class="lineno">   50</span>        items.clear();</div>
-<div class="line"><span class="lineno">   51</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a719e1625fadc7780e1946f3960e3e11d" name="a719e1625fadc7780e1946f3960e3e11d"></a>
@@ -290,10 +262,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/de0/TimeoutTrackerMap_8java_source.html#l00081">81</a> of file <a class="el" href="../../d4/de0/TimeoutTrackerMap_8java_source.html">TimeoutTrackerMap.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   81</span>                                   {</div>
-<div class="line"><span class="lineno">   82</span>        <span class="keywordflow">return</span> items.containsKey(key);</div>
-<div class="line"><span class="lineno">   83</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aae76b9b1ac2add914b5a807ebb70fb2a" name="aae76b9b1ac2add914b5a807ebb70fb2a"></a>
@@ -313,10 +282,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/de0/TimeoutTrackerMap_8java_source.html#l00041">41</a> of file <a class="el" href="../../d4/de0/TimeoutTrackerMap_8java_source.html">TimeoutTrackerMap.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   41</span>                            {</div>
-<div class="line"><span class="lineno">   42</span>        <span class="keywordflow">return</span> getData(key, <span class="keyword">null</span>).item;</div>
-<div class="line"><span class="lineno">   43</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a3f2b461aeb40eef8510628841cc3907a" name="a3f2b461aeb40eef8510628841cc3907a"></a>
@@ -336,10 +302,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/de0/TimeoutTrackerMap_8java_source.html#l00038">38</a> of file <a class="el" href="../../d4/de0/TimeoutTrackerMap_8java_source.html">TimeoutTrackerMap.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   38</span>                                     {</div>
-<div class="line"><span class="lineno">   39</span>        <span class="keywordflow">return</span> getData(key, <span class="keyword">null</span>).remaining;</div>
-<div class="line"><span class="lineno">   40</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2794e695c01709f8337657a8e5729bd0" name="a2794e695c01709f8337657a8e5729bd0"></a>
@@ -359,10 +322,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/de0/TimeoutTrackerMap_8java_source.html#l00045">45</a> of file <a class="el" href="../../d4/de0/TimeoutTrackerMap_8java_source.html">TimeoutTrackerMap.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   45</span>                              {</div>
-<div class="line"><span class="lineno">   46</span>        items.remove(key);</div>
-<div class="line"><span class="lineno">   47</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a20867c301d460e5ae4d84905e34724eb" name="a20867c301d460e5ae4d84905e34724eb"></a>
@@ -398,10 +358,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/de0/TimeoutTrackerMap_8java_source.html#l00034">34</a> of file <a class="el" href="../../d4/de0/TimeoutTrackerMap_8java_source.html">TimeoutTrackerMap.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   34</span>                                               {</div>
-<div class="line"><span class="lineno">   35</span>        getData(key, item).remaining = time;</div>
-<div class="line"><span class="lineno">   36</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

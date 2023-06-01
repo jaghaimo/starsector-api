@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -238,36 +239,7 @@ Static Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d2/d6d/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatReadinessPlugin.html#a55b695d3505364d9e8e22055bc77038f">com.fs.starfarer.api.combat.CombatReadinessPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/dc0/CRPluginImpl_8java_source.html#l00353">353</a> of file <a class="el" href="../../dc/dc0/CRPluginImpl_8java_source.html">CRPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  353</span>                                                      {</div>
-<div class="line"><span class="lineno">  354</span>        <span class="keywordflow">if</span> (!ship.isFighter() &amp;&amp; cr &lt; <a class="code hl_function" href="../../da/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl.html#a4a45eeefc9449abd41f5800e1ae7e000">getMissileAmmoReductionThreshold</a>(ship.getMutableStats())) {</div>
-<div class="line"><span class="lineno">  355</span>            <span class="keywordflow">for</span> (WeaponAPI weapon : ship.getAllWeapons()) {</div>
-<div class="line"><span class="lineno">  356</span>                <span class="keywordflow">if</span> (weapon.getType() == WeaponType.MISSILE) {</div>
-<div class="line"><span class="lineno">  357</span>                    <span class="keywordtype">float</span> ammo = (float) weapon.getMaxAmmo() * <a class="code hl_function" href="../../da/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl.html#a4b30f74d5c4e81be5d9010b436262d87">getMissileLoadedFraction</a>(ship.getMutableStats(), cr);</div>
-<div class="line"><span class="lineno">  358</span>                    <span class="keywordflow">if</span> (ammo &lt; 0) ammo = 0;</div>
-<div class="line"><span class="lineno">  359</span>                    weapon.setAmmo(Math.round(ammo));</div>
-<div class="line"><span class="lineno">  360</span>                }</div>
-<div class="line"><span class="lineno">  361</span>            }</div>
-<div class="line"><span class="lineno">  362</span>        }</div>
-<div class="line"><span class="lineno">  363</span>        ship.setCRAtDeployment(cr);</div>
-<div class="line"><span class="lineno">  364</span>        </div>
-<div class="line"><span class="lineno">  365</span>        <span class="keywordtype">float</span> c = <a class="code hl_function" href="../../da/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl.html#ada8824d535b64ed443abb734db9b03fa">getCriticalMalfunctionThreshold</a>(ship.getMutableStats());</div>
-<div class="line"><span class="lineno">  366</span>        <span class="keywordflow">if</span> (cr &lt; c &amp;&amp; !ship.controlsLocked() &amp;&amp; !ship.isFighter()) {</div>
-<div class="line"><span class="lineno">  367</span>            <span class="keywordtype">float</span> severity = (c - cr) / (c);</div>
-<div class="line"><span class="lineno">  368</span>            <span class="keywordflow">if</span> (Global.getCombatEngine() != <span class="keyword">null</span>) { <span class="comment">// can be null if coming from refit on a fresh app start in campaign</span></div>
-<div class="line"><span class="lineno">  369</span>                </div>
-<div class="line"><span class="lineno">  370</span>                <span class="keywordtype">float</span> criticalMult = 1f;</div>
-<div class="line"><span class="lineno">  371</span>                <span class="keywordflow">for</span> (StatMod mod : ship.getMutableStats().getCriticalMalfunctionChance().getMultMods().values()) { </div>
-<div class="line"><span class="lineno">  372</span>                    criticalMult *= mod.getValue();</div>
-<div class="line"><span class="lineno">  373</span>                }</div>
-<div class="line"><span class="lineno">  374</span>                severity *= criticalMult;</div>
-<div class="line"><span class="lineno">  375</span>                Global.getCombatEngine().addPlugin(<span class="keyword">new</span> LowCRShipDamageSequence(ship, severity));</div>
-<div class="line"><span class="lineno">  376</span>            }</div>
-<div class="line"><span class="lineno">  377</span>        }</div>
-<div class="line"><span class="lineno">  378</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl_html_a4a45eeefc9449abd41f5800e1ae7e000"><div class="ttname"><a href="../../da/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl.html#a4a45eeefc9449abd41f5800e1ae7e000">com.fs.starfarer.api.impl.combat.CRPluginImpl.getMissileAmmoReductionThreshold</a></div><div class="ttdeci">float getMissileAmmoReductionThreshold(MutableShipStatsAPI stats)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dc0/CRPluginImpl_8java_source.html#l00407">CRPluginImpl.java:407</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl_html_a4b30f74d5c4e81be5d9010b436262d87"><div class="ttname"><a href="../../da/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl.html#a4b30f74d5c4e81be5d9010b436262d87">com.fs.starfarer.api.impl.combat.CRPluginImpl.getMissileLoadedFraction</a></div><div class="ttdeci">float getMissileLoadedFraction(MutableShipStatsAPI stats, float cr)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dc0/CRPluginImpl_8java_source.html#l00380">CRPluginImpl.java:380</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl_html_ada8824d535b64ed443abb734db9b03fa"><div class="ttname"><a href="../../da/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl.html#ada8824d535b64ed443abb734db9b03fa">com.fs.starfarer.api.impl.combat.CRPluginImpl.getCriticalMalfunctionThreshold</a></div><div class="ttdeci">float getCriticalMalfunctionThreshold(MutableShipStatsAPI stats)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dc0/CRPluginImpl_8java_source.html#l00395">CRPluginImpl.java:395</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a14dd37486a07b8e29e4718ca6f9ccaca" name="a14dd37486a07b8e29e4718ca6f9ccaca"></a>
@@ -305,109 +277,7 @@ Static Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d2/d6d/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatReadinessPlugin.html#a41e1e54af6e8542047cbc8da9f728711">com.fs.starfarer.api.combat.CombatReadinessPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/dc0/CRPluginImpl_8java_source.html#l00253">253</a> of file <a class="el" href="../../dc/dc0/CRPluginImpl_8java_source.html">CRPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  253</span>                                                                                       {</div>
-<div class="line"><span class="lineno">  254</span>        String <span class="keywordtype">id</span> = <span class="stringliteral">&quot;cr_effect&quot;</span>;</div>
-<div class="line"><span class="lineno">  255</span>        <span class="comment">//System.out.println(&quot;CR: &quot; + cr);</span></div>
-<div class="line"><span class="lineno">  256</span>        <span class="keywordtype">boolean</span> fighter = hullSize == HullSize.FIGHTER;</div>
-<div class="line"><span class="lineno">  257</span> </div>
-<div class="line"><span class="lineno">  258</span><span class="comment">//      if (hullSize == HullSize.CAPITAL_SHIP) {</span></div>
-<div class="line"><span class="lineno">  259</span><span class="comment">//          System.out.println(&quot;Applying CR value of &quot; + cr + &quot; to stats &quot; + stats + &quot;(&quot; + hullSize.name() + &quot;)&quot;);</span></div>
-<div class="line"><span class="lineno">  260</span><span class="comment">//          //new RuntimeException().printStackTrace();</span></div>
-<div class="line"><span class="lineno">  261</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  262</span> </div>
-<div class="line"><span class="lineno">  263</span>        <span class="keywordflow">if</span> (!fighter) {</div>
-<div class="line"><span class="lineno">  264</span>            <span class="keywordflow">if</span> (cr &lt; <a class="code hl_function" href="../../da/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl.html#ac7f58dfcfe93aa250be7223c30251e49">getMalfunctionThreshold</a>(stats)) {</div>
-<div class="line"><span class="lineno">  265</span>                stats.getWeaponMalfunctionChance().modifyFlat(<span class="keywordtype">id</span>, 0.01f * getWeaponMalfuctionPercent(stats, cr));</div>
-<div class="line"><span class="lineno">  266</span>                stats.getEngineMalfunctionChance().modifyFlat(<span class="keywordtype">id</span>, 0.01f * getEngineMalfuctionPercent(stats, cr));</div>
-<div class="line"><span class="lineno">  267</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  268</span>                stats.getWeaponMalfunctionChance().unmodify(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  269</span>                stats.getEngineMalfunctionChance().unmodify(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  270</span>            }</div>
-<div class="line"><span class="lineno">  271</span>        }</div>
-<div class="line"><span class="lineno">  272</span>        </div>
-<div class="line"><span class="lineno">  273</span>        <span class="keywordflow">if</span> (!fighter) {</div>
-<div class="line"><span class="lineno">  274</span>            <span class="keywordflow">if</span> (cr &lt; <a class="code hl_function" href="../../da/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl.html#ada8824d535b64ed443abb734db9b03fa">getCriticalMalfunctionThreshold</a>(stats)) {</div>
-<div class="line"><span class="lineno">  275</span>                stats.getCriticalMalfunctionChance().modifyFlat(<span class="keywordtype">id</span>, 0.01f * getCriticalMalfuctionPercent(stats, cr));</div>
-<div class="line"><span class="lineno">  276</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  277</span>                stats.getCriticalMalfunctionChance().unmodify(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  278</span>            }</div>
-<div class="line"><span class="lineno">  279</span>        }</div>
-<div class="line"><span class="lineno">  280</span>        </div>
-<div class="line"><span class="lineno">  281</span>        <span class="keywordflow">if</span> (!fighter) {</div>
-<div class="line"><span class="lineno">  282</span>            <span class="keywordflow">if</span> (cr &lt; <a class="code hl_function" href="../../da/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl.html#a3c4ba4422eb3b21eaa9b8bdfb4715c06">getShieldMalfunctionThreshold</a>(stats)) {</div>
-<div class="line"><span class="lineno">  283</span>                stats.getShieldMalfunctionChance().modifyFlat(<span class="keywordtype">id</span>, 0.01f * getShieldMalfuctionPercent(stats, cr));</div>
-<div class="line"><span class="lineno">  284</span>                stats.getShieldMalfunctionFluxLevel().modifyFlat(<span class="keywordtype">id</span>, 0.75f);</div>
-<div class="line"><span class="lineno">  285</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  286</span>                stats.getShieldMalfunctionChance().unmodify(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  287</span>                stats.getShieldMalfunctionFluxLevel().unmodify(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  288</span>            }</div>
-<div class="line"><span class="lineno">  289</span>        }</div>
-<div class="line"><span class="lineno">  290</span>    </div>
-<div class="line"><span class="lineno">  291</span>        <span class="keywordflow">if</span> (!fighter) {</div>
-<div class="line"><span class="lineno">  292</span>            <span class="keywordflow">if</span> (stats.getEntity() instanceof ShipAPI) {</div>
-<div class="line"><span class="lineno">  293</span>                ShipAPI ship = (ShipAPI)stats.getEntity();</div>
-<div class="line"><span class="lineno">  294</span>                <span class="keywordflow">if</span> (cr &lt;= <a class="code hl_variable" href="../../da/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl.html#a0ec083c90bd1ae40fbbb941226af4b08">NO_SYSTEM_THRESHOLD</a>) {</div>
-<div class="line"><span class="lineno">  295</span>                    ship.setShipSystemDisabled(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  296</span>                    ship.setDefenseDisabled(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  297</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  298</span>                    ship.setShipSystemDisabled(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  299</span>                    ship.setDefenseDisabled(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  300</span>                }</div>
-<div class="line"><span class="lineno">  301</span>            }</div>
-<div class="line"><span class="lineno">  302</span>        }</div>
-<div class="line"><span class="lineno">  303</span>        </div>
-<div class="line"><span class="lineno">  304</span>        <span class="keywordtype">float</span> movementChange = getMovementChangePercent(stats, cr);</div>
-<div class="line"><span class="lineno">  305</span>        <span class="keywordtype">float</span> damageTakenChange = getDamageTakenChangePercent(stats, cr);</div>
-<div class="line"><span class="lineno">  306</span>        <span class="keywordtype">float</span> damageChange = getDamageChangePercent(stats, cr);</div>
-<div class="line"><span class="lineno">  307</span>        <span class="keywordtype">float</span> refitTimeChange = getRefitTimeChangePercent(stats, cr);</div>
-<div class="line"><span class="lineno">  308</span>        </div>
-<div class="line"><span class="lineno">  309</span>        <span class="keywordflow">if</span> (refitTimeChange != 0) {</div>
-<div class="line"><span class="lineno">  310</span>            stats.getFighterRefitTimeMult().modifyPercent(<span class="keywordtype">id</span>, refitTimeChange);</div>
-<div class="line"><span class="lineno">  311</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  312</span>            stats.getFighterRefitTimeMult().unmodify(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  313</span>        }</div>
-<div class="line"><span class="lineno">  314</span>        </div>
-<div class="line"><span class="lineno">  315</span>        <span class="keywordflow">if</span> (movementChange != 0) {</div>
-<div class="line"><span class="lineno">  316</span>            stats.getMaxSpeed().modifyPercent(<span class="keywordtype">id</span>, movementChange);</div>
-<div class="line"><span class="lineno">  317</span>            stats.getAcceleration().modifyPercent(<span class="keywordtype">id</span>, movementChange);</div>
-<div class="line"><span class="lineno">  318</span>            stats.getDeceleration().modifyPercent(<span class="keywordtype">id</span>, movementChange);</div>
-<div class="line"><span class="lineno">  319</span>            stats.getTurnAcceleration().modifyPercent(<span class="keywordtype">id</span>, movementChange);</div>
-<div class="line"><span class="lineno">  320</span>            stats.getMaxTurnRate().modifyPercent(<span class="keywordtype">id</span>, movementChange);</div>
-<div class="line"><span class="lineno">  321</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  322</span>            stats.getMaxSpeed().unmodify(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  323</span>            stats.getAcceleration().unmodify(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  324</span>            stats.getDeceleration().unmodify(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  325</span>            stats.getTurnAcceleration().unmodify(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  326</span>            stats.getMaxTurnRate().unmodify(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  327</span>        }</div>
-<div class="line"><span class="lineno">  328</span>        </div>
-<div class="line"><span class="lineno">  329</span>        <span class="keywordflow">if</span> (damageTakenChange != 0) {</div>
-<div class="line"><span class="lineno">  330</span>            stats.getArmorDamageTakenMult().modifyPercent(<span class="keywordtype">id</span>, damageTakenChange);</div>
-<div class="line"><span class="lineno">  331</span>            stats.getHullDamageTakenMult().modifyPercent(<span class="keywordtype">id</span>, damageTakenChange);</div>
-<div class="line"><span class="lineno">  332</span>            stats.getShieldDamageTakenMult().modifyPercent(<span class="keywordtype">id</span>, damageTakenChange);</div>
-<div class="line"><span class="lineno">  333</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  334</span>            stats.getArmorDamageTakenMult().unmodify(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  335</span>            stats.getHullDamageTakenMult().unmodify(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  336</span>            stats.getShieldDamageTakenMult().unmodify(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  337</span>        }</div>
-<div class="line"><span class="lineno">  338</span>        </div>
-<div class="line"><span class="lineno">  339</span>        <span class="keywordflow">if</span> (damageChange != 0) {</div>
-<div class="line"><span class="lineno">  340</span>            stats.getBallisticWeaponDamageMult().modifyPercent(<span class="keywordtype">id</span>, damageChange);</div>
-<div class="line"><span class="lineno">  341</span>            stats.getEnergyWeaponDamageMult().modifyPercent(<span class="keywordtype">id</span>, damageChange);</div>
-<div class="line"><span class="lineno">  342</span>            stats.getMissileWeaponDamageMult().modifyPercent(<span class="keywordtype">id</span>, damageChange);</div>
-<div class="line"><span class="lineno">  343</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  344</span>            stats.getBallisticWeaponDamageMult().unmodify(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  345</span>            stats.getEnergyWeaponDamageMult().unmodify(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  346</span>            stats.getMissileWeaponDamageMult().unmodify(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  347</span>        }</div>
-<div class="line"><span class="lineno">  348</span>        </div>
-<div class="line"><span class="lineno">  349</span>        <span class="keywordtype">float</span> aimAccuracy = getAimAccuracy(cr);</div>
-<div class="line"><span class="lineno">  350</span>        stats.getAutofireAimAccuracy().modifyFlat(<span class="keywordtype">id</span>, aimAccuracy);</div>
-<div class="line"><span class="lineno">  351</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl_html_a0ec083c90bd1ae40fbbb941226af4b08"><div class="ttname"><a href="../../da/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl.html#a0ec083c90bd1ae40fbbb941226af4b08">com.fs.starfarer.api.impl.combat.CRPluginImpl.NO_SYSTEM_THRESHOLD</a></div><div class="ttdeci">static float NO_SYSTEM_THRESHOLD</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dc0/CRPluginImpl_8java_source.html#l00024">CRPluginImpl.java:24</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl_html_a3c4ba4422eb3b21eaa9b8bdfb4715c06"><div class="ttname"><a href="../../da/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl.html#a3c4ba4422eb3b21eaa9b8bdfb4715c06">com.fs.starfarer.api.impl.combat.CRPluginImpl.getShieldMalfunctionThreshold</a></div><div class="ttdeci">float getShieldMalfunctionThreshold(MutableShipStatsAPI stats)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dc0/CRPluginImpl_8java_source.html#l00401">CRPluginImpl.java:401</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl_html_ac7f58dfcfe93aa250be7223c30251e49"><div class="ttname"><a href="../../da/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl.html#ac7f58dfcfe93aa250be7223c30251e49">com.fs.starfarer.api.impl.combat.CRPluginImpl.getMalfunctionThreshold</a></div><div class="ttdeci">float getMalfunctionThreshold(MutableShipStatsAPI stats)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dc0/CRPluginImpl_8java_source.html#l00390">CRPluginImpl.java:390</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a78ab1eb4e5214294ddf86ef0915fa765" name="a78ab1eb4e5214294ddf86ef0915fa765"></a>
@@ -429,22 +299,7 @@ Static Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d2/d6d/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatReadinessPlugin.html#ab6dabc7da38ad8d7454e05dabfe290e9">com.fs.starfarer.api.combat.CombatReadinessPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/dc0/CRPluginImpl_8java_source.html#l00045">45</a> of file <a class="el" href="../../dc/dc0/CRPluginImpl_8java_source.html">CRPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   45</span>                                                               {</div>
-<div class="line"><span class="lineno">   46</span>        <span class="keywordflow">if</span> (member == <span class="keyword">null</span> || member.getStats() == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   47</span>        <span class="comment">//float maxCRBasedOnLevel = (40f + member.getCrewFraction() * 10f) / 100f;</span></div>
-<div class="line"><span class="lineno">   48</span>        <span class="keywordtype">float</span> maxCRBasedOnLevel = 0.7f;</div>
-<div class="line"><span class="lineno">   49</span>        member.getStats().getMaxCombatReadiness().modifyFlat(<span class="stringliteral">&quot;crew skill bonus&quot;</span>, maxCRBasedOnLevel, <span class="stringliteral">&quot;Basic maintenance&quot;</span>);</div>
-<div class="line"><span class="lineno">   50</span>        </div>
-<div class="line"><span class="lineno">   51</span>        <span class="keywordtype">float</span> cf = member.getCrewFraction();</div>
-<div class="line"><span class="lineno">   52</span>        <span class="keywordflow">if</span> (cf &lt; 1) {</div>
-<div class="line"><span class="lineno">   53</span>            <span class="keywordtype">float</span> penalty = 0.5f * (1f - cf);</div>
-<div class="line"><span class="lineno">   54</span>            <span class="comment">//float penalty = (1f - cf);</span></div>
-<div class="line"><span class="lineno">   55</span>            member.getStats().getMaxCombatReadiness().modifyFlat(<span class="stringliteral">&quot;crew understrength&quot;</span>, -penalty, <span class="stringliteral">&quot;Crew understrength&quot;</span>);</div>
-<div class="line"><span class="lineno">   56</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   57</span>            member.getStats().getMaxCombatReadiness().unmodifyFlat(<span class="stringliteral">&quot;crew understrength&quot;</span>);</div>
-<div class="line"><span class="lineno">   58</span>        }</div>
-<div class="line"><span class="lineno">   59</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a0fdf3c00e9aea8bcefe7f26b5b7557dc" name="a0fdf3c00e9aea8bcefe7f26b5b7557dc"></a>
@@ -490,72 +345,7 @@ Static Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d2/d6d/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatReadinessPlugin.html#a5eaef6bd605a0fd500cb721668a3a25d">com.fs.starfarer.api.combat.CombatReadinessPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/dc0/CRPluginImpl_8java_source.html#l00431">431</a> of file <a class="el" href="../../dc/dc0/CRPluginImpl_8java_source.html">CRPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  431</span>                                                                                                                    {</div>
-<div class="line"><span class="lineno">  432</span>        CREffectDescriptionForTooltip result = <span class="keyword">new</span> CREffectDescriptionForTooltip();</div>
-<div class="line"><span class="lineno">  433</span>        </div>
-<div class="line"><span class="lineno">  434</span>        List&lt;CREffectDetail&gt; details = <a class="code hl_function" href="../../da/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl.html#a482918ded392282a2c8383c522fb86ef">getCREffectDetails</a>(cr, member);</div>
-<div class="line"><span class="lineno">  435</span>        <span class="keywordtype">boolean</span> hasPositive = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  436</span>        <span class="keywordtype">boolean</span> hasNegative = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  437</span>        <span class="keywordflow">for</span> (CREffectDetail detail : details) {</div>
-<div class="line"><span class="lineno">  438</span>            <span class="keywordflow">if</span> (detail.getType() == CREffectDetailType.BONUS) hasPositive = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  439</span>            <span class="keywordflow">if</span> (detail.getType() == CREffectDetailType.PENALTY) hasNegative = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  440</span>        }</div>
-<div class="line"><span class="lineno">  441</span>        </div>
-<div class="line"><span class="lineno">  442</span>        <span class="keywordtype">float</span> noDeploy = Global.getSettings().getFloat(<span class="stringliteral">&quot;noDeployCRPercent&quot;</span>) * 0.01f;</div>
-<div class="line"><span class="lineno">  443</span>        String crStr = (int)(cr * 100f) + <span class="stringliteral">&quot;%&quot;</span>;</div>
-<div class="line"><span class="lineno">  444</span>        String str;</div>
-<div class="line"><span class="lineno">  445</span>        <span class="keywordflow">if</span> (cr &lt; noDeploy) {</div>
-<div class="line"><span class="lineno">  446</span>            str = String.format(<span class="stringliteral">&quot;The %s is not ready for combat and can not be deployed in battle.&quot;</span>, shipOrWing);</div>
-<div class="line"><span class="lineno">  447</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (cr &lt; <a class="code hl_function" href="../../da/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl.html#ada8824d535b64ed443abb734db9b03fa">getCriticalMalfunctionThreshold</a>(member.getStats())) {</div>
-<div class="line"><span class="lineno">  448</span>            str = String.format(<span class="stringliteral">&quot;The %s suffers from degraded performance and runs the risk of permanent and damaging malfunctions if deployed.&quot;</span>, shipOrWing);</div>
-<div class="line"><span class="lineno">  449</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (cr &lt; <a class="code hl_function" href="../../da/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl.html#ac7f58dfcfe93aa250be7223c30251e49">getMalfunctionThreshold</a>(member.getStats())) {</div>
-<div class="line"><span class="lineno">  450</span>            str = String.format(<span class="stringliteral">&quot;The %s suffers from degraded performance and runs the risk of weapon and engine malfunctions during combat.&quot;</span>, shipOrWing);</div>
-<div class="line"><span class="lineno">  451</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (cr &lt; <a class="code hl_function" href="../../da/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl.html#a96da4058fd3f893886b6bccbef550de2">getDegradeThreshold</a>(member.getStats()) &amp;&amp; hasNegative) {</div>
-<div class="line"><span class="lineno">  452</span>            str = String.format(<span class="stringliteral">&quot;The %s suffers from degraded performance during combat.&quot;</span>, shipOrWing);</div>
-<div class="line"><span class="lineno">  453</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (cr &lt; <a class="code hl_function" href="../../da/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl.html#aa3ecb27dccf9f598397ef215beba25b6">getImproveThreshold</a>(member.getStats()) || !hasPositive) {</div>
-<div class="line"><span class="lineno">  454</span>            str = String.format(<span class="stringliteral">&quot;The %s has standard combat performance.&quot;</span>, shipOrWing);</div>
-<div class="line"><span class="lineno">  455</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  456</span>            str = String.format(<span class="stringliteral">&quot;The %s benefits from improved combat performance.&quot;</span>, shipOrWing);</div>
-<div class="line"><span class="lineno">  457</span>        }</div>
-<div class="line"><span class="lineno">  458</span>        </div>
-<div class="line"><span class="lineno">  459</span>        <span class="comment">//result.getHighlights().add(crStr);</span></div>
-<div class="line"><span class="lineno">  460</span>        </div>
-<div class="line"><span class="lineno">  461</span> </div>
-<div class="line"><span class="lineno">  462</span>        <span class="keywordflow">if</span> (member.isFighterWing()) {</div>
-<div class="line"><span class="lineno">  463</span>            <span class="keywordtype">boolean</span> canReplaceFighters = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  464</span>            FleetDataAPI data = member.getFleetData();</div>
-<div class="line"><span class="lineno">  465</span>            <span class="keywordflow">if</span> (data != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  466</span>                <span class="keywordflow">for</span> (FleetMemberAPI curr : data.getMembersListCopy()) {</div>
-<div class="line"><span class="lineno">  467</span>                    <span class="keywordflow">if</span> (curr.isMothballed()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  468</span>                    <span class="keywordflow">if</span> (curr.getNumFlightDecks() &gt; 0) {</div>
-<div class="line"><span class="lineno">  469</span>                        canReplaceFighters = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  470</span>                        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  471</span>                    }</div>
-<div class="line"><span class="lineno">  472</span>                }</div>
-<div class="line"><span class="lineno">  473</span>            }</div>
-<div class="line"><span class="lineno">  474</span>            <span class="keywordflow">if</span> (canReplaceFighters) {</div>
-<div class="line"><span class="lineno">  475</span>                details.add(<span class="keyword">new</span> CREffectDetail(<span class="stringliteral">&quot;&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, CREffectDetailType.NEUTRAL));</div>
-<div class="line"><span class="lineno">  476</span>                <span class="keywordtype">float</span> costPer = member.getStats().getCRPerDeploymentPercent().computeEffective(member.getVariant().getHullSpec().getCRToDeploy()) / 100f;</div>
-<div class="line"><span class="lineno">  477</span>                String numStr = <span class="stringliteral">&quot;&quot;</span> + (int) Math.ceil((<span class="keywordtype">float</span>)((int) (cr * 100f)) / (costPer * 100f));</div>
-<div class="line"><span class="lineno">  478</span>                </div>
-<div class="line"><span class="lineno">  479</span>                str += <span class="stringliteral">&quot; &quot;</span> + numStr + <span class="stringliteral">&quot; fighter chassis are ready to replace combat losses.&quot;</span>;</div>
-<div class="line"><span class="lineno">  480</span>                result.getHighlights().add(numStr);</div>
-<div class="line"><span class="lineno">  481</span>                </div>
-<div class="line"><span class="lineno">  482</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  483</span>                details.add(<span class="keyword">new</span> CREffectDetail(<span class="stringliteral">&quot;Replacement chassis&quot;</span>, <span class="stringliteral">&quot;None&quot;</span>, CREffectDetailType.PENALTY));</div>
-<div class="line"><span class="lineno">  484</span>                str += <span class="stringliteral">&quot; &quot;</span> + <span class="stringliteral">&quot;Fighter losses can not be replaced due to the lack of a ship with proper facilities (i.e. a flight deck).&quot;</span>;</div>
-<div class="line"><span class="lineno">  485</span>            }</div>
-<div class="line"><span class="lineno">  486</span>        }</div>
-<div class="line"><span class="lineno">  487</span>        </div>
-<div class="line"><span class="lineno">  488</span>        </div>
-<div class="line"><span class="lineno">  489</span>        result.setString(str);</div>
-<div class="line"><span class="lineno">  490</span>        </div>
-<div class="line"><span class="lineno">  491</span>        <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">  492</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl_html_a482918ded392282a2c8383c522fb86ef"><div class="ttname"><a href="../../da/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl.html#a482918ded392282a2c8383c522fb86ef">com.fs.starfarer.api.impl.combat.CRPluginImpl.getCREffectDetails</a></div><div class="ttdeci">List&lt; CREffectDetail &gt; getCREffectDetails(float cr, FleetMemberAPI member)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dc0/CRPluginImpl_8java_source.html#l00506">CRPluginImpl.java:506</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl_html_a96da4058fd3f893886b6bccbef550de2"><div class="ttname"><a href="../../da/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl.html#a96da4058fd3f893886b6bccbef550de2">com.fs.starfarer.api.impl.combat.CRPluginImpl.getDegradeThreshold</a></div><div class="ttdeci">float getDegradeThreshold(MutableShipStatsAPI stats)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dc0/CRPluginImpl_8java_source.html#l00413">CRPluginImpl.java:413</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl_html_aa3ecb27dccf9f598397ef215beba25b6"><div class="ttname"><a href="../../da/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl.html#aa3ecb27dccf9f598397ef215beba25b6">com.fs.starfarer.api.impl.combat.CRPluginImpl.getImproveThreshold</a></div><div class="ttdeci">float getImproveThreshold(MutableShipStatsAPI stats)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dc0/CRPluginImpl_8java_source.html#l00419">CRPluginImpl.java:419</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a482918ded392282a2c8383c522fb86ef" name="a482918ded392282a2c8383c522fb86ef"></a>
@@ -587,96 +377,7 @@ Static Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d2/d6d/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatReadinessPlugin.html#a97397b778ea6c331c83399828c76efee">com.fs.starfarer.api.combat.CombatReadinessPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/dc0/CRPluginImpl_8java_source.html#l00506">506</a> of file <a class="el" href="../../dc/dc0/CRPluginImpl_8java_source.html">CRPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  506</span>                                                                                    {</div>
-<div class="line"><span class="lineno">  507</span>        List&lt;CREffectDetail&gt; result = <span class="keyword">new</span> ArrayList&lt;CREffectDetail&gt;();</div>
-<div class="line"><span class="lineno">  508</span>        </div>
-<div class="line"><span class="lineno">  509</span>        <span class="keywordtype">int</span> engine = (int) getEngineMalfuctionPercent(member.getStats(), cr);</div>
-<div class="line"><span class="lineno">  510</span>        <span class="keywordtype">int</span> weapon = (int) getWeaponMalfuctionPercent(member.getStats(), cr);</div>
-<div class="line"><span class="lineno">  511</span>        </div>
-<div class="line"><span class="lineno">  512</span>        <span class="keywordtype">int</span> speed = (int) Math.round(getMovementChangePercent(member.getStats(), cr));</div>
-<div class="line"><span class="lineno">  513</span>        <span class="keywordtype">int</span> damage = (int) Math.round(getDamageTakenChangePercent(member.getStats(), cr));</div>
-<div class="line"><span class="lineno">  514</span>        <span class="keywordtype">int</span> damageDealt = (int) Math.round(getDamageChangePercent(member.getStats(), cr));</div>
-<div class="line"><span class="lineno">  515</span>        <span class="keywordtype">int</span> refit = (int) Math.round(getRefitTimeChangePercent(member.getStats(), cr));</div>
-<div class="line"><span class="lineno">  516</span>        </div>
-<div class="line"><span class="lineno">  517</span>        <span class="keywordtype">float</span> acc = getAimAccuracy(cr);</div>
-<div class="line"><span class="lineno">  518</span>        </div>
-<div class="line"><span class="lineno">  519</span>        String malfStr = getMalfunctionString(member.getStats(), cr);</div>
-<div class="line"><span class="lineno">  520</span>        </div>
-<div class="line"><span class="lineno">  521</span>        String accString;</div>
-<div class="line"><span class="lineno">  522</span>        CREffectDetailType accType;</div>
-<div class="line"><span class="lineno">  523</span>        <span class="keywordflow">if</span> (acc &lt; 0) {</div>
-<div class="line"><span class="lineno">  524</span>            accString = <span class="stringliteral">&quot;Very poor&quot;</span>;</div>
-<div class="line"><span class="lineno">  525</span>            accType = CREffectDetailType.PENALTY;</div>
-<div class="line"><span class="lineno">  526</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (acc &lt; 0.25f) {</div>
-<div class="line"><span class="lineno">  527</span>            accString = <span class="stringliteral">&quot;Poor&quot;</span>;</div>
-<div class="line"><span class="lineno">  528</span>            accType = CREffectDetailType.PENALTY;</div>
-<div class="line"><span class="lineno">  529</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (acc &lt; 0.67) {</div>
-<div class="line"><span class="lineno">  530</span>            accString = <span class="stringliteral">&quot;Standard&quot;</span>;</div>
-<div class="line"><span class="lineno">  531</span>            accType = CREffectDetailType.NEUTRAL;</div>
-<div class="line"><span class="lineno">  532</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  533</span>            accString = <span class="stringliteral">&quot;Excellent&quot;</span>;</div>
-<div class="line"><span class="lineno">  534</span>            accType = CREffectDetailType.BONUS;</div>
-<div class="line"><span class="lineno">  535</span>        }</div>
-<div class="line"><span class="lineno">  536</span>        </div>
-<div class="line"><span class="lineno">  537</span>        String speedStr = speed + <span class="stringliteral">&quot;%&quot;</span>;</div>
-<div class="line"><span class="lineno">  538</span>        <span class="keywordflow">if</span> (speed &gt;= 0) {</div>
-<div class="line"><span class="lineno">  539</span>            speedStr = <span class="stringliteral">&quot;+&quot;</span> + speedStr;</div>
-<div class="line"><span class="lineno">  540</span>        }</div>
-<div class="line"><span class="lineno">  541</span>        String damageStr = damage + <span class="stringliteral">&quot;%&quot;</span>;</div>
-<div class="line"><span class="lineno">  542</span>        <span class="keywordflow">if</span> (damage &gt;= 0) {</div>
-<div class="line"><span class="lineno">  543</span>            damageStr = <span class="stringliteral">&quot;+&quot;</span> + damageStr;</div>
-<div class="line"><span class="lineno">  544</span>        }</div>
-<div class="line"><span class="lineno">  545</span>        String rofStr = damageDealt + <span class="stringliteral">&quot;%&quot;</span>;</div>
-<div class="line"><span class="lineno">  546</span>        <span class="keywordflow">if</span> (damageDealt &gt;= 0) {</div>
-<div class="line"><span class="lineno">  547</span>            rofStr = <span class="stringliteral">&quot;+&quot;</span> + rofStr;</div>
-<div class="line"><span class="lineno">  548</span>        }</div>
-<div class="line"><span class="lineno">  549</span>        </div>
-<div class="line"><span class="lineno">  550</span>        String refitStr = refit + <span class="stringliteral">&quot;%&quot;</span>;</div>
-<div class="line"><span class="lineno">  551</span>        <span class="keywordflow">if</span> (refit &gt;= 0) {</div>
-<div class="line"><span class="lineno">  552</span>            refitStr = <span class="stringliteral">&quot;+&quot;</span> + refitStr;</div>
-<div class="line"><span class="lineno">  553</span>        }</div>
-<div class="line"><span class="lineno">  554</span>        </div>
-<div class="line"><span class="lineno">  555</span>        result.add(<span class="keyword">new</span> CREffectDetail(<span class="stringliteral">&quot;Speed &amp; maneuverability&quot;</span>, speedStr, getTypeFor(speed, <span class="keyword">false</span>)));</div>
-<div class="line"><span class="lineno">  556</span>        result.add(<span class="keyword">new</span> CREffectDetail(<span class="stringliteral">&quot;Damage taken&quot;</span>, damageStr, getTypeFor(damage, <span class="keyword">true</span>)));</div>
-<div class="line"><span class="lineno">  557</span>        result.add(<span class="keyword">new</span> CREffectDetail(<span class="stringliteral">&quot;Damage dealt&quot;</span>, rofStr, getTypeFor(damageDealt, <span class="keyword">false</span>)));</div>
-<div class="line"><span class="lineno">  558</span>        </div>
-<div class="line"><span class="lineno">  559</span>        <span class="keywordflow">if</span> (member.getNumFlightDecks() &gt; 0) {</div>
-<div class="line"><span class="lineno">  560</span>            result.add(<span class="keyword">new</span> CREffectDetail(<span class="stringliteral">&quot;Fighter refit time&quot;</span>, refitStr, getTypeFor(refit, <span class="keyword">true</span>)));</div>
-<div class="line"><span class="lineno">  561</span>        }</div>
-<div class="line"><span class="lineno">  562</span>        </div>
-<div class="line"><span class="lineno">  563</span>        result.add(<span class="keyword">new</span> CREffectDetail(<span class="stringliteral">&quot;Autofire accuracy&quot;</span>, accString, accType));</div>
-<div class="line"><span class="lineno">  564</span>        </div>
-<div class="line"><span class="lineno">  565</span> </div>
-<div class="line"><span class="lineno">  566</span>        </div>
-<div class="line"><span class="lineno">  567</span>        CREffectDetailType malfType = CREffectDetailType.NEUTRAL;</div>
-<div class="line"><span class="lineno">  568</span>        <span class="keywordflow">if</span> (getWeaponMalfuctionPercent(member.getStats(), cr) &gt; 0) {</div>
-<div class="line"><span class="lineno">  569</span>            malfType = CREffectDetailType.PENALTY;</div>
-<div class="line"><span class="lineno">  570</span>        }</div>
-<div class="line"><span class="lineno">  571</span> </div>
-<div class="line"><span class="lineno">  572</span>        result.add(<span class="keyword">new</span> CREffectDetail(<span class="stringliteral">&quot;Malfunction risk&quot;</span>, malfStr, malfType));</div>
-<div class="line"><span class="lineno">  573</span>        </div>
-<div class="line"><span class="lineno">  574</span>        Collection&lt;String&gt; slots = member.getVariant().getFittedWeaponSlots();</div>
-<div class="line"><span class="lineno">  575</span>        <span class="keywordtype">boolean</span> hasMissiles = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  576</span>        <span class="keywordflow">for</span> (String slotId : slots) {</div>
-<div class="line"><span class="lineno">  577</span>            WeaponSpecAPI w = member.getVariant().getWeaponSpec(slotId);</div>
-<div class="line"><span class="lineno">  578</span>            <span class="keywordflow">if</span> (w.getType() == WeaponType.MISSILE) {</div>
-<div class="line"><span class="lineno">  579</span>                hasMissiles = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  580</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  581</span>            }</div>
-<div class="line"><span class="lineno">  582</span>        }</div>
-<div class="line"><span class="lineno">  583</span>        <span class="keywordflow">if</span> (hasMissiles) {</div>
-<div class="line"><span class="lineno">  584</span>            <span class="keywordtype">float</span> missileFraction = <a class="code hl_function" href="../../da/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl.html#a4b30f74d5c4e81be5d9010b436262d87">getMissileLoadedFraction</a>(member.getStats(), cr);</div>
-<div class="line"><span class="lineno">  585</span>            <span class="keywordflow">if</span> (missileFraction &lt; 0) missileFraction = 0;</div>
-<div class="line"><span class="lineno">  586</span>            String missileStr = (int)(missileFraction * 100f) + <span class="stringliteral">&quot;%&quot;</span>;</div>
-<div class="line"><span class="lineno">  587</span>            </div>
-<div class="line"><span class="lineno">  588</span>            <span class="keywordflow">if</span> (missileFraction &lt; 1f) {</div>
-<div class="line"><span class="lineno">  589</span>                result.add(<span class="keyword">new</span> CREffectDetail(<span class="stringliteral">&quot;Missile magazines&quot;</span>, missileStr, missileFraction &lt; 1 ? CREffectDetailType.PENALTY : CREffectDetailType.NEUTRAL));</div>
-<div class="line"><span class="lineno">  590</span>            }</div>
-<div class="line"><span class="lineno">  591</span>        }</div>
-<div class="line"><span class="lineno">  592</span>        </div>
-<div class="line"><span class="lineno">  593</span>        <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">  594</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ada8824d535b64ed443abb734db9b03fa" name="ada8824d535b64ed443abb734db9b03fa"></a>
@@ -698,13 +399,7 @@ Static Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d2/d6d/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatReadinessPlugin.html#a93172d099204e4db9986de31f6aca0bb">com.fs.starfarer.api.combat.CombatReadinessPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/dc0/CRPluginImpl_8java_source.html#l00395">395</a> of file <a class="el" href="../../dc/dc0/CRPluginImpl_8java_source.html">CRPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  395</span>                                                                            {</div>
-<div class="line"><span class="lineno">  396</span>        <span class="keywordtype">float</span> mult = 1f;</div>
-<div class="line"><span class="lineno">  397</span>        <span class="keywordflow">if</span> (stats != <span class="keyword">null</span>) mult *= stats.getDynamic().getStat(Stats.CR_MALFUNCION_RANGE).getModifiedValue();</div>
-<div class="line"><span class="lineno">  398</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../da/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl.html#a30187d706e40b7a796557fb69daaa687">CRITICAL_MALFUNCTION_START</a> * mult;</div>
-<div class="line"><span class="lineno">  399</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl_html_a30187d706e40b7a796557fb69daaa687"><div class="ttname"><a href="../../da/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl.html#a30187d706e40b7a796557fb69daaa687">com.fs.starfarer.api.impl.combat.CRPluginImpl.CRITICAL_MALFUNCTION_START</a></div><div class="ttdeci">static float CRITICAL_MALFUNCTION_START</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dc0/CRPluginImpl_8java_source.html#l00029">CRPluginImpl.java:29</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a1eedace1a2bc2d8c70c0aeb8b15cfaae" name="a1eedace1a2bc2d8c70c0aeb8b15cfaae"></a>
@@ -726,103 +421,7 @@ Static Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d2/d6d/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatReadinessPlugin.html#ac17e364112f34466e4713e132fa355ed">com.fs.starfarer.api.combat.CombatReadinessPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/dc0/CRPluginImpl_8java_source.html#l00063">63</a> of file <a class="el" href="../../dc/dc0/CRPluginImpl_8java_source.html">CRPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   63</span>                                                                       {</div>
-<div class="line"><span class="lineno">   64</span>        <span class="keywordtype">float</span> startingCR = ship.getCRAtDeployment();</div>
-<div class="line"><span class="lineno">   65</span>        <span class="keywordtype">float</span> cr = ship.getCurrentCR();</div>
-<div class="line"><span class="lineno">   66</span>        </div>
-<div class="line"><span class="lineno">   67</span>        List&lt;CRStatusItemData&gt; list = <span class="keyword">new</span> ArrayList&lt;CRStatusItemData&gt;();</div>
-<div class="line"><span class="lineno">   68</span>        </div>
-<div class="line"><span class="lineno">   69</span>        String icon = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   70</span>        </div>
-<div class="line"><span class="lineno">   71</span>        <span class="keywordflow">if</span> (cr &gt; <a class="code hl_function" href="../../da/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl.html#aa3ecb27dccf9f598397ef215beba25b6">getImproveThreshold</a>(ship.getMutableStats())) {</div>
-<div class="line"><span class="lineno">   72</span>            icon = Global.getSettings().getSpriteName(<span class="stringliteral">&quot;ui&quot;</span>, <span class="stringliteral">&quot;icon_tactical_cr_bonus&quot;</span>);</div>
-<div class="line"><span class="lineno">   73</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (cr &lt; <a class="code hl_function" href="../../da/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl.html#a96da4058fd3f893886b6bccbef550de2">getDegradeThreshold</a>(ship.getMutableStats())) {</div>
-<div class="line"><span class="lineno">   74</span>            icon = Global.getSettings().getSpriteName(<span class="stringliteral">&quot;ui&quot;</span>, <span class="stringliteral">&quot;icon_tactical_cr_penalty&quot;</span>);</div>
-<div class="line"><span class="lineno">   75</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   76</span>            icon = Global.getSettings().getSpriteName(<span class="stringliteral">&quot;ui&quot;</span>, <span class="stringliteral">&quot;icon_tactical_cr_neutral&quot;</span>);</div>
-<div class="line"><span class="lineno">   77</span>            <span class="comment">//return list;</span></div>
-<div class="line"><span class="lineno">   78</span>        }</div>
-<div class="line"><span class="lineno">   79</span>        </div>
-<div class="line"><span class="lineno">   80</span>        String title = <span class="stringliteral">&quot;Combat Readiness &quot;</span> + Math.round(cr * 100f) + <span class="stringliteral">&quot;%&quot;</span>;</div>
-<div class="line"><span class="lineno">   81</span>        </div>
-<div class="line"><span class="lineno">   82</span>        String malfStr = getMalfunctionString(ship.getMutableStats(), cr);</div>
-<div class="line"><span class="lineno">   83</span>        </div>
-<div class="line"><span class="lineno">   84</span>        <span class="keywordflow">if</span> (cr &lt;= <a class="code hl_variable" href="../../da/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl.html#a0ec083c90bd1ae40fbbb941226af4b08">NO_SYSTEM_THRESHOLD</a> &amp;&amp; ship.getShield() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   85</span>            CRStatusItemData itemData = <span class="keyword">new</span> CRStatusItemData(<a class="code hl_variable" href="../../da/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl.html#a5e85255c5b7c019b77f6939575263ec0">statusKeys</a>[9], icon, title,</div>
-<div class="line"><span class="lineno">   86</span>                    <span class="stringliteral">&quot;Shields offline&quot;</span>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   87</span>            list.add(itemData);</div>
-<div class="line"><span class="lineno">   88</span>        }</div>
-<div class="line"><span class="lineno">   89</span>        </div>
-<div class="line"><span class="lineno">   90</span>        <span class="keywordflow">if</span> (cr &lt;= <a class="code hl_variable" href="../../da/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl.html#a0ec083c90bd1ae40fbbb941226af4b08">NO_SYSTEM_THRESHOLD</a>) {</div>
-<div class="line"><span class="lineno">   91</span>            <span class="keywordtype">boolean</span> hasWings = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   92</span>            <span class="keywordflow">for</span> (FighterLaunchBayAPI bay : ship.getLaunchBaysCopy()) {</div>
-<div class="line"><span class="lineno">   93</span>                <span class="keywordflow">if</span> (bay.getWing() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   94</span>                    hasWings = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   95</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   96</span>                }</div>
-<div class="line"><span class="lineno">   97</span>            }</div>
-<div class="line"><span class="lineno">   98</span>            <span class="keywordflow">if</span> (hasWings) {</div>
-<div class="line"><span class="lineno">   99</span>                CRStatusItemData itemData = <span class="keyword">new</span> CRStatusItemData(<a class="code hl_variable" href="../../da/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl.html#a5e85255c5b7c019b77f6939575263ec0">statusKeys</a>[10], icon, title,</div>
-<div class="line"><span class="lineno">  100</span>                        <span class="stringliteral">&quot;Fighter bays offline&quot;</span>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  101</span>                list.add(itemData);</div>
-<div class="line"><span class="lineno">  102</span>            }</div>
-<div class="line"><span class="lineno">  103</span>        }</div>
-<div class="line"><span class="lineno">  104</span>        </div>
-<div class="line"><span class="lineno">  105</span>        <span class="keywordflow">if</span> (cr &lt;= <a class="code hl_variable" href="../../da/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl.html#a0ec083c90bd1ae40fbbb941226af4b08">NO_SYSTEM_THRESHOLD</a> &amp;&amp; ship.getPhaseCloak() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  106</span>            CRStatusItemData itemData = <span class="keyword">new</span> CRStatusItemData(<a class="code hl_variable" href="../../da/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl.html#a5e85255c5b7c019b77f6939575263ec0">statusKeys</a>[8], icon, title,</div>
-<div class="line"><span class="lineno">  107</span>                    ship.getPhaseCloak().getDisplayName() + <span class="stringliteral">&quot; offline&quot;</span>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  108</span>            list.add(itemData);</div>
-<div class="line"><span class="lineno">  109</span>        }</div>
-<div class="line"><span class="lineno">  110</span>        </div>
-<div class="line"><span class="lineno">  111</span>        <span class="keywordflow">if</span> (cr &lt;= <a class="code hl_variable" href="../../da/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl.html#a0ec083c90bd1ae40fbbb941226af4b08">NO_SYSTEM_THRESHOLD</a> &amp;&amp; ship.getSystem() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  112</span>            CRStatusItemData itemData = <span class="keyword">new</span> CRStatusItemData(<a class="code hl_variable" href="../../da/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl.html#a5e85255c5b7c019b77f6939575263ec0">statusKeys</a>[7], icon, title,</div>
-<div class="line"><span class="lineno">  113</span>                     ship.getSystem().getDisplayName() + <span class="stringliteral">&quot; offline&quot;</span>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  114</span>            list.add(itemData);</div>
-<div class="line"><span class="lineno">  115</span>        }</div>
-<div class="line"><span class="lineno">  116</span>        </div>
-<div class="line"><span class="lineno">  117</span>        <span class="keywordflow">if</span> (cr &lt; <a class="code hl_function" href="../../da/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl.html#ac7f58dfcfe93aa250be7223c30251e49">getMalfunctionThreshold</a>(ship.getMutableStats())) {</div>
-<div class="line"><span class="lineno">  118</span>            CRStatusItemData itemData = <span class="keyword">new</span> CRStatusItemData(<a class="code hl_variable" href="../../da/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl.html#a5e85255c5b7c019b77f6939575263ec0">statusKeys</a>[0], icon, title,</div>
-<div class="line"><span class="lineno">  119</span>                     <span class="stringliteral">&quot;malfunction risk: &quot;</span> + malfStr, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  120</span>            list.add(itemData);</div>
-<div class="line"><span class="lineno">  121</span>        }</div>
-<div class="line"><span class="lineno">  122</span>        <span class="keywordflow">if</span> (startingCR &lt; <a class="code hl_function" href="../../da/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl.html#a4a45eeefc9449abd41f5800e1ae7e000">getMissileAmmoReductionThreshold</a>(ship.getMutableStats())) {</div>
-<div class="line"><span class="lineno">  123</span>            CRStatusItemData itemData = <span class="keyword">new</span> CRStatusItemData(<a class="code hl_variable" href="../../da/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl.html#a5e85255c5b7c019b77f6939575263ec0">statusKeys</a>[2], icon, title,</div>
-<div class="line"><span class="lineno">  124</span>                     <span class="stringliteral">&quot;missiles not fully loaded&quot;</span>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  125</span>            list.add(itemData);</div>
-<div class="line"><span class="lineno">  126</span>        }</div>
-<div class="line"><span class="lineno">  127</span>        </div>
-<div class="line"><span class="lineno">  128</span>        <span class="keywordflow">if</span> (cr &lt; <a class="code hl_function" href="../../da/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl.html#a96da4058fd3f893886b6bccbef550de2">getDegradeThreshold</a>(ship.getMutableStats())) {</div>
-<div class="line"><span class="lineno">  129</span>            CRStatusItemData itemData = <span class="keyword">new</span> CRStatusItemData(<a class="code hl_variable" href="../../da/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl.html#a5e85255c5b7c019b77f6939575263ec0">statusKeys</a>[3], icon, title,</div>
-<div class="line"><span class="lineno">  130</span>                    <span class="stringliteral">&quot;degraded performance&quot;</span>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  131</span>            list.add(itemData);</div>
-<div class="line"><span class="lineno">  132</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (cr &gt; <a class="code hl_function" href="../../da/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl.html#aa3ecb27dccf9f598397ef215beba25b6">getImproveThreshold</a>(ship.getMutableStats())) {</div>
-<div class="line"><span class="lineno">  133</span>            CRStatusItemData itemData = <span class="keyword">new</span> CRStatusItemData(<a class="code hl_variable" href="../../da/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl.html#a5e85255c5b7c019b77f6939575263ec0">statusKeys</a>[4], icon, title,</div>
-<div class="line"><span class="lineno">  134</span>                    <span class="stringliteral">&quot;improved performance&quot;</span>, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  135</span>            list.add(itemData);</div>
-<div class="line"><span class="lineno">  136</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  137</span>            CRStatusItemData itemData = <span class="keyword">new</span> CRStatusItemData(<a class="code hl_variable" href="../../da/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl.html#a5e85255c5b7c019b77f6939575263ec0">statusKeys</a>[8], icon, title,</div>
-<div class="line"><span class="lineno">  138</span>                    <span class="stringliteral">&quot;standard performance&quot;</span>, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  139</span>            list.add(itemData);</div>
-<div class="line"><span class="lineno">  140</span>        }</div>
-<div class="line"><span class="lineno">  141</span>        </div>
-<div class="line"><span class="lineno">  142</span>        <span class="keywordflow">if</span> (ship.losesCRDuringCombat() &amp;&amp; cr &gt; 0) {</div>
-<div class="line"><span class="lineno">  143</span>            <span class="comment">//float noLossTime = ship.getHullSpec().getNoCRLossTime();</span></div>
-<div class="line"><span class="lineno">  144</span>            <span class="keywordtype">float</span> noLossTime = ship.getMutableStats().getPeakCRDuration().computeEffective(ship.getHullSpec().getNoCRLossTime());</div>
-<div class="line"><span class="lineno">  145</span>            <span class="keywordflow">if</span> (noLossTime &gt; ship.getTimeDeployedForCRReduction()) {</div>
-<div class="line"><span class="lineno">  146</span>                CRStatusItemData itemData = <span class="keyword">new</span> CRStatusItemData(<a class="code hl_variable" href="../../da/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl.html#a5e85255c5b7c019b77f6939575263ec0">statusKeys</a>[5], icon, <span class="stringliteral">&quot;peak active performance&quot;</span>,</div>
-<div class="line"><span class="lineno">  147</span>                        <span class="stringliteral">&quot;remaining time: &quot;</span> + (<span class="keywordtype">int</span>) (noLossTime - ship.getTimeDeployedForCRReduction()) + <span class="stringliteral">&quot; sec&quot;</span>, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  148</span>                list.add(itemData);</div>
-<div class="line"><span class="lineno">  149</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  150</span>                CRStatusItemData itemData = <span class="keyword">new</span> CRStatusItemData(<a class="code hl_variable" href="../../da/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl.html#a5e85255c5b7c019b77f6939575263ec0">statusKeys</a>[6], icon, <span class="stringliteral">&quot;combat stresses&quot;</span>,</div>
-<div class="line"><span class="lineno">  151</span>                        <span class="stringliteral">&quot;degrading readiness&quot;</span>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  152</span>                list.add(itemData);</div>
-<div class="line"><span class="lineno">  153</span>            }</div>
-<div class="line"><span class="lineno">  154</span>        }</div>
-<div class="line"><span class="lineno">  155</span>        </div>
-<div class="line"><span class="lineno">  156</span>        <span class="keywordflow">return</span> list;</div>
-<div class="line"><span class="lineno">  157</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl_html_a5e85255c5b7c019b77f6939575263ec0"><div class="ttname"><a href="../../da/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl.html#a5e85255c5b7c019b77f6939575263ec0">com.fs.starfarer.api.impl.combat.CRPluginImpl.statusKeys</a></div><div class="ttdeci">static Object[] statusKeys</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dc0/CRPluginImpl_8java_source.html#l00608">CRPluginImpl.java:608</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a96da4058fd3f893886b6bccbef550de2" name="a96da4058fd3f893886b6bccbef550de2"></a>
@@ -842,13 +441,7 @@ Static Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/dc0/CRPluginImpl_8java_source.html#l00413">413</a> of file <a class="el" href="../../dc/dc0/CRPluginImpl_8java_source.html">CRPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  413</span>                                                                {</div>
-<div class="line"><span class="lineno">  414</span>        <span class="keywordtype">float</span> mult = 1f;</div>
-<div class="line"><span class="lineno">  415</span>        <span class="keywordflow">if</span> (stats != <span class="keyword">null</span>) mult *= stats.getDynamic().getStat(Stats.CR_MALFUNCION_RANGE).getModifiedValue();</div>
-<div class="line"><span class="lineno">  416</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../da/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl.html#a761c91f21f5d016204c3532831644017">DEGRADE_START</a> * mult;</div>
-<div class="line"><span class="lineno">  417</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl_html_a761c91f21f5d016204c3532831644017"><div class="ttname"><a href="../../da/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl.html#a761c91f21f5d016204c3532831644017">com.fs.starfarer.api.impl.combat.CRPluginImpl.DEGRADE_START</a></div><div class="ttdeci">static float DEGRADE_START</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dc0/CRPluginImpl_8java_source.html#l00027">CRPluginImpl.java:27</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa3ecb27dccf9f598397ef215beba25b6" name="aa3ecb27dccf9f598397ef215beba25b6"></a>
@@ -868,13 +461,7 @@ Static Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/dc0/CRPluginImpl_8java_source.html#l00419">419</a> of file <a class="el" href="../../dc/dc0/CRPluginImpl_8java_source.html">CRPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  419</span>                                                                {</div>
-<div class="line"><span class="lineno">  420</span>        <span class="keywordtype">float</span> mult = 1f;</div>
-<div class="line"><span class="lineno">  421</span>        <span class="comment">//if (stats != null) mult *= stats.getDynamic().getStat(Stats.CR_MALFUNCION_RANGE).getModifiedValue();</span></div>
-<div class="line"><span class="lineno">  422</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../da/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl.html#a1c02942da38b9fffc7942e1fef8c0124">IMPROVE_START</a> * mult;</div>
-<div class="line"><span class="lineno">  423</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl_html_a1c02942da38b9fffc7942e1fef8c0124"><div class="ttname"><a href="../../da/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl.html#a1c02942da38b9fffc7942e1fef8c0124">com.fs.starfarer.api.impl.combat.CRPluginImpl.IMPROVE_START</a></div><div class="ttdeci">static float IMPROVE_START</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dc0/CRPluginImpl_8java_source.html#l00026">CRPluginImpl.java:26</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac7f58dfcfe93aa250be7223c30251e49" name="ac7f58dfcfe93aa250be7223c30251e49"></a>
@@ -896,13 +483,7 @@ Static Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d2/d6d/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatReadinessPlugin.html#a9ecda34e3202626a8a88f8346fa1387e">com.fs.starfarer.api.combat.CombatReadinessPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/dc0/CRPluginImpl_8java_source.html#l00390">390</a> of file <a class="el" href="../../dc/dc0/CRPluginImpl_8java_source.html">CRPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  390</span>                                                                    {</div>
-<div class="line"><span class="lineno">  391</span>        <span class="keywordtype">float</span> mult = 1f;</div>
-<div class="line"><span class="lineno">  392</span>        <span class="keywordflow">if</span> (stats != <span class="keyword">null</span>) mult *= stats.getDynamic().getStat(Stats.CR_MALFUNCION_RANGE).getModifiedValue();</div>
-<div class="line"><span class="lineno">  393</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../da/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl.html#aec83a0a136566e330c7be1c9cea23b65">MALFUNCTION_START</a> * mult;</div>
-<div class="line"><span class="lineno">  394</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl_html_aec83a0a136566e330c7be1c9cea23b65"><div class="ttname"><a href="../../da/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl.html#aec83a0a136566e330c7be1c9cea23b65">com.fs.starfarer.api.impl.combat.CRPluginImpl.MALFUNCTION_START</a></div><div class="ttdeci">static float MALFUNCTION_START</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dc0/CRPluginImpl_8java_source.html#l00030">CRPluginImpl.java:30</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a4a45eeefc9449abd41f5800e1ae7e000" name="a4a45eeefc9449abd41f5800e1ae7e000"></a>
@@ -922,13 +503,7 @@ Static Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/dc0/CRPluginImpl_8java_source.html#l00407">407</a> of file <a class="el" href="../../dc/dc0/CRPluginImpl_8java_source.html">CRPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  407</span>                                                                             {</div>
-<div class="line"><span class="lineno">  408</span>        <span class="keywordtype">float</span> mult = 1f;</div>
-<div class="line"><span class="lineno">  409</span>        <span class="keywordflow">if</span> (stats != <span class="keyword">null</span>) mult *= stats.getDynamic().getStat(Stats.CR_MALFUNCION_RANGE).getModifiedValue();</div>
-<div class="line"><span class="lineno">  410</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../da/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl.html#a78a9eaa70047e62d55ef69abab2da385">MISSILE_AMMO_REDUCTION_START</a> * mult;</div>
-<div class="line"><span class="lineno">  411</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl_html_a78a9eaa70047e62d55ef69abab2da385"><div class="ttname"><a href="../../da/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl.html#a78a9eaa70047e62d55ef69abab2da385">com.fs.starfarer.api.impl.combat.CRPluginImpl.MISSILE_AMMO_REDUCTION_START</a></div><div class="ttdeci">static float MISSILE_AMMO_REDUCTION_START</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dc0/CRPluginImpl_8java_source.html#l00031">CRPluginImpl.java:31</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a4b30f74d5c4e81be5d9010b436262d87" name="a4b30f74d5c4e81be5d9010b436262d87"></a>
@@ -960,15 +535,7 @@ Static Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d2/d6d/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatReadinessPlugin.html#ab56eabe0816a64678c90d1f33e5a6607">com.fs.starfarer.api.combat.CombatReadinessPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/dc0/CRPluginImpl_8java_source.html#l00380">380</a> of file <a class="el" href="../../dc/dc0/CRPluginImpl_8java_source.html">CRPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  380</span>                                                                               {</div>
-<div class="line"><span class="lineno">  381</span>        <span class="keywordflow">if</span> (<span class="keyword">true</span>) <span class="keywordflow">return</span> 1f;</div>
-<div class="line"><span class="lineno">  382</span>        <span class="keywordtype">float</span> test = Global.getSettings().getFloat(<span class="stringliteral">&quot;noDeployCRPercent&quot;</span>) * 0.01f;</div>
-<div class="line"><span class="lineno">  383</span>        <span class="keywordtype">float</span> f = (cr - test) / (<a class="code hl_function" href="../../da/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl.html#a4a45eeefc9449abd41f5800e1ae7e000">getMissileAmmoReductionThreshold</a>(stats) - test);</div>
-<div class="line"><span class="lineno">  384</span>        <span class="keywordflow">if</span> (f &gt; 1) f = 1;</div>
-<div class="line"><span class="lineno">  385</span>        <span class="keywordflow">if</span> (f &lt; 0) f = 0;</div>
-<div class="line"><span class="lineno">  386</span>        <span class="keywordflow">return</span> f;</div>
-<div class="line"><span class="lineno">  387</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a3c4ba4422eb3b21eaa9b8bdfb4715c06" name="a3c4ba4422eb3b21eaa9b8bdfb4715c06"></a>
@@ -988,13 +555,7 @@ Static Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/dc0/CRPluginImpl_8java_source.html#l00401">401</a> of file <a class="el" href="../../dc/dc0/CRPluginImpl_8java_source.html">CRPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  401</span>                                                                          {</div>
-<div class="line"><span class="lineno">  402</span>        <span class="keywordtype">float</span> mult = 1f;</div>
-<div class="line"><span class="lineno">  403</span>        <span class="keywordflow">if</span> (stats != <span class="keyword">null</span>) mult *= stats.getDynamic().getStat(Stats.CR_MALFUNCION_RANGE).getModifiedValue();</div>
-<div class="line"><span class="lineno">  404</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../da/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl.html#a12768b626f4e6dc2ae9e5cd44be6113f">SHIELD_MALFUNCTION_START</a> * mult;</div>
-<div class="line"><span class="lineno">  405</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl_html_a12768b626f4e6dc2ae9e5cd44be6113f"><div class="ttname"><a href="../../da/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl.html#a12768b626f4e6dc2ae9e5cd44be6113f">com.fs.starfarer.api.impl.combat.CRPluginImpl.SHIELD_MALFUNCTION_START</a></div><div class="ttdeci">static float SHIELD_MALFUNCTION_START</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dc0/CRPluginImpl_8java_source.html#l00028">CRPluginImpl.java:28</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a91b92436f0ae05da28df0668d9984c3e" name="a91b92436f0ae05da28df0668d9984c3e"></a>
@@ -1026,11 +587,7 @@ Static Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d2/d6d/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatReadinessPlugin.html#a1dc0a44f20bde596c1bf0b89295a4bab">com.fs.starfarer.api.combat.CombatReadinessPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/dc0/CRPluginImpl_8java_source.html#l00629">629</a> of file <a class="el" href="../../dc/dc0/CRPluginImpl_8java_source.html">CRPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  629</span>                                                                         {</div>
-<div class="line"><span class="lineno">  630</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../da/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl.html#a13295152cbcc985ef1d382a438fececb">isOkToPermanentlyDisableStatic</a>(ship, module);</div>
-<div class="line"><span class="lineno">  631</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl_html_a13295152cbcc985ef1d382a438fececb"><div class="ttname"><a href="../../da/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl.html#a13295152cbcc985ef1d382a438fececb">com.fs.starfarer.api.impl.combat.CRPluginImpl.isOkToPermanentlyDisableStatic</a></div><div class="ttdeci">static boolean isOkToPermanentlyDisableStatic(ShipAPI ship, Object module)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dc0/CRPluginImpl_8java_source.html#l00633">CRPluginImpl.java:633</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a13295152cbcc985ef1d382a438fececb" name="a13295152cbcc985ef1d382a438fececb"></a>
@@ -1068,44 +625,7 @@ Static Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/dc0/CRPluginImpl_8java_source.html#l00633">633</a> of file <a class="el" href="../../dc/dc0/CRPluginImpl_8java_source.html">CRPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  633</span>                                                                                      {</div>
-<div class="line"><span class="lineno">  634</span>        <span class="keywordflow">if</span> (module instanceof ShipEngineAPI) {</div>
-<div class="line"><span class="lineno">  635</span>            <span class="keywordtype">float</span> fractionIfDisabled = ((ShipEngineAPI) module).getContribution() + ship.getEngineFractionPermanentlyDisabled();</div>
-<div class="line"><span class="lineno">  636</span>            <span class="keywordflow">if</span> (fractionIfDisabled &gt; 0.66f) {</div>
-<div class="line"><span class="lineno">  637</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  638</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  639</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  640</span>            }</div>
-<div class="line"><span class="lineno">  641</span>        }</div>
-<div class="line"><span class="lineno">  642</span>        </div>
-<div class="line"><span class="lineno">  643</span>        <span class="keywordflow">if</span> (module instanceof WeaponAPI) {</div>
-<div class="line"><span class="lineno">  644</span>            WeaponType type = ((WeaponAPI)module).getType();</div>
-<div class="line"><span class="lineno">  645</span>            <span class="keywordflow">if</span> (type == WeaponType.DECORATIVE || type == WeaponType.LAUNCH_BAY || type == WeaponType.SYSTEM) {</div>
-<div class="line"><span class="lineno">  646</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  647</span>            }</div>
-<div class="line"><span class="lineno">  648</span>            </div>
-<div class="line"><span class="lineno">  649</span>            <span class="keywordflow">if</span> (ship.getCurrentCR() &lt;= 0) {</div>
-<div class="line"><span class="lineno">  650</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  651</span>            }</div>
-<div class="line"><span class="lineno">  652</span>            </div>
-<div class="line"><span class="lineno">  653</span>            List&lt;Object&gt; usableWeapons = <span class="keyword">new</span> ArrayList&lt;Object&gt;();</div>
-<div class="line"><span class="lineno">  654</span>            <span class="keywordflow">for</span> (WeaponAPI weapon : ship.getAllWeapons()) {</div>
-<div class="line"><span class="lineno">  655</span>                <span class="keywordflow">if</span> (weapon.isPermanentlyDisabled()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  656</span>                <span class="keywordflow">if</span> (weapon.isDecorative()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  657</span>                <span class="keywordflow">if</span> (weapon.getSlot().isSystemSlot()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  658</span>                <span class="keywordflow">if</span> (weapon.getSlot().isDecorative()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  659</span>                <span class="keywordflow">if</span> (weapon.getSlot().isStationModule()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  660</span>                <span class="keywordflow">if</span> (weapon.getAmmo() &gt; 0 &amp;&amp; (weapon.getMaxAmmo() &gt; 20 || weapon.getSpec().getAmmoPerSecond() &gt; 0)) {</div>
-<div class="line"><span class="lineno">  661</span>                    usableWeapons.add(weapon);</div>
-<div class="line"><span class="lineno">  662</span>                }</div>
-<div class="line"><span class="lineno">  663</span>            }</div>
-<div class="line"><span class="lineno">  664</span>            usableWeapons.remove(module);</div>
-<div class="line"><span class="lineno">  665</span>            </div>
-<div class="line"><span class="lineno">  666</span>            <span class="keywordflow">return</span> usableWeapons.size() &gt;= 1;</div>
-<div class="line"><span class="lineno">  667</span>        }</div>
-<div class="line"><span class="lineno">  668</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  669</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

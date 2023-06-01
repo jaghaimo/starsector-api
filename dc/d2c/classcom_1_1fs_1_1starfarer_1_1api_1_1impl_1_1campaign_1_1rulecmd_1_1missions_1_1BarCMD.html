@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -221,19 +222,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d4d/BarCMD_8java_source.html#l00418">418</a> of file <a class="el" href="../../d2/d4d/BarCMD_8java_source.html">BarCMD.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  418</span>                                               {</div>
-<div class="line"><span class="lineno">  419</span>        PortsideBarData data = PortsideBarData.getInstance();</div>
-<div class="line"><span class="lineno">  420</span>        <span class="keywordflow">for</span> (PortsideBarEvent event : data.getEvents()) {</div>
-<div class="line"><span class="lineno">  421</span>            <span class="keywordflow">if</span> (event instanceof HubMissionBarEventWrapper) {</div>
-<div class="line"><span class="lineno">  422</span>                HubMissionBarEventWrapper w = (HubMissionBarEventWrapper) event;</div>
-<div class="line"><span class="lineno">  423</span>                <span class="keywordflow">if</span> (w.getMission() == <span class="keyword">null</span>) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  424</span>                <span class="keywordflow">if</span> (optionId == <span class="keyword">null</span> || !optionId.startsWith(w.getMission().getTriggerPrefix())) {</div>
-<div class="line"><span class="lineno">  425</span>                    w.abortMission();</div>
-<div class="line"><span class="lineno">  426</span>                }</div>
-<div class="line"><span class="lineno">  427</span>            }</div>
-<div class="line"><span class="lineno">  428</span>        }</div>
-<div class="line"><span class="lineno">  429</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8fadb27c9b7dd05fa2785dffbd3002a0" name="a8fadb27c9b7dd05fa2785dffbd3002a0"></a>
@@ -255,9 +244,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d9/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogPlugin.html#a80d7eadd2dabaf3166c4eda0f197dcb3">com.fs.starfarer.api.campaign.InteractionDialogPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d4d/BarCMD_8java_source.html#l00456">456</a> of file <a class="el" href="../../d2/d4d/BarCMD_8java_source.html">BarCMD.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  456</span>                                      {</div>
-<div class="line"><span class="lineno">  457</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a26d08ddafffee03ead504068867753b8" name="a26d08ddafffee03ead504068867753b8"></a>
@@ -279,9 +266,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d9/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogPlugin.html#aef5c14336603e974e9d175c38e8b653d">com.fs.starfarer.api.campaign.InteractionDialogPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d4d/BarCMD_8java_source.html#l00458">458</a> of file <a class="el" href="../../d2/d4d/BarCMD_8java_source.html">BarCMD.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  458</span>                                                                     {</div>
-<div class="line"><span class="lineno">  459</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab65230d5f6c41af42f2b2a8041feeb95" name="ab65230d5f6c41af42f2b2a8041feeb95"></a>
@@ -325,89 +310,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d0/d5c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1CommandPlugin.html#a72a44c5127e60136b87d3b37613fd0e0">com.fs.starfarer.api.campaign.rules.CommandPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d4d/BarCMD_8java_source.html#l00094">94</a> of file <a class="el" href="../../d2/d4d/BarCMD_8java_source.html">BarCMD.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   94</span>                                                                                                                                   {</div>
-<div class="line"><span class="lineno">   95</span>        this.dialog = <a class="code hl_variable" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#afd18a0c869b07ab0a7c301d539478840">dialog</a>;</div>
-<div class="line"><span class="lineno">   96</span>        this.memoryMap = <a class="code hl_variable" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#a2fc4f5bbafa16bc3358744d2d12983b4">memoryMap</a>;</div>
-<div class="line"><span class="lineno">   97</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#afd18a0c869b07ab0a7c301d539478840">dialog</a> == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   98</span> </div>
-<div class="line"><span class="lineno">   99</span>        String command = params.get(0).getString(<a class="code hl_variable" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#a2fc4f5bbafa16bc3358744d2d12983b4">memoryMap</a>);</div>
-<div class="line"><span class="lineno">  100</span>        <span class="keywordflow">if</span> (command == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  101</span>        </div>
-<div class="line"><span class="lineno">  102</span>        </div>
-<div class="line"><span class="lineno">  103</span>        <span class="keywordflow">if</span> (command.equals(<span class="stringliteral">&quot;returnFromEvent&quot;</span>)) {</div>
-<div class="line"><span class="lineno">  104</span>            MemoryAPI mem = <a class="code hl_function" href="../../d7/dd6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1BaseCommandPlugin.html#af355b9be7db57d00eaf6a6f0637f2edb">getEntityMemory</a>(<a class="code hl_variable" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#a2fc4f5bbafa16bc3358744d2d12983b4">memoryMap</a>);</div>
-<div class="line"><span class="lineno">  105</span>            BarCMD cmd = (BarCMD) mem.get(<span class="stringliteral">&quot;$BarCMD&quot;</span>);</div>
-<div class="line"><span class="lineno">  106</span>            mem.unset(<span class="stringliteral">&quot;$BarCMD&quot;</span>);</div>
-<div class="line"><span class="lineno">  107</span>            <span class="comment">//mem.unset(&quot;$currMission_ref&quot;);</span></div>
-<div class="line"><span class="lineno">  108</span>            </div>
-<div class="line"><span class="lineno">  109</span>            <a class="code hl_variable" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#afd18a0c869b07ab0a7c301d539478840">dialog</a>.<a class="code hl_function" href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#a34d8510911888e5110d2c7d5fc746611">setPlugin</a>(cmd);</div>
-<div class="line"><span class="lineno">  110</span>            <a class="code hl_function" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#a0d677cf4a91b8c42e6434b1cb3f97767">abortMissions</a>(<span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  111</span> </div>
-<div class="line"><span class="lineno">  112</span>            <a class="code hl_variable" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#afd18a0c869b07ab0a7c301d539478840">dialog</a>.<a class="code hl_function" href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#aab8d898bf278af177dcaa802e64135be">getInteractionTarget</a>().<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#ab500a8412a1fa2872dccc9b4eb762e4b">setActivePerson</a>(<span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  113</span>            ((RuleBasedInteractionDialogPluginImpl)cmd.originalPlugin).updateMemory();</div>
-<div class="line"><span class="lineno">  114</span><span class="comment">//          memoryMap.put(MemKeys.LOCAL, dialog.getInteractionTarget().getMemoryWithoutUpdate());</span></div>
-<div class="line"><span class="lineno">  115</span><span class="comment">//          memoryMap.remove(MemKeys.ENTITY);</span></div>
-<div class="line"><span class="lineno">  116</span> </div>
-<div class="line"><span class="lineno">  117</span>            </div>
-<div class="line"><span class="lineno">  118</span>            <span class="keywordtype">boolean</span> withContinue = params.size() &gt; 1 &amp;&amp; params.get(1).getBoolean(<a class="code hl_variable" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#a2fc4f5bbafa16bc3358744d2d12983b4">memoryMap</a>);</div>
-<div class="line"><span class="lineno">  119</span>            cmd.returningFromEvent(withContinue);</div>
-<div class="line"><span class="lineno">  120</span>            </div>
-<div class="line"><span class="lineno">  121</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  122</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (command.equals(<span class="stringliteral">&quot;accept&quot;</span>)) {</div>
-<div class="line"><span class="lineno">  123</span>            <span class="comment">//MemoryAPI mem = getEntityMemory(memoryMap);</span></div>
-<div class="line"><span class="lineno">  124</span>            <span class="comment">//Object ref = mem.get(&quot;$currMission_ref&quot;);</span></div>
-<div class="line"><span class="lineno">  125</span>            </div>
-<div class="line"><span class="lineno">  126</span>            String missionId = params.get(1).getString(<a class="code hl_variable" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#a2fc4f5bbafa16bc3358744d2d12983b4">memoryMap</a>);</div>
-<div class="line"><span class="lineno">  127</span>            HubMissionBarEventWrapper w = <a class="code hl_function" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#a46345fb858ca2e922ea9fe4cc3e661dd">getWrapperFor</a>(missionId);</div>
-<div class="line"><span class="lineno">  128</span>            <span class="keywordflow">if</span> (w != <span class="keyword">null</span> &amp;&amp; w.getMission() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  129</span>                BarEventManager.getInstance().notifyWasInteractedWith(w);</div>
-<div class="line"><span class="lineno">  130</span>                w.getMission().accept(<a class="code hl_variable" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#afd18a0c869b07ab0a7c301d539478840">dialog</a>, <a class="code hl_variable" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#a2fc4f5bbafa16bc3358744d2d12983b4">memoryMap</a>);</div>
-<div class="line"><span class="lineno">  131</span>            }</div>
-<div class="line"><span class="lineno">  132</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  133</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (command.equals(<span class="stringliteral">&quot;leaveBar&quot;</span>)) {</div>
-<div class="line"><span class="lineno">  134</span>            <a class="code hl_function" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#a95149c4cf416f2a73754a484be9750be">leaveBar</a>();</div>
-<div class="line"><span class="lineno">  135</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  136</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (command.equals(<span class="stringliteral">&quot;playAmbience&quot;</span>)) {</div>
-<div class="line"><span class="lineno">  137</span>            <a class="code hl_variable" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#a1e75b68c67fb83b43348a47d0229b83a">entity</a> = <a class="code hl_variable" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#afd18a0c869b07ab0a7c301d539478840">dialog</a>.<a class="code hl_function" href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#aab8d898bf278af177dcaa802e64135be">getInteractionTarget</a>();</div>
-<div class="line"><span class="lineno">  138</span>            <span class="keywordflow">if</span> (!Global.getSector().hasTransientScript(BarAmbiencePlayer.class)) {</div>
-<div class="line"><span class="lineno">  139</span>                Global.getSector().addTransientScript(<span class="keyword">new</span> BarAmbiencePlayer(<a class="code hl_variable" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#a1e75b68c67fb83b43348a47d0229b83a">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#acfdfd07dc0bd1b2ecdd9d36bb21d9c4f">getMarket</a>()));</div>
-<div class="line"><span class="lineno">  140</span>            }</div>
-<div class="line"><span class="lineno">  141</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  142</span>        }</div>
-<div class="line"><span class="lineno">  143</span>        </div>
-<div class="line"><span class="lineno">  144</span><span class="comment">//      else if (command.equals(&quot;addContact&quot;)) {</span></div>
-<div class="line"><span class="lineno">  145</span><span class="comment">//          ContactIntel.addPotentialContact(contact, text)</span></div>
-<div class="line"><span class="lineno">  146</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  147</span>        </div>
-<div class="line"><span class="lineno">  148</span>        <a class="code hl_variable" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#a1e75b68c67fb83b43348a47d0229b83a">entity</a> = <a class="code hl_variable" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#afd18a0c869b07ab0a7c301d539478840">dialog</a>.<a class="code hl_function" href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#aab8d898bf278af177dcaa802e64135be">getInteractionTarget</a>();</div>
-<div class="line"><span class="lineno">  149</span>        <a class="code hl_variable" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#a8daf499eba86cdedf43d8b9e40d9dd1a">originalPlugin</a> = <a class="code hl_variable" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#afd18a0c869b07ab0a7c301d539478840">dialog</a>.<a class="code hl_function" href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#a63868370ebcb7aa6823f89065fe567d9">getPlugin</a>();</div>
-<div class="line"><span class="lineno">  150</span>        </div>
-<div class="line"><span class="lineno">  151</span>        <span class="comment">//FireBest.fire(null, dialog, memoryMap, &quot;SalvageSpecialFinishedNoContinue&quot;);</span></div>
-<div class="line"><span class="lineno">  152</span>        </div>
-<div class="line"><span class="lineno">  153</span>        <span class="keywordflow">if</span> (command.equals(<span class="stringliteral">&quot;showOptions&quot;</span>)) {</div>
-<div class="line"><span class="lineno">  154</span>            <a class="code hl_function" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#a1d387784a51b10ababe86196fcf26c9c">showOptions</a>(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  155</span>            <span class="keywordflow">if</span> (!Global.getSector().hasTransientScript(BarAmbiencePlayer.class)) {</div>
-<div class="line"><span class="lineno">  156</span>                Global.getSector().addTransientScript(<span class="keyword">new</span> BarAmbiencePlayer(<a class="code hl_variable" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#a1e75b68c67fb83b43348a47d0229b83a">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#acfdfd07dc0bd1b2ecdd9d36bb21d9c4f">getMarket</a>()));</div>
-<div class="line"><span class="lineno">  157</span>            }</div>
-<div class="line"><span class="lineno">  158</span>        }</div>
-<div class="line"><span class="lineno">  159</span>        </div>
-<div class="line"><span class="lineno">  160</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  161</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1BaseCommandPlugin_html_af355b9be7db57d00eaf6a6f0637f2edb"><div class="ttname"><a href="../../d7/dd6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1BaseCommandPlugin.html#af355b9be7db57d00eaf6a6f0637f2edb">com.fs.starfarer.api.impl.campaign.rulecmd.BaseCommandPlugin.getEntityMemory</a></div><div class="ttdeci">static MemoryAPI getEntityMemory(Map&lt; String, MemoryAPI &gt; memoryMap)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dbe/BaseCommandPlugin_8java_source.html#l00020">BaseCommandPlugin.java:20</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD_html_a0d677cf4a91b8c42e6434b1cb3f97767"><div class="ttname"><a href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#a0d677cf4a91b8c42e6434b1cb3f97767">com.fs.starfarer.api.impl.campaign.rulecmd.missions.BarCMD.abortMissions</a></div><div class="ttdeci">void abortMissions(String optionId)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d4d/BarCMD_8java_source.html#l00418">BarCMD.java:418</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD_html_a1d387784a51b10ababe86196fcf26c9c"><div class="ttname"><a href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#a1d387784a51b10ababe86196fcf26c9c">com.fs.starfarer.api.impl.campaign.rulecmd.missions.BarCMD.showOptions</a></div><div class="ttdeci">void showOptions(boolean returningFromEvent)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d4d/BarCMD_8java_source.html#l00163">BarCMD.java:163</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD_html_a1e75b68c67fb83b43348a47d0229b83a"><div class="ttname"><a href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#a1e75b68c67fb83b43348a47d0229b83a">com.fs.starfarer.api.impl.campaign.rulecmd.missions.BarCMD.entity</a></div><div class="ttdeci">SectorEntityToken entity</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d4d/BarCMD_8java_source.html#l00054">BarCMD.java:54</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD_html_a2fc4f5bbafa16bc3358744d2d12983b4"><div class="ttname"><a href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#a2fc4f5bbafa16bc3358744d2d12983b4">com.fs.starfarer.api.impl.campaign.rulecmd.missions.BarCMD.memoryMap</a></div><div class="ttdeci">Map&lt; String, MemoryAPI &gt; memoryMap</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d4d/BarCMD_8java_source.html#l00057">BarCMD.java:57</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD_html_a46345fb858ca2e922ea9fe4cc3e661dd"><div class="ttname"><a href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#a46345fb858ca2e922ea9fe4cc3e661dd">com.fs.starfarer.api.impl.campaign.rulecmd.missions.BarCMD.getWrapperFor</a></div><div class="ttdeci">HubMissionBarEventWrapper getWrapperFor(String optionId)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d4d/BarCMD_8java_source.html#l00405">BarCMD.java:405</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD_html_a8daf499eba86cdedf43d8b9e40d9dd1a"><div class="ttname"><a href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#a8daf499eba86cdedf43d8b9e40d9dd1a">com.fs.starfarer.api.impl.campaign.rulecmd.missions.BarCMD.originalPlugin</a></div><div class="ttdeci">InteractionDialogPlugin originalPlugin</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d4d/BarCMD_8java_source.html#l00055">BarCMD.java:55</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD_html_a95149c4cf416f2a73754a484be9750be"><div class="ttname"><a href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#a95149c4cf416f2a73754a484be9750be">com.fs.starfarer.api.impl.campaign.rulecmd.missions.BarCMD.leaveBar</a></div><div class="ttdeci">void leaveBar()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d4d/BarCMD_8java_source.html#l00441">BarCMD.java:441</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD_html_afd18a0c869b07ab0a7c301d539478840"><div class="ttname"><a href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#afd18a0c869b07ab0a7c301d539478840">com.fs.starfarer.api.impl.campaign.rulecmd.missions.BarCMD.dialog</a></div><div class="ttdeci">InteractionDialogAPI dialog</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d4d/BarCMD_8java_source.html#l00056">BarCMD.java:56</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI_html_a34d8510911888e5110d2c7d5fc746611"><div class="ttname"><a href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#a34d8510911888e5110d2c7d5fc746611">com.fs.starfarer.api.campaign.InteractionDialogAPI.setPlugin</a></div><div class="ttdeci">void setPlugin(InteractionDialogPlugin plugin)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI_html_a63868370ebcb7aa6823f89065fe567d9"><div class="ttname"><a href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#a63868370ebcb7aa6823f89065fe567d9">com.fs.starfarer.api.campaign.InteractionDialogAPI.getPlugin</a></div><div class="ttdeci">InteractionDialogPlugin getPlugin()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI_html_aab8d898bf278af177dcaa802e64135be"><div class="ttname"><a href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#aab8d898bf278af177dcaa802e64135be">com.fs.starfarer.api.campaign.InteractionDialogAPI.getInteractionTarget</a></div><div class="ttdeci">SectorEntityToken getInteractionTarget()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_ab500a8412a1fa2872dccc9b4eb762e4b"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#ab500a8412a1fa2872dccc9b4eb762e4b">com.fs.starfarer.api.campaign.SectorEntityToken.setActivePerson</a></div><div class="ttdeci">void setActivePerson(PersonAPI activePerson)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_acfdfd07dc0bd1b2ecdd9d36bb21d9c4f"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#acfdfd07dc0bd1b2ecdd9d36bb21d9c4f">com.fs.starfarer.api.campaign.SectorEntityToken.getMarket</a></div><div class="ttdeci">MarketAPI getMarket()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a32a880abb46fdf3d29df33927c485c0d" name="a32a880abb46fdf3d29df33927c485c0d"></a>
@@ -434,15 +337,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d4d/BarCMD_8java_source.html#l00432">432</a> of file <a class="el" href="../../d2/d4d/BarCMD_8java_source.html">BarCMD.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  432</span>                                                        {</div>
-<div class="line"><span class="lineno">  433</span>        <span class="keywordflow">for</span> (EveryFrameScript script : Global.getSector().getTransientScripts()) {</div>
-<div class="line"><span class="lineno">  434</span>            <span class="keywordflow">if</span> (script instanceof BarAmbiencePlayer) {</div>
-<div class="line"><span class="lineno">  435</span>                <span class="keywordflow">return</span> (BarAmbiencePlayer) script;</div>
-<div class="line"><span class="lineno">  436</span>            }</div>
-<div class="line"><span class="lineno">  437</span>        }</div>
-<div class="line"><span class="lineno">  438</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;        </div>
-<div class="line"><span class="lineno">  439</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="acc07267327a098bac24985181a0db69b" name="acc07267327a098bac24985181a0db69b"></a>
@@ -463,10 +358,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d9/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogPlugin.html#aea32ca8c29671cc5128ba0fa1684e296">com.fs.starfarer.api.campaign.InteractionDialogPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d4d/BarCMD_8java_source.html#l00460">460</a> of file <a class="el" href="../../d2/d4d/BarCMD_8java_source.html">BarCMD.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  460</span>                               {</div>
-<div class="line"><span class="lineno">  461</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  462</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a349679ab195d814409e3e7bcf04b2d07" name="a349679ab195d814409e3e7bcf04b2d07"></a>
@@ -487,10 +379,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d9/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogPlugin.html#a68f205d2acc9d28acad2496227d7486e">com.fs.starfarer.api.campaign.InteractionDialogPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d4d/BarCMD_8java_source.html#l00463">463</a> of file <a class="el" href="../../d2/d4d/BarCMD_8java_source.html">BarCMD.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  463</span>                                                 {</div>
-<div class="line"><span class="lineno">  464</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#a2fc4f5bbafa16bc3358744d2d12983b4">memoryMap</a>;</div>
-<div class="line"><span class="lineno">  465</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a46345fb858ca2e922ea9fe4cc3e661dd" name="a46345fb858ca2e922ea9fe4cc3e661dd"></a>
@@ -510,20 +399,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d4d/BarCMD_8java_source.html#l00405">405</a> of file <a class="el" href="../../d2/d4d/BarCMD_8java_source.html">BarCMD.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  405</span>                                                                    {</div>
-<div class="line"><span class="lineno">  406</span>        PortsideBarData data = PortsideBarData.getInstance();</div>
-<div class="line"><span class="lineno">  407</span>        <span class="keywordflow">for</span> (PortsideBarEvent event : data.getEvents()) {</div>
-<div class="line"><span class="lineno">  408</span>            <span class="keywordflow">if</span> (event instanceof HubMissionBarEventWrapper) {</div>
-<div class="line"><span class="lineno">  409</span>                HubMissionBarEventWrapper w = (HubMissionBarEventWrapper) event;</div>
-<div class="line"><span class="lineno">  410</span>                <span class="keywordflow">if</span> (w.getMission() == <span class="keyword">null</span>) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  411</span>                <span class="keywordflow">if</span> (optionId != <span class="keyword">null</span> &amp;&amp; optionId.startsWith(w.getMission().getTriggerPrefix())) {</div>
-<div class="line"><span class="lineno">  412</span>                    <span class="keywordflow">return</span> w;</div>
-<div class="line"><span class="lineno">  413</span>                }</div>
-<div class="line"><span class="lineno">  414</span>            }</div>
-<div class="line"><span class="lineno">  415</span>        }</div>
-<div class="line"><span class="lineno">  416</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  417</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="abd39040da93983fe575d1cf892717343" name="abd39040da93983fe575d1cf892717343"></a>
@@ -545,9 +421,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d9/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogPlugin.html#ad71422b0b24a8e67ea18dbc5979c96ef">com.fs.starfarer.api.campaign.InteractionDialogPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d4d/BarCMD_8java_source.html#l00469">469</a> of file <a class="el" href="../../d2/d4d/BarCMD_8java_source.html">BarCMD.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  469</span>                                                  {</div>
-<div class="line"><span class="lineno">  470</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a95149c4cf416f2a73754a484be9750be" name="a95149c4cf416f2a73754a484be9750be"></a>
@@ -566,22 +440,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d4d/BarCMD_8java_source.html#l00441">441</a> of file <a class="el" href="../../d2/d4d/BarCMD_8java_source.html">BarCMD.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  441</span>                           {</div>
-<div class="line"><span class="lineno">  442</span>        </div>
-<div class="line"><span class="lineno">  443</span>        BarAmbiencePlayer player = <a class="code hl_function" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#a32a880abb46fdf3d29df33927c485c0d">getAmbiencePlayer</a>();</div>
-<div class="line"><span class="lineno">  444</span>        <span class="keywordflow">if</span> (player != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  445</span>            player.stop();</div>
-<div class="line"><span class="lineno">  446</span>        }</div>
-<div class="line"><span class="lineno">  447</span>        </div>
-<div class="line"><span class="lineno">  448</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#a8daf499eba86cdedf43d8b9e40d9dd1a">originalPlugin</a> != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  449</span>            <a class="code hl_variable" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#afd18a0c869b07ab0a7c301d539478840">dialog</a>.<a class="code hl_function" href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#a34d8510911888e5110d2c7d5fc746611">setPlugin</a>(<a class="code hl_variable" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#a8daf499eba86cdedf43d8b9e40d9dd1a">originalPlugin</a>);</div>
-<div class="line"><span class="lineno">  450</span>        }</div>
-<div class="line"><span class="lineno">  451</span>        </div>
-<div class="line"><span class="lineno">  452</span>        <span class="keyword">new</span> ShowDefaultVisual().execute(<span class="keyword">null</span>, <a class="code hl_variable" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#afd18a0c869b07ab0a7c301d539478840">dialog</a>, Misc.tokenize(<span class="stringliteral">&quot;&quot;</span>), <a class="code hl_variable" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#a2fc4f5bbafa16bc3358744d2d12983b4">memoryMap</a>);</div>
-<div class="line"><span class="lineno">  453</span>        FireBest.fire(<span class="keyword">null</span>, <a class="code hl_variable" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#afd18a0c869b07ab0a7c301d539478840">dialog</a>, <a class="code hl_variable" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#a2fc4f5bbafa16bc3358744d2d12983b4">memoryMap</a>, <span class="stringliteral">&quot;ReturnFromBar&quot;</span>);</div>
-<div class="line"><span class="lineno">  454</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD_html_a32a880abb46fdf3d29df33927c485c0d"><div class="ttname"><a href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#a32a880abb46fdf3d29df33927c485c0d">com.fs.starfarer.api.impl.campaign.rulecmd.missions.BarCMD.getAmbiencePlayer</a></div><div class="ttdeci">static BarAmbiencePlayer getAmbiencePlayer()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d4d/BarCMD_8java_source.html#l00432">BarCMD.java:432</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac91bf3f5e80f4097e69ee9e241faed32" name="ac91bf3f5e80f4097e69ee9e241faed32"></a>
@@ -613,9 +472,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d9/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogPlugin.html#a6533393f43da9b96c0971c8fa4bde2e5">com.fs.starfarer.api.campaign.InteractionDialogPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d4d/BarCMD_8java_source.html#l00466">466</a> of file <a class="el" href="../../d2/d4d/BarCMD_8java_source.html">BarCMD.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  466</span>                                                                       {</div>
-<div class="line"><span class="lineno">  467</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a124c3f59c5bd5834d575a26a6845f788" name="a124c3f59c5bd5834d575a26a6845f788"></a>
@@ -647,73 +504,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d9/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogPlugin.html#a72a7cc4415c05e23d6274632910b961d">com.fs.starfarer.api.campaign.InteractionDialogPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d4d/BarCMD_8java_source.html#l00330">330</a> of file <a class="el" href="../../d2/d4d/BarCMD_8java_source.html">BarCMD.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  330</span>                                                                     {</div>
-<div class="line"><span class="lineno">  331</span>        <span class="keywordflow">if</span> (optionText != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  332</span>            <span class="comment">//dialog.getTextPanel().addParagraph(optionText, Global.getSettings().getColor(&quot;buttonText&quot;));</span></div>
-<div class="line"><span class="lineno">  333</span>            <a class="code hl_variable" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#afd18a0c869b07ab0a7c301d539478840">dialog</a>.<a class="code hl_function" href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#ab4a7f82e8efd7e5c7d19498a1580b708">addOptionSelectedText</a>(optionData);</div>
-<div class="line"><span class="lineno">  334</span>        }</div>
-<div class="line"><span class="lineno">  335</span>        <span class="keywordflow">if</span> (optionData == DumpMemory.OPTION_ID) {</div>
-<div class="line"><span class="lineno">  336</span>            <span class="keyword">new</span> DumpMemory().execute(<span class="keyword">null</span>, <a class="code hl_variable" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#afd18a0c869b07ab0a7c301d539478840">dialog</a>, <span class="keyword">null</span>, <a class="code hl_function" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#a349679ab195d814409e3e7bcf04b2d07">getMemoryMap</a>());</div>
-<div class="line"><span class="lineno">  337</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  338</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (DevMenuOptions.isDevOption(optionData)) {</div>
-<div class="line"><span class="lineno">  339</span>            DevMenuOptions.execute(<a class="code hl_variable" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#afd18a0c869b07ab0a7c301d539478840">dialog</a>, (String) optionData);</div>
-<div class="line"><span class="lineno">  340</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  341</span>        }</div>
-<div class="line"><span class="lineno">  342</span>        </div>
-<div class="line"><span class="lineno">  343</span>        <span class="comment">// need to abort any HubMissionBarEventWrapper missions that are *not* the current selection</span></div>
-<div class="line"><span class="lineno">  344</span>        String optionId = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  345</span>        <span class="keywordflow">if</span> (optionData instanceof String) {</div>
-<div class="line"><span class="lineno">  346</span>            optionId = (String) optionData;</div>
-<div class="line"><span class="lineno">  347</span>        }</div>
-<div class="line"><span class="lineno">  348</span>        </div>
-<div class="line"><span class="lineno">  349</span>        <a class="code hl_function" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#a0d677cf4a91b8c42e6434b1cb3f97767">abortMissions</a>(optionId);</div>
-<div class="line"><span class="lineno">  350</span>        </div>
-<div class="line"><span class="lineno">  351</span>        <span class="keywordflow">if</span> (optionData instanceof PortsideBarEvent) {</div>
-<div class="line"><span class="lineno">  352</span>            PortsideBarEvent <span class="keyword">event</span> = (PortsideBarEvent) optionData;</div>
-<div class="line"><span class="lineno">  353</span>            BarEventDialogPlugin plugin = <span class="keyword">new</span> BarEventDialogPlugin(<span class="keyword">this</span>, <span class="keyword">this</span>, event, <a class="code hl_variable" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#a2fc4f5bbafa16bc3358744d2d12983b4">memoryMap</a>);</div>
-<div class="line"><span class="lineno">  354</span>            <a class="code hl_variable" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#afd18a0c869b07ab0a7c301d539478840">dialog</a>.<a class="code hl_function" href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#a34d8510911888e5110d2c7d5fc746611">setPlugin</a>(plugin);</div>
-<div class="line"><span class="lineno">  355</span>            plugin.init(<a class="code hl_variable" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#afd18a0c869b07ab0a7c301d539478840">dialog</a>);</div>
-<div class="line"><span class="lineno">  356</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  357</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="stringliteral">&quot;barLeave&quot;</span>.equals(optionData)) {</div>
-<div class="line"><span class="lineno">  358</span>            <a class="code hl_function" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#a95149c4cf416f2a73754a484be9750be">leaveBar</a>();</div>
-<div class="line"><span class="lineno">  359</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="stringliteral">&quot;barContinue&quot;</span>.equals(optionData)) {</div>
-<div class="line"><span class="lineno">  360</span>            <a class="code hl_function" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#a1d387784a51b10ababe86196fcf26c9c">showOptions</a>(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  361</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (optionData instanceof String) {</div>
-<div class="line"><span class="lineno">  362</span>            <span class="comment">// a HubMissionBarEventWrapper option</span></div>
-<div class="line"><span class="lineno">  363</span><span class="comment">//          HubMissionBarEventWrapper w = getWrapperFor(optionId);</span></div>
-<div class="line"><span class="lineno">  364</span><span class="comment">//          if (w != null &amp;&amp; w.getMission() != null) {</span></div>
-<div class="line"><span class="lineno">  365</span><span class="comment">//              mem.set(&quot;$currMission_ref&quot;, w.getMission(), 0f);</span></div>
-<div class="line"><span class="lineno">  366</span><span class="comment">//          } else {</span></div>
-<div class="line"><span class="lineno">  367</span><span class="comment">//              mem.unset(&quot;$currMission_ref&quot;);</span></div>
-<div class="line"><span class="lineno">  368</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">  369</span>            </div>
-<div class="line"><span class="lineno">  370</span>            MemoryAPI eMem = <a class="code hl_function" href="../../d7/dd6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1BaseCommandPlugin.html#af355b9be7db57d00eaf6a6f0637f2edb">getEntityMemory</a>(<a class="code hl_variable" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#a2fc4f5bbafa16bc3358744d2d12983b4">memoryMap</a>);</div>
-<div class="line"><span class="lineno">  371</span>            eMem.set(<span class="stringliteral">&quot;$BarCMD&quot;</span>, <span class="keyword">this</span>, 0f);</div>
-<div class="line"><span class="lineno">  372</span>            </div>
-<div class="line"><span class="lineno">  373</span>            HubMissionBarEventWrapper w = <a class="code hl_function" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#a46345fb858ca2e922ea9fe4cc3e661dd">getWrapperFor</a>(optionId);</div>
-<div class="line"><span class="lineno">  374</span>            <span class="keywordflow">if</span> (w != <span class="keyword">null</span> &amp;&amp; w.getMission() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  375</span>                PersonAPI person = w.getMission().getPerson();</div>
-<div class="line"><span class="lineno">  376</span>                <span class="keywordflow">if</span> (person != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  377</span>                    <a class="code hl_variable" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#afd18a0c869b07ab0a7c301d539478840">dialog</a>.<a class="code hl_function" href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#aab8d898bf278af177dcaa802e64135be">getInteractionTarget</a>().<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#ab500a8412a1fa2872dccc9b4eb762e4b">setActivePerson</a>(person);</div>
-<div class="line"><span class="lineno">  378</span>                    ((RuleBasedInteractionDialogPluginImpl)<a class="code hl_variable" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#a8daf499eba86cdedf43d8b9e40d9dd1a">originalPlugin</a>).updateMemory();</div>
-<div class="line"><span class="lineno">  379</span><span class="comment">//                  memoryMap.put(MemKeys.ENTITY, memoryMap.get(MemKeys.LOCAL));</span></div>
-<div class="line"><span class="lineno">  380</span><span class="comment">//                  memoryMap.put(MemKeys.LOCAL, person.getMemoryWithoutUpdate());</span></div>
-<div class="line"><span class="lineno">  381</span>                    <a class="code hl_variable" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#afd18a0c869b07ab0a7c301d539478840">dialog</a>.<a class="code hl_function" href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#a5619d9b7c7aec96fff1afb09c47fff1c">getVisualPanel</a>().<a class="code hl_function" href="../../d1/d60/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1VisualPanelAPI.html#ae20b56e8249aaa645c28be56c9b85dd1">showPersonInfo</a>(person, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  382</span>                }</div>
-<div class="line"><span class="lineno">  383</span>            }</div>
-<div class="line"><span class="lineno">  384</span>            </div>
-<div class="line"><span class="lineno">  385</span>            MemoryAPI mem = <a class="code hl_variable" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#a2fc4f5bbafa16bc3358744d2d12983b4">memoryMap</a>.get(MemKeys.LOCAL);</div>
-<div class="line"><span class="lineno">  386</span>            <a class="code hl_variable" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#afd18a0c869b07ab0a7c301d539478840">dialog</a>.<a class="code hl_function" href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#a34d8510911888e5110d2c7d5fc746611">setPlugin</a>(<a class="code hl_variable" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#a8daf499eba86cdedf43d8b9e40d9dd1a">originalPlugin</a>);</div>
-<div class="line"><span class="lineno">  387</span>            mem.set(<span class="stringliteral">&quot;$option&quot;</span>, (String) optionData, 0f);</div>
-<div class="line"><span class="lineno">  388</span>            </div>
-<div class="line"><span class="lineno">  389</span>            FireBest.fire(<span class="keyword">null</span>, <a class="code hl_variable" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#afd18a0c869b07ab0a7c301d539478840">dialog</a>, <a class="code hl_variable" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#a2fc4f5bbafa16bc3358744d2d12983b4">memoryMap</a>, <span class="stringliteral">&quot;DialogOptionSelected&quot;</span>);</div>
-<div class="line"><span class="lineno">  390</span>        }</div>
-<div class="line"><span class="lineno">  391</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD_html_a349679ab195d814409e3e7bcf04b2d07"><div class="ttname"><a href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#a349679ab195d814409e3e7bcf04b2d07">com.fs.starfarer.api.impl.campaign.rulecmd.missions.BarCMD.getMemoryMap</a></div><div class="ttdeci">Map&lt; String, MemoryAPI &gt; getMemoryMap()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d4d/BarCMD_8java_source.html#l00463">BarCMD.java:463</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI_html_a5619d9b7c7aec96fff1afb09c47fff1c"><div class="ttname"><a href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#a5619d9b7c7aec96fff1afb09c47fff1c">com.fs.starfarer.api.campaign.InteractionDialogAPI.getVisualPanel</a></div><div class="ttdeci">VisualPanelAPI getVisualPanel()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI_html_ab4a7f82e8efd7e5c7d19498a1580b708"><div class="ttname"><a href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#ab4a7f82e8efd7e5c7d19498a1580b708">com.fs.starfarer.api.campaign.InteractionDialogAPI.addOptionSelectedText</a></div><div class="ttdeci">void addOptionSelectedText(Object optionId)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1VisualPanelAPI_html_ae20b56e8249aaa645c28be56c9b85dd1"><div class="ttname"><a href="../../d1/d60/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1VisualPanelAPI.html#ae20b56e8249aaa645c28be56c9b85dd1">com.fs.starfarer.api.campaign.VisualPanelAPI.showPersonInfo</a></div><div class="ttdeci">void showPersonInfo(PersonAPI person)</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a064468ea23e3760731ba2efe9ad653a5" name="a064468ea23e3760731ba2efe9ad653a5"></a>
@@ -733,18 +524,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d4d/BarCMD_8java_source.html#l00396">396</a> of file <a class="el" href="../../d2/d4d/BarCMD_8java_source.html">BarCMD.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  396</span>                                                         {</div>
-<div class="line"><span class="lineno">  397</span>        <span class="keywordflow">if</span> (withContinue) {</div>
-<div class="line"><span class="lineno">  398</span>            <a class="code hl_variable" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#afd18a0c869b07ab0a7c301d539478840">dialog</a>.<a class="code hl_function" href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#af4f0b5fdb66110b1d0565b433abaf65c">getOptionPanel</a>().<a class="code hl_function" href="../../da/d65/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OptionPanelAPI.html#a72ccab6cc04270d28959f8175d0821cb">clearOptions</a>();</div>
-<div class="line"><span class="lineno">  399</span>            <a class="code hl_variable" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#afd18a0c869b07ab0a7c301d539478840">dialog</a>.<a class="code hl_function" href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#af4f0b5fdb66110b1d0565b433abaf65c">getOptionPanel</a>().<a class="code hl_function" href="../../da/d65/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OptionPanelAPI.html#a57f02433899c784a146848ca9955130a">addOption</a>(<span class="stringliteral">&quot;Continue&quot;</span>, <span class="stringliteral">&quot;barContinue&quot;</span>);</div>
-<div class="line"><span class="lineno">  400</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  401</span>            <a class="code hl_function" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#a1d387784a51b10ababe86196fcf26c9c">showOptions</a>(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  402</span>        }</div>
-<div class="line"><span class="lineno">  403</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI_html_af4f0b5fdb66110b1d0565b433abaf65c"><div class="ttname"><a href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#af4f0b5fdb66110b1d0565b433abaf65c">com.fs.starfarer.api.campaign.InteractionDialogAPI.getOptionPanel</a></div><div class="ttdeci">OptionPanelAPI getOptionPanel()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OptionPanelAPI_html_a57f02433899c784a146848ca9955130a"><div class="ttname"><a href="../../da/d65/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OptionPanelAPI.html#a57f02433899c784a146848ca9955130a">com.fs.starfarer.api.campaign.OptionPanelAPI.addOption</a></div><div class="ttdeci">void addOption(String text, Object data)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OptionPanelAPI_html_a72ccab6cc04270d28959f8175d0821cb"><div class="ttname"><a href="../../da/d65/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OptionPanelAPI.html#a72ccab6cc04270d28959f8175d0821cb">com.fs.starfarer.api.campaign.OptionPanelAPI.clearOptions</a></div><div class="ttdeci">void clearOptions()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5d1d9b85c5a7b205ec15f504236e2ca3" name="a5d1d9b85c5a7b205ec15f504236e2ca3"></a>
@@ -764,11 +544,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d4d/BarCMD_8java_source.html#l00393">393</a> of file <a class="el" href="../../d2/d4d/BarCMD_8java_source.html">BarCMD.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  393</span>                                                           {</div>
-<div class="line"><span class="lineno">  394</span>        <a class="code hl_function" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#a5d1d9b85c5a7b205ec15f504236e2ca3">returningFromEvent</a>(event.endWithContinue());</div>
-<div class="line"><span class="lineno">  395</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD_html_a5d1d9b85c5a7b205ec15f504236e2ca3"><div class="ttname"><a href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#a5d1d9b85c5a7b205ec15f504236e2ca3">com.fs.starfarer.api.impl.campaign.rulecmd.missions.BarCMD.returningFromEvent</a></div><div class="ttdeci">void returningFromEvent(PortsideBarEvent event)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d4d/BarCMD_8java_source.html#l00393">BarCMD.java:393</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a1d387784a51b10ababe86196fcf26c9c" name="a1d387784a51b10ababe86196fcf26c9c"></a>
@@ -788,182 +564,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d4d/BarCMD_8java_source.html#l00163">163</a> of file <a class="el" href="../../d2/d4d/BarCMD_8java_source.html">BarCMD.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  163</span>                                                        {</div>
-<div class="line"><span class="lineno">  164</span>        <a class="code hl_variable" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#afd18a0c869b07ab0a7c301d539478840">dialog</a>.<a class="code hl_function" href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#a5619d9b7c7aec96fff1afb09c47fff1c">getVisualPanel</a>().<a class="code hl_function" href="../../d1/d60/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1VisualPanelAPI.html#ae14001234afba1d70d4a877d7e633c58">restoreSavedVisual</a>();</div>
-<div class="line"><span class="lineno">  165</span>        <a class="code hl_variable" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#afd18a0c869b07ab0a7c301d539478840">dialog</a>.<a class="code hl_function" href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#a5619d9b7c7aec96fff1afb09c47fff1c">getVisualPanel</a>().<a class="code hl_function" href="../../d1/d60/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1VisualPanelAPI.html#a971ca47da04bc7f43bb5a1cfbf7692f7">saveCurrentVisual</a>();</div>
-<div class="line"><span class="lineno">  166</span>        </div>
-<div class="line"><span class="lineno">  167</span>        PortsideBarData data = PortsideBarData.getInstance();</div>
-<div class="line"><span class="lineno">  168</span>        </div>
-<div class="line"><span class="lineno">  169</span>        MarketAPI market = <a class="code hl_variable" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#a1e75b68c67fb83b43348a47d0229b83a">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#acfdfd07dc0bd1b2ecdd9d36bb21d9c4f">getMarket</a>();</div>
-<div class="line"><span class="lineno">  170</span>        </div>
-<div class="line"><span class="lineno">  171</span>        <a class="code hl_variable" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#afd18a0c869b07ab0a7c301d539478840">dialog</a>.<a class="code hl_function" href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#af4f0b5fdb66110b1d0565b433abaf65c">getOptionPanel</a>().<a class="code hl_function" href="../../da/d65/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OptionPanelAPI.html#a72ccab6cc04270d28959f8175d0821cb">clearOptions</a>();</div>
-<div class="line"><span class="lineno">  172</span>        </div>
-<div class="line"><span class="lineno">  173</span>        Random random = <span class="keyword">new</span> Random(BarEventManager.getInstance().getSeed(<a class="code hl_variable" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#a1e75b68c67fb83b43348a47d0229b83a">entity</a>, <span class="keyword">null</span>, <span class="keyword">null</span>));</div>
-<div class="line"><span class="lineno">  174</span>        </div>
-<div class="line"><span class="lineno">  175</span>        <span class="keywordtype">int</span> min = Global.getSettings().getInt(<span class="stringliteral">&quot;minBarEvents&quot;</span>);</div>
-<div class="line"><span class="lineno">  176</span>        <span class="keywordtype">int</span> max = Global.getSettings().getInt(<span class="stringliteral">&quot;maxBarEvents&quot;</span>);</div>
-<div class="line"><span class="lineno">  177</span>        <span class="keywordtype">float</span> pMult = Global.getSettings().getFloat(<span class="stringliteral">&quot;barEventProbOneMore&quot;</span>);</div>
-<div class="line"><span class="lineno">  178</span>        <span class="comment">//int num = min + random.nextInt(max - min + 1);</span></div>
-<div class="line"><span class="lineno">  179</span>        </div>
-<div class="line"><span class="lineno">  180</span>        WeightedRandomPicker&lt;Integer&gt; numPicker = <span class="keyword">new</span> WeightedRandomPicker&lt;Integer&gt;(random);</div>
-<div class="line"><span class="lineno">  181</span>        <span class="keywordtype">float</span> p = 1f;</div>
-<div class="line"><span class="lineno">  182</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = min; i &lt;= max; i++) {</div>
-<div class="line"><span class="lineno">  183</span>            numPicker.add(i, p);</div>
-<div class="line"><span class="lineno">  184</span>            p *= pMult;</div>
-<div class="line"><span class="lineno">  185</span>        }</div>
-<div class="line"><span class="lineno">  186</span>        <span class="keywordtype">int</span> num = numPicker.pick();</div>
-<div class="line"><span class="lineno">  187</span>        </div>
-<div class="line"><span class="lineno">  188</span>        <span class="keywordflow">if</span> (DebugFlags.BAR_DEBUG) {</div>
-<div class="line"><span class="lineno">  189</span>            max = 8;</div>
-<div class="line"><span class="lineno">  190</span>            num = 7;</div>
-<div class="line"><span class="lineno">  191</span>            <span class="comment">//num = max;</span></div>
-<div class="line"><span class="lineno">  192</span>        }</div>
-<div class="line"><span class="lineno">  193</span>        </div>
-<div class="line"><span class="lineno">  194</span>        <span class="comment">//num = 1000;</span></div>
-<div class="line"><span class="lineno">  195</span>        </div>
-<div class="line"><span class="lineno">  196</span>        List&lt;PortsideBarEvent&gt; events = <span class="keyword">new</span> ArrayList&lt;PortsideBarEvent&gt;();</div>
-<div class="line"><span class="lineno">  197</span>        String key = <span class="stringliteral">&quot;$BarCMD_shownEvents&quot;</span>;</div>
-<div class="line"><span class="lineno">  198</span>        MemoryAPI mem = market.getMemoryWithoutUpdate();</div>
-<div class="line"><span class="lineno">  199</span>        <span class="keywordtype">boolean</span> needToSaveShown = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  200</span>        <span class="keywordflow">if</span> (mem.contains(key)) {</div>
-<div class="line"><span class="lineno">  201</span>            List&lt;String&gt; eventIds = (List&lt;String&gt;) mem.get(key);</div>
-<div class="line"><span class="lineno">  202</span>            <span class="keywordflow">for</span> (String <span class="keywordtype">id</span> : eventIds) {</div>
-<div class="line"><span class="lineno">  203</span>                OUTER: <span class="keywordflow">for</span> (PortsideBarEvent event : data.getEvents()) {</div>
-<div class="line"><span class="lineno">  204</span><span class="comment">//                  for (GenericBarEventCreator c : BarEventManager.getInstance().getTimeout().getItems()) {</span></div>
-<div class="line"><span class="lineno">  205</span><span class="comment">//                      if (c.getBarEventId() != null &amp;&amp; c.getBarEventId().equals(id)) {</span></div>
-<div class="line"><span class="lineno">  206</span><span class="comment">//                          continue OUTER;</span></div>
-<div class="line"><span class="lineno">  207</span><span class="comment">//                      }</span></div>
-<div class="line"><span class="lineno">  208</span><span class="comment">//                  }</span></div>
-<div class="line"><span class="lineno">  209</span>                    <span class="keywordflow">if</span> (<span class="keywordtype">id</span>.equals(event.getBarEventId())) {</div>
-<div class="line"><span class="lineno">  210</span>                        events.add(event);</div>
-<div class="line"><span class="lineno">  211</span>                    }</div>
-<div class="line"><span class="lineno">  212</span>                }</div>
-<div class="line"><span class="lineno">  213</span>            }</div>
-<div class="line"><span class="lineno">  214</span>            num = Math.max(eventIds.size(), num);</div>
-<div class="line"><span class="lineno">  215</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  216</span>            events.addAll(data.getEvents());</div>
-<div class="line"><span class="lineno">  217</span>            Collections.shuffle(events, random);</div>
-<div class="line"><span class="lineno">  218</span>            needToSaveShown = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  219</span>        }</div>
-<div class="line"><span class="lineno">  220</span>        </div>
-<div class="line"><span class="lineno">  221</span>        <span class="keywordtype">boolean</span> addedSomething = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  222</span>        </div>
-<div class="line"><span class="lineno">  223</span>        AddBarEvent.clearTempEvents(market);</div>
-<div class="line"><span class="lineno">  224</span>        FireAll.fire(<span class="keyword">null</span>, <a class="code hl_variable" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#afd18a0c869b07ab0a7c301d539478840">dialog</a>, <a class="code hl_variable" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#a2fc4f5bbafa16bc3358744d2d12983b4">memoryMap</a>, <span class="stringliteral">&quot;AddBarEvents&quot;</span>);</div>
-<div class="line"><span class="lineno">  225</span>        </div>
-<div class="line"><span class="lineno">  226</span>        List&lt;BarEventData&gt; temp = <span class="keyword">new</span> ArrayList&lt;BarEventData&gt;(AddBarEvent.getTempEvents(market).events.values());</div>
-<div class="line"><span class="lineno">  227</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; max &amp;&amp; i &lt; temp.size(); i++) {</div>
-<div class="line"><span class="lineno">  228</span>            BarEventData b = temp.get(i);</div>
-<div class="line"><span class="lineno">  229</span>            <span class="keywordflow">if</span> (!b.blurb.isEmpty()) {</div>
-<div class="line"><span class="lineno">  230</span>                <a class="code hl_variable" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#afd18a0c869b07ab0a7c301d539478840">dialog</a>.<a class="code hl_function" href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#a52d00add8a9c52795f652f493ac37244">getTextPanel</a>().<a class="code hl_function" href="../../d4/ddc/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1TextPanelAPI.html#a0ef96007fc183cddf8dce605e19a98bf">addPara</a>(b.blurb);</div>
-<div class="line"><span class="lineno">  231</span>            }</div>
-<div class="line"><span class="lineno">  232</span>            <a class="code hl_variable" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#afd18a0c869b07ab0a7c301d539478840">dialog</a>.<a class="code hl_function" href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#af4f0b5fdb66110b1d0565b433abaf65c">getOptionPanel</a>().<a class="code hl_function" href="../../da/d65/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OptionPanelAPI.html#a57f02433899c784a146848ca9955130a">addOption</a>(b.option, b.optionId);</div>
-<div class="line"><span class="lineno">  233</span>            <span class="keywordflow">if</span> (b.optionColor != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  234</span>                <a class="code hl_variable" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#afd18a0c869b07ab0a7c301d539478840">dialog</a>.<a class="code hl_function" href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#a385090332b0ccf1cedd82bad2232a641">setOptionColor</a>(b.optionId, b.optionColor);</div>
-<div class="line"><span class="lineno">  235</span>            }</div>
-<div class="line"><span class="lineno">  236</span>            addedSomething = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  237</span>        }</div>
-<div class="line"><span class="lineno">  238</span>        </div>
-<div class="line"><span class="lineno">  239</span>        List&lt;String&gt; shown = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
-<div class="line"><span class="lineno">  240</span>        </div>
-<div class="line"><span class="lineno">  241</span>        <span class="comment">// used alongside with ip.excludeFromGetPerson() to ensure that the same person isn&#39;t picked</span></div>
-<div class="line"><span class="lineno">  242</span>        <span class="comment">// for multiple concurrent bar events</span></div>
-<div class="line"><span class="lineno">  243</span>        ImportantPeopleAPI ip = Global.getSector().getImportantPeople();</div>
-<div class="line"><span class="lineno">  244</span>        ip.resetExcludeFromGetPerson();</div>
-<div class="line"><span class="lineno">  245</span>        </div>
-<div class="line"><span class="lineno">  246</span>        <span class="comment">// existing contacts don&#39;t show up at the bar, since the bar encounter dialogue is written</span></div>
-<div class="line"><span class="lineno">  247</span>        <span class="comment">// assuming you&#39;re meeting them for the first time</span></div>
-<div class="line"><span class="lineno">  248</span>        <span class="keywordflow">for</span> (IntelInfoPlugin intel : Global.getSector().getIntelManager().getIntel(ContactIntel.class)) {</div>
-<div class="line"><span class="lineno">  249</span>            ip.excludeFromGetPerson(((ContactIntel)intel).getPerson());</div>
-<div class="line"><span class="lineno">  250</span>        }</div>
-<div class="line"><span class="lineno">  251</span>        </div>
-<div class="line"><span class="lineno">  252</span><span class="comment">//      BaseMissionHub.resetMissionAngle(null, market);</span></div>
-<div class="line"><span class="lineno">  253</span><span class="comment">//      BaseMissionHub.getMissionAngle(null, market, random);</span></div>
-<div class="line"><span class="lineno">  254</span>        </div>
-<div class="line"><span class="lineno">  255</span>        Collections.sort(events, <span class="keyword">new</span> Comparator&lt;PortsideBarEvent&gt;() {</div>
-<div class="line"><span class="lineno">  256</span>            <span class="keyword">public</span> <span class="keywordtype">int</span> compare(PortsideBarEvent o1, PortsideBarEvent o2) {</div>
-<div class="line"><span class="lineno">  257</span>                <span class="keywordtype">boolean</span> p1 = o1.isAlwaysShow();</div>
-<div class="line"><span class="lineno">  258</span>                <span class="keywordtype">boolean</span> p2 = o2.isAlwaysShow();</div>
-<div class="line"><span class="lineno">  259</span>                <span class="keywordflow">if</span> (p1 &amp;&amp; !p2) <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno">  260</span>                <span class="keywordflow">if</span> (p2 &amp;&amp; !p1) <span class="keywordflow">return</span> 1;</div>
-<div class="line"><span class="lineno">  261</span>                <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  262</span>            }</div>
-<div class="line"><span class="lineno">  263</span>        });</div>
-<div class="line"><span class="lineno">  264</span>        </div>
-<div class="line"><span class="lineno">  265</span>        <span class="keywordtype">int</span> curr = 0;</div>
-<div class="line"><span class="lineno">  266</span>        <span class="comment">//for (PortsideBarEvent event : data.getEvents()) {</span></div>
-<div class="line"><span class="lineno">  267</span>        <span class="keywordflow">for</span> (PortsideBarEvent event : events) {</div>
-<div class="line"><span class="lineno">  268</span>            <span class="keywordflow">if</span> (TutorialMissionIntel.isTutorialInProgress()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  269</span>            <span class="keywordflow">if</span> (curr + temp.size() &gt;= max) <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  270</span>            </div>
-<div class="line"><span class="lineno">  271</span><span class="comment">//          if (curr &lt; 16) {</span></div>
-<div class="line"><span class="lineno">  272</span><span class="comment">//              curr++;</span></div>
-<div class="line"><span class="lineno">  273</span><span class="comment">//              continue;</span></div>
-<div class="line"><span class="lineno">  274</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">  275</span>            </div>
-<div class="line"><span class="lineno">  276</span>            <span class="keywordflow">if</span> (event.shouldRemoveEvent()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  277</span>            <span class="keywordflow">if</span> (!event.shouldShowAtMarket(market)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  278</span>            </div>
-<div class="line"><span class="lineno">  279</span>            <span class="keyword">event</span>.addPromptAndOption(<a class="code hl_variable" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#afd18a0c869b07ab0a7c301d539478840">dialog</a>, <a class="code hl_variable" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#a2fc4f5bbafa16bc3358744d2d12983b4">memoryMap</a>);</div>
-<div class="line"><span class="lineno">  280</span>            <span class="keywordflow">if</span> (event instanceof HubMissionBarEventWrapper) {</div>
-<div class="line"><span class="lineno">  281</span>                HubMissionBarEventWrapper w = (HubMissionBarEventWrapper) event;</div>
-<div class="line"><span class="lineno">  282</span>                <span class="keywordflow">if</span> (w.getMission() == <span class="keyword">null</span>) { <span class="comment">// aborted during creation</span></div>
-<div class="line"><span class="lineno">  283</span>                    <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  284</span>                }</div>
-<div class="line"><span class="lineno">  285</span>            }</div>
-<div class="line"><span class="lineno">  286</span>            <span class="keyword">event</span>.wasShownAtMarket(market);</div>
-<div class="line"><span class="lineno">  287</span>            </div>
-<div class="line"><span class="lineno">  288</span>            <span class="keywordflow">if</span> (event.getBarEventId() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  289</span>                shown.add(event.getBarEventId());</div>
-<div class="line"><span class="lineno">  290</span>            }</div>
-<div class="line"><span class="lineno">  291</span>            </div>
-<div class="line"><span class="lineno">  292</span>            addedSomething = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  293</span>            </div>
-<div class="line"><span class="lineno">  294</span>            <span class="keywordflow">if</span> (!event.isAlwaysShow()) {</div>
-<div class="line"><span class="lineno">  295</span>                curr++;</div>
-<div class="line"><span class="lineno">  296</span>            }</div>
-<div class="line"><span class="lineno">  297</span>            <span class="keywordflow">if</span> (curr &gt;= num) <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  298</span>        }</div>
-<div class="line"><span class="lineno">  299</span>        </div>
-<div class="line"><span class="lineno">  300</span>        <span class="comment">//BaseMissionHub.clearCreatedMissionsList(null, market);</span></div>
-<div class="line"><span class="lineno">  301</span>        ip.resetExcludeFromGetPerson();</div>
-<div class="line"><span class="lineno">  302</span>        </div>
-<div class="line"><span class="lineno">  303</span>        <span class="keywordflow">if</span> (needToSaveShown) {</div>
-<div class="line"><span class="lineno">  304</span>            <span class="keywordtype">float</span> time = <a class="code hl_variable" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#a2f4a4c32065b7b20b5ffcec193a97174">BAR_EVENT_MIN_TIME_BEFORE_CHANGING</a> + </div>
-<div class="line"><span class="lineno">  305</span>                         (<a class="code hl_variable" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#a9fd27538580f59172280566ebd06e8e5">BAR_EVENT_MAX_TIME_BEFORE_CHANGING</a> - <a class="code hl_variable" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#a2f4a4c32065b7b20b5ffcec193a97174">BAR_EVENT_MIN_TIME_BEFORE_CHANGING</a>) * random.nextFloat();</div>
-<div class="line"><span class="lineno">  306</span>            mem.set(key, shown, time);</div>
-<div class="line"><span class="lineno">  307</span>        }</div>
-<div class="line"><span class="lineno">  308</span>        </div>
-<div class="line"><span class="lineno">  309</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#a5d1d9b85c5a7b205ec15f504236e2ca3">returningFromEvent</a>) {</div>
-<div class="line"><span class="lineno">  310</span>            <span class="keywordflow">if</span> (!addedSomething) {</div>
-<div class="line"><span class="lineno">  311</span>                <a class="code hl_variable" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#afd18a0c869b07ab0a7c301d539478840">dialog</a>.<a class="code hl_function" href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#a52d00add8a9c52795f652f493ac37244">getTextPanel</a>().<a class="code hl_function" href="../../d4/ddc/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1TextPanelAPI.html#a0ef96007fc183cddf8dce605e19a98bf">addPara</a>(<span class="stringliteral">&quot;Nothing of note is going on at the bar.&quot;</span>);</div>
-<div class="line"><span class="lineno">  312</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  313</span>                <a class="code hl_variable" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#afd18a0c869b07ab0a7c301d539478840">dialog</a>.<a class="code hl_function" href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#a52d00add8a9c52795f652f493ac37244">getTextPanel</a>().<a class="code hl_function" href="../../d4/ddc/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1TextPanelAPI.html#a0ef96007fc183cddf8dce605e19a98bf">addPara</a>(<span class="stringliteral">&quot;You unobtrusively watch the patrons of the bar for &quot;</span> +</div>
-<div class="line"><span class="lineno">  314</span>                                              <span class="stringliteral">&quot;a few minutes before deciding what to do next.&quot;</span>);</div>
-<div class="line"><span class="lineno">  315</span>            }</div>
-<div class="line"><span class="lineno">  316</span>        }</div>
-<div class="line"><span class="lineno">  317</span>        </div>
-<div class="line"><span class="lineno">  318</span>        <a class="code hl_variable" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#afd18a0c869b07ab0a7c301d539478840">dialog</a>.<a class="code hl_function" href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#af4f0b5fdb66110b1d0565b433abaf65c">getOptionPanel</a>().<a class="code hl_function" href="../../da/d65/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OptionPanelAPI.html#a57f02433899c784a146848ca9955130a">addOption</a>(<span class="stringliteral">&quot;Leave the bar&quot;</span>, <span class="stringliteral">&quot;barLeave&quot;</span>);</div>
-<div class="line"><span class="lineno">  319</span>        <a class="code hl_variable" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#afd18a0c869b07ab0a7c301d539478840">dialog</a>.<a class="code hl_function" href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#af4f0b5fdb66110b1d0565b433abaf65c">getOptionPanel</a>().<a class="code hl_function" href="../../da/d65/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OptionPanelAPI.html#aeeb9e590eca47e04443cd9a45b89fd39">setShortcut</a>(<span class="stringliteral">&quot;barLeave&quot;</span>, Keyboard.KEY_ESCAPE, <span class="keyword">false</span>, <span class="keyword">false</span>, <span class="keyword">false</span>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  320</span>        </div>
-<div class="line"><span class="lineno">  321</span>        </div>
-<div class="line"><span class="lineno">  322</span>        <span class="keywordflow">if</span> (Global.getSettings().isDevMode()) {</div>
-<div class="line"><span class="lineno">  323</span>            DevMenuOptions.addOptions(<a class="code hl_variable" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#afd18a0c869b07ab0a7c301d539478840">dialog</a>);</div>
-<div class="line"><span class="lineno">  324</span>        }</div>
-<div class="line"><span class="lineno">  325</span>        </div>
-<div class="line"><span class="lineno">  326</span>        <a class="code hl_variable" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#afd18a0c869b07ab0a7c301d539478840">dialog</a>.<a class="code hl_function" href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#a34d8510911888e5110d2c7d5fc746611">setPlugin</a>(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  327</span>        <a class="code hl_function" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#abd39040da93983fe575d1cf892717343">init</a>(<a class="code hl_variable" href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#afd18a0c869b07ab0a7c301d539478840">dialog</a>);</div>
-<div class="line"><span class="lineno">  328</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD_html_a2f4a4c32065b7b20b5ffcec193a97174"><div class="ttname"><a href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#a2f4a4c32065b7b20b5ffcec193a97174">com.fs.starfarer.api.impl.campaign.rulecmd.missions.BarCMD.BAR_EVENT_MIN_TIME_BEFORE_CHANGING</a></div><div class="ttdeci">static float BAR_EVENT_MIN_TIME_BEFORE_CHANGING</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d4d/BarCMD_8java_source.html#l00051">BarCMD.java:51</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD_html_a9fd27538580f59172280566ebd06e8e5"><div class="ttname"><a href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#a9fd27538580f59172280566ebd06e8e5">com.fs.starfarer.api.impl.campaign.rulecmd.missions.BarCMD.BAR_EVENT_MAX_TIME_BEFORE_CHANGING</a></div><div class="ttdeci">static float BAR_EVENT_MAX_TIME_BEFORE_CHANGING</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d4d/BarCMD_8java_source.html#l00052">BarCMD.java:52</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD_html_abd39040da93983fe575d1cf892717343"><div class="ttname"><a href="../../dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html#abd39040da93983fe575d1cf892717343">com.fs.starfarer.api.impl.campaign.rulecmd.missions.BarCMD.init</a></div><div class="ttdeci">void init(InteractionDialogAPI dialog)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d4d/BarCMD_8java_source.html#l00469">BarCMD.java:469</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI_html_a385090332b0ccf1cedd82bad2232a641"><div class="ttname"><a href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#a385090332b0ccf1cedd82bad2232a641">com.fs.starfarer.api.campaign.InteractionDialogAPI.setOptionColor</a></div><div class="ttdeci">void setOptionColor(Object optionId, Color color)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI_html_a52d00add8a9c52795f652f493ac37244"><div class="ttname"><a href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#a52d00add8a9c52795f652f493ac37244">com.fs.starfarer.api.campaign.InteractionDialogAPI.getTextPanel</a></div><div class="ttdeci">TextPanelAPI getTextPanel()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OptionPanelAPI_html_aeeb9e590eca47e04443cd9a45b89fd39"><div class="ttname"><a href="../../da/d65/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OptionPanelAPI.html#aeeb9e590eca47e04443cd9a45b89fd39">com.fs.starfarer.api.campaign.OptionPanelAPI.setShortcut</a></div><div class="ttdeci">void setShortcut(Object data, int code, boolean ctrl, boolean alt, boolean shift, boolean putLast)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1TextPanelAPI_html_a0ef96007fc183cddf8dce605e19a98bf"><div class="ttname"><a href="../../d4/ddc/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1TextPanelAPI.html#a0ef96007fc183cddf8dce605e19a98bf">com.fs.starfarer.api.campaign.TextPanelAPI.addPara</a></div><div class="ttdeci">LabelAPI addPara(String text)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1VisualPanelAPI_html_a971ca47da04bc7f43bb5a1cfbf7692f7"><div class="ttname"><a href="../../d1/d60/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1VisualPanelAPI.html#a971ca47da04bc7f43bb5a1cfbf7692f7">com.fs.starfarer.api.campaign.VisualPanelAPI.saveCurrentVisual</a></div><div class="ttdeci">void saveCurrentVisual()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1VisualPanelAPI_html_ae14001234afba1d70d4a877d7e633c58"><div class="ttname"><a href="../../d1/d60/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1VisualPanelAPI.html#ae14001234afba1d70d4a877d7e633c58">com.fs.starfarer.api.campaign.VisualPanelAPI.restoreSavedVisual</a></div><div class="ttdeci">void restoreSavedVisual()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

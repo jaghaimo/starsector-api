@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -217,57 +218,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d45/PirateFleetManager_8java_source.html#l00171">171</a> of file <a class="el" href="../../dc/d45/PirateFleetManager_8java_source.html">PirateFleetManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  171</span>                                                                                                             {</div>
-<div class="line"><span class="lineno">  172</span>        <span class="keywordtype">float</span> combat = combatPoints;</div>
-<div class="line"><span class="lineno">  173</span>        <span class="keywordtype">float</span> tanker = 0f;</div>
-<div class="line"><span class="lineno">  174</span>        <span class="keywordtype">float</span> freighter = 0f;</div>
-<div class="line"><span class="lineno">  175</span>        </div>
-<div class="line"><span class="lineno">  176</span>        MercType type = MercType.SCOUT;</div>
-<div class="line"><span class="lineno">  177</span>        <span class="keywordflow">if</span> (combat &gt;= 18f) type = MercType.ARMADA;</div>
-<div class="line"><span class="lineno">  178</span>        <span class="keywordflow">if</span> (combat &gt;= 12f) type = MercType.PATROL;</div>
-<div class="line"><span class="lineno">  179</span>        <span class="keywordflow">if</span> (combat &gt;= 6f) {</div>
-<div class="line"><span class="lineno">  180</span>            <span class="keywordflow">if</span> ((<span class="keywordtype">float</span>) Math.random() &lt; 0.5f) {</div>
-<div class="line"><span class="lineno">  181</span>                type = MercType.PRIVATEER;</div>
-<div class="line"><span class="lineno">  182</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  183</span>                type = MercType.BOUNTY_HUNTER;</div>
-<div class="line"><span class="lineno">  184</span>            }</div>
-<div class="line"><span class="lineno">  185</span>        }</div>
-<div class="line"><span class="lineno">  186</span>        </div>
-<div class="line"><span class="lineno">  187</span>        combat *= 5f;</div>
-<div class="line"><span class="lineno">  188</span>        </div>
-<div class="line"><span class="lineno">  189</span>        String fleetType = type.fleetType;</div>
-<div class="line"><span class="lineno">  190</span>        </div>
-<div class="line"><span class="lineno">  191</span>        FleetParamsV3 params = <span class="keyword">new</span> FleetParamsV3(</div>
-<div class="line"><span class="lineno">  192</span>                route != <span class="keyword">null</span> ? route.getMarket() : <span class="keyword">null</span>, </div>
-<div class="line"><span class="lineno">  193</span>                locInHyper,</div>
-<div class="line"><span class="lineno">  194</span>                Factions.PIRATES, <span class="comment">// quality will always be reduced by non-market-faction penalty, which is what we want </span></div>
-<div class="line"><span class="lineno">  195</span>                route != <span class="keyword">null</span> ? route.getQualityOverride() : <span class="keyword">null</span>,</div>
-<div class="line"><span class="lineno">  196</span>                fleetType,</div>
-<div class="line"><span class="lineno">  197</span>                combat, <span class="comment">// combatPts</span></div>
-<div class="line"><span class="lineno">  198</span>                freighter, <span class="comment">// freighterPts </span></div>
-<div class="line"><span class="lineno">  199</span>                tanker, <span class="comment">// tankerPts</span></div>
-<div class="line"><span class="lineno">  200</span>                0f, <span class="comment">// transportPts</span></div>
-<div class="line"><span class="lineno">  201</span>                0f, <span class="comment">// linerPts</span></div>
-<div class="line"><span class="lineno">  202</span>                0f, <span class="comment">// utilityPts</span></div>
-<div class="line"><span class="lineno">  203</span>                0f <span class="comment">// qualityMod</span></div>
-<div class="line"><span class="lineno">  204</span>                );</div>
-<div class="line"><span class="lineno">  205</span>        <span class="keywordflow">if</span> (route != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  206</span>            params.timestamp = route.getTimestamp();</div>
-<div class="line"><span class="lineno">  207</span>        }</div>
-<div class="line"><span class="lineno">  208</span>        <span class="comment">//params.random = random;</span></div>
-<div class="line"><span class="lineno">  209</span>        CampaignFleetAPI fleet = FleetFactoryV3.createFleet(params);</div>
-<div class="line"><span class="lineno">  210</span>        </div>
-<div class="line"><span class="lineno">  211</span>        <span class="keywordflow">if</span> (fleet == <span class="keyword">null</span> || fleet.isEmpty()) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  212</span>        </div>
-<div class="line"><span class="lineno">  213</span>        fleet.getMemoryWithoutUpdate().set(MemFlags.MEMORY_KEY_PIRATE, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  214</span>        fleet.getMemoryWithoutUpdate().set(MemFlags.MEMORY_KEY_ALLOW_LONG_PURSUIT, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  215</span>        </div>
-<div class="line"><span class="lineno">  216</span>        MarketAPI source = Misc.getSourceMarket(fleet);</div>
-<div class="line"><span class="lineno">  217</span>        <span class="keywordflow">if</span> (source == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  218</span>        </div>
-<div class="line"><span class="lineno">  219</span>        <span class="keywordflow">return</span> fleet;</div>
-<div class="line"><span class="lineno">  220</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="abc207140553d4e006a56b9113867185c" name="abc207140553d4e006a56b9113867185c"></a>
@@ -296,10 +247,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/dda/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseLimitedFleetManager.html#a80d6bc0f6a203f2174131d6793d30b1f">com.fs.starfarer.api.impl.campaign.fleets.BaseLimitedFleetManager</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d45/PirateFleetManager_8java_source.html#l00029">29</a> of file <a class="el" href="../../dc/d45/PirateFleetManager_8java_source.html">PirateFleetManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   29</span>                                 {</div>
-<div class="line"><span class="lineno">   30</span>        <span class="keywordflow">return</span> (<span class="keywordtype">int</span>) Global.getSettings().getFloat(<span class="stringliteral">&quot;maxPirateFleets&quot;</span>);</div>
-<div class="line"><span class="lineno">   31</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a919ee01f1158bff49e456e83229327f9" name="a919ee01f1158bff49e456e83229327f9"></a>
@@ -326,36 +274,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d45/PirateFleetManager_8java_source.html#l00140">140</a> of file <a class="el" href="../../dc/d45/PirateFleetManager_8java_source.html">PirateFleetManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  140</span>                                               {</div>
-<div class="line"><span class="lineno">  141</span>        WeightedRandomPicker&lt;StarSystemAPI&gt; picker = <span class="keyword">new</span> WeightedRandomPicker&lt;StarSystemAPI&gt;();</div>
-<div class="line"><span class="lineno">  142</span>        <span class="keywordflow">for</span> (StarSystemAPI system : Global.getSector().getStarSystems()) {</div>
-<div class="line"><span class="lineno">  143</span>            <span class="keywordtype">float</span> mult = Misc.getSpawnChanceMult(system.getLocation());</div>
-<div class="line"><span class="lineno">  144</span>            </div>
-<div class="line"><span class="lineno">  145</span>            <span class="keywordflow">if</span> (system.hasTag(Tags.SYSTEM_CUT_OFF_FROM_HYPER)) {</div>
-<div class="line"><span class="lineno">  146</span>                <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  147</span>            }</div>
-<div class="line"><span class="lineno">  148</span>            </div>
-<div class="line"><span class="lineno">  149</span>            <span class="comment">// want: large, unstable</span></div>
-<div class="line"><span class="lineno">  150</span>            <span class="keywordtype">float</span> weight = 0f;</div>
-<div class="line"><span class="lineno">  151</span>            <span class="keywordtype">float</span> bounties = 0;</div>
-<div class="line"><span class="lineno">  152</span>            <span class="keywordflow">for</span> (MarketAPI market : Misc.getMarketsInLocation(system)) {</div>
-<div class="line"><span class="lineno">  153</span>                <span class="keywordflow">if</span> (market.getFactionId().equals(Factions.PIRATES)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  154</span>                <span class="comment">//weight += market.getSize() * (15f - market.getStabilityValue());</span></div>
-<div class="line"><span class="lineno">  155</span>                <span class="keywordtype">float</span> w = 11f - market.getStabilityValue() + market.getSize();</div>
-<div class="line"><span class="lineno">  156</span>                <span class="keywordflow">if</span> (w &gt; weight) weight = w;</div>
-<div class="line"><span class="lineno">  157</span><span class="comment">//              if (market.hasCondition(Conditions.EVENT_SYSTEM_BOUNTY)) {</span></div>
-<div class="line"><span class="lineno">  158</span><span class="comment">//                  bounties++;</span></div>
-<div class="line"><span class="lineno">  159</span><span class="comment">//              }</span></div>
-<div class="line"><span class="lineno">  160</span>            }</div>
-<div class="line"><span class="lineno">  161</span>            </div>
-<div class="line"><span class="lineno">  162</span>            weight *= (bounties + 1);</div>
-<div class="line"><span class="lineno">  163</span>            weight *= mult;</div>
-<div class="line"><span class="lineno">  164</span>            </div>
-<div class="line"><span class="lineno">  165</span>            picker.add(system, weight);</div>
-<div class="line"><span class="lineno">  166</span>        }</div>
-<div class="line"><span class="lineno">  167</span>        <span class="keywordflow">return</span> picker.pick();</div>
-<div class="line"><span class="lineno">  168</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a792c37623f695ee0a2d7872d54c6ee6e" name="a792c37623f695ee0a2d7872d54c6ee6e"></a>
@@ -384,112 +303,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/dda/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseLimitedFleetManager.html#ad915a0b4ce8686b012cb817b679c6dbd">com.fs.starfarer.api.impl.campaign.fleets.BaseLimitedFleetManager</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d45/PirateFleetManager_8java_source.html#l00034">34</a> of file <a class="el" href="../../dc/d45/PirateFleetManager_8java_source.html">PirateFleetManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   34</span>                                            {</div>
-<div class="line"><span class="lineno">   35</span>        StarSystemAPI target = <a class="code hl_function" href="../../dc/d2a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1PirateFleetManager.html#a919ee01f1158bff49e456e83229327f9">pickTargetSystem</a>();</div>
-<div class="line"><span class="lineno">   36</span>        <span class="keywordflow">if</span> (target == <span class="keyword">null</span> || <span class="keyword">true</span>) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   37</span>        </div>
-<div class="line"><span class="lineno">   38</span>        WeightedRandomPicker&lt;MercType&gt; picker = <span class="keyword">new</span> WeightedRandomPicker&lt;MercType&gt;();</div>
-<div class="line"><span class="lineno">   39</span>        picker.add(MercType.SCOUT, 10f); </div>
-<div class="line"><span class="lineno">   40</span>        picker.add(MercType.BOUNTY_HUNTER, 10f); </div>
-<div class="line"><span class="lineno">   41</span>        picker.add(MercType.PRIVATEER, 10f); </div>
-<div class="line"><span class="lineno">   42</span>        picker.add(MercType.PATROL, 10f); </div>
-<div class="line"><span class="lineno">   43</span>        picker.add(MercType.ARMADA, 3f); </div>
-<div class="line"><span class="lineno">   44</span>        </div>
-<div class="line"><span class="lineno">   45</span>        MercType type = picker.pick();</div>
-<div class="line"><span class="lineno">   46</span>        </div>
-<div class="line"><span class="lineno">   47</span>        </div>
-<div class="line"><span class="lineno">   48</span>        <span class="keywordtype">float</span> combat = 0f;</div>
-<div class="line"><span class="lineno">   49</span>        <span class="keywordtype">float</span> tanker = 0f;</div>
-<div class="line"><span class="lineno">   50</span>        <span class="keywordtype">float</span> freighter = 0f;</div>
-<div class="line"><span class="lineno">   51</span>        String fleetType = type.fleetType;</div>
-<div class="line"><span class="lineno">   52</span>        <span class="keywordflow">switch</span> (type) {</div>
-<div class="line"><span class="lineno">   53</span>        <span class="keywordflow">case</span> SCOUT:</div>
-<div class="line"><span class="lineno">   54</span>            combat = Math.round(1f + (<span class="keywordtype">float</span>) Math.random() * 2f);</div>
-<div class="line"><span class="lineno">   55</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   56</span>        <span class="keywordflow">case</span> PRIVATEER:</div>
-<div class="line"><span class="lineno">   57</span>        <span class="keywordflow">case</span> BOUNTY_HUNTER:</div>
-<div class="line"><span class="lineno">   58</span>            combat = Math.round(3f + (<span class="keywordtype">float</span>) Math.random() * 2f);</div>
-<div class="line"><span class="lineno">   59</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   60</span>        <span class="keywordflow">case</span> PATROL:</div>
-<div class="line"><span class="lineno">   61</span>            combat = Math.round(9f + (<span class="keywordtype">float</span>) Math.random() * 3f);</div>
-<div class="line"><span class="lineno">   62</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   63</span>        <span class="keywordflow">case</span> ARMADA:</div>
-<div class="line"><span class="lineno">   64</span>            combat = Math.round(12f + (<span class="keywordtype">float</span>) Math.random() * 8f);</div>
-<div class="line"><span class="lineno">   65</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   66</span>        }</div>
-<div class="line"><span class="lineno">   67</span>        </div>
-<div class="line"><span class="lineno">   68</span>        FleetParamsV3 params = <span class="keyword">new</span> FleetParamsV3(</div>
-<div class="line"><span class="lineno">   69</span>                <span class="keyword">null</span>, </div>
-<div class="line"><span class="lineno">   70</span>                target.getLocation(),</div>
-<div class="line"><span class="lineno">   71</span>                Factions.PIRATES, <span class="comment">// quality will always be reduced by non-market-faction penalty, which is what we want </span></div>
-<div class="line"><span class="lineno">   72</span>                <span class="keyword">null</span>,</div>
-<div class="line"><span class="lineno">   73</span>                fleetType,</div>
-<div class="line"><span class="lineno">   74</span>                combat, <span class="comment">// combatPts</span></div>
-<div class="line"><span class="lineno">   75</span>                freighter, <span class="comment">// freighterPts </span></div>
-<div class="line"><span class="lineno">   76</span>                tanker, <span class="comment">// tankerPts</span></div>
-<div class="line"><span class="lineno">   77</span>                0f, <span class="comment">// transportPts</span></div>
-<div class="line"><span class="lineno">   78</span>                0f, <span class="comment">// linerPts</span></div>
-<div class="line"><span class="lineno">   79</span>                0f, <span class="comment">// utilityPts</span></div>
-<div class="line"><span class="lineno">   80</span>                0f <span class="comment">// qualityMod</span></div>
-<div class="line"><span class="lineno">   81</span>                );</div>
-<div class="line"><span class="lineno">   82</span><span class="comment">//      if (route != null) {</span></div>
-<div class="line"><span class="lineno">   83</span><span class="comment">//          params.timestamp = route.getTimestamp();</span></div>
-<div class="line"><span class="lineno">   84</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">   85</span>        <span class="comment">//params.random = random;</span></div>
-<div class="line"><span class="lineno">   86</span>        CampaignFleetAPI fleet = FleetFactoryV3.createFleet(params);</div>
-<div class="line"><span class="lineno">   87</span>        <span class="keywordflow">if</span> (fleet == <span class="keyword">null</span> || fleet.isEmpty()) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   88</span>        </div>
-<div class="line"><span class="lineno">   89</span>        </div>
-<div class="line"><span class="lineno">   90</span>        fleet.getMemoryWithoutUpdate().set(MemFlags.MEMORY_KEY_PIRATE, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   91</span>        </div>
-<div class="line"><span class="lineno">   92</span>        MarketAPI source = Misc.getSourceMarket(fleet);</div>
-<div class="line"><span class="lineno">   93</span>        <span class="keywordflow">if</span> (source == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   94</span>        </div>
-<div class="line"><span class="lineno">   95</span>        CampaignFleetAPI player = Global.getSector().getPlayerFleet();</div>
-<div class="line"><span class="lineno">   96</span>        <span class="keywordtype">boolean</span> spawnAtSource = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   97</span>        <span class="keywordflow">if</span> (player != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   98</span>            <span class="keywordtype">float</span> sourceToPlayer = Misc.getDistance(player.getLocation(), source.getLocationInHyperspace());</div>
-<div class="line"><span class="lineno">   99</span>            <span class="keywordtype">float</span> targetToPlayer = Misc.getDistance(player.getLocation(), target.getLocation());</div>
-<div class="line"><span class="lineno">  100</span>            spawnAtSource = sourceToPlayer &lt; targetToPlayer;</div>
-<div class="line"><span class="lineno">  101</span>        }</div>
-<div class="line"><span class="lineno">  102</span>        </div>
-<div class="line"><span class="lineno">  103</span>        <span class="keywordflow">if</span> (spawnAtSource) {</div>
-<div class="line"><span class="lineno">  104</span>            source.getPrimaryEntity().getContainingLocation().addEntity(fleet);</div>
-<div class="line"><span class="lineno">  105</span>            fleet.setLocation(source.getPrimaryEntity().getLocation().x, source.getPrimaryEntity().getLocation().y);</div>
-<div class="line"><span class="lineno">  106</span>            </div>
-<div class="line"><span class="lineno">  107</span>            fleet.addAssignment(FleetAssignment.ORBIT_AGGRESSIVE, source.getPrimaryEntity(), 2f + (<span class="keywordtype">float</span>) Math.random() * 2f,</div>
-<div class="line"><span class="lineno">  108</span>                                <span class="stringliteral">&quot;orbiting &quot;</span> + source.getName());</div>
-<div class="line"><span class="lineno">  109</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  110</span>            Vector2f loc = Misc.pickHyperLocationNotNearPlayer(target.getLocation(), Global.getSettings().getMaxSensorRangeHyper() + 500f);</div>
-<div class="line"><span class="lineno">  111</span>            Global.getSector().getHyperspace().addEntity(fleet);</div>
-<div class="line"><span class="lineno">  112</span>            fleet.setLocation(loc.x, loc.y);</div>
-<div class="line"><span class="lineno">  113</span>        }</div>
-<div class="line"><span class="lineno">  114</span>        </div>
-<div class="line"><span class="lineno">  115</span>        </div>
-<div class="line"><span class="lineno">  116</span>        Vector2f dest = Misc.getPointAtRadius(target.getLocation(), 1500);</div>
-<div class="line"><span class="lineno">  117</span>        LocationAPI hyper = Global.getSector().getHyperspace();</div>
-<div class="line"><span class="lineno">  118</span>        SectorEntityToken token = hyper.createToken(dest.x, dest.y);</div>
-<div class="line"><span class="lineno">  119</span>        </div>
-<div class="line"><span class="lineno">  120</span>        fleet.addAssignment(FleetAssignment.GO_TO_LOCATION, token, 1000,</div>
-<div class="line"><span class="lineno">  121</span>                <span class="stringliteral">&quot;traveling to the &quot;</span> + target.getBaseName() + <span class="stringliteral">&quot; star system&quot;</span>);</div>
-<div class="line"><span class="lineno">  122</span> </div>
-<div class="line"><span class="lineno">  123</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">float</span>) Math.random() &gt; 0.75f) {</div>
-<div class="line"><span class="lineno">  124</span>            fleet.addAssignment(FleetAssignment.RAID_SYSTEM, target.getHyperspaceAnchor(), 20,</div>
-<div class="line"><span class="lineno">  125</span>                    <span class="stringliteral">&quot;raiding around the &quot;</span> + target.getBaseName() + <span class="stringliteral">&quot; star system&quot;</span>);</div>
-<div class="line"><span class="lineno">  126</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  127</span>            fleet.addAssignment(FleetAssignment.RAID_SYSTEM, target.getCenter(), 20,</div>
-<div class="line"><span class="lineno">  128</span>                    <span class="stringliteral">&quot;raiding the &quot;</span> + target.getBaseName() + <span class="stringliteral">&quot; star system&quot;</span>);</div>
-<div class="line"><span class="lineno">  129</span>        }</div>
-<div class="line"><span class="lineno">  130</span>        fleet.addAssignment(FleetAssignment.GO_TO_LOCATION, source.getPrimaryEntity(), 1000,</div>
-<div class="line"><span class="lineno">  131</span>                    <span class="stringliteral">&quot;returning to &quot;</span> + source.getName());</div>
-<div class="line"><span class="lineno">  132</span>        fleet.addAssignment(FleetAssignment.ORBIT_PASSIVE, source.getPrimaryEntity(), 2f + 2f * (<span class="keywordtype">float</span>) Math.random(),</div>
-<div class="line"><span class="lineno">  133</span>                    <span class="stringliteral">&quot;offloading ill-gotten goods&quot;</span>);</div>
-<div class="line"><span class="lineno">  134</span>        fleet.addAssignment(FleetAssignment.GO_TO_LOCATION_AND_DESPAWN, source.getPrimaryEntity(), 1000);</div>
-<div class="line"><span class="lineno">  135</span>        </div>
-<div class="line"><span class="lineno">  136</span>        <span class="keywordflow">return</span> fleet;</div>
-<div class="line"><span class="lineno">  137</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1PirateFleetManager_html_a919ee01f1158bff49e456e83229327f9"><div class="ttname"><a href="../../dc/d2a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1PirateFleetManager.html#a919ee01f1158bff49e456e83229327f9">com.fs.starfarer.api.impl.campaign.fleets.PirateFleetManager.pickTargetSystem</a></div><div class="ttdeci">StarSystemAPI pickTargetSystem()</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d45/PirateFleetManager_8java_source.html#l00140">PirateFleetManager.java:140</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

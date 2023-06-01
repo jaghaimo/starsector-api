@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -183,48 +184,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="../../d0/d5c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1CommandPlugin.html#a72a44c5127e60136b87d3b37613fd0e0">com.fs.starfarer.api.campaign.rules.CommandPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../db/dd4/ShrineCMD_8java_source.html#l00047">47</a> of file <a class="el" href="../../db/dd4/ShrineCMD_8java_source.html">ShrineCMD.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   47</span>                                                                                                                             {</div>
-<div class="line"><span class="lineno">   48</span>        <span class="keywordflow">if</span> (dialog == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   49</span>        </div>
-<div class="line"><span class="lineno">   50</span>        String command = params.get(0).getString(memoryMap);</div>
-<div class="line"><span class="lineno">   51</span>        <span class="keywordflow">if</span> (command == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   52</span>        </div>
-<div class="line"><span class="lineno">   53</span>        SectorEntityToken entity = dialog.getInteractionTarget();</div>
-<div class="line"><span class="lineno">   54</span>        <span class="keywordflow">if</span> (entity.getMarket() != <span class="keyword">null</span> &amp;&amp; !entity.getMarket().isPlanetConditionMarketOnly()) {</div>
-<div class="line"><span class="lineno">   55</span>            PlanetAPI planet = entity.getMarket().getPlanetEntity();</div>
-<div class="line"><span class="lineno">   56</span>            <span class="keywordflow">if</span> (planet != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   57</span>                entity = planet;</div>
-<div class="line"><span class="lineno">   58</span>            }</div>
-<div class="line"><span class="lineno">   59</span>        }</div>
-<div class="line"><span class="lineno">   60</span>        <span class="keywordflow">if</span> (<span class="stringliteral">&quot;addIntel&quot;</span>.equals(command)) {</div>
-<div class="line"><span class="lineno">   61</span>            <span class="keywordflow">if</span> (params.size() &gt; 1) {</div>
-<div class="line"><span class="lineno">   62</span>                String <span class="keywordtype">id</span> = params.get(1).getString(memoryMap);</div>
-<div class="line"><span class="lineno">   63</span>                entity = LuddicShrineIntel.getEntity(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">   64</span>            }</div>
-<div class="line"><span class="lineno">   65</span>            LuddicShrineIntel.addShrineIntelIfNeeded(entity, dialog.getTextPanel());</div>
-<div class="line"><span class="lineno">   66</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   67</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="stringliteral">&quot;setVisited&quot;</span>.equals(command)) {</div>
-<div class="line"><span class="lineno">   68</span>            <span class="keywordflow">if</span> (params.size() &gt; 1) {</div>
-<div class="line"><span class="lineno">   69</span>                String <span class="keywordtype">id</span> = params.get(1).getString(memoryMap);</div>
-<div class="line"><span class="lineno">   70</span>                entity = LuddicShrineIntel.getEntity(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">   71</span>            }</div>
-<div class="line"><span class="lineno">   72</span>            LuddicShrineIntel.addShrineIntelIfNeeded(entity, dialog.getTextPanel(), <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   73</span>            LuddicShrineIntel.setVisited(entity, dialog.getTextPanel());</div>
-<div class="line"><span class="lineno">   74</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;    </div>
-<div class="line"><span class="lineno">   75</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="stringliteral">&quot;playMusic&quot;</span>.equals(command)) {</div>
-<div class="line"><span class="lineno">   76</span>            String shrineMusic = <span class="stringliteral">&quot;music_luddite_shrine&quot;</span>;</div>
-<div class="line"><span class="lineno">   77</span>            Global.getSoundPlayer().playCustomMusic(1, 1, shrineMusic, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   78</span>            <span class="comment">// failsafe is not actually necessary; leaving the entity will give the music player a kick anyway</span></div>
-<div class="line"><span class="lineno">   79</span><span class="comment">//          if (!Global.getSector().hasScript(ShrineMusicStopFailsafe.class)) {</span></div>
-<div class="line"><span class="lineno">   80</span><span class="comment">//              Global.getSector().addScript(new ShrineMusicStopFailsafe(shrineMusic));</span></div>
-<div class="line"><span class="lineno">   81</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">   82</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="stringliteral">&quot;endMusic&quot;</span>.equals(command)) {</div>
-<div class="line"><span class="lineno">   83</span>            Global.getSoundPlayer().restartCurrentMusic();</div>
-<div class="line"><span class="lineno">   84</span>        }</div>
-<div class="line"><span class="lineno">   85</span> </div>
-<div class="line"><span class="lineno">   86</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   87</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

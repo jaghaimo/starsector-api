@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -454,21 +455,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a12adf882423877632cedb6d50fbbe2f4">com.fs.starfarer.api.impl.campaign.abilities.BaseToggleAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/dad/GoDarkAbility_8java_source.html#l00036">36</a> of file <a class="el" href="../../d2/dad/GoDarkAbility_8java_source.html">GoDarkAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   36</span>                                  {</div>
-<div class="line"><span class="lineno">   37</span><span class="comment">//      if (entity.isInCurrentLocation()) {</span></div>
-<div class="line"><span class="lineno">   38</span><span class="comment">//          entity.addFloatingText(&quot;Going dark&quot;, entity.getFaction().getBaseUIColor(), 0.5f);</span></div>
-<div class="line"><span class="lineno">   39</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">   40</span>        </div>
-<div class="line"><span class="lineno">   41</span><span class="comment">//      AbilityPlugin transponder = entity.getAbility(Abilities.TRANSPONDER);</span></div>
-<div class="line"><span class="lineno">   42</span><span class="comment">//      if (transponder != null &amp;&amp; transponder.isActive()) {</span></div>
-<div class="line"><span class="lineno">   43</span><span class="comment">//          transponder.deactivate();</span></div>
-<div class="line"><span class="lineno">   44</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">   45</span><span class="comment">//      AbilityPlugin sb = entity.getAbility(Abilities.SUSTAINED_BURN);</span></div>
-<div class="line"><span class="lineno">   46</span><span class="comment">//      if (sb != null &amp;&amp; sb.isActive()) {</span></div>
-<div class="line"><span class="lineno">   47</span><span class="comment">//          sb.deactivate();</span></div>
-<div class="line"><span class="lineno">   48</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">   49</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab764390a5733fe063a2d0b0995b141f0" name="ab764390a5733fe063a2d0b0995b141f0"></a>
@@ -514,44 +501,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a2324a0cbf8a7db75371a93495b16f520">com.fs.starfarer.api.impl.campaign.abilities.BaseToggleAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/dad/GoDarkAbility_8java_source.html#l00052">52</a> of file <a class="el" href="../../d2/dad/GoDarkAbility_8java_source.html">GoDarkAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   52</span>                                                          {</div>
-<div class="line"><span class="lineno">   53</span>        CampaignFleetAPI fleet = <a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#abdc51d7defc6b6bf60924a01ec361d2d">getFleet</a>();</div>
-<div class="line"><span class="lineno">   54</span>        <span class="keywordflow">if</span> (fleet == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   55</span>        </div>
-<div class="line"><span class="lineno">   56</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#aac08e4b110b4b9c2b9d00dd035158553">level</a> &lt; 1) <a class="code hl_variable" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#aac08e4b110b4b9c2b9d00dd035158553">level</a> = 0;</div>
-<div class="line"><span class="lineno">   57</span>        </div>
-<div class="line"><span class="lineno">   58</span>        <span class="keywordtype">float</span> d = fleet.getStats().getDynamic().getValue(Stats.GO_DARK_DETECTED_AT_MULT);</div>
-<div class="line"><span class="lineno">   59</span>        <span class="comment">//float b = fleet.getStats().getDynamic().getValue(Stats.GO_DARK_BURN_PENALTY_MULT);</span></div>
-<div class="line"><span class="lineno">   60</span>        </div>
-<div class="line"><span class="lineno">   61</span>        fleet.getStats().getDetectedRangeMod().modifyMult(<a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a2e9e39ccbd5d39ae13b255974fef719c">getModId</a>(), 1f + (<a class="code hl_variable" href="../../d2/d8e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1GoDarkAbility.html#a731cc367929ef925760087b63864fcf7">DETECTABILITY_MULT</a> * d - 1f) * <a class="code hl_variable" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#aac08e4b110b4b9c2b9d00dd035158553">level</a>, <span class="stringliteral">&quot;Going dark&quot;</span>);</div>
-<div class="line"><span class="lineno">   62</span><span class="comment">//      float MAX_BURN_MULT = 0.5f;</span></div>
-<div class="line"><span class="lineno">   63</span><span class="comment">//      float b = 1f;</span></div>
-<div class="line"><span class="lineno">   64</span><span class="comment">//      fleet.getStats().getFleetwideMaxBurnMod().modifyMult(getModId(), 1f + (MAX_BURN_MULT - 1f) * level * b, &quot;Going dark&quot;);</span></div>
-<div class="line"><span class="lineno">   65</span>        </div>
-<div class="line"><span class="lineno">   66</span>        fleet.goSlowOneFrame();</div>
-<div class="line"><span class="lineno">   67</span>        </div>
-<div class="line"><span class="lineno">   68</span>        <span class="keywordflow">for</span> (FleetMemberViewAPI view : fleet.getViews()) {</div>
-<div class="line"><span class="lineno">   69</span>            view.getContrailColor().shift(<a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a2e9e39ccbd5d39ae13b255974fef719c">getModId</a>(), <span class="keyword">new</span> Color(0,0,0,0), 1f, 1f, 1f);</div>
-<div class="line"><span class="lineno">   70</span>            view.getContrailDurMult().shift(<a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a2e9e39ccbd5d39ae13b255974fef719c">getModId</a>(), 0f, 1f, 1f, 1f);</div>
-<div class="line"><span class="lineno">   71</span>            <span class="comment">//view.getContrailWidthMult().shift(getModId(), 0.25f, 1f, 1f, 1f);</span></div>
-<div class="line"><span class="lineno">   72</span>            view.getEngineGlowSizeMult().shift(<a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a2e9e39ccbd5d39ae13b255974fef719c">getModId</a>(), 0.5f, 1f, 1f, 1f);</div>
-<div class="line"><span class="lineno">   73</span>            view.getEngineHeightMult().shift(<a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a2e9e39ccbd5d39ae13b255974fef719c">getModId</a>(), 0.5f, 1f, 1f, 1f);</div>
-<div class="line"><span class="lineno">   74</span>            <span class="comment">//view.getEngineWidthMult().shift(getModId(), 3f, 1f, 1f, 1f);</span></div>
-<div class="line"><span class="lineno">   75</span>        }</div>
-<div class="line"><span class="lineno">   76</span>        </div>
-<div class="line"><span class="lineno">   77</span>        </div>
-<div class="line"><span class="lineno">   78</span><span class="comment">//      if (level &gt; 0) {</span></div>
-<div class="line"><span class="lineno">   79</span><span class="comment">//          SlipstreamTerrainPlugin slipstream = SlipstreamTerrainPlugin.getSlipstreamPlugin(fleet.getContainingLocation());</span></div>
-<div class="line"><span class="lineno">   80</span><span class="comment">//          if (slipstream != null) {</span></div>
-<div class="line"><span class="lineno">   81</span><span class="comment">//              slipstream.disrupt(fleet, 0.1f);</span></div>
-<div class="line"><span class="lineno">   82</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">   83</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">   84</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin_html_a2e9e39ccbd5d39ae13b255974fef719c"><div class="ttname"><a href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a2e9e39ccbd5d39ae13b255974fef719c">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin.getModId</a></div><div class="ttdeci">String getModId()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00140">BaseAbilityPlugin.java:140</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin_html_abdc51d7defc6b6bf60924a01ec361d2d"><div class="ttname"><a href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#abdc51d7defc6b6bf60924a01ec361d2d">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin.getFleet</a></div><div class="ttdeci">CampaignFleetAPI getFleet()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00144">BaseAbilityPlugin.java:144</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility_html_aac08e4b110b4b9c2b9d00dd035158553"><div class="ttname"><a href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#aac08e4b110b4b9c2b9d00dd035158553">com.fs.starfarer.api.impl.campaign.abilities.BaseToggleAbility.level</a></div><div class="ttdeci">float level</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dc5/BaseToggleAbility_8java_source.html#l00049">BaseToggleAbility.java:49</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1GoDarkAbility_html_a731cc367929ef925760087b63864fcf7"><div class="ttname"><a href="../../d2/d8e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1GoDarkAbility.html#a731cc367929ef925760087b63864fcf7">com.fs.starfarer.api.impl.campaign.abilities.GoDarkAbility.DETECTABILITY_MULT</a></div><div class="ttdeci">static final float DETECTABILITY_MULT</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dad/GoDarkAbility_8java_source.html#l00015">GoDarkAbility.java:15</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9233b7d6bcb42d052c19c52f93db88f8" name="a9233b7d6bcb42d052c19c52f93db88f8"></a>
@@ -580,14 +530,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#afd746bf8322ded78a2365c6f9301bb49">com.fs.starfarer.api.impl.campaign.abilities.BaseToggleAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/dad/GoDarkAbility_8java_source.html#l00092">92</a> of file <a class="el" href="../../d2/dad/GoDarkAbility_8java_source.html">GoDarkAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   92</span>                                 {</div>
-<div class="line"><span class="lineno">   93</span>        CampaignFleetAPI fleet = <a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#abdc51d7defc6b6bf60924a01ec361d2d">getFleet</a>();</div>
-<div class="line"><span class="lineno">   94</span>        <span class="keywordflow">if</span> (fleet == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   95</span>        </div>
-<div class="line"><span class="lineno">   96</span>        fleet.getStats().getDetectedRangeMod().unmodify(<a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a2e9e39ccbd5d39ae13b255974fef719c">getModId</a>());</div>
-<div class="line"><span class="lineno">   97</span>        <span class="comment">//fleet.getStats().getFleetwideMaxBurnMod().unmodifyMult(getModId());       </span></div>
-<div class="line"><span class="lineno">   98</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab895b272d13513deacc178817bc67a73" name="ab895b272d13513deacc178817bc67a73"></a>
@@ -626,49 +569,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a524c99aa9c5d81332f100b0bf6e8c699">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/dad/GoDarkAbility_8java_source.html#l00122">122</a> of file <a class="el" href="../../d2/dad/GoDarkAbility_8java_source.html">GoDarkAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  122</span>                                                                         {</div>
-<div class="line"><span class="lineno">  123</span>        Color gray = Misc.getGrayColor();</div>
-<div class="line"><span class="lineno">  124</span>        Color highlight = Misc.getHighlightColor();</div>
-<div class="line"><span class="lineno">  125</span>        </div>
-<div class="line"><span class="lineno">  126</span>        String status = <span class="stringliteral">&quot; (off)&quot;</span>;</div>
-<div class="line"><span class="lineno">  127</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a08ac4457340a4ab3d6bc7a6b09512348">turnedOn</a>) {</div>
-<div class="line"><span class="lineno">  128</span>            status = <span class="stringliteral">&quot; (on)&quot;</span>;</div>
-<div class="line"><span class="lineno">  129</span>        }</div>
-<div class="line"><span class="lineno">  130</span>        </div>
-<div class="line"><span class="lineno">  131</span>        LabelAPI title = tooltip.addTitle(<a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a15549d8a5c8c5b5c0bffda444f5098ea">spec</a>.<a class="code hl_function" href="../../d4/df9/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1AbilitySpecAPI.html#a8cc28775697361fae5481df4bb39cf69">getName</a>() + status);</div>
-<div class="line"><span class="lineno">  132</span>        title.highlightLast(status);</div>
-<div class="line"><span class="lineno">  133</span>        title.setHighlightColor(gray);</div>
-<div class="line"><span class="lineno">  134</span> </div>
-<div class="line"><span class="lineno">  135</span>        <span class="keywordtype">float</span> pad = 10f;</div>
-<div class="line"><span class="lineno">  136</span>        </div>
-<div class="line"><span class="lineno">  137</span>        </div>
-<div class="line"><span class="lineno">  138</span><span class="comment">//      tooltip.addPara(&quot;Turns off all non-essential systems, reducing the range&quot; +</span></div>
-<div class="line"><span class="lineno">  139</span><span class="comment">//              &quot; at which the fleet can be detected by %s and reducing the maximum burn&quot; +</span></div>
-<div class="line"><span class="lineno">  140</span><span class="comment">//              &quot; level by %s.&quot;, pad, </span></div>
-<div class="line"><span class="lineno">  141</span><span class="comment">//              highlight,</span></div>
-<div class="line"><span class="lineno">  142</span><span class="comment">//              &quot;&quot; + (int)((1f - DETECTABILITY_MULT) * 100f) + &quot;%&quot;,</span></div>
-<div class="line"><span class="lineno">  143</span><span class="comment">//              &quot;&quot; + (int)((1f - MAX_BURN_MULT) * 100f) + &quot;%&quot;</span></div>
-<div class="line"><span class="lineno">  144</span><span class="comment">//      );</span></div>
-<div class="line"><span class="lineno">  145</span>        tooltip.addPara(<span class="stringliteral">&quot;Turns off all non-essential systems, reducing the range&quot;</span> +</div>
-<div class="line"><span class="lineno">  146</span>                <span class="stringliteral">&quot; at which the fleet can be detected by %s and forcing the fleet to %s*.&quot;</span> +</div>
-<div class="line"><span class="lineno">  147</span>                <span class="stringliteral">&quot;&quot;</span>, pad, </div>
-<div class="line"><span class="lineno">  148</span>                highlight,</div>
-<div class="line"><span class="lineno">  149</span>                <span class="stringliteral">&quot;&quot;</span> + (<span class="keywordtype">int</span>)((1f - <a class="code hl_variable" href="../../d2/d8e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1GoDarkAbility.html#a731cc367929ef925760087b63864fcf7">DETECTABILITY_MULT</a>) * 100f) + <span class="stringliteral">&quot;%&quot;</span>,</div>
-<div class="line"><span class="lineno">  150</span>                <span class="stringliteral">&quot;move slowly&quot;</span></div>
-<div class="line"><span class="lineno">  151</span>        );</div>
-<div class="line"><span class="lineno">  152</span>        <span class="comment">//tooltip.addPara(&quot;Disables the transponder when activated.&quot;, pad);</span></div>
-<div class="line"><span class="lineno">  153</span>        </div>
-<div class="line"><span class="lineno">  154</span>        tooltip.addPara(<span class="stringliteral">&quot;*A fleet is considered slow-moving at a burn level of half that of its slowest ship.&quot;</span>, gray, pad);     </div>
-<div class="line"><span class="lineno">  155</span><span class="comment">//      tooltip.addPara(&quot;*Maximum burn level of %s&quot;, pad, gray, </span></div>
-<div class="line"><span class="lineno">  156</span><span class="comment">//              Misc.getDarkHighlightColor(), </span></div>
-<div class="line"><span class="lineno">  157</span><span class="comment">//              &quot;&quot; + Misc.getGoSlowBurnLevel(getFleet()));</span></div>
-<div class="line"><span class="lineno">  158</span>        <a class="code hl_function" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a3e8ae9f4c6f68275ae9a1762df54e158">addIncompatibleToTooltip</a>(tooltip, expanded);</div>
-<div class="line"><span class="lineno">  159</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin_html_a15549d8a5c8c5b5c0bffda444f5098ea"><div class="ttname"><a href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a15549d8a5c8c5b5c0bffda444f5098ea">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin.spec</a></div><div class="ttdeci">transient AbilitySpecAPI spec</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00029">BaseAbilityPlugin.java:29</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility_html_a08ac4457340a4ab3d6bc7a6b09512348"><div class="ttname"><a href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a08ac4457340a4ab3d6bc7a6b09512348">com.fs.starfarer.api.impl.campaign.abilities.BaseToggleAbility.turnedOn</a></div><div class="ttdeci">boolean turnedOn</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dc5/BaseToggleAbility_8java_source.html#l00045">BaseToggleAbility.java:45</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility_html_a3e8ae9f4c6f68275ae9a1762df54e158"><div class="ttname"><a href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a3e8ae9f4c6f68275ae9a1762df54e158">com.fs.starfarer.api.impl.campaign.abilities.BaseToggleAbility.addIncompatibleToTooltip</a></div><div class="ttdeci">void addIncompatibleToTooltip(TooltipMakerAPI tooltip, boolean expanded)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dc5/BaseToggleAbility_8java_source.html#l00107">BaseToggleAbility.java:107</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1AbilitySpecAPI_html_a8cc28775697361fae5481df4bb39cf69"><div class="ttname"><a href="../../d4/df9/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1AbilitySpecAPI.html#a8cc28775697361fae5481df4bb39cf69">com.fs.starfarer.api.loading.AbilitySpecAPI.getName</a></div><div class="ttdeci">String getName()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a6587ada47fab415f9841edc10b59f22e" name="a6587ada47fab415f9841edc10b59f22e"></a>
@@ -697,11 +598,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#af75816a5c3940f89f16bc77c8a8eaf8d">com.fs.starfarer.api.impl.campaign.abilities.BaseToggleAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/dad/GoDarkAbility_8java_source.html#l00087">87</a> of file <a class="el" href="../../d2/dad/GoDarkAbility_8java_source.html">GoDarkAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   87</span>                                    {</div>
-<div class="line"><span class="lineno">   88</span>        <a class="code hl_function" href="../../d2/d8e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1GoDarkAbility.html#a9233b7d6bcb42d052c19c52f93db88f8">cleanupImpl</a>();</div>
-<div class="line"><span class="lineno">   89</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1GoDarkAbility_html_a9233b7d6bcb42d052c19c52f93db88f8"><div class="ttname"><a href="../../d2/d8e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1GoDarkAbility.html#a9233b7d6bcb42d052c19c52f93db88f8">com.fs.starfarer.api.impl.campaign.abilities.GoDarkAbility.cleanupImpl</a></div><div class="ttdeci">void cleanupImpl()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dad/GoDarkAbility_8java_source.html#l00092">GoDarkAbility.java:92</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae7b455561b38bcd5cc3e689dc0456ecd" name="ae7b455561b38bcd5cc3e689dc0456ecd"></a>
@@ -730,10 +627,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a3be04ce2cf4b54d260d06d126bca0d7a">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/dad/GoDarkAbility_8java_source.html#l00024">24</a> of file <a class="el" href="../../d2/dad/GoDarkAbility_8java_source.html">GoDarkAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   24</span>                                         {</div>
-<div class="line"><span class="lineno">   25</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Going dark&quot;</span>;</div>
-<div class="line"><span class="lineno">   26</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a7bcdd8e8431d68afb8eb3ffed882d59a" name="a7bcdd8e8431d68afb8eb3ffed882d59a"></a>
@@ -762,11 +656,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a1f2ac4740a59ea1dc8fdf983f2227139">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/dad/GoDarkAbility_8java_source.html#l00029">29</a> of file <a class="el" href="../../d2/dad/GoDarkAbility_8java_source.html">GoDarkAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   29</span>                                           {</div>
-<div class="line"><span class="lineno">   30</span>        <span class="comment">//return &quot;Restoring power&quot;;</span></div>
-<div class="line"><span class="lineno">   31</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   32</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aaeaefd45ff6be61ba0ae9cd70876ef52" name="aaeaefd45ff6be61ba0ae9cd70876ef52"></a>
@@ -787,10 +677,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a35207ab01150d1c1521fa7ebf0ef4a75">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/dad/GoDarkAbility_8java_source.html#l00161">161</a> of file <a class="el" href="../../d2/dad/GoDarkAbility_8java_source.html">GoDarkAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  161</span>                                {</div>
-<div class="line"><span class="lineno">  162</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  163</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a3900bdc72d61aa48a315c6ca05ea6475" name="a3900bdc72d61aa48a315c6ca05ea6475"></a>
@@ -811,11 +698,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#aee19795994d3c0a0cb44c5908fdbba51">com.fs.starfarer.api.impl.campaign.abilities.BaseToggleAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/dad/GoDarkAbility_8java_source.html#l00116">116</a> of file <a class="el" href="../../d2/dad/GoDarkAbility_8java_source.html">GoDarkAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  116</span>                                         {</div>
-<div class="line"><span class="lineno">  117</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#af91d6e2ffa81c95835cfd099c0b7c579">isActive</a>();</div>
-<div class="line"><span class="lineno">  118</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility_html_af91d6e2ffa81c95835cfd099c0b7c579"><div class="ttname"><a href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#af91d6e2ffa81c95835cfd099c0b7c579">com.fs.starfarer.api.impl.campaign.abilities.BaseToggleAbility.isActive</a></div><div class="ttdeci">boolean isActive()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dc5/BaseToggleAbility_8java_source.html#l00242">BaseToggleAbility.java:242</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab7a30abf57908d30fe67b32c184310e0" name="ab7a30abf57908d30fe67b32c184310e0"></a>
@@ -836,10 +719,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a9452c3fb21490f2df87b01217bc0ebb9">com.fs.starfarer.api.impl.campaign.abilities.BaseToggleAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/dad/GoDarkAbility_8java_source.html#l00111">111</a> of file <a class="el" href="../../d2/dad/GoDarkAbility_8java_source.html">GoDarkAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  111</span>                                           {</div>
-<div class="line"><span class="lineno">  112</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  113</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

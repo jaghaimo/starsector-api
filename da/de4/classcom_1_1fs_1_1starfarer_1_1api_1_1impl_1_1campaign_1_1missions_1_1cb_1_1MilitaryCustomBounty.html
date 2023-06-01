@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -2421,13 +2422,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../de/df5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBounty.html#a2cfd5a76d30159fd333406be0d5e59b2">com.fs.starfarer.api.impl.campaign.missions.cb.BaseCustomBounty</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d3d/MilitaryCustomBounty_8java_source.html#l00033">33</a> of file <a class="el" href="../../d9/d3d/MilitaryCustomBounty_8java_source.html">MilitaryCustomBounty.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   33</span>                                                                    {</div>
-<div class="line"><span class="lineno">   34</span>        <span class="keywordflow">if</span> (Factions.PIRATES.equals(createdAt.getFaction().getId())) {</div>
-<div class="line"><span class="lineno">   35</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   36</span>        }</div>
-<div class="line"><span class="lineno">   37</span>        <span class="keywordflow">return</span> super.create(createdAt, barEvent);</div>
-<div class="line"><span class="lineno">   38</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a93c75911bec73ff30a5d56ef84fa98eb" name="a93c75911bec73ff30a5d56ef84fa98eb"></a>
@@ -2457,43 +2452,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../de/df5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBounty.html#a14b218b09c0bee858e477c983310a35b">com.fs.starfarer.api.impl.campaign.missions.cb.BaseCustomBounty</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d3d/MilitaryCustomBounty_8java_source.html#l00041">41</a> of file <a class="el" href="../../d9/d3d/MilitaryCustomBounty_8java_source.html">MilitaryCustomBounty.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   41</span>                                                       {</div>
-<div class="line"><span class="lineno">   42</span>        List&lt;String&gt; posts = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
-<div class="line"><span class="lineno">   43</span>        <span class="keywordflow">if</span> (Misc.isMilitary(createdAt)) {</div>
-<div class="line"><span class="lineno">   44</span>            posts.add(Ranks.POST_BASE_COMMANDER);</div>
-<div class="line"><span class="lineno">   45</span>        }</div>
-<div class="line"><span class="lineno">   46</span>        <span class="keywordflow">if</span> (Misc.hasOrbitalStation(createdAt)) {</div>
-<div class="line"><span class="lineno">   47</span>            posts.add(Ranks.POST_STATION_COMMANDER);</div>
-<div class="line"><span class="lineno">   48</span>        }</div>
-<div class="line"><span class="lineno">   49</span>        <span class="keywordflow">if</span> (posts.isEmpty()) {</div>
-<div class="line"><span class="lineno">   50</span>            posts.add(Ranks.POST_GENERIC_MILITARY);</div>
-<div class="line"><span class="lineno">   51</span>        }</div>
-<div class="line"><span class="lineno">   52</span>        String post = <a class="code hl_function" href="../../d5/dd1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission.html#ab1b70c8d09b41d5259c7c6ca4b6f9a7d">pickOne</a>(posts);</div>
-<div class="line"><span class="lineno">   53</span>        <a class="code hl_function" href="../../d5/dd1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission.html#a3c454d1368b61db991f266d8462bcfca">setGiverPost</a>(post);</div>
-<div class="line"><span class="lineno">   54</span>        <span class="keywordflow">if</span> (post.equals(Ranks.POST_GENERIC_MILITARY)) {</div>
-<div class="line"><span class="lineno">   55</span>            <a class="code hl_function" href="../../d5/dd1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission.html#a5cdf4afb2410c09f75275fecad12c7b6">setGiverRank</a>(Ranks.SPACE_COMMANDER);</div>
-<div class="line"><span class="lineno">   56</span>            <a class="code hl_function" href="../../d5/dd1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission.html#a66e038f9ee3bab919f39c9eda5f53cd2">setGiverImportance</a>(<a class="code hl_function" href="../../d5/dd1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission.html#a30584916e3c5d6f892ab12c9b609f175">pickImportance</a>());</div>
-<div class="line"><span class="lineno">   57</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (post.equals(Ranks.POST_BASE_COMMANDER)) {</div>
-<div class="line"><span class="lineno">   58</span>            <a class="code hl_function" href="../../d5/dd1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission.html#a5cdf4afb2410c09f75275fecad12c7b6">setGiverRank</a>(Ranks.GROUND_COLONEL);</div>
-<div class="line"><span class="lineno">   59</span>            <a class="code hl_function" href="../../d5/dd1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission.html#a66e038f9ee3bab919f39c9eda5f53cd2">setGiverImportance</a>(<a class="code hl_function" href="../../d5/dd1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission.html#a30584916e3c5d6f892ab12c9b609f175">pickImportance</a>());</div>
-<div class="line"><span class="lineno">   60</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (post.equals(Ranks.POST_STATION_COMMANDER)) {</div>
-<div class="line"><span class="lineno">   61</span>            <a class="code hl_function" href="../../d5/dd1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission.html#a5cdf4afb2410c09f75275fecad12c7b6">setGiverRank</a>(Ranks.SPACE_CAPTAIN);</div>
-<div class="line"><span class="lineno">   62</span>            <a class="code hl_function" href="../../d5/dd1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission.html#a66e038f9ee3bab919f39c9eda5f53cd2">setGiverImportance</a>(<a class="code hl_function" href="../../d5/dd1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission.html#aa7d99befb516117ae284164779d06577">pickHighImportance</a>());</div>
-<div class="line"><span class="lineno">   63</span>        }</div>
-<div class="line"><span class="lineno">   64</span>        <a class="code hl_function" href="../../d5/dd1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission.html#a6e8fa744d32180f635459e4631277af8">setGiverTags</a>(Tags.CONTACT_MILITARY);</div>
-<div class="line"><span class="lineno">   65</span>        <a class="code hl_function" href="../../d5/dd1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission.html#a8f0e0a3fd390830c8586ea0f4d701010">findOrCreateGiver</a>(createdAt, <span class="keyword">false</span>, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   66</span>        <a class="code hl_function" href="../../d5/dd1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission.html#ad0fc00b17e6b5439da0b78d61fa518b6">setGiverIsPotentialContactOnSuccess</a>();</div>
-<div class="line"><span class="lineno">   67</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_html_a30584916e3c5d6f892ab12c9b609f175"><div class="ttname"><a href="../../d5/dd1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission.html#a30584916e3c5d6f892ab12c9b609f175">com.fs.starfarer.api.impl.campaign.missions.hub.BaseHubMission.pickImportance</a></div><div class="ttdeci">PersonImportance pickImportance()</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d9d/BaseHubMission_8java_source.html#l02987">BaseHubMission.java:2987</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_html_a3c454d1368b61db991f266d8462bcfca"><div class="ttname"><a href="../../d5/dd1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission.html#a3c454d1368b61db991f266d8462bcfca">com.fs.starfarer.api.impl.campaign.missions.hub.BaseHubMission.setGiverPost</a></div><div class="ttdeci">void setGiverPost(String giverPost)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d9d/BaseHubMission_8java_source.html#l02928">BaseHubMission.java:2928</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_html_a5cdf4afb2410c09f75275fecad12c7b6"><div class="ttname"><a href="../../d5/dd1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission.html#a5cdf4afb2410c09f75275fecad12c7b6">com.fs.starfarer.api.impl.campaign.missions.hub.BaseHubMission.setGiverRank</a></div><div class="ttdeci">void setGiverRank(String giverRank)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d9d/BaseHubMission_8java_source.html#l02924">BaseHubMission.java:2924</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_html_a66e038f9ee3bab919f39c9eda5f53cd2"><div class="ttname"><a href="../../d5/dd1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission.html#a66e038f9ee3bab919f39c9eda5f53cd2">com.fs.starfarer.api.impl.campaign.missions.hub.BaseHubMission.setGiverImportance</a></div><div class="ttdeci">void setGiverImportance(PersonImportance giverImportance)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d9d/BaseHubMission_8java_source.html#l02936">BaseHubMission.java:2936</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_html_a6e8fa744d32180f635459e4631277af8"><div class="ttname"><a href="../../d5/dd1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission.html#a6e8fa744d32180f635459e4631277af8">com.fs.starfarer.api.impl.campaign.missions.hub.BaseHubMission.setGiverTags</a></div><div class="ttdeci">void setGiverTags(String ... giverTags)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d9d/BaseHubMission_8java_source.html#l02940">BaseHubMission.java:2940</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_html_a8f0e0a3fd390830c8586ea0f4d701010"><div class="ttname"><a href="../../d5/dd1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission.html#a8f0e0a3fd390830c8586ea0f4d701010">com.fs.starfarer.api.impl.campaign.missions.hub.BaseHubMission.findOrCreateGiver</a></div><div class="ttdeci">void findOrCreateGiver(MarketAPI market, boolean addToCommDirectory, boolean cleanUpOnMissionOverIfWasNewPerson)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d9d/BaseHubMission_8java_source.html#l02945">BaseHubMission.java:2945</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_html_aa7d99befb516117ae284164779d06577"><div class="ttname"><a href="../../d5/dd1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission.html#aa7d99befb516117ae284164779d06577">com.fs.starfarer.api.impl.campaign.missions.hub.BaseHubMission.pickHighImportance</a></div><div class="ttdeci">PersonImportance pickHighImportance()</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d9d/BaseHubMission_8java_source.html#l03003">BaseHubMission.java:3003</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_html_ab1b70c8d09b41d5259c7c6ca4b6f9a7d"><div class="ttname"><a href="../../d5/dd1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission.html#ab1b70c8d09b41d5259c7c6ca4b6f9a7d">com.fs.starfarer.api.impl.campaign.missions.hub.BaseHubMission.pickOne</a></div><div class="ttdeci">String pickOne(List&lt; String &gt; options)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d9d/BaseHubMission_8java_source.html#l02479">BaseHubMission.java:2479</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_html_ad0fc00b17e6b5439da0b78d61fa518b6"><div class="ttname"><a href="../../d5/dd1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission.html#ad0fc00b17e6b5439da0b78d61fa518b6">com.fs.starfarer.api.impl.campaign.missions.hub.BaseHubMission.setGiverIsPotentialContactOnSuccess</a></div><div class="ttdeci">void setGiverIsPotentialContactOnSuccess()</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d9d/BaseHubMission_8java_source.html#l00661">BaseHubMission.java:661</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ad2c3a4da75ae74897301f88d9cdc289b" name="ad2c3a4da75ae74897301f88d9cdc289b"></a>
@@ -2514,11 +2473,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../de/df5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBounty.html#a7ef41212cad51691cb6e62beb82f8acf">com.fs.starfarer.api.impl.campaign.missions.cb.BaseCustomBounty</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d3d/MilitaryCustomBounty_8java_source.html#l00028">28</a> of file <a class="el" href="../../d9/d3d/MilitaryCustomBounty_8java_source.html">MilitaryCustomBounty.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   28</span>                                                   {</div>
-<div class="line"><span class="lineno">   29</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../da/de4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1MilitaryCustomBounty.html#a7f6255fbdcdbf01852a30e9bb5a1b1fe">CREATORS</a>;</div>
-<div class="line"><span class="lineno">   30</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1MilitaryCustomBounty_html_a7f6255fbdcdbf01852a30e9bb5a1b1fe"><div class="ttname"><a href="../../da/de4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1MilitaryCustomBounty.html#a7f6255fbdcdbf01852a30e9bb5a1b1fe">com.fs.starfarer.api.impl.campaign.missions.cb.MilitaryCustomBounty.CREATORS</a></div><div class="ttdeci">static List&lt; CustomBountyCreator &gt; CREATORS</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d3d/MilitaryCustomBounty_8java_source.html#l00014">MilitaryCustomBounty.java:14</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

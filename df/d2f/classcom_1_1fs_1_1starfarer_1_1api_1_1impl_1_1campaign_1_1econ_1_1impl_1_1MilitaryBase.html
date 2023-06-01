@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -849,40 +850,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a7ad841b8dafd9646dec64c9e2e43b9dc">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/de8/MilitaryBase_8java_source.html#l00643">643</a> of file <a class="el" href="../../d6/de8/MilitaryBase_8java_source.html">MilitaryBase.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  643</span>                                                                                                {</div>
-<div class="line"><span class="lineno">  644</span>        <span class="keywordtype">float</span> opad = 10f;</div>
-<div class="line"><span class="lineno">  645</span>        Color highlight = Misc.getHighlightColor();</div>
-<div class="line"><span class="lineno">  646</span>        </div>
-<div class="line"><span class="lineno">  647</span>        String pre = <span class="stringliteral">&quot;Alpha-level AI core currently assigned. &quot;</span>;</div>
-<div class="line"><span class="lineno">  648</span>        <span class="keywordflow">if</span> (mode == AICoreDescriptionMode.MANAGE_CORE_DIALOG_LIST || mode == AICoreDescriptionMode.INDUSTRY_TOOLTIP) {</div>
-<div class="line"><span class="lineno">  649</span>            pre = <span class="stringliteral">&quot;Alpha-level AI core. &quot;</span>;</div>
-<div class="line"><span class="lineno">  650</span>        }</div>
-<div class="line"><span class="lineno">  651</span>        <span class="keywordtype">float</span> a = <a class="code hl_variable" href="../../df/d2f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#aaec609759fa72aaf3bd65b120bb9ac81">ALPHA_CORE_BONUS</a>;</div>
-<div class="line"><span class="lineno">  652</span>        <span class="comment">//String str = &quot;&quot; + (int)Math.round(a * 100f) + &quot;%&quot;;</span></div>
-<div class="line"><span class="lineno">  653</span>        String str = Strings.X + (1f + a);</div>
-<div class="line"><span class="lineno">  654</span>        </div>
-<div class="line"><span class="lineno">  655</span>        <span class="keywordflow">if</span> (mode == AICoreDescriptionMode.INDUSTRY_TOOLTIP) {</div>
-<div class="line"><span class="lineno">  656</span>            CommoditySpecAPI coreSpec = Global.getSettings().getCommoditySpec(<a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#acee5118b579b1ab038a7e766124ffaf2">aiCoreId</a>);</div>
-<div class="line"><span class="lineno">  657</span>            TooltipMakerAPI text = tooltip.beginImageWithText(coreSpec.getIconName(), 48);</div>
-<div class="line"><span class="lineno">  658</span>            text.addPara(pre + <span class="stringliteral">&quot;Reduces upkeep cost by %s. Reduces demand by %s unit. &quot;</span> +</div>
-<div class="line"><span class="lineno">  659</span>                    <span class="stringliteral">&quot;Increases fleet size by %s.&quot;</span>, 0f, highlight,</div>
-<div class="line"><span class="lineno">  660</span>                    <span class="stringliteral">&quot;&quot;</span> + (<span class="keywordtype">int</span>)((1f - <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#aa0521cdb7d92e9aad3551fd60573293f">UPKEEP_MULT</a>) * 100f) + <span class="stringliteral">&quot;%&quot;</span>, <span class="stringliteral">&quot;&quot;</span> + <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a1034a17059a3e8a52163e7dc6a8d3a9e">DEMAND_REDUCTION</a>,</div>
-<div class="line"><span class="lineno">  661</span>                    str);</div>
-<div class="line"><span class="lineno">  662</span>            tooltip.addImageWithText(opad);</div>
-<div class="line"><span class="lineno">  663</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  664</span>        }</div>
-<div class="line"><span class="lineno">  665</span>        </div>
-<div class="line"><span class="lineno">  666</span>        tooltip.addPara(pre + <span class="stringliteral">&quot;Reduces upkeep cost by %s. Reduces demand by %s unit. &quot;</span> +</div>
-<div class="line"><span class="lineno">  667</span>                <span class="stringliteral">&quot;Increases fleet size by %s.&quot;</span>, opad, highlight,</div>
-<div class="line"><span class="lineno">  668</span>                <span class="stringliteral">&quot;&quot;</span> + (<span class="keywordtype">int</span>)((1f - <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#aa0521cdb7d92e9aad3551fd60573293f">UPKEEP_MULT</a>) * 100f) + <span class="stringliteral">&quot;%&quot;</span>, <span class="stringliteral">&quot;&quot;</span> + <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a1034a17059a3e8a52163e7dc6a8d3a9e">DEMAND_REDUCTION</a>,</div>
-<div class="line"><span class="lineno">  669</span>                str);</div>
-<div class="line"><span class="lineno">  670</span>        </div>
-<div class="line"><span class="lineno">  671</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry_html_a1034a17059a3e8a52163e7dc6a8d3a9e"><div class="ttname"><a href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a1034a17059a3e8a52163e7dc6a8d3a9e">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry.DEMAND_REDUCTION</a></div><div class="ttdeci">static int DEMAND_REDUCTION</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8f/BaseIndustry_8java_source.html#l00060">BaseIndustry.java:60</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry_html_aa0521cdb7d92e9aad3551fd60573293f"><div class="ttname"><a href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#aa0521cdb7d92e9aad3551fd60573293f">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry.UPKEEP_MULT</a></div><div class="ttdeci">static float UPKEEP_MULT</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8f/BaseIndustry_8java_source.html#l00059">BaseIndustry.java:59</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry_html_acee5118b579b1ab038a7e766124ffaf2"><div class="ttname"><a href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#acee5118b579b1ab038a7e766124ffaf2">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry.aiCoreId</a></div><div class="ttdeci">String aiCoreId</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8f/BaseIndustry_8java_source.html#l00107">BaseIndustry.java:107</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase_html_aaec609759fa72aaf3bd65b120bb9ac81"><div class="ttname"><a href="../../df/d2f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#aaec609759fa72aaf3bd65b120bb9ac81">com.fs.starfarer.api.impl.campaign.econ.impl.MilitaryBase.ALPHA_CORE_BONUS</a></div><div class="ttdeci">static float ALPHA_CORE_BONUS</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/de8/MilitaryBase_8java_source.html#l00626">MilitaryBase.java:626</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a1d7d4a46d14297f22072b4fc8c4df08c" name="a1d7d4a46d14297f22072b4fc8c4df08c"></a>
@@ -914,29 +882,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a08e54587596d8c0b4cf9b7cca0a21267">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/de8/MilitaryBase_8java_source.html#l00698">698</a> of file <a class="el" href="../../d6/de8/MilitaryBase_8java_source.html">MilitaryBase.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  698</span>                                                                                      {</div>
-<div class="line"><span class="lineno">  699</span>        <span class="keywordtype">float</span> opad = 10f;</div>
-<div class="line"><span class="lineno">  700</span>        Color highlight = Misc.getHighlightColor();</div>
-<div class="line"><span class="lineno">  701</span>        </div>
-<div class="line"><span class="lineno">  702</span>        String str = <span class="stringliteral">&quot;&quot;</span> + (int) <a class="code hl_variable" href="../../df/d2f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#aca402364a00bd2b1f1db5d07fe6eeba7">IMPROVE_NUM_PATROLS_BONUS</a>;</div>
-<div class="line"><span class="lineno">  703</span>        </div>
-<div class="line"><span class="lineno">  704</span>        <span class="keywordtype">boolean</span> patrol = <a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a0e3b6afae5942698387ef7e1f55d1709">getSpec</a>().<a class="code hl_function" href="../../d2/d4c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1IndustrySpecAPI.html#a045e2ddd6dc1368c172d023f682a98ac">hasTag</a>(Industries.TAG_PATROL);</div>
-<div class="line"><span class="lineno">  705</span>        String type = <span class="stringliteral">&quot;medium patrols&quot;</span>;</div>
-<div class="line"><span class="lineno">  706</span>        <span class="keywordflow">if</span> (!patrol) type = <span class="stringliteral">&quot;heavy patrols&quot;</span>;</div>
-<div class="line"><span class="lineno">  707</span>        </div>
-<div class="line"><span class="lineno">  708</span>        <span class="keywordflow">if</span> (mode == ImprovementDescriptionMode.INDUSTRY_TOOLTIP) {</div>
-<div class="line"><span class="lineno">  709</span>            info.addPara(<span class="stringliteral">&quot;Number of &quot;</span> + type + <span class="stringliteral">&quot; launched increased by %s.&quot;</span>, 0f, highlight, str);</div>
-<div class="line"><span class="lineno">  710</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  711</span>            info.addPara(<span class="stringliteral">&quot;Increases the number of &quot;</span> + type + <span class="stringliteral">&quot; launched by %s.&quot;</span>, 0f, highlight, str);</div>
-<div class="line"><span class="lineno">  712</span>        }</div>
-<div class="line"><span class="lineno">  713</span> </div>
-<div class="line"><span class="lineno">  714</span>        info.addSpacer(opad);</div>
-<div class="line"><span class="lineno">  715</span>        super.addImproveDesc(info, mode);</div>
-<div class="line"><span class="lineno">  716</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry_html_a0e3b6afae5942698387ef7e1f55d1709"><div class="ttname"><a href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a0e3b6afae5942698387ef7e1f55d1709">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry.getSpec</a></div><div class="ttdeci">IndustrySpecAPI getSpec()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8f/BaseIndustry_8java_source.html#l00695">BaseIndustry.java:695</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase_html_aca402364a00bd2b1f1db5d07fe6eeba7"><div class="ttname"><a href="../../df/d2f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#aca402364a00bd2b1f1db5d07fe6eeba7">com.fs.starfarer.api.impl.campaign.econ.impl.MilitaryBase.IMPROVE_NUM_PATROLS_BONUS</a></div><div class="ttdeci">static int IMPROVE_NUM_PATROLS_BONUS</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/de8/MilitaryBase_8java_source.html#l00056">MilitaryBase.java:56</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1IndustrySpecAPI_html_a045e2ddd6dc1368c172d023f682a98ac"><div class="ttname"><a href="../../d2/d4c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1IndustrySpecAPI.html#a045e2ddd6dc1368c172d023f682a98ac">com.fs.starfarer.api.loading.IndustrySpecAPI.hasTag</a></div><div class="ttdeci">boolean hasTag(String tag)</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab40d147c24470cf2b75d08d875f700b4" name="ab40d147c24470cf2b75d08d875f700b4"></a>
@@ -982,25 +928,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a8686f09d9cee32e9ccc6fdcbf9df071c">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/de8/MilitaryBase_8java_source.html#l00228">228</a> of file <a class="el" href="../../d6/de8/MilitaryBase_8java_source.html">MilitaryBase.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  228</span>                                                                                                              {</div>
-<div class="line"><span class="lineno">  229</span>        <span class="keywordflow">if</span> (mode != IndustryTooltipMode.NORMAL || <a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a511613f792cac2306ff2ea5ba6be8407">isFunctional</a>()) {</div>
-<div class="line"><span class="lineno">  230</span>            <a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a67d08c28114a428ef8cfca9aa6e2ec2f">addStabilityPostDemandSection</a>(tooltip, hasDemand, mode);</div>
-<div class="line"><span class="lineno">  231</span>            </div>
-<div class="line"><span class="lineno">  232</span>            <span class="keywordtype">boolean</span> patrol = <a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a0e3b6afae5942698387ef7e1f55d1709">getSpec</a>().<a class="code hl_function" href="../../d2/d4c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1IndustrySpecAPI.html#a045e2ddd6dc1368c172d023f682a98ac">hasTag</a>(Industries.TAG_PATROL);</div>
-<div class="line"><span class="lineno">  233</span>            <span class="keywordtype">boolean</span> command = <a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a0e3b6afae5942698387ef7e1f55d1709">getSpec</a>().<a class="code hl_function" href="../../d2/d4c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1IndustrySpecAPI.html#a045e2ddd6dc1368c172d023f682a98ac">hasTag</a>(Industries.TAG_COMMAND);</div>
-<div class="line"><span class="lineno">  234</span>            <span class="keywordtype">float</span> bonus = <a class="code hl_variable" href="../../df/d2f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#a12dcc22adaf2573045ac20dad7f61e57">DEFENSE_BONUS_MILITARY</a>;</div>
-<div class="line"><span class="lineno">  235</span>            <span class="keywordflow">if</span> (patrol) bonus = <a class="code hl_variable" href="../../df/d2f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#a191532b63f795fac14dce48da42dadcd">DEFENSE_BONUS_PATROL</a>;</div>
-<div class="line"><span class="lineno">  236</span>            <span class="keywordflow">if</span> (command) bonus = <a class="code hl_variable" href="../../df/d2f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#a4fb5026c4e7ac0fb103fd1729fbd3dc9">DEFENSE_BONUS_COMMAND</a>;</div>
-<div class="line"><span class="lineno">  237</span>            <a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#acdac6c6ca67fd574d0f7f9c312f9a2de">addGroundDefensesImpactSection</a>(tooltip, bonus, Commodities.SUPPLIES);</div>
-<div class="line"><span class="lineno">  238</span>        }</div>
-<div class="line"><span class="lineno">  239</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry_html_a511613f792cac2306ff2ea5ba6be8407"><div class="ttname"><a href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a511613f792cac2306ff2ea5ba6be8407">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry.isFunctional</a></div><div class="ttdeci">boolean isFunctional()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8f/BaseIndustry_8java_source.html#l00475">BaseIndustry.java:475</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry_html_a67d08c28114a428ef8cfca9aa6e2ec2f"><div class="ttname"><a href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a67d08c28114a428ef8cfca9aa6e2ec2f">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry.addStabilityPostDemandSection</a></div><div class="ttdeci">void addStabilityPostDemandSection(TooltipMakerAPI tooltip, boolean hasDemand, IndustryTooltipMode mode)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8f/BaseIndustry_8java_source.html#l01706">BaseIndustry.java:1706</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry_html_acdac6c6ca67fd574d0f7f9c312f9a2de"><div class="ttname"><a href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#acdac6c6ca67fd574d0f7f9c312f9a2de">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry.addGroundDefensesImpactSection</a></div><div class="ttdeci">void addGroundDefensesImpactSection(TooltipMakerAPI tooltip, float bonus, String ...commodities)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8f/BaseIndustry_8java_source.html#l01884">BaseIndustry.java:1884</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase_html_a12dcc22adaf2573045ac20dad7f61e57"><div class="ttname"><a href="../../df/d2f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#a12dcc22adaf2573045ac20dad7f61e57">com.fs.starfarer.api.impl.campaign.econ.impl.MilitaryBase.DEFENSE_BONUS_MILITARY</a></div><div class="ttdeci">static float DEFENSE_BONUS_MILITARY</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/de8/MilitaryBase_8java_source.html#l00053">MilitaryBase.java:53</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase_html_a191532b63f795fac14dce48da42dadcd"><div class="ttname"><a href="../../df/d2f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#a191532b63f795fac14dce48da42dadcd">com.fs.starfarer.api.impl.campaign.econ.impl.MilitaryBase.DEFENSE_BONUS_PATROL</a></div><div class="ttdeci">static float DEFENSE_BONUS_PATROL</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/de8/MilitaryBase_8java_source.html#l00052">MilitaryBase.java:52</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase_html_a4fb5026c4e7ac0fb103fd1729fbd3dc9"><div class="ttname"><a href="../../df/d2f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#a4fb5026c4e7ac0fb103fd1729fbd3dc9">com.fs.starfarer.api.impl.campaign.econ.impl.MilitaryBase.DEFENSE_BONUS_COMMAND</a></div><div class="ttdeci">static float DEFENSE_BONUS_COMMAND</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/de8/MilitaryBase_8java_source.html#l00054">MilitaryBase.java:54</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a774e103ddb7d9edcdc849ba5b73f5c36" name="a774e103ddb7d9edcdc849ba5b73f5c36"></a>
@@ -1032,10 +960,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a1401c6deb0837e93cc5f7c8efc1382be">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/de8/MilitaryBase_8java_source.html#l00720">720</a> of file <a class="el" href="../../d6/de8/MilitaryBase_8java_source.html">MilitaryBase.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  720</span>                                                                                                 {</div>
-<div class="line"><span class="lineno">  721</span>        <span class="keywordflow">return</span> level.next();</div>
-<div class="line"><span class="lineno">  722</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8b131a76bf053de2e276ec790ce18930" name="a8b131a76bf053de2e276ec790ce18930"></a>
@@ -1080,10 +1005,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#af6e472b7cfe7d2b130b7b81b126b604f">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/de8/MilitaryBase_8java_source.html#l00725">725</a> of file <a class="el" href="../../d6/de8/MilitaryBase_8java_source.html">MilitaryBase.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  725</span>                                                                                                    {</div>
-<div class="line"><span class="lineno">  726</span>        <span class="keywordflow">return</span> level.next();</div>
-<div class="line"><span class="lineno">  727</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac81dff12bbc67f6f4333ede30421ea51" name="ac81dff12bbc67f6f4333ede30421ea51"></a>
@@ -1105,96 +1027,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a83c09c0f6a727f302c0e9c5b0763e85f">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/de8/MilitaryBase_8java_source.html#l00343">343</a> of file <a class="el" href="../../d6/de8/MilitaryBase_8java_source.html">MilitaryBase.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  343</span>                                      {</div>
-<div class="line"><span class="lineno">  344</span>        super.advance(amount);</div>
-<div class="line"><span class="lineno">  345</span>        </div>
-<div class="line"><span class="lineno">  346</span>        <span class="keywordflow">if</span> (Global.getSector().getEconomy().isSimMode()) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  347</span> </div>
-<div class="line"><span class="lineno">  348</span>        <span class="keywordflow">if</span> (!<a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a511613f792cac2306ff2ea5ba6be8407">isFunctional</a>()) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  349</span>        </div>
-<div class="line"><span class="lineno">  350</span>        <span class="keywordtype">float</span> days = Global.getSector().getClock().convertToDays(amount);</div>
-<div class="line"><span class="lineno">  351</span>        </div>
-<div class="line"><span class="lineno">  352</span><span class="comment">//      float stability = market.getPrevStability();</span></div>
-<div class="line"><span class="lineno">  353</span><span class="comment">//      float spawnRate = 1f + (stability - 5) * 0.2f;</span></div>
-<div class="line"><span class="lineno">  354</span><span class="comment">//      if (spawnRate &lt; 0.5f) spawnRate = 0.5f;</span></div>
-<div class="line"><span class="lineno">  355</span>        </div>
-<div class="line"><span class="lineno">  356</span>        <span class="keywordtype">float</span> spawnRate = 1f;</div>
-<div class="line"><span class="lineno">  357</span>        <span class="keywordtype">float</span> rateMult = <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a70323dd35f954c1be49bf2e8c43c9284">getStats</a>().<a class="code hl_function" href="../../d0/d6d/interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1MutableMarketStatsAPI.html#a07a35dc173333e48b78a68c47950280d">getDynamic</a>().<a class="code hl_function" href="../../db/dcf/interfacecom_1_1fs_1_1starfarer_1_1api_1_1util_1_1DynamicStatsAPI.html#a249fe23994c89b62e04869b26f539843">getStat</a>(Stats.COMBAT_FLEET_SPAWN_RATE_MULT).<a class="code hl_function" href="../../d4/d1a/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableStat.html#a6ae491ba70695a2098f790d7421d9ef2">getModifiedValue</a>();</div>
-<div class="line"><span class="lineno">  358</span>        spawnRate *= rateMult;</div>
-<div class="line"><span class="lineno">  359</span>        </div>
-<div class="line"><span class="lineno">  360</span>        <span class="keywordflow">if</span> (Global.getSector().isInNewGameAdvance()) {</div>
-<div class="line"><span class="lineno">  361</span>            spawnRate *= 3f;</div>
-<div class="line"><span class="lineno">  362</span>        }</div>
-<div class="line"><span class="lineno">  363</span>        </div>
-<div class="line"><span class="lineno">  364</span>        <span class="keywordtype">float</span> extraTime = 0f;</div>
-<div class="line"><span class="lineno">  365</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../df/d2f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#a790b1fdeff9d77bb014d07af66e7ef08">returningPatrolValue</a> &gt; 0) {</div>
-<div class="line"><span class="lineno">  366</span>            <span class="comment">// apply &quot;returned patrols&quot; to spawn rate, at a maximum rate of 1 interval per day</span></div>
-<div class="line"><span class="lineno">  367</span>            <span class="keywordtype">float</span> interval = <a class="code hl_variable" href="../../df/d2f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#aea6bf9dd362bce8747d10f96f370fcfb">tracker</a>.<a class="code hl_function" href="../../da/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html#a4f5cb3c75b41ad5f6cf8b569dd096e0b">getIntervalDuration</a>();</div>
-<div class="line"><span class="lineno">  368</span>            extraTime = interval * days;</div>
-<div class="line"><span class="lineno">  369</span>            <a class="code hl_variable" href="../../df/d2f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#a790b1fdeff9d77bb014d07af66e7ef08">returningPatrolValue</a> -= days;</div>
-<div class="line"><span class="lineno">  370</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../df/d2f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#a790b1fdeff9d77bb014d07af66e7ef08">returningPatrolValue</a> &lt; 0) <a class="code hl_variable" href="../../df/d2f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#a790b1fdeff9d77bb014d07af66e7ef08">returningPatrolValue</a> = 0;</div>
-<div class="line"><span class="lineno">  371</span>        }</div>
-<div class="line"><span class="lineno">  372</span>        <a class="code hl_variable" href="../../df/d2f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#aea6bf9dd362bce8747d10f96f370fcfb">tracker</a>.<a class="code hl_function" href="../../da/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html#a61881d44415cda2c50c3354c3f0a4d8a">advance</a>(days * spawnRate + extraTime);</div>
-<div class="line"><span class="lineno">  373</span>        </div>
-<div class="line"><span class="lineno">  374</span>        <span class="comment">//DebugFlags.FAST_PATROL_SPAWN = true;</span></div>
-<div class="line"><span class="lineno">  375</span>        <span class="keywordflow">if</span> (DebugFlags.FAST_PATROL_SPAWN) {</div>
-<div class="line"><span class="lineno">  376</span>            <a class="code hl_variable" href="../../df/d2f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#aea6bf9dd362bce8747d10f96f370fcfb">tracker</a>.<a class="code hl_function" href="../../da/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html#a61881d44415cda2c50c3354c3f0a4d8a">advance</a>(days * spawnRate * 100f);</div>
-<div class="line"><span class="lineno">  377</span>        }</div>
-<div class="line"><span class="lineno">  378</span>        </div>
-<div class="line"><span class="lineno">  379</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../df/d2f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#aea6bf9dd362bce8747d10f96f370fcfb">tracker</a>.intervalElapsed()) {</div>
-<div class="line"><span class="lineno">  380</span><span class="comment">//          if (market.isPlayerOwned()) {</span></div>
-<div class="line"><span class="lineno">  381</span><span class="comment">//              System.out.println(&quot;ewfwefew&quot;);</span></div>
-<div class="line"><span class="lineno">  382</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">  383</span><span class="comment">//          if (market.getName().equals(&quot;Jangala&quot;)) {</span></div>
-<div class="line"><span class="lineno">  384</span><span class="comment">//              System.out.println(&quot;wefwefe&quot;);</span></div>
-<div class="line"><span class="lineno">  385</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">  386</span>            String sid = <a class="code hl_function" href="../../df/d2f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#a4ba06ca0aaf6380859374b831fdb45c5">getRouteSourceId</a>();</div>
-<div class="line"><span class="lineno">  387</span>            </div>
-<div class="line"><span class="lineno">  388</span>            <span class="keywordtype">int</span> light = <a class="code hl_function" href="../../df/d2f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#a3d34cc91e0a4ef0a2ae7242b6960b950">getCount</a>(PatrolType.FAST);</div>
-<div class="line"><span class="lineno">  389</span>            <span class="keywordtype">int</span> medium = <a class="code hl_function" href="../../df/d2f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#a3d34cc91e0a4ef0a2ae7242b6960b950">getCount</a>(PatrolType.COMBAT);</div>
-<div class="line"><span class="lineno">  390</span>            <span class="keywordtype">int</span> heavy = <a class="code hl_function" href="../../df/d2f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#a3d34cc91e0a4ef0a2ae7242b6960b950">getCount</a>(PatrolType.HEAVY);</div>
-<div class="line"><span class="lineno">  391</span> </div>
-<div class="line"><span class="lineno">  392</span>            <span class="keywordtype">int</span> maxLight = <a class="code hl_function" href="../../df/d2f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#ab6ba1ed9637d05b7b149169bc8d5ea9b">getMaxPatrols</a>(PatrolType.FAST);</div>
-<div class="line"><span class="lineno">  393</span>            <span class="keywordtype">int</span> maxMedium = <a class="code hl_function" href="../../df/d2f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#ab6ba1ed9637d05b7b149169bc8d5ea9b">getMaxPatrols</a>(PatrolType.COMBAT);</div>
-<div class="line"><span class="lineno">  394</span>            <span class="keywordtype">int</span> maxHeavy = <a class="code hl_function" href="../../df/d2f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#ab6ba1ed9637d05b7b149169bc8d5ea9b">getMaxPatrols</a>(PatrolType.HEAVY);</div>
-<div class="line"><span class="lineno">  395</span>            </div>
-<div class="line"><span class="lineno">  396</span>            WeightedRandomPicker&lt;PatrolType&gt; picker = <span class="keyword">new</span> WeightedRandomPicker&lt;PatrolType&gt;();</div>
-<div class="line"><span class="lineno">  397</span>            picker.add(PatrolType.HEAVY, maxHeavy - heavy); </div>
-<div class="line"><span class="lineno">  398</span>            picker.add(PatrolType.COMBAT, maxMedium - medium); </div>
-<div class="line"><span class="lineno">  399</span>            picker.add(PatrolType.FAST, maxLight - light); </div>
-<div class="line"><span class="lineno">  400</span>            </div>
-<div class="line"><span class="lineno">  401</span>            <span class="keywordflow">if</span> (picker.isEmpty()) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  402</span>            </div>
-<div class="line"><span class="lineno">  403</span>            PatrolType type = picker.pick();</div>
-<div class="line"><span class="lineno">  404</span>            PatrolFleetData custom = <span class="keyword">new</span> PatrolFleetData(type);</div>
-<div class="line"><span class="lineno">  405</span>            </div>
-<div class="line"><span class="lineno">  406</span>            OptionalFleetData extra = <span class="keyword">new</span> OptionalFleetData(<a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">market</a>);</div>
-<div class="line"><span class="lineno">  407</span>            extra.fleetType = type.getFleetType();</div>
-<div class="line"><span class="lineno">  408</span>            </div>
-<div class="line"><span class="lineno">  409</span>            RouteData route = RouteManager.getInstance().addRoute(sid, <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">market</a>, Misc.genRandomSeed(), extra, <span class="keyword">this</span>, custom);</div>
-<div class="line"><span class="lineno">  410</span>            extra.strength = (float) <a class="code hl_function" href="../../df/d2f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#ac189e6f7f303db6c0859d013397fc079">getPatrolCombatFP</a>(type, route.getRandom());</div>
-<div class="line"><span class="lineno">  411</span>            extra.strength = Misc.getAdjustedStrength(extra.strength, <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">market</a>);</div>
-<div class="line"><span class="lineno">  412</span>            </div>
-<div class="line"><span class="lineno">  413</span>            </div>
-<div class="line"><span class="lineno">  414</span>            <span class="keywordtype">float</span> patrolDays = 35f + (float) Math.random() * 10f;</div>
-<div class="line"><span class="lineno">  415</span>            route.addSegment(<span class="keyword">new</span> RouteSegment(patrolDays, <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af1677b531fa1a657e17b732868c7b953">getPrimaryEntity</a>()));</div>
-<div class="line"><span class="lineno">  416</span>        }</div>
-<div class="line"><span class="lineno">  417</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableStat_html_a6ae491ba70695a2098f790d7421d9ef2"><div class="ttname"><a href="../../d4/d1a/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableStat.html#a6ae491ba70695a2098f790d7421d9ef2">com.fs.starfarer.api.combat.MutableStat.getModifiedValue</a></div><div class="ttdeci">float getModifiedValue()</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d27/MutableStat_8java_source.html#l00345">MutableStat.java:345</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry_html_a3a6a42045fe8b527252be206b4d9f27c"><div class="ttname"><a href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry.market</a></div><div class="ttdeci">MarketAPI market</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8f/BaseIndustry_8java_source.html#l00095">BaseIndustry.java:95</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase_html_a3d34cc91e0a4ef0a2ae7242b6960b950"><div class="ttname"><a href="../../df/d2f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#a3d34cc91e0a4ef0a2ae7242b6960b950">com.fs.starfarer.api.impl.campaign.econ.impl.MilitaryBase.getCount</a></div><div class="ttdeci">int getCount(PatrolType ... types)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/de8/MilitaryBase_8java_source.html#l00442">MilitaryBase.java:442</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase_html_a4ba06ca0aaf6380859374b831fdb45c5"><div class="ttname"><a href="../../df/d2f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#a4ba06ca0aaf6380859374b831fdb45c5">com.fs.starfarer.api.impl.campaign.econ.impl.MilitaryBase.getRouteSourceId</a></div><div class="ttdeci">String getRouteSourceId()</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/de8/MilitaryBase_8java_source.html#l00471">MilitaryBase.java:471</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase_html_a790b1fdeff9d77bb014d07af66e7ef08"><div class="ttname"><a href="../../df/d2f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#a790b1fdeff9d77bb014d07af66e7ef08">com.fs.starfarer.api.impl.campaign.econ.impl.MilitaryBase.returningPatrolValue</a></div><div class="ttdeci">float returningPatrolValue</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/de8/MilitaryBase_8java_source.html#l00326">MilitaryBase.java:326</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase_html_ab6ba1ed9637d05b7b149169bc8d5ea9b"><div class="ttname"><a href="../../df/d2f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#ab6ba1ed9637d05b7b149169bc8d5ea9b">com.fs.starfarer.api.impl.campaign.econ.impl.MilitaryBase.getMaxPatrols</a></div><div class="ttdeci">int getMaxPatrols(PatrolType type)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/de8/MilitaryBase_8java_source.html#l00458">MilitaryBase.java:458</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase_html_ac189e6f7f303db6c0859d013397fc079"><div class="ttname"><a href="../../df/d2f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#ac189e6f7f303db6c0859d013397fc079">com.fs.starfarer.api.impl.campaign.econ.impl.MilitaryBase.getPatrolCombatFP</a></div><div class="ttdeci">static int getPatrolCombatFP(PatrolType type, Random random)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/de8/MilitaryBase_8java_source.html#l00499">MilitaryBase.java:499</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase_html_aea6bf9dd362bce8747d10f96f370fcfb"><div class="ttname"><a href="../../df/d2f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#aea6bf9dd362bce8747d10f96f370fcfb">com.fs.starfarer.api.impl.campaign.econ.impl.MilitaryBase.tracker</a></div><div class="ttdeci">IntervalUtil tracker</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/de8/MilitaryBase_8java_source.html#l00323">MilitaryBase.java:323</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil_html_a4f5cb3c75b41ad5f6cf8b569dd096e0b"><div class="ttname"><a href="../../da/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html#a4f5cb3c75b41ad5f6cf8b569dd096e0b">com.fs.starfarer.api.util.IntervalUtil.getIntervalDuration</a></div><div class="ttdeci">float getIntervalDuration()</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de3/IntervalUtil_8java_source.html#l00058">IntervalUtil.java:58</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil_html_a61881d44415cda2c50c3354c3f0a4d8a"><div class="ttname"><a href="../../da/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html#a61881d44415cda2c50c3354c3f0a4d8a">com.fs.starfarer.api.util.IntervalUtil.advance</a></div><div class="ttdeci">void advance(float amount)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de3/IntervalUtil_8java_source.html#l00039">IntervalUtil.java:39</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a70323dd35f954c1be49bf2e8c43c9284"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a70323dd35f954c1be49bf2e8c43c9284">com.fs.starfarer.api.campaign.econ.MarketAPI.getStats</a></div><div class="ttdeci">MutableMarketStatsAPI getStats()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_af1677b531fa1a657e17b732868c7b953"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af1677b531fa1a657e17b732868c7b953">com.fs.starfarer.api.campaign.econ.MarketAPI.getPrimaryEntity</a></div><div class="ttdeci">SectorEntityToken getPrimaryEntity()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1MutableMarketStatsAPI_html_a07a35dc173333e48b78a68c47950280d"><div class="ttname"><a href="../../d0/d6d/interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1MutableMarketStatsAPI.html#a07a35dc173333e48b78a68c47950280d">com.fs.starfarer.api.fleet.MutableMarketStatsAPI.getDynamic</a></div><div class="ttdeci">DynamicStatsAPI getDynamic()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1util_1_1DynamicStatsAPI_html_a249fe23994c89b62e04869b26f539843"><div class="ttname"><a href="../../db/dcf/interfacecom_1_1fs_1_1starfarer_1_1api_1_1util_1_1DynamicStatsAPI.html#a249fe23994c89b62e04869b26f539843">com.fs.starfarer.api.util.DynamicStatsAPI.getStat</a></div><div class="ttdeci">MutableStat getStat(String id)</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a00468712dbd0ebc5baa311062142d563" name="a00468712dbd0ebc5baa311062142d563"></a>
@@ -1215,167 +1048,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../db/d10/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1Industry.html#afec13f539610ffc411c4aa0074a3b767">com.fs.starfarer.api.campaign.econ.Industry</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/de8/MilitaryBase_8java_source.html#l00058">58</a> of file <a class="el" href="../../d6/de8/MilitaryBase_8java_source.html">MilitaryBase.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   58</span>                        {</div>
-<div class="line"><span class="lineno">   59</span>        </div>
-<div class="line"><span class="lineno">   60</span>        <span class="keywordtype">int</span> size = <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af6f714c59a16687b5cde142091a54150">getSize</a>();</div>
-<div class="line"><span class="lineno">   61</span>        </div>
-<div class="line"><span class="lineno">   62</span>        <span class="keywordtype">boolean</span> patrol = <a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a0e3b6afae5942698387ef7e1f55d1709">getSpec</a>().<a class="code hl_function" href="../../d2/d4c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1IndustrySpecAPI.html#a045e2ddd6dc1368c172d023f682a98ac">hasTag</a>(Industries.TAG_PATROL);</div>
-<div class="line"><span class="lineno">   63</span>        <span class="keywordtype">boolean</span> militaryBase = <a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a0e3b6afae5942698387ef7e1f55d1709">getSpec</a>().<a class="code hl_function" href="../../d2/d4c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1IndustrySpecAPI.html#a045e2ddd6dc1368c172d023f682a98ac">hasTag</a>(Industries.TAG_MILITARY);</div>
-<div class="line"><span class="lineno">   64</span>        <span class="keywordtype">boolean</span> command = <a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a0e3b6afae5942698387ef7e1f55d1709">getSpec</a>().<a class="code hl_function" href="../../d2/d4c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1IndustrySpecAPI.html#a045e2ddd6dc1368c172d023f682a98ac">hasTag</a>(Industries.TAG_COMMAND);</div>
-<div class="line"><span class="lineno">   65</span>        </div>
-<div class="line"><span class="lineno">   66</span>        super.apply(!patrol);</div>
-<div class="line"><span class="lineno">   67</span>        <span class="keywordflow">if</span> (patrol) {</div>
-<div class="line"><span class="lineno">   68</span>            <a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a23b3a7fe9722f0ed85f72701e8401630">applyIncomeAndUpkeep</a>(3);</div>
-<div class="line"><span class="lineno">   69</span>        }</div>
-<div class="line"><span class="lineno">   70</span>        </div>
-<div class="line"><span class="lineno">   71</span>        <span class="keywordtype">int</span> extraDemand = 0;</div>
-<div class="line"><span class="lineno">   72</span>        </div>
-<div class="line"><span class="lineno">   73</span>        <span class="keywordtype">int</span> light = 1;</div>
-<div class="line"><span class="lineno">   74</span>        <span class="keywordtype">int</span> medium = 0;</div>
-<div class="line"><span class="lineno">   75</span>        <span class="keywordtype">int</span> heavy = 0;</div>
-<div class="line"><span class="lineno">   76</span>        </div>
-<div class="line"><span class="lineno">   77</span>        <span class="keywordflow">if</span> (patrol) {</div>
-<div class="line"><span class="lineno">   78</span>            extraDemand = 0;</div>
-<div class="line"><span class="lineno">   79</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (militaryBase) {</div>
-<div class="line"><span class="lineno">   80</span>            extraDemand = 2;</div>
-<div class="line"><span class="lineno">   81</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (command) {</div>
-<div class="line"><span class="lineno">   82</span>            extraDemand = 3;</div>
-<div class="line"><span class="lineno">   83</span>        }</div>
-<div class="line"><span class="lineno">   84</span>        </div>
-<div class="line"><span class="lineno">   85</span>        <span class="keywordflow">if</span> (patrol) {</div>
-<div class="line"><span class="lineno">   86</span>            light = 2;</div>
-<div class="line"><span class="lineno">   87</span>            medium = 0;</div>
-<div class="line"><span class="lineno">   88</span>            heavy = 0;</div>
-<div class="line"><span class="lineno">   89</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   90</span>            <span class="keywordflow">if</span> (size &lt;= 3) {</div>
-<div class="line"><span class="lineno">   91</span>                light = 2;</div>
-<div class="line"><span class="lineno">   92</span>                medium = 0;</div>
-<div class="line"><span class="lineno">   93</span>                heavy = 0;</div>
-<div class="line"><span class="lineno">   94</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (size == 4) {</div>
-<div class="line"><span class="lineno">   95</span>                light = 2;</div>
-<div class="line"><span class="lineno">   96</span>                medium = 0;</div>
-<div class="line"><span class="lineno">   97</span>                heavy = 0;</div>
-<div class="line"><span class="lineno">   98</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (size == 5) {</div>
-<div class="line"><span class="lineno">   99</span>                light = 2;</div>
-<div class="line"><span class="lineno">  100</span>                medium = 1;</div>
-<div class="line"><span class="lineno">  101</span>                heavy = 0;</div>
-<div class="line"><span class="lineno">  102</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (size == 6) {</div>
-<div class="line"><span class="lineno">  103</span>                light = 3;</div>
-<div class="line"><span class="lineno">  104</span>                medium = 1;</div>
-<div class="line"><span class="lineno">  105</span>                heavy = 0;</div>
-<div class="line"><span class="lineno">  106</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (size == 7) {</div>
-<div class="line"><span class="lineno">  107</span>                light = 3;</div>
-<div class="line"><span class="lineno">  108</span>                medium = 2;</div>
-<div class="line"><span class="lineno">  109</span>                heavy = 0;</div>
-<div class="line"><span class="lineno">  110</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (size == 8) {</div>
-<div class="line"><span class="lineno">  111</span>                light = 3;</div>
-<div class="line"><span class="lineno">  112</span>                medium = 3;</div>
-<div class="line"><span class="lineno">  113</span>                heavy = 0;</div>
-<div class="line"><span class="lineno">  114</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (size &gt;= 9) {</div>
-<div class="line"><span class="lineno">  115</span>                light = 4;</div>
-<div class="line"><span class="lineno">  116</span>                medium = 3;</div>
-<div class="line"><span class="lineno">  117</span>                heavy = 0;</div>
-<div class="line"><span class="lineno">  118</span>            }</div>
-<div class="line"><span class="lineno">  119</span>        }</div>
-<div class="line"><span class="lineno">  120</span>        </div>
-<div class="line"><span class="lineno">  121</span>        <span class="keywordflow">if</span> (militaryBase || command) {</div>
-<div class="line"><span class="lineno">  122</span>            <span class="comment">//light++;</span></div>
-<div class="line"><span class="lineno">  123</span>            medium = Math.max(medium + 1, size / 2 - 1);</div>
-<div class="line"><span class="lineno">  124</span>            heavy = Math.max(heavy, medium - 1);</div>
-<div class="line"><span class="lineno">  125</span>        }</div>
-<div class="line"><span class="lineno">  126</span>        </div>
-<div class="line"><span class="lineno">  127</span>        <span class="keywordflow">if</span> (command) {</div>
-<div class="line"><span class="lineno">  128</span>            medium++;</div>
-<div class="line"><span class="lineno">  129</span>            heavy++;</div>
-<div class="line"><span class="lineno">  130</span>        }</div>
-<div class="line"><span class="lineno">  131</span>        </div>
-<div class="line"><span class="lineno">  132</span><span class="comment">//      if (market.getId().equals(&quot;jangala&quot;)) {</span></div>
-<div class="line"><span class="lineno">  133</span><span class="comment">//          System.out.println(&quot;wefwefwe&quot;);</span></div>
-<div class="line"><span class="lineno">  134</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  135</span>        </div>
-<div class="line"><span class="lineno">  136</span><span class="comment">//      light += 5;</span></div>
-<div class="line"><span class="lineno">  137</span><span class="comment">//      medium += 3;</span></div>
-<div class="line"><span class="lineno">  138</span><span class="comment">//      heavy += 2;</span></div>
-<div class="line"><span class="lineno">  139</span>        </div>
-<div class="line"><span class="lineno">  140</span><span class="comment">//      float spawnRateMultStability = getStabilitySpawnRateMult();</span></div>
-<div class="line"><span class="lineno">  141</span><span class="comment">//      if (spawnRateMultStability != 1) {</span></div>
-<div class="line"><span class="lineno">  142</span><span class="comment">//          market.getStats().getDynamic().getStat(Stats.COMBAT_FLEET_SPAWN_RATE_MULT).modifyMult(getModId(), spawnRateMultStability);</span></div>
-<div class="line"><span class="lineno">  143</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  144</span>        </div>
-<div class="line"><span class="lineno">  145</span>        </div>
-<div class="line"><span class="lineno">  146</span>        <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a70323dd35f954c1be49bf2e8c43c9284">getStats</a>().<a class="code hl_function" href="../../d0/d6d/interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1MutableMarketStatsAPI.html#a07a35dc173333e48b78a68c47950280d">getDynamic</a>().<a class="code hl_function" href="../../db/dcf/interfacecom_1_1fs_1_1starfarer_1_1api_1_1util_1_1DynamicStatsAPI.html#a873b747b8989616c2da542355d167c79">getMod</a>(Stats.PATROL_NUM_LIGHT_MOD).<a class="code hl_function" href="../../dc/d19/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus.html#ad08aa246116d46809d4f55279eeb38e4">modifyFlat</a>(<a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a33413101f7f7479cfe98427bc31ec114">getModId</a>(), light);</div>
-<div class="line"><span class="lineno">  147</span>        <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a70323dd35f954c1be49bf2e8c43c9284">getStats</a>().<a class="code hl_function" href="../../d0/d6d/interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1MutableMarketStatsAPI.html#a07a35dc173333e48b78a68c47950280d">getDynamic</a>().<a class="code hl_function" href="../../db/dcf/interfacecom_1_1fs_1_1starfarer_1_1api_1_1util_1_1DynamicStatsAPI.html#a873b747b8989616c2da542355d167c79">getMod</a>(Stats.PATROL_NUM_MEDIUM_MOD).<a class="code hl_function" href="../../dc/d19/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus.html#ad08aa246116d46809d4f55279eeb38e4">modifyFlat</a>(<a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a33413101f7f7479cfe98427bc31ec114">getModId</a>(), medium);</div>
-<div class="line"><span class="lineno">  148</span>        <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a70323dd35f954c1be49bf2e8c43c9284">getStats</a>().<a class="code hl_function" href="../../d0/d6d/interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1MutableMarketStatsAPI.html#a07a35dc173333e48b78a68c47950280d">getDynamic</a>().<a class="code hl_function" href="../../db/dcf/interfacecom_1_1fs_1_1starfarer_1_1api_1_1util_1_1DynamicStatsAPI.html#a873b747b8989616c2da542355d167c79">getMod</a>(Stats.PATROL_NUM_HEAVY_MOD).<a class="code hl_function" href="../../dc/d19/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus.html#ad08aa246116d46809d4f55279eeb38e4">modifyFlat</a>(<a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a33413101f7f7479cfe98427bc31ec114">getModId</a>(), heavy);</div>
-<div class="line"><span class="lineno">  149</span>        </div>
-<div class="line"><span class="lineno">  150</span>        </div>
-<div class="line"><span class="lineno">  151</span>        <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#ada1a3bcbe22df6e0198bf0612576c5b5">demand</a>(Commodities.SUPPLIES, size - 1 + extraDemand);</div>
-<div class="line"><span class="lineno">  152</span>        <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#ada1a3bcbe22df6e0198bf0612576c5b5">demand</a>(Commodities.FUEL, size - 1 + extraDemand);</div>
-<div class="line"><span class="lineno">  153</span>        <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#ada1a3bcbe22df6e0198bf0612576c5b5">demand</a>(Commodities.SHIPS, size - 1 + extraDemand);</div>
-<div class="line"><span class="lineno">  154</span>        </div>
-<div class="line"><span class="lineno">  155</span>        <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a2be46a5c977e13c63ef2b249999b89c1">supply</a>(Commodities.CREW, size);</div>
-<div class="line"><span class="lineno">  156</span>        </div>
-<div class="line"><span class="lineno">  157</span>        <span class="keywordflow">if</span> (!patrol) {</div>
-<div class="line"><span class="lineno">  158</span>            <span class="comment">//demand(Commodities.HAND_WEAPONS, size);</span></div>
-<div class="line"><span class="lineno">  159</span>            <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a2be46a5c977e13c63ef2b249999b89c1">supply</a>(Commodities.MARINES, size);</div>
-<div class="line"><span class="lineno">  160</span>            </div>
-<div class="line"><span class="lineno">  161</span><span class="comment">//          Pair&lt;String, Integer&gt; deficit = getMaxDeficit(Commodities.HAND_WEAPONS);</span></div>
-<div class="line"><span class="lineno">  162</span><span class="comment">//          applyDeficitToProduction(1, deficit, Commodities.MARINES);</span></div>
-<div class="line"><span class="lineno">  163</span>        }</div>
-<div class="line"><span class="lineno">  164</span>        </div>
-<div class="line"><span class="lineno">  165</span>        </div>
-<div class="line"><span class="lineno">  166</span>        <a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a9360fbfc57a5308f435f940f2fb1294b">modifyStabilityWithBaseMod</a>();</div>
-<div class="line"><span class="lineno">  167</span>        </div>
-<div class="line"><span class="lineno">  168</span>        <span class="keywordtype">float</span> mult = <a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#aaecd00681494cec78eb1c1f9fe49233f">getDeficitMult</a>(Commodities.SUPPLIES);</div>
-<div class="line"><span class="lineno">  169</span>        String extra = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">  170</span>        <span class="keywordflow">if</span> (mult != 1) {</div>
-<div class="line"><span class="lineno">  171</span>            String com = <a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#af9ae61ae0ee27d39832661c87a9d1567">getMaxDeficit</a>(Commodities.SUPPLIES).one;</div>
-<div class="line"><span class="lineno">  172</span>            extra = <span class="stringliteral">&quot; (&quot;</span> + <a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a47ecacd3bd5f15e80e1ad37cd16b6f1f">getDeficitText</a>(com).toLowerCase() + <span class="stringliteral">&quot;)&quot;</span>;</div>
-<div class="line"><span class="lineno">  173</span>        }</div>
-<div class="line"><span class="lineno">  174</span>        <span class="keywordtype">float</span> bonus = <a class="code hl_variable" href="../../df/d2f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#a12dcc22adaf2573045ac20dad7f61e57">DEFENSE_BONUS_MILITARY</a>;</div>
-<div class="line"><span class="lineno">  175</span>        <span class="keywordflow">if</span> (patrol) bonus = <a class="code hl_variable" href="../../df/d2f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#a191532b63f795fac14dce48da42dadcd">DEFENSE_BONUS_PATROL</a>;</div>
-<div class="line"><span class="lineno">  176</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (command) bonus = <a class="code hl_variable" href="../../df/d2f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#a4fb5026c4e7ac0fb103fd1729fbd3dc9">DEFENSE_BONUS_COMMAND</a>;</div>
-<div class="line"><span class="lineno">  177</span>        <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a70323dd35f954c1be49bf2e8c43c9284">getStats</a>().<a class="code hl_function" href="../../d0/d6d/interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1MutableMarketStatsAPI.html#a07a35dc173333e48b78a68c47950280d">getDynamic</a>().<a class="code hl_function" href="../../db/dcf/interfacecom_1_1fs_1_1starfarer_1_1api_1_1util_1_1DynamicStatsAPI.html#a873b747b8989616c2da542355d167c79">getMod</a>(Stats.GROUND_DEFENSES_MOD)</div>
-<div class="line"><span class="lineno">  178</span>                        .<a class="code hl_function" href="../../dc/d19/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus.html#a246f649ef63533936f9dc3fdbf3bd7e0">modifyMult</a>(<a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a33413101f7f7479cfe98427bc31ec114">getModId</a>(), 1f + bonus * mult, <a class="code hl_function" href="../../df/d2f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#a5360f4276a2ee456eca213a665067b81">getNameForModifier</a>() + extra);</div>
-<div class="line"><span class="lineno">  179</span>        </div>
-<div class="line"><span class="lineno">  180</span>        </div>
-<div class="line"><span class="lineno">  181</span>        MemoryAPI memory = <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a71f3d463f3bf8bdd2cfa76870ee63424">getMemoryWithoutUpdate</a>();</div>
-<div class="line"><span class="lineno">  182</span>        Misc.setFlagWithReason(memory, MemFlags.MARKET_PATROL, <a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a33413101f7f7479cfe98427bc31ec114">getModId</a>(), <span class="keyword">true</span>, -1);</div>
-<div class="line"><span class="lineno">  183</span>        </div>
-<div class="line"><span class="lineno">  184</span>        <span class="keywordflow">if</span> (militaryBase || command) {</div>
-<div class="line"><span class="lineno">  185</span>            Misc.setFlagWithReason(memory, MemFlags.MARKET_MILITARY, <a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a33413101f7f7479cfe98427bc31ec114">getModId</a>(), <span class="keyword">true</span>, -1);</div>
-<div class="line"><span class="lineno">  186</span>        }</div>
-<div class="line"><span class="lineno">  187</span>        </div>
-<div class="line"><span class="lineno">  188</span>        <span class="keywordtype">float</span> officerProb = <a class="code hl_variable" href="../../df/d2f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#a96b6521ed420df52daa16ed8806fdeaf">OFFICER_PROB_MOD_PATROL_HQ</a>;</div>
-<div class="line"><span class="lineno">  189</span>        <span class="keywordflow">if</span> (militaryBase) officerProb = <a class="code hl_variable" href="../../df/d2f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#ae6bfa210f71a7d5fb65e2f8cad7486b7">OFFICER_PROB_MOD_MILITARY_BASE</a>;</div>
-<div class="line"><span class="lineno">  190</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (command) officerProb = <a class="code hl_variable" href="../../df/d2f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#af66946f3b6599f8377a57bab10c2c9ab">OFFICER_PROB_MOD_HIGH_COMMAND</a>;</div>
-<div class="line"><span class="lineno">  191</span>        <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a70323dd35f954c1be49bf2e8c43c9284">getStats</a>().<a class="code hl_function" href="../../d0/d6d/interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1MutableMarketStatsAPI.html#a07a35dc173333e48b78a68c47950280d">getDynamic</a>().<a class="code hl_function" href="../../db/dcf/interfacecom_1_1fs_1_1starfarer_1_1api_1_1util_1_1DynamicStatsAPI.html#a873b747b8989616c2da542355d167c79">getMod</a>(Stats.OFFICER_PROB_MOD).<a class="code hl_function" href="../../dc/d19/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus.html#ad08aa246116d46809d4f55279eeb38e4">modifyFlat</a>(<a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a33413101f7f7479cfe98427bc31ec114">getModId</a>(0), officerProb);</div>
-<div class="line"><span class="lineno">  192</span>        </div>
-<div class="line"><span class="lineno">  193</span>        </div>
-<div class="line"><span class="lineno">  194</span>        <span class="keywordflow">if</span> (!<a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a511613f792cac2306ff2ea5ba6be8407">isFunctional</a>()) {</div>
-<div class="line"><span class="lineno">  195</span>            <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a2be46a5c977e13c63ef2b249999b89c1">supply</a>.clear();</div>
-<div class="line"><span class="lineno">  196</span>            <a class="code hl_function" href="../../df/d2f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#a576e51838086aa315f26e891e0a7b189">unapply</a>();</div>
-<div class="line"><span class="lineno">  197</span>        }</div>
-<div class="line"><span class="lineno">  198</span> </div>
-<div class="line"><span class="lineno">  199</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus_html_a246f649ef63533936f9dc3fdbf3bd7e0"><div class="ttname"><a href="../../dc/d19/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus.html#a246f649ef63533936f9dc3fdbf3bd7e0">com.fs.starfarer.api.combat.StatBonus.modifyMult</a></div><div class="ttdeci">void modifyMult(String source, float value)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d6c/StatBonus_8java_source.html#l00154">StatBonus.java:154</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus_html_ad08aa246116d46809d4f55279eeb38e4"><div class="ttname"><a href="../../dc/d19/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus.html#ad08aa246116d46809d4f55279eeb38e4">com.fs.starfarer.api.combat.StatBonus.modifyFlat</a></div><div class="ttdeci">void modifyFlat(String source, float value)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d6c/StatBonus_8java_source.html#l00121">StatBonus.java:121</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry_html_a23b3a7fe9722f0ed85f72701e8401630"><div class="ttname"><a href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a23b3a7fe9722f0ed85f72701e8401630">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry.applyIncomeAndUpkeep</a></div><div class="ttdeci">void applyIncomeAndUpkeep(float sizeOverride)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8f/BaseIndustry_8java_source.html#l00357">BaseIndustry.java:357</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry_html_a2be46a5c977e13c63ef2b249999b89c1"><div class="ttname"><a href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a2be46a5c977e13c63ef2b249999b89c1">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry.supply</a></div><div class="ttdeci">Map&lt; String, MutableCommodityQuantity &gt; supply</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8f/BaseIndustry_8java_source.html#l00090">BaseIndustry.java:90</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry_html_a33413101f7f7479cfe98427bc31ec114"><div class="ttname"><a href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a33413101f7f7479cfe98427bc31ec114">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry.getModId</a></div><div class="ttdeci">String getModId()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8f/BaseIndustry_8java_source.html#l00259">BaseIndustry.java:259</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry_html_a47ecacd3bd5f15e80e1ad37cd16b6f1f"><div class="ttname"><a href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a47ecacd3bd5f15e80e1ad37cd16b6f1f">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry.getDeficitText</a></div><div class="ttdeci">static String getDeficitText(String commodityId)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8f/BaseIndustry_8java_source.html#l00080">BaseIndustry.java:80</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry_html_a9360fbfc57a5308f435f940f2fb1294b"><div class="ttname"><a href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a9360fbfc57a5308f435f940f2fb1294b">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry.modifyStabilityWithBaseMod</a></div><div class="ttdeci">void modifyStabilityWithBaseMod()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8f/BaseIndustry_8java_source.html#l01676">BaseIndustry.java:1676</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry_html_aaecd00681494cec78eb1c1f9fe49233f"><div class="ttname"><a href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#aaecd00681494cec78eb1c1f9fe49233f">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry.getDeficitMult</a></div><div class="ttdeci">float getDeficitMult(String ... commodities)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8f/BaseIndustry_8java_source.html#l01863">BaseIndustry.java:1863</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry_html_ada1a3bcbe22df6e0198bf0612576c5b5"><div class="ttname"><a href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#ada1a3bcbe22df6e0198bf0612576c5b5">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry.demand</a></div><div class="ttdeci">Map&lt; String, MutableCommodityQuantity &gt; demand</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8f/BaseIndustry_8java_source.html#l00091">BaseIndustry.java:91</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry_html_af9ae61ae0ee27d39832661c87a9d1567"><div class="ttname"><a href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#af9ae61ae0ee27d39832661c87a9d1567">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry.getMaxDeficit</a></div><div class="ttdeci">Pair&lt; String, Integer &gt; getMaxDeficit(String ... commodityIds)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8f/BaseIndustry_8java_source.html#l00799">BaseIndustry.java:799</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase_html_a5360f4276a2ee456eca213a665067b81"><div class="ttname"><a href="../../df/d2f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#a5360f4276a2ee456eca213a665067b81">com.fs.starfarer.api.impl.campaign.econ.impl.MilitaryBase.getNameForModifier</a></div><div class="ttdeci">String getNameForModifier()</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/de8/MilitaryBase_8java_source.html#l00257">MilitaryBase.java:257</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase_html_a576e51838086aa315f26e891e0a7b189"><div class="ttname"><a href="../../df/d2f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#a576e51838086aa315f26e891e0a7b189">com.fs.starfarer.api.impl.campaign.econ.impl.MilitaryBase.unapply</a></div><div class="ttdeci">void unapply()</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/de8/MilitaryBase_8java_source.html#l00202">MilitaryBase.java:202</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase_html_a96b6521ed420df52daa16ed8806fdeaf"><div class="ttname"><a href="../../df/d2f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#a96b6521ed420df52daa16ed8806fdeaf">com.fs.starfarer.api.impl.campaign.econ.impl.MilitaryBase.OFFICER_PROB_MOD_PATROL_HQ</a></div><div class="ttdeci">static float OFFICER_PROB_MOD_PATROL_HQ</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/de8/MilitaryBase_8java_source.html#l00047">MilitaryBase.java:47</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase_html_ae6bfa210f71a7d5fb65e2f8cad7486b7"><div class="ttname"><a href="../../df/d2f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#ae6bfa210f71a7d5fb65e2f8cad7486b7">com.fs.starfarer.api.impl.campaign.econ.impl.MilitaryBase.OFFICER_PROB_MOD_MILITARY_BASE</a></div><div class="ttdeci">static float OFFICER_PROB_MOD_MILITARY_BASE</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/de8/MilitaryBase_8java_source.html#l00048">MilitaryBase.java:48</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase_html_af66946f3b6599f8377a57bab10c2c9ab"><div class="ttname"><a href="../../df/d2f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#af66946f3b6599f8377a57bab10c2c9ab">com.fs.starfarer.api.impl.campaign.econ.impl.MilitaryBase.OFFICER_PROB_MOD_HIGH_COMMAND</a></div><div class="ttdeci">static float OFFICER_PROB_MOD_HIGH_COMMAND</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/de8/MilitaryBase_8java_source.html#l00049">MilitaryBase.java:49</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a71f3d463f3bf8bdd2cfa76870ee63424"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a71f3d463f3bf8bdd2cfa76870ee63424">com.fs.starfarer.api.campaign.econ.MarketAPI.getMemoryWithoutUpdate</a></div><div class="ttdeci">MemoryAPI getMemoryWithoutUpdate()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_af6f714c59a16687b5cde142091a54150"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af6f714c59a16687b5cde142091a54150">com.fs.starfarer.api.campaign.econ.MarketAPI.getSize</a></div><div class="ttdeci">int getSize()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1util_1_1DynamicStatsAPI_html_a873b747b8989616c2da542355d167c79"><div class="ttname"><a href="../../db/dcf/interfacecom_1_1fs_1_1starfarer_1_1api_1_1util_1_1DynamicStatsAPI.html#a873b747b8989616c2da542355d167c79">com.fs.starfarer.api.util.DynamicStatsAPI.getMod</a></div><div class="ttdeci">StatBonus getMod(String id)</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a126558083931898238a7aba120b9404c" name="a126558083931898238a7aba120b9404c"></a>
@@ -1404,11 +1077,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a9ec2923f1a2af4301bc295759a6763bd">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/de8/MilitaryBase_8java_source.html#l00628">628</a> of file <a class="el" href="../../d6/de8/MilitaryBase_8java_source.html">MilitaryBase.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  628</span>                                             {</div>
-<div class="line"><span class="lineno">  629</span>        <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a70323dd35f954c1be49bf2e8c43c9284">getStats</a>().<a class="code hl_function" href="../../d0/d6d/interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1MutableMarketStatsAPI.html#a07a35dc173333e48b78a68c47950280d">getDynamic</a>().<a class="code hl_function" href="../../db/dcf/interfacecom_1_1fs_1_1starfarer_1_1api_1_1util_1_1DynamicStatsAPI.html#a873b747b8989616c2da542355d167c79">getMod</a>(Stats.COMBAT_FLEET_SIZE_MULT).<a class="code hl_function" href="../../dc/d19/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus.html#a246f649ef63533936f9dc3fdbf3bd7e0">modifyMult</a>(</div>
-<div class="line"><span class="lineno">  630</span>                <a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a33413101f7f7479cfe98427bc31ec114">getModId</a>(), 1f + <a class="code hl_variable" href="../../df/d2f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#aaec609759fa72aaf3bd65b120bb9ac81">ALPHA_CORE_BONUS</a>, <span class="stringliteral">&quot;Alpha core (&quot;</span> + <a class="code hl_function" href="../../df/d2f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#a5360f4276a2ee456eca213a665067b81">getNameForModifier</a>() + <span class="stringliteral">&quot;)&quot;</span>);</div>
-<div class="line"><span class="lineno">  631</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a3ec0343aa403765a98b56f0458fdbddd" name="a3ec0343aa403765a98b56f0458fdbddd"></a>
@@ -1437,12 +1106,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a70cda419e1144f15680791a1f7288d70">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/de8/MilitaryBase_8java_source.html#l00639">639</a> of file <a class="el" href="../../d6/de8/MilitaryBase_8java_source.html">MilitaryBase.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  639</span>                                                            {</div>
-<div class="line"><span class="lineno">  640</span>        <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#aed79018a72a2a032cb317bb3809ed4cb">demandReduction</a>.<a class="code hl_function" href="../../d4/d1a/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableStat.html#a3af420f08b9b78a54ab0e4c8fdc9184b">modifyFlat</a>(<a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a33413101f7f7479cfe98427bc31ec114">getModId</a>(0), <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a1034a17059a3e8a52163e7dc6a8d3a9e">DEMAND_REDUCTION</a>, <span class="stringliteral">&quot;Alpha core&quot;</span>);</div>
-<div class="line"><span class="lineno">  641</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableStat_html_a3af420f08b9b78a54ab0e4c8fdc9184b"><div class="ttname"><a href="../../d4/d1a/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableStat.html#a3af420f08b9b78a54ab0e4c8fdc9184b">com.fs.starfarer.api.combat.MutableStat.modifyFlat</a></div><div class="ttdeci">void modifyFlat(String source, float value)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d27/MutableStat_8java_source.html#l00176">MutableStat.java:176</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry_html_aed79018a72a2a032cb317bb3809ed4cb"><div class="ttname"><a href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#aed79018a72a2a032cb317bb3809ed4cb">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry.demandReduction</a></div><div class="ttdeci">MutableStat demandReduction</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8f/BaseIndustry_8java_source.html#l00111">BaseIndustry.java:111</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a1bfc5ed24548468540f899f56a5d8ab9" name="a1bfc5ed24548468540f899f56a5d8ab9"></a>
@@ -1471,27 +1135,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a65f7baa78d347ea52b02de05f3f913b8">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/de8/MilitaryBase_8java_source.html#l00679">679</a> of file <a class="el" href="../../d6/de8/MilitaryBase_8java_source.html">MilitaryBase.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  679</span>                                           {</div>
-<div class="line"><span class="lineno">  680</span>        </div>
-<div class="line"><span class="lineno">  681</span>        String key = <span class="stringliteral">&quot;mil_base_improve&quot;</span>;</div>
-<div class="line"><span class="lineno">  682</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a114bff8f3b74c4f7a5e0ed7d18004c67">isImproved</a>()) {</div>
-<div class="line"><span class="lineno">  683</span>            <span class="keywordtype">boolean</span> patrol = <a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a0e3b6afae5942698387ef7e1f55d1709">getSpec</a>().<a class="code hl_function" href="../../d2/d4c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1IndustrySpecAPI.html#a045e2ddd6dc1368c172d023f682a98ac">hasTag</a>(Industries.TAG_PATROL);</div>
-<div class="line"><span class="lineno">  684</span><span class="comment">//          boolean militaryBase = getSpec().hasTag(Industries.TAG_MILITARY);</span></div>
-<div class="line"><span class="lineno">  685</span><span class="comment">//          boolean command = getSpec().hasTag(Industries.TAG_COMMAND);</span></div>
-<div class="line"><span class="lineno">  686</span>            </div>
-<div class="line"><span class="lineno">  687</span>            <span class="keywordflow">if</span> (patrol) {</div>
-<div class="line"><span class="lineno">  688</span>                <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a70323dd35f954c1be49bf2e8c43c9284">getStats</a>().<a class="code hl_function" href="../../d0/d6d/interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1MutableMarketStatsAPI.html#a07a35dc173333e48b78a68c47950280d">getDynamic</a>().<a class="code hl_function" href="../../db/dcf/interfacecom_1_1fs_1_1starfarer_1_1api_1_1util_1_1DynamicStatsAPI.html#a873b747b8989616c2da542355d167c79">getMod</a>(Stats.PATROL_NUM_MEDIUM_MOD).<a class="code hl_function" href="../../dc/d19/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus.html#ad08aa246116d46809d4f55279eeb38e4">modifyFlat</a>(key, <a class="code hl_variable" href="../../df/d2f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#aca402364a00bd2b1f1db5d07fe6eeba7">IMPROVE_NUM_PATROLS_BONUS</a>);</div>
-<div class="line"><span class="lineno">  689</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  690</span>                <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a70323dd35f954c1be49bf2e8c43c9284">getStats</a>().<a class="code hl_function" href="../../d0/d6d/interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1MutableMarketStatsAPI.html#a07a35dc173333e48b78a68c47950280d">getDynamic</a>().<a class="code hl_function" href="../../db/dcf/interfacecom_1_1fs_1_1starfarer_1_1api_1_1util_1_1DynamicStatsAPI.html#a873b747b8989616c2da542355d167c79">getMod</a>(Stats.PATROL_NUM_HEAVY_MOD).<a class="code hl_function" href="../../dc/d19/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus.html#ad08aa246116d46809d4f55279eeb38e4">modifyFlat</a>(key, <a class="code hl_variable" href="../../df/d2f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#aca402364a00bd2b1f1db5d07fe6eeba7">IMPROVE_NUM_PATROLS_BONUS</a>);</div>
-<div class="line"><span class="lineno">  691</span>            }</div>
-<div class="line"><span class="lineno">  692</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  693</span>            <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a70323dd35f954c1be49bf2e8c43c9284">getStats</a>().<a class="code hl_function" href="../../d0/d6d/interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1MutableMarketStatsAPI.html#a07a35dc173333e48b78a68c47950280d">getDynamic</a>().<a class="code hl_function" href="../../db/dcf/interfacecom_1_1fs_1_1starfarer_1_1api_1_1util_1_1DynamicStatsAPI.html#a873b747b8989616c2da542355d167c79">getMod</a>(Stats.PATROL_NUM_MEDIUM_MOD).<a class="code hl_function" href="../../dc/d19/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus.html#afb8cbd56006de48758f0081fc6b95bea">unmodifyFlat</a>(key);</div>
-<div class="line"><span class="lineno">  694</span>            <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a70323dd35f954c1be49bf2e8c43c9284">getStats</a>().<a class="code hl_function" href="../../d0/d6d/interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1MutableMarketStatsAPI.html#a07a35dc173333e48b78a68c47950280d">getDynamic</a>().<a class="code hl_function" href="../../db/dcf/interfacecom_1_1fs_1_1starfarer_1_1api_1_1util_1_1DynamicStatsAPI.html#a873b747b8989616c2da542355d167c79">getMod</a>(Stats.PATROL_NUM_HEAVY_MOD).<a class="code hl_function" href="../../dc/d19/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus.html#afb8cbd56006de48758f0081fc6b95bea">unmodifyFlat</a>(key);</div>
-<div class="line"><span class="lineno">  695</span>        }</div>
-<div class="line"><span class="lineno">  696</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus_html_afb8cbd56006de48758f0081fc6b95bea"><div class="ttname"><a href="../../dc/d19/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus.html#afb8cbd56006de48758f0081fc6b95bea">com.fs.starfarer.api.combat.StatBonus.unmodifyFlat</a></div><div class="ttdeci">void unmodifyFlat(String source)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d6c/StatBonus_8java_source.html#l00202">StatBonus.java:202</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry_html_a114bff8f3b74c4f7a5e0ed7d18004c67"><div class="ttname"><a href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a114bff8f3b74c4f7a5e0ed7d18004c67">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry.isImproved</a></div><div class="ttdeci">boolean isImproved()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8f/BaseIndustry_8java_source.html#l01969">BaseIndustry.java:1969</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ad5d75c8a3590e7143a18bdcb913a6bd9" name="ad5d75c8a3590e7143a18bdcb913a6bd9"></a>
@@ -1520,11 +1164,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#aea28248ea34657af478e7322dd090c42">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/de8/MilitaryBase_8java_source.html#l00634">634</a> of file <a class="el" href="../../d6/de8/MilitaryBase_8java_source.html">MilitaryBase.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  634</span>                                            {</div>
-<div class="line"><span class="lineno">  635</span>        <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a70323dd35f954c1be49bf2e8c43c9284">getStats</a>().<a class="code hl_function" href="../../d0/d6d/interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1MutableMarketStatsAPI.html#a07a35dc173333e48b78a68c47950280d">getDynamic</a>().<a class="code hl_function" href="../../db/dcf/interfacecom_1_1fs_1_1starfarer_1_1api_1_1util_1_1DynamicStatsAPI.html#a873b747b8989616c2da542355d167c79">getMod</a>(Stats.COMBAT_FLEET_SIZE_MULT).<a class="code hl_function" href="../../dc/d19/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus.html#a9bf42690fee3b977ec4836ddf3da7388">unmodifyMult</a>(<a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a33413101f7f7479cfe98427bc31ec114">getModId</a>());</div>
-<div class="line"><span class="lineno">  636</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus_html_a9bf42690fee3b977ec4836ddf3da7388"><div class="ttname"><a href="../../dc/d19/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus.html#a9bf42690fee3b977ec4836ddf3da7388">com.fs.starfarer.api.combat.StatBonus.unmodifyMult</a></div><div class="ttdeci">void unmodifyMult(String source)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d6c/StatBonus_8java_source.html#l00214">StatBonus.java:214</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aac5704fdc90b8b1ba8f68629254f15f8" name="aac5704fdc90b8b1ba8f68629254f15f8"></a>
@@ -1553,13 +1193,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a4386b07bb77b31a3a58b5a8b106382f3">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/de8/MilitaryBase_8java_source.html#l00329">329</a> of file <a class="el" href="../../d6/de8/MilitaryBase_8java_source.html">MilitaryBase.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  329</span>                                      {</div>
-<div class="line"><span class="lineno">  330</span>        super.buildingFinished();</div>
-<div class="line"><span class="lineno">  331</span>        </div>
-<div class="line"><span class="lineno">  332</span>        <a class="code hl_variable" href="../../df/d2f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#aea6bf9dd362bce8747d10f96f370fcfb">tracker</a>.<a class="code hl_function" href="../../da/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html#a27094391cb3987033d1189ff0e93a6fb">forceIntervalElapsed</a>();</div>
-<div class="line"><span class="lineno">  333</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil_html_a27094391cb3987033d1189ff0e93a6fb"><div class="ttname"><a href="../../da/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html#a27094391cb3987033d1189ff0e93a6fb">com.fs.starfarer.api.util.IntervalUtil.forceIntervalElapsed</a></div><div class="ttdeci">void forceIntervalElapsed()</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de3/IntervalUtil_8java_source.html#l00024">IntervalUtil.java:24</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aeba0afa214306569ee32ea214130e478" name="aeba0afa214306569ee32ea214130e478"></a>
@@ -1580,10 +1214,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#acdf9e1b2da8ccbdaeda1f10bdb7a1a88">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/de8/MilitaryBase_8java_source.html#l00675">675</a> of file <a class="el" href="../../d6/de8/MilitaryBase_8java_source.html">MilitaryBase.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  675</span>                                {</div>
-<div class="line"><span class="lineno">  676</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  677</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a3565c9b3eab8a32b0f0de9e223d45f1e" name="a3565c9b3eab8a32b0f0de9e223d45f1e"></a>
@@ -1645,84 +1276,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/de8/MilitaryBase_8java_source.html#l00547">547</a> of file <a class="el" href="../../d6/de8/MilitaryBase_8java_source.html">MilitaryBase.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  547</span>                                                                                                                                                          {</div>
-<div class="line"><span class="lineno">  548</span>        <span class="keywordflow">if</span> (random == <span class="keyword">null</span>) random = <span class="keyword">new</span> Random();</div>
-<div class="line"><span class="lineno">  549</span>        </div>
-<div class="line"><span class="lineno">  550</span>        </div>
-<div class="line"><span class="lineno">  551</span>        <span class="keywordtype">float</span> combat = <a class="code hl_function" href="../../df/d2f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#ac189e6f7f303db6c0859d013397fc079">getPatrolCombatFP</a>(type, random);</div>
-<div class="line"><span class="lineno">  552</span>        <span class="keywordtype">float</span> tanker = 0f;</div>
-<div class="line"><span class="lineno">  553</span>        <span class="keywordtype">float</span> freighter = 0f;</div>
-<div class="line"><span class="lineno">  554</span>        String fleetType = type.getFleetType();</div>
-<div class="line"><span class="lineno">  555</span>        <span class="keywordflow">switch</span> (type) {</div>
-<div class="line"><span class="lineno">  556</span>        <span class="keywordflow">case</span> FAST:</div>
-<div class="line"><span class="lineno">  557</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  558</span>        <span class="keywordflow">case</span> COMBAT:</div>
-<div class="line"><span class="lineno">  559</span>            tanker = Math.round((<span class="keywordtype">float</span>) random.nextFloat() * 5f);</div>
-<div class="line"><span class="lineno">  560</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  561</span>        <span class="keywordflow">case</span> HEAVY:</div>
-<div class="line"><span class="lineno">  562</span>            tanker = Math.round((<span class="keywordtype">float</span>) random.nextFloat() * 10f);</div>
-<div class="line"><span class="lineno">  563</span>            freighter = Math.round((<span class="keywordtype">float</span>) random.nextFloat() * 10f);</div>
-<div class="line"><span class="lineno">  564</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  565</span>        }</div>
-<div class="line"><span class="lineno">  566</span>        </div>
-<div class="line"><span class="lineno">  567</span>        FleetParamsV3 params = <span class="keyword">new</span> FleetParamsV3(</div>
-<div class="line"><span class="lineno">  568</span>                <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">market</a>, </div>
-<div class="line"><span class="lineno">  569</span>                locInHyper,</div>
-<div class="line"><span class="lineno">  570</span>                factionId,</div>
-<div class="line"><span class="lineno">  571</span>                route == <span class="keyword">null</span> ? <span class="keyword">null</span> : route.getQualityOverride(),</div>
-<div class="line"><span class="lineno">  572</span>                fleetType,</div>
-<div class="line"><span class="lineno">  573</span>                combat, <span class="comment">// combatPts</span></div>
-<div class="line"><span class="lineno">  574</span>                freighter, <span class="comment">// freighterPts </span></div>
-<div class="line"><span class="lineno">  575</span>                tanker, <span class="comment">// tankerPts</span></div>
-<div class="line"><span class="lineno">  576</span>                0f, <span class="comment">// transportPts</span></div>
-<div class="line"><span class="lineno">  577</span>                0f, <span class="comment">// linerPts</span></div>
-<div class="line"><span class="lineno">  578</span>                0f, <span class="comment">// utilityPts</span></div>
-<div class="line"><span class="lineno">  579</span>                0f <span class="comment">// qualityMod</span></div>
-<div class="line"><span class="lineno">  580</span>                );</div>
-<div class="line"><span class="lineno">  581</span>        <span class="keywordflow">if</span> (route != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  582</span>            params.timestamp = route.getTimestamp();</div>
-<div class="line"><span class="lineno">  583</span>        }</div>
-<div class="line"><span class="lineno">  584</span>        params.random = random;</div>
-<div class="line"><span class="lineno">  585</span>        CampaignFleetAPI fleet = FleetFactoryV3.createFleet(params);</div>
-<div class="line"><span class="lineno">  586</span>        </div>
-<div class="line"><span class="lineno">  587</span>        <span class="keywordflow">if</span> (fleet == <span class="keyword">null</span> || fleet.isEmpty()) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  588</span>        </div>
-<div class="line"><span class="lineno">  589</span>        <span class="keywordflow">if</span> (!fleet.getFaction().getCustomBoolean(Factions.CUSTOM_PATROLS_HAVE_NO_PATROL_MEMORY_KEY)) {</div>
-<div class="line"><span class="lineno">  590</span>            fleet.getMemoryWithoutUpdate().set(MemFlags.MEMORY_KEY_PATROL_FLEET, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  591</span>            <span class="keywordflow">if</span> (type == PatrolType.FAST || type == PatrolType.COMBAT) {</div>
-<div class="line"><span class="lineno">  592</span>                fleet.getMemoryWithoutUpdate().set(MemFlags.MEMORY_KEY_CUSTOMS_INSPECTOR, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  593</span>            }</div>
-<div class="line"><span class="lineno">  594</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (fleet.getFaction().getCustomBoolean(Factions.CUSTOM_PIRATE_BEHAVIOR)) {</div>
-<div class="line"><span class="lineno">  595</span>            fleet.getMemoryWithoutUpdate().set(MemFlags.MEMORY_KEY_PIRATE, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  596</span>            </div>
-<div class="line"><span class="lineno">  597</span>            <span class="comment">// hidden pather and pirate bases</span></div>
-<div class="line"><span class="lineno">  598</span>            <span class="comment">// make them raid so there&#39;s some consequence to just having a colony in a system with one of those</span></div>
-<div class="line"><span class="lineno">  599</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">market</a> != <span class="keyword">null</span> &amp;&amp; <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a0865559fcffb0d26a58e5986e4f88b97">isHidden</a>()) {</div>
-<div class="line"><span class="lineno">  600</span>                fleet.getMemoryWithoutUpdate().set(MemFlags.MEMORY_KEY_RAIDER, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  601</span>            }</div>
-<div class="line"><span class="lineno">  602</span>        }</div>
-<div class="line"><span class="lineno">  603</span>        </div>
-<div class="line"><span class="lineno">  604</span>        String postId = Ranks.POST_PATROL_COMMANDER;</div>
-<div class="line"><span class="lineno">  605</span>        String rankId = Ranks.SPACE_COMMANDER;</div>
-<div class="line"><span class="lineno">  606</span>        <span class="keywordflow">switch</span> (type) {</div>
-<div class="line"><span class="lineno">  607</span>        <span class="keywordflow">case</span> FAST:</div>
-<div class="line"><span class="lineno">  608</span>            rankId = Ranks.SPACE_LIEUTENANT;</div>
-<div class="line"><span class="lineno">  609</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  610</span>        <span class="keywordflow">case</span> COMBAT:</div>
-<div class="line"><span class="lineno">  611</span>            rankId = Ranks.SPACE_COMMANDER;</div>
-<div class="line"><span class="lineno">  612</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  613</span>        <span class="keywordflow">case</span> HEAVY:</div>
-<div class="line"><span class="lineno">  614</span>            rankId = Ranks.SPACE_CAPTAIN;</div>
-<div class="line"><span class="lineno">  615</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  616</span>        }</div>
-<div class="line"><span class="lineno">  617</span>        </div>
-<div class="line"><span class="lineno">  618</span>        fleet.getCommander().setPostId(postId);</div>
-<div class="line"><span class="lineno">  619</span>        fleet.getCommander().setRankId(rankId);</div>
-<div class="line"><span class="lineno">  620</span>        </div>
-<div class="line"><span class="lineno">  621</span>        <span class="keywordflow">return</span> fleet;</div>
-<div class="line"><span class="lineno">  622</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a0865559fcffb0d26a58e5986e4f88b97"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a0865559fcffb0d26a58e5986e4f88b97">com.fs.starfarer.api.campaign.econ.MarketAPI.isHidden</a></div><div class="ttdeci">boolean isHidden()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8f5f5368e152bc88cd26b10ecf4eb93b" name="a8f5f5368e152bc88cd26b10ecf4eb93b"></a>
@@ -1751,21 +1305,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#aede77df51d86914090129ad260db45e0">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/de8/MilitaryBase_8java_source.html#l00242">242</a> of file <a class="el" href="../../d6/de8/MilitaryBase_8java_source.html">MilitaryBase.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  242</span>                                        {</div>
-<div class="line"><span class="lineno">  243</span>        <span class="keywordtype">boolean</span> patrol = <a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a0e3b6afae5942698387ef7e1f55d1709">getSpec</a>().<a class="code hl_function" href="../../d2/d4c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1IndustrySpecAPI.html#a045e2ddd6dc1368c172d023f682a98ac">hasTag</a>(Industries.TAG_PATROL);</div>
-<div class="line"><span class="lineno">  244</span>        <span class="keywordtype">boolean</span> militaryBase = <a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a0e3b6afae5942698387ef7e1f55d1709">getSpec</a>().<a class="code hl_function" href="../../d2/d4c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1IndustrySpecAPI.html#a045e2ddd6dc1368c172d023f682a98ac">hasTag</a>(Industries.TAG_MILITARY);</div>
-<div class="line"><span class="lineno">  245</span>        <span class="keywordtype">boolean</span> command = <a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a0e3b6afae5942698387ef7e1f55d1709">getSpec</a>().<a class="code hl_function" href="../../d2/d4c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1IndustrySpecAPI.html#a045e2ddd6dc1368c172d023f682a98ac">hasTag</a>(Industries.TAG_COMMAND);</div>
-<div class="line"><span class="lineno">  246</span>        <span class="keywordtype">int</span> stabilityMod = 1;</div>
-<div class="line"><span class="lineno">  247</span>        <span class="keywordflow">if</span> (patrol) {</div>
-<div class="line"><span class="lineno">  248</span>            stabilityMod = 1;</div>
-<div class="line"><span class="lineno">  249</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (militaryBase) {</div>
-<div class="line"><span class="lineno">  250</span>            stabilityMod = 2;</div>
-<div class="line"><span class="lineno">  251</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (command) {</div>
-<div class="line"><span class="lineno">  252</span>            stabilityMod = 2;</div>
-<div class="line"><span class="lineno">  253</span>        }</div>
-<div class="line"><span class="lineno">  254</span>        <span class="keywordflow">return</span> stabilityMod;</div>
-<div class="line"><span class="lineno">  255</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a3d34cc91e0a4ef0a2ae7242b6960b950" name="a3d34cc91e0a4ef0a2ae7242b6960b950"></a>
@@ -1785,22 +1325,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/de8/MilitaryBase_8java_source.html#l00442">442</a> of file <a class="el" href="../../d6/de8/MilitaryBase_8java_source.html">MilitaryBase.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  442</span>                                              {</div>
-<div class="line"><span class="lineno">  443</span>        <span class="keywordtype">int</span> count = 0;</div>
-<div class="line"><span class="lineno">  444</span>        <span class="keywordflow">for</span> (RouteData data : RouteManager.getInstance().getRoutesForSource(<a class="code hl_function" href="../../df/d2f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#a4ba06ca0aaf6380859374b831fdb45c5">getRouteSourceId</a>())) {</div>
-<div class="line"><span class="lineno">  445</span>            <span class="keywordflow">if</span> (data.getCustom() instanceof PatrolFleetData) {</div>
-<div class="line"><span class="lineno">  446</span>                PatrolFleetData custom = (PatrolFleetData) data.getCustom();</div>
-<div class="line"><span class="lineno">  447</span>                <span class="keywordflow">for</span> (PatrolType type : types) {</div>
-<div class="line"><span class="lineno">  448</span>                    <span class="keywordflow">if</span> (type == custom.type) {</div>
-<div class="line"><span class="lineno">  449</span>                        count++;</div>
-<div class="line"><span class="lineno">  450</span>                        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  451</span>                    }</div>
-<div class="line"><span class="lineno">  452</span>                }</div>
-<div class="line"><span class="lineno">  453</span>            }</div>
-<div class="line"><span class="lineno">  454</span>        }</div>
-<div class="line"><span class="lineno">  455</span>        <span class="keywordflow">return</span> count;</div>
-<div class="line"><span class="lineno">  456</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a785a660a3b48fb6ae2c23951e5458b94" name="a785a660a3b48fb6ae2c23951e5458b94"></a>
@@ -1821,19 +1346,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a28115fd026b8ed1973b1de3eaa9bec02">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/de8/MilitaryBase_8java_source.html#l00284">284</a> of file <a class="el" href="../../d6/de8/MilitaryBase_8java_source.html">MilitaryBase.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  284</span>                                    {</div>
-<div class="line"><span class="lineno">  285</span>        <span class="keywordtype">boolean</span> military = Industries.MILITARYBASE.equals(<a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a4cfea1fb4cb6ac2d0159857c2610a2a8">getId</a>());</div>
-<div class="line"><span class="lineno">  286</span>        <span class="keywordflow">if</span> (military) {</div>
-<div class="line"><span class="lineno">  287</span>            PlanetAPI planet = <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#ad971f2c7cbd461a5e27f61536628a4fe">getPlanetEntity</a>();</div>
-<div class="line"><span class="lineno">  288</span>            <span class="keywordflow">if</span> (planet == <span class="keyword">null</span> || planet.isGasGiant()) {</div>
-<div class="line"><span class="lineno">  289</span>                <span class="keywordflow">return</span> Global.getSettings().getSpriteName(<span class="stringliteral">&quot;industry&quot;</span>, <span class="stringliteral">&quot;military_base_orbital&quot;</span>);</div>
-<div class="line"><span class="lineno">  290</span>            }</div>
-<div class="line"><span class="lineno">  291</span>        }</div>
-<div class="line"><span class="lineno">  292</span>        <span class="keywordflow">return</span> super.getCurrentImage();</div>
-<div class="line"><span class="lineno">  293</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry_html_a4cfea1fb4cb6ac2d0159857c2610a2a8"><div class="ttname"><a href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a4cfea1fb4cb6ac2d0159857c2610a2a8">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry.getId</a></div><div class="ttdeci">String getId()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8f/BaseIndustry_8java_source.html#l00691">BaseIndustry.java:691</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_ad971f2c7cbd461a5e27f61536628a4fe"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#ad971f2c7cbd461a5e27f61536628a4fe">com.fs.starfarer.api.campaign.econ.MarketAPI.getPlanetEntity</a></div><div class="ttdeci">PlanetAPI getPlanetEntity()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab6ba1ed9637d05b7b149169bc8d5ea9b" name="ab6ba1ed9637d05b7b149169bc8d5ea9b"></a>
@@ -1853,20 +1366,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/de8/MilitaryBase_8java_source.html#l00458">458</a> of file <a class="el" href="../../d6/de8/MilitaryBase_8java_source.html">MilitaryBase.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  458</span>                                              {</div>
-<div class="line"><span class="lineno">  459</span>        <span class="keywordflow">if</span> (type == PatrolType.FAST) {</div>
-<div class="line"><span class="lineno">  460</span>            <span class="keywordflow">return</span> (<span class="keywordtype">int</span>) <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a70323dd35f954c1be49bf2e8c43c9284">getStats</a>().<a class="code hl_function" href="../../d0/d6d/interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1MutableMarketStatsAPI.html#a07a35dc173333e48b78a68c47950280d">getDynamic</a>().<a class="code hl_function" href="../../db/dcf/interfacecom_1_1fs_1_1starfarer_1_1api_1_1util_1_1DynamicStatsAPI.html#a873b747b8989616c2da542355d167c79">getMod</a>(Stats.PATROL_NUM_LIGHT_MOD).<a class="code hl_function" href="../../dc/d19/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus.html#af16110c6c18625c9f384078ce824bdda">computeEffective</a>(0);</div>
-<div class="line"><span class="lineno">  461</span>        }</div>
-<div class="line"><span class="lineno">  462</span>        <span class="keywordflow">if</span> (type == PatrolType.COMBAT) {</div>
-<div class="line"><span class="lineno">  463</span>            <span class="keywordflow">return</span> (<span class="keywordtype">int</span>) <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a70323dd35f954c1be49bf2e8c43c9284">getStats</a>().<a class="code hl_function" href="../../d0/d6d/interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1MutableMarketStatsAPI.html#a07a35dc173333e48b78a68c47950280d">getDynamic</a>().<a class="code hl_function" href="../../db/dcf/interfacecom_1_1fs_1_1starfarer_1_1api_1_1util_1_1DynamicStatsAPI.html#a873b747b8989616c2da542355d167c79">getMod</a>(Stats.PATROL_NUM_MEDIUM_MOD).<a class="code hl_function" href="../../dc/d19/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus.html#af16110c6c18625c9f384078ce824bdda">computeEffective</a>(0);</div>
-<div class="line"><span class="lineno">  464</span>        }</div>
-<div class="line"><span class="lineno">  465</span>        <span class="keywordflow">if</span> (type == PatrolType.HEAVY) {</div>
-<div class="line"><span class="lineno">  466</span>            <span class="keywordflow">return</span> (<span class="keywordtype">int</span>) <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a70323dd35f954c1be49bf2e8c43c9284">getStats</a>().<a class="code hl_function" href="../../d0/d6d/interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1MutableMarketStatsAPI.html#a07a35dc173333e48b78a68c47950280d">getDynamic</a>().<a class="code hl_function" href="../../db/dcf/interfacecom_1_1fs_1_1starfarer_1_1api_1_1util_1_1DynamicStatsAPI.html#a873b747b8989616c2da542355d167c79">getMod</a>(Stats.PATROL_NUM_HEAVY_MOD).<a class="code hl_function" href="../../dc/d19/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus.html#af16110c6c18625c9f384078ce824bdda">computeEffective</a>(0);</div>
-<div class="line"><span class="lineno">  467</span>        }</div>
-<div class="line"><span class="lineno">  468</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  469</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus_html_af16110c6c18625c9f384078ce824bdda"><div class="ttname"><a href="../../dc/d19/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus.html#af16110c6c18625c9f384078ce824bdda">com.fs.starfarer.api.combat.StatBonus.computeEffective</a></div><div class="ttdeci">float computeEffective(float baseValue)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d6c/StatBonus_8java_source.html#l00250">StatBonus.java:250</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5360f4276a2ee456eca213a665067b81" name="a5360f4276a2ee456eca213a665067b81"></a>
@@ -1887,17 +1387,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#ae7fa4bd5c6ff749aa7a2fae48988657d">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/de8/MilitaryBase_8java_source.html#l00257">257</a> of file <a class="el" href="../../d6/de8/MilitaryBase_8java_source.html">MilitaryBase.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  257</span>                                       {</div>
-<div class="line"><span class="lineno">  258</span><span class="comment">//      boolean patrol = Industries.PATROLHQ.equals(getId());</span></div>
-<div class="line"><span class="lineno">  259</span><span class="comment">//      if (patrol) return getSpec().getName();</span></div>
-<div class="line"><span class="lineno">  260</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a0e3b6afae5942698387ef7e1f55d1709">getSpec</a>().getName().contains(<span class="stringliteral">&quot;HQ&quot;</span>)) {</div>
-<div class="line"><span class="lineno">  261</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a0e3b6afae5942698387ef7e1f55d1709">getSpec</a>().<a class="code hl_function" href="../../d2/d4c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1IndustrySpecAPI.html#a029cdd950dd03bf86ccdc06b6f3a4f15">getName</a>();</div>
-<div class="line"><span class="lineno">  262</span>        }</div>
-<div class="line"><span class="lineno">  263</span>        </div>
-<div class="line"><span class="lineno">  264</span>        <span class="keywordflow">return</span> Misc.ucFirst(<a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a0e3b6afae5942698387ef7e1f55d1709">getSpec</a>().getName().toLowerCase());</div>
-<div class="line"><span class="lineno">  265</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1IndustrySpecAPI_html_a029cdd950dd03bf86ccdc06b6f3a4f15"><div class="ttname"><a href="../../d2/d4c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1IndustrySpecAPI.html#a029cdd950dd03bf86ccdc06b6f3a4f15">com.fs.starfarer.api.loading.IndustrySpecAPI.getName</a></div><div class="ttdeci">String getName()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac189e6f7f303db6c0859d013397fc079" name="ac189e6f7f303db6c0859d013397fc079"></a>
@@ -1935,22 +1425,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/de8/MilitaryBase_8java_source.html#l00499">499</a> of file <a class="el" href="../../d6/de8/MilitaryBase_8java_source.html">MilitaryBase.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  499</span>                                                                        {</div>
-<div class="line"><span class="lineno">  500</span>        <span class="keywordtype">float</span> combat = 0;</div>
-<div class="line"><span class="lineno">  501</span>        <span class="keywordflow">switch</span> (type) {</div>
-<div class="line"><span class="lineno">  502</span>        <span class="keywordflow">case</span> FAST:</div>
-<div class="line"><span class="lineno">  503</span>            combat = Math.round(3f + (<span class="keywordtype">float</span>) random.nextFloat() * 2f) * 5f;</div>
-<div class="line"><span class="lineno">  504</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  505</span>        <span class="keywordflow">case</span> COMBAT:</div>
-<div class="line"><span class="lineno">  506</span>            combat = Math.round(6f + (<span class="keywordtype">float</span>) random.nextFloat() * 3f) * 5f;</div>
-<div class="line"><span class="lineno">  507</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  508</span>        <span class="keywordflow">case</span> HEAVY:</div>
-<div class="line"><span class="lineno">  509</span>            combat = Math.round(10f + (<span class="keywordtype">float</span>) random.nextFloat() * 5f) * 5f;</div>
-<div class="line"><span class="lineno">  510</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  511</span>        }</div>
-<div class="line"><span class="lineno">  512</span>        <span class="keywordflow">return</span> (<span class="keywordtype">int</span>) Math.round(combat);</div>
-<div class="line"><span class="lineno">  513</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a4ba06ca0aaf6380859374b831fdb45c5" name="a4ba06ca0aaf6380859374b831fdb45c5"></a>
@@ -1969,12 +1444,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/de8/MilitaryBase_8java_source.html#l00471">471</a> of file <a class="el" href="../../d6/de8/MilitaryBase_8java_source.html">MilitaryBase.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  471</span>                                     {</div>
-<div class="line"><span class="lineno">  472</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a47a363626212a0c886d343f9df12f9ee">getMarket</a>().<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a1c2b30198b83f80a06c4943c81c203d5">getId</a>() + <span class="stringliteral">&quot;_&quot;</span> + <span class="stringliteral">&quot;military&quot;</span>;</div>
-<div class="line"><span class="lineno">  473</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry_html_a47a363626212a0c886d343f9df12f9ee"><div class="ttname"><a href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a47a363626212a0c886d343f9df12f9ee">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry.getMarket</a></div><div class="ttdeci">MarketAPI getMarket()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8f/BaseIndustry_8java_source.html#l00765">BaseIndustry.java:765</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a1c2b30198b83f80a06c4943c81c203d5"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a1c2b30198b83f80a06c4943c81c203d5">com.fs.starfarer.api.campaign.econ.MarketAPI.getId</a></div><div class="ttdeci">String getId()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a3b8cc5c8bfe4512cd310dbf5ac42b5f5" name="a3b8cc5c8bfe4512cd310dbf5ac42b5f5"></a>
@@ -2003,15 +1473,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#ab5d5198f580f0b7815ad7452b29d5c41">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/de8/MilitaryBase_8java_source.html#l00273">273</a> of file <a class="el" href="../../d6/de8/MilitaryBase_8java_source.html">MilitaryBase.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  273</span>                                                                   {</div>
-<div class="line"><span class="lineno">  274</span>        <span class="keywordtype">boolean</span> patrol = <a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a0e3b6afae5942698387ef7e1f55d1709">getSpec</a>().<a class="code hl_function" href="../../d2/d4c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1IndustrySpecAPI.html#a045e2ddd6dc1368c172d023f682a98ac">hasTag</a>(Industries.TAG_PATROL);</div>
-<div class="line"><span class="lineno">  275</span>        <span class="keywordflow">if</span> (patrol) {</div>
-<div class="line"><span class="lineno">  276</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#af9ae61ae0ee27d39832661c87a9d1567">getMaxDeficit</a>(Commodities.SUPPLIES, Commodities.FUEL, Commodities.SHIPS);</div>
-<div class="line"><span class="lineno">  277</span>        }</div>
-<div class="line"><span class="lineno">  278</span>        <span class="comment">//return getMaxDeficit(Commodities.SUPPLIES, Commodities.FUEL, Commodities.SHIPS, Commodities.HAND_WEAPONS);</span></div>
-<div class="line"><span class="lineno">  279</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#af9ae61ae0ee27d39832661c87a9d1567">getMaxDeficit</a>(Commodities.SUPPLIES, Commodities.FUEL, Commodities.SHIPS);</div>
-<div class="line"><span class="lineno">  280</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a6432662333834ae7744c168958f48831" name="a6432662333834ae7744c168958f48831"></a>
@@ -2032,10 +1494,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a72d87df6d16cc07579bf6a1043bcd0cb">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/de8/MilitaryBase_8java_source.html#l00317">317</a> of file <a class="el" href="../../d6/de8/MilitaryBase_8java_source.html">MilitaryBase.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  317</span>                                         {</div>
-<div class="line"><span class="lineno">  318</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Requires a functional spaceport&quot;</span>;</div>
-<div class="line"><span class="lineno">  319</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa03507dbfb4c2eab479fe6bd493085d6" name="aa03507dbfb4c2eab479fe6bd493085d6"></a>
@@ -2075,10 +1534,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a7a958826403867d88cdf08ef5257dfe2">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/de8/MilitaryBase_8java_source.html#l00223">223</a> of file <a class="el" href="../../d6/de8/MilitaryBase_8java_source.html">MilitaryBase.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  223</span>                                                                                        {</div>
-<div class="line"><span class="lineno">  224</span>        <span class="keywordflow">return</span> mode != IndustryTooltipMode.NORMAL || <a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a511613f792cac2306ff2ea5ba6be8407">isFunctional</a>();</div>
-<div class="line"><span class="lineno">  225</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a1c6c556ad274eda1c3db374ee0b34fca" name="a1c6c556ad274eda1c3db374ee0b34fca"></a>
@@ -2099,20 +1555,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a5572288890e72ad03aa2e70bdfb7e639">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/de8/MilitaryBase_8java_source.html#l00304">304</a> of file <a class="el" href="../../d6/de8/MilitaryBase_8java_source.html">MilitaryBase.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  304</span>                                        {</div>
-<div class="line"><span class="lineno">  305</span>        <span class="keywordtype">boolean</span> canBuild = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  306</span>        <span class="keywordflow">for</span> (Industry ind : <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#ac5acce3843ed0b9764a1f79e69491970">getIndustries</a>()) {</div>
-<div class="line"><span class="lineno">  307</span>            <span class="keywordflow">if</span> (ind == <span class="keyword">this</span>) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  308</span>            <span class="keywordflow">if</span> (!ind.isFunctional()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  309</span>            <span class="keywordflow">if</span> (ind.getSpec().hasTag(Industries.TAG_SPACEPORT)) {</div>
-<div class="line"><span class="lineno">  310</span>                canBuild = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  311</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  312</span>            }</div>
-<div class="line"><span class="lineno">  313</span>        }</div>
-<div class="line"><span class="lineno">  314</span>        <span class="keywordflow">return</span> canBuild;</div>
-<div class="line"><span class="lineno">  315</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_ac5acce3843ed0b9764a1f79e69491970"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#ac5acce3843ed0b9764a1f79e69491970">com.fs.starfarer.api.campaign.econ.MarketAPI.getIndustries</a></div><div class="ttdeci">List&lt; Industry &gt; getIndustries()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a69e303eaa0f9a16773f18baf83ce2df3" name="a69e303eaa0f9a16773f18baf83ce2df3"></a>
@@ -2134,10 +1577,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a0bcf79f349b88c15db49cc050c72e13f">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/de8/MilitaryBase_8java_source.html#l00296">296</a> of file <a class="el" href="../../d6/de8/MilitaryBase_8java_source.html">MilitaryBase.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  296</span>                                                           {</div>
-<div class="line"><span class="lineno">  297</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  298</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a883f4bf417ca117f3b57d61f62e64bf2" name="a883f4bf417ca117f3b57d61f62e64bf2"></a>
@@ -2159,10 +1599,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#ad90cacebe332851efe2633a01f507149">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/de8/MilitaryBase_8java_source.html#l00300">300</a> of file <a class="el" href="../../d6/de8/MilitaryBase_8java_source.html">MilitaryBase.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  300</span>                                                           {</div>
-<div class="line"><span class="lineno">  301</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  302</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aaeb569731da94c2fa1b8abc4a8de1646" name="aaeb569731da94c2fa1b8abc4a8de1646"></a>
@@ -2182,12 +1619,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/de8/MilitaryBase_8java_source.html#l00428">428</a> of file <a class="el" href="../../d6/de8/MilitaryBase_8java_source.html">MilitaryBase.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  428</span>                                                                        {</div>
-<div class="line"><span class="lineno">  429</span><span class="comment">//      if (route.getActiveFleet() == null) return;</span></div>
-<div class="line"><span class="lineno">  430</span><span class="comment">//      PatrolFleetData custom = (PatrolFleetData) route.getCustom();</span></div>
-<div class="line"><span class="lineno">  431</span><span class="comment">//      custom.despawnFP = route.getActiveFleet().getFleetPoints();</span></div>
-<div class="line"><span class="lineno">  432</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a43247a5be956a474f018a767ce4eed91" name="a43247a5be956a474f018a767ce4eed91"></a>
@@ -2233,10 +1665,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d5/d7b/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1FleetEventListener.html#a6dff203922d9929930959967dfddb927">com.fs.starfarer.api.campaign.listeners.FleetEventListener</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/de8/MilitaryBase_8java_source.html#l00480">480</a> of file <a class="el" href="../../d6/de8/MilitaryBase_8java_source.html">MilitaryBase.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  480</span>                                                                                                               {</div>
-<div class="line"><span class="lineno">  481</span>        </div>
-<div class="line"><span class="lineno">  482</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a4e59e6d2c0901f13945d65043334a8de" name="a4e59e6d2c0901f13945d65043334a8de"></a>
@@ -2274,21 +1703,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d5/d7b/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1FleetEventListener.html#a80bf021b96aa1c0f11ee40000e5d3666">com.fs.starfarer.api.campaign.listeners.FleetEventListener</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/de8/MilitaryBase_8java_source.html#l00484">484</a> of file <a class="el" href="../../d6/de8/MilitaryBase_8java_source.html">MilitaryBase.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  484</span>                                                                                                                {</div>
-<div class="line"><span class="lineno">  485</span>        <span class="keywordflow">if</span> (!<a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a511613f792cac2306ff2ea5ba6be8407">isFunctional</a>()) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  486</span>        </div>
-<div class="line"><span class="lineno">  487</span>        <span class="keywordflow">if</span> (reason == FleetDespawnReason.REACHED_DESTINATION) {</div>
-<div class="line"><span class="lineno">  488</span>            RouteData route = RouteManager.getInstance().getRoute(<a class="code hl_function" href="../../df/d2f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#a4ba06ca0aaf6380859374b831fdb45c5">getRouteSourceId</a>(), fleet);</div>
-<div class="line"><span class="lineno">  489</span>            <span class="keywordflow">if</span> (route.getCustom() instanceof PatrolFleetData) {</div>
-<div class="line"><span class="lineno">  490</span>                PatrolFleetData custom = (PatrolFleetData) route.getCustom();</div>
-<div class="line"><span class="lineno">  491</span>                <span class="keywordflow">if</span> (custom.spawnFP &gt; 0) {</div>
-<div class="line"><span class="lineno">  492</span>                    <span class="keywordtype">float</span> fraction  = fleet.getFleetPoints() / custom.spawnFP;</div>
-<div class="line"><span class="lineno">  493</span>                    <a class="code hl_variable" href="../../df/d2f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#a790b1fdeff9d77bb014d07af66e7ef08">returningPatrolValue</a> += fraction;</div>
-<div class="line"><span class="lineno">  494</span>                }</div>
-<div class="line"><span class="lineno">  495</span>            }</div>
-<div class="line"><span class="lineno">  496</span>        }</div>
-<div class="line"><span class="lineno">  497</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a31365f37e9d6896956f3ce2701b450ed" name="a31365f37e9d6896956f3ce2701b450ed"></a>
@@ -2308,10 +1723,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/de8/MilitaryBase_8java_source.html#l00475">475</a> of file <a class="el" href="../../d6/de8/MilitaryBase_8java_source.html">MilitaryBase.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  475</span>                                                                     {</div>
-<div class="line"><span class="lineno">  476</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  477</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a669499a48977150897ebc2d9209dd870" name="a669499a48977150897ebc2d9209dd870"></a>
@@ -2331,12 +1743,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/de8/MilitaryBase_8java_source.html#l00434">434</a> of file <a class="el" href="../../d6/de8/MilitaryBase_8java_source.html">MilitaryBase.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  434</span>                                                 {</div>
-<div class="line"><span class="lineno">  435</span><span class="comment">//      PatrolFleetData custom = (PatrolFleetData) route.getCustom();</span></div>
-<div class="line"><span class="lineno">  438</span><span class="comment"></span><span class="comment">//      return route.getActiveFleet() != null &amp;&amp; route.getActiveFleet().getFleetPoints() &gt;= custom.spawnFP * 0.6f;</span></div>
-<div class="line"><span class="lineno">  439</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  440</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae6ff9a680cc56486d441e4f1b8ca72af" name="ae6ff9a680cc56486d441e4f1b8ca72af"></a>
@@ -2356,43 +1763,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/de8/MilitaryBase_8java_source.html#l00515">515</a> of file <a class="el" href="../../d6/de8/MilitaryBase_8java_source.html">MilitaryBase.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  515</span>                                                        {</div>
-<div class="line"><span class="lineno">  516</span>        </div>
-<div class="line"><span class="lineno">  517</span>        PatrolFleetData custom = (PatrolFleetData) route.getCustom();</div>
-<div class="line"><span class="lineno">  518</span>        PatrolType type = custom.type;</div>
-<div class="line"><span class="lineno">  519</span>        </div>
-<div class="line"><span class="lineno">  520</span>        Random random = route.getRandom();</div>
-<div class="line"><span class="lineno">  521</span>        </div>
-<div class="line"><span class="lineno">  522</span>        CampaignFleetAPI fleet = <a class="code hl_function" href="../../df/d2f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#a3565c9b3eab8a32b0f0de9e223d45f1e">createPatrol</a>(type, <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#aa132dbebb3e9e38ad71a576a4ea5ac9b">getFactionId</a>(), route, <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">market</a>, <span class="keyword">null</span>, random);</div>
-<div class="line"><span class="lineno">  523</span>        </div>
-<div class="line"><span class="lineno">  524</span>        <span class="keywordflow">if</span> (fleet == <span class="keyword">null</span> || fleet.isEmpty()) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  525</span>        </div>
-<div class="line"><span class="lineno">  526</span>        fleet.addEventListener(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  527</span>        </div>
-<div class="line"><span class="lineno">  528</span>        <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a12b6abba98638458d9e15e716da4c615">getContainingLocation</a>().<a class="code hl_function" href="../../d2/d2c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI.html#aa74c923b52bd9dd0adf14cc394f49b60">addEntity</a>(fleet);</div>
-<div class="line"><span class="lineno">  529</span>        fleet.setFacing((<span class="keywordtype">float</span>) Math.random() * 360f);</div>
-<div class="line"><span class="lineno">  530</span>        <span class="comment">// this will get overridden by the patrol assignment AI, depending on route-time elapsed etc</span></div>
-<div class="line"><span class="lineno">  531</span>        fleet.setLocation(<a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af1677b531fa1a657e17b732868c7b953">getPrimaryEntity</a>().<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#aedf9cd58593dcb6afd4d488bb017eafc">getLocation</a>().x, <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af1677b531fa1a657e17b732868c7b953">getPrimaryEntity</a>().<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#aedf9cd58593dcb6afd4d488bb017eafc">getLocation</a>().y);</div>
-<div class="line"><span class="lineno">  532</span>        </div>
-<div class="line"><span class="lineno">  533</span>        fleet.addScript(<span class="keyword">new</span> PatrolAssignmentAIV4(fleet, route));</div>
-<div class="line"><span class="lineno">  534</span>        </div>
-<div class="line"><span class="lineno">  535</span>        fleet.getMemoryWithoutUpdate().set(MemFlags.FLEET_IGNORES_OTHER_FLEETS, <span class="keyword">true</span>, 0.3f);</div>
-<div class="line"><span class="lineno">  536</span>        </div>
-<div class="line"><span class="lineno">  537</span>        <span class="comment">//market.getContainingLocation().addEntity(fleet);</span></div>
-<div class="line"><span class="lineno">  538</span>        <span class="comment">//fleet.setLocation(market.getPrimaryEntity().getLocation().x, market.getPrimaryEntity().getLocation().y);</span></div>
-<div class="line"><span class="lineno">  539</span>        </div>
-<div class="line"><span class="lineno">  540</span>        <span class="keywordflow">if</span> (custom.spawnFP &lt;= 0) {</div>
-<div class="line"><span class="lineno">  541</span>            custom.spawnFP = fleet.getFleetPoints();</div>
-<div class="line"><span class="lineno">  542</span>        }</div>
-<div class="line"><span class="lineno">  543</span>        </div>
-<div class="line"><span class="lineno">  544</span>        <span class="keywordflow">return</span> fleet;</div>
-<div class="line"><span class="lineno">  545</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase_html_a3565c9b3eab8a32b0f0de9e223d45f1e"><div class="ttname"><a href="../../df/d2f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#a3565c9b3eab8a32b0f0de9e223d45f1e">com.fs.starfarer.api.impl.campaign.econ.impl.MilitaryBase.createPatrol</a></div><div class="ttdeci">static CampaignFleetAPI createPatrol(PatrolType type, String factionId, RouteData route, MarketAPI market, Vector2f locInHyper, Random random)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/de8/MilitaryBase_8java_source.html#l00547">MilitaryBase.java:547</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI_html_aa74c923b52bd9dd0adf14cc394f49b60"><div class="ttname"><a href="../../d2/d2c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI.html#aa74c923b52bd9dd0adf14cc394f49b60">com.fs.starfarer.api.campaign.LocationAPI.addEntity</a></div><div class="ttdeci">void addEntity(SectorEntityToken entity)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_aedf9cd58593dcb6afd4d488bb017eafc"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#aedf9cd58593dcb6afd4d488bb017eafc">com.fs.starfarer.api.campaign.SectorEntityToken.getLocation</a></div><div class="ttdeci">Vector2f getLocation()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a12b6abba98638458d9e15e716da4c615"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a12b6abba98638458d9e15e716da4c615">com.fs.starfarer.api.campaign.econ.MarketAPI.getContainingLocation</a></div><div class="ttdeci">LocationAPI getContainingLocation()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_aa132dbebb3e9e38ad71a576a4ea5ac9b"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#aa132dbebb3e9e38ad71a576a4ea5ac9b">com.fs.starfarer.api.campaign.econ.MarketAPI.getFactionId</a></div><div class="ttdeci">String getFactionId()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a576e51838086aa315f26e891e0a7b189" name="a576e51838086aa315f26e891e0a7b189"></a>
@@ -2413,28 +1784,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#af3f1bd9a049574f633533ece2a744e0c">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/de8/MilitaryBase_8java_source.html#l00202">202</a> of file <a class="el" href="../../d6/de8/MilitaryBase_8java_source.html">MilitaryBase.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  202</span>                          {</div>
-<div class="line"><span class="lineno">  203</span>        super.unapply();</div>
-<div class="line"><span class="lineno">  204</span>        </div>
-<div class="line"><span class="lineno">  205</span>        MemoryAPI memory = <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a71f3d463f3bf8bdd2cfa76870ee63424">getMemoryWithoutUpdate</a>();</div>
-<div class="line"><span class="lineno">  206</span>        Misc.setFlagWithReason(memory, MemFlags.MARKET_PATROL, <a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a33413101f7f7479cfe98427bc31ec114">getModId</a>(), <span class="keyword">false</span>, -1);</div>
-<div class="line"><span class="lineno">  207</span>        Misc.setFlagWithReason(memory, MemFlags.MARKET_MILITARY, <a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a33413101f7f7479cfe98427bc31ec114">getModId</a>(), <span class="keyword">false</span>, -1);</div>
-<div class="line"><span class="lineno">  208</span>        </div>
-<div class="line"><span class="lineno">  209</span>        <a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a7f3e4f8aad0b9b14fc9972848a467a56">unmodifyStabilityWithBaseMod</a>();</div>
-<div class="line"><span class="lineno">  210</span>        </div>
-<div class="line"><span class="lineno">  211</span>        <span class="comment">//market.getStats().getDynamic().getStat(Stats.COMBAT_FLEET_SPAWN_RATE_MULT).unmodifyMult(getModId());</span></div>
-<div class="line"><span class="lineno">  212</span>        <span class="comment">//market.getStats().getDynamic().getMod(Stats.GROUND_DEFENSES_MULT).unmodifyFlat(getModId());</span></div>
-<div class="line"><span class="lineno">  213</span>        </div>
-<div class="line"><span class="lineno">  214</span>        <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a70323dd35f954c1be49bf2e8c43c9284">getStats</a>().<a class="code hl_function" href="../../d0/d6d/interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1MutableMarketStatsAPI.html#a07a35dc173333e48b78a68c47950280d">getDynamic</a>().<a class="code hl_function" href="../../db/dcf/interfacecom_1_1fs_1_1starfarer_1_1api_1_1util_1_1DynamicStatsAPI.html#a873b747b8989616c2da542355d167c79">getMod</a>(Stats.PATROL_NUM_LIGHT_MOD).<a class="code hl_function" href="../../dc/d19/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus.html#afb8cbd56006de48758f0081fc6b95bea">unmodifyFlat</a>(<a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a33413101f7f7479cfe98427bc31ec114">getModId</a>());</div>
-<div class="line"><span class="lineno">  215</span>        <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a70323dd35f954c1be49bf2e8c43c9284">getStats</a>().<a class="code hl_function" href="../../d0/d6d/interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1MutableMarketStatsAPI.html#a07a35dc173333e48b78a68c47950280d">getDynamic</a>().<a class="code hl_function" href="../../db/dcf/interfacecom_1_1fs_1_1starfarer_1_1api_1_1util_1_1DynamicStatsAPI.html#a873b747b8989616c2da542355d167c79">getMod</a>(Stats.PATROL_NUM_MEDIUM_MOD).<a class="code hl_function" href="../../dc/d19/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus.html#afb8cbd56006de48758f0081fc6b95bea">unmodifyFlat</a>(<a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a33413101f7f7479cfe98427bc31ec114">getModId</a>());</div>
-<div class="line"><span class="lineno">  216</span>        <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a70323dd35f954c1be49bf2e8c43c9284">getStats</a>().<a class="code hl_function" href="../../d0/d6d/interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1MutableMarketStatsAPI.html#a07a35dc173333e48b78a68c47950280d">getDynamic</a>().<a class="code hl_function" href="../../db/dcf/interfacecom_1_1fs_1_1starfarer_1_1api_1_1util_1_1DynamicStatsAPI.html#a873b747b8989616c2da542355d167c79">getMod</a>(Stats.PATROL_NUM_HEAVY_MOD).<a class="code hl_function" href="../../dc/d19/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus.html#afb8cbd56006de48758f0081fc6b95bea">unmodifyFlat</a>(<a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a33413101f7f7479cfe98427bc31ec114">getModId</a>());</div>
-<div class="line"><span class="lineno">  217</span>        </div>
-<div class="line"><span class="lineno">  218</span>        <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a70323dd35f954c1be49bf2e8c43c9284">getStats</a>().<a class="code hl_function" href="../../d0/d6d/interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1MutableMarketStatsAPI.html#a07a35dc173333e48b78a68c47950280d">getDynamic</a>().<a class="code hl_function" href="../../db/dcf/interfacecom_1_1fs_1_1starfarer_1_1api_1_1util_1_1DynamicStatsAPI.html#a873b747b8989616c2da542355d167c79">getMod</a>(Stats.GROUND_DEFENSES_MOD).<a class="code hl_function" href="../../dc/d19/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus.html#a9bf42690fee3b977ec4836ddf3da7388">unmodifyMult</a>(<a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a33413101f7f7479cfe98427bc31ec114">getModId</a>());</div>
-<div class="line"><span class="lineno">  219</span>        </div>
-<div class="line"><span class="lineno">  220</span>        <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a3a6a42045fe8b527252be206b4d9f27c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a70323dd35f954c1be49bf2e8c43c9284">getStats</a>().<a class="code hl_function" href="../../d0/d6d/interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1MutableMarketStatsAPI.html#a07a35dc173333e48b78a68c47950280d">getDynamic</a>().<a class="code hl_function" href="../../db/dcf/interfacecom_1_1fs_1_1starfarer_1_1api_1_1util_1_1DynamicStatsAPI.html#a873b747b8989616c2da542355d167c79">getMod</a>(Stats.OFFICER_PROB_MOD).<a class="code hl_function" href="../../dc/d19/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus.html#afb8cbd56006de48758f0081fc6b95bea">unmodifyFlat</a>(<a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a33413101f7f7479cfe98427bc31ec114">getModId</a>(0));</div>
-<div class="line"><span class="lineno">  221</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry_html_a7f3e4f8aad0b9b14fc9972848a467a56"><div class="ttname"><a href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a7f3e4f8aad0b9b14fc9972848a467a56">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry.unmodifyStabilityWithBaseMod</a></div><div class="ttdeci">void unmodifyStabilityWithBaseMod()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8f/BaseIndustry_8java_source.html#l01692">BaseIndustry.java:1692</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a78bc57516fbd9898595938b79ef7b17f" name="a78bc57516fbd9898595938b79ef7b17f"></a>
@@ -2464,12 +1814,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a439aa7bf5dd7b81480e5379cc9fc47a3">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/de8/MilitaryBase_8java_source.html#l00336">336</a> of file <a class="el" href="../../d6/de8/MilitaryBase_8java_source.html">MilitaryBase.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  336</span>                                                      {</div>
-<div class="line"><span class="lineno">  337</span>        super.upgradeFinished(previous);</div>
-<div class="line"><span class="lineno">  338</span>        </div>
-<div class="line"><span class="lineno">  339</span>        <a class="code hl_variable" href="../../df/d2f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#aea6bf9dd362bce8747d10f96f370fcfb">tracker</a>.<a class="code hl_function" href="../../da/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html#a27094391cb3987033d1189ff0e93a6fb">forceIntervalElapsed</a>();</div>
-<div class="line"><span class="lineno">  340</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -525,12 +526,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d4c/GateIntel_8java_source.html#l00022">22</a> of file <a class="el" href="../../d3/d4c/GateIntel_8java_source.html">GateIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   22</span>                                             {</div>
-<div class="line"><span class="lineno">   23</span>        this.gate = <a class="code hl_variable" href="../../db/da1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1GateIntel.html#af16ec3a6a31270a41da3f1bde7cae417">gate</a>;</div>
-<div class="line"><span class="lineno">   24</span>        <span class="comment">//Global.getSector().getIntelManager().addIntel(this);</span></div>
-<div class="line"><span class="lineno">   25</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1GateIntel_html_af16ec3a6a31270a41da3f1bde7cae417"><div class="ttname"><a href="../../db/da1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1GateIntel.html#af16ec3a6a31270a41da3f1bde7cae417">com.fs.starfarer.api.impl.campaign.intel.misc.GateIntel.gate</a></div><div class="ttdeci">SectorEntityToken gate</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d4c/GateIntel_8java_source.html#l00020">GateIntel.java:20</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -571,40 +567,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a78b9181ed44f28dac2b1167e1ce4395c">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d4c/GateIntel_8java_source.html#l00027">27</a> of file <a class="el" href="../../d3/d4c/GateIntel_8java_source.html">GateIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   27</span>                                                                            {</div>
-<div class="line"><span class="lineno">   28</span>        </div>
-<div class="line"><span class="lineno">   29</span>        <span class="keywordtype">boolean</span> active = GateEntityPlugin.isActive(<a class="code hl_variable" href="../../db/da1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1GateIntel.html#af16ec3a6a31270a41da3f1bde7cae417">gate</a>);</div>
-<div class="line"><span class="lineno">   30</span>        </div>
-<div class="line"><span class="lineno">   31</span>        Color h = Misc.getHighlightColor();</div>
-<div class="line"><span class="lineno">   32</span>        Color g = Misc.getGrayColor();</div>
-<div class="line"><span class="lineno">   33</span>        <span class="keywordtype">float</span> pad = 3f;</div>
-<div class="line"><span class="lineno">   34</span>        <span class="keywordtype">float</span> opad = 10f;</div>
-<div class="line"><span class="lineno">   35</span>        </div>
-<div class="line"><span class="lineno">   36</span>        <span class="keywordtype">float</span> initPad = pad;</div>
-<div class="line"><span class="lineno">   37</span>        <span class="keywordflow">if</span> (mode == ListInfoMode.IN_DESC) initPad = opad;</div>
-<div class="line"><span class="lineno">   38</span>        </div>
-<div class="line"><span class="lineno">   39</span>        Color tc = <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a9e443024a6224a5c170e5d1476514954">getBulletColorForMode</a>(mode);</div>
-<div class="line"><span class="lineno">   40</span>        </div>
-<div class="line"><span class="lineno">   41</span>        <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#adfa808a345b432134c9fb11227edc7df">bullet</a>(info);</div>
-<div class="line"><span class="lineno">   42</span>        <span class="keywordtype">boolean</span> isUpdate = <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a9ba572be19912ec6b816dc7b69352660">getListInfoParam</a>() != <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   43</span>        </div>
-<div class="line"><span class="lineno">   44</span><span class="comment">//      if (mode == ListInfoMode.INTEL) {</span></div>
-<div class="line"><span class="lineno">   45</span><span class="comment">//          info.addPara(&quot;Located in the &quot; + gate.getContainingLocation().getNameWithLowercaseTypeShort(), tc, initPad);</span></div>
-<div class="line"><span class="lineno">   46</span><span class="comment">//          initPad = 0f;</span></div>
-<div class="line"><span class="lineno">   47</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">   48</span>        </div>
-<div class="line"><span class="lineno">   49</span>        <span class="keywordflow">if</span> (GateEntityPlugin.isScanned(<a class="code hl_variable" href="../../db/da1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1GateIntel.html#af16ec3a6a31270a41da3f1bde7cae417">gate</a>)) {</div>
-<div class="line"><span class="lineno">   50</span>            info.addPara(<span class="stringliteral">&quot;Scanned&quot;</span>, tc, initPad);</div>
-<div class="line"><span class="lineno">   51</span>            initPad = 0f;</div>
-<div class="line"><span class="lineno">   52</span>        }</div>
-<div class="line"><span class="lineno">   53</span>        </div>
-<div class="line"><span class="lineno">   54</span>        <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a3e2fa48accd40a868889ad2f877bc578">unindent</a>(info);</div>
-<div class="line"><span class="lineno">   55</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_a3e2fa48accd40a868889ad2f877bc578"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a3e2fa48accd40a868889ad2f877bc578">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.unindent</a></div><div class="ttdeci">void unindent(TooltipMakerAPI info)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00570">BaseIntelPlugin.java:570</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_a9ba572be19912ec6b816dc7b69352660"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a9ba572be19912ec6b816dc7b69352660">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.getListInfoParam</a></div><div class="ttdeci">Object getListInfoParam()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00140">BaseIntelPlugin.java:140</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_a9e443024a6224a5c170e5d1476514954"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a9e443024a6224a5c170e5d1476514954">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.getBulletColorForMode</a></div><div class="ttdeci">Color getBulletColorForMode(ListInfoMode mode)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00633">BaseIntelPlugin.java:633</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_adfa808a345b432134c9fb11227edc7df"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#adfa808a345b432134c9fb11227edc7df">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.bullet</a></div><div class="ttdeci">void bullet(TooltipMakerAPI info)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00554">BaseIntelPlugin.java:554</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a0061e5c54ca25f5b5fe86bf41b410619" name="a0061e5c54ca25f5b5fe86bf41b410619"></a>
@@ -636,28 +599,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#afa8bb8f2afc14a90ef02a999a66535e9">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d4c/GateIntel_8java_source.html#l00059">59</a> of file <a class="el" href="../../d3/d4c/GateIntel_8java_source.html">GateIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   59</span>                                                                         {</div>
-<div class="line"><span class="lineno">   60</span>        String pre = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">   61</span>        String post = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">   62</span>        <span class="keywordflow">if</span> (mode == ListInfoMode.MESSAGES) {</div>
-<div class="line"><span class="lineno">   63</span>            pre = <span class="stringliteral">&quot;Discovered: &quot;</span>;</div>
-<div class="line"><span class="lineno">   64</span>        }</div>
-<div class="line"><span class="lineno">   65</span>        </div>
-<div class="line"><span class="lineno">   66</span>        <span class="keywordflow">if</span> (mode == ListInfoMode.INTEL) {</div>
-<div class="line"><span class="lineno">   67</span>            post = <span class="stringliteral">&quot; - &quot;</span> + <a class="code hl_variable" href="../../db/da1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1GateIntel.html#af16ec3a6a31270a41da3f1bde7cae417">gate</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a06362480c6a17326650354460c6d7442">getContainingLocation</a>().<a class="code hl_function" href="../../d2/d2c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI.html#a477e66fe3efbca5c3bea1ebf1c77471e">getNameWithTypeShort</a>();</div>
-<div class="line"><span class="lineno">   68</span>        }</div>
-<div class="line"><span class="lineno">   69</span>        </div>
-<div class="line"><span class="lineno">   70</span>        </div>
-<div class="line"><span class="lineno">   71</span>        Color c = <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#af44e4a0a7c61b8efbc4ef210c7061723">getTitleColor</a>(mode);</div>
-<div class="line"><span class="lineno">   72</span>        info.addPara(pre + <a class="code hl_function" href="../../db/da1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1GateIntel.html#ae27d146cddc683342a246d19375a1b42">getName</a>() + post, c, 0f);</div>
-<div class="line"><span class="lineno">   73</span>        <a class="code hl_function" href="../../db/da1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1GateIntel.html#ae78d1d5f46b3fb8c8e3a71429a8b3a33">addBulletPoints</a>(info, mode);</div>
-<div class="line"><span class="lineno">   74</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_af44e4a0a7c61b8efbc4ef210c7061723"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#af44e4a0a7c61b8efbc4ef210c7061723">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.getTitleColor</a></div><div class="ttdeci">Color getTitleColor(ListInfoMode mode)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00615">BaseIntelPlugin.java:615</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1GateIntel_html_ae27d146cddc683342a246d19375a1b42"><div class="ttname"><a href="../../db/da1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1GateIntel.html#ae27d146cddc683342a246d19375a1b42">com.fs.starfarer.api.impl.campaign.intel.misc.GateIntel.getName</a></div><div class="ttdeci">String getName()</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d4c/GateIntel_8java_source.html#l00131">GateIntel.java:131</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1GateIntel_html_ae78d1d5f46b3fb8c8e3a71429a8b3a33"><div class="ttname"><a href="../../db/da1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1GateIntel.html#ae78d1d5f46b3fb8c8e3a71429a8b3a33">com.fs.starfarer.api.impl.campaign.intel.misc.GateIntel.addBulletPoints</a></div><div class="ttdeci">void addBulletPoints(TooltipMakerAPI info, ListInfoMode mode)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d4c/GateIntel_8java_source.html#l00027">GateIntel.java:27</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI_html_a477e66fe3efbca5c3bea1ebf1c77471e"><div class="ttname"><a href="../../d2/d2c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI.html#a477e66fe3efbca5c3bea1ebf1c77471e">com.fs.starfarer.api.campaign.LocationAPI.getNameWithTypeShort</a></div><div class="ttdeci">String getNameWithTypeShort()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_a06362480c6a17326650354460c6d7442"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a06362480c6a17326650354460c6d7442">com.fs.starfarer.api.campaign.SectorEntityToken.getContainingLocation</a></div><div class="ttdeci">LocationAPI getContainingLocation()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8a83fbd7d3d913216f2e4a86cee525c4" name="a8a83fbd7d3d913216f2e4a86cee525c4"></a>
@@ -695,35 +637,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a8cccf49669fce7f61c75af3c8afc4bb9">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d4c/GateIntel_8java_source.html#l00077">77</a> of file <a class="el" href="../../d3/d4c/GateIntel_8java_source.html">GateIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   77</span>                                                                                        {</div>
-<div class="line"><span class="lineno">   78</span>        Color h = Misc.getHighlightColor();</div>
-<div class="line"><span class="lineno">   79</span>        Color g = Misc.getGrayColor();</div>
-<div class="line"><span class="lineno">   80</span>        Color tc = Misc.getTextColor();</div>
-<div class="line"><span class="lineno">   81</span>        <span class="keywordtype">float</span> pad = 3f;</div>
-<div class="line"><span class="lineno">   82</span>        <span class="keywordtype">float</span> opad = 10f;</div>
-<div class="line"><span class="lineno">   83</span>        </div>
-<div class="line"><span class="lineno">   84</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../db/da1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1GateIntel.html#af16ec3a6a31270a41da3f1bde7cae417">gate</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#afb853452462830b258fe5791a95fc84c">getCustomInteractionDialogImageVisual</a>() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   85</span>            info.addImage(<a class="code hl_variable" href="../../db/da1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1GateIntel.html#af16ec3a6a31270a41da3f1bde7cae417">gate</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#afb853452462830b258fe5791a95fc84c">getCustomInteractionDialogImageVisual</a>().<a class="code hl_function" href="../../de/db0/classcom_1_1fs_1_1starfarer_1_1api_1_1InteractionDialogImageVisual.html#a144834d3a3285d492f6f9fe2ab673ee6">getSpriteName</a>(), width, opad);</div>
-<div class="line"><span class="lineno">   86</span>        }</div>
-<div class="line"><span class="lineno">   87</span>        </div>
-<div class="line"><span class="lineno">   88</span>        Description desc = Global.getSettings().getDescription(<a class="code hl_variable" href="../../db/da1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1GateIntel.html#af16ec3a6a31270a41da3f1bde7cae417">gate</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#ad09adcf244505da54f231a0d6334bcd5">getCustomDescriptionId</a>(), Type.CUSTOM);</div>
-<div class="line"><span class="lineno">   89</span>        info.addPara(desc.getText1(), opad);</div>
-<div class="line"><span class="lineno">   90</span>        </div>
-<div class="line"><span class="lineno">   91</span>        <span class="keywordflow">if</span> (GateEntityPlugin.isScanned(<a class="code hl_variable" href="../../db/da1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1GateIntel.html#af16ec3a6a31270a41da3f1bde7cae417">gate</a>)) {</div>
-<div class="line"><span class="lineno">   92</span>            <span class="keywordflow">if</span> (GateEntityPlugin.canUseGates()) {</div>
-<div class="line"><span class="lineno">   93</span>                info.addPara(<span class="stringliteral">&quot;You&#39;ve scanned this gate and are able to transit it.&quot;</span>, opad);</div>
-<div class="line"><span class="lineno">   94</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   95</span>                info.addPara(<span class="stringliteral">&quot;You&#39;ve scanned this gate.&quot;</span>, opad);</div>
-<div class="line"><span class="lineno">   96</span>            }</div>
-<div class="line"><span class="lineno">   97</span>        }</div>
-<div class="line"><span class="lineno">   98</span>        </div>
-<div class="line"><span class="lineno">   99</span>        <span class="comment">//addBulletPoints(info, ListInfoMode.IN_DESC);</span></div>
-<div class="line"><span class="lineno">  100</span>        </div>
-<div class="line"><span class="lineno">  101</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1InteractionDialogImageVisual_html_a144834d3a3285d492f6f9fe2ab673ee6"><div class="ttname"><a href="../../de/db0/classcom_1_1fs_1_1starfarer_1_1api_1_1InteractionDialogImageVisual.html#a144834d3a3285d492f6f9fe2ab673ee6">com.fs.starfarer.api.InteractionDialogImageVisual.getSpriteName</a></div><div class="ttdeci">String getSpriteName()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/df6/InteractionDialogImageVisual_8java_source.html#l00093">InteractionDialogImageVisual.java:93</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_ad09adcf244505da54f231a0d6334bcd5"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#ad09adcf244505da54f231a0d6334bcd5">com.fs.starfarer.api.campaign.SectorEntityToken.getCustomDescriptionId</a></div><div class="ttdeci">String getCustomDescriptionId()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_afb853452462830b258fe5791a95fc84c"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#afb853452462830b258fe5791a95fc84c">com.fs.starfarer.api.campaign.SectorEntityToken.getCustomInteractionDialogImageVisual</a></div><div class="ttdeci">InteractionDialogImageVisual getCustomInteractionDialogImageVisual()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a923716b7ccf2d38be688c06ca904a7ea" name="a923716b7ccf2d38be688c06ca904a7ea"></a>
@@ -744,10 +658,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#ae93559a4be65baa333b36619a2a82850">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d4c/GateIntel_8java_source.html#l00155">155</a> of file <a class="el" href="../../d3/d4c/GateIntel_8java_source.html">GateIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  155</span>                                        {</div>
-<div class="line"><span class="lineno">  156</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;ui_discovered_entity&quot;</span>;</div>
-<div class="line"><span class="lineno">  157</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a31be6ee2931293a8112959e7944fdfa8" name="a31be6ee2931293a8112959e7944fdfa8"></a>
@@ -768,10 +679,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#aef7175eff8878a18ebb3099d3a7ab59f">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d4c/GateIntel_8java_source.html#l00136">136</a> of file <a class="el" href="../../d3/d4c/GateIntel_8java_source.html">GateIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  136</span>                                              {</div>
-<div class="line"><span class="lineno">  137</span>        <span class="keywordflow">return</span> super.getFactionForUIColors();</div>
-<div class="line"><span class="lineno">  138</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a86ab43b99ab5cd342876b48daf395186" name="a86ab43b99ab5cd342876b48daf395186"></a>
@@ -790,10 +698,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d4c/GateIntel_8java_source.html#l00159">159</a> of file <a class="el" href="../../d3/d4c/GateIntel_8java_source.html">GateIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  159</span>                                       {</div>
-<div class="line"><span class="lineno">  160</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../db/da1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1GateIntel.html#af16ec3a6a31270a41da3f1bde7cae417">gate</a>;</div>
-<div class="line"><span class="lineno">  161</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5cdf4ad2979d4057f19f086864524898" name="a5cdf4ad2979d4057f19f086864524898"></a>
@@ -815,14 +720,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a6499624a08c9565334e2395989f542c9">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d4c/GateIntel_8java_source.html#l00108">108</a> of file <a class="el" href="../../d3/d4c/GateIntel_8java_source.html">GateIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  108</span>                            {</div>
-<div class="line"><span class="lineno">  109</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../db/da1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1GateIntel.html#aac2d52bdec7b5d9a74e7622e591b7f20">isActive</a>()) {</div>
-<div class="line"><span class="lineno">  110</span>            <span class="keywordflow">return</span> Global.getSettings().getSpriteName(<span class="stringliteral">&quot;intel&quot;</span>, <span class="stringliteral">&quot;gate_active&quot;</span>);</div>
-<div class="line"><span class="lineno">  111</span>        }</div>
-<div class="line"><span class="lineno">  112</span>        <span class="keywordflow">return</span> Global.getSettings().getSpriteName(<span class="stringliteral">&quot;intel&quot;</span>, <span class="stringliteral">&quot;gate_inactive&quot;</span>);</div>
-<div class="line"><span class="lineno">  113</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1GateIntel_html_aac2d52bdec7b5d9a74e7622e591b7f20"><div class="ttname"><a href="../../db/da1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1GateIntel.html#aac2d52bdec7b5d9a74e7622e591b7f20">com.fs.starfarer.api.impl.campaign.intel.misc.GateIntel.isActive</a></div><div class="ttdeci">boolean isActive()</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d4c/GateIntel_8java_source.html#l00103">GateIntel.java:103</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9a896fc2ecb02b672454f3738008a671" name="a9a896fc2ecb02b672454f3738008a671"></a>
@@ -851,12 +749,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a4ef0af8cb71b4127afce850bc6a04514">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d4c/GateIntel_8java_source.html#l00116">116</a> of file <a class="el" href="../../d3/d4c/GateIntel_8java_source.html">GateIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  116</span>                                                      {</div>
-<div class="line"><span class="lineno">  117</span>        Set&lt;String&gt; tags = super.getIntelTags(map);</div>
-<div class="line"><span class="lineno">  118</span>        tags.add(Tags.INTEL_GATES);</div>
-<div class="line"><span class="lineno">  119</span>        <span class="keywordflow">return</span> tags;</div>
-<div class="line"><span class="lineno">  120</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aba48c25e6c87c347029d2641a931b640" name="aba48c25e6c87c347029d2641a931b640"></a>
@@ -878,10 +771,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a01f212769febb46bae89256b643c23eb">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d4c/GateIntel_8java_source.html#l00145">145</a> of file <a class="el" href="../../d3/d4c/GateIntel_8java_source.html">GateIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  145</span>                                                              {</div>
-<div class="line"><span class="lineno">  146</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../db/da1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1GateIntel.html#af16ec3a6a31270a41da3f1bde7cae417">gate</a>;</div>
-<div class="line"><span class="lineno">  147</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae27d146cddc683342a246d19375a1b42" name="ae27d146cddc683342a246d19375a1b42"></a>
@@ -902,11 +792,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a582fe7cb29e8f2f65670d4dd74418235">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d4c/GateIntel_8java_source.html#l00131">131</a> of file <a class="el" href="../../d3/d4c/GateIntel_8java_source.html">GateIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  131</span>                            {</div>
-<div class="line"><span class="lineno">  132</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../db/da1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1GateIntel.html#af16ec3a6a31270a41da3f1bde7cae417">gate</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a4fa77e45f0774df8a8980dc438598678">getName</a>();</div>
-<div class="line"><span class="lineno">  133</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_a4fa77e45f0774df8a8980dc438598678"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a4fa77e45f0774df8a8980dc438598678">com.fs.starfarer.api.campaign.SectorEntityToken.getName</a></div><div class="ttdeci">String getName()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2f05e7a201b42c59db704d31f0b1a9ed" name="a2f05e7a201b42c59db704d31f0b1a9ed"></a>
@@ -927,10 +813,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a8fe6bfa41873bed91428d73fa6bac1b6">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d4c/GateIntel_8java_source.html#l00140">140</a> of file <a class="el" href="../../d3/d4c/GateIntel_8java_source.html">GateIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  140</span>                                             {</div>
-<div class="line"><span class="lineno">  141</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../db/da1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1GateIntel.html#ae27d146cddc683342a246d19375a1b42">getName</a>() + <span class="stringliteral">&quot; - &quot;</span> + <a class="code hl_variable" href="../../db/da1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1GateIntel.html#af16ec3a6a31270a41da3f1bde7cae417">gate</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a06362480c6a17326650354460c6d7442">getContainingLocation</a>().<a class="code hl_function" href="../../d2/d2c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI.html#a477e66fe3efbca5c3bea1ebf1c77471e">getNameWithTypeShort</a>();</div>
-<div class="line"><span class="lineno">  142</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a268612cbdcd7fdac3f2f0912be800f03" name="a268612cbdcd7fdac3f2f0912be800f03"></a>
@@ -951,13 +834,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a6160e4bb36c43732e98a87a2f1e63b58">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d4c/GateIntel_8java_source.html#l00122">122</a> of file <a class="el" href="../../d3/d4c/GateIntel_8java_source.html">GateIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  122</span>                                  {</div>
-<div class="line"><span class="lineno">  123</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../db/da1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1GateIntel.html#aac2d52bdec7b5d9a74e7622e591b7f20">isActive</a>()) {</div>
-<div class="line"><span class="lineno">  124</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;Active Gate &quot;</span> + <a class="code hl_variable" href="../../db/da1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1GateIntel.html#af16ec3a6a31270a41da3f1bde7cae417">gate</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a4fa77e45f0774df8a8980dc438598678">getName</a>();</div>
-<div class="line"><span class="lineno">  125</span>        }</div>
-<div class="line"><span class="lineno">  126</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Inactive Gate &quot;</span> + <a class="code hl_variable" href="../../db/da1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1GateIntel.html#af16ec3a6a31270a41da3f1bde7cae417">gate</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a4fa77e45f0774df8a8980dc438598678">getName</a>();</div>
-<div class="line"><span class="lineno">  127</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aac2d52bdec7b5d9a74e7622e591b7f20" name="aac2d52bdec7b5d9a74e7622e591b7f20"></a>
@@ -984,10 +861,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d4c/GateIntel_8java_source.html#l00103">103</a> of file <a class="el" href="../../d3/d4c/GateIntel_8java_source.html">GateIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  103</span>                                 {</div>
-<div class="line"><span class="lineno">  104</span>        <span class="keywordflow">return</span> GateEntityPlugin.isActive(<a class="code hl_variable" href="../../db/da1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1GateIntel.html#af16ec3a6a31270a41da3f1bde7cae417">gate</a>);</div>
-<div class="line"><span class="lineno">  105</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="acbb1f088ddbc6cf4d19cd86eac83ac9f" name="acbb1f088ddbc6cf4d19cd86eac83ac9f"></a>
@@ -1008,10 +882,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#aede56a965d7570e8ea06cdf31d70e4de">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d4c/GateIntel_8java_source.html#l00150">150</a> of file <a class="el" href="../../d3/d4c/GateIntel_8java_source.html">GateIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  150</span>                                       {</div>
-<div class="line"><span class="lineno">  151</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  152</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -194,17 +195,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/dcc/PlayerTradeDataForSubmarket_8java_source.html#l00046">46</a> of file <a class="el" href="../../d6/dcc/PlayerTradeDataForSubmarket_8java_source.html">PlayerTradeDataForSubmarket.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   46</span>                                                               {</div>
-<div class="line"><span class="lineno">   47</span>        this.market = submarket.<a class="code hl_function" href="../../d4/d17/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1SubmarketAPI.html#af35b4df772ee09a438a1b8a90dc50e82">getMarket</a>();</div>
-<div class="line"><span class="lineno">   48</span>        this.submarket = submarket;</div>
-<div class="line"><span class="lineno">   49</span>        </div>
-<div class="line"><span class="lineno">   50</span>        playerBought = Global.getFactory().createCargo(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   51</span>        playerSold = Global.getFactory().createCargo(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   52</span>        </div>
-<div class="line"><span class="lineno">   53</span>        tracker = Misc.createEconIntervalTracker();</div>
-<div class="line"><span class="lineno">   54</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1SubmarketAPI_html_af35b4df772ee09a438a1b8a90dc50e82"><div class="ttname"><a href="../../d4/d17/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1SubmarketAPI.html#af35b4df772ee09a438a1b8a90dc50e82">com.fs.starfarer.api.campaign.econ.SubmarketAPI.getMarket</a></div><div class="ttdeci">MarketAPI getMarket()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -225,30 +216,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/dcc/PlayerTradeDataForSubmarket_8java_source.html#l00210">210</a> of file <a class="el" href="../../d6/dcc/PlayerTradeDataForSubmarket_8java_source.html">PlayerTradeDataForSubmarket.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  210</span>                                                              {</div>
-<div class="line"><span class="lineno">  211</span>        <span class="keywordtype">float</span> qty = stack.getSize() - playerSold.<a class="code hl_function" href="../../dc/d7b/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a1b064a41ed08586f74d34c41a778b055">getQuantity</a>(stack.getType(), stack.getData());</div>
-<div class="line"><span class="lineno">  212</span>        <span class="keywordtype">float</span> impact = <a class="code hl_function" href="../../d2/de3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PlayerTradeDataForSubmarket.html#af220471194c54f654de3bd6d38d43171">computeImpactOfHavingAlreadyBought</a>(market, </div>
-<div class="line"><span class="lineno">  213</span>                stack.getType(), stack.getData(), stack.getBaseValuePerUnit(), qty);</div>
-<div class="line"><span class="lineno">  214</span>        accumulatedPlayerTradeValueForPositive += impact * getTransponderMult();</div>
-<div class="line"><span class="lineno">  215</span>        accumulatedPlayerTradeValueForNegative += impact * getTransponderMult();</div>
-<div class="line"><span class="lineno">  216</span>        totalPlayerTradeValue += impact * getTransponderMult();</div>
-<div class="line"><span class="lineno">  217</span>        </div>
-<div class="line"><span class="lineno">  218</span>        playerBought.<a class="code hl_function" href="../../dc/d7b/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#ad69f0c7e417fed4f2f2aa5e164eb390a">addItems</a>(stack.getType(), stack.getData(), stack.getSize());</div>
-<div class="line"><span class="lineno">  219</span>        playerSold.<a class="code hl_function" href="../../dc/d7b/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a58b502616e01d21d1c1e105baa5df8eb">removeItems</a>(stack.getType(), stack.getData(), stack.getSize());</div>
-<div class="line"><span class="lineno">  220</span>        </div>
-<div class="line"><span class="lineno">  221</span>        <span class="keywordflow">if</span> (qty &gt;= 1 &amp;&amp; stack.getType() == CargoItemType.RESOURCES) {</div>
-<div class="line"><span class="lineno">  222</span>            PlayerTradeProfitabilityData data = SharedData.getData().getPlayerActivityTracker().getProfitabilityData();</div>
-<div class="line"><span class="lineno">  223</span>            <span class="keywordtype">float</span> price = <a class="code hl_function" href="../../d2/de3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PlayerTradeDataForSubmarket.html#a99c80d17edcb7396ea63d3f955b8bd04">computePriceOfHavingAlreadyBought</a>(market, </div>
-<div class="line"><span class="lineno">  224</span>                        stack.getType(), stack.getData(), stack.getBaseValuePerUnit(), qty);</div>
-<div class="line"><span class="lineno">  225</span>            data.reportNetBought((String)stack.getData(), qty, price);</div>
-<div class="line"><span class="lineno">  226</span>        }</div>
-<div class="line"><span class="lineno">  227</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PlayerTradeDataForSubmarket_html_a99c80d17edcb7396ea63d3f955b8bd04"><div class="ttname"><a href="../../d2/de3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PlayerTradeDataForSubmarket.html#a99c80d17edcb7396ea63d3f955b8bd04">com.fs.starfarer.api.impl.campaign.shared.PlayerTradeDataForSubmarket.computePriceOfHavingAlreadyBought</a></div><div class="ttdeci">static float computePriceOfHavingAlreadyBought(MarketAPI market, CargoItemType type, Object data, float baseValue, float qty)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dcc/PlayerTradeDataForSubmarket_8java_source.html#l00335">PlayerTradeDataForSubmarket.java:335</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PlayerTradeDataForSubmarket_html_af220471194c54f654de3bd6d38d43171"><div class="ttname"><a href="../../d2/de3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PlayerTradeDataForSubmarket.html#af220471194c54f654de3bd6d38d43171">com.fs.starfarer.api.impl.campaign.shared.PlayerTradeDataForSubmarket.computeImpactOfHavingAlreadyBought</a></div><div class="ttdeci">static float computeImpactOfHavingAlreadyBought(MarketAPI market, CargoItemType type, Object data, float baseValue, float qty)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dcc/PlayerTradeDataForSubmarket_8java_source.html#l00312">PlayerTradeDataForSubmarket.java:312</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI_html_a1b064a41ed08586f74d34c41a778b055"><div class="ttname"><a href="../../dc/d7b/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a1b064a41ed08586f74d34c41a778b055">com.fs.starfarer.api.campaign.CargoAPI.getQuantity</a></div><div class="ttdeci">float getQuantity(CargoAPI.CargoItemType type, Object data)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI_html_a58b502616e01d21d1c1e105baa5df8eb"><div class="ttname"><a href="../../dc/d7b/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a58b502616e01d21d1c1e105baa5df8eb">com.fs.starfarer.api.campaign.CargoAPI.removeItems</a></div><div class="ttdeci">boolean removeItems(CargoAPI.CargoItemType itemType, Object data, float quantity)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI_html_ad69f0c7e417fed4f2f2aa5e164eb390a"><div class="ttname"><a href="../../dc/d7b/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#ad69f0c7e417fed4f2f2aa5e164eb390a">com.fs.starfarer.api.campaign.CargoAPI.addItems</a></div><div class="ttdeci">void addItems(CargoAPI.CargoItemType itemType, Object data, float quantity)</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab2f78e61c67451b22e38e12c23b2af18" name="ab2f78e61c67451b22e38e12c23b2af18"></a>
@@ -268,33 +236,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/dcc/PlayerTradeDataForSubmarket_8java_source.html#l00160">160</a> of file <a class="el" href="../../d6/dcc/PlayerTradeDataForSubmarket_8java_source.html">PlayerTradeDataForSubmarket.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  160</span>                                                            {</div>
-<div class="line"><span class="lineno">  161</span>        String vid = info.getMember().getVariant().getHullSpec().getHullId();</div>
-<div class="line"><span class="lineno">  162</span>        ShipSalesData bought = <a class="code hl_function" href="../../d2/de3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PlayerTradeDataForSubmarket.html#aaa7d2bad7cef0b69980ff121598fcdb1">getBoughtShipData</a>(vid);</div>
-<div class="line"><span class="lineno">  163</span>        ShipSalesData sold = <a class="code hl_function" href="../../d2/de3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PlayerTradeDataForSubmarket.html#a8c893231daa127b23846baefb591ce14">getSoldShipData</a>(vid);</div>
-<div class="line"><span class="lineno">  164</span>        </div>
-<div class="line"><span class="lineno">  165</span>        <span class="keywordtype">float</span> playerImpactMult = Global.getSettings().getFloat(<span class="stringliteral">&quot;economyPlayerTradeImpactMult&quot;</span>);</div>
-<div class="line"><span class="lineno">  166</span>        </div>
-<div class="line"><span class="lineno">  167</span>        <span class="keywordtype">float</span> fractionBought = 1f;</div>
-<div class="line"><span class="lineno">  168</span>        <span class="keywordflow">if</span> (sold.getNumShips() &gt; 0) {</div>
-<div class="line"><span class="lineno">  169</span>            fractionBought = Math.max(0, fractionBought - sold.getNumShips());</div>
-<div class="line"><span class="lineno">  170</span>            sold.setNumShips(sold.getNumShips() - 1f);</div>
-<div class="line"><span class="lineno">  171</span>            sold.setTotalValue(sold.getTotalValue() - (1f - fractionBought) * info.getPrice() * playerImpactMult);</div>
-<div class="line"><span class="lineno">  172</span>            <span class="keywordflow">if</span> (sold.getNumShips() &lt; 0) sold.setNumShips(0);</div>
-<div class="line"><span class="lineno">  173</span>            <span class="keywordflow">if</span> (sold.getTotalValue() &lt; 0) sold.setTotalValue(0);</div>
-<div class="line"><span class="lineno">  174</span>        }</div>
-<div class="line"><span class="lineno">  175</span>        </div>
-<div class="line"><span class="lineno">  176</span>        <span class="keywordflow">if</span> (fractionBought &gt; 0) {</div>
-<div class="line"><span class="lineno">  177</span>            accumulatedPlayerTradeValueForPositive += info.getPrice() * playerImpactMult * fractionBought * getTransponderMult();</div>
-<div class="line"><span class="lineno">  178</span>            accumulatedPlayerTradeValueForNegative += info.getPrice() * playerImpactMult * fractionBought * getTransponderMult();</div>
-<div class="line"><span class="lineno">  179</span>            totalPlayerTradeValue += info.getPrice() * playerImpactMult * fractionBought * getTransponderMult();</div>
-<div class="line"><span class="lineno">  180</span>            bought.setNumShips(bought.getNumShips() + 1f * fractionBought);</div>
-<div class="line"><span class="lineno">  181</span>            bought.setTotalValue(bought.getTotalValue() + info.getPrice() * playerImpactMult * fractionBought);</div>
-<div class="line"><span class="lineno">  182</span>        }</div>
-<div class="line"><span class="lineno">  183</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PlayerTradeDataForSubmarket_html_a8c893231daa127b23846baefb591ce14"><div class="ttname"><a href="../../d2/de3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PlayerTradeDataForSubmarket.html#a8c893231daa127b23846baefb591ce14">com.fs.starfarer.api.impl.campaign.shared.PlayerTradeDataForSubmarket.getSoldShipData</a></div><div class="ttdeci">ShipSalesData getSoldShipData(String vid)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dcc/PlayerTradeDataForSubmarket_8java_source.html#l00404">PlayerTradeDataForSubmarket.java:404</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PlayerTradeDataForSubmarket_html_aaa7d2bad7cef0b69980ff121598fcdb1"><div class="ttname"><a href="../../d2/de3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PlayerTradeDataForSubmarket.html#aaa7d2bad7cef0b69980ff121598fcdb1">com.fs.starfarer.api.impl.campaign.shared.PlayerTradeDataForSubmarket.getBoughtShipData</a></div><div class="ttdeci">ShipSalesData getBoughtShipData(String vid)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dcc/PlayerTradeDataForSubmarket_8java_source.html#l00414">PlayerTradeDataForSubmarket.java:414</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2f4e4cff7105bedd4b5c3bf5f0431aa5" name="a2f4e4cff7105bedd4b5c3bf5f0431aa5"></a>
@@ -314,11 +256,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/dcc/PlayerTradeDataForSubmarket_8java_source.html#l00229">229</a> of file <a class="el" href="../../d6/dcc/PlayerTradeDataForSubmarket_8java_source.html">PlayerTradeDataForSubmarket.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  229</span>                                                            {</div>
-<div class="line"><span class="lineno">  230</span>        <a class="code hl_function" href="../../d2/de3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PlayerTradeDataForSubmarket.html#a0ecf311db111f1d5d2113e821917a25a">addToTrackedPlayerSold</a>(stack, -1);</div>
-<div class="line"><span class="lineno">  231</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PlayerTradeDataForSubmarket_html_a0ecf311db111f1d5d2113e821917a25a"><div class="ttname"><a href="../../d2/de3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PlayerTradeDataForSubmarket.html#a0ecf311db111f1d5d2113e821917a25a">com.fs.starfarer.api.impl.campaign.shared.PlayerTradeDataForSubmarket.addToTrackedPlayerSold</a></div><div class="ttdeci">void addToTrackedPlayerSold(ShipSaleInfo info)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dcc/PlayerTradeDataForSubmarket_8java_source.html#l00185">PlayerTradeDataForSubmarket.java:185</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a01d1ec33e82cd775698840909e77e479" name="a01d1ec33e82cd775698840909e77e479"></a>
@@ -348,41 +286,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/dcc/PlayerTradeDataForSubmarket_8java_source.html#l00233">233</a> of file <a class="el" href="../../d6/dcc/PlayerTradeDataForSubmarket_8java_source.html">PlayerTradeDataForSubmarket.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  233</span>                                                                                      {</div>
-<div class="line"><span class="lineno">  234</span>        <span class="keywordtype">float</span> qty = stack.getSize() - playerBought.<a class="code hl_function" href="../../dc/d7b/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a1b064a41ed08586f74d34c41a778b055">getQuantity</a>(stack.getType(), stack.getData());</div>
-<div class="line"><span class="lineno">  235</span>        <span class="keywordtype">float</span> impact = <a class="code hl_function" href="../../d2/de3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PlayerTradeDataForSubmarket.html#acb10707b64880b2e88c74acca77cee48">computeImpactOfHavingAlreadySold</a>(market, </div>
-<div class="line"><span class="lineno">  236</span>                stack.getType(), stack.getData(), stack.getBaseValuePerUnit(), qty);</div>
-<div class="line"><span class="lineno">  237</span>        </div>
-<div class="line"><span class="lineno">  238</span>        playerSold.<a class="code hl_function" href="../../dc/d7b/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#ad69f0c7e417fed4f2f2aa5e164eb390a">addItems</a>(stack.getType(), stack.getData(), stack.getSize());</div>
-<div class="line"><span class="lineno">  239</span>        playerBought.<a class="code hl_function" href="../../dc/d7b/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a58b502616e01d21d1c1e105baa5df8eb">removeItems</a>(stack.getType(), stack.getData(), stack.getSize());</div>
-<div class="line"><span class="lineno">  240</span>        </div>
-<div class="line"><span class="lineno">  241</span>        <span class="keywordtype">float</span> overrideImpactMult = 1f;</div>
-<div class="line"><span class="lineno">  242</span>        <span class="keywordflow">if</span> (qty &gt;= 1 &amp;&amp; stack.getType() == CargoItemType.RESOURCES) {</div>
-<div class="line"><span class="lineno">  243</span>            PlayerTradeProfitabilityData data = SharedData.getData().getPlayerActivityTracker().getProfitabilityData();</div>
-<div class="line"><span class="lineno">  244</span>            <span class="keywordtype">float</span> price = <a class="code hl_function" href="../../d2/de3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PlayerTradeDataForSubmarket.html#a778b8f274b0c4591a2adb734cb7fdaa3">computePriceOfHavingAlreadySold</a>(market, </div>
-<div class="line"><span class="lineno">  245</span>                        stack.getType(), stack.getData(), stack.getBaseValuePerUnit(), qty);</div>
-<div class="line"><span class="lineno">  246</span>            <span class="keywordflow">if</span> (totalPriceOverride &gt; 0) {</div>
-<div class="line"><span class="lineno">  247</span>                <span class="keywordflow">if</span> (price &gt; 0) {</div>
-<div class="line"><span class="lineno">  248</span>                    overrideImpactMult = totalPriceOverride / price;</div>
-<div class="line"><span class="lineno">  249</span>                }</div>
-<div class="line"><span class="lineno">  250</span>                price = totalPriceOverride;</div>
-<div class="line"><span class="lineno">  251</span>            }</div>
-<div class="line"><span class="lineno">  252</span>            </div>
-<div class="line"><span class="lineno">  253</span><span class="comment">//          String multId = Stats.getPlayerTradeImpactMultId(commodityId);</span></div>
-<div class="line"><span class="lineno">  254</span><span class="comment">//          val *= market.getStats().getDynamic().getValue(multId);</span></div>
-<div class="line"><span class="lineno">  255</span><span class="comment">//          multId = Stats.getPlayerSellImpactMultId(commodityId);</span></div>
-<div class="line"><span class="lineno">  256</span><span class="comment">//          val *= market.getStats().getDynamic().getValue(multId);</span></div>
-<div class="line"><span class="lineno">  257</span>            </div>
-<div class="line"><span class="lineno">  258</span>            data.reportNetSold((String)stack.getData(), qty, price);</div>
-<div class="line"><span class="lineno">  259</span>        }</div>
-<div class="line"><span class="lineno">  260</span>        </div>
-<div class="line"><span class="lineno">  261</span>        accumulatedPlayerTradeValueForPositive += impact * getTransponderMult() * overrideImpactMult;</div>
-<div class="line"><span class="lineno">  262</span>        accumulatedPlayerTradeValueForNegative += impact * getTransponderMult() * overrideImpactMult;</div>
-<div class="line"><span class="lineno">  263</span>        totalPlayerTradeValue += impact * getTransponderMult() * overrideImpactMult;</div>
-<div class="line"><span class="lineno">  264</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PlayerTradeDataForSubmarket_html_a778b8f274b0c4591a2adb734cb7fdaa3"><div class="ttname"><a href="../../d2/de3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PlayerTradeDataForSubmarket.html#a778b8f274b0c4591a2adb734cb7fdaa3">com.fs.starfarer.api.impl.campaign.shared.PlayerTradeDataForSubmarket.computePriceOfHavingAlreadySold</a></div><div class="ttdeci">static float computePriceOfHavingAlreadySold(MarketAPI market, CargoItemType type, Object data, float baseValue, float qty)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dcc/PlayerTradeDataForSubmarket_8java_source.html#l00298">PlayerTradeDataForSubmarket.java:298</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PlayerTradeDataForSubmarket_html_acb10707b64880b2e88c74acca77cee48"><div class="ttname"><a href="../../d2/de3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PlayerTradeDataForSubmarket.html#acb10707b64880b2e88c74acca77cee48">com.fs.starfarer.api.impl.campaign.shared.PlayerTradeDataForSubmarket.computeImpactOfHavingAlreadySold</a></div><div class="ttdeci">static float computeImpactOfHavingAlreadySold(MarketAPI market, CargoItemType type, Object data, float baseValue, float qty)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dcc/PlayerTradeDataForSubmarket_8java_source.html#l00266">PlayerTradeDataForSubmarket.java:266</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a0ecf311db111f1d5d2113e821917a25a" name="a0ecf311db111f1d5d2113e821917a25a"></a>
@@ -402,31 +306,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/dcc/PlayerTradeDataForSubmarket_8java_source.html#l00185">185</a> of file <a class="el" href="../../d6/dcc/PlayerTradeDataForSubmarket_8java_source.html">PlayerTradeDataForSubmarket.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  185</span>                                                          {</div>
-<div class="line"><span class="lineno">  186</span>        String vid = info.getMember().getVariant().getHullSpec().getHullId();</div>
-<div class="line"><span class="lineno">  187</span>        ShipSalesData bought = <a class="code hl_function" href="../../d2/de3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PlayerTradeDataForSubmarket.html#aaa7d2bad7cef0b69980ff121598fcdb1">getBoughtShipData</a>(vid);</div>
-<div class="line"><span class="lineno">  188</span>        ShipSalesData sold = <a class="code hl_function" href="../../d2/de3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PlayerTradeDataForSubmarket.html#a8c893231daa127b23846baefb591ce14">getSoldShipData</a>(vid);</div>
-<div class="line"><span class="lineno">  189</span>        </div>
-<div class="line"><span class="lineno">  190</span>        <span class="keywordtype">float</span> playerImpactMult = Global.getSettings().getFloat(<span class="stringliteral">&quot;economyPlayerTradeImpactMult&quot;</span>);</div>
-<div class="line"><span class="lineno">  191</span>        </div>
-<div class="line"><span class="lineno">  192</span>        <span class="keywordtype">float</span> fractionSold = 1f;</div>
-<div class="line"><span class="lineno">  193</span>        <span class="keywordflow">if</span> (bought.getNumShips() &gt; 0) {</div>
-<div class="line"><span class="lineno">  194</span>            fractionSold = Math.max(0, fractionSold - bought.getNumShips());</div>
-<div class="line"><span class="lineno">  195</span>            bought.setNumShips(bought.getNumShips() - 1f);</div>
-<div class="line"><span class="lineno">  196</span>            bought.setTotalValue(bought.getTotalValue() - (1f - fractionSold) * info.getPrice() * playerImpactMult);</div>
-<div class="line"><span class="lineno">  197</span>            <span class="keywordflow">if</span> (bought.getNumShips() &lt; 0) bought.setNumShips(0);</div>
-<div class="line"><span class="lineno">  198</span>            <span class="keywordflow">if</span> (bought.getTotalValue() &lt; 0) bought.setTotalValue(0);</div>
-<div class="line"><span class="lineno">  199</span>        }</div>
-<div class="line"><span class="lineno">  200</span>        </div>
-<div class="line"><span class="lineno">  201</span>        <span class="keywordflow">if</span> (fractionSold &gt; 0) {</div>
-<div class="line"><span class="lineno">  202</span>            accumulatedPlayerTradeValueForPositive += info.getPrice() * playerImpactMult * fractionSold * getTransponderMult();</div>
-<div class="line"><span class="lineno">  203</span>            accumulatedPlayerTradeValueForNegative += info.getPrice() * playerImpactMult * fractionSold * getTransponderMult();</div>
-<div class="line"><span class="lineno">  204</span>            totalPlayerTradeValue += info.getPrice() * playerImpactMult * fractionSold * getTransponderMult();</div>
-<div class="line"><span class="lineno">  205</span>            sold.setNumShips(sold.getNumShips() + 1f * fractionSold);</div>
-<div class="line"><span class="lineno">  206</span>            sold.setTotalValue(sold.getTotalValue() + info.getPrice() * playerImpactMult * fractionSold);</div>
-<div class="line"><span class="lineno">  207</span>        }</div>
-<div class="line"><span class="lineno">  208</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a4e2e302b2771acbf1e9ac5d008957c5e" name="a4e2e302b2771acbf1e9ac5d008957c5e"></a>
@@ -446,22 +326,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/dcc/PlayerTradeDataForSubmarket_8java_source.html#l00135">135</a> of file <a class="el" href="../../d6/dcc/PlayerTradeDataForSubmarket_8java_source.html">PlayerTradeDataForSubmarket.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  135</span>                                                                    {</div>
-<div class="line"><span class="lineno">  136</span>        <span class="keywordflow">for</span> (CargoStackAPI stack : transaction.getSold().getStacksCopy()) {</div>
-<div class="line"><span class="lineno">  137</span>            <a class="code hl_function" href="../../d2/de3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PlayerTradeDataForSubmarket.html#a0ecf311db111f1d5d2113e821917a25a">addToTrackedPlayerSold</a>(stack);</div>
-<div class="line"><span class="lineno">  138</span>        }</div>
-<div class="line"><span class="lineno">  139</span>        <span class="keywordflow">for</span> (CargoStackAPI stack : transaction.getBought().getStacksCopy()) {</div>
-<div class="line"><span class="lineno">  140</span>            <a class="code hl_function" href="../../d2/de3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PlayerTradeDataForSubmarket.html#ab2f78e61c67451b22e38e12c23b2af18">addToTrackedPlayerBought</a>(stack);</div>
-<div class="line"><span class="lineno">  141</span>        }</div>
-<div class="line"><span class="lineno">  142</span>        <span class="keywordflow">for</span> (ShipSaleInfo info : transaction.getShipsBought()) {</div>
-<div class="line"><span class="lineno">  143</span>            <a class="code hl_function" href="../../d2/de3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PlayerTradeDataForSubmarket.html#ab2f78e61c67451b22e38e12c23b2af18">addToTrackedPlayerBought</a>(info);</div>
-<div class="line"><span class="lineno">  144</span>        }</div>
-<div class="line"><span class="lineno">  145</span>        <span class="keywordflow">for</span> (ShipSaleInfo info : transaction.getShipsSold()) {</div>
-<div class="line"><span class="lineno">  146</span>            <a class="code hl_function" href="../../d2/de3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PlayerTradeDataForSubmarket.html#a0ecf311db111f1d5d2113e821917a25a">addToTrackedPlayerSold</a>(info);</div>
-<div class="line"><span class="lineno">  147</span>        }</div>
-<div class="line"><span class="lineno">  148</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PlayerTradeDataForSubmarket_html_ab2f78e61c67451b22e38e12c23b2af18"><div class="ttname"><a href="../../d2/de3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PlayerTradeDataForSubmarket.html#ab2f78e61c67451b22e38e12c23b2af18">com.fs.starfarer.api.impl.campaign.shared.PlayerTradeDataForSubmarket.addToTrackedPlayerBought</a></div><div class="ttdeci">void addToTrackedPlayerBought(ShipSaleInfo info)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dcc/PlayerTradeDataForSubmarket_8java_source.html#l00160">PlayerTradeDataForSubmarket.java:160</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a98a3b008bc2eb95b18906522d270546a" name="a98a3b008bc2eb95b18906522d270546a"></a>
@@ -481,63 +346,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/dcc/PlayerTradeDataForSubmarket_8java_source.html#l00080">80</a> of file <a class="el" href="../../d6/dcc/PlayerTradeDataForSubmarket_8java_source.html">PlayerTradeDataForSubmarket.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   80</span>                                    {</div>
-<div class="line"><span class="lineno">   81</span>        tracker.<a class="code hl_function" href="../../da/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html#a61881d44415cda2c50c3354c3f0a4d8a">advance</a>(days);</div>
-<div class="line"><span class="lineno">   82</span>        <span class="keywordflow">if</span> (tracker.intervalElapsed()) {</div>
-<div class="line"><span class="lineno">   83</span>            <span class="comment">//float factor = 1f - Misc.getGenericRollingAverageFactor();</span></div>
-<div class="line"><span class="lineno">   84</span>            <span class="keywordtype">float</span> factor = 0.5f;</div>
-<div class="line"><span class="lineno">   85</span>            </div>
-<div class="line"><span class="lineno">   86</span>            <span class="keywordflow">for</span> (CargoStackAPI stack : playerBought.<a class="code hl_function" href="../../dc/d7b/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#abdf57e23461ce51fedf1e45bf211975e">getStacksCopy</a>()) {</div>
-<div class="line"><span class="lineno">   87</span>                stack.setSize(stack.getSize() * factor);</div>
-<div class="line"><span class="lineno">   88</span>                <span class="keywordflow">if</span> (stack.getSize() &lt; 10) {</div>
-<div class="line"><span class="lineno">   89</span>                    stack.setSize(0);</div>
-<div class="line"><span class="lineno">   90</span>                }</div>
-<div class="line"><span class="lineno">   91</span>            }</div>
-<div class="line"><span class="lineno">   92</span>            playerBought.<a class="code hl_function" href="../../dc/d7b/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#af32194aa5868e41be9aa544594057a72">removeEmptyStacks</a>();</div>
-<div class="line"><span class="lineno">   93</span>            <span class="keywordflow">for</span> (CargoStackAPI stack : playerSold.<a class="code hl_function" href="../../dc/d7b/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#abdf57e23461ce51fedf1e45bf211975e">getStacksCopy</a>()) {</div>
-<div class="line"><span class="lineno">   94</span>                stack.setSize(stack.getSize() * factor);</div>
-<div class="line"><span class="lineno">   95</span>                <span class="keywordflow">if</span> (stack.getSize() &lt; 10) {</div>
-<div class="line"><span class="lineno">   96</span>                    stack.setSize(0);</div>
-<div class="line"><span class="lineno">   97</span>                }</div>
-<div class="line"><span class="lineno">   98</span>            }</div>
-<div class="line"><span class="lineno">   99</span>            playerSold.<a class="code hl_function" href="../../dc/d7b/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#af32194aa5868e41be9aa544594057a72">removeEmptyStacks</a>();</div>
-<div class="line"><span class="lineno">  100</span>            </div>
-<div class="line"><span class="lineno">  101</span>            <span class="comment">//System.out.println(&quot;Ships: &quot; + (playerBoughtShips.size() + playerSoldShips.size()));</span></div>
-<div class="line"><span class="lineno">  102</span><span class="comment">//          if (playerSold.getMothballedShips() != null) {</span></div>
-<div class="line"><span class="lineno">  103</span><span class="comment">//              System.out.println(&quot;Ships: &quot; + playerSold.getMothballedShips().getNumMembers());</span></div>
-<div class="line"><span class="lineno">  104</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">  105</span>            </div>
-<div class="line"><span class="lineno">  106</span>            List&lt;String&gt; <span class="keyword">remove</span> = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
-<div class="line"><span class="lineno">  107</span>            <span class="keywordflow">for</span> (ShipSalesData data : playerBoughtShips.values()) {</div>
-<div class="line"><span class="lineno">  108</span>                data.setNumShips(data.getNumShips() * factor);</div>
-<div class="line"><span class="lineno">  109</span>                data.setTotalValue(data.getTotalValue() * factor);</div>
-<div class="line"><span class="lineno">  110</span>                <span class="keywordflow">if</span> (data.getNumShips() &lt; 0.2f) <span class="keyword">remove</span>.add(data.getVariantId());</div>
-<div class="line"><span class="lineno">  111</span>            }</div>
-<div class="line"><span class="lineno">  112</span>            <span class="keywordflow">for</span> (String vid : <span class="keyword">remove</span>) {</div>
-<div class="line"><span class="lineno">  113</span>                playerBoughtShips.remove(vid);</div>
-<div class="line"><span class="lineno">  114</span>            }</div>
-<div class="line"><span class="lineno">  115</span>            <span class="keyword">remove</span>.clear();</div>
-<div class="line"><span class="lineno">  116</span>            </div>
-<div class="line"><span class="lineno">  117</span>            <span class="keywordflow">for</span> (ShipSalesData data : playerSoldShips.values()) {</div>
-<div class="line"><span class="lineno">  118</span>                data.setNumShips(data.getNumShips() * factor);</div>
-<div class="line"><span class="lineno">  119</span>                data.setTotalValue(data.getTotalValue() * factor);</div>
-<div class="line"><span class="lineno">  120</span>                <span class="keywordflow">if</span> (data.getNumShips() &lt; 0.2f) <span class="keyword">remove</span>.add(data.getVariantId());</div>
-<div class="line"><span class="lineno">  121</span>            }</div>
-<div class="line"><span class="lineno">  122</span>            <span class="keywordflow">for</span> (String vid : <span class="keyword">remove</span>) {</div>
-<div class="line"><span class="lineno">  123</span>                playerSoldShips.remove(vid);</div>
-<div class="line"><span class="lineno">  124</span>            }</div>
-<div class="line"><span class="lineno">  125</span>            <span class="keyword">remove</span>.clear();</div>
-<div class="line"><span class="lineno">  126</span>            </div>
-<div class="line"><span class="lineno">  127</span>            </div>
-<div class="line"><span class="lineno">  128</span>            accumulatedPlayerTradeValueForPositive *= factor;</div>
-<div class="line"><span class="lineno">  129</span>            accumulatedPlayerTradeValueForNegative *= factor;</div>
-<div class="line"><span class="lineno">  130</span>            totalPlayerTradeValue *= factor;</div>
-<div class="line"><span class="lineno">  131</span>        }</div>
-<div class="line"><span class="lineno">  132</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil_html_a61881d44415cda2c50c3354c3f0a4d8a"><div class="ttname"><a href="../../da/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html#a61881d44415cda2c50c3354c3f0a4d8a">com.fs.starfarer.api.util.IntervalUtil.advance</a></div><div class="ttdeci">void advance(float amount)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de3/IntervalUtil_8java_source.html#l00039">IntervalUtil.java:39</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI_html_abdf57e23461ce51fedf1e45bf211975e"><div class="ttname"><a href="../../dc/d7b/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#abdf57e23461ce51fedf1e45bf211975e">com.fs.starfarer.api.campaign.CargoAPI.getStacksCopy</a></div><div class="ttdeci">List&lt; CargoStackAPI &gt; getStacksCopy()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI_html_af32194aa5868e41be9aa544594057a72"><div class="ttname"><a href="../../dc/d7b/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#af32194aa5868e41be9aa544594057a72">com.fs.starfarer.api.campaign.CargoAPI.removeEmptyStacks</a></div><div class="ttdeci">void removeEmptyStacks()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af220471194c54f654de3bd6d38d43171" name="af220471194c54f654de3bd6d38d43171"></a>
@@ -593,34 +402,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/dcc/PlayerTradeDataForSubmarket_8java_source.html#l00312">312</a> of file <a class="el" href="../../d6/dcc/PlayerTradeDataForSubmarket_8java_source.html">PlayerTradeDataForSubmarket.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  312</span>                                                                                                                                          {</div>
-<div class="line"><span class="lineno">  313</span>        <span class="keywordflow">if</span> (qty &lt; 1) <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  314</span>        </div>
-<div class="line"><span class="lineno">  315</span>        <span class="keywordtype">float</span> playerImpactMult = Global.getSettings().getFloat(<span class="stringliteral">&quot;economyPlayerTradeImpactMult&quot;</span>);</div>
-<div class="line"><span class="lineno">  316</span><span class="comment">//      market.getSupplyPriceAssumingExistingTransaction(commodityId, qty, qty * com.getUtilityOnMarket(), true);</span></div>
-<div class="line"><span class="lineno">  317</span><span class="comment">//      market.getSupplyPriceAssumingExistingTransaction(commodityId, qty, 1, true);</span></div>
-<div class="line"><span class="lineno">  318</span>        <span class="keywordflow">if</span> (type == CargoItemType.RESOURCES) {</div>
-<div class="line"><span class="lineno">  319</span>            String commodityId = (String) data;</div>
-<div class="line"><span class="lineno">  320</span>            CommodityOnMarketAPI com = market.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a6186b555a108bee51ba3ee878d07032d">getCommodityData</a>(commodityId);</div>
-<div class="line"><span class="lineno">  321</span>            <span class="keywordtype">float</span> val = market.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a5080653b9ab197a415f29ee467363801">getSupplyPriceAssumingExistingTransaction</a>(commodityId, qty, qty * com.getUtilityOnMarket(), <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  322</span>            val *= playerImpactMult;</div>
-<div class="line"><span class="lineno">  323</span>            </div>
-<div class="line"><span class="lineno">  324</span>            String multId = Stats.getPlayerTradeRepImpactMultId(commodityId);</div>
-<div class="line"><span class="lineno">  325</span>            val *= market.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a70323dd35f954c1be49bf2e8c43c9284">getStats</a>().<a class="code hl_function" href="../../d0/d6d/interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1MutableMarketStatsAPI.html#a07a35dc173333e48b78a68c47950280d">getDynamic</a>().<a class="code hl_function" href="../../db/dcf/interfacecom_1_1fs_1_1starfarer_1_1api_1_1util_1_1DynamicStatsAPI.html#a73ee4989e89b94b194c02666c712c07e">getValue</a>(multId);</div>
-<div class="line"><span class="lineno">  326</span>            multId = Stats.getPlayerBuyRepImpactMultId(commodityId);</div>
-<div class="line"><span class="lineno">  327</span>            val *= market.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a70323dd35f954c1be49bf2e8c43c9284">getStats</a>().<a class="code hl_function" href="../../d0/d6d/interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1MutableMarketStatsAPI.html#a07a35dc173333e48b78a68c47950280d">getDynamic</a>().<a class="code hl_function" href="../../db/dcf/interfacecom_1_1fs_1_1starfarer_1_1api_1_1util_1_1DynamicStatsAPI.html#a73ee4989e89b94b194c02666c712c07e">getValue</a>(multId);</div>
-<div class="line"><span class="lineno">  328</span>            <span class="keywordflow">return</span> val;</div>
-<div class="line"><span class="lineno">  329</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  330</span>            <span class="keywordtype">float</span> val = (float) baseValue * qty * playerImpactMult;</div>
-<div class="line"><span class="lineno">  331</span>            <span class="keywordflow">return</span> val;</div>
-<div class="line"><span class="lineno">  332</span>        }</div>
-<div class="line"><span class="lineno">  333</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a5080653b9ab197a415f29ee467363801"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a5080653b9ab197a415f29ee467363801">com.fs.starfarer.api.campaign.econ.MarketAPI.getSupplyPriceAssumingExistingTransaction</a></div><div class="ttdeci">float getSupplyPriceAssumingExistingTransaction(String commodityId, double quantity, double existingTransactionUtility, boolean isPlayerPrice)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a6186b555a108bee51ba3ee878d07032d"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a6186b555a108bee51ba3ee878d07032d">com.fs.starfarer.api.campaign.econ.MarketAPI.getCommodityData</a></div><div class="ttdeci">CommodityOnMarketAPI getCommodityData(String commodityId)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a70323dd35f954c1be49bf2e8c43c9284"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a70323dd35f954c1be49bf2e8c43c9284">com.fs.starfarer.api.campaign.econ.MarketAPI.getStats</a></div><div class="ttdeci">MutableMarketStatsAPI getStats()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1MutableMarketStatsAPI_html_a07a35dc173333e48b78a68c47950280d"><div class="ttname"><a href="../../d0/d6d/interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1MutableMarketStatsAPI.html#a07a35dc173333e48b78a68c47950280d">com.fs.starfarer.api.fleet.MutableMarketStatsAPI.getDynamic</a></div><div class="ttdeci">DynamicStatsAPI getDynamic()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1util_1_1DynamicStatsAPI_html_a73ee4989e89b94b194c02666c712c07e"><div class="ttname"><a href="../../db/dcf/interfacecom_1_1fs_1_1starfarer_1_1api_1_1util_1_1DynamicStatsAPI.html#a73ee4989e89b94b194c02666c712c07e">com.fs.starfarer.api.util.DynamicStatsAPI.getValue</a></div><div class="ttdeci">float getValue(String id)</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="acb10707b64880b2e88c74acca77cee48" name="acb10707b64880b2e88c74acca77cee48"></a>
@@ -676,41 +458,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/dcc/PlayerTradeDataForSubmarket_8java_source.html#l00266">266</a> of file <a class="el" href="../../d6/dcc/PlayerTradeDataForSubmarket_8java_source.html">PlayerTradeDataForSubmarket.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  266</span>                                                                                                                                        {</div>
-<div class="line"><span class="lineno">  267</span>        <span class="keywordflow">if</span> (qty &lt; 1) <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  268</span>        </div>
-<div class="line"><span class="lineno">  269</span>        <span class="keywordtype">float</span> playerImpactMult = Global.getSettings().getFloat(<span class="stringliteral">&quot;economyPlayerTradeImpactMult&quot;</span>);</div>
-<div class="line"><span class="lineno">  270</span>        <span class="keywordtype">float</span> illegalImpactMult = Global.getSettings().getFloat(<span class="stringliteral">&quot;economyPlayerSellIllegalImpactMult&quot;</span>);</div>
-<div class="line"><span class="lineno">  271</span>        <span class="keywordtype">float</span> militaryImpactMult = Global.getSettings().getFloat(<span class="stringliteral">&quot;economyPlayerSellMilitaryImpactMult&quot;</span>);</div>
-<div class="line"><span class="lineno">  272</span>        </div>
-<div class="line"><span class="lineno">  273</span>        <span class="keywordflow">if</span> (type == CargoItemType.RESOURCES) {</div>
-<div class="line"><span class="lineno">  274</span>            String commodityId = (String) data;</div>
-<div class="line"><span class="lineno">  275</span>            CommodityOnMarketAPI com = market.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a6186b555a108bee51ba3ee878d07032d">getCommodityData</a>(commodityId);</div>
-<div class="line"><span class="lineno">  276</span>            <span class="keywordtype">float</span> val = market.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a1d3ef3db695be88dc17ba9cee3ed008b">getDemandPriceAssumingExistingTransaction</a>(commodityId, qty, -qty * com.getUtilityOnMarket(), <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  277</span>            <span class="keywordflow">if</span> (!market.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#adb4f096698b123e50d2d3e82eafad6b1">hasCondition</a>(Conditions.FREE_PORT) &amp;&amp;</div>
-<div class="line"><span class="lineno">  278</span>                    market.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a7bfbfe5dca481e733b81096553e8fa34">isIllegal</a>(commodityId)) {</div>
-<div class="line"><span class="lineno">  279</span>                val *= illegalImpactMult;</div>
-<div class="line"><span class="lineno">  280</span>            }</div>
-<div class="line"><span class="lineno">  281</span>            val *= playerImpactMult;</div>
-<div class="line"><span class="lineno">  282</span>            </div>
-<div class="line"><span class="lineno">  283</span>            String multId = Stats.getPlayerTradeRepImpactMultId(commodityId);</div>
-<div class="line"><span class="lineno">  284</span>            val *= market.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a70323dd35f954c1be49bf2e8c43c9284">getStats</a>().<a class="code hl_function" href="../../d0/d6d/interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1MutableMarketStatsAPI.html#a07a35dc173333e48b78a68c47950280d">getDynamic</a>().<a class="code hl_function" href="../../db/dcf/interfacecom_1_1fs_1_1starfarer_1_1api_1_1util_1_1DynamicStatsAPI.html#a73ee4989e89b94b194c02666c712c07e">getValue</a>(multId);</div>
-<div class="line"><span class="lineno">  285</span>            multId = Stats.getPlayerSellRepImpactMultId(commodityId);</div>
-<div class="line"><span class="lineno">  286</span>            val *= market.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a70323dd35f954c1be49bf2e8c43c9284">getStats</a>().<a class="code hl_function" href="../../d0/d6d/interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1MutableMarketStatsAPI.html#a07a35dc173333e48b78a68c47950280d">getDynamic</a>().<a class="code hl_function" href="../../db/dcf/interfacecom_1_1fs_1_1starfarer_1_1api_1_1util_1_1DynamicStatsAPI.html#a73ee4989e89b94b194c02666c712c07e">getValue</a>(multId);</div>
-<div class="line"><span class="lineno">  287</span>            </div>
-<div class="line"><span class="lineno">  288</span>            <span class="keywordflow">if</span> (com.getCommodity().hasTag(Commodities.TAG_MILITARY)) {</div>
-<div class="line"><span class="lineno">  289</span>                val *= militaryImpactMult;</div>
-<div class="line"><span class="lineno">  290</span>            }</div>
-<div class="line"><span class="lineno">  291</span>            <span class="keywordflow">return</span> val;</div>
-<div class="line"><span class="lineno">  292</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  293</span>            <span class="keywordtype">float</span> val = (float) baseValue * qty * playerImpactMult;</div>
-<div class="line"><span class="lineno">  294</span>            <span class="keywordflow">return</span> val;</div>
-<div class="line"><span class="lineno">  295</span>        }</div>
-<div class="line"><span class="lineno">  296</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a1d3ef3db695be88dc17ba9cee3ed008b"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a1d3ef3db695be88dc17ba9cee3ed008b">com.fs.starfarer.api.campaign.econ.MarketAPI.getDemandPriceAssumingExistingTransaction</a></div><div class="ttdeci">float getDemandPriceAssumingExistingTransaction(String commodityId, double quantity, double existingTransactionUtility, boolean isPlayerPrice)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a7bfbfe5dca481e733b81096553e8fa34"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a7bfbfe5dca481e733b81096553e8fa34">com.fs.starfarer.api.campaign.econ.MarketAPI.isIllegal</a></div><div class="ttdeci">boolean isIllegal(String commodityId)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_adb4f096698b123e50d2d3e82eafad6b1"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#adb4f096698b123e50d2d3e82eafad6b1">com.fs.starfarer.api.campaign.econ.MarketAPI.hasCondition</a></div><div class="ttdeci">boolean hasCondition(String id)</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a99c80d17edcb7396ea63d3f955b8bd04" name="a99c80d17edcb7396ea63d3f955b8bd04"></a>
@@ -766,20 +514,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/dcc/PlayerTradeDataForSubmarket_8java_source.html#l00335">335</a> of file <a class="el" href="../../d6/dcc/PlayerTradeDataForSubmarket_8java_source.html">PlayerTradeDataForSubmarket.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  335</span>                                                                                                                                         {</div>
-<div class="line"><span class="lineno">  336</span>        <span class="keywordflow">if</span> (qty &lt; 1) <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  337</span>        </div>
-<div class="line"><span class="lineno">  338</span>        <span class="keywordflow">if</span> (type == CargoItemType.RESOURCES) {</div>
-<div class="line"><span class="lineno">  339</span>            String commodityId = (String) data;</div>
-<div class="line"><span class="lineno">  340</span>            CommodityOnMarketAPI com = market.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a6186b555a108bee51ba3ee878d07032d">getCommodityData</a>(commodityId);</div>
-<div class="line"><span class="lineno">  341</span>            <span class="keywordtype">float</span> val = market.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a5080653b9ab197a415f29ee467363801">getSupplyPriceAssumingExistingTransaction</a>(commodityId, qty, qty * com.getUtilityOnMarket(), <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  342</span>            <span class="keywordflow">return</span> val;</div>
-<div class="line"><span class="lineno">  343</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  344</span>            <span class="keywordtype">float</span> val = (float) baseValue * qty;</div>
-<div class="line"><span class="lineno">  345</span>            <span class="keywordflow">return</span> val;</div>
-<div class="line"><span class="lineno">  346</span>        }</div>
-<div class="line"><span class="lineno">  347</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a778b8f274b0c4591a2adb734cb7fdaa3" name="a778b8f274b0c4591a2adb734cb7fdaa3"></a>
@@ -835,20 +570,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/dcc/PlayerTradeDataForSubmarket_8java_source.html#l00298">298</a> of file <a class="el" href="../../d6/dcc/PlayerTradeDataForSubmarket_8java_source.html">PlayerTradeDataForSubmarket.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  298</span>                                                                                                                                       {</div>
-<div class="line"><span class="lineno">  299</span>        <span class="keywordflow">if</span> (qty &lt; 1) <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  300</span>        </div>
-<div class="line"><span class="lineno">  301</span>        <span class="keywordflow">if</span> (type == CargoItemType.RESOURCES) {</div>
-<div class="line"><span class="lineno">  302</span>            String commodityId = (String) data;</div>
-<div class="line"><span class="lineno">  303</span>            CommodityOnMarketAPI com = market.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a6186b555a108bee51ba3ee878d07032d">getCommodityData</a>(commodityId);</div>
-<div class="line"><span class="lineno">  304</span>            <span class="keywordtype">float</span> val = market.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a1d3ef3db695be88dc17ba9cee3ed008b">getDemandPriceAssumingExistingTransaction</a>(commodityId, qty, -qty * com.getUtilityOnMarket(), <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  305</span>            <span class="keywordflow">return</span> val;</div>
-<div class="line"><span class="lineno">  306</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  307</span>            <span class="keywordtype">float</span> val = (float) baseValue * qty;</div>
-<div class="line"><span class="lineno">  308</span>            <span class="keywordflow">return</span> val;</div>
-<div class="line"><span class="lineno">  309</span>        }</div>
-<div class="line"><span class="lineno">  310</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a17f8dc948530529f8223173b2101bcbc" name="a17f8dc948530529f8223173b2101bcbc"></a>
@@ -867,10 +589,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/dcc/PlayerTradeDataForSubmarket_8java_source.html#l00374">374</a> of file <a class="el" href="../../d6/dcc/PlayerTradeDataForSubmarket_8java_source.html">PlayerTradeDataForSubmarket.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  374</span>                                                             {</div>
-<div class="line"><span class="lineno">  375</span>        <span class="keywordflow">return</span> accumulatedPlayerTradeValueForNegative;</div>
-<div class="line"><span class="lineno">  376</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ad402b9dc897b14f50bb5f304d68e335f" name="ad402b9dc897b14f50bb5f304d68e335f"></a>
@@ -889,10 +608,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/dcc/PlayerTradeDataForSubmarket_8java_source.html#l00366">366</a> of file <a class="el" href="../../d6/dcc/PlayerTradeDataForSubmarket_8java_source.html">PlayerTradeDataForSubmarket.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  366</span>                                                             {</div>
-<div class="line"><span class="lineno">  367</span>        <span class="keywordflow">return</span> accumulatedPlayerTradeValueForPositive;</div>
-<div class="line"><span class="lineno">  368</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aaa7d2bad7cef0b69980ff121598fcdb1" name="aaa7d2bad7cef0b69980ff121598fcdb1"></a>
@@ -920,16 +636,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/dcc/PlayerTradeDataForSubmarket_8java_source.html#l00414">414</a> of file <a class="el" href="../../d6/dcc/PlayerTradeDataForSubmarket_8java_source.html">PlayerTradeDataForSubmarket.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  414</span>                                                          {</div>
-<div class="line"><span class="lineno">  415</span>        ShipSalesData bought = playerBoughtShips.get(vid);</div>
-<div class="line"><span class="lineno">  416</span>        <span class="keywordflow">if</span> (bought == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  417</span>            bought = <span class="keyword">new</span> ShipSalesData();</div>
-<div class="line"><span class="lineno">  418</span>            bought.setVariantId(vid);</div>
-<div class="line"><span class="lineno">  419</span>            playerBoughtShips.put(vid, bought);</div>
-<div class="line"><span class="lineno">  420</span>        }</div>
-<div class="line"><span class="lineno">  421</span>        <span class="keywordflow">return</span> bought;</div>
-<div class="line"><span class="lineno">  422</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a765f741bee62e2984e8c59bb765f6e6b" name="a765f741bee62e2984e8c59bb765f6e6b"></a>
@@ -948,10 +655,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/dcc/PlayerTradeDataForSubmarket_8java_source.html#l00395">395</a> of file <a class="el" href="../../d6/dcc/PlayerTradeDataForSubmarket_8java_source.html">PlayerTradeDataForSubmarket.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  395</span>                                 {</div>
-<div class="line"><span class="lineno">  396</span>        <span class="keywordflow">return</span> market;</div>
-<div class="line"><span class="lineno">  397</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a7cc9f2fd17642c39461796a0bb83e11a" name="a7cc9f2fd17642c39461796a0bb83e11a"></a>
@@ -970,34 +674,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/dcc/PlayerTradeDataForSubmarket_8java_source.html#l00424">424</a> of file <a class="el" href="../../d6/dcc/PlayerTradeDataForSubmarket_8java_source.html">PlayerTradeDataForSubmarket.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  424</span>                                                 {</div>
-<div class="line"><span class="lineno">  425</span><span class="comment">//      float playerImpactMult = Global.getSettings().getFloat(&quot;economyPlayerTradeImpactMult&quot;);</span></div>
-<div class="line"><span class="lineno">  426</span><span class="comment">//      float illegalImpactMult = Global.getSettings().getFloat(&quot;economyPlayerSellIllegalImpactMult&quot;);</span></div>
-<div class="line"><span class="lineno">  427</span>        </div>
-<div class="line"><span class="lineno">  428</span>        <span class="keywordtype">float</span> total = 0;</div>
-<div class="line"><span class="lineno">  429</span>        <span class="keywordflow">for</span> (CargoStackAPI stack : playerBought.<a class="code hl_function" href="../../dc/d7b/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#abdf57e23461ce51fedf1e45bf211975e">getStacksCopy</a>()) {</div>
-<div class="line"><span class="lineno">  430</span>            <span class="keywordtype">float</span> qty = stack.getSize();</div>
-<div class="line"><span class="lineno">  431</span><span class="comment">//          if (qty &lt; 1) continue;</span></div>
-<div class="line"><span class="lineno">  432</span><span class="comment">//          float val = (float) stack.getBaseValuePerUnit() * qty * playerImpactMult;</span></div>
-<div class="line"><span class="lineno">  433</span>            <span class="keywordtype">float</span> val = <a class="code hl_function" href="../../d2/de3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PlayerTradeDataForSubmarket.html#af220471194c54f654de3bd6d38d43171">computeImpactOfHavingAlreadyBought</a>(market, </div>
-<div class="line"><span class="lineno">  434</span>                                    stack.getType(), stack.getData(), stack.getBaseValuePerUnit(), qty);</div>
-<div class="line"><span class="lineno">  435</span>            total += val;</div>
-<div class="line"><span class="lineno">  436</span>        }</div>
-<div class="line"><span class="lineno">  437</span>        <span class="keywordflow">for</span> (CargoStackAPI stack : playerSold.<a class="code hl_function" href="../../dc/d7b/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#abdf57e23461ce51fedf1e45bf211975e">getStacksCopy</a>()) {</div>
-<div class="line"><span class="lineno">  438</span>            <span class="keywordtype">float</span> qty = stack.getSize();</div>
-<div class="line"><span class="lineno">  439</span>            <span class="keywordflow">if</span> (qty &lt; 1) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  440</span><span class="comment">//          float val = (float) stack.getBaseValuePerUnit() * qty * playerImpactMult;</span></div>
-<div class="line"><span class="lineno">  441</span><span class="comment">//          if (!market.hasCondition(Conditions.FREE_PORT) &amp;&amp;</span></div>
-<div class="line"><span class="lineno">  442</span><span class="comment">//                  stack.isCommodityStack() &amp;&amp; market.isIllegal(stack.getCommodityId())) {</span></div>
-<div class="line"><span class="lineno">  443</span><span class="comment">//              val *= illegalImpactMult;</span></div>
-<div class="line"><span class="lineno">  444</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">  445</span>            <span class="keywordtype">float</span> val = <a class="code hl_function" href="../../d2/de3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PlayerTradeDataForSubmarket.html#acb10707b64880b2e88c74acca77cee48">computeImpactOfHavingAlreadySold</a>(market, </div>
-<div class="line"><span class="lineno">  446</span>                                        stack.getType(), stack.getData(), stack.getBaseValuePerUnit(), qty);</div>
-<div class="line"><span class="lineno">  447</span>            total += val;</div>
-<div class="line"><span class="lineno">  448</span>        }</div>
-<div class="line"><span class="lineno">  449</span>        <span class="keywordflow">return</span> total;</div>
-<div class="line"><span class="lineno">  450</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ade55de2b232e7cd0535c10228b515054" name="ade55de2b232e7cd0535c10228b515054"></a>
@@ -1016,10 +693,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/dcc/PlayerTradeDataForSubmarket_8java_source.html#l00387">387</a> of file <a class="el" href="../../d6/dcc/PlayerTradeDataForSubmarket_8java_source.html">PlayerTradeDataForSubmarket.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  387</span>                                                                    {</div>
-<div class="line"><span class="lineno">  388</span>        <span class="keywordflow">return</span> playerBoughtShips.values();</div>
-<div class="line"><span class="lineno">  389</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a7f9f6488dee3bd8608f8fe8ecf6f407e" name="a7f9f6488dee3bd8608f8fe8ecf6f407e"></a>
@@ -1038,10 +712,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/dcc/PlayerTradeDataForSubmarket_8java_source.html#l00391">391</a> of file <a class="el" href="../../d6/dcc/PlayerTradeDataForSubmarket_8java_source.html">PlayerTradeDataForSubmarket.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  391</span>                                                                  {</div>
-<div class="line"><span class="lineno">  392</span>        <span class="keywordflow">return</span> playerSoldShips.values();</div>
-<div class="line"><span class="lineno">  393</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a1b55c6f4b66f8f1d5cd71c0cfa0c465b" name="a1b55c6f4b66f8f1d5cd71c0cfa0c465b"></a>
@@ -1060,10 +731,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/dcc/PlayerTradeDataForSubmarket_8java_source.html#l00358">358</a> of file <a class="el" href="../../d6/dcc/PlayerTradeDataForSubmarket_8java_source.html">PlayerTradeDataForSubmarket.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  358</span>                                            {</div>
-<div class="line"><span class="lineno">  359</span>        <span class="keywordflow">return</span> playerBought;</div>
-<div class="line"><span class="lineno">  360</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a96c1e18b40e141458375d57d7aa10e03" name="a96c1e18b40e141458375d57d7aa10e03"></a>
@@ -1082,10 +750,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/dcc/PlayerTradeDataForSubmarket_8java_source.html#l00362">362</a> of file <a class="el" href="../../d6/dcc/PlayerTradeDataForSubmarket_8java_source.html">PlayerTradeDataForSubmarket.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  362</span>                                          {</div>
-<div class="line"><span class="lineno">  363</span>        <span class="keywordflow">return</span> playerSold;</div>
-<div class="line"><span class="lineno">  364</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8c893231daa127b23846baefb591ce14" name="a8c893231daa127b23846baefb591ce14"></a>
@@ -1113,16 +778,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/dcc/PlayerTradeDataForSubmarket_8java_source.html#l00404">404</a> of file <a class="el" href="../../d6/dcc/PlayerTradeDataForSubmarket_8java_source.html">PlayerTradeDataForSubmarket.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  404</span>                                                        {</div>
-<div class="line"><span class="lineno">  405</span>        ShipSalesData sold = playerSoldShips.get(vid);</div>
-<div class="line"><span class="lineno">  406</span>        <span class="keywordflow">if</span> (sold == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  407</span>            sold = <span class="keyword">new</span> ShipSalesData();</div>
-<div class="line"><span class="lineno">  408</span>            sold.setVariantId(vid);</div>
-<div class="line"><span class="lineno">  409</span>            playerSoldShips.put(vid, sold);</div>
-<div class="line"><span class="lineno">  410</span>        }</div>
-<div class="line"><span class="lineno">  411</span>        <span class="keywordflow">return</span> sold;</div>
-<div class="line"><span class="lineno">  412</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a601e2390e00d23a9b5c9207f586316c5" name="a601e2390e00d23a9b5c9207f586316c5"></a>
@@ -1142,15 +798,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/dcc/PlayerTradeDataForSubmarket_8java_source.html#l00071">71</a> of file <a class="el" href="../../d6/dcc/PlayerTradeDataForSubmarket_8java_source.html">PlayerTradeDataForSubmarket.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   71</span>                                                      {</div>
-<div class="line"><span class="lineno">   72</span>        MutableStatWithTempMods stat = tx.get(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">   73</span>        <span class="keywordflow">if</span> (stat == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   74</span>            stat = <span class="keyword">new</span> MutableStatWithTempMods(0);</div>
-<div class="line"><span class="lineno">   75</span>            tx.put(<span class="keywordtype">id</span>, stat);</div>
-<div class="line"><span class="lineno">   76</span>        }</div>
-<div class="line"><span class="lineno">   77</span>        <span class="keywordflow">return</span> stat;</div>
-<div class="line"><span class="lineno">   78</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a90773ff849669b808faf138a7783b2e5" name="a90773ff849669b808faf138a7783b2e5"></a>
@@ -1169,10 +817,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/dcc/PlayerTradeDataForSubmarket_8java_source.html#l00399">399</a> of file <a class="el" href="../../d6/dcc/PlayerTradeDataForSubmarket_8java_source.html">PlayerTradeDataForSubmarket.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  399</span>                                       {</div>
-<div class="line"><span class="lineno">  400</span>        <span class="keywordflow">return</span> submarket;</div>
-<div class="line"><span class="lineno">  401</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8336f3fe931f98e6a2fe715197a1505f" name="a8336f3fe931f98e6a2fe715197a1505f"></a>
@@ -1191,10 +836,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/dcc/PlayerTradeDataForSubmarket_8java_source.html#l00350">350</a> of file <a class="el" href="../../d6/dcc/PlayerTradeDataForSubmarket_8java_source.html">PlayerTradeDataForSubmarket.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  350</span>                                            {</div>
-<div class="line"><span class="lineno">  351</span>        <span class="keywordflow">return</span> totalPlayerTradeValue;</div>
-<div class="line"><span class="lineno">  352</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae15f39317261cd04bfe5b446d762bcb8" name="ae15f39317261cd04bfe5b446d762bcb8"></a>
@@ -1213,10 +855,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/dcc/PlayerTradeDataForSubmarket_8java_source.html#l00383">383</a> of file <a class="el" href="../../d6/dcc/PlayerTradeDataForSubmarket_8java_source.html">PlayerTradeDataForSubmarket.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  383</span>                                     {</div>
-<div class="line"><span class="lineno">  384</span>        <span class="keywordflow">return</span> tracker;</div>
-<div class="line"><span class="lineno">  385</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a27e6f03ec12f9fe37e553ea6b851b120" name="a27e6f03ec12f9fe37e553ea6b851b120"></a>
@@ -1244,10 +883,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/dcc/PlayerTradeDataForSubmarket_8java_source.html#l00063">63</a> of file <a class="el" href="../../d6/dcc/PlayerTradeDataForSubmarket_8java_source.html">PlayerTradeDataForSubmarket.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   63</span>                                                      {</div>
-<div class="line"><span class="lineno">   64</span>        <span class="keywordflow">return</span> stack.getType().name() + <span class="stringliteral">&quot;_&quot;</span> + stack.getData().toString();</div>
-<div class="line"><span class="lineno">   65</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a37df93e39fe8e218332147f84b522c4b" name="a37df93e39fe8e218332147f84b522c4b"></a>
@@ -1275,10 +911,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/dcc/PlayerTradeDataForSubmarket_8java_source.html#l00067">67</a> of file <a class="el" href="../../d6/dcc/PlayerTradeDataForSubmarket_8java_source.html">PlayerTradeDataForSubmarket.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   67</span>                                                     {</div>
-<div class="line"><span class="lineno">   68</span>        <span class="keywordflow">return</span> data.getVariantId();</div>
-<div class="line"><span class="lineno">   69</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a1adb9e74721160c6a8c7b5b4bf07e297" name="a1adb9e74721160c6a8c7b5b4bf07e297"></a>
@@ -1305,13 +938,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/dcc/PlayerTradeDataForSubmarket_8java_source.html#l00056">56</a> of file <a class="el" href="../../d6/dcc/PlayerTradeDataForSubmarket_8java_source.html">PlayerTradeDataForSubmarket.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   56</span>                                   {</div>
-<div class="line"><span class="lineno">   57</span>        <span class="keywordflow">if</span> (tx == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   58</span>            tx = <span class="keyword">new</span> HashMap&lt;String, MutableStatWithTempMods&gt;();</div>
-<div class="line"><span class="lineno">   59</span>        }</div>
-<div class="line"><span class="lineno">   60</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">   61</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af03fe73ca31d5f1718b829cc28bb27c7" name="af03fe73ca31d5f1718b829cc28bb27c7"></a>
@@ -1331,10 +958,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/dcc/PlayerTradeDataForSubmarket_8java_source.html#l00378">378</a> of file <a class="el" href="../../d6/dcc/PlayerTradeDataForSubmarket_8java_source.html">PlayerTradeDataForSubmarket.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  379</span>                                                          {</div>
-<div class="line"><span class="lineno">  380</span>        this.accumulatedPlayerTradeValueForNegative = accumulatedPlayerTradeValueForNegative;</div>
-<div class="line"><span class="lineno">  381</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a055669b09ac99ba37de8c7382a8458d4" name="a055669b09ac99ba37de8c7382a8458d4"></a>
@@ -1354,10 +978,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/dcc/PlayerTradeDataForSubmarket_8java_source.html#l00370">370</a> of file <a class="el" href="../../d6/dcc/PlayerTradeDataForSubmarket_8java_source.html">PlayerTradeDataForSubmarket.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  370</span>                                                                                             {</div>
-<div class="line"><span class="lineno">  371</span>        this.accumulatedPlayerTradeValueForPositive = accumulatedPlayerTradeValue;</div>
-<div class="line"><span class="lineno">  372</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8307564c404817d8b96be5815dd12e13" name="a8307564c404817d8b96be5815dd12e13"></a>
@@ -1377,10 +998,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/dcc/PlayerTradeDataForSubmarket_8java_source.html#l00452">452</a> of file <a class="el" href="../../d6/dcc/PlayerTradeDataForSubmarket_8java_source.html">PlayerTradeDataForSubmarket.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  452</span>                                                     {</div>
-<div class="line"><span class="lineno">  453</span>        this.submarket = submarket;</div>
-<div class="line"><span class="lineno">  454</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="afe1f7a7bac6b3fc8189976cb2ebcc28c" name="afe1f7a7bac6b3fc8189976cb2ebcc28c"></a>
@@ -1400,10 +1018,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/dcc/PlayerTradeDataForSubmarket_8java_source.html#l00354">354</a> of file <a class="el" href="../../d6/dcc/PlayerTradeDataForSubmarket_8java_source.html">PlayerTradeDataForSubmarket.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  354</span>                                                                      {</div>
-<div class="line"><span class="lineno">  355</span>        this.totalPlayerTradeValue = totalPlayerTradeValue;</div>
-<div class="line"><span class="lineno">  356</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

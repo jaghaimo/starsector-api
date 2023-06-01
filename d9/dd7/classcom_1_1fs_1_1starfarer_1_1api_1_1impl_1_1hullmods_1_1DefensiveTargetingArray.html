@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -301,10 +302,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a3859215f6c3408946bf590a2ce5c0e74">com.fs.starfarer.api.combat.BaseHullMod</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/da9/DefensiveTargetingArray_8java_source.html#l00016">16</a> of file <a class="el" href="../../d2/da9/DefensiveTargetingArray_8java_source.html">DefensiveTargetingArray.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   16</span>                                                                                                        {</div>
-<div class="line"><span class="lineno">   17</span>        stats.getFighterWingRange().modifyMult(<span class="keywordtype">id</span>, 0f);</div>
-<div class="line"><span class="lineno">   18</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af27e6e9640dd81dbd735fa6fef35e74a" name="af27e6e9640dd81dbd735fa6fef35e74a"></a>
@@ -342,29 +340,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a2618f88ad207fe4bc6a9b767aa4c1dfd">com.fs.starfarer.api.combat.BaseHullMod</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/da9/DefensiveTargetingArray_8java_source.html#l00021">21</a> of file <a class="el" href="../../d2/da9/DefensiveTargetingArray_8java_source.html">DefensiveTargetingArray.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   21</span>                                                                                             {</div>
-<div class="line"><span class="lineno">   22</span>        fighter.getMutableStats().getDamageToFighters().modifyFlat(<span class="keywordtype">id</span>, <a class="code hl_variable" href="../../d9/dd7/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1DefensiveTargetingArray.html#a9d22dccf1247ae1df3cdeaf8dc2aa95a">PD_DAMAGE_BONUS</a> / 100f);</div>
-<div class="line"><span class="lineno">   23</span>        fighter.getMutableStats().getDamageToMissiles().modifyFlat(<span class="keywordtype">id</span>, <a class="code hl_variable" href="../../d9/dd7/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1DefensiveTargetingArray.html#a9d22dccf1247ae1df3cdeaf8dc2aa95a">PD_DAMAGE_BONUS</a> / 100f);</div>
-<div class="line"><span class="lineno">   24</span>        </div>
-<div class="line"><span class="lineno">   25</span>        <span class="keywordtype">boolean</span> sMod = <a class="code hl_function" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a17449d5c7699039330e0d40d7f51dcd3">isSMod</a>(ship);</div>
-<div class="line"><span class="lineno">   26</span>        <span class="keywordflow">if</span> (sMod) {</div>
-<div class="line"><span class="lineno">   27</span>            fighter.getMutableStats().getBallisticWeaponRangeBonus().modifyFlat(<span class="keywordtype">id</span>, <a class="code hl_variable" href="../../d9/dd7/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1DefensiveTargetingArray.html#afdae1e2e0c89c4b408f7a59a47534cf0">SMOD_RANGE_BONUS</a>);</div>
-<div class="line"><span class="lineno">   28</span>            fighter.getMutableStats().getEnergyWeaponRangeBonus().modifyFlat(<span class="keywordtype">id</span>, <a class="code hl_variable" href="../../d9/dd7/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1DefensiveTargetingArray.html#afdae1e2e0c89c4b408f7a59a47534cf0">SMOD_RANGE_BONUS</a>);</div>
-<div class="line"><span class="lineno">   29</span>        }</div>
-<div class="line"><span class="lineno">   30</span>        </div>
-<div class="line"><span class="lineno">   31</span>        <span class="keywordflow">if</span> (fighter.getWing() != <span class="keyword">null</span> &amp;&amp; fighter.getWing().getSpec() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   32</span>            <span class="keywordflow">if</span> (fighter.getWing().getSpec().isRegularFighter() || </div>
-<div class="line"><span class="lineno">   33</span>                    fighter.getWing().getSpec().isAssault() ||</div>
-<div class="line"><span class="lineno">   34</span>                    fighter.getWing().getSpec().isBomber() ||</div>
-<div class="line"><span class="lineno">   35</span>                    fighter.getWing().getSpec().isInterceptor()) {</div>
-<div class="line"><span class="lineno">   36</span>                fighter.addTag(Tags.WING_STAY_IN_FRONT_OF_SHIP);</div>
-<div class="line"><span class="lineno">   37</span>            }</div>
-<div class="line"><span class="lineno">   38</span>        }</div>
-<div class="line"><span class="lineno">   39</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod_html_a17449d5c7699039330e0d40d7f51dcd3"><div class="ttname"><a href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a17449d5c7699039330e0d40d7f51dcd3">com.fs.starfarer.api.combat.BaseHullMod.isSMod</a></div><div class="ttdeci">boolean isSMod(MutableShipStatsAPI stats)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/da7/BaseHullMod_8java_source.html#l00029">BaseHullMod.java:29</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1DefensiveTargetingArray_html_a9d22dccf1247ae1df3cdeaf8dc2aa95a"><div class="ttname"><a href="../../d9/dd7/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1DefensiveTargetingArray.html#a9d22dccf1247ae1df3cdeaf8dc2aa95a">com.fs.starfarer.api.impl.hullmods.DefensiveTargetingArray.PD_DAMAGE_BONUS</a></div><div class="ttdeci">static float PD_DAMAGE_BONUS</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/da9/DefensiveTargetingArray_8java_source.html#l00011">DefensiveTargetingArray.java:11</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1DefensiveTargetingArray_html_afdae1e2e0c89c4b408f7a59a47534cf0"><div class="ttname"><a href="../../d9/dd7/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1DefensiveTargetingArray.html#afdae1e2e0c89c4b408f7a59a47534cf0">com.fs.starfarer.api.impl.hullmods.DefensiveTargetingArray.SMOD_RANGE_BONUS</a></div><div class="ttdeci">static float SMOD_RANGE_BONUS</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/da9/DefensiveTargetingArray_8java_source.html#l00012">DefensiveTargetingArray.java:12</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a6323599dd29db84761d104cb601777f0" name="a6323599dd29db84761d104cb601777f0"></a>
@@ -396,11 +372,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a5f6ac9583ca5b1606fda3e53f15c3d14">com.fs.starfarer.api.combat.BaseHullMod</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/da9/DefensiveTargetingArray_8java_source.html#l00046">46</a> of file <a class="el" href="../../d2/da9/DefensiveTargetingArray_8java_source.html">DefensiveTargetingArray.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   46</span>                                                                    {</div>
-<div class="line"><span class="lineno">   47</span>        <span class="keywordflow">if</span> (index == 0) <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span> + (int) <a class="code hl_variable" href="../../d9/dd7/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1DefensiveTargetingArray.html#a9d22dccf1247ae1df3cdeaf8dc2aa95a">PD_DAMAGE_BONUS</a> + <span class="stringliteral">&quot;%&quot;</span>;</div>
-<div class="line"><span class="lineno">   48</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   49</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a785c73cddc13df07475a48a4a972b093" name="a785c73cddc13df07475a48a4a972b093"></a>
@@ -432,11 +404,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a88cbea3ac1298bcd2f5c1ed913ad1157">com.fs.starfarer.api.combat.BaseHullMod</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/da9/DefensiveTargetingArray_8java_source.html#l00041">41</a> of file <a class="el" href="../../d2/da9/DefensiveTargetingArray_8java_source.html">DefensiveTargetingArray.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   41</span>                                                                        {</div>
-<div class="line"><span class="lineno">   42</span>        <span class="keywordflow">if</span> (index == 0) <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span> + (int) <a class="code hl_variable" href="../../d9/dd7/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1DefensiveTargetingArray.html#afdae1e2e0c89c4b408f7a59a47534cf0">SMOD_RANGE_BONUS</a> + <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">   43</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   44</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="abb9c1fedef73fe5ac081e8fa5cc651b1" name="abb9c1fedef73fe5ac081e8fa5cc651b1"></a>
@@ -458,10 +426,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a1e372e808b9fc3e1aa3da1002c5bf9c8">com.fs.starfarer.api.combat.BaseHullMod</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/da9/DefensiveTargetingArray_8java_source.html#l00056">56</a> of file <a class="el" href="../../d2/da9/DefensiveTargetingArray_8java_source.html">DefensiveTargetingArray.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   56</span>                                                      {</div>
-<div class="line"><span class="lineno">   57</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Ship does not have fighter bays&quot;</span>;</div>
-<div class="line"><span class="lineno">   58</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae3dd06db06a199ca7971b6427bcd671a" name="ae3dd06db06a199ca7971b6427bcd671a"></a>
@@ -483,11 +448,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#aba110c18a85c975b063efdf40ac482a7">com.fs.starfarer.api.combat.BaseHullMod</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/da9/DefensiveTargetingArray_8java_source.html#l00051">51</a> of file <a class="el" href="../../d2/da9/DefensiveTargetingArray_8java_source.html">DefensiveTargetingArray.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   51</span>                                                    {</div>
-<div class="line"><span class="lineno">   52</span>        <span class="keywordtype">int</span> bays = (int) ship.getMutableStats().getNumFighterBays().getModifiedValue();</div>
-<div class="line"><span class="lineno">   53</span>        <span class="keywordflow">return</span> ship != <span class="keyword">null</span> &amp;&amp; bays &gt; 0; </div>
-<div class="line"><span class="lineno">   54</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

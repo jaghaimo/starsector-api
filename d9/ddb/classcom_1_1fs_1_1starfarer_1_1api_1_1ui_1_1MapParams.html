@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -189,46 +190,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/d7f/MapParams_8java_source.html#l00057">57</a> of file <a class="el" href="../../d1/d7f/MapParams_8java_source.html">MapParams.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   57</span>                       {</div>
-<div class="line"><span class="lineno">   58</span>        <a class="code hl_variable" href="../../d9/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MapParams.html#aeeaa0b88d23720b711b04deea28f6e2e">filterData</a> = <span class="keyword">new</span> MapFilterData(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   59</span>        <a class="code hl_variable" href="../../d9/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MapParams.html#a9384dd2eeb5707dd515313fb83ea3dbd">showFilter</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   60</span>        <a class="code hl_variable" href="../../d9/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MapParams.html#a91033b65a9f466a8f49b31421926012c">smallFilter</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   61</span>        <a class="code hl_variable" href="../../d9/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MapParams.html#a4008d7f2efc35271e87be94b49499f1f">showTabs</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   62</span>        filterData.starscape = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   63</span>        filterData.names = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   64</span>        </div>
-<div class="line"><span class="lineno">   65</span>        <span class="comment">//showSystems = new HashSet&lt;StarSystemAPI&gt;();</span></div>
-<div class="line"><span class="lineno">   66</span>        </div>
-<div class="line"><span class="lineno">   67</span>        <a class="code hl_variable" href="../../d9/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MapParams.html#ad4cdc35140b45a390d0c0bd864363e66">starSelectionRadiusMult</a> = 0.8f;</div>
-<div class="line"><span class="lineno">   68</span>        <a class="code hl_variable" href="../../d9/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MapParams.html#aa72a9a0a49f1a34593e2c82736c8d61b">starAlphaMult</a> = 0.5f;</div>
-<div class="line"><span class="lineno">   69</span>        </div>
-<div class="line"><span class="lineno">   70</span>        <a class="code hl_variable" href="../../d9/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MapParams.html#a67a1d6bdefffc2f3274b4f5e64f0e074">borderColor</a> = Misc.getDarkPlayerColor();</div>
-<div class="line"><span class="lineno">   71</span>        <a class="code hl_variable" href="../../d9/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MapParams.html#ae5c7c4b6107139e36647144aa913a1cc">renderTopBorder</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   72</span>        </div>
-<div class="line"><span class="lineno">   73</span>        <a class="code hl_variable" href="../../d9/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MapParams.html#a86e19cb5c2949551eff5eb791f17b916">location</a> = Global.getSector().getHyperspace();</div>
-<div class="line"><span class="lineno">   74</span>        <span class="comment">//skipCurrLocMarkerRendering = true;</span></div>
-<div class="line"><span class="lineno">   75</span>        </div>
-<div class="line"><span class="lineno">   76</span>        <span class="comment">//markers = new ArrayList&lt;MarkerData&gt;();</span></div>
-<div class="line"><span class="lineno">   77</span><span class="comment">//      CampaignFleetAPI player = Global.getSector().getPlayerFleet();</span></div>
-<div class="line"><span class="lineno">   78</span><span class="comment">//      markers.add(new MarkerData(player.getLocationInHyperspace(), null, null));</span></div>
-<div class="line"><span class="lineno">   79</span>        </div>
-<div class="line"><span class="lineno">   80</span>        <a class="code hl_variable" href="../../d9/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MapParams.html#ac60cfe051bc72c4dfa6c705400e3586b">zoomLevel</a> = 1f;</div>
-<div class="line"><span class="lineno">   81</span>        </div>
-<div class="line"><span class="lineno">   82</span>        Vector2f loc = Global.getSector().getPlayerFleet().getLocationInHyperspace();</div>
-<div class="line"><span class="lineno">   83</span>        <a class="code hl_variable" href="../../d9/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MapParams.html#a57e4dc3ca29938fc17cd03084010c17b">centerOn</a> = <span class="keyword">new</span> Vector2f(loc);</div>
-<div class="line"><span class="lineno">   84</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MapParams_html_a4008d7f2efc35271e87be94b49499f1f"><div class="ttname"><a href="../../d9/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MapParams.html#a4008d7f2efc35271e87be94b49499f1f">com.fs.starfarer.api.ui.MapParams.showTabs</a></div><div class="ttdeci">boolean showTabs</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d7f/MapParams_8java_source.html#l00036">MapParams.java:36</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MapParams_html_a57e4dc3ca29938fc17cd03084010c17b"><div class="ttname"><a href="../../d9/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MapParams.html#a57e4dc3ca29938fc17cd03084010c17b">com.fs.starfarer.api.ui.MapParams.centerOn</a></div><div class="ttdeci">Vector2f centerOn</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d7f/MapParams_8java_source.html#l00050">MapParams.java:50</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MapParams_html_a67a1d6bdefffc2f3274b4f5e64f0e074"><div class="ttname"><a href="../../d9/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MapParams.html#a67a1d6bdefffc2f3274b4f5e64f0e074">com.fs.starfarer.api.ui.MapParams.borderColor</a></div><div class="ttdeci">Color borderColor</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d7f/MapParams_8java_source.html#l00042">MapParams.java:42</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MapParams_html_a86e19cb5c2949551eff5eb791f17b916"><div class="ttname"><a href="../../d9/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MapParams.html#a86e19cb5c2949551eff5eb791f17b916">com.fs.starfarer.api.ui.MapParams.location</a></div><div class="ttdeci">LocationAPI location</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d7f/MapParams_8java_source.html#l00047">MapParams.java:47</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MapParams_html_a91033b65a9f466a8f49b31421926012c"><div class="ttname"><a href="../../d9/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MapParams.html#a91033b65a9f466a8f49b31421926012c">com.fs.starfarer.api.ui.MapParams.smallFilter</a></div><div class="ttdeci">boolean smallFilter</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d7f/MapParams_8java_source.html#l00035">MapParams.java:35</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MapParams_html_a9384dd2eeb5707dd515313fb83ea3dbd"><div class="ttname"><a href="../../d9/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MapParams.html#a9384dd2eeb5707dd515313fb83ea3dbd">com.fs.starfarer.api.ui.MapParams.showFilter</a></div><div class="ttdeci">boolean showFilter</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d7f/MapParams_8java_source.html#l00034">MapParams.java:34</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MapParams_html_aa72a9a0a49f1a34593e2c82736c8d61b"><div class="ttname"><a href="../../d9/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MapParams.html#aa72a9a0a49f1a34593e2c82736c8d61b">com.fs.starfarer.api.ui.MapParams.starAlphaMult</a></div><div class="ttdeci">float starAlphaMult</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d7f/MapParams_8java_source.html#l00039">MapParams.java:39</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MapParams_html_ac60cfe051bc72c4dfa6c705400e3586b"><div class="ttname"><a href="../../d9/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MapParams.html#ac60cfe051bc72c4dfa6c705400e3586b">com.fs.starfarer.api.ui.MapParams.zoomLevel</a></div><div class="ttdeci">float zoomLevel</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d7f/MapParams_8java_source.html#l00046">MapParams.java:46</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MapParams_html_ad4cdc35140b45a390d0c0bd864363e66"><div class="ttname"><a href="../../d9/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MapParams.html#ad4cdc35140b45a390d0c0bd864363e66">com.fs.starfarer.api.ui.MapParams.starSelectionRadiusMult</a></div><div class="ttdeci">float starSelectionRadiusMult</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d7f/MapParams_8java_source.html#l00038">MapParams.java:38</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MapParams_html_ae5c7c4b6107139e36647144aa913a1cc"><div class="ttname"><a href="../../d9/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MapParams.html#ae5c7c4b6107139e36647144aa913a1cc">com.fs.starfarer.api.ui.MapParams.renderTopBorder</a></div><div class="ttdeci">boolean renderTopBorder</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d7f/MapParams_8java_source.html#l00043">MapParams.java:43</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MapParams_html_aeeaa0b88d23720b711b04deea28f6e2e"><div class="ttname"><a href="../../d9/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MapParams.html#aeeaa0b88d23720b711b04deea28f6e2e">com.fs.starfarer.api.ui.MapParams.filterData</a></div><div class="ttdeci">MapFilterData filterData</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d7f/MapParams_8java_source.html#l00029">MapParams.java:29</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -259,84 +221,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/d7f/MapParams_8java_source.html#l00086">86</a> of file <a class="el" href="../../d1/d7f/MapParams_8java_source.html">MapParams.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   86</span>                                                                                                  {</div>
-<div class="line"><span class="lineno">   87</span>        Vector2f center = <span class="keyword">new</span> Vector2f();</div>
-<div class="line"><span class="lineno">   88</span>        <span class="keywordtype">float</span> total = 0f;</div>
-<div class="line"><span class="lineno">   89</span>        CampaignFleetAPI player = Global.getSector().getPlayerFleet();</div>
-<div class="line"><span class="lineno">   90</span>        MarkerData playerMarker = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   91</span>        <span class="keywordflow">if</span> (showPlayerFleet) {</div>
-<div class="line"><span class="lineno">   92</span>            <a class="code hl_variable" href="../../d9/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MapParams.html#acae91dcff9d8708910b8746271b20fca">skipCurrLocMarkerRendering</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   93</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d9/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MapParams.html#a322fbb738d2d11ea9eb17777684b0166">markers</a> == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   94</span>                <a class="code hl_variable" href="../../d9/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MapParams.html#a322fbb738d2d11ea9eb17777684b0166">markers</a> = <span class="keyword">new</span> ArrayList&lt;MarkerData&gt;();</div>
-<div class="line"><span class="lineno">   95</span>            }</div>
-<div class="line"><span class="lineno">   96</span>            playerMarker = <span class="keyword">new</span> MarkerData(player.getLocationInHyperspace(), <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   97</span>            <a class="code hl_variable" href="../../d9/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MapParams.html#a322fbb738d2d11ea9eb17777684b0166">markers</a>.add(playerMarker);</div>
-<div class="line"><span class="lineno">   98</span><span class="comment">//          Vector2f.add(center, player.getLocationInHyperspace(), center);</span></div>
-<div class="line"><span class="lineno">   99</span><span class="comment">//          total++;</span></div>
-<div class="line"><span class="lineno">  100</span>        }</div>
-<div class="line"><span class="lineno">  101</span>        </div>
-<div class="line"><span class="lineno">  102</span>        Vector2f min = <span class="keyword">new</span> Vector2f();</div>
-<div class="line"><span class="lineno">  103</span>        Vector2f max = <span class="keyword">new</span> Vector2f();</div>
-<div class="line"><span class="lineno">  104</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d9/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MapParams.html#aabf03c91b8361e3c191eda0898b0fdb4">showSystems</a> != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  105</span>            <span class="keywordflow">for</span> (StarSystemAPI curr : <a class="code hl_variable" href="../../d9/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MapParams.html#aabf03c91b8361e3c191eda0898b0fdb4">showSystems</a>) {</div>
-<div class="line"><span class="lineno">  106</span>                Vector2f p = curr.getLocation();</div>
-<div class="line"><span class="lineno">  107</span>                min.x = Math.min(min.x, p.x);</div>
-<div class="line"><span class="lineno">  108</span>                min.y = Math.min(min.y, p.y);</div>
-<div class="line"><span class="lineno">  109</span>                max.x = Math.max(max.x, p.x);</div>
-<div class="line"><span class="lineno">  110</span>                max.y = Math.max(max.y, p.y);</div>
-<div class="line"><span class="lineno">  111</span>                </div>
-<div class="line"><span class="lineno">  112</span>                Vector2f.add(center, p, center);</div>
-<div class="line"><span class="lineno">  113</span>                total++;</div>
-<div class="line"><span class="lineno">  114</span>            }</div>
-<div class="line"><span class="lineno">  115</span>        }</div>
-<div class="line"><span class="lineno">  116</span>        </div>
-<div class="line"><span class="lineno">  117</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d9/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MapParams.html#a322fbb738d2d11ea9eb17777684b0166">markers</a> != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  118</span>            <span class="keywordflow">for</span> (MarkerData curr : <a class="code hl_variable" href="../../d9/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MapParams.html#a322fbb738d2d11ea9eb17777684b0166">markers</a>) {</div>
-<div class="line"><span class="lineno">  119</span>                <span class="keywordflow">if</span> (curr == playerMarker) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  120</span>                Vector2f p = curr.coordinates;</div>
-<div class="line"><span class="lineno">  121</span>                min.x = Math.min(min.x, p.x);</div>
-<div class="line"><span class="lineno">  122</span>                min.y = Math.min(min.y, p.y);</div>
-<div class="line"><span class="lineno">  123</span>                max.x = Math.max(max.x, p.x);</div>
-<div class="line"><span class="lineno">  124</span>                max.y = Math.max(max.y, p.y);</div>
-<div class="line"><span class="lineno">  125</span>                </div>
-<div class="line"><span class="lineno">  126</span>                Vector2f.add(center, p, center);</div>
-<div class="line"><span class="lineno">  127</span>                total++;</div>
-<div class="line"><span class="lineno">  128</span>            }</div>
-<div class="line"><span class="lineno">  129</span>        }</div>
-<div class="line"><span class="lineno">  130</span>        </div>
-<div class="line"><span class="lineno">  131</span>        <span class="keywordflow">if</span> (total &gt; 0) {</div>
-<div class="line"><span class="lineno">  132</span>            center.scale(1f / total);</div>
-<div class="line"><span class="lineno">  133</span>        }</div>
-<div class="line"><span class="lineno">  134</span>        </div>
-<div class="line"><span class="lineno">  135</span>        <span class="keywordtype">float</span> factor = <a class="code hl_variable" href="../../d9/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MapParams.html#a5984a281e3e2d48c168c2cd3b1c31f6f">GRID_SIZE_PIXELS</a> / <a class="code hl_variable" href="../../d9/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MapParams.html#a98da1c9b2d274ab503c7f6110b17e9ca">GRID_SIZE_MAP_UNITS</a>;</div>
-<div class="line"><span class="lineno">  136</span>        <span class="keywordtype">float</span> distance = Misc.getDistance(player.getLocationInHyperspace(), center);</div>
-<div class="line"><span class="lineno">  137</span>        Vector2f diff = Vector2f.sub(max, min, <span class="keyword">new</span> Vector2f());</div>
-<div class="line"><span class="lineno">  138</span>        distance += diff.length() * 0.5f;</div>
-<div class="line"><span class="lineno">  139</span>        </div>
-<div class="line"><span class="lineno">  140</span>        distance *= 1.2f;</div>
-<div class="line"><span class="lineno">  141</span>        distance *= factor;</div>
-<div class="line"><span class="lineno">  142</span>        </div>
-<div class="line"><span class="lineno">  143</span>        <span class="keywordtype">float</span> maxShown = heightOnScreen;</div>
-<div class="line"><span class="lineno">  144</span>        </div>
-<div class="line"><span class="lineno">  145</span>        <span class="keywordtype">float</span> zoom = (float) (Math.ceil(distance / maxShown)) + 1;</div>
-<div class="line"><span class="lineno">  146</span>        <span class="keywordflow">if</span> (zoom &lt; 3) zoom = 3;</div>
-<div class="line"><span class="lineno">  147</span>        </div>
-<div class="line"><span class="lineno">  148</span>        <a class="code hl_variable" href="../../d9/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MapParams.html#ac60cfe051bc72c4dfa6c705400e3586b">zoomLevel</a> = zoom;</div>
-<div class="line"><span class="lineno">  149</span>        </div>
-<div class="line"><span class="lineno">  150</span>        Vector2f loc = Misc.interpolateVector(Global.getSector().getPlayerFleet().getLocationInHyperspace(),</div>
-<div class="line"><span class="lineno">  151</span>                                              center, 0.5f);</div>
-<div class="line"><span class="lineno">  152</span>        </div>
-<div class="line"><span class="lineno">  153</span>        <a class="code hl_variable" href="../../d9/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MapParams.html#a57e4dc3ca29938fc17cd03084010c17b">centerOn</a> = loc;</div>
-<div class="line"><span class="lineno">  154</span>        </div>
-<div class="line"><span class="lineno">  155</span><span class="comment">//      zoomLevel = 100;</span></div>
-<div class="line"><span class="lineno">  156</span><span class="comment">//      centerOn = new Vector2f();</span></div>
-<div class="line"><span class="lineno">  157</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MapParams_html_a322fbb738d2d11ea9eb17777684b0166"><div class="ttname"><a href="../../d9/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MapParams.html#a322fbb738d2d11ea9eb17777684b0166">com.fs.starfarer.api.ui.MapParams.markers</a></div><div class="ttdeci">List&lt; MarkerData &gt; markers</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d7f/MapParams_8java_source.html#l00052">MapParams.java:52</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MapParams_html_a5984a281e3e2d48c168c2cd3b1c31f6f"><div class="ttname"><a href="../../d9/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MapParams.html#a5984a281e3e2d48c168c2cd3b1c31f6f">com.fs.starfarer.api.ui.MapParams.GRID_SIZE_PIXELS</a></div><div class="ttdeci">static final float GRID_SIZE_PIXELS</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d7f/MapParams_8java_source.html#l00024">MapParams.java:24</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MapParams_html_a98da1c9b2d274ab503c7f6110b17e9ca"><div class="ttname"><a href="../../d9/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MapParams.html#a98da1c9b2d274ab503c7f6110b17e9ca">com.fs.starfarer.api.ui.MapParams.GRID_SIZE_MAP_UNITS</a></div><div class="ttdeci">static final float GRID_SIZE_MAP_UNITS</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d7f/MapParams_8java_source.html#l00023">MapParams.java:23</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MapParams_html_aabf03c91b8361e3c191eda0898b0fdb4"><div class="ttname"><a href="../../d9/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MapParams.html#aabf03c91b8361e3c191eda0898b0fdb4">com.fs.starfarer.api.ui.MapParams.showSystems</a></div><div class="ttdeci">Set&lt; StarSystemAPI &gt; showSystems</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d7f/MapParams_8java_source.html#l00048">MapParams.java:48</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MapParams_html_acae91dcff9d8708910b8746271b20fca"><div class="ttname"><a href="../../d9/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MapParams.html#acae91dcff9d8708910b8746271b20fca">com.fs.starfarer.api.ui.MapParams.skipCurrLocMarkerRendering</a></div><div class="ttdeci">boolean skipCurrLocMarkerRendering</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d7f/MapParams_8java_source.html#l00054">MapParams.java:54</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae855c3a1f178775c2870e715c8083559" name="ae855c3a1f178775c2870e715c8083559"></a>
@@ -356,15 +241,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/d7f/MapParams_8java_source.html#l00166">166</a> of file <a class="el" href="../../d1/d7f/MapParams_8java_source.html">MapParams.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  166</span>                                             {</div>
-<div class="line"><span class="lineno">  167</span>        <span class="keywordtype">float</span> scale = 1f;</div>
-<div class="line"><span class="lineno">  168</span>        <span class="keywordflow">if</span> (market != <span class="keyword">null</span> &amp;&amp; !market.isPlanetConditionMarketOnly()) {</div>
-<div class="line"><span class="lineno">  169</span>            scale = MarkerData.getScaleForMarket(market);</div>
-<div class="line"><span class="lineno">  170</span>        }</div>
-<div class="line"><span class="lineno">  171</span>        <a class="code hl_function" href="../../d9/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MapParams.html#ae855c3a1f178775c2870e715c8083559">showMarket</a>(market, scale);</div>
-<div class="line"><span class="lineno">  172</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MapParams_html_ae855c3a1f178775c2870e715c8083559"><div class="ttname"><a href="../../d9/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MapParams.html#ae855c3a1f178775c2870e715c8083559">com.fs.starfarer.api.ui.MapParams.showMarket</a></div><div class="ttdeci">void showMarket(MarketAPI market)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d7f/MapParams_8java_source.html#l00166">MapParams.java:166</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="afe421fd3b3e4fad6cdc0e9eefba81c0e" name="afe421fd3b3e4fad6cdc0e9eefba81c0e"></a>
@@ -394,18 +271,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/d7f/MapParams_8java_source.html#l00173">173</a> of file <a class="el" href="../../d1/d7f/MapParams_8java_source.html">MapParams.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  173</span>                                                          {</div>
-<div class="line"><span class="lineno">  174</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d9/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MapParams.html#a322fbb738d2d11ea9eb17777684b0166">markers</a> == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  175</span>            <a class="code hl_variable" href="../../d9/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MapParams.html#a322fbb738d2d11ea9eb17777684b0166">markers</a> = <span class="keyword">new</span> ArrayList&lt;MarkerData&gt;();</div>
-<div class="line"><span class="lineno">  176</span>        }</div>
-<div class="line"><span class="lineno">  177</span>        </div>
-<div class="line"><span class="lineno">  178</span>        <a class="code hl_variable" href="../../d9/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MapParams.html#a322fbb738d2d11ea9eb17777684b0166">markers</a>.add(<span class="keyword">new</span> MarkerData(</div>
-<div class="line"><span class="lineno">  179</span>                        market.getLocationInHyperspace(), </div>
-<div class="line"><span class="lineno">  180</span>                        <span class="keyword">null</span>, </div>
-<div class="line"><span class="lineno">  181</span>                        market.getFaction().getBaseUIColor(), </div>
-<div class="line"><span class="lineno">  182</span>                        scale));</div>
-<div class="line"><span class="lineno">  183</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a56af770c24009b9c17c47b33115364ba" name="a56af770c24009b9c17c47b33115364ba"></a>
@@ -425,13 +291,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/d7f/MapParams_8java_source.html#l00159">159</a> of file <a class="el" href="../../d1/d7f/MapParams_8java_source.html">MapParams.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  159</span>                                                 {</div>
-<div class="line"><span class="lineno">  160</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d9/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MapParams.html#aabf03c91b8361e3c191eda0898b0fdb4">showSystems</a> == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  161</span>            <a class="code hl_variable" href="../../d9/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MapParams.html#aabf03c91b8361e3c191eda0898b0fdb4">showSystems</a> = <span class="keyword">new</span> HashSet&lt;StarSystemAPI&gt;();</div>
-<div class="line"><span class="lineno">  162</span>        }</div>
-<div class="line"><span class="lineno">  163</span>        <a class="code hl_variable" href="../../d9/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MapParams.html#aabf03c91b8361e3c191eda0898b0fdb4">showSystems</a>.add(system);</div>
-<div class="line"><span class="lineno">  164</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -191,14 +192,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/d45/BaseLimitedFleetManager_8java_source.html#l00042">42</a> of file <a class="el" href="../../df/d45/BaseLimitedFleetManager_8java_source.html">BaseLimitedFleetManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   42</span>                                     {</div>
-<div class="line"><span class="lineno">   43</span>        <span class="keywordtype">float</span> interval = 30f;</div>
-<div class="line"><span class="lineno">   44</span>        <a class="code hl_variable" href="../../d2/dda/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseLimitedFleetManager.html#a1e8444b51ace0ebb7a47807925ec018a">tracker</a> = <span class="keyword">new</span> IntervalUtil(interval * 0.75f, interval * 1.25f);</div>
-<div class="line"><span class="lineno">   45</span>        <a class="code hl_function" href="../../d2/dda/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseLimitedFleetManager.html#ad1beb985b9af12dfb072fa0b66029841">readResolve</a>();</div>
-<div class="line"><span class="lineno">   46</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseLimitedFleetManager_html_a1e8444b51ace0ebb7a47807925ec018a"><div class="ttname"><a href="../../d2/dda/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseLimitedFleetManager.html#a1e8444b51ace0ebb7a47807925ec018a">com.fs.starfarer.api.impl.campaign.fleets.BaseLimitedFleetManager.tracker</a></div><div class="ttdeci">IntervalUtil tracker</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d45/BaseLimitedFleetManager_8java_source.html#l00040">BaseLimitedFleetManager.java:40</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseLimitedFleetManager_html_ad1beb985b9af12dfb072fa0b66029841"><div class="ttname"><a href="../../d2/dda/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseLimitedFleetManager.html#ad1beb985b9af12dfb072fa0b66029841">com.fs.starfarer.api.impl.campaign.fleets.BaseLimitedFleetManager.readResolve</a></div><div class="ttdeci">Object readResolve()</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d45/BaseLimitedFleetManager_8java_source.html#l00048">BaseLimitedFleetManager.java:48</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -229,57 +223,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../d1/d23/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DisposableFleetManager.html#a2295d7a47f2690b0299e4c0cd1496787">com.fs.starfarer.api.impl.campaign.fleets.DisposableFleetManager</a>, <a class="el" href="../../d5/d1b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DisposablePirateFleetManager.html#ae54f00efdddd4d68c1c502e6261d6649">com.fs.starfarer.api.impl.campaign.fleets.DisposablePirateFleetManager</a>, and <a class="el" href="../../d8/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1PlayerVisibleFleetManager.html#a325124949d9108f5ef32e46104798af4">com.fs.starfarer.api.impl.campaign.fleets.PlayerVisibleFleetManager</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/d45/BaseLimitedFleetManager_8java_source.html#l00063">63</a> of file <a class="el" href="../../df/d45/BaseLimitedFleetManager_8java_source.html">BaseLimitedFleetManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   63</span>                                      {</div>
-<div class="line"><span class="lineno">   64</span>        <span class="keywordtype">float</span> days = Global.getSector().getClock().convertToDays(amount);</div>
-<div class="line"><span class="lineno">   65</span>        </div>
-<div class="line"><span class="lineno">   66</span>        <a class="code hl_variable" href="../../d2/dda/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseLimitedFleetManager.html#a1e8444b51ace0ebb7a47807925ec018a">tracker</a>.<a class="code hl_function" href="../../da/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html#a61881d44415cda2c50c3354c3f0a4d8a">advance</a>(days * <a class="code hl_function" href="../../d2/dda/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseLimitedFleetManager.html#a5f8cc84345c1d78111936e3f2d2b29d6">getSpawnRateMult</a>());</div>
-<div class="line"><span class="lineno">   67</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="../../d2/dda/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseLimitedFleetManager.html#a1e8444b51ace0ebb7a47807925ec018a">tracker</a>.intervalElapsed()) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   68</span>        </div>
-<div class="line"><span class="lineno">   69</span>        <span class="keywordtype">float</span> next = <a class="code hl_function" href="../../d2/dda/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseLimitedFleetManager.html#acf30713fc30fe924174df7341c6eb177">getNextInterval</a>();</div>
-<div class="line"><span class="lineno">   70</span>        <a class="code hl_variable" href="../../d2/dda/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseLimitedFleetManager.html#a1e8444b51ace0ebb7a47807925ec018a">tracker</a>.<a class="code hl_function" href="../../da/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html#a602873feb4614d386fd4a2e3969efad6">setInterval</a>(next, next);</div>
-<div class="line"><span class="lineno">   71</span>        </div>
-<div class="line"><span class="lineno">   72</span>        Global.getSettings().profilerBegin(this.getClass().getSimpleName() + <span class="stringliteral">&quot;.advance()&quot;</span>);</div>
-<div class="line"><span class="lineno">   73</span>        List&lt;ManagedFleetData&gt; <span class="keyword">remove</span> = <span class="keyword">new</span> ArrayList&lt;ManagedFleetData&gt;();</div>
-<div class="line"><span class="lineno">   74</span>        <span class="keywordflow">for</span> (ManagedFleetData data : <a class="code hl_variable" href="../../d2/dda/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseLimitedFleetManager.html#a4b3904dbf3a0ba362c64c8fa30aa39af">active</a>) {</div>
-<div class="line"><span class="lineno">   75</span>            <span class="keywordflow">if</span> (data.fleet.getContainingLocation() == <span class="keyword">null</span> ||</div>
-<div class="line"><span class="lineno">   76</span>                !data.fleet.getContainingLocation().getFleets().contains(data.fleet)) {</div>
-<div class="line"><span class="lineno">   77</span>                <span class="keyword">remove</span>.add(data);</div>
-<div class="line"><span class="lineno">   78</span>                <a class="code hl_variable" href="../../d2/dda/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseLimitedFleetManager.html#a1a3dd6118f4179bc1975f7795ac963bc">log</a>.info(<span class="stringliteral">&quot;Cleaning up orphaned fleet [&quot;</span> + data.fleet.getNameWithFaction() + <span class="stringliteral">&quot;]&quot;</span>);</div>
-<div class="line"><span class="lineno">   79</span>            }</div>
-<div class="line"><span class="lineno">   80</span>        }</div>
-<div class="line"><span class="lineno">   81</span>        <a class="code hl_variable" href="../../d2/dda/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseLimitedFleetManager.html#a4b3904dbf3a0ba362c64c8fa30aa39af">active</a>.removeAll(<span class="keyword">remove</span>);</div>
-<div class="line"><span class="lineno">   82</span>        </div>
-<div class="line"><span class="lineno">   83</span>        <span class="keywordtype">int</span> max = <a class="code hl_function" href="../../d2/dda/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseLimitedFleetManager.html#a80d6bc0f6a203f2174131d6793d30b1f">getMaxFleets</a>();</div>
-<div class="line"><span class="lineno">   84</span>        </div>
-<div class="line"><span class="lineno">   85</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d2/dda/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseLimitedFleetManager.html#a4b3904dbf3a0ba362c64c8fa30aa39af">active</a>.size() &lt; max) {</div>
-<div class="line"><span class="lineno">   86</span>            <span class="comment">//log.info(active.size() + &quot; out of a maximum &quot; + max + &quot; fleets in play for [&quot; + getClass().getName() + &quot;]&quot;);</span></div>
-<div class="line"><span class="lineno">   87</span>            CampaignFleetAPI fleet = <a class="code hl_function" href="../../d2/dda/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseLimitedFleetManager.html#ad915a0b4ce8686b012cb817b679c6dbd">spawnFleet</a>();</div>
-<div class="line"><span class="lineno">   88</span>            <span class="keywordflow">if</span> (fleet != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   89</span>                fleet.addEventListener(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">   90</span>                LocationAPI spawnLoc = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   91</span>                <span class="keywordflow">if</span> (<span class="keyword">this</span> instanceof DisposableFleetManager) {</div>
-<div class="line"><span class="lineno">   92</span>                    spawnLoc = ((DisposableFleetManager)<span class="keyword">this</span>).getCurrSpawnLoc();</div>
-<div class="line"><span class="lineno">   93</span>                }</div>
-<div class="line"><span class="lineno">   94</span>                ManagedFleetData data = <span class="keyword">new</span> ManagedFleetData(fleet, spawnLoc);</div>
-<div class="line"><span class="lineno">   95</span>                <a class="code hl_variable" href="../../d2/dda/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseLimitedFleetManager.html#a4b3904dbf3a0ba362c64c8fa30aa39af">active</a>.add(data);</div>
-<div class="line"><span class="lineno">   96</span>                <a class="code hl_variable" href="../../d2/dda/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseLimitedFleetManager.html#a1a3dd6118f4179bc1975f7795ac963bc">log</a>.info(<span class="stringliteral">&quot;Spawned fleet [&quot;</span> + fleet.getNameWithFaction() + <span class="stringliteral">&quot;] at hyperloc &quot;</span> + fleet.getLocationInHyperspace());</div>
-<div class="line"><span class="lineno">   97</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   98</span>                <span class="comment">//log.info(&quot;Could not spawn fleet - returned null&quot;);</span></div>
-<div class="line"><span class="lineno">   99</span>            }</div>
-<div class="line"><span class="lineno">  100</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  101</span>            <a class="code hl_variable" href="../../d2/dda/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseLimitedFleetManager.html#a1a3dd6118f4179bc1975f7795ac963bc">log</a>.debug(<span class="stringliteral">&quot;Maximum number of &quot;</span> + max + <span class="stringliteral">&quot; fleets already in play for [&quot;</span> + getClass().getName() + <span class="stringliteral">&quot;]&quot;</span>);</div>
-<div class="line"><span class="lineno">  102</span>        }</div>
-<div class="line"><span class="lineno">  103</span>        Global.getSettings().profilerEnd();</div>
-<div class="line"><span class="lineno">  104</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseLimitedFleetManager_html_a1a3dd6118f4179bc1975f7795ac963bc"><div class="ttname"><a href="../../d2/dda/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseLimitedFleetManager.html#a1a3dd6118f4179bc1975f7795ac963bc">com.fs.starfarer.api.impl.campaign.fleets.BaseLimitedFleetManager.log</a></div><div class="ttdeci">static Logger log</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d45/BaseLimitedFleetManager_8java_source.html#l00027">BaseLimitedFleetManager.java:27</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseLimitedFleetManager_html_a4b3904dbf3a0ba362c64c8fa30aa39af"><div class="ttname"><a href="../../d2/dda/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseLimitedFleetManager.html#a4b3904dbf3a0ba362c64c8fa30aa39af">com.fs.starfarer.api.impl.campaign.fleets.BaseLimitedFleetManager.active</a></div><div class="ttdeci">List&lt; ManagedFleetData &gt; active</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d45/BaseLimitedFleetManager_8java_source.html#l00039">BaseLimitedFleetManager.java:39</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseLimitedFleetManager_html_a5f8cc84345c1d78111936e3f2d2b29d6"><div class="ttname"><a href="../../d2/dda/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseLimitedFleetManager.html#a5f8cc84345c1d78111936e3f2d2b29d6">com.fs.starfarer.api.impl.campaign.fleets.BaseLimitedFleetManager.getSpawnRateMult</a></div><div class="ttdeci">float getSpawnRateMult()</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d45/BaseLimitedFleetManager_8java_source.html#l00059">BaseLimitedFleetManager.java:59</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseLimitedFleetManager_html_a80d6bc0f6a203f2174131d6793d30b1f"><div class="ttname"><a href="../../d2/dda/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseLimitedFleetManager.html#a80d6bc0f6a203f2174131d6793d30b1f">com.fs.starfarer.api.impl.campaign.fleets.BaseLimitedFleetManager.getMaxFleets</a></div><div class="ttdeci">abstract int getMaxFleets()</div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseLimitedFleetManager_html_acf30713fc30fe924174df7341c6eb177"><div class="ttname"><a href="../../d2/dda/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseLimitedFleetManager.html#acf30713fc30fe924174df7341c6eb177">com.fs.starfarer.api.impl.campaign.fleets.BaseLimitedFleetManager.getNextInterval</a></div><div class="ttdeci">float getNextInterval()</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d45/BaseLimitedFleetManager_8java_source.html#l00055">BaseLimitedFleetManager.java:55</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseLimitedFleetManager_html_ad915a0b4ce8686b012cb817b679c6dbd"><div class="ttname"><a href="../../d2/dda/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseLimitedFleetManager.html#ad915a0b4ce8686b012cb817b679c6dbd">com.fs.starfarer.api.impl.campaign.fleets.BaseLimitedFleetManager.spawnFleet</a></div><div class="ttdeci">abstract CampaignFleetAPI spawnFleet()</div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil_html_a602873feb4614d386fd4a2e3969efad6"><div class="ttname"><a href="../../da/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html#a602873feb4614d386fd4a2e3969efad6">com.fs.starfarer.api.util.IntervalUtil.setInterval</a></div><div class="ttdeci">void setInterval(float min, float max)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de3/IntervalUtil_8java_source.html#l00062">IntervalUtil.java:62</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil_html_a61881d44415cda2c50c3354c3f0a4d8a"><div class="ttname"><a href="../../da/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html#a61881d44415cda2c50c3354c3f0a4d8a">com.fs.starfarer.api.util.IntervalUtil.advance</a></div><div class="ttdeci">void advance(float amount)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de3/IntervalUtil_8java_source.html#l00039">IntervalUtil.java:39</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a80d6bc0f6a203f2174131d6793d30b1f" name="a80d6bc0f6a203f2174131d6793d30b1f"></a>
@@ -333,10 +277,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/d45/BaseLimitedFleetManager_8java_source.html#l00055">55</a> of file <a class="el" href="../../df/d45/BaseLimitedFleetManager_8java_source.html">BaseLimitedFleetManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   55</span>                                      {</div>
-<div class="line"><span class="lineno">   56</span>        <span class="keywordflow">return</span> 30f * (0.75f + (float) Math.random() * 0.5f); </div>
-<div class="line"><span class="lineno">   57</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5f8cc84345c1d78111936e3f2d2b29d6" name="a5f8cc84345c1d78111936e3f2d2b29d6"></a>
@@ -365,10 +306,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../d1/d23/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DisposableFleetManager.html#a9171999f1ecfac604a082669f4c02a02">com.fs.starfarer.api.impl.campaign.fleets.DisposableFleetManager</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/d45/BaseLimitedFleetManager_8java_source.html#l00059">59</a> of file <a class="el" href="../../df/d45/BaseLimitedFleetManager_8java_source.html">BaseLimitedFleetManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   59</span>                                       {</div>
-<div class="line"><span class="lineno">   60</span>        <span class="keywordflow">return</span> 1f;</div>
-<div class="line"><span class="lineno">   61</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a394a4a10021765c258d998f333cba0a9" name="a394a4a10021765c258d998f333cba0a9"></a>
@@ -390,10 +328,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d7/d63/interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html#a2b9a206acf99d1cdc1511885d14bb58c">com.fs.starfarer.api.EveryFrameScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/d45/BaseLimitedFleetManager_8java_source.html#l00106">106</a> of file <a class="el" href="../../df/d45/BaseLimitedFleetManager_8java_source.html">BaseLimitedFleetManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  106</span>                            {</div>
-<div class="line"><span class="lineno">  107</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  108</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ad1beb985b9af12dfb072fa0b66029841" name="ad1beb985b9af12dfb072fa0b66029841"></a>
@@ -422,10 +357,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../d1/d23/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DisposableFleetManager.html#a8f261837630e00c9477af11050d120a3">com.fs.starfarer.api.impl.campaign.fleets.DisposableFleetManager</a>, <a class="el" href="../../dd/d20/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DisposableLuddicPathFleetManager.html#a48dc4028b62ee46d2d7e2f90a67303b9">com.fs.starfarer.api.impl.campaign.fleets.DisposableLuddicPathFleetManager</a>, <a class="el" href="../../d5/d1b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DisposablePirateFleetManager.html#aaf7e5760e803b0064a7b4a0163be33cb">com.fs.starfarer.api.impl.campaign.fleets.DisposablePirateFleetManager</a>, <a class="el" href="../../d8/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1PlayerVisibleFleetManager.html#a124ee61eb12f1d0aba24cbb1f60e87a2">com.fs.starfarer.api.impl.campaign.fleets.PlayerVisibleFleetManager</a>, and <a class="el" href="../../d6/d93/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1DisposableHostileActivityFleetManager.html#ae9a87dddf31ed7437b2d7916db9c0980">com.fs.starfarer.api.impl.campaign.intel.events.DisposableHostileActivityFleetManager</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/d45/BaseLimitedFleetManager_8java_source.html#l00048">48</a> of file <a class="el" href="../../df/d45/BaseLimitedFleetManager_8java_source.html">BaseLimitedFleetManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   48</span>                                   {</div>
-<div class="line"><span class="lineno">   49</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">   50</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a084415de4901a301f5448b9b6dc7a320" name="a084415de4901a301f5448b9b6dc7a320"></a>
@@ -471,9 +403,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d5/d7b/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1FleetEventListener.html#a6dff203922d9929930959967dfddb927">com.fs.starfarer.api.campaign.listeners.FleetEventListener</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/d45/BaseLimitedFleetManager_8java_source.html#l00123">123</a> of file <a class="el" href="../../df/d45/BaseLimitedFleetManager_8java_source.html">BaseLimitedFleetManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  123</span>                                                                                                               {</div>
-<div class="line"><span class="lineno">  124</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af2ac39349725ed669b7419484671b2f8" name="af2ac39349725ed669b7419484671b2f8"></a>
@@ -509,15 +439,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/d45/BaseLimitedFleetManager_8java_source.html#l00114">114</a> of file <a class="el" href="../../df/d45/BaseLimitedFleetManager_8java_source.html">BaseLimitedFleetManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  114</span>                                                                                                      {</div>
-<div class="line"><span class="lineno">  115</span>        <span class="keywordflow">for</span> (ManagedFleetData data : <a class="code hl_variable" href="../../d2/dda/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseLimitedFleetManager.html#a4b3904dbf3a0ba362c64c8fa30aa39af">active</a>) {</div>
-<div class="line"><span class="lineno">  116</span>            <span class="keywordflow">if</span> (data.fleet == fleet) {</div>
-<div class="line"><span class="lineno">  117</span>                <a class="code hl_variable" href="../../d2/dda/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseLimitedFleetManager.html#a4b3904dbf3a0ba362c64c8fa30aa39af">active</a>.remove(data);</div>
-<div class="line"><span class="lineno">  118</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  119</span>            }</div>
-<div class="line"><span class="lineno">  120</span>        }</div>
-<div class="line"><span class="lineno">  121</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a0c9f4b3f880819484177939acf342a4a" name="a0c9f4b3f880819484177939acf342a4a"></a>
@@ -555,9 +477,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d5/d7b/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1FleetEventListener.html#a80bf021b96aa1c0f11ee40000e5d3666">com.fs.starfarer.api.campaign.listeners.FleetEventListener</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/d45/BaseLimitedFleetManager_8java_source.html#l00126">126</a> of file <a class="el" href="../../df/d45/BaseLimitedFleetManager_8java_source.html">BaseLimitedFleetManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  126</span>                                                                                                                {</div>
-<div class="line"><span class="lineno">  127</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8de417d55f79fe36f559fffdfdae29c7" name="a8de417d55f79fe36f559fffdfdae29c7"></a>
@@ -579,10 +499,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d7/d63/interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html#a6397d6c1c19a4dd0b58099219c0e0173">com.fs.starfarer.api.EveryFrameScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/d45/BaseLimitedFleetManager_8java_source.html#l00110">110</a> of file <a class="el" href="../../df/d45/BaseLimitedFleetManager_8java_source.html">BaseLimitedFleetManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  110</span>                                    {</div>
-<div class="line"><span class="lineno">  111</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  112</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ad915a0b4ce8686b012cb817b679c6dbd" name="ad915a0b4ce8686b012cb817b679c6dbd"></a>

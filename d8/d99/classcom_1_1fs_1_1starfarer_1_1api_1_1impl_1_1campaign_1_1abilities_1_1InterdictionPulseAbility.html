@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -502,30 +503,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#a1b79c85d7032a24bea4a4b599f765f52">com.fs.starfarer.api.impl.campaign.abilities.BaseDurationAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d8a/InterdictionPulseAbility_8java_source.html#l00139">139</a> of file <a class="el" href="../../d0/d8a/InterdictionPulseAbility_8java_source.html">InterdictionPulseAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  139</span>                                  {</div>
-<div class="line"><span class="lineno">  140</span>        CampaignFleetAPI fleet = <a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#abdc51d7defc6b6bf60924a01ec361d2d">getFleet</a>();</div>
-<div class="line"><span class="lineno">  141</span>        <span class="keywordflow">if</span> (fleet == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  142</span>        </div>
-<div class="line"><span class="lineno">  143</span>        Global.getSector().addPing(fleet, Pings.INTERDICT);</div>
-<div class="line"><span class="lineno">  144</span>        </div>
-<div class="line"><span class="lineno">  145</span>        <span class="keywordtype">float</span> range = <a class="code hl_function" href="../../d8/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1InterdictionPulseAbility.html#a6460204b31f6411d00733eb38597337c">getRange</a>(fleet);</div>
-<div class="line"><span class="lineno">  146</span>        <span class="keywordflow">for</span> (CampaignFleetAPI other : fleet.getContainingLocation().getFleets()) {</div>
-<div class="line"><span class="lineno">  147</span>            <span class="keywordflow">if</span> (other == fleet) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  148</span>            </div>
-<div class="line"><span class="lineno">  149</span>            <span class="keywordtype">float</span> dist = Misc.getDistance(fleet.getLocation(), other.getLocation());</div>
-<div class="line"><span class="lineno">  150</span>            <span class="keywordflow">if</span> (dist &gt; range + 500f) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  151</span> </div>
-<div class="line"><span class="lineno">  152</span>            other.addScript(<span class="keyword">new</span> IPReactionScript(fleet, other, <a class="code hl_function" href="../../d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#a0a5890f9ca871b20a00d1b8c534f3388">getActivationDays</a>()));</div>
-<div class="line"><span class="lineno">  153</span>        }</div>
-<div class="line"><span class="lineno">  154</span>        </div>
-<div class="line"><span class="lineno">  155</span>        <a class="code hl_variable" href="../../d8/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1InterdictionPulseAbility.html#a73856216911a1b5925bcff6c543b108e">primed</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  156</span>        </div>
-<div class="line"><span class="lineno">  157</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin_html_abdc51d7defc6b6bf60924a01ec361d2d"><div class="ttname"><a href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#abdc51d7defc6b6bf60924a01ec361d2d">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin.getFleet</a></div><div class="ttdeci">CampaignFleetAPI getFleet()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00144">BaseAbilityPlugin.java:144</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility_html_a0a5890f9ca871b20a00d1b8c534f3388"><div class="ttname"><a href="../../d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#a0a5890f9ca871b20a00d1b8c534f3388">com.fs.starfarer.api.impl.campaign.abilities.BaseDurationAbility.getActivationDays</a></div><div class="ttdeci">float getActivationDays()</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d40/BaseDurationAbility_8java_source.html#l00047">BaseDurationAbility.java:47</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1InterdictionPulseAbility_html_a6460204b31f6411d00733eb38597337c"><div class="ttname"><a href="../../d8/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1InterdictionPulseAbility.html#a6460204b31f6411d00733eb38597337c">com.fs.starfarer.api.impl.campaign.abilities.InterdictionPulseAbility.getRange</a></div><div class="ttdeci">static float getRange(CampaignFleetAPI fleet)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d8a/InterdictionPulseAbility_8java_source.html#l00123">InterdictionPulseAbility.java:123</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1InterdictionPulseAbility_html_a73856216911a1b5925bcff6c543b108e"><div class="ttname"><a href="../../d8/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1InterdictionPulseAbility.html#a73856216911a1b5925bcff6c543b108e">com.fs.starfarer.api.impl.campaign.abilities.InterdictionPulseAbility.primed</a></div><div class="ttdeci">Boolean primed</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d8a/InterdictionPulseAbility_8java_source.html#l00134">InterdictionPulseAbility.java:134</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af226ed1a758cf823ca7b2c1e9959e248" name="af226ed1a758cf823ca7b2c1e9959e248"></a>
@@ -571,127 +549,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#aee269ddd5f701aa11a8acd69c9bd434f">com.fs.starfarer.api.impl.campaign.abilities.BaseDurationAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d8a/InterdictionPulseAbility_8java_source.html#l00199">199</a> of file <a class="el" href="../../d0/d8a/InterdictionPulseAbility_8java_source.html">InterdictionPulseAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  199</span>                                                          {</div>
-<div class="line"><span class="lineno">  200</span>        CampaignFleetAPI fleet = <a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#abdc51d7defc6b6bf60924a01ec361d2d">getFleet</a>();</div>
-<div class="line"><span class="lineno">  201</span>        <span class="keywordflow">if</span> (fleet == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  202</span>        </div>
-<div class="line"><span class="lineno">  203</span>        fleet.getStats().getDetectedRangeMod().modifyPercent(<a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a2e9e39ccbd5d39ae13b255974fef719c">getModId</a>(), <a class="code hl_variable" href="../../d8/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1InterdictionPulseAbility.html#a6cc5cb8dd01b0b76c4b90368d01686f5">DETECTABILITY_PERCENT</a> * <a class="code hl_variable" href="../../d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#a74548753f66b57cc2bcc46a8288c459f">level</a>, <span class="stringliteral">&quot;Interdiction pulse&quot;</span>);</div>
-<div class="line"><span class="lineno">  204</span>        </div>
-<div class="line"><span class="lineno">  205</span>        <span class="comment">//System.out.println(&quot;Level: &quot; + level);</span></div>
-<div class="line"><span class="lineno">  206</span>        </div>
-<div class="line"><span class="lineno">  207</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#a74548753f66b57cc2bcc46a8288c459f">level</a> &gt; 0 &amp;&amp; level &lt; 1 &amp;&amp; amount &gt; 0) {</div>
-<div class="line"><span class="lineno">  208</span>            <a class="code hl_function" href="../../d8/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1InterdictionPulseAbility.html#a0d7a486a3005580ab467c939ea569ca9">showRangePing</a>(amount);</div>
-<div class="line"><span class="lineno">  209</span><span class="comment">//          float activateSeconds = getActivationDays() * Global.getSector().getClock().getSecondsPerDay();</span></div>
-<div class="line"><span class="lineno">  210</span><span class="comment">//          float speed = fleet.getVelocity().length();</span></div>
-<div class="line"><span class="lineno">  211</span><span class="comment">//          float acc = Math.max(speed, 200f)/activateSeconds + fleet.getAcceleration();</span></div>
-<div class="line"><span class="lineno">  212</span><span class="comment">//          float ds = acc * amount;</span></div>
-<div class="line"><span class="lineno">  213</span><span class="comment">//          if (ds &gt; speed) ds = speed;</span></div>
-<div class="line"><span class="lineno">  214</span><span class="comment">//          Vector2f dv = Misc.getUnitVectorAtDegreeAngle(Misc.getAngleInDegrees(fleet.getVelocity()));</span></div>
-<div class="line"><span class="lineno">  215</span><span class="comment">//          dv.scale(ds);</span></div>
-<div class="line"><span class="lineno">  216</span><span class="comment">//          fleet.setVelocity(fleet.getVelocity().x - dv.x, fleet.getVelocity().y - dv.y);</span></div>
-<div class="line"><span class="lineno">  217</span>            fleet.goSlowOneFrame();</div>
-<div class="line"><span class="lineno">  218</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  219</span>        }</div>
-<div class="line"><span class="lineno">  220</span>        </div>
-<div class="line"><span class="lineno">  221</span>        <span class="keywordtype">float</span> range = <a class="code hl_function" href="../../d8/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1InterdictionPulseAbility.html#a6460204b31f6411d00733eb38597337c">getRange</a>(fleet);</div>
-<div class="line"><span class="lineno">  222</span>        </div>
-<div class="line"><span class="lineno">  223</span>        <span class="keywordtype">boolean</span> playedHit = !(<a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a9d2408f6489b56d90a93b2a21ea0f340">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a0dfd224c22bfc35f7dda6f8a1c913472">isInCurrentLocation</a>() &amp;&amp; <a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a9d2408f6489b56d90a93b2a21ea0f340">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a535f1e15c5bcf56712d2dadbedf5e712">isVisibleToPlayerFleet</a>());</div>
-<div class="line"><span class="lineno">  224</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#a74548753f66b57cc2bcc46a8288c459f">level</a> == 1 &amp;&amp; <a class="code hl_variable" href="../../d8/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1InterdictionPulseAbility.html#a73856216911a1b5925bcff6c543b108e">primed</a> != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  225</span>            </div>
-<div class="line"><span class="lineno">  226</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a9d2408f6489b56d90a93b2a21ea0f340">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a0dfd224c22bfc35f7dda6f8a1c913472">isInCurrentLocation</a>()) {</div>
-<div class="line"><span class="lineno">  227</span>                Global.getSector().getMemoryWithoutUpdate().set(MemFlags.GLOBAL_INTERDICTION_PULSE_JUST_USED_IN_CURRENT_LOCATION, <span class="keyword">true</span>, 0.1f);</div>
-<div class="line"><span class="lineno">  228</span>            }</div>
-<div class="line"><span class="lineno">  229</span>            fleet.getMemoryWithoutUpdate().set(MemFlags.JUST_DID_INTERDICTION_PULSE, <span class="keyword">true</span>, 0.1f);</div>
-<div class="line"><span class="lineno">  230</span>            </div>
-<div class="line"><span class="lineno">  231</span>            CampaignPingSpec custom = <span class="keyword">new</span> CampaignPingSpec();</div>
-<div class="line"><span class="lineno">  232</span>            custom.setUseFactionColor(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  233</span>            custom.setWidth(15);</div>
-<div class="line"><span class="lineno">  234</span>            custom.setRange(range * 1.3f);</div>
-<div class="line"><span class="lineno">  235</span>            custom.setDuration(0.5f);</div>
-<div class="line"><span class="lineno">  236</span>            custom.setAlphaMult(1f);</div>
-<div class="line"><span class="lineno">  237</span>            custom.setInFraction(0.1f);</div>
-<div class="line"><span class="lineno">  238</span>            custom.setNum(1);</div>
-<div class="line"><span class="lineno">  239</span>            Global.getSector().addPing(fleet, custom);</div>
-<div class="line"><span class="lineno">  240</span> </div>
-<div class="line"><span class="lineno">  241</span>            </div>
-<div class="line"><span class="lineno">  242</span>            <span class="keywordflow">for</span> (CampaignFleetAPI other : fleet.getContainingLocation().getFleets()) {</div>
-<div class="line"><span class="lineno">  243</span>                <span class="keywordflow">if</span> (other == fleet) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  244</span>                <span class="keywordflow">if</span> (other.getFaction() == fleet.getFaction()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  245</span>                <span class="keywordflow">if</span> (other.isInHyperspaceTransition()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  246</span>                </div>
-<div class="line"><span class="lineno">  247</span>                <span class="keywordtype">float</span> dist = Misc.getDistance(fleet.getLocation(), other.getLocation());</div>
-<div class="line"><span class="lineno">  248</span>                <span class="keywordflow">if</span> (dist &gt; range) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  249</span>                </div>
-<div class="line"><span class="lineno">  250</span>                </div>
-<div class="line"><span class="lineno">  251</span>                <span class="keywordtype">float</span> interdictSeconds = <a class="code hl_function" href="../../d8/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1InterdictionPulseAbility.html#a3fd7d591c0f3b9fd1bf57abb2991d856">getInterdictSeconds</a>(fleet, other);</div>
-<div class="line"><span class="lineno">  252</span>                <span class="keywordflow">if</span> (interdictSeconds &gt; 0 &amp;&amp; interdictSeconds &lt; 1f) interdictSeconds = 1f;</div>
-<div class="line"><span class="lineno">  253</span>                </div>
-<div class="line"><span class="lineno">  254</span>                VisibilityLevel vis = other.getVisibilityLevelToPlayerFleet();</div>
-<div class="line"><span class="lineno">  255</span>                <span class="keywordflow">if</span> (vis == VisibilityLevel.COMPOSITION_AND_FACTION_DETAILS ||</div>
-<div class="line"><span class="lineno">  256</span>                        vis == VisibilityLevel.COMPOSITION_DETAILS ||</div>
-<div class="line"><span class="lineno">  257</span>                        (vis == VisibilityLevel.SENSOR_CONTACT &amp;&amp; fleet.isPlayerFleet())) {</div>
-<div class="line"><span class="lineno">  258</span>                    <span class="keywordflow">if</span> (interdictSeconds &lt;= 0) {</div>
-<div class="line"><span class="lineno">  259</span>                        other.addFloatingText(<span class="stringliteral">&quot;Interdict avoided!&quot;</span> , fleet.getFaction().getBaseUIColor(), 1f, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  260</span>                        <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  261</span>                    } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  262</span>                        other.addFloatingText(<span class="stringliteral">&quot;Interdict! (&quot;</span> + (<span class="keywordtype">int</span>) Math.round(interdictSeconds) + <span class="stringliteral">&quot;s)&quot;</span> , fleet.getFaction().getBaseUIColor(), 1f, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  263</span>                    }</div>
-<div class="line"><span class="lineno">  264</span>                }</div>
-<div class="line"><span class="lineno">  265</span>                </div>
-<div class="line"><span class="lineno">  266</span>                <span class="keywordtype">float</span> interdictDays = interdictSeconds / Global.getSector().getClock().getSecondsPerDay();</div>
-<div class="line"><span class="lineno">  267</span>                </div>
-<div class="line"><span class="lineno">  268</span>                <span class="keywordflow">for</span> (AbilityPlugin ability : other.getAbilities().values()) {</div>
-<div class="line"><span class="lineno">  269</span>                    <span class="keywordflow">if</span> (!ability.getSpec().hasTag(Abilities.TAG_BURN + <span class="stringliteral">&quot;+&quot;</span>) &amp;&amp;</div>
-<div class="line"><span class="lineno">  270</span>                            !ability.getId().equals(Abilities.INTERDICTION_PULSE)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  271</span>                    </div>
-<div class="line"><span class="lineno">  272</span>                    <span class="keywordtype">float</span> origCooldown = ability.getCooldownLeft();</div>
-<div class="line"><span class="lineno">  273</span>                    <span class="keywordtype">float</span> extra = 0;</div>
-<div class="line"><span class="lineno">  274</span>                    <span class="keywordflow">if</span> (ability.isActiveOrInProgress()) {</div>
-<div class="line"><span class="lineno">  275</span>                        extra += ability.getSpec().getDeactivationCooldown() * ability.getProgressFraction();</div>
-<div class="line"><span class="lineno">  276</span>                        ability.deactivate();</div>
-<div class="line"><span class="lineno">  277</span>                        </div>
-<div class="line"><span class="lineno">  278</span>                    }</div>
-<div class="line"><span class="lineno">  279</span>                    </div>
-<div class="line"><span class="lineno">  280</span>                    <span class="keywordflow">if</span> (!ability.getSpec().hasTag(Abilities.TAG_BURN + <span class="stringliteral">&quot;+&quot;</span>)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  281</span>                    </div>
-<div class="line"><span class="lineno">  282</span>                    <span class="keywordtype">float</span> cooldown = interdictDays;</div>
-<div class="line"><span class="lineno">  283</span>                    <span class="comment">//cooldown = Math.max(cooldown, origCooldown);</span></div>
-<div class="line"><span class="lineno">  284</span>                    cooldown += origCooldown;</div>
-<div class="line"><span class="lineno">  285</span>                    cooldown += extra;</div>
-<div class="line"><span class="lineno">  286</span>                    <span class="keywordtype">float</span> max = Math.max(ability.getSpec().getDeactivationCooldown(), 2f);</div>
-<div class="line"><span class="lineno">  287</span>                    <span class="keywordflow">if</span> (cooldown &gt; max) cooldown = max;</div>
-<div class="line"><span class="lineno">  288</span>                    ability.setCooldownLeft(cooldown);</div>
-<div class="line"><span class="lineno">  289</span>                }</div>
-<div class="line"><span class="lineno">  290</span>                </div>
-<div class="line"><span class="lineno">  291</span>                <span class="keywordflow">if</span> (fleet.isPlayerFleet() &amp;&amp; other.knowsWhoPlayerIs() &amp;&amp; fleet.getFaction() != other.getFaction()) {</div>
-<div class="line"><span class="lineno">  292</span>                    Global.getSector().adjustPlayerReputation(</div>
-<div class="line"><span class="lineno">  293</span>                                        <span class="keyword">new</span> RepActionEnvelope(RepActions.INTERDICTED, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">false</span>), </div>
-<div class="line"><span class="lineno">  294</span>                                        other.getFaction().getId());</div>
-<div class="line"><span class="lineno">  295</span>                }</div>
-<div class="line"><span class="lineno">  296</span>                </div>
-<div class="line"><span class="lineno">  297</span>                <span class="keywordflow">if</span> (!playedHit) {</div>
-<div class="line"><span class="lineno">  298</span>                    Global.getSoundPlayer().playSound(<span class="stringliteral">&quot;world_interdict_hit&quot;</span>, 1f, 1f, other.getLocation(), other.getVelocity());</div>
-<div class="line"><span class="lineno">  299</span>                    <span class="comment">//playedHit = true;</span></div>
-<div class="line"><span class="lineno">  300</span>                }</div>
-<div class="line"><span class="lineno">  301</span>            }</div>
-<div class="line"><span class="lineno">  302</span>            </div>
-<div class="line"><span class="lineno">  303</span>            <a class="code hl_variable" href="../../d8/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1InterdictionPulseAbility.html#a73856216911a1b5925bcff6c543b108e">primed</a> = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  304</span>            <a class="code hl_variable" href="../../d8/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1InterdictionPulseAbility.html#adfebe1f4704383b2220faafcdae97161">elapsed</a> = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  305</span>            <a class="code hl_variable" href="../../d8/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1InterdictionPulseAbility.html#a9a5bead9de092eee8efaf6bc0e2ae946">numFired</a> = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  306</span>        }</div>
-<div class="line"><span class="lineno">  307</span>        </div>
-<div class="line"><span class="lineno">  308</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin_html_a2e9e39ccbd5d39ae13b255974fef719c"><div class="ttname"><a href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a2e9e39ccbd5d39ae13b255974fef719c">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin.getModId</a></div><div class="ttdeci">String getModId()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00140">BaseAbilityPlugin.java:140</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin_html_a9d2408f6489b56d90a93b2a21ea0f340"><div class="ttname"><a href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a9d2408f6489b56d90a93b2a21ea0f340">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin.entity</a></div><div class="ttdeci">SectorEntityToken entity</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00024">BaseAbilityPlugin.java:24</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility_html_a74548753f66b57cc2bcc46a8288c459f"><div class="ttname"><a href="../../d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#a74548753f66b57cc2bcc46a8288c459f">com.fs.starfarer.api.impl.campaign.abilities.BaseDurationAbility.level</a></div><div class="ttdeci">float level</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d40/BaseDurationAbility_8java_source.html#l00065">BaseDurationAbility.java:65</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1InterdictionPulseAbility_html_a0d7a486a3005580ab467c939ea569ca9"><div class="ttname"><a href="../../d8/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1InterdictionPulseAbility.html#a0d7a486a3005580ab467c939ea569ca9">com.fs.starfarer.api.impl.campaign.abilities.InterdictionPulseAbility.showRangePing</a></div><div class="ttdeci">void showRangePing(float amount)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d8a/InterdictionPulseAbility_8java_source.html#l00159">InterdictionPulseAbility.java:159</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1InterdictionPulseAbility_html_a3fd7d591c0f3b9fd1bf57abb2991d856"><div class="ttname"><a href="../../d8/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1InterdictionPulseAbility.html#a3fd7d591c0f3b9fd1bf57abb2991d856">com.fs.starfarer.api.impl.campaign.abilities.InterdictionPulseAbility.getInterdictSeconds</a></div><div class="ttdeci">static float getInterdictSeconds(CampaignFleetAPI fleet, CampaignFleetAPI other)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d8a/InterdictionPulseAbility_8java_source.html#l00310">InterdictionPulseAbility.java:310</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1InterdictionPulseAbility_html_a6cc5cb8dd01b0b76c4b90368d01686f5"><div class="ttname"><a href="../../d8/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1InterdictionPulseAbility.html#a6cc5cb8dd01b0b76c4b90368d01686f5">com.fs.starfarer.api.impl.campaign.abilities.InterdictionPulseAbility.DETECTABILITY_PERCENT</a></div><div class="ttdeci">static final float DETECTABILITY_PERCENT</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d8a/InterdictionPulseAbility_8java_source.html#l00116">InterdictionPulseAbility.java:116</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1InterdictionPulseAbility_html_a9a5bead9de092eee8efaf6bc0e2ae946"><div class="ttname"><a href="../../d8/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1InterdictionPulseAbility.html#a9a5bead9de092eee8efaf6bc0e2ae946">com.fs.starfarer.api.impl.campaign.abilities.InterdictionPulseAbility.numFired</a></div><div class="ttdeci">Integer numFired</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d8a/InterdictionPulseAbility_8java_source.html#l00136">InterdictionPulseAbility.java:136</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1InterdictionPulseAbility_html_adfebe1f4704383b2220faafcdae97161"><div class="ttname"><a href="../../d8/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1InterdictionPulseAbility.html#adfebe1f4704383b2220faafcdae97161">com.fs.starfarer.api.impl.campaign.abilities.InterdictionPulseAbility.elapsed</a></div><div class="ttdeci">Float elapsed</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d8a/InterdictionPulseAbility_8java_source.html#l00135">InterdictionPulseAbility.java:135</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_a0dfd224c22bfc35f7dda6f8a1c913472"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a0dfd224c22bfc35f7dda6f8a1c913472">com.fs.starfarer.api.campaign.SectorEntityToken.isInCurrentLocation</a></div><div class="ttdeci">boolean isInCurrentLocation()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_a535f1e15c5bcf56712d2dadbedf5e712"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a535f1e15c5bcf56712d2dadbedf5e712">com.fs.starfarer.api.campaign.SectorEntityToken.isVisibleToPlayerFleet</a></div><div class="ttdeci">boolean isVisibleToPlayerFleet()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2665f55bc1e4c473c228701ce019ff8a" name="a2665f55bc1e4c473c228701ce019ff8a"></a>
@@ -720,19 +578,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#a95552e19a3ed75bafe0ccc9501302145">com.fs.starfarer.api.impl.campaign.abilities.BaseDurationAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d8a/InterdictionPulseAbility_8java_source.html#l00347">347</a> of file <a class="el" href="../../d0/d8a/InterdictionPulseAbility_8java_source.html">InterdictionPulseAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  347</span>                                 {</div>
-<div class="line"><span class="lineno">  348</span>        CampaignFleetAPI fleet = <a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#abdc51d7defc6b6bf60924a01ec361d2d">getFleet</a>();</div>
-<div class="line"><span class="lineno">  349</span>        <span class="keywordflow">if</span> (fleet == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  350</span>        </div>
-<div class="line"><span class="lineno">  351</span>        fleet.getStats().getDetectedRangeMod().unmodify(<a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a2e9e39ccbd5d39ae13b255974fef719c">getModId</a>());</div>
-<div class="line"><span class="lineno">  352</span>        <span class="comment">//fleet.getStats().getSensorRangeMod().unmodify(getModId());</span></div>
-<div class="line"><span class="lineno">  353</span>        <span class="comment">//fleet.getStats().getFleetwideMaxBurnMod().unmodify(getModId());</span></div>
-<div class="line"><span class="lineno">  354</span>        <span class="comment">//fleet.getStats().getAccelerationMult().unmodify(getModId());</span></div>
-<div class="line"><span class="lineno">  355</span>        <span class="comment">//fleet.getCommanderStats().getDynamic().getStat(Stats.NAVIGATION_PENALTY_MULT).unmodify(getModId());</span></div>
-<div class="line"><span class="lineno">  356</span>        </div>
-<div class="line"><span class="lineno">  357</span>        <a class="code hl_variable" href="../../d8/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1InterdictionPulseAbility.html#a73856216911a1b5925bcff6c543b108e">primed</a> = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  358</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a22754e3f47d84226329650fb5e806336" name="a22754e3f47d84226329650fb5e806336"></a>
@@ -771,55 +617,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a524c99aa9c5d81332f100b0bf6e8c699">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d8a/InterdictionPulseAbility_8java_source.html#l00399">399</a> of file <a class="el" href="../../d0/d8a/InterdictionPulseAbility_8java_source.html">InterdictionPulseAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  399</span>                                                                         {</div>
-<div class="line"><span class="lineno">  400</span>        CampaignFleetAPI fleet = <a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#abdc51d7defc6b6bf60924a01ec361d2d">getFleet</a>();</div>
-<div class="line"><span class="lineno">  401</span>        <span class="keywordflow">if</span> (fleet == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  402</span>        </div>
-<div class="line"><span class="lineno">  403</span>        Color gray = Misc.getGrayColor();</div>
-<div class="line"><span class="lineno">  404</span>        Color highlight = Misc.getHighlightColor();</div>
-<div class="line"><span class="lineno">  405</span>        Color fuel = Global.getSettings().getColor(<span class="stringliteral">&quot;progressBarFuelColor&quot;</span>);</div>
-<div class="line"><span class="lineno">  406</span>        Color bad = Misc.getNegativeHighlightColor();</div>
-<div class="line"><span class="lineno">  407</span>        </div>
-<div class="line"><span class="lineno">  408</span>        LabelAPI title = tooltip.addTitle(<span class="stringliteral">&quot;Interdiction Pulse&quot;</span>);</div>
-<div class="line"><span class="lineno">  409</span> </div>
-<div class="line"><span class="lineno">  410</span>        <span class="keywordtype">float</span> pad = 10f;</div>
-<div class="line"><span class="lineno">  411</span>        </div>
-<div class="line"><span class="lineno">  412</span>        <span class="keywordtype">int</span> range = (int) <a class="code hl_function" href="../../d8/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1InterdictionPulseAbility.html#a6460204b31f6411d00733eb38597337c">getRange</a>(fleet);</div>
-<div class="line"><span class="lineno">  413</span>        </div>
-<div class="line"><span class="lineno">  414</span>        </div>
-<div class="line"><span class="lineno">  415</span>        tooltip.addPara(<span class="stringliteral">&quot;Slows* the fleet and uses its active sensor network to charge and release a powerful energy pulse that &quot;</span> +</div>
-<div class="line"><span class="lineno">  416</span>                <span class="stringliteral">&quot;can disrupt the drive fields of nearby fleets.&quot;</span>, pad);</div>
-<div class="line"><span class="lineno">  417</span>        </div>
-<div class="line"><span class="lineno">  418</span>        Color c = Misc.getTooltipTitleAndLightHighlightColor();</div>
-<div class="line"><span class="lineno">  419</span>        tooltip.addPara(<span class="stringliteral">&quot;The disruption interrupts any movement-related abilities (such as %s) &quot;</span> +</div>
-<div class="line"><span class="lineno">  420</span>                <span class="stringliteral">&quot;and prevents their use for some time afterwards. Also interrupts charging interdiction pulses.&quot;</span>, pad,</div>
-<div class="line"><span class="lineno">  421</span>                highlight, <span class="stringliteral">&quot;Sustained Burn&quot;</span>);</div>
-<div class="line"><span class="lineno">  422</span> </div>
-<div class="line"><span class="lineno">  423</span>        tooltip.addPara(<span class="stringliteral">&quot;The disruption lasts for %s seconds, modified by %s second for &quot;</span> +</div>
-<div class="line"><span class="lineno">  424</span>                <span class="stringliteral">&quot;every %s points of difference in the fleets&#39; sensor strengths.&quot;</span>, pad, highlight,</div>
-<div class="line"><span class="lineno">  425</span>                <span class="stringliteral">&quot;&quot;</span> + (<span class="keywordtype">int</span>) <a class="code hl_variable" href="../../d8/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1InterdictionPulseAbility.html#a1c63c8cacfd24919cb8f2d94c0e280a0">BASE_SECONDS</a>,</div>
-<div class="line"><span class="lineno">  426</span>                <span class="stringliteral">&quot;&quot;</span> + (int) 1,</div>
-<div class="line"><span class="lineno">  427</span>                <span class="stringliteral">&quot;&quot;</span> + (<span class="keywordtype">int</span>) <a class="code hl_variable" href="../../d8/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1InterdictionPulseAbility.html#a01de4076e38c6e7c974c96f3584b9806">STRENGTH_PER_SECOND</a>);</div>
-<div class="line"><span class="lineno">  428</span>        </div>
-<div class="line"><span class="lineno">  429</span>        tooltip.addPara(<span class="stringliteral">&quot;Base range of %s* units, increased by half your fleet&#39;s sensor strength, &quot;</span> +</div>
-<div class="line"><span class="lineno">  430</span>                <span class="stringliteral">&quot;for a total of %s units. While the pulse is charging, the range at which the fleet can be detected will &quot;</span> +</div>
-<div class="line"><span class="lineno">  431</span>                <span class="stringliteral">&quot;gradually increase by up to %s.&quot;</span>, pad, highlight, </div>
-<div class="line"><span class="lineno">  432</span>                <span class="stringliteral">&quot;&quot;</span> + (<span class="keywordtype">int</span>) <a class="code hl_variable" href="../../d8/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1InterdictionPulseAbility.html#aac52ab65c6d188eb324481695e1a8cc0">BASE_RANGE</a>,</div>
-<div class="line"><span class="lineno">  433</span>                <span class="stringliteral">&quot;&quot;</span> + range,</div>
-<div class="line"><span class="lineno">  434</span>                <span class="stringliteral">&quot;&quot;</span> + (int) <a class="code hl_variable" href="../../d8/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1InterdictionPulseAbility.html#a6cc5cb8dd01b0b76c4b90368d01686f5">DETECTABILITY_PERCENT</a> + <span class="stringliteral">&quot;%&quot;</span>);</div>
-<div class="line"><span class="lineno">  435</span>        </div>
-<div class="line"><span class="lineno">  436</span>        tooltip.addPara(<span class="stringliteral">&quot;A successful interdict is considered a hostile act, though not on the same level as &quot;</span> +</div>
-<div class="line"><span class="lineno">  437</span>                        <span class="stringliteral">&quot;open warfare.&quot;</span>, pad);</div>
-<div class="line"><span class="lineno">  438</span>        </div>
-<div class="line"><span class="lineno">  439</span>        tooltip.addPara(<span class="stringliteral">&quot;*2000 units = 1 map grid cell&quot;</span>, gray, pad);</div>
-<div class="line"><span class="lineno">  440</span>        tooltip.addPara(<span class="stringliteral">&quot;*A fleet is considered slow-moving at a burn level of half that of its slowest ship.&quot;</span>, gray, pad);</div>
-<div class="line"><span class="lineno">  441</span>        <a class="code hl_function" href="../../d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#aca01e068aef63af5241219b9aa33c5d0">addIncompatibleToTooltip</a>(tooltip, expanded);</div>
-<div class="line"><span class="lineno">  442</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility_html_aca01e068aef63af5241219b9aa33c5d0"><div class="ttname"><a href="../../d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#aca01e068aef63af5241219b9aa33c5d0">com.fs.starfarer.api.impl.campaign.abilities.BaseDurationAbility.addIncompatibleToTooltip</a></div><div class="ttdeci">void addIncompatibleToTooltip(TooltipMakerAPI tooltip, boolean expanded)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d40/BaseDurationAbility_8java_source.html#l00153">BaseDurationAbility.java:153</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1InterdictionPulseAbility_html_a01de4076e38c6e7c974c96f3584b9806"><div class="ttname"><a href="../../d8/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1InterdictionPulseAbility.html#a01de4076e38c6e7c974c96f3584b9806">com.fs.starfarer.api.impl.campaign.abilities.InterdictionPulseAbility.STRENGTH_PER_SECOND</a></div><div class="ttdeci">static final float STRENGTH_PER_SECOND</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d8a/InterdictionPulseAbility_8java_source.html#l00113">InterdictionPulseAbility.java:113</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1InterdictionPulseAbility_html_a1c63c8cacfd24919cb8f2d94c0e280a0"><div class="ttname"><a href="../../d8/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1InterdictionPulseAbility.html#a1c63c8cacfd24919cb8f2d94c0e280a0">com.fs.starfarer.api.impl.campaign.abilities.InterdictionPulseAbility.BASE_SECONDS</a></div><div class="ttdeci">static final float BASE_SECONDS</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d8a/InterdictionPulseAbility_8java_source.html#l00112">InterdictionPulseAbility.java:112</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1InterdictionPulseAbility_html_aac52ab65c6d188eb324481695e1a8cc0"><div class="ttname"><a href="../../d8/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1InterdictionPulseAbility.html#aac52ab65c6d188eb324481695e1a8cc0">com.fs.starfarer.api.impl.campaign.abilities.InterdictionPulseAbility.BASE_RANGE</a></div><div class="ttdeci">static final float BASE_RANGE</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d8a/InterdictionPulseAbility_8java_source.html#l00111">InterdictionPulseAbility.java:111</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="acb4c8fd4eefe3592edcd65b3f59f305e" name="acb4c8fd4eefe3592edcd65b3f59f305e"></a>
@@ -848,11 +646,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#a598f0df48bcfc1718427ad8cee13cdc6">com.fs.starfarer.api.impl.campaign.abilities.BaseDurationAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d8a/InterdictionPulseAbility_8java_source.html#l00342">342</a> of file <a class="el" href="../../d0/d8a/InterdictionPulseAbility_8java_source.html">InterdictionPulseAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  342</span>                                    {</div>
-<div class="line"><span class="lineno">  343</span>        <a class="code hl_function" href="../../d8/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1InterdictionPulseAbility.html#a2665f55bc1e4c473c228701ce019ff8a">cleanupImpl</a>();</div>
-<div class="line"><span class="lineno">  344</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1InterdictionPulseAbility_html_a2665f55bc1e4c473c228701ce019ff8a"><div class="ttname"><a href="../../d8/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1InterdictionPulseAbility.html#a2665f55bc1e4c473c228701ce019ff8a">com.fs.starfarer.api.impl.campaign.abilities.InterdictionPulseAbility.cleanupImpl</a></div><div class="ttdeci">void cleanupImpl()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d8a/InterdictionPulseAbility_8java_source.html#l00347">InterdictionPulseAbility.java:347</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af7d6ebbeecfb6706e04677b6f2007612" name="af7d6ebbeecfb6706e04677b6f2007612"></a>
@@ -884,13 +678,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a9807387360d315e712b48e2da5af0741">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d8a/InterdictionPulseAbility_8java_source.html#l00450">450</a> of file <a class="el" href="../../d0/d8a/InterdictionPulseAbility_8java_source.html">InterdictionPulseAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  450</span>                                                                                {</div>
-<div class="line"><span class="lineno">  451</span>        <span class="keywordflow">if</span> (engagedInHostilities) {</div>
-<div class="line"><span class="lineno">  452</span>            <a class="code hl_function" href="../../d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#a4c645f917e0db75e7ba759eddb0898f2">deactivate</a>();</div>
-<div class="line"><span class="lineno">  453</span>        }</div>
-<div class="line"><span class="lineno">  454</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility_html_a4c645f917e0db75e7ba759eddb0898f2"><div class="ttname"><a href="../../d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#a4c645f917e0db75e7ba759eddb0898f2">com.fs.starfarer.api.impl.campaign.abilities.BaseDurationAbility.deactivate</a></div><div class="ttdeci">void deactivate()</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d40/BaseDurationAbility_8java_source.html#l00233">BaseDurationAbility.java:233</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a82f0e1754af1d57f9b8adb7214fb8263" name="a82f0e1754af1d57f9b8adb7214fb8263"></a>
@@ -918,10 +706,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#ac17f98876df21077a7e38da52149ea01">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d8a/InterdictionPulseAbility_8java_source.html#l00457">457</a> of file <a class="el" href="../../d0/d8a/InterdictionPulseAbility_8java_source.html">InterdictionPulseAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  457</span>                                                    {</div>
-<div class="line"><span class="lineno">  458</span>        <a class="code hl_function" href="../../d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#a4c645f917e0db75e7ba759eddb0898f2">deactivate</a>();</div>
-<div class="line"><span class="lineno">  459</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a647345c268858e5bbbbeb58b66a1b702" name="a647345c268858e5bbbbeb58b66a1b702"></a>
@@ -950,11 +735,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a3be04ce2cf4b54d260d06d126bca0d7a">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d8a/InterdictionPulseAbility_8java_source.html#l00128">128</a> of file <a class="el" href="../../d0/d8a/InterdictionPulseAbility_8java_source.html">InterdictionPulseAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  128</span>                                         {</div>
-<div class="line"><span class="lineno">  129</span>        <span class="comment">//return Misc.ucFirst(spec.getName().toLowerCase());</span></div>
-<div class="line"><span class="lineno">  130</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Interdiction pulse&quot;</span>;</div>
-<div class="line"><span class="lineno">  131</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a3fd7d591c0f3b9fd1bf57abb2991d856" name="a3fd7d591c0f3b9fd1bf57abb2991d856"></a>
@@ -992,18 +773,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d8a/InterdictionPulseAbility_8java_source.html#l00310">310</a> of file <a class="el" href="../../d0/d8a/InterdictionPulseAbility_8java_source.html">InterdictionPulseAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  310</span>                                                                                            {</div>
-<div class="line"><span class="lineno">  311</span>        <span class="keywordtype">float</span> offense = fleet.getSensorRangeMod().computeEffective(fleet.getSensorStrength());</div>
-<div class="line"><span class="lineno">  312</span>        <span class="keywordtype">float</span> defense = other.getSensorRangeMod().computeEffective(other.getSensorStrength());</div>
-<div class="line"><span class="lineno">  313</span>        <span class="keywordtype">float</span> diff = offense - defense;</div>
-<div class="line"><span class="lineno">  314</span>        </div>
-<div class="line"><span class="lineno">  315</span>        <span class="keywordtype">float</span> extra = diff / <a class="code hl_variable" href="../../d8/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1InterdictionPulseAbility.html#a01de4076e38c6e7c974c96f3584b9806">STRENGTH_PER_SECOND</a>;</div>
-<div class="line"><span class="lineno">  316</span>        </div>
-<div class="line"><span class="lineno">  317</span>        <span class="keywordtype">float</span> total = <a class="code hl_variable" href="../../d8/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1InterdictionPulseAbility.html#a1c63c8cacfd24919cb8f2d94c0e280a0">BASE_SECONDS</a> + extra;</div>
-<div class="line"><span class="lineno">  318</span>        <span class="keywordflow">if</span> (total &lt; 0f) total = 0f;</div>
-<div class="line"><span class="lineno">  319</span>        <span class="keywordflow">return</span> total;<span class="comment">// / Global.getSector().getClock().getSecondsPerDay();</span></div>
-<div class="line"><span class="lineno">  320</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a6460204b31f6411d00733eb38597337c" name="a6460204b31f6411d00733eb38597337c"></a>
@@ -1031,10 +801,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d8a/InterdictionPulseAbility_8java_source.html#l00123">123</a> of file <a class="el" href="../../d0/d8a/InterdictionPulseAbility_8java_source.html">InterdictionPulseAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  123</span>                                                         {</div>
-<div class="line"><span class="lineno">  124</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d8/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1InterdictionPulseAbility.html#aac52ab65c6d188eb324481695e1a8cc0">BASE_RANGE</a> + fleet.getSensorRangeMod().computeEffective(fleet.getSensorStrength()) / 2f;</div>
-<div class="line"><span class="lineno">  125</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a31649e69343cecb596acf10a517dec21" name="a31649e69343cecb596acf10a517dec21"></a>
@@ -1055,10 +822,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a35207ab01150d1c1521fa7ebf0ef4a75">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d8a/InterdictionPulseAbility_8java_source.html#l00444">444</a> of file <a class="el" href="../../d0/d8a/InterdictionPulseAbility_8java_source.html">InterdictionPulseAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  444</span>                                {</div>
-<div class="line"><span class="lineno">  445</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  446</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a169a161441ef5d4b6ad06476ec601665" name="a169a161441ef5d4b6ad06476ec601665"></a>
@@ -1080,12 +844,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#ac04092fe5109fdf398792cb01f739ae7">com.fs.starfarer.api.impl.campaign.abilities.BaseDurationAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d8a/InterdictionPulseAbility_8java_source.html#l00362">362</a> of file <a class="el" href="../../d0/d8a/InterdictionPulseAbility_8java_source.html">InterdictionPulseAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  362</span>                              {</div>
-<div class="line"><span class="lineno">  363</span>        <span class="keywordflow">return</span> super.isUsable() &amp;&amp; </div>
-<div class="line"><span class="lineno">  364</span>                    <a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#abdc51d7defc6b6bf60924a01ec361d2d">getFleet</a>() != <span class="keyword">null</span>;<span class="comment">// &amp;&amp; </span></div>
-<div class="line"><span class="lineno">  365</span>                    <span class="comment">//getNonReadyShips().isEmpty();</span></div>
-<div class="line"><span class="lineno">  366</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a0d7a486a3005580ab467c939ea569ca9" name="a0d7a486a3005580ab467c939ea569ca9"></a>
@@ -1113,45 +872,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d8a/InterdictionPulseAbility_8java_source.html#l00159">159</a> of file <a class="el" href="../../d0/d8a/InterdictionPulseAbility_8java_source.html">InterdictionPulseAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  159</span>                                               {</div>
-<div class="line"><span class="lineno">  160</span>        CampaignFleetAPI fleet = <a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#abdc51d7defc6b6bf60924a01ec361d2d">getFleet</a>();</div>
-<div class="line"><span class="lineno">  161</span>        <span class="keywordflow">if</span> (fleet == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  162</span>        </div>
-<div class="line"><span class="lineno">  163</span>        VisibilityLevel vis = fleet.getVisibilityLevelToPlayerFleet();</div>
-<div class="line"><span class="lineno">  164</span>        <span class="keywordflow">if</span> (vis == VisibilityLevel.NONE || vis == VisibilityLevel.SENSOR_CONTACT) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  165</span>        </div>
-<div class="line"><span class="lineno">  166</span>        </div>
-<div class="line"><span class="lineno">  167</span>        <span class="keywordtype">boolean</span> fire = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  168</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d8/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1InterdictionPulseAbility.html#adfebe1f4704383b2220faafcdae97161">elapsed</a> == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  169</span>            <a class="code hl_variable" href="../../d8/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1InterdictionPulseAbility.html#adfebe1f4704383b2220faafcdae97161">elapsed</a> = 0f;</div>
-<div class="line"><span class="lineno">  170</span>            <a class="code hl_variable" href="../../d8/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1InterdictionPulseAbility.html#a9a5bead9de092eee8efaf6bc0e2ae946">numFired</a> = 0;</div>
-<div class="line"><span class="lineno">  171</span>            fire = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  172</span>        }</div>
-<div class="line"><span class="lineno">  173</span>        <a class="code hl_variable" href="../../d8/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1InterdictionPulseAbility.html#adfebe1f4704383b2220faafcdae97161">elapsed</a> += amount;</div>
-<div class="line"><span class="lineno">  174</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d8/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1InterdictionPulseAbility.html#adfebe1f4704383b2220faafcdae97161">elapsed</a> &gt; 0.5f &amp;&amp; <a class="code hl_variable" href="../../d8/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1InterdictionPulseAbility.html#a9a5bead9de092eee8efaf6bc0e2ae946">numFired</a> &lt; 4) {</div>
-<div class="line"><span class="lineno">  175</span>            <a class="code hl_variable" href="../../d8/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1InterdictionPulseAbility.html#adfebe1f4704383b2220faafcdae97161">elapsed</a> -= 0.5f;</div>
-<div class="line"><span class="lineno">  176</span>            fire = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  177</span>        }</div>
-<div class="line"><span class="lineno">  178</span>        </div>
-<div class="line"><span class="lineno">  179</span>        <span class="keywordflow">if</span> (fire) {</div>
-<div class="line"><span class="lineno">  180</span>            <a class="code hl_variable" href="../../d8/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1InterdictionPulseAbility.html#a9a5bead9de092eee8efaf6bc0e2ae946">numFired</a>++;</div>
-<div class="line"><span class="lineno">  181</span>            </div>
-<div class="line"><span class="lineno">  182</span>            <span class="keywordtype">float</span> range = <a class="code hl_function" href="../../d8/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1InterdictionPulseAbility.html#a6460204b31f6411d00733eb38597337c">getRange</a>(fleet);</div>
-<div class="line"><span class="lineno">  183</span>            CampaignPingSpec custom = <span class="keyword">new</span> CampaignPingSpec();</div>
-<div class="line"><span class="lineno">  184</span>            custom.setUseFactionColor(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  185</span>            custom.setWidth(7);</div>
-<div class="line"><span class="lineno">  186</span>            custom.setMinRange(range - 100f);</div>
-<div class="line"><span class="lineno">  187</span>            custom.setRange(200);</div>
-<div class="line"><span class="lineno">  188</span>            custom.setDuration(2f);</div>
-<div class="line"><span class="lineno">  189</span>            custom.setAlphaMult(0.25f);</div>
-<div class="line"><span class="lineno">  190</span>            custom.setInFraction(0.2f);</div>
-<div class="line"><span class="lineno">  191</span>            custom.setNum(1);</div>
-<div class="line"><span class="lineno">  192</span>            </div>
-<div class="line"><span class="lineno">  193</span>            Global.getSector().addPing(fleet, custom);</div>
-<div class="line"><span class="lineno">  194</span>        }</div>
-<div class="line"><span class="lineno">  195</span>        </div>
-<div class="line"><span class="lineno">  196</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

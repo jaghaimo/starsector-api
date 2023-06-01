@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -293,17 +294,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a3859215f6c3408946bf590a2ce5c0e74">com.fs.starfarer.api.combat.BaseHullMod</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/da1/ErraticInjector_8java_source.html#l00014">14</a> of file <a class="el" href="../../d4/da1/ErraticInjector_8java_source.html">ErraticInjector.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   14</span>                                                                                                        {</div>
-<div class="line"><span class="lineno">   15</span>        <span class="keywordtype">float</span> effect = stats.getDynamic().getValue(Stats.DMOD_EFFECT_MULT);</div>
-<div class="line"><span class="lineno">   16</span>        stats.getFuelUseMod().modifyPercent(<span class="keywordtype">id</span>, <a class="code hl_variable" href="../../d2/dec/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ErraticInjector.html#a4f21044a23b0f49580b41aefc5adb8c3">FUEL_PERCENT</a> * effect);</div>
-<div class="line"><span class="lineno">   17</span>        </div>
-<div class="line"><span class="lineno">   18</span>        stats.getZeroFluxSpeedBoost().modifyFlat(<span class="keywordtype">id</span>, -<a class="code hl_variable" href="../../d2/dec/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ErraticInjector.html#a927d7e422d866284dc29060f7b505401">ZERO_FLUX_PENALTY</a> * effect);</div>
-<div class="line"><span class="lineno">   19</span>        </div>
-<div class="line"><span class="lineno">   20</span>        CompromisedStructure.modifyCost(hullSize, stats, <span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">   21</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ErraticInjector_html_a4f21044a23b0f49580b41aefc5adb8c3"><div class="ttname"><a href="../../d2/dec/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ErraticInjector.html#a4f21044a23b0f49580b41aefc5adb8c3">com.fs.starfarer.api.impl.hullmods.ErraticInjector.FUEL_PERCENT</a></div><div class="ttdeci">static float FUEL_PERCENT</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/da1/ErraticInjector_8java_source.html#l00011">ErraticInjector.java:11</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ErraticInjector_html_a927d7e422d866284dc29060f7b505401"><div class="ttname"><a href="../../d2/dec/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ErraticInjector.html#a927d7e422d866284dc29060f7b505401">com.fs.starfarer.api.impl.hullmods.ErraticInjector.ZERO_FLUX_PENALTY</a></div><div class="ttdeci">static float ZERO_FLUX_PENALTY</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/da1/ErraticInjector_8java_source.html#l00012">ErraticInjector.java:12</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a087ceb29ab02ee8cb2326348af2abfac" name="a087ceb29ab02ee8cb2326348af2abfac"></a>
@@ -341,15 +332,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a81fc41471bf3bff9e51db9106e2e1bd2">com.fs.starfarer.api.combat.BaseHullMod</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/da1/ErraticInjector_8java_source.html#l00023">23</a> of file <a class="el" href="../../d4/da1/ErraticInjector_8java_source.html">ErraticInjector.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   23</span>                                                                                  {</div>
-<div class="line"><span class="lineno">   24</span>        <span class="keywordtype">float</span> effect = 1f;</div>
-<div class="line"><span class="lineno">   25</span>        <span class="keywordflow">if</span> (ship != <span class="keyword">null</span>) effect = ship.getMutableStats().getDynamic().getValue(Stats.DMOD_EFFECT_MULT);</div>
-<div class="line"><span class="lineno">   26</span>        <span class="keywordflow">if</span> (index == 0) <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span> + (int)Math.round(<a class="code hl_variable" href="../../d2/dec/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ErraticInjector.html#a4f21044a23b0f49580b41aefc5adb8c3">FUEL_PERCENT</a> * effect) + <span class="stringliteral">&quot;%&quot;</span>;</div>
-<div class="line"><span class="lineno">   27</span>        <span class="keywordflow">if</span> (index == 1) <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span> + (int)Math.round(<a class="code hl_variable" href="../../d2/dec/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ErraticInjector.html#a927d7e422d866284dc29060f7b505401">ZERO_FLUX_PENALTY</a> * effect) + <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">   28</span>        <span class="keywordflow">if</span> (index &gt;= 2) <span class="keywordflow">return</span> CompromisedStructure.getCostDescParam(index, 2);</div>
-<div class="line"><span class="lineno">   29</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   30</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

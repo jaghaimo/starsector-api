@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -159,82 +160,7 @@ Static Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/dc7/SkillData_8java_source.html#l00044">44</a> of file <a class="el" href="../../dd/dc7/SkillData_8java_source.html">SkillData.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   44</span>                                    {</div>
-<div class="line"><span class="lineno">   45</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dc/dba/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SkillData.html#aeb5933ba2b0ca11a9410324d2c48c3d2">computed</a>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   46</span>        <a class="code hl_variable" href="../../dc/dba/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SkillData.html#aeb5933ba2b0ca11a9410324d2c48c3d2">computed</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   47</span>        </div>
-<div class="line"><span class="lineno">   48</span>        <a class="code hl_variable" href="../../dc/dba/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SkillData.html#a34c084e34996ef6132d1da52bc69e9f9">aptitudes</a>.clear();</div>
-<div class="line"><span class="lineno">   49</span>        </div>
-<div class="line"><span class="lineno">   50</span>        <span class="comment">//List&lt;String&gt; aptitudeIds = new ArrayList&lt;String&gt;(Global.getSettings().getAptitudeIds());</span></div>
-<div class="line"><span class="lineno">   51</span>        List&lt;String&gt; skillIds = <span class="keyword">new</span> ArrayList&lt;String&gt;(Global.getSettings().getSkillIds());</div>
-<div class="line"><span class="lineno">   52</span>        </div>
-<div class="line"><span class="lineno">   53</span>        <span class="keywordflow">for</span> (String skillId : skillIds) {</div>
-<div class="line"><span class="lineno">   54</span>            SkillSpecAPI skill = Global.getSettings().getSkillSpec(skillId);</div>
-<div class="line"><span class="lineno">   55</span>            <span class="keywordflow">if</span> (skill.isAptitudeEffect()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   56</span>            <span class="keywordflow">if</span> (skill.hasTag(Skills.TAG_NPC_ONLY)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   57</span>            <span class="keywordflow">if</span> (skill.hasTag(Skills.TAG_DEPRECATED)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   58</span>            </div>
-<div class="line"><span class="lineno">   59</span>            String aptitudeId = skill.getGoverningAptitudeId();</div>
-<div class="line"><span class="lineno">   60</span>            <span class="keywordflow">if</span> (aptitudeId == <span class="keyword">null</span> || aptitudeId.isEmpty()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   61</span>            </div>
-<div class="line"><span class="lineno">   62</span>            SkillsForAptitude skills = <a class="code hl_variable" href="../../dc/dba/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SkillData.html#a34c084e34996ef6132d1da52bc69e9f9">aptitudes</a>.get(aptitudeId);</div>
-<div class="line"><span class="lineno">   63</span>            <span class="keywordflow">if</span> (skills == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   64</span>                skills = <span class="keyword">new</span> SkillsForAptitude(aptitudeId);</div>
-<div class="line"><span class="lineno">   65</span>                <a class="code hl_variable" href="../../dc/dba/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SkillData.html#a34c084e34996ef6132d1da52bc69e9f9">aptitudes</a>.put(aptitudeId, skills);</div>
-<div class="line"><span class="lineno">   66</span>            }</div>
-<div class="line"><span class="lineno">   67</span>            </div>
-<div class="line"><span class="lineno">   68</span>            skills.all.add(skill);</div>
-<div class="line"><span class="lineno">   69</span>        }</div>
-<div class="line"><span class="lineno">   70</span>        </div>
-<div class="line"><span class="lineno">   71</span>        <span class="keywordflow">for</span> (String aptitudeId : <a class="code hl_variable" href="../../dc/dba/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SkillData.html#a34c084e34996ef6132d1da52bc69e9f9">aptitudes</a>.keySet()) {</div>
-<div class="line"><span class="lineno">   72</span>            SkillsForAptitude skills = <a class="code hl_variable" href="../../dc/dba/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SkillData.html#a34c084e34996ef6132d1da52bc69e9f9">aptitudes</a>.get(aptitudeId);</div>
-<div class="line"><span class="lineno">   73</span>            </div>
-<div class="line"><span class="lineno">   74</span>            Collections.sort(skills.all, <span class="keyword">new</span> Comparator&lt;SkillSpecAPI&gt;() {</div>
-<div class="line"><span class="lineno">   75</span>                public int compare(SkillSpecAPI o1, SkillSpecAPI o2) {</div>
-<div class="line"><span class="lineno">   76</span>                    int result = o1.getTier() - o2.getTier();</div>
-<div class="line"><span class="lineno">   77</span>                    if (result == 0) {</div>
-<div class="line"><span class="lineno">   78</span>                        result = (int) Math.signum(o1.getOrder() - o2.getOrder());</div>
-<div class="line"><span class="lineno">   79</span>                    }</div>
-<div class="line"><span class="lineno">   80</span>                    return result;</div>
-<div class="line"><span class="lineno">   81</span>                }</div>
-<div class="line"><span class="lineno">   82</span>            });</div>
-<div class="line"><span class="lineno">   83</span>            </div>
-<div class="line"><span class="lineno">   84</span>            <span class="keywordtype">boolean</span> useTier = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   85</span>            <span class="keywordflow">for</span> (SkillSpecAPI skill : skills.all) {</div>
-<div class="line"><span class="lineno">   86</span>                useTier &amp;= skill.getReqPoints() == 0;</div>
-<div class="line"><span class="lineno">   87</span>            }</div>
-<div class="line"><span class="lineno">   88</span>            </div>
-<div class="line"><span class="lineno">   89</span>            <span class="keywordtype">int</span> currTier = -1;</div>
-<div class="line"><span class="lineno">   90</span>            <span class="keywordtype">int</span> prevReq = -1;</div>
-<div class="line"><span class="lineno">   91</span>            List&lt;SkillSpecAPI&gt; soFar = <span class="keyword">new</span> ArrayList&lt;SkillSpecAPI&gt;();</div>
-<div class="line"><span class="lineno">   92</span>            <span class="keywordflow">for</span> (SkillSpecAPI skill : skills.all) {</div>
-<div class="line"><span class="lineno">   93</span>                <span class="keywordflow">if</span> (!useTier) {</div>
-<div class="line"><span class="lineno">   94</span>                    <span class="keywordflow">if</span> (skill.getReqPoints() != prevReq) {</div>
-<div class="line"><span class="lineno">   95</span>                        <span class="keywordflow">if</span> (!soFar.isEmpty()) {</div>
-<div class="line"><span class="lineno">   96</span>                            skills.tiers.add(soFar);</div>
-<div class="line"><span class="lineno">   97</span>                        }</div>
-<div class="line"><span class="lineno">   98</span>                        soFar = <span class="keyword">new</span> ArrayList&lt;SkillSpecAPI&gt;();</div>
-<div class="line"><span class="lineno">   99</span>                        prevReq = skill.getReqPoints();</div>
-<div class="line"><span class="lineno">  100</span>                    }</div>
-<div class="line"><span class="lineno">  101</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  102</span>                    <span class="keywordflow">if</span> (skill.getTier() != currTier) {</div>
-<div class="line"><span class="lineno">  103</span>                        <span class="keywordflow">if</span> (!soFar.isEmpty()) {</div>
-<div class="line"><span class="lineno">  104</span>                            skills.tiers.add(soFar);</div>
-<div class="line"><span class="lineno">  105</span>                        }</div>
-<div class="line"><span class="lineno">  106</span>                        soFar = <span class="keyword">new</span> ArrayList&lt;SkillSpecAPI&gt;();</div>
-<div class="line"><span class="lineno">  107</span>                        currTier = skill.getTier();</div>
-<div class="line"><span class="lineno">  108</span>                    }</div>
-<div class="line"><span class="lineno">  109</span>                }</div>
-<div class="line"><span class="lineno">  110</span>                soFar.add(skill);</div>
-<div class="line"><span class="lineno">  111</span>            }</div>
-<div class="line"><span class="lineno">  112</span>            <span class="keywordflow">if</span> (!soFar.isEmpty()) {</div>
-<div class="line"><span class="lineno">  113</span>                skills.tiers.add(soFar);</div>
-<div class="line"><span class="lineno">  114</span>            } </div>
-<div class="line"><span class="lineno">  115</span>        }</div>
-<div class="line"><span class="lineno">  116</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SkillData_html_a34c084e34996ef6132d1da52bc69e9f9"><div class="ttname"><a href="../../dc/dba/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SkillData.html#a34c084e34996ef6132d1da52bc69e9f9">com.fs.starfarer.api.util.SkillData.aptitudes</a></div><div class="ttdeci">static Map&lt; String, SkillsForAptitude &gt; aptitudes</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dc7/SkillData_8java_source.html#l00029">SkillData.java:29</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SkillData_html_aeb5933ba2b0ca11a9410324d2c48c3d2"><div class="ttname"><a href="../../dc/dba/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SkillData.html#aeb5933ba2b0ca11a9410324d2c48c3d2">com.fs.starfarer.api.util.SkillData.computed</a></div><div class="ttdeci">static boolean computed</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dc7/SkillData_8java_source.html#l00043">SkillData.java:43</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2e8d52b4471eed3840f80c81a88bf67a" name="a2e8d52b4471eed3840f80c81a88bf67a"></a>
@@ -261,12 +187,7 @@ Static Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/dc7/SkillData_8java_source.html#l00037">37</a> of file <a class="el" href="../../dd/dc7/SkillData_8java_source.html">SkillData.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   37</span>                                                                {</div>
-<div class="line"><span class="lineno">   38</span>        <a class="code hl_function" href="../../dc/dba/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SkillData.html#ac78289cc5fb47f90ef3941fd25e8ccc8">compute</a>();</div>
-<div class="line"><span class="lineno">   39</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../dc/dba/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SkillData.html#a34c084e34996ef6132d1da52bc69e9f9">aptitudes</a>;</div>
-<div class="line"><span class="lineno">   40</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SkillData_html_ac78289cc5fb47f90ef3941fd25e8ccc8"><div class="ttname"><a href="../../dc/dba/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SkillData.html#ac78289cc5fb47f90ef3941fd25e8ccc8">com.fs.starfarer.api.util.SkillData.compute</a></div><div class="ttdeci">static void compute()</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dc7/SkillData_8java_source.html#l00044">SkillData.java:44</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a272ad5e85ee6fbe4d0b3909ae032725b" name="a272ad5e85ee6fbe4d0b3909ae032725b"></a>
@@ -294,12 +215,7 @@ Static Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/dc7/SkillData_8java_source.html#l00031">31</a> of file <a class="el" href="../../dd/dc7/SkillData_8java_source.html">SkillData.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   31</span>                                                                 {</div>
-<div class="line"><span class="lineno">   32</span>        SkillsForAptitude skills = SkillData.getAptitudes().get(aptitudeId);</div>
-<div class="line"><span class="lineno">   33</span>        <span class="keywordflow">if</span> (skills == <span class="keyword">null</span>) skills = <span class="keyword">new</span> SkillsForAptitude(aptitudeId);</div>
-<div class="line"><span class="lineno">   34</span>        <span class="keywordflow">return</span> skills;</div>
-<div class="line"><span class="lineno">   35</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

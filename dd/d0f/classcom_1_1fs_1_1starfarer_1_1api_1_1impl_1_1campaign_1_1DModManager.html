@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -180,17 +181,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d20/DModManager_8java_source.html#l00303">303</a> of file <a class="el" href="../../d5/d20/DModManager_8java_source.html">DModManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  303</span>                                                                                       {</div>
-<div class="line"><span class="lineno">  304</span>        <span class="keywordtype">int</span> added = 0;</div>
-<div class="line"><span class="lineno">  305</span>        <span class="keywordflow">for</span> (HullModSpecAPI mod : <a class="code hl_function" href="../../dd/d0f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DModManager.html#a0f4154ca74e2ca9865d0c80cea590e45">getModsWithTags</a>(tags)) {</div>
-<div class="line"><span class="lineno">  306</span>            <span class="keywordflow">if</span> (!variant.hasHullMod(mod.getId())) added++;</div>
-<div class="line"><span class="lineno">  307</span>            variant.removeSuppressedMod(mod.getId());</div>
-<div class="line"><span class="lineno">  308</span>            variant.addPermaMod(mod.getId(), <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  309</span>        }</div>
-<div class="line"><span class="lineno">  310</span>        <span class="keywordflow">return</span> added;</div>
-<div class="line"><span class="lineno">  311</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DModManager_html_a0f4154ca74e2ca9865d0c80cea590e45"><div class="ttname"><a href="../../dd/d0f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DModManager.html#a0f4154ca74e2ca9865d0c80cea590e45">com.fs.starfarer.api.impl.campaign.DModManager.getModsWithTags</a></div><div class="ttdeci">static List&lt; HullModSpecAPI &gt; getModsWithTags(String ... tags)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d20/DModManager_8java_source.html#l00324">DModManager.java:324</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2337505c6afb5eb3a1eed4d4354cc57b" name="a2337505c6afb5eb3a1eed4d4354cc57b"></a>
@@ -240,12 +231,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d20/DModManager_8java_source.html#l00172">172</a> of file <a class="el" href="../../d5/d20/DModManager_8java_source.html">DModManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  172</span>                                                                                                            {</div>
-<div class="line"><span class="lineno">  173</span>        ShipVariantAPI variant = member.getVariant();</div>
-<div class="line"><span class="lineno">  174</span>        <a class="code hl_function" href="../../dd/d0f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DModManager.html#a3b69ea49f4b58f91c4db01c261ffcce1">addDMods</a>(variant, canAddDestroyedMods, num, random);</div>
-<div class="line"><span class="lineno">  175</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DModManager_html_a3b69ea49f4b58f91c4db01c261ffcce1"><div class="ttname"><a href="../../dd/d0f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DModManager.html#a3b69ea49f4b58f91c4db01c261ffcce1">com.fs.starfarer.api.impl.campaign.DModManager.addDMods</a></div><div class="ttdeci">static void addDMods(FleetMemberData data, boolean own, CampaignFleetAPI recoverer, Random random)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d20/DModManager_8java_source.html#l00058">DModManager.java:58</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa44cce599bf388aa610cc9d55f02352a" name="aa44cce599bf388aa610cc9d55f02352a"></a>
@@ -301,11 +287,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d20/DModManager_8java_source.html#l00062">62</a> of file <a class="el" href="../../d5/d20/DModManager_8java_source.html">DModManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   62</span>                                                                                                                                  {</div>
-<div class="line"><span class="lineno">   63</span>        ShipVariantAPI variant = member.getVariant();</div>
-<div class="line"><span class="lineno">   64</span>        <a class="code hl_function" href="../../dd/d0f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DModManager.html#a3b69ea49f4b58f91c4db01c261ffcce1">addDMods</a>(variant, destroyed, own, recoverer, random);</div>
-<div class="line"><span class="lineno">   65</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a3b69ea49f4b58f91c4db01c261ffcce1" name="a3b69ea49f4b58f91c4db01c261ffcce1"></a>
@@ -356,10 +338,7 @@ Static Public Attributes</h2></td></tr>
 <p >This is the d-mods post combat method. </p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d20/DModManager_8java_source.html#l00058">58</a> of file <a class="el" href="../../d5/d20/DModManager_8java_source.html">DModManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   58</span>                                                                                                              {</div>
-<div class="line"><span class="lineno">   59</span>        <a class="code hl_function" href="../../dd/d0f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DModManager.html#a3b69ea49f4b58f91c4db01c261ffcce1">addDMods</a>(data.getMember(), data.getStatus() == Status.DESTROYED, own, recoverer, random);</div>
-<div class="line"><span class="lineno">   60</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a95c5c1c8f3d2b3418c1bcccb26dd6783" name="a95c5c1c8f3d2b3418c1bcccb26dd6783"></a>
@@ -409,83 +388,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d20/DModManager_8java_source.html#l00176">176</a> of file <a class="el" href="../../d5/d20/DModManager_8java_source.html">DModManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  176</span>                                                                                                             {</div>
-<div class="line"><span class="lineno">  177</span>        <span class="keywordflow">if</span> (random == <span class="keyword">null</span>) random = <span class="keyword">new</span> Random();</div>
-<div class="line"><span class="lineno">  178</span>        </div>
-<div class="line"><span class="lineno">  179</span>        DModAdderParams params = <span class="keyword">new</span> DModAdderParams();</div>
-<div class="line"><span class="lineno">  180</span>        params.variant = variant;</div>
-<div class="line"><span class="lineno">  181</span>        params.canAddDestroyedMods = canAddDestroyedMods;</div>
-<div class="line"><span class="lineno">  182</span>        params.num = num;</div>
-<div class="line"><span class="lineno">  183</span>        params.random = random;</div>
-<div class="line"><span class="lineno">  184</span>        DModAdderPlugin plugin = Global.getSector().getGenericPlugins().pickPlugin(DModAdderPlugin.class, params);</div>
-<div class="line"><span class="lineno">  185</span>        <span class="keywordflow">if</span> (plugin != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  186</span>            plugin.addDMods(params);</div>
-<div class="line"><span class="lineno">  187</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  188</span>        }</div>
-<div class="line"><span class="lineno">  189</span>        </div>
-<div class="line"><span class="lineno">  190</span>        </div>
-<div class="line"><span class="lineno">  191</span><span class="comment">//      if (member.getHullSpec().getHints().contains(ShipTypeHints.CIVILIAN)) {</span></div>
-<div class="line"><span class="lineno">  192</span><span class="comment">//          int added = addAllPermaModsWithTags(variant, Tags.HULLMOD_CIV_ALWAYS);</span></div>
-<div class="line"><span class="lineno">  193</span><span class="comment">//          if (added &gt; 0) {</span></div>
-<div class="line"><span class="lineno">  194</span><span class="comment">//              num -= added;</span></div>
-<div class="line"><span class="lineno">  195</span><span class="comment">//              if (num &lt;= 0) return;</span></div>
-<div class="line"><span class="lineno">  196</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">  197</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  198</span>        </div>
-<div class="line"><span class="lineno">  199</span>        List&lt;HullModSpecAPI&gt; potentialMods = <a class="code hl_function" href="../../dd/d0f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DModManager.html#a0f4154ca74e2ca9865d0c80cea590e45">getModsWithTags</a>(Tags.HULLMOD_DAMAGE);</div>
-<div class="line"><span class="lineno">  200</span>        <span class="keywordflow">if</span> (canAddDestroyedMods) potentialMods.addAll(<a class="code hl_function" href="../../dd/d0f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DModManager.html#a0f4154ca74e2ca9865d0c80cea590e45">getModsWithTags</a>(Tags.HULLMOD_DESTROYED_ALWAYS));</div>
-<div class="line"><span class="lineno">  201</span>        </div>
-<div class="line"><span class="lineno">  202</span>        <a class="code hl_function" href="../../dd/d0f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DModManager.html#aa00da64ccb769b9ce0ef265301a13791">removeUnsuitedMods</a>(variant, potentialMods);</div>
-<div class="line"><span class="lineno">  203</span>        </div>
-<div class="line"><span class="lineno">  204</span>        <span class="keywordtype">boolean</span> hasStructDamage = <a class="code hl_function" href="../../dd/d0f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DModManager.html#acf88477955b9965a39f1d9516e971ac7">getNumDMods</a>(variant, Tags.HULLMOD_DAMAGE_STRUCT) &gt; 0;</div>
-<div class="line"><span class="lineno">  205</span>        <span class="keywordflow">if</span> (hasStructDamage) {</div>
-<div class="line"><span class="lineno">  206</span>            potentialMods = <a class="code hl_function" href="../../dd/d0f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DModManager.html#a89c139c3a4a2fc11b9e3dec38bfeace8">getModsWithoutTags</a>(potentialMods, Tags.HULLMOD_DAMAGE_STRUCT);</div>
-<div class="line"><span class="lineno">  207</span>        }</div>
-<div class="line"><span class="lineno">  208</span>        </div>
-<div class="line"><span class="lineno">  209</span>        <span class="keywordflow">if</span> (variant.getHullSpec().getFighterBays() &gt; 0) {</div>
-<div class="line"><span class="lineno">  210</span>        <span class="comment">//if (variant.getHullSpec().getFighterBays() &gt; 0 || variant.isCarrier()) {          </span></div>
-<div class="line"><span class="lineno">  211</span>            potentialMods.addAll(<a class="code hl_function" href="../../dd/d0f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DModManager.html#a0f4154ca74e2ca9865d0c80cea590e45">getModsWithTags</a>(Tags.HULLMOD_FIGHTER_BAY_DAMAGE));</div>
-<div class="line"><span class="lineno">  212</span>        }</div>
-<div class="line"><span class="lineno">  213</span>        <span class="comment">//if (variant.getHullSpec().getDefenseType() == ShieldType.PHASE) {</span></div>
-<div class="line"><span class="lineno">  214</span>        <span class="keywordflow">if</span> (variant.getHullSpec().isPhase()) {</div>
-<div class="line"><span class="lineno">  215</span>            potentialMods.addAll(<a class="code hl_function" href="../../dd/d0f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DModManager.html#a0f4154ca74e2ca9865d0c80cea590e45">getModsWithTags</a>(Tags.HULLMOD_DAMAGE_PHASE));</div>
-<div class="line"><span class="lineno">  216</span>        }</div>
-<div class="line"><span class="lineno">  217</span>        </div>
-<div class="line"><span class="lineno">  218</span>        <span class="keywordflow">if</span> (variant.isCarrier()) {</div>
-<div class="line"><span class="lineno">  219</span>            potentialMods.addAll(<a class="code hl_function" href="../../dd/d0f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DModManager.html#a0f4154ca74e2ca9865d0c80cea590e45">getModsWithTags</a>(Tags.HULLMOD_CARRIER_ALWAYS));</div>
-<div class="line"><span class="lineno">  220</span>        }</div>
-<div class="line"><span class="lineno">  221</span>        </div>
-<div class="line"><span class="lineno">  222</span>        potentialMods = <span class="keyword">new</span> ArrayList&lt;HullModSpecAPI&gt;(potentialMods);</div>
-<div class="line"><span class="lineno">  223</span>        </div>
-<div class="line"><span class="lineno">  224</span>        <a class="code hl_function" href="../../dd/d0f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DModManager.html#ae83404602619ac98b11b8721ab168b05">removeModsAlreadyInVariant</a>(variant, potentialMods);</div>
-<div class="line"><span class="lineno">  225</span>        </div>
-<div class="line"><span class="lineno">  226</span><span class="comment">//      System.out.println(&quot;&quot;);</span></div>
-<div class="line"><span class="lineno">  227</span><span class="comment">//      System.out.println(&quot;Adding: &quot;);</span></div>
-<div class="line"><span class="lineno">  228</span>        WeightedRandomPicker&lt;HullModSpecAPI&gt; picker = <span class="keyword">new</span> WeightedRandomPicker&lt;HullModSpecAPI&gt;(random);</div>
-<div class="line"><span class="lineno">  229</span>        picker.addAll(potentialMods);</div>
-<div class="line"><span class="lineno">  230</span>        <span class="keywordtype">int</span> added = 0;</div>
-<div class="line"><span class="lineno">  231</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; num &amp;&amp; !picker.isEmpty(); i++) {</div>
-<div class="line"><span class="lineno">  232</span>            HullModSpecAPI pick = picker.pickAndRemove();</div>
-<div class="line"><span class="lineno">  233</span>            <span class="keywordflow">if</span> (pick != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  234</span>                <span class="keywordflow">if</span> (pick.hasTag(Tags.HULLMOD_DAMAGE_STRUCT) &amp;&amp; <a class="code hl_function" href="../../dd/d0f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DModManager.html#acf88477955b9965a39f1d9516e971ac7">getNumDMods</a>(variant, Tags.HULLMOD_DAMAGE_STRUCT) &gt; 0) {</div>
-<div class="line"><span class="lineno">  235</span>                    i--;</div>
-<div class="line"><span class="lineno">  236</span>                    <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  237</span>                }</div>
-<div class="line"><span class="lineno">  238</span>                variant.removeSuppressedMod(pick.getId());</div>
-<div class="line"><span class="lineno">  239</span>                variant.addPermaMod(pick.getId(), <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  240</span>                <span class="comment">//System.out.println(&quot;Mod: &quot; + pick.getId());</span></div>
-<div class="line"><span class="lineno">  241</span>                added++;</div>
-<div class="line"><span class="lineno">  242</span>            }</div>
-<div class="line"><span class="lineno">  243</span>        }</div>
-<div class="line"><span class="lineno">  244</span><span class="comment">//      if (getNumDMods(variant) &lt; 5) {</span></div>
-<div class="line"><span class="lineno">  245</span><span class="comment">//          System.out.println(&quot;ewfwefew&quot;);</span></div>
-<div class="line"><span class="lineno">  246</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  247</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DModManager_html_a89c139c3a4a2fc11b9e3dec38bfeace8"><div class="ttname"><a href="../../dd/d0f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DModManager.html#a89c139c3a4a2fc11b9e3dec38bfeace8">com.fs.starfarer.api.impl.campaign.DModManager.getModsWithoutTags</a></div><div class="ttdeci">static List&lt; HullModSpecAPI &gt; getModsWithoutTags(List&lt; HullModSpecAPI &gt; mods, String ... tags)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d20/DModManager_8java_source.html#l00313">DModManager.java:313</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DModManager_html_aa00da64ccb769b9ce0ef265301a13791"><div class="ttname"><a href="../../dd/d0f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DModManager.html#aa00da64ccb769b9ce0ef265301a13791">com.fs.starfarer.api.impl.campaign.DModManager.removeUnsuitedMods</a></div><div class="ttdeci">static void removeUnsuitedMods(ShipVariantAPI variant, List&lt; HullModSpecAPI &gt; mods)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d20/DModManager_8java_source.html#l00252">DModManager.java:252</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DModManager_html_acf88477955b9965a39f1d9516e971ac7"><div class="ttname"><a href="../../dd/d0f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DModManager.html#acf88477955b9965a39f1d9516e971ac7">com.fs.starfarer.api.impl.campaign.DModManager.getNumDMods</a></div><div class="ttdeci">static int getNumDMods(ShipVariantAPI variant)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d20/DModManager_8java_source.html#l00334">DModManager.java:334</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DModManager_html_ae83404602619ac98b11b8721ab168b05"><div class="ttname"><a href="../../dd/d0f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DModManager.html#ae83404602619ac98b11b8721ab168b05">com.fs.starfarer.api.impl.campaign.DModManager.removeModsAlreadyInVariant</a></div><div class="ttdeci">static void removeModsAlreadyInVariant(ShipVariantAPI variant, List&lt; HullModSpecAPI &gt; mods)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d20/DModManager_8java_source.html#l00295">DModManager.java:295</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a0376935531f3b24c15065005bc14aa12" name="a0376935531f3b24c15065005bc14aa12"></a>
@@ -541,114 +444,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d20/DModManager_8java_source.html#l00066">66</a> of file <a class="el" href="../../d5/d20/DModManager_8java_source.html">DModManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   66</span>                                                                                                                                   {</div>
-<div class="line"><span class="lineno">   67</span>        <span class="comment">//int original = getNumDMods(variant);</span></div>
-<div class="line"><span class="lineno">   68</span>        <span class="keywordflow">if</span> (random == <span class="keyword">null</span>) random = <span class="keyword">new</span> Random();</div>
-<div class="line"><span class="lineno">   69</span>        </div>
-<div class="line"><span class="lineno">   70</span><span class="comment">//      if (own) {</span></div>
-<div class="line"><span class="lineno">   71</span><span class="comment">//          System.out.println(&quot;323ffwe&quot;);</span></div>
-<div class="line"><span class="lineno">   72</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">   73</span>        DModAdderParams params = <span class="keyword">new</span> DModAdderParams();</div>
-<div class="line"><span class="lineno">   74</span>        params.variant = variant;</div>
-<div class="line"><span class="lineno">   75</span>        params.destroyed = destroyed;</div>
-<div class="line"><span class="lineno">   76</span>        params.own = own;</div>
-<div class="line"><span class="lineno">   77</span>        params.recoverer = recoverer;</div>
-<div class="line"><span class="lineno">   78</span>        params.random = random;</div>
-<div class="line"><span class="lineno">   79</span>        DModAdderPlugin plugin = Global.getSector().getGenericPlugins().pickPlugin(DModAdderPlugin.class, params);</div>
-<div class="line"><span class="lineno">   80</span>        <span class="keywordflow">if</span> (plugin != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   81</span>            plugin.addDMods(params);</div>
-<div class="line"><span class="lineno">   82</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   83</span>        }</div>
-<div class="line"><span class="lineno">   84</span>        </div>
-<div class="line"><span class="lineno">   85</span>        </div>
-<div class="line"><span class="lineno">   86</span>        <span class="keywordflow">if</span> (destroyed) {</div>
-<div class="line"><span class="lineno">   87</span>            <a class="code hl_function" href="../../dd/d0f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DModManager.html#a9e6ace2e7e990c45e744cf2ec1eb9411">addAllPermaModsWithTags</a>(variant, Tags.HULLMOD_DESTROYED_ALWAYS);</div>
-<div class="line"><span class="lineno">   88</span><span class="comment">//          if (own) {</span></div>
-<div class="line"><span class="lineno">   89</span><span class="comment">//              int added = getNumDMods(variant) - original;</span></div>
-<div class="line"><span class="lineno">   90</span><span class="comment">//              if (added &gt; 0) return;</span></div>
-<div class="line"><span class="lineno">   91</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">   92</span>        }</div>
-<div class="line"><span class="lineno">   93</span>        </div>
-<div class="line"><span class="lineno">   94</span><span class="comment">//      if (member.getHullSpec().getHints().contains(ShipTypeHints.CIVILIAN)) {</span></div>
-<div class="line"><span class="lineno">   95</span><span class="comment">//          addAllPermaModsWithTags(variant, Tags.HULLMOD_CIV_ALWAYS);</span></div>
-<div class="line"><span class="lineno">   96</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">   97</span> </div>
-<div class="line"><span class="lineno">   98</span>        List&lt;HullModSpecAPI&gt; potentialMods = <a class="code hl_function" href="../../dd/d0f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DModManager.html#a0f4154ca74e2ca9865d0c80cea590e45">getModsWithTags</a>(Tags.HULLMOD_DAMAGE);</div>
-<div class="line"><span class="lineno">   99</span>        <a class="code hl_function" href="../../dd/d0f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DModManager.html#aa00da64ccb769b9ce0ef265301a13791">removeUnsuitedMods</a>(variant, potentialMods);</div>
-<div class="line"><span class="lineno">  100</span>        </div>
-<div class="line"><span class="lineno">  101</span>        <span class="keywordtype">boolean</span> hasStructDamage = <a class="code hl_function" href="../../dd/d0f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DModManager.html#acf88477955b9965a39f1d9516e971ac7">getNumDMods</a>(variant, Tags.HULLMOD_DAMAGE_STRUCT) &gt; 0;</div>
-<div class="line"><span class="lineno">  102</span>        <span class="keywordflow">if</span> (hasStructDamage) {</div>
-<div class="line"><span class="lineno">  103</span>            potentialMods = <a class="code hl_function" href="../../dd/d0f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DModManager.html#a89c139c3a4a2fc11b9e3dec38bfeace8">getModsWithoutTags</a>(potentialMods, Tags.HULLMOD_DAMAGE_STRUCT);</div>
-<div class="line"><span class="lineno">  104</span>        }</div>
-<div class="line"><span class="lineno">  105</span>        </div>
-<div class="line"><span class="lineno">  106</span>        <span class="comment">//if (variant.getHullSpec().getFighterBays() &gt; 0 || variant.isCarrier()) {</span></div>
-<div class="line"><span class="lineno">  107</span>        <span class="keywordflow">if</span> (variant.getHullSpec().getFighterBays() &gt; 0) {</div>
-<div class="line"><span class="lineno">  108</span>            potentialMods.addAll(<a class="code hl_function" href="../../dd/d0f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DModManager.html#a0f4154ca74e2ca9865d0c80cea590e45">getModsWithTags</a>(Tags.HULLMOD_FIGHTER_BAY_DAMAGE));</div>
-<div class="line"><span class="lineno">  109</span>        }</div>
-<div class="line"><span class="lineno">  110</span>        <span class="comment">//if (variant.getHullSpec().getDefenseType() == ShieldType.PHASE) {</span></div>
-<div class="line"><span class="lineno">  111</span>        <span class="keywordflow">if</span> (variant.getHullSpec().isPhase()) {</div>
-<div class="line"><span class="lineno">  112</span>            potentialMods.addAll(<a class="code hl_function" href="../../dd/d0f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DModManager.html#a0f4154ca74e2ca9865d0c80cea590e45">getModsWithTags</a>(Tags.HULLMOD_DAMAGE_PHASE));</div>
-<div class="line"><span class="lineno">  113</span>        }</div>
-<div class="line"><span class="lineno">  114</span>        </div>
-<div class="line"><span class="lineno">  115</span><span class="comment">//      if (variant.isCarrier()) {</span></div>
-<div class="line"><span class="lineno">  116</span><span class="comment">//          if (own || true) { // bit too harsh to always add damaged flight decks to recovered enemy carriers</span></div>
-<div class="line"><span class="lineno">  117</span><span class="comment">//              potentialMods.addAll(getModsWithTags(Tags.HULLMOD_CARRIER_ALWAYS));</span></div>
-<div class="line"><span class="lineno">  118</span><span class="comment">//          } else {</span></div>
-<div class="line"><span class="lineno">  119</span><span class="comment">//              addAllPermaModsWithTags(variant, Tags.HULLMOD_CARRIER_ALWAYS);</span></div>
-<div class="line"><span class="lineno">  120</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">  121</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  122</span>        </div>
-<div class="line"><span class="lineno">  123</span>        <a class="code hl_function" href="../../dd/d0f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DModManager.html#ae83404602619ac98b11b8721ab168b05">removeModsAlreadyInVariant</a>(variant, potentialMods);</div>
-<div class="line"><span class="lineno">  124</span>        </div>
-<div class="line"><span class="lineno">  125</span>        <span class="keywordtype">int</span> num = 2 + random.nextInt(3);</div>
-<div class="line"><span class="lineno">  126</span>        </div>
-<div class="line"><span class="lineno">  127</span>        <span class="keywordtype">int</span> reduction = 0;</div>
-<div class="line"><span class="lineno">  128</span>        reduction += <a class="code hl_variable" href="../../dd/d0f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DModManager.html#a91df53237b9493c6e4ffb41301e45e57">reduceNextDmodsBy</a>;</div>
-<div class="line"><span class="lineno">  129</span>        <a class="code hl_variable" href="../../dd/d0f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DModManager.html#a91df53237b9493c6e4ffb41301e45e57">reduceNextDmodsBy</a> = 0;</div>
-<div class="line"><span class="lineno">  130</span>        <span class="keywordflow">if</span> (recoverer != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  131</span>            <span class="keywordtype">int</span> extra = (int) recoverer.getStats().getDynamic().getValue(Stats.SHIP_DMOD_REDUCTION, 0);</div>
-<div class="line"><span class="lineno">  132</span>            <span class="keywordflow">if</span> (extra &gt;= 0) {</div>
-<div class="line"><span class="lineno">  133</span>                extra = random.nextInt(extra + 1);</div>
-<div class="line"><span class="lineno">  134</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  135</span>                extra = -1 * random.nextInt(-extra + 1);</div>
-<div class="line"><span class="lineno">  136</span>            }</div>
-<div class="line"><span class="lineno">  137</span>            reduction += extra;</div>
-<div class="line"><span class="lineno">  138</span>        }</div>
-<div class="line"><span class="lineno">  139</span>        </div>
-<div class="line"><span class="lineno">  140</span>        num -= reduction;</div>
-<div class="line"><span class="lineno">  141</span>        <span class="keywordflow">if</span> (num &lt; 1) num = 1;</div>
-<div class="line"><span class="lineno">  142</span>        </div>
-<div class="line"><span class="lineno">  143</span>        <span class="keywordtype">int</span> already = <a class="code hl_function" href="../../dd/d0f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DModManager.html#acf88477955b9965a39f1d9516e971ac7">getNumDMods</a>(variant);</div>
-<div class="line"><span class="lineno">  144</span>        </div>
-<div class="line"><span class="lineno">  145</span>        <span class="keywordtype">int</span> add = num - already;</div>
-<div class="line"><span class="lineno">  146</span>        <span class="keywordflow">if</span> (own) {</div>
-<div class="line"><span class="lineno">  147</span>            add = (1 - reduction);</div>
-<div class="line"><span class="lineno">  148</span>        }</div>
-<div class="line"><span class="lineno">  149</span>        </div>
-<div class="line"><span class="lineno">  150</span>        <span class="keywordflow">if</span> (add + already &gt; <a class="code hl_variable" href="../../dd/d0f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DModManager.html#ab2e120698b1e1a0729b0ea1ba43f4668">MAX_DMODS_FROM_COMBAT</a>) {</div>
-<div class="line"><span class="lineno">  151</span>            add = <a class="code hl_variable" href="../../dd/d0f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DModManager.html#ab2e120698b1e1a0729b0ea1ba43f4668">MAX_DMODS_FROM_COMBAT</a> - already;</div>
-<div class="line"><span class="lineno">  152</span>        }</div>
-<div class="line"><span class="lineno">  153</span>        <span class="keywordflow">if</span> (add &lt;= 0) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  154</span> </div>
-<div class="line"><span class="lineno">  155</span>        </div>
-<div class="line"><span class="lineno">  156</span>        WeightedRandomPicker&lt;HullModSpecAPI&gt; picker = <span class="keyword">new</span> WeightedRandomPicker&lt;HullModSpecAPI&gt;(random);</div>
-<div class="line"><span class="lineno">  157</span>        picker.addAll(potentialMods);</div>
-<div class="line"><span class="lineno">  158</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; add &amp;&amp; !picker.isEmpty(); i++) {</div>
-<div class="line"><span class="lineno">  159</span>            HullModSpecAPI pick = picker.pickAndRemove();</div>
-<div class="line"><span class="lineno">  160</span>            <span class="keywordflow">if</span> (pick != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  161</span>                <span class="keywordflow">if</span> (pick.hasTag(Tags.HULLMOD_DAMAGE_STRUCT) &amp;&amp; <a class="code hl_function" href="../../dd/d0f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DModManager.html#acf88477955b9965a39f1d9516e971ac7">getNumDMods</a>(variant, Tags.HULLMOD_DAMAGE_STRUCT) &gt; 0) {</div>
-<div class="line"><span class="lineno">  162</span>                    i--;</div>
-<div class="line"><span class="lineno">  163</span>                    <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  164</span>                }</div>
-<div class="line"><span class="lineno">  165</span>                variant.removeSuppressedMod(pick.getId());</div>
-<div class="line"><span class="lineno">  166</span>                variant.addPermaMod(pick.getId(), <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  167</span>            }</div>
-<div class="line"><span class="lineno">  168</span>        }</div>
-<div class="line"><span class="lineno">  169</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DModManager_html_a91df53237b9493c6e4ffb41301e45e57"><div class="ttname"><a href="../../dd/d0f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DModManager.html#a91df53237b9493c6e4ffb41301e45e57">com.fs.starfarer.api.impl.campaign.DModManager.reduceNextDmodsBy</a></div><div class="ttdeci">static int reduceNextDmodsBy</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d20/DModManager_8java_source.html#l00053">DModManager.java:53</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DModManager_html_a9e6ace2e7e990c45e744cf2ec1eb9411"><div class="ttname"><a href="../../dd/d0f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DModManager.html#a9e6ace2e7e990c45e744cf2ec1eb9411">com.fs.starfarer.api.impl.campaign.DModManager.addAllPermaModsWithTags</a></div><div class="ttdeci">static int addAllPermaModsWithTags(ShipVariantAPI variant, String ... tags)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d20/DModManager_8java_source.html#l00303">DModManager.java:303</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DModManager_html_ab2e120698b1e1a0729b0ea1ba43f4668"><div class="ttname"><a href="../../dd/d0f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DModManager.html#ab2e120698b1e1a0729b0ea1ba43f4668">com.fs.starfarer.api.impl.campaign.DModManager.MAX_DMODS_FROM_COMBAT</a></div><div class="ttdeci">static int MAX_DMODS_FROM_COMBAT</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d20/DModManager_8java_source.html#l00038">DModManager.java:38</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8a87860f3faf7d7e93a0983f47487c4e" name="a8a87860f3faf7d7e93a0983f47487c4e"></a>
@@ -676,10 +472,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d20/DModManager_8java_source.html#l00363">363</a> of file <a class="el" href="../../d5/d20/DModManager_8java_source.html">DModManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  363</span>                                                   {</div>
-<div class="line"><span class="lineno">  364</span>        <span class="keywordflow">return</span> Global.getSettings().getHullModSpec(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  365</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a89c139c3a4a2fc11b9e3dec38bfeace8" name="a89c139c3a4a2fc11b9e3dec38bfeace8"></a>
@@ -717,17 +510,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d20/DModManager_8java_source.html#l00313">313</a> of file <a class="el" href="../../d5/d20/DModManager_8java_source.html">DModManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  313</span>                                                                                                      {</div>
-<div class="line"><span class="lineno">  314</span>        List&lt;HullModSpecAPI&gt; result = <span class="keyword">new</span> ArrayList&lt;HullModSpecAPI&gt;();</div>
-<div class="line"><span class="lineno">  315</span>        OUTER: <span class="keywordflow">for</span> (HullModSpecAPI mod : mods) {</div>
-<div class="line"><span class="lineno">  316</span>            <span class="keywordflow">for</span> (String tag : tags) {</div>
-<div class="line"><span class="lineno">  317</span>                <span class="keywordflow">if</span> (mod.hasTag(tag)) <span class="keywordflow">continue</span> OUTER;</div>
-<div class="line"><span class="lineno">  318</span>            }</div>
-<div class="line"><span class="lineno">  319</span>            result.add(mod);</div>
-<div class="line"><span class="lineno">  320</span>        }</div>
-<div class="line"><span class="lineno">  321</span>        <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">  322</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a0f4154ca74e2ca9865d0c80cea590e45" name="a0f4154ca74e2ca9865d0c80cea590e45"></a>
@@ -755,16 +538,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d20/DModManager_8java_source.html#l00324">324</a> of file <a class="el" href="../../d5/d20/DModManager_8java_source.html">DModManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  324</span>                                                                        {</div>
-<div class="line"><span class="lineno">  325</span>        List&lt;HullModSpecAPI&gt; result = <span class="keyword">new</span> ArrayList&lt;HullModSpecAPI&gt;();</div>
-<div class="line"><span class="lineno">  326</span>        <span class="keywordflow">for</span> (HullModSpecAPI mod : Global.getSettings().getAllHullModSpecs()) {</div>
-<div class="line"><span class="lineno">  327</span>            <span class="keywordflow">if</span> (mod.getTags().containsAll(Arrays.asList(tags))) {</div>
-<div class="line"><span class="lineno">  328</span>                result.add(mod);</div>
-<div class="line"><span class="lineno">  329</span>            }</div>
-<div class="line"><span class="lineno">  330</span>        }</div>
-<div class="line"><span class="lineno">  331</span>        <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">  332</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="acf88477955b9965a39f1d9516e971ac7" name="acf88477955b9965a39f1d9516e971ac7"></a>
@@ -792,15 +566,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d20/DModManager_8java_source.html#l00334">334</a> of file <a class="el" href="../../d5/d20/DModManager_8java_source.html">DModManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  334</span>                                                          {</div>
-<div class="line"><span class="lineno">  335</span>        <span class="keywordtype">int</span> count = 0;</div>
-<div class="line"><span class="lineno">  336</span>        <span class="keywordflow">for</span> (String <span class="keywordtype">id</span> : variant.getHullMods()) {</div>
-<div class="line"><span class="lineno">  337</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="../../dd/d0f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DModManager.html#a8a87860f3faf7d7e93a0983f47487c4e">getMod</a>(<span class="keywordtype">id</span>).hasTag(Tags.HULLMOD_DMOD)) count++;</div>
-<div class="line"><span class="lineno">  338</span>        }</div>
-<div class="line"><span class="lineno">  339</span>        <span class="keywordflow">return</span> count;</div>
-<div class="line"><span class="lineno">  340</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DModManager_html_a8a87860f3faf7d7e93a0983f47487c4e"><div class="ttname"><a href="../../dd/d0f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DModManager.html#a8a87860f3faf7d7e93a0983f47487c4e">com.fs.starfarer.api.impl.campaign.DModManager.getMod</a></div><div class="ttdeci">static HullModSpecAPI getMod(String id)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d20/DModManager_8java_source.html#l00363">DModManager.java:363</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae64b96bced6889153f515e6b4c9727d0" name="ae64b96bced6889153f515e6b4c9727d0"></a>
@@ -838,16 +604,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d20/DModManager_8java_source.html#l00353">353</a> of file <a class="el" href="../../d5/d20/DModManager_8java_source.html">DModManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  353</span>                                                                           {</div>
-<div class="line"><span class="lineno">  354</span>        <span class="keywordtype">int</span> count = 0;</div>
-<div class="line"><span class="lineno">  355</span>        <span class="keywordflow">for</span> (String <span class="keywordtype">id</span> : variant.getHullMods()) {</div>
-<div class="line"><span class="lineno">  356</span>            HullModSpecAPI mod = <a class="code hl_function" href="../../dd/d0f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DModManager.html#a8a87860f3faf7d7e93a0983f47487c4e">getMod</a>(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  357</span>            <span class="keywordflow">if</span> (!mod.getTags().containsAll(Arrays.asList(tags))) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  358</span>            <span class="keywordflow">if</span> (mod.hasTag(Tags.HULLMOD_DMOD)) count++;</div>
-<div class="line"><span class="lineno">  359</span>        }</div>
-<div class="line"><span class="lineno">  360</span>        <span class="keywordflow">return</span> count;</div>
-<div class="line"><span class="lineno">  361</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2e5c3298357b92dadb319cb799d76a2c" name="a2e5c3298357b92dadb319cb799d76a2c"></a>
@@ -875,17 +632,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d20/DModManager_8java_source.html#l00342">342</a> of file <a class="el" href="../../d5/d20/DModManager_8java_source.html">DModManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  342</span>                                                                    {</div>
-<div class="line"><span class="lineno">  343</span>        <span class="keywordtype">int</span> count = 0;</div>
-<div class="line"><span class="lineno">  344</span>        <span class="keywordflow">for</span> (String <span class="keywordtype">id</span> : variant.getHullMods()) {</div>
-<div class="line"><span class="lineno">  345</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="../../dd/d0f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DModManager.html#a8a87860f3faf7d7e93a0983f47487c4e">getMod</a>(<span class="keywordtype">id</span>).hasTag(Tags.HULLMOD_DMOD)) {</div>
-<div class="line"><span class="lineno">  346</span>                <span class="keywordflow">if</span> (variant.getHullSpec().getBuiltInMods().contains(<span class="keywordtype">id</span>)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  347</span>                count++;</div>
-<div class="line"><span class="lineno">  348</span>            }</div>
-<div class="line"><span class="lineno">  349</span>        }</div>
-<div class="line"><span class="lineno">  350</span>        <span class="keywordflow">return</span> count;</div>
-<div class="line"><span class="lineno">  351</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="afc25ae78abcf9d4d2069146dde85154d" name="afc25ae78abcf9d4d2069146dde85154d"></a>
@@ -923,26 +670,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d20/DModManager_8java_source.html#l00367">367</a> of file <a class="el" href="../../d5/d20/DModManager_8java_source.html">DModManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  367</span>                                                               {</div>
-<div class="line"><span class="lineno">  368</span>        ShipHullSpecAPI base = v.getHullSpec().getDParentHull();</div>
-<div class="line"><span class="lineno">  369</span>        </div>
-<div class="line"><span class="lineno">  370</span>        <span class="comment">// so that a skin with dmods can be &quot;restored&quot; - i.e. just dmods suppressed w/o changing to</span></div>
-<div class="line"><span class="lineno">  371</span>        <span class="comment">// actual base skin</span></div>
-<div class="line"><span class="lineno">  372</span>        <span class="keywordflow">if</span> (!v.getHullSpec().isDefaultDHull() &amp;&amp; !v.getHullSpec().isRestoreToBase()) {</div>
-<div class="line"><span class="lineno">  373</span>            base = v.getHullSpec();</div>
-<div class="line"><span class="lineno">  374</span>        }</div>
-<div class="line"><span class="lineno">  375</span>        <span class="keywordflow">if</span> (base == <span class="keyword">null</span> &amp;&amp; v.getHullSpec().isRestoreToBase()) {</div>
-<div class="line"><span class="lineno">  376</span>            base = v.getHullSpec().getBaseHull();</div>
-<div class="line"><span class="lineno">  377</span>        }</div>
-<div class="line"><span class="lineno">  378</span>        <span class="keywordflow">if</span> (base.isBuiltInMod(<span class="keywordtype">id</span>)) {</div>
-<div class="line"><span class="lineno">  379</span>            v.removePermaMod(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  380</span>            v.addSuppressedMod(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  381</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  382</span>            v.removePermaMod(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  383</span>            v.removeMod(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  384</span>        }</div>
-<div class="line"><span class="lineno">  385</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae83404602619ac98b11b8721ab168b05" name="ae83404602619ac98b11b8721ab168b05"></a>
@@ -980,14 +708,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d20/DModManager_8java_source.html#l00295">295</a> of file <a class="el" href="../../d5/d20/DModManager_8java_source.html">DModManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  295</span>                                                                                                     {</div>
-<div class="line"><span class="lineno">  296</span>        Iterator&lt;HullModSpecAPI&gt; iter = mods.iterator();</div>
-<div class="line"><span class="lineno">  297</span>        <span class="keywordflow">while</span> (iter.hasNext()) {</div>
-<div class="line"><span class="lineno">  298</span>            HullModSpecAPI curr = iter.next();</div>
-<div class="line"><span class="lineno">  299</span>            <span class="keywordflow">if</span> (variant.hasHullMod(curr.getId())) iter.remove();</div>
-<div class="line"><span class="lineno">  300</span>        }</div>
-<div class="line"><span class="lineno">  301</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa00da64ccb769b9ce0ef265301a13791" name="aa00da64ccb769b9ce0ef265301a13791"></a>
@@ -1025,51 +746,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d20/DModManager_8java_source.html#l00252">252</a> of file <a class="el" href="../../d5/d20/DModManager_8java_source.html">DModManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  252</span>                                                                                             {</div>
-<div class="line"><span class="lineno">  253</span>        <span class="keywordtype">boolean</span> auto = variant.hasHullMod(HullMods.AUTOMATED);</div>
-<div class="line"><span class="lineno">  254</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dd/d0f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DModManager.html#a43bfe080c52e43a92c5eb9840aec19f9">assumeAllShipsAreAutomated</a>) auto = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  255</span>        <span class="keywordtype">boolean</span> civ = variant.getHullSpec().getHints().contains(ShipTypeHints.CIVILIAN);</div>
-<div class="line"><span class="lineno">  256</span>        <span class="comment">//boolean phase = variant.getHullSpec().getDefenseType() == ShieldType.PHASE;</span></div>
-<div class="line"><span class="lineno">  257</span>        <span class="keywordtype">boolean</span> phase = variant.getHullSpec().isPhase();</div>
-<div class="line"><span class="lineno">  258</span>        <span class="keywordtype">boolean</span> peakTime = variant.getHullSpec().getNoCRLossTime() &lt; 10000;</div>
-<div class="line"><span class="lineno">  259</span>        <span class="keywordtype">boolean</span> shields = variant.getHullSpec().getDefenseType() == ShieldType.FRONT || </div>
-<div class="line"><span class="lineno">  260</span>                          variant.getHullSpec().getDefenseType() == ShieldType.OMNI; </div>
-<div class="line"><span class="lineno">  261</span>                </div>
-<div class="line"><span class="lineno">  262</span>        Iterator&lt;HullModSpecAPI&gt; iter = mods.iterator();</div>
-<div class="line"><span class="lineno">  263</span>        <span class="keywordflow">while</span> (iter.hasNext()) {</div>
-<div class="line"><span class="lineno">  264</span>            HullModSpecAPI curr = iter.next();</div>
-<div class="line"><span class="lineno">  265</span>            <span class="keywordflow">if</span> (!peakTime &amp;&amp; curr.hasTag(Tags.HULLMOD_PEAK_TIME)) {</div>
-<div class="line"><span class="lineno">  266</span>                iter.remove();</div>
-<div class="line"><span class="lineno">  267</span>                <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  268</span>            }</div>
-<div class="line"><span class="lineno">  269</span>            <span class="keywordflow">if</span> (phase &amp;&amp; curr.hasTag(Tags.HULLMOD_NOT_PHASE)) {</div>
-<div class="line"><span class="lineno">  270</span>                iter.remove();</div>
-<div class="line"><span class="lineno">  271</span>                <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  272</span>            }</div>
-<div class="line"><span class="lineno">  273</span>            <span class="keywordflow">if</span> (auto &amp;&amp; curr.hasTag(Tags.HULLMOD_NOT_AUTO)) {</div>
-<div class="line"><span class="lineno">  274</span>                iter.remove();</div>
-<div class="line"><span class="lineno">  275</span>                <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  276</span>            }</div>
-<div class="line"><span class="lineno">  277</span>            <span class="keywordflow">if</span> (civ &amp;&amp; curr.hasTag(Tags.HULLMOD_NOT_CIV)) {</div>
-<div class="line"><span class="lineno">  278</span>                iter.remove();</div>
-<div class="line"><span class="lineno">  279</span>                <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  280</span>            }</div>
-<div class="line"><span class="lineno">  281</span>            <span class="keywordflow">if</span> (civ &amp;&amp; !curr.hasTag(Tags.HULLMOD_CIV) &amp;&amp; !curr.hasTag(Tags.HULLMOD_CIV_ONLY)) {</div>
-<div class="line"><span class="lineno">  282</span>                iter.remove();</div>
-<div class="line"><span class="lineno">  283</span>                <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  284</span>            }</div>
-<div class="line"><span class="lineno">  285</span>            <span class="keywordflow">if</span> (!civ &amp;&amp; curr.hasTag(Tags.HULLMOD_CIV_ONLY)) {</div>
-<div class="line"><span class="lineno">  286</span>                iter.remove();</div>
-<div class="line"><span class="lineno">  287</span>                <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  288</span>            }</div>
-<div class="line"><span class="lineno">  289</span>            <span class="keywordflow">if</span> (!shields  &amp;&amp; curr.hasTag(Tags.HULLMOD_REQ_SHIELDS)) {</div>
-<div class="line"><span class="lineno">  290</span>                iter.remove();</div>
-<div class="line"><span class="lineno">  291</span>                <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  292</span>            }</div>
-<div class="line"><span class="lineno">  293</span>        }</div>
-<div class="line"><span class="lineno">  294</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DModManager_html_a43bfe080c52e43a92c5eb9840aec19f9"><div class="ttname"><a href="../../dd/d0f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DModManager.html#a43bfe080c52e43a92c5eb9840aec19f9">com.fs.starfarer.api.impl.campaign.DModManager.assumeAllShipsAreAutomated</a></div><div class="ttdeci">static boolean assumeAllShipsAreAutomated</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d20/DModManager_8java_source.html#l00250">DModManager.java:250</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a76922488328336d5d55254db10f762a5" name="a76922488328336d5d55254db10f762a5"></a>
@@ -1097,19 +774,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d20/DModManager_8java_source.html#l00040">40</a> of file <a class="el" href="../../d5/d20/DModManager_8java_source.html">DModManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   40</span>                                                           {</div>
-<div class="line"><span class="lineno">   41</span>        <span class="comment">//if (!variant.getHullSpec().isDHull()) {</span></div>
-<div class="line"><span class="lineno">   42</span>        variant.setSource(VariantSource.REFIT);</div>
-<div class="line"><span class="lineno">   43</span>        <span class="comment">//if (!variant.isDHull()) {</span></div>
-<div class="line"><span class="lineno">   44</span>        <span class="keywordflow">if</span> (!variant.getHullSpec().isDefaultDHull()) {</div>
-<div class="line"><span class="lineno">   45</span>            String dHullId = Misc.getDHullId(variant.getHullSpec());</div>
-<div class="line"><span class="lineno">   46</span>            ShipHullSpecAPI dHull = Global.getSettings().getHullSpec(dHullId);</div>
-<div class="line"><span class="lineno">   47</span>            variant.setHullSpecAPI(dHull);</div>
-<div class="line"><span class="lineno">   48</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   49</span>        }</div>
-<div class="line"><span class="lineno">   50</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   51</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

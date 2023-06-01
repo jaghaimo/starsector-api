@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -178,40 +179,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="../../d0/d5c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1CommandPlugin.html#a72a44c5127e60136b87d3b37613fd0e0">com.fs.starfarer.api.campaign.rules.CommandPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/dac/MovePersonToMarket_8java_source.html#l00026">26</a> of file <a class="el" href="../../df/dac/MovePersonToMarket_8java_source.html">MovePersonToMarket.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   26</span>                                                                                                                             {</div>
-<div class="line"><span class="lineno">   27</span>        </div>
-<div class="line"><span class="lineno">   28</span>        String personId = params.get(0).getString(memoryMap);</div>
-<div class="line"><span class="lineno">   29</span>        String marketId = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   30</span>        <span class="keywordflow">if</span> (params.size() &gt; 1) {</div>
-<div class="line"><span class="lineno">   31</span>            marketId = params.get(1).getString(memoryMap);</div>
-<div class="line"><span class="lineno">   32</span>        }</div>
-<div class="line"><span class="lineno">   33</span>        </div>
-<div class="line"><span class="lineno">   34</span>        SectorEntityToken entity = dialog.getInteractionTarget();</div>
-<div class="line"><span class="lineno">   35</span>        </div>
-<div class="line"><span class="lineno">   36</span>        MarketAPI market = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   37</span>        <span class="keywordflow">if</span> (entity != <span class="keyword">null</span>) market = entity.getMarket();</div>
-<div class="line"><span class="lineno">   38</span>        <span class="keywordflow">if</span> (marketId != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   39</span>            market = Global.getSector().getEconomy().getMarket(marketId);</div>
-<div class="line"><span class="lineno">   40</span>        }</div>
-<div class="line"><span class="lineno">   41</span>        <span class="keywordflow">if</span> (market == <span class="keyword">null</span> &amp;&amp; <span class="stringliteral">&quot;ga_market&quot;</span>.equals(marketId)) { <span class="comment">// horrible hack time</span></div>
-<div class="line"><span class="lineno">   42</span>            market = Global.getSector().getImportantPeople().getPerson(People.BAIRD).getMarket();</div>
-<div class="line"><span class="lineno">   43</span>        }</div>
-<div class="line"><span class="lineno">   44</span>        </div>
-<div class="line"><span class="lineno">   45</span>        <span class="keywordflow">if</span> (market == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   46</span>        </div>
-<div class="line"><span class="lineno">   47</span>        PersonAPI person = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   48</span>        PersonDataAPI data = Global.getSector().getImportantPeople().getData(personId);</div>
-<div class="line"><span class="lineno">   49</span>        <span class="keywordflow">if</span> (data != <span class="keyword">null</span>) person = data.getPerson();</div>
-<div class="line"><span class="lineno">   50</span>        </div>
-<div class="line"><span class="lineno">   51</span>        <span class="keywordflow">if</span> (person == <span class="keyword">null</span> &amp;&amp; entity != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   52</span>            person = entity.getActivePerson();</div>
-<div class="line"><span class="lineno">   53</span>        }</div>
-<div class="line"><span class="lineno">   54</span>        <span class="keywordflow">if</span> (person == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   55</span>        </div>
-<div class="line"><span class="lineno">   56</span>        Misc.moveToMarket(person, market, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   57</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   58</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -247,9 +248,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d57/DomainSurveyDerelictSpecial_8java_source.html#l00045">45</a> of file <a class="el" href="../../d5/d57/DomainSurveyDerelictSpecial_8java_source.html">DomainSurveyDerelictSpecial.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   45</span>                                         {</div>
-<div class="line"><span class="lineno">   46</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -271,10 +270,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html#a5e1d1f5367f65edd77c9deb9dd4b5a64">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.BaseSalvageSpecial</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d57/DomainSurveyDerelictSpecial_8java_source.html#l00458">458</a> of file <a class="el" href="../../d5/d57/DomainSurveyDerelictSpecial_8java_source.html">DomainSurveyDerelictSpecial.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  458</span>                                     {</div>
-<div class="line"><span class="lineno">  459</span>        <span class="keywordflow">return</span> super.endWithContinue();</div>
-<div class="line"><span class="lineno">  460</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a467c1c4666b448b0d48e94eb8520dfe3" name="a467c1c4666b448b0d48e94eb8520dfe3"></a>
@@ -302,68 +298,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d57/DomainSurveyDerelictSpecial_8java_source.html#l00355">355</a> of file <a class="el" href="../../d5/d57/DomainSurveyDerelictSpecial_8java_source.html">DomainSurveyDerelictSpecial.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  355</span>                                                                          {</div>
-<div class="line"><span class="lineno">  356</span>        LocationAPI loc = <a class="code hl_variable" href="../../d3/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html#ac773b2f252bf75b95964ca6a11c321b7">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a06362480c6a17326650354460c6d7442">getContainingLocation</a>();</div>
-<div class="line"><span class="lineno">  357</span>        <span class="keywordflow">if</span> (loc == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  358</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;in an unknown location nearby&quot;</span>; </div>
-<div class="line"><span class="lineno">  359</span>        }</div>
-<div class="line"><span class="lineno">  360</span>        <span class="keywordflow">if</span> (loc.isHyperspace()) {</div>
-<div class="line"><span class="lineno">  361</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;in hyperspace nearby&quot;</span>;</div>
-<div class="line"><span class="lineno">  362</span>        }</div>
-<div class="line"><span class="lineno">  363</span>        StarSystemAPI system = (StarSystemAPI) loc;</div>
-<div class="line"><span class="lineno">  364</span>        </div>
-<div class="line"><span class="lineno">  365</span>        <span class="keywordflow">if</span> (system == Global.getSector().getCurrentLocation()) {</div>
-<div class="line"><span class="lineno">  366</span>            <span class="keywordflow">if</span> (system.isNebula()) {</div>
-<div class="line"><span class="lineno">  367</span>                <span class="keywordflow">return</span> <span class="stringliteral">&quot;inside this nebula&quot;</span>;</div>
-<div class="line"><span class="lineno">  368</span>            }</div>
-<div class="line"><span class="lineno">  369</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;in this system&quot;</span>;</div>
-<div class="line"><span class="lineno">  370</span>        }</div>
-<div class="line"><span class="lineno">  371</span> </div>
-<div class="line"><span class="lineno">  372</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d3/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html#ac773b2f252bf75b95964ca6a11c321b7">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#ab7242f26914ad8f11dfb9b3610397daf">getConstellation</a>() != <span class="keyword">null</span> &amp;&amp; <a class="code hl_variable" href="../../d3/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html#ac773b2f252bf75b95964ca6a11c321b7">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#ab7242f26914ad8f11dfb9b3610397daf">getConstellation</a>() != Global.getSector().getCurrentLocation().getConstellation()) {</div>
-<div class="line"><span class="lineno">  373</span>            Constellation c = <a class="code hl_variable" href="../../d3/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html#ac773b2f252bf75b95964ca6a11c321b7">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#ab7242f26914ad8f11dfb9b3610397daf">getConstellation</a>();</div>
-<div class="line"><span class="lineno">  374</span>            String cText = <span class="stringliteral">&quot;in the &quot;</span> + c.<a class="code hl_function" href="../../d4/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1Constellation.html#a8d5665b148a3fd9dd15738caa7f70eef">getNameWithLowercaseType</a>();</div>
-<div class="line"><span class="lineno">  375</span>            <span class="keywordflow">if</span> (c.getSystems().size() == 1) {</div>
-<div class="line"><span class="lineno">  376</span>                <span class="keywordflow">return</span> <span class="stringliteral">&quot;orbiting &quot;</span> + <a class="code hl_function" href="../../d8/d55/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1DomainSurveyDerelictSpecial.html#ada275f6dd72b9be53def9cc1b20aadaa">getStarDescription</a>(system.getStar()) + <span class="stringliteral">&quot; nearby&quot;</span>;</div>
-<div class="line"><span class="lineno">  377</span>            }</div>
-<div class="line"><span class="lineno">  378</span>            </div>
-<div class="line"><span class="lineno">  379</span>            <span class="keywordflow">if</span> (system.isNebula()) {</div>
-<div class="line"><span class="lineno">  380</span>                <span class="keywordflow">return</span> <span class="stringliteral">&quot;inside a nebula &quot;</span> + cText;</div>
-<div class="line"><span class="lineno">  381</span>            }</div>
-<div class="line"><span class="lineno">  382</span>            </div>
-<div class="line"><span class="lineno">  383</span>            <span class="keywordflow">if</span> (system.getTertiary() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  384</span>                <span class="keywordflow">return</span> <span class="stringliteral">&quot;in a trinary star system &quot;</span> + cText;</div>
-<div class="line"><span class="lineno">  385</span>            }</div>
-<div class="line"><span class="lineno">  386</span>            </div>
-<div class="line"><span class="lineno">  387</span>            <span class="keywordflow">if</span> (system.getSecondary() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  388</span>                <span class="keywordflow">return</span> <span class="stringliteral">&quot;in a binary star system &quot;</span> + cText;</div>
-<div class="line"><span class="lineno">  389</span>            }</div>
-<div class="line"><span class="lineno">  390</span>            </div>
-<div class="line"><span class="lineno">  391</span>            <span class="comment">//if (system.getType() == StarSystemType.SINGLE) {</span></div>
-<div class="line"><span class="lineno">  392</span>                <span class="keywordflow">return</span> <span class="stringliteral">&quot;orbiting &quot;</span> + <a class="code hl_function" href="../../d8/d55/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1DomainSurveyDerelictSpecial.html#ada275f6dd72b9be53def9cc1b20aadaa">getStarDescription</a>(system.getStar()) + <span class="stringliteral">&quot; &quot;</span> + cText;</div>
-<div class="line"><span class="lineno">  393</span>        }</div>
-<div class="line"><span class="lineno">  394</span>        </div>
-<div class="line"><span class="lineno">  395</span>        <span class="keywordflow">if</span> (system.isNebula()) {</div>
-<div class="line"><span class="lineno">  396</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;inside a nearby nebula&quot;</span>;</div>
-<div class="line"><span class="lineno">  397</span>        }</div>
-<div class="line"><span class="lineno">  398</span>        </div>
-<div class="line"><span class="lineno">  399</span>        <span class="keywordflow">if</span> (system.getTertiary() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  400</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;in a nearby trinary star system&quot;</span>;</div>
-<div class="line"><span class="lineno">  401</span>        }</div>
-<div class="line"><span class="lineno">  402</span>        </div>
-<div class="line"><span class="lineno">  403</span>        <span class="keywordflow">if</span> (system.getSecondary() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  404</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;in a nearby binary star system&quot;</span>;</div>
-<div class="line"><span class="lineno">  405</span>        }</div>
-<div class="line"><span class="lineno">  406</span>        </div>
-<div class="line"><span class="lineno">  407</span>        <span class="comment">//if (system.getType() == StarSystemType.SINGLE) {</span></div>
-<div class="line"><span class="lineno">  408</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;orbiting &quot;</span> + <a class="code hl_function" href="../../d8/d55/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1DomainSurveyDerelictSpecial.html#ada275f6dd72b9be53def9cc1b20aadaa">getStarDescription</a>(system.getStar()) + <span class="stringliteral">&quot; nearby&quot;</span>;</div>
-<div class="line"><span class="lineno">  409</span>        <span class="comment">//}</span></div>
-<div class="line"><span class="lineno">  410</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1Constellation_html_a8d5665b148a3fd9dd15738caa7f70eef"><div class="ttname"><a href="../../d4/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1Constellation.html#a8d5665b148a3fd9dd15738caa7f70eef">com.fs.starfarer.api.impl.campaign.procgen.Constellation.getNameWithLowercaseType</a></div><div class="ttdeci">String getNameWithLowercaseType()</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d9d/Constellation_8java_source.html#l00094">Constellation.java:94</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial_html_ac773b2f252bf75b95964ca6a11c321b7"><div class="ttname"><a href="../../d3/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html#ac773b2f252bf75b95964ca6a11c321b7">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.BaseSalvageSpecial.entity</a></div><div class="ttdeci">SectorEntityToken entity</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dfc/BaseSalvageSpecial_8java_source.html#l00035">BaseSalvageSpecial.java:35</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1DomainSurveyDerelictSpecial_html_ada275f6dd72b9be53def9cc1b20aadaa"><div class="ttname"><a href="../../d8/d55/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1DomainSurveyDerelictSpecial.html#ada275f6dd72b9be53def9cc1b20aadaa">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.DomainSurveyDerelictSpecial.getStarDescription</a></div><div class="ttdeci">static String getStarDescription(PlanetAPI star)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d57/DomainSurveyDerelictSpecial_8java_source.html#l00413">DomainSurveyDerelictSpecial.java:413</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_a06362480c6a17326650354460c6d7442"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a06362480c6a17326650354460c6d7442">com.fs.starfarer.api.campaign.SectorEntityToken.getContainingLocation</a></div><div class="ttdeci">LocationAPI getContainingLocation()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_ab7242f26914ad8f11dfb9b3610397daf"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#ab7242f26914ad8f11dfb9b3610397daf">com.fs.starfarer.api.campaign.SectorEntityToken.getConstellation</a></div><div class="ttdeci">Constellation getConstellation()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a4dca905e015ee00433181a13d05a18a0" name="a4dca905e015ee00433181a13d05a18a0"></a>
@@ -391,27 +326,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d57/DomainSurveyDerelictSpecial_8java_source.html#l00335">335</a> of file <a class="el" href="../../d5/d57/DomainSurveyDerelictSpecial_8java_source.html">DomainSurveyDerelictSpecial.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  335</span>                                                                   {</div>
-<div class="line"><span class="lineno">  336</span>        LocationAPI loc = <a class="code hl_variable" href="../../d3/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html#ac773b2f252bf75b95964ca6a11c321b7">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a06362480c6a17326650354460c6d7442">getContainingLocation</a>();</div>
-<div class="line"><span class="lineno">  337</span>        <span class="keywordflow">if</span> (loc == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  338</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;in an unknown location nearby&quot;</span>; </div>
-<div class="line"><span class="lineno">  339</span>        }</div>
-<div class="line"><span class="lineno">  340</span>        <span class="keywordflow">if</span> (loc.isHyperspace()) {</div>
-<div class="line"><span class="lineno">  341</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;in hyperspace nearby&quot;</span>;</div>
-<div class="line"><span class="lineno">  342</span>        }</div>
-<div class="line"><span class="lineno">  343</span>        StarSystemAPI system = (StarSystemAPI) loc;</div>
-<div class="line"><span class="lineno">  344</span>        </div>
-<div class="line"><span class="lineno">  345</span>        <span class="keywordflow">if</span> (system == Global.getSector().getCurrentLocation()) {</div>
-<div class="line"><span class="lineno">  346</span>            <span class="keywordflow">if</span> (system.isNebula()) {</div>
-<div class="line"><span class="lineno">  347</span>                <span class="keywordflow">return</span> <span class="stringliteral">&quot;inside this nebula&quot;</span>;</div>
-<div class="line"><span class="lineno">  348</span>            }</div>
-<div class="line"><span class="lineno">  349</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;in this system&quot;</span>;</div>
-<div class="line"><span class="lineno">  350</span>        }</div>
-<div class="line"><span class="lineno">  351</span>        </div>
-<div class="line"><span class="lineno">  352</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;in the &quot;</span> + system.<a class="code hl_function" href="../../d2/d2c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI.html#a9852a0789ec12b7c5826eab0d72df0f4">getNameWithLowercaseType</a>();</div>
-<div class="line"><span class="lineno">  353</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI_html_a9852a0789ec12b7c5826eab0d72df0f4"><div class="ttname"><a href="../../d2/d2c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI.html#a9852a0789ec12b7c5826eab0d72df0f4">com.fs.starfarer.api.campaign.LocationAPI.getNameWithLowercaseType</a></div><div class="ttdeci">String getNameWithLowercaseType()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ada275f6dd72b9be53def9cc1b20aadaa" name="ada275f6dd72b9be53def9cc1b20aadaa"></a>
@@ -439,40 +354,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d57/DomainSurveyDerelictSpecial_8java_source.html#l00413">413</a> of file <a class="el" href="../../d5/d57/DomainSurveyDerelictSpecial_8java_source.html">DomainSurveyDerelictSpecial.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  413</span>                                                            {</div>
-<div class="line"><span class="lineno">  414</span>        String type = star.getTypeId();</div>
-<div class="line"><span class="lineno">  415</span>        </div>
-<div class="line"><span class="lineno">  416</span>        <span class="keywordflow">if</span> (type.equals(StarTypes.BLACK_HOLE)) <span class="keywordflow">return</span> <span class="stringliteral">&quot;a black hole&quot;</span>;</div>
-<div class="line"><span class="lineno">  417</span>        <span class="keywordflow">if</span> (type.equals(StarTypes.NEUTRON_STAR)) <span class="keywordflow">return</span> <span class="stringliteral">&quot;a neutron star&quot;</span>;</div>
-<div class="line"><span class="lineno">  418</span>        </div>
-<div class="line"><span class="lineno">  419</span>        <span class="keywordflow">if</span> (type.equals(StarTypes.ORANGE) ||</div>
-<div class="line"><span class="lineno">  420</span>            type.equals(StarTypes.ORANGE_GIANT)) {</div>
-<div class="line"><span class="lineno">  421</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;an orange star&quot;</span>;</div>
-<div class="line"><span class="lineno">  422</span>        }</div>
-<div class="line"><span class="lineno">  423</span>        </div>
-<div class="line"><span class="lineno">  424</span>        <span class="keywordflow">if</span> (type.equals(StarTypes.RED_DWARF) ||</div>
-<div class="line"><span class="lineno">  425</span>            type.equals(StarTypes.RED_SUPERGIANT) ||</div>
-<div class="line"><span class="lineno">  426</span>                type.equals(StarTypes.RED_GIANT)) {</div>
-<div class="line"><span class="lineno">  427</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;a red star&quot;</span>;</div>
-<div class="line"><span class="lineno">  428</span>        }</div>
-<div class="line"><span class="lineno">  429</span>        </div>
-<div class="line"><span class="lineno">  430</span>        <span class="keywordflow">if</span> (type.equals(StarTypes.BLUE_GIANT) ||</div>
-<div class="line"><span class="lineno">  431</span>                type.equals(StarTypes.BLUE_SUPERGIANT)) {</div>
-<div class="line"><span class="lineno">  432</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;a blue star&quot;</span>;</div>
-<div class="line"><span class="lineno">  433</span>        }</div>
-<div class="line"><span class="lineno">  434</span>        </div>
-<div class="line"><span class="lineno">  435</span>        <span class="keywordflow">if</span> (type.equals(StarTypes.BROWN_DWARF) ||</div>
-<div class="line"><span class="lineno">  436</span>                type.equals(StarTypes.WHITE_DWARF)) {</div>
-<div class="line"><span class="lineno">  437</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;a dim star&quot;</span>;</div>
-<div class="line"><span class="lineno">  438</span>        }</div>
-<div class="line"><span class="lineno">  439</span>        </div>
-<div class="line"><span class="lineno">  440</span>        <span class="keywordflow">if</span> (type.equals(StarTypes.YELLOW)) {</div>
-<div class="line"><span class="lineno">  441</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;a yellow star&quot;</span>;</div>
-<div class="line"><span class="lineno">  442</span>        }</div>
-<div class="line"><span class="lineno">  443</span>        </div>
-<div class="line"><span class="lineno">  444</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;a star of unknown type&quot;</span>;</div>
-<div class="line"><span class="lineno">  445</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="acb80e694d0574f90699fabcf724f4598" name="acb80e694d0574f90699fabcf724f4598"></a>
@@ -504,62 +386,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html#a27b2795ca95e07b0407dea2266f74c49">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.BaseSalvageSpecial</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d57/DomainSurveyDerelictSpecial_8java_source.html#l00049">49</a> of file <a class="el" href="../../d5/d57/DomainSurveyDerelictSpecial_8java_source.html">DomainSurveyDerelictSpecial.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   49</span>                                                                      {</div>
-<div class="line"><span class="lineno">   50</span>        super.init(<a class="code hl_variable" href="../../d3/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html#a52a1f4bf10534c4251533752d1632277">dialog</a>, specialData);</div>
-<div class="line"><span class="lineno">   51</span>        </div>
-<div class="line"><span class="lineno">   52</span>        data = (DomainSurveyDerelictSpecialData) specialData;</div>
-<div class="line"><span class="lineno">   53</span>        </div>
-<div class="line"><span class="lineno">   54</span>        <span class="keywordflow">if</span> (data.entityId != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   55</span>            SectorEntityToken <a class="code hl_variable" href="../../d3/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html#ac773b2f252bf75b95964ca6a11c321b7">entity</a> = Global.getSector().getEntityById(data.entityId);</div>
-<div class="line"><span class="lineno">   56</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d3/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html#ac773b2f252bf75b95964ca6a11c321b7">entity</a> == <span class="keyword">null</span>) {<span class="comment">// || </span></div>
-<div class="line"><span class="lineno">   57</span><span class="comment">//                  (entity != null &amp;&amp; entity instanceof CustomCampaignEntityAPI &amp;&amp; </span></div>
-<div class="line"><span class="lineno">   58</span><span class="comment">//                          !((CustomCampaignEntityAPI)entity).isDiscoverable())) {</span></div>
-<div class="line"><span class="lineno">   59</span>                data.entityId = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   60</span>                data.type = SpecialType.SCRAMBLED;</div>
-<div class="line"><span class="lineno">   61</span>            }</div>
-<div class="line"><span class="lineno">   62</span>        }</div>
-<div class="line"><span class="lineno">   63</span>        </div>
-<div class="line"><span class="lineno">   64</span>        <span class="keywordflow">switch</span> (data.type) {</div>
-<div class="line"><span class="lineno">   65</span>        <span class="keywordflow">case</span> SCRAMBLED:</div>
-<div class="line"><span class="lineno">   66</span>            <a class="code hl_function" href="../../d8/d55/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1DomainSurveyDerelictSpecial.html#a6b2d301ec79acadc517d4bfd86091f8d">initNothing</a>();</div>
-<div class="line"><span class="lineno">   67</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   68</span><span class="comment">//      case PLANET_INTERESTING_PROPERTY:</span></div>
-<div class="line"><span class="lineno">   69</span><span class="comment">//          initInterestingProperty();</span></div>
-<div class="line"><span class="lineno">   70</span><span class="comment">//          break;</span></div>
-<div class="line"><span class="lineno">   71</span><span class="comment">//      case PLANET_SURVEY_DATA:</span></div>
-<div class="line"><span class="lineno">   72</span><span class="comment">//          initPlanetSurveyData();</span></div>
-<div class="line"><span class="lineno">   73</span><span class="comment">//          break;</span></div>
-<div class="line"><span class="lineno">   74</span><span class="comment">//      case SYSTEM_PRELIMINARY_SURVEY:</span></div>
-<div class="line"><span class="lineno">   77</span><span class="comment"></span><span class="comment">//          initPreliminarySystemSurvey();</span></div>
-<div class="line"><span class="lineno">   78</span><span class="comment">//          break;</span></div>
-<div class="line"><span class="lineno">   79</span>        <span class="keywordflow">case</span> LOCATION_SURVEY_SHIP:</div>
-<div class="line"><span class="lineno">   80</span>            initSurveyParentEntity();</div>
-<div class="line"><span class="lineno">   81</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   82</span>        <span class="keywordflow">case</span> LOCATION_MOTHERSHIP:</div>
-<div class="line"><span class="lineno">   83</span>            initSurveyParentEntity();</div>
-<div class="line"><span class="lineno">   84</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   85</span><span class="comment">//      case CONSTELLATION_PRELIMINARY_SURVEY:</span></div>
-<div class="line"><span class="lineno">   86</span><span class="comment">//          break;</span></div>
-<div class="line"><span class="lineno">   87</span>        }</div>
-<div class="line"><span class="lineno">   88</span>        </div>
-<div class="line"><span class="lineno">   89</span><span class="comment">//      for (PlanetAPI curr : entity.getContainingLocation().getPlanets()) {</span></div>
-<div class="line"><span class="lineno">   90</span><span class="comment">//          if (!curr.isStar()) {</span></div>
-<div class="line"><span class="lineno">   91</span><span class="comment">//              planet = curr;</span></div>
-<div class="line"><span class="lineno">   92</span><span class="comment">//              break;</span></div>
-<div class="line"><span class="lineno">   93</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">   94</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">   95</span><span class="comment">//      </span></div>
-<div class="line"><span class="lineno">   96</span><span class="comment">//      dialog.getTextPanel().addParagraph(&quot;Survey data for &quot; + planet.getName() + &quot; gained.&quot;);</span></div>
-<div class="line"><span class="lineno">   97</span><span class="comment">//      //Misc.setFullySurveyed(planet.getMarket());</span></div>
-<div class="line"><span class="lineno">   98</span><span class="comment">//      planet.getMarket().setSurveyLevel(SurveyLevel.PRELIMINARY);</span></div>
-<div class="line"><span class="lineno">   99</span><span class="comment">//      </span></div>
-<div class="line"><span class="lineno">  100</span><span class="comment">//      setDone(true);</span></div>
-<div class="line"><span class="lineno">  101</span><span class="comment">//      dialog.getOptionPanel().clearOptions();</span></div>
-<div class="line"><span class="lineno">  102</span><span class="comment">//      dialog.getOptionPanel().addOption(&quot;Continue&quot;, &quot;continue&quot;);</span></div>
-<div class="line"><span class="lineno">  103</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial_html_a52a1f4bf10534c4251533752d1632277"><div class="ttname"><a href="../../d3/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html#a52a1f4bf10534c4251533752d1632277">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.BaseSalvageSpecial.dialog</a></div><div class="ttdeci">InteractionDialogAPI dialog</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dfc/BaseSalvageSpecial_8java_source.html#l00033">BaseSalvageSpecial.java:33</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1DomainSurveyDerelictSpecial_html_a6b2d301ec79acadc517d4bfd86091f8d"><div class="ttname"><a href="../../d8/d55/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1DomainSurveyDerelictSpecial.html#a6b2d301ec79acadc517d4bfd86091f8d">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.DomainSurveyDerelictSpecial.initNothing</a></div><div class="ttdeci">void initNothing()</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d57/DomainSurveyDerelictSpecial_8java_source.html#l00161">DomainSurveyDerelictSpecial.java:161</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a6b2d301ec79acadc517d4bfd86091f8d" name="a6b2d301ec79acadc517d4bfd86091f8d"></a>
@@ -580,15 +407,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html#a5b4d2cee83738c3e6402bf7d76b29d05">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.BaseSalvageSpecial</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d57/DomainSurveyDerelictSpecial_8java_source.html#l00161">161</a> of file <a class="el" href="../../d5/d57/DomainSurveyDerelictSpecial_8java_source.html">DomainSurveyDerelictSpecial.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  161</span>                              {</div>
-<div class="line"><span class="lineno">  162</span>        <a class="code hl_function" href="../../d3/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html#a544240523ec9644e7f318558571e8b37">addText</a>(<span class="stringliteral">&quot;The $shortName&#39;s memory banks have been scrubbed clean by hard radiation, and the systems are largely inert and non-functional.&quot;</span>);</div>
-<div class="line"><span class="lineno">  163</span>        </div>
-<div class="line"><span class="lineno">  164</span>        <span class="comment">//unsetData();</span></div>
-<div class="line"><span class="lineno">  165</span>        <a class="code hl_function" href="../../d3/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html#a1a337a2a4c502467d45f95b880cd412e">setDone</a>(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  166</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial_html_a1a337a2a4c502467d45f95b880cd412e"><div class="ttname"><a href="../../d3/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html#a1a337a2a4c502467d45f95b880cd412e">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.BaseSalvageSpecial.setDone</a></div><div class="ttdeci">void setDone(boolean done)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dfc/BaseSalvageSpecial_8java_source.html#l00157">BaseSalvageSpecial.java:157</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial_html_a544240523ec9644e7f318558571e8b37"><div class="ttname"><a href="../../d3/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html#a544240523ec9644e7f318558571e8b37">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.BaseSalvageSpecial.addText</a></div><div class="ttdeci">void addText(String format)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dfc/BaseSalvageSpecial_8java_source.html#l00173">BaseSalvageSpecial.java:173</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5a2314aabb958abd77672543f95d2bc4" name="a5a2314aabb958abd77672543f95d2bc4"></a>
@@ -620,14 +439,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html#a26913511fb9a1c78c35f00c251148d54">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.BaseSalvageSpecial</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d57/DomainSurveyDerelictSpecial_8java_source.html#l00449">449</a> of file <a class="el" href="../../d5/d57/DomainSurveyDerelictSpecial_8java_source.html">DomainSurveyDerelictSpecial.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  449</span>                                                                     {</div>
-<div class="line"><span class="lineno">  450</span>        super.optionSelected(optionText, optionData);</div>
-<div class="line"><span class="lineno">  451</span>        </div>
-<div class="line"><span class="lineno">  452</span>        <span class="keywordflow">if</span> (<span class="stringliteral">&quot;continue&quot;</span>.equals(optionData)) {</div>
-<div class="line"><span class="lineno">  453</span>            <a class="code hl_function" href="../../d3/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html#a1a337a2a4c502467d45f95b880cd412e">setDone</a>(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  454</span>        }</div>
-<div class="line"><span class="lineno">  455</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a60876ca0293ffa661baaf3ab9bd78a79" name="a60876ca0293ffa661baaf3ab9bd78a79"></a>
@@ -648,13 +460,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html#a9393b90ae52f5cff59711883af0e6d50">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.BaseSalvageSpecial</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d57/DomainSurveyDerelictSpecial_8java_source.html#l00105">105</a> of file <a class="el" href="../../d5/d57/DomainSurveyDerelictSpecial_8java_source.html">DomainSurveyDerelictSpecial.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  105</span>                                     {</div>
-<div class="line"><span class="lineno">  106</span>        <span class="keywordflow">return</span> data != <span class="keyword">null</span> &amp;&amp; (</div>
-<div class="line"><span class="lineno">  107</span>            data.type == SpecialType.ACTIVATE_PROBE || </div>
-<div class="line"><span class="lineno">  108</span>            data.type == SpecialType.ACTIVATE_SURVEY_SHIP</div>
-<div class="line"><span class="lineno">  109</span>        );</div>
-<div class="line"><span class="lineno">  110</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -173,15 +174,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d06/SmoothMovementUtil_8java_source.html#l00028">28</a> of file <a class="el" href="../../d2/d06/SmoothMovementUtil_8java_source.html">SmoothMovementUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   28</span>                                {</div>
-<div class="line"><span class="lineno">   29</span>        <a class="code hl_variable" href="../../da/de7/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SmoothMovementUtil.html#a8b0b3293cf31ab3801a8b27be5f5dc6c">acceleration</a> = 1f;</div>
-<div class="line"><span class="lineno">   30</span>        <a class="code hl_variable" href="../../da/de7/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SmoothMovementUtil.html#aea635975b7afa4b250b2bed5c4bf2bfe">maxSpeed</a> = 1f;</div>
-<div class="line"><span class="lineno">   31</span>        <a class="code hl_variable" href="../../da/de7/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SmoothMovementUtil.html#a2eae45545ad8bfbf17cdcb8dab843d4d">smoothCap</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   32</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SmoothMovementUtil_html_a2eae45545ad8bfbf17cdcb8dab843d4d"><div class="ttname"><a href="../../da/de7/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SmoothMovementUtil.html#a2eae45545ad8bfbf17cdcb8dab843d4d">com.fs.starfarer.api.util.SmoothMovementUtil.smoothCap</a></div><div class="ttdeci">boolean smoothCap</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d06/SmoothMovementUtil_8java_source.html#l00016">SmoothMovementUtil.java:16</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SmoothMovementUtil_html_a8b0b3293cf31ab3801a8b27be5f5dc6c"><div class="ttname"><a href="../../da/de7/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SmoothMovementUtil.html#a8b0b3293cf31ab3801a8b27be5f5dc6c">com.fs.starfarer.api.util.SmoothMovementUtil.acceleration</a></div><div class="ttdeci">float acceleration</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d06/SmoothMovementUtil_8java_source.html#l00015">SmoothMovementUtil.java:15</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SmoothMovementUtil_html_aea635975b7afa4b250b2bed5c4bf2bfe"><div class="ttname"><a href="../../da/de7/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SmoothMovementUtil.html#aea635975b7afa4b250b2bed5c4bf2bfe">com.fs.starfarer.api.util.SmoothMovementUtil.maxSpeed</a></div><div class="ttdeci">float maxSpeed</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d06/SmoothMovementUtil_8java_source.html#l00015">SmoothMovementUtil.java:15</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -202,149 +195,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d06/SmoothMovementUtil_8java_source.html#l00049">49</a> of file <a class="el" href="../../d2/d06/SmoothMovementUtil_8java_source.html">SmoothMovementUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   49</span>                                      {</div>
-<div class="line"><span class="lineno">   50</span>        </div>
-<div class="line"><span class="lineno">   51</span>        <span class="keywordflow">if</span> (amount * amount == 0 || amount &lt;= 0) {</div>
-<div class="line"><span class="lineno">   52</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   53</span>        }</div>
-<div class="line"><span class="lineno">   54</span>        </div>
-<div class="line"><span class="lineno">   55</span>        <span class="keywordtype">float</span> effectiveMaxSpeed = <a class="code hl_variable" href="../../da/de7/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SmoothMovementUtil.html#aea635975b7afa4b250b2bed5c4bf2bfe">maxSpeed</a>;</div>
-<div class="line"><span class="lineno">   56</span>        <span class="keywordtype">float</span> accelMult = 1f;</div>
-<div class="line"><span class="lineno">   57</span><span class="comment">//      if (true &amp;&amp; fleet != null) {</span></div>
-<div class="line"><span class="lineno">   58</span><span class="comment">//          accelMult = 1f - Math.max(0, (fleet.getRadius() - 22f) / (100 - 22f));</span></div>
-<div class="line"><span class="lineno">   59</span><span class="comment">//          accelMult = 0.25f + accelMult * 0.75f;</span></div>
-<div class="line"><span class="lineno">   60</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">   61</span><span class="comment">//      if (fleet != null &amp;&amp; fleet.isPlayerFleet()) {</span></div>
-<div class="line"><span class="lineno">   62</span><span class="comment">//          System.out.println(&quot;fwefwefe&quot;);</span></div>
-<div class="line"><span class="lineno">   63</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">   64</span>            </div>
-<div class="line"><span class="lineno">   65</span>        <span class="keywordtype">float</span> speed = <a class="code hl_variable" href="../../da/de7/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SmoothMovementUtil.html#a4661d63512343e032900db0088a6ac78">vel</a>.length();</div>
-<div class="line"><span class="lineno">   66</span>        <span class="keywordtype">float</span> acc = <a class="code hl_variable" href="../../da/de7/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SmoothMovementUtil.html#a8b0b3293cf31ab3801a8b27be5f5dc6c">acceleration</a>;</div>
-<div class="line"><span class="lineno">   67</span><span class="comment">//      if (speed &gt; effectiveMaxSpeed) {</span></div>
-<div class="line"><span class="lineno">   68</span><span class="comment">//          acc = Math.max(speed, 200f) + fleet.getAcceleration();</span></div>
-<div class="line"><span class="lineno">   69</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">   70</span>        </div>
-<div class="line"><span class="lineno">   71</span>        <span class="keywordtype">float</span> effectiveAccel = acc * accelMult;</div>
-<div class="line"><span class="lineno">   72</span>        </div>
-<div class="line"><span class="lineno">   73</span>        <span class="keywordflow">if</span> (effectiveAccel &lt;= 0f) {</div>
-<div class="line"><span class="lineno">   74</span>            <a class="code hl_variable" href="../../da/de7/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SmoothMovementUtil.html#ab0bffe2119f5a0232a880ab810c18582">accel</a>.set(0, 0);</div>
-<div class="line"><span class="lineno">   75</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   76</span>        }</div>
-<div class="line"><span class="lineno">   77</span>        <span class="comment">//amount *= 20f;</span></div>
-<div class="line"><span class="lineno">   78</span>        </div>
-<div class="line"><span class="lineno">   79</span>        Vector2f toDest = Vector2f.sub(<a class="code hl_variable" href="../../da/de7/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SmoothMovementUtil.html#a226a5db8775e1a02a22bed6e7fb804d6">dest</a>, <a class="code hl_variable" href="../../da/de7/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SmoothMovementUtil.html#a6b19862b67b2cd2df332d39d5aa3eb03">loc</a>, <span class="keyword">new</span> Vector2f());</div>
-<div class="line"><span class="lineno">   80</span>        Vector2f velDiff = Vector2f.sub(<a class="code hl_variable" href="../../da/de7/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SmoothMovementUtil.html#a5f4fb55112bf0c0dc7b395116d8da0cf">destVel</a>, <a class="code hl_variable" href="../../da/de7/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SmoothMovementUtil.html#a4661d63512343e032900db0088a6ac78">vel</a>, <span class="keyword">new</span> Vector2f());</div>
-<div class="line"><span class="lineno">   81</span>        </div>
-<div class="line"><span class="lineno">   82</span>        toDest.scale(3f);</div>
-<div class="line"><span class="lineno">   83</span>        </div>
-<div class="line"><span class="lineno">   84</span>        <span class="comment">//Vector2f dir = Vector2f.sub(dest, loc, new Vector2f());</span></div>
-<div class="line"><span class="lineno">   85</span>        <span class="comment">//Utils.normalise(dir);</span></div>
-<div class="line"><span class="lineno">   86</span>        </div>
-<div class="line"><span class="lineno">   87</span>        <span class="comment">// positive means away from loc</span></div>
-<div class="line"><span class="lineno">   88</span>        <span class="comment">//float relativeSpeed = Vector2f.dot(dir, destVel);</span></div>
-<div class="line"><span class="lineno">   89</span>        <span class="comment">//float dist = Utils.getDistance(loc, dest);</span></div>
-<div class="line"><span class="lineno">   90</span><span class="comment">//      if (delegate == CampaignEngine.getInstance().getPlayerFleet()) {</span></div>
-<div class="line"><span class="lineno">   91</span><span class="comment">//          System.out.println(&quot;23rsd1sdfew&quot;);</span></div>
-<div class="line"><span class="lineno">   92</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">   93</span>        <span class="keywordtype">float</span> timeToMatchVel = velDiff.length() / effectiveAccel;</div>
-<div class="line"><span class="lineno">   94</span>        <span class="comment">//toDest.scale(timeToMatchVel + 2f);</span></div>
-<div class="line"><span class="lineno">   95</span>        velDiff.scale(timeToMatchVel + 0.75f);</div>
-<div class="line"><span class="lineno">   96</span>        <span class="comment">//velDiff.scale(0.5f * timeToMatchVel);</span></div>
-<div class="line"><span class="lineno">   97</span>        </div>
-<div class="line"><span class="lineno">   98</span><span class="comment">//      if (relativeSpeed &gt; 0) {</span></div>
-<div class="line"><span class="lineno">   99</span><span class="comment">//          velDiff.scale(dist / relativeSpeed);</span></div>
-<div class="line"><span class="lineno">  100</span><span class="comment">//      } else {</span></div>
-<div class="line"><span class="lineno">  101</span><span class="comment">//          velDiff.scale(timeToMatchVel);</span></div>
-<div class="line"><span class="lineno">  102</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  103</span>        </div>
-<div class="line"><span class="lineno">  104</span>        <span class="comment">// this is the vector we want to negate (reduce to zero) in order to match</span></div>
-<div class="line"><span class="lineno">  105</span>        <span class="comment">// location and speed. Units are distance.</span></div>
-<div class="line"><span class="lineno">  106</span>        Vector2f negate = (Vector2f) Vector2f.add(toDest, velDiff, <span class="keyword">new</span> Vector2f()).negate();</div>
-<div class="line"><span class="lineno">  107</span>        <span class="comment">//if (negate.lengthSquared() &lt; 0.25f) negate.set(0, 0);</span></div>
-<div class="line"><span class="lineno">  108</span>        </div>
-<div class="line"><span class="lineno">  109</span><span class="comment">//      if (delegate == CampaignEngine.getInstance().getPlayerFleet()) {</span></div>
-<div class="line"><span class="lineno">  110</span><span class="comment">//          System.out.println(toDest);</span></div>
-<div class="line"><span class="lineno">  111</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  112</span>        </div>
-<div class="line"><span class="lineno">  113</span>        <span class="keywordtype">float</span> maxAccel = negate.length() / (amount * amount);</div>
-<div class="line"><span class="lineno">  114</span>        <span class="keywordflow">if</span> (maxAccel &gt; effectiveAccel) maxAccel = effectiveAccel;</div>
-<div class="line"><span class="lineno">  115</span>        <span class="comment">//maxAccel = 280f;</span></div>
-<div class="line"><span class="lineno">  116</span>        <span class="comment">//maxAccel = acceleration;</span></div>
-<div class="line"><span class="lineno">  117</span>        <span class="keywordflow">if</span> (maxAccel &gt; 0) {</div>
-<div class="line"><span class="lineno">  118</span>            <a class="code hl_variable" href="../../da/de7/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SmoothMovementUtil.html#ab0bffe2119f5a0232a880ab810c18582">accel</a> = (Vector2f) Misc.normalise(negate).scale(-maxAccel);</div>
-<div class="line"><span class="lineno">  119</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  120</span>            <a class="code hl_variable" href="../../da/de7/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SmoothMovementUtil.html#ab0bffe2119f5a0232a880ab810c18582">accel</a> = (Vector2f) negate.negate();</div>
-<div class="line"><span class="lineno">  121</span>        }</div>
-<div class="line"><span class="lineno">  122</span><span class="comment">//      accel = (Vector2f) Utils.normalise(negate).scale(-maxAccel);</span></div>
-<div class="line"><span class="lineno">  123</span><span class="comment">//      if (delegate == CampaignEngine.getInstance().getPlayerFleet()) {</span></div>
-<div class="line"><span class="lineno">  124</span><span class="comment">//          System.out.println(&quot;Max: &quot; + maxAccel);</span></div>
-<div class="line"><span class="lineno">  125</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  126</span>        </div>
-<div class="line"><span class="lineno">  127</span><span class="comment">//      float speedPre = vel.length();</span></div>
-<div class="line"><span class="lineno">  128</span><span class="comment">//      if (delegate == CampaignEngine.getInstance().getPlayerFleet()) {</span></div>
-<div class="line"><span class="lineno">  129</span><span class="comment">//          System.out.println(&quot;Speed pre: &quot; + vel.length());</span></div>
-<div class="line"><span class="lineno">  130</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  131</span>        vel.x += accel.x * amount;</div>
-<div class="line"><span class="lineno">  132</span>        vel.y += accel.y * amount;</div>
-<div class="line"><span class="lineno">  133</span>        </div>
-<div class="line"><span class="lineno">  134</span>        speed = <a class="code hl_variable" href="../../da/de7/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SmoothMovementUtil.html#a4661d63512343e032900db0088a6ac78">vel</a>.length();</div>
-<div class="line"><span class="lineno">  135</span><span class="comment">//      float speedPost = vel.length();</span></div>
-<div class="line"><span class="lineno">  136</span><span class="comment">//      if (delegate == CampaignEngine.getInstance().getPlayerFleet()) {</span></div>
-<div class="line"><span class="lineno">  137</span><span class="comment">//          System.out.println(&quot;Speed post: &quot; + vel.length());</span></div>
-<div class="line"><span class="lineno">  138</span><span class="comment">//          System.out.println(&quot;&quot;);</span></div>
-<div class="line"><span class="lineno">  139</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  140</span><span class="comment">//      if (delegate == CampaignEngine.getInstance().getPlayerFleet()) {</span></div>
-<div class="line"><span class="lineno">  141</span><span class="comment">//          if (speedPre &lt; speedPost) {</span></div>
-<div class="line"><span class="lineno">  142</span><span class="comment">//              System.out.println(accel);</span></div>
-<div class="line"><span class="lineno">  143</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">  144</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  145</span>        </div>
-<div class="line"><span class="lineno">  146</span>        <span class="comment">//float speed = vel.length();</span></div>
-<div class="line"><span class="lineno">  147</span>        <span class="keywordflow">if</span> (speed &gt;= effectiveMaxSpeed &amp;&amp; speed &gt; 0) {</div>
-<div class="line"><span class="lineno">  148</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/de7/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SmoothMovementUtil.html#a2eae45545ad8bfbf17cdcb8dab843d4d">smoothCap</a>) {</div>
-<div class="line"><span class="lineno">  149</span><span class="comment">//              if (delegate == CampaignEngine.getInstance().getPlayerFleet()) {</span></div>
-<div class="line"><span class="lineno">  150</span><span class="comment">//                  System.out.println(&quot;23refwef&quot;);</span></div>
-<div class="line"><span class="lineno">  151</span><span class="comment">//              }</span></div>
-<div class="line"><span class="lineno">  152</span>                Vector2f cap = <span class="keyword">new</span> Vector2f(<a class="code hl_variable" href="../../da/de7/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SmoothMovementUtil.html#a4661d63512343e032900db0088a6ac78">vel</a>);</div>
-<div class="line"><span class="lineno">  153</span>                cap.negate();</div>
-<div class="line"><span class="lineno">  154</span>                Misc.normalise(cap);</div>
-<div class="line"><span class="lineno">  155</span>                <span class="comment">//float mag = 1f;</span></div>
-<div class="line"><span class="lineno">  156</span>                <span class="comment">//if (maxAccel * 2f &gt; 1) {</span></div>
-<div class="line"><span class="lineno">  157</span>                    <span class="comment">//mag = maxAccel * 2f;</span></div>
-<div class="line"><span class="lineno">  158</span>                <span class="comment">//}</span></div>
-<div class="line"><span class="lineno">  159</span>                <span class="comment">//if (mag &lt; 1000) mag = 1000;</span></div>
-<div class="line"><span class="lineno">  160</span>                <span class="keywordtype">float</span> mag = speed - effectiveMaxSpeed;</div>
-<div class="line"><span class="lineno">  161</span>                <span class="keywordflow">if</span> (mag &lt; 50f) mag = 50f;</div>
-<div class="line"><span class="lineno">  162</span>                </div>
-<div class="line"><span class="lineno">  163</span>                <span class="keywordtype">float</span> minMag = maxAccel * 2f;</div>
-<div class="line"><span class="lineno">  164</span>                <span class="keywordflow">if</span> (mag &lt; minMag) mag = minMag;</div>
-<div class="line"><span class="lineno">  165</span>                </div>
-<div class="line"><span class="lineno">  166</span>                <span class="keywordflow">if</span> (mag * amount &gt; (speed - effectiveMaxSpeed) &amp;&amp; amount &gt; 0) {</div>
-<div class="line"><span class="lineno">  167</span>                    mag = (speed - effectiveMaxSpeed) / amount;</div>
-<div class="line"><span class="lineno">  168</span>                }</div>
-<div class="line"><span class="lineno">  169</span>                cap.scale(mag);</div>
-<div class="line"><span class="lineno">  170</span>                vel.x += cap.x * amount;</div>
-<div class="line"><span class="lineno">  171</span>                vel.y += cap.y * amount;</div>
-<div class="line"><span class="lineno">  172</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  173</span>                <a class="code hl_variable" href="../../da/de7/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SmoothMovementUtil.html#a4661d63512343e032900db0088a6ac78">vel</a>.scale(effectiveMaxSpeed / speed);</div>
-<div class="line"><span class="lineno">  174</span>            }</div>
-<div class="line"><span class="lineno">  175</span>        }</div>
-<div class="line"><span class="lineno">  176</span>        </div>
-<div class="line"><span class="lineno">  177</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/de7/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SmoothMovementUtil.html#a1a108b3e42f124779fa351f24976c200">hardSpeedLimit</a> &gt;= 0 &amp;&amp; speed &gt; 0) {</div>
-<div class="line"><span class="lineno">  178</span>            <a class="code hl_variable" href="../../da/de7/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SmoothMovementUtil.html#a4661d63512343e032900db0088a6ac78">vel</a>.scale(<a class="code hl_variable" href="../../da/de7/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SmoothMovementUtil.html#a1a108b3e42f124779fa351f24976c200">hardSpeedLimit</a> / speed);</div>
-<div class="line"><span class="lineno">  179</span>        }</div>
-<div class="line"><span class="lineno">  180</span>        </div>
-<div class="line"><span class="lineno">  181</span>        loc.x += vel.x * amount;</div>
-<div class="line"><span class="lineno">  182</span>        loc.y += vel.y * amount;</div>
-<div class="line"><span class="lineno">  183</span>        </div>
-<div class="line"><span class="lineno">  184</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SmoothMovementUtil_html_a1a108b3e42f124779fa351f24976c200"><div class="ttname"><a href="../../da/de7/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SmoothMovementUtil.html#a1a108b3e42f124779fa351f24976c200">com.fs.starfarer.api.util.SmoothMovementUtil.hardSpeedLimit</a></div><div class="ttdeci">float hardSpeedLimit</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d06/SmoothMovementUtil_8java_source.html#l00018">SmoothMovementUtil.java:18</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SmoothMovementUtil_html_a226a5db8775e1a02a22bed6e7fb804d6"><div class="ttname"><a href="../../da/de7/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SmoothMovementUtil.html#a226a5db8775e1a02a22bed6e7fb804d6">com.fs.starfarer.api.util.SmoothMovementUtil.dest</a></div><div class="ttdeci">Vector2f dest</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d06/SmoothMovementUtil_8java_source.html#l00012">SmoothMovementUtil.java:12</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SmoothMovementUtil_html_a4661d63512343e032900db0088a6ac78"><div class="ttname"><a href="../../da/de7/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SmoothMovementUtil.html#a4661d63512343e032900db0088a6ac78">com.fs.starfarer.api.util.SmoothMovementUtil.vel</a></div><div class="ttdeci">Vector2f vel</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d06/SmoothMovementUtil_8java_source.html#l00008">SmoothMovementUtil.java:8</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SmoothMovementUtil_html_a5f4fb55112bf0c0dc7b395116d8da0cf"><div class="ttname"><a href="../../da/de7/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SmoothMovementUtil.html#a5f4fb55112bf0c0dc7b395116d8da0cf">com.fs.starfarer.api.util.SmoothMovementUtil.destVel</a></div><div class="ttdeci">Vector2f destVel</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d06/SmoothMovementUtil_8java_source.html#l00013">SmoothMovementUtil.java:13</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SmoothMovementUtil_html_a6b19862b67b2cd2df332d39d5aa3eb03"><div class="ttname"><a href="../../da/de7/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SmoothMovementUtil.html#a6b19862b67b2cd2df332d39d5aa3eb03">com.fs.starfarer.api.util.SmoothMovementUtil.loc</a></div><div class="ttdeci">Vector2f loc</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d06/SmoothMovementUtil_8java_source.html#l00009">SmoothMovementUtil.java:9</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SmoothMovementUtil_html_ab0bffe2119f5a0232a880ab810c18582"><div class="ttname"><a href="../../da/de7/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SmoothMovementUtil.html#ab0bffe2119f5a0232a880ab810c18582">com.fs.starfarer.api.util.SmoothMovementUtil.accel</a></div><div class="ttdeci">Vector2f accel</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d06/SmoothMovementUtil_8java_source.html#l00010">SmoothMovementUtil.java:10</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5dba411dd1f127db9c61ddcbcf1c129f" name="a5dba411dd1f127db9c61ddcbcf1c129f"></a>
@@ -363,10 +214,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d06/SmoothMovementUtil_8java_source.html#l00191">191</a> of file <a class="el" href="../../d2/d06/SmoothMovementUtil_8java_source.html">SmoothMovementUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  191</span>                                   {</div>
-<div class="line"><span class="lineno">  192</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../da/de7/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SmoothMovementUtil.html#a8b0b3293cf31ab3801a8b27be5f5dc6c">acceleration</a>;</div>
-<div class="line"><span class="lineno">  193</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a7d5756c7d1c28a07df4370b87afd67c4" name="a7d5756c7d1c28a07df4370b87afd67c4"></a>
@@ -385,10 +233,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d06/SmoothMovementUtil_8java_source.html#l00187">187</a> of file <a class="el" href="../../d2/d06/SmoothMovementUtil_8java_source.html">SmoothMovementUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  187</span>                                             {</div>
-<div class="line"><span class="lineno">  188</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../da/de7/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SmoothMovementUtil.html#ab0bffe2119f5a0232a880ab810c18582">accel</a>;</div>
-<div class="line"><span class="lineno">  189</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a0073d8e3ec0a58408e6768a639151ec4" name="a0073d8e3ec0a58408e6768a639151ec4"></a>
@@ -407,10 +252,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d06/SmoothMovementUtil_8java_source.html#l00215">215</a> of file <a class="el" href="../../d2/d06/SmoothMovementUtil_8java_source.html">SmoothMovementUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  215</span>                              {</div>
-<div class="line"><span class="lineno">  216</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../da/de7/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SmoothMovementUtil.html#a226a5db8775e1a02a22bed6e7fb804d6">dest</a>;</div>
-<div class="line"><span class="lineno">  217</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a960a51019c231d8a20f768fa22c6a462" name="a960a51019c231d8a20f768fa22c6a462"></a>
@@ -429,10 +271,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d06/SmoothMovementUtil_8java_source.html#l00020">20</a> of file <a class="el" href="../../d2/d06/SmoothMovementUtil_8java_source.html">SmoothMovementUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   20</span>                                     {</div>
-<div class="line"><span class="lineno">   21</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../da/de7/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SmoothMovementUtil.html#a1a108b3e42f124779fa351f24976c200">hardSpeedLimit</a>;</div>
-<div class="line"><span class="lineno">   22</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa99dc89e01c2aedc7facf8cc1d7f077a" name="aa99dc89e01c2aedc7facf8cc1d7f077a"></a>
@@ -451,10 +290,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d06/SmoothMovementUtil_8java_source.html#l00211">211</a> of file <a class="el" href="../../d2/d06/SmoothMovementUtil_8java_source.html">SmoothMovementUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  211</span>                                  {</div>
-<div class="line"><span class="lineno">  212</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../da/de7/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SmoothMovementUtil.html#a6b19862b67b2cd2df332d39d5aa3eb03">loc</a>;</div>
-<div class="line"><span class="lineno">  213</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a6fdefb17549ba239dc03c67431ac4d4c" name="a6fdefb17549ba239dc03c67431ac4d4c"></a>
@@ -473,10 +309,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d06/SmoothMovementUtil_8java_source.html#l00199">199</a> of file <a class="el" href="../../d2/d06/SmoothMovementUtil_8java_source.html">SmoothMovementUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  199</span>                               {</div>
-<div class="line"><span class="lineno">  200</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../da/de7/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SmoothMovementUtil.html#aea635975b7afa4b250b2bed5c4bf2bfe">maxSpeed</a>;</div>
-<div class="line"><span class="lineno">  201</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a0e40b852cba237337b7b3b3b45598db5" name="a0e40b852cba237337b7b3b3b45598db5"></a>
@@ -495,10 +328,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d06/SmoothMovementUtil_8java_source.html#l00207">207</a> of file <a class="el" href="../../d2/d06/SmoothMovementUtil_8java_source.html">SmoothMovementUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  207</span>                                  {</div>
-<div class="line"><span class="lineno">  208</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../da/de7/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SmoothMovementUtil.html#a4661d63512343e032900db0088a6ac78">vel</a>;</div>
-<div class="line"><span class="lineno">  209</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="add4fbbd6b225a29469902f5245abb014" name="add4fbbd6b225a29469902f5245abb014"></a>
@@ -518,10 +348,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d06/SmoothMovementUtil_8java_source.html#l00195">195</a> of file <a class="el" href="../../d2/d06/SmoothMovementUtil_8java_source.html">SmoothMovementUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  195</span>                                                    {</div>
-<div class="line"><span class="lineno">  196</span>        this.acceleration = <a class="code hl_variable" href="../../da/de7/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SmoothMovementUtil.html#a8b0b3293cf31ab3801a8b27be5f5dc6c">acceleration</a>;</div>
-<div class="line"><span class="lineno">  197</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a08e5b77b66b5d398610ea5f3ec1f1c3b" name="a08e5b77b66b5d398610ea5f3ec1f1c3b"></a>
@@ -551,21 +378,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d06/SmoothMovementUtil_8java_source.html#l00034">34</a> of file <a class="el" href="../../d2/d06/SmoothMovementUtil_8java_source.html">SmoothMovementUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   34</span>                                                         {</div>
-<div class="line"><span class="lineno">   35</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/de7/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SmoothMovementUtil.html#a226a5db8775e1a02a22bed6e7fb804d6">dest</a> == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   36</span>            this.<a class="code hl_variable" href="../../da/de7/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SmoothMovementUtil.html#a226a5db8775e1a02a22bed6e7fb804d6">dest</a>.set(0, 0);</div>
-<div class="line"><span class="lineno">   37</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   38</span>            this.<a class="code hl_variable" href="../../da/de7/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SmoothMovementUtil.html#a226a5db8775e1a02a22bed6e7fb804d6">dest</a>.set(<a class="code hl_variable" href="../../da/de7/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SmoothMovementUtil.html#a226a5db8775e1a02a22bed6e7fb804d6">dest</a>);</div>
-<div class="line"><span class="lineno">   39</span>        }</div>
-<div class="line"><span class="lineno">   40</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/de7/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SmoothMovementUtil.html#a5f4fb55112bf0c0dc7b395116d8da0cf">destVel</a> == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   41</span>            <span class="keywordtype">float</span> dir = Misc.getAngleInDegrees(<a class="code hl_variable" href="../../da/de7/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SmoothMovementUtil.html#a6b19862b67b2cd2df332d39d5aa3eb03">loc</a>, this.<a class="code hl_variable" href="../../da/de7/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SmoothMovementUtil.html#a226a5db8775e1a02a22bed6e7fb804d6">dest</a>);</div>
-<div class="line"><span class="lineno">   42</span>            this.destVel = Misc.getUnitVectorAtDegreeAngle(dir);</div>
-<div class="line"><span class="lineno">   43</span>            this.<a class="code hl_variable" href="../../da/de7/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SmoothMovementUtil.html#a5f4fb55112bf0c0dc7b395116d8da0cf">destVel</a>.scale(10000f);</div>
-<div class="line"><span class="lineno">   44</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   45</span>            this.<a class="code hl_variable" href="../../da/de7/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SmoothMovementUtil.html#a5f4fb55112bf0c0dc7b395116d8da0cf">destVel</a>.set(<a class="code hl_variable" href="../../da/de7/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SmoothMovementUtil.html#a5f4fb55112bf0c0dc7b395116d8da0cf">destVel</a>);</div>
-<div class="line"><span class="lineno">   46</span>        }</div>
-<div class="line"><span class="lineno">   47</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af860b6110b1d9ac97a0cd43e8ae38d04" name="af860b6110b1d9ac97a0cd43e8ae38d04"></a>
@@ -585,10 +398,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d06/SmoothMovementUtil_8java_source.html#l00024">24</a> of file <a class="el" href="../../d2/d06/SmoothMovementUtil_8java_source.html">SmoothMovementUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   24</span>                                                        {</div>
-<div class="line"><span class="lineno">   25</span>        this.hardSpeedLimit = <a class="code hl_variable" href="../../da/de7/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SmoothMovementUtil.html#a1a108b3e42f124779fa351f24976c200">hardSpeedLimit</a>;</div>
-<div class="line"><span class="lineno">   26</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab98e1c169c21222846b85fb9c0b5023d" name="ab98e1c169c21222846b85fb9c0b5023d"></a>
@@ -608,10 +418,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d06/SmoothMovementUtil_8java_source.html#l00203">203</a> of file <a class="el" href="../../d2/d06/SmoothMovementUtil_8java_source.html">SmoothMovementUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  203</span>                                            {</div>
-<div class="line"><span class="lineno">  204</span>        this.maxSpeed = <a class="code hl_variable" href="../../da/de7/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SmoothMovementUtil.html#aea635975b7afa4b250b2bed5c4bf2bfe">maxSpeed</a>;</div>
-<div class="line"><span class="lineno">  205</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

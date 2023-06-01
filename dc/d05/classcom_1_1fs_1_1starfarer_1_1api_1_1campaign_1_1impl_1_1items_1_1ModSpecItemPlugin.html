@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -268,78 +269,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d11/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BaseSpecialItemPlugin.html#abbd9e80e13a8b5d71d01d670ab91ddda">com.fs.starfarer.api.campaign.impl.items.BaseSpecialItemPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d23/ModSpecItemPlugin_8java_source.html#l00169">169</a> of file <a class="el" href="../../d5/d23/ModSpecItemPlugin_8java_source.html">ModSpecItemPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  169</span>                                                                                                                                      {</div>
-<div class="line"><span class="lineno">  170</span>        <span class="comment">//super.createTooltip(tooltip, expanded, transferHandler, stackSource);</span></div>
-<div class="line"><span class="lineno">  171</span>        </div>
-<div class="line"><span class="lineno">  172</span>        <span class="keywordtype">float</span> pad = 3f;</div>
-<div class="line"><span class="lineno">  173</span>        <span class="keywordtype">float</span> opad = 10f;</div>
-<div class="line"><span class="lineno">  174</span>        <span class="keywordtype">float</span> small = 5f;</div>
-<div class="line"><span class="lineno">  175</span>        Color h = Misc.getHighlightColor();</div>
-<div class="line"><span class="lineno">  176</span>        Color g = Misc.getGrayColor();</div>
-<div class="line"><span class="lineno">  177</span>        Color b = Misc.getButtonTextColor();</div>
-<div class="line"><span class="lineno">  178</span>        b = Misc.getPositiveHighlightColor();</div>
-<div class="line"><span class="lineno">  179</span> </div>
-<div class="line"><span class="lineno">  180</span>        tooltip.addTitle(<a class="code hl_function" href="../../dc/d05/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1ModSpecItemPlugin.html#a652399063906e367cdb38980e42c2b7d">getName</a>());</div>
-<div class="line"><span class="lineno">  181</span>        </div>
-<div class="line"><span class="lineno">  182</span>        String design = <a class="code hl_function" href="../../dc/d05/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1ModSpecItemPlugin.html#a207f6ddb3a9803f8663d63ed8a74148f">getDesignType</a>();</div>
-<div class="line"><span class="lineno">  183</span>        Misc.addDesignTypePara(tooltip, design, 10f);</div>
-<div class="line"><span class="lineno">  184</span>        </div>
-<div class="line"><span class="lineno">  185</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="../../da/d11/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BaseSpecialItemPlugin.html#aa8bb41a5717a81aa5d8be0bda2a9fc47">spec</a>.<a class="code hl_function" href="../../de/d3f/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SpecialItemSpecAPI.html#a907d39d4ac8c9e667ee26f217ce038d7">getDesc</a>().isEmpty()) {</div>
-<div class="line"><span class="lineno">  186</span>            tooltip.addPara(<a class="code hl_variable" href="../../da/d11/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BaseSpecialItemPlugin.html#aa8bb41a5717a81aa5d8be0bda2a9fc47">spec</a>.<a class="code hl_function" href="../../de/d3f/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SpecialItemSpecAPI.html#a907d39d4ac8c9e667ee26f217ce038d7">getDesc</a>(), Misc.getGrayColor(), opad);</div>
-<div class="line"><span class="lineno">  187</span>        }</div>
-<div class="line"><span class="lineno">  188</span>        </div>
-<div class="line"><span class="lineno">  189</span>        tooltip.addSectionHeading(<span class="stringliteral">&quot;Effect&quot;</span>, Alignment.MID, opad * 1f);</div>
-<div class="line"><span class="lineno">  190</span>        </div>
-<div class="line"><span class="lineno">  191</span>        HullModEffect e = modSpec.<a class="code hl_function" href="../../d5/da9/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1HullModSpecAPI.html#af3d374dd0ea115dc31e4adcfba0c8b79">getEffect</a>();</div>
-<div class="line"><span class="lineno">  192</span>        HullSize size = HullSize.CAPITAL_SHIP;</div>
-<div class="line"><span class="lineno">  193</span>        <span class="keywordflow">if</span> (e.shouldAddDescriptionToTooltip(size, <span class="keyword">null</span>, <span class="keyword">true</span>)) {</div>
-<div class="line"><span class="lineno">  194</span>            <span class="keyword">final</span> String [] params = <span class="keyword">new</span> String [] { </div>
-<div class="line"><span class="lineno">  195</span>                     e.<a class="code hl_function" href="../../d1/def/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1HullModEffect.html#a4e80a6fdbe93ea9edf4cfa058d1196ae">getDescriptionParam</a>(0, size, <span class="keyword">null</span>),</div>
-<div class="line"><span class="lineno">  196</span>                     e.getDescriptionParam(1, size, <span class="keyword">null</span>),</div>
-<div class="line"><span class="lineno">  197</span>                     e.getDescriptionParam(2, size, <span class="keyword">null</span>),</div>
-<div class="line"><span class="lineno">  198</span>                     e.getDescriptionParam(3, size, <span class="keyword">null</span>),</div>
-<div class="line"><span class="lineno">  199</span>                     e.getDescriptionParam(4, size, <span class="keyword">null</span>),</div>
-<div class="line"><span class="lineno">  200</span>                     e.getDescriptionParam(5, size, <span class="keyword">null</span>),</div>
-<div class="line"><span class="lineno">  201</span>                     e.getDescriptionParam(6, size, <span class="keyword">null</span>),</div>
-<div class="line"><span class="lineno">  202</span>                     e.getDescriptionParam(7, size, <span class="keyword">null</span>),</div>
-<div class="line"><span class="lineno">  203</span>                     e.getDescriptionParam(8, size, <span class="keyword">null</span>),</div>
-<div class="line"><span class="lineno">  204</span>                     e.getDescriptionParam(9, size, <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  205</span>                };</div>
-<div class="line"><span class="lineno">  206</span>            </div>
-<div class="line"><span class="lineno">  207</span>            tooltip.addPara(modSpec.<a class="code hl_function" href="../../d5/da9/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1HullModSpecAPI.html#aba1b8da33e6ce56a09a2ade71427ba1e">getDescription</a>(size).replaceAll(<span class="stringliteral">&quot;\\%&quot;</span>, <span class="stringliteral">&quot;%%&quot;</span>), opad, h, params);</div>
-<div class="line"><span class="lineno">  208</span>            <span class="comment">//e.getDescriptionParam(0, size);</span></div>
-<div class="line"><span class="lineno">  209</span>        }</div>
-<div class="line"><span class="lineno">  210</span>        </div>
-<div class="line"><span class="lineno">  211</span>        e.addPostDescriptionSection(tooltip, size, <span class="keyword">null</span>, <a class="code hl_function" href="../../dc/d05/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1ModSpecItemPlugin.html#a287906df8f67d441e0d19a4cc7527911">getTooltipWidth</a>(), <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  212</span>        </div>
-<div class="line"><span class="lineno">  213</span>        <span class="keywordflow">if</span> (e.hasSModEffectSection(size, <span class="keyword">null</span>, <span class="keyword">false</span>)) {</div>
-<div class="line"><span class="lineno">  214</span>            e.addSModSection(tooltip, size, <span class="keyword">null</span>, <a class="code hl_function" href="../../dc/d05/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1ModSpecItemPlugin.html#a287906df8f67d441e0d19a4cc7527911">getTooltipWidth</a>(), <span class="keyword">true</span>, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  215</span>        }</div>
-<div class="line"><span class="lineno">  216</span>        </div>
-<div class="line"><span class="lineno">  217</span>        <a class="code hl_function" href="../../da/d11/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BaseSpecialItemPlugin.html#a0c6d39d358eaa8f491426907c2995d61">addCostLabel</a>(tooltip, opad, transferHandler, stackSource);</div>
-<div class="line"><span class="lineno">  218</span>        </div>
-<div class="line"><span class="lineno">  219</span>        <span class="comment">//if (CampaignEngine.getInstance().getCharacterData().getPerson().getStats().isHullModAvailable(id)) {</span></div>
-<div class="line"><span class="lineno">  220</span>        <span class="comment">//tooltip.setParaSmallOrbitron();</span></div>
-<div class="line"><span class="lineno">  221</span>        </div>
-<div class="line"><span class="lineno">  222</span>        <span class="keywordtype">boolean</span> known = Global.getSector().getCharacterData().knowsHullMod(modId);</div>
-<div class="line"><span class="lineno">  223</span>        <span class="keywordflow">if</span> (known) {</div>
-<div class="line"><span class="lineno">  224</span>            <span class="comment">//tooltip.addPara(&quot;Already known&quot;, g, pad).setAlignment(Alignment.MID);</span></div>
-<div class="line"><span class="lineno">  225</span>            tooltip.addPara(<span class="stringliteral">&quot;Already known&quot;</span>, g, opad);</div>
-<div class="line"><span class="lineno">  226</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  227</span>            <span class="comment">//tooltip.addPara(&quot;Right-click to learn&quot;, b, pad).setAlignment(Alignment.MID);</span></div>
-<div class="line"><span class="lineno">  228</span>            tooltip.addPara(<span class="stringliteral">&quot;Right-click to learn&quot;</span>, b, opad);</div>
-<div class="line"><span class="lineno">  229</span>        }</div>
-<div class="line"><span class="lineno">  230</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BaseSpecialItemPlugin_html_a0c6d39d358eaa8f491426907c2995d61"><div class="ttname"><a href="../../da/d11/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BaseSpecialItemPlugin.html#a0c6d39d358eaa8f491426907c2995d61">com.fs.starfarer.api.campaign.impl.items.BaseSpecialItemPlugin.addCostLabel</a></div><div class="ttdeci">void addCostLabel(TooltipMakerAPI tooltip, float pad, CargoTransferHandlerAPI transferHandler, Object stackSource)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/da5/BaseSpecialItemPlugin_8java_source.html#l00111">BaseSpecialItemPlugin.java:111</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BaseSpecialItemPlugin_html_aa8bb41a5717a81aa5d8be0bda2a9fc47"><div class="ttname"><a href="../../da/d11/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BaseSpecialItemPlugin.html#aa8bb41a5717a81aa5d8be0bda2a9fc47">com.fs.starfarer.api.campaign.impl.items.BaseSpecialItemPlugin.spec</a></div><div class="ttdeci">SpecialItemSpecAPI spec</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/da5/BaseSpecialItemPlugin_8java_source.html#l00029">BaseSpecialItemPlugin.java:29</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1ModSpecItemPlugin_html_a207f6ddb3a9803f8663d63ed8a74148f"><div class="ttname"><a href="../../dc/d05/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1ModSpecItemPlugin.html#a207f6ddb3a9803f8663d63ed8a74148f">com.fs.starfarer.api.campaign.impl.items.ModSpecItemPlugin.getDesignType</a></div><div class="ttdeci">String getDesignType()</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d23/ModSpecItemPlugin_8java_source.html#l00161">ModSpecItemPlugin.java:161</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1ModSpecItemPlugin_html_a287906df8f67d441e0d19a4cc7527911"><div class="ttname"><a href="../../dc/d05/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1ModSpecItemPlugin.html#a287906df8f67d441e0d19a4cc7527911">com.fs.starfarer.api.campaign.impl.items.ModSpecItemPlugin.getTooltipWidth</a></div><div class="ttdeci">float getTooltipWidth()</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d23/ModSpecItemPlugin_8java_source.html#l00233">ModSpecItemPlugin.java:233</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1ModSpecItemPlugin_html_a652399063906e367cdb38980e42c2b7d"><div class="ttname"><a href="../../dc/d05/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1ModSpecItemPlugin.html#a652399063906e367cdb38980e42c2b7d">com.fs.starfarer.api.campaign.impl.items.ModSpecItemPlugin.getName</a></div><div class="ttdeci">String getName()</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d23/ModSpecItemPlugin_8java_source.html#l00155">ModSpecItemPlugin.java:155</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SpecialItemSpecAPI_html_a907d39d4ac8c9e667ee26f217ce038d7"><div class="ttname"><a href="../../de/d3f/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SpecialItemSpecAPI.html#a907d39d4ac8c9e667ee26f217ce038d7">com.fs.starfarer.api.campaign.SpecialItemSpecAPI.getDesc</a></div><div class="ttdeci">String getDesc()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1HullModEffect_html_a4e80a6fdbe93ea9edf4cfa058d1196ae"><div class="ttname"><a href="../../d1/def/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1HullModEffect.html#a4e80a6fdbe93ea9edf4cfa058d1196ae">com.fs.starfarer.api.combat.HullModEffect.getDescriptionParam</a></div><div class="ttdeci">String getDescriptionParam(int index, HullSize hullSize)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1HullModSpecAPI_html_aba1b8da33e6ce56a09a2ade71427ba1e"><div class="ttname"><a href="../../d5/da9/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1HullModSpecAPI.html#aba1b8da33e6ce56a09a2ade71427ba1e">com.fs.starfarer.api.loading.HullModSpecAPI.getDescription</a></div><div class="ttdeci">String getDescription(HullSize size)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1HullModSpecAPI_html_af3d374dd0ea115dc31e4adcfba0c8b79"><div class="ttname"><a href="../../d5/da9/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1HullModSpecAPI.html#af3d374dd0ea115dc31e4adcfba0c8b79">com.fs.starfarer.api.loading.HullModSpecAPI.getEffect</a></div><div class="ttdeci">HullModEffect getEffect()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a207f6ddb3a9803f8663d63ed8a74148f" name="a207f6ddb3a9803f8663d63ed8a74148f"></a>
@@ -360,14 +290,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d11/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BaseSpecialItemPlugin.html#a36d41fcf45c510c1d70ce8658ef81e46">com.fs.starfarer.api.campaign.impl.items.BaseSpecialItemPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d23/ModSpecItemPlugin_8java_source.html#l00161">161</a> of file <a class="el" href="../../d5/d23/ModSpecItemPlugin_8java_source.html">ModSpecItemPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  161</span>                                  {</div>
-<div class="line"><span class="lineno">  162</span>        <span class="keywordflow">if</span> (modSpec != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  163</span>            <span class="keywordflow">return</span> modSpec.<a class="code hl_function" href="../../d5/da9/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1HullModSpecAPI.html#ac302c8affef641396b0b9961ad7d64b7">getManufacturer</a>();</div>
-<div class="line"><span class="lineno">  164</span>        }</div>
-<div class="line"><span class="lineno">  165</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  166</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1HullModSpecAPI_html_ac302c8affef641396b0b9961ad7d64b7"><div class="ttname"><a href="../../d5/da9/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1HullModSpecAPI.html#ac302c8affef641396b0b9961ad7d64b7">com.fs.starfarer.api.loading.HullModSpecAPI.getManufacturer</a></div><div class="ttdeci">String getManufacturer()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8203ccbc67fb17fae1872364a207a9c3" name="a8203ccbc67fb17fae1872364a207a9c3"></a>
@@ -386,10 +309,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d23/ModSpecItemPlugin_8java_source.html#l00331">331</a> of file <a class="el" href="../../d5/d23/ModSpecItemPlugin_8java_source.html">ModSpecItemPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  331</span>                             {</div>
-<div class="line"><span class="lineno">  332</span>        <span class="keywordflow">return</span> modId;</div>
-<div class="line"><span class="lineno">  333</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a652399063906e367cdb38980e42c2b7d" name="a652399063906e367cdb38980e42c2b7d"></a>
@@ -410,11 +330,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d11/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BaseSpecialItemPlugin.html#a345793881030ca3d3b0cb3e62ba8f9ef">com.fs.starfarer.api.campaign.impl.items.BaseSpecialItemPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d23/ModSpecItemPlugin_8java_source.html#l00155">155</a> of file <a class="el" href="../../d5/d23/ModSpecItemPlugin_8java_source.html">ModSpecItemPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  155</span>                            {</div>
-<div class="line"><span class="lineno">  156</span>        <span class="keywordflow">return</span> modSpec.<a class="code hl_function" href="../../d5/da9/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1HullModSpecAPI.html#a4769de80cfbbf2ec6a99442f63737cf8">getDisplayName</a>() + <span class="stringliteral">&quot; - Modspec&quot;</span>;</div>
-<div class="line"><span class="lineno">  157</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1HullModSpecAPI_html_a4769de80cfbbf2ec6a99442f63737cf8"><div class="ttname"><a href="../../d5/da9/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1HullModSpecAPI.html#a4769de80cfbbf2ec6a99442f63737cf8">com.fs.starfarer.api.loading.HullModSpecAPI.getDisplayName</a></div><div class="ttdeci">String getDisplayName()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a147797544c53baa9e059b67ec80551f2" name="a147797544c53baa9e059b67ec80551f2"></a>
@@ -446,12 +362,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d11/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BaseSpecialItemPlugin.html#a25a8dc85e0c6ae5cd46d3f3cc4458a02">com.fs.starfarer.api.campaign.impl.items.BaseSpecialItemPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d23/ModSpecItemPlugin_8java_source.html#l00149">149</a> of file <a class="el" href="../../d5/d23/ModSpecItemPlugin_8java_source.html">ModSpecItemPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  149</span>                                                                  {</div>
-<div class="line"><span class="lineno">  150</span>        <span class="keywordflow">if</span> (modSpec != <span class="keyword">null</span>) <span class="keywordflow">return</span> (<span class="keywordtype">int</span>) modSpec.<a class="code hl_function" href="../../d5/da9/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1HullModSpecAPI.html#ae293b80c56c6e9e654757f0cc0d13a9a">getBaseValue</a>();</div>
-<div class="line"><span class="lineno">  151</span>        <span class="keywordflow">return</span> super.getPrice(market, submarket);</div>
-<div class="line"><span class="lineno">  152</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1HullModSpecAPI_html_ae293b80c56c6e9e654757f0cc0d13a9a"><div class="ttname"><a href="../../d5/da9/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1HullModSpecAPI.html#ae293b80c56c6e9e654757f0cc0d13a9a">com.fs.starfarer.api.loading.HullModSpecAPI.getBaseValue</a></div><div class="ttdeci">float getBaseValue()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a287906df8f67d441e0d19a4cc7527911" name="a287906df8f67d441e0d19a4cc7527911"></a>
@@ -472,10 +383,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d11/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BaseSpecialItemPlugin.html#aadab4e324bd58fdcfb0f1f602df028f5">com.fs.starfarer.api.campaign.impl.items.BaseSpecialItemPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d23/ModSpecItemPlugin_8java_source.html#l00233">233</a> of file <a class="el" href="../../d5/d23/ModSpecItemPlugin_8java_source.html">ModSpecItemPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  233</span>                                   {</div>
-<div class="line"><span class="lineno">  234</span>        <span class="keywordflow">return</span> super.getTooltipWidth();</div>
-<div class="line"><span class="lineno">  235</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae29b9357c2e9f886eba72727a629011d" name="ae29b9357c2e9f886eba72727a629011d"></a>
@@ -496,10 +404,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d11/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BaseSpecialItemPlugin.html#a6b7958846b3d69670f256816b138c338">com.fs.starfarer.api.campaign.impl.items.BaseSpecialItemPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d23/ModSpecItemPlugin_8java_source.html#l00243">243</a> of file <a class="el" href="../../d5/d23/ModSpecItemPlugin_8java_source.html">ModSpecItemPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  243</span>                                         {</div>
-<div class="line"><span class="lineno">  244</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  245</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae5984d827b5e5f2ed964e25b9c1ff7fb" name="ae5984d827b5e5f2ed964e25b9c1ff7fb"></a>
@@ -521,17 +426,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d11/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BaseSpecialItemPlugin.html#a7a062560b0f2dcf8bafce4665c29337c">com.fs.starfarer.api.campaign.impl.items.BaseSpecialItemPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d23/ModSpecItemPlugin_8java_source.html#l00036">36</a> of file <a class="el" href="../../d5/d23/ModSpecItemPlugin_8java_source.html">ModSpecItemPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   36</span>                                          {</div>
-<div class="line"><span class="lineno">   37</span>        super.init(<a class="code hl_variable" href="../../da/d11/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BaseSpecialItemPlugin.html#a8d95be9852d077f1500bd118cc3aa9c6">stack</a>);</div>
-<div class="line"><span class="lineno">   38</span>        modId = <a class="code hl_variable" href="../../da/d11/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BaseSpecialItemPlugin.html#a8d95be9852d077f1500bd118cc3aa9c6">stack</a>.<a class="code hl_function" href="../../d0/db3/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoStackAPI.html#a38b33bc0cdd6005c8b81198cc0356708">getSpecialDataIfSpecial</a>().<a class="code hl_function" href="../../d6/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SpecialItemData.html#a1454f55970a640fb84a25301b2712f1a">getData</a>();</div>
-<div class="line"><span class="lineno">   39</span>        modSpec = Global.getSettings().getHullModSpec(modId);</div>
-<div class="line"><span class="lineno">   40</span>        </div>
-<div class="line"><span class="lineno">   41</span>        <span class="comment">//sprite = Global.getSettings().getSprite(modSpec.getSpriteName());</span></div>
-<div class="line"><span class="lineno">   42</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SpecialItemData_html_a1454f55970a640fb84a25301b2712f1a"><div class="ttname"><a href="../../d6/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SpecialItemData.html#a1454f55970a640fb84a25301b2712f1a">com.fs.starfarer.api.campaign.SpecialItemData.getData</a></div><div class="ttdeci">String getData()</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d63/SpecialItemData_8java_source.html#l00017">SpecialItemData.java:17</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BaseSpecialItemPlugin_html_a8d95be9852d077f1500bd118cc3aa9c6"><div class="ttname"><a href="../../da/d11/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BaseSpecialItemPlugin.html#a8d95be9852d077f1500bd118cc3aa9c6">com.fs.starfarer.api.campaign.impl.items.BaseSpecialItemPlugin.stack</a></div><div class="ttdeci">CargoStackAPI stack</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/da5/BaseSpecialItemPlugin_8java_source.html#l00030">BaseSpecialItemPlugin.java:30</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoStackAPI_html_a38b33bc0cdd6005c8b81198cc0356708"><div class="ttname"><a href="../../d0/db3/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoStackAPI.html#a38b33bc0cdd6005c8b81198cc0356708">com.fs.starfarer.api.campaign.CargoStackAPI.getSpecialDataIfSpecial</a></div><div class="ttdeci">SpecialItemData getSpecialDataIfSpecial()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a4e16deea5d00f34b02289f3f6a5c455c" name="a4e16deea5d00f34b02289f3f6a5c455c"></a>
@@ -552,10 +447,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d11/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BaseSpecialItemPlugin.html#aaa06fd99f1db4c9899cd042b39241000">com.fs.starfarer.api.campaign.impl.items.BaseSpecialItemPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d23/ModSpecItemPlugin_8java_source.html#l00238">238</a> of file <a class="el" href="../../d5/d23/ModSpecItemPlugin_8java_source.html">ModSpecItemPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  238</span>                                         {</div>
-<div class="line"><span class="lineno">  239</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  240</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af26d941ec2d823f18fbda1c97214e57b" name="af26d941ec2d823f18fbda1c97214e57b"></a>
@@ -576,19 +468,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d11/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BaseSpecialItemPlugin.html#aae4d799526a5c42ee6c335e2c9a82618">com.fs.starfarer.api.campaign.impl.items.BaseSpecialItemPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d23/ModSpecItemPlugin_8java_source.html#l00253">253</a> of file <a class="el" href="../../d5/d23/ModSpecItemPlugin_8java_source.html">ModSpecItemPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  253</span>                                          {</div>
-<div class="line"><span class="lineno">  254</span>        <span class="keywordflow">if</span> (Global.getSector().getCharacterData().knowsHullMod(modId)) {</div>
-<div class="line"><span class="lineno">  255</span>            Global.getSector().getCampaignUI().getMessageDisplay().addMessage(</div>
-<div class="line"><span class="lineno">  256</span>                    <span class="stringliteral">&quot;&quot;</span> + modSpec.<a class="code hl_function" href="../../d5/da9/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1HullModSpecAPI.html#a4769de80cfbbf2ec6a99442f63737cf8">getDisplayName</a>() + <span class="stringliteral">&quot;: already known&quot;</span>);<span class="comment">//,</span></div>
-<div class="line"><span class="lineno">  257</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  258</span>            Global.getSoundPlayer().playUISound(<span class="stringliteral">&quot;ui_acquired_hullmod&quot;</span>, 1, 1);</div>
-<div class="line"><span class="lineno">  259</span>            Global.getSector().getCharacterData().addHullMod(modId);</div>
-<div class="line"><span class="lineno">  260</span>            Global.getSector().getCampaignUI().getMessageDisplay().addMessage(</div>
-<div class="line"><span class="lineno">  261</span>                    <span class="stringliteral">&quot;Acquired hull mod: &quot;</span> + modSpec.<a class="code hl_function" href="../../d5/da9/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1HullModSpecAPI.html#a4769de80cfbbf2ec6a99442f63737cf8">getDisplayName</a>() + <span class="stringliteral">&quot;&quot;</span>);<span class="comment">//, </span></div>
-<div class="line"><span class="lineno">  262</span> </div>
-<div class="line"><span class="lineno">  263</span>        }</div>
-<div class="line"><span class="lineno">  264</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af143a19d54ebe7c3e40aa8aaf360a8cd" name="af143a19d54ebe7c3e40aa8aaf360a8cd"></a>
@@ -650,109 +530,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d11/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BaseSpecialItemPlugin.html#ad949e33e4e2682792c611a87745a1a86">com.fs.starfarer.api.campaign.impl.items.BaseSpecialItemPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d23/ModSpecItemPlugin_8java_source.html#l00045">45</a> of file <a class="el" href="../../d5/d23/ModSpecItemPlugin_8java_source.html">ModSpecItemPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   46</span>                                                                        {</div>
-<div class="line"><span class="lineno">   47</span>        <span class="keywordtype">float</span> cx = x + w/2f;</div>
-<div class="line"><span class="lineno">   48</span>        <span class="keywordtype">float</span> cy = y + h/2f;</div>
-<div class="line"><span class="lineno">   49</span>        </div>
-<div class="line"><span class="lineno">   50</span>        cx -= 2;</div>
-<div class="line"><span class="lineno">   51</span>        cy -= 1;</div>
-<div class="line"><span class="lineno">   52</span>        </div>
-<div class="line"><span class="lineno">   53</span>        x = (int) x;</div>
-<div class="line"><span class="lineno">   54</span>        y = (int) y;</div>
-<div class="line"><span class="lineno">   55</span>        w = (int) w;</div>
-<div class="line"><span class="lineno">   56</span>        h = (int) h;</div>
-<div class="line"><span class="lineno">   57</span>        </div>
-<div class="line"><span class="lineno">   58</span>        <span class="keywordtype">boolean</span> known = Global.getSector().getCharacterData().knowsHullMod(modId);</div>
-<div class="line"><span class="lineno">   59</span>        <span class="keywordtype">float</span> mult = 1f;</div>
-<div class="line"><span class="lineno">   60</span>        <span class="keywordflow">if</span> (known) {</div>
-<div class="line"><span class="lineno">   61</span>            mult = 0.5f;</div>
-<div class="line"><span class="lineno">   62</span>        }</div>
-<div class="line"><span class="lineno">   63</span>        </div>
-<div class="line"><span class="lineno">   64</span>        SpriteAPI sprite = Global.getSettings().getSprite(modSpec.<a class="code hl_function" href="../../d5/da9/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1HullModSpecAPI.html#a63104ac79c205fab17b034be567c7a80">getSpriteName</a>());</div>
-<div class="line"><span class="lineno">   65</span>        </div>
-<div class="line"><span class="lineno">   66</span><span class="comment">//      sprite.setNormalBlend();</span></div>
-<div class="line"><span class="lineno">   67</span><span class="comment">//      sprite.setAlphaMult(alphaMult * mult);</span></div>
-<div class="line"><span class="lineno">   68</span><span class="comment">//      </span></div>
-<div class="line"><span class="lineno">   69</span><span class="comment">//      sprite.renderAtCenter(cx, cy);</span></div>
-<div class="line"><span class="lineno">   70</span><span class="comment">//      </span></div>
-<div class="line"><span class="lineno">   71</span><span class="comment">//      if (glowMult &gt; 0) {</span></div>
-<div class="line"><span class="lineno">   72</span><span class="comment">//          sprite.setAlphaMult(alphaMult * glowMult * 0.5f * mult);</span></div>
-<div class="line"><span class="lineno">   73</span><span class="comment">//          sprite.renderAtCenter(cx, cy);</span></div>
-<div class="line"><span class="lineno">   74</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">   75</span><span class="comment">//      </span></div>
-<div class="line"><span class="lineno">   76</span><span class="comment">//      renderer.renderScanlines(sprite, cx, cy, alphaMult);</span></div>
-<div class="line"><span class="lineno">   77</span><span class="comment">//      if (!known) {</span></div>
-<div class="line"><span class="lineno">   78</span><span class="comment">//          renderer.renderSchematic(sprite, cx, cy, alphaMult * 0.67f);</span></div>
-<div class="line"><span class="lineno">   79</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">   80</span><span class="comment">//      </span></div>
-<div class="line"><span class="lineno">   81</span><span class="comment">//      if (true) return;</span></div>
-<div class="line"><span class="lineno">   82</span>        </div>
-<div class="line"><span class="lineno">   83</span>        </div>
-<div class="line"><span class="lineno">   84</span>        w = sprite.getWidth() * 1.5f + 5;</div>
-<div class="line"><span class="lineno">   85</span>        h = sprite.getHeight() * 1.5f;</div>
-<div class="line"><span class="lineno">   86</span><span class="comment">//      x = cx - w / 2f;</span></div>
-<div class="line"><span class="lineno">   87</span><span class="comment">//      y = cy - h / 2f;</span></div>
-<div class="line"><span class="lineno">   88</span>        </div>
-<div class="line"><span class="lineno">   89</span>        x = cx;</div>
-<div class="line"><span class="lineno">   90</span>        y = cy;</div>
-<div class="line"><span class="lineno">   91</span>        </div>
-<div class="line"><span class="lineno">   92</span><span class="comment">//      float blX = x - w / 2f;</span></div>
-<div class="line"><span class="lineno">   93</span><span class="comment">//      float blY = y - h / 2f + 7;</span></div>
-<div class="line"><span class="lineno">   94</span><span class="comment">//      float tlX = x - w / 2f + 10;</span></div>
-<div class="line"><span class="lineno">   95</span><span class="comment">//      float tlY = y + h / 2f - 7;</span></div>
-<div class="line"><span class="lineno">   96</span><span class="comment">//      float trX = x + w / 2f;</span></div>
-<div class="line"><span class="lineno">   97</span><span class="comment">//      float trY = y + h / 2f;</span></div>
-<div class="line"><span class="lineno">   98</span><span class="comment">//      float brX = x + w / 2f - 10;</span></div>
-<div class="line"><span class="lineno">   99</span><span class="comment">//      float brY = y - h / 2f;</span></div>
-<div class="line"><span class="lineno">  100</span>        </div>
-<div class="line"><span class="lineno">  101</span><span class="comment">// modspec.png</span></div>
-<div class="line"><span class="lineno">  102</span><span class="comment">//      float blX = -23f;</span></div>
-<div class="line"><span class="lineno">  103</span><span class="comment">//      float blY = -10f;</span></div>
-<div class="line"><span class="lineno">  104</span><span class="comment">//      float tlX = -14f;</span></div>
-<div class="line"><span class="lineno">  105</span><span class="comment">//      float tlY = 21f;</span></div>
-<div class="line"><span class="lineno">  106</span><span class="comment">//      float trX = 25f;</span></div>
-<div class="line"><span class="lineno">  107</span><span class="comment">//      float trY = 20f;</span></div>
-<div class="line"><span class="lineno">  108</span><span class="comment">//      float brX = 23f;</span></div>
-<div class="line"><span class="lineno">  109</span><span class="comment">//      float brY = -10f;</span></div>
-<div class="line"><span class="lineno">  110</span> </div>
-<div class="line"><span class="lineno">  111</span><span class="comment">// modspec2.png</span></div>
-<div class="line"><span class="lineno">  112</span>        <span class="keywordtype">float</span> blX = -23f;</div>
-<div class="line"><span class="lineno">  113</span>        <span class="keywordtype">float</span> blY = -10f;</div>
-<div class="line"><span class="lineno">  114</span>        <span class="keywordtype">float</span> tlX = -18f;</div>
-<div class="line"><span class="lineno">  115</span>        <span class="keywordtype">float</span> tlY = 24f;</div>
-<div class="line"><span class="lineno">  116</span>        <span class="keywordtype">float</span> trX = 24f;</div>
-<div class="line"><span class="lineno">  117</span>        <span class="keywordtype">float</span> trY = 24f;</div>
-<div class="line"><span class="lineno">  118</span>        <span class="keywordtype">float</span> brX = 23f;</div>
-<div class="line"><span class="lineno">  119</span>        <span class="keywordtype">float</span> brY = -10f;</div>
-<div class="line"><span class="lineno">  120</span>        </div>
-<div class="line"><span class="lineno">  121</span><span class="comment">//      float tilt = 5;</span></div>
-<div class="line"><span class="lineno">  122</span><span class="comment">//      float b = Global.getSector().getCampaignUI().getSharedFader().getBrightness();</span></div>
-<div class="line"><span class="lineno">  123</span><span class="comment">//      tilt = 20f * b - 10f;</span></div>
-<div class="line"><span class="lineno">  124</span><span class="comment">//      w = 100;</span></div>
-<div class="line"><span class="lineno">  125</span><span class="comment">//      h = 100;</span></div>
-<div class="line"><span class="lineno">  126</span><span class="comment">//      tilt = 10;</span></div>
-<div class="line"><span class="lineno">  127</span>        </div>
-<div class="line"><span class="lineno">  128</span>        sprite.setAlphaMult(alphaMult * mult);</div>
-<div class="line"><span class="lineno">  129</span>        sprite.setNormalBlend();</div>
-<div class="line"><span class="lineno">  130</span>        sprite.renderWithCorners(blX, blY, tlX, tlY, trX, trY, brX, brY);</div>
-<div class="line"><span class="lineno">  131</span>        </div>
-<div class="line"><span class="lineno">  132</span>        </div>
-<div class="line"><span class="lineno">  133</span>        <span class="keywordflow">if</span> (glowMult &gt; 0) {</div>
-<div class="line"><span class="lineno">  134</span>            sprite.setAlphaMult(alphaMult * glowMult * 0.5f * mult);</div>
-<div class="line"><span class="lineno">  135</span>            <span class="comment">//sprite.renderAtCenter(cx, cy);</span></div>
-<div class="line"><span class="lineno">  136</span>            sprite.setAdditiveBlend();</div>
-<div class="line"><span class="lineno">  137</span>            sprite.renderWithCorners(blX, blY, tlX, tlY, trX, trY, brX, brY);</div>
-<div class="line"><span class="lineno">  138</span>        }</div>
-<div class="line"><span class="lineno">  139</span>        </div>
-<div class="line"><span class="lineno">  140</span>        <span class="comment">//renderer.renderScanlines(sprite, cx, cy, alphaMult);</span></div>
-<div class="line"><span class="lineno">  141</span>        renderer.renderScanlinesWithCorners(blX, blY, tlX, tlY, trX, trY, brX, brY, alphaMult, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  142</span>        <span class="keywordflow">if</span> (!known) {</div>
-<div class="line"><span class="lineno">  143</span>            <span class="comment">//renderer.renderSchematic(sprite, cx, cy, alphaMult * 0.67f);</span></div>
-<div class="line"><span class="lineno">  144</span>            renderer.renderSchematicWithCorners(sprite, <span class="keyword">null</span>, blX, blY, tlX, tlY, trX, trY, brX, brY, alphaMult * 0.67f);</div>
-<div class="line"><span class="lineno">  145</span>        }</div>
-<div class="line"><span class="lineno">  146</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1HullModSpecAPI_html_a63104ac79c205fab17b034be567c7a80"><div class="ttname"><a href="../../d5/da9/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1HullModSpecAPI.html#a63104ac79c205fab17b034be567c7a80">com.fs.starfarer.api.loading.HullModSpecAPI.getSpriteName</a></div><div class="ttdeci">String getSpriteName()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a7b89a90f6b3eff7f661c700fdc445c74" name="a7b89a90f6b3eff7f661c700fdc445c74"></a>
@@ -797,71 +575,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d11/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BaseSpecialItemPlugin.html#a77c0c2cb30de7bdce86fd860bacfa21c">com.fs.starfarer.api.campaign.impl.items.BaseSpecialItemPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d23/ModSpecItemPlugin_8java_source.html#l00267">267</a> of file <a class="el" href="../../d5/d23/ModSpecItemPlugin_8java_source.html">ModSpecItemPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  267</span>                                                                                                         {</div>
-<div class="line"><span class="lineno">  268</span>        <span class="keywordflow">if</span> (params == <span class="keyword">null</span> || params.isEmpty()) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  269</span>        </div>
-<div class="line"><span class="lineno">  270</span>        </div>
-<div class="line"><span class="lineno">  271</span>        JSONObject json = <span class="keyword">new</span> JSONObject(params);</div>
-<div class="line"><span class="lineno">  272</span>        </div>
-<div class="line"><span class="lineno">  273</span>        <span class="keywordtype">int</span> tier = json.optInt(<span class="stringliteral">&quot;tier&quot;</span>, -1);</div>
-<div class="line"><span class="lineno">  274</span>        Set&lt;String&gt; tags = <span class="keyword">new</span> HashSet&lt;String&gt;();</div>
-<div class="line"><span class="lineno">  275</span>        <span class="keywordflow">if</span> (json.has(<span class="stringliteral">&quot;tags&quot;</span>)) {</div>
-<div class="line"><span class="lineno">  276</span>            JSONArray tagsArray = json.getJSONArray(<span class="stringliteral">&quot;tags&quot;</span>);</div>
-<div class="line"><span class="lineno">  277</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; tagsArray.length(); i++) {</div>
-<div class="line"><span class="lineno">  278</span>                tags.add(tagsArray.getString(i));</div>
-<div class="line"><span class="lineno">  279</span>            }</div>
-<div class="line"><span class="lineno">  280</span>        }</div>
-<div class="line"><span class="lineno">  281</span>        </div>
-<div class="line"><span class="lineno">  282</span>        List&lt;HullModSpecAPI&gt; specs = Global.getSettings().getAllHullModSpecs();</div>
-<div class="line"><span class="lineno">  283</span>        </div>
-<div class="line"><span class="lineno">  284</span>        Iterator&lt;HullModSpecAPI&gt; iter = specs.iterator();</div>
-<div class="line"><span class="lineno">  285</span>        <span class="keywordflow">while</span> (iter.hasNext()) {</div>
-<div class="line"><span class="lineno">  286</span>            HullModSpecAPI curr = iter.next();</div>
-<div class="line"><span class="lineno">  287</span>            <span class="keywordtype">boolean</span> known = Global.getSector().getPlayerFaction().knowsHullMod(curr.getId());</div>
-<div class="line"><span class="lineno">  288</span>            <span class="keywordflow">if</span> (DebugFlags.ALLOW_KNOWN_HULLMOD_DROPS) known = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  289</span>            <span class="keywordflow">if</span> (known || curr.isHidden() || curr.isHiddenEverywhere() || curr.hasTag(Tags.HULLMOD_NO_DROP)) {</div>
-<div class="line"><span class="lineno">  290</span>                iter.remove();</div>
-<div class="line"><span class="lineno">  291</span>                <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  292</span>            }</div>
-<div class="line"><span class="lineno">  293</span>        }</div>
-<div class="line"><span class="lineno">  294</span>        </div>
-<div class="line"><span class="lineno">  295</span>        <span class="keywordflow">if</span> (tier &gt;= 0) {</div>
-<div class="line"><span class="lineno">  296</span>            iter = specs.iterator();</div>
-<div class="line"><span class="lineno">  297</span>            <span class="keywordflow">while</span> (iter.hasNext()) {</div>
-<div class="line"><span class="lineno">  298</span>                HullModSpecAPI curr = iter.next();</div>
-<div class="line"><span class="lineno">  299</span>                <span class="keywordflow">if</span> (curr.getTier() != tier) iter.remove();</div>
-<div class="line"><span class="lineno">  300</span>            }</div>
-<div class="line"><span class="lineno">  301</span>        }</div>
-<div class="line"><span class="lineno">  302</span>        </div>
-<div class="line"><span class="lineno">  303</span>        <span class="keywordflow">if</span> (!tags.isEmpty()) {</div>
-<div class="line"><span class="lineno">  304</span>            iter = specs.iterator();</div>
-<div class="line"><span class="lineno">  305</span>            <span class="keywordflow">while</span> (iter.hasNext()) {</div>
-<div class="line"><span class="lineno">  306</span>                HullModSpecAPI curr = iter.next();</div>
-<div class="line"><span class="lineno">  307</span>                <span class="keywordflow">for</span> (String tag : tags) {</div>
-<div class="line"><span class="lineno">  308</span>                    <span class="keywordtype">boolean</span> not = tag.startsWith(<span class="stringliteral">&quot;!&quot;</span>);</div>
-<div class="line"><span class="lineno">  309</span>                    tag = not ? tag.substring(1) : tag;</div>
-<div class="line"><span class="lineno">  310</span>                    <span class="keywordtype">boolean</span> has = curr.hasTag(tag);</div>
-<div class="line"><span class="lineno">  311</span>                    <span class="keywordflow">if</span> (not == has) {</div>
-<div class="line"><span class="lineno">  312</span>                        iter.remove();</div>
-<div class="line"><span class="lineno">  313</span>                        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  314</span>                    }</div>
-<div class="line"><span class="lineno">  315</span>                }</div>
-<div class="line"><span class="lineno">  316</span>            }</div>
-<div class="line"><span class="lineno">  317</span>        }</div>
-<div class="line"><span class="lineno">  318</span>        </div>
-<div class="line"><span class="lineno">  319</span>        WeightedRandomPicker&lt;HullModSpecAPI&gt; picker = <span class="keyword">new</span> WeightedRandomPicker&lt;HullModSpecAPI&gt;(random);</div>
-<div class="line"><span class="lineno">  320</span>        <span class="keywordflow">for</span> (HullModSpecAPI <a class="code hl_variable" href="../../da/d11/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BaseSpecialItemPlugin.html#aa8bb41a5717a81aa5d8be0bda2a9fc47">spec</a> : specs) {</div>
-<div class="line"><span class="lineno">  321</span>            picker.add(<a class="code hl_variable" href="../../da/d11/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BaseSpecialItemPlugin.html#aa8bb41a5717a81aa5d8be0bda2a9fc47">spec</a>, 1f * <a class="code hl_variable" href="../../da/d11/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BaseSpecialItemPlugin.html#aa8bb41a5717a81aa5d8be0bda2a9fc47">spec</a>.<a class="code hl_function" href="../../de/d3f/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SpecialItemSpecAPI.html#a82cda307f45da2d479ef30810a7c2029">getRarity</a>());</div>
-<div class="line"><span class="lineno">  322</span>        }</div>
-<div class="line"><span class="lineno">  323</span>        HullModSpecAPI pick = picker.pick();</div>
-<div class="line"><span class="lineno">  324</span>        <span class="keywordflow">if</span> (pick == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  325</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  326</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  327</span>            <span class="keywordflow">return</span> pick.getId(); </div>
-<div class="line"><span class="lineno">  328</span>        }</div>
-<div class="line"><span class="lineno">  329</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SpecialItemSpecAPI_html_a82cda307f45da2d479ef30810a7c2029"><div class="ttname"><a href="../../de/d3f/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SpecialItemSpecAPI.html#a82cda307f45da2d479ef30810a7c2029">com.fs.starfarer.api.campaign.SpecialItemSpecAPI.getRarity</a></div><div class="ttdeci">float getRarity()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a68ed4fad769dee0ed2ac873f47fd1279" name="a68ed4fad769dee0ed2ac873f47fd1279"></a>
@@ -882,10 +596,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d11/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BaseSpecialItemPlugin.html#a7e13ef1d77ed5dd763ee3d072a807bf7">com.fs.starfarer.api.campaign.impl.items.BaseSpecialItemPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d23/ModSpecItemPlugin_8java_source.html#l00248">248</a> of file <a class="el" href="../../d5/d23/ModSpecItemPlugin_8java_source.html">ModSpecItemPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  248</span>                                                    {</div>
-<div class="line"><span class="lineno">  249</span>        <span class="keywordflow">return</span> !Global.getSector().getCharacterData().knowsHullMod(modId);</div>
-<div class="line"><span class="lineno">  250</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

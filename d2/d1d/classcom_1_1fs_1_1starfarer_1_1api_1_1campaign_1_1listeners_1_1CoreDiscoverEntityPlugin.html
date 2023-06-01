@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -140,42 +141,7 @@ Public Member Functions</h2></td></tr>
 <p>Implements <a class="el" href="../../dd/d8f/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1DiscoverEntityPlugin.html#ac833da0892bdf15ae3bd09e2bfa99834">com.fs.starfarer.api.campaign.listeners.DiscoverEntityPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d60/CoreDiscoverEntityPlugin_8java_source.html#l00014">14</a> of file <a class="el" href="../../d8/d60/CoreDiscoverEntityPlugin_8java_source.html">CoreDiscoverEntityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   14</span>                                                         {</div>
-<div class="line"><span class="lineno">   15</span> </div>
-<div class="line"><span class="lineno">   16</span>        </div>
-<div class="line"><span class="lineno">   17</span>        entity.setDiscoverable(<span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   18</span>        entity.setSensorProfile(<span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   19</span>        </div>
-<div class="line"><span class="lineno">   20</span>        <span class="keywordflow">if</span> (entity.hasTag(Tags.WARNING_BEACON)) {</div>
-<div class="line"><span class="lineno">   21</span>            WarningBeaconIntel intel = <span class="keyword">new</span> WarningBeaconIntel(entity);</div>
-<div class="line"><span class="lineno">   22</span>            Global.getSector().getIntelManager().addIntel(intel);</div>
-<div class="line"><span class="lineno">   23</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   24</span>            Color c = Global.getSector().getPlayerFaction().getBaseUIColor();</div>
-<div class="line"><span class="lineno">   25</span>            MessageIntel intel = <span class="keyword">new</span> MessageIntel(<span class="stringliteral">&quot;Discovered: &quot;</span> + entity.getName(),</div>
-<div class="line"><span class="lineno">   26</span>                                                  c, <span class="keyword">new</span> String[] {entity.getName()}, c);</div>
-<div class="line"><span class="lineno">   27</span>            intel.setSound(<span class="stringliteral">&quot;ui_discovered_entity&quot;</span>);</div>
-<div class="line"><span class="lineno">   28</span>            intel.setIcon(Global.getSettings().getSpriteName(<span class="stringliteral">&quot;intel&quot;</span>, <span class="stringliteral">&quot;discovered_entity&quot;</span>));</div>
-<div class="line"><span class="lineno">   29</span>            Global.getSector().getCampaignUI().addMessage(intel);</div>
-<div class="line"><span class="lineno">   30</span>        }</div>
-<div class="line"><span class="lineno">   31</span>        </div>
-<div class="line"><span class="lineno">   32</span> </div>
-<div class="line"><span class="lineno">   33</span>        </div>
-<div class="line"><span class="lineno">   34</span>        <span class="keywordtype">float</span> xp = 0;</div>
-<div class="line"><span class="lineno">   35</span>        <span class="keywordflow">if</span> (entity.hasDiscoveryXP()) {</div>
-<div class="line"><span class="lineno">   36</span>            xp = entity.getDiscoveryXP();</div>
-<div class="line"><span class="lineno">   37</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (entity.getCustomEntityType() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   38</span>            SalvageEntityGenDataSpec salvageSpec = (SalvageEntityGenDataSpec) Global.getSettings().getSpec(SalvageEntityGenDataSpec.class, entity.getCustomEntityType(), <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   39</span>            <span class="keywordflow">if</span> (salvageSpec != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   40</span>                xp = salvageSpec.getXpDiscover();</div>
-<div class="line"><span class="lineno">   41</span>            }</div>
-<div class="line"><span class="lineno">   42</span>        }</div>
-<div class="line"><span class="lineno">   43</span>        <span class="keywordflow">if</span> (xp &gt; 0) {</div>
-<div class="line"><span class="lineno">   44</span>            Global.getSector().getPlayerPerson().getStats().addXP((<span class="keywordtype">long</span>) xp);</div>
-<div class="line"><span class="lineno">   45</span>        }</div>
-<div class="line"><span class="lineno">   46</span>        </div>
-<div class="line"><span class="lineno">   47</span>        ListenerUtil.reportEntityDiscovered(entity);</div>
-<div class="line"><span class="lineno">   48</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a34c527d12a84ed171ccaa1c9a2f0cbc0" name="a34c527d12a84ed171ccaa1c9a2f0cbc0"></a>
@@ -195,10 +161,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d60/CoreDiscoverEntityPlugin_8java_source.html#l00052">52</a> of file <a class="el" href="../../d8/d60/CoreDiscoverEntityPlugin_8java_source.html">CoreDiscoverEntityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   52</span>                                                  {</div>
-<div class="line"><span class="lineno">   53</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">   54</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

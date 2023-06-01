@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -174,14 +175,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/d5b/LeashScript_8java_source.html#l00020">20</a> of file <a class="el" href="../../de/d5b/LeashScript_8java_source.html">LeashScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   20</span>                                                                                                                        {</div>
-<div class="line"><span class="lineno">   21</span>        this.fleet = fleet;</div>
-<div class="line"><span class="lineno">   22</span>        this.range = range;</div>
-<div class="line"><span class="lineno">   23</span>        this.onBroken = onBroken;</div>
-<div class="line"><span class="lineno">   24</span>        this.anchor = anchor;</div>
-<div class="line"><span class="lineno">   25</span>        this.offset = offset;</div>
-<div class="line"><span class="lineno">   26</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -210,37 +204,7 @@ Public Member Functions</h2></td></tr>
 <p>Implements <a class="el" href="../../d7/d63/interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html#a3a97090ca8cfdc230e9ad7e633407af6">com.fs.starfarer.api.EveryFrameScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../de/d5b/LeashScript_8java_source.html#l00029">29</a> of file <a class="el" href="../../de/d5b/LeashScript_8java_source.html">LeashScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   29</span>                                      {</div>
-<div class="line"><span class="lineno">   30</span>        <span class="keywordflow">if</span> (fleet.<a class="code hl_function" href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a07c10e046f23b4bb24b32eeadbeab5f9">getContainingLocation</a>() != anchor.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a06362480c6a17326650354460c6d7442">getContainingLocation</a>()) {</div>
-<div class="line"><span class="lineno">   31</span>            broken = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   32</span>            onBroken.<a class="code hl_function" href="../../dd/dc1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1Script.html#a7e737390a93b3bcb11608cb64b30a30d">run</a>();</div>
-<div class="line"><span class="lineno">   33</span>        }</div>
-<div class="line"><span class="lineno">   34</span>        <span class="keywordflow">if</span> (broken) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   35</span>        </div>
-<div class="line"><span class="lineno">   36</span>        </div>
-<div class="line"><span class="lineno">   37</span>        Vector2f dest = <span class="keyword">new</span> Vector2f(anchor.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#aedf9cd58593dcb6afd4d488bb017eafc">getLocation</a>().x + offset.x, anchor.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#aedf9cd58593dcb6afd4d488bb017eafc">getLocation</a>().y + offset.y);</div>
-<div class="line"><span class="lineno">   38</span>        <span class="keywordtype">float</span> distToDest = Misc.getDistance(dest, fleet.<a class="code hl_function" href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a059da851c050a5b1c104809f4e700bef">getLocation</a>());</div>
-<div class="line"><span class="lineno">   39</span>        fleet.<a class="code hl_function" href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a7e8b31b84e48922c1b5b4cded99634db">setMoveDestination</a>(dest.x, dest.y);</div>
-<div class="line"><span class="lineno">   40</span>        <span class="keywordflow">if</span> (distToDest &lt; 2) {</div>
-<div class="line"><span class="lineno">   41</span>            fleet.<a class="code hl_function" href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#ace05f3858a77d9f164ed7fc24590440f">setLocation</a>(dest.x, dest.y);</div>
-<div class="line"><span class="lineno">   42</span>        }</div>
-<div class="line"><span class="lineno">   43</span>        </div>
-<div class="line"><span class="lineno">   44</span>        <span class="keywordtype">float</span> dist = Misc.getDistance(anchor.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#aedf9cd58593dcb6afd4d488bb017eafc">getLocation</a>(), fleet.<a class="code hl_function" href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a059da851c050a5b1c104809f4e700bef">getLocation</a>());</div>
-<div class="line"><span class="lineno">   45</span>        <span class="keywordflow">if</span> (dist &gt; range + anchor.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a6a79c7cc3a0ec97f24a9de5f6f904d96">getRadius</a>() + fleet.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a6a79c7cc3a0ec97f24a9de5f6f904d96">getRadius</a>()) {</div>
-<div class="line"><span class="lineno">   46</span>            broken = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   47</span>            onBroken.<a class="code hl_function" href="../../dd/dc1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1Script.html#a7e737390a93b3bcb11608cb64b30a30d">run</a>();</div>
-<div class="line"><span class="lineno">   48</span>        }</div>
-<div class="line"><span class="lineno">   49</span>        </div>
-<div class="line"><span class="lineno">   50</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1Script_html_a7e737390a93b3bcb11608cb64b30a30d"><div class="ttname"><a href="../../dd/dc1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1Script.html#a7e737390a93b3bcb11608cb64b30a30d">com.fs.starfarer.api.Script.run</a></div><div class="ttdeci">void run()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI_html_a059da851c050a5b1c104809f4e700bef"><div class="ttname"><a href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a059da851c050a5b1c104809f4e700bef">com.fs.starfarer.api.campaign.CampaignFleetAPI.getLocation</a></div><div class="ttdeci">Vector2f getLocation()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI_html_a07c10e046f23b4bb24b32eeadbeab5f9"><div class="ttname"><a href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a07c10e046f23b4bb24b32eeadbeab5f9">com.fs.starfarer.api.campaign.CampaignFleetAPI.getContainingLocation</a></div><div class="ttdeci">LocationAPI getContainingLocation()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI_html_a7e8b31b84e48922c1b5b4cded99634db"><div class="ttname"><a href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a7e8b31b84e48922c1b5b4cded99634db">com.fs.starfarer.api.campaign.CampaignFleetAPI.setMoveDestination</a></div><div class="ttdeci">void setMoveDestination(float x, float y)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI_html_ace05f3858a77d9f164ed7fc24590440f"><div class="ttname"><a href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#ace05f3858a77d9f164ed7fc24590440f">com.fs.starfarer.api.campaign.CampaignFleetAPI.setLocation</a></div><div class="ttdeci">void setLocation(float x, float y)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_a06362480c6a17326650354460c6d7442"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a06362480c6a17326650354460c6d7442">com.fs.starfarer.api.campaign.SectorEntityToken.getContainingLocation</a></div><div class="ttdeci">LocationAPI getContainingLocation()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_a6a79c7cc3a0ec97f24a9de5f6f904d96"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a6a79c7cc3a0ec97f24a9de5f6f904d96">com.fs.starfarer.api.campaign.SectorEntityToken.getRadius</a></div><div class="ttdeci">float getRadius()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_aedf9cd58593dcb6afd4d488bb017eafc"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#aedf9cd58593dcb6afd4d488bb017eafc">com.fs.starfarer.api.campaign.SectorEntityToken.getLocation</a></div><div class="ttdeci">Vector2f getLocation()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a003df6088136df07738a736d39c3a674" name="a003df6088136df07738a736d39c3a674"></a>
@@ -262,10 +226,7 @@ Public Member Functions</h2></td></tr>
 <p>Implements <a class="el" href="../../d7/d63/interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html#a2b9a206acf99d1cdc1511885d14bb58c">com.fs.starfarer.api.EveryFrameScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../de/d5b/LeashScript_8java_source.html#l00052">52</a> of file <a class="el" href="../../de/d5b/LeashScript_8java_source.html">LeashScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   52</span>                            {</div>
-<div class="line"><span class="lineno">   53</span>        <span class="keywordflow">return</span> broken;</div>
-<div class="line"><span class="lineno">   54</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a363218da35816f1cb24f443e448742f7" name="a363218da35816f1cb24f443e448742f7"></a>
@@ -287,10 +248,7 @@ Public Member Functions</h2></td></tr>
 <p>Implements <a class="el" href="../../d7/d63/interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html#a6397d6c1c19a4dd0b58099219c0e0173">com.fs.starfarer.api.EveryFrameScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../de/d5b/LeashScript_8java_source.html#l00056">56</a> of file <a class="el" href="../../de/d5b/LeashScript_8java_source.html">LeashScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   56</span>                                    {</div>
-<div class="line"><span class="lineno">   57</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   58</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -177,45 +178,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="../../d0/d5c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1CommandPlugin.html#a72a44c5127e60136b87d3b37613fd0e0">com.fs.starfarer.api.campaign.rules.CommandPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d06/RepairAll_8java_source.html#l00024">24</a> of file <a class="el" href="../../d0/d06/RepairAll_8java_source.html">RepairAll.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   24</span>                                                                                                                             {</div>
-<div class="line"><span class="lineno">   25</span>        CampaignFleetAPI playerFleet = Global.getSector().getPlayerFleet();</div>
-<div class="line"><span class="lineno">   26</span>        </div>
-<div class="line"><span class="lineno">   27</span><span class="comment">//      TextPanelAPI textPanel = dialog.getTextPanel();</span></div>
-<div class="line"><span class="lineno">   28</span>        </div>
-<div class="line"><span class="lineno">   29</span><span class="comment">//      textPanel.addParagraph(getString(&quot;repair&quot;));</span></div>
-<div class="line"><span class="lineno">   30</span>        </div>
-<div class="line"><span class="lineno">   31</span>        <span class="keywordtype">boolean</span> useSupplies = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   32</span>        <span class="keywordflow">if</span> (params.size() &gt;= 1) {</div>
-<div class="line"><span class="lineno">   33</span>            useSupplies = params.get(0).getBoolean(memoryMap);</div>
-<div class="line"><span class="lineno">   34</span>        }</div>
-<div class="line"><span class="lineno">   35</span>        </div>
-<div class="line"><span class="lineno">   36</span>        <span class="keywordtype">float</span> supplies = playerFleet.getCargo().getSupplies();</div>
-<div class="line"><span class="lineno">   37</span>        <span class="keywordtype">float</span> needed = playerFleet.getLogistics().getTotalRepairAndRecoverySupplyCost();</div>
-<div class="line"><span class="lineno">   38</span>        <span class="keywordflow">if</span> (needed &gt; 0) needed = Math.max(1, Math.round(needed));</div>
-<div class="line"><span class="lineno">   39</span>        </div>
-<div class="line"><span class="lineno">   40</span><span class="comment">//      memoryMap.get(&quot;global&quot;).set(&quot;$repairSupplyCost&quot;, (int) needed);</span></div>
-<div class="line"><span class="lineno">   41</span>        </div>
-<div class="line"><span class="lineno">   42</span><span class="comment">//      textPanel.highlightLastInLastPara(&quot;&quot; + (int) needed, HIGHLIGHT_COLOR);</span></div>
-<div class="line"><span class="lineno">   43</span>        </div>
-<div class="line"><span class="lineno">   44</span>        <span class="keywordflow">for</span> (FleetMemberAPI member : playerFleet.getFleetData().getMembersListCopy()) {</div>
-<div class="line"><span class="lineno">   45</span>            <span class="keywordflow">if</span> (member.canBeRepaired() || (member.isFighterWing() &amp;&amp; !member.getRepairTracker().isSuspendRepairs())) {</div>
-<div class="line"><span class="lineno">   46</span>                member.getStatus().repairFully();</div>
-<div class="line"><span class="lineno">   47</span>                <span class="keywordtype">float</span> max = member.getRepairTracker().getMaxCR();</div>
-<div class="line"><span class="lineno">   48</span>                <span class="keywordtype">float</span> curr = member.getRepairTracker().getBaseCR();</div>
-<div class="line"><span class="lineno">   49</span>                <span class="keywordflow">if</span> (max &gt; curr) {</div>
-<div class="line"><span class="lineno">   50</span>                    member.getRepairTracker().applyCREvent(max - curr, <span class="stringliteral">&quot;Repaired at dockyard&quot;</span>);</div>
-<div class="line"><span class="lineno">   51</span>                }</div>
-<div class="line"><span class="lineno">   52</span>            }</div>
-<div class="line"><span class="lineno">   53</span>        }</div>
-<div class="line"><span class="lineno">   54</span>        </div>
-<div class="line"><span class="lineno">   55</span>        <span class="keywordflow">if</span> (needed &gt; 0 &amp;&amp; useSupplies) {</div>
-<div class="line"><span class="lineno">   56</span>            playerFleet.getCargo().removeSupplies(needed);</div>
-<div class="line"><span class="lineno">   57</span>            playerFleet.getLogistics().updateRepairUtilizationForUI();</div>
-<div class="line"><span class="lineno">   58</span>        }</div>
-<div class="line"><span class="lineno">   59</span>        </div>
-<div class="line"><span class="lineno">   60</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   61</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

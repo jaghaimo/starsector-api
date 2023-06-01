@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -179,11 +180,7 @@ Static Public Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d0/d01/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1AbandonMarketPlugin.html#a6745ec6abe91cc76b021273f4a9455b0">com.fs.starfarer.api.campaign.econ.AbandonMarketPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d06/AbandonMarketPluginImpl_8java_source.html#l00043">43</a> of file <a class="el" href="../../dc/d06/AbandonMarketPluginImpl_8java_source.html">AbandonMarketPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   43</span>                                                             {</div>
-<div class="line"><span class="lineno">   44</span>        <span class="keywordflow">return</span> !<a class="code hl_function" href="../../db/d5e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AbandonMarketPluginImpl.html#a3ff1a3285db1eceb7d1cc9f1f3fc4a60">canAbandon</a>(market);</div>
-<div class="line"><span class="lineno">   45</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AbandonMarketPluginImpl_html_a3ff1a3285db1eceb7d1cc9f1f3fc4a60"><div class="ttname"><a href="../../db/d5e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AbandonMarketPluginImpl.html#a3ff1a3285db1eceb7d1cc9f1f3fc4a60">com.fs.starfarer.api.impl.campaign.AbandonMarketPluginImpl.canAbandon</a></div><div class="ttdeci">boolean canAbandon(MarketAPI market)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d06/AbandonMarketPluginImpl_8java_source.html#l00025">AbandonMarketPluginImpl.java:25</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae40246b370901c3ff84e40007a43fbf7" name="ae40246b370901c3ff84e40007a43fbf7"></a>
@@ -205,60 +202,7 @@ Static Public Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d0/d01/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1AbandonMarketPlugin.html#a968b81e0f878d5834e34c43509f71722">com.fs.starfarer.api.campaign.econ.AbandonMarketPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d06/AbandonMarketPluginImpl_8java_source.html#l00102">102</a> of file <a class="el" href="../../dc/d06/AbandonMarketPluginImpl_8java_source.html">AbandonMarketPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  102</span>                                                   {</div>
-<div class="line"><span class="lineno">  103</span>        </div>
-<div class="line"><span class="lineno">  104</span>        <span class="keywordtype">int</span> cost = <a class="code hl_function" href="../../db/d5e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AbandonMarketPluginImpl.html#a03db3f2fa43472b62aa9d44155543b35">getAbandonCost</a>(market);</div>
-<div class="line"><span class="lineno">  105</span>        <span class="keywordtype">int</span> refund = Misc.computeTotalShutdownRefund(market);</div>
-<div class="line"><span class="lineno">  106</span>        </div>
-<div class="line"><span class="lineno">  107</span>        <span class="keywordtype">int</span> diff = cost - refund;</div>
-<div class="line"><span class="lineno">  108</span>        </div>
-<div class="line"><span class="lineno">  109</span>        Global.getSector().getPlayerFleet().getCargo().getCredits().subtract(diff);</div>
-<div class="line"><span class="lineno">  110</span>        </div>
-<div class="line"><span class="lineno">  111</span>        <span class="keywordflow">if</span> (diff &gt; 0) {</div>
-<div class="line"><span class="lineno">  112</span>            Global.getSector().getCampaignUI().getMessageDisplay().addMessage(</div>
-<div class="line"><span class="lineno">  113</span>                    String.format(<span class="stringliteral">&quot;Spent %s&quot;</span>, Misc.getDGSCredits(diff)), </div>
-<div class="line"><span class="lineno">  114</span>                    Misc.getTooltipTitleAndLightHighlightColor(), Misc.getDGSCredits(diff), Misc.getHighlightColor());</div>
-<div class="line"><span class="lineno">  115</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (diff &lt; 0) {</div>
-<div class="line"><span class="lineno">  116</span>            Global.getSector().getCampaignUI().getMessageDisplay().addMessage(</div>
-<div class="line"><span class="lineno">  117</span>                    String.format(<span class="stringliteral">&quot;Received %s&quot;</span>, Misc.getDGSCredits(-diff)), </div>
-<div class="line"><span class="lineno">  118</span>                    Misc.getTooltipTitleAndLightHighlightColor(), Misc.getDGSCredits(-diff), Misc.getHighlightColor());</div>
-<div class="line"><span class="lineno">  119</span>        }</div>
-<div class="line"><span class="lineno">  120</span>        </div>
-<div class="line"><span class="lineno">  121</span>        DecivTracker.removeColony(market, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  122</span>        </div>
-<div class="line"><span class="lineno">  123</span>        ListenerUtil.reportPlayerAbandonedColony(market);</div>
-<div class="line"><span class="lineno">  124</span>        </div>
-<div class="line"><span class="lineno">  125</span>        InteractionDialogAPI dialog = Global.getSector().getCampaignUI().getCurrentInteractionDialog();</div>
-<div class="line"><span class="lineno">  126</span>        <span class="keywordflow">if</span> (dialog != <span class="keyword">null</span> &amp;&amp; dialog.getPlugin() instanceof RuleBasedDialog) {</div>
-<div class="line"><span class="lineno">  127</span>            <span class="comment">//dialog.dismiss();</span></div>
-<div class="line"><span class="lineno">  128</span>            <span class="comment">//dialog.getVisualPanel().closeCoreUI();</span></div>
-<div class="line"><span class="lineno">  129</span>            RuleBasedDialog rbd = ((RuleBasedDialog) dialog.getPlugin());</div>
-<div class="line"><span class="lineno">  130</span>            rbd.updateMemory();</div>
-<div class="line"><span class="lineno">  131</span>            market.getMemoryWithoutUpdate().unset(<span class="stringliteral">&quot;$tradeMode&quot;</span>);</div>
-<div class="line"><span class="lineno">  132</span>            <span class="keywordflow">if</span> (market.getPrimaryEntity() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  133</span>                market.getPrimaryEntity().getMemoryWithoutUpdate().unset(<span class="stringliteral">&quot;$tradeMode&quot;</span>);</div>
-<div class="line"><span class="lineno">  134</span>            }</div>
-<div class="line"><span class="lineno">  135</span>            <span class="comment">//FireBest.fire(null, dialog, rbd.getMemoryMap(), &quot;OpenInteractionDialog&quot;);</span></div>
-<div class="line"><span class="lineno">  136</span>            </div>
-<div class="line"><span class="lineno">  137</span>            <span class="keyword">new</span> ShowDefaultVisual().execute(<span class="keyword">null</span>, dialog, Misc.tokenize(<span class="stringliteral">&quot;&quot;</span>), rbd.getMemoryMap());</div>
-<div class="line"><span class="lineno">  138</span>            </div>
-<div class="line"><span class="lineno">  139</span>            <span class="comment">//FireAll.fire(null, dialog, memoryMap, &quot;MarketPostOpen&quot;);</span></div>
-<div class="line"><span class="lineno">  140</span>            dialog.getInteractionTarget().getMemoryWithoutUpdate().set(<span class="stringliteral">&quot;$menuState&quot;</span>, <span class="stringliteral">&quot;main&quot;</span>, 0);</div>
-<div class="line"><span class="lineno">  141</span>            dialog.getInteractionTarget().getMemoryWithoutUpdate().set(<span class="stringliteral">&quot;$tradeMode&quot;</span>, <span class="stringliteral">&quot;NONE&quot;</span>, 0);</div>
-<div class="line"><span class="lineno">  142</span>            dialog.getInteractionTarget().getMemoryWithoutUpdate().unset(<span class="stringliteral">&quot;$hasMarket&quot;</span>);</div>
-<div class="line"><span class="lineno">  143</span>            <span class="comment">//FireAll.fire(null, dialog, rbd.getMemoryMap(), &quot;PopulateOptions&quot;);</span></div>
-<div class="line"><span class="lineno">  144</span>            </div>
-<div class="line"><span class="lineno">  145</span>            dialog.getVisualPanel().closeCoreUI();</div>
-<div class="line"><span class="lineno">  146</span>            </div>
-<div class="line"><span class="lineno">  147</span>            rbd.updateMemory();</div>
-<div class="line"><span class="lineno">  148</span>            FireAll.fire(<span class="keyword">null</span>, dialog, rbd.getMemoryMap(), <span class="stringliteral">&quot;OpenInteractionDialog&quot;</span>);</div>
-<div class="line"><span class="lineno">  149</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  150</span>            <span class="comment">// if abandoned from command tab (rather than by interacting with colony), go back to colony list</span></div>
-<div class="line"><span class="lineno">  151</span>            Global.getSector().getCampaignUI().showCoreUITab(CoreUITabId.OUTPOSTS);</div>
-<div class="line"><span class="lineno">  152</span>        }</div>
-<div class="line"><span class="lineno">  153</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AbandonMarketPluginImpl_html_a03db3f2fa43472b62aa9d44155543b35"><div class="ttname"><a href="../../db/d5e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AbandonMarketPluginImpl.html#a03db3f2fa43472b62aa9d44155543b35">com.fs.starfarer.api.impl.campaign.AbandonMarketPluginImpl.getAbandonCost</a></div><div class="ttdeci">int getAbandonCost(MarketAPI market)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d06/AbandonMarketPluginImpl_8java_source.html#l00029">AbandonMarketPluginImpl.java:29</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a3ff1a3285db1eceb7d1cc9f1f3fc4a60" name="a3ff1a3285db1eceb7d1cc9f1f3fc4a60"></a>
@@ -280,11 +224,7 @@ Static Public Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d0/d01/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1AbandonMarketPlugin.html#a29e1a1067f932d917f1138521d635c13">com.fs.starfarer.api.campaign.econ.AbandonMarketPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d06/AbandonMarketPluginImpl_8java_source.html#l00025">25</a> of file <a class="el" href="../../dc/d06/AbandonMarketPluginImpl_8java_source.html">AbandonMarketPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   25</span>                                                {</div>
-<div class="line"><span class="lineno">   26</span>        <span class="keywordflow">return</span> market.getSize() &lt;= <a class="code hl_variable" href="../../db/d5e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AbandonMarketPluginImpl.html#ae0cf8e57ed4222cd41684756b496bab3">MAX_SIZE</a>;<span class="comment">// &amp;&amp; market.getPlanetEntity() != null;</span></div>
-<div class="line"><span class="lineno">   27</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AbandonMarketPluginImpl_html_ae0cf8e57ed4222cd41684756b496bab3"><div class="ttname"><a href="../../db/d5e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AbandonMarketPluginImpl.html#ae0cf8e57ed4222cd41684756b496bab3">com.fs.starfarer.api.impl.campaign.AbandonMarketPluginImpl.MAX_SIZE</a></div><div class="ttdeci">static int MAX_SIZE</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d06/AbandonMarketPluginImpl_8java_source.html#l00022">AbandonMarketPluginImpl.java:22</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac828201c2b3a06ab9c5f9307dd711060" name="ac828201c2b3a06ab9c5f9307dd711060"></a>
@@ -328,12 +268,7 @@ Static Public Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d0/d01/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1AbandonMarketPlugin.html#aebc805a1f00e58d824819127071bba7e">com.fs.starfarer.api.campaign.econ.AbandonMarketPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d06/AbandonMarketPluginImpl_8java_source.html#l00033">33</a> of file <a class="el" href="../../dc/d06/AbandonMarketPluginImpl_8java_source.html">AbandonMarketPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   33</span>                                                                                                                  {</div>
-<div class="line"><span class="lineno">   34</span>        info.addPara(<span class="stringliteral">&quot;Can only abandon colonies of size %s or smaller.&quot;</span>, 0f,</div>
-<div class="line"><span class="lineno">   35</span>                Misc.getNegativeHighlightColor(), Misc.getHighlightColor(),</div>
-<div class="line"><span class="lineno">   36</span>                <span class="stringliteral">&quot;&quot;</span> + <a class="code hl_variable" href="../../db/d5e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AbandonMarketPluginImpl.html#ae0cf8e57ed4222cd41684756b496bab3">MAX_SIZE</a>);</div>
-<div class="line"><span class="lineno">   37</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a05d4f445680494a50ffd7edd8b30af6b" name="a05d4f445680494a50ffd7edd8b30af6b"></a>
@@ -365,49 +300,7 @@ Static Public Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d0/d01/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1AbandonMarketPlugin.html#a1ab00ecf276bb60d6b83661f387df33b">com.fs.starfarer.api.campaign.econ.AbandonMarketPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d06/AbandonMarketPluginImpl_8java_source.html#l00048">48</a> of file <a class="el" href="../../dc/d06/AbandonMarketPluginImpl_8java_source.html">AbandonMarketPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   48</span>                                                                                   {</div>
-<div class="line"><span class="lineno">   49</span>        <span class="keywordtype">float</span> opad = 10f;</div>
-<div class="line"><span class="lineno">   50</span>        </div>
-<div class="line"><span class="lineno">   51</span>        <span class="keywordtype">int</span> cost = <a class="code hl_function" href="../../db/d5e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AbandonMarketPluginImpl.html#a03db3f2fa43472b62aa9d44155543b35">getAbandonCost</a>(market);</div>
-<div class="line"><span class="lineno">   52</span>        <span class="keywordtype">int</span> refund = Misc.computeTotalShutdownRefund(market);</div>
-<div class="line"><span class="lineno">   53</span>        <span class="keywordtype">int</span> credits = (int) Global.getSector().getPlayerFleet().getCargo().getCredits().get();</div>
-<div class="line"><span class="lineno">   54</span>        </div>
-<div class="line"><span class="lineno">   55</span>        Color h = Misc.getHighlightColor();</div>
-<div class="line"><span class="lineno">   56</span>        Color cc = h;</div>
-<div class="line"><span class="lineno">   57</span>        </div>
-<div class="line"><span class="lineno">   58</span>        String costStr = <span class="stringliteral">&quot;cost&quot;</span>;</div>
-<div class="line"><span class="lineno">   59</span>        <span class="keywordflow">if</span> (refund &gt; cost) {</div>
-<div class="line"><span class="lineno">   60</span>            costStr = <span class="stringliteral">&quot;payout&quot;</span>;</div>
-<div class="line"><span class="lineno">   61</span>        }</div>
-<div class="line"><span class="lineno">   62</span>        </div>
-<div class="line"><span class="lineno">   63</span>        <span class="keywordflow">if</span> (cost - refund &gt; credits) {</div>
-<div class="line"><span class="lineno">   64</span>            cc = Misc.getNegativeHighlightColor();</div>
-<div class="line"><span class="lineno">   65</span>        }</div>
-<div class="line"><span class="lineno">   66</span>        </div>
-<div class="line"><span class="lineno">   67</span><span class="comment">//      prompt.setParaFontDefault();</span></div>
-<div class="line"><span class="lineno">   68</span><span class="comment">//      prompt.setParaSmallInsignia();</span></div>
-<div class="line"><span class="lineno">   69</span>        </div>
-<div class="line"><span class="lineno">   70</span>        FactionAPI faction = market.getFaction();</div>
-<div class="line"><span class="lineno">   71</span><span class="comment">//      LabelAPI label = prompt.addPara(&quot;You can abandon %s, a size %s colony, for a cost of %s in evacuation expenses.&quot;, 0f,</span></div>
-<div class="line"><span class="lineno">   72</span><span class="comment">//              h, market.getName(), &quot;&quot; + market.getSize(), Misc.getDGSCredits(cost));</span></div>
-<div class="line"><span class="lineno">   73</span>        LabelAPI label = prompt.addPara(<span class="stringliteral">&quot;Abandoning %s, a size %s colony, requires %s in evacuation expenses. &quot;</span> +</div>
-<div class="line"><span class="lineno">   74</span>                <span class="stringliteral">&quot;Shutting down all operations will generate %s credits, for a net &quot;</span> + costStr + <span class="stringliteral">&quot; of %s.&quot;</span>,</div>
-<div class="line"><span class="lineno">   75</span>                0f,</div>
-<div class="line"><span class="lineno">   76</span>                h,</div>
-<div class="line"><span class="lineno">   77</span>                market.getName(), </div>
-<div class="line"><span class="lineno">   78</span>                <span class="stringliteral">&quot;&quot;</span> + market.getSize(),</div>
-<div class="line"><span class="lineno">   79</span>                Misc.getDGSCredits(cost),</div>
-<div class="line"><span class="lineno">   80</span>                Misc.getDGSCredits(refund),</div>
-<div class="line"><span class="lineno">   81</span>                Misc.getDGSCredits(Math.abs(cost - refund))</div>
-<div class="line"><span class="lineno">   82</span>                );</div>
-<div class="line"><span class="lineno">   83</span>        label.setHighlightColors(faction.getBaseUIColor(), h, h, h, cc);</div>
-<div class="line"><span class="lineno">   84</span>        </div>
-<div class="line"><span class="lineno">   85</span>        </div>
-<div class="line"><span class="lineno">   86</span>        prompt.addPara(<span class="stringliteral">&quot;You have %s credits.&quot;</span>, opad, h, Misc.getDGSCredits(credits));</div>
-<div class="line"><span class="lineno">   87</span>        </div>
-<div class="line"><span class="lineno">   88</span>        prompt.addPara(<span class="stringliteral">&quot;This action can not be undone. All items in storage and in use by industries will be lost.&quot;</span>, opad);</div>
-<div class="line"><span class="lineno">   89</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a03db3f2fa43472b62aa9d44155543b35" name="a03db3f2fa43472b62aa9d44155543b35"></a>
@@ -427,11 +320,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d06/AbandonMarketPluginImpl_8java_source.html#l00029">29</a> of file <a class="el" href="../../dc/d06/AbandonMarketPluginImpl_8java_source.html">AbandonMarketPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   29</span>                                                {</div>
-<div class="line"><span class="lineno">   30</span>        <span class="keywordflow">return</span> Math.max(1, market.getSize() - 2) * <a class="code hl_variable" href="../../db/d5e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AbandonMarketPluginImpl.html#a5d66c6b9e7f937d238536c43c64de160">COST_PER_SIZE_MINUS_2</a>;</div>
-<div class="line"><span class="lineno">   31</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AbandonMarketPluginImpl_html_a5d66c6b9e7f937d238536c43c64de160"><div class="ttname"><a href="../../db/d5e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AbandonMarketPluginImpl.html#a5d66c6b9e7f937d238536c43c64de160">com.fs.starfarer.api.impl.campaign.AbandonMarketPluginImpl.COST_PER_SIZE_MINUS_2</a></div><div class="ttdeci">static int COST_PER_SIZE_MINUS_2</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d06/AbandonMarketPluginImpl_8java_source.html#l00023">AbandonMarketPluginImpl.java:23</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab86b9ae2098281509b2f308b0e2dd445" name="ab86b9ae2098281509b2f308b0e2dd445"></a>
@@ -453,10 +342,7 @@ Static Public Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d0/d01/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1AbandonMarketPlugin.html#ad171008f42774c31e9c89d3220013fc5">com.fs.starfarer.api.campaign.econ.AbandonMarketPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d06/AbandonMarketPluginImpl_8java_source.html#l00098">98</a> of file <a class="el" href="../../dc/d06/AbandonMarketPluginImpl_8java_source.html">AbandonMarketPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   98</span>                                                              {</div>
-<div class="line"><span class="lineno">   99</span>        <span class="keywordflow">return</span> 550f;</div>
-<div class="line"><span class="lineno">  100</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a098dd5029df3e94ee12f10fafb019d60" name="a098dd5029df3e94ee12f10fafb019d60"></a>
@@ -478,10 +364,7 @@ Static Public Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d0/d01/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1AbandonMarketPlugin.html#a086d6f5927025edb8bc2af02bbb67925">com.fs.starfarer.api.campaign.econ.AbandonMarketPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d06/AbandonMarketPluginImpl_8java_source.html#l00039">39</a> of file <a class="el" href="../../dc/d06/AbandonMarketPluginImpl_8java_source.html">AbandonMarketPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   39</span>                                                                      {</div>
-<div class="line"><span class="lineno">   40</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   41</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a973edad89f30b265df0a8bfc3abef74a" name="a973edad89f30b265df0a8bfc3abef74a"></a>
@@ -503,13 +386,7 @@ Static Public Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d0/d01/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1AbandonMarketPlugin.html#ac17b3d701b4dfd850b4b5f51433e045e">com.fs.starfarer.api.campaign.econ.AbandonMarketPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d06/AbandonMarketPluginImpl_8java_source.html#l00091">91</a> of file <a class="el" href="../../dc/d06/AbandonMarketPluginImpl_8java_source.html">AbandonMarketPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   91</span>                                                      {</div>
-<div class="line"><span class="lineno">   92</span>        <span class="keywordtype">int</span> cost = <a class="code hl_function" href="../../db/d5e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AbandonMarketPluginImpl.html#a03db3f2fa43472b62aa9d44155543b35">getAbandonCost</a>(market);</div>
-<div class="line"><span class="lineno">   93</span>        <span class="keywordtype">int</span> refund = Misc.computeTotalShutdownRefund(market);</div>
-<div class="line"><span class="lineno">   94</span>        </div>
-<div class="line"><span class="lineno">   95</span>        <span class="keywordflow">return</span> Global.getSector().getPlayerFleet().getCargo().getCredits().get() &gt;= (cost - refund);</div>
-<div class="line"><span class="lineno">   96</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

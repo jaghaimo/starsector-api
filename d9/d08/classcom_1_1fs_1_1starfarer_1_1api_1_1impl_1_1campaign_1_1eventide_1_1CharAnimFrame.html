@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -183,32 +184,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d63/CharAnimFrame_8java_source.html#l00051">51</a> of file <a class="el" href="../../dd/d63/CharAnimFrame_8java_source.html">CharAnimFrame.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   51</span>                                    {</div>
-<div class="line"><span class="lineno">   52</span>        <span class="keywordflow">try</span> {</div>
-<div class="line"><span class="lineno">   53</span>            CharAnimFrame copy = (CharAnimFrame) super.clone();</div>
-<div class="line"><span class="lineno">   54</span>            copy.move = <span class="keyword">new</span> Vector2f(<a class="code hl_variable" href="../../d9/d08/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1CharAnimFrame.html#a06c2e63803373879569a2d536fad148c">move</a>);</div>
-<div class="line"><span class="lineno">   55</span>            copy.attackArea = <span class="keyword">new</span> ArrayList&lt;HitArea&gt;();</div>
-<div class="line"><span class="lineno">   56</span>            <span class="keywordflow">for</span> (HitArea curr : <a class="code hl_variable" href="../../d9/d08/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1CharAnimFrame.html#a345ca1b36ae1c0a6b97be5718c393ed6">attackArea</a>) {</div>
-<div class="line"><span class="lineno">   57</span>                copy.attackArea.add(curr.clone());</div>
-<div class="line"><span class="lineno">   58</span>            }</div>
-<div class="line"><span class="lineno">   59</span>            copy.blockArea = <span class="keyword">new</span> ArrayList&lt;HitArea&gt;();</div>
-<div class="line"><span class="lineno">   60</span>            <span class="keywordflow">for</span> (HitArea curr : <a class="code hl_variable" href="../../d9/d08/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1CharAnimFrame.html#a4fbae499bcd95d52bddcd6be4ac7b773">blockArea</a>) {</div>
-<div class="line"><span class="lineno">   61</span>                copy.blockArea.add(curr.clone());</div>
-<div class="line"><span class="lineno">   62</span>            }</div>
-<div class="line"><span class="lineno">   63</span>            copy.hittableArea = <span class="keyword">new</span> ArrayList&lt;HitArea&gt;();</div>
-<div class="line"><span class="lineno">   64</span>            <span class="keywordflow">for</span> (HitArea curr : <a class="code hl_variable" href="../../d9/d08/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1CharAnimFrame.html#a954ac7abb6028ecf35718f48328b7c40">hittableArea</a>) {</div>
-<div class="line"><span class="lineno">   65</span>                copy.hittableArea.add(curr.clone());</div>
-<div class="line"><span class="lineno">   66</span>            }</div>
-<div class="line"><span class="lineno">   67</span>            <span class="keywordflow">return</span> copy;</div>
-<div class="line"><span class="lineno">   68</span>        } <span class="keywordflow">catch</span> (CloneNotSupportedException e) {</div>
-<div class="line"><span class="lineno">   69</span>            <span class="keywordflow">throw</span> <span class="keyword">new</span> RuntimeException(e);</div>
-<div class="line"><span class="lineno">   70</span>        }</div>
-<div class="line"><span class="lineno">   71</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1CharAnimFrame_html_a06c2e63803373879569a2d536fad148c"><div class="ttname"><a href="../../d9/d08/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1CharAnimFrame.html#a06c2e63803373879569a2d536fad148c">com.fs.starfarer.api.impl.campaign.eventide.CharAnimFrame.move</a></div><div class="ttdeci">Vector2f move</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d63/CharAnimFrame_8java_source.html#l00012">CharAnimFrame.java:12</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1CharAnimFrame_html_a345ca1b36ae1c0a6b97be5718c393ed6"><div class="ttname"><a href="../../d9/d08/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1CharAnimFrame.html#a345ca1b36ae1c0a6b97be5718c393ed6">com.fs.starfarer.api.impl.campaign.eventide.CharAnimFrame.attackArea</a></div><div class="ttdeci">List&lt; HitArea &gt; attackArea</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d63/CharAnimFrame_8java_source.html#l00015">CharAnimFrame.java:15</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1CharAnimFrame_html_a4fbae499bcd95d52bddcd6be4ac7b773"><div class="ttname"><a href="../../d9/d08/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1CharAnimFrame.html#a4fbae499bcd95d52bddcd6be4ac7b773">com.fs.starfarer.api.impl.campaign.eventide.CharAnimFrame.blockArea</a></div><div class="ttdeci">List&lt; HitArea &gt; blockArea</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d63/CharAnimFrame_8java_source.html#l00016">CharAnimFrame.java:16</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1CharAnimFrame_html_a954ac7abb6028ecf35718f48328b7c40"><div class="ttname"><a href="../../d9/d08/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1CharAnimFrame.html#a954ac7abb6028ecf35718f48328b7c40">com.fs.starfarer.api.impl.campaign.eventide.CharAnimFrame.hittableArea</a></div><div class="ttdeci">List&lt; HitArea &gt; hittableArea</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d63/CharAnimFrame_8java_source.html#l00014">CharAnimFrame.java:14</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab5b48907e73007a1f972ac50b0d68432" name="ab5b48907e73007a1f972ac50b0d68432"></a>
@@ -238,16 +214,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d63/CharAnimFrame_8java_source.html#l00032">32</a> of file <a class="el" href="../../dd/d63/CharAnimFrame_8java_source.html">CharAnimFrame.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   32</span>                                            {</div>
-<div class="line"><span class="lineno">   33</span>        HitArea area = <span class="keyword">new</span> HitArea();</div>
-<div class="line"><span class="lineno">   34</span>        area.y = -<a class="code hl_variable" href="../../d9/d08/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1CharAnimFrame.html#a2b0cfd96e7c55285bbf082b229def504">height</a>/2f;</div>
-<div class="line"><span class="lineno">   35</span>        area.x = x;</div>
-<div class="line"><span class="lineno">   36</span>        area.h = <a class="code hl_variable" href="../../d9/d08/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1CharAnimFrame.html#a2b0cfd96e7c55285bbf082b229def504">height</a>;</div>
-<div class="line"><span class="lineno">   37</span>        area.w = w;</div>
-<div class="line"><span class="lineno">   38</span>        <a class="code hl_variable" href="../../d9/d08/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1CharAnimFrame.html#a345ca1b36ae1c0a6b97be5718c393ed6">attackArea</a>.add(area);</div>
-<div class="line"><span class="lineno">   39</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1CharAnimFrame_html_a2b0cfd96e7c55285bbf082b229def504"><div class="ttname"><a href="../../d9/d08/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1CharAnimFrame.html#a2b0cfd96e7c55285bbf082b229def504">com.fs.starfarer.api.impl.campaign.eventide.CharAnimFrame.height</a></div><div class="ttdeci">float height</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d63/CharAnimFrame_8java_source.html#l00011">CharAnimFrame.java:11</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a1066c6a121bf89e5423ec9bb6eba3441" name="a1066c6a121bf89e5423ec9bb6eba3441"></a>
@@ -277,15 +244,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d63/CharAnimFrame_8java_source.html#l00041">41</a> of file <a class="el" href="../../dd/d63/CharAnimFrame_8java_source.html">CharAnimFrame.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   41</span>                                           {</div>
-<div class="line"><span class="lineno">   42</span>        HitArea area = <span class="keyword">new</span> HitArea();</div>
-<div class="line"><span class="lineno">   43</span>        area.y = -<a class="code hl_variable" href="../../d9/d08/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1CharAnimFrame.html#a2b0cfd96e7c55285bbf082b229def504">height</a>/2f;</div>
-<div class="line"><span class="lineno">   44</span>        area.x = x;</div>
-<div class="line"><span class="lineno">   45</span>        area.h = <a class="code hl_variable" href="../../d9/d08/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1CharAnimFrame.html#a2b0cfd96e7c55285bbf082b229def504">height</a>;</div>
-<div class="line"><span class="lineno">   46</span>        area.w = w;</div>
-<div class="line"><span class="lineno">   47</span>        <a class="code hl_variable" href="../../d9/d08/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1CharAnimFrame.html#a4fbae499bcd95d52bddcd6be4ac7b773">blockArea</a>.add(area);</div>
-<div class="line"><span class="lineno">   48</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aaad2e08ca43895c41dc7ec7f06f676a8" name="aaad2e08ca43895c41dc7ec7f06f676a8"></a>
@@ -315,15 +274,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d63/CharAnimFrame_8java_source.html#l00023">23</a> of file <a class="el" href="../../dd/d63/CharAnimFrame_8java_source.html">CharAnimFrame.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   23</span>                                              {</div>
-<div class="line"><span class="lineno">   24</span>        HitArea area = <span class="keyword">new</span> HitArea();</div>
-<div class="line"><span class="lineno">   25</span>        area.y = -<a class="code hl_variable" href="../../d9/d08/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1CharAnimFrame.html#a2b0cfd96e7c55285bbf082b229def504">height</a>/2f;</div>
-<div class="line"><span class="lineno">   26</span>        area.x = x;</div>
-<div class="line"><span class="lineno">   27</span>        area.h = <a class="code hl_variable" href="../../d9/d08/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1CharAnimFrame.html#a2b0cfd96e7c55285bbf082b229def504">height</a>;</div>
-<div class="line"><span class="lineno">   28</span>        area.w = w;</div>
-<div class="line"><span class="lineno">   29</span>        <a class="code hl_variable" href="../../d9/d08/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1CharAnimFrame.html#a954ac7abb6028ecf35718f48328b7c40">hittableArea</a>.add(area);</div>
-<div class="line"><span class="lineno">   30</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

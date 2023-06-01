@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -302,147 +303,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBountyCreator.html#a8102762c41812bbc953e75036d8e74f9">com.fs.starfarer.api.impl.campaign.missions.cb.BaseCustomBountyCreator</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/d66/CBMerc_8java_source.html#l00046">46</a> of file <a class="el" href="../../df/d66/CBMerc_8java_source.html">CBMerc.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   46</span>                                                                                                                                  {</div>
-<div class="line"><span class="lineno">   47</span>        CustomBountyData data = <span class="keyword">new</span> CustomBountyData();</div>
-<div class="line"><span class="lineno">   48</span>        data.difficulty = difficulty;</div>
-<div class="line"><span class="lineno">   49</span>        </div>
-<div class="line"><span class="lineno">   50</span>        data.system = <a class="code hl_function" href="../../d2/dc3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CBMerc.html#a637dbf6fda3bc582dd7593485bd82ceb">findSystem</a>(createdAt, mission, difficulty, bountyStage);</div>
-<div class="line"><span class="lineno">   51</span>        <span class="keywordflow">if</span> (data.system == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   52</span>    </div>
-<div class="line"><span class="lineno">   53</span><span class="comment">//      FleetSize size = FleetSize.MEDIUM;</span></div>
-<div class="line"><span class="lineno">   54</span><span class="comment">//      FleetSize sizeWolfpack = FleetSize.MEDIUM;</span></div>
-<div class="line"><span class="lineno">   55</span><span class="comment">//      FleetQuality quality = FleetQuality.VERY_HIGH;</span></div>
-<div class="line"><span class="lineno">   56</span><span class="comment">//      FleetQuality qualityWolfpack = FleetQuality.SMOD_3;</span></div>
-<div class="line"><span class="lineno">   57</span>        </div>
-<div class="line"><span class="lineno">   58</span>        <span class="keywordtype">boolean</span> smallFleet = mission.rollProbability(<a class="code hl_variable" href="../../d2/dc3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CBMerc.html#a2c53773b1afbe0b88c2bd5a727e8201d">PROB_SMALL_FLEET</a>);</div>
-<div class="line"><span class="lineno">   59</span>        <span class="keywordtype">boolean</span> smallUsePhase = mission.rollProbability(<a class="code hl_variable" href="../../d2/dc3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CBMerc.html#a17ca12f2fc4421d74751ebce6c9be407">PROB_SOME_PHASE_IN_SMALL_FLEET</a>);</div>
-<div class="line"><span class="lineno">   60</span>        <span class="keywordtype">boolean</span> largeUsePhase = mission.rollProbability(<a class="code hl_variable" href="../../d2/dc3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CBMerc.html#a489d825aaac28bdfeb4e7487357e1f60">PROB_SOME_PHASE_IN_LARGE_FLEET</a>);</div>
-<div class="line"><span class="lineno">   61</span>        <span class="keywordtype">boolean</span> largeUseCarriers = mission.rollProbability(<a class="code hl_variable" href="../../d2/dc3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CBMerc.html#a20593953de8e0d289ae513201153d741">PROB_CARRIER_BASED_LARGE_FLEET</a>);</div>
-<div class="line"><span class="lineno">   62</span>        </div>
-<div class="line"><span class="lineno">   63</span><span class="comment">//      smallFleet = true;</span></div>
-<div class="line"><span class="lineno">   64</span><span class="comment">//      largeUseCarriers = false;</span></div>
-<div class="line"><span class="lineno">   65</span><span class="comment">//      largeUsePhase = true;</span></div>
-<div class="line"><span class="lineno">   66</span><span class="comment">//      smallUsePhase = true;</span></div>
-<div class="line"><span class="lineno">   67</span>        </div>
-<div class="line"><span class="lineno">   68</span>        <a class="code hl_function" href="../../d2/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBountyCreator.html#aaab6ac0e3b19aed7b02e6e921f9b2ca8">beginFleet</a>(mission, data);</div>
-<div class="line"><span class="lineno">   69</span>        <span class="keywordflow">if</span> (smallFleet) {</div>
-<div class="line"><span class="lineno">   70</span>            data.custom1 = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   71</span>            <span class="keywordflow">if</span> (difficulty &lt;= 6) {</div>
-<div class="line"><span class="lineno">   72</span>                mission.triggerCreateFleet(FleetSize.SMALL, FleetQuality.SMOD_3, </div>
-<div class="line"><span class="lineno">   73</span>                                           Factions.MERCENARY, FleetTypes.MERC_BOUNTY_HUNTER, data.system);</div>
-<div class="line"><span class="lineno">   74</span>                mission.triggerSetFleetMaxShipSize(1);</div>
-<div class="line"><span class="lineno">   75</span>                mission.triggerSetFleetDoctrineOther(1, 4);</div>
-<div class="line"><span class="lineno">   76</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (difficulty &lt;= 7) {</div>
-<div class="line"><span class="lineno">   77</span>                mission.triggerCreateFleet(FleetSize.MEDIUM, FleetQuality.SMOD_3, </div>
-<div class="line"><span class="lineno">   78</span>                                           Factions.MERCENARY, FleetTypes.MERC_BOUNTY_HUNTER, data.system);</div>
-<div class="line"><span class="lineno">   79</span>                mission.triggerSetFleetMaxShipSize(2);</div>
-<div class="line"><span class="lineno">   80</span>                mission.triggerSetFleetDoctrineOther(2, 4);</div>
-<div class="line"><span class="lineno">   81</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (difficulty &lt;= 8) {</div>
-<div class="line"><span class="lineno">   82</span>                mission.triggerCreateFleet(FleetSize.MEDIUM, FleetQuality.SMOD_3, </div>
-<div class="line"><span class="lineno">   83</span>                        Factions.MERCENARY, FleetTypes.MERC_BOUNTY_HUNTER, data.system);</div>
-<div class="line"><span class="lineno">   84</span>                mission.triggerSetFleetMaxShipSize(3);</div>
-<div class="line"><span class="lineno">   85</span>                mission.triggerSetFleetDoctrineOther(3, 4);</div>
-<div class="line"><span class="lineno">   86</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (difficulty &lt;= 9) {</div>
-<div class="line"><span class="lineno">   87</span>                mission.triggerCreateFleet(FleetSize.LARGE, FleetQuality.SMOD_3, </div>
-<div class="line"><span class="lineno">   88</span>                        Factions.MERCENARY, FleetTypes.MERC_BOUNTY_HUNTER, data.system);</div>
-<div class="line"><span class="lineno">   89</span>                mission.triggerSetFleetDoctrineOther(4, 4);</div>
-<div class="line"><span class="lineno">   90</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (difficulty &lt;= 10) {</div>
-<div class="line"><span class="lineno">   91</span>                mission.triggerCreateFleet(FleetSize.LARGE, FleetQuality.SMOD_3, </div>
-<div class="line"><span class="lineno">   92</span>                        Factions.MERCENARY, FleetTypes.MERC_BOUNTY_HUNTER, data.system);</div>
-<div class="line"><span class="lineno">   93</span>                mission.triggerSetFleetDoctrineOther(5, 4);</div>
-<div class="line"><span class="lineno">   94</span>            }</div>
-<div class="line"><span class="lineno">   95</span>            </div>
-<div class="line"><span class="lineno">   96</span>            mission.triggerSetFleetMaxNumShips(12);</div>
-<div class="line"><span class="lineno">   97</span>            </div>
-<div class="line"><span class="lineno">   98</span>            <span class="keywordflow">if</span> (smallUsePhase) {</div>
-<div class="line"><span class="lineno">   99</span>                <span class="keywordflow">if</span> (difficulty &lt;= 8) {</div>
-<div class="line"><span class="lineno">  100</span>                    mission.triggerSetFleetDoctrineComp(0, 0, 5);</div>
-<div class="line"><span class="lineno">  101</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  102</span>                    mission.triggerSetFleetDoctrineComp(4, 0, 3);</div>
-<div class="line"><span class="lineno">  103</span>                }</div>
-<div class="line"><span class="lineno">  104</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  105</span>                mission.triggerSetFleetDoctrineComp(5, 0, 0);</div>
-<div class="line"><span class="lineno">  106</span>            }</div>
-<div class="line"><span class="lineno">  107</span>            </div>
-<div class="line"><span class="lineno">  108</span>            mission.triggerFleetAddCommanderSkill(Skills.COORDINATED_MANEUVERS, 1);</div>
-<div class="line"><span class="lineno">  109</span>            mission.triggerFleetAddCommanderSkill(Skills.WOLFPACK_TACTICS, 1);</div>
-<div class="line"><span class="lineno">  110</span>            mission.triggerFleetAddCommanderSkill(Skills.ELECTRONIC_WARFARE, 1);</div>
-<div class="line"><span class="lineno">  111</span>            mission.triggerFleetAddCommanderSkill(Skills.FLUX_REGULATION, 1);</div>
-<div class="line"><span class="lineno">  112</span>            mission.triggerFleetAddCommanderSkill(Skills.TACTICAL_DRILLS, 1);</div>
-<div class="line"><span class="lineno">  113</span>            mission.triggerSetFleetOfficers(OfficerNum.MORE, OfficerQuality.UNUSUALLY_HIGH);</div>
-<div class="line"><span class="lineno">  114</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  115</span>            <span class="keywordflow">if</span> (difficulty &lt;= 6) {</div>
-<div class="line"><span class="lineno">  116</span>                mission.triggerCreateFleet(FleetSize.MEDIUM, FleetQuality.VERY_HIGH, </div>
-<div class="line"><span class="lineno">  117</span>                                           Factions.MERCENARY, FleetTypes.MERC_BOUNTY_HUNTER, data.system);</div>
-<div class="line"><span class="lineno">  118</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (difficulty &lt;= 7) {</div>
-<div class="line"><span class="lineno">  119</span>                mission.triggerCreateFleet(FleetSize.LARGE, FleetQuality.VERY_HIGH, </div>
-<div class="line"><span class="lineno">  120</span>                                           Factions.MERCENARY, FleetTypes.MERC_PRIVATEER, data.system);</div>
-<div class="line"><span class="lineno">  121</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (difficulty &lt;= 8) {</div>
-<div class="line"><span class="lineno">  122</span>                mission.triggerCreateFleet(FleetSize.VERY_LARGE, FleetQuality.VERY_HIGH, </div>
-<div class="line"><span class="lineno">  123</span>                                           Factions.MERCENARY, FleetTypes.MERC_ARMADA, data.system);</div>
-<div class="line"><span class="lineno">  124</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (difficulty &lt;= 9) {</div>
-<div class="line"><span class="lineno">  125</span>                mission.triggerCreateFleet(FleetSize.VERY_LARGE, FleetQuality.SMOD_1, </div>
-<div class="line"><span class="lineno">  126</span>                                           Factions.MERCENARY, FleetTypes.MERC_ARMADA, data.system);</div>
-<div class="line"><span class="lineno">  127</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (difficulty &lt;= 10) {</div>
-<div class="line"><span class="lineno">  128</span>                mission.triggerCreateFleet(FleetSize.HUGE, FleetQuality.SMOD_2, </div>
-<div class="line"><span class="lineno">  129</span>                                           Factions.MERCENARY, FleetTypes.MERC_ARMADA, data.system);</div>
-<div class="line"><span class="lineno">  130</span>            }</div>
-<div class="line"><span class="lineno">  131</span>            </div>
-<div class="line"><span class="lineno">  132</span>            <span class="keywordflow">if</span> (largeUseCarriers) {</div>
-<div class="line"><span class="lineno">  133</span>                mission.triggerSetFleetDoctrineComp(3, 4, 0);</div>
-<div class="line"><span class="lineno">  134</span>                mission.triggerFleetAddCommanderSkill(Skills.CARRIER_GROUP, 1);</div>
-<div class="line"><span class="lineno">  135</span>                mission.triggerFleetAddCommanderSkill(Skills.FIGHTER_UPLINK, 1);</div>
-<div class="line"><span class="lineno">  136</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  137</span>                <span class="keywordflow">if</span> (largeUsePhase) {</div>
-<div class="line"><span class="lineno">  138</span>                    mission.triggerSetFleetDoctrineComp(3, 0, 2);</div>
-<div class="line"><span class="lineno">  139</span>                    mission.triggerFleetAddCommanderSkill(Skills.PHASE_CORPS, 1);</div>
-<div class="line"><span class="lineno">  140</span>                    mission.triggerFleetAddCommanderSkill(Skills.FLUX_REGULATION, 1);</div>
-<div class="line"><span class="lineno">  141</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  142</span>                    mission.triggerSetFleetDoctrineComp(5, 0, 0);</div>
-<div class="line"><span class="lineno">  143</span>                    mission.triggerFleetAddCommanderSkill(Skills.COORDINATED_MANEUVERS, 1);</div>
-<div class="line"><span class="lineno">  144</span>                    mission.triggerFleetAddCommanderSkill(Skills.ELECTRONIC_WARFARE, 1);</div>
-<div class="line"><span class="lineno">  145</span>                }</div>
-<div class="line"><span class="lineno">  146</span>            }</div>
-<div class="line"><span class="lineno">  147</span>            </div>
-<div class="line"><span class="lineno">  148</span>            mission.triggerSetFleetDoctrineOther(3, 3);</div>
-<div class="line"><span class="lineno">  149</span>            mission.triggerSetFleetOfficers(OfficerNum.MORE, OfficerQuality.HIGHER);</div>
-<div class="line"><span class="lineno">  150</span>        }</div>
-<div class="line"><span class="lineno">  151</span>        </div>
-<div class="line"><span class="lineno">  152</span>        </div>
-<div class="line"><span class="lineno">  153</span>        mission.triggerSetFleetNoCommanderSkills();</div>
-<div class="line"><span class="lineno">  154</span>        mission.triggerFleetAddCommanderSkill(Skills.CREW_TRAINING, 1);</div>
-<div class="line"><span class="lineno">  155</span>        mission.triggerSetFleetFaction(Factions.INDEPENDENT);</div>
-<div class="line"><span class="lineno">  156</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d2/dc3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CBMerc.html#a314662700edee6240c49975db94f7018">isAggro</a>()) {</div>
-<div class="line"><span class="lineno">  157</span>            mission.triggerMakeHostileAndAggressive();</div>
-<div class="line"><span class="lineno">  158</span>            mission.triggerMakeNoRepImpact();</div>
-<div class="line"><span class="lineno">  159</span>        }</div>
-<div class="line"><span class="lineno">  160</span>        mission.triggerFleetAllowLongPursuit();</div>
-<div class="line"><span class="lineno">  161</span>        mission.triggerDoNotShowFleetDesc();</div>
-<div class="line"><span class="lineno">  162</span>        mission.triggerFleetSetAllWeapons();</div>
-<div class="line"><span class="lineno">  163</span>        </div>
-<div class="line"><span class="lineno">  164</span>        mission.triggerPickLocationAtInSystemJumpPoint(data.system);</div>
-<div class="line"><span class="lineno">  165</span>        mission.triggerSpawnFleetAtPickedLocation(<span class="keyword">null</span>, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  166</span>        <span class="comment">//mission.triggerFleetSetPatrolActionText(&quot;patrolling&quot;);</span></div>
-<div class="line"><span class="lineno">  167</span>        mission.triggerOrderFleetPatrol(data.system, <span class="keyword">true</span>, Tags.JUMP_POINT, Tags.SALVAGEABLE, Tags.PLANET, Tags.OBJECTIVE);</div>
-<div class="line"><span class="lineno">  168</span>        </div>
-<div class="line"><span class="lineno">  169</span>        data.fleet = <a class="code hl_function" href="../../d2/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBountyCreator.html#ae30bb83bcc3961a3bcd60d247ba7a44e">createFleet</a>(mission, data);</div>
-<div class="line"><span class="lineno">  170</span>        <span class="keywordflow">if</span> (data.fleet == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  171</span>        </div>
-<div class="line"><span class="lineno">  172</span>        <a class="code hl_function" href="../../d2/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBountyCreator.html#a46b26283774f9810f92ab40ea58ca02a">setRepChangesBasedOnDifficulty</a>(data, difficulty);</div>
-<div class="line"><span class="lineno">  173</span>        data.baseReward = CBStats.getBaseBounty(difficulty, CBStats.MERC_MULT, mission);</div>
-<div class="line"><span class="lineno">  174</span>        </div>
-<div class="line"><span class="lineno">  175</span>        <span class="keywordflow">return</span> data;</div>
-<div class="line"><span class="lineno">  176</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBountyCreator_html_a46b26283774f9810f92ab40ea58ca02a"><div class="ttname"><a href="../../d2/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBountyCreator.html#a46b26283774f9810f92ab40ea58ca02a">com.fs.starfarer.api.impl.campaign.missions.cb.BaseCustomBountyCreator.setRepChangesBasedOnDifficulty</a></div><div class="ttdeci">void setRepChangesBasedOnDifficulty(CustomBountyData data, int difficulty)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/db7/BaseCustomBountyCreator_8java_source.html#l00312">BaseCustomBountyCreator.java:312</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBountyCreator_html_aaab6ac0e3b19aed7b02e6e921f9b2ca8"><div class="ttname"><a href="../../d2/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBountyCreator.html#aaab6ac0e3b19aed7b02e6e921f9b2ca8">com.fs.starfarer.api.impl.campaign.missions.cb.BaseCustomBountyCreator.beginFleet</a></div><div class="ttdeci">void beginFleet(HubMissionWithBarEvent mission, CustomBountyData data)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/db7/BaseCustomBountyCreator_8java_source.html#l00225">BaseCustomBountyCreator.java:225</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBountyCreator_html_ae30bb83bcc3961a3bcd60d247ba7a44e"><div class="ttname"><a href="../../d2/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBountyCreator.html#ae30bb83bcc3961a3bcd60d247ba7a44e">com.fs.starfarer.api.impl.campaign.missions.cb.BaseCustomBountyCreator.createFleet</a></div><div class="ttdeci">CampaignFleetAPI createFleet(HubMissionWithBarEvent mission, CustomBountyData data)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/db7/BaseCustomBountyCreator_8java_source.html#l00229">BaseCustomBountyCreator.java:229</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CBMerc_html_a17ca12f2fc4421d74751ebce6c9be407"><div class="ttname"><a href="../../d2/dc3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CBMerc.html#a17ca12f2fc4421d74751ebce6c9be407">com.fs.starfarer.api.impl.campaign.missions.cb.CBMerc.PROB_SOME_PHASE_IN_SMALL_FLEET</a></div><div class="ttdeci">static float PROB_SOME_PHASE_IN_SMALL_FLEET</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d66/CBMerc_8java_source.html#l00018">CBMerc.java:18</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CBMerc_html_a20593953de8e0d289ae513201153d741"><div class="ttname"><a href="../../d2/dc3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CBMerc.html#a20593953de8e0d289ae513201153d741">com.fs.starfarer.api.impl.campaign.missions.cb.CBMerc.PROB_CARRIER_BASED_LARGE_FLEET</a></div><div class="ttdeci">static float PROB_CARRIER_BASED_LARGE_FLEET</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d66/CBMerc_8java_source.html#l00019">CBMerc.java:19</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CBMerc_html_a2c53773b1afbe0b88c2bd5a727e8201d"><div class="ttname"><a href="../../d2/dc3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CBMerc.html#a2c53773b1afbe0b88c2bd5a727e8201d">com.fs.starfarer.api.impl.campaign.missions.cb.CBMerc.PROB_SMALL_FLEET</a></div><div class="ttdeci">static float PROB_SMALL_FLEET</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d66/CBMerc_8java_source.html#l00017">CBMerc.java:17</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CBMerc_html_a314662700edee6240c49975db94f7018"><div class="ttname"><a href="../../d2/dc3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CBMerc.html#a314662700edee6240c49975db94f7018">com.fs.starfarer.api.impl.campaign.missions.cb.CBMerc.isAggro</a></div><div class="ttdeci">boolean isAggro()</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d66/CBMerc_8java_source.html#l00041">CBMerc.java:41</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CBMerc_html_a489d825aaac28bdfeb4e7487357e1f60"><div class="ttname"><a href="../../d2/dc3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CBMerc.html#a489d825aaac28bdfeb4e7487357e1f60">com.fs.starfarer.api.impl.campaign.missions.cb.CBMerc.PROB_SOME_PHASE_IN_LARGE_FLEET</a></div><div class="ttdeci">static float PROB_SOME_PHASE_IN_LARGE_FLEET</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d66/CBMerc_8java_source.html#l00020">CBMerc.java:20</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CBMerc_html_a637dbf6fda3bc582dd7593485bd82ceb"><div class="ttname"><a href="../../d2/dc3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CBMerc.html#a637dbf6fda3bc582dd7593485bd82ceb">com.fs.starfarer.api.impl.campaign.missions.cb.CBMerc.findSystem</a></div><div class="ttdeci">StarSystemAPI findSystem(MarketAPI createdAt, HubMissionWithBarEvent mission, int difficulty, Object bountyStage)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d66/CBMerc_8java_source.html#l00031">CBMerc.java:31</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a637dbf6fda3bc582dd7593485bd82ceb" name="a637dbf6fda3bc582dd7593485bd82ceb"></a>
@@ -494,16 +355,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../d6/dbc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CBMercUW.html#a7257af2ab2d196fdeb0fcff71a4efad9">com.fs.starfarer.api.impl.campaign.missions.cb.CBMercUW</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/d66/CBMerc_8java_source.html#l00031">31</a> of file <a class="el" href="../../df/d66/CBMerc_8java_source.html">CBMerc.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   31</span>                                                                                                                                {</div>
-<div class="line"><span class="lineno">   32</span><span class="comment">//      mission.requireSystemTags(ReqMode.ANY, Tags.THEME_RUINS, Tags.THEME_MISC, Tags.THEME_REMNANT_SECONDARY,</span></div>
-<div class="line"><span class="lineno">   33</span><span class="comment">//                                Tags.THEME_DERELICT, Tags.THEME_REMNANT_DESTROYED);</span></div>
-<div class="line"><span class="lineno">   34</span>        mission.requireSystemInterestingAndNotUnsafeOrCore();</div>
-<div class="line"><span class="lineno">   35</span>        mission.requireSystemNotHasPulsar();</div>
-<div class="line"><span class="lineno">   36</span> </div>
-<div class="line"><span class="lineno">   37</span>        StarSystemAPI system = mission.pickSystem();</div>
-<div class="line"><span class="lineno">   38</span>        <span class="keywordflow">return</span> system;      </div>
-<div class="line"><span class="lineno">   39</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af9698462222f9bc790fd54c1a5f06b32" name="af9698462222f9bc790fd54c1a5f06b32"></a>
@@ -535,10 +387,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBountyCreator.html#a7729b5908a09e6f8caed631cbe2b9a24">com.fs.starfarer.api.impl.campaign.missions.cb.BaseCustomBountyCreator</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/d66/CBMerc_8java_source.html#l00027">27</a> of file <a class="el" href="../../df/d66/CBMerc_8java_source.html">CBMerc.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   27</span>                                                                                              {</div>
-<div class="line"><span class="lineno">   28</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot; - Elite Mercenary&quot;</span>;</div>
-<div class="line"><span class="lineno">   29</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8de2a6bfcdecdb47e431e07d4d632407" name="a8de2a6bfcdecdb47e431e07d4d632407"></a>
@@ -570,10 +419,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBountyCreator.html#ac9908c47a53d64bf94559e9ea7879d34">com.fs.starfarer.api.impl.campaign.missions.cb.BaseCustomBountyCreator</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/d66/CBMerc_8java_source.html#l00023">23</a> of file <a class="el" href="../../df/d66/CBMerc_8java_source.html">CBMerc.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   23</span>                                                                              {</div>
-<div class="line"><span class="lineno">   24</span>        <span class="keywordflow">return</span> super.getFrequency(mission, difficulty) * CBStats.MERC_FREQ;</div>
-<div class="line"><span class="lineno">   25</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a06d8bf35b4b3640b03056c147a605881" name="a06d8bf35b4b3640b03056c147a605881"></a>
@@ -594,10 +440,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBountyCreator.html#ad2f24c4985459280a706f52dd77a13ce">com.fs.starfarer.api.impl.campaign.missions.cb.BaseCustomBountyCreator</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/d66/CBMerc_8java_source.html#l00191">191</a> of file <a class="el" href="../../df/d66/CBMerc_8java_source.html">CBMerc.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  191</span>                                  {</div>
-<div class="line"><span class="lineno">  192</span>        <span class="keywordflow">return</span> super.getMaxDifficulty();</div>
-<div class="line"><span class="lineno">  193</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5f7023bb19c100dcd4a9ead50b95311e" name="a5f7023bb19c100dcd4a9ead50b95311e"></a>
@@ -618,10 +461,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBountyCreator.html#a5d78d975877bd4da1ef3bc77546bbc23">com.fs.starfarer.api.impl.campaign.missions.cb.BaseCustomBountyCreator</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/d66/CBMerc_8java_source.html#l00196">196</a> of file <a class="el" href="../../df/d66/CBMerc_8java_source.html">CBMerc.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  196</span>                                  {</div>
-<div class="line"><span class="lineno">  197</span>        <span class="keywordflow">return</span> 6;</div>
-<div class="line"><span class="lineno">  198</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a314662700edee6240c49975db94f7018" name="a314662700edee6240c49975db94f7018"></a>
@@ -650,10 +490,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../d6/dbc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CBMercUW.html#ad4f1bf254c7836e5bca67e0627a01e84">com.fs.starfarer.api.impl.campaign.missions.cb.CBMercUW</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/d66/CBMerc_8java_source.html#l00041">41</a> of file <a class="el" href="../../df/d66/CBMerc_8java_source.html">CBMerc.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   41</span>                                {</div>
-<div class="line"><span class="lineno">   42</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   43</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac73557b6cacf5ec5303a5a82353158da" name="ac73557b6cacf5ec5303a5a82353158da"></a>
@@ -685,17 +522,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBountyCreator.html#ab23df1b23f5383b52a836929d698f516">com.fs.starfarer.api.impl.campaign.missions.cb.BaseCustomBountyCreator</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/d66/CBMerc_8java_source.html#l00179">179</a> of file <a class="el" href="../../df/d66/CBMerc_8java_source.html">CBMerc.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  179</span>                                                                                             {</div>
-<div class="line"><span class="lineno">  180</span>        String <span class="keywordtype">id</span> = mission.getMissionId();</div>
-<div class="line"><span class="lineno">  181</span>        <span class="keywordflow">if</span> (data.custom1 != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  182</span>            mission.set(<span class="stringliteral">&quot;$&quot;</span> + <span class="keywordtype">id</span> + <span class="stringliteral">&quot;_smallMerc&quot;</span>, data.difficulty);</div>
-<div class="line"><span class="lineno">  183</span>            mission.set(<span class="stringliteral">&quot;$bcb_smallMerc&quot;</span>, data.difficulty);</div>
-<div class="line"><span class="lineno">  184</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  185</span>            mission.unset(<span class="stringliteral">&quot;$&quot;</span> + <span class="keywordtype">id</span> + <span class="stringliteral">&quot;_smallMerc&quot;</span>);</div>
-<div class="line"><span class="lineno">  186</span>            mission.unset(<span class="stringliteral">&quot;$bcb_smallMerc&quot;</span>);</div>
-<div class="line"><span class="lineno">  187</span>        }</div>
-<div class="line"><span class="lineno">  188</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

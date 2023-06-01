@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -186,103 +187,7 @@ Static Public Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d0/d4b/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1AICoreOfficerPlugin.html#a9daf9cafaf6f973290400a294822a515">com.fs.starfarer.api.campaign.AICoreOfficerPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/dba/AICoreOfficerPluginImpl_8java_source.html#l00051">51</a> of file <a class="el" href="../../d7/dba/AICoreOfficerPluginImpl_8java_source.html">AICoreOfficerPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   51</span>                                                                                    {</div>
-<div class="line"><span class="lineno">   52</span>        <span class="keywordflow">if</span> (random == <span class="keyword">null</span>) random = <span class="keyword">new</span> Random();</div>
-<div class="line"><span class="lineno">   53</span>        </div>
-<div class="line"><span class="lineno">   54</span>        PersonAPI person = Global.getFactory().createPerson();</div>
-<div class="line"><span class="lineno">   55</span>        person.setFaction(factionId);</div>
-<div class="line"><span class="lineno">   56</span>        person.setAICoreId(aiCoreId);</div>
-<div class="line"><span class="lineno">   57</span>        </div>
-<div class="line"><span class="lineno">   58</span>        CommoditySpecAPI spec = Global.getSettings().getCommoditySpec(aiCoreId);</div>
-<div class="line"><span class="lineno">   59</span>        <span class="keywordtype">boolean</span> alpha = Commodities.ALPHA_CORE.equals(aiCoreId);</div>
-<div class="line"><span class="lineno">   60</span>        <span class="keywordtype">boolean</span> beta = Commodities.BETA_CORE.equals(aiCoreId);</div>
-<div class="line"><span class="lineno">   61</span>        <span class="keywordtype">boolean</span> gamma = Commodities.GAMMA_CORE.equals(aiCoreId);</div>
-<div class="line"><span class="lineno">   62</span>        <span class="keywordtype">boolean</span> omega = Commodities.OMEGA_CORE.equals(aiCoreId);</div>
-<div class="line"><span class="lineno">   63</span>        </div>
-<div class="line"><span class="lineno">   64</span>        person.getStats().setSkipRefresh(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   65</span>        </div>
-<div class="line"><span class="lineno">   66</span>        person.setName(<span class="keyword">new</span> FullName(spec.getName(), <span class="stringliteral">&quot;&quot;</span>, Gender.ANY));</div>
-<div class="line"><span class="lineno">   67</span>        <span class="keywordtype">int</span> points = 0;</div>
-<div class="line"><span class="lineno">   68</span>        <span class="keywordtype">float</span> mult = 1f;</div>
-<div class="line"><span class="lineno">   69</span>        <span class="keywordflow">if</span> (omega) { <span class="comment">// assume it&#39;s not going to be integrated, no reason to do it - same as assuming it&#39;s always integrated</span></div>
-<div class="line"><span class="lineno">   70</span>            person.setPortraitSprite(<span class="stringliteral">&quot;graphics/portraits/characters/omega.png&quot;</span>);</div>
-<div class="line"><span class="lineno">   71</span>            person.getStats().setLevel(9);</div>
-<div class="line"><span class="lineno">   72</span>            person.getStats().setSkillLevel(Skills.HELMSMANSHIP, 2);</div>
-<div class="line"><span class="lineno">   73</span>            person.getStats().setSkillLevel(Skills.TARGET_ANALYSIS, 2);</div>
-<div class="line"><span class="lineno">   74</span>            person.getStats().setSkillLevel(Skills.IMPACT_MITIGATION, 2);</div>
-<div class="line"><span class="lineno">   75</span>            <span class="comment">//person.getStats().setSkillLevel(Skills.SHIELD_MODULATION, 2);</span></div>
-<div class="line"><span class="lineno">   76</span>            person.getStats().setSkillLevel(Skills.FIELD_MODULATION, 2);</div>
-<div class="line"><span class="lineno">   77</span>            <span class="comment">//person.getStats().setSkillLevel(Skills.SYSTEMS_EXPERTISE, 2);</span></div>
-<div class="line"><span class="lineno">   78</span>            person.getStats().setSkillLevel(Skills.GUNNERY_IMPLANTS, 2);</div>
-<div class="line"><span class="lineno">   79</span>            <span class="comment">//person.getStats().setSkillLevel(Skills.RELIABILITY_ENGINEERING, 2);</span></div>
-<div class="line"><span class="lineno">   80</span>            person.getStats().setSkillLevel(Skills.COMBAT_ENDURANCE, 2);</div>
-<div class="line"><span class="lineno">   81</span>            person.getStats().setSkillLevel(Skills.DAMAGE_CONTROL, 2);</div>
-<div class="line"><span class="lineno">   82</span>            person.getStats().setSkillLevel(Skills.POINT_DEFENSE, 2);</div>
-<div class="line"><span class="lineno">   83</span>            person.getStats().setSkillLevel(Skills.ENERGY_WEAPON_MASTERY, 2);</div>
-<div class="line"><span class="lineno">   84</span>            person.getStats().setSkillLevel(Skills.OMEGA_ECM, 2);</div>
-<div class="line"><span class="lineno">   85</span>            points = <a class="code hl_variable" href="../../d3/d5b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AICoreOfficerPluginImpl.html#ae4a7b1e825564d0c87e58eed5b006a96">OMEGA_POINTS</a>;</div>
-<div class="line"><span class="lineno">   86</span>            mult = <a class="code hl_variable" href="../../d3/d5b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AICoreOfficerPluginImpl.html#a7eea8f120d8ed030b135b7d151ade028">OMEGA_MULT</a>;</div>
-<div class="line"><span class="lineno">   87</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (alpha) {</div>
-<div class="line"><span class="lineno">   88</span>            person.setPortraitSprite(<span class="stringliteral">&quot;graphics/portraits/portrait_ai2b.png&quot;</span>);</div>
-<div class="line"><span class="lineno">   89</span>            person.getStats().setLevel(7);</div>
-<div class="line"><span class="lineno">   90</span>            person.getStats().setSkillLevel(Skills.HELMSMANSHIP, 2);</div>
-<div class="line"><span class="lineno">   91</span>            person.getStats().setSkillLevel(Skills.TARGET_ANALYSIS, 2);</div>
-<div class="line"><span class="lineno">   92</span>            person.getStats().setSkillLevel(Skills.IMPACT_MITIGATION, 2);</div>
-<div class="line"><span class="lineno">   93</span>            <span class="comment">//person.getStats().setSkillLevel(Skills.SHIELD_MODULATION, 2);</span></div>
-<div class="line"><span class="lineno">   94</span>            person.getStats().setSkillLevel(Skills.FIELD_MODULATION, 2);</div>
-<div class="line"><span class="lineno">   95</span>            <span class="comment">//person.getStats().setSkillLevel(Skills.SYSTEMS_EXPERTISE, 2);</span></div>
-<div class="line"><span class="lineno">   96</span>            person.getStats().setSkillLevel(Skills.GUNNERY_IMPLANTS, 2);</div>
-<div class="line"><span class="lineno">   97</span>            <span class="comment">//person.getStats().setSkillLevel(Skills.RELIABILITY_ENGINEERING, 2);</span></div>
-<div class="line"><span class="lineno">   98</span>            person.getStats().setSkillLevel(Skills.COMBAT_ENDURANCE, 2);</div>
-<div class="line"><span class="lineno">   99</span>            person.getStats().setSkillLevel(Skills.DAMAGE_CONTROL, 2);</div>
-<div class="line"><span class="lineno">  100</span>            points = <a class="code hl_variable" href="../../d3/d5b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AICoreOfficerPluginImpl.html#aa366b23ac8f48a1966dd33248f46ed93">ALPHA_POINTS</a>;</div>
-<div class="line"><span class="lineno">  101</span>            mult = <a class="code hl_variable" href="../../d3/d5b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AICoreOfficerPluginImpl.html#ac2ff2ce765358fe2a09dd3a89149aa3e">ALPHA_MULT</a>;</div>
-<div class="line"><span class="lineno">  102</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (beta) {</div>
-<div class="line"><span class="lineno">  103</span>            person.setPortraitSprite(<span class="stringliteral">&quot;graphics/portraits/portrait_ai3b.png&quot;</span>);</div>
-<div class="line"><span class="lineno">  104</span>            person.getStats().setLevel(5);</div>
-<div class="line"><span class="lineno">  105</span>            person.getStats().setSkillLevel(Skills.HELMSMANSHIP, 2);</div>
-<div class="line"><span class="lineno">  106</span>            person.getStats().setSkillLevel(Skills.TARGET_ANALYSIS, 2);</div>
-<div class="line"><span class="lineno">  107</span>            person.getStats().setSkillLevel(Skills.IMPACT_MITIGATION, 2);</div>
-<div class="line"><span class="lineno">  108</span>            person.getStats().setSkillLevel(Skills.GUNNERY_IMPLANTS, 2);</div>
-<div class="line"><span class="lineno">  109</span>            <span class="comment">//person.getStats().setSkillLevel(Skills.RELIABILITY_ENGINEERING, 2);</span></div>
-<div class="line"><span class="lineno">  110</span>            person.getStats().setSkillLevel(Skills.COMBAT_ENDURANCE, 2);</div>
-<div class="line"><span class="lineno">  111</span>            points = <a class="code hl_variable" href="../../d3/d5b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AICoreOfficerPluginImpl.html#af0659170449e5396d2e9e3ff06bec28e">BETA_POINTS</a>;</div>
-<div class="line"><span class="lineno">  112</span>            mult = <a class="code hl_variable" href="../../d3/d5b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AICoreOfficerPluginImpl.html#adcd0c3d1836106cb88e0f94bab6c63a6">BETA_MULT</a>;</div>
-<div class="line"><span class="lineno">  113</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (gamma) {</div>
-<div class="line"><span class="lineno">  114</span>            person.setPortraitSprite(<span class="stringliteral">&quot;graphics/portraits/portrait_ai1b.png&quot;</span>);</div>
-<div class="line"><span class="lineno">  115</span>            person.getStats().setLevel(3);</div>
-<div class="line"><span class="lineno">  116</span>            person.getStats().setSkillLevel(Skills.HELMSMANSHIP, 2);</div>
-<div class="line"><span class="lineno">  117</span>            person.getStats().setSkillLevel(Skills.IMPACT_MITIGATION, 2);</div>
-<div class="line"><span class="lineno">  118</span>            <span class="comment">//person.getStats().setSkillLevel(Skills.RELIABILITY_ENGINEERING, 2);</span></div>
-<div class="line"><span class="lineno">  119</span>            person.getStats().setSkillLevel(Skills.COMBAT_ENDURANCE, 2);</div>
-<div class="line"><span class="lineno">  120</span>            points = <a class="code hl_variable" href="../../d3/d5b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AICoreOfficerPluginImpl.html#a6b10843104d2461ad0ca33004638e524">GAMMA_POINTS</a>;</div>
-<div class="line"><span class="lineno">  121</span>            mult = <a class="code hl_variable" href="../../d3/d5b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AICoreOfficerPluginImpl.html#a0992b9a5abf3d7d2a7bbe3a772eb193b">GAMMA_MULT</a>;</div>
-<div class="line"><span class="lineno">  122</span>        }</div>
-<div class="line"><span class="lineno">  123</span>        </div>
-<div class="line"><span class="lineno">  124</span>        <span class="keywordflow">if</span> (points != 0) {</div>
-<div class="line"><span class="lineno">  125</span>            person.getMemoryWithoutUpdate().set(<a class="code hl_variable" href="../../d0/d4b/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1AICoreOfficerPlugin.html#a7111d0624ec75cb2b93cdc2b84e048d5">AUTOMATED_POINTS_VALUE</a>, points);</div>
-<div class="line"><span class="lineno">  126</span>        }</div>
-<div class="line"><span class="lineno">  127</span>        person.getMemoryWithoutUpdate().set(<a class="code hl_variable" href="../../d0/d4b/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1AICoreOfficerPlugin.html#ab4fc4bb95502e2f2b3ece99db4f1d8ac">AUTOMATED_POINTS_MULT</a>, mult);</div>
-<div class="line"><span class="lineno">  128</span>        </div>
-<div class="line"><span class="lineno">  129</span>        person.setPersonality(Personalities.RECKLESS);</div>
-<div class="line"><span class="lineno">  130</span>        person.setRankId(Ranks.SPACE_CAPTAIN);</div>
-<div class="line"><span class="lineno">  131</span>        person.setPostId(<span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  132</span>        </div>
-<div class="line"><span class="lineno">  133</span>        person.getStats().setSkipRefresh(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  134</span>        </div>
-<div class="line"><span class="lineno">  135</span>        <span class="keywordflow">return</span> person;</div>
-<div class="line"><span class="lineno">  136</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AICoreOfficerPluginImpl_html_a0992b9a5abf3d7d2a7bbe3a772eb193b"><div class="ttname"><a href="../../d3/d5b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AICoreOfficerPluginImpl.html#a0992b9a5abf3d7d2a7bbe3a772eb193b">com.fs.starfarer.api.impl.campaign.AICoreOfficerPluginImpl.GAMMA_MULT</a></div><div class="ttdeci">static float GAMMA_MULT</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dba/AICoreOfficerPluginImpl_8java_source.html#l00039">AICoreOfficerPluginImpl.java:39</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AICoreOfficerPluginImpl_html_a6b10843104d2461ad0ca33004638e524"><div class="ttname"><a href="../../d3/d5b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AICoreOfficerPluginImpl.html#a6b10843104d2461ad0ca33004638e524">com.fs.starfarer.api.impl.campaign.AICoreOfficerPluginImpl.GAMMA_POINTS</a></div><div class="ttdeci">static int GAMMA_POINTS</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dba/AICoreOfficerPluginImpl_8java_source.html#l00031">AICoreOfficerPluginImpl.java:31</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AICoreOfficerPluginImpl_html_a7eea8f120d8ed030b135b7d151ade028"><div class="ttname"><a href="../../d3/d5b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AICoreOfficerPluginImpl.html#a7eea8f120d8ed030b135b7d151ade028">com.fs.starfarer.api.impl.campaign.AICoreOfficerPluginImpl.OMEGA_MULT</a></div><div class="ttdeci">static float OMEGA_MULT</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dba/AICoreOfficerPluginImpl_8java_source.html#l00036">AICoreOfficerPluginImpl.java:36</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AICoreOfficerPluginImpl_html_aa366b23ac8f48a1966dd33248f46ed93"><div class="ttname"><a href="../../d3/d5b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AICoreOfficerPluginImpl.html#aa366b23ac8f48a1966dd33248f46ed93">com.fs.starfarer.api.impl.campaign.AICoreOfficerPluginImpl.ALPHA_POINTS</a></div><div class="ttdeci">static int ALPHA_POINTS</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dba/AICoreOfficerPluginImpl_8java_source.html#l00029">AICoreOfficerPluginImpl.java:29</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AICoreOfficerPluginImpl_html_ac2ff2ce765358fe2a09dd3a89149aa3e"><div class="ttname"><a href="../../d3/d5b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AICoreOfficerPluginImpl.html#ac2ff2ce765358fe2a09dd3a89149aa3e">com.fs.starfarer.api.impl.campaign.AICoreOfficerPluginImpl.ALPHA_MULT</a></div><div class="ttdeci">static float ALPHA_MULT</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dba/AICoreOfficerPluginImpl_8java_source.html#l00037">AICoreOfficerPluginImpl.java:37</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AICoreOfficerPluginImpl_html_adcd0c3d1836106cb88e0f94bab6c63a6"><div class="ttname"><a href="../../d3/d5b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AICoreOfficerPluginImpl.html#adcd0c3d1836106cb88e0f94bab6c63a6">com.fs.starfarer.api.impl.campaign.AICoreOfficerPluginImpl.BETA_MULT</a></div><div class="ttdeci">static float BETA_MULT</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dba/AICoreOfficerPluginImpl_8java_source.html#l00038">AICoreOfficerPluginImpl.java:38</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AICoreOfficerPluginImpl_html_ae4a7b1e825564d0c87e58eed5b006a96"><div class="ttname"><a href="../../d3/d5b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AICoreOfficerPluginImpl.html#ae4a7b1e825564d0c87e58eed5b006a96">com.fs.starfarer.api.impl.campaign.AICoreOfficerPluginImpl.OMEGA_POINTS</a></div><div class="ttdeci">static int OMEGA_POINTS</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dba/AICoreOfficerPluginImpl_8java_source.html#l00028">AICoreOfficerPluginImpl.java:28</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AICoreOfficerPluginImpl_html_af0659170449e5396d2e9e3ff06bec28e"><div class="ttname"><a href="../../d3/d5b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AICoreOfficerPluginImpl.html#af0659170449e5396d2e9e3ff06bec28e">com.fs.starfarer.api.impl.campaign.AICoreOfficerPluginImpl.BETA_POINTS</a></div><div class="ttdeci">static int BETA_POINTS</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dba/AICoreOfficerPluginImpl_8java_source.html#l00030">AICoreOfficerPluginImpl.java:30</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1AICoreOfficerPlugin_html_a7111d0624ec75cb2b93cdc2b84e048d5"><div class="ttname"><a href="../../d0/d4b/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1AICoreOfficerPlugin.html#a7111d0624ec75cb2b93cdc2b84e048d5">com.fs.starfarer.api.campaign.AICoreOfficerPlugin.AUTOMATED_POINTS_VALUE</a></div><div class="ttdeci">static String AUTOMATED_POINTS_VALUE</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d2d/AICoreOfficerPlugin_8java_source.html#l00015">AICoreOfficerPlugin.java:15</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1AICoreOfficerPlugin_html_ab4fc4bb95502e2f2b3ece99db4f1d8ac"><div class="ttname"><a href="../../d0/d4b/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1AICoreOfficerPlugin.html#ab4fc4bb95502e2f2b3ece99db4f1d8ac">com.fs.starfarer.api.campaign.AICoreOfficerPlugin.AUTOMATED_POINTS_MULT</a></div><div class="ttdeci">static String AUTOMATED_POINTS_MULT</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d2d/AICoreOfficerPlugin_8java_source.html#l00021">AICoreOfficerPlugin.java:21</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

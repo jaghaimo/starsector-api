@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -231,44 +232,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d3c/MiscPilgrimFleetCreator_8java_source.html#l00104">104</a> of file <a class="el" href="../../d2/d3c/MiscPilgrimFleetCreator_8java_source.html">MiscPilgrimFleetCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  104</span>                                                                          {</div>
-<div class="line"><span class="lineno">  105</span>        MiscRouteData data = <span class="keyword">new</span> MiscRouteData(<a class="code hl_function" href="../../dc/d53/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1BaseMiscFleetCreatorPlugin.html#a1d7af6c35d6b024d5994df006d36c6c0">getId</a>());</div>
-<div class="line"><span class="lineno">  106</span>        data.from = from;</div>
-<div class="line"><span class="lineno">  107</span>        data.to = to;</div>
-<div class="line"><span class="lineno">  108</span>        </div>
-<div class="line"><span class="lineno">  109</span>        <span class="keywordflow">if</span> (from.getFaction().isHostileTo(Factions.LUDDIC_CHURCH)) {</div>
-<div class="line"><span class="lineno">  110</span>            data.factionId = Factions.INDEPENDENT;</div>
-<div class="line"><span class="lineno">  111</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  112</span>            data.factionId = Factions.LUDDIC_CHURCH;</div>
-<div class="line"><span class="lineno">  113</span>        }</div>
-<div class="line"><span class="lineno">  114</span>        </div>
-<div class="line"><span class="lineno">  115</span>        </div>
-<div class="line"><span class="lineno">  116</span>        MarketAPI market = to.getMarket();</div>
-<div class="line"><span class="lineno">  117</span>        <span class="keywordtype">boolean</span> realMarket = market != <span class="keyword">null</span> &amp;&amp; !market.isPlanetConditionMarketOnly();</div>
-<div class="line"><span class="lineno">  118</span>        <span class="keywordflow">if</span> (realMarket &amp;&amp; market.getFaction().isHostileTo(from.getFaction())) {</div>
-<div class="line"><span class="lineno">  119</span>            <span class="keywordflow">if</span> (market.getFaction().isHostileTo(data.factionId)) {</div>
-<div class="line"><span class="lineno">  120</span>                data.smuggling = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  121</span>            }</div>
-<div class="line"><span class="lineno">  122</span><span class="comment">//          if (market.getFaction().isHostileTo(Factions.INDEPENDENT)) {</span></div>
-<div class="line"><span class="lineno">  123</span><span class="comment">//              data.smuggling = true;</span></div>
-<div class="line"><span class="lineno">  124</span><span class="comment">//          } else {</span></div>
-<div class="line"><span class="lineno">  125</span><span class="comment">//              data.factionId = Factions.INDEPENDENT;</span></div>
-<div class="line"><span class="lineno">  126</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">  127</span>        }</div>
-<div class="line"><span class="lineno">  128</span>        </div>
-<div class="line"><span class="lineno">  129</span>        </div>
-<div class="line"><span class="lineno">  130</span>        <span class="keywordtype">float</span> sizeBasis;</div>
-<div class="line"><span class="lineno">  131</span>        <span class="keywordflow">if</span> (realMarket) {</div>
-<div class="line"><span class="lineno">  132</span>            sizeBasis = market.getSize() + from.getSize();</div>
-<div class="line"><span class="lineno">  133</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  134</span>            sizeBasis = from.getSize() * 0.5f;</div>
-<div class="line"><span class="lineno">  135</span>        }</div>
-<div class="line"><span class="lineno">  136</span>        data.size = sizeBasis / 40f;</div>
-<div class="line"><span class="lineno">  137</span>        </div>
-<div class="line"><span class="lineno">  138</span>        <span class="keywordflow">return</span> data;</div>
-<div class="line"><span class="lineno">  139</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1BaseMiscFleetCreatorPlugin_html_a1d7af6c35d6b024d5994df006d36c6c0"><div class="ttname"><a href="../../dc/d53/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1BaseMiscFleetCreatorPlugin.html#a1d7af6c35d6b024d5994df006d36c6c0">com.fs.starfarer.api.impl.campaign.fleets.misc.BaseMiscFleetCreatorPlugin.getId</a></div><div class="ttdeci">String getId()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/ded/BaseMiscFleetCreatorPlugin_8java_source.html#l00014">BaseMiscFleetCreatorPlugin.java:14</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af03e0075d7eef92605f6084cb0b5d16a" name="af03e0075d7eef92605f6084cb0b5d16a"></a>
@@ -306,30 +270,7 @@ Public Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../dc/d53/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1BaseMiscFleetCreatorPlugin.html#a7113d55679c1bfca75dbefceef85aee6">com.fs.starfarer.api.impl.campaign.fleets.misc.BaseMiscFleetCreatorPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d3c/MiscPilgrimFleetCreator_8java_source.html#l00079">79</a> of file <a class="el" href="../../d2/d3c/MiscPilgrimFleetCreator_8java_source.html">MiscPilgrimFleetCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   79</span>                                                                                                       {</div>
-<div class="line"><span class="lineno">   80</span>        MiscRouteData data = (MiscRouteData) route.getCustom();</div>
-<div class="line"><span class="lineno">   81</span> </div>
-<div class="line"><span class="lineno">   82</span>        FleetCreatorMission m = <span class="keyword">new</span> FleetCreatorMission(random);</div>
-<div class="line"><span class="lineno">   83</span>        m.beginFleet();</div>
-<div class="line"><span class="lineno">   84</span>        </div>
-<div class="line"><span class="lineno">   85</span>        </div>
-<div class="line"><span class="lineno">   86</span>        m.triggerCreateFleet(FleetSize.MEDIUM, FleetQuality.LOWER, data.factionId, </div>
-<div class="line"><span class="lineno">   87</span>                             FleetTypes.SHRINE_PILGRIMS, data.from.getLocationInHyperspace());</div>
-<div class="line"><span class="lineno">   88</span>        m.triggerSetFleetOfficers(OfficerNum.FC_ONLY, OfficerQuality.LOWER);</div>
-<div class="line"><span class="lineno">   89</span>        m.triggerSetFleetSizeFraction(data.size * 0.5f * (0.5f + random.nextFloat() * 0.5f));</div>
-<div class="line"><span class="lineno">   90</span>        m.triggerFleetSetNoFactionInName();</div>
-<div class="line"><span class="lineno">   91</span>        m.triggerSetTraderFleet();</div>
-<div class="line"><span class="lineno">   92</span>        m.triggerSetFleetComposition(0f, 0f, 0f, 1f, 0f);</div>
-<div class="line"><span class="lineno">   93</span>        m.triggerSetFleetMemoryValue(MemFlags.MEMORY_KEY_SOURCE_MARKET, data.from);</div>
-<div class="line"><span class="lineno">   94</span>        m.triggerSetFleetMemoryValue(<span class="stringliteral">&quot;$destShrine&quot;</span>, data.to.getId());</div>
-<div class="line"><span class="lineno">   95</span>        m.triggerSetFleetMemoryValue(MemFlags.SHRINE_PILGRIM_FLEET, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   96</span>        </div>
-<div class="line"><span class="lineno">   97</span>        CampaignFleetAPI fleet = m.createFleet();</div>
-<div class="line"><span class="lineno">   98</span>        fleet.removeScriptsOfClass(MissionFleetAutoDespawn.class);</div>
-<div class="line"><span class="lineno">   99</span>        </div>
-<div class="line"><span class="lineno">  100</span>        <span class="keywordflow">return</span> fleet;</div>
-<div class="line"><span class="lineno">  101</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a4c79326d3cbd199b93cf8568013fa4a4" name="a4c79326d3cbd199b93cf8568013fa4a4"></a>
@@ -361,24 +302,7 @@ Public Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../dc/d53/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1BaseMiscFleetCreatorPlugin.html#a383f845713b907f9bd33d4692792e419">com.fs.starfarer.api.impl.campaign.fleets.misc.BaseMiscFleetCreatorPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d3c/MiscPilgrimFleetCreator_8java_source.html#l00062">62</a> of file <a class="el" href="../../d2/d3c/MiscPilgrimFleetCreator_8java_source.html">MiscPilgrimFleetCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   62</span>                                                                                         {</div>
-<div class="line"><span class="lineno">   63</span>        MarketAPI from = <a class="code hl_function" href="../../dd/d17/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscPilgrimFleetCreator.html#add8c793d303e80db7686a91027e6612d">pickSourceMarket</a>(manager);</div>
-<div class="line"><span class="lineno">   64</span>        <span class="keywordflow">if</span> (from == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   65</span>        SectorEntityToken to = <a class="code hl_function" href="../../dd/d17/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscPilgrimFleetCreator.html#ae9194da811308e4238793d0fe96560cd">pickDestShrine</a>(manager, from);</div>
-<div class="line"><span class="lineno">   66</span>        <span class="keywordflow">if</span> (to == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   67</span>        </div>
-<div class="line"><span class="lineno">   68</span><span class="comment">//      from = Global.getSector().getEconomy().getMarket(&quot;chalcedon&quot;);</span></div>
-<div class="line"><span class="lineno">   69</span><span class="comment">//      to = Global.getSector().getEconomy().getMarket(&quot;eochu_bres&quot;).getPrimaryEntity();</span></div>
-<div class="line"><span class="lineno">   70</span><span class="comment">//      to = Global.getSector().getEntityById(&quot;beholder_station&quot;);</span></div>
-<div class="line"><span class="lineno">   71</span>        </div>
-<div class="line"><span class="lineno">   72</span>        MiscRouteData result = <a class="code hl_function" href="../../dd/d17/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscPilgrimFleetCreator.html#a27d061ea94a4579696e15803bf08dfe9">createData</a>(from, to);</div>
-<div class="line"><span class="lineno">   73</span>        </div>
-<div class="line"><span class="lineno">   74</span>        <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">   75</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscPilgrimFleetCreator_html_a27d061ea94a4579696e15803bf08dfe9"><div class="ttname"><a href="../../dd/d17/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscPilgrimFleetCreator.html#a27d061ea94a4579696e15803bf08dfe9">com.fs.starfarer.api.impl.campaign.fleets.misc.MiscPilgrimFleetCreator.createData</a></div><div class="ttdeci">MiscRouteData createData(MarketAPI from, SectorEntityToken to)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d3c/MiscPilgrimFleetCreator_8java_source.html#l00104">MiscPilgrimFleetCreator.java:104</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscPilgrimFleetCreator_html_add8c793d303e80db7686a91027e6612d"><div class="ttname"><a href="../../dd/d17/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscPilgrimFleetCreator.html#add8c793d303e80db7686a91027e6612d">com.fs.starfarer.api.impl.campaign.fleets.misc.MiscPilgrimFleetCreator.pickSourceMarket</a></div><div class="ttdeci">MarketAPI pickSourceMarket(MiscFleetRouteManager manager)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d3c/MiscPilgrimFleetCreator_8java_source.html#l00141">MiscPilgrimFleetCreator.java:141</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscPilgrimFleetCreator_html_ae9194da811308e4238793d0fe96560cd"><div class="ttname"><a href="../../dd/d17/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscPilgrimFleetCreator.html#ae9194da811308e4238793d0fe96560cd">com.fs.starfarer.api.impl.campaign.fleets.misc.MiscPilgrimFleetCreator.pickDestShrine</a></div><div class="ttdeci">SectorEntityToken pickDestShrine(MiscFleetRouteManager manager, MarketAPI from)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d3c/MiscPilgrimFleetCreator_8java_source.html#l00176">MiscPilgrimFleetCreator.java:176</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5aa0b62ec77f5a5f7ca6e4dec4719f19" name="a5aa0b62ec77f5a5f7ca6e4dec4719f19"></a>
@@ -416,10 +340,7 @@ Public Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../dc/d53/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1BaseMiscFleetCreatorPlugin.html#a384dc5ced9f6e23e65ec676551edff2b">com.fs.starfarer.api.impl.campaign.fleets.misc.BaseMiscFleetCreatorPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d3c/MiscPilgrimFleetCreator_8java_source.html#l00255">255</a> of file <a class="el" href="../../d2/d3c/MiscPilgrimFleetCreator_8java_source.html">MiscPilgrimFleetCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  255</span>                                                                                                            {</div>
-<div class="line"><span class="lineno">  256</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;embarking pilgrims for return voyage to &quot;</span> + data.from.getName();</div>
-<div class="line"><span class="lineno">  257</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="acf1f4fc2af5fc802db67b3783b232f1e" name="acf1f4fc2af5fc802db67b3783b232f1e"></a>
@@ -457,10 +378,7 @@ Public Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../dc/d53/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1BaseMiscFleetCreatorPlugin.html#a930cb17eb2d3c6fa5bac7c71942c9e1e">com.fs.starfarer.api.impl.campaign.fleets.misc.BaseMiscFleetCreatorPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d3c/MiscPilgrimFleetCreator_8java_source.html#l00251">251</a> of file <a class="el" href="../../d2/d3c/MiscPilgrimFleetCreator_8java_source.html">MiscPilgrimFleetCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  251</span>                                                                                                              {</div>
-<div class="line"><span class="lineno">  252</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;disembarking pilgrims at shrine on &quot;</span> + data.to.getName();</div>
-<div class="line"><span class="lineno">  253</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="accc4f188f39ac21a5f86804771bb4485" name="accc4f188f39ac21a5f86804771bb4485"></a>
@@ -498,10 +416,7 @@ Public Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../dc/d53/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1BaseMiscFleetCreatorPlugin.html#a82f70b9747531a04dad9cb7fa9d1fff9">com.fs.starfarer.api.impl.campaign.fleets.misc.BaseMiscFleetCreatorPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d3c/MiscPilgrimFleetCreator_8java_source.html#l00239">239</a> of file <a class="el" href="../../d2/d3c/MiscPilgrimFleetCreator_8java_source.html">MiscPilgrimFleetCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  239</span>                                                                                                        {</div>
-<div class="line"><span class="lineno">  240</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;disembarking pilgrims at &quot;</span> + data.from.getName();</div>
-<div class="line"><span class="lineno">  241</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2b892c7dc2c850222ed645147b6d4afc" name="a2b892c7dc2c850222ed645147b6d4afc"></a>
@@ -522,10 +437,7 @@ Public Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../dc/d53/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1BaseMiscFleetCreatorPlugin.html#aac233004a382f14d925104e70a8b0690">com.fs.starfarer.api.impl.campaign.fleets.misc.BaseMiscFleetCreatorPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d3c/MiscPilgrimFleetCreator_8java_source.html#l00040">40</a> of file <a class="el" href="../../d2/d3c/MiscPilgrimFleetCreator_8java_source.html">MiscPilgrimFleetCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   40</span>                                {</div>
-<div class="line"><span class="lineno">   41</span>        <span class="keywordflow">return</span> Global.getSettings().getFloat(<span class="stringliteral">&quot;miscFleetPilgrimFrequency&quot;</span>);</div>
-<div class="line"><span class="lineno">   42</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2978a36ac6138d1e5f6b61b9a1802988" name="a2978a36ac6138d1e5f6b61b9a1802988"></a>
@@ -546,10 +458,7 @@ Public Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../dc/d53/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1BaseMiscFleetCreatorPlugin.html#af211fe4ee6c7cfc52bf67ffa84781cd2">com.fs.starfarer.api.impl.campaign.fleets.misc.BaseMiscFleetCreatorPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d3c/MiscPilgrimFleetCreator_8java_source.html#l00045">45</a> of file <a class="el" href="../../d2/d3c/MiscPilgrimFleetCreator_8java_source.html">MiscPilgrimFleetCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   45</span>                                            {</div>
-<div class="line"><span class="lineno">   46</span>        <span class="keywordflow">return</span> Global.getSettings().getInt(<span class="stringliteral">&quot;miscFleetPilgrimMaxFleets&quot;</span>);</div>
-<div class="line"><span class="lineno">   47</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9d21e37a3d7237d45b4b0c7dfabc4078" name="a9d21e37a3d7237d45b4b0c7dfabc4078"></a>
@@ -569,16 +478,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d3c/MiscPilgrimFleetCreator_8java_source.html#l00051">51</a> of file <a class="el" href="../../d2/d3c/MiscPilgrimFleetCreator_8java_source.html">MiscPilgrimFleetCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   51</span>                                                                             {</div>
-<div class="line"><span class="lineno">   52</span>        List&lt;SectorEntityToken&gt; shrines = (List&lt;SectorEntityToken&gt;) manager.getData().get(<a class="code hl_variable" href="../../dd/d17/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscPilgrimFleetCreator.html#a13ff12db243c32375e61def164112ee1">SHRINE_LIST_KEY</a>);</div>
-<div class="line"><span class="lineno">   53</span>        <span class="keywordflow">if</span> (shrines == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   54</span>            shrines = Global.getSector().getEntitiesWithTag(Tags.LUDDIC_SHRINE);</div>
-<div class="line"><span class="lineno">   55</span>            manager.getData().put(<a class="code hl_variable" href="../../dd/d17/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscPilgrimFleetCreator.html#a13ff12db243c32375e61def164112ee1">SHRINE_LIST_KEY</a>, shrines);</div>
-<div class="line"><span class="lineno">   56</span>        }</div>
-<div class="line"><span class="lineno">   57</span>        <span class="keywordflow">return</span> shrines;</div>
-<div class="line"><span class="lineno">   58</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscPilgrimFleetCreator_html_a13ff12db243c32375e61def164112ee1"><div class="ttname"><a href="../../dd/d17/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscPilgrimFleetCreator.html#a13ff12db243c32375e61def164112ee1">com.fs.starfarer.api.impl.campaign.fleets.misc.MiscPilgrimFleetCreator.SHRINE_LIST_KEY</a></div><div class="ttdeci">String SHRINE_LIST_KEY</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d3c/MiscPilgrimFleetCreator_8java_source.html#l00036">MiscPilgrimFleetCreator.java:36</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ada42350cea49b0b0492286b4b9c5051e" name="ada42350cea49b0b0492286b4b9c5051e"></a>
@@ -616,10 +516,7 @@ Public Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../dc/d53/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1BaseMiscFleetCreatorPlugin.html#adfea3a420d8b83d622d8723dbbc7ffd4">com.fs.starfarer.api.impl.campaign.fleets.misc.BaseMiscFleetCreatorPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d3c/MiscPilgrimFleetCreator_8java_source.html#l00235">235</a> of file <a class="el" href="../../d2/d3c/MiscPilgrimFleetCreator_8java_source.html">MiscPilgrimFleetCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  235</span>                                                                                                          {</div>
-<div class="line"><span class="lineno">  236</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;preparing for pilgrimage to shrine on &quot;</span> + data.to.getName();</div>
-<div class="line"><span class="lineno">  237</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="afed3beb0e5ed293089ef6807b63a5343" name="afed3beb0e5ed293089ef6807b63a5343"></a>
@@ -657,10 +554,7 @@ Public Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../dc/d53/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1BaseMiscFleetCreatorPlugin.html#a2bce6a57d982239a845083deae1c6ddb">com.fs.starfarer.api.impl.campaign.fleets.misc.BaseMiscFleetCreatorPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d3c/MiscPilgrimFleetCreator_8java_source.html#l00247">247</a> of file <a class="el" href="../../d2/d3c/MiscPilgrimFleetCreator_8java_source.html">MiscPilgrimFleetCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  247</span>                                                                                                              {</div>
-<div class="line"><span class="lineno">  248</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;returning pilgrims to &quot;</span> + data.from.getName();</div>
-<div class="line"><span class="lineno">  249</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aacf0a87277bb37f6d601ca37d62f3f19" name="aacf0a87277bb37f6d601ca37d62f3f19"></a>
@@ -698,10 +592,7 @@ Public Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../dc/d53/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1BaseMiscFleetCreatorPlugin.html#ab957a2c5dfa568764e26c43ecc72f87f">com.fs.starfarer.api.impl.campaign.fleets.misc.BaseMiscFleetCreatorPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d3c/MiscPilgrimFleetCreator_8java_source.html#l00243">243</a> of file <a class="el" href="../../d2/d3c/MiscPilgrimFleetCreator_8java_source.html">MiscPilgrimFleetCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  243</span>                                                                                                              {</div>
-<div class="line"><span class="lineno">  244</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;taking pilgrims to shrine on &quot;</span> + data.to.getName();</div>
-<div class="line"><span class="lineno">  245</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae9194da811308e4238793d0fe96560cd" name="ae9194da811308e4238793d0fe96560cd"></a>
@@ -731,38 +622,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d3c/MiscPilgrimFleetCreator_8java_source.html#l00176">176</a> of file <a class="el" href="../../d2/d3c/MiscPilgrimFleetCreator_8java_source.html">MiscPilgrimFleetCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  176</span>                                                                                           {</div>
-<div class="line"><span class="lineno">  177</span>        <span class="keywordflow">if</span> (from == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  178</span>        </div>
-<div class="line"><span class="lineno">  179</span>        WeightedRandomPicker&lt;SectorEntityToken&gt; picker = <span class="keyword">new</span> WeightedRandomPicker&lt;SectorEntityToken&gt;(manager.getRandom());</div>
-<div class="line"><span class="lineno">  180</span>        </div>
-<div class="line"><span class="lineno">  181</span>        <span class="keywordflow">for</span> (SectorEntityToken shrine : <span class="keyword">new</span> ArrayList&lt;SectorEntityToken&gt;(<a class="code hl_function" href="../../dd/d17/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscPilgrimFleetCreator.html#a9d21e37a3d7237d45b4b0c7dfabc4078">getShrines</a>(manager))) {</div>
-<div class="line"><span class="lineno">  182</span>            <span class="keywordflow">if</span> (!shrine.isAlive()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  183</span>            <span class="keywordflow">if</span> (shrine.getContainingLocation().hasTag(Tags.SYSTEM_CUT_OFF_FROM_HYPER)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  184</span>            </div>
-<div class="line"><span class="lineno">  185</span>            MarketAPI market = shrine.getMarket();</div>
-<div class="line"><span class="lineno">  186</span>            <span class="keywordtype">boolean</span> realMarket = market != <span class="keyword">null</span> &amp;&amp; !market.isPlanetConditionMarketOnly();</div>
-<div class="line"><span class="lineno">  187</span>            <span class="keywordflow">if</span> (realMarket) {</div>
-<div class="line"><span class="lineno">  188</span>                <span class="keywordflow">if</span> (market.hasCondition(Conditions.DECIVILIZED)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  189</span>                <span class="keywordflow">if</span> (market.getFaction().isHostileTo(Factions.INDEPENDENT) &amp;&amp;</div>
-<div class="line"><span class="lineno">  190</span>                        market.getFaction().isHostileTo(Factions.LUDDIC_CHURCH)) {</div>
-<div class="line"><span class="lineno">  191</span>                        <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  192</span>                    }</div>
-<div class="line"><span class="lineno">  193</span>            }</div>
-<div class="line"><span class="lineno">  194</span>            </div>
-<div class="line"><span class="lineno">  195</span>            <span class="keywordtype">float</span> mult = 1f;</div>
-<div class="line"><span class="lineno">  196</span>            <span class="keywordflow">if</span> (realMarket) {</div>
-<div class="line"><span class="lineno">  197</span>                mult = 10f * market.getSize();</div>
-<div class="line"><span class="lineno">  198</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  199</span>                <span class="comment">//mult *= 100f;</span></div>
-<div class="line"><span class="lineno">  200</span>            }</div>
-<div class="line"><span class="lineno">  201</span>            picker.add(shrine, mult);</div>
-<div class="line"><span class="lineno">  202</span>        }</div>
-<div class="line"><span class="lineno">  203</span>        </div>
-<div class="line"><span class="lineno">  204</span>        <span class="keywordflow">return</span> picker.pick();</div>
-<div class="line"><span class="lineno">  205</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscPilgrimFleetCreator_html_a9d21e37a3d7237d45b4b0c7dfabc4078"><div class="ttname"><a href="../../dd/d17/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscPilgrimFleetCreator.html#a9d21e37a3d7237d45b4b0c7dfabc4078">com.fs.starfarer.api.impl.campaign.fleets.misc.MiscPilgrimFleetCreator.getShrines</a></div><div class="ttdeci">List&lt; SectorEntityToken &gt; getShrines(MiscFleetRouteManager manager)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d3c/MiscPilgrimFleetCreator_8java_source.html#l00051">MiscPilgrimFleetCreator.java:51</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="add8c793d303e80db7686a91027e6612d" name="add8c793d303e80db7686a91027e6612d"></a>
@@ -782,41 +642,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d3c/MiscPilgrimFleetCreator_8java_source.html#l00141">141</a> of file <a class="el" href="../../d2/d3c/MiscPilgrimFleetCreator_8java_source.html">MiscPilgrimFleetCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  141</span>                                                                     {</div>
-<div class="line"><span class="lineno">  142</span>        </div>
-<div class="line"><span class="lineno">  143</span>        WeightedRandomPicker&lt;MarketAPI&gt; markets = <span class="keyword">new</span> WeightedRandomPicker&lt;MarketAPI&gt;(manager.getRandom());</div>
-<div class="line"><span class="lineno">  144</span>        <span class="keywordflow">for</span> (MarketAPI market : Global.getSector().getEconomy().getMarketsCopy()) {</div>
-<div class="line"><span class="lineno">  145</span>            <span class="keywordflow">if</span> (market.isHidden()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  146</span>            <span class="keywordflow">if</span> (!market.hasSpaceport()) <span class="keywordflow">continue</span>; <span class="comment">// markets w/o spaceports don&#39;t launch fleets</span></div>
-<div class="line"><span class="lineno">  147</span>            <span class="keywordflow">if</span> (manager.getTimeout(<a class="code hl_function" href="../../dc/d53/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1BaseMiscFleetCreatorPlugin.html#a1d7af6c35d6b024d5994df006d36c6c0">getId</a>()).contains(market.getId())) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  148</span>            <span class="keywordflow">if</span> (market.getContainingLocation().hasTag(Tags.SYSTEM_CUT_OFF_FROM_HYPER)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  149</span>            <span class="keywordflow">if</span> (market.getFaction().isHostileTo(Factions.INDEPENDENT) &amp;&amp;</div>
-<div class="line"><span class="lineno">  150</span>                market.getFaction().isHostileTo(Factions.LUDDIC_CHURCH)) {</div>
-<div class="line"><span class="lineno">  151</span>                <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  152</span>            }</div>
-<div class="line"><span class="lineno">  153</span>            </div>
-<div class="line"><span class="lineno">  154</span>            <span class="comment">// use this for shrines also</span></div>
-<div class="line"><span class="lineno">  155</span>            <span class="keywordflow">if</span> (SharedData.getData().getMarketsWithoutTradeFleetSpawn().contains(market.getId())) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  156</span>            </div>
-<div class="line"><span class="lineno">  157</span>            <span class="keywordtype">float</span> distLY = Misc.getDistanceToPlayerLY(market.getPrimaryEntity());</div>
-<div class="line"><span class="lineno">  158</span>            <span class="keywordtype">float</span> mult = 1f - Math.min(0.99f, distLY / 10f);</div>
-<div class="line"><span class="lineno">  159</span>            </div>
-<div class="line"><span class="lineno">  160</span>            String fid = market.getFactionId();</div>
-<div class="line"><span class="lineno">  161</span>            <span class="keywordflow">if</span> (Factions.LUDDIC_CHURCH.equals(fid) ||</div>
-<div class="line"><span class="lineno">  162</span>                    Factions.LUDDIC_PATH.equals(fid) ||</div>
-<div class="line"><span class="lineno">  163</span>                    Factions.KOL.equals(fid)) {</div>
-<div class="line"><span class="lineno">  164</span>                mult *= 10f;</div>
-<div class="line"><span class="lineno">  165</span>            }</div>
-<div class="line"><span class="lineno">  166</span>            </div>
-<div class="line"><span class="lineno">  167</span>            markets.add(market, market.getSize() * mult);</div>
-<div class="line"><span class="lineno">  168</span>            </div>
-<div class="line"><span class="lineno">  169</span><span class="comment">//          if (market.getName().toLowerCase().equals(&quot;jannow&quot;)) {</span></div>
-<div class="line"><span class="lineno">  170</span><span class="comment">//              markets.add(market, 100000f);</span></div>
-<div class="line"><span class="lineno">  171</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">  172</span>        }</div>
-<div class="line"><span class="lineno">  173</span>        <span class="keywordflow">return</span> markets.pick();</div>
-<div class="line"><span class="lineno">  174</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac908db0eddb4745b312b25b4c6ecf6d6" name="ac908db0eddb4745b312b25b4c6ecf6d6"></a>
@@ -860,32 +686,7 @@ Public Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../dc/d53/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1BaseMiscFleetCreatorPlugin.html#aeefcfb210aef772260bf0110ace62274">com.fs.starfarer.api.impl.campaign.fleets.misc.BaseMiscFleetCreatorPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d3c/MiscPilgrimFleetCreator_8java_source.html#l00208">208</a> of file <a class="el" href="../../d2/d3c/MiscPilgrimFleetCreator_8java_source.html">MiscPilgrimFleetCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  208</span>                                                                                                                                              {</div>
-<div class="line"><span class="lineno">  209</span>        RouteData route = RouteManager.getInstance().getRoute(manager.getRouteSourceId(), fleet);</div>
-<div class="line"><span class="lineno">  210</span>        <span class="keywordflow">if</span> (route == <span class="keyword">null</span> || !(route.getCustom() instanceof MiscRouteData)) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  211</span>        </div>
-<div class="line"><span class="lineno">  212</span>        <span class="keywordflow">if</span> (route.isExpired()) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  213</span>        <span class="keywordflow">if</span> (!battle.isPlayerInvolved()) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  214</span> </div>
-<div class="line"><span class="lineno">  215</span>        <span class="comment">// player was involved, no the opposite side of the pilgrim fleet</span></div>
-<div class="line"><span class="lineno">  216</span>        <span class="keywordflow">if</span> (battle.getNonPlayerSideSnapshot().contains(fleet)) {</div>
-<div class="line"><span class="lineno">  217</span>            MiscRouteData data = (MiscRouteData) route.getCustom();</div>
-<div class="line"><span class="lineno">  218</span>            </div>
-<div class="line"><span class="lineno">  219</span>            DelayedFleetEncounter e = <span class="keyword">new</span> DelayedFleetEncounter(<span class="keyword">new</span> Random(), <span class="stringliteral">&quot;luddicPilgrims&quot;</span>);</div>
-<div class="line"><span class="lineno">  220</span>            e.setDelayShort();</div>
-<div class="line"><span class="lineno">  221</span>            <span class="comment">//e.setDelayNone();</span></div>
-<div class="line"><span class="lineno">  222</span>            e.setLocationCoreOnly(<span class="keyword">true</span>, Factions.LUDDIC_CHURCH);</div>
-<div class="line"><span class="lineno">  223</span>            e.beginCreate();</div>
-<div class="line"><span class="lineno">  224</span>            e.triggerCreateFleet(FleetSize.MEDIUM, FleetQuality.DEFAULT, Factions.LUDDIC_CHURCH, FleetTypes.PATROL_MEDIUM, <span class="keyword">new</span> Vector2f());</div>
-<div class="line"><span class="lineno">  225</span>            e.triggerSetFleetSizeFraction(Math.min(1f, data.size * 3f));</div>
-<div class="line"><span class="lineno">  226</span>            e.autoAdjustFleetTypeName();</div>
-<div class="line"><span class="lineno">  227</span>            e.triggerSetPatrol();</div>
-<div class="line"><span class="lineno">  228</span>            e.triggerSetStandardAggroInterceptFlags();</div>
-<div class="line"><span class="lineno">  229</span>            e.triggerSetFleetGenericHailPermanent(<span class="stringliteral">&quot;PilgrimRevengeHail&quot;</span>);</div>
-<div class="line"><span class="lineno">  230</span>            e.endCreate();          </div>
-<div class="line"><span class="lineno">  231</span>        }</div>
-<div class="line"><span class="lineno">  232</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

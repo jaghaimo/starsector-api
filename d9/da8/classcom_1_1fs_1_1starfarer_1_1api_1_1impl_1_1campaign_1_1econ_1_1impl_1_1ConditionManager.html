@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -157,10 +158,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d7a/ConditionManager_8java_source.html#l00027">27</a> of file <a class="el" href="../../d6/d7a/ConditionManager_8java_source.html">ConditionManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   27</span>                              {</div>
-<div class="line"><span class="lineno">   28</span>        Global.getSector().getEconomy().addUpdateListener(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">   29</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -181,10 +179,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d7a/ConditionManager_8java_source.html#l00102">102</a> of file <a class="el" href="../../d6/d7a/ConditionManager_8java_source.html">ConditionManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  102</span>                                                     {</div>
-<div class="line"><span class="lineno">  103</span>        </div>
-<div class="line"><span class="lineno">  104</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae3928231da095354de11b55127b802f5" name="ae3928231da095354de11b55127b802f5"></a>
@@ -203,76 +198,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d7a/ConditionManager_8java_source.html#l00032">32</a> of file <a class="el" href="../../d6/d7a/ConditionManager_8java_source.html">ConditionManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   32</span>                                 {</div>
-<div class="line"><span class="lineno">   33</span>        </div>
-<div class="line"><span class="lineno">   34</span>        <span class="keywordflow">for</span> (MarketAPI market : Global.getSector().getEconomy().getMarketsCopy()) {</div>
-<div class="line"><span class="lineno">   35</span>            <span class="keywordflow">if</span> (market.isHidden()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   36</span>            </div>
-<div class="line"><span class="lineno">   37</span>            <span class="keywordtype">int</span> urban = 0;</div>
-<div class="line"><span class="lineno">   38</span>            <span class="keywordtype">int</span> industrial = 0;</div>
-<div class="line"><span class="lineno">   39</span>            <span class="keywordtype">int</span> rural = 0;</div>
-<div class="line"><span class="lineno">   40</span>            <span class="keywordtype">int</span> pollution = 0;</div>
-<div class="line"><span class="lineno">   41</span>            </div>
-<div class="line"><span class="lineno">   42</span>            <span class="keywordflow">for</span> (Industry curr : market.getIndustries()) {</div>
-<div class="line"><span class="lineno">   43</span>                <span class="keywordflow">if</span> (!curr.isIndustry()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   44</span>                </div>
-<div class="line"><span class="lineno">   45</span>                <span class="keywordflow">if</span> (curr.getSpec().hasTag(Industries.TAG_URBAN)) {</div>
-<div class="line"><span class="lineno">   46</span>                    urban++;</div>
-<div class="line"><span class="lineno">   47</span>                }</div>
-<div class="line"><span class="lineno">   48</span>                <span class="keywordflow">if</span> (curr.getSpec().hasTag(Industries.TAG_RURAL)) {</div>
-<div class="line"><span class="lineno">   49</span>                    rural++;</div>
-<div class="line"><span class="lineno">   50</span>                }</div>
-<div class="line"><span class="lineno">   51</span>                <span class="keywordflow">if</span> (curr.getSpec().hasTag(Industries.TAG_INDUSTRIAL)) {</div>
-<div class="line"><span class="lineno">   52</span>                    industrial++;</div>
-<div class="line"><span class="lineno">   53</span>                    pollution++;</div>
-<div class="line"><span class="lineno">   54</span>                }</div>
-<div class="line"><span class="lineno">   55</span>            }</div>
-<div class="line"><span class="lineno">   56</span>            </div>
-<div class="line"><span class="lineno">   57</span>            <span class="keywordflow">if</span> (market.hasCondition(Conditions.URBANIZED_POLITY)) {</div>
-<div class="line"><span class="lineno">   58</span>                <span class="keywordflow">if</span> (urban &lt;= 0 || industrial &gt; 0 || rural &gt; 0) {</div>
-<div class="line"><span class="lineno">   59</span>                    market.removeCondition(Conditions.URBANIZED_POLITY);</div>
-<div class="line"><span class="lineno">   60</span>                }</div>
-<div class="line"><span class="lineno">   61</span>            }</div>
-<div class="line"><span class="lineno">   62</span>            <span class="keywordflow">if</span> (market.hasCondition(Conditions.RURAL_POLITY)) {</div>
-<div class="line"><span class="lineno">   63</span>                <span class="keywordflow">if</span> (rural &lt;= 0 || urban &gt; 0 || industrial &gt; 0) {</div>
-<div class="line"><span class="lineno">   64</span>                    market.removeCondition(Conditions.RURAL_POLITY);</div>
-<div class="line"><span class="lineno">   65</span>                }</div>
-<div class="line"><span class="lineno">   66</span>            }</div>
-<div class="line"><span class="lineno">   67</span>            <span class="keywordflow">if</span> (market.hasCondition(Conditions.INDUSTRIAL_POLITY)) {</div>
-<div class="line"><span class="lineno">   68</span>                <span class="keywordflow">if</span> (industrial &lt;= 0 || urban &gt; 0 || rural &gt; 0) {</div>
-<div class="line"><span class="lineno">   69</span>                    market.removeCondition(Conditions.INDUSTRIAL_POLITY);</div>
-<div class="line"><span class="lineno">   70</span>                }</div>
-<div class="line"><span class="lineno">   71</span>            }</div>
-<div class="line"><span class="lineno">   72</span>            </div>
-<div class="line"><span class="lineno">   73</span>            <span class="keywordflow">if</span> (market.getSize() &lt;= 3) {</div>
-<div class="line"><span class="lineno">   74</span>                <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   75</span>            }</div>
-<div class="line"><span class="lineno">   76</span>            </div>
-<div class="line"><span class="lineno">   77</span>            <span class="keywordflow">if</span> (!market.hasCondition(Conditions.URBANIZED_POLITY)) {</div>
-<div class="line"><span class="lineno">   78</span>                <span class="keywordflow">if</span> (urban &gt; 0 &amp;&amp; industrial + rural &lt;= 0) {</div>
-<div class="line"><span class="lineno">   79</span>                    market.addCondition(Conditions.URBANIZED_POLITY);</div>
-<div class="line"><span class="lineno">   80</span>                }</div>
-<div class="line"><span class="lineno">   81</span>            }</div>
-<div class="line"><span class="lineno">   82</span>            <span class="keywordflow">if</span> (!market.hasCondition(Conditions.RURAL_POLITY)) {</div>
-<div class="line"><span class="lineno">   83</span>                <span class="keywordflow">if</span> (rural &gt; 0 &amp;&amp; industrial + urban &lt;= 0) {</div>
-<div class="line"><span class="lineno">   84</span>                    market.addCondition(Conditions.RURAL_POLITY);</div>
-<div class="line"><span class="lineno">   85</span>                }</div>
-<div class="line"><span class="lineno">   86</span>            }</div>
-<div class="line"><span class="lineno">   87</span>            <span class="keywordflow">if</span> (!market.hasCondition(Conditions.INDUSTRIAL_POLITY)) {</div>
-<div class="line"><span class="lineno">   88</span>                <span class="keywordflow">if</span> (industrial &gt; 0 &amp;&amp; rural + urban &lt;= 0) {</div>
-<div class="line"><span class="lineno">   89</span>                    market.addCondition(Conditions.INDUSTRIAL_POLITY);</div>
-<div class="line"><span class="lineno">   90</span>                }</div>
-<div class="line"><span class="lineno">   91</span>            }</div>
-<div class="line"><span class="lineno">   92</span>            </div>
-<div class="line"><span class="lineno">   93</span>            <span class="keywordflow">if</span> (!market.hasCondition(Conditions.POLLUTION) &amp;&amp; market.hasCondition(Conditions.HABITABLE) &amp;&amp; </div>
-<div class="line"><span class="lineno">   94</span>                    market.getSize() &gt;= 5 &amp;&amp; pollution &gt;= 3) {</div>
-<div class="line"><span class="lineno">   95</span>                market.addCondition(Conditions.POLLUTION);</div>
-<div class="line"><span class="lineno">   96</span>            }</div>
-<div class="line"><span class="lineno">   97</span>            </div>
-<div class="line"><span class="lineno">   98</span>        }</div>
-<div class="line"><span class="lineno">   99</span>        </div>
-<div class="line"><span class="lineno">  100</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9337754c517dbb0c41945c6f74da165c" name="a9337754c517dbb0c41945c6f74da165c"></a>
@@ -299,17 +225,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d7a/ConditionManager_8java_source.html#l00014">14</a> of file <a class="el" href="../../d6/d7a/ConditionManager_8java_source.html">ConditionManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   14</span>                                                 {</div>
-<div class="line"><span class="lineno">   15</span>        Object test = Global.getSector().getMemoryWithoutUpdate().get(<a class="code hl_variable" href="../../d9/da8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1ConditionManager.html#af227e640ede9c319d8455bb1e8687827">KEY</a>);</div>
-<div class="line"><span class="lineno">   16</span>        <span class="keywordflow">if</span> (test == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   17</span>            test = <span class="keyword">new</span> <a class="code hl_function" href="../../d9/da8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1ConditionManager.html#a121e8176920d39af612f9ff77192e28a">ConditionManager</a>();</div>
-<div class="line"><span class="lineno">   18</span>            Global.getSector().getMemoryWithoutUpdate().set(<a class="code hl_variable" href="../../d9/da8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1ConditionManager.html#af227e640ede9c319d8455bb1e8687827">KEY</a>, test);</div>
-<div class="line"><span class="lineno">   19</span>        }</div>
-<div class="line"><span class="lineno">   20</span>        <span class="keywordflow">return</span> (<a class="code hl_function" href="../../d9/da8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1ConditionManager.html#a121e8176920d39af612f9ff77192e28a">ConditionManager</a>) test; </div>
-<div class="line"><span class="lineno">   21</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1ConditionManager_html_a121e8176920d39af612f9ff77192e28a"><div class="ttname"><a href="../../d9/da8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1ConditionManager.html#a121e8176920d39af612f9ff77192e28a">com.fs.starfarer.api.impl.campaign.econ.impl.ConditionManager.ConditionManager</a></div><div class="ttdeci">ConditionManager()</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d7a/ConditionManager_8java_source.html#l00027">ConditionManager.java:27</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1ConditionManager_html_af227e640ede9c319d8455bb1e8687827"><div class="ttname"><a href="../../d9/da8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1ConditionManager.html#af227e640ede9c319d8455bb1e8687827">com.fs.starfarer.api.impl.campaign.econ.impl.ConditionManager.KEY</a></div><div class="ttdeci">static final String KEY</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d7a/ConditionManager_8java_source.html#l00012">ConditionManager.java:12</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5220d9ee463fe21e09164f93da8adc27" name="a5220d9ee463fe21e09164f93da8adc27"></a>
@@ -328,10 +244,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d7a/ConditionManager_8java_source.html#l00106">106</a> of file <a class="el" href="../../d6/d7a/ConditionManager_8java_source.html">ConditionManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  106</span>                                              {</div>
-<div class="line"><span class="lineno">  107</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  108</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a0c9667e59a9b6318b65049ff0c37f8ec" name="a0c9667e59a9b6318b65049ff0c37f8ec"></a>
@@ -358,10 +271,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d7a/ConditionManager_8java_source.html#l00023">23</a> of file <a class="el" href="../../d6/d7a/ConditionManager_8java_source.html">ConditionManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   23</span>                                   {</div>
-<div class="line"><span class="lineno">   24</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">   25</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

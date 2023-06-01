@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -176,53 +177,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="../../d0/d5c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1CommandPlugin.html#a72a44c5127e60136b87d3b37613fd0e0">com.fs.starfarer.api.campaign.rules.CommandPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d0e/HostileFleetNearbyAndAware_8java_source.html#l00022">22</a> of file <a class="el" href="../../dd/d0e/HostileFleetNearbyAndAware_8java_source.html">HostileFleetNearbyAndAware.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   22</span>                                                                                                                             {</div>
-<div class="line"><span class="lineno">   23</span>        </div>
-<div class="line"><span class="lineno">   24</span>        <span class="comment">//float range = params.get(0).getFloat(memoryMap);</span></div>
-<div class="line"><span class="lineno">   25</span> </div>
-<div class="line"><span class="lineno">   26</span>        CampaignFleetAPI playerFleet = Global.getSector().getPlayerFleet();</div>
-<div class="line"><span class="lineno">   27</span>        <span class="keywordflow">for</span> (CampaignFleetAPI fleet : playerFleet.getContainingLocation().getFleets()) {</div>
-<div class="line"><span class="lineno">   28</span>            <span class="keywordflow">if</span> (fleet.getAI() == <span class="keyword">null</span>) <span class="keywordflow">continue</span>; <span class="comment">// dormant Remnant fleets</span></div>
-<div class="line"><span class="lineno">   29</span>            <span class="keywordflow">if</span> (fleet.getFaction().isPlayerFaction()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   30</span>            <span class="keywordflow">if</span> (fleet.isStationMode()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   31</span>            </div>
-<div class="line"><span class="lineno">   32</span>            <span class="keywordflow">if</span> (!fleet.isHostileTo(playerFleet)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   33</span>            <span class="keywordflow">if</span> (fleet.getBattle() != <span class="keyword">null</span>) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   34</span>            </div>
-<div class="line"><span class="lineno">   35</span>            <span class="keywordflow">if</span> (Misc.isInsignificant(fleet)) {</div>
-<div class="line"><span class="lineno">   36</span>                <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   37</span>            }</div>
-<div class="line"><span class="lineno">   38</span>            </div>
-<div class="line"><span class="lineno">   39</span>            </div>
-<div class="line"><span class="lineno">   40</span>            VisibilityLevel level = playerFleet.getVisibilityLevelTo(fleet);</div>
-<div class="line"><span class="lineno">   41</span><span class="comment">//          MemoryAPI mem = fleet.getMemoryWithoutUpdate();</span></div>
-<div class="line"><span class="lineno">   42</span><span class="comment">//          if (!mem.contains(MemFlags.MEMORY_KEY_SAW_PLAYER_WITH_TRANSPONDER_OFF) &amp;&amp; </span></div>
-<div class="line"><span class="lineno">   43</span><span class="comment">//                  !mem.contains(MemFlags.MEMORY_KEY_PURSUE_PLAYER)) {</span></div>
-<div class="line"><span class="lineno">   44</span><span class="comment">//              if (level == VisibilityLevel.NONE) continue;</span></div>
-<div class="line"><span class="lineno">   45</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">   46</span>            <span class="keywordflow">if</span> (level == VisibilityLevel.NONE) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   47</span>            </div>
-<div class="line"><span class="lineno">   48</span>            <span class="keywordflow">if</span> (fleet.getFleetData().getMembersListCopy().isEmpty()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   49</span>            </div>
-<div class="line"><span class="lineno">   50</span>            <span class="keywordtype">float</span> dist = Misc.getDistance(playerFleet.getLocation(), fleet.getLocation());</div>
-<div class="line"><span class="lineno">   51</span>            <span class="keywordflow">if</span> (dist &gt; 1500f) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   52</span>            </div>
-<div class="line"><span class="lineno">   53</span>            <span class="comment">//fleet.getAI().pickEncounterOption(null, playerFleet, true);</span></div>
-<div class="line"><span class="lineno">   54</span>            <span class="keywordflow">if</span> (fleet.getAI() instanceof ModularFleetAIAPI) {</div>
-<div class="line"><span class="lineno">   55</span>                ModularFleetAIAPI ai = (ModularFleetAIAPI) fleet.getAI();</div>
-<div class="line"><span class="lineno">   56</span>                <span class="keywordflow">if</span> (ai.getTacticalModule() != <span class="keyword">null</span> &amp;&amp; </div>
-<div class="line"><span class="lineno">   57</span>                        (ai.getTacticalModule().isFleeing() || ai.getTacticalModule().isMaintainingContact() ||</div>
-<div class="line"><span class="lineno">   58</span>                                ai.getTacticalModule().isStandingDown())) {</div>
-<div class="line"><span class="lineno">   59</span>                    <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   60</span>                }</div>
-<div class="line"><span class="lineno">   61</span>            }</div>
-<div class="line"><span class="lineno">   62</span>            </div>
-<div class="line"><span class="lineno">   63</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   64</span>        }</div>
-<div class="line"><span class="lineno">   65</span> </div>
-<div class="line"><span class="lineno">   66</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   67</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

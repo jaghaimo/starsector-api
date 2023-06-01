@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -169,9 +170,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d0f/RemnantOfficerGeneratorPlugin_8java_source.html#l00037">37</a> of file <a class="el" href="../../d5/d0f/RemnantOfficerGeneratorPlugin_8java_source.html">RemnantOfficerGeneratorPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   37</span>                                           {</div>
-<div class="line"><span class="lineno">   38</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a563bf6b88326fb84609f77d6bd428ac5" name="a563bf6b88326fb84609f77d6bd428ac5"></a>
@@ -201,13 +200,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d0f/RemnantOfficerGeneratorPlugin_8java_source.html#l00040">40</a> of file <a class="el" href="../../d5/d0f/RemnantOfficerGeneratorPlugin_8java_source.html">RemnantOfficerGeneratorPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   40</span>                                                                               {</div>
-<div class="line"><span class="lineno">   41</span>        this.derelictMode = <a class="code hl_variable" href="../../d5/d59/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RemnantOfficerGeneratorPlugin.html#a934d0a8dad44c31e2303f4f6706d81cf">derelictMode</a>;</div>
-<div class="line"><span class="lineno">   42</span>        this.coreMult = <a class="code hl_variable" href="../../d5/d59/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RemnantOfficerGeneratorPlugin.html#afe941d7d3e5d9be99b414c4ff701767e">coreMult</a>;</div>
-<div class="line"><span class="lineno">   43</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RemnantOfficerGeneratorPlugin_html_a934d0a8dad44c31e2303f4f6706d81cf"><div class="ttname"><a href="../../d5/d59/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RemnantOfficerGeneratorPlugin.html#a934d0a8dad44c31e2303f4f6706d81cf">com.fs.starfarer.api.impl.campaign.procgen.themes.RemnantOfficerGeneratorPlugin.derelictMode</a></div><div class="ttdeci">boolean derelictMode</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d0f/RemnantOfficerGeneratorPlugin_8java_source.html#l00034">RemnantOfficerGeneratorPlugin.java:34</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RemnantOfficerGeneratorPlugin_html_afe941d7d3e5d9be99b414c4ff701767e"><div class="ttname"><a href="../../d5/d59/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RemnantOfficerGeneratorPlugin.html#afe941d7d3e5d9be99b414c4ff701767e">com.fs.starfarer.api.impl.campaign.procgen.themes.RemnantOfficerGeneratorPlugin.coreMult</a></div><div class="ttdeci">float coreMult</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d0f/RemnantOfficerGeneratorPlugin_8java_source.html#l00035">RemnantOfficerGeneratorPlugin.java:35</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -246,168 +239,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d8/d05/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseGenerateFleetOfficersPlugin.html#a101931395dfc56c7d49f2ae63f6209a8">com.fs.starfarer.api.impl.campaign.fleets.BaseGenerateFleetOfficersPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d0f/RemnantOfficerGeneratorPlugin_8java_source.html#l00071">71</a> of file <a class="el" href="../../d5/d0f/RemnantOfficerGeneratorPlugin_8java_source.html">RemnantOfficerGeneratorPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   71</span>                                                                                                     {</div>
-<div class="line"><span class="lineno">   72</span>        <span class="keywordflow">if</span> (random == <span class="keyword">null</span>) random = Misc.random;</div>
-<div class="line"><span class="lineno">   73</span>        FactionAPI faction = fleet.getFaction();</div>
-<div class="line"><span class="lineno">   74</span>        FactionDoctrineAPI doctrine = faction.getDoctrine();</div>
-<div class="line"><span class="lineno">   75</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="../../d5/d59/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RemnantOfficerGeneratorPlugin.html#a934d0a8dad44c31e2303f4f6706d81cf">derelictMode</a> &amp;&amp; params != <span class="keyword">null</span> &amp;&amp; params.doctrineOverride != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   76</span>            doctrine = params.doctrineOverride;</div>
-<div class="line"><span class="lineno">   77</span>        }</div>
-<div class="line"><span class="lineno">   78</span>        List&lt;FleetMemberAPI&gt; members = fleet.getFleetData().getMembersListCopy();</div>
-<div class="line"><span class="lineno">   79</span>        <span class="keywordflow">if</span> (members.isEmpty()) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   80</span>        </div>
-<div class="line"><span class="lineno">   81</span>        Map&lt;String, AICoreOfficerPlugin&gt; plugins = <span class="keyword">new</span> HashMap&lt;String, AICoreOfficerPlugin&gt;();</div>
-<div class="line"><span class="lineno">   82</span>        </div>
-<div class="line"><span class="lineno">   83</span>        plugins.put(Commodities.OMEGA_CORE, Misc.getAICoreOfficerPlugin(Commodities.OMEGA_CORE));</div>
-<div class="line"><span class="lineno">   84</span>        plugins.put(Commodities.ALPHA_CORE, Misc.getAICoreOfficerPlugin(Commodities.ALPHA_CORE));</div>
-<div class="line"><span class="lineno">   85</span>        plugins.put(Commodities.BETA_CORE, Misc.getAICoreOfficerPlugin(Commodities.BETA_CORE));</div>
-<div class="line"><span class="lineno">   86</span>        plugins.put(Commodities.GAMMA_CORE, Misc.getAICoreOfficerPlugin(Commodities.GAMMA_CORE));</div>
-<div class="line"><span class="lineno">   87</span>        String nothing = <span class="stringliteral">&quot;nothing&quot;</span>;</div>
-<div class="line"><span class="lineno">   88</span>        </div>
-<div class="line"><span class="lineno">   89</span>        <span class="keywordtype">float</span> fleetFP = 0f; <span class="comment">//fleet.getFleetPoints(); &lt;- doesn&#39;t work here, requires a call to fleet.forceSync()</span></div>
-<div class="line"><span class="lineno">   90</span>        <span class="keywordflow">for</span> (FleetMemberAPI member : members) {</div>
-<div class="line"><span class="lineno">   91</span>            fleetFP += member.getFleetPointCost();</div>
-<div class="line"><span class="lineno">   92</span>        }</div>
-<div class="line"><span class="lineno">   93</span>        <span class="keywordtype">boolean</span> allowAlphaAnywhere = fleetFP &gt; 150f;</div>
-<div class="line"><span class="lineno">   94</span>        <span class="keywordtype">boolean</span> allowBetaAnywhere = fleetFP &gt; 75f;</div>
-<div class="line"><span class="lineno">   95</span>        </div>
-<div class="line"><span class="lineno">   96</span>        <span class="comment">//boolean integrate = fleetFP &gt; 200f || params.forceIntegrateAICores;</span></div>
-<div class="line"><span class="lineno">   97</span>        <span class="keywordtype">boolean</span> integrate = params != <span class="keyword">null</span> &amp;&amp; !params.doNotIntegrateAICores;</div>
-<div class="line"><span class="lineno">   98</span>        integrate |= <a class="code hl_variable" href="../../d5/d59/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RemnantOfficerGeneratorPlugin.html#a1dc00c432d6a383549d514606426f5ad">forceIntegrateCores</a>;</div>
-<div class="line"><span class="lineno">   99</span>        </div>
-<div class="line"><span class="lineno">  100</span>        <span class="keywordtype">int</span> numCommanderSkills = 1;</div>
-<div class="line"><span class="lineno">  101</span>        <span class="keywordflow">if</span> (allowBetaAnywhere) numCommanderSkills++;</div>
-<div class="line"><span class="lineno">  102</span>        <span class="keywordflow">if</span> (allowAlphaAnywhere) numCommanderSkills++;</div>
-<div class="line"><span class="lineno">  103</span>        <span class="keywordflow">if</span> (params != <span class="keyword">null</span> &amp;&amp; params.noCommanderSkills != <span class="keyword">null</span> &amp;&amp; params.noCommanderSkills) numCommanderSkills = 0;</div>
-<div class="line"><span class="lineno">  104</span>        </div>
-<div class="line"><span class="lineno">  105</span>        </div>
-<div class="line"><span class="lineno">  106</span>        <span class="comment">//float fpPerCore = 20f;</span></div>
-<div class="line"><span class="lineno">  107</span>        <span class="keywordtype">float</span> fpPerCore = Global.getSettings().getFloat(<span class="stringliteral">&quot;baseFPPerAICore&quot;</span>);</div>
-<div class="line"><span class="lineno">  108</span>        </div>
-<div class="line"><span class="lineno">  109</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d5/d59/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RemnantOfficerGeneratorPlugin.html#a934d0a8dad44c31e2303f4f6706d81cf">derelictMode</a>) {</div>
-<div class="line"><span class="lineno">  110</span>            fpPerCore = 30 - 20f * <a class="code hl_variable" href="../../d5/d59/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RemnantOfficerGeneratorPlugin.html#afe941d7d3e5d9be99b414c4ff701767e">coreMult</a>;</div>
-<div class="line"><span class="lineno">  111</span>        }</div>
-<div class="line"><span class="lineno">  112</span>        </div>
-<div class="line"><span class="lineno">  113</span>        <span class="keywordtype">int</span> minCores = (int) (fleetFP / fpPerCore * (params != <span class="keyword">null</span> ? params.officerNumberMult : 1f));</div>
-<div class="line"><span class="lineno">  114</span>        <span class="keywordflow">if</span> (params != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  115</span>            minCores += params.officerNumberBonus;</div>
-<div class="line"><span class="lineno">  116</span>        }</div>
-<div class="line"><span class="lineno">  117</span>        <span class="keywordflow">if</span> (minCores &lt; 1) minCores = 1;</div>
-<div class="line"><span class="lineno">  118</span>        </div>
-<div class="line"><span class="lineno">  119</span>        <span class="keywordtype">boolean</span> debug = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  120</span>        debug = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  121</span>        </div>
-<div class="line"><span class="lineno">  122</span>        WeightedRandomPicker&lt;FleetMemberAPI&gt; withOfficers = <span class="keyword">new</span> WeightedRandomPicker&lt;FleetMemberAPI&gt;(random);</div>
-<div class="line"><span class="lineno">  123</span>        </div>
-<div class="line"><span class="lineno">  124</span>        <span class="keywordtype">int</span> maxSize = 0;</div>
-<div class="line"><span class="lineno">  125</span>        <span class="keywordflow">for</span> (FleetMemberAPI member : members) {</div>
-<div class="line"><span class="lineno">  126</span>            <span class="keywordflow">if</span> (member.isFighterWing()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  127</span>            <span class="keywordflow">if</span> (member.isCivilian()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  128</span>            <span class="keywordtype">int</span> size = member.getHullSpec().getHullSize().ordinal();</div>
-<div class="line"><span class="lineno">  129</span>            <span class="keywordflow">if</span> (size &gt; maxSize) {</div>
-<div class="line"><span class="lineno">  130</span>                maxSize = size;</div>
-<div class="line"><span class="lineno">  131</span>            }</div>
-<div class="line"><span class="lineno">  132</span>        }</div>
-<div class="line"><span class="lineno">  133</span>        </div>
-<div class="line"><span class="lineno">  134</span>        List&lt;FleetMemberAPI&gt; allWithOfficers = <span class="keyword">new</span> ArrayList&lt;FleetMemberAPI&gt;();</div>
-<div class="line"><span class="lineno">  135</span>        <span class="keywordtype">int</span> addedCores = 0;</div>
-<div class="line"><span class="lineno">  136</span>        <span class="keywordflow">for</span> (FleetMemberAPI member : members) {</div>
-<div class="line"><span class="lineno">  137</span>            </div>
-<div class="line"><span class="lineno">  138</span>            <span class="keywordflow">if</span> (member.isCivilian()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  139</span>            <span class="keywordflow">if</span> (member.isFighterWing()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  140</span>            </div>
-<div class="line"><span class="lineno">  141</span>            <span class="keywordtype">float</span> fp = member.getFleetPointCost();</div>
-<div class="line"><span class="lineno">  142</span>            </div>
-<div class="line"><span class="lineno">  143</span>            WeightedRandomPicker&lt;String&gt; picker = <span class="keyword">new</span> WeightedRandomPicker&lt;String&gt;(random);</div>
-<div class="line"><span class="lineno">  144</span>            </div>
-<div class="line"><span class="lineno">  145</span>            <span class="keywordflow">if</span> (params != <span class="keyword">null</span> &amp;&amp; params.aiCores == OfficerQuality.AI_GAMMA) {</div>
-<div class="line"><span class="lineno">  146</span>                picker.add(Commodities.GAMMA_CORE, fp);</div>
-<div class="line"><span class="lineno">  147</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (params != <span class="keyword">null</span> &amp;&amp; params.aiCores == OfficerQuality.AI_BETA) {</div>
-<div class="line"><span class="lineno">  148</span>                picker.add(Commodities.BETA_CORE, fp);</div>
-<div class="line"><span class="lineno">  149</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (params != <span class="keyword">null</span> &amp;&amp; params.aiCores == OfficerQuality.AI_ALPHA) {</div>
-<div class="line"><span class="lineno">  150</span>                picker.add(Commodities.ALPHA_CORE, fp);</div>
-<div class="line"><span class="lineno">  151</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (params != <span class="keyword">null</span> &amp;&amp; params.aiCores == OfficerQuality.AI_OMEGA) {</div>
-<div class="line"><span class="lineno">  152</span>                picker.add(Commodities.OMEGA_CORE, fp);</div>
-<div class="line"><span class="lineno">  153</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (params != <span class="keyword">null</span> &amp;&amp; params.aiCores == OfficerQuality.AI_BETA_OR_GAMMA) {</div>
-<div class="line"><span class="lineno">  154</span>                <span class="keywordflow">if</span> (member.isCapital() || member.isCruiser()) {</div>
-<div class="line"><span class="lineno">  155</span>                    picker.add(Commodities.BETA_CORE, fp);</div>
-<div class="line"><span class="lineno">  156</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (allowAlphaAnywhere) {</div>
-<div class="line"><span class="lineno">  157</span>                    picker.add(Commodities.BETA_CORE, fp);</div>
-<div class="line"><span class="lineno">  158</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  159</span>                    picker.add(Commodities.BETA_CORE, fp/2f);</div>
-<div class="line"><span class="lineno">  160</span>                }</div>
-<div class="line"><span class="lineno">  161</span>                picker.add(Commodities.GAMMA_CORE, fp);</div>
-<div class="line"><span class="lineno">  162</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  163</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d5/d59/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RemnantOfficerGeneratorPlugin.html#a934d0a8dad44c31e2303f4f6706d81cf">derelictMode</a>) {</div>
-<div class="line"><span class="lineno">  164</span>                    picker.add(Commodities.GAMMA_CORE, fp);</div>
-<div class="line"><span class="lineno">  165</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  166</span>                    <span class="keywordflow">if</span> (member.isCapital() || member.isCruiser()) {</div>
-<div class="line"><span class="lineno">  167</span>                        picker.add(Commodities.ALPHA_CORE, fp);</div>
-<div class="line"><span class="lineno">  168</span>                    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (allowAlphaAnywhere) {</div>
-<div class="line"><span class="lineno">  169</span>                        picker.add(Commodities.ALPHA_CORE, fp);</div>
-<div class="line"><span class="lineno">  170</span>                    }</div>
-<div class="line"><span class="lineno">  171</span>                    </div>
-<div class="line"><span class="lineno">  172</span>                    <span class="keywordflow">if</span> (member.isCruiser() || member.isDestroyer()) {</div>
-<div class="line"><span class="lineno">  173</span>                        picker.add(Commodities.BETA_CORE, fp/2f);</div>
-<div class="line"><span class="lineno">  174</span>                    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (allowBetaAnywhere &amp;&amp; member.isFrigate()) {</div>
-<div class="line"><span class="lineno">  175</span>                        picker.add(Commodities.BETA_CORE, fp);</div>
-<div class="line"><span class="lineno">  176</span>                    }</div>
-<div class="line"><span class="lineno">  177</span>                    </div>
-<div class="line"><span class="lineno">  178</span>                    <span class="keywordflow">if</span> (member.isDestroyer() || member.isFrigate()) {</div>
-<div class="line"><span class="lineno">  179</span>                        picker.add(Commodities.GAMMA_CORE, fp);</div>
-<div class="line"><span class="lineno">  180</span>                    }</div>
-<div class="line"><span class="lineno">  181</span>                }</div>
-<div class="line"><span class="lineno">  182</span>            }</div>
-<div class="line"><span class="lineno">  183</span>            </div>
-<div class="line"><span class="lineno">  184</span>            <span class="keywordflow">if</span> (addedCores &gt;= minCores) {</div>
-<div class="line"><span class="lineno">  185</span>                picker.add(nothing, 10f * picker.getTotal()/fp);</div>
-<div class="line"><span class="lineno">  186</span>            }</div>
-<div class="line"><span class="lineno">  187</span>            </div>
-<div class="line"><span class="lineno">  188</span>            String pick = picker.pick();</div>
-<div class="line"><span class="lineno">  189</span>            <span class="keywordflow">if</span> (debug) {</div>
-<div class="line"><span class="lineno">  190</span>                System.out.println(<span class="stringliteral">&quot;Picked [&quot;</span> + pick + <span class="stringliteral">&quot;] for &quot;</span> + member.getHullId());</div>
-<div class="line"><span class="lineno">  191</span>            }</div>
-<div class="line"><span class="lineno">  192</span>            AICoreOfficerPlugin plugin = plugins.get(pick);</div>
-<div class="line"><span class="lineno">  193</span>            <span class="keywordflow">if</span> (plugin != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  194</span>                addedCores++;</div>
-<div class="line"><span class="lineno">  195</span>                </div>
-<div class="line"><span class="lineno">  196</span>                PersonAPI person = plugin.createPerson(pick, fleet.getFaction().getId(), random);</div>
-<div class="line"><span class="lineno">  197</span>                member.setCaptain(person);</div>
-<div class="line"><span class="lineno">  198</span>                <span class="keywordflow">if</span> (integrate) {</div>
-<div class="line"><span class="lineno">  199</span>                    <a class="code hl_function" href="../../d5/d59/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RemnantOfficerGeneratorPlugin.html#afd43bbd2213ab5e2d184c22b74d280ab">integrateAndAdaptCoreForAIFleet</a>(member);</div>
-<div class="line"><span class="lineno">  200</span>                }</div>
-<div class="line"><span class="lineno">  201</span>                </div>
-<div class="line"><span class="lineno">  202</span>                <span class="keywordflow">if</span> (!member.isFighterWing() &amp;&amp; !member.isCivilian()) {</div>
-<div class="line"><span class="lineno">  203</span>                    withOfficers.add(member, fp);</div>
-<div class="line"><span class="lineno">  204</span>                }</div>
-<div class="line"><span class="lineno">  205</span>                </div>
-<div class="line"><span class="lineno">  206</span>                allWithOfficers.add(member);</div>
-<div class="line"><span class="lineno">  207</span>            }</div>
-<div class="line"><span class="lineno">  208</span>            </div>
-<div class="line"><span class="lineno">  209</span>            <span class="keywordflow">if</span> (addedCores &gt; 0 &amp;&amp; params != <span class="keyword">null</span> &amp;&amp; params.officerNumberMult &lt;= 0) {</div>
-<div class="line"><span class="lineno">  210</span>                <span class="keywordflow">break</span>; <span class="comment">// only want to add the fleet commander</span></div>
-<div class="line"><span class="lineno">  211</span>            }</div>
-<div class="line"><span class="lineno">  212</span>        }</div>
-<div class="line"><span class="lineno">  213</span>        </div>
-<div class="line"><span class="lineno">  214</span>        <span class="keywordflow">if</span> (withOfficers.isEmpty() &amp;&amp; !allWithOfficers.isEmpty()) {</div>
-<div class="line"><span class="lineno">  215</span>            withOfficers.add(allWithOfficers.get(0), 1f);</div>
-<div class="line"><span class="lineno">  216</span>        }</div>
-<div class="line"><span class="lineno">  217</span>        </div>
-<div class="line"><span class="lineno">  218</span>        </div>
-<div class="line"><span class="lineno">  219</span>        FleetMemberAPI flagship = withOfficers.pick();</div>
-<div class="line"><span class="lineno">  220</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="../../d5/d59/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RemnantOfficerGeneratorPlugin.html#a934d0a8dad44c31e2303f4f6706d81cf">derelictMode</a> &amp;&amp; flagship != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  221</span>            PersonAPI commander = flagship.getCaptain();</div>
-<div class="line"><span class="lineno">  222</span>            commander.setRankId(Ranks.SPACE_COMMANDER);</div>
-<div class="line"><span class="lineno">  223</span>            commander.setPostId(Ranks.POST_FLEET_COMMANDER);</div>
-<div class="line"><span class="lineno">  224</span>            fleet.setCommander(commander);</div>
-<div class="line"><span class="lineno">  225</span>            fleet.getFleetData().setFlagship(flagship);</div>
-<div class="line"><span class="lineno">  226</span>            <a class="code hl_function" href="../../d5/d59/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RemnantOfficerGeneratorPlugin.html#a98f837e80a98f3691211b949265bccf7">addCommanderSkills</a>(commander, fleet, params, numCommanderSkills, random);           </div>
-<div class="line"><span class="lineno">  227</span>        }</div>
-<div class="line"><span class="lineno">  228</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RemnantOfficerGeneratorPlugin_html_a1dc00c432d6a383549d514606426f5ad"><div class="ttname"><a href="../../d5/d59/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RemnantOfficerGeneratorPlugin.html#a1dc00c432d6a383549d514606426f5ad">com.fs.starfarer.api.impl.campaign.procgen.themes.RemnantOfficerGeneratorPlugin.forceIntegrateCores</a></div><div class="ttdeci">boolean forceIntegrateCores</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d0f/RemnantOfficerGeneratorPlugin_8java_source.html#l00033">RemnantOfficerGeneratorPlugin.java:33</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RemnantOfficerGeneratorPlugin_html_a98f837e80a98f3691211b949265bccf7"><div class="ttname"><a href="../../d5/d59/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RemnantOfficerGeneratorPlugin.html#a98f837e80a98f3691211b949265bccf7">com.fs.starfarer.api.impl.campaign.procgen.themes.RemnantOfficerGeneratorPlugin.addCommanderSkills</a></div><div class="ttdeci">static void addCommanderSkills(PersonAPI commander, CampaignFleetAPI fleet, FleetParamsV3 params, int numSkills, Random random)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d0f/RemnantOfficerGeneratorPlugin_8java_source.html#l00284">RemnantOfficerGeneratorPlugin.java:284</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RemnantOfficerGeneratorPlugin_html_afd43bbd2213ab5e2d184c22b74d280ab"><div class="ttname"><a href="../../d5/d59/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RemnantOfficerGeneratorPlugin.html#afd43bbd2213ab5e2d184c22b74d280ab">com.fs.starfarer.api.impl.campaign.procgen.themes.RemnantOfficerGeneratorPlugin.integrateAndAdaptCoreForAIFleet</a></div><div class="ttdeci">static void integrateAndAdaptCoreForAIFleet(FleetMemberAPI member)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d0f/RemnantOfficerGeneratorPlugin_8java_source.html#l00230">RemnantOfficerGeneratorPlugin.java:230</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a98f837e80a98f3691211b949265bccf7" name="a98f837e80a98f3691211b949265bccf7"></a>
@@ -463,44 +295,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d0f/RemnantOfficerGeneratorPlugin_8java_source.html#l00284">284</a> of file <a class="el" href="../../d5/d0f/RemnantOfficerGeneratorPlugin_8java_source.html">RemnantOfficerGeneratorPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  284</span>                                                                                                                                           {</div>
-<div class="line"><span class="lineno">  285</span>        <span class="keywordflow">if</span> (random == <span class="keyword">null</span>) random = <span class="keyword">new</span> Random();</div>
-<div class="line"><span class="lineno">  286</span>        <span class="keywordflow">if</span> (numSkills &lt;= 0) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  287</span>        </div>
-<div class="line"><span class="lineno">  288</span>        MutableCharacterStatsAPI stats = commander.getStats();</div>
-<div class="line"><span class="lineno">  289</span>        </div>
-<div class="line"><span class="lineno">  290</span>        FactionDoctrineAPI doctrine = fleet.getFaction().getDoctrine();</div>
-<div class="line"><span class="lineno">  291</span>        <span class="keywordflow">if</span> (params != <span class="keyword">null</span> &amp;&amp; params.doctrineOverride != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  292</span>            doctrine = params.doctrineOverride;</div>
-<div class="line"><span class="lineno">  293</span>        }</div>
-<div class="line"><span class="lineno">  294</span>        </div>
-<div class="line"><span class="lineno">  295</span>        List&lt;String&gt; skills = <span class="keyword">new</span> ArrayList&lt;String&gt;(doctrine.getCommanderSkills());</div>
-<div class="line"><span class="lineno">  296</span>        <span class="keywordflow">if</span> (skills.isEmpty()) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  297</span>        </div>
-<div class="line"><span class="lineno">  298</span>        <span class="keywordflow">if</span> (random.nextFloat() &lt; doctrine.getCommanderSkillsShuffleProbability()) {</div>
-<div class="line"><span class="lineno">  299</span>            Collections.shuffle(skills, random);</div>
-<div class="line"><span class="lineno">  300</span>        }</div>
-<div class="line"><span class="lineno">  301</span> </div>
-<div class="line"><span class="lineno">  302</span>        stats.setSkipRefresh(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  303</span>        </div>
-<div class="line"><span class="lineno">  304</span>        <span class="keywordtype">boolean</span> debug = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  305</span>        debug = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  306</span>        <span class="keywordflow">if</span> (debug) System.out.println(<span class="stringliteral">&quot;Generating commander skills, person level &quot;</span> + stats.getLevel() + <span class="stringliteral">&quot;, skills: &quot;</span> + numSkills);</div>
-<div class="line"><span class="lineno">  307</span>        <span class="keywordtype">int</span> picks = 0;</div>
-<div class="line"><span class="lineno">  308</span>        <span class="keywordflow">for</span> (String skillId : skills) {</div>
-<div class="line"><span class="lineno">  309</span>            <span class="keywordflow">if</span> (debug) System.out.println(<span class="stringliteral">&quot;Selected skill: [&quot;</span> + skillId + <span class="stringliteral">&quot;]&quot;</span>);</div>
-<div class="line"><span class="lineno">  310</span>            stats.setSkillLevel(skillId, 1);</div>
-<div class="line"><span class="lineno">  311</span>            picks++;</div>
-<div class="line"><span class="lineno">  312</span>            <span class="keywordflow">if</span> (picks &gt;= numSkills) {</div>
-<div class="line"><span class="lineno">  313</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  314</span>            }</div>
-<div class="line"><span class="lineno">  315</span>        }</div>
-<div class="line"><span class="lineno">  316</span>        <span class="keywordflow">if</span> (debug) System.out.println(<span class="stringliteral">&quot;Done generating commander skills\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  317</span>        </div>
-<div class="line"><span class="lineno">  318</span>        stats.setSkipRefresh(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  319</span>        stats.refreshCharacterStatsEffects();</div>
-<div class="line"><span class="lineno">  320</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a49b1ee0e69c4a8b43e2df5ce4455339f" name="a49b1ee0e69c4a8b43e2df5ce4455339f"></a>
@@ -522,20 +317,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d8/d05/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseGenerateFleetOfficersPlugin.html#ae161b03fa4026cd8567610dd7cc5b513">com.fs.starfarer.api.impl.campaign.fleets.BaseGenerateFleetOfficersPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d0f/RemnantOfficerGeneratorPlugin_8java_source.html#l00055">55</a> of file <a class="el" href="../../d5/d0f/RemnantOfficerGeneratorPlugin_8java_source.html">RemnantOfficerGeneratorPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   55</span>                                                  {</div>
-<div class="line"><span class="lineno">   56</span>        <span class="keywordflow">if</span> (!(params instanceof GenerateFleetOfficersPickData)) <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno">   57</span>        </div>
-<div class="line"><span class="lineno">   58</span>        GenerateFleetOfficersPickData data = (GenerateFleetOfficersPickData) params;</div>
-<div class="line"><span class="lineno">   59</span>        </div>
-<div class="line"><span class="lineno">   60</span>        <span class="keywordflow">if</span> (data.params != <span class="keyword">null</span> &amp;&amp; !data.params.withOfficers) <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno">   61</span>        </div>
-<div class="line"><span class="lineno">   62</span>        <span class="keywordflow">if</span> (data.params.aiCores != <span class="keyword">null</span>) <span class="keywordflow">return</span> GenericPluginManagerAPI.CORE_SUBSET;</div>
-<div class="line"><span class="lineno">   63</span>        </div>
-<div class="line"><span class="lineno">   64</span>        <span class="keywordflow">if</span> (data.fleet == <span class="keyword">null</span> || !data.fleet.getFaction().getId().equals(Factions.REMNANTS)) <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno">   65</span>        </div>
-<div class="line"><span class="lineno">   66</span>        <span class="keywordflow">return</span> GenericPluginManagerAPI.CORE_SUBSET;</div>
-<div class="line"><span class="lineno">   67</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a62c7a82a53df21b8a22e493294aa699b" name="a62c7a82a53df21b8a22e493294aa699b"></a>
@@ -563,21 +345,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d0f/RemnantOfficerGeneratorPlugin_8java_source.html#l00268">268</a> of file <a class="el" href="../../d5/d0f/RemnantOfficerGeneratorPlugin_8java_source.html">RemnantOfficerGeneratorPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  268</span>                                                                                 {</div>
-<div class="line"><span class="lineno">  269</span>        <span class="keywordflow">return</span> FleetFactoryV3.getSkillPrefForShip(member);</div>
-<div class="line"><span class="lineno">  270</span><span class="comment">//      float weight = FleetFactoryV3.getMemberWeight(member);</span></div>
-<div class="line"><span class="lineno">  271</span><span class="comment">//      float fighters = member.getVariant().getFittedWings().size();</span></div>
-<div class="line"><span class="lineno">  272</span><span class="comment">//      boolean wantCarrierSkills = weight &gt; 0 &amp;&amp; fighters / weight &gt;= 0.5f;</span></div>
-<div class="line"><span class="lineno">  273</span><span class="comment">//      SkillPickPreference pref = SkillPickPreference.GENERIC;</span></div>
-<div class="line"><span class="lineno">  274</span><span class="comment">//      if (wantCarrierSkills) {</span></div>
-<div class="line"><span class="lineno">  275</span><span class="comment">//          pref = SkillPickPreference.CARRIER;</span></div>
-<div class="line"><span class="lineno">  276</span><span class="comment">//      } else if (member.isPhaseShip()) {</span></div>
-<div class="line"><span class="lineno">  277</span><span class="comment">//          pref = SkillPickPreference.PHASE;</span></div>
-<div class="line"><span class="lineno">  278</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  279</span><span class="comment">//      </span></div>
-<div class="line"><span class="lineno">  280</span><span class="comment">//      return pref;</span></div>
-<div class="line"><span class="lineno">  281</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="afd43bbd2213ab5e2d184c22b74d280ab" name="afd43bbd2213ab5e2d184c22b74d280ab"></a>
@@ -605,43 +373,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d0f/RemnantOfficerGeneratorPlugin_8java_source.html#l00230">230</a> of file <a class="el" href="../../d5/d0f/RemnantOfficerGeneratorPlugin_8java_source.html">RemnantOfficerGeneratorPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  230</span>                                                                              {</div>
-<div class="line"><span class="lineno">  231</span>        PersonAPI person = member.getCaptain();</div>
-<div class="line"><span class="lineno">  232</span>        <span class="keywordflow">if</span> (!person.isAICore()) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  233</span>        </div>
-<div class="line"><span class="lineno">  234</span>        person.getStats().setLevel(person.getStats().getLevel() + 1);</div>
-<div class="line"><span class="lineno">  235</span>        </div>
-<div class="line"><span class="lineno">  236</span>        person.getStats().setSkipRefresh(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  237</span>        </div>
-<div class="line"><span class="lineno">  238</span><span class="comment">//      if (member.isCarrier()) {</span></div>
-<div class="line"><span class="lineno">  239</span><span class="comment">//          person.getStats().setSkillLevel(Skills.STRIKE_COMMANDER, 2);</span></div>
-<div class="line"><span class="lineno">  240</span><span class="comment">//          if (person.getStats().getSkillLevel(Skills.POINT_DEFENSE) &lt;= 0) {</span></div>
-<div class="line"><span class="lineno">  241</span><span class="comment">//              person.getStats().setSkillLevel(Skills.POINT_DEFENSE, 2);</span></div>
-<div class="line"><span class="lineno">  242</span><span class="comment">//              person.getStats().setSkillLevel(Skills.RELIABILITY_ENGINEERING, 0);</span></div>
-<div class="line"><span class="lineno">  243</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">  244</span><span class="comment">//      } else {</span></div>
-<div class="line"><span class="lineno">  245</span>            <span class="keywordflow">if</span> (member.getHullSpec() != <span class="keyword">null</span> &amp;&amp; member.getHullSpec().hasTag(Factions.DERELICT) &amp;&amp;</div>
-<div class="line"><span class="lineno">  246</span>                    person.getStats().getSkillLevel(Skills.BALLISTIC_MASTERY) &lt;= 0) {</div>
-<div class="line"><span class="lineno">  247</span>                person.getStats().setSkillLevel(Skills.BALLISTIC_MASTERY, 2);</div>
-<div class="line"><span class="lineno">  248</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  249</span>                <span class="keywordflow">if</span> (person.getStats().getSkillLevel(Skills.ENERGY_WEAPON_MASTERY) &lt;= 0) {</div>
-<div class="line"><span class="lineno">  250</span>                    person.getStats().setSkillLevel(Skills.ENERGY_WEAPON_MASTERY, 2);</div>
-<div class="line"><span class="lineno">  251</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  252</span>                    person.getStats().setSkillLevel(Skills.MISSILE_SPECIALIZATION, 2);</div>
-<div class="line"><span class="lineno">  253</span>                }</div>
-<div class="line"><span class="lineno">  254</span>            }</div>
-<div class="line"><span class="lineno">  255</span>            </div>
-<div class="line"><span class="lineno">  256</span>            <span class="keywordflow">if</span> (member.isCapital() || member.isStation()) {</div>
-<div class="line"><span class="lineno">  257</span>                <span class="keywordflow">if</span> (person.getStats().getSkillLevel(Skills.POLARIZED_ARMOR) &lt;= 0) {</div>
-<div class="line"><span class="lineno">  258</span>                    person.getStats().setSkillLevel(Skills.COMBAT_ENDURANCE, 0);</div>
-<div class="line"><span class="lineno">  259</span>                    person.getStats().setSkillLevel(Skills.POLARIZED_ARMOR, 2);</div>
-<div class="line"><span class="lineno">  260</span>                }</div>
-<div class="line"><span class="lineno">  261</span>            }</div>
-<div class="line"><span class="lineno">  262</span>        <span class="comment">//}</span></div>
-<div class="line"><span class="lineno">  263</span>        </div>
-<div class="line"><span class="lineno">  264</span>        person.getStats().setSkipRefresh(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  265</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5e171cdde60fbecabc384ad92740f6c1" name="a5e171cdde60fbecabc384ad92740f6c1"></a>
@@ -660,10 +392,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d0f/RemnantOfficerGeneratorPlugin_8java_source.html#l00046">46</a> of file <a class="el" href="../../d5/d0f/RemnantOfficerGeneratorPlugin_8java_source.html">RemnantOfficerGeneratorPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   46</span>                                           {</div>
-<div class="line"><span class="lineno">   47</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d5/d59/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RemnantOfficerGeneratorPlugin.html#a1dc00c432d6a383549d514606426f5ad">forceIntegrateCores</a>;</div>
-<div class="line"><span class="lineno">   48</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae133dd93812260edbbf0578336d55ad1" name="ae133dd93812260edbbf0578336d55ad1"></a>
@@ -683,10 +412,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d0f/RemnantOfficerGeneratorPlugin_8java_source.html#l00050">50</a> of file <a class="el" href="../../d5/d0f/RemnantOfficerGeneratorPlugin_8java_source.html">RemnantOfficerGeneratorPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   50</span>                                                                    {</div>
-<div class="line"><span class="lineno">   51</span>        this.forceIntegrateCores = <a class="code hl_variable" href="../../d5/d59/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RemnantOfficerGeneratorPlugin.html#a1dc00c432d6a383549d514606426f5ad">forceIntegrateCores</a>;</div>
-<div class="line"><span class="lineno">   52</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

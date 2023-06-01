@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -195,15 +196,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../de/d8f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1BasePLStat.html#a61ff95bb5ad76aa5b1b0601e81ad8db9">com.fs.starfarer.api.impl.campaign.plog.BasePLStat</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d00/PLStatFleet_8java_source.html#l00011">11</a> of file <a class="el" href="../../d4/d00/PLStatFleet_8java_source.html">PLStatFleet.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   11</span>                                  {</div>
-<div class="line"><span class="lineno">   12</span>        <span class="comment">//return (int) Global.getSector().getPlayerFleet().getFleetPoints();</span></div>
-<div class="line"><span class="lineno">   13</span>        <span class="keywordtype">float</span> total = 0f;</div>
-<div class="line"><span class="lineno">   14</span>        <span class="keywordflow">for</span> (FleetMemberAPI member : Global.getSector().getPlayerFleet().getFleetData().getMembersListCopy()) {</div>
-<div class="line"><span class="lineno">   15</span>            total += member.getDeploymentPointsCost();</div>
-<div class="line"><span class="lineno">   16</span>        }</div>
-<div class="line"><span class="lineno">   17</span>        <span class="keywordflow">return</span> (<span class="keywordtype">int</span>) Math.round(total);</div>
-<div class="line"><span class="lineno">   18</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a4dbeada45af17a90303cb6e256deef3a" name="a4dbeada45af17a90303cb6e256deef3a"></a>
@@ -224,10 +217,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../de/d8f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1BasePLStat.html#ad3ef3c578340bcbb3fa6d05a7c76c9ca">com.fs.starfarer.api.impl.campaign.plog.BasePLStat</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d00/PLStatFleet_8java_source.html#l00021">21</a> of file <a class="el" href="../../d4/d00/PLStatFleet_8java_source.html">PLStatFleet.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   21</span>                                 {</div>
-<div class="line"><span class="lineno">   22</span>        <span class="keywordflow">return</span> Global.getSettings().getColor(<span class="stringliteral">&quot;progressBarFleetPointsColor&quot;</span>);</div>
-<div class="line"><span class="lineno">   23</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="abe2c7a3ac3f4a50009b739e0ba510d9d" name="abe2c7a3ac3f4a50009b739e0ba510d9d"></a>
@@ -248,10 +238,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../de/d8f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1BasePLStat.html#a3d15b87e152cce9c74c4ec091c9d0a4a">com.fs.starfarer.api.impl.campaign.plog.BasePLStat</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d00/PLStatFleet_8java_source.html#l00026">26</a> of file <a class="el" href="../../d4/d00/PLStatFleet_8java_source.html">PLStatFleet.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   26</span>                                  {</div>
-<div class="line"><span class="lineno">   27</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Fleet&quot;</span>;</div>
-<div class="line"><span class="lineno">   28</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a851cb9724dbb1f892c76eb0adbca9003" name="a851cb9724dbb1f892c76eb0adbca9003"></a>
@@ -272,11 +259,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../de/d8f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1BasePLStat.html#aa28701476b2b38f9700c2e771403dbde">com.fs.starfarer.api.impl.campaign.plog.BasePLStat</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d00/PLStatFleet_8java_source.html#l00035">35</a> of file <a class="el" href="../../d4/d00/PLStatFleet_8java_source.html">PLStatFleet.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   35</span>                              {</div>
-<div class="line"><span class="lineno">   36</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../dc/d0f/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PLStat.html#abaaff3c6f89d1aeae0771472220b25d9">FLEET_MAX</a>;</div>
-<div class="line"><span class="lineno">   37</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PLStat_html_abaaff3c6f89d1aeae0771472220b25d9"><div class="ttname"><a href="../../dc/d0f/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PLStat.html#abaaff3c6f89d1aeae0771472220b25d9">com.fs.starfarer.api.impl.campaign.plog.PLStat.FLEET_MAX</a></div><div class="ttdeci">static long FLEET_MAX</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d87/PLStat_8java_source.html#l00009">PLStat.java:9</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a454801018c86458d09e16c1c65436814" name="a454801018c86458d09e16c1c65436814"></a>
@@ -298,11 +281,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../de/d8f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1BasePLStat.html#afd99a6d678af33247c10db8228c0be17">com.fs.starfarer.api.impl.campaign.plog.BasePLStat</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d00/PLStatFleet_8java_source.html#l00039">39</a> of file <a class="el" href="../../d4/d00/PLStatFleet_8java_source.html">PLStatFleet.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   39</span>                                           {</div>
-<div class="line"><span class="lineno">   40</span>        <span class="comment">//return getGraphLabel();</span></div>
-<div class="line"><span class="lineno">   41</span>        <span class="keywordflow">return</span> super.getHoverText(value);</div>
-<div class="line"><span class="lineno">   42</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a759bb1969dc16d6f5da18a1d2bee2bfc" name="a759bb1969dc16d6f5da18a1d2bee2bfc"></a>
@@ -323,10 +302,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../de/d8f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1BasePLStat.html#a03075ac34ea55c9a79bd468b029470d2">com.fs.starfarer.api.impl.campaign.plog.BasePLStat</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d00/PLStatFleet_8java_source.html#l00031">31</a> of file <a class="el" href="../../d4/d00/PLStatFleet_8java_source.html">PLStatFleet.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   31</span>                          {</div>
-<div class="line"><span class="lineno">   32</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;fleet&quot;</span>;</div>
-<div class="line"><span class="lineno">   33</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

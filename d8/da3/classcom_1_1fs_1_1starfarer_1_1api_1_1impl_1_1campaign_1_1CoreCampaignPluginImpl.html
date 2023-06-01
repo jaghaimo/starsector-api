@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -301,39 +302,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dd3/CoreCampaignPluginImpl_8java_source.html#l00381">381</a> of file <a class="el" href="../../d4/dd3/CoreCampaignPluginImpl_8java_source.html">CoreCampaignPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  381</span>                                                                               {</div>
-<div class="line"><span class="lineno">  382</span>        <span class="keywordtype">float</span> smugglingTotal = 0f;</div>
-<div class="line"><span class="lineno">  383</span>        <span class="keywordtype">float</span> tradeTotal = 0f;</div>
-<div class="line"><span class="lineno">  384</span>        <span class="keywordflow">for</span> (SubmarketAPI submarket : market.getSubmarketsCopy()) {</div>
-<div class="line"><span class="lineno">  385</span>            SubmarketPlugin plugin = submarket.getPlugin();</div>
-<div class="line"><span class="lineno">  386</span>            <span class="keywordflow">if</span> (!plugin.isParticipatesInEconomy()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  387</span>            </div>
-<div class="line"><span class="lineno">  388</span>            PlayerTradeDataForSubmarket tradeData =  SharedData.getData().getPlayerActivityTracker().getPlayerTradeData(submarket);</div>
-<div class="line"><span class="lineno">  389</span>            <span class="keywordflow">if</span> (submarket.getFaction().isHostileTo(market.getFaction()) || submarket.getPlugin().isBlackMarket()) {</div>
-<div class="line"><span class="lineno">  390</span>                smugglingTotal += tradeData.getTotalPlayerTradeValue();</div>
-<div class="line"><span class="lineno">  391</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  392</span>                tradeTotal += tradeData.getTotalPlayerTradeValue();</div>
-<div class="line"><span class="lineno">  393</span>            }</div>
-<div class="line"><span class="lineno">  394</span>        }</div>
-<div class="line"><span class="lineno">  395</span>        </div>
-<div class="line"><span class="lineno">  396</span>        <span class="keywordtype">float</span> suspicionLevel = 0f;</div>
-<div class="line"><span class="lineno">  397</span>        </div>
-<div class="line"><span class="lineno">  398</span>        <span class="keywordflow">if</span> (smugglingTotal + tradeTotal &gt; 0) {</div>
-<div class="line"><span class="lineno">  399</span>            suspicionLevel = smugglingTotal / (smugglingTotal + tradeTotal);</div>
-<div class="line"><span class="lineno">  400</span>            </div>
-<div class="line"><span class="lineno">  401</span>            <span class="comment">//float playerImpactMult = Global.getSettings().getFloat(&quot;economyPlayerTradeImpactMult&quot;);</span></div>
-<div class="line"><span class="lineno">  402</span>            <span class="comment">//float threshold = 30000f * playerImpactMult * market.getSize();</span></div>
-<div class="line"><span class="lineno">  403</span>            <span class="keywordtype">float</span> threshold = 10000f * market.getSize();</div>
-<div class="line"><span class="lineno">  404</span>            suspicionLevel *= Math.min(1f, (smugglingTotal + tradeTotal) / threshold);</div>
-<div class="line"><span class="lineno">  405</span>        }</div>
-<div class="line"><span class="lineno">  406</span>        </div>
-<div class="line"><span class="lineno">  407</span>        <span class="keywordtype">float</span> extra = market.getMemoryWithoutUpdate().getFloat(MemFlags.MARKET_EXTRA_SUSPICION);</div>
-<div class="line"><span class="lineno">  408</span>        suspicionLevel += extra;</div>
-<div class="line"><span class="lineno">  409</span>        suspicionLevel = Math.min(1f, suspicionLevel);</div>
-<div class="line"><span class="lineno">  410</span>        </div>
-<div class="line"><span class="lineno">  411</span>        <span class="keywordflow">return</span> suspicionLevel;</div>
-<div class="line"><span class="lineno">  412</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a49a5d03de64f3e0ff2d42645cea27843" name="a49a5d03de64f3e0ff2d42645cea27843"></a>
@@ -355,10 +324,7 @@ Static Public Member Functions</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../dd/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BaseCampaignPlugin.html#adfad004acda2efc527cee877f2620a8c">com.fs.starfarer.api.campaign.BaseCampaignPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dd3/CoreCampaignPluginImpl_8java_source.html#l00075">75</a> of file <a class="el" href="../../d4/dd3/CoreCampaignPluginImpl_8java_source.html">CoreCampaignPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   75</span>                          {</div>
-<div class="line"><span class="lineno">   76</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;coreCampaignPluginImpl&quot;</span>;</div>
-<div class="line"><span class="lineno">   77</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a19520b523130b0e16d8d14880b49fffa" name="a19520b523130b0e16d8d14880b49fffa"></a>
@@ -383,10 +349,7 @@ Static Public Member Functions</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../dd/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BaseCampaignPlugin.html#a4bcbe73c4d817d3053442c73ae1dde3d">com.fs.starfarer.api.campaign.BaseCampaignPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dd3/CoreCampaignPluginImpl_8java_source.html#l00079">79</a> of file <a class="el" href="../../d4/dd3/CoreCampaignPluginImpl_8java_source.html">CoreCampaignPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   79</span>                                 {</div>
-<div class="line"><span class="lineno">   80</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   81</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="acb717726f1d2bc2720cd3ea637813c61" name="acb717726f1d2bc2720cd3ea637813c61"></a>
@@ -425,29 +388,7 @@ Static Public Member Functions</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../dd/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BaseCampaignPlugin.html#af41255540f8048fe5116ce8d0492644f">com.fs.starfarer.api.campaign.BaseCampaignPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dd3/CoreCampaignPluginImpl_8java_source.html#l00125">125</a> of file <a class="el" href="../../d4/dd3/CoreCampaignPluginImpl_8java_source.html">CoreCampaignPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  125</span>                                                                                                  {</div>
-<div class="line"><span class="lineno">  126</span>        <span class="keywordflow">if</span> (ability == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  127</span>        String <span class="keywordtype">id</span> = ability.getId();</div>
-<div class="line"><span class="lineno">  128</span>        <span class="keywordflow">if</span> (<span class="keywordtype">id</span> == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  129</span>        </div>
-<div class="line"><span class="lineno">  130</span>        <span class="keywordflow">if</span> (ability.getSpec().getAIPluginClass() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  131</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> PluginPick&lt;AbilityAIPlugin&gt;(ability.getSpec().getNewAIPluginInstance(ability), PickPriority.CORE_GENERAL);</div>
-<div class="line"><span class="lineno">  132</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  133</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  134</span>        }</div>
-<div class="line"><span class="lineno">  135</span>        </div>
-<div class="line"><span class="lineno">  136</span><span class="comment">//      if (id.equals(Abilities.GO_DARK)) {</span></div>
-<div class="line"><span class="lineno">  137</span><span class="comment">//          return new PluginPick&lt;AbilityAIPlugin&gt;(new GoDarkAbilityAI(ability, ai), PickPriority.CORE_GENERAL);</span></div>
-<div class="line"><span class="lineno">  138</span><span class="comment">//      } else if (id.equals(Abilities.EMERGENCY_BURN)) {</span></div>
-<div class="line"><span class="lineno">  139</span><span class="comment">//          return new PluginPick&lt;AbilityAIPlugin&gt;(new EmergencyBurnAbilityAI(ability, ai), PickPriority.CORE_GENERAL);</span></div>
-<div class="line"><span class="lineno">  140</span><span class="comment">//      } else if (id.equals(Abilities.SENSOR_BURST)) {</span></div>
-<div class="line"><span class="lineno">  141</span><span class="comment">//          return new PluginPick&lt;AbilityAIPlugin&gt;(new SensorBurstAbilityAI(ability, ai), PickPriority.CORE_GENERAL);</span></div>
-<div class="line"><span class="lineno">  142</span><span class="comment">//      } else if (id.equals(Abilities.TRANSPONDER)) {</span></div>
-<div class="line"><span class="lineno">  143</span><span class="comment">//          return new PluginPick&lt;AbilityAIPlugin&gt;(new TransponderAbilityAI(ability, ai), PickPriority.CORE_GENERAL);</span></div>
-<div class="line"><span class="lineno">  144</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  145</span><span class="comment">//      return null;</span></div>
-<div class="line"><span class="lineno">  146</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aea5fa4e750d87dbb15b11f00c2be5f17" name="aea5fa4e750d87dbb15b11f00c2be5f17"></a>
@@ -469,13 +410,7 @@ Static Public Member Functions</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../dd/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BaseCampaignPlugin.html#aa59d6cb28cae78a5496c31db0cb9f72c">com.fs.starfarer.api.campaign.BaseCampaignPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dd3/CoreCampaignPluginImpl_8java_source.html#l00698">698</a> of file <a class="el" href="../../d4/dd3/CoreCampaignPluginImpl_8java_source.html">CoreCampaignPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  698</span>                                                                                   {</div>
-<div class="line"><span class="lineno">  699</span>        <span class="keywordflow">if</span> (Commodities.ALPHA_CORE.equals(commodityId)) {</div>
-<div class="line"><span class="lineno">  700</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> PluginPick&lt;AICoreAdminPlugin&gt;(<span class="keyword">new</span> AICoreAdminPluginImpl(), PickPriority.CORE_GENERAL);</div>
-<div class="line"><span class="lineno">  701</span>        }</div>
-<div class="line"><span class="lineno">  702</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  703</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9aaec18184af00bfa5a9d49a9a850ead" name="a9aaec18184af00bfa5a9d49a9a850ead"></a>
@@ -497,16 +432,7 @@ Static Public Member Functions</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../dd/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BaseCampaignPlugin.html#a047ea99cfb0a6e49b2edf97cfe28b374">com.fs.starfarer.api.campaign.BaseCampaignPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dd3/CoreCampaignPluginImpl_8java_source.html#l00705">705</a> of file <a class="el" href="../../d4/dd3/CoreCampaignPluginImpl_8java_source.html">CoreCampaignPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  705</span>                                                                                       {</div>
-<div class="line"><span class="lineno">  706</span>        <span class="keywordflow">if</span> (Commodities.OMEGA_CORE.equals(commodityId) ||</div>
-<div class="line"><span class="lineno">  707</span>                Commodities.ALPHA_CORE.equals(commodityId) ||</div>
-<div class="line"><span class="lineno">  708</span>                Commodities.BETA_CORE.equals(commodityId) ||</div>
-<div class="line"><span class="lineno">  709</span>                Commodities.GAMMA_CORE.equals(commodityId)) {</div>
-<div class="line"><span class="lineno">  710</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> PluginPick&lt;AICoreOfficerPlugin&gt;(<span class="keyword">new</span> AICoreOfficerPluginImpl(), PickPriority.CORE_GENERAL);</div>
-<div class="line"><span class="lineno">  711</span>        }</div>
-<div class="line"><span class="lineno">  712</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  713</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a069b7a1fba3c6f73279772f23c7efa28" name="a069b7a1fba3c6f73279772f23c7efa28"></a>
@@ -535,15 +461,7 @@ Static Public Member Functions</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../dd/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BaseCampaignPlugin.html#a412960cbf28c6fad974b41eb59feea83">com.fs.starfarer.api.campaign.BaseCampaignPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dd3/CoreCampaignPluginImpl_8java_source.html#l00673">673</a> of file <a class="el" href="../../d4/dd3/CoreCampaignPluginImpl_8java_source.html">CoreCampaignPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  673</span>                                                                              {</div>
-<div class="line"><span class="lineno">  674</span>        PersonAPI commander = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  675</span>        <span class="keywordflow">if</span> (member != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  676</span>            commander = member.getFleetCommanderForStats();</div>
-<div class="line"><span class="lineno">  677</span>            <span class="keywordflow">if</span> (commander == <span class="keyword">null</span>) commander = member.getFleetCommander();</div>
-<div class="line"><span class="lineno">  678</span>        }</div>
-<div class="line"><span class="lineno">  679</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> PluginPick&lt;AutofitPlugin&gt;(<span class="keyword">new</span> CoreAutofitPlugin(commander), PickPriority.CORE_GENERAL);</div>
-<div class="line"><span class="lineno">  680</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="abe69624b6c470759494a198e4a737c78" name="abe69624b6c470759494a198e4a737c78"></a>
@@ -574,13 +492,7 @@ Static Public Member Functions</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../dd/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BaseCampaignPlugin.html#a05a095922f8fbb93a6a53cc05250308e">com.fs.starfarer.api.campaign.BaseCampaignPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dd3/CoreCampaignPluginImpl_8java_source.html#l00159">159</a> of file <a class="el" href="../../d4/dd3/CoreCampaignPluginImpl_8java_source.html">CoreCampaignPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  159</span>                                                                                               {</div>
-<div class="line"><span class="lineno">  160</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> PluginPick&lt;BattleAutoresolverPlugin&gt;(</div>
-<div class="line"><span class="lineno">  161</span>                        <span class="keyword">new</span> BattleAutoresolverPluginImpl(battle),</div>
-<div class="line"><span class="lineno">  162</span>                        PickPriority.CORE_GENERAL</div>
-<div class="line"><span class="lineno">  163</span>                   );</div>
-<div class="line"><span class="lineno">  164</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a62874e179fe71d0eeb283f15a41b4fe4" name="a62874e179fe71d0eeb283f15a41b4fe4"></a>
@@ -610,13 +522,7 @@ Static Public Member Functions</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../dd/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BaseCampaignPlugin.html#a47787a459c04e5f58649fc67d8c72f7c">com.fs.starfarer.api.campaign.BaseCampaignPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dd3/CoreCampaignPluginImpl_8java_source.html#l00151">151</a> of file <a class="el" href="../../d4/dd3/CoreCampaignPluginImpl_8java_source.html">CoreCampaignPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  151</span>                                                                                                 {</div>
-<div class="line"><span class="lineno">  152</span>        <span class="keywordflow">if</span> (opponent instanceof CampaignFleetAPI) {</div>
-<div class="line"><span class="lineno">  153</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> PluginPick&lt;BattleCreationPlugin&gt;(<span class="keyword">new</span> BattleCreationPluginImpl(), PickPriority.CORE_GENERAL);</div>
-<div class="line"><span class="lineno">  154</span>        }</div>
-<div class="line"><span class="lineno">  155</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  156</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab8d875fb580f094b4e1997c6f446e856" name="ab8d875fb580f094b4e1997c6f446e856"></a>
@@ -656,14 +562,7 @@ Static Public Member Functions</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../dd/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BaseCampaignPlugin.html#a334e0275ce378da4573bef471b8a338d">com.fs.starfarer.api.campaign.BaseCampaignPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dd3/CoreCampaignPluginImpl_8java_source.html#l00715">715</a> of file <a class="el" href="../../d4/dd3/CoreCampaignPluginImpl_8java_source.html">CoreCampaignPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  715</span>                                                                                              {</div>
-<div class="line"><span class="lineno">  716</span>        <span class="keywordflow">if</span> (params instanceof DefaultFleetInflaterParams) {</div>
-<div class="line"><span class="lineno">  717</span>            DefaultFleetInflaterParams p = (DefaultFleetInflaterParams) params;</div>
-<div class="line"><span class="lineno">  718</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> PluginPick&lt;FleetInflater&gt;(<span class="keyword">new</span> DefaultFleetInflater(p), PickPriority.CORE_GENERAL);</div>
-<div class="line"><span class="lineno">  719</span>        }</div>
-<div class="line"><span class="lineno">  720</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  721</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a74b2959b390734f0b7324df4c7403568" name="a74b2959b390734f0b7324df4c7403568"></a>
@@ -685,10 +584,7 @@ Static Public Member Functions</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../dd/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BaseCampaignPlugin.html#ac61a5baf4b57192ec2ad13b8a6856c2e">com.fs.starfarer.api.campaign.BaseCampaignPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dd3/CoreCampaignPluginImpl_8java_source.html#l00694">694</a> of file <a class="el" href="../../d4/dd3/CoreCampaignPluginImpl_8java_source.html">CoreCampaignPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  694</span>                                                                                 {</div>
-<div class="line"><span class="lineno">  695</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> PluginPick&lt;ImmigrationPlugin&gt;(<span class="keyword">new</span> CoreImmigrationPluginImpl(market), PickPriority.CORE_GENERAL);</div>
-<div class="line"><span class="lineno">  696</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab491bc0ee0fac1b200073aed8f01da53" name="ab491bc0ee0fac1b200073aed8f01da53"></a>
@@ -731,10 +627,7 @@ Static Public Member Functions</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../dd/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BaseCampaignPlugin.html#a9904ef38fd49260294861ee409e5c219">com.fs.starfarer.api.campaign.BaseCampaignPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dd3/CoreCampaignPluginImpl_8java_source.html#l00119">119</a> of file <a class="el" href="../../d4/dd3/CoreCampaignPluginImpl_8java_source.html">CoreCampaignPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  119</span>                                                                                                                              {</div>
-<div class="line"><span class="lineno">  120</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  121</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2439f23d31837d8a0ddd9283e95c25d0" name="a2439f23d31837d8a0ddd9283e95c25d0"></a>
@@ -765,42 +658,7 @@ Static Public Member Functions</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../dd/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BaseCampaignPlugin.html#af7e05e6a4968dc7023241336b25c6931">com.fs.starfarer.api.campaign.BaseCampaignPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dd3/CoreCampaignPluginImpl_8java_source.html#l00083">83</a> of file <a class="el" href="../../d4/dd3/CoreCampaignPluginImpl_8java_source.html">CoreCampaignPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   83</span>                                                                                                                {</div>
-<div class="line"><span class="lineno">   84</span>        <span class="keywordflow">if</span> (interactionTarget.hasTag(Tags.OBJECTIVE) || interactionTarget.getMarket() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   85</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> PluginPick&lt;InteractionDialogPlugin&gt;(<span class="keyword">new</span> RuleBasedInteractionDialogPluginImpl(), PickPriority.CORE_GENERAL);</div>
-<div class="line"><span class="lineno">   86</span>        }</div>
-<div class="line"><span class="lineno">   87</span>        </div>
-<div class="line"><span class="lineno">   88</span>        <span class="keywordflow">if</span> (interactionTarget.hasTag(Tags.GATE)) {</div>
-<div class="line"><span class="lineno">   89</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> PluginPick&lt;InteractionDialogPlugin&gt;(<span class="keyword">new</span> RuleBasedInteractionDialogPluginImpl(), PickPriority.CORE_GENERAL);</div>
-<div class="line"><span class="lineno">   90</span>        }</div>
-<div class="line"><span class="lineno">   91</span>        </div>
-<div class="line"><span class="lineno">   92</span>        <span class="keywordflow">if</span> (interactionTarget.hasTag(Tags.STATION)) {</div>
-<div class="line"><span class="lineno">   93</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> PluginPick&lt;InteractionDialogPlugin&gt;(<span class="keyword">new</span> RuleBasedInteractionDialogPluginImpl(), PickPriority.CORE_GENERAL);</div>
-<div class="line"><span class="lineno">   94</span>        }</div>
-<div class="line"><span class="lineno">   95</span>        </div>
-<div class="line"><span class="lineno">   96</span>        <span class="keywordflow">if</span> (interactionTarget.hasTag(Tags.HAS_INTERACTION_DIALOG)) {</div>
-<div class="line"><span class="lineno">   97</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> PluginPick&lt;InteractionDialogPlugin&gt;(<span class="keyword">new</span> RuleBasedInteractionDialogPluginImpl(), PickPriority.CORE_GENERAL);</div>
-<div class="line"><span class="lineno">   98</span>        }</div>
-<div class="line"><span class="lineno">   99</span>        </div>
-<div class="line"><span class="lineno">  100</span><span class="comment">//      if ((interactionTarget instanceof OrbitalStationAPI ||</span></div>
-<div class="line"><span class="lineno">  101</span><span class="comment">//              interactionTarget.hasTag(&quot;station&quot;)) ||</span></div>
-<div class="line"><span class="lineno">  102</span><span class="comment">//              interactionTarget.getMarket() != null) {</span></div>
-<div class="line"><span class="lineno">  103</span>        <span class="keywordflow">if</span> (interactionTarget.getMarket() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  104</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> PluginPick&lt;InteractionDialogPlugin&gt;(<span class="keyword">new</span> OrbitalStationInteractionDialogPluginImpl(), PickPriority.CORE_GENERAL);</div>
-<div class="line"><span class="lineno">  105</span>        }</div>
-<div class="line"><span class="lineno">  106</span>        </div>
-<div class="line"><span class="lineno">  107</span>        <span class="keywordflow">if</span> (interactionTarget instanceof CampaignFleetAPI) {</div>
-<div class="line"><span class="lineno">  108</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> PluginPick&lt;InteractionDialogPlugin&gt;(<span class="keyword">new</span> FleetInteractionDialogPluginImpl(), PickPriority.CORE_GENERAL);</div>
-<div class="line"><span class="lineno">  109</span>        }</div>
-<div class="line"><span class="lineno">  110</span>        <span class="keywordflow">if</span> (interactionTarget instanceof JumpPointAPI) {</div>
-<div class="line"><span class="lineno">  111</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> PluginPick&lt;InteractionDialogPlugin&gt;(<span class="keyword">new</span> JumpPointInteractionDialogPluginImpl(), PickPriority.CORE_GENERAL);</div>
-<div class="line"><span class="lineno">  112</span>        }</div>
-<div class="line"><span class="lineno">  113</span>        <span class="keywordflow">if</span> (interactionTarget instanceof PlanetAPI) {</div>
-<div class="line"><span class="lineno">  114</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> PluginPick&lt;InteractionDialogPlugin&gt;(<span class="keyword">new</span> PlanetInteractionDialogPluginImpl(), PickPriority.CORE_GENERAL);</div>
-<div class="line"><span class="lineno">  115</span>        }</div>
-<div class="line"><span class="lineno">  116</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  117</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a51bbed0ce280d23b1f51d09dad8222a2" name="a51bbed0ce280d23b1f51d09dad8222a2"></a>
@@ -832,16 +690,7 @@ Static Public Member Functions</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../dd/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BaseCampaignPlugin.html#a7cbc70b7e456c82ebaa9b3e1781939c3">com.fs.starfarer.api.campaign.BaseCampaignPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dd3/CoreCampaignPluginImpl_8java_source.html#l00179">179</a> of file <a class="el" href="../../d4/dd3/CoreCampaignPluginImpl_8java_source.html">CoreCampaignPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  179</span>                                                                                                                          {</div>
-<div class="line"><span class="lineno">  180</span>        <span class="keywordflow">if</span> (action instanceof RepActions || action instanceof RepActionEnvelope) {</div>
-<div class="line"><span class="lineno">  181</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> PluginPick&lt;ReputationActionResponsePlugin&gt;(</div>
-<div class="line"><span class="lineno">  182</span>                            <span class="keyword">new</span> CoreReputationPlugin(),</div>
-<div class="line"><span class="lineno">  183</span>                            PickPriority.CORE_GENERAL</div>
-<div class="line"><span class="lineno">  184</span>                       );</div>
-<div class="line"><span class="lineno">  185</span>        }</div>
-<div class="line"><span class="lineno">  186</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  187</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a66175677bfe840147c287b318b40d171" name="a66175677bfe840147c287b318b40d171"></a>
@@ -873,16 +722,7 @@ Static Public Member Functions</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../dd/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BaseCampaignPlugin.html#a528e571bdf6befe3262d787904de4178">com.fs.starfarer.api.campaign.BaseCampaignPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dd3/CoreCampaignPluginImpl_8java_source.html#l00168">168</a> of file <a class="el" href="../../d4/dd3/CoreCampaignPluginImpl_8java_source.html">CoreCampaignPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  168</span>                                                                                                                          {</div>
-<div class="line"><span class="lineno">  169</span>        <span class="keywordflow">if</span> (action instanceof RepActions || action instanceof RepActionEnvelope) {</div>
-<div class="line"><span class="lineno">  170</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> PluginPick&lt;ReputationActionResponsePlugin&gt;(</div>
-<div class="line"><span class="lineno">  171</span>                            <span class="keyword">new</span> CoreReputationPlugin(),</div>
-<div class="line"><span class="lineno">  172</span>                            PickPriority.CORE_GENERAL</div>
-<div class="line"><span class="lineno">  173</span>                       );</div>
-<div class="line"><span class="lineno">  174</span>        }</div>
-<div class="line"><span class="lineno">  175</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  176</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="abeb2f02635dca0d7f26390a21462cb41" name="abeb2f02635dca0d7f26390a21462cb41"></a>
@@ -903,15 +743,7 @@ Static Public Member Functions</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../dd/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BaseCampaignPlugin.html#acf015339ff57606d1a765551d585cd33">com.fs.starfarer.api.campaign.BaseCampaignPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dd3/CoreCampaignPluginImpl_8java_source.html#l00683">683</a> of file <a class="el" href="../../d4/dd3/CoreCampaignPluginImpl_8java_source.html">CoreCampaignPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  683</span>                                                                   {</div>
-<div class="line"><span class="lineno">  684</span>        </div>
-<div class="line"><span class="lineno">  685</span>        <span class="keywordflow">if</span> (Global.getSector().getMemoryWithoutUpdate().getBoolean(CampaignTutorialScript.USE_TUTORIAL_RESPAWN)) {</div>
-<div class="line"><span class="lineno">  686</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> PluginPick&lt;InteractionDialogPlugin&gt;(<span class="keyword">new</span> TutorialRespawnDialogPluginImpl(), PickPriority.MOD_SPECIFIC);</div>
-<div class="line"><span class="lineno">  687</span>        }</div>
-<div class="line"><span class="lineno">  688</span>        <span class="comment">//return new PluginPick&lt;InteractionDialogPlugin&gt;(new StandardRespawnDialogPluginImpl(), PickPriority.CORE_GENERAL);</span></div>
-<div class="line"><span class="lineno">  689</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  690</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a34bc63c128723a4a5ea81936bb4a7e60" name="a34bc63c128723a4a5ea81936bb4a7e60"></a>
@@ -933,10 +765,7 @@ Static Public Member Functions</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../dd/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BaseCampaignPlugin.html#a562f8e47c4ecd34397c5d681510ef4ef">com.fs.starfarer.api.campaign.BaseCampaignPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dd3/CoreCampaignPluginImpl_8java_source.html#l00660">660</a> of file <a class="el" href="../../d4/dd3/CoreCampaignPluginImpl_8java_source.html">CoreCampaignPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  660</span>                                                                                          {</div>
-<div class="line"><span class="lineno">  661</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> PluginPick&lt;FleetStubConverterPlugin&gt;(<span class="keyword">new</span> FleetStubConverterPluginImpl(), PickPriority.CORE_GENERAL);</div>
-<div class="line"><span class="lineno">  662</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a562569e716678653c2c03cf2add1ca0c" name="a562569e716678653c2c03cf2add1ca0c"></a>
@@ -958,13 +787,7 @@ Static Public Member Functions</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../dd/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BaseCampaignPlugin.html#a9a0fcf104ac195c757baf6a09c5b66ba">com.fs.starfarer.api.campaign.BaseCampaignPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dd3/CoreCampaignPluginImpl_8java_source.html#l00665">665</a> of file <a class="el" href="../../d4/dd3/CoreCampaignPluginImpl_8java_source.html">CoreCampaignPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  665</span>                                                                                     {</div>
-<div class="line"><span class="lineno">  666</span><span class="comment">//      if (stub != null &amp;&amp; stub.getParams() instanceof FleetParams) {</span></div>
-<div class="line"><span class="lineno">  667</span><span class="comment">//          return new PluginPick&lt;FleetStubConverterPlugin&gt;(new FleetStubConverterPluginImpl(), PickPriority.CORE_GENERAL);</span></div>
-<div class="line"><span class="lineno">  668</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  669</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  670</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a0665265b42e4a342a0f5a10797eba1c0" name="a0665265b42e4a342a0f5a10797eba1c0"></a>
@@ -1005,143 +828,7 @@ Static Public Member Functions</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../dd/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BaseCampaignPlugin.html#ae13e55aa18627d934ecd4246bf6c84a4">com.fs.starfarer.api.campaign.BaseCampaignPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dd3/CoreCampaignPluginImpl_8java_source.html#l00191">191</a> of file <a class="el" href="../../d4/dd3/CoreCampaignPluginImpl_8java_source.html">CoreCampaignPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  191</span>                                                                              {</div>
-<div class="line"><span class="lineno">  192</span>        <span class="keywordflow">for</span> (String tag : entity.getTags()) {</div>
-<div class="line"><span class="lineno">  193</span>            memory.set(<span class="stringliteral">&quot;$tag:&quot;</span> + tag, <span class="keyword">true</span>, 0);</div>
-<div class="line"><span class="lineno">  194</span>        }</div>
-<div class="line"><span class="lineno">  195</span>        </div>
-<div class="line"><span class="lineno">  196</span>        String onOrAt = <span class="stringliteral">&quot;on&quot;</span>;</div>
-<div class="line"><span class="lineno">  197</span>        <span class="keywordflow">if</span> (entity.hasTag(Tags.STATION)) {</div>
-<div class="line"><span class="lineno">  198</span>            onOrAt = <span class="stringliteral">&quot;at&quot;</span>;</div>
-<div class="line"><span class="lineno">  199</span>        }</div>
-<div class="line"><span class="lineno">  200</span>        memory.set(<span class="stringliteral">&quot;$onOrAt&quot;</span>, onOrAt, 0);</div>
-<div class="line"><span class="lineno">  201</span>        </div>
-<div class="line"><span class="lineno">  202</span>        <span class="keywordflow">if</span> (entity.getStarSystem() != <span class="keyword">null</span> &amp;&amp; </div>
-<div class="line"><span class="lineno">  203</span>                entity.getStarSystem().hasTag(Tags.SYSTEM_CUT_OFF_FROM_HYPER)) {</div>
-<div class="line"><span class="lineno">  204</span>            memory.set(<span class="stringliteral">&quot;$systemCutOffFromHyper&quot;</span>, <span class="keyword">true</span>, 0);</div>
-<div class="line"><span class="lineno">  205</span>        }</div>
-<div class="line"><span class="lineno">  206</span>        </div>
-<div class="line"><span class="lineno">  207</span>        <span class="keywordflow">if</span> (entity.getContainingLocation() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  208</span>            memory.set(<span class="stringliteral">&quot;$locationId&quot;</span>, entity.getContainingLocation().getId(), 0f);</div>
-<div class="line"><span class="lineno">  209</span>        }</div>
-<div class="line"><span class="lineno">  210</span>        </div>
-<div class="line"><span class="lineno">  211</span>        CampaignFleetAPI playerFleet = Global.getSector().getPlayerFleet();</div>
-<div class="line"><span class="lineno">  212</span>        </div>
-<div class="line"><span class="lineno">  213</span>        memory.set(<span class="stringliteral">&quot;$id&quot;</span>, entity.getId(), 0);</div>
-<div class="line"><span class="lineno">  214</span>        </div>
-<div class="line"><span class="lineno">  215</span>        memory.set(<span class="stringliteral">&quot;$transponderOn&quot;</span>, entity.isTransponderOn(), 0);</div>
-<div class="line"><span class="lineno">  216</span>        </div>
-<div class="line"><span class="lineno">  217</span><span class="comment">//      if (entity.getMarket() != null) {</span></div>
-<div class="line"><span class="lineno">  218</span><span class="comment">//          memory.set(&quot;$market&quot;, entity.getMarket().getName(), 0);</span></div>
-<div class="line"><span class="lineno">  219</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  220</span>        </div>
-<div class="line"><span class="lineno">  221</span>        memory.set(<span class="stringliteral">&quot;$name&quot;</span>, entity.getName(), 0);</div>
-<div class="line"><span class="lineno">  222</span>        memory.set(<span class="stringliteral">&quot;$fullName&quot;</span>, entity.getFullName(), 0);</div>
-<div class="line"><span class="lineno">  223</span>        </div>
-<div class="line"><span class="lineno">  224</span>        memory.set(<span class="stringliteral">&quot;$inHyperspace&quot;</span>, entity.isInHyperspace(), 0);</div>
-<div class="line"><span class="lineno">  225</span>        </div>
-<div class="line"><span class="lineno">  226</span>        </div>
-<div class="line"><span class="lineno">  227</span>        <span class="keywordflow">if</span> (entity.getCustomEntityType() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  228</span>            memory.set(<span class="stringliteral">&quot;$customType&quot;</span>, entity.getCustomEntityType(), 0);</div>
-<div class="line"><span class="lineno">  229</span>            </div>
-<div class="line"><span class="lineno">  230</span>            <span class="keywordflow">if</span> (entity.getCustomEntitySpec() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  231</span>                CustomEntitySpecAPI spec = entity.getCustomEntitySpec();</div>
-<div class="line"><span class="lineno">  232</span>                memory.set(<span class="stringliteral">&quot;$nameInText&quot;</span>, spec.getNameInText(), 0);</div>
-<div class="line"><span class="lineno">  233</span>                memory.set(<span class="stringliteral">&quot;$shortName&quot;</span>, spec.getShortName(), 0);</div>
-<div class="line"><span class="lineno">  234</span>                memory.set(<span class="stringliteral">&quot;$isOrAre&quot;</span>, spec.getIsOrAre(), 0);</div>
-<div class="line"><span class="lineno">  235</span>                memory.set(<span class="stringliteral">&quot;$aOrAn&quot;</span>, spec.getAOrAn(), 0);</div>
-<div class="line"><span class="lineno">  236</span>            }</div>
-<div class="line"><span class="lineno">  237</span>        }</div>
-<div class="line"><span class="lineno">  238</span>        </div>
-<div class="line"><span class="lineno">  239</span>        <span class="keywordflow">if</span> (entity instanceof CampaignTerrainAPI) {</div>
-<div class="line"><span class="lineno">  240</span>            CampaignTerrainAPI terrain = (CampaignTerrainAPI) entity;</div>
-<div class="line"><span class="lineno">  241</span>            CampaignTerrainPlugin plugin = terrain.getPlugin();</div>
-<div class="line"><span class="lineno">  242</span>            memory.set(<span class="stringliteral">&quot;$terrainId&quot;</span>, plugin.getSpec().getId(), 0);</div>
-<div class="line"><span class="lineno">  243</span>        }</div>
-<div class="line"><span class="lineno">  244</span>        </div>
-<div class="line"><span class="lineno">  245</span>        </div>
-<div class="line"><span class="lineno">  246</span>        <span class="keywordflow">if</span> (entity instanceof CampaignFleetAPI) {</div>
-<div class="line"><span class="lineno">  247</span>            CampaignFleetAPI fleet = (CampaignFleetAPI) entity;</div>
-<div class="line"><span class="lineno">  248</span>            <span class="keywordflow">if</span> (fleet.getAI() instanceof CampaignFleetAIAPI) {</div>
-<div class="line"><span class="lineno">  249</span>                CampaignFleetAIAPI ai = (CampaignFleetAIAPI) fleet.getAI();</div>
-<div class="line"><span class="lineno">  250</span>                EncounterOption option = ai.pickEncounterOption(<span class="keyword">null</span>, playerFleet, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  251</span>                BattleAPI b = fleet.getBattle();</div>
-<div class="line"><span class="lineno">  252</span>                <span class="keywordflow">if</span> (b != <span class="keyword">null</span> &amp;&amp; b.isPlayerInvolved()) {</div>
-<div class="line"><span class="lineno">  253</span>                    b.genCombined();</div>
-<div class="line"><span class="lineno">  254</span>                    option = b.getCombinedFor(fleet).getAI().pickEncounterOption(<span class="keyword">null</span>, b.getCombinedFor(Global.getSector().getPlayerFleet()), <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  255</span>                }</div>
-<div class="line"><span class="lineno">  256</span>                </div>
-<div class="line"><span class="lineno">  257</span>                <span class="keywordflow">switch</span> (option) {</div>
-<div class="line"><span class="lineno">  258</span>                <span class="keywordflow">case</span> DISENGAGE:</div>
-<div class="line"><span class="lineno">  259</span>                    memory.set(<span class="stringliteral">&quot;$relativeStrength&quot;</span>, -1, 0);</div>
-<div class="line"><span class="lineno">  260</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  261</span>                <span class="keywordflow">case</span> ENGAGE:</div>
-<div class="line"><span class="lineno">  262</span>                    memory.set(<span class="stringliteral">&quot;$relativeStrength&quot;</span>, 1, 0);</div>
-<div class="line"><span class="lineno">  263</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  264</span>                <span class="keywordflow">case</span> HOLD:</div>
-<div class="line"><span class="lineno">  265</span>                    memory.set(<span class="stringliteral">&quot;$relativeStrength&quot;</span>, 0, 0);</div>
-<div class="line"><span class="lineno">  266</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  267</span>                <span class="keywordflow">case</span> HOLD_VS_STRONGER:</div>
-<div class="line"><span class="lineno">  268</span>                    memory.set(<span class="stringliteral">&quot;$weakerThanPlayerButHolding&quot;</span>, <span class="keyword">true</span>, 0);</div>
-<div class="line"><span class="lineno">  269</span>                    memory.set(<span class="stringliteral">&quot;$relativeStrength&quot;</span>, -1, 0);</div>
-<div class="line"><span class="lineno">  270</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  271</span>                }</div>
-<div class="line"><span class="lineno">  272</span>                </div>
-<div class="line"><span class="lineno">  273</span>                memory.set(<span class="stringliteral">&quot;$isHostile&quot;</span>, ai.isHostileTo(playerFleet), 0);</div>
-<div class="line"><span class="lineno">  274</span>                </div>
-<div class="line"><span class="lineno">  275</span>                memory.set(<span class="stringliteral">&quot;$fleetPoints&quot;</span>, fleet.getFleetPoints(), 0);</div>
-<div class="line"><span class="lineno">  276</span>            }</div>
-<div class="line"><span class="lineno">  277</span>            </div>
-<div class="line"><span class="lineno">  278</span>            memory.set(<span class="stringliteral">&quot;$isStation&quot;</span>, fleet.isStationMode(), 0); </div>
-<div class="line"><span class="lineno">  279</span>            </div>
-<div class="line"><span class="lineno">  280</span>            memory.set(<span class="stringliteral">&quot;$supplies&quot;</span>, fleet.getCargo().getSupplies(), 0);</div>
-<div class="line"><span class="lineno">  281</span>            memory.set(<span class="stringliteral">&quot;$fuel&quot;</span>, fleet.getCargo().getFuel(), 0);</div>
-<div class="line"><span class="lineno">  282</span>            </div>
-<div class="line"><span class="lineno">  283</span>            memory.set(<span class="stringliteral">&quot;$knowsWhoPlayerIs&quot;</span>, fleet.knowsWhoPlayerIs(), 0);</div>
-<div class="line"><span class="lineno">  284</span>            </div>
-<div class="line"><span class="lineno">  285</span>            <span class="keywordflow">if</span> (!playerFleet.isTransponderOn() &amp;&amp; !memory.contains(MemFlags.MEMORY_KEY_SAW_PLAYER_WITH_TRANSPONDER_OFF)) {</div>
-<div class="line"><span class="lineno">  286</span>                memory.set(MemFlags.MEMORY_KEY_SAW_PLAYER_WITH_TRANSPONDER_OFF, <span class="keyword">true</span>, 0);</div>
-<div class="line"><span class="lineno">  287</span>            }</div>
-<div class="line"><span class="lineno">  288</span>            </div>
-<div class="line"><span class="lineno">  289</span>            <span class="keywordflow">if</span> (!Misc.isPermaKnowsWhoPlayerIs(fleet) &amp;&amp; playerFleet.isTransponderOn()) {</div>
-<div class="line"><span class="lineno">  290</span>                memory.set(MemFlags.MEMORY_KEY_SAW_PLAYER_WITH_TRANSPONDER_ON, <span class="keyword">true</span>, 7f + (<span class="keywordtype">float</span>) Math.random() * 7f);</div>
-<div class="line"><span class="lineno">  291</span>            }</div>
-<div class="line"><span class="lineno">  292</span>        }</div>
-<div class="line"><span class="lineno">  293</span>        </div>
-<div class="line"><span class="lineno">  294</span>        <span class="keywordflow">if</span> (entity.getFaction() != <span class="keyword">null</span> &amp;&amp; !memory.contains(<span class="stringliteral">&quot;$isHostile&quot;</span>)) {</div>
-<div class="line"><span class="lineno">  295</span>            <span class="keywordtype">float</span> rel = entity.getFaction().getRelationship(Factions.PLAYER);</div>
-<div class="line"><span class="lineno">  296</span>            RepLevel level = RepLevel.getLevelFor(rel);</div>
-<div class="line"><span class="lineno">  297</span>            <span class="keywordflow">if</span> (level.isAtWorst(RepLevel.INHOSPITABLE)) {</div>
-<div class="line"><span class="lineno">  298</span>                memory.set(<span class="stringliteral">&quot;$isHostile&quot;</span>, <span class="keyword">false</span>, 0);</div>
-<div class="line"><span class="lineno">  299</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  300</span>                memory.set(<span class="stringliteral">&quot;$isHostile&quot;</span>, <span class="keyword">true</span>, 0);</div>
-<div class="line"><span class="lineno">  301</span>            }</div>
-<div class="line"><span class="lineno">  302</span>        }</div>
-<div class="line"><span class="lineno">  303</span>        </div>
-<div class="line"><span class="lineno">  304</span>        </div>
-<div class="line"><span class="lineno">  305</span>        MarketAPI market = entity.getMarket();</div>
-<div class="line"><span class="lineno">  306</span>        <span class="keywordflow">if</span> (market != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  307</span><span class="comment">//          for (MarketConditionAPI mc : market.getConditions()) {</span></div>
-<div class="line"><span class="lineno">  308</span><span class="comment">//              memory.set(&quot;$mc:&quot; + mc.getId(), true, 0);</span></div>
-<div class="line"><span class="lineno">  309</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">  310</span>            <span class="keywordflow">if</span> (!market.isPlanetConditionMarketOnly()) {</div>
-<div class="line"><span class="lineno">  311</span>                memory.set(<span class="stringliteral">&quot;$hasMarket&quot;</span>, <span class="keyword">true</span>, 0);</div>
-<div class="line"><span class="lineno">  312</span>            }</div>
-<div class="line"><span class="lineno">  313</span>            </div>
-<div class="line"><span class="lineno">  314</span>            <span class="keywordflow">if</span> (Misc.getStationFleet(market) != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  315</span>                memory.set(<span class="stringliteral">&quot;$hasStation&quot;</span>, <span class="keyword">true</span>, 0);</div>
-<div class="line"><span class="lineno">  316</span>            }</div>
-<div class="line"><span class="lineno">  317</span>            </div>
-<div class="line"><span class="lineno">  318</span>            memory.set(<span class="stringliteral">&quot;$marketSize&quot;</span>, market.getSize(), 0);</div>
-<div class="line"><span class="lineno">  319</span>            memory.set(<span class="stringliteral">&quot;$stability&quot;</span>, (<span class="keywordtype">int</span>) market.getStabilityValue(), 0);</div>
-<div class="line"><span class="lineno">  320</span>        }</div>
-<div class="line"><span class="lineno">  321</span>        </div>
-<div class="line"><span class="lineno">  322</span>        <span class="keywordflow">if</span> (entity instanceof PlanetAPI) {</div>
-<div class="line"><span class="lineno">  323</span>            PlanetAPI planet = (PlanetAPI) entity;</div>
-<div class="line"><span class="lineno">  324</span>            memory.set(<span class="stringliteral">&quot;$planetType&quot;</span>, planet.getTypeId(), 0);</div>
-<div class="line"><span class="lineno">  325</span>        }</div>
-<div class="line"><span class="lineno">  326</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a827e84a8288f8561363a003b4913f5bc" name="a827e84a8288f8561363a003b4913f5bc"></a>
@@ -1173,54 +860,7 @@ Static Public Member Functions</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../dd/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BaseCampaignPlugin.html#a329cfabbe92df64f992a0d4158ede07b">com.fs.starfarer.api.campaign.BaseCampaignPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dd3/CoreCampaignPluginImpl_8java_source.html#l00471">471</a> of file <a class="el" href="../../d4/dd3/CoreCampaignPluginImpl_8java_source.html">CoreCampaignPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  471</span>                                                                         {</div>
-<div class="line"><span class="lineno">  472</span>        memory.set(<span class="stringliteral">&quot;$id&quot;</span>, faction.getId(), 0);</div>
-<div class="line"><span class="lineno">  473</span>        </div>
-<div class="line"><span class="lineno">  474</span>        <span class="keywordtype">float</span> rel = faction.getRelationship(Factions.PLAYER);</div>
-<div class="line"><span class="lineno">  475</span>        RepLevel level = RepLevel.getLevelFor(rel);</div>
-<div class="line"><span class="lineno">  476</span>        <span class="keywordflow">if</span> (level.isAtWorst(RepLevel.FAVORABLE)) {</div>
-<div class="line"><span class="lineno">  477</span>            memory.set(<span class="stringliteral">&quot;$friendlyToPlayer&quot;</span>, <span class="keyword">true</span>, 0);</div>
-<div class="line"><span class="lineno">  478</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (level.isAtBest(RepLevel.HOSTILE)) {</div>
-<div class="line"><span class="lineno">  479</span>            memory.set(<span class="stringliteral">&quot;$hostileToPlayer&quot;</span>, <span class="keyword">true</span>, 0);</div>
-<div class="line"><span class="lineno">  480</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  481</span>            memory.set(<span class="stringliteral">&quot;$neutralToPlayer&quot;</span>, <span class="keyword">true</span>, 0);</div>
-<div class="line"><span class="lineno">  482</span>        }</div>
-<div class="line"><span class="lineno">  483</span>        </div>
-<div class="line"><span class="lineno">  484</span>        <span class="keywordflow">if</span> (level.isAtWorst(RepLevel.INHOSPITABLE)) {</div>
-<div class="line"><span class="lineno">  485</span>            memory.set(<span class="stringliteral">&quot;$isHostile&quot;</span>, <span class="keyword">false</span>, 0);</div>
-<div class="line"><span class="lineno">  486</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  487</span>            memory.set(<span class="stringliteral">&quot;$isHostile&quot;</span>, <span class="keyword">true</span>, 0);</div>
-<div class="line"><span class="lineno">  488</span>        }</div>
-<div class="line"><span class="lineno">  489</span>        </div>
-<div class="line"><span class="lineno">  490</span>        <span class="keywordflow">if</span> (JSONObject.getNames(faction.getCustom()) != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  491</span>            <span class="keywordflow">for</span> (String key : JSONObject.getNames(faction.getCustom())) {</div>
-<div class="line"><span class="lineno">  492</span>                String val = faction.getCustom().optString(key);</div>
-<div class="line"><span class="lineno">  493</span>                memory.set(<span class="stringliteral">&quot;$c:&quot;</span> + key, val, 0);</div>
-<div class="line"><span class="lineno">  494</span>            }</div>
-<div class="line"><span class="lineno">  495</span>        }</div>
-<div class="line"><span class="lineno">  496</span>        Color c = faction.getColor();</div>
-<div class="line"><span class="lineno">  497</span>        memory.set(<span class="stringliteral">&quot;$color&quot;</span>, c.getRed() + <span class="stringliteral">&quot;,&quot;</span> + c.getGreen() + <span class="stringliteral">&quot;,&quot;</span> + c.getBlue() + <span class="stringliteral">&quot;,&quot;</span> + c.getAlpha(), 0);</div>
-<div class="line"><span class="lineno">  498</span>        </div>
-<div class="line"><span class="lineno">  499</span>        c = faction.getBaseUIColor();</div>
-<div class="line"><span class="lineno">  500</span>        memory.set(<span class="stringliteral">&quot;$baseColor&quot;</span>, c.getRed() + <span class="stringliteral">&quot;,&quot;</span> + c.getGreen() + <span class="stringliteral">&quot;,&quot;</span> + c.getBlue() + <span class="stringliteral">&quot;,&quot;</span> + c.getAlpha(), 0);</div>
-<div class="line"><span class="lineno">  501</span>        </div>
-<div class="line"><span class="lineno">  502</span>        c = faction.getBrightUIColor();</div>
-<div class="line"><span class="lineno">  503</span>        memory.set(<span class="stringliteral">&quot;$brightColor&quot;</span>, c.getRed() + <span class="stringliteral">&quot;,&quot;</span> + c.getGreen() + <span class="stringliteral">&quot;,&quot;</span> + c.getBlue() + <span class="stringliteral">&quot;,&quot;</span> + c.getAlpha(), 0);</div>
-<div class="line"><span class="lineno">  504</span>        </div>
-<div class="line"><span class="lineno">  505</span>        c = faction.getDarkUIColor();</div>
-<div class="line"><span class="lineno">  506</span>        memory.set(<span class="stringliteral">&quot;$darkColor&quot;</span>, c.getRed() + <span class="stringliteral">&quot;,&quot;</span> + c.getGreen() + <span class="stringliteral">&quot;,&quot;</span> + c.getBlue() + <span class="stringliteral">&quot;,&quot;</span> + c.getAlpha(), 0);</div>
-<div class="line"><span class="lineno">  507</span>        </div>
-<div class="line"><span class="lineno">  508</span>        c = faction.getGridUIColor();</div>
-<div class="line"><span class="lineno">  509</span>        memory.set(<span class="stringliteral">&quot;$gridColor&quot;</span>, c.getRed() + <span class="stringliteral">&quot;,&quot;</span> + c.getGreen() + <span class="stringliteral">&quot;,&quot;</span> + c.getBlue() + <span class="stringliteral">&quot;,&quot;</span> + c.getAlpha(), 0);</div>
-<div class="line"><span class="lineno">  510</span>        </div>
-<div class="line"><span class="lineno">  511</span>        </div>
-<div class="line"><span class="lineno">  512</span>        memory.set(<span class="stringliteral">&quot;$isNeutralFaction&quot;</span>, faction.isNeutralFaction(), 0);</div>
-<div class="line"><span class="lineno">  513</span>        </div>
-<div class="line"><span class="lineno">  514</span>        memory.set(<span class="stringliteral">&quot;$relValue&quot;</span>, rel, 0);</div>
-<div class="line"><span class="lineno">  515</span>        memory.set(<span class="stringliteral">&quot;$rel&quot;</span>, level.name(), 0);</div>
-<div class="line"><span class="lineno">  516</span>        <span class="comment">//memory.set(&quot;$relAdjective&quot;, level.getDisplayName().toLowerCase(), 0);</span></div>
-<div class="line"><span class="lineno">  517</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a12eb80e4a888fb9ae05a7b82dbd54c47" name="a12eb80e4a888fb9ae05a7b82dbd54c47"></a>
@@ -1242,21 +882,7 @@ Static Public Member Functions</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../dd/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BaseCampaignPlugin.html#a7d0e0f3cfac677ddd1f1093af1e27bef">com.fs.starfarer.api.campaign.BaseCampaignPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dd3/CoreCampaignPluginImpl_8java_source.html#l00520">520</a> of file <a class="el" href="../../d4/dd3/CoreCampaignPluginImpl_8java_source.html">CoreCampaignPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  520</span>                                                    {</div>
-<div class="line"><span class="lineno">  521</span>        <span class="keywordflow">if</span> (Global.getSettings().isDevMode()) {</div>
-<div class="line"><span class="lineno">  522</span>            memory.set(<span class="stringliteral">&quot;$isDevMode&quot;</span>, <span class="keyword">true</span>, 0);</div>
-<div class="line"><span class="lineno">  523</span>        }</div>
-<div class="line"><span class="lineno">  524</span>        <span class="keywordflow">if</span> (TutorialMissionIntel.isTutorialInProgress()) {</div>
-<div class="line"><span class="lineno">  525</span>            memory.set(<span class="stringliteral">&quot;$isInTutorial&quot;</span>, <span class="keyword">true</span>, 0);   </div>
-<div class="line"><span class="lineno">  526</span>        }</div>
-<div class="line"><span class="lineno">  527</span>        </div>
-<div class="line"><span class="lineno">  528</span>        <span class="keywordflow">if</span> (!memory.getBoolean(GateEntityPlugin.PLAYER_CAN_USE_GATES)) {</div>
-<div class="line"><span class="lineno">  529</span>            memory.set(GateEntityPlugin.PLAYER_CAN_USE_GATES, GateEntityPlugin.canUseGates(), 0);</div>
-<div class="line"><span class="lineno">  530</span>        }</div>
-<div class="line"><span class="lineno">  531</span>        </div>
-<div class="line"><span class="lineno">  532</span>        memory.set(<span class="stringliteral">&quot;$daysSinceStart&quot;</span>, PirateBaseManager.getInstance().getUnadjustedDaysSinceStart(), 0);    </div>
-<div class="line"><span class="lineno">  533</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aaecfba13745692d12e0018e71628bf77" name="aaecfba13745692d12e0018e71628bf77"></a>
@@ -1288,47 +914,7 @@ Static Public Member Functions</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../dd/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BaseCampaignPlugin.html#adb5ef60882bce7df9e7be760bf5177b5">com.fs.starfarer.api.campaign.BaseCampaignPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dd3/CoreCampaignPluginImpl_8java_source.html#l00328">328</a> of file <a class="el" href="../../d4/dd3/CoreCampaignPluginImpl_8java_source.html">CoreCampaignPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  328</span>                                                                      {</div>
-<div class="line"><span class="lineno">  329</span>        <span class="keywordflow">if</span> (market != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  330</span>            <span class="keywordflow">for</span> (String tag : market.getTags()) {</div>
-<div class="line"><span class="lineno">  331</span>                memory.set(<span class="stringliteral">&quot;$tag:&quot;</span> + tag, <span class="keyword">true</span>, 0);</div>
-<div class="line"><span class="lineno">  332</span>            }</div>
-<div class="line"><span class="lineno">  333</span>            <span class="keywordflow">for</span> (MarketConditionAPI mc : market.getConditions()) {</div>
-<div class="line"><span class="lineno">  334</span>                memory.set(<span class="stringliteral">&quot;$mc:&quot;</span> + mc.getId(), <span class="keyword">true</span>, 0);</div>
-<div class="line"><span class="lineno">  335</span>            }</div>
-<div class="line"><span class="lineno">  336</span>            <span class="keywordflow">for</span> (Industry ind : market.getIndustries()) {</div>
-<div class="line"><span class="lineno">  337</span>                memory.set(<span class="stringliteral">&quot;$ind:&quot;</span> + ind.getId(), <span class="keyword">true</span>, 0);</div>
-<div class="line"><span class="lineno">  338</span>            }</div>
-<div class="line"><span class="lineno">  339</span>            </div>
-<div class="line"><span class="lineno">  340</span>            memory.set(<span class="stringliteral">&quot;$id&quot;</span>, market.getId(), 0);</div>
-<div class="line"><span class="lineno">  341</span>            memory.set(<span class="stringliteral">&quot;$size&quot;</span>, market.getSize(), 0);</div>
-<div class="line"><span class="lineno">  342</span>            memory.set(<span class="stringliteral">&quot;$stability&quot;</span>, (<span class="keywordtype">int</span>) market.getStabilityValue(), 0);</div>
-<div class="line"><span class="lineno">  343</span>            </div>
-<div class="line"><span class="lineno">  344</span>            memory.set(<span class="stringliteral">&quot;$isSurveyed&quot;</span>, market.getSurveyLevel() == SurveyLevel.FULL, 0);</div>
-<div class="line"><span class="lineno">  345</span>            memory.set(<span class="stringliteral">&quot;$surveyLevel&quot;</span>, market.getSurveyLevel().name(), 0);</div>
-<div class="line"><span class="lineno">  346</span>            memory.set(<span class="stringliteral">&quot;$isPlanetConditionMarketOnly&quot;</span>, market.isPlanetConditionMarketOnly(), 0);</div>
-<div class="line"><span class="lineno">  347</span>            </div>
-<div class="line"><span class="lineno">  348</span>            memory.set(<span class="stringliteral">&quot;$isHidden&quot;</span>, market.isHidden(), 0);</div>
-<div class="line"><span class="lineno">  349</span>            </div>
-<div class="line"><span class="lineno">  350</span>            memory.set(<span class="stringliteral">&quot;$isPlayerOwned&quot;</span>, market.isPlayerOwned(), 0);</div>
-<div class="line"><span class="lineno">  351</span>            </div>
-<div class="line"><span class="lineno">  352</span>            <span class="keywordtype">boolean</span> hasRuins = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  353</span>            <span class="keywordflow">if</span> (Misc.hasRuins(market)) {</div>
-<div class="line"><span class="lineno">  354</span>                memory.set(<span class="stringliteral">&quot;$hasRuins&quot;</span>, <span class="keyword">true</span>, 0);</div>
-<div class="line"><span class="lineno">  355</span>                hasRuins = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  356</span>            }</div>
-<div class="line"><span class="lineno">  357</span>            </div>
-<div class="line"><span class="lineno">  358</span>            <span class="comment">//boolean ruinsExlored = memory.getBoolean(&quot;$ruinsExplored&quot;);</span></div>
-<div class="line"><span class="lineno">  359</span>            </div>
-<div class="line"><span class="lineno">  360</span>            memory.set(<span class="stringliteral">&quot;$hasUnexploredRuins&quot;</span>, Misc.hasUnexploredRuins(market), 0);</div>
-<div class="line"><span class="lineno">  361</span>            </div>
-<div class="line"><span class="lineno">  362</span>            </div>
-<div class="line"><span class="lineno">  363</span>            <span class="keywordtype">float</span> suspicionLevel = <a class="code hl_function" href="../../d8/da3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CoreCampaignPluginImpl.html#abdc16aa6433c6a4752613bb03690e26a">computeSmugglingSuspicionLevel</a>(market);</div>
-<div class="line"><span class="lineno">  364</span>            memory.set(MemFlags.MEMORY_MARKET_SMUGGLING_SUSPICION_LEVEL, suspicionLevel, 0);</div>
-<div class="line"><span class="lineno">  365</span>        }</div>
-<div class="line"><span class="lineno">  366</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CoreCampaignPluginImpl_html_abdc16aa6433c6a4752613bb03690e26a"><div class="ttname"><a href="../../d8/da3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CoreCampaignPluginImpl.html#abdc16aa6433c6a4752613bb03690e26a">com.fs.starfarer.api.impl.campaign.CoreCampaignPluginImpl.computeSmugglingSuspicionLevel</a></div><div class="ttdeci">static final float computeSmugglingSuspicionLevel(MarketAPI market)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dd3/CoreCampaignPluginImpl_8java_source.html#l00381">CoreCampaignPluginImpl.java:381</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a51f95ace392deedc432b830322a1155e" name="a51f95ace392deedc432b830322a1155e"></a>
@@ -1360,62 +946,7 @@ Static Public Member Functions</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../dd/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BaseCampaignPlugin.html#a2fe0f2839792bf159aeaa79c97862272">com.fs.starfarer.api.campaign.BaseCampaignPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dd3/CoreCampaignPluginImpl_8java_source.html#l00414">414</a> of file <a class="el" href="../../d4/dd3/CoreCampaignPluginImpl_8java_source.html">CoreCampaignPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  414</span>                                                                      {</div>
-<div class="line"><span class="lineno">  415</span>        memory.set(<span class="stringliteral">&quot;$id&quot;</span>, person.getId(), 0);</div>
-<div class="line"><span class="lineno">  416</span>        </div>
-<div class="line"><span class="lineno">  417</span>        <span class="keywordflow">for</span> (String tag : person.getTags()) {</div>
-<div class="line"><span class="lineno">  418</span>            memory.set(<span class="stringliteral">&quot;$tag:&quot;</span> + tag, <span class="keyword">true</span>, 0);</div>
-<div class="line"><span class="lineno">  419</span>        }</div>
-<div class="line"><span class="lineno">  420</span>        </div>
-<div class="line"><span class="lineno">  421</span>        <span class="comment">//int rel = (int)Math.round(person.getRelToPlayer().getRel() * 100f);</span></div>
-<div class="line"><span class="lineno">  422</span>        <span class="keywordtype">float</span> rel = person.getRelToPlayer().getRel();</div>
-<div class="line"><span class="lineno">  423</span>        memory.set(<span class="stringliteral">&quot;$rel&quot;</span>, rel, 0);</div>
-<div class="line"><span class="lineno">  424</span>        </div>
-<div class="line"><span class="lineno">  425</span>        <span class="keywordflow">if</span> (Misc.isMercenary(person)) {</div>
-<div class="line"><span class="lineno">  426</span>            memory.set(<span class="stringliteral">&quot;$mercContractDur&quot;</span>, (<span class="keywordtype">int</span>)Global.getSettings().getFloat(<span class="stringliteral">&quot;officerMercContractDur&quot;</span>), 0);</div>
-<div class="line"><span class="lineno">  427</span>            memory.set(<span class="stringliteral">&quot;$mercContractDurStr&quot;</span>, <span class="stringliteral">&quot;&quot;</span> + (<span class="keywordtype">int</span>)Global.getSettings().getFloat(<span class="stringliteral">&quot;officerMercContractDur&quot;</span>), 0);</div>
-<div class="line"><span class="lineno">  428</span>        }</div>
-<div class="line"><span class="lineno">  429</span>        </div>
-<div class="line"><span class="lineno">  430</span>        memory.set(<span class="stringliteral">&quot;$isPerson&quot;</span>, <span class="keyword">true</span>, 0);</div>
-<div class="line"><span class="lineno">  431</span>        memory.set(<span class="stringliteral">&quot;$name&quot;</span>, person.getName().getFullName(), 0);</div>
-<div class="line"><span class="lineno">  432</span>        memory.set(<span class="stringliteral">&quot;$personName&quot;</span>, person.getName().getFullName(), 0);</div>
-<div class="line"><span class="lineno">  433</span>        memory.set(<span class="stringliteral">&quot;$isContact&quot;</span>, ContactIntel.playerHasContact(person, <span class="keyword">false</span>), 0);</div>
-<div class="line"><span class="lineno">  434</span>        </div>
-<div class="line"><span class="lineno">  435</span>        memory.set(<span class="stringliteral">&quot;$rankId&quot;</span>, person.getRankId(), 0);</div>
-<div class="line"><span class="lineno">  436</span>        memory.set(<span class="stringliteral">&quot;$postId&quot;</span>, person.getPostId(), 0);</div>
-<div class="line"><span class="lineno">  437</span>        </div>
-<div class="line"><span class="lineno">  438</span>        <span class="keywordflow">if</span> (person.isAICore()) {</div>
-<div class="line"><span class="lineno">  439</span>            memory.set(<span class="stringliteral">&quot;$aiCoreId&quot;</span>, person.getAICoreId(), 0);</div>
-<div class="line"><span class="lineno">  440</span>            memory.set(<span class="stringliteral">&quot;$isAICore&quot;</span>, <span class="keyword">true</span>, 0);</div>
-<div class="line"><span class="lineno">  441</span>        }</div>
-<div class="line"><span class="lineno">  442</span>        </div>
-<div class="line"><span class="lineno">  443</span>        memory.set(<span class="stringliteral">&quot;$rankAOrAn&quot;</span>, person.getRankArticle(), 0);</div>
-<div class="line"><span class="lineno">  444</span>        memory.set(<span class="stringliteral">&quot;$postAOrAn&quot;</span>, person.getPostArticle(), 0);</div>
-<div class="line"><span class="lineno">  445</span> </div>
-<div class="line"><span class="lineno">  446</span>        <span class="keywordflow">if</span> (person.getRank() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  447</span>            memory.set(<span class="stringliteral">&quot;$rank&quot;</span>, person.getRank().toLowerCase(), 0);</div>
-<div class="line"><span class="lineno">  448</span>            memory.set(<span class="stringliteral">&quot;$Rank&quot;</span>, Misc.ucFirst(person.getRank()), 0);</div>
-<div class="line"><span class="lineno">  449</span>        }</div>
-<div class="line"><span class="lineno">  450</span>        <span class="keywordflow">if</span> (person.getPost() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  451</span>            memory.set(<span class="stringliteral">&quot;$post&quot;</span>, person.getPost().toLowerCase(), 0);</div>
-<div class="line"><span class="lineno">  452</span>            memory.set(<span class="stringliteral">&quot;$Post&quot;</span>, Misc.ucFirst(person.getPost()), 0);</div>
-<div class="line"><span class="lineno">  453</span>        }</div>
-<div class="line"><span class="lineno">  454</span>        memory.set(<span class="stringliteral">&quot;$importance&quot;</span>, person.getImportance().name(), 0);</div>
-<div class="line"><span class="lineno">  455</span>        </div>
-<div class="line"><span class="lineno">  456</span>        memory.set(<span class="stringliteral">&quot;$level&quot;</span>, person.getStats().getLevel(), 0);</div>
-<div class="line"><span class="lineno">  457</span>        </div>
-<div class="line"><span class="lineno">  458</span>        memory.set(<span class="stringliteral">&quot;$personality&quot;</span>, person.getPersonalityAPI().getId(), 0);</div>
-<div class="line"><span class="lineno">  459</span>        </div>
-<div class="line"><span class="lineno">  460</span>        ImportantPeopleAPI ip = Global.getSector().getImportantPeople();</div>
-<div class="line"><span class="lineno">  461</span>        PersonDataAPI data = ip.getData(person);</div>
-<div class="line"><span class="lineno">  462</span>        <span class="keywordflow">if</span> (data != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  463</span>            <span class="keywordflow">if</span> (data.getLocation().getMarket() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  464</span>                MarketAPI market = data.getLocation().getMarket();</div>
-<div class="line"><span class="lineno">  465</span>                memory.set(<span class="stringliteral">&quot;$hostileToMarket&quot;</span>, person.getFaction().isHostileTo(market.getFaction()), 0);</div>
-<div class="line"><span class="lineno">  466</span>            }</div>
-<div class="line"><span class="lineno">  467</span>        }</div>
-<div class="line"><span class="lineno">  468</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a4eab4e3ff74b194cc6028ee31dd8dc70" name="a4eab4e3ff74b194cc6028ee31dd8dc70"></a>
@@ -1437,129 +968,7 @@ Static Public Member Functions</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../dd/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BaseCampaignPlugin.html#a457021d6c22d77dcfe929bea815b7055">com.fs.starfarer.api.campaign.BaseCampaignPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dd3/CoreCampaignPluginImpl_8java_source.html#l00536">536</a> of file <a class="el" href="../../d4/dd3/CoreCampaignPluginImpl_8java_source.html">CoreCampaignPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  536</span>                                                    {</div>
-<div class="line"><span class="lineno">  537</span>        CampaignFleetAPI fleet = Global.getSector().getPlayerFleet();</div>
-<div class="line"><span class="lineno">  538</span> </div>
-<div class="line"><span class="lineno">  539</span>        PersonAPI person = Global.getSector().getPlayerPerson();</div>
-<div class="line"><span class="lineno">  540</span>        memory.set(<span class="stringliteral">&quot;$firstName&quot;</span>, person.getName().getFirst(), 0);</div>
-<div class="line"><span class="lineno">  541</span>        memory.set(<span class="stringliteral">&quot;$lastName&quot;</span>, person.getName().getLast(), 0);</div>
-<div class="line"><span class="lineno">  542</span>        memory.set(<span class="stringliteral">&quot;$name&quot;</span>, person.getName().getFullName(), 0);</div>
-<div class="line"><span class="lineno">  543</span>        </div>
-<div class="line"><span class="lineno">  544</span>        </div>
-<div class="line"><span class="lineno">  545</span>        <span class="keywordflow">if</span> (Misc.getCommissionFactionId() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  546</span>            memory.set(<span class="stringliteral">&quot;$commissionFactionId&quot;</span>, Misc.getCommissionFactionId(), 0);</div>
-<div class="line"><span class="lineno">  547</span>        }</div>
-<div class="line"><span class="lineno">  548</span>        </div>
-<div class="line"><span class="lineno">  549</span>        </div>
-<div class="line"><span class="lineno">  550</span>        <span class="keywordflow">if</span> (fleet.getContainingLocation() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  551</span>            memory.set(<span class="stringliteral">&quot;$locationId&quot;</span>, fleet.getContainingLocation().getId(), 0);</div>
-<div class="line"><span class="lineno">  552</span>            </div>
-<div class="line"><span class="lineno">  553</span>            <span class="keywordflow">for</span> (String tag : fleet.getContainingLocation().getTags()) {</div>
-<div class="line"><span class="lineno">  554</span>                memory.set(<span class="stringliteral">&quot;$locTag:&quot;</span> + tag, <span class="keyword">true</span>, 0);  </div>
-<div class="line"><span class="lineno">  555</span>            }</div>
-<div class="line"><span class="lineno">  556</span>        }</div>
-<div class="line"><span class="lineno">  557</span>        </div>
-<div class="line"><span class="lineno">  558</span>        </div>
-<div class="line"><span class="lineno">  559</span>        </div>
-<div class="line"><span class="lineno">  560</span>        </div>
-<div class="line"><span class="lineno">  561</span>        memory.set(<span class="stringliteral">&quot;$fleetId&quot;</span>, fleet.getId(), 0);</div>
-<div class="line"><span class="lineno">  562</span>        </div>
-<div class="line"><span class="lineno">  563</span>        memory.set(<span class="stringliteral">&quot;$transponderOn&quot;</span>, fleet.isTransponderOn(), 0);</div>
-<div class="line"><span class="lineno">  564</span>        </div>
-<div class="line"><span class="lineno">  565</span>        memory.set(<span class="stringliteral">&quot;$supplies&quot;</span>, (<span class="keywordtype">int</span>)fleet.getCargo().getSupplies(), 0);</div>
-<div class="line"><span class="lineno">  566</span>        memory.set(<span class="stringliteral">&quot;$fuel&quot;</span>, (<span class="keywordtype">int</span>)fleet.getCargo().getFuel(), 0);</div>
-<div class="line"><span class="lineno">  567</span>        memory.set(<span class="stringliteral">&quot;$machinery&quot;</span>, (<span class="keywordtype">int</span>)fleet.getCargo().getCommodityQuantity(Commodities.HEAVY_MACHINERY), 0);</div>
-<div class="line"><span class="lineno">  568</span>        </div>
-<div class="line"><span class="lineno">  569</span>        </div>
-<div class="line"><span class="lineno">  570</span>        memory.set(<span class="stringliteral">&quot;$marines&quot;</span>, (<span class="keywordtype">int</span>)fleet.getCargo().getMarines(), 0);</div>
-<div class="line"><span class="lineno">  571</span>        </div>
-<div class="line"><span class="lineno">  572</span>        memory.set(<span class="stringliteral">&quot;$crew&quot;</span>, (<span class="keywordtype">int</span>)fleet.getCargo().getCrew(), 0);</div>
-<div class="line"><span class="lineno">  573</span>        </div>
-<div class="line"><span class="lineno">  574</span>        memory.set(<span class="stringliteral">&quot;$crewRoom&quot;</span>, (<span class="keywordtype">int</span>)(fleet.getCargo().getMaxPersonnel() - fleet.getCargo().getTotalPersonnel()), 0);</div>
-<div class="line"><span class="lineno">  575</span>        memory.set(<span class="stringliteral">&quot;$fuelRoom&quot;</span>, (<span class="keywordtype">int</span>)fleet.getCargo().getMaxFuel() - (<span class="keywordtype">int</span>)fleet.getCargo().getFuel(), 0);</div>
-<div class="line"><span class="lineno">  576</span>        memory.set(<span class="stringliteral">&quot;$cargoRoom&quot;</span>, (<span class="keywordtype">int</span>)fleet.getCargo().getMaxCapacity() - (<span class="keywordtype">int</span>)fleet.getCargo().getSpaceUsed(), 0);</div>
-<div class="line"><span class="lineno">  577</span>        </div>
-<div class="line"><span class="lineno">  578</span>        memory.set(<span class="stringliteral">&quot;$crewRoomStr&quot;</span>, Misc.getWithDGS((<span class="keywordtype">int</span>)(fleet.getCargo().getMaxPersonnel() - fleet.getCargo().getTotalPersonnel())), 0);</div>
-<div class="line"><span class="lineno">  579</span>        memory.set(<span class="stringliteral">&quot;$fuelRoomStr&quot;</span>, Misc.getWithDGS((<span class="keywordtype">int</span>)fleet.getCargo().getMaxFuel() - (<span class="keywordtype">int</span>)fleet.getCargo().getFuel()), 0);</div>
-<div class="line"><span class="lineno">  580</span>        memory.set(<span class="stringliteral">&quot;$cargoRoomStr&quot;</span>, Misc.getWithDGS((<span class="keywordtype">int</span>)fleet.getCargo().getMaxCapacity() - (<span class="keywordtype">int</span>)fleet.getCargo().getSpaceUsed()), 0);</div>
-<div class="line"><span class="lineno">  581</span>        </div>
-<div class="line"><span class="lineno">  582</span>        memory.set(<span class="stringliteral">&quot;$credits&quot;</span>, (<span class="keywordtype">int</span>)fleet.getCargo().getCredits().get(), 0);</div>
-<div class="line"><span class="lineno">  583</span>        memory.set(<span class="stringliteral">&quot;$creditsStr&quot;</span>, Misc.getWithDGS((<span class="keywordtype">int</span>)fleet.getCargo().getCredits().get()), 0);</div>
-<div class="line"><span class="lineno">  584</span>        memory.set(<span class="stringliteral">&quot;$creditsStrC&quot;</span>, Misc.getWithDGS((<span class="keywordtype">int</span>)fleet.getCargo().getCredits().get()) + Strings.C, 0);</div>
-<div class="line"><span class="lineno">  585</span>        </div>
-<div class="line"><span class="lineno">  586</span><span class="comment">//      for (CommoditySpecAPI spec : Global.getSettings().getAllCommoditySpecs()) {</span></div>
-<div class="line"><span class="lineno">  587</span><span class="comment">//          if (spec.isMeta()) continue;</span></div>
-<div class="line"><span class="lineno">  588</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  589</span>        Set&lt;String&gt; seen = <span class="keyword">new</span> HashSet&lt;String&gt;();</div>
-<div class="line"><span class="lineno">  590</span>        <span class="keywordflow">for</span> (CargoStackAPI stack : fleet.getCargo().getStacksCopy()) {</div>
-<div class="line"><span class="lineno">  591</span>            String <span class="keywordtype">id</span> = stack.getCommodityId();</div>
-<div class="line"><span class="lineno">  592</span>            <span class="keywordflow">if</span> (<span class="keywordtype">id</span> == <span class="keyword">null</span>) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  593</span>            <span class="keywordflow">if</span> (seen.contains(<span class="keywordtype">id</span>)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  594</span>            seen.add(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  595</span>            </div>
-<div class="line"><span class="lineno">  596</span>            <span class="keywordtype">int</span> quantity = (int) fleet.getCargo().getCommodityQuantity(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  597</span>            String key = <span class="stringliteral">&quot;$&quot;</span> + id;</div>
-<div class="line"><span class="lineno">  598</span>            </div>
-<div class="line"><span class="lineno">  599</span>            <span class="keywordflow">if</span> (!memory.contains(key)) {</div>
-<div class="line"><span class="lineno">  600</span>                memory.set(key, quantity, 0);</div>
-<div class="line"><span class="lineno">  601</span>            }</div>
-<div class="line"><span class="lineno">  602</span>        }</div>
-<div class="line"><span class="lineno">  603</span>        </div>
-<div class="line"><span class="lineno">  604</span>        </div>
-<div class="line"><span class="lineno">  605</span>        MonthlyReport report = SharedData.getData().getPreviousReport();</div>
-<div class="line"><span class="lineno">  606</span>        <span class="keywordtype">boolean</span> debt = report.getDebt() &gt; 0;</div>
-<div class="line"><span class="lineno">  607</span>        <span class="keywordtype">boolean</span> longDebt = report.getDebt() &gt; 0 &amp;&amp; report.getPreviousDebt() &gt; 0;</div>
-<div class="line"><span class="lineno">  608</span>        memory.set(<span class="stringliteral">&quot;$inDebt&quot;</span>, debt, 0);</div>
-<div class="line"><span class="lineno">  609</span>        memory.set(<span class="stringliteral">&quot;$inLongDebt&quot;</span>, longDebt, 0);</div>
-<div class="line"><span class="lineno">  610</span>        </div>
-<div class="line"><span class="lineno">  611</span>        <span class="keywordtype">int</span> fleetSizeCount = fleet.getFleetSizeCount();</div>
-<div class="line"><span class="lineno">  612</span>        <span class="keywordtype">int</span> maxSize = 0;</div>
-<div class="line"><span class="lineno">  613</span>        <span class="keywordtype">int</span> maxCombatSize = 0;</div>
-<div class="line"><span class="lineno">  614</span>        <span class="keywordflow">for</span> (FleetMemberAPI member : fleet.getFleetData().getMembersListCopy()) {</div>
-<div class="line"><span class="lineno">  615</span>            HullSize size = member.getHullSpec().getHullSize();</div>
-<div class="line"><span class="lineno">  616</span>            <span class="keywordtype">int</span> val = 1;</div>
-<div class="line"><span class="lineno">  617</span>            <span class="keywordflow">switch</span> (size) {</div>
-<div class="line"><span class="lineno">  618</span>            <span class="keywordflow">case</span> CAPITAL_SHIP:</div>
-<div class="line"><span class="lineno">  619</span>                val = 4;</div>
-<div class="line"><span class="lineno">  620</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  621</span>            <span class="keywordflow">case</span> CRUISER:</div>
-<div class="line"><span class="lineno">  622</span>                val = 3;</div>
-<div class="line"><span class="lineno">  623</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  624</span>            <span class="keywordflow">case</span> DESTROYER:</div>
-<div class="line"><span class="lineno">  625</span>                val = 2;</div>
-<div class="line"><span class="lineno">  626</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  627</span>            <span class="keywordflow">case</span> FIGHTER:</div>
-<div class="line"><span class="lineno">  628</span>            <span class="keywordflow">case</span> FRIGATE:</div>
-<div class="line"><span class="lineno">  629</span>            <span class="keywordflow">case</span> DEFAULT:</div>
-<div class="line"><span class="lineno">  630</span>                val = 1;</div>
-<div class="line"><span class="lineno">  631</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  632</span>            }</div>
-<div class="line"><span class="lineno">  633</span>            <span class="keywordflow">if</span> (val &gt; maxSize) {</div>
-<div class="line"><span class="lineno">  634</span>                maxSize = val;;</div>
-<div class="line"><span class="lineno">  635</span>            }</div>
-<div class="line"><span class="lineno">  636</span>            <span class="keywordflow">if</span> (val &gt; maxCombatSize &amp;&amp; !member.isCivilian()) {</div>
-<div class="line"><span class="lineno">  637</span>                maxCombatSize = val;</div>
-<div class="line"><span class="lineno">  638</span>            }</div>
-<div class="line"><span class="lineno">  639</span>        }</div>
-<div class="line"><span class="lineno">  640</span>        </div>
-<div class="line"><span class="lineno">  641</span>        memory.set(<span class="stringliteral">&quot;$maxHullSize&quot;</span>, maxSize, 0);</div>
-<div class="line"><span class="lineno">  642</span>        memory.set(<span class="stringliteral">&quot;$maxCombatHullSize&quot;</span>, maxCombatSize, 0);</div>
-<div class="line"><span class="lineno">  643</span>        </div>
-<div class="line"><span class="lineno">  644</span>        memory.set(<span class="stringliteral">&quot;$fleetSizeCount&quot;</span>, fleetSizeCount, 0);</div>
-<div class="line"><span class="lineno">  645</span>        memory.set(<span class="stringliteral">&quot;$numShips&quot;</span>, fleet.getFleetData().getMembersListCopy().size(), 0);</div>
-<div class="line"><span class="lineno">  646</span>        memory.set(<span class="stringliteral">&quot;$fleetPoints&quot;</span>, fleet.getFleetPoints(), 0);</div>
-<div class="line"><span class="lineno">  647</span>        </div>
-<div class="line"><span class="lineno">  648</span>        memory.set(<span class="stringliteral">&quot;$numColonies&quot;</span>, Misc.getPlayerMarkets(<span class="keyword">true</span>).size(), 0);</div>
-<div class="line"><span class="lineno">  649</span>        </div>
-<div class="line"><span class="lineno">  650</span>        <span class="keywordflow">if</span> (fleet.getFlagship() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  651</span>            memory.set(<span class="stringliteral">&quot;$flagshipName&quot;</span>, fleet.getFlagship().getShipName(), 0);</div>
-<div class="line"><span class="lineno">  652</span>        }</div>
-<div class="line"><span class="lineno">  653</span>        </div>
-<div class="line"><span class="lineno">  654</span>        <span class="keywordflow">for</span> (String <span class="keywordtype">id</span> : fleet.getAbilities().keySet()) {</div>
-<div class="line"><span class="lineno">  655</span>            memory.set(<span class="stringliteral">&quot;$ability:&quot;</span> + <span class="keywordtype">id</span>, <span class="keyword">true</span>, 0);</div>
-<div class="line"><span class="lineno">  656</span>        }</div>
-<div class="line"><span class="lineno">  657</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

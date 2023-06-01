@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -347,78 +348,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a33c67bf29e82daaad9e6a6ffcf0ee0b2">com.fs.starfarer.api.combat.BaseHullMod</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d5c/PhaseField_8java_source.html#l00085">85</a> of file <a class="el" href="../../d5/d5c/PhaseField_8java_source.html">PhaseField.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   85</span>                                                                                                                                       {</div>
-<div class="line"><span class="lineno">   86</span>        <span class="keywordtype">float</span> pad = 3f;</div>
-<div class="line"><span class="lineno">   87</span>        <span class="keywordtype">float</span> opad = 10f;</div>
-<div class="line"><span class="lineno">   88</span>        Color h = Misc.getHighlightColor();</div>
-<div class="line"><span class="lineno">   89</span>        Color bad = Misc.getNegativeHighlightColor();</div>
-<div class="line"><span class="lineno">   90</span>        </div>
-<div class="line"><span class="lineno">   91</span>        <span class="keywordtype">int</span> numProfileShips = Global.getSettings().getInt(<span class="stringliteral">&quot;maxSensorShips&quot;</span>);</div>
-<div class="line"><span class="lineno">   92</span>        tooltip.addPara(<span class="stringliteral">&quot;In addition, the fleet&#39;s detected-at range is reduced by a multiplier based on the total &quot;</span></div>
-<div class="line"><span class="lineno">   93</span>                + <span class="stringliteral">&quot;sensor profile of the %s highest-profile ships in the fleet, and the total sensor strength of the %s &quot;</span></div>
-<div class="line"><span class="lineno">   94</span>                + <span class="stringliteral">&quot;phase ships with the highest sensor strength values. This effect only applies when the &quot;</span></div>
-<div class="line"><span class="lineno">   95</span>                + <span class="stringliteral">&quot;fleet&#39;s transponder is turned off.&quot;</span>, opad,</div>
-<div class="line"><span class="lineno">   96</span>                h,</div>
-<div class="line"><span class="lineno">   97</span>                <span class="stringliteral">&quot;&quot;</span> + numProfileShips, <span class="stringliteral">&quot;&quot;</span> + numProfileShips);</div>
-<div class="line"><span class="lineno">   98</span>        </div>
-<div class="line"><span class="lineno">   99</span>        tooltip.addPara(<span class="stringliteral">&quot;Fleetwide sensor strength increases - such as from High Resolution Sensors - do not factor into &quot;</span></div>
-<div class="line"><span class="lineno">  100</span>                + <span class="stringliteral">&quot;this calculation.&quot;</span>, opad);</div>
-<div class="line"><span class="lineno">  101</span>        </div>
-<div class="line"><span class="lineno">  102</span>        <span class="keywordflow">if</span> (isForModSpec || ship == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  103</span>        <span class="keywordflow">if</span> (Global.getSettings().getCurrentState() == GameState.TITLE) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  104</span>        </div>
-<div class="line"><span class="lineno">  105</span>        </div>
-<div class="line"><span class="lineno">  106</span>        CampaignFleetAPI fleet = Global.getSector().getPlayerFleet();</div>
-<div class="line"><span class="lineno">  107</span>        <span class="keywordtype">float</span> [] data = <a class="code hl_function" href="../../dc/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1PhaseField.html#a1dd9129d50c9ce67d740cf248e8831e2">getPhaseFieldMultBaseProfileAndTotal</a>(fleet, <span class="keyword">null</span>, 0f, 0f);</div>
-<div class="line"><span class="lineno">  108</span>        <span class="keywordtype">float</span> [] dataWithOneMore = <a class="code hl_function" href="../../dc/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1PhaseField.html#a1dd9129d50c9ce67d740cf248e8831e2">getPhaseFieldMultBaseProfileAndTotal</a>(fleet, <span class="keyword">null</span>,</div>
-<div class="line"><span class="lineno">  109</span>                ship.getMutableStats().getSensorProfile().getModifiedValue(),</div>
-<div class="line"><span class="lineno">  110</span>                ship.getMutableStats().getSensorStrength().getModifiedValue());</div>
-<div class="line"><span class="lineno">  111</span>        <span class="keywordtype">float</span> [] dataWithOneLess = <a class="code hl_function" href="../../dc/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1PhaseField.html#a1dd9129d50c9ce67d740cf248e8831e2">getPhaseFieldMultBaseProfileAndTotal</a>(fleet, ship.getFleetMemberId(), 0f, 0f);</div>
-<div class="line"><span class="lineno">  112</span>        </div>
-<div class="line"><span class="lineno">  113</span>        <span class="keywordtype">float</span> mult = data[0];</div>
-<div class="line"><span class="lineno">  114</span>        <span class="keywordtype">float</span> profile = data[1];</div>
-<div class="line"><span class="lineno">  115</span>        <span class="keywordtype">float</span> sensors = data[2];</div>
-<div class="line"><span class="lineno">  116</span>        </div>
-<div class="line"><span class="lineno">  117</span>        tooltip.addPara(<span class="stringliteral">&quot;The sensor profile of the %s top ships in your fleet is %s. The sensor strength of the top %s phase ships &quot;</span></div>
-<div class="line"><span class="lineno">  118</span>                + <span class="stringliteral">&quot;is %s.&quot;</span>, opad, h,</div>
-<div class="line"><span class="lineno">  119</span>                <span class="stringliteral">&quot;&quot;</span> + numProfileShips,</div>
-<div class="line"><span class="lineno">  120</span>                <span class="stringliteral">&quot;&quot;</span> + (<span class="keywordtype">int</span>)Math.round(profile),</div>
-<div class="line"><span class="lineno">  121</span>                <span class="stringliteral">&quot;&quot;</span> + numProfileShips,</div>
-<div class="line"><span class="lineno">  122</span>                <span class="stringliteral">&quot;&quot;</span> + (<span class="keywordtype">int</span>)Math.round(sensors)</div>
-<div class="line"><span class="lineno">  123</span>                );</div>
-<div class="line"><span class="lineno">  124</span>        </div>
-<div class="line"><span class="lineno">  125</span>        tooltip.addPara(<span class="stringliteral">&quot;The detected-at range multiplier for your fleet is %s. The fleet&#39;s transponder must be off &quot;</span></div>
-<div class="line"><span class="lineno">  126</span>                + <span class="stringliteral">&quot;for the multiplier to be applied.&quot;</span>,</div>
-<div class="line"><span class="lineno">  127</span>                opad, h,</div>
-<div class="line"><span class="lineno">  128</span>                Strings.X + Misc.getRoundedValueFloat(mult),</div>
-<div class="line"><span class="lineno">  129</span>                <span class="stringliteral">&quot;transponder must be off&quot;</span>);</div>
-<div class="line"><span class="lineno">  130</span>        </div>
-<div class="line"><span class="lineno">  131</span>        <span class="keywordtype">float</span> cr = ship.getCurrentCR();</div>
-<div class="line"><span class="lineno">  132</span>        <span class="keywordflow">for</span> (FleetMemberAPI member : Global.getSector().getPlayerFleet().getFleetData().getMembersListCopy()) {</div>
-<div class="line"><span class="lineno">  133</span>            <span class="keywordflow">if</span> (member.getId().equals(ship.getFleetMemberId())) {</div>
-<div class="line"><span class="lineno">  134</span>                cr = member.getRepairTracker().getCR();</div>
-<div class="line"><span class="lineno">  135</span>            }</div>
-<div class="line"><span class="lineno">  136</span>        }</div>
-<div class="line"><span class="lineno">  137</span>        </div>
-<div class="line"><span class="lineno">  138</span>        <span class="keywordflow">if</span> (cr &lt; <a class="code hl_variable" href="../../dc/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1PhaseField.html#ad10bab4ca5271be1b42090ddd04a951c">MIN_CR</a>) {</div>
-<div class="line"><span class="lineno">  139</span>            LabelAPI label = tooltip.addPara(<span class="stringliteral">&quot;This ship&#39;s combat readiness is below %s &quot;</span> +</div>
-<div class="line"><span class="lineno">  140</span>                    <span class="stringliteral">&quot;and the phase field&#39;s fleetwide effect can not be utilized. Bringing this ship into readiness &quot;</span> +</div>
-<div class="line"><span class="lineno">  141</span>                    <span class="stringliteral">&quot;would improve the multiplier to %s.&quot;</span>,</div>
-<div class="line"><span class="lineno">  142</span>                    opad, h,</div>
-<div class="line"><span class="lineno">  143</span>                    <span class="stringliteral">&quot;&quot;</span> + (<span class="keywordtype">int</span>) Math.round(<a class="code hl_variable" href="../../dc/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1PhaseField.html#ad10bab4ca5271be1b42090ddd04a951c">MIN_CR</a> * 100f) + <span class="stringliteral">&quot;%&quot;</span>,</div>
-<div class="line"><span class="lineno">  144</span>                    Strings.X + Misc.getRoundedValueFloat(dataWithOneMore[0]));</div>
-<div class="line"><span class="lineno">  145</span>            label.setHighlightColors(bad, h);</div>
-<div class="line"><span class="lineno">  146</span>            label.setHighlight(<span class="stringliteral">&quot;&quot;</span> + (<span class="keywordtype">int</span>) Math.round(<a class="code hl_variable" href="../../dc/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1PhaseField.html#ad10bab4ca5271be1b42090ddd04a951c">MIN_CR</a> * 100f) + <span class="stringliteral">&quot;%&quot;</span>, Strings.X + Misc.getRoundedValueFloat(dataWithOneMore[0]));</div>
-<div class="line"><span class="lineno">  147</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  148</span>            tooltip.addPara(<span class="stringliteral">&quot;Removing this ship would change the multiplier to %s. Adding another ship with the same sensor strength &quot;</span> +</div>
-<div class="line"><span class="lineno">  149</span>                    <span class="stringliteral">&quot;would improve it to %s.&quot;</span>, opad, h,</div>
-<div class="line"><span class="lineno">  150</span>                    Strings.X + Misc.getRoundedValueFloat(dataWithOneLess[0]),</div>
-<div class="line"><span class="lineno">  151</span>                    Strings.X + Misc.getRoundedValueFloat(dataWithOneMore[0]));</div>
-<div class="line"><span class="lineno">  152</span>        }</div>
-<div class="line"><span class="lineno">  153</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1PhaseField_html_a1dd9129d50c9ce67d740cf248e8831e2"><div class="ttname"><a href="../../dc/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1PhaseField.html#a1dd9129d50c9ce67d740cf248e8831e2">com.fs.starfarer.api.impl.hullmods.PhaseField.getPhaseFieldMultBaseProfileAndTotal</a></div><div class="ttdeci">static float[] getPhaseFieldMultBaseProfileAndTotal(CampaignFleetAPI fleet, String skipId, float addProfile, float addSensor)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d5c/PhaseField_8java_source.html#l00189">PhaseField.java:189</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1PhaseField_html_ad10bab4ca5271be1b42090ddd04a951c"><div class="ttname"><a href="../../dc/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1PhaseField.html#ad10bab4ca5271be1b42090ddd04a951c">com.fs.starfarer.api.impl.hullmods.PhaseField.MIN_CR</a></div><div class="ttdeci">static float MIN_CR</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d5c/PhaseField_8java_source.html#l00034">PhaseField.java:34</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8829379c4b9f2ea75d0edf89210d7def" name="a8829379c4b9f2ea75d0edf89210d7def"></a>
@@ -448,18 +378,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="../../dc/d34/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1HullModFleetEffect.html#ae4f88e61c31b68b677a3dd892c4ca2a6">com.fs.starfarer.api.combat.HullModFleetEffect</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d5c/PhaseField_8java_source.html#l00051">51</a> of file <a class="el" href="../../d5/d5c/PhaseField_8java_source.html">PhaseField.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   51</span>                                                          {</div>
-<div class="line"><span class="lineno">   52</span>        <span class="comment">//if (fleet.isPlayerFleet() &amp;&amp; fleet.getMemoryWithoutUpdate() != null &amp;&amp;</span></div>
-<div class="line"><span class="lineno">   53</span>        String key = <span class="stringliteral">&quot;$updatedPhaseFieldModifier&quot;</span>;</div>
-<div class="line"><span class="lineno">   54</span>        <span class="keywordflow">if</span> (fleet.isPlayerFleet() &amp;&amp; fleet.getMemoryWithoutUpdate() != <span class="keyword">null</span> &amp;&amp;</div>
-<div class="line"><span class="lineno">   55</span>                !fleet.getMemoryWithoutUpdate().getBoolean(key) &amp;&amp;</div>
-<div class="line"><span class="lineno">   56</span>                fleet.getMemoryWithoutUpdate().getBoolean(MemFlags.JUST_TOGGLED_TRANSPONDER)) {</div>
-<div class="line"><span class="lineno">   57</span>            <a class="code hl_function" href="../../dc/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1PhaseField.html#aa4e3b92ec8b7415931c2b0dcb93361ea">onFleetSync</a>(fleet);</div>
-<div class="line"><span class="lineno">   58</span>            fleet.getMemoryWithoutUpdate().set(key, <span class="keyword">true</span>, 0.1f);</div>
-<div class="line"><span class="lineno">   59</span>        }</div>
-<div class="line"><span class="lineno">   60</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1PhaseField_html_aa4e3b92ec8b7415931c2b0dcb93361ea"><div class="ttname"><a href="../../dc/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1PhaseField.html#aa4e3b92ec8b7415931c2b0dcb93361ea">com.fs.starfarer.api.impl.hullmods.PhaseField.onFleetSync</a></div><div class="ttdeci">void onFleetSync(CampaignFleetAPI fleet)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d5c/PhaseField_8java_source.html#l00069">PhaseField.java:69</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a58b49821aac4b0b6154d0188e9a72185" name="a58b49821aac4b0b6154d0188e9a72185"></a>
@@ -497,12 +416,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a3859215f6c3408946bf590a2ce5c0e74">com.fs.starfarer.api.combat.BaseHullMod</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d5c/PhaseField_8java_source.html#l00041">41</a> of file <a class="el" href="../../d5/d5c/PhaseField_8java_source.html">PhaseField.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   41</span>                                                                                                        {</div>
-<div class="line"><span class="lineno">   42</span>        stats.getSensorProfile().modifyMult(<span class="keywordtype">id</span>, <a class="code hl_variable" href="../../dc/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1PhaseField.html#a7af3d31057c5e2bdeb986933b62597e9">PROFILE_MULT</a>);</div>
-<div class="line"><span class="lineno">   43</span>        <span class="comment">//stats.getDynamic().getMod(Stats.PHASE_FIELD_SENSOR_PROFILE_MOD).modifyFlat(id, (Float) mag.get(hullSize));</span></div>
-<div class="line"><span class="lineno">   44</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1PhaseField_html_a7af3d31057c5e2bdeb986933b62597e9"><div class="ttname"><a href="../../dc/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1PhaseField.html#a7af3d31057c5e2bdeb986933b62597e9">com.fs.starfarer.api.impl.hullmods.PhaseField.PROFILE_MULT</a></div><div class="ttdeci">static float PROFILE_MULT</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d5c/PhaseField_8java_source.html#l00037">PhaseField.java:37</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="afb41f0ed999fe7de620f19e0e58800fe" name="afb41f0ed999fe7de620f19e0e58800fe"></a>
@@ -534,11 +448,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a5f6ac9583ca5b1606fda3e53f15c3d14">com.fs.starfarer.api.combat.BaseHullMod</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d5c/PhaseField_8java_source.html#l00046">46</a> of file <a class="el" href="../../d5/d5c/PhaseField_8java_source.html">PhaseField.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   46</span>                                                                    {</div>
-<div class="line"><span class="lineno">   47</span>        <span class="keywordflow">if</span> (index == 0) <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span> + (int) ((1f - <a class="code hl_variable" href="../../dc/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1PhaseField.html#a7af3d31057c5e2bdeb986933b62597e9">PROFILE_MULT</a>) * 100f) + <span class="stringliteral">&quot;%&quot;</span>;</div>
-<div class="line"><span class="lineno">   48</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   49</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a1dd9129d50c9ce67d740cf248e8831e2" name="a1dd9129d50c9ce67d740cf248e8831e2"></a>
@@ -588,66 +498,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d5c/PhaseField_8java_source.html#l00189">189</a> of file <a class="el" href="../../d5/d5c/PhaseField_8java_source.html">PhaseField.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  189</span>                                                                                                                                          {</div>
-<div class="line"><span class="lineno">  190</span>        List&lt;FleetMemberAPI&gt; members = <span class="keyword">new</span> ArrayList&lt;FleetMemberAPI&gt;();</div>
-<div class="line"><span class="lineno">  191</span>        List&lt;FleetMemberAPI&gt; phase = <span class="keyword">new</span> ArrayList&lt;FleetMemberAPI&gt;();</div>
-<div class="line"><span class="lineno">  192</span>        <span class="keywordflow">for</span> (FleetMemberAPI member : fleet.getFleetData().getMembersListCopy()) {</div>
-<div class="line"><span class="lineno">  193</span>            <span class="keywordflow">if</span> (member.getId().equals(skipId)) { </div>
-<div class="line"><span class="lineno">  194</span>                <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  195</span>            }</div>
-<div class="line"><span class="lineno">  196</span>            members.add(member);</div>
-<div class="line"><span class="lineno">  197</span>            </div>
-<div class="line"><span class="lineno">  198</span>            <span class="keywordflow">if</span> (member.isMothballed()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  199</span>            <span class="keywordflow">if</span> (member.getRepairTracker().getCR() &lt; <a class="code hl_variable" href="../../dc/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1PhaseField.html#ad10bab4ca5271be1b42090ddd04a951c">MIN_CR</a>) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  200</span>            <span class="keywordflow">if</span> (member.getVariant().hasHullMod(HullMods.PHASE_FIELD)) {</div>
-<div class="line"><span class="lineno">  201</span>                phase.add(member);</div>
-<div class="line"><span class="lineno">  202</span>            }</div>
-<div class="line"><span class="lineno">  203</span>        }</div>
-<div class="line"><span class="lineno">  204</span>        </div>
-<div class="line"><span class="lineno">  205</span>        <span class="keywordtype">float</span> [] profiles = <span class="keyword">new</span> <span class="keywordtype">float</span> [members.size()];</div>
-<div class="line"><span class="lineno">  206</span>        <span class="keywordflow">if</span> (addProfile &lt;= 0) {</div>
-<div class="line"><span class="lineno">  207</span>            profiles = <span class="keyword">new</span> <span class="keywordtype">float</span> [members.size()];</div>
-<div class="line"><span class="lineno">  208</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  209</span>            profiles = <span class="keyword">new</span> <span class="keywordtype">float</span> [members.size() + 1];</div>
-<div class="line"><span class="lineno">  210</span>        }</div>
-<div class="line"><span class="lineno">  211</span>        <span class="keywordtype">float</span> [] phaseSensors;</div>
-<div class="line"><span class="lineno">  212</span>        <span class="keywordflow">if</span> (addSensor &lt;= 0) {</div>
-<div class="line"><span class="lineno">  213</span>            phaseSensors = <span class="keyword">new</span> <span class="keywordtype">float</span> [phase.size()];</div>
-<div class="line"><span class="lineno">  214</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  215</span>            phaseSensors = <span class="keyword">new</span> <span class="keywordtype">float</span> [phase.size() + 1];</div>
-<div class="line"><span class="lineno">  216</span>        }</div>
-<div class="line"><span class="lineno">  217</span>        </div>
-<div class="line"><span class="lineno">  218</span>        <span class="keywordtype">int</span> i = 0;</div>
-<div class="line"><span class="lineno">  219</span>        <span class="keywordflow">for</span> (FleetMemberAPI member : members) {</div>
-<div class="line"><span class="lineno">  220</span>            profiles[i] = member.getStats().getSensorProfile().getModifiedValue();</div>
-<div class="line"><span class="lineno">  221</span>            i++;</div>
-<div class="line"><span class="lineno">  222</span>        }</div>
-<div class="line"><span class="lineno">  223</span>        <span class="keywordflow">if</span> (addProfile &gt; 0) profiles[i] = addProfile;</div>
-<div class="line"><span class="lineno">  224</span>        i = 0;</div>
-<div class="line"><span class="lineno">  225</span>        <span class="keywordflow">for</span> (FleetMemberAPI member : phase) {</div>
-<div class="line"><span class="lineno">  226</span>            phaseSensors[i] = member.getStats().getSensorStrength().getModifiedValue();</div>
-<div class="line"><span class="lineno">  227</span>            i++;</div>
-<div class="line"><span class="lineno">  228</span>        }</div>
-<div class="line"><span class="lineno">  229</span>        <span class="keywordflow">if</span> (addSensor &gt; 0) phaseSensors[i] = addSensor;</div>
-<div class="line"><span class="lineno">  230</span>        </div>
-<div class="line"><span class="lineno">  231</span>        <span class="keywordtype">int</span> numProfileShips = Global.getSettings().getInt(<span class="stringliteral">&quot;maxSensorShips&quot;</span>);</div>
-<div class="line"><span class="lineno">  232</span>        <span class="keywordtype">int</span> numPhaseShips = numProfileShips;</div>
-<div class="line"><span class="lineno">  233</span>        </div>
-<div class="line"><span class="lineno">  234</span>        <span class="keywordtype">float</span> totalProfile = <a class="code hl_function" href="../../dc/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1PhaseField.html#a42ce6fa78dee80296e392dcae306c161">getTopKValuesSum</a>(profiles, numProfileShips);</div>
-<div class="line"><span class="lineno">  235</span>        <span class="keywordtype">float</span> totalPhaseSensors = <a class="code hl_function" href="../../dc/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1PhaseField.html#a42ce6fa78dee80296e392dcae306c161">getTopKValuesSum</a>(phaseSensors, numPhaseShips);</div>
-<div class="line"><span class="lineno">  236</span>        </div>
-<div class="line"><span class="lineno">  237</span>        <span class="keywordtype">float</span> total = Math.max(totalProfile + totalPhaseSensors, 1f);</div>
-<div class="line"><span class="lineno">  238</span>        </div>
-<div class="line"><span class="lineno">  239</span>        <span class="keywordtype">float</span> mult = totalProfile / total;</div>
-<div class="line"><span class="lineno">  240</span>        </div>
-<div class="line"><span class="lineno">  241</span>        <span class="keywordflow">if</span> (mult &lt; <a class="code hl_variable" href="../../dc/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1PhaseField.html#a16252e3cd3ac5974ae63deadbcdcb89b">MIN_FIELD_MULT</a>) mult = <a class="code hl_variable" href="../../dc/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1PhaseField.html#a16252e3cd3ac5974ae63deadbcdcb89b">MIN_FIELD_MULT</a>;</div>
-<div class="line"><span class="lineno">  242</span>        <span class="keywordflow">if</span> (mult &gt; 1f) mult = 1f;</div>
-<div class="line"><span class="lineno">  243</span>        </div>
-<div class="line"><span class="lineno">  244</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <span class="keywordtype">float</span>[] {mult, totalProfile, totalPhaseSensors};</div>
-<div class="line"><span class="lineno">  245</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1PhaseField_html_a16252e3cd3ac5974ae63deadbcdcb89b"><div class="ttname"><a href="../../dc/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1PhaseField.html#a16252e3cd3ac5974ae63deadbcdcb89b">com.fs.starfarer.api.impl.hullmods.PhaseField.MIN_FIELD_MULT</a></div><div class="ttdeci">static float MIN_FIELD_MULT</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d5c/PhaseField_8java_source.html#l00039">PhaseField.java:39</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1PhaseField_html_a42ce6fa78dee80296e392dcae306c161"><div class="ttname"><a href="../../dc/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1PhaseField.html#a42ce6fa78dee80296e392dcae306c161">com.fs.starfarer.api.impl.hullmods.PhaseField.getTopKValuesSum</a></div><div class="ttdeci">static float getTopKValuesSum(float[] arr, int k)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d5c/PhaseField_8java_source.html#l00248">PhaseField.java:248</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a42ce6fa78dee80296e392dcae306c161" name="a42ce6fa78dee80296e392dcae306c161"></a>
@@ -685,24 +536,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d5c/PhaseField_8java_source.html#l00248">248</a> of file <a class="el" href="../../d5/d5c/PhaseField_8java_source.html">PhaseField.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  248</span>                                                              {</div>
-<div class="line"><span class="lineno">  249</span>        k = Math.min(k, arr.length);</div>
-<div class="line"><span class="lineno">  250</span>        </div>
-<div class="line"><span class="lineno">  251</span>        <span class="keywordtype">float</span> kVal = Misc.findKth(arr, arr.length - k);</div>
-<div class="line"><span class="lineno">  252</span>        <span class="keywordtype">float</span> total = 0;</div>
-<div class="line"><span class="lineno">  253</span>        <span class="keywordtype">int</span> found = 0;</div>
-<div class="line"><span class="lineno">  254</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; arr.length; i++) {</div>
-<div class="line"><span class="lineno">  255</span>            <span class="keywordflow">if</span> (arr[i] &gt; kVal) {</div>
-<div class="line"><span class="lineno">  256</span>                found++;</div>
-<div class="line"><span class="lineno">  257</span>                total += arr[i];</div>
-<div class="line"><span class="lineno">  258</span>            }</div>
-<div class="line"><span class="lineno">  259</span>        }</div>
-<div class="line"><span class="lineno">  260</span>        <span class="keywordflow">if</span> (k &gt; found) {</div>
-<div class="line"><span class="lineno">  261</span>            total += (k - found) * kVal;</div>
-<div class="line"><span class="lineno">  262</span>        }</div>
-<div class="line"><span class="lineno">  263</span>        <span class="keywordflow">return</span> total;</div>
-<div class="line"><span class="lineno">  264</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa4e3b92ec8b7415931c2b0dcb93361ea" name="aa4e3b92ec8b7415931c2b0dcb93361ea"></a>
@@ -730,17 +564,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="../../dc/d34/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1HullModFleetEffect.html#aa6a0c15187a062780bd4306539491729">com.fs.starfarer.api.combat.HullModFleetEffect</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d5c/PhaseField_8java_source.html#l00069">69</a> of file <a class="el" href="../../d5/d5c/PhaseField_8java_source.html">PhaseField.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   69</span>                                                    {</div>
-<div class="line"><span class="lineno">   70</span>        <span class="keywordtype">float</span> mult = <a class="code hl_function" href="../../dc/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1PhaseField.html#a1dd9129d50c9ce67d740cf248e8831e2">getPhaseFieldMultBaseProfileAndTotal</a>(fleet, <span class="keyword">null</span>, 0f, 0f)[0];</div>
-<div class="line"><span class="lineno">   71</span>        <span class="keywordflow">if</span> (fleet.isTransponderOn()) mult = 1f;</div>
-<div class="line"><span class="lineno">   72</span>        <span class="keywordflow">if</span> (mult &lt;= 0) {</div>
-<div class="line"><span class="lineno">   73</span>            fleet.getDetectedRangeMod().unmodifyMult(<a class="code hl_variable" href="../../dc/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1PhaseField.html#ad52cbeb10ca599662d75c3a8e6c09b48">MOD_KEY</a>);</div>
-<div class="line"><span class="lineno">   74</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   75</span>            fleet.getDetectedRangeMod().modifyMult(<a class="code hl_variable" href="../../dc/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1PhaseField.html#ad52cbeb10ca599662d75c3a8e6c09b48">MOD_KEY</a>, mult, <span class="stringliteral">&quot;Phase ships in fleet&quot;</span>);</div>
-<div class="line"><span class="lineno">   76</span>        }</div>
-<div class="line"><span class="lineno">   77</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1PhaseField_html_ad52cbeb10ca599662d75c3a8e6c09b48"><div class="ttname"><a href="../../dc/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1PhaseField.html#ad52cbeb10ca599662d75c3a8e6c09b48">com.fs.starfarer.api.impl.hullmods.PhaseField.MOD_KEY</a></div><div class="ttdeci">static String MOD_KEY</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d5c/PhaseField_8java_source.html#l00035">PhaseField.java:35</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="abf1a973fbd6a0c4b2c786b061227f4c4" name="abf1a973fbd6a0c4b2c786b061227f4c4"></a>
@@ -787,10 +611,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a3ea50f57642925029054d03f5362630b">com.fs.starfarer.api.combat.BaseHullMod</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d5c/PhaseField_8java_source.html#l00080">80</a> of file <a class="el" href="../../d5/d5c/PhaseField_8java_source.html">PhaseField.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   80</span>                                                                                                        {</div>
-<div class="line"><span class="lineno">   81</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   82</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a6f61b9554c8b36aa1cf521976bb6b349" name="a6f61b9554c8b36aa1cf521976bb6b349"></a>
@@ -812,10 +633,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="../../dc/d34/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1HullModFleetEffect.html#a5adb6bfb54b862425c5ae4fdf03d4551">com.fs.starfarer.api.combat.HullModFleetEffect</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d5c/PhaseField_8java_source.html#l00062">62</a> of file <a class="el" href="../../d5/d5c/PhaseField_8java_source.html">PhaseField.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   62</span>                                           {</div>
-<div class="line"><span class="lineno">   63</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   64</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a6dbbdd41ed3d92e8162a3a4a83ed49fa" name="a6dbbdd41ed3d92e8162a3a4a83ed49fa"></a>
@@ -837,10 +655,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="../../dc/d34/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1HullModFleetEffect.html#a3f2f9f51912a3d0fc31352789a3637dc">com.fs.starfarer.api.combat.HullModFleetEffect</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d5c/PhaseField_8java_source.html#l00065">65</a> of file <a class="el" href="../../d5/d5c/PhaseField_8java_source.html">PhaseField.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   65</span>                                     {</div>
-<div class="line"><span class="lineno">   66</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   67</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

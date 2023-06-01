@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -181,12 +182,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/dc6/AddBarEvent_8java_source.html#l00050">50</a> of file <a class="el" href="../../d0/dc6/AddBarEvent_8java_source.html">AddBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   50</span>                                                         {</div>
-<div class="line"><span class="lineno">   51</span>        MemoryAPI mem = market.getMemoryWithoutUpdate();</div>
-<div class="line"><span class="lineno">   52</span>        mem.unset(<a class="code hl_variable" href="../../df/df7/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1AddBarEvent.html#ae83457da1d391834db92d9a92c607a2e">KEY</a>);</div>
-<div class="line"><span class="lineno">   53</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1AddBarEvent_html_ae83457da1d391834db92d9a92c607a2e"><div class="ttname"><a href="../../df/df7/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1AddBarEvent.html#ae83457da1d391834db92d9a92c607a2e">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.AddBarEvent.KEY</a></div><div class="ttdeci">static String KEY</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dc6/AddBarEvent_8java_source.html#l00035">AddBarEvent.java:35</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a982e288167e5a201fd71ea5ea07b6f73" name="a982e288167e5a201fd71ea5ea07b6f73"></a>
@@ -230,28 +226,7 @@ Static Public Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d0/d5c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1CommandPlugin.html#a72a44c5127e60136b87d3b37613fd0e0">com.fs.starfarer.api.campaign.rules.CommandPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/dc6/AddBarEvent_8java_source.html#l00056">56</a> of file <a class="el" href="../../d0/dc6/AddBarEvent_8java_source.html">AddBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   56</span>                                                                                                                             {</div>
-<div class="line"><span class="lineno">   57</span>        MarketAPI market = dialog.getInteractionTarget().getMarket();</div>
-<div class="line"><span class="lineno">   58</span>        <span class="keywordflow">if</span> (market == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   59</span>        </div>
-<div class="line"><span class="lineno">   60</span>        String optionId = params.get(0).getString(memoryMap);</div>
-<div class="line"><span class="lineno">   61</span>        String option = params.get(1).getStringWithTokenReplacement(ruleId, dialog, memoryMap);</div>
-<div class="line"><span class="lineno">   62</span>        String blurb = params.get(2).getStringWithTokenReplacement(ruleId, dialog, memoryMap);</div>
-<div class="line"><span class="lineno">   63</span>        </div>
-<div class="line"><span class="lineno">   64</span>        Color color = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   65</span>        <span class="keywordflow">if</span> (params.size() &gt;= 4) {</div>
-<div class="line"><span class="lineno">   66</span>            color = params.get(3).getColor(memoryMap);</div>
-<div class="line"><span class="lineno">   67</span>        }</div>
-<div class="line"><span class="lineno">   68</span>        </div>
-<div class="line"><span class="lineno">   69</span>        TempBarEvents events = <a class="code hl_function" href="../../df/df7/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1AddBarEvent.html#a5007756262b89f57f31a16a7448fd61b">getTempEvents</a>(market);</div>
-<div class="line"><span class="lineno">   70</span>        </div>
-<div class="line"><span class="lineno">   71</span>        BarEventData data = <span class="keyword">new</span> BarEventData(optionId, option, blurb);</div>
-<div class="line"><span class="lineno">   72</span>        data.optionColor = color;</div>
-<div class="line"><span class="lineno">   73</span>        events.events.put(optionId, data);</div>
-<div class="line"><span class="lineno">   74</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   75</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1AddBarEvent_html_a5007756262b89f57f31a16a7448fd61b"><div class="ttname"><a href="../../df/df7/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1AddBarEvent.html#a5007756262b89f57f31a16a7448fd61b">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.AddBarEvent.getTempEvents</a></div><div class="ttdeci">static TempBarEvents getTempEvents(MarketAPI market)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dc6/AddBarEvent_8java_source.html#l00036">AddBarEvent.java:36</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5007756262b89f57f31a16a7448fd61b" name="a5007756262b89f57f31a16a7448fd61b"></a>
@@ -279,16 +254,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/dc6/AddBarEvent_8java_source.html#l00036">36</a> of file <a class="el" href="../../d0/dc6/AddBarEvent_8java_source.html">AddBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   36</span>                                                                {</div>
-<div class="line"><span class="lineno">   37</span>        MemoryAPI mem = market.getMemoryWithoutUpdate();</div>
-<div class="line"><span class="lineno">   38</span>        TempBarEvents events = (TempBarEvents)mem.get(<a class="code hl_variable" href="../../df/df7/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1AddBarEvent.html#ae83457da1d391834db92d9a92c607a2e">KEY</a>);</div>
-<div class="line"><span class="lineno">   39</span>        <span class="keywordflow">if</span> (events == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   40</span>            events = <span class="keyword">new</span> TempBarEvents();</div>
-<div class="line"><span class="lineno">   41</span>            mem.set(<a class="code hl_variable" href="../../df/df7/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1AddBarEvent.html#ae83457da1d391834db92d9a92c607a2e">KEY</a>, events, 0f);</div>
-<div class="line"><span class="lineno">   42</span>        }</div>
-<div class="line"><span class="lineno">   43</span>        <span class="keywordflow">return</span> events;</div>
-<div class="line"><span class="lineno">   44</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aaaffaa27c682b3fc332d9ec3b44c3340" name="aaaffaa27c682b3fc332d9ec3b44c3340"></a>
@@ -326,10 +292,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/dc6/AddBarEvent_8java_source.html#l00046">46</a> of file <a class="el" href="../../d0/dc6/AddBarEvent_8java_source.html">AddBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   46</span>                                                                          {</div>
-<div class="line"><span class="lineno">   47</span>        <a class="code hl_function" href="../../df/df7/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1AddBarEvent.html#a5007756262b89f57f31a16a7448fd61b">getTempEvents</a>(market).events.remove(optionId);</div>
-<div class="line"><span class="lineno">   48</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

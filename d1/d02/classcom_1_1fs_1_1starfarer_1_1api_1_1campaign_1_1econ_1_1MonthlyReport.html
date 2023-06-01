@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -215,11 +216,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/d4c/MonthlyReport_8java_source.html#l00097">97</a> of file <a class="el" href="../../df/d4c/MonthlyReport_8java_source.html">MonthlyReport.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   97</span>                                {</div>
-<div class="line"><span class="lineno">   98</span>        <a class="code hl_function" href="../../d1/d02/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MonthlyReport.html#a29451dde7d8fbbdeda208e89461b8bf8">computeTotals</a>(root);</div>
-<div class="line"><span class="lineno">   99</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MonthlyReport_html_a29451dde7d8fbbdeda208e89461b8bf8"><div class="ttname"><a href="../../d1/d02/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MonthlyReport.html#a29451dde7d8fbbdeda208e89461b8bf8">com.fs.starfarer.api.campaign.econ.MonthlyReport.computeTotals</a></div><div class="ttdeci">void computeTotals()</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d4c/MonthlyReport_8java_source.html#l00097">MonthlyReport.java:97</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab45d4e3a6b10beb0b7988c747243f7cf" name="ab45d4e3a6b10beb0b7988c747243f7cf"></a>
@@ -247,20 +244,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/d4c/MonthlyReport_8java_source.html#l00129">129</a> of file <a class="el" href="../../df/d4c/MonthlyReport_8java_source.html">MonthlyReport.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  129</span>                                              {</div>
-<div class="line"><span class="lineno">  130</span>        curr.totalIncome = curr.income;</div>
-<div class="line"><span class="lineno">  131</span>        curr.totalUpkeep = curr.upkeep;</div>
-<div class="line"><span class="lineno">  132</span>        </div>
-<div class="line"><span class="lineno">  133</span>        <span class="keywordflow">for</span> (FDNode child : curr.getChildren().values()) {</div>
-<div class="line"><span class="lineno">  134</span>            <a class="code hl_function" href="../../d1/d02/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MonthlyReport.html#a29451dde7d8fbbdeda208e89461b8bf8">computeTotals</a>(child);</div>
-<div class="line"><span class="lineno">  135</span>        }</div>
-<div class="line"><span class="lineno">  136</span>        </div>
-<div class="line"><span class="lineno">  137</span>        <span class="keywordflow">if</span> (curr.parent != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  138</span>            curr.parent.totalIncome += curr.totalIncome;</div>
-<div class="line"><span class="lineno">  139</span>            curr.parent.totalUpkeep += curr.totalUpkeep;</div>
-<div class="line"><span class="lineno">  140</span>        }</div>
-<div class="line"><span class="lineno">  141</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af32f246a95e7d8d31bb060eaad599c5e" name="af32f246a95e7d8d31bb060eaad599c5e"></a>
@@ -279,13 +263,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/d4c/MonthlyReport_8java_source.html#l00143">143</a> of file <a class="el" href="../../df/d4c/MonthlyReport_8java_source.html">MonthlyReport.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  143</span>                                      {</div>
-<div class="line"><span class="lineno">  144</span>        List&lt;FDNode&gt; all = <span class="keyword">new</span> ArrayList&lt;FDNode&gt;();</div>
-<div class="line"><span class="lineno">  145</span>        <a class="code hl_function" href="../../d1/d02/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MonthlyReport.html#af32f246a95e7d8d31bb060eaad599c5e">getAllNodes</a>(root, all);</div>
-<div class="line"><span class="lineno">  146</span>        <span class="keywordflow">return</span> all;</div>
-<div class="line"><span class="lineno">  147</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MonthlyReport_html_af32f246a95e7d8d31bb060eaad599c5e"><div class="ttname"><a href="../../d1/d02/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MonthlyReport.html#af32f246a95e7d8d31bb060eaad599c5e">com.fs.starfarer.api.campaign.econ.MonthlyReport.getAllNodes</a></div><div class="ttdeci">List&lt; FDNode &gt; getAllNodes()</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d4c/MonthlyReport_8java_source.html#l00143">MonthlyReport.java:143</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a1fec38d954f8e6bc3eb463de8f00d601" name="a1fec38d954f8e6bc3eb463de8f00d601"></a>
@@ -323,14 +301,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/d4c/MonthlyReport_8java_source.html#l00149">149</a> of file <a class="el" href="../../df/d4c/MonthlyReport_8java_source.html">MonthlyReport.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  149</span>                                                                {</div>
-<div class="line"><span class="lineno">  150</span>        nodes.add(curr);</div>
-<div class="line"><span class="lineno">  151</span>        </div>
-<div class="line"><span class="lineno">  152</span>        <span class="keywordflow">for</span> (FDNode child : curr.getChildren().values()) {</div>
-<div class="line"><span class="lineno">  153</span>            <a class="code hl_function" href="../../d1/d02/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MonthlyReport.html#af32f246a95e7d8d31bb060eaad599c5e">getAllNodes</a>(child, nodes);</div>
-<div class="line"><span class="lineno">  154</span>        }</div>
-<div class="line"><span class="lineno">  155</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a80a5efed9c3a317c48f8c655202cbe77" name="a80a5efed9c3a317c48f8c655202cbe77"></a>
@@ -349,18 +320,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/d4c/MonthlyReport_8java_source.html#l00181">181</a> of file <a class="el" href="../../df/d4c/MonthlyReport_8java_source.html">MonthlyReport.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  181</span>                                    {</div>
-<div class="line"><span class="lineno">  182</span>        FDNode marketsNode = <a class="code hl_function" href="../../d1/d02/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MonthlyReport.html#aaeb86b3d0cde9be3f5f335f231e7d267">getNode</a>(MonthlyReport.OUTPOSTS);</div>
-<div class="line"><span class="lineno">  183</span>        <span class="keywordflow">if</span> (marketsNode.name == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  184</span>            marketsNode.name = <span class="stringliteral">&quot;Colonies&quot;</span>;</div>
-<div class="line"><span class="lineno">  185</span>            marketsNode.custom = MonthlyReport.OUTPOSTS;</div>
-<div class="line"><span class="lineno">  186</span>            marketsNode.tooltipCreator = <a class="code hl_function" href="../../d1/d02/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MonthlyReport.html#af1cbc4731a9370fa11bdf68d3a8036ac">getMonthlyReportTooltip</a>();</div>
-<div class="line"><span class="lineno">  187</span>        }</div>
-<div class="line"><span class="lineno">  188</span>        <span class="keywordflow">return</span> marketsNode;</div>
-<div class="line"><span class="lineno">  189</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MonthlyReport_html_aaeb86b3d0cde9be3f5f335f231e7d267"><div class="ttname"><a href="../../d1/d02/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MonthlyReport.html#aaeb86b3d0cde9be3f5f335f231e7d267">com.fs.starfarer.api.campaign.econ.MonthlyReport.getNode</a></div><div class="ttdeci">FDNode getNode(String ... path)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d4c/MonthlyReport_8java_source.html#l00157">MonthlyReport.java:157</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MonthlyReport_html_af1cbc4731a9370fa11bdf68d3a8036ac"><div class="ttname"><a href="../../d1/d02/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MonthlyReport.html#af1cbc4731a9370fa11bdf68d3a8036ac">com.fs.starfarer.api.campaign.econ.MonthlyReport.getMonthlyReportTooltip</a></div><div class="ttdeci">MonthlyReportNodeTooltipCreator getMonthlyReportTooltip()</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d4c/MonthlyReport_8java_source.html#l00090">MonthlyReport.java:90</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a281ee97cefcfd91bf7974bc1a31bafee" name="a281ee97cefcfd91bf7974bc1a31bafee"></a>
@@ -380,21 +340,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/d4c/MonthlyReport_8java_source.html#l00202">202</a> of file <a class="el" href="../../df/d4c/MonthlyReport_8java_source.html">MonthlyReport.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  202</span>                                                           {</div>
-<div class="line"><span class="lineno">  203</span>        FDNode mNode = <a class="code hl_function" href="../../d1/d02/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MonthlyReport.html#a31f8260aa8522c893648e630fbc83250">getMarketNode</a>(market);</div>
-<div class="line"><span class="lineno">  204</span>        </div>
-<div class="line"><span class="lineno">  205</span>        FDNode sNode = <a class="code hl_function" href="../../d1/d02/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MonthlyReport.html#aaeb86b3d0cde9be3f5f335f231e7d267">getNode</a>(mNode, MonthlyReport.STOCKPILING);</div>
-<div class="line"><span class="lineno">  206</span>        <span class="keywordflow">if</span> (sNode.name == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  207</span>            sNode.name = <span class="stringliteral">&quot;Stockpiles used to counter shortages&quot;</span>;</div>
-<div class="line"><span class="lineno">  208</span>            sNode.custom = MonthlyReport.STOCKPILING;</div>
-<div class="line"><span class="lineno">  209</span>            sNode.custom2 = Global.getFactory().createCargo(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  210</span>            ((CargoAPI)sNode.custom2).initMothballedShips(Factions.PLAYER);</div>
-<div class="line"><span class="lineno">  211</span>            sNode.tooltipCreator = <a class="code hl_function" href="../../d1/d02/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MonthlyReport.html#af1cbc4731a9370fa11bdf68d3a8036ac">getMonthlyReportTooltip</a>();</div>
-<div class="line"><span class="lineno">  212</span>        }</div>
-<div class="line"><span class="lineno">  213</span>        <span class="keywordflow">return</span> sNode;</div>
-<div class="line"><span class="lineno">  214</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MonthlyReport_html_a31f8260aa8522c893648e630fbc83250"><div class="ttname"><a href="../../d1/d02/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MonthlyReport.html#a31f8260aa8522c893648e630fbc83250">com.fs.starfarer.api.campaign.econ.MonthlyReport.getMarketNode</a></div><div class="ttdeci">FDNode getMarketNode(MarketAPI market)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d4c/MonthlyReport_8java_source.html#l00191">MonthlyReport.java:191</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a4b08128d3b4fdf07f49a4e7b65f959dd" name="a4b08128d3b4fdf07f49a4e7b65f959dd"></a>
@@ -413,10 +359,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/d4c/MonthlyReport_8java_source.html#l00117">117</a> of file <a class="el" href="../../df/d4c/MonthlyReport_8java_source.html">MonthlyReport.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  117</span>                         {</div>
-<div class="line"><span class="lineno">  118</span>        <span class="keywordflow">return</span> debt;</div>
-<div class="line"><span class="lineno">  119</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9ee201db0c9f68c7487daecdd9088c32" name="a9ee201db0c9f68c7487daecdd9088c32"></a>
@@ -435,17 +378,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/d4c/MonthlyReport_8java_source.html#l00232">232</a> of file <a class="el" href="../../df/d4c/MonthlyReport_8java_source.html">MonthlyReport.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  232</span>                                {</div>
-<div class="line"><span class="lineno">  233</span>        FDNode debtNode = <a class="code hl_function" href="../../d1/d02/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MonthlyReport.html#aaeb86b3d0cde9be3f5f335f231e7d267">getNode</a>(MonthlyReport.LAST_MONTH_DEBT);</div>
-<div class="line"><span class="lineno">  234</span>        <span class="keywordflow">if</span> (debtNode.name == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  235</span>            debtNode.name = <span class="stringliteral">&quot;Last month&#39;s debt&quot;</span>;</div>
-<div class="line"><span class="lineno">  236</span>            debtNode.custom = MonthlyReport.LAST_MONTH_DEBT;</div>
-<div class="line"><span class="lineno">  237</span>            debtNode.icon = Global.getSettings().getSpriteName(<span class="stringliteral">&quot;income_report&quot;</span>, <span class="stringliteral">&quot;generic_expense&quot;</span>);</div>
-<div class="line"><span class="lineno">  238</span>            debtNode.tooltipCreator = <a class="code hl_function" href="../../d1/d02/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MonthlyReport.html#af1cbc4731a9370fa11bdf68d3a8036ac">getMonthlyReportTooltip</a>();</div>
-<div class="line"><span class="lineno">  239</span>        }</div>
-<div class="line"><span class="lineno">  240</span>        <span class="keywordflow">return</span> debtNode;</div>
-<div class="line"><span class="lineno">  241</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a31f8260aa8522c893648e630fbc83250" name="a31f8260aa8522c893648e630fbc83250"></a>
@@ -465,18 +398,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/d4c/MonthlyReport_8java_source.html#l00191">191</a> of file <a class="el" href="../../df/d4c/MonthlyReport_8java_source.html">MonthlyReport.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  191</span>                                                  {</div>
-<div class="line"><span class="lineno">  192</span>        FDNode marketsNode = <a class="code hl_function" href="../../d1/d02/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MonthlyReport.html#a80a5efed9c3a317c48f8c655202cbe77">getColoniesNode</a>();</div>
-<div class="line"><span class="lineno">  193</span>        </div>
-<div class="line"><span class="lineno">  194</span>        FDNode mNode = <a class="code hl_function" href="../../d1/d02/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MonthlyReport.html#aaeb86b3d0cde9be3f5f335f231e7d267">getNode</a>(marketsNode, market.getId());</div>
-<div class="line"><span class="lineno">  195</span>        <span class="keywordflow">if</span> (mNode.name == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  196</span>            mNode.name = market.getName() + <span class="stringliteral">&quot; (&quot;</span> + market.getSize() + <span class="stringliteral">&quot;)&quot;</span>;</div>
-<div class="line"><span class="lineno">  197</span>            mNode.custom = market;</div>
-<div class="line"><span class="lineno">  198</span>        }</div>
-<div class="line"><span class="lineno">  199</span>        <span class="keywordflow">return</span> mNode;</div>
-<div class="line"><span class="lineno">  200</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MonthlyReport_html_a80a5efed9c3a317c48f8c655202cbe77"><div class="ttname"><a href="../../d1/d02/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MonthlyReport.html#a80a5efed9c3a317c48f8c655202cbe77">com.fs.starfarer.api.campaign.econ.MonthlyReport.getColoniesNode</a></div><div class="ttdeci">FDNode getColoniesNode()</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d4c/MonthlyReport_8java_source.html#l00181">MonthlyReport.java:181</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af1cbc4731a9370fa11bdf68d3a8036ac" name="af1cbc4731a9370fa11bdf68d3a8036ac"></a>
@@ -495,13 +417,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/d4c/MonthlyReport_8java_source.html#l00090">90</a> of file <a class="el" href="../../df/d4c/MonthlyReport_8java_source.html">MonthlyReport.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   90</span>                                                                     {</div>
-<div class="line"><span class="lineno">   91</span>        <span class="keywordflow">if</span> (monthlyReportTooltip == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   92</span>            monthlyReportTooltip = <span class="keyword">new</span> MonthlyReportNodeTooltipCreator();</div>
-<div class="line"><span class="lineno">   93</span>        }</div>
-<div class="line"><span class="lineno">   94</span>        <span class="keywordflow">return</span> monthlyReportTooltip;</div>
-<div class="line"><span class="lineno">   95</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a7e4d11c46f300ca08bd61a2906b01a97" name="a7e4d11c46f300ca08bd61a2906b01a97"></a>
@@ -531,22 +447,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/d4c/MonthlyReport_8java_source.html#l00164">164</a> of file <a class="el" href="../../df/d4c/MonthlyReport_8java_source.html">MonthlyReport.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  164</span>                                                          {</div>
-<div class="line"><span class="lineno">  165</span>        <span class="keywordflow">if</span> (path.isEmpty()) <span class="keywordflow">return</span> from;</div>
-<div class="line"><span class="lineno">  166</span>        </div>
-<div class="line"><span class="lineno">  167</span>        String nextId = path.remove(0);</div>
-<div class="line"><span class="lineno">  168</span>        FDNode next = from.children == <span class="keyword">null</span> ? null : from.children.get(nextId);</div>
-<div class="line"><span class="lineno">  169</span>        <span class="keywordflow">if</span> (next == <span class="keyword">null</span>) { </div>
-<div class="line"><span class="lineno">  170</span>            <span class="keywordflow">if</span> (from.children == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  171</span>                from.children = <span class="keyword">new</span> LinkedHashMap&lt;String, FDNode&gt;();</div>
-<div class="line"><span class="lineno">  172</span>            }</div>
-<div class="line"><span class="lineno">  173</span>            next = <span class="keyword">new</span> FDNode();</div>
-<div class="line"><span class="lineno">  174</span>            next.parent = from;</div>
-<div class="line"><span class="lineno">  175</span>            from.children.put(nextId, next);</div>
-<div class="line"><span class="lineno">  176</span>        }</div>
-<div class="line"><span class="lineno">  177</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../d1/d02/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MonthlyReport.html#aaeb86b3d0cde9be3f5f335f231e7d267">getNode</a>(next, path);</div>
-<div class="line"><span class="lineno">  178</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a0e72b0dd17f09e468b55a3a3ed89a6c8" name="a0e72b0dd17f09e468b55a3a3ed89a6c8"></a>
@@ -576,10 +477,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/d4c/MonthlyReport_8java_source.html#l00161">161</a> of file <a class="el" href="../../df/d4c/MonthlyReport_8java_source.html">MonthlyReport.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  161</span>                                                        {</div>
-<div class="line"><span class="lineno">  162</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../d1/d02/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MonthlyReport.html#aaeb86b3d0cde9be3f5f335f231e7d267">getNode</a>(from, <span class="keyword">new</span> LinkedList&lt;String&gt;(Arrays.asList(path)));</div>
-<div class="line"><span class="lineno">  163</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aaeb86b3d0cde9be3f5f335f231e7d267" name="aaeb86b3d0cde9be3f5f335f231e7d267"></a>
@@ -599,10 +497,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/d4c/MonthlyReport_8java_source.html#l00157">157</a> of file <a class="el" href="../../df/d4c/MonthlyReport_8java_source.html">MonthlyReport.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  157</span>                                           {</div>
-<div class="line"><span class="lineno">  158</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../d1/d02/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MonthlyReport.html#aaeb86b3d0cde9be3f5f335f231e7d267">getNode</a>(root, <span class="keyword">new</span> LinkedList&lt;String&gt;(Arrays.asList(path)));</div>
-<div class="line"><span class="lineno">  159</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a84ed4bde1330c676a786d2d4906a217d" name="a84ed4bde1330c676a786d2d4906a217d"></a>
@@ -621,10 +516,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/d4c/MonthlyReport_8java_source.html#l00109">109</a> of file <a class="el" href="../../df/d4c/MonthlyReport_8java_source.html">MonthlyReport.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  109</span>                                 {</div>
-<div class="line"><span class="lineno">  110</span>        <span class="keywordflow">return</span> previousDebt;</div>
-<div class="line"><span class="lineno">  111</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="adb0ea584c6ca85b1fd73cf710bcb8641" name="adb0ea584c6ca85b1fd73cf710bcb8641"></a>
@@ -644,22 +536,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/d4c/MonthlyReport_8java_source.html#l00216">216</a> of file <a class="el" href="../../df/d4c/MonthlyReport_8java_source.html">MonthlyReport.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  216</span>                                                      {</div>
-<div class="line"><span class="lineno">  217</span>        <span class="comment">//FDNode mNode = getMarketNode(market);</span></div>
-<div class="line"><span class="lineno">  218</span>        </div>
-<div class="line"><span class="lineno">  219</span>        FDNode mNode = <a class="code hl_function" href="../../d1/d02/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MonthlyReport.html#a80a5efed9c3a317c48f8c655202cbe77">getColoniesNode</a>();</div>
-<div class="line"><span class="lineno">  220</span>        </div>
-<div class="line"><span class="lineno">  221</span>        FDNode sNode = <a class="code hl_function" href="../../d1/d02/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MonthlyReport.html#aaeb86b3d0cde9be3f5f335f231e7d267">getNode</a>(mNode, MonthlyReport.RESTOCKING);</div>
-<div class="line"><span class="lineno">  222</span>        <span class="keywordflow">if</span> (sNode.name == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  223</span>            sNode.name = <span class="stringliteral">&quot;Stockpiles drawn by your fleet&quot;</span>;</div>
-<div class="line"><span class="lineno">  224</span>            sNode.custom = MonthlyReport.RESTOCKING;</div>
-<div class="line"><span class="lineno">  225</span>            sNode.custom2 = Global.getFactory().createCargo(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  226</span>            ((CargoAPI)sNode.custom2).initMothballedShips(Factions.PLAYER);</div>
-<div class="line"><span class="lineno">  227</span>            sNode.tooltipCreator = <a class="code hl_function" href="../../d1/d02/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MonthlyReport.html#af1cbc4731a9370fa11bdf68d3a8036ac">getMonthlyReportTooltip</a>();</div>
-<div class="line"><span class="lineno">  228</span>        }</div>
-<div class="line"><span class="lineno">  229</span>        <span class="keywordflow">return</span> sNode;</div>
-<div class="line"><span class="lineno">  230</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a0e099ffd752ef3c0b087e82a6179ced7" name="a0e099ffd752ef3c0b087e82a6179ced7"></a>
@@ -678,10 +555,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/d4c/MonthlyReport_8java_source.html#l00125">125</a> of file <a class="el" href="../../df/d4c/MonthlyReport_8java_source.html">MonthlyReport.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  125</span>                            {</div>
-<div class="line"><span class="lineno">  126</span>        <span class="keywordflow">return</span> root;</div>
-<div class="line"><span class="lineno">  127</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a713be89495aa7c6ead9ac76eb794c463" name="a713be89495aa7c6ead9ac76eb794c463"></a>
@@ -700,10 +574,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/d4c/MonthlyReport_8java_source.html#l00101">101</a> of file <a class="el" href="../../df/d4c/MonthlyReport_8java_source.html">MonthlyReport.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  101</span>                               {</div>
-<div class="line"><span class="lineno">  102</span>        <span class="keywordflow">return</span> timestamp;</div>
-<div class="line"><span class="lineno">  103</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac2e2a78ffc022c1f6cc00474fff49634" name="ac2e2a78ffc022c1f6cc00474fff49634"></a>
@@ -731,14 +602,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/d4c/MonthlyReport_8java_source.html#l00243">243</a> of file <a class="el" href="../../df/d4c/MonthlyReport_8java_source.html">MonthlyReport.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  243</span>                                           {</div>
-<div class="line"><span class="lineno">  244</span>        MonthlyReport data = <span class="keyword">new</span> MonthlyReport();</div>
-<div class="line"><span class="lineno">  245</span>        </div>
-<div class="line"><span class="lineno">  246</span>        data.getNode(<span class="stringliteral">&quot;test&quot;</span>, <span class="stringliteral">&quot;test1&quot;</span>, <span class="stringliteral">&quot;test2&quot;</span>).income = 10;</div>
-<div class="line"><span class="lineno">  247</span>        </div>
-<div class="line"><span class="lineno">  248</span>        System.out.println(data);</div>
-<div class="line"><span class="lineno">  249</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a525b2bf1827b40322bba8827d7036d95" name="a525b2bf1827b40322bba8827d7036d95"></a>
@@ -758,10 +622,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/d4c/MonthlyReport_8java_source.html#l00121">121</a> of file <a class="el" href="../../df/d4c/MonthlyReport_8java_source.html">MonthlyReport.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  121</span>                                  {</div>
-<div class="line"><span class="lineno">  122</span>        this.debt = debt;</div>
-<div class="line"><span class="lineno">  123</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a43740775f2dda962d09ba57a43746787" name="a43740775f2dda962d09ba57a43746787"></a>
@@ -781,10 +642,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/d4c/MonthlyReport_8java_source.html#l00113">113</a> of file <a class="el" href="../../df/d4c/MonthlyReport_8java_source.html">MonthlyReport.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  113</span>                                                  {</div>
-<div class="line"><span class="lineno">  114</span>        this.previousDebt = previousDebt;</div>
-<div class="line"><span class="lineno">  115</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a514b69e311d49cf4e30fa57cc1cc778e" name="a514b69e311d49cf4e30fa57cc1cc778e"></a>
@@ -804,10 +662,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/d4c/MonthlyReport_8java_source.html#l00105">105</a> of file <a class="el" href="../../df/d4c/MonthlyReport_8java_source.html">MonthlyReport.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  105</span>                                             {</div>
-<div class="line"><span class="lineno">  106</span>        this.timestamp = timestamp;</div>
-<div class="line"><span class="lineno">  107</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

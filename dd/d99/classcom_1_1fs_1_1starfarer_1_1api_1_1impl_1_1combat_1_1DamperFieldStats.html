@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -219,37 +220,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseShipSystemScript.html#a4bc8ac2999423cda8da369b8498bd43a">com.fs.starfarer.api.impl.combat.BaseShipSystemScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d4c/DamperFieldStats_8java_source.html#l00029">29</a> of file <a class="el" href="../../d7/d4c/DamperFieldStats_8java_source.html">DamperFieldStats.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   29</span>                                                                                            {</div>
-<div class="line"><span class="lineno">   30</span>        effectLevel = 1f;</div>
-<div class="line"><span class="lineno">   31</span>        </div>
-<div class="line"><span class="lineno">   32</span>        <span class="keywordtype">float</span> mult = (Float) mag.get(HullSize.CRUISER);</div>
-<div class="line"><span class="lineno">   33</span>        <span class="keywordflow">if</span> (stats.getVariant() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   34</span>            mult = (Float) mag.get(stats.getVariant().getHullSize());</div>
-<div class="line"><span class="lineno">   35</span>        }</div>
-<div class="line"><span class="lineno">   36</span>        stats.getHullDamageTakenMult().modifyMult(<span class="keywordtype">id</span>, 1f - (1f - mult) * effectLevel);</div>
-<div class="line"><span class="lineno">   37</span>        stats.getArmorDamageTakenMult().modifyMult(<span class="keywordtype">id</span>, 1f - (1f - mult) * effectLevel);</div>
-<div class="line"><span class="lineno">   38</span>        stats.getEmpDamageTakenMult().modifyMult(<span class="keywordtype">id</span>, 1f - (1f - mult) * effectLevel);</div>
-<div class="line"><span class="lineno">   39</span>        </div>
-<div class="line"><span class="lineno">   40</span>        </div>
-<div class="line"><span class="lineno">   41</span>        ShipAPI ship = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   42</span>        <span class="keywordtype">boolean</span> player = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   43</span>        <span class="keywordflow">if</span> (stats.getEntity() instanceof ShipAPI) {</div>
-<div class="line"><span class="lineno">   44</span>            ship = (ShipAPI) stats.getEntity();</div>
-<div class="line"><span class="lineno">   45</span>            player = ship == Global.getCombatEngine().getPlayerShip();</div>
-<div class="line"><span class="lineno">   46</span>        }</div>
-<div class="line"><span class="lineno">   47</span>        <span class="keywordflow">if</span> (player) {</div>
-<div class="line"><span class="lineno">   48</span>            ShipSystemAPI system = <a class="code hl_function" href="../../dd/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1DamperFieldStats.html#a5918de81bafd86c33ff914a59176d300">getDamper</a>(ship);</div>
-<div class="line"><span class="lineno">   49</span>            <span class="keywordflow">if</span> (system != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   50</span>                <span class="keywordtype">float</span> percent = (1f - mult) * effectLevel * 100;</div>
-<div class="line"><span class="lineno">   51</span>                Global.getCombatEngine().maintainStatusForPlayerShip(<a class="code hl_variable" href="../../dd/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1DamperFieldStats.html#a5587de94597b6b702e506c25d2b4f2a9">STATUSKEY1</a>,</div>
-<div class="line"><span class="lineno">   52</span>                    system.getSpecAPI().getIconSpriteName(), system.getDisplayName(),</div>
-<div class="line"><span class="lineno">   53</span>                    (int) Math.round(percent) + <span class="stringliteral">&quot;% less damage taken&quot;</span>, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   54</span>            }</div>
-<div class="line"><span class="lineno">   55</span>        }</div>
-<div class="line"><span class="lineno">   56</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1DamperFieldStats_html_a5587de94597b6b702e506c25d2b4f2a9"><div class="ttname"><a href="../../dd/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1DamperFieldStats.html#a5587de94597b6b702e506c25d2b4f2a9">com.fs.starfarer.api.impl.combat.DamperFieldStats.STATUSKEY1</a></div><div class="ttdeci">Object STATUSKEY1</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d4c/DamperFieldStats_8java_source.html#l00024">DamperFieldStats.java:24</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1DamperFieldStats_html_a5918de81bafd86c33ff914a59176d300"><div class="ttname"><a href="../../dd/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1DamperFieldStats.html#a5918de81bafd86c33ff914a59176d300">com.fs.starfarer.api.impl.combat.DamperFieldStats.getDamper</a></div><div class="ttdeci">static ShipSystemAPI getDamper(ShipAPI ship)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d4c/DamperFieldStats_8java_source.html#l00058">DamperFieldStats.java:58</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5918de81bafd86c33ff914a59176d300" name="a5918de81bafd86c33ff914a59176d300"></a>
@@ -277,19 +248,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d4c/DamperFieldStats_8java_source.html#l00058">58</a> of file <a class="el" href="../../d7/d4c/DamperFieldStats_8java_source.html">DamperFieldStats.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   58</span>                                                        {</div>
-<div class="line"><span class="lineno">   59</span><span class="comment">//      ShipSystemAPI system = ship.getSystem();</span></div>
-<div class="line"><span class="lineno">   60</span><span class="comment">//      if (system != null &amp;&amp; system.getId().equals(&quot;damper&quot;)) return system;</span></div>
-<div class="line"><span class="lineno">   61</span><span class="comment">//      if (system != null &amp;&amp; system.getId().equals(&quot;damper_omega&quot;)) return system;</span></div>
-<div class="line"><span class="lineno">   62</span><span class="comment">//      if (system != null &amp;&amp; system.getSpecAPI() != null &amp;&amp; system.getSpecAPI().hasTag(Tags.SYSTEM_USES_DAMPER_FIELD_AI)) return system;</span></div>
-<div class="line"><span class="lineno">   63</span><span class="comment">//      return ship.getPhaseCloak();</span></div>
-<div class="line"><span class="lineno">   64</span>        ShipSystemAPI system = ship.getPhaseCloak();</div>
-<div class="line"><span class="lineno">   65</span>        <span class="keywordflow">if</span> (system != <span class="keyword">null</span> &amp;&amp; system.getId().equals(<span class="stringliteral">&quot;damper&quot;</span>)) <span class="keywordflow">return</span> system;</div>
-<div class="line"><span class="lineno">   66</span>        <span class="keywordflow">if</span> (system != <span class="keyword">null</span> &amp;&amp; system.getId().equals(<span class="stringliteral">&quot;damper_omega&quot;</span>)) <span class="keywordflow">return</span> system;</div>
-<div class="line"><span class="lineno">   67</span>        <span class="keywordflow">if</span> (system != <span class="keyword">null</span> &amp;&amp; system.getSpecAPI() != <span class="keyword">null</span> &amp;&amp; system.getSpecAPI().hasTag(Tags.SYSTEM_USES_DAMPER_FIELD_AI)) <span class="keywordflow">return</span> system;</div>
-<div class="line"><span class="lineno">   68</span>        <span class="keywordflow">return</span> ship.getSystem();</div>
-<div class="line"><span class="lineno">   69</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a7bdec85f29f67f25925d2e800d8874ad" name="a7bdec85f29f67f25925d2e800d8874ad"></a>
@@ -321,12 +280,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseShipSystemScript.html#a020712b9bb37e9ece4fbfd4c865c4037">com.fs.starfarer.api.impl.combat.BaseShipSystemScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d4c/DamperFieldStats_8java_source.html#l00071">71</a> of file <a class="el" href="../../d7/d4c/DamperFieldStats_8java_source.html">DamperFieldStats.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   71</span>                                                              {</div>
-<div class="line"><span class="lineno">   72</span>        stats.getHullDamageTakenMult().unmodify(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">   73</span>        stats.getArmorDamageTakenMult().unmodify(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">   74</span>        stats.getEmpDamageTakenMult().unmodify(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">   75</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

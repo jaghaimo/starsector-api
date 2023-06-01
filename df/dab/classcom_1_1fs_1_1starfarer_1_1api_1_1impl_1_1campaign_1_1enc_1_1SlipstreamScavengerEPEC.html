@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -222,32 +223,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../db/de4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator.html#a46e448de97b74998915e13f30f4bbfb0">com.fs.starfarer.api.impl.campaign.enc.BaseEPEncounterCreator</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d7d/SlipstreamScavengerEPEC_8java_source.html#l00021">21</a> of file <a class="el" href="../../d4/d7d/SlipstreamScavengerEPEC_8java_source.html">SlipstreamScavengerEPEC.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   21</span>                                                                                {</div>
-<div class="line"><span class="lineno">   22</span>        Random random = manager.getRandom();</div>
-<div class="line"><span class="lineno">   23</span>        <span class="keywordtype">boolean</span> pirate = random.nextBoolean();</div>
-<div class="line"><span class="lineno">   24</span>        pirate = <span class="keyword">true</span>; <span class="comment">// seems like legit scavengers wouldn&#39;t spend too much time waiting in ambush</span></div>
-<div class="line"><span class="lineno">   25</span>        </div>
-<div class="line"><span class="lineno">   26</span>        WeightedRandomPicker&lt;String&gt; picker = <span class="keyword">new</span> WeightedRandomPicker&lt;String&gt;(random);</div>
-<div class="line"><span class="lineno">   27</span>        picker.add(FleetTypes.SCAVENGER_SMALL, 5f);</div>
-<div class="line"><span class="lineno">   28</span>        picker.add(FleetTypes.SCAVENGER_MEDIUM, 15f);</div>
-<div class="line"><span class="lineno">   29</span>        picker.add(FleetTypes.SCAVENGER_LARGE, 10f);</div>
-<div class="line"><span class="lineno">   30</span>        String type = picker.pick();</div>
-<div class="line"><span class="lineno">   31</span>        </div>
-<div class="line"><span class="lineno">   32</span>        CampaignFleetAPI fleet = RuinsFleetRouteManager.createScavenger(type, point.getLocInHyper(), </div>
-<div class="line"><span class="lineno">   33</span>                                                                        <span class="keyword">null</span>, <span class="keyword">null</span>, pirate, random);</div>
-<div class="line"><span class="lineno">   34</span>        </div>
-<div class="line"><span class="lineno">   35</span>        <span class="keywordflow">if</span> (fleet != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   36</span>            point.where.addEntity(fleet);</div>
-<div class="line"><span class="lineno">   37</span>            fleet.setLocation(point.loc.x, point.loc.y);</div>
-<div class="line"><span class="lineno">   38</span>            Vector2f spawnLoc = Misc.getPointWithinRadius(point.loc, 1000f);</div>
-<div class="line"><span class="lineno">   39</span>            SectorEntityToken e = point.where.createToken(spawnLoc);</div>
-<div class="line"><span class="lineno">   40</span>            fleet.addAssignment(FleetAssignment.ORBIT_AGGRESSIVE, e, 30f * random.nextFloat(), <span class="stringliteral">&quot;waiting&quot;</span>);</div>
-<div class="line"><span class="lineno">   41</span>            fleet.removeScriptsOfClass(MissionFleetAutoDespawn.class);</div>
-<div class="line"><span class="lineno">   42</span>            fleet.addScript(<span class="keyword">new</span> MissionFleetAutoDespawn(<span class="keyword">null</span>, fleet));</div>
-<div class="line"><span class="lineno">   43</span>            fleet.addScript(<span class="keyword">new</span> ScavengerPiracyScript(fleet));</div>
-<div class="line"><span class="lineno">   44</span>        }</div>
-<div class="line"><span class="lineno">   45</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5b17010e6f0088a94d0a65ed8dca8f64" name="a5b17010e6f0088a94d0a65ed8dca8f64"></a>
@@ -279,17 +255,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../db/de4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator.html#a8611cdd627b4d42ed22a162cec395a4e">com.fs.starfarer.api.impl.campaign.enc.BaseEPEncounterCreator</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d7d/SlipstreamScavengerEPEC_8java_source.html#l00047">47</a> of file <a class="el" href="../../d4/d7d/SlipstreamScavengerEPEC_8java_source.html">SlipstreamScavengerEPEC.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   47</span>                                                                                      {</div>
-<div class="line"><span class="lineno">   48</span>        <span class="keywordflow">if</span> (!EncounterManager.EP_TYPE_SLIPSTREAM.equals(point.type)) <span class="keywordflow">return</span> 0f;</div>
-<div class="line"><span class="lineno">   49</span>        </div>
-<div class="line"><span class="lineno">   50</span>        <span class="keywordtype">float</span> f = <a class="code hl_function" href="../../df/dab/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1SlipstreamScavengerEPEC.html#ae237eafd680c4cf2bf58a2566840055b">getProximityFactor</a>(point.getLocInHyper());</div>
-<div class="line"><span class="lineno">   51</span>        <span class="keywordflow">if</span> (f &gt; 0) {</div>
-<div class="line"><span class="lineno">   52</span>            f = 0.25f + 0.75f * f;</div>
-<div class="line"><span class="lineno">   53</span>        }</div>
-<div class="line"><span class="lineno">   54</span>        <span class="keywordflow">return</span> 10f * f;</div>
-<div class="line"><span class="lineno">   55</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1SlipstreamScavengerEPEC_html_ae237eafd680c4cf2bf58a2566840055b"><div class="ttname"><a href="../../df/dab/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1SlipstreamScavengerEPEC.html#ae237eafd680c4cf2bf58a2566840055b">com.fs.starfarer.api.impl.campaign.enc.SlipstreamScavengerEPEC.getProximityFactor</a></div><div class="ttdeci">static float getProximityFactor(Vector2f locInHyper)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d7d/SlipstreamScavengerEPEC_8java_source.html#l00058">SlipstreamScavengerEPEC.java:58</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae237eafd680c4cf2bf58a2566840055b" name="ae237eafd680c4cf2bf58a2566840055b"></a>
@@ -317,14 +283,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d7d/SlipstreamScavengerEPEC_8java_source.html#l00058">58</a> of file <a class="el" href="../../d4/d7d/SlipstreamScavengerEPEC_8java_source.html">SlipstreamScavengerEPEC.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   58</span>                                                                {</div>
-<div class="line"><span class="lineno">   59</span>        StarSystemAPI ruins = <a class="code hl_function" href="../../db/de4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator.html#abf8bbdce14e55cce0be8869051b68cde">getClosestSystemWithRuins</a>(locInHyper);</div>
-<div class="line"><span class="lineno">   60</span>        <span class="keywordtype">float</span> f = <a class="code hl_function" href="../../db/de4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator.html#a181a2ecae22e7049c014b2fe0d873387">getRuinsProximityFactor</a>(ruins, locInHyper);</div>
-<div class="line"><span class="lineno">   61</span>        <span class="keywordflow">return</span> f;</div>
-<div class="line"><span class="lineno">   62</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator_html_a181a2ecae22e7049c014b2fe0d873387"><div class="ttname"><a href="../../db/de4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator.html#a181a2ecae22e7049c014b2fe0d873387">com.fs.starfarer.api.impl.campaign.enc.BaseEPEncounterCreator.getRuinsProximityFactor</a></div><div class="ttdeci">static float getRuinsProximityFactor(StarSystemAPI system, Vector2f locInHyper)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d43/BaseEPEncounterCreator_8java_source.html#l00136">BaseEPEncounterCreator.java:136</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator_html_abf8bbdce14e55cce0be8869051b68cde"><div class="ttname"><a href="../../db/de4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator.html#abf8bbdce14e55cce0be8869051b68cde">com.fs.starfarer.api.impl.campaign.enc.BaseEPEncounterCreator.getClosestSystemWithRuins</a></div><div class="ttdeci">static StarSystemAPI getClosestSystemWithRuins(Vector2f locInHyper)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d43/BaseEPEncounterCreator_8java_source.html#l00149">BaseEPEncounterCreator.java:149</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

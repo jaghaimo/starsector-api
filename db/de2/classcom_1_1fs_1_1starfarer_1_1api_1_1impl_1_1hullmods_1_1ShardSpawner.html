@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -328,203 +329,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a107100a4b58129790cba1a26265c1ad8">com.fs.starfarer.api.combat.BaseHullMod</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/de2/ShardSpawner_8java_source.html#l00151">151</a> of file <a class="el" href="../../d8/de2/ShardSpawner_8java_source.html">ShardSpawner.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  151</span>                                                            {</div>
-<div class="line"><span class="lineno">  152</span>        CombatEngineAPI engine = Global.getCombatEngine();</div>
-<div class="line"><span class="lineno">  153</span>        <span class="keywordflow">if</span> (ship.getOriginalOwner() != 0) {</div>
-<div class="line"><span class="lineno">  154</span>            engine.setCombatNotOverForAtLeast(<a class="code hl_variable" href="../../db/de2/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ShardSpawner.html#a80dae431c48d45a4ad68ad41bbb72ca1">SPAWN_TIME</a> + 1f);</div>
-<div class="line"><span class="lineno">  155</span>        }</div>
-<div class="line"><span class="lineno">  156</span>        </div>
-<div class="line"><span class="lineno">  157</span>        <span class="keywordflow">if</span> (!ship.isHulk() || !engine.isEntityInPlay(ship)) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  158</span>        </div>
-<div class="line"><span class="lineno">  159</span>        String key = <a class="code hl_variable" href="../../db/de2/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ShardSpawner.html#aff0cce52722f6c55fb0ccd43d5b0c819">DATA_KEY</a> + <span class="stringliteral">&quot;_&quot;</span> + ship.getId();</div>
-<div class="line"><span class="lineno">  160</span>        ShardSpawnerData data = (ShardSpawnerData) engine.getCustomData().get(key);</div>
-<div class="line"><span class="lineno">  161</span>        <span class="keywordflow">if</span> (data == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  162</span>            data = <span class="keyword">new</span> ShardSpawnerData();</div>
-<div class="line"><span class="lineno">  163</span>            engine.getCustomData().put(key, data);</div>
-<div class="line"><span class="lineno">  164</span>        }</div>
-<div class="line"><span class="lineno">  165</span>        </div>
-<div class="line"><span class="lineno">  166</span>        <span class="keywordflow">if</span> (data.done) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  167</span>        </div>
-<div class="line"><span class="lineno">  168</span>        </div>
-<div class="line"><span class="lineno">  169</span>        ship.setHitpoints(ship.getMaxHitpoints());</div>
-<div class="line"><span class="lineno">  170</span>        ship.getMutableStats().getHullDamageTakenMult().modifyMult(<span class="stringliteral">&quot;ShardSpawnerInvuln&quot;</span>, 0f);</div>
-<div class="line"><span class="lineno">  171</span>        data.delay -= amount;</div>
-<div class="line"><span class="lineno">  172</span>        <span class="keywordflow">if</span> (data.delay &gt; 0) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  173</span>        </div>
-<div class="line"><span class="lineno">  174</span>        <span class="comment">//ship.setCollisionClass(CollisionClass.NONE);</span></div>
-<div class="line"><span class="lineno">  175</span>        <span class="keywordtype">float</span> dur = <a class="code hl_variable" href="../../db/de2/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ShardSpawner.html#a80dae431c48d45a4ad68ad41bbb72ca1">SPAWN_TIME</a>;</div>
-<div class="line"><span class="lineno">  176</span>        <span class="keywordtype">float</span> extraDur = 0f;</div>
-<div class="line"><span class="lineno">  177</span> </div>
-<div class="line"><span class="lineno">  178</span>        </div>
-<div class="line"><span class="lineno">  179</span>        <span class="keywordtype">float</span> splitWeight = 0f;</div>
-<div class="line"><span class="lineno">  180</span>        </div>
-<div class="line"><span class="lineno">  181</span>        <span class="keywordtype">float</span> probNothingAtAll = 0f;</div>
-<div class="line"><span class="lineno">  182</span>        <span class="comment">//float forceFighterProb = 0f;</span></div>
-<div class="line"><span class="lineno">  183</span>        <span class="keywordtype">float</span> cruiserProb = 0f;</div>
-<div class="line"><span class="lineno">  184</span>        <span class="keywordtype">float</span> cruiserProbMult = 0f;</div>
-<div class="line"><span class="lineno">  185</span>        <span class="keywordtype">float</span> maxCruisers = 0f;</div>
-<div class="line"><span class="lineno">  186</span>        <span class="keywordtype">float</span> destroyerProb = 0f;</div>
-<div class="line"><span class="lineno">  187</span>        <span class="keywordtype">float</span> destroyerProbMult = 0f;</div>
-<div class="line"><span class="lineno">  188</span>        <span class="keywordtype">float</span> maxDestroyers = 0f;</div>
-<div class="line"><span class="lineno">  189</span>        <span class="keywordtype">float</span> frigateProb = 0f;</div>
-<div class="line"><span class="lineno">  190</span>        <span class="keywordtype">float</span> frigateProbMult = 0f;</div>
-<div class="line"><span class="lineno">  191</span>        <span class="keywordtype">float</span> maxFrigates = 0f;</div>
-<div class="line"><span class="lineno">  192</span>        </div>
-<div class="line"><span class="lineno">  193</span>        <span class="keywordflow">if</span> (ship.isCapital()) {</div>
-<div class="line"><span class="lineno">  194</span>            splitWeight = 12f;</div>
-<div class="line"><span class="lineno">  195</span>            </div>
-<div class="line"><span class="lineno">  196</span>            cruiserProb = 1f;</div>
-<div class="line"><span class="lineno">  197</span>            cruiserProbMult = 0.5f;</div>
-<div class="line"><span class="lineno">  198</span>            maxCruisers = 1f;</div>
-<div class="line"><span class="lineno">  199</span>            destroyerProb = 1f;</div>
-<div class="line"><span class="lineno">  200</span>            destroyerProbMult = 1f;</div>
-<div class="line"><span class="lineno">  201</span>            maxDestroyers = 2f;</div>
-<div class="line"><span class="lineno">  202</span>            frigateProb = 1f;</div>
-<div class="line"><span class="lineno">  203</span>            frigateProbMult = 1f;</div>
-<div class="line"><span class="lineno">  204</span>            maxFrigates = 3f;</div>
-<div class="line"><span class="lineno">  205</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (ship.isCruiser()) {</div>
-<div class="line"><span class="lineno">  206</span><span class="comment">//          splitWeight = 7f;</span></div>
-<div class="line"><span class="lineno">  207</span><span class="comment">//          </span></div>
-<div class="line"><span class="lineno">  208</span><span class="comment">//          destroyerProb = 1f;</span></div>
-<div class="line"><span class="lineno">  209</span><span class="comment">//          destroyerProbMult = 0.5f;</span></div>
-<div class="line"><span class="lineno">  210</span><span class="comment">//          maxDestroyers = 1f;</span></div>
-<div class="line"><span class="lineno">  211</span><span class="comment">//          frigateProb = 1f;</span></div>
-<div class="line"><span class="lineno">  212</span><span class="comment">//          frigateProbMult = 0.67f;</span></div>
-<div class="line"><span class="lineno">  213</span><span class="comment">//          maxFrigates = 3f;</span></div>
-<div class="line"><span class="lineno">  214</span>            </div>
-<div class="line"><span class="lineno">  215</span>            splitWeight = 7f;</div>
-<div class="line"><span class="lineno">  216</span>            </div>
-<div class="line"><span class="lineno">  217</span>            destroyerProb = 1f;</div>
-<div class="line"><span class="lineno">  218</span>            destroyerProbMult = 0.5f;</div>
-<div class="line"><span class="lineno">  219</span>            maxDestroyers = 1f;</div>
-<div class="line"><span class="lineno">  220</span>            frigateProb = 1f;</div>
-<div class="line"><span class="lineno">  221</span>            frigateProbMult = 1f;</div>
-<div class="line"><span class="lineno">  222</span>            maxFrigates = 2f;</div>
-<div class="line"><span class="lineno">  223</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (ship.isDestroyer()) {</div>
-<div class="line"><span class="lineno">  224</span><span class="comment">//          splitWeight = 4f;</span></div>
-<div class="line"><span class="lineno">  225</span><span class="comment">//          </span></div>
-<div class="line"><span class="lineno">  226</span><span class="comment">//          frigateProb = 1f;</span></div>
-<div class="line"><span class="lineno">  227</span><span class="comment">//          frigateProbMult = 0.75f;</span></div>
-<div class="line"><span class="lineno">  228</span><span class="comment">//          maxFrigates = 3f;</span></div>
-<div class="line"><span class="lineno">  229</span>            </div>
-<div class="line"><span class="lineno">  230</span>            splitWeight = 4f;</div>
-<div class="line"><span class="lineno">  231</span>            </div>
-<div class="line"><span class="lineno">  232</span>            frigateProb = 1f;</div>
-<div class="line"><span class="lineno">  233</span>            frigateProbMult = 1f;</div>
-<div class="line"><span class="lineno">  234</span>            maxFrigates = 2f;</div>
-<div class="line"><span class="lineno">  235</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (ship.isFrigate()) {</div>
-<div class="line"><span class="lineno">  236</span>            splitWeight = 2f;</div>
-<div class="line"><span class="lineno">  237</span>        }</div>
-<div class="line"><span class="lineno">  238</span>        WeightedRandomPicker&lt;ShardType&gt; typePicker = <a class="code hl_function" href="../../db/de2/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ShardSpawner.html#a061860d3441643eebe7d5043c9818e83">getTypePickerBasedOnLocalConditions</a>(ship);</div>
-<div class="line"><span class="lineno">  239</span>        </div>
-<div class="line"><span class="lineno">  240</span><span class="comment">//      splitWeight = 8f;</span></div>
-<div class="line"><span class="lineno">  241</span><span class="comment">//      destroyerProb = 0.8f;</span></div>
-<div class="line"><span class="lineno">  242</span><span class="comment">//      maxDestroyers = 2f;</span></div>
-<div class="line"><span class="lineno">  243</span><span class="comment">//      //maxDestroyers = 0f;</span></div>
-<div class="line"><span class="lineno">  244</span><span class="comment">//      </span></div>
-<div class="line"><span class="lineno">  245</span><span class="comment">//      splitWeight = 1f;</span></div>
-<div class="line"><span class="lineno">  246</span>        </div>
-<div class="line"><span class="lineno">  247</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">float</span>) Math.random() &lt; probNothingAtAll) {</div>
-<div class="line"><span class="lineno">  248</span>            splitWeight = 0f;</div>
-<div class="line"><span class="lineno">  249</span>        }</div>
-<div class="line"><span class="lineno">  250</span> </div>
-<div class="line"><span class="lineno">  251</span>        WeightedRandomPicker&lt;Float&gt; spawnAngles = <span class="keyword">new</span> WeightedRandomPicker&lt;Float&gt;();</div>
-<div class="line"><span class="lineno">  252</span>        <span class="keywordtype">int</span> spawnAnglesIter = 0;</div>
-<div class="line"><span class="lineno">  253</span>        <span class="keywordtype">float</span> angleOffset = (float) Math.random() * 360f;</div>
-<div class="line"><span class="lineno">  254</span>        </div>
-<div class="line"><span class="lineno">  255</span>        <span class="keywordtype">float</span> addedWeight = 0f;</div>
-<div class="line"><span class="lineno">  256</span>        <span class="keywordtype">float</span> fighters = 0f;</div>
-<div class="line"><span class="lineno">  257</span>        <span class="keywordtype">float</span> frigates = 0f;</div>
-<div class="line"><span class="lineno">  258</span>        <span class="keywordtype">float</span> destroyers = 0f;</div>
-<div class="line"><span class="lineno">  259</span>        <span class="keywordtype">float</span> cruisers = 0f;</div>
-<div class="line"><span class="lineno">  260</span>        List&lt;ShardFadeInPlugin&gt; shards = <span class="keyword">new</span> ArrayList&lt;ShardFadeInPlugin&gt;();</div>
-<div class="line"><span class="lineno">  261</span>        <span class="keywordflow">while</span> (addedWeight &lt; splitWeight) {</div>
-<div class="line"><span class="lineno">  262</span>            ShardType type = typePicker.pick();</div>
-<div class="line"><span class="lineno">  263</span>            </div>
-<div class="line"><span class="lineno">  264</span>            <span class="keywordtype">float</span> rem = splitWeight - addedWeight;</div>
-<div class="line"><span class="lineno">  265</span>            <span class="keywordtype">boolean</span> cruiser = (float) Math.random() &lt; cruiserProb &amp;&amp; cruisers &lt; maxCruisers &amp;&amp; rem &gt;= 3.5f;</div>
-<div class="line"><span class="lineno">  266</span>            <span class="keywordtype">boolean</span> destroyer = (float) Math.random() &lt; destroyerProb &amp;&amp; destroyers &lt; maxDestroyers &amp;&amp; rem &gt;= 1.5f;</div>
-<div class="line"><span class="lineno">  267</span>            <span class="keywordtype">boolean</span> frigate = (float) Math.random() &lt; frigateProb &amp;&amp; frigates &lt; maxFrigates;</div>
-<div class="line"><span class="lineno">  268</span>            <span class="comment">//boolean fighter = (float) Math.random() &lt; forceFighterProb &amp;&amp; fighters &lt; maxFromFightersOnlyCategory;</span></div>
-<div class="line"><span class="lineno">  269</span>            String variant = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  270</span>            <span class="keywordtype">float</span> weight = 1f;</div>
-<div class="line"><span class="lineno">  271</span>            </div>
-<div class="line"><span class="lineno">  272</span>            <span class="keywordflow">if</span> (cruiser) {</div>
-<div class="line"><span class="lineno">  273</span>                ShardTypeVariants variants = <a class="code hl_variable" href="../../db/de2/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ShardSpawner.html#a3aea3fc4b60aa5876f88029911e3686d">variantData</a>.get(HullSize.CRUISER);</div>
-<div class="line"><span class="lineno">  274</span>                WeightedRandomPicker&lt;String&gt; variantPicker = variants.get(type);</div>
-<div class="line"><span class="lineno">  275</span>                variant = variantPicker.pick();</div>
-<div class="line"><span class="lineno">  276</span>                <span class="keywordflow">if</span> (variant != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  277</span>                    weight = 4f;</div>
-<div class="line"><span class="lineno">  278</span>                    cruisers++;</div>
-<div class="line"><span class="lineno">  279</span>                    cruiserProb *= cruiserProbMult;</div>
-<div class="line"><span class="lineno">  280</span>                }</div>
-<div class="line"><span class="lineno">  281</span>            }</div>
-<div class="line"><span class="lineno">  282</span>            </div>
-<div class="line"><span class="lineno">  283</span>            <span class="keywordflow">if</span> (destroyer &amp;&amp; variant == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  284</span>                ShardTypeVariants variants = <a class="code hl_variable" href="../../db/de2/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ShardSpawner.html#a3aea3fc4b60aa5876f88029911e3686d">variantData</a>.get(HullSize.DESTROYER);</div>
-<div class="line"><span class="lineno">  285</span>                WeightedRandomPicker&lt;String&gt; variantPicker = variants.get(type);</div>
-<div class="line"><span class="lineno">  286</span>                variant = variantPicker.pick();</div>
-<div class="line"><span class="lineno">  287</span>                <span class="keywordflow">if</span> (variant != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  288</span>                    weight = 2f;</div>
-<div class="line"><span class="lineno">  289</span>                    destroyers++;</div>
-<div class="line"><span class="lineno">  290</span>                    destroyerProb *= destroyerProbMult;</div>
-<div class="line"><span class="lineno">  291</span>                }</div>
-<div class="line"><span class="lineno">  292</span>            } </div>
-<div class="line"><span class="lineno">  293</span>            </div>
-<div class="line"><span class="lineno">  294</span>            <span class="keywordflow">if</span> (frigate &amp;&amp; variant == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  295</span>                ShardTypeVariants variants = <a class="code hl_variable" href="../../db/de2/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ShardSpawner.html#a3aea3fc4b60aa5876f88029911e3686d">variantData</a>.get(HullSize.FRIGATE);</div>
-<div class="line"><span class="lineno">  296</span>                WeightedRandomPicker&lt;String&gt; variantPicker = variants.get(type);</div>
-<div class="line"><span class="lineno">  297</span>                variant = variantPicker.pick();</div>
-<div class="line"><span class="lineno">  298</span>                <span class="keywordflow">if</span> (variant != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  299</span>                    weight = 1f;</div>
-<div class="line"><span class="lineno">  300</span>                    frigates++;</div>
-<div class="line"><span class="lineno">  301</span>                    frigateProb *= frigateProbMult;</div>
-<div class="line"><span class="lineno">  302</span>                }</div>
-<div class="line"><span class="lineno">  303</span>            }</div>
-<div class="line"><span class="lineno">  304</span>            </div>
-<div class="line"><span class="lineno">  305</span>            <span class="keywordflow">if</span> (variant == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  306</span>                ShardTypeVariants variants = <a class="code hl_variable" href="../../db/de2/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ShardSpawner.html#a3aea3fc4b60aa5876f88029911e3686d">variantData</a>.get(HullSize.FIGHTER);</div>
-<div class="line"><span class="lineno">  307</span>                WeightedRandomPicker&lt;String&gt; variantPicker = variants.get(type);</div>
-<div class="line"><span class="lineno">  308</span>                variant = variantPicker.pick();</div>
-<div class="line"><span class="lineno">  309</span>                <span class="keywordflow">if</span> (variant != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  310</span>                    fighters++;</div>
-<div class="line"><span class="lineno">  311</span>                }</div>
-<div class="line"><span class="lineno">  312</span>            }</div>
-<div class="line"><span class="lineno">  313</span>            </div>
-<div class="line"><span class="lineno">  314</span>            <span class="comment">//variant = &quot;aspect_shock_wing&quot;;</span></div>
-<div class="line"><span class="lineno">  315</span>            <span class="comment">//variant = &quot;aspect_shieldbreaker_wing&quot;;</span></div>
-<div class="line"><span class="lineno">  316</span>            <span class="comment">//variant = &quot;aspect_missile_wing&quot;;</span></div>
-<div class="line"><span class="lineno">  317</span>            <span class="keywordflow">if</span> (variant != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  318</span>                <span class="keywordflow">if</span> (spawnAngles == <span class="keyword">null</span> || spawnAngles.isEmpty()) {</div>
-<div class="line"><span class="lineno">  319</span>                    spawnAngles = <a class="code hl_function" href="../../db/de2/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ShardSpawner.html#afaeee15404b2029808d2f791330e7337">getSpawnAngles</a>(spawnAnglesIter++);</div>
-<div class="line"><span class="lineno">  320</span>                }</div>
-<div class="line"><span class="lineno">  321</span>                <span class="keywordtype">float</span> angle = spawnAngles.pickAndRemove() + angleOffset;</div>
-<div class="line"><span class="lineno">  322</span>                ShardFadeInPlugin shard = <a class="code hl_function" href="../../db/de2/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ShardSpawner.html#a3880d26f502f6eb82fbf26c977b5dee0">createShipFadeInPlugin</a>(variant, ship, extraDur, dur, angle);</div>
-<div class="line"><span class="lineno">  323</span>                shards.add(shard);</div>
-<div class="line"><span class="lineno">  324</span>                Global.getCombatEngine().addPlugin(shard);</div>
-<div class="line"><span class="lineno">  325</span>                addedWeight += weight;</div>
-<div class="line"><span class="lineno">  326</span>                </div>
-<div class="line"><span class="lineno">  327</span><span class="comment">//              float delay = 0.5f + (float) Math.random() * 0.5f;</span></div>
-<div class="line"><span class="lineno">  328</span><span class="comment">//              extraDur += delay;</span></div>
-<div class="line"><span class="lineno">  329</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  330</span>                addedWeight += 0.1f; <span class="comment">// if we didn&#39;t manage to add anything, eventually break out of the loop</span></div>
-<div class="line"><span class="lineno">  331</span>            }</div>
-<div class="line"><span class="lineno">  332</span>        }</div>
-<div class="line"><span class="lineno">  333</span>        </div>
-<div class="line"><span class="lineno">  334</span>        Global.getCombatEngine().addPlugin(<a class="code hl_function" href="../../db/de2/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ShardSpawner.html#adb567d9b5bcc30c8d81527348909b119">createShipFadeOutPlugin</a>(ship, dur + extraDur * 0.5f, shards));</div>
-<div class="line"><span class="lineno">  335</span>        </div>
-<div class="line"><span class="lineno">  336</span><span class="comment">//      Global.getCombatEngine().addPlugin(createShipFadeInPlugin(&quot;shard_left_Attack&quot;, ship, 0f, dur));</span></div>
-<div class="line"><span class="lineno">  337</span><span class="comment">//      Global.getCombatEngine().addPlugin(createShipFadeInPlugin(&quot;shard_right_Attack&quot;, ship, 0f, dur));</span></div>
-<div class="line"><span class="lineno">  338</span>        data.done = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  339</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ShardSpawner_html_a061860d3441643eebe7d5043c9818e83"><div class="ttname"><a href="../../db/de2/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ShardSpawner.html#a061860d3441643eebe7d5043c9818e83">com.fs.starfarer.api.impl.hullmods.ShardSpawner.getTypePickerBasedOnLocalConditions</a></div><div class="ttdeci">WeightedRandomPicker&lt; ShardType &gt; getTypePickerBasedOnLocalConditions(ShipAPI ship)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/de2/ShardSpawner_8java_source.html#l00361">ShardSpawner.java:361</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ShardSpawner_html_a3880d26f502f6eb82fbf26c977b5dee0"><div class="ttname"><a href="../../db/de2/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ShardSpawner.html#a3880d26f502f6eb82fbf26c977b5dee0">com.fs.starfarer.api.impl.hullmods.ShardSpawner.createShipFadeInPlugin</a></div><div class="ttdeci">ShardFadeInPlugin createShipFadeInPlugin(final String variantId, final ShipAPI source, final float delay, final float fadeInTime, final float angle)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/de2/ShardSpawner_8java_source.html#l00633">ShardSpawner.java:633</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ShardSpawner_html_a3aea3fc4b60aa5876f88029911e3686d"><div class="ttname"><a href="../../db/de2/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ShardSpawner.html#a3aea3fc4b60aa5876f88029911e3686d">com.fs.starfarer.api.impl.hullmods.ShardSpawner.variantData</a></div><div class="ttdeci">static Map&lt; HullSize, ShardTypeVariants &gt; variantData</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/de2/ShardSpawner_8java_source.html#l00069">ShardSpawner.java:69</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ShardSpawner_html_a80dae431c48d45a4ad68ad41bbb72ca1"><div class="ttname"><a href="../../db/de2/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ShardSpawner.html#a80dae431c48d45a4ad68ad41bbb72ca1">com.fs.starfarer.api.impl.hullmods.ShardSpawner.SPAWN_TIME</a></div><div class="ttdeci">static float SPAWN_TIME</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/de2/ShardSpawner_8java_source.html#l00045">ShardSpawner.java:45</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ShardSpawner_html_adb567d9b5bcc30c8d81527348909b119"><div class="ttname"><a href="../../db/de2/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ShardSpawner.html#adb567d9b5bcc30c8d81527348909b119">com.fs.starfarer.api.impl.hullmods.ShardSpawner.createShipFadeOutPlugin</a></div><div class="ttdeci">EveryFrameCombatPlugin createShipFadeOutPlugin(final ShipAPI ship, final float fadeOutTime, final List&lt; ShardFadeInPlugin &gt; shards)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/de2/ShardSpawner_8java_source.html#l00512">ShardSpawner.java:512</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ShardSpawner_html_afaeee15404b2029808d2f791330e7337"><div class="ttname"><a href="../../db/de2/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ShardSpawner.html#afaeee15404b2029808d2f791330e7337">com.fs.starfarer.api.impl.hullmods.ShardSpawner.getSpawnAngles</a></div><div class="ttdeci">WeightedRandomPicker&lt; Float &gt; getSpawnAngles(int iter)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/de2/ShardSpawner_8java_source.html#l00341">ShardSpawner.java:341</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ShardSpawner_html_aff0cce52722f6c55fb0ccd43d5b0c819"><div class="ttname"><a href="../../db/de2/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ShardSpawner.html#aff0cce52722f6c55fb0ccd43d5b0c819">com.fs.starfarer.api.impl.hullmods.ShardSpawner.DATA_KEY</a></div><div class="ttdeci">static String DATA_KEY</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/de2/ShardSpawner_8java_source.html#l00043">ShardSpawner.java:43</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="afcd1fada67011fc443f1618fdb079131" name="afcd1fada67011fc443f1618fdb079131"></a>
@@ -562,10 +367,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a3859215f6c3408946bf590a2ce5c0e74">com.fs.starfarer.api.combat.BaseHullMod</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/de2/ShardSpawner_8java_source.html#l00146">146</a> of file <a class="el" href="../../d8/de2/ShardSpawner_8java_source.html">ShardSpawner.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  146</span>                                                                                                        {</div>
-<div class="line"><span class="lineno">  147</span>        stats.getBreakProb().modifyMult(<span class="keywordtype">id</span>, 0f);</div>
-<div class="line"><span class="lineno">  148</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a3880d26f502f6eb82fbf26c977b5dee0" name="a3880d26f502f6eb82fbf26c977b5dee0"></a>
@@ -621,11 +423,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/de2/ShardSpawner_8java_source.html#l00633">633</a> of file <a class="el" href="../../d8/de2/ShardSpawner_8java_source.html">ShardSpawner.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  634</span>                                                                                                                          {</div>
-<div class="line"><span class="lineno">  635</span>    </div>
-<div class="line"><span class="lineno">  636</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> ShardFadeInPlugin(variantId, source, delay, fadeInTime, angle);</div>
-<div class="line"><span class="lineno">  637</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="adb567d9b5bcc30c8d81527348909b119" name="adb567d9b5bcc30c8d81527348909b119"></a>
@@ -669,126 +467,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/de2/ShardSpawner_8java_source.html#l00512">512</a> of file <a class="el" href="../../d8/de2/ShardSpawner_8java_source.html">ShardSpawner.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  513</span>                                                                                  {</div>
-<div class="line"><span class="lineno">  514</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> BaseEveryFrameCombatPlugin() {</div>
-<div class="line"><span class="lineno">  515</span>            <span class="keywordtype">float</span> elapsed = 0f;</div>
-<div class="line"><span class="lineno">  516</span>            IntervalUtil interval = <span class="keyword">new</span> IntervalUtil(0.075f, 0.125f);</div>
-<div class="line"><span class="lineno">  517</span>            </div>
-<div class="line"><span class="lineno">  518</span>            <span class="keyword">protected</span> <span class="keywordtype">void</span> pushShipsAway(<span class="keywordtype">float</span> amount) {</div>
-<div class="line"><span class="lineno">  519</span>                Vector2f com = <span class="keyword">new</span> Vector2f();</div>
-<div class="line"><span class="lineno">  520</span>                <span class="keywordtype">float</span> count = 0f;</div>
-<div class="line"><span class="lineno">  521</span>                <span class="keywordflow">for</span> (ShardFadeInPlugin shard : shards) {</div>
-<div class="line"><span class="lineno">  522</span>                    ShipAPI ship = shard.ships[0];</div>
-<div class="line"><span class="lineno">  523</span>                    <span class="keywordflow">if</span> (ship.isFighter()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  524</span>                    Vector2f.add(com, ship.getLocation(), com);</div>
-<div class="line"><span class="lineno">  525</span>                    count++;</div>
-<div class="line"><span class="lineno">  526</span>                }</div>
-<div class="line"><span class="lineno">  527</span>                com.scale(1f / Math.max(1f, count));</div>
-<div class="line"><span class="lineno">  528</span>                </div>
-<div class="line"><span class="lineno">  529</span>                Vector2f comForFighters = <span class="keyword">new</span> Vector2f();</div>
-<div class="line"><span class="lineno">  530</span>                count = 0f;</div>
-<div class="line"><span class="lineno">  531</span>                <span class="keywordflow">for</span> (ShardFadeInPlugin shard : shards) {</div>
-<div class="line"><span class="lineno">  532</span>                    ShipAPI ship = shard.ships[0];</div>
-<div class="line"><span class="lineno">  533</span>                    <span class="keywordflow">if</span> (!ship.isFighter()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  534</span>                    Vector2f.add(comForFighters, ship.getLocation(), comForFighters);</div>
-<div class="line"><span class="lineno">  535</span>                    count++;</div>
-<div class="line"><span class="lineno">  536</span>                }</div>
-<div class="line"><span class="lineno">  537</span>                comForFighters.scale(1f / Math.max(1f, count));</div>
-<div class="line"><span class="lineno">  538</span>                </div>
-<div class="line"><span class="lineno">  539</span>                <span class="keywordtype">float</span> progress = elapsed / fadeOutTime;</div>
-<div class="line"><span class="lineno">  540</span>                <span class="keywordflow">if</span> (progress &gt; 1f) progress = 1f;</div>
-<div class="line"><span class="lineno">  541</span>                <span class="keywordflow">for</span> (ShardFadeInPlugin shard : shards) {</div>
-<div class="line"><span class="lineno">  542</span>                    ShipAPI ship = shard.ships[0];</div>
-<div class="line"><span class="lineno">  543</span>                    Vector2f currCom = com;</div>
-<div class="line"><span class="lineno">  544</span>                    <span class="keywordflow">if</span> (ship.isFighter()) currCom = comForFighters;</div>
-<div class="line"><span class="lineno">  545</span>                    </div>
-<div class="line"><span class="lineno">  546</span>                    Vector2f dir = Misc.getUnitVectorAtDegreeAngle(Misc.getAngleInDegrees(currCom, ship.getLocation()));</div>
-<div class="line"><span class="lineno">  547</span>                    <span class="keywordtype">float</span> speed = ship.getCollisionRadius() * 0.5f;</div>
-<div class="line"><span class="lineno">  548</span>                    dir.scale(amount * speed * progress);</div>
-<div class="line"><span class="lineno">  549</span>                    Vector2f.add(ship.getLocation(), dir, ship.getLocation());</div>
-<div class="line"><span class="lineno">  550</span>                }</div>
-<div class="line"><span class="lineno">  551</span>            }</div>
-<div class="line"><span class="lineno">  552</span>            </div>
-<div class="line"><span class="lineno">  553</span>            @Override</div>
-<div class="line"><span class="lineno">  554</span>            <span class="keyword">public</span> <span class="keywordtype">void</span> advance(<span class="keywordtype">float</span> amount, List&lt;InputEventAPI&gt; events) {</div>
-<div class="line"><span class="lineno">  555</span>                <span class="keywordflow">if</span> (Global.getCombatEngine().isPaused()) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  556</span>                </div>
-<div class="line"><span class="lineno">  557</span>                elapsed += amount;</div>
-<div class="line"><span class="lineno">  558</span>                </div>
-<div class="line"><span class="lineno">  559</span>                </div>
-<div class="line"><span class="lineno">  560</span>                <span class="keywordtype">float</span> progress = elapsed / fadeOutTime;</div>
-<div class="line"><span class="lineno">  561</span>                <span class="keywordflow">if</span> (progress &gt; 1f) progress = 1f;</div>
-<div class="line"><span class="lineno">  562</span>                ship.setAlphaMult(1f - progress);</div>
-<div class="line"><span class="lineno">  563</span>                </div>
-<div class="line"><span class="lineno">  564</span>                <span class="comment">//if (progress &lt; 0.5f) {</span></div>
-<div class="line"><span class="lineno">  565</span>                    pushShipsAway(amount);</div>
-<div class="line"><span class="lineno">  566</span>                <span class="comment">//}</span></div>
-<div class="line"><span class="lineno">  567</span>                    </div>
-<div class="line"><span class="lineno">  568</span>                <span class="keywordflow">if</span> (progress &gt; 0.5f) {</div>
-<div class="line"><span class="lineno">  569</span>                    ship.setCollisionClass(CollisionClass.NONE);</div>
-<div class="line"><span class="lineno">  570</span>                }</div>
-<div class="line"><span class="lineno">  571</span>                </div>
-<div class="line"><span class="lineno">  572</span>                <span class="keywordtype">float</span> jitterLevel = progress;</div>
-<div class="line"><span class="lineno">  573</span>                <span class="keywordflow">if</span> (jitterLevel &lt; 0.5f) {</div>
-<div class="line"><span class="lineno">  574</span>                    jitterLevel *= 2f;</div>
-<div class="line"><span class="lineno">  575</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  576</span>                    jitterLevel = (1f - jitterLevel) * 2f;</div>
-<div class="line"><span class="lineno">  577</span>                }</div>
-<div class="line"><span class="lineno">  578</span>                </div>
-<div class="line"><span class="lineno">  579</span>                <span class="keywordtype">float</span> jitterRange = progress;</div>
-<div class="line"><span class="lineno">  580</span>                <span class="comment">//jitterRange = (float) Math.sqrt(jitterRange);</span></div>
-<div class="line"><span class="lineno">  581</span>                <span class="keywordtype">float</span> maxRangeBonus = 100f;</div>
-<div class="line"><span class="lineno">  582</span>                <span class="keywordtype">float</span> jitterRangeBonus = jitterRange * maxRangeBonus;</div>
-<div class="line"><span class="lineno">  583</span>                Color c = <a class="code hl_variable" href="../../db/de2/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ShardSpawner.html#adeaaac7861c3031e99e28fa36177b135">JITTER_COLOR</a>;</div>
-<div class="line"><span class="lineno">  584</span>                <span class="keywordtype">int</span> alpha = c.getAlpha();</div>
-<div class="line"><span class="lineno">  585</span>                alpha += 100f * progress;</div>
-<div class="line"><span class="lineno">  586</span>                <span class="keywordflow">if</span> (alpha &gt; 255) alpha = 255;</div>
-<div class="line"><span class="lineno">  587</span>                c = Misc.setAlpha(c, alpha);</div>
-<div class="line"><span class="lineno">  588</span>                </div>
-<div class="line"><span class="lineno">  589</span>                ship.setJitter(<span class="keyword">this</span>, c, jitterLevel, 35, 0f, jitterRangeBonus);</div>
-<div class="line"><span class="lineno">  590</span>                </div>
-<div class="line"><span class="lineno">  591</span>                interval.advance(amount);</div>
-<div class="line"><span class="lineno">  592</span>                <span class="keywordflow">if</span> (interval.intervalElapsed() &amp;&amp; elapsed &lt; fadeOutTime * 0.75f) {</div>
-<div class="line"><span class="lineno">  593</span>                    CombatEngineAPI engine = Global.getCombatEngine();</div>
-<div class="line"><span class="lineno">  594</span>                    c = RiftLanceEffect.getColorForDarkening(RiftCascadeEffect.STANDARD_RIFT_COLOR);</div>
-<div class="line"><span class="lineno">  595</span>                    <span class="keywordtype">float</span> baseDuration = 2f;</div>
-<div class="line"><span class="lineno">  596</span>                    Vector2f vel = <span class="keyword">new</span> Vector2f(ship.getVelocity());</div>
-<div class="line"><span class="lineno">  597</span>                    <span class="keywordtype">float</span> size = ship.getCollisionRadius() * 0.35f;</div>
-<div class="line"><span class="lineno">  598</span>                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 3; i++) {</div>
-<div class="line"><span class="lineno">  599</span>                        Vector2f point = <span class="keyword">new</span> Vector2f(ship.getLocation());</div>
-<div class="line"><span class="lineno">  600</span>                        point = Misc.getPointWithinRadiusUniform(point, ship.getCollisionRadius() * 0.5f, Misc.random);</div>
-<div class="line"><span class="lineno">  601</span>                        <span class="keywordtype">float</span> dur = baseDuration + baseDuration * (float) Math.random();</div>
-<div class="line"><span class="lineno">  602</span>                        <span class="keywordtype">float</span> nSize = size;</div>
-<div class="line"><span class="lineno">  603</span>                        Vector2f pt = Misc.getPointWithinRadius(point, nSize * 0.5f);</div>
-<div class="line"><span class="lineno">  604</span>                        Vector2f v = Misc.getUnitVectorAtDegreeAngle((<span class="keywordtype">float</span>) Math.random() * 360f);</div>
-<div class="line"><span class="lineno">  605</span>                        v.scale(nSize + nSize * (<span class="keywordtype">float</span>) Math.random() * 0.5f);</div>
-<div class="line"><span class="lineno">  606</span>                        v.scale(0.2f);</div>
-<div class="line"><span class="lineno">  607</span>                        Vector2f.add(vel, v, v);</div>
-<div class="line"><span class="lineno">  608</span>                        </div>
-<div class="line"><span class="lineno">  609</span>                        <span class="keywordtype">float</span> maxSpeed = nSize * 1.5f * 0.2f; </div>
-<div class="line"><span class="lineno">  610</span>                        <span class="keywordtype">float</span> minSpeed = nSize * 1f * 0.2f; </div>
-<div class="line"><span class="lineno">  611</span>                        <span class="keywordtype">float</span> overMin = v.length() - minSpeed;</div>
-<div class="line"><span class="lineno">  612</span>                        <span class="keywordflow">if</span> (overMin &gt; 0) {</div>
-<div class="line"><span class="lineno">  613</span>                            <span class="keywordtype">float</span> durMult = 1f - overMin / (maxSpeed - minSpeed);</div>
-<div class="line"><span class="lineno">  614</span>                            <span class="keywordflow">if</span> (durMult &lt; 0.1f) durMult = 0.1f;</div>
-<div class="line"><span class="lineno">  615</span>                            dur *= 0.5f + 0.5f * durMult;</div>
-<div class="line"><span class="lineno">  616</span>                        }</div>
-<div class="line"><span class="lineno">  617</span>                        engine.addNegativeNebulaParticle(pt, v, nSize * 1f, 2f,</div>
-<div class="line"><span class="lineno">  618</span>                                                        0.5f / dur, 0f, dur, c);</div>
-<div class="line"><span class="lineno">  619</span>                    }</div>
-<div class="line"><span class="lineno">  620</span>                }</div>
-<div class="line"><span class="lineno">  621</span>                </div>
-<div class="line"><span class="lineno">  622</span>                <span class="keywordflow">if</span> (elapsed &gt; fadeOutTime) {</div>
-<div class="line"><span class="lineno">  623</span>                    ship.setHitpoints(0f);</div>
-<div class="line"><span class="lineno">  624</span>                    Global.getCombatEngine().removeEntity(ship);</div>
-<div class="line"><span class="lineno">  625</span>                    ship.setAlphaMult(0f);</div>
-<div class="line"><span class="lineno">  626</span>                    Global.getCombatEngine().removePlugin(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  627</span>                }</div>
-<div class="line"><span class="lineno">  628</span>            }</div>
-<div class="line"><span class="lineno">  629</span>        };</div>
-<div class="line"><span class="lineno">  630</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ShardSpawner_html_adeaaac7861c3031e99e28fa36177b135"><div class="ttname"><a href="../../db/de2/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ShardSpawner.html#adeaaac7861c3031e99e28fa36177b135">com.fs.starfarer.api.impl.hullmods.ShardSpawner.JITTER_COLOR</a></div><div class="ttdeci">static Color JITTER_COLOR</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/de2/ShardSpawner_8java_source.html#l00042">ShardSpawner.java:42</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="afaeee15404b2029808d2f791330e7337" name="afaeee15404b2029808d2f791330e7337"></a>
@@ -808,24 +487,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/de2/ShardSpawner_8java_source.html#l00341">341</a> of file <a class="el" href="../../d8/de2/ShardSpawner_8java_source.html">ShardSpawner.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  341</span>                                                                {</div>
-<div class="line"><span class="lineno">  342</span>        WeightedRandomPicker&lt;Float&gt; picker = <span class="keyword">new</span> WeightedRandomPicker&lt;Float&gt;();</div>
-<div class="line"><span class="lineno">  343</span>        <span class="keywordtype">float</span> start = 0f;</div>
-<div class="line"><span class="lineno">  344</span>        <span class="keywordtype">float</span> incr = 60f;</div>
-<div class="line"><span class="lineno">  345</span>        <span class="keywordflow">if</span> (iter == 1) {</div>
-<div class="line"><span class="lineno">  346</span>            start = 30f;</div>
-<div class="line"><span class="lineno">  347</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (iter == 2) {</div>
-<div class="line"><span class="lineno">  348</span>            start = 15f;</div>
-<div class="line"><span class="lineno">  349</span>            incr = 30f;</div>
-<div class="line"><span class="lineno">  350</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  351</span>            incr = 10f;</div>
-<div class="line"><span class="lineno">  352</span>        }</div>
-<div class="line"><span class="lineno">  353</span>        <span class="keywordflow">for</span> (<span class="keywordtype">float</span> i = start; i &lt; 360f + start; i += incr) {</div>
-<div class="line"><span class="lineno">  354</span>            picker.add(i);</div>
-<div class="line"><span class="lineno">  355</span>        }</div>
-<div class="line"><span class="lineno">  356</span>        <span class="keywordflow">return</span> picker;</div>
-<div class="line"><span class="lineno">  357</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a061860d3441643eebe7d5043c9818e83" name="a061860d3441643eebe7d5043c9818e83"></a>
@@ -845,98 +507,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/de2/ShardSpawner_8java_source.html#l00361">361</a> of file <a class="el" href="../../d8/de2/ShardSpawner_8java_source.html">ShardSpawner.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  361</span>                                                                                             {</div>
-<div class="line"><span class="lineno">  362</span>        CombatEngineAPI engine = Global.getCombatEngine();</div>
-<div class="line"><span class="lineno">  363</span>        <span class="keywordtype">float</span> checkRadius = 5000;</div>
-<div class="line"><span class="lineno">  364</span>        Iterator&lt;Object&gt; iter = engine.getAiGridShips().getCheckIterator(ship.getLocation(), checkRadius * 2f, checkRadius * 2f);</div>
-<div class="line"><span class="lineno">  365</span> </div>
-<div class="line"><span class="lineno">  366</span>        <span class="keywordtype">float</span> weightFighters = 0f;</div>
-<div class="line"><span class="lineno">  367</span>        <span class="keywordtype">float</span> weightGoodShields = 0f;</div>
-<div class="line"><span class="lineno">  368</span>        <span class="keywordtype">float</span> weightGoodArmor = 0f;</div>
-<div class="line"><span class="lineno">  369</span>        <span class="keywordtype">float</span> weightVulnerable = 0f;</div>
-<div class="line"><span class="lineno">  370</span>        <span class="keywordtype">float</span> weightCarriers = 0f;</div>
-<div class="line"><span class="lineno">  371</span>        </div>
-<div class="line"><span class="lineno">  372</span>        <span class="keywordtype">float</span> weightEnemies = 0f;</div>
-<div class="line"><span class="lineno">  373</span>        <span class="keywordtype">float</span> weightFriends = 0f;</div>
-<div class="line"><span class="lineno">  374</span>        </div>
-<div class="line"><span class="lineno">  375</span>        <span class="keywordflow">while</span> (iter.hasNext()) {</div>
-<div class="line"><span class="lineno">  376</span>            Object o = iter.next();</div>
-<div class="line"><span class="lineno">  377</span>            <span class="keywordflow">if</span> (o instanceof ShipAPI) {</div>
-<div class="line"><span class="lineno">  378</span>                ShipAPI other = (ShipAPI) o;</div>
-<div class="line"><span class="lineno">  379</span>                <span class="keywordflow">if</span> (other.getOwner() == Misc.OWNER_NEUTRAL) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  380</span>                </div>
-<div class="line"><span class="lineno">  381</span>                <span class="keywordtype">boolean</span> enemy = ship.getOwner() != other.getOwner();</div>
-<div class="line"><span class="lineno">  382</span>                <span class="keywordflow">if</span> (enemy) {</div>
-<div class="line"><span class="lineno">  383</span>                    <span class="keywordflow">if</span> (other.isFighter() || other.isDrone()) {</div>
-<div class="line"><span class="lineno">  384</span>                        weightFighters += 0.25f;</div>
-<div class="line"><span class="lineno">  385</span>                        weightEnemies += 0.25f;</div>
-<div class="line"><span class="lineno">  386</span>                    } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  387</span>                        <span class="keywordtype">float</span> w = Misc.getShipWeight(other);</div>
-<div class="line"><span class="lineno">  388</span>                        weightEnemies += w;</div>
-<div class="line"><span class="lineno">  389</span>                        </div>
-<div class="line"><span class="lineno">  390</span>                        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../db/de2/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ShardSpawner.html#a95a2678a52f9fb7b66b35d8545fcf2e9">hasGoodShields</a>(other)) {</div>
-<div class="line"><span class="lineno">  391</span>                            weightGoodShields += w;</div>
-<div class="line"><span class="lineno">  392</span>                        }</div>
-<div class="line"><span class="lineno">  393</span>                        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../db/de2/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ShardSpawner.html#a59a96df22c40f58cad47b7bdb9cd2fa2">hasGoodArmor</a>(other)) {</div>
-<div class="line"><span class="lineno">  394</span>                            weightGoodArmor += w;</div>
-<div class="line"><span class="lineno">  395</span>                        }</div>
-<div class="line"><span class="lineno">  396</span>                        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../db/de2/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ShardSpawner.html#a228f1c69410f2c0563ba347217a60ab2">isVulnerableToMissileBarrage</a>(ship, other)) {</div>
-<div class="line"><span class="lineno">  397</span>                            weightVulnerable += w;</div>
-<div class="line"><span class="lineno">  398</span>                        }</div>
-<div class="line"><span class="lineno">  399</span>                        <span class="keywordflow">if</span> (other.getVariant().isCarrier()) {</div>
-<div class="line"><span class="lineno">  400</span>                            weightCarriers += w;</div>
-<div class="line"><span class="lineno">  401</span>                        }</div>
-<div class="line"><span class="lineno">  402</span>                    }</div>
-<div class="line"><span class="lineno">  403</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  404</span>                    <span class="keywordflow">if</span> (other.isFighter() || other.isDrone()) {</div>
-<div class="line"><span class="lineno">  405</span>                        weightFriends += 0.25f;</div>
-<div class="line"><span class="lineno">  406</span>                    } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  407</span>                        <span class="keywordtype">float</span> w = Misc.getShipWeight(other);</div>
-<div class="line"><span class="lineno">  408</span>                        weightFriends += w;</div>
-<div class="line"><span class="lineno">  409</span>                    }</div>
-<div class="line"><span class="lineno">  410</span>                }</div>
-<div class="line"><span class="lineno">  411</span>            }</div>
-<div class="line"><span class="lineno">  412</span>        }</div>
-<div class="line"><span class="lineno">  413</span>        </div>
-<div class="line"><span class="lineno">  414</span>        WeightedRandomPicker&lt;ShardType&gt; picker = <span class="keyword">new</span> WeightedRandomPicker&lt;ShardType&gt;();</div>
-<div class="line"><span class="lineno">  415</span> </div>
-<div class="line"><span class="lineno">  416</span>        <span class="keywordtype">float</span> total = weightFighters + weightGoodShields + weightGoodArmor + weightVulnerable + weightCarriers;</div>
-<div class="line"><span class="lineno">  417</span>        <span class="keywordflow">if</span> (total &lt;= 1f) total = 1f;</div>
-<div class="line"><span class="lineno">  418</span>        </div>
-<div class="line"><span class="lineno">  419</span>        <span class="keywordtype">float</span> antiFighter = (weightFighters + weightCarriers) / total;</div>
-<div class="line"><span class="lineno">  420</span>        <span class="keywordtype">float</span> antiShield = weightGoodShields / total;</div>
-<div class="line"><span class="lineno">  421</span>        <span class="keywordtype">float</span> antiArmor = weightGoodArmor / total;</div>
-<div class="line"><span class="lineno">  422</span>        <span class="keywordtype">float</span> missile = weightVulnerable / total;</div>
-<div class="line"><span class="lineno">  423</span> </div>
-<div class="line"><span class="lineno">  424</span>        <span class="keywordtype">float</span> friends = weightFriends / Math.max(1f, weightEnemies + weightFriends);</div>
-<div class="line"><span class="lineno">  425</span>        </div>
-<div class="line"><span class="lineno">  426</span>        picker.add(ShardType.GENERAL, 0.0f + (1f - friends) * 0.4f);</div>
-<div class="line"><span class="lineno">  427</span><span class="comment">//      picker.add(ShardType.GENERAL, 0.2f);</span></div>
-<div class="line"><span class="lineno">  428</span><span class="comment">//      if (friends &lt; 0.3f) {</span></div>
-<div class="line"><span class="lineno">  429</span><span class="comment">//          picker.add(ShardType.GENERAL, Math.min(0.25f, (1f - friends) * 0.25f));</span></div>
-<div class="line"><span class="lineno">  430</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  431</span>        </div>
-<div class="line"><span class="lineno">  432</span>        <span class="keywordtype">float</span> unlikelyWeight = 0f;</div>
-<div class="line"><span class="lineno">  433</span>        <span class="keywordtype">float</span> unlikelyThreshold = 0.2f;</div>
-<div class="line"><span class="lineno">  434</span>        </div>
-<div class="line"><span class="lineno">  435</span>        <span class="keywordflow">if</span> (antiFighter &lt; unlikelyThreshold) antiFighter = unlikelyWeight;</div>
-<div class="line"><span class="lineno">  436</span>        picker.add(ShardType.POINT_DEFENSE, antiFighter);</div>
-<div class="line"><span class="lineno">  437</span>        </div>
-<div class="line"><span class="lineno">  438</span>        <span class="keywordflow">if</span> (antiShield &lt; unlikelyThreshold) antiShield = unlikelyWeight;</div>
-<div class="line"><span class="lineno">  439</span>        picker.add(ShardType.ANTI_SHIELD, antiShield);</div>
-<div class="line"><span class="lineno">  440</span>        </div>
-<div class="line"><span class="lineno">  441</span>        <span class="keywordflow">if</span> (antiArmor &lt; unlikelyThreshold) antiArmor = unlikelyWeight;</div>
-<div class="line"><span class="lineno">  442</span>        picker.add(ShardType.ANTI_ARMOR, antiArmor);</div>
-<div class="line"><span class="lineno">  443</span>        </div>
-<div class="line"><span class="lineno">  444</span>        <span class="keywordflow">if</span> (missile &lt; unlikelyThreshold) missile = unlikelyWeight;</div>
-<div class="line"><span class="lineno">  445</span>        picker.add(ShardType.MISSILE, missile);</div>
-<div class="line"><span class="lineno">  446</span>        </div>
-<div class="line"><span class="lineno">  447</span>        <span class="keywordflow">return</span> picker;</div>
-<div class="line"><span class="lineno">  448</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ShardSpawner_html_a228f1c69410f2c0563ba347217a60ab2"><div class="ttname"><a href="../../db/de2/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ShardSpawner.html#a228f1c69410f2c0563ba347217a60ab2">com.fs.starfarer.api.impl.hullmods.ShardSpawner.isVulnerableToMissileBarrage</a></div><div class="ttdeci">boolean isVulnerableToMissileBarrage(ShipAPI from, ShipAPI other)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/de2/ShardSpawner_8java_source.html#l00450">ShardSpawner.java:450</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ShardSpawner_html_a59a96df22c40f58cad47b7bdb9cd2fa2"><div class="ttname"><a href="../../db/de2/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ShardSpawner.html#a59a96df22c40f58cad47b7bdb9cd2fa2">com.fs.starfarer.api.impl.hullmods.ShardSpawner.hasGoodArmor</a></div><div class="ttdeci">boolean hasGoodArmor(ShipAPI other)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/de2/ShardSpawner_8java_source.html#l00464">ShardSpawner.java:464</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ShardSpawner_html_a95a2678a52f9fb7b66b35d8545fcf2e9"><div class="ttname"><a href="../../db/de2/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ShardSpawner.html#a95a2678a52f9fb7b66b35d8545fcf2e9">com.fs.starfarer.api.impl.hullmods.ShardSpawner.hasGoodShields</a></div><div class="ttdeci">boolean hasGoodShields(ShipAPI other)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/de2/ShardSpawner_8java_source.html#l00474">ShardSpawner.java:474</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a59a96df22c40f58cad47b7bdb9cd2fa2" name="a59a96df22c40f58cad47b7bdb9cd2fa2"></a>
@@ -956,16 +527,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/de2/ShardSpawner_8java_source.html#l00464">464</a> of file <a class="el" href="../../d8/de2/ShardSpawner_8java_source.html">ShardSpawner.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  464</span>                                               {</div>
-<div class="line"><span class="lineno">  465</span>        <span class="keywordtype">float</span> requiredArmor = 1240;</div>
-<div class="line"><span class="lineno">  466</span> </div>
-<div class="line"><span class="lineno">  467</span>        <span class="keywordflow">if</span> (other.getArmorGrid().getArmorRating() &lt; requiredArmor) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  468</span>        </div>
-<div class="line"><span class="lineno">  469</span>        <span class="keywordtype">float</span> armor = other.getAverageArmorInSlice(other.getFacing(), 120f);</div>
-<div class="line"><span class="lineno">  470</span>        <span class="keywordflow">return</span> armor &gt;= requiredArmor * 0.8f;</div>
-<div class="line"><span class="lineno">  471</span>        </div>
-<div class="line"><span class="lineno">  472</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a95a2678a52f9fb7b66b35d8545fcf2e9" name="a95a2678a52f9fb7b66b35d8545fcf2e9"></a>
@@ -985,42 +547,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/de2/ShardSpawner_8java_source.html#l00474">474</a> of file <a class="el" href="../../d8/de2/ShardSpawner_8java_source.html">ShardSpawner.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  474</span>                                                 {</div>
-<div class="line"><span class="lineno">  475</span>        ShieldAPI shield = other.getShield();</div>
-<div class="line"><span class="lineno">  476</span>        <span class="keywordflow">if</span> (shield == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  477</span>        <span class="keywordflow">if</span> (shield.getType() == ShieldType.NONE) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  478</span>        <span class="keywordflow">if</span> (shield.getType() == ShieldType.PHASE) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  479</span>        </div>
-<div class="line"><span class="lineno">  480</span>        <span class="keywordtype">float</span> requiredCapacity = 10000000f;</div>
-<div class="line"><span class="lineno">  481</span>        <span class="keywordflow">switch</span> (other.getHullSize()) {</div>
-<div class="line"><span class="lineno">  482</span>        <span class="keywordflow">case</span> CAPITAL_SHIP:</div>
-<div class="line"><span class="lineno">  483</span>            requiredCapacity = 25000;</div>
-<div class="line"><span class="lineno">  484</span>            <span class="keywordflow">if</span> (shield.getType() == ShieldType.FRONT &amp;&amp; shield.getArc() &lt; 250) {</div>
-<div class="line"><span class="lineno">  485</span>                requiredCapacity = 1000000;</div>
-<div class="line"><span class="lineno">  486</span>            }</div>
-<div class="line"><span class="lineno">  487</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  488</span>        <span class="keywordflow">case</span> CRUISER:</div>
-<div class="line"><span class="lineno">  489</span>            requiredCapacity = 12500;</div>
-<div class="line"><span class="lineno">  490</span>            <span class="keywordflow">if</span> (shield.getType() == ShieldType.FRONT &amp;&amp; shield.getArc() &lt; 250) {</div>
-<div class="line"><span class="lineno">  491</span>                requiredCapacity = 1000000;</div>
-<div class="line"><span class="lineno">  492</span>            }</div>
-<div class="line"><span class="lineno">  493</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  494</span>        <span class="keywordflow">case</span> DESTROYER:</div>
-<div class="line"><span class="lineno">  495</span>            requiredCapacity = 8000;</div>
-<div class="line"><span class="lineno">  496</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  497</span>        <span class="keywordflow">case</span> FRIGATE:</div>
-<div class="line"><span class="lineno">  498</span>            requiredCapacity = 4000;</div>
-<div class="line"><span class="lineno">  499</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  500</span>        }</div>
-<div class="line"><span class="lineno">  501</span>        </div>
-<div class="line"><span class="lineno">  502</span>        <span class="keywordtype">float</span> e = other.getShield().getFluxPerPointOfDamage() *</div>
-<div class="line"><span class="lineno">  503</span>                  other.getMutableStats().getShieldDamageTakenMult().getModifiedValue();</div>
-<div class="line"><span class="lineno">  504</span>        <span class="keywordtype">float</span> capacity = other.getMaxFlux();</div>
-<div class="line"><span class="lineno">  505</span>        capacity /= Math.max(0.1f, e);</div>
-<div class="line"><span class="lineno">  506</span>        </div>
-<div class="line"><span class="lineno">  507</span>        <span class="keywordflow">return</span> capacity &gt;= requiredCapacity &amp;&amp; e &lt;= 1f;</div>
-<div class="line"><span class="lineno">  508</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a228f1c69410f2c0563ba347217a60ab2" name="a228f1c69410f2c0563ba347217a60ab2"></a>
@@ -1050,20 +577,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/de2/ShardSpawner_8java_source.html#l00450">450</a> of file <a class="el" href="../../d8/de2/ShardSpawner_8java_source.html">ShardSpawner.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  450</span>                                                                             {</div>
-<div class="line"><span class="lineno">  451</span>        <span class="keywordtype">float</span> incap = Misc.getIncapacitatedTime(other);</div>
-<div class="line"><span class="lineno">  452</span>        </div>
-<div class="line"><span class="lineno">  453</span>        <span class="keywordtype">float</span> dist = Misc.getDistance(from.getLocation(), other.getLocation());</div>
-<div class="line"><span class="lineno">  454</span>        <span class="keywordflow">if</span> (dist &gt; 2000) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  455</span>        </div>
-<div class="line"><span class="lineno">  456</span>        <span class="keywordtype">float</span> assumedMissileSpeed = 500;</div>
-<div class="line"><span class="lineno">  457</span>        <span class="keywordtype">float</span> eta = dist / assumedMissileSpeed;</div>
-<div class="line"><span class="lineno">  458</span>        eta += <a class="code hl_variable" href="../../db/de2/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ShardSpawner.html#a80dae431c48d45a4ad68ad41bbb72ca1">SPAWN_TIME</a>;</div>
-<div class="line"><span class="lineno">  459</span>        eta += 2f;</div>
-<div class="line"><span class="lineno">  460</span>        </div>
-<div class="line"><span class="lineno">  461</span>        <span class="keywordflow">return</span> incap &gt;= eta || (other.getFluxLevel() &gt;= 0.95f &amp;&amp; other.getFluxTracker().getTimeToVent() &gt;= eta);</div>
-<div class="line"><span class="lineno">  462</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -189,139 +190,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="../../d0/d5c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1CommandPlugin.html#a72a44c5127e60136b87d3b37613fd0e0">com.fs.starfarer.api.campaign.rules.CommandPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d1/d15/Wait_8java_source.html#l00035">35</a> of file <a class="el" href="../../d1/d15/Wait_8java_source.html">Wait.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   35</span>                                                                                                                             {</div>
-<div class="line"><span class="lineno">   36</span>        <span class="keywordflow">if</span> (params.size() != 6) {</div>
-<div class="line"><span class="lineno">   37</span>            <span class="keywordflow">throw</span> <span class="keyword">new</span> RuleException(<span class="stringliteral">&quot;Wait usage: Wait $handle duration $finished $interrupted $inProgress &lt;text&gt;&quot;</span>);</div>
-<div class="line"><span class="lineno">   38</span>        }</div>
-<div class="line"><span class="lineno">   39</span>        </div>
-<div class="line"><span class="lineno">   40</span>        handle = params.get(0).getVarNameAndMemory(memoryMap);</div>
-<div class="line"><span class="lineno">   41</span>        <span class="keyword">final</span> <span class="keywordtype">float</span> durationDays = Float.parseFloat(params.get(1).string);</div>
-<div class="line"><span class="lineno">   42</span>        finished = params.get(2).getVarNameAndMemory(memoryMap);</div>
-<div class="line"><span class="lineno">   43</span>        interrupted = params.get(3).getVarNameAndMemory(memoryMap);</div>
-<div class="line"><span class="lineno">   44</span>        inProgress = params.get(4).getVarNameAndMemory(memoryMap);</div>
-<div class="line"><span class="lineno">   45</span>        </div>
-<div class="line"><span class="lineno">   46</span>        String text = <span class="stringliteral">&quot;Waiting&quot;</span>;</div>
-<div class="line"><span class="lineno">   47</span>        <span class="keywordflow">if</span> (params.size() &gt;= 5) {</div>
-<div class="line"><span class="lineno">   48</span>            text = params.get(5).getString(memoryMap);</div>
-<div class="line"><span class="lineno">   49</span>        }</div>
-<div class="line"><span class="lineno">   50</span>        </div>
-<div class="line"><span class="lineno">   51</span>        <span class="comment">//Global.getSoundPlayer().playUISound(&quot;ui_wait_start&quot;, 1, 1);</span></div>
-<div class="line"><span class="lineno">   52</span>        </div>
-<div class="line"><span class="lineno">   53</span>        <span class="keyword">final</span> SectorEntityToken target = dialog.getInteractionTarget();</div>
-<div class="line"><span class="lineno">   54</span>        </div>
-<div class="line"><span class="lineno">   55</span>        <span class="keyword">final</span> CampaignFleetAPI playerFleet = Global.getSector().getPlayerFleet();</div>
-<div class="line"><span class="lineno">   56</span>        playerFleet.setInteractionTarget(<span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   57</span>        Vector2f offset = Vector2f.sub(playerFleet.getLocation(), target.getLocation(), <span class="keyword">new</span> Vector2f());</div>
-<div class="line"><span class="lineno">   58</span><span class="comment">//      float dir = Misc.getAngleInDegrees(offset);</span></div>
-<div class="line"><span class="lineno">   59</span><span class="comment">//      offset = Misc.getUnitVectorAtDegreeAngle(dir)</span></div>
-<div class="line"><span class="lineno">   60</span>        <span class="keywordtype">float</span> len = offset.length();</div>
-<div class="line"><span class="lineno">   61</span>        <span class="keywordtype">float</span> radSum = playerFleet.getRadius() + target.getRadius() - 1f;</div>
-<div class="line"><span class="lineno">   62</span>        <span class="keywordflow">if</span> (len &gt; 0) {</div>
-<div class="line"><span class="lineno">   63</span>            offset.scale(radSum / len);</div>
-<div class="line"><span class="lineno">   64</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   65</span>            offset.set(radSum, 0);</div>
-<div class="line"><span class="lineno">   66</span>        }</div>
-<div class="line"><span class="lineno">   67</span>        </div>
-<div class="line"><span class="lineno">   68</span>        indicator = Global.getFactory().createProgressIndicator(text, target, durationDays);</div>
-<div class="line"><span class="lineno">   69</span>        target.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a06362480c6a17326650354460c6d7442">getContainingLocation</a>().<a class="code hl_function" href="../../d2/d2c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI.html#aa74c923b52bd9dd0adf14cc394f49b60">addEntity</a>(indicator);</div>
-<div class="line"><span class="lineno">   70</span>        </div>
-<div class="line"><span class="lineno">   71</span>        </div>
-<div class="line"><span class="lineno">   72</span>        waitScript = <span class="keyword">new</span> BaseCampaignEventListenerAndScript(durationDays + 0.1f) {</div>
-<div class="line"><span class="lineno">   73</span>            <span class="keyword">private</span> <span class="keywordtype">float</span> elapsedDays = 0f;</div>
-<div class="line"><span class="lineno">   74</span>            <span class="keyword">private</span> <span class="keywordtype">boolean</span> done = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   75</span>            <span class="keyword">private</span> <span class="keywordtype">boolean</span> battleOccured = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   76</span>            <span class="keyword">private</span> <span class="keywordtype">boolean</span> interactedWithSomethingElse = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   77</span>            <span class="keyword">public</span> <span class="keywordtype">boolean</span> runWhilePaused() {</div>
-<div class="line"><span class="lineno">   78</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   79</span>            }</div>
-<div class="line"><span class="lineno">   80</span>            <span class="keyword">public</span> <span class="keywordtype">boolean</span> isDone() {</div>
-<div class="line"><span class="lineno">   81</span>                <span class="keywordflow">return</span> done;</div>
-<div class="line"><span class="lineno">   82</span>            }</div>
-<div class="line"><span class="lineno">   83</span>            <span class="keyword">public</span> <span class="keywordtype">void</span> advance(<span class="keywordtype">float</span> amount) {</div>
-<div class="line"><span class="lineno">   84</span>                CampaignClockAPI clock = Global.getSector().getClock();</div>
-<div class="line"><span class="lineno">   85</span>                </div>
-<div class="line"><span class="lineno">   86</span>                Global.getSector().getCampaignUI().setDisallowPlayerInteractionsForOneFrame();</div>
-<div class="line"><span class="lineno">   87</span>                </div>
-<div class="line"><span class="lineno">   88</span>                <span class="keywordtype">float</span> days = clock.convertToDays(amount);</div>
-<div class="line"><span class="lineno">   89</span>                elapsedDays += days;</div>
-<div class="line"><span class="lineno">   90</span>                </div>
-<div class="line"><span class="lineno">   91</span>                inProgress.memory.set(inProgress.name, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   92</span>                inProgress.memory.expire(inProgress.name, 0.1f);</div>
-<div class="line"><span class="lineno">   93</span>                </div>
-<div class="line"><span class="lineno">   94</span><span class="comment">//              float sinceLastBattle = clock.getElapsedDaysSince(Global.getSector().getLastPlayerBattleTimestamp());</span></div>
-<div class="line"><span class="lineno">   95</span><span class="comment">//              if (sinceLastBattle &lt;= elapsedDays) {</span></div>
-<div class="line"><span class="lineno">   96</span>                <span class="keywordflow">if</span> (battleOccured || interactedWithSomethingElse) {</div>
-<div class="line"><span class="lineno">   97</span>                    done = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   98</span>                    interrupted.memory.set(interrupted.name, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   99</span>                    interrupted.memory.expire(interrupted.name, 2f);</div>
-<div class="line"><span class="lineno">  100</span>                    handle.memory.unset(handle.name);</div>
-<div class="line"><span class="lineno">  101</span>                    indicator.<a class="code hl_function" href="../../de/dfd/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignProgressIndicatorAPI.html#a22eb9bad1f4f63e528ee2410537a7305">interrupt</a>();</div>
-<div class="line"><span class="lineno">  102</span>                    Global.getSector().removeScript(leash);</div>
-<div class="line"><span class="lineno">  103</span>                    </div>
-<div class="line"><span class="lineno">  104</span>                    Global.getSoundPlayer().playUISound(<span class="stringliteral">&quot;ui_wait_interrupt&quot;</span>, 1, 1);</div>
-<div class="line"><span class="lineno">  105</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (elapsedDays &gt;= durationDays &amp;&amp; !Global.getSector().getCampaignUI().isShowingDialog()) {</div>
-<div class="line"><span class="lineno">  106</span>                    done = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  107</span>                    finished.memory.set(finished.name, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  108</span>                    finished.memory.expire(finished.name, 0f);</div>
-<div class="line"><span class="lineno">  109</span>                    </div>
-<div class="line"><span class="lineno">  110</span>                    inProgress.memory.unset(inProgress.name);</div>
-<div class="line"><span class="lineno">  111</span>                    handle.memory.unset(handle.name);</div>
-<div class="line"><span class="lineno">  112</span>                    </div>
-<div class="line"><span class="lineno">  113</span>                    Global.getSector().removeScript(leash);</div>
-<div class="line"><span class="lineno">  114</span>                    indicator.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a06362480c6a17326650354460c6d7442">getContainingLocation</a>().<a class="code hl_function" href="../../d2/d2c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI.html#adb00ac0e3bc9abeaa59cd7081b22202b">removeEntity</a>(indicator);</div>
-<div class="line"><span class="lineno">  115</span>                    Global.getSector().getCampaignUI().showInteractionDialog(target);</div>
-<div class="line"><span class="lineno">  116</span>                    Global.getSoundPlayer().playUISound(<span class="stringliteral">&quot;ui_wait_finish&quot;</span>, 1, 1);</div>
-<div class="line"><span class="lineno">  117</span>                }</div>
-<div class="line"><span class="lineno">  118</span>            }</div>
-<div class="line"><span class="lineno">  119</span>            @Override</div>
-<div class="line"><span class="lineno">  120</span>            <span class="keyword">public</span> <span class="keywordtype">void</span> reportBattleOccurred(CampaignFleetAPI primaryWinner, BattleAPI battle) {</div>
-<div class="line"><span class="lineno">  121</span>                <span class="keywordflow">if</span> (battle.getSnapshotSideFor(playerFleet) != <span class="keyword">null</span> || </div>
-<div class="line"><span class="lineno">  122</span>                        (target instanceof CampaignFleetAPI &amp;&amp; battle.getSnapshotSideFor((CampaignFleetAPI)target) != <span class="keyword">null</span>)) {</div>
-<div class="line"><span class="lineno">  123</span>                    battleOccured = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  124</span>                }</div>
-<div class="line"><span class="lineno">  125</span>            }</div>
-<div class="line"><span class="lineno">  126</span>            @Override</div>
-<div class="line"><span class="lineno">  127</span>            <span class="keyword">public</span> <span class="keywordtype">void</span> reportShownInteractionDialog(InteractionDialogAPI dialog) {</div>
-<div class="line"><span class="lineno">  128</span>                interactedWithSomethingElse |= dialog.getInteractionTarget() != target;</div>
-<div class="line"><span class="lineno">  129</span>            }</div>
-<div class="line"><span class="lineno">  130</span>            @Override</div>
-<div class="line"><span class="lineno">  131</span>            <span class="keyword">public</span> <span class="keywordtype">void</span> reportFleetDespawned(CampaignFleetAPI fleet, FleetDespawnReason reason, Object param) {</div>
-<div class="line"><span class="lineno">  132</span>                <span class="keywordflow">if</span> (fleet == playerFleet || fleet == target) {</div>
-<div class="line"><span class="lineno">  133</span>                    battleOccured = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  134</span>                }</div>
-<div class="line"><span class="lineno">  135</span>            }</div>
-<div class="line"><span class="lineno">  136</span>            </div>
-<div class="line"><span class="lineno">  137</span>        };</div>
-<div class="line"><span class="lineno">  138</span>        </div>
-<div class="line"><span class="lineno">  139</span>        leash = <span class="keyword">new</span> LeashScript(playerFleet, 50, target, offset, <span class="keyword">new</span> Script() {</div>
-<div class="line"><span class="lineno">  140</span>            <span class="keyword">public</span> <span class="keywordtype">void</span> run() {</div>
-<div class="line"><span class="lineno">  141</span>                interrupted.memory.set(interrupted.name, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  142</span>                interrupted.memory.expire(interrupted.name, 2f);</div>
-<div class="line"><span class="lineno">  143</span><span class="comment">//              memory.set(keyInterrupted, true);</span></div>
-<div class="line"><span class="lineno">  144</span><span class="comment">//              memory.expire(keyInterrupted, 2f);</span></div>
-<div class="line"><span class="lineno">  145</span>                <span class="comment">//indicator.getContainingLocation().removeEntity(indicator);</span></div>
-<div class="line"><span class="lineno">  146</span>                handle.memory.unset(handle.name);</div>
-<div class="line"><span class="lineno">  147</span>                indicator.<a class="code hl_function" href="../../de/dfd/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignProgressIndicatorAPI.html#a22eb9bad1f4f63e528ee2410537a7305">interrupt</a>();</div>
-<div class="line"><span class="lineno">  148</span>                Global.getSector().removeScript(waitScript);</div>
-<div class="line"><span class="lineno">  149</span>                Global.getSoundPlayer().playUISound(<span class="stringliteral">&quot;ui_wait_interrupt&quot;</span>, 1, 1);</div>
-<div class="line"><span class="lineno">  150</span>            }</div>
-<div class="line"><span class="lineno">  151</span>        });</div>
-<div class="line"><span class="lineno">  152</span>        Global.getSector().addScript(leash);</div>
-<div class="line"><span class="lineno">  153</span>        </div>
-<div class="line"><span class="lineno">  154</span>        handle.memory.set(handle.name, <span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  155</span>        </div>
-<div class="line"><span class="lineno">  156</span>        Global.getSector().addScript(waitScript);</div>
-<div class="line"><span class="lineno">  157</span>        </div>
-<div class="line"><span class="lineno">  158</span>        Global.getSector().setPaused(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  159</span>        dialog.dismiss();</div>
-<div class="line"><span class="lineno">  160</span>        </div>
-<div class="line"><span class="lineno">  161</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  162</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignProgressIndicatorAPI_html_a22eb9bad1f4f63e528ee2410537a7305"><div class="ttname"><a href="../../de/dfd/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignProgressIndicatorAPI.html#a22eb9bad1f4f63e528ee2410537a7305">com.fs.starfarer.api.campaign.CampaignProgressIndicatorAPI.interrupt</a></div><div class="ttdeci">void interrupt()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI_html_aa74c923b52bd9dd0adf14cc394f49b60"><div class="ttname"><a href="../../d2/d2c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI.html#aa74c923b52bd9dd0adf14cc394f49b60">com.fs.starfarer.api.campaign.LocationAPI.addEntity</a></div><div class="ttdeci">void addEntity(SectorEntityToken entity)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI_html_adb00ac0e3bc9abeaa59cd7081b22202b"><div class="ttname"><a href="../../d2/d2c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI.html#adb00ac0e3bc9abeaa59cd7081b22202b">com.fs.starfarer.api.campaign.LocationAPI.removeEntity</a></div><div class="ttdeci">void removeEntity(SectorEntityToken entity)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_a06362480c6a17326650354460c6d7442"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a06362480c6a17326650354460c6d7442">com.fs.starfarer.api.campaign.SectorEntityToken.getContainingLocation</a></div><div class="ttdeci">LocationAPI getContainingLocation()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="afb2cd3083864936e39269e0374f716a9" name="afb2cd3083864936e39269e0374f716a9"></a>
@@ -340,10 +209,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/d15/Wait_8java_source.html#l00180">180</a> of file <a class="el" href="../../d1/d15/Wait_8java_source.html">Wait.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  180</span>                                      {</div>
-<div class="line"><span class="lineno">  181</span>        <span class="keywordflow">return</span> finished;</div>
-<div class="line"><span class="lineno">  182</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5cb27859dbca2f6ca054c4fd819df032" name="a5cb27859dbca2f6ca054c4fd819df032"></a>
@@ -362,10 +228,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/d15/Wait_8java_source.html#l00176">176</a> of file <a class="el" href="../../d1/d15/Wait_8java_source.html">Wait.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  176</span>                                    {</div>
-<div class="line"><span class="lineno">  177</span>        <span class="keywordflow">return</span> handle;</div>
-<div class="line"><span class="lineno">  178</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a3f0c1b3b886370c35e520e6ce03365df" name="a3f0c1b3b886370c35e520e6ce03365df"></a>
@@ -384,10 +247,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/d15/Wait_8java_source.html#l00172">172</a> of file <a class="el" href="../../d1/d15/Wait_8java_source.html">Wait.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  172</span>                                                       {</div>
-<div class="line"><span class="lineno">  173</span>        <span class="keywordflow">return</span> indicator;</div>
-<div class="line"><span class="lineno">  174</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae34a19ba6bcb3e2eab3efcf398cfc442" name="ae34a19ba6bcb3e2eab3efcf398cfc442"></a>
@@ -406,10 +266,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/d15/Wait_8java_source.html#l00184">184</a> of file <a class="el" href="../../d1/d15/Wait_8java_source.html">Wait.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  184</span>                                        {</div>
-<div class="line"><span class="lineno">  185</span>        <span class="keywordflow">return</span> inProgress;</div>
-<div class="line"><span class="lineno">  186</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2889a4b516c0c63e9951a9acac3ff202" name="a2889a4b516c0c63e9951a9acac3ff202"></a>
@@ -428,10 +285,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/d15/Wait_8java_source.html#l00188">188</a> of file <a class="el" href="../../d1/d15/Wait_8java_source.html">Wait.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  188</span>                                         {</div>
-<div class="line"><span class="lineno">  189</span>        <span class="keywordflow">return</span> interrupted;</div>
-<div class="line"><span class="lineno">  190</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2ed4d981bff2b3460aef4da2df0bd126" name="a2ed4d981bff2b3460aef4da2df0bd126"></a>
@@ -450,10 +304,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/d15/Wait_8java_source.html#l00168">168</a> of file <a class="el" href="../../d1/d15/Wait_8java_source.html">Wait.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  168</span>                                        {</div>
-<div class="line"><span class="lineno">  169</span>        <span class="keywordflow">return</span> leash;</div>
-<div class="line"><span class="lineno">  170</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac61a650abfe0638593dc3e5fd47573b3" name="ac61a650abfe0638593dc3e5fd47573b3"></a>
@@ -472,10 +323,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/d15/Wait_8java_source.html#l00164">164</a> of file <a class="el" href="../../d1/d15/Wait_8java_source.html">Wait.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  164</span>                                            {</div>
-<div class="line"><span class="lineno">  165</span>        <span class="keywordflow">return</span> waitScript;</div>
-<div class="line"><span class="lineno">  166</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

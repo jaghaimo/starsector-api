@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -740,10 +741,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a1401c6deb0837e93cc5f7c8efc1382be">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/d88/Cryosanctum_8java_source.html#l00052">52</a> of file <a class="el" href="../../da/d88/Cryosanctum_8java_source.html">Cryosanctum.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   52</span>                                                                                                 {</div>
-<div class="line"><span class="lineno">   53</span>        <span class="keywordflow">return</span> level.next();</div>
-<div class="line"><span class="lineno">   54</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="adc8869f10ca4d1622199c1093618f161" name="adc8869f10ca4d1622199c1093618f161"></a>
@@ -788,10 +786,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#af6e472b7cfe7d2b130b7b81b126b604f">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/d88/Cryosanctum_8java_source.html#l00057">57</a> of file <a class="el" href="../../da/d88/Cryosanctum_8java_source.html">Cryosanctum.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   57</span>                                                                                                    {</div>
-<div class="line"><span class="lineno">   58</span>        <span class="keywordflow">return</span> level.next();</div>
-<div class="line"><span class="lineno">   59</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab83c714f1693ef288411577e07f074a3" name="ab83c714f1693ef288411577e07f074a3"></a>
@@ -812,36 +807,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="../../db/d10/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1Industry.html#afec13f539610ffc411c4aa0074a3b767">com.fs.starfarer.api.campaign.econ.Industry</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/d88/Cryosanctum_8java_source.html#l00010">10</a> of file <a class="el" href="../../da/d88/Cryosanctum_8java_source.html">Cryosanctum.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   10</span>                        {</div>
-<div class="line"><span class="lineno">   11</span>        super.apply(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   12</span>        </div>
-<div class="line"><span class="lineno">   13</span>        <span class="keywordtype">int</span> size = 6;</div>
-<div class="line"><span class="lineno">   14</span>        </div>
-<div class="line"><span class="lineno">   15</span>        <a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a23b3a7fe9722f0ed85f72701e8401630">applyIncomeAndUpkeep</a>(size);</div>
-<div class="line"><span class="lineno">   16</span>        </div>
-<div class="line"><span class="lineno">   17</span>        <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#ada1a3bcbe22df6e0198bf0612576c5b5">demand</a>(Commodities.SUPPLIES, size - 3);</div>
-<div class="line"><span class="lineno">   18</span>        <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#ada1a3bcbe22df6e0198bf0612576c5b5">demand</a>(Commodities.ORGANICS, size - 3);</div>
-<div class="line"><span class="lineno">   19</span>        </div>
-<div class="line"><span class="lineno">   20</span>        <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a2be46a5c977e13c63ef2b249999b89c1">supply</a>(Commodities.ORGANS, size);</div>
-<div class="line"><span class="lineno">   21</span>        </div>
-<div class="line"><span class="lineno">   22</span>        </div>
-<div class="line"><span class="lineno">   23</span>        Pair&lt;String, Integer&gt; deficit = <a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#af9ae61ae0ee27d39832661c87a9d1567">getMaxDeficit</a>(Commodities.ORGANICS, Commodities.SUPPLIES);</div>
-<div class="line"><span class="lineno">   24</span>        <span class="comment">// that&#39;s right.</span></div>
-<div class="line"><span class="lineno">   25</span>        <span class="keywordflow">if</span> (deficit.two &gt; 0) deficit.two = -1;</div>
-<div class="line"><span class="lineno">   26</span>        </div>
-<div class="line"><span class="lineno">   27</span>        <a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#af9bdec48945d46f8aa36e04865a4a886">applyDeficitToProduction</a>(1, deficit, Commodities.ORGANS);</div>
-<div class="line"><span class="lineno">   28</span>        </div>
-<div class="line"><span class="lineno">   29</span>        <span class="keywordflow">if</span> (!<a class="code hl_function" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a511613f792cac2306ff2ea5ba6be8407">isFunctional</a>()) {</div>
-<div class="line"><span class="lineno">   30</span>            <a class="code hl_variable" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a2be46a5c977e13c63ef2b249999b89c1">supply</a>.clear();</div>
-<div class="line"><span class="lineno">   31</span>        }</div>
-<div class="line"><span class="lineno">   32</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry_html_a23b3a7fe9722f0ed85f72701e8401630"><div class="ttname"><a href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a23b3a7fe9722f0ed85f72701e8401630">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry.applyIncomeAndUpkeep</a></div><div class="ttdeci">void applyIncomeAndUpkeep(float sizeOverride)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8f/BaseIndustry_8java_source.html#l00357">BaseIndustry.java:357</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry_html_a2be46a5c977e13c63ef2b249999b89c1"><div class="ttname"><a href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a2be46a5c977e13c63ef2b249999b89c1">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry.supply</a></div><div class="ttdeci">Map&lt; String, MutableCommodityQuantity &gt; supply</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8f/BaseIndustry_8java_source.html#l00090">BaseIndustry.java:90</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry_html_a511613f792cac2306ff2ea5ba6be8407"><div class="ttname"><a href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a511613f792cac2306ff2ea5ba6be8407">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry.isFunctional</a></div><div class="ttdeci">boolean isFunctional()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8f/BaseIndustry_8java_source.html#l00475">BaseIndustry.java:475</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry_html_ada1a3bcbe22df6e0198bf0612576c5b5"><div class="ttname"><a href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#ada1a3bcbe22df6e0198bf0612576c5b5">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry.demand</a></div><div class="ttdeci">Map&lt; String, MutableCommodityQuantity &gt; demand</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8f/BaseIndustry_8java_source.html#l00091">BaseIndustry.java:91</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry_html_af9ae61ae0ee27d39832661c87a9d1567"><div class="ttname"><a href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#af9ae61ae0ee27d39832661c87a9d1567">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry.getMaxDeficit</a></div><div class="ttdeci">Pair&lt; String, Integer &gt; getMaxDeficit(String ... commodityIds)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8f/BaseIndustry_8java_source.html#l00799">BaseIndustry.java:799</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry_html_af9bdec48945d46f8aa36e04865a4a886"><div class="ttname"><a href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#af9bdec48945d46f8aa36e04865a4a886">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry.applyDeficitToProduction</a></div><div class="ttdeci">void applyDeficitToProduction(int index, Pair&lt; String, Integer &gt; deficit, String ... commodities)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8f/BaseIndustry_8java_source.html#l00336">BaseIndustry.java:336</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a13c8d7eeb70ec8da19aa17df65da6147" name="a13c8d7eeb70ec8da19aa17df65da6147"></a>
@@ -862,10 +828,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a5572288890e72ad03aa2e70bdfb7e639">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/d88/Cryosanctum_8java_source.html#l00042">42</a> of file <a class="el" href="../../da/d88/Cryosanctum_8java_source.html">Cryosanctum.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   42</span>                                        {</div>
-<div class="line"><span class="lineno">   43</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   44</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9b97f236e98dc210e031b406fcbea959" name="a9b97f236e98dc210e031b406fcbea959"></a>
@@ -886,10 +849,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#ada878c79f769abea9b20a68ce2a7a263">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/d88/Cryosanctum_8java_source.html#l00046">46</a> of file <a class="el" href="../../da/d88/Cryosanctum_8java_source.html">Cryosanctum.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   46</span>                                         {</div>
-<div class="line"><span class="lineno">   47</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   48</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a1ab562f35e0505799759b6c4f4300183" name="a1ab562f35e0505799759b6c4f4300183"></a>
@@ -910,10 +870,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#af3f1bd9a049574f633533ece2a744e0c">com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/d88/Cryosanctum_8java_source.html#l00036">36</a> of file <a class="el" href="../../da/d88/Cryosanctum_8java_source.html">Cryosanctum.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   36</span>                          {</div>
-<div class="line"><span class="lineno">   37</span>        super.unapply();</div>
-<div class="line"><span class="lineno">   38</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -176,72 +177,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="../../d0/d5c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1CommandPlugin.html#a72a44c5127e60136b87d3b37613fd0e0">com.fs.starfarer.api.campaign.rules.CommandPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d9b/AddAbility_8java_source.html#l00018">18</a> of file <a class="el" href="../../d3/d9b/AddAbility_8java_source.html">AddAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   18</span>                                                                                                                             {</div>
-<div class="line"><span class="lineno">   19</span>        <span class="keywordflow">if</span> (dialog == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   20</span>        </div>
-<div class="line"><span class="lineno">   21</span>        <span class="comment">// if the player already had the ability, calling this command ensures they don&#39;t lose it</span></div>
-<div class="line"><span class="lineno">   22</span>        <span class="comment">// if they spec out of the skill that granted it, but this command will be &quot;quiet&quot;</span></div>
-<div class="line"><span class="lineno">   23</span>        </div>
-<div class="line"><span class="lineno">   24</span>        String abilityId = params.get(0).getString(memoryMap);</div>
-<div class="line"><span class="lineno">   25</span>        <span class="keywordflow">if</span> (abilityId == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   26</span>        </div>
-<div class="line"><span class="lineno">   27</span>        <span class="keywordtype">boolean</span> hadAbilityAlready = Global.getSector().getPlayerFleet().hasAbility(abilityId);</div>
-<div class="line"><span class="lineno">   28</span>        </div>
-<div class="line"><span class="lineno">   29</span>        <span class="keywordtype">boolean</span> found = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   30</span>        AbilitySlotsAPI slots = Global.getSector().getUIData().getAbilitySlotsAPI();</div>
-<div class="line"><span class="lineno">   31</span>        <span class="keywordtype">int</span> curr = slots.getCurrBarIndex();</div>
-<div class="line"><span class="lineno">   32</span>        OUTER: <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 5; i++) {</div>
-<div class="line"><span class="lineno">   33</span>            slots.setCurrBarIndex(i);</div>
-<div class="line"><span class="lineno">   34</span>            <span class="keywordflow">for</span> (AbilitySlotAPI slot : slots.getCurrSlotsCopy()) {</div>
-<div class="line"><span class="lineno">   35</span>                <span class="keywordflow">if</span> (abilityId.equals(slot.getAbilityId())) {</div>
-<div class="line"><span class="lineno">   36</span>                    found = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   37</span>                    <span class="keywordflow">break</span> OUTER;</div>
-<div class="line"><span class="lineno">   38</span>                }</div>
-<div class="line"><span class="lineno">   39</span>            }</div>
-<div class="line"><span class="lineno">   40</span>            slots.setCurrBarIndex(curr);</div>
-<div class="line"><span class="lineno">   41</span>        }</div>
-<div class="line"><span class="lineno">   42</span>        <span class="keywordflow">if</span> (!found) {</div>
-<div class="line"><span class="lineno">   43</span>            hadAbilityAlready = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   44</span>        }</div>
-<div class="line"><span class="lineno">   45</span>        </div>
-<div class="line"><span class="lineno">   46</span>        Global.getSector().getCharacterData().addAbility(abilityId);</div>
-<div class="line"><span class="lineno">   47</span>        <span class="comment">//Global.getSector().getUIData().getAbilitySlotsAPI().getCurrSlotsCopy().get(8).getAbilityId()</span></div>
-<div class="line"><span class="lineno">   48</span>        </div>
-<div class="line"><span class="lineno">   49</span>        <span class="keywordflow">if</span> (!hadAbilityAlready) {</div>
-<div class="line"><span class="lineno">   50</span>            <span class="keywordtype">boolean</span> assignedToSlot = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   51</span>            <span class="keywordflow">if</span> (params.size() &gt;= 2) {</div>
-<div class="line"><span class="lineno">   52</span>                <span class="keywordtype">int</span> slotIndex = (int) params.get(1).getFloat(memoryMap);</div>
-<div class="line"><span class="lineno">   53</span>                slots.setCurrBarIndex(0);</div>
-<div class="line"><span class="lineno">   54</span>                AbilitySlotAPI slot = slots.getCurrSlotsCopy().get(slotIndex);</div>
-<div class="line"><span class="lineno">   55</span>                <span class="keywordflow">if</span> (slot.getAbilityId() == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   56</span>                    slot.setAbilityId(abilityId);</div>
-<div class="line"><span class="lineno">   57</span>                    assignedToSlot = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   58</span>                }</div>
-<div class="line"><span class="lineno">   59</span>            }</div>
-<div class="line"><span class="lineno">   60</span>            </div>
-<div class="line"><span class="lineno">   61</span>            <span class="keywordflow">if</span> (!assignedToSlot) {</div>
-<div class="line"><span class="lineno">   62</span>                <span class="keywordtype">int</span> currBarIndex = slots.getCurrBarIndex();</div>
-<div class="line"><span class="lineno">   63</span>                OUTER: <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 5; i++) {</div>
-<div class="line"><span class="lineno">   64</span>                    slots.setCurrBarIndex(i);</div>
-<div class="line"><span class="lineno">   65</span>                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; 10; j++) {</div>
-<div class="line"><span class="lineno">   66</span>                        AbilitySlotAPI slot = slots.getCurrSlotsCopy().get(j);</div>
-<div class="line"><span class="lineno">   67</span>                        <span class="keywordflow">if</span> (slot.getAbilityId() == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   68</span>                            slot.setAbilityId(abilityId);</div>
-<div class="line"><span class="lineno">   69</span>                            assignedToSlot = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   70</span>                            <span class="keywordflow">break</span> OUTER;</div>
-<div class="line"><span class="lineno">   71</span>                        }       </div>
-<div class="line"><span class="lineno">   72</span>                    }</div>
-<div class="line"><span class="lineno">   73</span>                }</div>
-<div class="line"><span class="lineno">   74</span>                slots.setCurrBarIndex(currBarIndex);</div>
-<div class="line"><span class="lineno">   75</span>            }</div>
-<div class="line"><span class="lineno">   76</span>            </div>
-<div class="line"><span class="lineno">   77</span>            Global.getSector().getCharacterData().getMemoryWithoutUpdate().set(<span class="stringliteral">&quot;$ability:&quot;</span> + abilityId, <span class="keyword">true</span>, 0);</div>
-<div class="line"><span class="lineno">   78</span>            AddRemoveCommodity.addAbilityGainText(abilityId, dialog.getTextPanel());</div>
-<div class="line"><span class="lineno">   79</span>        }</div>
-<div class="line"><span class="lineno">   80</span>        </div>
-<div class="line"><span class="lineno">   81</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   82</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

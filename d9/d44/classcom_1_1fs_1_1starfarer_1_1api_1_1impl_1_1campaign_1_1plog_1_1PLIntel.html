@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -514,10 +515,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/dc6/PLIntel_8java_source.html#l00019">19</a> of file <a class="el" href="../../dc/dc6/PLIntel_8java_source.html">PLIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   19</span>                     {</div>
-<div class="line"><span class="lineno">   20</span>        <span class="comment">//Global.getSector().getIntelManager().addIntel(this);</span></div>
-<div class="line"><span class="lineno">   21</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -558,39 +556,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a78b9181ed44f28dac2b1167e1ce4395c">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/dc6/PLIntel_8java_source.html#l00023">23</a> of file <a class="el" href="../../dc/dc6/PLIntel_8java_source.html">PLIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   23</span>                                                                            {</div>
-<div class="line"><span class="lineno">   24</span>        </div>
-<div class="line"><span class="lineno">   25</span>        Color h = Misc.getHighlightColor();</div>
-<div class="line"><span class="lineno">   26</span>        Color g = Misc.getGrayColor();</div>
-<div class="line"><span class="lineno">   27</span>        <span class="keywordtype">float</span> pad = 3f;</div>
-<div class="line"><span class="lineno">   28</span>        <span class="keywordtype">float</span> opad = 10f;</div>
-<div class="line"><span class="lineno">   29</span>        </div>
-<div class="line"><span class="lineno">   30</span>        <span class="keywordtype">float</span> initPad = pad;</div>
-<div class="line"><span class="lineno">   31</span>        <span class="keywordflow">if</span> (mode == ListInfoMode.IN_DESC) initPad = opad;</div>
-<div class="line"><span class="lineno">   32</span>        </div>
-<div class="line"><span class="lineno">   33</span>        Color tc = <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a9e443024a6224a5c170e5d1476514954">getBulletColorForMode</a>(mode);</div>
-<div class="line"><span class="lineno">   34</span>        </div>
-<div class="line"><span class="lineno">   35</span>        <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#adfa808a345b432134c9fb11227edc7df">bullet</a>(info);</div>
-<div class="line"><span class="lineno">   36</span>        <span class="comment">//boolean isUpdate = getListInfoParam() != null;</span></div>
-<div class="line"><span class="lineno">   37</span>        </div>
-<div class="line"><span class="lineno">   38</span><span class="comment">//      info.addPara(&quot;Factions: &quot;, tc, initPad);</span></div>
-<div class="line"><span class="lineno">   39</span><span class="comment">//      indent(info);</span></div>
-<div class="line"><span class="lineno">   40</span><span class="comment">//      LabelAPI label = info.addPara(&quot;%s and %s&quot;, 0f, tc,</span></div>
-<div class="line"><span class="lineno">   41</span><span class="comment">//               h, one.getDisplayName(), two.getDisplayName());</span></div>
-<div class="line"><span class="lineno">   42</span><span class="comment">//      label.setHighlight(one.getDisplayName(), two.getDisplayName());</span></div>
-<div class="line"><span class="lineno">   43</span><span class="comment">//      label.setHighlightColors(one.getBaseUIColor(), two.getBaseUIColor());</span></div>
-<div class="line"><span class="lineno">   44</span><span class="comment">//      </span></div>
-<div class="line"><span class="lineno">   45</span><span class="comment">//      info.addPara(one.getDisplayName(), 0f, tc,</span></div>
-<div class="line"><span class="lineno">   46</span><span class="comment">//                   one.getBaseUIColor(), one.getDisplayName());</span></div>
-<div class="line"><span class="lineno">   47</span><span class="comment">//      info.addPara(two.getDisplayName(), 0f, tc,</span></div>
-<div class="line"><span class="lineno">   48</span><span class="comment">//                   two.getBaseUIColor(), two.getDisplayName());</span></div>
-<div class="line"><span class="lineno">   49</span>            </div>
-<div class="line"><span class="lineno">   50</span>        <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a3e2fa48accd40a868889ad2f877bc578">unindent</a>(info);</div>
-<div class="line"><span class="lineno">   51</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_a3e2fa48accd40a868889ad2f877bc578"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a3e2fa48accd40a868889ad2f877bc578">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.unindent</a></div><div class="ttdeci">void unindent(TooltipMakerAPI info)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00570">BaseIntelPlugin.java:570</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_a9e443024a6224a5c170e5d1476514954"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a9e443024a6224a5c170e5d1476514954">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.getBulletColorForMode</a></div><div class="ttdeci">Color getBulletColorForMode(ListInfoMode mode)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00633">BaseIntelPlugin.java:633</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_adfa808a345b432134c9fb11227edc7df"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#adfa808a345b432134c9fb11227edc7df">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.bullet</a></div><div class="ttdeci">void bullet(TooltipMakerAPI info)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00554">BaseIntelPlugin.java:554</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a4d1dc2cf7bf9624dfb7090803e2a686a" name="a4d1dc2cf7bf9624dfb7090803e2a686a"></a>
@@ -622,21 +588,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#afa8bb8f2afc14a90ef02a999a66535e9">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/dc6/PLIntel_8java_source.html#l00054">54</a> of file <a class="el" href="../../dc/dc6/PLIntel_8java_source.html">PLIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   54</span>                                                                         {</div>
-<div class="line"><span class="lineno">   55</span>        Color h = Misc.getHighlightColor();</div>
-<div class="line"><span class="lineno">   56</span>        Color g = Misc.getGrayColor();</div>
-<div class="line"><span class="lineno">   57</span>        Color c = <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#af44e4a0a7c61b8efbc4ef210c7061723">getTitleColor</a>(mode);</div>
-<div class="line"><span class="lineno">   58</span>        <span class="keywordtype">float</span> pad = 3f;</div>
-<div class="line"><span class="lineno">   59</span>        <span class="keywordtype">float</span> opad = 10f;</div>
-<div class="line"><span class="lineno">   60</span>        </div>
-<div class="line"><span class="lineno">   61</span>        info.addPara(<a class="code hl_function" href="../../d9/d44/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PLIntel.html#aecf119f2c8042282b66fcc92ff83111f">getName</a>(), c, 0f);</div>
-<div class="line"><span class="lineno">   62</span>        </div>
-<div class="line"><span class="lineno">   63</span>        <a class="code hl_function" href="../../d9/d44/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PLIntel.html#a5349f5a8c4d6a8f1fa16f39b46667316">addBulletPoints</a>(info, mode);</div>
-<div class="line"><span class="lineno">   64</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_af44e4a0a7c61b8efbc4ef210c7061723"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#af44e4a0a7c61b8efbc4ef210c7061723">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.getTitleColor</a></div><div class="ttdeci">Color getTitleColor(ListInfoMode mode)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00615">BaseIntelPlugin.java:615</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PLIntel_html_a5349f5a8c4d6a8f1fa16f39b46667316"><div class="ttname"><a href="../../d9/d44/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PLIntel.html#a5349f5a8c4d6a8f1fa16f39b46667316">com.fs.starfarer.api.impl.campaign.plog.PLIntel.addBulletPoints</a></div><div class="ttdeci">void addBulletPoints(TooltipMakerAPI info, ListInfoMode mode)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dc6/PLIntel_8java_source.html#l00023">PLIntel.java:23</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PLIntel_html_aecf119f2c8042282b66fcc92ff83111f"><div class="ttname"><a href="../../d9/d44/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PLIntel.html#aecf119f2c8042282b66fcc92ff83111f">com.fs.starfarer.api.impl.campaign.plog.PLIntel.getName</a></div><div class="ttdeci">String getName()</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dc6/PLIntel_8java_source.html#l00070">PLIntel.java:70</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9f316403377402de597ecc0686e60ea5" name="a9f316403377402de597ecc0686e60ea5"></a>
@@ -674,21 +626,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a257801f80bbb907e2fef217e12296711">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/dc6/PLIntel_8java_source.html#l00087">87</a> of file <a class="el" href="../../dc/dc6/PLIntel_8java_source.html">PLIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   87</span>                                                                                        {</div>
-<div class="line"><span class="lineno">   88</span>        </div>
-<div class="line"><span class="lineno">   89</span>        Color h = Misc.getHighlightColor();</div>
-<div class="line"><span class="lineno">   90</span>        Color g = Misc.getGrayColor();</div>
-<div class="line"><span class="lineno">   91</span>        Color tc = Misc.getTextColor();</div>
-<div class="line"><span class="lineno">   92</span>        <span class="keywordtype">float</span> pad = 3f;</div>
-<div class="line"><span class="lineno">   93</span>        <span class="keywordtype">float</span> opad = 10f;</div>
-<div class="line"><span class="lineno">   94</span> </div>
-<div class="line"><span class="lineno">   95</span>        TooltipMakerAPI info = panel.createUIElement(width, height, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   96</span>        panel.addUIElement(info).inTL(0, 0);</div>
-<div class="line"><span class="lineno">   97</span>        </div>
-<div class="line"><span class="lineno">   98</span>        <span class="comment">// sorry</span></div>
-<div class="line"><span class="lineno">   99</span>        info.addPlaythroughDataPanel(width, height);</div>
-<div class="line"><span class="lineno">  100</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a972202939b195d7aaee7b7d4b7191061" name="a972202939b195d7aaee7b7d4b7191061"></a>
@@ -709,10 +647,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#aef7175eff8878a18ebb3099d3a7ab59f">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/dc6/PLIntel_8java_source.html#l00079">79</a> of file <a class="el" href="../../dc/dc6/PLIntel_8java_source.html">PLIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   79</span>                                              {</div>
-<div class="line"><span class="lineno">   80</span>        <span class="keywordflow">return</span> Global.getSector().getPlayerFaction();</div>
-<div class="line"><span class="lineno">   81</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a1e68fc933dbd99ec29ef719873cc438c" name="a1e68fc933dbd99ec29ef719873cc438c"></a>
@@ -734,10 +669,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a6499624a08c9565334e2395989f542c9">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/dc6/PLIntel_8java_source.html#l00112">112</a> of file <a class="el" href="../../dc/dc6/PLIntel_8java_source.html">PLIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  112</span>                            {</div>
-<div class="line"><span class="lineno">  113</span>        <span class="keywordflow">return</span> Global.getSettings().getSpriteName(<span class="stringliteral">&quot;intel&quot;</span>, <span class="stringliteral">&quot;fleet_log&quot;</span>);</div>
-<div class="line"><span class="lineno">  114</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a4fab7d57009cda957c1865b73cb4971a" name="a4fab7d57009cda957c1865b73cb4971a"></a>
@@ -766,13 +698,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a4ef0af8cb71b4127afce850bc6a04514">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/dc6/PLIntel_8java_source.html#l00116">116</a> of file <a class="el" href="../../dc/dc6/PLIntel_8java_source.html">PLIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  116</span>                                                      {</div>
-<div class="line"><span class="lineno">  117</span>        Set&lt;String&gt; tags = super.getIntelTags(map);</div>
-<div class="line"><span class="lineno">  118</span>        tags.add(Tags.INTEL_FLEET_LOG);</div>
-<div class="line"><span class="lineno">  119</span>        tags.add(Tags.INTEL_STORY);</div>
-<div class="line"><span class="lineno">  120</span>        <span class="keywordflow">return</span> tags;</div>
-<div class="line"><span class="lineno">  121</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab0fd4f1e39c15ee2e92742199dfe3d60" name="ab0fd4f1e39c15ee2e92742199dfe3d60"></a>
@@ -794,10 +720,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a01f212769febb46bae89256b643c23eb">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/dc6/PLIntel_8java_source.html#l00124">124</a> of file <a class="el" href="../../dc/dc6/PLIntel_8java_source.html">PLIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  124</span>                                                              {</div>
-<div class="line"><span class="lineno">  125</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  126</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aecf119f2c8042282b66fcc92ff83111f" name="aecf119f2c8042282b66fcc92ff83111f"></a>
@@ -818,14 +741,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a582fe7cb29e8f2f65670d4dd74418235">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/dc6/PLIntel_8java_source.html#l00070">70</a> of file <a class="el" href="../../dc/dc6/PLIntel_8java_source.html">PLIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   70</span>                            {</div>
-<div class="line"><span class="lineno">   71</span>        <span class="keywordflow">if</span> (Misc.isPlayerFactionSetUp()) {</div>
-<div class="line"><span class="lineno">   72</span>            <span class="keywordflow">return</span> Global.getSector().getPlayerFaction().getDisplayName() + <span class="stringliteral">&quot; - History&quot;</span>;</div>
-<div class="line"><span class="lineno">   73</span>        }</div>
-<div class="line"><span class="lineno">   74</span>        <span class="keywordflow">return</span> Global.getSector().getPlayerPerson().getNameString() + <span class="stringliteral">&quot; - History&quot;</span>;</div>
-<div class="line"><span class="lineno">   75</span>        <span class="comment">//return &quot;Fleet Log&quot;;</span></div>
-<div class="line"><span class="lineno">   76</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a63575dc41cb56a15d4d0faed654c6b26" name="a63575dc41cb56a15d4d0faed654c6b26"></a>
@@ -846,10 +762,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a8fe6bfa41873bed91428d73fa6bac1b6">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/dc6/PLIntel_8java_source.html#l00083">83</a> of file <a class="el" href="../../dc/dc6/PLIntel_8java_source.html">PLIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   83</span>                                             {</div>
-<div class="line"><span class="lineno">   84</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../d9/d44/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PLIntel.html#aecf119f2c8042282b66fcc92ff83111f">getName</a>();</div>
-<div class="line"><span class="lineno">   85</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a13f6893b4f0da0f3bf66046e0ce9b49a" name="a13f6893b4f0da0f3bf66046e0ce9b49a"></a>
@@ -870,10 +783,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a6160e4bb36c43732e98a87a2f1e63b58">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/dc6/PLIntel_8java_source.html#l00066">66</a> of file <a class="el" href="../../dc/dc6/PLIntel_8java_source.html">PLIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   66</span>                                  {</div>
-<div class="line"><span class="lineno">   67</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;History&quot;</span>;</div>
-<div class="line"><span class="lineno">   68</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac183ebed2bb77172a75046fbdadfc4c4" name="ac183ebed2bb77172a75046fbdadfc4c4"></a>
@@ -894,10 +804,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a6e16c7466c98541d19cb8442b6d910c1">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/dc6/PLIntel_8java_source.html#l00103">103</a> of file <a class="el" href="../../dc/dc6/PLIntel_8java_source.html">PLIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  103</span>                                         {</div>
-<div class="line"><span class="lineno">  104</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  105</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa1b57eed5f960f918ff7e8fb0f659847" name="aa1b57eed5f960f918ff7e8fb0f659847"></a>
@@ -918,10 +825,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#abc5ef72ee5874d9b22685d7f75936cce">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/dc6/PLIntel_8java_source.html#l00108">108</a> of file <a class="el" href="../../dc/dc6/PLIntel_8java_source.html">PLIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  108</span>                                         {</div>
-<div class="line"><span class="lineno">  109</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  110</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -168,10 +169,7 @@ Static Public Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d7/d63/interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html#a3a97090ca8cfdc230e9ad7e633407af6">com.fs.starfarer.api.EveryFrameScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d85/GAPZPostEncounters_8java_source.html#l00213">213</a> of file <a class="el" href="../../d4/d85/GAPZPostEncounters_8java_source.html">GAPZPostEncounters.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  213</span>                                      {</div>
-<div class="line"><span class="lineno">  214</span>        </div>
-<div class="line"><span class="lineno">  215</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="afbf0fc2c38b421fe3950a1cb4f6325fe" name="afbf0fc2c38b421fe3950a1cb4f6325fe"></a>
@@ -198,43 +196,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d85/GAPZPostEncounters_8java_source.html#l00177">177</a> of file <a class="el" href="../../d4/d85/GAPZPostEncounters_8java_source.html">GAPZPostEncounters.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  177</span>                                                                      {</div>
-<div class="line"><span class="lineno">  178</span>        {</div>
-<div class="line"><span class="lineno">  179</span>            DelayedFleetEncounter e = <span class="keyword">new</span> DelayedFleetEncounter(Misc.getRandom(Misc.genRandomSeed(), 0), <span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  180</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../df/dd7/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAPZPostEncounters.html#a4436ea22b2c5815e35472dd81e2f2a7e">debug</a>) {</div>
-<div class="line"><span class="lineno">  181</span>                e.setDelayNone();</div>
-<div class="line"><span class="lineno">  182</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  183</span>                e.setDelay(10, 15);</div>
-<div class="line"><span class="lineno">  184</span>            }</div>
-<div class="line"><span class="lineno">  185</span>            </div>
-<div class="line"><span class="lineno">  186</span>            String factionId = Factions.DIKTAT;</div>
-<div class="line"><span class="lineno">  187</span>            e.setLocationCoreOnly(<span class="keyword">true</span>, factionId);</div>
-<div class="line"><span class="lineno">  188</span>            e.setEncounterFromSomewhereInSystem();</div>
-<div class="line"><span class="lineno">  189</span>            e.setRequireFactionPresence(factionId);</div>
-<div class="line"><span class="lineno">  190</span>            e.setDoNotAbortWhenPlayerFleetTooStrong();</div>
-<div class="line"><span class="lineno">  191</span>            </div>
-<div class="line"><span class="lineno">  192</span>            e.beginCreate();</div>
-<div class="line"><span class="lineno">  193</span>            e.triggerCreateFleet(FleetSize.MEDIUM, FleetQuality.DEFAULT, Factions.DIKTAT, FleetTypes.INSPECTION_FLEET, <span class="keyword">new</span> Vector2f());</div>
-<div class="line"><span class="lineno">  194</span>            e.setFleetSource(<span class="stringliteral">&quot;sindria&quot;</span>);</div>
-<div class="line"><span class="lineno">  195</span>            e.triggerSetFleetFaction(factionId);</div>
-<div class="line"><span class="lineno">  196</span>            <span class="comment">//e.triggerFleetSetShipPickMode(ShipPickMode.PRIORITY_THEN_ALL);</span></div>
-<div class="line"><span class="lineno">  197</span>            <span class="comment">//e.triggerFleetSetNoFactionInName();</span></div>
-<div class="line"><span class="lineno">  198</span>            <span class="comment">//e.triggerSetFleetOfficers(OfficerNum.MORE, OfficerQuality.HIGHER);</span></div>
-<div class="line"><span class="lineno">  199</span>            e.triggerSetFleetFlag(<span class="stringliteral">&quot;$gaPZ_diktatSecond&quot;</span>);</div>
-<div class="line"><span class="lineno">  200</span>            <span class="comment">//e.triggerSetStandardAggroInterceptFlags();</span></div>
-<div class="line"><span class="lineno">  201</span>            e.triggerFleetAllowLongPursuit();</div>
-<div class="line"><span class="lineno">  202</span>            e.triggerSetFleetAlwaysPursue();</div>
-<div class="line"><span class="lineno">  203</span>            e.triggerOrderFleetInterceptPlayer();</div>
-<div class="line"><span class="lineno">  204</span>            e.triggerOrderFleetMaybeEBurn();</div>
-<div class="line"><span class="lineno">  205</span>            e.triggerFleetMakeImportantPermanent(<span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  206</span>            e.triggerFleetAddDefeatTriggerPermanent(<span class="stringliteral">&quot;GAPZGoAwayTrigger&quot;</span>);</div>
-<div class="line"><span class="lineno">  207</span>            e.endCreate();</div>
-<div class="line"><span class="lineno">  208</span>            </div>
-<div class="line"><span class="lineno">  209</span>            <span class="keywordflow">return</span> e;</div>
-<div class="line"><span class="lineno">  210</span>        }</div>
-<div class="line"><span class="lineno">  211</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAPZPostEncounters_html_a4436ea22b2c5815e35472dd81e2f2a7e"><div class="ttname"><a href="../../df/dd7/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAPZPostEncounters.html#a4436ea22b2c5815e35472dd81e2f2a7e">com.fs.starfarer.api.impl.campaign.missions.academy.GAPZPostEncounters.debug</a></div><div class="ttdeci">static boolean debug</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d85/GAPZPostEncounters_8java_source.html#l00021">GAPZPostEncounters.java:21</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae4e42fcbfb57999a81536f37dc443dc1" name="ae4e42fcbfb57999a81536f37dc443dc1"></a>
@@ -261,159 +223,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d85/GAPZPostEncounters_8java_source.html#l00024">24</a> of file <a class="el" href="../../d4/d85/GAPZPostEncounters_8java_source.html">GAPZPostEncounters.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   24</span>                              {</div>
-<div class="line"><span class="lineno">   25</span>        <span class="comment">//debug = true;</span></div>
-<div class="line"><span class="lineno">   26</span>        </div>
-<div class="line"><span class="lineno">   27</span>        <span class="keywordtype">float</span> cottonDelay = 30f + (float) Math.random() * 30f;</div>
-<div class="line"><span class="lineno">   28</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../df/dd7/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAPZPostEncounters.html#a4436ea22b2c5815e35472dd81e2f2a7e">debug</a>) cottonDelay = 0f;</div>
-<div class="line"><span class="lineno">   29</span>        SetMemoryValueAfterDelay action = <span class="keyword">new</span> SetMemoryValueAfterDelay(cottonDelay,</div>
-<div class="line"><span class="lineno">   30</span>                Global.getSector().getMemoryWithoutUpdate(), <span class="stringliteral">&quot;$gaPZ_brotherCottonEncounter&quot;</span>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   31</span>        action.doAction(<span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   32</span>        </div>
-<div class="line"><span class="lineno">   33</span>        </div>
-<div class="line"><span class="lineno">   34</span>        {</div>
-<div class="line"><span class="lineno">   35</span>            DelayedFleetEncounter e = <span class="keyword">new</span> DelayedFleetEncounter(Misc.getRandom(Misc.genRandomSeed(), 0), <span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">   36</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../df/dd7/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAPZPostEncounters.html#a4436ea22b2c5815e35472dd81e2f2a7e">debug</a>) {</div>
-<div class="line"><span class="lineno">   37</span>                e.setDelayNone();</div>
-<div class="line"><span class="lineno">   38</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   39</span>                e.setDelayShort();</div>
-<div class="line"><span class="lineno">   40</span>            }</div>
-<div class="line"><span class="lineno">   41</span>            e.setLocationCoreOnly(<span class="keyword">true</span>, Factions.HEGEMONY);</div>
-<div class="line"><span class="lineno">   42</span>            e.setEncounterFromSomewhereInSystem();</div>
-<div class="line"><span class="lineno">   43</span>            e.setRequireFactionPresence(Factions.HEGEMONY);</div>
-<div class="line"><span class="lineno">   44</span>            e.setDoNotAbortWhenPlayerFleetTooStrong();</div>
-<div class="line"><span class="lineno">   45</span>            </div>
-<div class="line"><span class="lineno">   46</span>            e.beginCreate();</div>
-<div class="line"><span class="lineno">   47</span>            e.triggerCreateFleet(FleetSize.HUGE, FleetQuality.VERY_HIGH, Factions.HEGEMONY, FleetTypes.TASK_FORCE, <span class="keyword">new</span> Vector2f());</div>
-<div class="line"><span class="lineno">   48</span>            e.setFleetSource(<span class="stringliteral">&quot;coatl&quot;</span>, <span class="stringliteral">&quot;chicomoztoc&quot;</span>);</div>
-<div class="line"><span class="lineno">   49</span>            </div>
-<div class="line"><span class="lineno">   50</span>            e.triggerSetFleetOfficers(OfficerNum.MORE, OfficerQuality.HIGHER);</div>
-<div class="line"><span class="lineno">   51</span>            e.triggerSetFleetFlag(<span class="stringliteral">&quot;$gaPZ_hegemony&quot;</span>);</div>
-<div class="line"><span class="lineno">   52</span>            e.triggerSetStandardAggroInterceptFlags();</div>
-<div class="line"><span class="lineno">   53</span>            e.triggerFleetMakeImportantPermanent(<span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   54</span>            e.triggerFleetAddDefeatTriggerPermanent(<span class="stringliteral">&quot;GAPZGoAwayTrigger&quot;</span>);</div>
-<div class="line"><span class="lineno">   55</span>            e.endCreate();</div>
-<div class="line"><span class="lineno">   56</span>        }</div>
-<div class="line"><span class="lineno">   57</span>        </div>
-<div class="line"><span class="lineno">   58</span>        {</div>
-<div class="line"><span class="lineno">   59</span>            DelayedFleetEncounter e = <span class="keyword">new</span> DelayedFleetEncounter(Misc.getRandom(Misc.genRandomSeed(), 0), <span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">   60</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../df/dd7/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAPZPostEncounters.html#a4436ea22b2c5815e35472dd81e2f2a7e">debug</a>) {</div>
-<div class="line"><span class="lineno">   61</span>                e.setDelayNone();</div>
-<div class="line"><span class="lineno">   62</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   63</span>                e.setDelayShort();</div>
-<div class="line"><span class="lineno">   64</span>            }</div>
-<div class="line"><span class="lineno">   65</span>            e.setLocationCoreOnly(<span class="keyword">true</span>, Factions.TRITACHYON);</div>
-<div class="line"><span class="lineno">   66</span>            e.setEncounterFromSomewhereInSystem();</div>
-<div class="line"><span class="lineno">   67</span>            e.setRequireFactionPresence(Factions.TRITACHYON);</div>
-<div class="line"><span class="lineno">   68</span>            e.setDoNotAbortWhenPlayerFleetTooStrong();</div>
-<div class="line"><span class="lineno">   69</span>            </div>
-<div class="line"><span class="lineno">   70</span>            e.beginCreate();</div>
-<div class="line"><span class="lineno">   71</span>            e.triggerCreateFleet(FleetSize.VERY_LARGE, FleetQuality.SMOD_1, Factions.TRITACHYON, FleetTypes.TASK_FORCE, <span class="keyword">new</span> Vector2f());</div>
-<div class="line"><span class="lineno">   72</span>            e.setFleetSource(<span class="stringliteral">&quot;culann&quot;</span>, <span class="stringliteral">&quot;eochu_bres&quot;</span>);</div>
-<div class="line"><span class="lineno">   73</span>            </div>
-<div class="line"><span class="lineno">   74</span>            e.triggerSetFleetOfficers(OfficerNum.MORE, OfficerQuality.HIGHER);</div>
-<div class="line"><span class="lineno">   75</span>            e.triggerSetFleetFlag(<span class="stringliteral">&quot;$gaPZ_tritachyon&quot;</span>);</div>
-<div class="line"><span class="lineno">   76</span>            e.triggerSetStandardAggroInterceptFlags();</div>
-<div class="line"><span class="lineno">   77</span>            e.triggerFleetMakeImportantPermanent(<span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   78</span>            e.triggerFleetAddDefeatTriggerPermanent(<span class="stringliteral">&quot;GAPZGoAwayTrigger&quot;</span>);</div>
-<div class="line"><span class="lineno">   79</span>            e.endCreate();</div>
-<div class="line"><span class="lineno">   80</span>        }</div>
-<div class="line"><span class="lineno">   81</span>        </div>
-<div class="line"><span class="lineno">   82</span>        {</div>
-<div class="line"><span class="lineno">   83</span>            DelayedFleetEncounter e = <span class="keyword">new</span> DelayedFleetEncounter(Misc.getRandom(Misc.genRandomSeed(), 0), <span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">   84</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../df/dd7/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAPZPostEncounters.html#a4436ea22b2c5815e35472dd81e2f2a7e">debug</a>) {</div>
-<div class="line"><span class="lineno">   85</span>                e.setDelayNone();</div>
-<div class="line"><span class="lineno">   86</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   87</span>                e.setDelayShort();</div>
-<div class="line"><span class="lineno">   88</span>            }</div>
-<div class="line"><span class="lineno">   89</span>            String factionId = Factions.LUDDIC_CHURCH;</div>
-<div class="line"><span class="lineno">   90</span>            e.setLocationCoreOnly(<span class="keyword">true</span>, factionId);</div>
-<div class="line"><span class="lineno">   91</span>            e.setEncounterFromSomewhereInSystem();</div>
-<div class="line"><span class="lineno">   92</span>            e.setRequireFactionPresence(factionId);</div>
-<div class="line"><span class="lineno">   93</span>            e.setDoNotAbortWhenPlayerFleetTooStrong();</div>
-<div class="line"><span class="lineno">   94</span>            </div>
-<div class="line"><span class="lineno">   95</span>            e.beginCreate();</div>
-<div class="line"><span class="lineno">   96</span>            e.triggerCreateFleet(FleetSize.LARGE, FleetQuality.HIGHER, factionId, FleetTypes.TASK_FORCE, <span class="keyword">new</span> Vector2f());</div>
-<div class="line"><span class="lineno">   97</span>            e.setFleetSource(<span class="stringliteral">&quot;baetis&quot;</span>);</div>
-<div class="line"><span class="lineno">   98</span>            </div>
-<div class="line"><span class="lineno">   99</span>            e.triggerSetFleetOfficers(OfficerNum.MORE, OfficerQuality.DEFAULT);</div>
-<div class="line"><span class="lineno">  100</span>            e.triggerSetFleetFlag(<span class="stringliteral">&quot;$gaPZ_luddic_church&quot;</span>);</div>
-<div class="line"><span class="lineno">  101</span>            e.triggerFleetAllowLongPursuit();</div>
-<div class="line"><span class="lineno">  102</span>            e.triggerSetFleetAlwaysPursue();</div>
-<div class="line"><span class="lineno">  103</span>            e.triggerOrderFleetInterceptPlayer();</div>
-<div class="line"><span class="lineno">  104</span>            e.triggerMakeFleetAllowDisengage();</div>
-<div class="line"><span class="lineno">  105</span>            e.triggerOrderFleetMaybeEBurn();</div>
-<div class="line"><span class="lineno">  106</span>            e.triggerFleetMakeImportantPermanent(<span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  107</span>            e.triggerFleetAddDefeatTriggerPermanent(<span class="stringliteral">&quot;GAPZGoAwayTrigger&quot;</span>);</div>
-<div class="line"><span class="lineno">  108</span>            e.endCreate();</div>
-<div class="line"><span class="lineno">  109</span>        }</div>
-<div class="line"><span class="lineno">  110</span>        </div>
-<div class="line"><span class="lineno">  111</span>        {</div>
-<div class="line"><span class="lineno">  112</span>            DelayedFleetEncounter e = <span class="keyword">new</span> DelayedFleetEncounter(Misc.getRandom(Misc.genRandomSeed(), 0), <span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  113</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../df/dd7/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAPZPostEncounters.html#a4436ea22b2c5815e35472dd81e2f2a7e">debug</a>) {</div>
-<div class="line"><span class="lineno">  114</span>                e.setDelayNone();</div>
-<div class="line"><span class="lineno">  115</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  116</span>                e.setDelayShort();</div>
-<div class="line"><span class="lineno">  117</span>            }</div>
-<div class="line"><span class="lineno">  118</span>            String factionId = Factions.PERSEAN;</div>
-<div class="line"><span class="lineno">  119</span>            e.setLocationCoreOnly(<span class="keyword">true</span>, factionId);</div>
-<div class="line"><span class="lineno">  120</span>            e.setEncounterFromSomewhereInSystem();</div>
-<div class="line"><span class="lineno">  121</span>            e.setRequireFactionPresence(factionId);</div>
-<div class="line"><span class="lineno">  122</span>            e.setDoNotAbortWhenPlayerFleetTooStrong();</div>
-<div class="line"><span class="lineno">  123</span>            </div>
-<div class="line"><span class="lineno">  124</span>            e.beginCreate();</div>
-<div class="line"><span class="lineno">  125</span>            e.triggerCreateFleet(FleetSize.MEDIUM, FleetQuality.HIGHER, factionId, FleetTypes.PATROL_MEDIUM, <span class="keyword">new</span> Vector2f());</div>
-<div class="line"><span class="lineno">  126</span>            e.triggerSetFleetFaction(Factions.PERSEAN);</div>
-<div class="line"><span class="lineno">  127</span>            e.triggerSetFleetCommander(People.getPerson(People.SIYAVONG));</div>
-<div class="line"><span class="lineno">  128</span>            <span class="comment">//e.triggerSet</span></div>
-<div class="line"><span class="lineno">  129</span>            e.triggerSetFleetOfficers(OfficerNum.MORE, OfficerQuality.HIGHER);</div>
-<div class="line"><span class="lineno">  130</span>            e.triggerMakeNonHostile();</div>
-<div class="line"><span class="lineno">  131</span>            e.triggerFleetAllowLongPursuit();</div>
-<div class="line"><span class="lineno">  132</span>            e.triggerSetFleetAlwaysPursue();</div>
-<div class="line"><span class="lineno">  133</span>            e.triggerOrderFleetInterceptPlayer();</div>
-<div class="line"><span class="lineno">  134</span>            e.triggerMakeFleetAllowDisengage();</div>
-<div class="line"><span class="lineno">  135</span>            e.triggerOrderFleetMaybeEBurn();</div>
-<div class="line"><span class="lineno">  136</span>            </div>
-<div class="line"><span class="lineno">  137</span>            e.setFleetSource(<span class="stringliteral">&quot;kazeron&quot;</span>);</div>
-<div class="line"><span class="lineno">  138</span>            </div>
-<div class="line"><span class="lineno">  139</span>            e.triggerSetFleetFlag(<span class="stringliteral">&quot;$gaPZ_persean&quot;</span>);</div>
-<div class="line"><span class="lineno">  140</span>            e.triggerSetStandardAggroInterceptFlags();</div>
-<div class="line"><span class="lineno">  141</span>            e.triggerFleetMakeImportantPermanent(<span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  142</span>            e.triggerFleetAddDefeatTriggerPermanent(<span class="stringliteral">&quot;GAPZGoAwayTrigger&quot;</span>);</div>
-<div class="line"><span class="lineno">  143</span>            e.endCreate();</div>
-<div class="line"><span class="lineno">  144</span>        }</div>
-<div class="line"><span class="lineno">  145</span>        </div>
-<div class="line"><span class="lineno">  146</span>        {</div>
-<div class="line"><span class="lineno">  147</span>            DelayedFleetEncounter e = <span class="keyword">new</span> DelayedFleetEncounter(Misc.getRandom(Misc.genRandomSeed(), 0), <span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  148</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../df/dd7/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAPZPostEncounters.html#a4436ea22b2c5815e35472dd81e2f2a7e">debug</a>) {</div>
-<div class="line"><span class="lineno">  149</span>                e.setDelayNone();</div>
-<div class="line"><span class="lineno">  150</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  151</span>                e.setDelayShort();</div>
-<div class="line"><span class="lineno">  152</span>            }</div>
-<div class="line"><span class="lineno">  153</span>            </div>
-<div class="line"><span class="lineno">  154</span>            String factionId = Factions.DIKTAT;</div>
-<div class="line"><span class="lineno">  155</span>            e.setLocationCoreOnly(<span class="keyword">true</span>, factionId);</div>
-<div class="line"><span class="lineno">  156</span>            e.setEncounterFromSomewhereInSystem();</div>
-<div class="line"><span class="lineno">  157</span>            e.setRequireFactionPresence(factionId);</div>
-<div class="line"><span class="lineno">  158</span>            e.setDoNotAbortWhenPlayerFleetTooStrong();</div>
-<div class="line"><span class="lineno">  159</span>            </div>
-<div class="line"><span class="lineno">  160</span>            e.beginCreate();</div>
-<div class="line"><span class="lineno">  161</span>            e.triggerCreateFleet(FleetSize.HUGE, FleetQuality.SMOD_1, Factions.LIONS_GUARD, FleetTypes.PATROL_LARGE, <span class="keyword">new</span> Vector2f());</div>
-<div class="line"><span class="lineno">  162</span>            e.setFleetSource(<span class="stringliteral">&quot;sindria&quot;</span>);</div>
-<div class="line"><span class="lineno">  163</span>            e.triggerSetFleetFaction(factionId);</div>
-<div class="line"><span class="lineno">  164</span>            e.triggerFleetSetShipPickMode(ShipPickMode.PRIORITY_THEN_ALL);</div>
-<div class="line"><span class="lineno">  165</span>            e.triggerFleetSetNoFactionInName();</div>
-<div class="line"><span class="lineno">  166</span>            e.triggerMakeNoRepImpact();</div>
-<div class="line"><span class="lineno">  167</span>            </div>
-<div class="line"><span class="lineno">  168</span>            e.triggerSetFleetOfficers(OfficerNum.MORE, OfficerQuality.HIGHER);</div>
-<div class="line"><span class="lineno">  169</span>            e.triggerSetFleetFlag(<span class="stringliteral">&quot;$gaPZ_diktat&quot;</span>);</div>
-<div class="line"><span class="lineno">  170</span>            e.triggerSetStandardAggroInterceptFlags();</div>
-<div class="line"><span class="lineno">  171</span>            e.triggerFleetMakeImportantPermanent(<span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  172</span>            e.triggerFleetAddDefeatTriggerPermanent(<span class="stringliteral">&quot;GAPZGoAwayTrigger&quot;</span>);</div>
-<div class="line"><span class="lineno">  173</span>            e.endCreate();</div>
-<div class="line"><span class="lineno">  174</span>        }</div>
-<div class="line"><span class="lineno">  175</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a6655158ea477c6b66e853c1407e2e483" name="a6655158ea477c6b66e853c1407e2e483"></a>
@@ -435,10 +245,7 @@ Static Public Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d7/d63/interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html#a2b9a206acf99d1cdc1511885d14bb58c">com.fs.starfarer.api.EveryFrameScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d85/GAPZPostEncounters_8java_source.html#l00217">217</a> of file <a class="el" href="../../d4/d85/GAPZPostEncounters_8java_source.html">GAPZPostEncounters.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  217</span>                            {</div>
-<div class="line"><span class="lineno">  218</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  219</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a667abfff0ff8c404baa3559efc96ec32" name="a667abfff0ff8c404baa3559efc96ec32"></a>
@@ -460,10 +267,7 @@ Static Public Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d7/d63/interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html#a6397d6c1c19a4dd0b58099219c0e0173">com.fs.starfarer.api.EveryFrameScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d85/GAPZPostEncounters_8java_source.html#l00221">221</a> of file <a class="el" href="../../d4/d85/GAPZPostEncounters_8java_source.html">GAPZPostEncounters.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  221</span>                                    {</div>
-<div class="line"><span class="lineno">  222</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  223</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

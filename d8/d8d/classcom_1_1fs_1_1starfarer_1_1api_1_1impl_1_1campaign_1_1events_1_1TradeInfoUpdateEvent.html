@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -436,32 +437,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a892d9c8e77f8c51654d4399169a80540">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d52/TradeInfoUpdateEvent_8java_source.html#l00056">56</a> of file <a class="el" href="../../d3/d52/TradeInfoUpdateEvent_8java_source.html">TradeInfoUpdateEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   56</span>                                      {</div>
-<div class="line"><span class="lineno">   57</span>        <span class="comment">//if (true) return;</span></div>
-<div class="line"><span class="lineno">   58</span>        </div>
-<div class="line"><span class="lineno">   59</span>        <span class="keywordflow">if</span> (!<a class="code hl_function" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#ac5c47dbb1c74444a7517c8d031192459">isEventStarted</a>()) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   60</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d8/d8d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1TradeInfoUpdateEvent.html#ac7a92af688436f9ec133bc58a1e91c7a">isDone</a>()) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   61</span>        </div>
-<div class="line"><span class="lineno">   62</span>        <span class="keywordtype">float</span> days = Global.getSector().getClock().convertToDays(amount);</div>
-<div class="line"><span class="lineno">   63</span>        </div>
-<div class="line"><span class="lineno">   64</span>        sinceLastLocalReport.<a class="code hl_function" href="../../dd/df5/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTracker.html#a841c73d428617df86cca633e7640f439">advance</a>(days);</div>
-<div class="line"><span class="lineno">   65</span>        sinceLastRemoteReport.<a class="code hl_function" href="../../dd/df5/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTracker.html#a841c73d428617df86cca633e7640f439">advance</a>(days);</div>
-<div class="line"><span class="lineno">   66</span>        </div>
-<div class="line"><span class="lineno">   67</span>        localTracker.<a class="code hl_function" href="../../da/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html#a61881d44415cda2c50c3354c3f0a4d8a">advance</a>(days);</div>
-<div class="line"><span class="lineno">   68</span>        <span class="keywordflow">if</span> (localTracker.intervalElapsed()) {</div>
-<div class="line"><span class="lineno">   69</span>            checkLocalPrices();</div>
-<div class="line"><span class="lineno">   70</span>        }</div>
-<div class="line"><span class="lineno">   71</span>        </div>
-<div class="line"><span class="lineno">   72</span>        remoteTracker.<a class="code hl_function" href="../../da/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html#a61881d44415cda2c50c3354c3f0a4d8a">advance</a>(days);</div>
-<div class="line"><span class="lineno">   73</span>        <span class="keywordflow">if</span> (remoteTracker.intervalElapsed()) {</div>
-<div class="line"><span class="lineno">   74</span>            checkRemotePrices();</div>
-<div class="line"><span class="lineno">   75</span>        }</div>
-<div class="line"><span class="lineno">   76</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin_html_ac5c47dbb1c74444a7517c8d031192459"><div class="ttname"><a href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#ac5c47dbb1c74444a7517c8d031192459">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin.isEventStarted</a></div><div class="ttdeci">boolean isEventStarted()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00106">BaseEventPlugin.java:106</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1TradeInfoUpdateEvent_html_ac7a92af688436f9ec133bc58a1e91c7a"><div class="ttname"><a href="../../d8/d8d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1TradeInfoUpdateEvent.html#ac7a92af688436f9ec133bc58a1e91c7a">com.fs.starfarer.api.impl.campaign.events.TradeInfoUpdateEvent.isDone</a></div><div class="ttdeci">boolean isDone()</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d52/TradeInfoUpdateEvent_8java_source.html#l00627">TradeInfoUpdateEvent.java:627</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil_html_a61881d44415cda2c50c3354c3f0a4d8a"><div class="ttname"><a href="../../da/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html#a61881d44415cda2c50c3354c3f0a4d8a">com.fs.starfarer.api.util.IntervalUtil.advance</a></div><div class="ttdeci">void advance(float amount)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de3/IntervalUtil_8java_source.html#l00039">IntervalUtil.java:39</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTracker_html_a841c73d428617df86cca633e7640f439"><div class="ttname"><a href="../../dd/df5/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTracker.html#a841c73d428617df86cca633e7640f439">com.fs.starfarer.api.util.TimeoutTracker.advance</a></div><div class="ttdeci">void advance(float amount)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dcf/TimeoutTracker_8java_source.html#l00093">TimeoutTracker.java:93</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa4178ccb54da7a2c5e07ef6b54103ee4" name="aa4178ccb54da7a2c5e07ef6b54103ee4"></a>
@@ -482,10 +458,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a768b12bc984bf1abddf99819a45f06e2">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d52/TradeInfoUpdateEvent_8java_source.html#l00638">638</a> of file <a class="el" href="../../d3/d52/TradeInfoUpdateEvent_8java_source.html">TradeInfoUpdateEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  638</span>                                                    {</div>
-<div class="line"><span class="lineno">  639</span>        <span class="keywordflow">return</span> CampaignEventCategory.DO_NOT_SHOW_IN_MESSAGE_FILTER;</div>
-<div class="line"><span class="lineno">  640</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa8776ed0b30489e4f422e0d2665d30b3" name="aa8776ed0b30489e4f422e0d2665d30b3"></a>
@@ -506,10 +479,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#aef42b16a88a66024a330092d6f08eb9b">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d52/TradeInfoUpdateEvent_8java_source.html#l00633">633</a> of file <a class="el" href="../../d3/d52/TradeInfoUpdateEvent_8java_source.html">TradeInfoUpdateEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  633</span>                                 {</div>
-<div class="line"><span class="lineno">  634</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Trade info update&quot;</span>; <span class="comment">// not used anywhere</span></div>
-<div class="line"><span class="lineno">  635</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a3244a4b83cb25f4f84f8dc7a379c6206" name="a3244a4b83cb25f4f84f8dc7a379c6206"></a>
@@ -530,11 +500,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#af2e4ba1b8f1c54db22375ebd2626c779">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d52/TradeInfoUpdateEvent_8java_source.html#l00622">622</a> of file <a class="el" href="../../d3/d52/TradeInfoUpdateEvent_8java_source.html">TradeInfoUpdateEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  622</span>                                                {</div>
-<div class="line"><span class="lineno">  623</span>        <span class="keywordflow">if</span> (tempTarget != <span class="keyword">null</span>) <span class="keywordflow">return</span> tempTarget;</div>
-<div class="line"><span class="lineno">  624</span>        <span class="keywordflow">return</span> super.getEventTarget();</div>
-<div class="line"><span class="lineno">  625</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8f97a4cdfc1f8120ad7d76b87323d904" name="a8f97a4cdfc1f8120ad7d76b87323d904"></a>
@@ -563,10 +529,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a3020d01a879fc0b9d383e46f7d9c53bf">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d52/TradeInfoUpdateEvent_8java_source.html#l00617">617</a> of file <a class="el" href="../../d3/d52/TradeInfoUpdateEvent_8java_source.html">TradeInfoUpdateEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  617</span>                                                      {</div>
-<div class="line"><span class="lineno">  618</span>        <span class="keywordflow">return</span> super.getHighlightColors(stageId);</div>
-<div class="line"><span class="lineno">  619</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="afb65aa6bc440ec1299090d61a87cbfe3" name="afb65aa6bc440ec1299090d61a87cbfe3"></a>
@@ -595,13 +558,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a00dc5b856ba666734d16d72b420e763d">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d52/TradeInfoUpdateEvent_8java_source.html#l00609">609</a> of file <a class="el" href="../../d3/d52/TradeInfoUpdateEvent_8java_source.html">TradeInfoUpdateEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  609</span>                                                  {</div>
-<div class="line"><span class="lineno">  610</span><span class="comment">//      List&lt;String&gt; result = new ArrayList&lt;String&gt;();</span></div>
-<div class="line"><span class="lineno">  611</span><span class="comment">//      addTokensToList(result, &quot;$neededFood&quot;);</span></div>
-<div class="line"><span class="lineno">  612</span><span class="comment">//      return result.toArray(new String[0]);</span></div>
-<div class="line"><span class="lineno">  613</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  614</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae377924c1ccbd94892354947dfd2b241" name="ae377924c1ccbd94892354947dfd2b241"></a>
@@ -629,27 +586,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d52/TradeInfoUpdateEvent_8java_source.html#l00543">543</a> of file <a class="el" href="../../d3/d52/TradeInfoUpdateEvent_8java_source.html">TradeInfoUpdateEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  543</span>                                                     {</div>
-<div class="line"><span class="lineno">  544</span><span class="comment">//      float days = SharedData.getData().getPlayerActivityTracker().getDaysSinceLastVisitTo(market);</span></div>
-<div class="line"><span class="lineno">  545</span><span class="comment">//      if (days &lt; 3) return;</span></div>
-<div class="line"><span class="lineno">  546</span>        </div>
-<div class="line"><span class="lineno">  547</span>        CampaignFleetAPI playerFleet = Global.getSector().getPlayerFleet();</div>
-<div class="line"><span class="lineno">  548</span><span class="comment">//      if (playerFleet.isInHyperspace()) return;</span></div>
-<div class="line"><span class="lineno">  549</span>        </div>
-<div class="line"><span class="lineno">  550</span>        List&lt;PriceUpdate&gt; list = getUpdatesFor(<a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a>);</div>
-<div class="line"><span class="lineno">  551</span>        tempTarget = <span class="keyword">new</span> CampaignEventTarget(<a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a>);</div>
-<div class="line"><span class="lineno">  552</span>        this.market = <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a>;</div>
-<div class="line"><span class="lineno">  553</span>        <span class="keywordflow">if</span> (!list.isEmpty()) {</div>
-<div class="line"><span class="lineno">  554</span>            pickAllRelevantFromMarket(<a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a>, list);</div>
-<div class="line"><span class="lineno">  555</span>            <span class="keywordflow">if</span> (!updatesForNextReport.isEmpty()) {</div>
-<div class="line"><span class="lineno">  556</span>                <span class="comment">//Global.getSector().reportEventStage(this, &quot;prices_market&quot;, playerFleet, MessagePriority.DELIVER_IMMEDIATELY);</span></div>
-<div class="line"><span class="lineno">  557</span>            }</div>
-<div class="line"><span class="lineno">  558</span>        }</div>
-<div class="line"><span class="lineno">  559</span>        tempTarget = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  560</span>        this.market = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  561</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin_html_a82135608621e80f71b991a0c839669e2"><div class="ttname"><a href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin.market</a></div><div class="ttdeci">MarketAPI market</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00043">BaseEventPlugin.java:43</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a553575dc357e866aa5a46c622db2371f" name="a553575dc357e866aa5a46c622db2371f"></a>
@@ -670,10 +607,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#ad9fe317284841355f94d9d3db565eff5">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d52/TradeInfoUpdateEvent_8java_source.html#l00566">566</a> of file <a class="el" href="../../d3/d52/TradeInfoUpdateEvent_8java_source.html">TradeInfoUpdateEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  566</span>                                                     {</div>
-<div class="line"><span class="lineno">  567</span>        <span class="keywordflow">return</span> updatesForNextReport;</div>
-<div class="line"><span class="lineno">  568</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2e15f2dfe04250d926dfebcb56b290d8" name="a2e15f2dfe04250d926dfebcb56b290d8"></a>
@@ -694,10 +628,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#abd961aa7802b8e214ae9842644eeac94">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d52/TradeInfoUpdateEvent_8java_source.html#l00571">571</a> of file <a class="el" href="../../d3/d52/TradeInfoUpdateEvent_8java_source.html">TradeInfoUpdateEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  571</span>                                                {</div>
-<div class="line"><span class="lineno">  572</span>        <span class="keywordflow">return</span> super.getRelatedCommodities();</div>
-<div class="line"><span class="lineno">  573</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa0cbef00e6fe9b78791ed084bb1a6c90" name="aa0cbef00e6fe9b78791ed084bb1a6c90"></a>
@@ -719,42 +650,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#aa67b1f6c564a4765a764cfb90a60f4c9">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d52/TradeInfoUpdateEvent_8java_source.html#l00576">576</a> of file <a class="el" href="../../d3/d52/TradeInfoUpdateEvent_8java_source.html">TradeInfoUpdateEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  576</span>                                                      {</div>
-<div class="line"><span class="lineno">  577</span>        Map&lt;String, String&gt; map = super.getTokenReplacements();</div>
-<div class="line"><span class="lineno">  578</span><span class="comment">//      CampaignFleetAPI playerFleet = Global.getSector().getPlayerFleet();</span></div>
-<div class="line"><span class="lineno">  579</span><span class="comment">//      if (playerFleet.isInHyperspace()) {</span></div>
-<div class="line"><span class="lineno">  580</span><span class="comment">//          map.put(&quot;$fromSystem&quot;, &quot;hyperspace&quot;);</span></div>
-<div class="line"><span class="lineno">  581</span><span class="comment">//      } else {</span></div>
-<div class="line"><span class="lineno">  582</span><span class="comment">//          map.put(&quot;$fromSystem&quot;, ((StarSystemAPI)playerFleet.getContainingLocation()).getBaseName());</span></div>
-<div class="line"><span class="lineno">  583</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  584</span>        </div>
-<div class="line"><span class="lineno">  585</span>        <span class="keywordflow">if</span> (commRelayForNextReport != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  586</span>            map.put(<span class="stringliteral">&quot;$relayName&quot;</span>, commRelayForNextReport.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a4fa77e45f0774df8a8980dc438598678">getName</a>());</div>
-<div class="line"><span class="lineno">  587</span>            <span class="keywordflow">if</span> (commRelayForNextReport.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#aca208794671c1be979d665d374deaa94">isInHyperspace</a>()) {</div>
-<div class="line"><span class="lineno">  588</span>                map.put(<span class="stringliteral">&quot;$fromSystem&quot;</span>, <span class="stringliteral">&quot;hyperspace&quot;</span>);</div>
-<div class="line"><span class="lineno">  589</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  590</span>                map.put(<span class="stringliteral">&quot;$fromSystem&quot;</span>, ((StarSystemAPI)commRelayForNextReport.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a06362480c6a17326650354460c6d7442">getContainingLocation</a>()).getBaseName());</div>
-<div class="line"><span class="lineno">  591</span>            }</div>
-<div class="line"><span class="lineno">  592</span>        }</div>
-<div class="line"><span class="lineno">  593</span>        </div>
-<div class="line"><span class="lineno">  594</span>        List&lt;PriceUpdatePlugin&gt; updates = <a class="code hl_function" href="../../d8/d8d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1TradeInfoUpdateEvent.html#a553575dc357e866aa5a46c622db2371f">getPriceUpdates</a>();</div>
-<div class="line"><span class="lineno">  595</span>        <span class="keywordflow">if</span> (updates != <span class="keyword">null</span> &amp;&amp; !updates.isEmpty()) {</div>
-<div class="line"><span class="lineno">  596</span>            String priceList = <span class="stringliteral">&quot;Price information updated for: &quot;</span>;</div>
-<div class="line"><span class="lineno">  597</span>            <span class="keywordflow">for</span> (PriceUpdatePlugin update : updates) {</div>
-<div class="line"><span class="lineno">  598</span>                CommodityOnMarketAPI com = update.getCommodity();</div>
-<div class="line"><span class="lineno">  599</span>                priceList += com.getCommodity().getName()  + <span class="stringliteral">&quot; (&quot;</span> + com.getMarket().getName() + <span class="stringliteral">&quot;), &quot;</span>;</div>
-<div class="line"><span class="lineno">  600</span>            }</div>
-<div class="line"><span class="lineno">  601</span>            priceList = priceList.substring(0, priceList.length() - 2);</div>
-<div class="line"><span class="lineno">  602</span>            priceList += <span class="stringliteral">&quot;.&quot;</span>;</div>
-<div class="line"><span class="lineno">  603</span>            map.put(<span class="stringliteral">&quot;$priceList&quot;</span>, priceList);</div>
-<div class="line"><span class="lineno">  604</span>        }</div>
-<div class="line"><span class="lineno">  605</span>        <span class="keywordflow">return</span> map;</div>
-<div class="line"><span class="lineno">  606</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1TradeInfoUpdateEvent_html_a553575dc357e866aa5a46c622db2371f"><div class="ttname"><a href="../../d8/d8d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1TradeInfoUpdateEvent.html#a553575dc357e866aa5a46c622db2371f">com.fs.starfarer.api.impl.campaign.events.TradeInfoUpdateEvent.getPriceUpdates</a></div><div class="ttdeci">List&lt; PriceUpdatePlugin &gt; getPriceUpdates()</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d52/TradeInfoUpdateEvent_8java_source.html#l00566">TradeInfoUpdateEvent.java:566</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_a06362480c6a17326650354460c6d7442"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a06362480c6a17326650354460c6d7442">com.fs.starfarer.api.campaign.SectorEntityToken.getContainingLocation</a></div><div class="ttdeci">LocationAPI getContainingLocation()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_a4fa77e45f0774df8a8980dc438598678"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a4fa77e45f0774df8a8980dc438598678">com.fs.starfarer.api.campaign.SectorEntityToken.getName</a></div><div class="ttdeci">String getName()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_aca208794671c1be979d665d374deaa94"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#aca208794671c1be979d665d374deaa94">com.fs.starfarer.api.campaign.SectorEntityToken.isInHyperspace</a></div><div class="ttdeci">boolean isInHyperspace()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a1ceedda10667f8253035c22823ee8c1e" name="a1ceedda10667f8253035c22823ee8c1e"></a>
@@ -793,13 +689,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a85df425421b0ba2ec216cb3058f88297">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d52/TradeInfoUpdateEvent_8java_source.html#l00046">46</a> of file <a class="el" href="../../d3/d52/TradeInfoUpdateEvent_8java_source.html">TradeInfoUpdateEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   46</span>                                                                   {</div>
-<div class="line"><span class="lineno">   47</span>        super.init(type, <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#abe1c16c1836db2f6bacef1b8b0814872">eventTarget</a>);</div>
-<div class="line"><span class="lineno">   48</span>        remoteTracker = <span class="keyword">new</span> IntervalUtil(0.5f, 1.5f);</div>
-<div class="line"><span class="lineno">   49</span>        localTracker = <span class="keyword">new</span> IntervalUtil(0.5f, 1.5f);</div>
-<div class="line"><span class="lineno">   50</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin_html_abe1c16c1836db2f6bacef1b8b0814872"><div class="ttname"><a href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#abe1c16c1836db2f6bacef1b8b0814872">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin.eventTarget</a></div><div class="ttdeci">CampaignEventTarget eventTarget</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00042">BaseEventPlugin.java:42</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac7a92af688436f9ec133bc58a1e91c7a" name="ac7a92af688436f9ec133bc58a1e91c7a"></a>
@@ -820,10 +710,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#ab897ab2cfdb15c8183902a077567171b">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d52/TradeInfoUpdateEvent_8java_source.html#l00627">627</a> of file <a class="el" href="../../d3/d52/TradeInfoUpdateEvent_8java_source.html">TradeInfoUpdateEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  627</span>                            {</div>
-<div class="line"><span class="lineno">  628</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  629</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a88d4c7e87b89c3db500696e244a5588a" name="a88d4c7e87b89c3db500696e244a5588a"></a>
@@ -845,13 +732,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a3db0ae59d2f6b8a22665c8a4777c110b">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d52/TradeInfoUpdateEvent_8java_source.html#l00537">537</a> of file <a class="el" href="../../d3/d52/TradeInfoUpdateEvent_8java_source.html">TradeInfoUpdateEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  537</span>                                                           {</div>
-<div class="line"><span class="lineno">  538</span>        <span class="comment">//market.removeCondition(Conditions.EVENT_TRADE_DISRUPTION);</span></div>
-<div class="line"><span class="lineno">  539</span>        <span class="comment">//market.getCommodityData(Commodities.HEAVY_MACHINERY).getPlayerPriceMod().modifyMult(&quot;sdfsdfsd&quot;, 0.1f);</span></div>
-<div class="line"><span class="lineno">  540</span>        <a class="code hl_function" href="../../d8/d8d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1TradeInfoUpdateEvent.html#ae377924c1ccbd94892354947dfd2b241">getLocalUpdates</a>(<a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a>);</div>
-<div class="line"><span class="lineno">  541</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1TradeInfoUpdateEvent_html_ae377924c1ccbd94892354947dfd2b241"><div class="ttname"><a href="../../d8/d8d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1TradeInfoUpdateEvent.html#ae377924c1ccbd94892354947dfd2b241">com.fs.starfarer.api.impl.campaign.events.TradeInfoUpdateEvent.getLocalUpdates</a></div><div class="ttdeci">void getLocalUpdates(MarketAPI market)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d52/TradeInfoUpdateEvent_8java_source.html#l00543">TradeInfoUpdateEvent.java:543</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab29f50dbfc73900e0a319f87b0fd303e" name="ab29f50dbfc73900e0a319f87b0fd303e"></a>
@@ -873,10 +754,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#adbf754dfd872992b4779989a4e04f82d">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d52/TradeInfoUpdateEvent_8java_source.html#l00532">532</a> of file <a class="el" href="../../d3/d52/TradeInfoUpdateEvent_8java_source.html">TradeInfoUpdateEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  532</span>                                                           {</div>
-<div class="line"><span class="lineno">  533</span>        <a class="code hl_function" href="../../d8/d8d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1TradeInfoUpdateEvent.html#ae377924c1ccbd94892354947dfd2b241">getLocalUpdates</a>(<a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a>);</div>
-<div class="line"><span class="lineno">  534</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a08ccea44f1153431f65463261491bdd8" name="a08ccea44f1153431f65463261491bdd8"></a>
@@ -898,10 +776,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#af30b0da9b4fc72069e1eec6514402634">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d52/TradeInfoUpdateEvent_8java_source.html#l00642">642</a> of file <a class="el" href="../../d3/d52/TradeInfoUpdateEvent_8java_source.html">TradeInfoUpdateEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  642</span>                                              {</div>
-<div class="line"><span class="lineno">  643</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  644</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a269c2e36c386246f636881e9ad205be9" name="a269c2e36c386246f636881e9ad205be9"></a>
@@ -923,10 +798,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#aa016b5c97932063aa9184483bd01c5ee">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d52/TradeInfoUpdateEvent_8java_source.html#l00052">52</a> of file <a class="el" href="../../d3/d52/TradeInfoUpdateEvent_8java_source.html">TradeInfoUpdateEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   52</span>                             {</div>
-<div class="line"><span class="lineno">   53</span>        super.startEvent();</div>
-<div class="line"><span class="lineno">   54</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

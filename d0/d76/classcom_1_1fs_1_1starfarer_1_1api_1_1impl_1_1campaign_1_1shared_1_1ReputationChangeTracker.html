@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -134,25 +135,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../db/d6e/ReputationChangeTracker_8java_source.html#l00038">38</a> of file <a class="el" href="../../db/d6e/ReputationChangeTracker_8java_source.html">ReputationChangeTracker.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   38</span>                                    {</div>
-<div class="line"><span class="lineno">   39</span>        </div>
-<div class="line"><span class="lineno">   40</span>        <span class="keywordflow">for</span> (FactionAPI faction : Global.getSector().getAllFactions()) {</div>
-<div class="line"><span class="lineno">   41</span>            <span class="keywordflow">if</span> (faction.isPlayerFaction()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   42</span>        </div>
-<div class="line"><span class="lineno">   43</span>            ReputationChangeData data = <a class="code hl_function" href="../../d0/d76/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1ReputationChangeTracker.html#a99de81cd7e86c3b65b892dc5d6dda627">getDataFor</a>(faction.getId());</div>
-<div class="line"><span class="lineno">   44</span>            <span class="keywordtype">float</span> rep = faction.getRelationship(Factions.PLAYER);</div>
-<div class="line"><span class="lineno">   45</span>            <span class="keywordflow">if</span> (data.getLastValue() != rep) {</div>
-<div class="line"><span class="lineno">   46</span>                <span class="keywordflow">if</span> (data.getLastValue() &gt; rep) {</div>
-<div class="line"><span class="lineno">   47</span>                    data.setLastNegativeChange(Global.getSector().getClock().getTimestamp());</div>
-<div class="line"><span class="lineno">   48</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   49</span>                    data.setLastPositiveChange(Global.getSector().getClock().getTimestamp());</div>
-<div class="line"><span class="lineno">   50</span>                }</div>
-<div class="line"><span class="lineno">   51</span>                data.setLastValue(rep);</div>
-<div class="line"><span class="lineno">   52</span>            }</div>
-<div class="line"><span class="lineno">   53</span>        }</div>
-<div class="line"><span class="lineno">   54</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1ReputationChangeTracker_html_a99de81cd7e86c3b65b892dc5d6dda627"><div class="ttname"><a href="../../d0/d76/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1ReputationChangeTracker.html#a99de81cd7e86c3b65b892dc5d6dda627">com.fs.starfarer.api.impl.campaign.shared.ReputationChangeTracker.getDataFor</a></div><div class="ttdeci">ReputationChangeData getDataFor(String factionId)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d6e/ReputationChangeTracker_8java_source.html#l00065">ReputationChangeTracker.java:65</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a99de81cd7e86c3b65b892dc5d6dda627" name="a99de81cd7e86c3b65b892dc5d6dda627"></a>
@@ -172,20 +155,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../db/d6e/ReputationChangeTracker_8java_source.html#l00065">65</a> of file <a class="el" href="../../db/d6e/ReputationChangeTracker_8java_source.html">ReputationChangeTracker.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   65</span>                                                             {</div>
-<div class="line"><span class="lineno">   66</span>        ReputationChangeData data = repData.get(factionId);</div>
-<div class="line"><span class="lineno">   67</span>        <span class="keywordflow">if</span> (data == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   68</span>            data = <span class="keyword">new</span> ReputationChangeData();</div>
-<div class="line"><span class="lineno">   69</span>            FactionAPI faction = Global.getSector().getFaction(factionId);</div>
-<div class="line"><span class="lineno">   70</span>            <span class="keywordtype">float</span> rep = faction.getRelationship(Factions.PLAYER);</div>
-<div class="line"><span class="lineno">   71</span>            data.setLastValue(rep);</div>
-<div class="line"><span class="lineno">   72</span>            data.setLastPositiveChange(Global.getSector().getClock().getTimestamp());</div>
-<div class="line"><span class="lineno">   73</span>            data.setLastNegativeChange(Global.getSector().getClock().getTimestamp());</div>
-<div class="line"><span class="lineno">   74</span>            repData.put(factionId, data);</div>
-<div class="line"><span class="lineno">   75</span>        }</div>
-<div class="line"><span class="lineno">   76</span>        <span class="keywordflow">return</span> data;</div>
-<div class="line"><span class="lineno">   77</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8088ce259e1f5694048b6e6005a80807" name="a8088ce259e1f5694048b6e6005a80807"></a>
@@ -205,11 +175,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../db/d6e/ReputationChangeTracker_8java_source.html#l00060">60</a> of file <a class="el" href="../../db/d6e/ReputationChangeTracker_8java_source.html">ReputationChangeTracker.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   60</span>                                                                  {</div>
-<div class="line"><span class="lineno">   61</span>        ReputationChangeData data = <a class="code hl_function" href="../../d0/d76/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1ReputationChangeTracker.html#a99de81cd7e86c3b65b892dc5d6dda627">getDataFor</a>(factionId);</div>
-<div class="line"><span class="lineno">   62</span>        <span class="keywordflow">return</span> Global.getSector().getClock().getElapsedDaysSince(data.getLastPositiveChange());</div>
-<div class="line"><span class="lineno">   63</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2d1f4a7cac674178ab41a570938cc9a9" name="a2d1f4a7cac674178ab41a570938cc9a9"></a>
@@ -229,11 +195,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../db/d6e/ReputationChangeTracker_8java_source.html#l00056">56</a> of file <a class="el" href="../../db/d6e/ReputationChangeTracker_8java_source.html">ReputationChangeTracker.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   56</span>                                                                  {</div>
-<div class="line"><span class="lineno">   57</span>        ReputationChangeData data = <a class="code hl_function" href="../../d0/d76/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1ReputationChangeTracker.html#a99de81cd7e86c3b65b892dc5d6dda627">getDataFor</a>(factionId);</div>
-<div class="line"><span class="lineno">   58</span>        <span class="keywordflow">return</span> Global.getSector().getClock().getElapsedDaysSince(data.getLastPositiveChange());</div>
-<div class="line"><span class="lineno">   59</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

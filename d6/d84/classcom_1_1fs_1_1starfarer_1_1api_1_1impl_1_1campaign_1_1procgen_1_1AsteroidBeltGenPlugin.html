@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -152,117 +153,7 @@ Public Member Functions</h2></td></tr>
 <p>Implements <a class="el" href="../../de/d64/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1TerrainGenPlugin.html#aca9a5ae2809f5b40f3ed01e5a4fc6242">com.fs.starfarer.api.impl.campaign.procgen.TerrainGenPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d5e/AsteroidBeltGenPlugin_8java_source.html#l00015">15</a> of file <a class="el" href="../../d2/d5e/AsteroidBeltGenPlugin_8java_source.html">AsteroidBeltGenPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   15</span>                                                                                  {</div>
-<div class="line"><span class="lineno">   16</span>        StarSystemAPI system = context.system;</div>
-<div class="line"><span class="lineno">   17</span>        SectorEntityToken parent = context.center;</div>
-<div class="line"><span class="lineno">   18</span>        <span class="keywordflow">if</span> (context.parent != <span class="keyword">null</span>) parent = context.parent;</div>
-<div class="line"><span class="lineno">   19</span>        </div>
-<div class="line"><span class="lineno">   20</span>        <span class="comment">//float width = StarSystemGenerator.getRadius(terrainData.getMinRadius(), terrainData.getMaxRadius());</span></div>
-<div class="line"><span class="lineno">   21</span>        <span class="keywordtype">float</span> width = 200f;</div>
-<div class="line"><span class="lineno">   22</span>        </div>
-<div class="line"><span class="lineno">   23</span>        <span class="keywordtype">float</span> countMult = 1f;</div>
-<div class="line"><span class="lineno">   24</span>        <span class="keywordtype">float</span> maxPlanets = 1;</div>
-<div class="line"><span class="lineno">   25</span>        <span class="keywordflow">if</span> (context.currentRadius &gt; 2000f &amp;&amp; StarSystemGenerator.random.nextFloat() &gt; 0.5f) {</div>
-<div class="line"><span class="lineno">   26</span>            width += 100f;</div>
-<div class="line"><span class="lineno">   27</span>            countMult += 0.1f;</div>
-<div class="line"><span class="lineno">   28</span>            maxPlanets++;</div>
-<div class="line"><span class="lineno">   29</span>        }</div>
-<div class="line"><span class="lineno">   30</span>        <span class="keywordflow">if</span> (context.currentRadius &gt; 4000f &amp;&amp; StarSystemGenerator.random.nextFloat() &gt; 0.5f) {</div>
-<div class="line"><span class="lineno">   31</span>            width += 100f;</div>
-<div class="line"><span class="lineno">   32</span>            countMult += 0.1f;</div>
-<div class="line"><span class="lineno">   33</span>            maxPlanets++;</div>
-<div class="line"><span class="lineno">   34</span>        }</div>
-<div class="line"><span class="lineno">   35</span>        <span class="keywordflow">if</span> (context.currentRadius &gt; 6000f &amp;&amp; StarSystemGenerator.random.nextFloat() &gt; 0.5f) {</div>
-<div class="line"><span class="lineno">   36</span>            width += 100f;</div>
-<div class="line"><span class="lineno">   37</span>            countMult += 0.1f;</div>
-<div class="line"><span class="lineno">   38</span>            maxPlanets++;</div>
-<div class="line"><span class="lineno">   39</span>        }</div>
-<div class="line"><span class="lineno">   40</span>        </div>
-<div class="line"><span class="lineno">   41</span>        <span class="comment">//if (maxPlanets &gt; 3) maxPlanets = 3;</span></div>
-<div class="line"><span class="lineno">   42</span>        <span class="keywordflow">if</span> (maxPlanets &gt; 1) maxPlanets = 1;</div>
-<div class="line"><span class="lineno">   43</span>        </div>
-<div class="line"><span class="lineno">   44</span>        </div>
-<div class="line"><span class="lineno">   45</span>        <span class="keywordtype">float</span> orbitRadius = context.currentRadius + width / 2f;</div>
-<div class="line"><span class="lineno">   46</span>        <span class="keywordtype">float</span> orbitDays = orbitRadius / (15f + 5f * StarSystemGenerator.random.nextFloat());</div>
-<div class="line"><span class="lineno">   47</span> </div>
-<div class="line"><span class="lineno">   48</span>        <span class="keywordtype">int</span> count = (int) (orbitDays * (0.25f + 0.5f * StarSystemGenerator.random.nextFloat()) * countMult);</div>
-<div class="line"><span class="lineno">   49</span>        <span class="keywordflow">if</span> (count &gt; 100) {</div>
-<div class="line"><span class="lineno">   50</span>            count = (int) (100f + (count - 100f) * 0.25f); </div>
-<div class="line"><span class="lineno">   51</span>        }</div>
-<div class="line"><span class="lineno">   52</span>        <span class="keywordflow">if</span> (count &gt; 250) count = 250;</div>
-<div class="line"><span class="lineno">   53</span>        </div>
-<div class="line"><span class="lineno">   54</span>        SectorEntityToken belt = system.addAsteroidBelt(parent, count, orbitRadius, width, orbitDays * .75f, orbitDays * 1.5f, Terrain.ASTEROID_BELT,  <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   55</span>        </div>
-<div class="line"><span class="lineno">   56</span>        WeightedRandomPicker&lt;Integer&gt; indexPicker = <span class="keyword">new</span> WeightedRandomPicker&lt;Integer&gt;(StarSystemGenerator.random);</div>
-<div class="line"><span class="lineno">   57</span>        indexPicker.add(0);</div>
-<div class="line"><span class="lineno">   58</span>        indexPicker.add(1);</div>
-<div class="line"><span class="lineno">   59</span>        <span class="comment">//indexPicker.add(2);</span></div>
-<div class="line"><span class="lineno">   60</span>        <span class="comment">//indexPicker.add(3);</span></div>
-<div class="line"><span class="lineno">   61</span>        </div>
-<div class="line"><span class="lineno">   62</span>        system.addRingBand(parent, <span class="stringliteral">&quot;misc&quot;</span>, <span class="stringliteral">&quot;rings_asteroids0&quot;</span>, 256f, indexPicker.pickAndRemove(), Color.white, 256f, orbitRadius - width * 0.25f, orbitDays * 1.05f, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   63</span>        </div>
-<div class="line"><span class="lineno">   64</span>        </div>
-<div class="line"><span class="lineno">   65</span>        indexPicker = <span class="keyword">new</span> WeightedRandomPicker&lt;Integer&gt;(StarSystemGenerator.random);</div>
-<div class="line"><span class="lineno">   66</span>        indexPicker.add(0);</div>
-<div class="line"><span class="lineno">   67</span>        indexPicker.add(1);</div>
-<div class="line"><span class="lineno">   68</span>        indexPicker.add(2);</div>
-<div class="line"><span class="lineno">   69</span>        indexPicker.add(3);</div>
-<div class="line"><span class="lineno">   70</span>        system.addRingBand(parent, <span class="stringliteral">&quot;misc&quot;</span>, <span class="stringliteral">&quot;rings_asteroids0&quot;</span>, 256f, indexPicker.pickAndRemove(), Color.white, 256f, orbitRadius + width * 0.25f, orbitDays, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   71</span> </div>
-<div class="line"><span class="lineno">   72</span>        </div>
-<div class="line"><span class="lineno">   73</span>        <span class="keywordtype">float</span> prevRadius = context.currentRadius;</div>
-<div class="line"><span class="lineno">   74</span>        <span class="comment">//float [] offsets = new float [] {0.5f, 0.15f, 0.85f};</span></div>
-<div class="line"><span class="lineno">   75</span>        <span class="comment">//float [] offsets = new float [] {0.25f};</span></div>
-<div class="line"><span class="lineno">   76</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; maxPlanets; i++) {</div>
-<div class="line"><span class="lineno">   77</span>            CategoryGenDataSpec cat = context.gen.pickCategory(context, StarSystemGenerator.COL_IN_ASTEROIDS, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   78</span>            <span class="keywordflow">if</span> (cat != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   79</span>                WeightedRandomPicker&lt;EntityGenDataSpec&gt; picker = context.gen.getPickerForCategory(cat, context,</div>
-<div class="line"><span class="lineno">   80</span>                                                                        StarSystemGenerator.COL_IN_ASTEROIDS);</div>
-<div class="line"><span class="lineno">   81</span>                <span class="keywordflow">if</span> (StarSystemGenerator.DEBUG) {</div>
-<div class="line"><span class="lineno">   82</span>                    picker.print(<span class="stringliteral">&quot;  Picking from category &quot;</span> + cat.getCategory() + </div>
-<div class="line"><span class="lineno">   83</span>                            <span class="stringliteral">&quot;, orbit index &quot;</span> + (context.parent != <span class="keyword">null</span> ? context.parentOrbitIndex : context.orbitIndex));</div>
-<div class="line"><span class="lineno">   84</span>                }</div>
-<div class="line"><span class="lineno">   85</span>                EntityGenDataSpec pick = picker.pick();</div>
-<div class="line"><span class="lineno">   86</span>                <span class="keywordflow">if</span> (StarSystemGenerator.DEBUG) {</div>
-<div class="line"><span class="lineno">   87</span>                    <span class="keywordflow">if</span> (pick == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   88</span>                        System.out.println(<span class="stringliteral">&quot;  Nothing to pick&quot;</span>);</div>
-<div class="line"><span class="lineno">   89</span>                        System.out.println();</div>
-<div class="line"><span class="lineno">   90</span>                    } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   91</span>                        System.out.println(<span class="stringliteral">&quot;  Picked: &quot;</span> + pick.getId());</div>
-<div class="line"><span class="lineno">   92</span>                        System.out.println();</div>
-<div class="line"><span class="lineno">   93</span>                    }</div>
-<div class="line"><span class="lineno">   94</span>                }</div>
-<div class="line"><span class="lineno">   95</span>                </div>
-<div class="line"><span class="lineno">   96</span>                <span class="keywordflow">if</span> (pick instanceof PlanetGenDataSpec) {</div>
-<div class="line"><span class="lineno">   97</span>                    PlanetGenDataSpec planetData = (PlanetGenDataSpec) pick;</div>
-<div class="line"><span class="lineno">   98</span>                    <span class="comment">//context.currentRadius = prevRadius + width * 0.1f + i * (width * 0.8f) / maxPlanets;</span></div>
-<div class="line"><span class="lineno">   99</span>                    <span class="comment">//context.currentRadius = prevRadius + width * offsets[i];</span></div>
-<div class="line"><span class="lineno">  100</span>                    context.currentRadius = prevRadius - width * 0.6f;</div>
-<div class="line"><span class="lineno">  101</span>                    <span class="comment">//context.parentRadiusOverride = width * 0.75f / maxPlanets / StarSystemGenerator.MOON_RADIUS_MAX_FRACTION_OF_PARENT;</span></div>
-<div class="line"><span class="lineno">  102</span>                    context.parentRadiusOverride = 200f;</div>
-<div class="line"><span class="lineno">  103</span>                    GenResult result = context.gen.addPlanet(context, planetData, <span class="keyword">true</span>, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  104</span>                    <span class="keywordflow">if</span> (result != <span class="keyword">null</span> &amp;&amp; !result.entities.isEmpty()) {</div>
-<div class="line"><span class="lineno">  105</span>                        context.gen.getAllEntitiesAdded().put(result.entities.get(0), result.entities);</div>
-<div class="line"><span class="lineno">  106</span>                    }</div>
-<div class="line"><span class="lineno">  107</span>                    </div>
-<div class="line"><span class="lineno">  108</span>                    <span class="keywordflow">if</span> (!context.generatedPlanets.isEmpty()) {</div>
-<div class="line"><span class="lineno">  109</span>                        GeneratedPlanet last = context.generatedPlanets.get(context.generatedPlanets.size() - 1);</div>
-<div class="line"><span class="lineno">  110</span>                        last.planet.setRadius(last.planet.getRadius() * 0.75f);</div>
-<div class="line"><span class="lineno">  111</span>                    }</div>
-<div class="line"><span class="lineno">  112</span>                }</div>
-<div class="line"><span class="lineno">  113</span>            }</div>
-<div class="line"><span class="lineno">  114</span>        }</div>
-<div class="line"><span class="lineno">  115</span>        context.parentRadiusOverride = -1;</div>
-<div class="line"><span class="lineno">  116</span>        context.currentRadius = prevRadius;</div>
-<div class="line"><span class="lineno">  117</span>        </div>
-<div class="line"><span class="lineno">  118</span>        </div>
-<div class="line"><span class="lineno">  119</span>        GenResult result = <span class="keyword">new</span> GenResult();</div>
-<div class="line"><span class="lineno">  120</span>        result.onlyIncrementByWidth = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  121</span>        result.orbitalWidth = width;</div>
-<div class="line"><span class="lineno">  122</span>        result.entities.add(belt); </div>
-<div class="line"><span class="lineno">  123</span>        <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">  124</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a38c6d152f13ba255f227372c19268e29" name="a38c6d152f13ba255f227372c19268e29"></a>
@@ -294,10 +185,7 @@ Public Member Functions</h2></td></tr>
 <p>Implements <a class="el" href="../../de/d64/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1TerrainGenPlugin.html#a25af793d3d41b4dac5d49cf983293188">com.fs.starfarer.api.impl.campaign.procgen.TerrainGenPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d5e/AsteroidBeltGenPlugin_8java_source.html#l00126">126</a> of file <a class="el" href="../../d2/d5e/AsteroidBeltGenPlugin_8java_source.html">AsteroidBeltGenPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  126</span>                                                                                     {</div>
-<div class="line"><span class="lineno">  127</span>        <span class="keywordflow">return</span> terrainData != <span class="keyword">null</span> &amp;&amp; terrainData.getId().equals(<span class="stringliteral">&quot;asteroid_belt&quot;</span>);</div>
-<div class="line"><span class="lineno">  128</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -415,29 +416,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a892d9c8e77f8c51654d4399169a80540">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/dbc/RecentUnrestEvent_8java_source.html#l00028">28</a> of file <a class="el" href="../../d8/dbc/RecentUnrestEvent_8java_source.html">RecentUnrestEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   28</span>                                      {</div>
-<div class="line"><span class="lineno">   29</span>        <span class="keywordflow">if</span> (!<a class="code hl_function" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#ac5c47dbb1c74444a7517c8d031192459">isEventStarted</a>()) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   30</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../de/d8f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1RecentUnrestEvent.html#a35c8084704ff5dcefa5c0f3720ef30e9">isDone</a>()) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   31</span>        </div>
-<div class="line"><span class="lineno">   32</span>        <span class="keywordtype">float</span> days = Global.getSector().getClock().convertToDays(amount);</div>
-<div class="line"><span class="lineno">   33</span>        elapsedDays += days;</div>
-<div class="line"><span class="lineno">   34</span>        </div>
-<div class="line"><span class="lineno">   35</span>        <span class="keywordflow">if</span> (elapsedDays &gt;= <a class="code hl_variable" href="../../de/d8f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1RecentUnrestEvent.html#a733f830b7f7bba6f61701e7a2ed3eecd">DAYS_PER_STAGE</a>) {</div>
-<div class="line"><span class="lineno">   36</span>            elapsedDays -= <a class="code hl_variable" href="../../de/d8f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1RecentUnrestEvent.html#a733f830b7f7bba6f61701e7a2ed3eecd">DAYS_PER_STAGE</a>;</div>
-<div class="line"><span class="lineno">   37</span>            stabilityPenalty--;</div>
-<div class="line"><span class="lineno">   38</span>            <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a9e839c075f76c21a034ac25fc40a6692">reapplyCondition</a>(conditionToken);</div>
-<div class="line"><span class="lineno">   39</span>        }</div>
-<div class="line"><span class="lineno">   40</span>        </div>
-<div class="line"><span class="lineno">   41</span>        <span class="keywordflow">if</span> (stabilityPenalty &lt;= 0) {</div>
-<div class="line"><span class="lineno">   42</span>            endEvent();</div>
-<div class="line"><span class="lineno">   43</span>        }</div>
-<div class="line"><span class="lineno">   44</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin_html_a82135608621e80f71b991a0c839669e2"><div class="ttname"><a href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin.market</a></div><div class="ttdeci">MarketAPI market</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00043">BaseEventPlugin.java:43</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin_html_ac5c47dbb1c74444a7517c8d031192459"><div class="ttname"><a href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#ac5c47dbb1c74444a7517c8d031192459">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin.isEventStarted</a></div><div class="ttdeci">boolean isEventStarted()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00106">BaseEventPlugin.java:106</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1RecentUnrestEvent_html_a35c8084704ff5dcefa5c0f3720ef30e9"><div class="ttname"><a href="../../de/d8f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1RecentUnrestEvent.html#a35c8084704ff5dcefa5c0f3720ef30e9">com.fs.starfarer.api.impl.campaign.events.RecentUnrestEvent.isDone</a></div><div class="ttdeci">boolean isDone()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/dbc/RecentUnrestEvent_8java_source.html#l00054">RecentUnrestEvent.java:54</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1RecentUnrestEvent_html_a733f830b7f7bba6f61701e7a2ed3eecd"><div class="ttname"><a href="../../de/d8f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1RecentUnrestEvent.html#a733f830b7f7bba6f61701e7a2ed3eecd">com.fs.starfarer.api.impl.campaign.events.RecentUnrestEvent.DAYS_PER_STAGE</a></div><div class="ttdeci">static final float DAYS_PER_STAGE</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/dbc/RecentUnrestEvent_8java_source.html#l00009">RecentUnrestEvent.java:9</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a9e839c075f76c21a034ac25fc40a6692"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a9e839c075f76c21a034ac25fc40a6692">com.fs.starfarer.api.campaign.econ.MarketAPI.reapplyCondition</a></div><div class="ttdeci">void reapplyCondition(String token)</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2ef57c5018a8400ebd92f00f74d11d4b" name="a2ef57c5018a8400ebd92f00f74d11d4b"></a>
@@ -458,12 +437,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#aef42b16a88a66024a330092d6f08eb9b">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/dbc/RecentUnrestEvent_8java_source.html#l00095">95</a> of file <a class="el" href="../../d8/dbc/RecentUnrestEvent_8java_source.html">RecentUnrestEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   95</span>                                 {</div>
-<div class="line"><span class="lineno">   96</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../de/d8f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1RecentUnrestEvent.html#a35c8084704ff5dcefa5c0f3720ef30e9">isDone</a>()) <span class="keywordflow">return</span> <span class="stringliteral">&quot;Recent unrest at null market&quot;</span>;</div>
-<div class="line"><span class="lineno">   97</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Recent unrest at &quot;</span> + <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a7e5b6e8035c61f63cd8b331df994233b">getName</a>();</div>
-<div class="line"><span class="lineno">   98</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a7e5b6e8035c61f63cd8b331df994233b"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a7e5b6e8035c61f63cd8b331df994233b">com.fs.starfarer.api.campaign.econ.MarketAPI.getName</a></div><div class="ttdeci">String getName()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a615adde975d50c8d798fde91bea68893" name="a615adde975d50c8d798fde91bea68893"></a>
@@ -482,10 +456,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/dbc/RecentUnrestEvent_8java_source.html#l00058">58</a> of file <a class="el" href="../../d8/dbc/RecentUnrestEvent_8java_source.html">RecentUnrestEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   58</span>                                     {</div>
-<div class="line"><span class="lineno">   59</span>        <span class="keywordflow">return</span> stabilityPenalty;</div>
-<div class="line"><span class="lineno">   60</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae994995cb62a8da2ff601b26507b1179" name="ae994995cb62a8da2ff601b26507b1179"></a>
@@ -505,17 +476,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/dbc/RecentUnrestEvent_8java_source.html#l00073">73</a> of file <a class="el" href="../../d8/dbc/RecentUnrestEvent_8java_source.html">RecentUnrestEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   73</span>                                                      {</div>
-<div class="line"><span class="lineno">   74</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../de/d8f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1RecentUnrestEvent.html#a35c8084704ff5dcefa5c0f3720ef30e9">isDone</a>()) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   75</span>        </div>
-<div class="line"><span class="lineno">   76</span>        this.stabilityPenalty += penalty;</div>
-<div class="line"><span class="lineno">   77</span>        <span class="keywordflow">if</span> (stabilityPenalty &lt;= 0) {</div>
-<div class="line"><span class="lineno">   78</span>            endEvent();</div>
-<div class="line"><span class="lineno">   79</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   80</span>            <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a9e839c075f76c21a034ac25fc40a6692">reapplyCondition</a>(conditionToken);</div>
-<div class="line"><span class="lineno">   81</span>        }</div>
-<div class="line"><span class="lineno">   82</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a1fc52e114b73ba2d37d8df006cd35657" name="a1fc52e114b73ba2d37d8df006cd35657"></a>
@@ -554,11 +515,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a85df425421b0ba2ec216cb3058f88297">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/dbc/RecentUnrestEvent_8java_source.html#l00014">14</a> of file <a class="el" href="../../d8/dbc/RecentUnrestEvent_8java_source.html">RecentUnrestEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   14</span>                                                                   {</div>
-<div class="line"><span class="lineno">   15</span>        super.init(type, <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#abe1c16c1836db2f6bacef1b8b0814872">eventTarget</a>, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   16</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin_html_abe1c16c1836db2f6bacef1b8b0814872"><div class="ttname"><a href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#abe1c16c1836db2f6bacef1b8b0814872">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin.eventTarget</a></div><div class="ttdeci">CampaignEventTarget eventTarget</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00042">BaseEventPlugin.java:42</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a35c8084704ff5dcefa5c0f3720ef30e9" name="a35c8084704ff5dcefa5c0f3720ef30e9"></a>
@@ -579,10 +536,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#ab897ab2cfdb15c8183902a077567171b">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/dbc/RecentUnrestEvent_8java_source.html#l00054">54</a> of file <a class="el" href="../../d8/dbc/RecentUnrestEvent_8java_source.html">RecentUnrestEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   54</span>                            {</div>
-<div class="line"><span class="lineno">   55</span>        <span class="keywordflow">return</span> ended;</div>
-<div class="line"><span class="lineno">   56</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a7ec0dbb829888534ac6c58832a275638" name="a7ec0dbb829888534ac6c58832a275638"></a>
@@ -602,17 +556,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/dbc/RecentUnrestEvent_8java_source.html#l00084">84</a> of file <a class="el" href="../../d8/dbc/RecentUnrestEvent_8java_source.html">RecentUnrestEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   84</span>                                                    {</div>
-<div class="line"><span class="lineno">   85</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../de/d8f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1RecentUnrestEvent.html#a35c8084704ff5dcefa5c0f3720ef30e9">isDone</a>()) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   86</span>        </div>
-<div class="line"><span class="lineno">   87</span>        this.stabilityPenalty -= penalty;</div>
-<div class="line"><span class="lineno">   88</span>        <span class="keywordflow">if</span> (stabilityPenalty &lt;= 0) {</div>
-<div class="line"><span class="lineno">   89</span>            endEvent();</div>
-<div class="line"><span class="lineno">   90</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   91</span>            <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a9e839c075f76c21a034ac25fc40a6692">reapplyCondition</a>(conditionToken);</div>
-<div class="line"><span class="lineno">   92</span>        }</div>
-<div class="line"><span class="lineno">   93</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="adf33a857e5bd936e4e8ea288c8cedb62" name="adf33a857e5bd936e4e8ea288c8cedb62"></a>
@@ -632,17 +576,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/dbc/RecentUnrestEvent_8java_source.html#l00062">62</a> of file <a class="el" href="../../d8/dbc/RecentUnrestEvent_8java_source.html">RecentUnrestEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   62</span>                                                          {</div>
-<div class="line"><span class="lineno">   63</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../de/d8f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1RecentUnrestEvent.html#a35c8084704ff5dcefa5c0f3720ef30e9">isDone</a>()) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   64</span>        </div>
-<div class="line"><span class="lineno">   65</span>        this.stabilityPenalty = stabilityPenalty;</div>
-<div class="line"><span class="lineno">   66</span>        <span class="keywordflow">if</span> (stabilityPenalty &lt;= 0) {</div>
-<div class="line"><span class="lineno">   67</span>            endEvent();</div>
-<div class="line"><span class="lineno">   68</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   69</span>            <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a9e839c075f76c21a034ac25fc40a6692">reapplyCondition</a>(conditionToken);</div>
-<div class="line"><span class="lineno">   70</span>        }</div>
-<div class="line"><span class="lineno">   71</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8b0ce6c5b0a705860a77cfd50f0f1248" name="a8b0ce6c5b0a705860a77cfd50f0f1248"></a>
@@ -664,17 +598,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#aa016b5c97932063aa9184483bd01c5ee">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/dbc/RecentUnrestEvent_8java_source.html#l00018">18</a> of file <a class="el" href="../../d8/dbc/RecentUnrestEvent_8java_source.html">RecentUnrestEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   18</span>                             {</div>
-<div class="line"><span class="lineno">   19</span>        super.startEvent(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   20</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a> == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   21</span>            endEvent();</div>
-<div class="line"><span class="lineno">   22</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   23</span>        }</div>
-<div class="line"><span class="lineno">   24</span>        </div>
-<div class="line"><span class="lineno">   25</span>        conditionToken = <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#ab83e76a338104a130f716183d8896b1f">addCondition</a>(Conditions.RECENT_UNREST, <span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">   26</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_ab83e76a338104a130f716183d8896b1f"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#ab83e76a338104a130f716183d8896b1f">com.fs.starfarer.api.campaign.econ.MarketAPI.addCondition</a></div><div class="ttdeci">String addCondition(String id)</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

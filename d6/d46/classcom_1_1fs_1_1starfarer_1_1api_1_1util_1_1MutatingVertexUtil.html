@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -162,13 +163,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/df4/MutatingVertexUtil_8java_source.html#l00012">12</a> of file <a class="el" href="../../d9/df4/MutatingVertexUtil_8java_source.html">MutatingVertexUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   12</span>                                                                                                 {</div>
-<div class="line"><span class="lineno">   13</span>            <a class="code hl_variable" href="../../d6/d46/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1MutatingVertexUtil.html#ad38a0db9000869e654a6f374818dca5e">theta</a> = <span class="keyword">new</span> MutatingValue(-360f * ((<span class="keywordtype">float</span>) Math.random() * 3f + 1f), 360f * ((<span class="keywordtype">float</span>) Math.random() * 3f + 1f), angleRate);</div>
-<div class="line"><span class="lineno">   14</span>            <a class="code hl_variable" href="../../d6/d46/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1MutatingVertexUtil.html#a7ca20d8cc3d7a772e4275d3a563da904">radius</a> = <span class="keyword">new</span> MutatingValue(minRadius, maxRadius, rate);</div>
-<div class="line"><span class="lineno">   15</span>        }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1MutatingVertexUtil_html_a7ca20d8cc3d7a772e4275d3a563da904"><div class="ttname"><a href="../../d6/d46/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1MutatingVertexUtil.html#a7ca20d8cc3d7a772e4275d3a563da904">com.fs.starfarer.api.util.MutatingVertexUtil.radius</a></div><div class="ttdeci">MutatingValue radius</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/df4/MutatingVertexUtil_8java_source.html#l00009">MutatingVertexUtil.java:9</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1MutatingVertexUtil_html_ad38a0db9000869e654a6f374818dca5e"><div class="ttname"><a href="../../d6/d46/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1MutatingVertexUtil.html#ad38a0db9000869e654a6f374818dca5e">com.fs.starfarer.api.util.MutatingVertexUtil.theta</a></div><div class="ttdeci">MutatingValue theta</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/df4/MutatingVertexUtil_8java_source.html#l00008">MutatingVertexUtil.java:8</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -189,15 +184,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/df4/MutatingVertexUtil_8java_source.html#l00017">17</a> of file <a class="el" href="../../d9/df4/MutatingVertexUtil_8java_source.html">MutatingVertexUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   17</span>                                          {</div>
-<div class="line"><span class="lineno">   18</span>            <a class="code hl_variable" href="../../d6/d46/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1MutatingVertexUtil.html#ad38a0db9000869e654a6f374818dca5e">theta</a>.advance(amount);</div>
-<div class="line"><span class="lineno">   19</span>            <a class="code hl_variable" href="../../d6/d46/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1MutatingVertexUtil.html#a7ca20d8cc3d7a772e4275d3a563da904">radius</a>.advance(amount);</div>
-<div class="line"><span class="lineno">   20</span>            </div>
-<div class="line"><span class="lineno">   21</span>            <a class="code hl_variable" href="../../d6/d46/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1MutatingVertexUtil.html#a3f8e471152fe2f3bb50dbff763fcdd02">vector</a> = Misc.getUnitVectorAtDegreeAngle(<a class="code hl_variable" href="../../d6/d46/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1MutatingVertexUtil.html#ad38a0db9000869e654a6f374818dca5e">theta</a>.getValue());</div>
-<div class="line"><span class="lineno">   22</span>            <a class="code hl_variable" href="../../d6/d46/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1MutatingVertexUtil.html#a3f8e471152fe2f3bb50dbff763fcdd02">vector</a>.scale(<a class="code hl_variable" href="../../d6/d46/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1MutatingVertexUtil.html#a7ca20d8cc3d7a772e4275d3a563da904">radius</a>.getValue());</div>
-<div class="line"><span class="lineno">   23</span>        }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1MutatingVertexUtil_html_a3f8e471152fe2f3bb50dbff763fcdd02"><div class="ttname"><a href="../../d6/d46/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1MutatingVertexUtil.html#a3f8e471152fe2f3bb50dbff763fcdd02">com.fs.starfarer.api.util.MutatingVertexUtil.vector</a></div><div class="ttdeci">Vector2f vector</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/df4/MutatingVertexUtil_8java_source.html#l00010">MutatingVertexUtil.java:10</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

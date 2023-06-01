@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -175,54 +176,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="../../d0/d5c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1CommandPlugin.html#a72a44c5127e60136b87d3b37613fd0e0">com.fs.starfarer.api.campaign.rules.CommandPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/dfc/BroadcastPlayerWaitAction_8java_source.html#l00024">24</a> of file <a class="el" href="../../dc/dfc/BroadcastPlayerWaitAction_8java_source.html">BroadcastPlayerWaitAction.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   24</span>                                                                                                                             {</div>
-<div class="line"><span class="lineno">   25</span>        waitHandle = params.get(0).getVarNameAndMemory(memoryMap);</div>
-<div class="line"><span class="lineno">   26</span> </div>
-<div class="line"><span class="lineno">   27</span>        <span class="keyword">final</span> ActionType type = Enum.valueOf(ActionType.class, params.get(1).string);</div>
-<div class="line"><span class="lineno">   28</span>        <span class="keyword">final</span> <span class="keywordtype">float</span> range = Float.parseFloat(params.get(2).string);</div>
-<div class="line"><span class="lineno">   29</span>        <span class="keyword">final</span> String responseVariable = params.get(3).string;</div>
-<div class="line"><span class="lineno">   30</span>        </div>
-<div class="line"><span class="lineno">   31</span>        <span class="keyword">final</span> SectorEntityToken target = dialog.getInteractionTarget();</div>
-<div class="line"><span class="lineno">   32</span>        <span class="keyword">final</span> CampaignFleetAPI playerFleet = Global.getSector().getPlayerFleet();</div>
-<div class="line"><span class="lineno">   33</span>        </div>
-<div class="line"><span class="lineno">   34</span>        BroadcastPlayerAction.broadcast(type, range, responseVariable, playerFleet, target);</div>
-<div class="line"><span class="lineno">   35</span>        broadcastScript = <span class="keyword">new</span> EveryFrameScript() {</div>
-<div class="line"><span class="lineno">   36</span>            <span class="keyword">private</span> IntervalUtil tracker = <span class="keyword">new</span> IntervalUtil(0.05f, 0.15f);</div>
-<div class="line"><span class="lineno">   37</span>            <span class="keyword">private</span> <span class="keywordtype">boolean</span> done = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   38</span> </div>
-<div class="line"><span class="lineno">   39</span>            <span class="keyword">public</span> <span class="keywordtype">boolean</span> runWhilePaused() {</div>
-<div class="line"><span class="lineno">   40</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   41</span>            }</div>
-<div class="line"><span class="lineno">   42</span>            <span class="keyword">public</span> <span class="keywordtype">boolean</span> isDone() {</div>
-<div class="line"><span class="lineno">   43</span>                <span class="keywordflow">return</span> done;</div>
-<div class="line"><span class="lineno">   44</span>            }</div>
-<div class="line"><span class="lineno">   45</span>            <span class="keyword">public</span> <span class="keywordtype">void</span> advance(<span class="keywordtype">float</span> amount) {</div>
-<div class="line"><span class="lineno">   46</span>                CampaignClockAPI clock = Global.getSector().getClock();</div>
-<div class="line"><span class="lineno">   47</span>                </div>
-<div class="line"><span class="lineno">   48</span>                <span class="keywordtype">float</span> days = clock.convertToDays(amount);</div>
-<div class="line"><span class="lineno">   49</span>                tracker.advance(days);</div>
-<div class="line"><span class="lineno">   50</span>                </div>
-<div class="line"><span class="lineno">   51</span>                <span class="keywordflow">if</span> (tracker.intervalElapsed() &amp;&amp; !done) {</div>
-<div class="line"><span class="lineno">   52</span>                    <span class="keywordflow">if</span> (waitHandle.memory.contains(waitHandle.name)) {</div>
-<div class="line"><span class="lineno">   53</span>                        Wait wait = (Wait) waitHandle.memory.get(waitHandle.name);</div>
-<div class="line"><span class="lineno">   54</span>                        <span class="keywordflow">if</span> (wait.getWaitScript().isDone()) {</div>
-<div class="line"><span class="lineno">   55</span>                            done = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   56</span>                            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   57</span>                        }</div>
-<div class="line"><span class="lineno">   58</span>                    } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   59</span>                        done = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   60</span>                        <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   61</span>                    }</div>
-<div class="line"><span class="lineno">   62</span>                    BroadcastPlayerAction.broadcast(type, range, responseVariable, playerFleet, target);</div>
-<div class="line"><span class="lineno">   63</span>                }</div>
-<div class="line"><span class="lineno">   64</span>            }</div>
-<div class="line"><span class="lineno">   65</span>        };</div>
-<div class="line"><span class="lineno">   66</span>        </div>
-<div class="line"><span class="lineno">   67</span>        Global.getSector().addScript(broadcastScript);</div>
-<div class="line"><span class="lineno">   68</span>        </div>
-<div class="line"><span class="lineno">   69</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   70</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -181,46 +182,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/d96/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1BaseSensorGhostCreator.html#a672d510486f4336ac8ce1b5883b1b228">com.fs.starfarer.api.impl.campaign.ghosts.BaseSensorGhostCreator</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d1/da6/EncounterTricksterGhostCreator_8java_source.html#l00037">37</a> of file <a class="el" href="../../d1/da6/EncounterTricksterGhostCreator_8java_source.html">EncounterTricksterGhostCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   37</span>                                                                     {</div>
-<div class="line"><span class="lineno">   38</span>        <span class="keywordflow">if</span> (!Global.getSector().getCurrentLocation().isHyperspace()) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   39</span>        </div>
-<div class="line"><span class="lineno">   40</span>        Random random = manager.getRandom();</div>
-<div class="line"><span class="lineno">   41</span>        CampaignFleetAPI pf = Global.getSector().getPlayerFleet();</div>
-<div class="line"><span class="lineno">   42</span>        LocationAPI hyper = Global.getSector().getCurrentLocation();</div>
-<div class="line"><span class="lineno">   43</span>        </div>
-<div class="line"><span class="lineno">   44</span>        Vector2f loc = <a class="code hl_function" href="../../d3/d96/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1BaseSensorGhostCreator.html#a93ba1c69473d6f5e377bf9e1d94a4d81">findHyperspaceArea</a>(pf.getLocation(), 3000, 4000, 1000, random, <span class="keyword">true</span>, 3000);</div>
-<div class="line"><span class="lineno">   45</span>        <span class="keywordflow">if</span> (loc == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   46</span>        </div>
-<div class="line"><span class="lineno">   47</span>        CampaignFleetAPI other = <a class="code hl_function" href="../../d2/d52/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1EncounterTricksterGhostCreator.html#a29c3f3946a7d95b80976c8563e21e471">createOtherFleet</a>(manager, pf.getLocation());</div>
-<div class="line"><span class="lineno">   48</span>        <span class="keywordflow">if</span> (other == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   49</span>            <span class="comment">// to trigger full timeout, since this is a valid outcome for this creator</span></div>
-<div class="line"><span class="lineno">   50</span>            <span class="comment">// i.e. it picked &quot;nothing&quot; due to not being near a pirate base etc</span></div>
-<div class="line"><span class="lineno">   51</span><span class="comment">//          List&lt;SensorGhost&gt; result = new ArrayList&lt;SensorGhost&gt;();</span></div>
-<div class="line"><span class="lineno">   52</span><span class="comment">//          result.add(new NoGhost(manager));</span></div>
-<div class="line"><span class="lineno">   53</span><span class="comment">//          return result;</span></div>
-<div class="line"><span class="lineno">   54</span>            <span class="comment">// actually, don&#39;t want the above, it&#39;s fine fo this ghost to trigger the short timeout and for</span></div>
-<div class="line"><span class="lineno">   55</span>            <span class="comment">// another ghost to be picked</span></div>
-<div class="line"><span class="lineno">   56</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   57</span>        }</div>
-<div class="line"><span class="lineno">   58</span>        </div>
-<div class="line"><span class="lineno">   59</span>        hyper.addEntity(other);</div>
-<div class="line"><span class="lineno">   60</span>        other.setLocation(loc.x, loc.y);</div>
-<div class="line"><span class="lineno">   61</span>        other.addScript(<span class="keyword">new</span> AutoDespawnScript(other));</div>
-<div class="line"><span class="lineno">   62</span>        </div>
-<div class="line"><span class="lineno">   63</span>        <span class="keywordtype">boolean</span> guideToTarget = manager.getRandom().nextBoolean();</div>
-<div class="line"><span class="lineno">   64</span>        <span class="comment">//guideToTarget = false;</span></div>
-<div class="line"><span class="lineno">   65</span>        List&lt;SensorGhost&gt; result = <span class="keyword">new</span> ArrayList&lt;SensorGhost&gt;();</div>
-<div class="line"><span class="lineno">   66</span>        SensorGhost g = <span class="keyword">new</span> EncounterTricksterGhost(manager, other, guideToTarget);</div>
-<div class="line"><span class="lineno">   67</span>        <span class="keywordflow">if</span> (g.isCreationFailed()) {</div>
-<div class="line"><span class="lineno">   68</span>            hyper.removeEntity(other);</div>
-<div class="line"><span class="lineno">   69</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   70</span>        }</div>
-<div class="line"><span class="lineno">   71</span>        result.add(g);</div>
-<div class="line"><span class="lineno">   72</span>        <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">   73</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1BaseSensorGhostCreator_html_a93ba1c69473d6f5e377bf9e1d94a4d81"><div class="ttname"><a href="../../d3/d96/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1BaseSensorGhostCreator.html#a93ba1c69473d6f5e377bf9e1d94a4d81">com.fs.starfarer.api.impl.campaign.ghosts.BaseSensorGhostCreator.findHyperspaceArea</a></div><div class="ttdeci">static Vector2f findHyperspaceArea(Vector2f from, float minRange, float maxRange, float radius, Random random, boolean clear, float noSlipstreamRange)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d61/BaseSensorGhostCreator_8java_source.html#l00042">BaseSensorGhostCreator.java:42</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1EncounterTricksterGhostCreator_html_a29c3f3946a7d95b80976c8563e21e471"><div class="ttname"><a href="../../d2/d52/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1EncounterTricksterGhostCreator.html#a29c3f3946a7d95b80976c8563e21e471">com.fs.starfarer.api.impl.campaign.ghosts.types.EncounterTricksterGhostCreator.createOtherFleet</a></div><div class="ttdeci">CampaignFleetAPI createOtherFleet(SensorGhostManager manager, Vector2f locInHyper)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/da6/EncounterTricksterGhostCreator_8java_source.html#l00082">EncounterTricksterGhostCreator.java:82</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a29c3f3946a7d95b80976c8563e21e471" name="a29c3f3946a7d95b80976c8563e21e471"></a>
@@ -250,113 +212,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/da6/EncounterTricksterGhostCreator_8java_source.html#l00082">82</a> of file <a class="el" href="../../d1/da6/EncounterTricksterGhostCreator_8java_source.html">EncounterTricksterGhostCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   82</span>                                                                                              {</div>
-<div class="line"><span class="lineno">   83</span>        Random random = manager.getRandom();</div>
-<div class="line"><span class="lineno">   84</span> </div>
-<div class="line"><span class="lineno">   85</span>        </div>
-<div class="line"><span class="lineno">   86</span>        PirateBaseIntel intel = BaseEPEncounterCreator.getClosestPirateBase(locInHyper);</div>
-<div class="line"><span class="lineno">   87</span>        <span class="keywordtype">float</span> f1 = BaseEPEncounterCreator.getPirateBaseProximityFactor(intel, locInHyper);</div>
-<div class="line"><span class="lineno">   88</span>        </div>
-<div class="line"><span class="lineno">   89</span>        LuddicPathBaseIntel intel2 = BaseEPEncounterCreator.getClosestLuddicPathBase(locInHyper);</div>
-<div class="line"><span class="lineno">   90</span>        <span class="keywordtype">float</span> f2 = BaseEPEncounterCreator.getLuddicPathBaseProximityFactor(intel2, locInHyper);</div>
-<div class="line"><span class="lineno">   91</span>        </div>
-<div class="line"><span class="lineno">   92</span>        <span class="keywordtype">float</span> result = Math.max(f1, f2);</div>
-<div class="line"><span class="lineno">   93</span>        </div>
-<div class="line"><span class="lineno">   94</span>        StarSystemAPI ruins = BaseEPEncounterCreator.getClosestSystemWithRuins(locInHyper);</div>
-<div class="line"><span class="lineno">   95</span>        <span class="keywordtype">float</span> f3 = BaseEPEncounterCreator.getRuinsProximityFactor(ruins, locInHyper);</div>
-<div class="line"><span class="lineno">   96</span>        f3 *= 0.25f;</div>
-<div class="line"><span class="lineno">   97</span>        result = Math.max(result, f3);</div>
-<div class="line"><span class="lineno">   98</span>        </div>
-<div class="line"><span class="lineno">   99</span>        WeightedRandomPicker&lt;OtherFleetType&gt; picker = <span class="keyword">new</span> WeightedRandomPicker&lt;OtherFleetType&gt;(random);</div>
-<div class="line"><span class="lineno">  100</span>        picker.add(OtherFleetType.PIRATE, f1 + 0.1f);</div>
-<div class="line"><span class="lineno">  101</span>        picker.add(OtherFleetType.LUDDIC_PATH, f2 + 0.05f);</div>
-<div class="line"><span class="lineno">  102</span>        picker.add(OtherFleetType.MERCENARY, (f1 + f2) * 0.25f + 0.01f);</div>
-<div class="line"><span class="lineno">  103</span>        picker.add(OtherFleetType.NOTHING, 1f);</div>
-<div class="line"><span class="lineno">  104</span>        OtherFleetType type = picker.pick();</div>
-<div class="line"><span class="lineno">  105</span>        <span class="keywordflow">if</span> (type == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  106</span>        </div>
-<div class="line"><span class="lineno">  107</span>        CampaignFleetAPI fleet = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  108</span>        FleetCreatorMission m = <span class="keyword">new</span> FleetCreatorMission(random);</div>
-<div class="line"><span class="lineno">  109</span>        m.beginFleet();</div>
-<div class="line"><span class="lineno">  110</span>        </div>
-<div class="line"><span class="lineno">  111</span>        <span class="keywordflow">if</span> (type == OtherFleetType.PIRATE) {</div>
-<div class="line"><span class="lineno">  112</span>            String factionId = Factions.PIRATES;</div>
-<div class="line"><span class="lineno">  113</span>            <span class="keywordflow">if</span> (intel != <span class="keyword">null</span> &amp;&amp; intel.getMarket() != <span class="keyword">null</span>) factionId = intel.getMarket().getFactionId();</div>
-<div class="line"><span class="lineno">  114</span>            <span class="keywordtype">int</span> difficulty = 0;</div>
-<div class="line"><span class="lineno">  115</span>            </div>
-<div class="line"><span class="lineno">  116</span>            <span class="keywordflow">if</span> (intel != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  117</span>                difficulty += (int) Math.round(f1 * 2f);</div>
-<div class="line"><span class="lineno">  118</span>                <span class="keywordflow">if</span> (intel != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  119</span>                    <span class="keywordflow">switch</span> (intel.getTier()) {</div>
-<div class="line"><span class="lineno">  120</span>                    <span class="keywordflow">case</span> TIER_1_1MODULE: difficulty += 2; <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  121</span>                    <span class="keywordflow">case</span> TIER_2_1MODULE: difficulty += 2; <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  122</span>                    <span class="keywordflow">case</span> TIER_3_2MODULE: difficulty += 3; <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  123</span>                    <span class="keywordflow">case</span> TIER_4_3MODULE: difficulty += 4; <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  124</span>                    <span class="keywordflow">case</span> TIER_5_3MODULE: difficulty += 5; <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  125</span>                    }</div>
-<div class="line"><span class="lineno">  126</span>                }</div>
-<div class="line"><span class="lineno">  127</span>                difficulty += random.nextInt(4);</div>
-<div class="line"><span class="lineno">  128</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  129</span>                difficulty += 4;</div>
-<div class="line"><span class="lineno">  130</span>                difficulty += random.nextInt(7);</div>
-<div class="line"><span class="lineno">  131</span>            }</div>
-<div class="line"><span class="lineno">  132</span>            Vector2f loc = locInHyper;</div>
-<div class="line"><span class="lineno">  133</span>            m.createStandardFleet(difficulty, factionId, loc);</div>
-<div class="line"><span class="lineno">  134</span>            m.triggerSetStandardAggroPirateFlags();</div>
-<div class="line"><span class="lineno">  135</span>            m.triggerFleetAllowLongPursuit();</div>
-<div class="line"><span class="lineno">  136</span>            <span class="keywordflow">if</span> (intel != <span class="keyword">null</span> &amp;&amp; intel.getMarket() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  137</span>                m.triggerSetFleetMemoryValue(MemFlags.MEMORY_KEY_SOURCE_MARKET, intel.getMarket().getId());</div>
-<div class="line"><span class="lineno">  138</span>            }</div>
-<div class="line"><span class="lineno">  139</span>            fleet = m.createFleet();</div>
-<div class="line"><span class="lineno">  140</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (type == OtherFleetType.LUDDIC_PATH) {</div>
-<div class="line"><span class="lineno">  141</span>            <span class="keywordtype">int</span> difficulty = 0;</div>
-<div class="line"><span class="lineno">  142</span>            <span class="keywordflow">if</span> (intel2 != <span class="keyword">null</span>) { </div>
-<div class="line"><span class="lineno">  143</span>                difficulty += (int) Math.round(f2 * 2f);</div>
-<div class="line"><span class="lineno">  144</span>                <span class="keywordflow">if</span> (intel2.isLarge()) {</div>
-<div class="line"><span class="lineno">  145</span>                    difficulty += 5;</div>
-<div class="line"><span class="lineno">  146</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  147</span>                    difficulty += 3;</div>
-<div class="line"><span class="lineno">  148</span>                }</div>
-<div class="line"><span class="lineno">  149</span>                difficulty += random.nextInt(4);</div>
-<div class="line"><span class="lineno">  150</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  151</span>                difficulty += 4;</div>
-<div class="line"><span class="lineno">  152</span>                difficulty += random.nextInt(7);</div>
-<div class="line"><span class="lineno">  153</span>            }</div>
-<div class="line"><span class="lineno">  154</span>            </div>
-<div class="line"><span class="lineno">  155</span>            Vector2f loc = locInHyper;</div>
-<div class="line"><span class="lineno">  156</span>            m.createStandardFleet(difficulty, Factions.LUDDIC_PATH, loc);</div>
-<div class="line"><span class="lineno">  157</span>            m.triggerSetStandardAggroPirateFlags();</div>
-<div class="line"><span class="lineno">  158</span>            m.triggerFleetAllowLongPursuit();</div>
-<div class="line"><span class="lineno">  159</span>            <span class="keywordflow">if</span> (intel2 != <span class="keyword">null</span> &amp;&amp; intel2.getMarket() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  160</span>                m.triggerSetFleetMemoryValue(MemFlags.MEMORY_KEY_SOURCE_MARKET, intel2.getMarket().getId());</div>
-<div class="line"><span class="lineno">  161</span>            }</div>
-<div class="line"><span class="lineno">  162</span>            </div>
-<div class="line"><span class="lineno">  163</span>            fleet = m.createFleet();</div>
-<div class="line"><span class="lineno">  164</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (type == OtherFleetType.MERCENARY) {</div>
-<div class="line"><span class="lineno">  165</span>            <span class="keywordtype">int</span> difficulty = 3;</div>
-<div class="line"><span class="lineno">  166</span>            <span class="keywordtype">float</span> f = Math.max(f1, f2);</div>
-<div class="line"><span class="lineno">  167</span>            difficulty += (int) Math.round(f * 3f);</div>
-<div class="line"><span class="lineno">  168</span>            difficulty += random.nextInt(5);</div>
-<div class="line"><span class="lineno">  169</span>            </div>
-<div class="line"><span class="lineno">  170</span>            Vector2f loc = locInHyper;</div>
-<div class="line"><span class="lineno">  171</span>            m.createQualityFleet(difficulty, Factions.MERCENARY, loc);</div>
-<div class="line"><span class="lineno">  172</span>            m.triggerFleetAllowLongPursuit();</div>
-<div class="line"><span class="lineno">  173</span>            m.triggerSetFleetFaction(Factions.INDEPENDENT);</div>
-<div class="line"><span class="lineno">  174</span>            m.triggerMakeNoRepImpact();</div>
-<div class="line"><span class="lineno">  175</span>            m.triggerFleetSetAllWeapons();</div>
-<div class="line"><span class="lineno">  176</span>            </div>
-<div class="line"><span class="lineno">  177</span>            fleet = m.createFleet();</div>
-<div class="line"><span class="lineno">  178</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (type == OtherFleetType.NOTHING) {</div>
-<div class="line"><span class="lineno">  179</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  180</span>        }</div>
-<div class="line"><span class="lineno">  181</span>        </div>
-<div class="line"><span class="lineno">  182</span>        <span class="keywordflow">if</span> (fleet == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  183</span>        fleet.removeScriptsOfClass(MissionFleetAutoDespawn.class);</div>
-<div class="line"><span class="lineno">  184</span>        fleet.addScript(<span class="keyword">new</span> MissionFleetAutoDespawn(<span class="keyword">null</span>, fleet));</div>
-<div class="line"><span class="lineno">  185</span>        </div>
-<div class="line"><span class="lineno">  186</span>        <span class="keywordflow">return</span> fleet;</div>
-<div class="line"><span class="lineno">  187</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac866294ece77feeca5b15aff79180034" name="ac866294ece77feeca5b15aff79180034"></a>
@@ -378,11 +234,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/d96/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1BaseSensorGhostCreator.html#a0b8e9e91bdbc699998d02c1013aa936a">com.fs.starfarer.api.impl.campaign.ghosts.BaseSensorGhostCreator</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d1/da6/EncounterTricksterGhostCreator_8java_source.html#l00076">76</a> of file <a class="el" href="../../d1/da6/EncounterTricksterGhostCreator_8java_source.html">EncounterTricksterGhostCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   76</span>                                                          {</div>
-<div class="line"><span class="lineno">   77</span>        <span class="keywordflow">return</span> GhostFrequencies.getEncounterTricksterFrequency(manager);</div>
-<div class="line"><span class="lineno">   78</span>        <span class="comment">//return 100000f;</span></div>
-<div class="line"><span class="lineno">   79</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

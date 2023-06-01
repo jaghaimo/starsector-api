@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -158,10 +159,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d0e/NameAssigner_8java_source.html#l00069">69</a> of file <a class="el" href="../../d2/d0e/NameAssigner_8java_source.html">NameAssigner.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   69</span>                                                     {</div>
-<div class="line"><span class="lineno">   70</span>        this.constellation = constellation;</div>
-<div class="line"><span class="lineno">   71</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -192,98 +190,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d0e/NameAssigner_8java_source.html#l00391">391</a> of file <a class="el" href="../../d2/d0e/NameAssigner_8java_source.html">NameAssigner.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  391</span>                                                                       {</div>
-<div class="line"><span class="lineno">  392</span>        OUTER: <span class="keywordflow">for</span> (PlanetAPI planet : system.getPlanets()) {</div>
-<div class="line"><span class="lineno">  393</span>            <span class="keywordflow">if</span> (planet.isStar()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  394</span>            <span class="keywordflow">if</span> (planet == curr.entity) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  395</span>            <span class="keywordflow">if</span> (!constellation.<a class="code hl_variable" href="../../d4/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1Constellation.html#a042a550367d28950b43ba2c1892cd0e4">allEntitiesAdded</a>.containsKey(planet)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  396</span>            <span class="keywordflow">for</span> (NamingTreeNode n : curr.children) {</div>
-<div class="line"><span class="lineno">  397</span>                <span class="keywordflow">if</span> (n.entity == planet) <span class="keywordflow">continue</span> OUTER;</div>
-<div class="line"><span class="lineno">  398</span>            }</div>
-<div class="line"><span class="lineno">  399</span>            </div>
-<div class="line"><span class="lineno">  400</span>            PlanetAPI lagrangeParent = constellation.<a class="code hl_variable" href="../../d4/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1Constellation.html#afb51a0c78dde99aa9c618df2c8e636e8">lagrangeParentMap</a>.get(planet);</div>
-<div class="line"><span class="lineno">  401</span>            <span class="keywordtype">boolean</span> mainStarAndOrbitingSystemCenter = curr.entity == curr.system.getStar() &amp;&amp;</div>
-<div class="line"><span class="lineno">  402</span>                                                      planet.getOrbitFocus() == curr.system.getCenter() &amp;&amp;</div>
-<div class="line"><span class="lineno">  403</span>                                                      lagrangeParent == <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  404</span>            </div>
-<div class="line"><span class="lineno">  405</span>            <span class="keywordflow">if</span> (mainStarAndOrbitingSystemCenter || </div>
-<div class="line"><span class="lineno">  406</span>                    (planet.getOrbitFocus() == curr.entity &amp;&amp; lagrangeParent == <span class="keyword">null</span>) ||</div>
-<div class="line"><span class="lineno">  407</span>                    lagrangeParent == curr.entity) {</div>
-<div class="line"><span class="lineno">  408</span>                NamingTreeNode node = <span class="keyword">new</span> NamingTreeNode(system);</div>
-<div class="line"><span class="lineno">  409</span>                node.entity = planet;</div>
-<div class="line"><span class="lineno">  410</span>                node.parent = curr;</div>
-<div class="line"><span class="lineno">  411</span>                curr.children.add(node);</div>
-<div class="line"><span class="lineno">  412</span>                </div>
-<div class="line"><span class="lineno">  413</span>                <span class="keywordflow">if</span> (lagrangeParent != <span class="keyword">null</span> &amp;&amp; planet.getOrbitFocus() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  414</span>                    <span class="comment">//float angle1 = planet.getOrbitFocus().getCircularOrbitAngle();</span></div>
-<div class="line"><span class="lineno">  415</span>                    <span class="keywordtype">float</span> angle1 = lagrangeParent.getCircularOrbitAngle();</div>
-<div class="line"><span class="lineno">  416</span>                    <span class="keywordtype">float</span> angle2 = planet.getCircularOrbitAngle();</div>
-<div class="line"><span class="lineno">  417</span>                    </div>
-<div class="line"><span class="lineno">  418</span>                    <span class="keywordflow">if</span> (Misc.getClosestTurnDirection(angle1, angle2) &lt; 0) {</div>
-<div class="line"><span class="lineno">  419</span>                        node.lagrangePointType = LagrangePointType.L4;</div>
-<div class="line"><span class="lineno">  420</span>                    } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  421</span>                        node.lagrangePointType = LagrangePointType.L5;</div>
-<div class="line"><span class="lineno">  422</span>                    }</div>
-<div class="line"><span class="lineno">  423</span>                }</div>
-<div class="line"><span class="lineno">  424</span>                </div>
-<div class="line"><span class="lineno">  425</span>                <a class="code hl_function" href="../../d0/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1NameAssigner.html#acba411a349a6e6c94634a5c6ff1a6b31">addChildren</a>(system, node);</div>
-<div class="line"><span class="lineno">  426</span>            }</div>
-<div class="line"><span class="lineno">  427</span>        }</div>
-<div class="line"><span class="lineno">  428</span>        </div>
-<div class="line"><span class="lineno">  429</span>        OUTER: <span class="keywordflow">for</span> (CampaignTerrainAPI terrain : system.getTerrainCopy()) {</div>
-<div class="line"><span class="lineno">  430</span>            <span class="keywordflow">if</span> (terrain == curr.entity) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  431</span>            <span class="keywordflow">if</span> (!constellation.<a class="code hl_variable" href="../../d4/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1Constellation.html#a042a550367d28950b43ba2c1892cd0e4">allEntitiesAdded</a>.containsKey(terrain)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  432</span>            <span class="keywordflow">for</span> (NamingTreeNode n : curr.children) {</div>
-<div class="line"><span class="lineno">  433</span>                <span class="keywordflow">if</span> (n.entity == terrain) <span class="keywordflow">continue</span> OUTER;</div>
-<div class="line"><span class="lineno">  434</span>            }</div>
-<div class="line"><span class="lineno">  435</span>            </div>
-<div class="line"><span class="lineno">  436</span>            PlanetAPI lagrangeParent = constellation.<a class="code hl_variable" href="../../d4/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1Constellation.html#afb51a0c78dde99aa9c618df2c8e636e8">lagrangeParentMap</a>.get(terrain);</div>
-<div class="line"><span class="lineno">  437</span>            <span class="keywordtype">boolean</span> mainStarAndOrbitingSystemCenter = curr.entity == curr.system.getStar() &amp;&amp;</div>
-<div class="line"><span class="lineno">  438</span>                                                      terrain.getOrbitFocus() == curr.system.getCenter() &amp;&amp;</div>
-<div class="line"><span class="lineno">  439</span>                                                      lagrangeParent == <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  440</span>            <span class="keywordflow">if</span> (mainStarAndOrbitingSystemCenter || </div>
-<div class="line"><span class="lineno">  441</span>                    (terrain.getOrbitFocus() == curr.entity &amp;&amp; lagrangeParent == <span class="keyword">null</span>) ||</div>
-<div class="line"><span class="lineno">  442</span>                    lagrangeParent == curr.entity) {</div>
-<div class="line"><span class="lineno">  443</span>                NamingTreeNode node = <span class="keyword">new</span> NamingTreeNode(system);</div>
-<div class="line"><span class="lineno">  444</span>                node.entity = terrain;</div>
-<div class="line"><span class="lineno">  445</span>                node.parent = curr;</div>
-<div class="line"><span class="lineno">  446</span>                curr.children.add(node);</div>
-<div class="line"><span class="lineno">  447</span>                </div>
-<div class="line"><span class="lineno">  448</span>                <span class="keywordflow">if</span> (lagrangeParent != <span class="keyword">null</span> &amp;&amp; terrain.getOrbitFocus() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  449</span>                    <span class="comment">//float angle1 = terrain.getOrbitFocus().getCircularOrbitAngle();</span></div>
-<div class="line"><span class="lineno">  450</span>                    <span class="keywordtype">float</span> angle1 = lagrangeParent.getCircularOrbitAngle();</div>
-<div class="line"><span class="lineno">  451</span>                    <span class="keywordtype">float</span> angle2 = terrain.getCircularOrbitAngle();</div>
-<div class="line"><span class="lineno">  452</span>                    </div>
-<div class="line"><span class="lineno">  453</span>                    <span class="keywordflow">if</span> (Misc.getClosestTurnDirection(angle1, angle2) &lt; 0) {</div>
-<div class="line"><span class="lineno">  454</span>                        node.lagrangePointType = LagrangePointType.L4;</div>
-<div class="line"><span class="lineno">  455</span>                    } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  456</span>                        node.lagrangePointType = LagrangePointType.L5;</div>
-<div class="line"><span class="lineno">  457</span>                    }</div>
-<div class="line"><span class="lineno">  458</span>                }</div>
-<div class="line"><span class="lineno">  459</span>                </div>
-<div class="line"><span class="lineno">  460</span>                <a class="code hl_function" href="../../d0/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1NameAssigner.html#acba411a349a6e6c94634a5c6ff1a6b31">addChildren</a>(system, node);</div>
-<div class="line"><span class="lineno">  461</span>            }</div>
-<div class="line"><span class="lineno">  462</span>        }</div>
-<div class="line"><span class="lineno">  463</span>        </div>
-<div class="line"><span class="lineno">  464</span>        Collections.sort(curr.children, <span class="keyword">new</span> Comparator&lt;NamingTreeNode&gt;() {</div>
-<div class="line"><span class="lineno">  465</span>            public int compare(NamingTreeNode o1, NamingTreeNode o2) {</div>
-<div class="line"><span class="lineno">  466</span>                Vector2f from = new Vector2f();</div>
-<div class="line"><span class="lineno">  467</span>                if (o1.parent != null &amp;&amp; o1.parent.entity != null) {</div>
-<div class="line"><span class="lineno">  468</span>                    from = o1.parent.entity.getLocation();</div>
-<div class="line"><span class="lineno">  469</span>                    if (o1.parent == o1.system.getStar()) {</div>
-<div class="line"><span class="lineno">  470</span>                        from = o1.system.getCenter().getLocation();</div>
-<div class="line"><span class="lineno">  471</span>                    }</div>
-<div class="line"><span class="lineno">  472</span>                }</div>
-<div class="line"><span class="lineno">  473</span>                float d1 = Misc.getDistance(from, o1.entity.getLocation());</div>
-<div class="line"><span class="lineno">  474</span>                float d2 = Misc.getDistance(from, o2.entity.getLocation());</div>
-<div class="line"><span class="lineno">  475</span>                return (int) Math.signum(d1 - d2);</div>
-<div class="line"><span class="lineno">  476</span>            }</div>
-<div class="line"><span class="lineno">  477</span>        });</div>
-<div class="line"><span class="lineno">  478</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1Constellation_html_a042a550367d28950b43ba2c1892cd0e4"><div class="ttname"><a href="../../d4/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1Constellation.html#a042a550367d28950b43ba2c1892cd0e4">com.fs.starfarer.api.impl.campaign.procgen.Constellation.allEntitiesAdded</a></div><div class="ttdeci">transient Map&lt; SectorEntityToken, List&lt; SectorEntityToken &gt; &gt; allEntitiesAdded</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d9d/Constellation_8java_source.html#l00023">Constellation.java:23</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1Constellation_html_afb51a0c78dde99aa9c618df2c8e636e8"><div class="ttname"><a href="../../d4/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1Constellation.html#afb51a0c78dde99aa9c618df2c8e636e8">com.fs.starfarer.api.impl.campaign.procgen.Constellation.lagrangeParentMap</a></div><div class="ttdeci">transient Map&lt; SectorEntityToken, PlanetAPI &gt; lagrangeParentMap</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d9d/Constellation_8java_source.html#l00022">Constellation.java:22</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1NameAssigner_html_acba411a349a6e6c94634a5c6ff1a6b31"><div class="ttname"><a href="../../d0/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1NameAssigner.html#acba411a349a6e6c94634a5c6ff1a6b31">com.fs.starfarer.api.impl.campaign.procgen.NameAssigner.addChildren</a></div><div class="ttdeci">void addChildren(StarSystemAPI system, NamingTreeNode curr)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d0e/NameAssigner_8java_source.html#l00391">NameAssigner.java:391</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a3d97f0eb2fcd1a81e84b5d97bb57c9fb" name="a3d97f0eb2fcd1a81e84b5d97bb57c9fb"></a>
@@ -313,64 +220,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d0e/NameAssigner_8java_source.html#l00085">85</a> of file <a class="el" href="../../d2/d0e/NameAssigner_8java_source.html">NameAssigner.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   85</span>                                                           {</div>
-<div class="line"><span class="lineno">   86</span>        <span class="keywordflow">if</span> (constellation.<a class="code hl_function" href="../../d4/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1Constellation.html#a50b7d71a3a57d7d0f3ae01f8268e7141">getSystems</a>().isEmpty()) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   87</span>        </div>
-<div class="line"><span class="lineno">   88</span>        <span class="keywordflow">if</span> (name == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   89</span>            constellationName = ProcgenUsedNames.pickName(NameGenData.TAG_CONSTELLATION, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   90</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   91</span>            NameGenData data = (NameGenData) Global.getSettings().getSpec(NameGenData.class, name, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   92</span>            <span class="keywordflow">if</span> (data == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   93</span>                data = <span class="keyword">new</span> NameGenData(name, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   94</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   95</span>                ProcgenUsedNames.notifyUsed(name);</div>
-<div class="line"><span class="lineno">   96</span>            }</div>
-<div class="line"><span class="lineno">   97</span>            constellationName = <span class="keyword">new</span> NamePick(data, name, secondary);</div>
-<div class="line"><span class="lineno">   98</span>        }</div>
-<div class="line"><span class="lineno">   99</span>        <span class="keywordflow">if</span> (!constellationName.spec.isReusable() &amp;&amp; !constellation.<a class="code hl_function" href="../../d4/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1Constellation.html#a6aec8e484ede5a011d6e86ab5235ca9f">isLeavePickedNameUnused</a>()) {</div>
-<div class="line"><span class="lineno">  100</span>            ProcgenUsedNames.notifyUsed(constellationName.nameWithRomanSuffixIfAny);</div>
-<div class="line"><span class="lineno">  101</span>        }</div>
-<div class="line"><span class="lineno">  102</span>        Global.getSettings().greekLetterReset();</div>
-<div class="line"><span class="lineno">  103</span> </div>
-<div class="line"><span class="lineno">  104</span>        constellation.<a class="code hl_function" href="../../d4/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1Constellation.html#ad1a68be507f5cf46d7c3a8dfba219102">setNamePick</a>(constellationName);</div>
-<div class="line"><span class="lineno">  105</span>        </div>
-<div class="line"><span class="lineno">  106</span>        Collections.sort(constellation.<a class="code hl_function" href="../../d4/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1Constellation.html#a50b7d71a3a57d7d0f3ae01f8268e7141">getSystems</a>(), <span class="keyword">new</span> Comparator&lt;StarSystemAPI&gt;() {</div>
-<div class="line"><span class="lineno">  107</span>            public int compare(StarSystemAPI o1, StarSystemAPI o2) {</div>
-<div class="line"><span class="lineno">  108</span>                if (o1.getStar() == null || o2.getStar() != null) return 1; </div>
-<div class="line"><span class="lineno">  109</span>                if (o1.getStar() != null || o2.getStar() == null) return -1; </div>
-<div class="line"><span class="lineno">  110</span>                return (int) Math.signum(o1.getStar().getRadius() - o2.getStar().getRadius());</div>
-<div class="line"><span class="lineno">  111</span>            }</div>
-<div class="line"><span class="lineno">  112</span>        });</div>
-<div class="line"><span class="lineno">  113</span>        </div>
-<div class="line"><span class="lineno">  114</span>        </div>
-<div class="line"><span class="lineno">  115</span>        <span class="keywordflow">for</span> (StarSystemAPI system : constellation.<a class="code hl_function" href="../../d4/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1Constellation.html#a50b7d71a3a57d7d0f3ae01f8268e7141">getSystems</a>()) {</div>
-<div class="line"><span class="lineno">  116</span>            String base = constellationName.nameWithRomanSuffixIfAny;</div>
-<div class="line"><span class="lineno">  117</span>            <span class="keywordflow">if</span> (constellationName.secondaryWithRomanSuffixIfAny != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  118</span>                base = constellationName.secondaryWithRomanSuffixIfAny;</div>
-<div class="line"><span class="lineno">  119</span>            }</div>
-<div class="line"><span class="lineno">  120</span>            String n = Global.getSettings().getNextGreekLetter(constellationName) + <span class="stringliteral">&quot; &quot;</span> + base;</div>
-<div class="line"><span class="lineno">  121</span> </div>
-<div class="line"><span class="lineno">  122</span>            <a class="code hl_function" href="../../d0/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1NameAssigner.html#a2d665b5a0a34e5235fd168baf72926db">computeNamingTree</a>(system);</div>
-<div class="line"><span class="lineno">  123</span>            <a class="code hl_function" href="../../d0/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1NameAssigner.html#acb7d8e73756d1bdc85f3988672a5c00e">assignStructuralNames</a>(system, n);</div>
-<div class="line"><span class="lineno">  124</span>            <span class="keywordflow">if</span> (StarSystemGenerator.random.nextFloat() &lt; specialNamesProbability || (constellation.<a class="code hl_variable" href="../../d4/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1Constellation.html#a9cd2b969899c2604eb0cfb15bbac9ee3">systems</a>.size() &lt;= 1 &amp;&amp; specialNamesProbability &gt; 0)) {</div>
-<div class="line"><span class="lineno">  125</span>                <a class="code hl_function" href="../../d0/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1NameAssigner.html#aa9da7813b041ac1343f7b5e60e7adb68">assignSpecialNames</a>(root);</div>
-<div class="line"><span class="lineno">  126</span>            }</div>
-<div class="line"><span class="lineno">  127</span>            </div>
-<div class="line"><span class="lineno">  128</span>            <a class="code hl_function" href="../../d0/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1NameAssigner.html#a2540093937378eb01e1c9f43be5565c5">updateJumpPointDestinationNames</a>(system);</div>
-<div class="line"><span class="lineno">  129</span>        }</div>
-<div class="line"><span class="lineno">  130</span><span class="comment">//      String tag = NameGenData.TAG_PLANET;</span></div>
-<div class="line"><span class="lineno">  131</span><span class="comment">//      if (isMoon) tag = NameGenData.TAG_MOON;</span></div>
-<div class="line"><span class="lineno">  132</span><span class="comment">//      NamePick namePick = ProcgenUsedNames.pickName(tag, null);</span></div>
-<div class="line"><span class="lineno">  133</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1Constellation_html_a50b7d71a3a57d7d0f3ae01f8268e7141"><div class="ttname"><a href="../../d4/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1Constellation.html#a50b7d71a3a57d7d0f3ae01f8268e7141">com.fs.starfarer.api.impl.campaign.procgen.Constellation.getSystems</a></div><div class="ttdeci">List&lt; StarSystemAPI &gt; getSystems()</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d9d/Constellation_8java_source.html#l00108">Constellation.java:108</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1Constellation_html_a6aec8e484ede5a011d6e86ab5235ca9f"><div class="ttname"><a href="../../d4/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1Constellation.html#a6aec8e484ede5a011d6e86ab5235ca9f">com.fs.starfarer.api.impl.campaign.procgen.Constellation.isLeavePickedNameUnused</a></div><div class="ttdeci">boolean isLeavePickedNameUnused()</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d9d/Constellation_8java_source.html#l00036">Constellation.java:36</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1Constellation_html_a9cd2b969899c2604eb0cfb15bbac9ee3"><div class="ttname"><a href="../../d4/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1Constellation.html#a9cd2b969899c2604eb0cfb15bbac9ee3">com.fs.starfarer.api.impl.campaign.procgen.Constellation.systems</a></div><div class="ttdeci">List&lt; StarSystemAPI &gt; systems</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d9d/Constellation_8java_source.html#l00025">Constellation.java:25</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1Constellation_html_ad1a68be507f5cf46d7c3a8dfba219102"><div class="ttname"><a href="../../d4/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1Constellation.html#ad1a68be507f5cf46d7c3a8dfba219102">com.fs.starfarer.api.impl.campaign.procgen.Constellation.setNamePick</a></div><div class="ttdeci">void setNamePick(NamePick namePick)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d9d/Constellation_8java_source.html#l00105">Constellation.java:105</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1NameAssigner_html_a2540093937378eb01e1c9f43be5565c5"><div class="ttname"><a href="../../d0/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1NameAssigner.html#a2540093937378eb01e1c9f43be5565c5">com.fs.starfarer.api.impl.campaign.procgen.NameAssigner.updateJumpPointDestinationNames</a></div><div class="ttdeci">void updateJumpPointDestinationNames(StarSystemAPI system)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d0e/NameAssigner_8java_source.html#l00352">NameAssigner.java:352</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1NameAssigner_html_a2d665b5a0a34e5235fd168baf72926db"><div class="ttname"><a href="../../d0/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1NameAssigner.html#a2d665b5a0a34e5235fd168baf72926db">com.fs.starfarer.api.impl.campaign.procgen.NameAssigner.computeNamingTree</a></div><div class="ttdeci">void computeNamingTree(StarSystemAPI system)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d0e/NameAssigner_8java_source.html#l00368">NameAssigner.java:368</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1NameAssigner_html_aa9da7813b041ac1343f7b5e60e7adb68"><div class="ttname"><a href="../../d0/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1NameAssigner.html#aa9da7813b041ac1343f7b5e60e7adb68">com.fs.starfarer.api.impl.campaign.procgen.NameAssigner.assignSpecialNames</a></div><div class="ttdeci">void assignSpecialNames(NamingTreeNode curr)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d0e/NameAssigner_8java_source.html#l00136">NameAssigner.java:136</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1NameAssigner_html_acb7d8e73756d1bdc85f3988672a5c00e"><div class="ttname"><a href="../../d0/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1NameAssigner.html#acb7d8e73756d1bdc85f3988672a5c00e">com.fs.starfarer.api.impl.campaign.procgen.NameAssigner.assignStructuralNames</a></div><div class="ttdeci">void assignStructuralNames(StarSystemAPI system, String name)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d0e/NameAssigner_8java_source.html#l00223">NameAssigner.java:223</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aeca44372c7a244bf11682030a4543ab7" name="aeca44372c7a244bf11682030a4543ab7"></a>
@@ -406,79 +256,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d0e/NameAssigner_8java_source.html#l00253">253</a> of file <a class="el" href="../../d2/d0e/NameAssigner_8java_source.html">NameAssigner.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  253</span>                                                                                      {</div>
-<div class="line"><span class="lineno">  254</span>        <span class="keywordflow">if</span> (parentName == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  255</span>        </div>
-<div class="line"><span class="lineno">  256</span>        String name = parentName;</div>
-<div class="line"><span class="lineno">  257</span>        </div>
-<div class="line"><span class="lineno">  258</span>        <span class="keywordflow">if</span> (curr.entity != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  259</span>            CampaignTerrainAPI terrain = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  260</span>            CampaignTerrainPlugin plugin = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  261</span>            <span class="keywordflow">if</span> (curr.entity instanceof CampaignTerrainAPI) {</div>
-<div class="line"><span class="lineno">  262</span>                terrain = (CampaignTerrainAPI) curr.entity;</div>
-<div class="line"><span class="lineno">  263</span>                plugin = terrain.getPlugin();</div>
-<div class="line"><span class="lineno">  264</span>            }</div>
-<div class="line"><span class="lineno">  265</span>            <span class="keywordtype">boolean</span> rename = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  266</span>            <span class="keywordflow">if</span> (curr.isSecondaryStar()) {</div>
-<div class="line"><span class="lineno">  267</span>                name += <span class="stringliteral">&quot; B&quot;</span>;</div>
-<div class="line"><span class="lineno">  268</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (curr.isTertiaryStar()) {</div>
-<div class="line"><span class="lineno">  269</span>                name += <span class="stringliteral">&quot; C&quot;</span>;</div>
-<div class="line"><span class="lineno">  270</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  271</span>                String [] moonPostfixes = {<span class="stringliteral">&quot;A&quot;</span>, <span class="stringliteral">&quot;B&quot;</span>, <span class="stringliteral">&quot;C&quot;</span>, <span class="stringliteral">&quot;D&quot;</span>, <span class="stringliteral">&quot;E&quot;</span>, <span class="stringliteral">&quot;F&quot;</span>, <span class="stringliteral">&quot;G&quot;</span>, <span class="stringliteral">&quot;H&quot;</span>, <span class="stringliteral">&quot;I&quot;</span>, <span class="stringliteral">&quot;J&quot;</span>, <span class="stringliteral">&quot;K&quot;</span>, <span class="stringliteral">&quot;L&quot;</span>, <span class="stringliteral">&quot;M&quot;</span>, <span class="stringliteral">&quot;N&quot;</span>};</div>
-<div class="line"><span class="lineno">  272</span>                <span class="keywordflow">if</span> (curr.isTerrain()) {</div>
-<div class="line"><span class="lineno">  273</span>                    <span class="keywordflow">if</span> (curr.lagrangePointType != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  274</span>                        name += <span class="stringliteral">&quot; &quot;</span> + curr.lagrangePointType.name();</div>
-<div class="line"><span class="lineno">  275</span>                        <span class="keywordflow">if</span> (plugin instanceof AsteroidFieldTerrainPlugin) {</div>
-<div class="line"><span class="lineno">  276</span>                            name += <span class="stringliteral">&quot; Asteroid Field&quot;</span>;</div>
-<div class="line"><span class="lineno">  277</span>                        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (plugin instanceof NebulaTerrainPlugin) {</div>
-<div class="line"><span class="lineno">  278</span>                            name += <span class="stringliteral">&quot; Nebula&quot;</span>;</div>
-<div class="line"><span class="lineno">  279</span>                        }</div>
-<div class="line"><span class="lineno">  280</span>                    } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  281</span>                        rename = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  282</span>                    }</div>
-<div class="line"><span class="lineno">  283</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (curr.isMoon()) {</div>
-<div class="line"><span class="lineno">  284</span>                    <span class="keywordflow">if</span> (curr.lagrangePointType != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  285</span>                        name += <span class="stringliteral">&quot;-&quot;</span> + curr.lagrangePointType.name();</div>
-<div class="line"><span class="lineno">  286</span>                    } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  287</span>                        name += <span class="stringliteral">&quot;-&quot;</span> + moonPostfixes[index];</div>
-<div class="line"><span class="lineno">  288</span>                    }</div>
-<div class="line"><span class="lineno">  289</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  290</span>                    name += <span class="stringliteral">&quot; &quot;</span> + Global.getSettings().getRoman(index + 1);</div>
-<div class="line"><span class="lineno">  291</span>                }</div>
-<div class="line"><span class="lineno">  292</span>            }</div>
-<div class="line"><span class="lineno">  293</span>            </div>
-<div class="line"><span class="lineno">  294</span>            <span class="keywordflow">if</span> (rename) {</div>
-<div class="line"><span class="lineno">  295</span><span class="comment">//              curr.entity.setName(name);</span></div>
-<div class="line"><span class="lineno">  296</span><span class="comment">//              if (plugin != null) {</span></div>
-<div class="line"><span class="lineno">  297</span><span class="comment">//                  plugin.setTerrainName(name);</span></div>
-<div class="line"><span class="lineno">  298</span><span class="comment">//              }</span></div>
-<div class="line"><span class="lineno">  299</span>                List&lt;SectorEntityToken&gt; all = constellation.<a class="code hl_variable" href="../../d4/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1Constellation.html#a042a550367d28950b43ba2c1892cd0e4">allEntitiesAdded</a>.get(curr.entity);</div>
-<div class="line"><span class="lineno">  300</span>                <span class="keywordflow">for</span> (SectorEntityToken entity : all) {</div>
-<div class="line"><span class="lineno">  301</span>                    entity.setName(name);</div>
-<div class="line"><span class="lineno">  302</span>                    <span class="keywordflow">if</span> (entity.getMarket() != <span class="keyword">null</span>) entity.getMarket().setName(name);</div>
-<div class="line"><span class="lineno">  303</span>                    <a class="code hl_function" href="../../d0/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1NameAssigner.html#af08ed8922fea310f471be2a033661917">updateJumpPointNameFor</a>(entity);</div>
-<div class="line"><span class="lineno">  304</span>                    <span class="keywordflow">if</span> (entity instanceof CampaignTerrainAPI) {</div>
-<div class="line"><span class="lineno">  305</span>                        ((CampaignTerrainAPI) entity).getPlugin().setTerrainName(name);</div>
-<div class="line"><span class="lineno">  306</span>                    }</div>
-<div class="line"><span class="lineno">  307</span>                }</div>
-<div class="line"><span class="lineno">  308</span>            }</div>
-<div class="line"><span class="lineno">  309</span>        }</div>
-<div class="line"><span class="lineno">  310</span>        </div>
-<div class="line"><span class="lineno">  311</span>        <span class="keywordtype">int</span> i = 0;</div>
-<div class="line"><span class="lineno">  312</span>        <span class="keywordflow">for</span> (NamingTreeNode node : curr.children) {</div>
-<div class="line"><span class="lineno">  313</span>            <a class="code hl_function" href="../../d0/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1NameAssigner.html#aeca44372c7a244bf11682030a4543ab7">assignSNamesHelper</a>(node, name, i);</div>
-<div class="line"><span class="lineno">  314</span>            </div>
-<div class="line"><span class="lineno">  315</span>            <span class="keywordflow">if</span> (node.entity instanceof PlanetAPI) {</div>
-<div class="line"><span class="lineno">  316</span>                PlanetAPI planet = (PlanetAPI) node.entity;</div>
-<div class="line"><span class="lineno">  317</span>                if (!planet.isStar()) {</div>
-<div class="line"><span class="lineno">  318</span>                    i++;</div>
-<div class="line"><span class="lineno">  319</span>                }</div>
-<div class="line"><span class="lineno">  320</span>            }</div>
-<div class="line"><span class="lineno">  321</span>        }</div>
-<div class="line"><span class="lineno">  322</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1NameAssigner_html_aeca44372c7a244bf11682030a4543ab7"><div class="ttname"><a href="../../d0/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1NameAssigner.html#aeca44372c7a244bf11682030a4543ab7">com.fs.starfarer.api.impl.campaign.procgen.NameAssigner.assignSNamesHelper</a></div><div class="ttdeci">void assignSNamesHelper(NamingTreeNode curr, String parentName, int index)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d0e/NameAssigner_8java_source.html#l00253">NameAssigner.java:253</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1NameAssigner_html_af08ed8922fea310f471be2a033661917"><div class="ttname"><a href="../../d0/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1NameAssigner.html#af08ed8922fea310f471be2a033661917">com.fs.starfarer.api.impl.campaign.procgen.NameAssigner.updateJumpPointNameFor</a></div><div class="ttdeci">void updateJumpPointNameFor(SectorEntityToken entity)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d0e/NameAssigner_8java_source.html#l00324">NameAssigner.java:324</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa9da7813b041ac1343f7b5e60e7adb68" name="aa9da7813b041ac1343f7b5e60e7adb68"></a>
@@ -498,92 +276,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d0e/NameAssigner_8java_source.html#l00136">136</a> of file <a class="el" href="../../d2/d0e/NameAssigner_8java_source.html">NameAssigner.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  136</span>                                                        {</div>
-<div class="line"><span class="lineno">  137</span>        String tag = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  138</span>        CampaignTerrainPlugin plugin = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  139</span>        <span class="keywordflow">if</span> (curr.entity != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  140</span>            <span class="keywordflow">if</span> (curr.isTerrain()) {</div>
-<div class="line"><span class="lineno">  141</span>                CampaignTerrainAPI terrain = (CampaignTerrainAPI) curr.entity;</div>
-<div class="line"><span class="lineno">  142</span>                plugin = terrain.getPlugin();</div>
-<div class="line"><span class="lineno">  143</span>                <span class="keywordflow">if</span> (plugin instanceof AsteroidFieldTerrainPlugin) {</div>
-<div class="line"><span class="lineno">  144</span>                    tag = NameGenData.TAG_ASTEROID_FIELD;</div>
-<div class="line"><span class="lineno">  145</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (plugin instanceof AsteroidBeltTerrainPlugin) {</div>
-<div class="line"><span class="lineno">  146</span>                    tag = NameGenData.TAG_ASTEROID_BELT;</div>
-<div class="line"><span class="lineno">  147</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (plugin instanceof RingSystemTerrainPlugin) {</div>
-<div class="line"><span class="lineno">  148</span>                    RingSystemTerrainPlugin ringPlugin = (RingSystemTerrainPlugin) plugin;</div>
-<div class="line"><span class="lineno">  149</span>                    <span class="keywordflow">if</span> (ringPlugin.getNameForTooltip() != <span class="keyword">null</span> &amp;&amp; ringPlugin.getNameForTooltip().contains(<span class="stringliteral">&quot;Accretion&quot;</span>)) {</div>
-<div class="line"><span class="lineno">  150</span>                        tag = NameGenData.TAG_ACCRETION;</div>
-<div class="line"><span class="lineno">  151</span>                    }</div>
-<div class="line"><span class="lineno">  152</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (plugin instanceof NebulaTerrainPlugin) {</div>
-<div class="line"><span class="lineno">  153</span>                    tag = NameGenData.TAG_NEBULA;</div>
-<div class="line"><span class="lineno">  154</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (plugin instanceof MagneticFieldTerrainPlugin) {</div>
-<div class="line"><span class="lineno">  155</span>                    tag = NameGenData.TAG_MAGNETIC_FIELD;</div>
-<div class="line"><span class="lineno">  156</span>                }</div>
-<div class="line"><span class="lineno">  157</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (curr.isMoon()) {</div>
-<div class="line"><span class="lineno">  158</span>                tag = NameGenData.TAG_MOON;</div>
-<div class="line"><span class="lineno">  159</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (curr.isPrimaryStar() || curr.isSecondaryStar() || curr.isTertiaryStar()) {</div>
-<div class="line"><span class="lineno">  160</span>                tag = NameGenData.TAG_STAR;</div>
-<div class="line"><span class="lineno">  161</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (curr.entity instanceof PlanetAPI) {</div>
-<div class="line"><span class="lineno">  162</span>                tag = NameGenData.TAG_PLANET;</div>
-<div class="line"><span class="lineno">  163</span>            }</div>
-<div class="line"><span class="lineno">  164</span>        }</div>
-<div class="line"><span class="lineno">  165</span>        </div>
-<div class="line"><span class="lineno">  166</span>        <span class="keywordflow">if</span> (tag != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  167</span>            String parent = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  168</span>            <span class="keywordflow">if</span> (curr.parent != <span class="keyword">null</span> &amp;&amp; curr.parent.name != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  169</span>                parent = curr.parent.name.spec.getName();</div>
-<div class="line"><span class="lineno">  170</span>            }</div>
-<div class="line"><span class="lineno">  171</span>            <span class="keywordflow">if</span> (curr == root) {</div>
-<div class="line"><span class="lineno">  172</span>                parent = constellationName.spec.getName();</div>
-<div class="line"><span class="lineno">  173</span>            }</div>
-<div class="line"><span class="lineno">  174</span>            </div>
-<div class="line"><span class="lineno">  175</span>            </div>
-<div class="line"><span class="lineno">  176</span>            <span class="keywordtype">boolean</span> noRename = curr.system.getStar() == curr.entity &amp;&amp; !renameSystem;</div>
-<div class="line"><span class="lineno">  177</span>            NamePick pick = ProcgenUsedNames.pickName(tag, parent, curr.lagrangePointType);</div>
-<div class="line"><span class="lineno">  178</span>            <span class="keywordflow">if</span> (!pick.spec.isReusable() &amp;&amp; !noRename) {</div>
-<div class="line"><span class="lineno">  179</span>                ProcgenUsedNames.notifyUsed(pick.nameWithRomanSuffixIfAny);</div>
-<div class="line"><span class="lineno">  180</span>            }</div>
-<div class="line"><span class="lineno">  181</span>            </div>
-<div class="line"><span class="lineno">  182</span>            <span class="keywordflow">if</span> (pick != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  183</span>                <span class="keywordflow">if</span> (noRename) {</div>
-<div class="line"><span class="lineno">  184</span>                    String name = curr.system.getBaseName();</div>
-<div class="line"><span class="lineno">  185</span>                    NameGenData data = (NameGenData) Global.getSettings().getSpec(NameGenData.class, name, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  186</span>                    <span class="keywordflow">if</span> (data == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  187</span>                        data = <span class="keyword">new</span> NameGenData(name, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  188</span>                    } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  189</span>                        ProcgenUsedNames.notifyUsed(name);</div>
-<div class="line"><span class="lineno">  190</span>                    }</div>
-<div class="line"><span class="lineno">  191</span>                    curr.name = <span class="keyword">new</span> NamePick(data, name, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  192</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  193</span>                    curr.name = pick;</div>
-<div class="line"><span class="lineno">  194</span>                    String name = pick.nameWithRomanSuffixIfAny;</div>
-<div class="line"><span class="lineno">  195</span>                    List&lt;SectorEntityToken&gt; all = constellation.<a class="code hl_variable" href="../../d4/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1Constellation.html#a042a550367d28950b43ba2c1892cd0e4">allEntitiesAdded</a>.get(curr.entity);</div>
-<div class="line"><span class="lineno">  196</span>                    <span class="keywordflow">for</span> (SectorEntityToken entity : all) {</div>
-<div class="line"><span class="lineno">  197</span>    <span class="comment">//                  if (tag != null &amp;&amp; tag.equals(NameGenData.TAG_RING) &amp;&amp; pick.spec.isReusable()) {</span></div>
-<div class="line"><span class="lineno">  198</span>    <span class="comment">//                      if (entity instanceof CampaignTerrainAPI) {</span></div>
-<div class="line"><span class="lineno">  199</span>    <span class="comment">//                          ((CampaignTerrainAPI) entity).getPlugin().setTerrainName(name);</span></div>
-<div class="line"><span class="lineno">  200</span>    <span class="comment">//                      }</span></div>
-<div class="line"><span class="lineno">  201</span>    <span class="comment">//                  }</span></div>
-<div class="line"><span class="lineno">  202</span>                        entity.setName(name);</div>
-<div class="line"><span class="lineno">  203</span>                        <span class="keywordflow">if</span> (entity.getMarket() != <span class="keyword">null</span>) entity.getMarket().setName(name);</div>
-<div class="line"><span class="lineno">  204</span>                        <a class="code hl_function" href="../../d0/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1NameAssigner.html#af08ed8922fea310f471be2a033661917">updateJumpPointNameFor</a>(entity);</div>
-<div class="line"><span class="lineno">  205</span>                        <span class="keywordflow">if</span> (entity instanceof CampaignTerrainAPI) {</div>
-<div class="line"><span class="lineno">  206</span>                            ((CampaignTerrainAPI) entity).getPlugin().setTerrainName(name);</div>
-<div class="line"><span class="lineno">  207</span>                        }</div>
-<div class="line"><span class="lineno">  208</span>                    }</div>
-<div class="line"><span class="lineno">  209</span>                    <span class="keywordflow">if</span> (curr.system.getStar() == curr.entity) {</div>
-<div class="line"><span class="lineno">  210</span>                        curr.system.setBaseName(name);</div>
-<div class="line"><span class="lineno">  211</span>                    }</div>
-<div class="line"><span class="lineno">  212</span>                }</div>
-<div class="line"><span class="lineno">  213</span>            }</div>
-<div class="line"><span class="lineno">  214</span>        }</div>
-<div class="line"><span class="lineno">  215</span>        </div>
-<div class="line"><span class="lineno">  216</span>        <span class="keywordflow">for</span> (NamingTreeNode node : curr.children) {</div>
-<div class="line"><span class="lineno">  217</span>            <a class="code hl_function" href="../../d0/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1NameAssigner.html#aa9da7813b041ac1343f7b5e60e7adb68">assignSpecialNames</a>(node);</div>
-<div class="line"><span class="lineno">  218</span>        }</div>
-<div class="line"><span class="lineno">  219</span>        </div>
-<div class="line"><span class="lineno">  220</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="acd14a140d53cf46e4e843898f1e999d2" name="acd14a140d53cf46e4e843898f1e999d2"></a>
@@ -611,30 +304,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d0e/NameAssigner_8java_source.html#l00499">499</a> of file <a class="el" href="../../d2/d0e/NameAssigner_8java_source.html">NameAssigner.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  499</span>                                                                {</div>
-<div class="line"><span class="lineno">  500</span>        Constellation actual = system.getConstellation();</div>
-<div class="line"><span class="lineno">  501</span>        <span class="keywordflow">if</span> (actual == <span class="keyword">null</span> || actual.getNamePick() == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  502</span>        </div>
-<div class="line"><span class="lineno">  503</span><span class="comment">//      if (system.getName().toLowerCase().contains(&quot;alpha cirrus&quot;)) {</span></div>
-<div class="line"><span class="lineno">  504</span><span class="comment">//          System.out.println(&quot;fwefwefwefe&quot;);</span></div>
-<div class="line"><span class="lineno">  505</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  506</span>        </div>
-<div class="line"><span class="lineno">  507</span>        Constellation c = <span class="keyword">new</span> Constellation(ConstellationType.NORMAL, actual.getAge());</div>
-<div class="line"><span class="lineno">  508</span>        <span class="comment">//c.setNamePick(actual.getNamePick());</span></div>
-<div class="line"><span class="lineno">  509</span>        c.getSystems().add(system);</div>
-<div class="line"><span class="lineno">  510</span>        c.setLagrangeParentMap(actual.getLagrangeParentMap());</div>
-<div class="line"><span class="lineno">  511</span>        c.setAllEntitiesAdded(actual.getAllEntitiesAdded());</div>
-<div class="line"><span class="lineno">  512</span>        c.setLeavePickedNameUnused(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  513</span>        </div>
-<div class="line"><span class="lineno">  514</span>        <a class="code hl_function" href="../../d0/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1NameAssigner.html#af9fab09f292c27796dcef52613c3d249">NameAssigner</a> namer = <span class="keyword">new</span> <a class="code hl_function" href="../../d0/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1NameAssigner.html#af9fab09f292c27796dcef52613c3d249">NameAssigner</a>(c);</div>
-<div class="line"><span class="lineno">  515</span>        namer.setSpecialNamesProbability(1f);</div>
-<div class="line"><span class="lineno">  516</span>        </div>
-<div class="line"><span class="lineno">  517</span>        <span class="comment">//namer.setRenameSystem(false);</span></div>
-<div class="line"><span class="lineno">  518</span>        <span class="comment">//namer.setStructuralNameOffset(nameOffset);</span></div>
-<div class="line"><span class="lineno">  519</span>        namer.assignNames(actual.getNamePick().spec.getName(), actual.getNamePick().spec.getSecondary());</div>
-<div class="line"><span class="lineno">  520</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1NameAssigner_html_af9fab09f292c27796dcef52613c3d249"><div class="ttname"><a href="../../d0/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1NameAssigner.html#af9fab09f292c27796dcef52613c3d249">com.fs.starfarer.api.impl.campaign.procgen.NameAssigner.NameAssigner</a></div><div class="ttdeci">NameAssigner(Constellation constellation)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d0e/NameAssigner_8java_source.html#l00069">NameAssigner.java:69</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="acb7d8e73756d1bdc85f3988672a5c00e" name="acb7d8e73756d1bdc85f3988672a5c00e"></a>
@@ -664,36 +334,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d0e/NameAssigner_8java_source.html#l00223">223</a> of file <a class="el" href="../../d2/d0e/NameAssigner_8java_source.html">NameAssigner.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  223</span>                                                                         {</div>
-<div class="line"><span class="lineno">  224</span><span class="comment">//      if (system.getSecondary() != null) {</span></div>
-<div class="line"><span class="lineno">  225</span><span class="comment">//          System.out.println(&quot;wefwefe&quot;);</span></div>
-<div class="line"><span class="lineno">  226</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  227</span>        <span class="keywordflow">if</span> (renameSystem) {</div>
-<div class="line"><span class="lineno">  228</span>            system.setBaseName(name);</div>
-<div class="line"><span class="lineno">  229</span>            <span class="keywordflow">if</span> (system.getStar() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  230</span>                system.getStar().setName(name);</div>
-<div class="line"><span class="lineno">  231</span>                <a class="code hl_function" href="../../d0/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1NameAssigner.html#af08ed8922fea310f471be2a033661917">updateJumpPointNameFor</a>(system.getStar());</div>
-<div class="line"><span class="lineno">  232</span>            }</div>
-<div class="line"><span class="lineno">  233</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  234</span>            name = system.getBaseName();</div>
-<div class="line"><span class="lineno">  235</span>        }</div>
-<div class="line"><span class="lineno">  236</span>        </div>
-<div class="line"><span class="lineno">  237</span>        <span class="keywordtype">int</span> i = structuralNameOffset;</div>
-<div class="line"><span class="lineno">  238</span>        <span class="keywordflow">for</span> (NamingTreeNode node : root.children) {</div>
-<div class="line"><span class="lineno">  239</span><span class="comment">//          if (node.entity instanceof PlanetAPI &amp;&amp; ((PlanetAPI)node.entity).isStar()) {</span></div>
-<div class="line"><span class="lineno">  240</span><span class="comment">//              System.out.println(&quot;wefwefwefwe&quot;);</span></div>
-<div class="line"><span class="lineno">  241</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">  242</span>            <a class="code hl_function" href="../../d0/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1NameAssigner.html#aeca44372c7a244bf11682030a4543ab7">assignSNamesHelper</a>(node, name, i);</div>
-<div class="line"><span class="lineno">  243</span>            </div>
-<div class="line"><span class="lineno">  244</span>            <span class="keywordflow">if</span> (node.entity instanceof PlanetAPI) {</div>
-<div class="line"><span class="lineno">  245</span>                PlanetAPI planet = (PlanetAPI) node.entity;</div>
-<div class="line"><span class="lineno">  246</span>                if (!planet.isStar()) {</div>
-<div class="line"><span class="lineno">  247</span>                    i++;</div>
-<div class="line"><span class="lineno">  248</span>                }</div>
-<div class="line"><span class="lineno">  249</span>            }</div>
-<div class="line"><span class="lineno">  250</span>        }</div>
-<div class="line"><span class="lineno">  251</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2d665b5a0a34e5235fd168baf72926db" name="a2d665b5a0a34e5235fd168baf72926db"></a>
@@ -713,29 +354,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d0e/NameAssigner_8java_source.html#l00368">368</a> of file <a class="el" href="../../d2/d0e/NameAssigner_8java_source.html">NameAssigner.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  368</span>                                                        {</div>
-<div class="line"><span class="lineno">  369</span>        root = <span class="keyword">new</span> NamingTreeNode(system);</div>
-<div class="line"><span class="lineno">  370</span>        <span class="keywordflow">if</span> (system.getStar() != <span class="keyword">null</span> &amp;&amp; system.getType() != StarSystemType.NEBULA) {</div>
-<div class="line"><span class="lineno">  371</span>            root.entity = system.getStar();</div>
-<div class="line"><span class="lineno">  372</span>        }</div>
-<div class="line"><span class="lineno">  373</span>        </div>
-<div class="line"><span class="lineno">  374</span>        <span class="keywordflow">for</span> (PlanetAPI planet : system.getPlanets()) {</div>
-<div class="line"><span class="lineno">  375</span>            <span class="keywordflow">if</span> (!planet.isStar()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  376</span>            <span class="keywordflow">if</span> (planet == system.getStar()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  377</span>            <span class="keywordflow">if</span> (!constellation.<a class="code hl_variable" href="../../d4/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1Constellation.html#a042a550367d28950b43ba2c1892cd0e4">allEntitiesAdded</a>.containsKey(planet)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  378</span>            </div>
-<div class="line"><span class="lineno">  379</span>            NamingTreeNode node = <span class="keyword">new</span> NamingTreeNode(system);</div>
-<div class="line"><span class="lineno">  380</span>            node.entity = planet;</div>
-<div class="line"><span class="lineno">  381</span>            node.parent = root;</div>
-<div class="line"><span class="lineno">  382</span>            root.children.add(node);</div>
-<div class="line"><span class="lineno">  383</span>        }</div>
-<div class="line"><span class="lineno">  384</span> </div>
-<div class="line"><span class="lineno">  385</span>        <a class="code hl_function" href="../../d0/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1NameAssigner.html#acba411a349a6e6c94634a5c6ff1a6b31">addChildren</a>(system, root);</div>
-<div class="line"><span class="lineno">  386</span>        <span class="keywordflow">for</span> (NamingTreeNode node : root.children) {</div>
-<div class="line"><span class="lineno">  387</span>            <a class="code hl_function" href="../../d0/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1NameAssigner.html#acba411a349a6e6c94634a5c6ff1a6b31">addChildren</a>(system, node);</div>
-<div class="line"><span class="lineno">  388</span>        }</div>
-<div class="line"><span class="lineno">  389</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5d23565ba079202903a4b2d74705e224" name="a5d23565ba079202903a4b2d74705e224"></a>
@@ -763,22 +382,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d0e/NameAssigner_8java_source.html#l00482">482</a> of file <a class="el" href="../../d2/d0e/NameAssigner_8java_source.html">NameAssigner.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  482</span>                                                              {         </div>
-<div class="line"><span class="lineno">  483</span>        <span class="keywordflow">if</span> (system.getConstellation() == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  484</span>        </div>
-<div class="line"><span class="lineno">  485</span>        String name = system.getBaseName();</div>
-<div class="line"><span class="lineno">  486</span>        </div>
-<div class="line"><span class="lineno">  487</span>        NamePick constellationName = system.getConstellation().getNamePick();</div>
-<div class="line"><span class="lineno">  488</span>        String base = constellationName.nameWithRomanSuffixIfAny;</div>
-<div class="line"><span class="lineno">  489</span>        <span class="keywordflow">if</span> (constellationName.secondaryWithRomanSuffixIfAny != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  490</span>            base = constellationName.secondaryWithRomanSuffixIfAny;</div>
-<div class="line"><span class="lineno">  491</span>        }</div>
-<div class="line"><span class="lineno">  492</span>        <span class="keywordflow">if</span> (name.toLowerCase().contains(base.toLowerCase())) {</div>
-<div class="line"><span class="lineno">  493</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  494</span>        }</div>
-<div class="line"><span class="lineno">  495</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  496</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aff723c1ac3a85e88f76f760b2aee351b" name="aff723c1ac3a85e88f76f760b2aee351b"></a>
@@ -798,10 +402,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d0e/NameAssigner_8java_source.html#l00077">77</a> of file <a class="el" href="../../d2/d0e/NameAssigner_8java_source.html">NameAssigner.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   77</span>                                                    {</div>
-<div class="line"><span class="lineno">   78</span>        this.renameSystem = renameStar;</div>
-<div class="line"><span class="lineno">   79</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a350d58818e2e09a15954c40d6471d954" name="a350d58818e2e09a15954c40d6471d954"></a>
@@ -821,10 +422,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d0e/NameAssigner_8java_source.html#l00073">73</a> of file <a class="el" href="../../d2/d0e/NameAssigner_8java_source.html">NameAssigner.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   73</span>                                                                          {</div>
-<div class="line"><span class="lineno">   74</span>        this.specialNamesProbability = specialNamesProbability;</div>
-<div class="line"><span class="lineno">   75</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="afab976dc59321517323470f56cd59c8c" name="afab976dc59321517323470f56cd59c8c"></a>
@@ -844,10 +442,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d0e/NameAssigner_8java_source.html#l00081">81</a> of file <a class="el" href="../../d2/d0e/NameAssigner_8java_source.html">NameAssigner.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   81</span>                                                                  {</div>
-<div class="line"><span class="lineno">   82</span>        this.structuralNameOffset = structuralNameOffset;</div>
-<div class="line"><span class="lineno">   83</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2540093937378eb01e1c9f43be5565c5" name="a2540093937378eb01e1c9f43be5565c5"></a>
@@ -867,19 +462,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d0e/NameAssigner_8java_source.html#l00352">352</a> of file <a class="el" href="../../d2/d0e/NameAssigner_8java_source.html">NameAssigner.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  352</span>                                                                      {</div>
-<div class="line"><span class="lineno">  353</span>        <span class="keywordflow">for</span> (JumpPointAPI point : system.getAutogeneratedJumpPointsInHyper()) {</div>
-<div class="line"><span class="lineno">  354</span>            <span class="keywordflow">for</span> (JumpDestination dest : point.getDestinations()) {</div>
-<div class="line"><span class="lineno">  355</span>                <span class="comment">//dest.setLabelInInteractionDialog(system.getBaseName());</span></div>
-<div class="line"><span class="lineno">  356</span><span class="comment">//              String name = &quot;the &quot; + system.getName();</span></div>
-<div class="line"><span class="lineno">  357</span><span class="comment">//              name = name.replaceAll(&quot;Star System&quot;, &quot;star system&quot;);</span></div>
-<div class="line"><span class="lineno">  358</span><span class="comment">//              name = name.replaceAll(&quot;Nebula&quot;, &quot;nebula&quot;);</span></div>
-<div class="line"><span class="lineno">  359</span>                String name = <span class="stringliteral">&quot;the &quot;</span> + system.getNameWithLowercaseType();</div>
-<div class="line"><span class="lineno">  360</span>                dest.setLabelInInteractionDialog(name);</div>
-<div class="line"><span class="lineno">  361</span>            }</div>
-<div class="line"><span class="lineno">  362</span>        }</div>
-<div class="line"><span class="lineno">  363</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af08ed8922fea310f471be2a033661917" name="af08ed8922fea310f471be2a033661917"></a>
@@ -899,34 +482,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d0e/NameAssigner_8java_source.html#l00324">324</a> of file <a class="el" href="../../d2/d0e/NameAssigner_8java_source.html">NameAssigner.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  324</span>                                                                 {</div>
-<div class="line"><span class="lineno">  325</span>        <span class="keywordflow">if</span> (!(entity instanceof PlanetAPI)) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  326</span>        <span class="keywordflow">if</span> (!(entity.getContainingLocation() instanceof StarSystemAPI)) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  327</span>        </div>
-<div class="line"><span class="lineno">  328</span>        StarSystemAPI system = (StarSystemAPI) entity.getContainingLocation();</div>
-<div class="line"><span class="lineno">  329</span>        </div>
-<div class="line"><span class="lineno">  330</span>        <span class="keywordflow">for</span> (JumpPointAPI point : system.getAutogeneratedJumpPointsInHyper()) {</div>
-<div class="line"><span class="lineno">  331</span>            <span class="keywordflow">if</span> (point.getDestinationVisualEntity() == entity) {</div>
-<div class="line"><span class="lineno">  332</span>                PlanetAPI planet = (PlanetAPI) entity;</div>
-<div class="line"><span class="lineno">  333</span>                String name = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  334</span>                <span class="keywordflow">if</span> (planet.isGasGiant()) {</div>
-<div class="line"><span class="lineno">  335</span>                    name = planet.getName() + <span class="stringliteral">&quot; Gravity Well&quot;</span>;</div>
-<div class="line"><span class="lineno">  336</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (planet.isStar()) {</div>
-<div class="line"><span class="lineno">  337</span>                    name = planet.getName() + <span class="stringliteral">&quot;, &quot;</span> + planet.getSpec().getName();</div>
-<div class="line"><span class="lineno">  338</span>                }</div>
-<div class="line"><span class="lineno">  339</span>                <span class="keywordflow">if</span> (name != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  340</span>                    point.setName(name);</div>
-<div class="line"><span class="lineno">  341</span>                }</div>
-<div class="line"><span class="lineno">  342</span>                </div>
-<div class="line"><span class="lineno">  343</span><span class="comment">//              for (JumpDestination dest : point.getDestinations()) {</span></div>
-<div class="line"><span class="lineno">  344</span><span class="comment">//                  dest.setLabelInInteractionDialog(system.getBaseName());</span></div>
-<div class="line"><span class="lineno">  345</span><span class="comment">//              }</span></div>
-<div class="line"><span class="lineno">  346</span>                </div>
-<div class="line"><span class="lineno">  347</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  348</span>            }</div>
-<div class="line"><span class="lineno">  349</span>        }</div>
-<div class="line"><span class="lineno">  350</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

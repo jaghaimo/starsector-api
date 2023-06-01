@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -192,36 +193,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d0/d5c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1CommandPlugin.html#a72a44c5127e60136b87d3b37613fd0e0">com.fs.starfarer.api.campaign.rules.CommandPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/db9/FireBest_8java_source.html#l00031">31</a> of file <a class="el" href="../../df/db9/FireBest_8java_source.html">FireBest.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   31</span>                                                                                                                             {</div>
-<div class="line"><span class="lineno">   32</span>        </div>
-<div class="line"><span class="lineno">   33</span>        this.ruleId = <a class="code hl_variable" href="../../d6/de6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1FireBest.html#ad852dfe4b2189a66cf45b6081ea7d55c">ruleId</a>;</div>
-<div class="line"><span class="lineno">   34</span>        this.dialog = <a class="code hl_variable" href="../../d6/de6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1FireBest.html#a516077162f0ce791cb0902c57c982282">dialog</a>;</div>
-<div class="line"><span class="lineno">   35</span>        this.params = <a class="code hl_variable" href="../../d6/de6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1FireBest.html#ac941f1079e539c6ddf829f27a6b06865">params</a>;</div>
-<div class="line"><span class="lineno">   36</span>        this.memoryMap = <a class="code hl_variable" href="../../d6/de6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1FireBest.html#a6f7c63403c4e92b4585b26a0054e8a29">memoryMap</a>;</div>
-<div class="line"><span class="lineno">   37</span>        String trigger = <a class="code hl_variable" href="../../d6/de6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1FireBest.html#ac941f1079e539c6ddf829f27a6b06865">params</a>.get(0).string;</div>
-<div class="line"><span class="lineno">   38</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d6/de6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1FireBest.html#ac941f1079e539c6ddf829f27a6b06865">params</a>.get(0).isVariable()) {</div>
-<div class="line"><span class="lineno">   39</span>            VarAndMemory var = <a class="code hl_variable" href="../../d6/de6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1FireBest.html#ac941f1079e539c6ddf829f27a6b06865">params</a>.get(0).getVarNameAndMemory(<a class="code hl_variable" href="../../d6/de6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1FireBest.html#a6f7c63403c4e92b4585b26a0054e8a29">memoryMap</a>);</div>
-<div class="line"><span class="lineno">   40</span>            trigger = var.memory.getString(var.name);</div>
-<div class="line"><span class="lineno">   41</span>        }</div>
-<div class="line"><span class="lineno">   42</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d6/de6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1FireBest.html#ac941f1079e539c6ddf829f27a6b06865">params</a>.size() &gt; 1) {</div>
-<div class="line"><span class="lineno">   43</span>            <a class="code hl_variable" href="../../d6/de6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1FireBest.html#a79e30361a0dd8457fdf32debbd33ae54">keepOptions</a> = <a class="code hl_variable" href="../../d6/de6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1FireBest.html#ac941f1079e539c6ddf829f27a6b06865">params</a>.get(1).getBoolean(<a class="code hl_variable" href="../../d6/de6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1FireBest.html#a6f7c63403c4e92b4585b26a0054e8a29">memoryMap</a>);</div>
-<div class="line"><span class="lineno">   44</span>        }</div>
-<div class="line"><span class="lineno">   45</span>        </div>
-<div class="line"><span class="lineno">   46</span>        RulesAPI rules = Global.getSector().getRules();</div>
-<div class="line"><span class="lineno">   47</span>        RuleAPI rule = rules.getBestMatching(<a class="code hl_variable" href="../../d6/de6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1FireBest.html#ad852dfe4b2189a66cf45b6081ea7d55c">ruleId</a>, trigger, <a class="code hl_variable" href="../../d6/de6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1FireBest.html#a516077162f0ce791cb0902c57c982282">dialog</a>, <a class="code hl_variable" href="../../d6/de6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1FireBest.html#a6f7c63403c4e92b4585b26a0054e8a29">memoryMap</a>);</div>
-<div class="line"><span class="lineno">   48</span>        </div>
-<div class="line"><span class="lineno">   49</span>        <span class="keywordflow">if</span> (rule == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   50</span>        </div>
-<div class="line"><span class="lineno">   51</span>        applyRule(rule);</div>
-<div class="line"><span class="lineno">   52</span>        </div>
-<div class="line"><span class="lineno">   53</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   54</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1FireBest_html_a516077162f0ce791cb0902c57c982282"><div class="ttname"><a href="../../d6/de6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1FireBest.html#a516077162f0ce791cb0902c57c982282">com.fs.starfarer.api.impl.campaign.rulecmd.FireBest.dialog</a></div><div class="ttdeci">InteractionDialogAPI dialog</div><div class="ttdef"><b>Definition:</b> <a href="../../df/db9/FireBest_8java_source.html#l00025">FireBest.java:25</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1FireBest_html_a6f7c63403c4e92b4585b26a0054e8a29"><div class="ttname"><a href="../../d6/de6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1FireBest.html#a6f7c63403c4e92b4585b26a0054e8a29">com.fs.starfarer.api.impl.campaign.rulecmd.FireBest.memoryMap</a></div><div class="ttdeci">Map&lt; String, MemoryAPI &gt; memoryMap</div><div class="ttdef"><b>Definition:</b> <a href="../../df/db9/FireBest_8java_source.html#l00026">FireBest.java:26</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1FireBest_html_a79e30361a0dd8457fdf32debbd33ae54"><div class="ttname"><a href="../../d6/de6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1FireBest.html#a79e30361a0dd8457fdf32debbd33ae54">com.fs.starfarer.api.impl.campaign.rulecmd.FireBest.keepOptions</a></div><div class="ttdeci">boolean keepOptions</div><div class="ttdef"><b>Definition:</b> <a href="../../df/db9/FireBest_8java_source.html#l00029">FireBest.java:29</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1FireBest_html_ac941f1079e539c6ddf829f27a6b06865"><div class="ttname"><a href="../../d6/de6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1FireBest.html#ac941f1079e539c6ddf829f27a6b06865">com.fs.starfarer.api.impl.campaign.rulecmd.FireBest.params</a></div><div class="ttdeci">List&lt; Token &gt; params</div><div class="ttdef"><b>Definition:</b> <a href="../../df/db9/FireBest_8java_source.html#l00027">FireBest.java:27</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1FireBest_html_ad852dfe4b2189a66cf45b6081ea7d55c"><div class="ttname"><a href="../../d6/de6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1FireBest.html#ad852dfe4b2189a66cf45b6081ea7d55c">com.fs.starfarer.api.impl.campaign.rulecmd.FireBest.ruleId</a></div><div class="ttdeci">String ruleId</div><div class="ttdef"><b>Definition:</b> <a href="../../df/db9/FireBest_8java_source.html#l00028">FireBest.java:28</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="acb808f2f249f794be6dd719d0dd71bd6" name="acb808f2f249f794be6dd719d0dd71bd6"></a>
@@ -271,10 +243,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/db9/FireBest_8java_source.html#l00056">56</a> of file <a class="el" href="../../df/db9/FireBest_8java_source.html">FireBest.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   56</span>                                                                                                                            {</div>
-<div class="line"><span class="lineno">   57</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> FireBest().execute(<a class="code hl_variable" href="../../d6/de6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1FireBest.html#ad852dfe4b2189a66cf45b6081ea7d55c">ruleId</a>, <a class="code hl_variable" href="../../d6/de6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1FireBest.html#a516077162f0ce791cb0902c57c982282">dialog</a>, Misc.tokenize(<a class="code hl_variable" href="../../d6/de6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1FireBest.html#ac941f1079e539c6ddf829f27a6b06865">params</a>), <a class="code hl_variable" href="../../d6/de6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1FireBest.html#a6f7c63403c4e92b4585b26a0054e8a29">memoryMap</a>);</div>
-<div class="line"><span class="lineno">   58</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -154,12 +155,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d9f/AutoReducingValue_8java_source.html#l00016">16</a> of file <a class="el" href="../../dd/d9f/AutoReducingValue_8java_source.html">AutoReducingValue.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   16</span>                                                                                              {</div>
-<div class="line"><span class="lineno">   17</span>        this.value = value;</div>
-<div class="line"><span class="lineno">   18</span>        this.elapsedPerPoint = elapsedPerPoint;</div>
-<div class="line"><span class="lineno">   19</span>        this.listener = listener;</div>
-<div class="line"><span class="lineno">   20</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -180,21 +176,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d9f/AutoReducingValue_8java_source.html#l00022">22</a> of file <a class="el" href="../../dd/d9f/AutoReducingValue_8java_source.html">AutoReducingValue.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   22</span>                                      {</div>
-<div class="line"><span class="lineno">   23</span>        elapsed += amount;</div>
-<div class="line"><span class="lineno">   24</span>        </div>
-<div class="line"><span class="lineno">   25</span>        <span class="keywordflow">if</span> (elapsed &gt;= elapsedPerPoint) {</div>
-<div class="line"><span class="lineno">   26</span>            elapsed -= elapsedPerPoint;</div>
-<div class="line"><span class="lineno">   27</span>            </div>
-<div class="line"><span class="lineno">   28</span>            <span class="keywordtype">int</span> prev = value;</div>
-<div class="line"><span class="lineno">   29</span>            value--;</div>
-<div class="line"><span class="lineno">   30</span>            <span class="keywordflow">if</span> (value &lt; 0) value = 0;</div>
-<div class="line"><span class="lineno">   31</span>            <span class="keywordflow">if</span> (prev != value &amp;&amp; listener != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   32</span>                listener.valueChanged(prev, value, <span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">   33</span>            }</div>
-<div class="line"><span class="lineno">   34</span>        }</div>
-<div class="line"><span class="lineno">   35</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a37aa0c0bb4cf12968512ab9bbf450b77" name="a37aa0c0bb4cf12968512ab9bbf450b77"></a>
@@ -213,10 +195,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d9f/AutoReducingValue_8java_source.html#l00037">37</a> of file <a class="el" href="../../dd/d9f/AutoReducingValue_8java_source.html">AutoReducingValue.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   37</span>                          {</div>
-<div class="line"><span class="lineno">   38</span>        <span class="keywordflow">return</span> value;</div>
-<div class="line"><span class="lineno">   39</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a958f1e555fa1f236c7b2582303464fca" name="a958f1e555fa1f236c7b2582303464fca"></a>
@@ -236,17 +215,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d9f/AutoReducingValue_8java_source.html#l00049">49</a> of file <a class="el" href="../../dd/d9f/AutoReducingValue_8java_source.html">AutoReducingValue.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   49</span>                                       {</div>
-<div class="line"><span class="lineno">   50</span>        <span class="keywordtype">int</span> prev = value;</div>
-<div class="line"><span class="lineno">   51</span>        this.value += amt;</div>
-<div class="line"><span class="lineno">   52</span>        <span class="keywordflow">if</span> (value &lt; 0) {</div>
-<div class="line"><span class="lineno">   53</span>            value = 0;</div>
-<div class="line"><span class="lineno">   54</span>        }</div>
-<div class="line"><span class="lineno">   55</span>        <span class="keywordflow">if</span> (prev != value &amp;&amp; listener != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   56</span>            listener.valueChanged(prev, value, <span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">   57</span>        }</div>
-<div class="line"><span class="lineno">   58</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2a19b6f2daaaa2398645281433be215b" name="a2a19b6f2daaaa2398645281433be215b"></a>
@@ -266,17 +235,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d9f/AutoReducingValue_8java_source.html#l00060">60</a> of file <a class="el" href="../../dd/d9f/AutoReducingValue_8java_source.html">AutoReducingValue.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   60</span>                                     {</div>
-<div class="line"><span class="lineno">   61</span>        <span class="keywordtype">int</span> prev = value;</div>
-<div class="line"><span class="lineno">   62</span>        this.value -= amt;</div>
-<div class="line"><span class="lineno">   63</span>        <span class="keywordflow">if</span> (value &lt; 0) {</div>
-<div class="line"><span class="lineno">   64</span>            value = 0;</div>
-<div class="line"><span class="lineno">   65</span>        }</div>
-<div class="line"><span class="lineno">   66</span>        <span class="keywordflow">if</span> (prev != value &amp;&amp; listener != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   67</span>            listener.valueChanged(prev, value, <span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">   68</span>        }</div>
-<div class="line"><span class="lineno">   69</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="acaba0abc7e4762de4ebebbaefce25fc4" name="acaba0abc7e4762de4ebebbaefce25fc4"></a>
@@ -296,14 +255,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d9f/AutoReducingValue_8java_source.html#l00041">41</a> of file <a class="el" href="../../dd/d9f/AutoReducingValue_8java_source.html">AutoReducingValue.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   41</span>                                    {</div>
-<div class="line"><span class="lineno">   42</span>        <span class="keywordtype">int</span> prev = value;</div>
-<div class="line"><span class="lineno">   43</span>        this.value = value;</div>
-<div class="line"><span class="lineno">   44</span>        <span class="keywordflow">if</span> (prev != value &amp;&amp; listener != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   45</span>            listener.valueChanged(prev, value, <span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">   46</span>        }</div>
-<div class="line"><span class="lineno">   47</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

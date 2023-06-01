@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -654,34 +655,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00097">97</a> of file <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html">LuddicPathCellsIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   97</span>                                                                   {</div>
-<div class="line"><span class="lineno">   98</span>        this.market = <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a36d0907b90b5ca0fa6d31f1466b3a56a">market</a>;</div>
-<div class="line"><span class="lineno">   99</span>        this.sleeper = <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#ad3d6ba73544a6a854df94b7291f72222">sleeper</a>;</div>
-<div class="line"><span class="lineno">  100</span>        </div>
-<div class="line"><span class="lineno">  101</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a36d0907b90b5ca0fa6d31f1466b3a56a">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a64c3437824f8a05ba3e6dc8a8ab61e62">isPlayerOwned</a>()) {</div>
-<div class="line"><span class="lineno">  102</span>            <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a36d4d66383f0cb3fd36c30b524aee5d6">setPostingLocation</a>(<a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a36d0907b90b5ca0fa6d31f1466b3a56a">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af1677b531fa1a657e17b732868c7b953">getPrimaryEntity</a>());</div>
-<div class="line"><span class="lineno">  103</span>        }</div>
-<div class="line"><span class="lineno">  104</span>        </div>
-<div class="line"><span class="lineno">  105</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a36d0907b90b5ca0fa6d31f1466b3a56a">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#adb4f096698b123e50d2d3e82eafad6b1">hasCondition</a>(Conditions.PATHER_CELLS)) {</div>
-<div class="line"><span class="lineno">  106</span>            <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a36d0907b90b5ca0fa6d31f1466b3a56a">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#ab83e76a338104a130f716183d8896b1f">addCondition</a>(Conditions.PATHER_CELLS, <span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  107</span>        }</div>
-<div class="line"><span class="lineno">  108</span>        </div>
-<div class="line"><span class="lineno">  109</span>        Global.getSector().addScript(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  110</span>        </div>
-<div class="line"><span class="lineno">  111</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a36d0907b90b5ca0fa6d31f1466b3a56a">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a64c3437824f8a05ba3e6dc8a8ab61e62">isPlayerOwned</a>() || DebugFlags.PATHER_BASE_DEBUG) {</div>
-<div class="line"><span class="lineno">  112</span>            Global.getSector().getIntelManager().addIntel(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  113</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  114</span>            Global.getSector().getIntelManager().queueIntel(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  115</span>        }</div>
-<div class="line"><span class="lineno">  116</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_a36d4d66383f0cb3fd36c30b524aee5d6"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a36d4d66383f0cb3fd36c30b524aee5d6">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.setPostingLocation</a></div><div class="ttdeci">void setPostingLocation(SectorEntityToken postingLocation)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00525">BaseIntelPlugin.java:525</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel_html_a36d0907b90b5ca0fa6d31f1466b3a56a"><div class="ttname"><a href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a36d0907b90b5ca0fa6d31f1466b3a56a">com.fs.starfarer.api.impl.campaign.intel.bases.LuddicPathCellsIntel.market</a></div><div class="ttdeci">MarketAPI market</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00078">LuddicPathCellsIntel.java:78</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel_html_ad3d6ba73544a6a854df94b7291f72222"><div class="ttname"><a href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#ad3d6ba73544a6a854df94b7291f72222">com.fs.starfarer.api.impl.campaign.intel.bases.LuddicPathCellsIntel.sleeper</a></div><div class="ttdeci">boolean sleeper</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00075">LuddicPathCellsIntel.java:75</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a64c3437824f8a05ba3e6dc8a8ab61e62"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a64c3437824f8a05ba3e6dc8a8ab61e62">com.fs.starfarer.api.campaign.econ.MarketAPI.isPlayerOwned</a></div><div class="ttdeci">boolean isPlayerOwned()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_ab83e76a338104a130f716183d8896b1f"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#ab83e76a338104a130f716183d8896b1f">com.fs.starfarer.api.campaign.econ.MarketAPI.addCondition</a></div><div class="ttdeci">String addCondition(String id)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_adb4f096698b123e50d2d3e82eafad6b1"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#adb4f096698b123e50d2d3e82eafad6b1">com.fs.starfarer.api.campaign.econ.MarketAPI.hasCondition</a></div><div class="ttdeci">boolean hasCondition(String id)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_af1677b531fa1a657e17b732868c7b953"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af1677b531fa1a657e17b732868c7b953">com.fs.starfarer.api.campaign.econ.MarketAPI.getPrimaryEntity</a></div><div class="ttdeci">SectorEntityToken getPrimaryEntity()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -701,18 +675,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00709">709</a> of file <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html">LuddicPathCellsIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  709</span>                                {</div>
-<div class="line"><span class="lineno">  710</span>        <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a4ad89d95c0ef7d0a04e95516e4a0c7f8">incidentDelay</a> = 0;</div>
-<div class="line"><span class="lineno">  711</span>        <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a4c71c02ba0b576f7818b4b4ff73fa15f">incidentType</a> = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  712</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a4bb6f5766d72e290314464bd83fc8cdf">smuggler</a> != <span class="keyword">null</span> &amp;&amp; <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a4bb6f5766d72e290314464bd83fc8cdf">smuggler</a>.getActiveFleet() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  713</span>            <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a4bb6f5766d72e290314464bd83fc8cdf">smuggler</a>.getActiveFleet().removeEventListener(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  714</span>        }</div>
-<div class="line"><span class="lineno">  715</span>        <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a4bb6f5766d72e290314464bd83fc8cdf">smuggler</a> = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  716</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel_html_a4ad89d95c0ef7d0a04e95516e4a0c7f8"><div class="ttname"><a href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a4ad89d95c0ef7d0a04e95516e4a0c7f8">com.fs.starfarer.api.impl.campaign.intel.bases.LuddicPathCellsIntel.incidentDelay</a></div><div class="ttdeci">float incidentDelay</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00085">LuddicPathCellsIntel.java:85</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel_html_a4bb6f5766d72e290314464bd83fc8cdf"><div class="ttname"><a href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a4bb6f5766d72e290314464bd83fc8cdf">com.fs.starfarer.api.impl.campaign.intel.bases.LuddicPathCellsIntel.smuggler</a></div><div class="ttdeci">RouteData smuggler</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00087">LuddicPathCellsIntel.java:87</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel_html_a4c71c02ba0b576f7818b4b4ff73fa15f"><div class="ttname"><a href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a4c71c02ba0b576f7818b4b4ff73fa15f">com.fs.starfarer.api.impl.campaign.intel.bases.LuddicPathCellsIntel.incidentType</a></div><div class="ttdeci">IncidentType incidentType</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00086">LuddicPathCellsIntel.java:86</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a1841b469920ea4f80aab5ee3cea590f6" name="a1841b469920ea4f80aab5ee3cea590f6"></a>
@@ -752,64 +715,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a78b9181ed44f28dac2b1167e1ce4395c">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00277">277</a> of file <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html">LuddicPathCellsIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  277</span>                                                                            {</div>
-<div class="line"><span class="lineno">  278</span>        </div>
-<div class="line"><span class="lineno">  279</span>        Color h = Misc.getHighlightColor();</div>
-<div class="line"><span class="lineno">  280</span>        Color g = Misc.getGrayColor();</div>
-<div class="line"><span class="lineno">  281</span>        <span class="keywordtype">float</span> pad = 3f;</div>
-<div class="line"><span class="lineno">  282</span>        <span class="keywordtype">float</span> opad = 10f;</div>
-<div class="line"><span class="lineno">  283</span>        </div>
-<div class="line"><span class="lineno">  284</span>        <span class="keywordtype">float</span> initPad = pad;</div>
-<div class="line"><span class="lineno">  285</span>        <span class="keywordflow">if</span> (mode == ListInfoMode.IN_DESC) initPad = opad;</div>
-<div class="line"><span class="lineno">  286</span>        </div>
-<div class="line"><span class="lineno">  287</span>        Color tc = <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a9e443024a6224a5c170e5d1476514954">getBulletColorForMode</a>(mode);</div>
-<div class="line"><span class="lineno">  288</span>        </div>
-<div class="line"><span class="lineno">  289</span>        <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#adfa808a345b432134c9fb11227edc7df">bullet</a>(info);</div>
-<div class="line"><span class="lineno">  290</span>        <span class="keywordtype">boolean</span> isUpdate = <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a9ba572be19912ec6b816dc7b69352660">getListInfoParam</a>() != <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  291</span>        </div>
-<div class="line"><span class="lineno">  292</span>        <span class="keywordflow">if</span> (mode != ListInfoMode.IN_DESC) {</div>
-<div class="line"><span class="lineno">  293</span>            <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#af6b4d6c756c2850bf6878f3c2fb6f5dc">addMarketToList</a>(info, <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a36d0907b90b5ca0fa6d31f1466b3a56a">market</a>, initPad, tc);</div>
-<div class="line"><span class="lineno">  294</span>            initPad = 0f;</div>
-<div class="line"><span class="lineno">  295</span>        }</div>
-<div class="line"><span class="lineno">  296</span>        <span class="comment">//info.addPara(market., initPad)</span></div>
-<div class="line"><span class="lineno">  297</span>        </div>
-<div class="line"><span class="lineno">  298</span>        <span class="keywordflow">if</span> (isUpdate) {</div>
-<div class="line"><span class="lineno">  299</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a9ba572be19912ec6b816dc7b69352660">getListInfoParam</a>() == <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a864bfbaa527abc00c7ea0959cf3d527f">INCIDENT_HAPPENED</a>) {</div>
-<div class="line"><span class="lineno">  300</span>                <span class="keywordflow">if</span> (!<a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#acc25b82a4b8d0b6701e459939787cd78">prevIncidentSucceeded</a>) {</div>
-<div class="line"><span class="lineno">  301</span>                    info.addPara(<span class="stringliteral">&quot;Incident averted by local security forces&quot;</span>, initPad);</div>
-<div class="line"><span class="lineno">  302</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  303</span>                    <span class="keywordflow">switch</span> (<a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#ac702bc13b137f3d6c7c68534fe19db11">prevIncident</a>) {</div>
-<div class="line"><span class="lineno">  304</span>                    <span class="keywordflow">case</span> INDUSTRY_SABOTAGE:</div>
-<div class="line"><span class="lineno">  305</span>                        Industry ind = (Industry) <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#af813af61011898e132a7b3d61a2422fc">prevIncidentData</a>;</div>
-<div class="line"><span class="lineno">  306</span>                        String days = <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a2ee7957c267e4968a3d815b5ed203bbb">getDays</a>(ind.getDisruptedDays());</div>
-<div class="line"><span class="lineno">  307</span>                        String daysStr = <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#adbde084b12ba8da771222211c5a439d9">getDaysString</a>(ind.getDisruptedDays());</div>
-<div class="line"><span class="lineno">  308</span>                        info.addPara(ind.getCurrentName() + <span class="stringliteral">&quot; operations disrupted for %s &quot;</span> + daysStr, initPad, tc, h, days);</div>
-<div class="line"><span class="lineno">  309</span>                        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  310</span>                    <span class="keywordflow">case</span> REDUCED_STABILITY:</div>
-<div class="line"><span class="lineno">  311</span>                        info.addPara(<span class="stringliteral">&quot;Stability reduced by %s&quot;</span>, initPad, tc, h, <span class="stringliteral">&quot;&quot;</span> + (Integer) <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#af813af61011898e132a7b3d61a2422fc">prevIncidentData</a>);</div>
-<div class="line"><span class="lineno">  312</span>                        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  313</span>                    <span class="keywordflow">case</span> PLANETBUSTER:</div>
-<div class="line"><span class="lineno">  314</span>                        info.addPara(<span class="stringliteral">&quot;Colony destroyed by planetbuster&quot;</span>, initPad, tc);</div>
-<div class="line"><span class="lineno">  315</span>                        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  316</span>                    }</div>
-<div class="line"><span class="lineno">  317</span>                }</div>
-<div class="line"><span class="lineno">  318</span>            }</div>
-<div class="line"><span class="lineno">  319</span>        }</div>
-<div class="line"><span class="lineno">  320</span>        </div>
-<div class="line"><span class="lineno">  321</span>        <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a3e2fa48accd40a868889ad2f877bc578">unindent</a>(info);</div>
-<div class="line"><span class="lineno">  322</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_a2ee7957c267e4968a3d815b5ed203bbb"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a2ee7957c267e4968a3d815b5ed203bbb">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.getDays</a></div><div class="ttdeci">String getDays(float days)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00598">BaseIntelPlugin.java:598</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_a3e2fa48accd40a868889ad2f877bc578"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a3e2fa48accd40a868889ad2f877bc578">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.unindent</a></div><div class="ttdeci">void unindent(TooltipMakerAPI info)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00570">BaseIntelPlugin.java:570</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_a9ba572be19912ec6b816dc7b69352660"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a9ba572be19912ec6b816dc7b69352660">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.getListInfoParam</a></div><div class="ttdeci">Object getListInfoParam()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00140">BaseIntelPlugin.java:140</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_a9e443024a6224a5c170e5d1476514954"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a9e443024a6224a5c170e5d1476514954">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.getBulletColorForMode</a></div><div class="ttdeci">Color getBulletColorForMode(ListInfoMode mode)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00633">BaseIntelPlugin.java:633</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_adbde084b12ba8da771222211c5a439d9"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#adbde084b12ba8da771222211c5a439d9">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.getDaysString</a></div><div class="ttdeci">static String getDaysString(float days)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00601">BaseIntelPlugin.java:601</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_adfa808a345b432134c9fb11227edc7df"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#adfa808a345b432134c9fb11227edc7df">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.bullet</a></div><div class="ttdeci">void bullet(TooltipMakerAPI info)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00554">BaseIntelPlugin.java:554</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_af6b4d6c756c2850bf6878f3c2fb6f5dc"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#af6b4d6c756c2850bf6878f3c2fb6f5dc">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.addMarketToList</a></div><div class="ttdeci">static void addMarketToList(TooltipMakerAPI info, MarketAPI market, float pad)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00713">BaseIntelPlugin.java:713</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel_html_a864bfbaa527abc00c7ea0959cf3d527f"><div class="ttname"><a href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a864bfbaa527abc00c7ea0959cf3d527f">com.fs.starfarer.api.impl.campaign.intel.bases.LuddicPathCellsIntel.INCIDENT_HAPPENED</a></div><div class="ttdeci">static Object INCIDENT_HAPPENED</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00066">LuddicPathCellsIntel.java:66</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel_html_ac702bc13b137f3d6c7c68534fe19db11"><div class="ttname"><a href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#ac702bc13b137f3d6c7c68534fe19db11">com.fs.starfarer.api.impl.campaign.intel.bases.LuddicPathCellsIntel.prevIncident</a></div><div class="ttdeci">IncidentType prevIncident</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00089">LuddicPathCellsIntel.java:89</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel_html_acc25b82a4b8d0b6701e459939787cd78"><div class="ttname"><a href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#acc25b82a4b8d0b6701e459939787cd78">com.fs.starfarer.api.impl.campaign.intel.bases.LuddicPathCellsIntel.prevIncidentSucceeded</a></div><div class="ttdeci">boolean prevIncidentSucceeded</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00090">LuddicPathCellsIntel.java:90</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel_html_af813af61011898e132a7b3d61a2422fc"><div class="ttname"><a href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#af813af61011898e132a7b3d61a2422fc">com.fs.starfarer.api.impl.campaign.intel.bases.LuddicPathCellsIntel.prevIncidentData</a></div><div class="ttdeci">Object prevIncidentData</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00092">LuddicPathCellsIntel.java:92</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5e042a5b5a674423bee15089689550ab" name="a5e042a5b5a674423bee15089689550ab"></a>
@@ -845,72 +751,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00331">331</a> of file <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html">LuddicPathCellsIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  331</span>                                                                                 {</div>
-<div class="line"><span class="lineno">  332</span>        Color h = Misc.getHighlightColor();</div>
-<div class="line"><span class="lineno">  333</span>        <span class="keywordtype">float</span> opad = 10f;</div>
-<div class="line"><span class="lineno">  334</span>        </div>
-<div class="line"><span class="lineno">  335</span>        info.addSectionHeading(<span class="stringliteral">&quot;Pather interest&quot;</span>, <a class="code hl_function" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a0ee783c835a4509b0c740099006f540d">getFactionForUIColors</a>().getBaseUIColor(),</div>
-<div class="line"><span class="lineno">  336</span>                  <a class="code hl_function" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a0ee783c835a4509b0c740099006f540d">getFactionForUIColors</a>().getDarkUIColor(), Alignment.MID, opad);</div>
-<div class="line"><span class="lineno">  337</span>        </div>
-<div class="line"><span class="lineno">  338</span>        info.addPara(<span class="stringliteral">&quot;The following activity is attracting Pather interest, whether due to AI core use or the inherent nature of the industry:&quot;</span>, opad);</div>
-<div class="line"><span class="lineno">  339</span>        </div>
-<div class="line"><span class="lineno">  340</span>        List&lt;Industry&gt; industries = <span class="keyword">new</span> ArrayList&lt;Industry&gt;(<a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a36d0907b90b5ca0fa6d31f1466b3a56a">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#ac5acce3843ed0b9764a1f79e69491970">getIndustries</a>());</div>
-<div class="line"><span class="lineno">  341</span>        Iterator&lt;Industry&gt; iter = industries.iterator();</div>
-<div class="line"><span class="lineno">  342</span>        <span class="keywordflow">while</span> (iter.hasNext()) {</div>
-<div class="line"><span class="lineno">  343</span>            <span class="keywordflow">if</span> (iter.next().isHidden()) {</div>
-<div class="line"><span class="lineno">  344</span>                iter.remove();</div>
-<div class="line"><span class="lineno">  345</span>            }</div>
-<div class="line"><span class="lineno">  346</span>        }</div>
-<div class="line"><span class="lineno">  347</span>        Collections.sort(industries, <span class="keyword">new</span> Comparator&lt;Industry&gt;() {</div>
-<div class="line"><span class="lineno">  348</span>            <span class="keyword">public</span> <span class="keywordtype">int</span> compare(Industry o1, Industry o2) {</div>
-<div class="line"><span class="lineno">  349</span>                <span class="keywordtype">float</span> s1 = o1.getPatherInterest();</div>
-<div class="line"><span class="lineno">  350</span>                <span class="keywordtype">float</span> s2 = o2.getPatherInterest();</div>
-<div class="line"><span class="lineno">  351</span>                <span class="keywordflow">return</span> (<span class="keywordtype">int</span>) Math.signum(s2 - s1);</div>
-<div class="line"><span class="lineno">  352</span>            }</div>
-<div class="line"><span class="lineno">  353</span>        });</div>
-<div class="line"><span class="lineno">  354</span>        String <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a09ab8314d72610d7b7258acfd644a789">indent</a> = <span class="stringliteral">&quot;    &quot;</span>;</div>
-<div class="line"><span class="lineno">  355</span>        <span class="keywordtype">float</span> initPad = 5f;</div>
-<div class="line"><span class="lineno">  356</span>        <span class="keywordtype">boolean</span> added = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  357</span>        </div>
-<div class="line"><span class="lineno">  358</span>        String aiCoreId = <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a36d0907b90b5ca0fa6d31f1466b3a56a">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#ac50006877429fed7a41fff0c260ae38a">getAdmin</a>().<a class="code hl_function" href="../../d9/df0/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#a1cfdd64aa9c10e01055badd3c799fff3">getAICoreId</a>();</div>
-<div class="line"><span class="lineno">  359</span>        <span class="keywordflow">if</span> (aiCoreId != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  360</span>            <span class="keywordtype">int</span> s = (int) Math.round(LuddicPathBaseManager.AI_CORE_ADMIN_INTEREST);</div>
-<div class="line"><span class="lineno">  361</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a36d0907b90b5ca0fa6d31f1466b3a56a">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#ac50006877429fed7a41fff0c260ae38a">getAdmin</a>().<a class="code hl_function" href="../../d9/df0/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#abccf50492b3fcc15fe7be6afdff04eea">getMemoryWithoutUpdate</a>().<a class="code hl_function" href="../../d0/de7/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html#adb833cc81359cc239a89eae309480fc9">getBoolean</a>(MemFlags.SUSPECTED_AI)) {</div>
-<div class="line"><span class="lineno">  362</span>                info.addPara(<a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a09ab8314d72610d7b7258acfd644a789">indent</a> + <span class="stringliteral">&quot;Suspected AI core administrator (%s)&quot;</span>, initPad, h, <span class="stringliteral">&quot;&quot;</span> + s);</div>
-<div class="line"><span class="lineno">  363</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  364</span>                info.addPara(<a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a09ab8314d72610d7b7258acfd644a789">indent</a> + <span class="stringliteral">&quot;AI core administrator (%s)&quot;</span>, initPad, h, <span class="stringliteral">&quot;&quot;</span> + s);</div>
-<div class="line"><span class="lineno">  365</span>            }</div>
-<div class="line"><span class="lineno">  366</span>            initPad = 3f;</div>
-<div class="line"><span class="lineno">  367</span>            added = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  368</span>        }</div>
-<div class="line"><span class="lineno">  369</span>        </div>
-<div class="line"><span class="lineno">  370</span>        <span class="keywordflow">for</span> (Industry ind : industries) {</div>
-<div class="line"><span class="lineno">  371</span>            <span class="comment">//float score = LuddicPathBaseManager.getLuddicPathMarketInterest(market);</span></div>
-<div class="line"><span class="lineno">  372</span>            <span class="keywordtype">float</span> score = ind.getPatherInterest();</div>
-<div class="line"><span class="lineno">  373</span>            <span class="keywordflow">if</span> (score &gt; 0) {</div>
-<div class="line"><span class="lineno">  374</span>                <span class="keywordtype">int</span> s = (int) Math.round(score);</div>
-<div class="line"><span class="lineno">  375</span>                info.addPara(<a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a09ab8314d72610d7b7258acfd644a789">indent</a> + ind.getCurrentName() + <span class="stringliteral">&quot; (%s)&quot;</span>, initPad, h, <span class="stringliteral">&quot;&quot;</span> + s);</div>
-<div class="line"><span class="lineno">  376</span>                initPad = 3f;</div>
-<div class="line"><span class="lineno">  377</span>                added = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  378</span>            }</div>
-<div class="line"><span class="lineno">  379</span>        }</div>
-<div class="line"><span class="lineno">  380</span>        </div>
-<div class="line"><span class="lineno">  381</span>        </div>
-<div class="line"><span class="lineno">  382</span>        </div>
-<div class="line"><span class="lineno">  383</span>        <span class="keywordflow">if</span> (!added) {</div>
-<div class="line"><span class="lineno">  384</span>            info.addPara(<a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a09ab8314d72610d7b7258acfd644a789">indent</a> + <span class="stringliteral">&quot;None&quot;</span>, initPad);</div>
-<div class="line"><span class="lineno">  385</span>        }</div>
-<div class="line"><span class="lineno">  386</span>        </div>
-<div class="line"><span class="lineno">  387</span>        </div>
-<div class="line"><span class="lineno">  388</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_a09ab8314d72610d7b7258acfd644a789"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a09ab8314d72610d7b7258acfd644a789">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.indent</a></div><div class="ttdeci">void indent(TooltipMakerAPI info)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00562">BaseIntelPlugin.java:562</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel_html_a0ee783c835a4509b0c740099006f540d"><div class="ttname"><a href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a0ee783c835a4509b0c740099006f540d">com.fs.starfarer.api.impl.campaign.intel.bases.LuddicPathCellsIntel.getFactionForUIColors</a></div><div class="ttdeci">FactionAPI getFactionForUIColors()</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00619">LuddicPathCellsIntel.java:619</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_ac50006877429fed7a41fff0c260ae38a"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#ac50006877429fed7a41fff0c260ae38a">com.fs.starfarer.api.campaign.econ.MarketAPI.getAdmin</a></div><div class="ttdeci">PersonAPI getAdmin()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_ac5acce3843ed0b9764a1f79e69491970"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#ac5acce3843ed0b9764a1f79e69491970">com.fs.starfarer.api.campaign.econ.MarketAPI.getIndustries</a></div><div class="ttdeci">List&lt; Industry &gt; getIndustries()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI_html_adb833cc81359cc239a89eae309480fc9"><div class="ttname"><a href="../../d0/de7/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html#adb833cc81359cc239a89eae309480fc9">com.fs.starfarer.api.campaign.rules.MemoryAPI.getBoolean</a></div><div class="ttdeci">boolean getBoolean(String key)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI_html_a1cfdd64aa9c10e01055badd3c799fff3"><div class="ttname"><a href="../../d9/df0/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#a1cfdd64aa9c10e01055badd3c799fff3">com.fs.starfarer.api.characters.PersonAPI.getAICoreId</a></div><div class="ttdeci">String getAICoreId()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI_html_abccf50492b3fcc15fe7be6afdff04eea"><div class="ttname"><a href="../../d9/df0/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#abccf50492b3fcc15fe7be6afdff04eea">com.fs.starfarer.api.characters.PersonAPI.getMemoryWithoutUpdate</a></div><div class="ttdeci">MemoryAPI getMemoryWithoutUpdate()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a62f30e23d96b798990e8b4b781405bcf" name="a62f30e23d96b798990e8b4b781405bcf"></a>
@@ -940,95 +781,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a23503aedd518fbcfbbc1ed549ed81d38">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00201">201</a> of file <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html">LuddicPathCellsIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  201</span>                                             {</div>
-<div class="line"><span class="lineno">  202</span>        super.advanceImpl(amount);</div>
-<div class="line"><span class="lineno">  203</span>        </div>
-<div class="line"><span class="lineno">  204</span>        <span class="keywordtype">float</span> days = Misc.getDays(amount);</div>
-<div class="line"><span class="lineno">  205</span>        </div>
-<div class="line"><span class="lineno">  206</span>        <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a11c55e71794426a353457bdf0def8a23">inertiaTime</a> += days;</div>
-<div class="line"><span class="lineno">  207</span>        </div>
-<div class="line"><span class="lineno">  208</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a8f5dfa690f58f4f76fccc5308b86e906">sleeperTimeout</a> &gt; 0) {</div>
-<div class="line"><span class="lineno">  209</span>            <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a8f5dfa690f58f4f76fccc5308b86e906">sleeperTimeout</a> -= days;</div>
-<div class="line"><span class="lineno">  210</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a8f5dfa690f58f4f76fccc5308b86e906">sleeperTimeout</a> &lt; 0) {</div>
-<div class="line"><span class="lineno">  211</span>                <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a8f5dfa690f58f4f76fccc5308b86e906">sleeperTimeout</a> = 0;</div>
-<div class="line"><span class="lineno">  212</span>            }</div>
-<div class="line"><span class="lineno">  213</span>        }</div>
-<div class="line"><span class="lineno">  214</span>        </div>
-<div class="line"><span class="lineno">  215</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a36d0907b90b5ca0fa6d31f1466b3a56a">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#aa90dca68abeb54f7f1da7a063111b281">isInEconomy</a>()) {</div>
-<div class="line"><span class="lineno">  216</span>            <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#aded37538fc19c3bce23708407fcb0d29">endImmediately</a>();</div>
-<div class="line"><span class="lineno">  217</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  218</span>        }</div>
-<div class="line"><span class="lineno">  219</span>        </div>
-<div class="line"><span class="lineno">  220</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a07f2726a509e83c001daa8eb92270ad7">isSleeper</a>()) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  221</span>        </div>
-<div class="line"><span class="lineno">  222</span>        <span class="comment">// incidents handled through HostileActivityEventIntel now</span></div>
-<div class="line"><span class="lineno">  223</span>        <span class="keywordflow">if</span> (<span class="keyword">true</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  224</span>        </div>
-<div class="line"><span class="lineno">  225</span>        <span class="keywordflow">if</span> (DebugFlags.PATHER_BASE_DEBUG) {</div>
-<div class="line"><span class="lineno">  226</span>            days *= 200f;</div>
-<div class="line"><span class="lineno">  227</span>        }</div>
-<div class="line"><span class="lineno">  228</span>        </div>
-<div class="line"><span class="lineno">  229</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#ac702bc13b137f3d6c7c68534fe19db11">prevIncident</a> != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  230</span>            <span class="keywordtype">float</span> mult = 1f;</div>
-<div class="line"><span class="lineno">  231</span>            <span class="keywordflow">if</span> (DebugFlags.PATHER_BASE_DEBUG) {</div>
-<div class="line"><span class="lineno">  232</span>                mult = 1f / 20f;</div>
-<div class="line"><span class="lineno">  233</span>            }</div>
-<div class="line"><span class="lineno">  234</span>            <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a3fa836467714c78bf9eed725f361b2ee">sincePrevIncident</a> += days * mult;</div>
-<div class="line"><span class="lineno">  235</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a3fa836467714c78bf9eed725f361b2ee">sincePrevIncident</a> &gt;= 180f) {</div>
-<div class="line"><span class="lineno">  236</span>                <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a3fa836467714c78bf9eed725f361b2ee">sincePrevIncident</a> = 0f;</div>
-<div class="line"><span class="lineno">  237</span>                <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#ac702bc13b137f3d6c7c68534fe19db11">prevIncident</a> = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  238</span>                <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#af813af61011898e132a7b3d61a2422fc">prevIncidentData</a> = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  239</span>                <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#acc25b82a4b8d0b6701e459939787cd78">prevIncidentSucceeded</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  240</span>            }</div>
-<div class="line"><span class="lineno">  241</span>        }</div>
-<div class="line"><span class="lineno">  242</span><span class="comment">//      if (market.isPlayerOwned()) {</span></div>
-<div class="line"><span class="lineno">  243</span><span class="comment">//          System.out.println(&quot;wefwefwe&quot;);</span></div>
-<div class="line"><span class="lineno">  244</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  245</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a4c71c02ba0b576f7818b4b4ff73fa15f">incidentType</a> == <span class="keyword">null</span> &amp;&amp; <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#ac702bc13b137f3d6c7c68534fe19db11">prevIncident</a> == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  246</span>            <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#ac582a86bd0adc699438bc43381f852da">incidentTracker</a>.<a class="code hl_function" href="../../da/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html#a61881d44415cda2c50c3354c3f0a4d8a">advance</a>(days);</div>
-<div class="line"><span class="lineno">  247</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#ac582a86bd0adc699438bc43381f852da">incidentTracker</a>.intervalElapsed() &amp;&amp; <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#adc39b3b52a70c749a97a2dde992adfc2">random</a>.nextFloat() &lt; <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a5ab2f65320c3a8e72f23fe7bbc90e1ac">INCIDENT_PROB</a>) {</div>
-<div class="line"><span class="lineno">  248</span>                <a class="code hl_function" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#af12390e09cfe1dd7fc58ea7560ceac5b">prepareIncident</a>();</div>
-<div class="line"><span class="lineno">  249</span>                <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#ae440048e053d0678a9c7640590200b5c">numIncidentAttempts</a>++;</div>
-<div class="line"><span class="lineno">  250</span>            }</div>
-<div class="line"><span class="lineno">  251</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a4c71c02ba0b576f7818b4b4ff73fa15f">incidentType</a> != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  252</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a4ad89d95c0ef7d0a04e95516e4a0c7f8">incidentDelay</a> &gt; 0 &amp;&amp; <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a4bb6f5766d72e290314464bd83fc8cdf">smuggler</a> == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  253</span>                <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a4ad89d95c0ef7d0a04e95516e4a0c7f8">incidentDelay</a> -= days;</div>
-<div class="line"><span class="lineno">  254</span>            }</div>
-<div class="line"><span class="lineno">  255</span>            </div>
-<div class="line"><span class="lineno">  256</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a4bb6f5766d72e290314464bd83fc8cdf">smuggler</a> == <span class="keyword">null</span> &amp;&amp; <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a4ad89d95c0ef7d0a04e95516e4a0c7f8">incidentDelay</a> &lt;= 0) {</div>
-<div class="line"><span class="lineno">  257</span>                <a class="code hl_function" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a1439d8eb3a8ee26c7f79b29cc8ce56a9">beginIncident</a>();</div>
-<div class="line"><span class="lineno">  258</span>            }</div>
-<div class="line"><span class="lineno">  259</span><span class="comment">//              if(market.isPlayerOwned()) {</span></div>
-<div class="line"><span class="lineno">  260</span><span class="comment">//                  System.out.println(&quot;efwwefew&quot;);</span></div>
-<div class="line"><span class="lineno">  261</span><span class="comment">//              }</span></div>
-<div class="line"><span class="lineno">  262</span><span class="comment">//          smuggler.getActiveFleet().getLocation()</span></div>
-<div class="line"><span class="lineno">  263</span><span class="comment">//          smuggler.getActiveFleet().getContainingLocation()</span></div>
-<div class="line"><span class="lineno">  264</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a4bb6f5766d72e290314464bd83fc8cdf">smuggler</a> != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  265</span>                RouteSegment segment = <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a4bb6f5766d72e290314464bd83fc8cdf">smuggler</a>.getCurrent();</div>
-<div class="line"><span class="lineno">  266</span>                <span class="keywordflow">if</span> (segment != <span class="keyword">null</span> &amp;&amp; segment.getId() == EconomyFleetRouteManager.ROUTE_TRAVEL_SRC) {</div>
-<div class="line"><span class="lineno">  267</span><span class="comment">//                  if(market.isPlayerOwned()) {</span></div>
-<div class="line"><span class="lineno">  268</span><span class="comment">//                      System.out.println(&quot;efwwefew&quot;);</span></div>
-<div class="line"><span class="lineno">  269</span><span class="comment">//                  }</span></div>
-<div class="line"><span class="lineno">  270</span>                    <a class="code hl_function" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#ab5f6f7200dd5e7e430e3387e131c083f">doIncident</a>();</div>
-<div class="line"><span class="lineno">  271</span>                }</div>
-<div class="line"><span class="lineno">  272</span>            }</div>
-<div class="line"><span class="lineno">  273</span>        }</div>
-<div class="line"><span class="lineno">  274</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_aded37538fc19c3bce23708407fcb0d29"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#aded37538fc19c3bce23708407fcb0d29">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.endImmediately</a></div><div class="ttdeci">void endImmediately()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00095">BaseIntelPlugin.java:95</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel_html_a07f2726a509e83c001daa8eb92270ad7"><div class="ttname"><a href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a07f2726a509e83c001daa8eb92270ad7">com.fs.starfarer.api.impl.campaign.intel.bases.LuddicPathCellsIntel.isSleeper</a></div><div class="ttdeci">boolean isSleeper()</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00638">LuddicPathCellsIntel.java:638</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel_html_a11c55e71794426a353457bdf0def8a23"><div class="ttname"><a href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a11c55e71794426a353457bdf0def8a23">com.fs.starfarer.api.impl.campaign.intel.bases.LuddicPathCellsIntel.inertiaTime</a></div><div class="ttdeci">float inertiaTime</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00094">LuddicPathCellsIntel.java:94</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel_html_a1439d8eb3a8ee26c7f79b29cc8ce56a9"><div class="ttname"><a href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a1439d8eb3a8ee26c7f79b29cc8ce56a9">com.fs.starfarer.api.impl.campaign.intel.bases.LuddicPathCellsIntel.beginIncident</a></div><div class="ttdeci">void beginIncident()</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00699">LuddicPathCellsIntel.java:699</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel_html_a3fa836467714c78bf9eed725f361b2ee"><div class="ttname"><a href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a3fa836467714c78bf9eed725f361b2ee">com.fs.starfarer.api.impl.campaign.intel.bases.LuddicPathCellsIntel.sincePrevIncident</a></div><div class="ttdeci">float sincePrevIncident</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00091">LuddicPathCellsIntel.java:91</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel_html_a5ab2f65320c3a8e72f23fe7bbc90e1ac"><div class="ttname"><a href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a5ab2f65320c3a8e72f23fe7bbc90e1ac">com.fs.starfarer.api.impl.campaign.intel.bases.LuddicPathCellsIntel.INCIDENT_PROB</a></div><div class="ttdeci">static float INCIDENT_PROB</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00051">LuddicPathCellsIntel.java:51</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel_html_a8f5dfa690f58f4f76fccc5308b86e906"><div class="ttname"><a href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a8f5dfa690f58f4f76fccc5308b86e906">com.fs.starfarer.api.impl.campaign.intel.bases.LuddicPathCellsIntel.sleeperTimeout</a></div><div class="ttdeci">float sleeperTimeout</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00076">LuddicPathCellsIntel.java:76</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel_html_ab5f6f7200dd5e7e430e3387e131c083f"><div class="ttname"><a href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#ab5f6f7200dd5e7e430e3387e131c083f">com.fs.starfarer.api.impl.campaign.intel.bases.LuddicPathCellsIntel.doIncident</a></div><div class="ttdeci">void doIncident()</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00723">LuddicPathCellsIntel.java:723</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel_html_ac582a86bd0adc699438bc43381f852da"><div class="ttname"><a href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#ac582a86bd0adc699438bc43381f852da">com.fs.starfarer.api.impl.campaign.intel.bases.LuddicPathCellsIntel.incidentTracker</a></div><div class="ttdeci">IntervalUtil incidentTracker</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00080">LuddicPathCellsIntel.java:80</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel_html_adc39b3b52a70c749a97a2dde992adfc2"><div class="ttname"><a href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#adc39b3b52a70c749a97a2dde992adfc2">com.fs.starfarer.api.impl.campaign.intel.bases.LuddicPathCellsIntel.random</a></div><div class="ttdeci">Random random</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00081">LuddicPathCellsIntel.java:81</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel_html_ae440048e053d0678a9c7640590200b5c"><div class="ttname"><a href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#ae440048e053d0678a9c7640590200b5c">com.fs.starfarer.api.impl.campaign.intel.bases.LuddicPathCellsIntel.numIncidentAttempts</a></div><div class="ttdeci">int numIncidentAttempts</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00083">LuddicPathCellsIntel.java:83</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel_html_af12390e09cfe1dd7fc58ea7560ceac5b"><div class="ttname"><a href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#af12390e09cfe1dd7fc58ea7560ceac5b">com.fs.starfarer.api.impl.campaign.intel.bases.LuddicPathCellsIntel.prepareIncident</a></div><div class="ttdeci">void prepareIncident()</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00666">LuddicPathCellsIntel.java:666</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil_html_a61881d44415cda2c50c3354c3f0a4d8a"><div class="ttname"><a href="../../da/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html#a61881d44415cda2c50c3354c3f0a4d8a">com.fs.starfarer.api.util.IntervalUtil.advance</a></div><div class="ttdeci">void advance(float amount)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de3/IntervalUtil_8java_source.html#l00039">IntervalUtil.java:39</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_aa90dca68abeb54f7f1da7a063111b281"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#aa90dca68abeb54f7f1da7a063111b281">com.fs.starfarer.api.campaign.econ.MarketAPI.isInEconomy</a></div><div class="ttdeci">boolean isInEconomy()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a1439d8eb3a8ee26c7f79b29cc8ce56a9" name="a1439d8eb3a8ee26c7f79b29cc8ce56a9"></a>
@@ -1047,20 +800,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00699">699</a> of file <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html">LuddicPathCellsIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  699</span>                                {</div>
-<div class="line"><span class="lineno">  700</span>        LuddicPathBaseIntel base = <a class="code hl_function" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#ac098434beca91162413cc73494a503a2">LuddicPathCellsIntel</a>.getClosestBase(<a class="code hl_function" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a0ef4ea6954298f8b3a1012f9dc9a7235">getMarket</a>());</div>
-<div class="line"><span class="lineno">  701</span>        <span class="keywordflow">if</span> (base == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  702</span>            <a class="code hl_function" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a0d99d5811725a65fd4dcf829ae3becf8">abortIncident</a>();</div>
-<div class="line"><span class="lineno">  703</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  704</span>        }</div>
-<div class="line"><span class="lineno">  705</span>        </div>
-<div class="line"><span class="lineno">  706</span>        <a class="code hl_function" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#aaf268d9a793028df80cc0f6e614a0a32">sendSmuggler</a>(base);</div>
-<div class="line"><span class="lineno">  707</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel_html_a0d99d5811725a65fd4dcf829ae3becf8"><div class="ttname"><a href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a0d99d5811725a65fd4dcf829ae3becf8">com.fs.starfarer.api.impl.campaign.intel.bases.LuddicPathCellsIntel.abortIncident</a></div><div class="ttdeci">void abortIncident()</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00709">LuddicPathCellsIntel.java:709</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel_html_a0ef4ea6954298f8b3a1012f9dc9a7235"><div class="ttname"><a href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a0ef4ea6954298f8b3a1012f9dc9a7235">com.fs.starfarer.api.impl.campaign.intel.bases.LuddicPathCellsIntel.getMarket</a></div><div class="ttdeci">MarketAPI getMarket()</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00158">LuddicPathCellsIntel.java:158</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel_html_aaf268d9a793028df80cc0f6e614a0a32"><div class="ttname"><a href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#aaf268d9a793028df80cc0f6e614a0a32">com.fs.starfarer.api.impl.campaign.intel.bases.LuddicPathCellsIntel.sendSmuggler</a></div><div class="ttdeci">void sendSmuggler(LuddicPathBaseIntel base)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00775">LuddicPathCellsIntel.java:775</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel_html_ac098434beca91162413cc73494a503a2"><div class="ttname"><a href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#ac098434beca91162413cc73494a503a2">com.fs.starfarer.api.impl.campaign.intel.bases.LuddicPathCellsIntel.LuddicPathCellsIntel</a></div><div class="ttdeci">LuddicPathCellsIntel(MarketAPI market, boolean sleeper)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00097">LuddicPathCellsIntel.java:97</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af6acdf3d6be65ae5328f7c407b9cd595" name="af6acdf3d6be65ae5328f7c407b9cd595"></a>
@@ -1089,10 +829,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#af99accb83f6d9f3a6a57277b5d187dde">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00163">163</a> of file <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html">LuddicPathCellsIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  163</span>                                                                      {</div>
-<div class="line"><span class="lineno">  164</span>        <span class="keywordflow">return</span> super.canMakeVisibleToPlayer(playerInRelayRange);</div>
-<div class="line"><span class="lineno">  165</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae2dd04f3dcd6fd1143efe739d400d820" name="ae2dd04f3dcd6fd1143efe739d400d820"></a>
@@ -1119,12 +856,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00718">718</a> of file <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html">LuddicPathCellsIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  718</span>                                     {</div>
-<div class="line"><span class="lineno">  719</span>        <span class="keywordtype">float</span> pSuccess = 1f - <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a36d0907b90b5ca0fa6d31f1466b3a56a">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a2632307f40c3a4bc2dba30e35eca2284">getStabilityValue</a>() * 0.075f;</div>
-<div class="line"><span class="lineno">  720</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#adc39b3b52a70c749a97a2dde992adfc2">random</a>.nextFloat() &lt; pSuccess;</div>
-<div class="line"><span class="lineno">  721</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a2632307f40c3a4bc2dba30e35eca2284"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a2632307f40c3a4bc2dba30e35eca2284">com.fs.starfarer.api.campaign.econ.MarketAPI.getStabilityValue</a></div><div class="ttdeci">float getStabilityValue()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8ea2f106e730f1f91aa5059415d1f73d" name="a8ea2f106e730f1f91aa5059415d1f73d"></a>
@@ -1156,15 +888,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#afa8bb8f2afc14a90ef02a999a66535e9">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00325">325</a> of file <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html">LuddicPathCellsIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  325</span>                                                                         {</div>
-<div class="line"><span class="lineno">  326</span>        Color c = <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#af44e4a0a7c61b8efbc4ef210c7061723">getTitleColor</a>(mode);</div>
-<div class="line"><span class="lineno">  327</span>        info.addPara(<a class="code hl_function" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#aa75af1345e9be9436736ce0a31ee0619">getName</a>(), c, 0f);</div>
-<div class="line"><span class="lineno">  328</span>        <a class="code hl_function" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a1841b469920ea4f80aab5ee3cea590f6">addBulletPoints</a>(info, mode);</div>
-<div class="line"><span class="lineno">  329</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_af44e4a0a7c61b8efbc4ef210c7061723"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#af44e4a0a7c61b8efbc4ef210c7061723">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.getTitleColor</a></div><div class="ttdeci">Color getTitleColor(ListInfoMode mode)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00615">BaseIntelPlugin.java:615</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel_html_a1841b469920ea4f80aab5ee3cea590f6"><div class="ttname"><a href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a1841b469920ea4f80aab5ee3cea590f6">com.fs.starfarer.api.impl.campaign.intel.bases.LuddicPathCellsIntel.addBulletPoints</a></div><div class="ttdeci">void addBulletPoints(TooltipMakerAPI info, ListInfoMode mode)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00277">LuddicPathCellsIntel.java:277</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel_html_aa75af1345e9be9436736ce0a31ee0619"><div class="ttname"><a href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#aa75af1345e9be9436736ce0a31ee0619">com.fs.starfarer.api.impl.campaign.intel.bases.LuddicPathCellsIntel.getName</a></div><div class="ttdeci">String getName()</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00592">LuddicPathCellsIntel.java:592</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a4cb16d45c41faa559824ea39de4acae2" name="a4cb16d45c41faa559824ea39de4acae2"></a>
@@ -1202,158 +926,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a8cccf49669fce7f61c75af3c8afc4bb9">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00392">392</a> of file <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html">LuddicPathCellsIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  392</span>                                                                                        {</div>
-<div class="line"><span class="lineno">  393</span>        Color h = Misc.getHighlightColor();</div>
-<div class="line"><span class="lineno">  394</span>        Color g = Misc.getGrayColor();</div>
-<div class="line"><span class="lineno">  395</span>        Color tc = Misc.getTextColor();</div>
-<div class="line"><span class="lineno">  396</span>        <span class="keywordtype">float</span> pad = 3f;</div>
-<div class="line"><span class="lineno">  397</span>        <span class="keywordtype">float</span> opad = 10f;</div>
-<div class="line"><span class="lineno">  398</span>        </div>
-<div class="line"><span class="lineno">  399</span>        <span class="keywordflow">if</span> (width &gt; 0) { <span class="comment">// it&#39;s 0 when called from market condition tooltip</span></div>
-<div class="line"><span class="lineno">  400</span>            info.addImage(<a class="code hl_function" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a0ee783c835a4509b0c740099006f540d">getFactionForUIColors</a>().getLogo(), width, 128, opad);</div>
-<div class="line"><span class="lineno">  401</span>        }</div>
-<div class="line"><span class="lineno">  402</span>        </div>
-<div class="line"><span class="lineno">  403</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#ac265e304e3d245a6ae16be73e0b918b0">isEnding</a>()) {</div>
-<div class="line"><span class="lineno">  404</span>            info.addPara(<span class="stringliteral">&quot;The Pather cells &quot;</span> +</div>
-<div class="line"><span class="lineno">  405</span>                    <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a36d0907b90b5ca0fa6d31f1466b3a56a">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a4e5414a5be09e723f9a76a54a03cbfba">getOnOrAt</a>() + <span class="stringliteral">&quot; &quot;</span> + <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a36d0907b90b5ca0fa6d31f1466b3a56a">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a7e5b6e8035c61f63cd8b331df994233b">getName</a>() + <span class="stringliteral">&quot; have been dissolved.&quot;</span>, opad);</div>
-<div class="line"><span class="lineno">  406</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a07f2726a509e83c001daa8eb92270ad7">isSleeper</a>() &amp;&amp; <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a8f5dfa690f58f4f76fccc5308b86e906">sleeperTimeout</a> &lt;= 0) {</div>
-<div class="line"><span class="lineno">  407</span>            info.addPara(<span class="stringliteral">&quot;There are indications that sleeper Luddic Path cells are being organized &quot;</span> +</div>
-<div class="line"><span class="lineno">  408</span>                    <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a36d0907b90b5ca0fa6d31f1466b3a56a">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a4e5414a5be09e723f9a76a54a03cbfba">getOnOrAt</a>() + <span class="stringliteral">&quot; &quot;</span> + <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a36d0907b90b5ca0fa6d31f1466b3a56a">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a7e5b6e8035c61f63cd8b331df994233b">getName</a>() + <span class="stringliteral">&quot;.&quot;</span>, opad);</div>
-<div class="line"><span class="lineno">  409</span>            info.addPara(<span class="stringliteral">&quot;The Pathers have not made any significant moves, but are apparently preparing &quot;</span> + </div>
-<div class="line"><span class="lineno">  410</span>                    <span class="stringliteral">&quot;to do so if whatever activity they object to - industrial development, or the suspected &quot;</span> +</div>
-<div class="line"><span class="lineno">  411</span>                    <span class="stringliteral">&quot;use of AI cores, and other such - continues.&quot;</span>, opad);</div>
-<div class="line"><span class="lineno">  412</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  413</span>            info.addPara(<span class="stringliteral">&quot;There are active Luddic Path cells &quot;</span> +</div>
-<div class="line"><span class="lineno">  414</span>                    <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a36d0907b90b5ca0fa6d31f1466b3a56a">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a4e5414a5be09e723f9a76a54a03cbfba">getOnOrAt</a>() + <span class="stringliteral">&quot; &quot;</span> + <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a36d0907b90b5ca0fa6d31f1466b3a56a">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a7e5b6e8035c61f63cd8b331df994233b">getName</a>() + <span class="stringliteral">&quot;.&quot;</span>, opad);</div>
-<div class="line"><span class="lineno">  415</span><span class="comment">//          info.addPara(&quot;They are engaged in planning acts of terror and industrial sabotage, but &quot; +</span></div>
-<div class="line"><span class="lineno">  416</span><span class="comment">//                  &quot;need material support - smuggled in from the nearest Pather base - to carry them off.&quot;</span></div>
-<div class="line"><span class="lineno">  417</span><span class="comment">//                  + &quot; The cells also provide intel to Pather fleets operating in-system.&quot;, opad);</span></div>
-<div class="line"><span class="lineno">  418</span>            info.addPara(<span class="stringliteral">&quot;They are engaged in planning acts of terror and industrial sabotage, but &quot;</span> +</div>
-<div class="line"><span class="lineno">  419</span>                    <span class="stringliteral">&quot;are unlikely to carry them off unless the overal level of hostile activity in the system &quot;</span></div>
-<div class="line"><span class="lineno">  420</span>                    + <span class="stringliteral">&quot;provides sufficient cover.&quot;</span></div>
-<div class="line"><span class="lineno">  421</span>                    + <span class="stringliteral">&quot; The cells also provide intel to Pather fleets operating in-system.&quot;</span>, opad);</div>
-<div class="line"><span class="lineno">  422</span>            </div>
-<div class="line"><span class="lineno">  423</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a8f5dfa690f58f4f76fccc5308b86e906">sleeperTimeout</a> &gt; 0) {</div>
-<div class="line"><span class="lineno">  424</span>                <span class="keywordtype">int</span> daysNum = (int) Math.round(<a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a8f5dfa690f58f4f76fccc5308b86e906">sleeperTimeout</a>);</div>
-<div class="line"><span class="lineno">  425</span>                <span class="keywordflow">if</span> (daysNum &lt; 1) daysNum = 1;</div>
-<div class="line"><span class="lineno">  426</span>                String days = <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#adbde084b12ba8da771222211c5a439d9">getDaysString</a>(daysNum);</div>
-<div class="line"><span class="lineno">  427</span>                info.addPara(<span class="stringliteral">&quot;However, the base supporting these cells is no longer operational. &quot;</span> +</div>
-<div class="line"><span class="lineno">  428</span>                        <span class="stringliteral">&quot;It is projected that establishing a new support network will take at least &quot;</span> +</div>
-<div class="line"><span class="lineno">  429</span>                        <span class="stringliteral">&quot;%s &quot;</span> + days + <span class="stringliteral">&quot;, provided another base exists.&quot;</span>, opad,</div>
-<div class="line"><span class="lineno">  430</span>                        h,</div>
-<div class="line"><span class="lineno">  431</span>                        <span class="stringliteral">&quot;&quot;</span> + daysNum);</div>
-<div class="line"><span class="lineno">  432</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  433</span>                LuddicPathBaseIntel base = <a class="code hl_function" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#ac098434beca91162413cc73494a503a2">LuddicPathCellsIntel</a>.getClosestBase(<a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a36d0907b90b5ca0fa6d31f1466b3a56a">market</a>);</div>
-<div class="line"><span class="lineno">  434</span>                <span class="keywordflow">if</span> (base != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  435</span>                    <span class="keywordflow">if</span> (base.isPlayerVisible()) {</div>
-<div class="line"><span class="lineno">  436</span>                        info.addPara(<span class="stringliteral">&quot;The Pather base at the &quot;</span> + base.getMarket().getStarSystem().getNameWithLowercaseType() + </div>
-<div class="line"><span class="lineno">  437</span>                            <span class="stringliteral">&quot; is providing support to these cells.&quot;</span>, opad);</div>
-<div class="line"><span class="lineno">  438</span>                    } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  439</span>                        info.addPara(<span class="stringliteral">&quot;You do not know the location of the Pather base providing support to these cells.&quot;</span>, opad);</div>
-<div class="line"><span class="lineno">  440</span>                    }</div>
-<div class="line"><span class="lineno">  441</span>                    </div>
-<div class="line"><span class="lineno">  442</span>                    info.addPara(<span class="stringliteral">&quot;If the base is destroyed, it will take some time to organize &quot;</span> +</div>
-<div class="line"><span class="lineno">  443</span>                            <span class="stringliteral">&quot;support from another base, and both ground and fleet operations will be disrupted.&quot;</span>, opad);</div>
-<div class="line"><span class="lineno">  444</span>                } </div>
-<div class="line"><span class="lineno">  445</span>            }</div>
-<div class="line"><span class="lineno">  446</span>        }</div>
-<div class="line"><span class="lineno">  447</span>        </div>
-<div class="line"><span class="lineno">  448</span>        <span class="keywordflow">if</span> (!<a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#ac265e304e3d245a6ae16be73e0b918b0">isEnding</a>()) {</div>
-<div class="line"><span class="lineno">  449</span>            info.addSectionHeading(<span class="stringliteral">&quot;Impact&quot;</span>, <a class="code hl_function" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a0ee783c835a4509b0c740099006f540d">getFactionForUIColors</a>().getBaseUIColor(),</div>
-<div class="line"><span class="lineno">  450</span>                                  <a class="code hl_function" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a0ee783c835a4509b0c740099006f540d">getFactionForUIColors</a>().getDarkUIColor(), Alignment.MID, opad);</div>
-<div class="line"><span class="lineno">  451</span>            </div>
-<div class="line"><span class="lineno">  452</span>            <span class="keywordflow">if</span> (!<a class="code hl_function" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a07f2726a509e83c001daa8eb92270ad7">isSleeper</a>()) {</div>
-<div class="line"><span class="lineno">  453</span>                <span class="keywordtype">float</span> stability = LuddicPathCells.STABLITY_PENALTY;</div>
-<div class="line"><span class="lineno">  454</span><span class="comment">//              info.addPara(&quot;%s stability. Possibility of various acts of terror and sabotage, &quot; +</span></div>
-<div class="line"><span class="lineno">  455</span><span class="comment">//                      &quot;if smugglers from a Luddic Path base are able to provide material support.&quot;, </span></div>
-<div class="line"><span class="lineno">  456</span><span class="comment">//                      opad, h,</span></div>
-<div class="line"><span class="lineno">  457</span><span class="comment">//                      &quot;-&quot; + (int)stability);</span></div>
-<div class="line"><span class="lineno">  458</span>                info.addPara(<span class="stringliteral">&quot;%s stability.&quot;</span>, </div>
-<div class="line"><span class="lineno">  459</span>                        opad, h,</div>
-<div class="line"><span class="lineno">  460</span>                        <span class="stringliteral">&quot;-&quot;</span> + (<span class="keywordtype">int</span>)stability);</div>
-<div class="line"><span class="lineno">  461</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  462</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a8f5dfa690f58f4f76fccc5308b86e906">sleeperTimeout</a> &lt;= 0) { <span class="comment">// only show for actual sleeper cells, not &quot;disrupted&quot; active cells</span></div>
-<div class="line"><span class="lineno">  463</span>                    info.addPara(<span class="stringliteral">&quot;No perceptible impact on operations as of yet.&quot;</span>, opad);</div>
-<div class="line"><span class="lineno">  464</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  465</span>                    info.addPara(<span class="stringliteral">&quot;No impact on operations due to lack of material support.&quot;</span>, opad);</div>
-<div class="line"><span class="lineno">  466</span>                }</div>
-<div class="line"><span class="lineno">  467</span>            }</div>
-<div class="line"><span class="lineno">  468</span>            </div>
-<div class="line"><span class="lineno">  469</span>            <span class="comment">//addInterestInfo(info, width, height);</span></div>
-<div class="line"><span class="lineno">  470</span>        }</div>
-<div class="line"><span class="lineno">  471</span>        </div>
-<div class="line"><span class="lineno">  472</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#ac702bc13b137f3d6c7c68534fe19db11">prevIncident</a> != <span class="keyword">null</span> || <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a4c71c02ba0b576f7818b4b4ff73fa15f">incidentType</a> == IncidentType.PLANETBUSTER) {</div>
-<div class="line"><span class="lineno">  473</span>            info.addSectionHeading(<span class="stringliteral">&quot;Recent events&quot;</span>, <a class="code hl_function" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a0ee783c835a4509b0c740099006f540d">getFactionForUIColors</a>().getBaseUIColor(),</div>
-<div class="line"><span class="lineno">  474</span>                      <a class="code hl_function" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a0ee783c835a4509b0c740099006f540d">getFactionForUIColors</a>().getDarkUIColor(), Alignment.MID, opad);</div>
-<div class="line"><span class="lineno">  475</span>            </div>
-<div class="line"><span class="lineno">  476</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#acc25b82a4b8d0b6701e459939787cd78">prevIncidentSucceeded</a>) {</div>
-<div class="line"><span class="lineno">  477</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a4c71c02ba0b576f7818b4b4ff73fa15f">incidentType</a> == IncidentType.PLANETBUSTER) {</div>
-<div class="line"><span class="lineno">  478</span>                    info.addPara(<span class="stringliteral">&quot;There are indications that the Pather cells are preparing to sneak &quot;</span> +</div>
-<div class="line"><span class="lineno">  479</span>                            <span class="stringliteral">&quot;a planetbuster onto &quot;</span> + <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a36d0907b90b5ca0fa6d31f1466b3a56a">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a7e5b6e8035c61f63cd8b331df994233b">getName</a>() + <span class="stringliteral">&quot;. &quot;</span> + </div>
-<div class="line"><span class="lineno">  480</span>                            <span class="stringliteral">&quot;If they succeed, the colony will effectively be destroyed.&quot;</span>, opad);</div>
-<div class="line"><span class="lineno">  481</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#ac702bc13b137f3d6c7c68534fe19db11">prevIncident</a> != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  482</span>                    <span class="keywordflow">switch</span> (<a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#ac702bc13b137f3d6c7c68534fe19db11">prevIncident</a>) {</div>
-<div class="line"><span class="lineno">  483</span>                    <span class="keywordflow">case</span> INDUSTRY_SABOTAGE:</div>
-<div class="line"><span class="lineno">  484</span>                        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#af813af61011898e132a7b3d61a2422fc">prevIncidentData</a> instanceof Industry) {</div>
-<div class="line"><span class="lineno">  485</span>                            Industry ind = (Industry) <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#af813af61011898e132a7b3d61a2422fc">prevIncidentData</a>;</div>
-<div class="line"><span class="lineno">  486</span>                            <span class="keywordflow">if</span> (ind.getDisruptedDays() &gt; 2) {</div>
-<div class="line"><span class="lineno">  487</span>                                String days = <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a2ee7957c267e4968a3d815b5ed203bbb">getDays</a>(ind.getDisruptedDays());</div>
-<div class="line"><span class="lineno">  488</span>                                String daysStr = <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#adbde084b12ba8da771222211c5a439d9">getDaysString</a>(ind.getDisruptedDays());</div>
-<div class="line"><span class="lineno">  489</span>                                info.addPara(<span class="stringliteral">&quot;The Pather cells have conducted a successful act of sabotage, &quot;</span> +</div>
-<div class="line"><span class="lineno">  490</span>                                        <span class="stringliteral">&quot;disrupting &quot;</span> + ind.getCurrentName() + <span class="stringliteral">&quot; operations for %s &quot;</span> + daysStr + <span class="stringliteral">&quot;.&quot;</span>, </div>
-<div class="line"><span class="lineno">  491</span>                                        opad, h, days);</div>
-<div class="line"><span class="lineno">  492</span>                            }</div>
-<div class="line"><span class="lineno">  493</span>                        }</div>
-<div class="line"><span class="lineno">  494</span>                        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  495</span>                    <span class="keywordflow">case</span> REDUCED_STABILITY:</div>
-<div class="line"><span class="lineno">  496</span>                        info.addPara(<span class="stringliteral">&quot;The Pather cells have conducted low-level attacks on various &quot;</span> +</div>
-<div class="line"><span class="lineno">  497</span>                                <span class="stringliteral">&quot;industrial, military, and civilian targets, reducing stability by %s.&quot;</span>,</div>
-<div class="line"><span class="lineno">  498</span>                                opad, h, <span class="stringliteral">&quot;&quot;</span> + (Integer) <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#af813af61011898e132a7b3d61a2422fc">prevIncidentData</a>);</div>
-<div class="line"><span class="lineno">  499</span>                        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  500</span>                    <span class="keywordflow">case</span> PLANETBUSTER:</div>
-<div class="line"><span class="lineno">  501</span>                        info.addPara(<span class="stringliteral">&quot;The Pather cells have smuggled a planetbuster onto &quot;</span> + <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a36d0907b90b5ca0fa6d31f1466b3a56a">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a7e5b6e8035c61f63cd8b331df994233b">getName</a>() + </div>
-<div class="line"><span class="lineno">  502</span>                                <span class="stringliteral">&quot; and detonated it. The colony has been effectively destroyed.&quot;</span>, opad);</div>
-<div class="line"><span class="lineno">  503</span>                        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  504</span>                    }</div>
-<div class="line"><span class="lineno">  505</span>                }</div>
-<div class="line"><span class="lineno">  506</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  507</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#ac702bc13b137f3d6c7c68534fe19db11">prevIncident</a> != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  508</span>                    <span class="keywordflow">switch</span> (<a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#ac702bc13b137f3d6c7c68534fe19db11">prevIncident</a>) {</div>
-<div class="line"><span class="lineno">  509</span>                    <span class="keywordflow">case</span> INDUSTRY_SABOTAGE:</div>
-<div class="line"><span class="lineno">  510</span>                        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#af813af61011898e132a7b3d61a2422fc">prevIncidentData</a> instanceof Industry) {</div>
-<div class="line"><span class="lineno">  511</span>                            Industry ind = (Industry) <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#af813af61011898e132a7b3d61a2422fc">prevIncidentData</a>;</div>
-<div class="line"><span class="lineno">  512</span>                            info.addPara(<span class="stringliteral">&quot;An attempted act of sabotage against &quot;</span> +</div>
-<div class="line"><span class="lineno">  513</span>                                        ind.getCurrentName() + <span class="stringliteral">&quot; operations was averted by the local security forces.&quot;</span>, </div>
-<div class="line"><span class="lineno">  514</span>                                        opad);</div>
-<div class="line"><span class="lineno">  515</span>                        }</div>
-<div class="line"><span class="lineno">  516</span>                        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  517</span>                    <span class="keywordflow">case</span> REDUCED_STABILITY:</div>
-<div class="line"><span class="lineno">  518</span>                        info.addPara(<span class="stringliteral">&quot;Multiple planned attacks against various industrial, &quot;</span> +</div>
-<div class="line"><span class="lineno">  519</span>                                <span class="stringliteral">&quot;military, and civilian targets &quot;</span> +</div>
-<div class="line"><span class="lineno">  520</span>                                <span class="stringliteral">&quot; were averted by the local security forces.&quot;</span>, </div>
-<div class="line"><span class="lineno">  521</span>                                opad);</div>
-<div class="line"><span class="lineno">  522</span>                        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  523</span>                    <span class="keywordflow">case</span> PLANETBUSTER:</div>
-<div class="line"><span class="lineno">  524</span>                        info.addPara(<span class="stringliteral">&quot;The Pather cells have smuggled a planetbuster onto &quot;</span> + <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a36d0907b90b5ca0fa6d31f1466b3a56a">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a7e5b6e8035c61f63cd8b331df994233b">getName</a>() + </div>
-<div class="line"><span class="lineno">  525</span>                                <span class="stringliteral">&quot;, but the local security forces were able to locate and disarm it, thereby &quot;</span> +</div>
-<div class="line"><span class="lineno">  526</span>                                <span class="stringliteral">&quot;saving the colony.&quot;</span>, opad);</div>
-<div class="line"><span class="lineno">  527</span>                        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  528</span>                    }</div>
-<div class="line"><span class="lineno">  529</span>                }</div>
-<div class="line"><span class="lineno">  530</span>            }</div>
-<div class="line"><span class="lineno">  531</span>            </div>
-<div class="line"><span class="lineno">  532</span>            <a class="code hl_function" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a1841b469920ea4f80aab5ee3cea590f6">addBulletPoints</a>(info, ListInfoMode.IN_DESC);</div>
-<div class="line"><span class="lineno">  533</span>        }</div>
-<div class="line"><span class="lineno">  534</span>        </div>
-<div class="line"><span class="lineno">  535</span>        <span class="keywordflow">if</span> (!<a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#ac265e304e3d245a6ae16be73e0b918b0">isEnding</a>()) {</div>
-<div class="line"><span class="lineno">  536</span>            <a class="code hl_function" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a5e042a5b5a674423bee15089689550ab">addInterestInfo</a>(info, width, height);</div>
-<div class="line"><span class="lineno">  537</span>        }</div>
-<div class="line"><span class="lineno">  538</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_ac265e304e3d245a6ae16be73e0b918b0"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#ac265e304e3d245a6ae16be73e0b918b0">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.isEnding</a></div><div class="ttdeci">boolean isEnding()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00126">BaseIntelPlugin.java:126</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel_html_a5e042a5b5a674423bee15089689550ab"><div class="ttname"><a href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a5e042a5b5a674423bee15089689550ab">com.fs.starfarer.api.impl.campaign.intel.bases.LuddicPathCellsIntel.addInterestInfo</a></div><div class="ttdeci">void addInterestInfo(TooltipMakerAPI info, float width, float height)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00331">LuddicPathCellsIntel.java:331</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a4e5414a5be09e723f9a76a54a03cbfba"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a4e5414a5be09e723f9a76a54a03cbfba">com.fs.starfarer.api.campaign.econ.MarketAPI.getOnOrAt</a></div><div class="ttdeci">String getOnOrAt()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a7e5b6e8035c61f63cd8b331df994233b"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a7e5b6e8035c61f63cd8b331df994233b">com.fs.starfarer.api.campaign.econ.MarketAPI.getName</a></div><div class="ttdeci">String getName()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab5f6f7200dd5e7e430e3387e131c083f" name="ab5f6f7200dd5e7e430e3387e131c083f"></a>
@@ -1372,61 +945,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00723">723</a> of file <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html">LuddicPathCellsIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  723</span>                             {</div>
-<div class="line"><span class="lineno">  724</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a4c71c02ba0b576f7818b4b4ff73fa15f">incidentType</a> == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  725</span>        </div>
-<div class="line"><span class="lineno">  726</span>        <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#af813af61011898e132a7b3d61a2422fc">prevIncidentData</a> = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  727</span>        </div>
-<div class="line"><span class="lineno">  728</span>        <span class="keywordtype">boolean</span> success = <a class="code hl_function" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#ae2dd04f3dcd6fd1143efe739d400d820">checkSuccess</a>();</div>
-<div class="line"><span class="lineno">  729</span>        </div>
-<div class="line"><span class="lineno">  730</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a4c71c02ba0b576f7818b4b4ff73fa15f">incidentType</a> == IncidentType.REDUCED_STABILITY) {</div>
-<div class="line"><span class="lineno">  731</span>            <span class="keywordflow">if</span> (success) {</div>
-<div class="line"><span class="lineno">  732</span>                RecentUnrest.get(<a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a36d0907b90b5ca0fa6d31f1466b3a56a">market</a>).add(3, </div>
-<div class="line"><span class="lineno">  733</span>                        Misc.ucFirst(Global.getSector().getFaction(Factions.LUDDIC_PATH).getPersonNamePrefix()) + <span class="stringliteral">&quot; sabotage&quot;</span>);</div>
-<div class="line"><span class="lineno">  734</span>                <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#af813af61011898e132a7b3d61a2422fc">prevIncidentData</a> = 3;</div>
-<div class="line"><span class="lineno">  735</span>            }</div>
-<div class="line"><span class="lineno">  736</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a4c71c02ba0b576f7818b4b4ff73fa15f">incidentType</a> == IncidentType.INDUSTRY_SABOTAGE) {</div>
-<div class="line"><span class="lineno">  737</span>            WeightedRandomPicker&lt;Industry&gt; picker = <span class="keyword">new</span> WeightedRandomPicker&lt;Industry&gt;(<a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#adc39b3b52a70c749a97a2dde992adfc2">random</a>);</div>
-<div class="line"><span class="lineno">  738</span>            <span class="keywordflow">for</span> (Industry ind : <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a36d0907b90b5ca0fa6d31f1466b3a56a">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#ac5acce3843ed0b9764a1f79e69491970">getIndustries</a>()) {</div>
-<div class="line"><span class="lineno">  739</span>                <span class="keywordflow">if</span> (!ind.canBeDisrupted()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  740</span>                picker.add(ind, ind.getPatherInterest());</div>
-<div class="line"><span class="lineno">  741</span>            }</div>
-<div class="line"><span class="lineno">  742</span>            Industry target = picker.pick();</div>
-<div class="line"><span class="lineno">  743</span>            <span class="keywordflow">if</span> (target == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  744</span>                <a class="code hl_function" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a0d99d5811725a65fd4dcf829ae3becf8">abortIncident</a>();</div>
-<div class="line"><span class="lineno">  745</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  746</span>            }</div>
-<div class="line"><span class="lineno">  747</span>            </div>
-<div class="line"><span class="lineno">  748</span>            <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#af813af61011898e132a7b3d61a2422fc">prevIncidentData</a> = target;</div>
-<div class="line"><span class="lineno">  749</span>            <span class="keywordflow">if</span> (success) {</div>
-<div class="line"><span class="lineno">  750</span>                <span class="keywordtype">float</span> disruptionDur = <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a64a24941da4cb2f8c0efcf65f0244a9b">MIN_SABOTAGE</a> + <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#adc39b3b52a70c749a97a2dde992adfc2">random</a>.nextFloat() * (<a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a89a023faa3d10a4eea4b2e706566cc79">MAX_SABOTAGE</a> - <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a64a24941da4cb2f8c0efcf65f0244a9b">MIN_SABOTAGE</a>);</div>
-<div class="line"><span class="lineno">  751</span>                target.setDisrupted(disruptionDur, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  752</span>            }</div>
-<div class="line"><span class="lineno">  753</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a4c71c02ba0b576f7818b4b4ff73fa15f">incidentType</a> == IncidentType.PLANETBUSTER) {</div>
-<div class="line"><span class="lineno">  754</span>            <span class="comment">// ??? turn into lava planet, remove market, etc</span></div>
-<div class="line"><span class="lineno">  755</span>        }</div>
-<div class="line"><span class="lineno">  756</span>        </div>
-<div class="line"><span class="lineno">  757</span>        <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#ac702bc13b137f3d6c7c68534fe19db11">prevIncident</a> = <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a4c71c02ba0b576f7818b4b4ff73fa15f">incidentType</a>;</div>
-<div class="line"><span class="lineno">  758</span>        <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a3fa836467714c78bf9eed725f361b2ee">sincePrevIncident</a> = 0f;</div>
-<div class="line"><span class="lineno">  759</span>        <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#acc25b82a4b8d0b6701e459939787cd78">prevIncidentSucceeded</a> = success;</div>
-<div class="line"><span class="lineno">  760</span>        </div>
-<div class="line"><span class="lineno">  761</span>        </div>
-<div class="line"><span class="lineno">  762</span>        <span class="keywordflow">if</span> (DebugFlags.SEND_UPDATES_WHEN_NO_COMM || Global.getSector().getIntelManager().isPlayerInRangeOfCommRelay() </div>
-<div class="line"><span class="lineno">  763</span>                || <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a36d0907b90b5ca0fa6d31f1466b3a56a">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a64c3437824f8a05ba3e6dc8a8ab61e62">isPlayerOwned</a>()) {</div>
-<div class="line"><span class="lineno">  764</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a36d0907b90b5ca0fa6d31f1466b3a56a">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a64c3437824f8a05ba3e6dc8a8ab61e62">isPlayerOwned</a>() || </div>
-<div class="line"><span class="lineno">  765</span>                    <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a4c71c02ba0b576f7818b4b4ff73fa15f">incidentType</a> == IncidentType.INDUSTRY_SABOTAGE ||</div>
-<div class="line"><span class="lineno">  766</span>                    <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a4c71c02ba0b576f7818b4b4ff73fa15f">incidentType</a> == IncidentType.PLANETBUSTER) {</div>
-<div class="line"><span class="lineno">  767</span>                <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a9a95c1eccf4604952fd8a65605f24e31">sendUpdateIfPlayerHasIntel</a>(<a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a864bfbaa527abc00c7ea0959cf3d527f">INCIDENT_HAPPENED</a>, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  768</span>            }</div>
-<div class="line"><span class="lineno">  769</span>        }</div>
-<div class="line"><span class="lineno">  770</span>        </div>
-<div class="line"><span class="lineno">  771</span>        <a class="code hl_function" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a0d99d5811725a65fd4dcf829ae3becf8">abortIncident</a>();</div>
-<div class="line"><span class="lineno">  772</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_a9a95c1eccf4604952fd8a65605f24e31"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a9a95c1eccf4604952fd8a65605f24e31">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.sendUpdateIfPlayerHasIntel</a></div><div class="ttdeci">void sendUpdateIfPlayerHasIntel(Object listInfoParam, TextPanelAPI textPanel)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00159">BaseIntelPlugin.java:159</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel_html_a64a24941da4cb2f8c0efcf65f0244a9b"><div class="ttname"><a href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a64a24941da4cb2f8c0efcf65f0244a9b">com.fs.starfarer.api.impl.campaign.intel.bases.LuddicPathCellsIntel.MIN_SABOTAGE</a></div><div class="ttdeci">static float MIN_SABOTAGE</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00057">LuddicPathCellsIntel.java:57</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel_html_a89a023faa3d10a4eea4b2e706566cc79"><div class="ttname"><a href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a89a023faa3d10a4eea4b2e706566cc79">com.fs.starfarer.api.impl.campaign.intel.bases.LuddicPathCellsIntel.MAX_SABOTAGE</a></div><div class="ttdeci">static float MAX_SABOTAGE</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00058">LuddicPathCellsIntel.java:58</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel_html_ae2dd04f3dcd6fd1143efe739d400d820"><div class="ttname"><a href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#ae2dd04f3dcd6fd1143efe739d400d820">com.fs.starfarer.api.impl.campaign.intel.bases.LuddicPathCellsIntel.checkSuccess</a></div><div class="ttdeci">boolean checkSuccess()</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00718">LuddicPathCellsIntel.java:718</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a078aecd2710172e1eaabf7ffdef43db5" name="a078aecd2710172e1eaabf7ffdef43db5"></a>
@@ -1448,31 +967,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#aa8860a78d7f4966472cd93f25704ccc1">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00540">540</a> of file <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html">LuddicPathCellsIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  540</span>                                                          {</div>
-<div class="line"><span class="lineno">  541</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a8f5dfa690f58f4f76fccc5308b86e906">sleeperTimeout</a> &gt; 0) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  542</span>        </div>
-<div class="line"><span class="lineno">  543</span>        LuddicPathBaseIntel base = <a class="code hl_function" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#ac098434beca91162413cc73494a503a2">LuddicPathCellsIntel</a>.getClosestBase(<a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a36d0907b90b5ca0fa6d31f1466b3a56a">market</a>);</div>
-<div class="line"><span class="lineno">  544</span>        <span class="keywordflow">if</span> (base == <span class="keyword">null</span> || !base.isPlayerVisible()) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  545</span>        </div>
-<div class="line"><span class="lineno">  546</span>        List&lt;ArrowData&gt; result = <span class="keyword">new</span> ArrayList&lt;ArrowData&gt;();</div>
-<div class="line"><span class="lineno">  547</span>        </div>
-<div class="line"><span class="lineno">  548</span>        </div>
-<div class="line"><span class="lineno">  549</span>        SectorEntityToken entityFrom = base.getMapLocation(map);</div>
-<div class="line"><span class="lineno">  550</span>        <span class="keywordflow">if</span> (map != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  551</span>            SectorEntityToken iconEntity = map.getIntelIconEntity(base);</div>
-<div class="line"><span class="lineno">  552</span>            <span class="keywordflow">if</span> (iconEntity != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  553</span>                entityFrom = iconEntity;</div>
-<div class="line"><span class="lineno">  554</span>            }</div>
-<div class="line"><span class="lineno">  555</span>        }</div>
-<div class="line"><span class="lineno">  556</span>        </div>
-<div class="line"><span class="lineno">  557</span>        ArrowData arrow = <span class="keyword">new</span> ArrowData(entityFrom, <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a36d0907b90b5ca0fa6d31f1466b3a56a">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af1677b531fa1a657e17b732868c7b953">getPrimaryEntity</a>());</div>
-<div class="line"><span class="lineno">  558</span>        arrow.color = <a class="code hl_function" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a0ee783c835a4509b0c740099006f540d">getFactionForUIColors</a>().<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a0213b272fbf9c2669316aa25c775ad60">getBaseUIColor</a>();</div>
-<div class="line"><span class="lineno">  559</span>        result.add(arrow);</div>
-<div class="line"><span class="lineno">  560</span>        </div>
-<div class="line"><span class="lineno">  561</span>        <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">  562</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI_html_a0213b272fbf9c2669316aa25c775ad60"><div class="ttname"><a href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a0213b272fbf9c2669316aa25c775ad60">com.fs.starfarer.api.campaign.FactionAPI.getBaseUIColor</a></div><div class="ttdeci">Color getBaseUIColor()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aae9a6583aa7405e643866f8ca1a83956" name="aae9a6583aa7405e643866f8ca1a83956"></a>
@@ -1510,21 +1005,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00133">133</a> of file <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html">LuddicPathCellsIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  133</span>                                                                                                               {</div>
-<div class="line"><span class="lineno">  134</span>        List&lt;LuddicPathCellsIntel&gt; result = <span class="keyword">new</span> ArrayList&lt;LuddicPathCellsIntel&gt;();</div>
-<div class="line"><span class="lineno">  135</span>        </div>
-<div class="line"><span class="lineno">  136</span>        List&lt;IntelInfoPlugin&gt; cells = Global.getSector().getIntelManager().getIntel(<a class="code hl_function" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#ac098434beca91162413cc73494a503a2">LuddicPathCellsIntel</a>.class);</div>
-<div class="line"><span class="lineno">  137</span>        <span class="keywordflow">for</span> (IntelInfoPlugin curr : cells) {</div>
-<div class="line"><span class="lineno">  138</span>            <a class="code hl_function" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#ac098434beca91162413cc73494a503a2">LuddicPathCellsIntel</a> intel = (<a class="code hl_function" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#ac098434beca91162413cc73494a503a2">LuddicPathCellsIntel</a>) curr;</div>
-<div class="line"><span class="lineno">  139</span>            <span class="keywordflow">if</span> (!includeSleeper &amp;&amp; intel.isSleeper()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  140</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#ac458ba4b8e8d68dbb6abb9edf433f7f2">getClosestBase</a>(intel.getMarket()) == base) {</div>
-<div class="line"><span class="lineno">  141</span>                result.add(intel);</div>
-<div class="line"><span class="lineno">  142</span>            }</div>
-<div class="line"><span class="lineno">  143</span>        }</div>
-<div class="line"><span class="lineno">  144</span>        <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">  145</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel_html_ac458ba4b8e8d68dbb6abb9edf433f7f2"><div class="ttname"><a href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#ac458ba4b8e8d68dbb6abb9edf433f7f2">com.fs.starfarer.api.impl.campaign.intel.bases.LuddicPathCellsIntel.getClosestBase</a></div><div class="ttdeci">static LuddicPathBaseIntel getClosestBase(MarketAPI market)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00118">LuddicPathCellsIntel.java:118</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aff883fd5ccaa7dfdcfce032d0e93b8ad" name="aff883fd5ccaa7dfdcfce032d0e93b8ad"></a>
@@ -1552,16 +1033,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00147">147</a> of file <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html">LuddicPathCellsIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  147</span>                                                                           {</div>
-<div class="line"><span class="lineno">  148</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a36d0907b90b5ca0fa6d31f1466b3a56a">market</a> == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  149</span>        List&lt;IntelInfoPlugin&gt; cells = Global.getSector().getIntelManager().getIntel(<a class="code hl_function" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#ac098434beca91162413cc73494a503a2">LuddicPathCellsIntel</a>.class);</div>
-<div class="line"><span class="lineno">  150</span>        <span class="keywordflow">for</span> (IntelInfoPlugin curr : cells) {</div>
-<div class="line"><span class="lineno">  151</span>            <a class="code hl_function" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#ac098434beca91162413cc73494a503a2">LuddicPathCellsIntel</a> intel = (<a class="code hl_function" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#ac098434beca91162413cc73494a503a2">LuddicPathCellsIntel</a>) curr;</div>
-<div class="line"><span class="lineno">  152</span>            <span class="keywordflow">if</span> (intel.getMarket() == <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a36d0907b90b5ca0fa6d31f1466b3a56a">market</a>) <span class="keywordflow">return</span> intel;</div>
-<div class="line"><span class="lineno">  153</span>        }</div>
-<div class="line"><span class="lineno">  154</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  155</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac458ba4b8e8d68dbb6abb9edf433f7f2" name="ac458ba4b8e8d68dbb6abb9edf433f7f2"></a>
@@ -1589,22 +1061,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00118">118</a> of file <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html">LuddicPathCellsIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  118</span>                                                                       {</div>
-<div class="line"><span class="lineno">  119</span>        List&lt;IntelInfoPlugin&gt; bases = Global.getSector().getIntelManager().getIntel(LuddicPathBaseIntel.class);</div>
-<div class="line"><span class="lineno">  120</span>        <span class="keywordtype">float</span> minDist = Float.MAX_VALUE;</div>
-<div class="line"><span class="lineno">  121</span>        LuddicPathBaseIntel closest = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  122</span>        <span class="keywordflow">for</span> (IntelInfoPlugin curr : bases) {</div>
-<div class="line"><span class="lineno">  123</span>            LuddicPathBaseIntel intel = (LuddicPathBaseIntel) curr;</div>
-<div class="line"><span class="lineno">  124</span>            <span class="keywordtype">float</span> dist = Misc.getDistance(intel.getMarket().getLocationInHyperspace(), <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a36d0907b90b5ca0fa6d31f1466b3a56a">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#ac7c52901d8193892f65ffba9ac182a4e">getLocationInHyperspace</a>());</div>
-<div class="line"><span class="lineno">  125</span>            <span class="keywordflow">if</span> (dist &lt; minDist) {</div>
-<div class="line"><span class="lineno">  126</span>                minDist = dist;</div>
-<div class="line"><span class="lineno">  127</span>                closest = intel;</div>
-<div class="line"><span class="lineno">  128</span>            }</div>
-<div class="line"><span class="lineno">  129</span>        }</div>
-<div class="line"><span class="lineno">  130</span>        <span class="keywordflow">return</span> closest;</div>
-<div class="line"><span class="lineno">  131</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_ac7c52901d8193892f65ffba9ac182a4e"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#ac7c52901d8193892f65ffba9ac182a4e">com.fs.starfarer.api.campaign.econ.MarketAPI.getLocationInHyperspace</a></div><div class="ttdeci">Vector2f getLocationInHyperspace()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a4588de174fd59cbc21a73025aeaa4ec2" name="a4588de174fd59cbc21a73025aeaa4ec2"></a>
@@ -1625,10 +1082,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#ae93559a4be65baa333b36619a2a82850">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00634">634</a> of file <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html">LuddicPathCellsIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  634</span>                                        {</div>
-<div class="line"><span class="lineno">  635</span>        <span class="keywordflow">return</span> super.getCommMessageSound();</div>
-<div class="line"><span class="lineno">  636</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a0ee783c835a4509b0c740099006f540d" name="a0ee783c835a4509b0c740099006f540d"></a>
@@ -1649,10 +1103,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#aef7175eff8878a18ebb3099d3a7ab59f">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00619">619</a> of file <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html">LuddicPathCellsIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  619</span>                                              {</div>
-<div class="line"><span class="lineno">  620</span>        <span class="keywordflow">return</span> Global.getSector().getFaction(Factions.LUDDIC_PATH);</div>
-<div class="line"><span class="lineno">  621</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a3d8f909f64bdbb9022b66262e7a6bd5f" name="a3d8f909f64bdbb9022b66262e7a6bd5f"></a>
@@ -1674,13 +1125,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a6499624a08c9565334e2395989f542c9">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00565">565</a> of file <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html">LuddicPathCellsIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  565</span>                            {</div>
-<div class="line"><span class="lineno">  566</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a07f2726a509e83c001daa8eb92270ad7">isSleeper</a>()) {</div>
-<div class="line"><span class="lineno">  567</span>            <span class="keywordflow">return</span> Global.getSettings().getSpriteName(<span class="stringliteral">&quot;intel&quot;</span>, <span class="stringliteral">&quot;sleeper_cells&quot;</span>);</div>
-<div class="line"><span class="lineno">  568</span>        }</div>
-<div class="line"><span class="lineno">  569</span>        <span class="keywordflow">return</span> Global.getSettings().getSpriteName(<span class="stringliteral">&quot;intel&quot;</span>, <span class="stringliteral">&quot;active_cells&quot;</span>);</div>
-<div class="line"><span class="lineno">  570</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="abc4e6a91ad225bf12a7557c7b69e318c" name="abc4e6a91ad225bf12a7557c7b69e318c"></a>
@@ -1699,10 +1144,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00855">855</a> of file <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html">LuddicPathCellsIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  855</span>                                  {</div>
-<div class="line"><span class="lineno">  856</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a11c55e71794426a353457bdf0def8a23">inertiaTime</a>;</div>
-<div class="line"><span class="lineno">  857</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a94bb6d0161edec3ae6ccfdedf0dd243e" name="a94bb6d0161edec3ae6ccfdedf0dd243e"></a>
@@ -1731,17 +1173,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a4ef0af8cb71b4127afce850bc6a04514">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00573">573</a> of file <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html">LuddicPathCellsIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  573</span>                                                      {</div>
-<div class="line"><span class="lineno">  574</span>        Set&lt;String&gt; tags = super.getIntelTags(map);</div>
-<div class="line"><span class="lineno">  575</span>        tags.add(Factions.LUDDIC_PATH);</div>
-<div class="line"><span class="lineno">  576</span>        </div>
-<div class="line"><span class="lineno">  577</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a36d0907b90b5ca0fa6d31f1466b3a56a">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a64c3437824f8a05ba3e6dc8a8ab61e62">isPlayerOwned</a>()) {</div>
-<div class="line"><span class="lineno">  578</span>            tags.add(Tags.INTEL_COLONIES);</div>
-<div class="line"><span class="lineno">  579</span>        }</div>
-<div class="line"><span class="lineno">  580</span>        </div>
-<div class="line"><span class="lineno">  581</span>        <span class="keywordflow">return</span> tags;</div>
-<div class="line"><span class="lineno">  582</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a62417bd9e0d40ec0280ee153db360d4d" name="a62417bd9e0d40ec0280ee153db360d4d"></a>
@@ -1763,10 +1195,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a01f212769febb46bae89256b643c23eb">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00628">628</a> of file <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html">LuddicPathCellsIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  628</span>                                                              {</div>
-<div class="line"><span class="lineno">  629</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a36d0907b90b5ca0fa6d31f1466b3a56a">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af1677b531fa1a657e17b732868c7b953">getPrimaryEntity</a>();</div>
-<div class="line"><span class="lineno">  630</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a0ef4ea6954298f8b3a1012f9dc9a7235" name="a0ef4ea6954298f8b3a1012f9dc9a7235"></a>
@@ -1785,10 +1214,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00158">158</a> of file <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html">LuddicPathCellsIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  158</span>                                 {</div>
-<div class="line"><span class="lineno">  159</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a36d0907b90b5ca0fa6d31f1466b3a56a">market</a>;</div>
-<div class="line"><span class="lineno">  160</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa75af1345e9be9436736ce0a31ee0619" name="aa75af1345e9be9436736ce0a31ee0619"></a>
@@ -1809,33 +1235,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a582fe7cb29e8f2f65670d4dd74418235">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00592">592</a> of file <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html">LuddicPathCellsIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  592</span>                            {</div>
-<div class="line"><span class="lineno">  593</span>        String base = <span class="stringliteral">&quot;Luddic Path Cells&quot;</span>;</div>
-<div class="line"><span class="lineno">  594</span>        </div>
-<div class="line"><span class="lineno">  595</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a05f5d8564711c5a47050c834e15a5ad5">isSendingUpdate</a>()) {</div>
-<div class="line"><span class="lineno">  596</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a9ba572be19912ec6b816dc7b69352660">getListInfoParam</a>() == <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a864bfbaa527abc00c7ea0959cf3d527f">INCIDENT_HAPPENED</a>) {</div>
-<div class="line"><span class="lineno">  597</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#acc25b82a4b8d0b6701e459939787cd78">prevIncidentSucceeded</a>) {</div>
-<div class="line"><span class="lineno">  598</span>                    <span class="keywordflow">return</span> base + <span class="stringliteral">&quot; - Incident&quot;</span>;</div>
-<div class="line"><span class="lineno">  599</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  600</span>                    <span class="keywordflow">return</span> base + <span class="stringliteral">&quot; - Incident Averted&quot;</span>;</div>
-<div class="line"><span class="lineno">  601</span>                }</div>
-<div class="line"><span class="lineno">  602</span>            }</div>
-<div class="line"><span class="lineno">  603</span>        }</div>
-<div class="line"><span class="lineno">  604</span>        </div>
-<div class="line"><span class="lineno">  605</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#ac265e304e3d245a6ae16be73e0b918b0">isEnding</a>()) {</div>
-<div class="line"><span class="lineno">  606</span>            <span class="keywordflow">return</span> base + <span class="stringliteral">&quot; - Dissolved&quot;</span>;</div>
-<div class="line"><span class="lineno">  607</span>        }</div>
-<div class="line"><span class="lineno">  608</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a8f5dfa690f58f4f76fccc5308b86e906">sleeperTimeout</a> &gt; 0) {</div>
-<div class="line"><span class="lineno">  609</span>            <span class="keywordflow">return</span> base + <span class="stringliteral">&quot; - Disrupted&quot;</span>;</div>
-<div class="line"><span class="lineno">  610</span>        }</div>
-<div class="line"><span class="lineno">  611</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a07f2726a509e83c001daa8eb92270ad7">isSleeper</a>()) {</div>
-<div class="line"><span class="lineno">  612</span>            <span class="keywordflow">return</span> base + <span class="stringliteral">&quot; - Sleeper&quot;</span>;</div>
-<div class="line"><span class="lineno">  613</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  614</span>            <span class="keywordflow">return</span> base + <span class="stringliteral">&quot; - Active&quot;</span>;</div>
-<div class="line"><span class="lineno">  615</span>        }</div>
-<div class="line"><span class="lineno">  616</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_a05f5d8564711c5a47050c834e15a5ad5"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a05f5d8564711c5a47050c834e15a5ad5">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.isSendingUpdate</a></div><div class="ttdeci">boolean isSendingUpdate()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00149">BaseIntelPlugin.java:149</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="acb93f27d09743d311a751d8535481608" name="acb93f27d09743d311a751d8535481608"></a>
@@ -1854,11 +1254,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00660">660</a> of file <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html">LuddicPathCellsIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  660</span>                                     {</div>
-<div class="line"><span class="lineno">  661</span>        <span class="keywordflow">return</span> EconomyFleetRouteManager.SOURCE_ID;</div>
-<div class="line"><span class="lineno">  662</span>        <span class="comment">//return &quot;pather_cells_smuggler&quot;;</span></div>
-<div class="line"><span class="lineno">  663</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa4de30fab32b71a09c1c003a512abf60" name="aa4de30fab32b71a09c1c003a512abf60"></a>
@@ -1877,10 +1273,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00651">651</a> of file <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html">LuddicPathCellsIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  651</span>                                     {</div>
-<div class="line"><span class="lineno">  652</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a8f5dfa690f58f4f76fccc5308b86e906">sleeperTimeout</a>;</div>
-<div class="line"><span class="lineno">  653</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a82ed516c45141a18e204a7918a7a2cae" name="a82ed516c45141a18e204a7918a7a2cae"></a>
@@ -1901,10 +1294,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a8fe6bfa41873bed91428d73fa6bac1b6">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00623">623</a> of file <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html">LuddicPathCellsIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  623</span>                                             {</div>
-<div class="line"><span class="lineno">  624</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#aa75af1345e9be9436736ce0a31ee0619">getName</a>();</div>
-<div class="line"><span class="lineno">  625</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a50e7f85ab3cdcfe906668d7f874e4dc0" name="a50e7f85ab3cdcfe906668d7f874e4dc0"></a>
@@ -1925,14 +1315,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a6160e4bb36c43732e98a87a2f1e63b58">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00584">584</a> of file <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html">LuddicPathCellsIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  584</span>                                  {</div>
-<div class="line"><span class="lineno">  585</span>        String base = Misc.ucFirst(<a class="code hl_function" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a0ee783c835a4509b0c740099006f540d">getFactionForUIColors</a>().getPersonNamePrefix());</div>
-<div class="line"><span class="lineno">  586</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#ad3d6ba73544a6a854df94b7291f72222">sleeper</a>) {</div>
-<div class="line"><span class="lineno">  587</span>            <span class="keywordflow">return</span> base + <span class="stringliteral">&quot; D&quot;</span>; <span class="comment">// so it goes after &quot;Luddic Path Base&quot;</span></div>
-<div class="line"><span class="lineno">  588</span>        }</div>
-<div class="line"><span class="lineno">  589</span>        <span class="keywordflow">return</span> base + <span class="stringliteral">&quot; C&quot;</span>; <span class="comment">// so it goes after &quot;Luddic Path Base&quot;</span></div>
-<div class="line"><span class="lineno">  590</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a07f2726a509e83c001daa8eb92270ad7" name="a07f2726a509e83c001daa8eb92270ad7"></a>
@@ -1951,16 +1334,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00638">638</a> of file <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html">LuddicPathCellsIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  638</span>                               {</div>
-<div class="line"><span class="lineno">  639</span>        <span class="keywordflow">if</span> (Factions.PLAYER.equals(<a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a36d0907b90b5ca0fa6d31f1466b3a56a">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#aa132dbebb3e9e38ad71a576a4ea5ac9b">getFactionId</a>())) {</div>
-<div class="line"><span class="lineno">  640</span>            <span class="keywordflow">if</span> (HA_CMD.playerHasPatherAgreement()) {</div>
-<div class="line"><span class="lineno">  641</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  642</span>            }</div>
-<div class="line"><span class="lineno">  643</span>        }</div>
-<div class="line"><span class="lineno">  644</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#ad3d6ba73544a6a854df94b7291f72222">sleeper</a>;</div>
-<div class="line"><span class="lineno">  645</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_aa132dbebb3e9e38ad71a576a4ea5ac9b"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#aa132dbebb3e9e38ad71a576a4ea5ac9b">com.fs.starfarer.api.campaign.econ.MarketAPI.getFactionId</a></div><div class="ttdeci">String getFactionId()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aecaac3bfa27f9331c191c83b0819f0b7" name="aecaac3bfa27f9331c191c83b0819f0b7"></a>
@@ -1979,12 +1353,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00193">193</a> of file <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html">LuddicPathCellsIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  193</span>                                       {</div>
-<div class="line"><span class="lineno">  194</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a8f5dfa690f58f4f76fccc5308b86e906">sleeperTimeout</a> &lt;= 0) {</div>
-<div class="line"><span class="lineno">  195</span>            <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#ad3d6ba73544a6a854df94b7291f72222">sleeper</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  196</span>        }</div>
-<div class="line"><span class="lineno">  197</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a339fba3696d929e8100f7dfdcb00f517" name="a339fba3696d929e8100f7dfdcb00f517"></a>
@@ -2003,11 +1372,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00184">184</a> of file <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html">LuddicPathCellsIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  184</span>                              {</div>
-<div class="line"><span class="lineno">  185</span>        <a class="code hl_function" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a339fba3696d929e8100f7dfdcb00f517">makeSleeper</a>(-1);</div>
-<div class="line"><span class="lineno">  186</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel_html_a339fba3696d929e8100f7dfdcb00f517"><div class="ttname"><a href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a339fba3696d929e8100f7dfdcb00f517">com.fs.starfarer.api.impl.campaign.intel.bases.LuddicPathCellsIntel.makeSleeper</a></div><div class="ttdeci">void makeSleeper()</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00184">LuddicPathCellsIntel.java:184</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aeadd278d9d0f6814886cbde59322c08c" name="aeadd278d9d0f6814886cbde59322c08c"></a>
@@ -2027,13 +1392,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00187">187</a> of file <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html">LuddicPathCellsIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  187</span>                                                  {</div>
-<div class="line"><span class="lineno">  188</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a8f5dfa690f58f4f76fccc5308b86e906">sleeperTimeout</a> &gt;= 0) {</div>
-<div class="line"><span class="lineno">  189</span>            this.sleeperTimeout = <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a8f5dfa690f58f4f76fccc5308b86e906">sleeperTimeout</a>;</div>
-<div class="line"><span class="lineno">  190</span>        }</div>
-<div class="line"><span class="lineno">  191</span>        <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#ad3d6ba73544a6a854df94b7291f72222">sleeper</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  192</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a1217e040d2808edc0c6d0f6d8a19f696" name="a1217e040d2808edc0c6d0f6d8a19f696"></a>
@@ -2062,11 +1421,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#aa97466aeeeda8efaa762a17d5dbb37b9">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00168">168</a> of file <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html">LuddicPathCellsIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  168</span>                                 {</div>
-<div class="line"><span class="lineno">  169</span>        super.notifyEnded();</div>
-<div class="line"><span class="lineno">  170</span>        Global.getSector().removeScript(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  171</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="afc72f83213af9b72abf63a421572b525" name="afc72f83213af9b72abf63a421572b525"></a>
@@ -2095,15 +1450,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a7cb55f93ada9a3020919de0342c3199a">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00175">175</a> of file <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html">LuddicPathCellsIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  175</span>                                  {</div>
-<div class="line"><span class="lineno">  176</span>        super.notifyEnding();</div>
-<div class="line"><span class="lineno">  177</span>        </div>
-<div class="line"><span class="lineno">  178</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a36d0907b90b5ca0fa6d31f1466b3a56a">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#adb4f096698b123e50d2d3e82eafad6b1">hasCondition</a>(Conditions.PATHER_CELLS)) {</div>
-<div class="line"><span class="lineno">  179</span>            <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a36d0907b90b5ca0fa6d31f1466b3a56a">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#ae754a2d0cbea2bbf5b54684e47966efd">removeCondition</a>(Conditions.PATHER_CELLS);</div>
-<div class="line"><span class="lineno">  180</span>        }</div>
-<div class="line"><span class="lineno">  181</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_ae754a2d0cbea2bbf5b54684e47966efd"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#ae754a2d0cbea2bbf5b54684e47966efd">com.fs.starfarer.api.campaign.econ.MarketAPI.removeCondition</a></div><div class="ttdeci">void removeCondition(String id)</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af12390e09cfe1dd7fc58ea7560ceac5b" name="af12390e09cfe1dd7fc58ea7560ceac5b"></a>
@@ -2122,41 +1469,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00666">666</a> of file <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html">LuddicPathCellsIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  666</span>                                  {</div>
-<div class="line"><span class="lineno">  667</span>        <a class="code hl_function" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a0d99d5811725a65fd4dcf829ae3becf8">abortIncident</a>();</div>
-<div class="line"><span class="lineno">  668</span>        <span class="comment">//if (incidentType != null) return;</span></div>
-<div class="line"><span class="lineno">  669</span>        LuddicPathBaseIntel base = <a class="code hl_function" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#ac098434beca91162413cc73494a503a2">LuddicPathCellsIntel</a>.getClosestBase(<a class="code hl_function" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a0ef4ea6954298f8b3a1012f9dc9a7235">getMarket</a>());</div>
-<div class="line"><span class="lineno">  670</span>        <span class="keywordflow">if</span> (base == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  671</span>        </div>
-<div class="line"><span class="lineno">  672</span>        WeightedRandomPicker&lt;IncidentType&gt; types = <span class="keyword">new</span> WeightedRandomPicker&lt;IncidentType&gt;(<a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#adc39b3b52a70c749a97a2dde992adfc2">random</a>);</div>
-<div class="line"><span class="lineno">  673</span>        </div>
-<div class="line"><span class="lineno">  674</span>        types.add(IncidentType.REDUCED_STABILITY, 10f);</div>
-<div class="line"><span class="lineno">  675</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#ae440048e053d0678a9c7640590200b5c">numIncidentAttempts</a> &gt;= 3 || !<a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a36d0907b90b5ca0fa6d31f1466b3a56a">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a64c3437824f8a05ba3e6dc8a8ab61e62">isPlayerOwned</a>()) {</div>
-<div class="line"><span class="lineno">  676</span>            types.add(IncidentType.INDUSTRY_SABOTAGE, 10f);</div>
-<div class="line"><span class="lineno">  677</span>        }</div>
-<div class="line"><span class="lineno">  678</span>        </div>
-<div class="line"><span class="lineno">  679</span><span class="comment">//      if (numIncidentAttempts &gt;= 10 &amp;&amp; market.getSize() &gt;= 5 &amp;&amp; </span></div>
-<div class="line"><span class="lineno">  680</span><span class="comment">//              !Global.getSector().getMemory().is(USED_PLANETBUSTER_KEY, true)) {</span></div>
-<div class="line"><span class="lineno">  681</span><span class="comment">//          types.add(IncidentType.PLANETBUSTER, 5f);</span></div>
-<div class="line"><span class="lineno">  682</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  683</span>        </div>
-<div class="line"><span class="lineno">  684</span>        <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a4c71c02ba0b576f7818b4b4ff73fa15f">incidentType</a> = types.pick();</div>
-<div class="line"><span class="lineno">  685</span>        <span class="comment">//incidentType = IncidentType.REDUCED_STABILITY;</span></div>
-<div class="line"><span class="lineno">  686</span>        <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a4ad89d95c0ef7d0a04e95516e4a0c7f8">incidentDelay</a> = <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#adefa24ef48286a72574f2ad9b0ad2f3b">MIN_WARNING_DAYS</a> + <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#adc39b3b52a70c749a97a2dde992adfc2">random</a>.nextFloat() * <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#adefa24ef48286a72574f2ad9b0ad2f3b">MIN_WARNING_DAYS</a>;</div>
-<div class="line"><span class="lineno">  687</span>        </div>
-<div class="line"><span class="lineno">  688</span>        </div>
-<div class="line"><span class="lineno">  689</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a4c71c02ba0b576f7818b4b4ff73fa15f">incidentType</a> == IncidentType.PLANETBUSTER) {</div>
-<div class="line"><span class="lineno">  690</span>            <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a4ad89d95c0ef7d0a04e95516e4a0c7f8">incidentDelay</a> = <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#adefa24ef48286a72574f2ad9b0ad2f3b">MIN_WARNING_DAYS</a> * 4f + <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#adc39b3b52a70c749a97a2dde992adfc2">random</a>.nextFloat() * 30f;</div>
-<div class="line"><span class="lineno">  691</span>            Global.getSector().getMemoryWithoutUpdate().set(<a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#af244896c39cf9cb9b90222601eae0f57">USED_PLANETBUSTER_KEY</a>, <span class="keyword">true</span>, 1500f);</div>
-<div class="line"><span class="lineno">  692</span>        }</div>
-<div class="line"><span class="lineno">  693</span>        </div>
-<div class="line"><span class="lineno">  694</span><span class="comment">//      if (market.isPlayerOwned()) {</span></div>
-<div class="line"><span class="lineno">  695</span><span class="comment">//          sendUpdateIfPlayerHasIntel(INCIDENT_PREP, false);</span></div>
-<div class="line"><span class="lineno">  696</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  697</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel_html_adefa24ef48286a72574f2ad9b0ad2f3b"><div class="ttname"><a href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#adefa24ef48286a72574f2ad9b0ad2f3b">com.fs.starfarer.api.impl.campaign.intel.bases.LuddicPathCellsIntel.MIN_WARNING_DAYS</a></div><div class="ttdeci">static float MIN_WARNING_DAYS</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00052">LuddicPathCellsIntel.java:52</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel_html_af244896c39cf9cb9b90222601eae0f57"><div class="ttname"><a href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#af244896c39cf9cb9b90222601eae0f57">com.fs.starfarer.api.impl.campaign.intel.bases.LuddicPathCellsIntel.USED_PLANETBUSTER_KEY</a></div><div class="ttdeci">static String USED_PLANETBUSTER_KEY</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00049">LuddicPathCellsIntel.java:49</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a970864b2d525b007fb726c3d41edefad" name="a970864b2d525b007fb726c3d41edefad"></a>
@@ -2176,10 +1489,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00810">810</a> of file <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html">LuddicPathCellsIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  810</span>                                                                        {</div>
-<div class="line"><span class="lineno">  811</span>        </div>
-<div class="line"><span class="lineno">  812</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a74cedbad3bf0f12f53e2595bc477af5f" name="a74cedbad3bf0f12f53e2595bc477af5f"></a>
@@ -2225,17 +1535,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d5/d7b/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1FleetEventListener.html#a6dff203922d9929930959967dfddb927">com.fs.starfarer.api.campaign.listeners.FleetEventListener</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00838">838</a> of file <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html">LuddicPathCellsIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  838</span>                                                                                                               {</div>
-<div class="line"><span class="lineno">  839</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a4bb6f5766d72e290314464bd83fc8cdf">smuggler</a> == <span class="keyword">null</span> || <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a4bb6f5766d72e290314464bd83fc8cdf">smuggler</a>.getActiveFleet() == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  840</span>        </div>
-<div class="line"><span class="lineno">  841</span>        CampaignFleetAPI active = <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a4bb6f5766d72e290314464bd83fc8cdf">smuggler</a>.getActiveFleet();</div>
-<div class="line"><span class="lineno">  842</span>        <span class="keywordflow">if</span> (!battle.isInvolved(active)) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  843</span>        </div>
-<div class="line"><span class="lineno">  844</span>        <span class="keywordflow">if</span> (battle.getSideFor(active) != battle.getSideFor(primaryWinner)) {</div>
-<div class="line"><span class="lineno">  845</span>            <a class="code hl_function" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a0d99d5811725a65fd4dcf829ae3becf8">abortIncident</a>();</div>
-<div class="line"><span class="lineno">  846</span>        }</div>
-<div class="line"><span class="lineno">  847</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a80fce751b688fb496a9657a8a3dc3aec" name="a80fce751b688fb496a9657a8a3dc3aec"></a>
@@ -2273,12 +1573,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d5/d7b/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1FleetEventListener.html#a80bf021b96aa1c0f11ee40000e5d3666">com.fs.starfarer.api.campaign.listeners.FleetEventListener</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00849">849</a> of file <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html">LuddicPathCellsIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  849</span>                                                                                                                {</div>
-<div class="line"><span class="lineno">  850</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a4bb6f5766d72e290314464bd83fc8cdf">smuggler</a> != <span class="keyword">null</span> &amp;&amp; fleet == <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a4bb6f5766d72e290314464bd83fc8cdf">smuggler</a>.getActiveFleet()) {</div>
-<div class="line"><span class="lineno">  851</span>            <a class="code hl_function" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a0d99d5811725a65fd4dcf829ae3becf8">abortIncident</a>();</div>
-<div class="line"><span class="lineno">  852</span>        }</div>
-<div class="line"><span class="lineno">  853</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aaf268d9a793028df80cc0f6e614a0a32" name="aaf268d9a793028df80cc0f6e614a0a32"></a>
@@ -2306,42 +1601,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00775">775</a> of file <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html">LuddicPathCellsIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  775</span>                                                          {</div>
-<div class="line"><span class="lineno">  776</span>        String sid = <a class="code hl_function" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#acb93f27d09743d311a751d8535481608">getRouteSourceId</a>();</div>
-<div class="line"><span class="lineno">  777</span>        </div>
-<div class="line"><span class="lineno">  778</span>        SectorEntityToken from = base.getMarket().getPrimaryEntity();</div>
-<div class="line"><span class="lineno">  779</span>        SectorEntityToken to = <a class="code hl_function" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a0ef4ea6954298f8b3a1012f9dc9a7235">getMarket</a>().<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af1677b531fa1a657e17b732868c7b953">getPrimaryEntity</a>();</div>
-<div class="line"><span class="lineno">  780</span>        </div>
-<div class="line"><span class="lineno">  781</span>        EconomyRouteData data = <span class="keyword">new</span> EconomyRouteData();</div>
-<div class="line"><span class="lineno">  782</span>        data.from = base.getMarket();</div>
-<div class="line"><span class="lineno">  783</span>        data.to = <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a36d0907b90b5ca0fa6d31f1466b3a56a">market</a>;</div>
-<div class="line"><span class="lineno">  784</span>        data.smuggling = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  785</span>        data.cargoCap = 400;</div>
-<div class="line"><span class="lineno">  786</span>        data.fuelCap = 200;</div>
-<div class="line"><span class="lineno">  787</span>        </div>
-<div class="line"><span class="lineno">  788</span>        OptionalFleetData extra = <span class="keyword">new</span> OptionalFleetData(data.from);</div>
-<div class="line"><span class="lineno">  789</span>        extra.fleetType = FleetTypes.TRADE_SMUGGLER;</div>
-<div class="line"><span class="lineno">  790</span>        </div>
-<div class="line"><span class="lineno">  791</span>        RouteData route = RouteManager.getInstance().addRoute(sid, base.getMarket(), Misc.genRandomSeed(), extra, <span class="keyword">this</span>, data);</div>
-<div class="line"><span class="lineno">  792</span>        extra.strength = 50f;</div>
-<div class="line"><span class="lineno">  793</span>        extra.strength = Misc.getAdjustedStrength(extra.strength, base.getMarket());</div>
-<div class="line"><span class="lineno">  794</span>        </div>
-<div class="line"><span class="lineno">  795</span>        </div>
-<div class="line"><span class="lineno">  796</span>        <span class="keywordtype">float</span> orbitDays = 3f + <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#adc39b3b52a70c749a97a2dde992adfc2">random</a>.nextFloat() * 3f;</div>
-<div class="line"><span class="lineno">  797</span>        <span class="keywordtype">float</span> travelDays = RouteLocationCalculator.getTravelDays(from, to);</div>
-<div class="line"><span class="lineno">  798</span>        <span class="keywordflow">if</span> (DebugFlags.PATHER_BASE_DEBUG) travelDays *= 0.1f;</div>
-<div class="line"><span class="lineno">  799</span>        </div>
-<div class="line"><span class="lineno">  800</span>        route.addSegment(<span class="keyword">new</span> RouteSegment(EconomyFleetRouteManager.ROUTE_SRC_LOAD, orbitDays, from));</div>
-<div class="line"><span class="lineno">  801</span>        route.addSegment(<span class="keyword">new</span> RouteSegment(EconomyFleetRouteManager.ROUTE_TRAVEL_DST, travelDays, from, to));</div>
-<div class="line"><span class="lineno">  802</span>        route.addSegment(<span class="keyword">new</span> RouteSegment(EconomyFleetRouteManager.ROUTE_DST_UNLOAD, orbitDays * 0.5f, to));</div>
-<div class="line"><span class="lineno">  803</span>        route.addSegment(<span class="keyword">new</span> RouteSegment(EconomyFleetRouteManager.ROUTE_DST_LOAD, orbitDays * 0.5f, to));</div>
-<div class="line"><span class="lineno">  804</span>        route.addSegment(<span class="keyword">new</span> RouteSegment(EconomyFleetRouteManager.ROUTE_TRAVEL_SRC, travelDays, to, from));</div>
-<div class="line"><span class="lineno">  805</span>        route.addSegment(<span class="keyword">new</span> RouteSegment(EconomyFleetRouteManager.ROUTE_SRC_UNLOAD, orbitDays, from));</div>
-<div class="line"><span class="lineno">  806</span>        </div>
-<div class="line"><span class="lineno">  807</span>        <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a4bb6f5766d72e290314464bd83fc8cdf">smuggler</a> = route;</div>
-<div class="line"><span class="lineno">  808</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel_html_acb93f27d09743d311a751d8535481608"><div class="ttname"><a href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#acb93f27d09743d311a751d8535481608">com.fs.starfarer.api.impl.campaign.intel.bases.LuddicPathCellsIntel.getRouteSourceId</a></div><div class="ttdeci">String getRouteSourceId()</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00660">LuddicPathCellsIntel.java:660</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2d2f444bc66efd2e4268bf63c1e26085" name="a2d2f444bc66efd2e4268bf63c1e26085"></a>
@@ -2361,10 +1621,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00859">859</a> of file <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html">LuddicPathCellsIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  859</span>                                                  {</div>
-<div class="line"><span class="lineno">  860</span>        this.inertiaTime = <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a11c55e71794426a353457bdf0def8a23">inertiaTime</a>;</div>
-<div class="line"><span class="lineno">  861</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a82069102ea8922979cc3a79985c7d228" name="a82069102ea8922979cc3a79985c7d228"></a>
@@ -2384,10 +1641,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00647">647</a> of file <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html">LuddicPathCellsIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  647</span>                                            {</div>
-<div class="line"><span class="lineno">  648</span>        this.sleeper = <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#ad3d6ba73544a6a854df94b7291f72222">sleeper</a>;</div>
-<div class="line"><span class="lineno">  649</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac6343dbd3f211425b089f1f46809a651" name="ac6343dbd3f211425b089f1f46809a651"></a>
@@ -2407,10 +1661,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00655">655</a> of file <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html">LuddicPathCellsIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  655</span>                                                        {</div>
-<div class="line"><span class="lineno">  656</span>        this.sleeperTimeout = <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a8f5dfa690f58f4f76fccc5308b86e906">sleeperTimeout</a>;</div>
-<div class="line"><span class="lineno">  657</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a16ccd3724f5d3049a0b476ae8a386de1" name="a16ccd3724f5d3049a0b476ae8a386de1"></a>
@@ -2430,10 +1681,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00814">814</a> of file <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html">LuddicPathCellsIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  814</span>                                                                     {</div>
-<div class="line"><span class="lineno">  815</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  816</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="afabbe8d41ce55b537ee0f6908aa7f281" name="afabbe8d41ce55b537ee0f6908aa7f281"></a>
@@ -2453,10 +1701,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00818">818</a> of file <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html">LuddicPathCellsIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  818</span>                                                 {</div>
-<div class="line"><span class="lineno">  819</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  820</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a18e2bfd7fa3df7c682f8865d2056ae21" name="a18e2bfd7fa3df7c682f8865d2056ae21"></a>
@@ -2476,22 +1721,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html#l00822">822</a> of file <a class="el" href="../../d3/d4b/LuddicPathCellsIntel_8java_source.html">LuddicPathCellsIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  822</span>                                                        {</div>
-<div class="line"><span class="lineno">  823</span>        Random <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#adc39b3b52a70c749a97a2dde992adfc2">random</a> = <span class="keyword">new</span> Random();</div>
-<div class="line"><span class="lineno">  824</span>        <span class="keywordflow">if</span> (route.getSeed() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  825</span>            <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#adc39b3b52a70c749a97a2dde992adfc2">random</a> = <span class="keyword">new</span> Random(route.getSeed());</div>
-<div class="line"><span class="lineno">  826</span>        }</div>
-<div class="line"><span class="lineno">  827</span>        </div>
-<div class="line"><span class="lineno">  828</span>        CampaignFleetAPI fleet = EconomyFleetRouteManager.createTradeRouteFleet(route, <a class="code hl_variable" href="../../d0/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#adc39b3b52a70c749a97a2dde992adfc2">random</a>);</div>
-<div class="line"><span class="lineno">  829</span>        <span class="keywordflow">if</span> (fleet == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">null</span>;;</div>
-<div class="line"><span class="lineno">  830</span>        </div>
-<div class="line"><span class="lineno">  831</span>        fleet.getMemoryWithoutUpdate().set(MemFlags.FLEET_DO_NOT_IGNORE_PLAYER, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  832</span>        fleet.getMemoryWithoutUpdate().set(MemFlags.FLEET_IGNORES_OTHER_FLEETS, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  833</span>        fleet.addEventListener(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  834</span>        fleet.addScript(<span class="keyword">new</span> EconomyFleetAssignmentAI(fleet, route));</div>
-<div class="line"><span class="lineno">  835</span>        <span class="keywordflow">return</span> fleet;</div>
-<div class="line"><span class="lineno">  836</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

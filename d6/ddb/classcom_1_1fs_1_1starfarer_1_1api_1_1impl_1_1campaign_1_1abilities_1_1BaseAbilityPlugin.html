@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -353,14 +354,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#a963f1f20ecf27289f887ea634a098be7">com.fs.starfarer.api.impl.campaign.abilities.BaseDurationAbility</a>, and <a class="el" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a6f23d39da4af9512392890d804613bde">com.fs.starfarer.api.impl.campaign.abilities.BaseToggleAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00218">218</a> of file <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html">BaseAbilityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  218</span>                           {</div>
-<div class="line"><span class="lineno">  219</span>        CampaignFleetAPI fleet = <a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#abdc51d7defc6b6bf60924a01ec361d2d">getFleet</a>();</div>
-<div class="line"><span class="lineno">  220</span>        <span class="keywordflow">if</span> (fleet == <span class="keyword">null</span> || !fleet.isPlayerFleet()) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  221</span>        Global.getSector().reportPlayerActivatedAbility(<span class="keyword">this</span>, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  222</span>        <span class="comment">//interruptIncompatible();</span></div>
-<div class="line"><span class="lineno">  223</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin_html_abdc51d7defc6b6bf60924a01ec361d2d"><div class="ttname"><a href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#abdc51d7defc6b6bf60924a01ec361d2d">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin.getFleet</a></div><div class="ttdeci">CampaignFleetAPI getFleet()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00144">BaseAbilityPlugin.java:144</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac041ae2308c2f0dbfce5aae09655814c" name="ac041ae2308c2f0dbfce5aae09655814c"></a>
@@ -410,30 +404,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00093">93</a> of file <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html">BaseAbilityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   93</span>                                                                                                                      {</div>
-<div class="line"><span class="lineno">   94</span>        List&lt;AbilityPlugin&gt; list = <a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a9bf5a40423dfabeb6b3f3e9fd59e8a97">getInterruptedList</a>();</div>
-<div class="line"><span class="lineno">   95</span>        <span class="keywordflow">if</span> (list.isEmpty()) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   96</span>        </div>
-<div class="line"><span class="lineno">   97</span>        <span class="keywordflow">if</span> (expanded) {</div>
-<div class="line"><span class="lineno">   98</span>            String pre = desc;</div>
-<div class="line"><span class="lineno">   99</span>            tooltip.addPara(pre, 10f);</div>
-<div class="line"><span class="lineno">  100</span>            </div>
-<div class="line"><span class="lineno">  101</span>            String str = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">  102</span>            <span class="keywordflow">for</span> (AbilityPlugin curr : list) {</div>
-<div class="line"><span class="lineno">  103</span>                str += <span class="stringliteral">&quot;    &quot;</span> + curr.getSpec().getName() + <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><span class="lineno">  104</span>            }</div>
-<div class="line"><span class="lineno">  105</span>            str = str.substring(0, str.length() - 1);</div>
-<div class="line"><span class="lineno">  106</span>            Color c = Misc.getTooltipTitleAndLightHighlightColor();</div>
-<div class="line"><span class="lineno">  107</span>            <span class="comment">//c = Misc.interpolateColor(c, Color.black, 0.2f);</span></div>
-<div class="line"><span class="lineno">  108</span>            <span class="comment">//c = Misc.getGrayColor();</span></div>
-<div class="line"><span class="lineno">  109</span>            tooltip.addPara(str, c, 3f);</div>
-<div class="line"><span class="lineno">  110</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  111</span>            Color c = Misc.getGrayColor();          </div>
-<div class="line"><span class="lineno">  112</span>            tooltip.addPara(descShort, c, 10f);</div>
-<div class="line"><span class="lineno">  113</span>        }</div>
-<div class="line"><span class="lineno">  114</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin_html_a9bf5a40423dfabeb6b3f3e9fd59e8a97"><div class="ttname"><a href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a9bf5a40423dfabeb6b3f3e9fd59e8a97">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin.getInterruptedList</a></div><div class="ttdeci">List&lt; AbilityPlugin &gt; getInterruptedList()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00116">BaseAbilityPlugin.java:116</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aeac572782043c538e3786a72a572a42d" name="aeac572782043c538e3786a72a572a42d"></a>
@@ -463,12 +434,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#a291a5bdc00f8ace19bdb4de19b8076be">com.fs.starfarer.api.impl.campaign.abilities.BaseDurationAbility</a>, <a class="el" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#aa9b81f5e0282a31da0a801b7d85c680e">com.fs.starfarer.api.impl.campaign.abilities.BaseToggleAbility</a>, <a class="el" href="../../d9/d47/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1DistressCallAbility.html#a2c9074ea4b7dcdc41427737704ab5f6c">com.fs.starfarer.api.impl.campaign.abilities.DistressCallAbility</a>, <a class="el" href="../../d5/d41/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1GraviticScanAbility.html#ae134d46d826973b0002d4b3900ea40a7">com.fs.starfarer.api.impl.campaign.abilities.GraviticScanAbility</a>, <a class="el" href="../../d6/d45/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ScavengeAbility.html#a249c9c9b112a669798d7aa836caa2c5e">com.fs.starfarer.api.impl.campaign.abilities.ScavengeAbility</a>, and <a class="el" href="../../d0/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#a5406b6bb4c0fe50fcca0b949ae08ad46">com.fs.starfarer.api.impl.campaign.abilities.TransponderAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00159">159</a> of file <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html">BaseAbilityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  159</span>                                      {</div>
-<div class="line"><span class="lineno">  160</span>        <a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a0482cb5cb825c9dfa42e77d793062b6b">disableFrames</a>--;</div>
-<div class="line"><span class="lineno">  161</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a0482cb5cb825c9dfa42e77d793062b6b">disableFrames</a> &lt; 0) <a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a0482cb5cb825c9dfa42e77d793062b6b">disableFrames</a> = 0;</div>
-<div class="line"><span class="lineno">  162</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin_html_a0482cb5cb825c9dfa42e77d793062b6b"><div class="ttname"><a href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a0482cb5cb825c9dfa42e77d793062b6b">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin.disableFrames</a></div><div class="ttdeci">int disableFrames</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00027">BaseAbilityPlugin.java:27</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab9303678cbf9abde1e6aa8f8e99038be" name="ab9303678cbf9abde1e6aa8f8e99038be"></a>
@@ -492,10 +458,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#a3a403ae2fc66f3b4b66fce788c58543f">com.fs.starfarer.api.impl.campaign.abilities.BaseDurationAbility</a>, and <a class="el" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a03faa554adcc3428501dba43e3cd5b4b">com.fs.starfarer.api.impl.campaign.abilities.BaseToggleAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00274">274</a> of file <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html">BaseAbilityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  274</span>                          {</div>
-<div class="line"><span class="lineno">  275</span>        </div>
-<div class="line"><span class="lineno">  276</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a524c99aa9c5d81332f100b0bf6e8c699" name="a524c99aa9c5d81332f100b0bf6e8c699"></a>
@@ -536,9 +499,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../d9/d47/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1DistressCallAbility.html#a849dece60f544e80526e05c8e17cb445">com.fs.starfarer.api.impl.campaign.abilities.DistressCallAbility</a>, <a class="el" href="../../d7/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility.html#a730330889cf025319d0d66a2e751e714">com.fs.starfarer.api.impl.campaign.abilities.EmergencyBurnAbility</a>, <a class="el" href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#ab23334fb5a6ba37931df1020b522dbfe">com.fs.starfarer.api.impl.campaign.abilities.FractureJumpAbility</a>, <a class="el" href="../../d2/d8e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1GoDarkAbility.html#ab895b272d13513deacc178817bc67a73">com.fs.starfarer.api.impl.campaign.abilities.GoDarkAbility</a>, <a class="el" href="../../d5/d41/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1GraviticScanAbility.html#a6e6f60e9e9155e3ebf19b2bac9206476">com.fs.starfarer.api.impl.campaign.abilities.GraviticScanAbility</a>, <a class="el" href="../../d8/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1InterdictionPulseAbility.html#a22754e3f47d84226329650fb5e806336">com.fs.starfarer.api.impl.campaign.abilities.InterdictionPulseAbility</a>, <a class="el" href="../../d2/db9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1RemoteSurveyAbility.html#a20460f69ebb278d0306f97fd4b46f13d">com.fs.starfarer.api.impl.campaign.abilities.RemoteSurveyAbility</a>, <a class="el" href="../../d6/d45/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ScavengeAbility.html#a50da3c485f260178f84b6775c81fa21b">com.fs.starfarer.api.impl.campaign.abilities.ScavengeAbility</a>, <a class="el" href="../../d1/d02/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1SensorBurstAbility.html#a640a82857767f7ce40bc3aba34c05c2e">com.fs.starfarer.api.impl.campaign.abilities.SensorBurstAbility</a>, <a class="el" href="../../da/da2/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1SustainedBurnAbility.html#ac0d77bbba31f6072b3fdda77e3d109ef">com.fs.starfarer.api.impl.campaign.abilities.SustainedBurnAbility</a>, and <a class="el" href="../../d0/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#a1139d06aa5586652ca44225a555c898d">com.fs.starfarer.api.impl.campaign.abilities.TransponderAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00196">196</a> of file <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html">BaseAbilityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  196</span>                                                                         {</div>
-<div class="line"><span class="lineno">  197</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a98f123aa55935c4df99f2f3ffa6124a4" name="a98f123aa55935c4df99f2f3ffa6124a4"></a>
@@ -563,12 +524,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#a4c645f917e0db75e7ba759eddb0898f2">com.fs.starfarer.api.impl.campaign.abilities.BaseDurationAbility</a>, <a class="el" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a86af14d884d633297c911dadd52924c8">com.fs.starfarer.api.impl.campaign.abilities.BaseToggleAbility</a>, <a class="el" href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a9a5cb6be806d7730babcd13bd4370387">com.fs.starfarer.api.impl.campaign.abilities.FractureJumpAbility</a>, and <a class="el" href="../../d0/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#ae9f306799059457470ce756052efbf2b">com.fs.starfarer.api.impl.campaign.abilities.TransponderAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00225">225</a> of file <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html">BaseAbilityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  225</span>                             {</div>
-<div class="line"><span class="lineno">  226</span>        CampaignFleetAPI fleet = <a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#abdc51d7defc6b6bf60924a01ec361d2d">getFleet</a>();</div>
-<div class="line"><span class="lineno">  227</span>        <span class="keywordflow">if</span> (fleet == <span class="keyword">null</span> || !fleet.isPlayerFleet()) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  228</span>        Global.getSector().reportPlayerDeactivatedAbility(<span class="keyword">this</span>, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  229</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a77d755863ecda4b72c7be78825897d7f" name="a77d755863ecda4b72c7be78825897d7f"></a>
@@ -595,19 +551,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00073">73</a> of file <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html">BaseAbilityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   73</span>                                         {</div>
-<div class="line"><span class="lineno">   74</span>        CampaignFleetAPI fleet = <a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#abdc51d7defc6b6bf60924a01ec361d2d">getFleet</a>();</div>
-<div class="line"><span class="lineno">   75</span>        <span class="keywordflow">if</span> (fleet == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   76</span>        </div>
-<div class="line"><span class="lineno">   77</span>        <span class="keywordflow">for</span> (AbilityPlugin curr : fleet.getAbilities().values()) {</div>
-<div class="line"><span class="lineno">   78</span>            <span class="keywordflow">if</span> (curr == <span class="keyword">this</span>) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   79</span>            <span class="keywordflow">if</span> (!<a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a2a5f692d2c11b1c3c3bb66d972116b9d">isCompatible</a>(curr)) {</div>
-<div class="line"><span class="lineno">   80</span>                curr.forceDisable();</div>
-<div class="line"><span class="lineno">   81</span>            }</div>
-<div class="line"><span class="lineno">   82</span>        }</div>
-<div class="line"><span class="lineno">   83</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin_html_a2a5f692d2c11b1c3c3bb66d972116b9d"><div class="ttname"><a href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a2a5f692d2c11b1c3c3bb66d972116b9d">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin.isCompatible</a></div><div class="ttdeci">boolean isCompatible(AbilityPlugin other)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00085">BaseAbilityPlugin.java:85</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac92b6f426991fc27ac299a071d9124d0" name="ac92b6f426991fc27ac299a071d9124d0"></a>
@@ -631,9 +575,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../da/da2/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1SustainedBurnAbility.html#ae8d609a12141fe8fead58908bf469150">com.fs.starfarer.api.impl.campaign.abilities.SustainedBurnAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00294">294</a> of file <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html">BaseAbilityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  294</span>                                                    {</div>
-<div class="line"><span class="lineno">  295</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9807387360d315e712b48e2da5af0741" name="a9807387360d315e712b48e2da5af0741"></a>
@@ -667,9 +609,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../d7/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility.html#a5bbcac51c04b2d3e4801314c7891fb4e">com.fs.starfarer.api.impl.campaign.abilities.EmergencyBurnAbility</a>, <a class="el" href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#ae5823e67f061fae57513d751b871da46">com.fs.starfarer.api.impl.campaign.abilities.FractureJumpAbility</a>, <a class="el" href="../../d8/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1InterdictionPulseAbility.html#af7d6ebbeecfb6706e04677b6f2007612">com.fs.starfarer.api.impl.campaign.abilities.InterdictionPulseAbility</a>, and <a class="el" href="../../da/da2/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1SustainedBurnAbility.html#ad0ab6385331cef878085166c3fbdff44">com.fs.starfarer.api.impl.campaign.abilities.SustainedBurnAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00297">297</a> of file <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html">BaseAbilityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  297</span>                                                                                {</div>
-<div class="line"><span class="lineno">  298</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac17f98876df21077a7e38da52149ea01" name="ac17f98876df21077a7e38da52149ea01"></a>
@@ -699,9 +639,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../d7/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility.html#a087308db1de69ca6e3cb2d2de73421dd">com.fs.starfarer.api.impl.campaign.abilities.EmergencyBurnAbility</a>, <a class="el" href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a4c1dcc1a14ac3e0626f9f4af8e9f6505">com.fs.starfarer.api.impl.campaign.abilities.FractureJumpAbility</a>, and <a class="el" href="../../d8/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1InterdictionPulseAbility.html#a82f0e1754af1d57f9b8adb7214fb8263">com.fs.starfarer.api.impl.campaign.abilities.InterdictionPulseAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00300">300</a> of file <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html">BaseAbilityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  300</span>                                                    {</div>
-<div class="line"><span class="lineno">  301</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a4fc50f3a8e8a9c6ee78488c98bdfce68" name="a4fc50f3a8e8a9c6ee78488c98bdfce68"></a>
@@ -723,10 +661,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../db/d80/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1AbilityPlugin.html#ab744d318ce11b815cedb804d7f1ca9c0">com.fs.starfarer.api.characters.AbilityPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00180">180</a> of file <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html">BaseAbilityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  180</span>                               {</div>
-<div class="line"><span class="lineno">  181</span>        <a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a0482cb5cb825c9dfa42e77d793062b6b">disableFrames</a> = 2;</div>
-<div class="line"><span class="lineno">  182</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a3be04ce2cf4b54d260d06d126bca0d7a" name="a3be04ce2cf4b54d260d06d126bca0d7a"></a>
@@ -755,13 +690,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a116100cbd71a33f1387cb1a5df2df4a8">com.fs.starfarer.api.impl.campaign.abilities.FractureJumpAbility</a>, <a class="el" href="../../d2/d8e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1GoDarkAbility.html#ae7b455561b38bcd5cc3e689dc0456ecd">com.fs.starfarer.api.impl.campaign.abilities.GoDarkAbility</a>, <a class="el" href="../../d5/d41/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1GraviticScanAbility.html#ad730603dd707d232c6585819c4ea7404">com.fs.starfarer.api.impl.campaign.abilities.GraviticScanAbility</a>, <a class="el" href="../../d8/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1InterdictionPulseAbility.html#a647345c268858e5bbbbeb58b66a1b702">com.fs.starfarer.api.impl.campaign.abilities.InterdictionPulseAbility</a>, <a class="el" href="../../d6/d45/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ScavengeAbility.html#a452595d6aafb341c5e132171172c06df">com.fs.starfarer.api.impl.campaign.abilities.ScavengeAbility</a>, <a class="el" href="../../da/da2/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1SustainedBurnAbility.html#ae0f836ae1db1c8c66b80c2c3e1992802">com.fs.starfarer.api.impl.campaign.abilities.SustainedBurnAbility</a>, and <a class="el" href="../../d0/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#a520f93734aadc0faf475a74799f9e739">com.fs.starfarer.api.impl.campaign.abilities.TransponderAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00285">285</a> of file <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html">BaseAbilityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  285</span>                                         {</div>
-<div class="line"><span class="lineno">  286</span>        <span class="keywordflow">return</span> Misc.ucFirst(<a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a15549d8a5c8c5b5c0bffda444f5098ea">spec</a>.<a class="code hl_function" href="../../d4/df9/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1AbilitySpecAPI.html#a8cc28775697361fae5481df4bb39cf69">getName</a>().toLowerCase());</div>
-<div class="line"><span class="lineno">  287</span>        <span class="comment">//return null;</span></div>
-<div class="line"><span class="lineno">  288</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin_html_a15549d8a5c8c5b5c0bffda444f5098ea"><div class="ttname"><a href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a15549d8a5c8c5b5c0bffda444f5098ea">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin.spec</a></div><div class="ttdeci">transient AbilitySpecAPI spec</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00029">BaseAbilityPlugin.java:29</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1AbilitySpecAPI_html_a8cc28775697361fae5481df4bb39cf69"><div class="ttname"><a href="../../d4/df9/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1AbilitySpecAPI.html#a8cc28775697361fae5481df4bb39cf69">com.fs.starfarer.api.loading.AbilitySpecAPI.getName</a></div><div class="ttdeci">String getName()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a32f8f5d51a8fb923aea68482ae11fbdd" name="a32f8f5d51a8fb923aea68482ae11fbdd"></a>
@@ -782,13 +711,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../db/d80/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1AbilityPlugin.html#acbd77152a47a66018ce0d54b6c683b19">com.fs.starfarer.api.characters.AbilityPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00241">241</a> of file <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html">BaseAbilityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  241</span>                                  {</div>
-<div class="line"><span class="lineno">  242</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a9d2408f6489b56d90a93b2a21ea0f340">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#afb72bc74f75ccbbf240564b26b94e17b">getFaction</a>().<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#ab16cdc9529073cf9bd427665fc1a8b0c">getBrightUIColor</a>();</div>
-<div class="line"><span class="lineno">  243</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin_html_a9d2408f6489b56d90a93b2a21ea0f340"><div class="ttname"><a href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a9d2408f6489b56d90a93b2a21ea0f340">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin.entity</a></div><div class="ttdeci">SectorEntityToken entity</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00024">BaseAbilityPlugin.java:24</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI_html_ab16cdc9529073cf9bd427665fc1a8b0c"><div class="ttname"><a href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#ab16cdc9529073cf9bd427665fc1a8b0c">com.fs.starfarer.api.campaign.FactionAPI.getBrightUIColor</a></div><div class="ttdeci">Color getBrightUIColor()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_afb72bc74f75ccbbf240564b26b94e17b"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#afb72bc74f75ccbbf240564b26b94e17b">com.fs.starfarer.api.campaign.SectorEntityToken.getFaction</a></div><div class="ttdeci">FactionAPI getFaction()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af752a111e3e80392503b9be9d77b0320" name="af752a111e3e80392503b9be9d77b0320"></a>
@@ -811,10 +734,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../d5/d41/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1GraviticScanAbility.html#a6c4564229fe433c5f04868f73c5f40ed">com.fs.starfarer.api.impl.campaign.abilities.GraviticScanAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00307">307</a> of file <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html">BaseAbilityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  307</span>                                                           {</div>
-<div class="line"><span class="lineno">  308</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  309</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2b7beaafff07fa48cea7e315d15012b1" name="a2b7beaafff07fa48cea7e315d15012b1"></a>
@@ -837,10 +757,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../d7/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility.html#aad4908d08dea44ea1eb18e1ee89e7d48">com.fs.starfarer.api.impl.campaign.abilities.EmergencyBurnAbility</a>, <a class="el" href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a05adcd3625a637570f7dd4f292d0e263">com.fs.starfarer.api.impl.campaign.abilities.FractureJumpAbility</a>, and <a class="el" href="../../d0/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#a75525e6dfb5c2c6dde531b04aacbfd09">com.fs.starfarer.api.impl.campaign.abilities.TransponderAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00233">233</a> of file <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html">BaseAbilityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  233</span>                                    {</div>
-<div class="line"><span class="lineno">  234</span>        <span class="keywordflow">return</span> defaultCooldownColor;</div>
-<div class="line"><span class="lineno">  235</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a45fb1f3bce0ff8531b1940c9c8fa5f77" name="a45fb1f3bce0ff8531b1940c9c8fa5f77"></a>
@@ -864,10 +781,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#aa41cf4e32a02c6e63625dbc2a70c3e73">com.fs.starfarer.api.impl.campaign.abilities.BaseDurationAbility</a>, <a class="el" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#aa4e0d4b04f25dd1404cf1162620e4e64">com.fs.starfarer.api.impl.campaign.abilities.BaseToggleAbility</a>, <a class="el" href="../../d7/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility.html#a7b0f95d28cd52d04b77eeb25103d6b78">com.fs.starfarer.api.impl.campaign.abilities.EmergencyBurnAbility</a>, <a class="el" href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#ac72f675e1e5ad6759087616cbd093f42">com.fs.starfarer.api.impl.campaign.abilities.FractureJumpAbility</a>, and <a class="el" href="../../d0/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#a0a19a71c69bcfc49b4474a9d7cf6323b">com.fs.starfarer.api.impl.campaign.abilities.TransponderAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00184">184</a> of file <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html">BaseAbilityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  184</span>                                       {</div>
-<div class="line"><span class="lineno">  185</span>        <span class="keywordflow">return</span> 1f;</div>
-<div class="line"><span class="lineno">  186</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa0c7060cc2d72705818823c7d0c39877" name="aa0c7060cc2d72705818823c7d0c39877"></a>
@@ -925,10 +839,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../d2/d8e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1GoDarkAbility.html#a7bcdd8e8431d68afb8eb3ffed882d59a">com.fs.starfarer.api.impl.campaign.abilities.GoDarkAbility</a>, <a class="el" href="../../d5/d41/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1GraviticScanAbility.html#a083bcbeef6355cf7d263b485529bddd6">com.fs.starfarer.api.impl.campaign.abilities.GraviticScanAbility</a>, and <a class="el" href="../../d0/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#a13937e32e9d5e96f764cf8ea55afbdbd">com.fs.starfarer.api.impl.campaign.abilities.TransponderAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00290">290</a> of file <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html">BaseAbilityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  290</span>                                           {</div>
-<div class="line"><span class="lineno">  291</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  292</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a0b8db0148bbc08fab91904b1d9ec800f" name="a0b8db0148bbc08fab91904b1d9ec800f"></a>
@@ -949,10 +860,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../db/d80/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1AbilityPlugin.html#a2dd37a1994144385420d0b272a28fccb">com.fs.starfarer.api.characters.AbilityPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00151">151</a> of file <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html">BaseAbilityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  151</span>                                         {</div>
-<div class="line"><span class="lineno">  152</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a9d2408f6489b56d90a93b2a21ea0f340">entity</a>;</div>
-<div class="line"><span class="lineno">  153</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="abdc51d7defc6b6bf60924a01ec361d2d" name="abdc51d7defc6b6bf60924a01ec361d2d"></a>
@@ -971,13 +879,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00144">144</a> of file <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html">BaseAbilityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  144</span>                                       {</div>
-<div class="line"><span class="lineno">  145</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a9d2408f6489b56d90a93b2a21ea0f340">entity</a> instanceof CampaignFleetAPI) {</div>
-<div class="line"><span class="lineno">  146</span>            <span class="keywordflow">return</span> (CampaignFleetAPI) <a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a9d2408f6489b56d90a93b2a21ea0f340">entity</a>;</div>
-<div class="line"><span class="lineno">  147</span>        }</div>
-<div class="line"><span class="lineno">  148</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  149</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a07180ef49acd90487f1b0c595a071349" name="a07180ef49acd90487f1b0c595a071349"></a>
@@ -998,11 +900,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../db/d80/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1AbilityPlugin.html#a143dd84fb6953fa7a3ab918f0acc7e06">com.fs.starfarer.api.characters.AbilityPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00155">155</a> of file <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html">BaseAbilityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  155</span>                          {</div>
-<div class="line"><span class="lineno">  156</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#ada12cfe94f3fa3b78c2471a6274a4fd9">id</a>;</div>
-<div class="line"><span class="lineno">  157</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin_html_ada12cfe94f3fa3b78c2471a6274a4fd9"><div class="ttname"><a href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#ada12cfe94f3fa3b78c2471a6274a4fd9">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin.id</a></div><div class="ttdeci">String id</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00025">BaseAbilityPlugin.java:25</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9bf5a40423dfabeb6b3f3e9fd59e8a97" name="a9bf5a40423dfabeb6b3f3e9fd59e8a97"></a>
@@ -1021,29 +919,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00116">116</a> of file <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html">BaseAbilityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  116</span>                                                    {</div>
-<div class="line"><span class="lineno">  117</span>        List&lt;AbilityPlugin&gt; result = <span class="keyword">new</span> ArrayList&lt;AbilityPlugin&gt;(); </div>
-<div class="line"><span class="lineno">  118</span>        CampaignFleetAPI fleet = <a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#abdc51d7defc6b6bf60924a01ec361d2d">getFleet</a>();</div>
-<div class="line"><span class="lineno">  119</span>        <span class="keywordflow">if</span> (fleet == <span class="keyword">null</span>) <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">  120</span>        </div>
-<div class="line"><span class="lineno">  121</span>        <span class="keywordflow">for</span> (AbilityPlugin curr : fleet.getAbilities().values()) {</div>
-<div class="line"><span class="lineno">  122</span>            <span class="keywordflow">if</span> (curr == <span class="keyword">this</span>) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  123</span>            </div>
-<div class="line"><span class="lineno">  124</span>            <span class="keywordflow">if</span> (<span class="keyword">this</span> instanceof BaseToggleAbility &amp;&amp; curr instanceof BaseDurationAbility) {</div>
-<div class="line"><span class="lineno">  125</span>                <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  126</span>            }</div>
-<div class="line"><span class="lineno">  127</span>            <span class="keywordflow">if</span> (!<a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a2a5f692d2c11b1c3c3bb66d972116b9d">isCompatible</a>(curr)) {</div>
-<div class="line"><span class="lineno">  128</span>                result.add(curr);</div>
-<div class="line"><span class="lineno">  129</span>            }</div>
-<div class="line"><span class="lineno">  130</span>        }</div>
-<div class="line"><span class="lineno">  131</span>        Collections.sort(result, <span class="keyword">new</span> Comparator&lt;AbilityPlugin&gt;() {</div>
-<div class="line"><span class="lineno">  132</span>            <span class="keyword">public</span> <span class="keywordtype">int</span> compare(AbilityPlugin o1, AbilityPlugin o2) {</div>
-<div class="line"><span class="lineno">  133</span>                <span class="keywordflow">return</span> o1.getSpec().getSortOrder() - o2.getSpec().getSortOrder();</div>
-<div class="line"><span class="lineno">  134</span>            }</div>
-<div class="line"><span class="lineno">  135</span>        });</div>
-<div class="line"><span class="lineno">  136</span>        <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">  137</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aacb9fbb53c324287571edbb94af69d87" name="aacb9fbb53c324287571edbb94af69d87"></a>
@@ -1066,10 +942,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#a41d4e3599755d4b2daa3d99e6e22a55e">com.fs.starfarer.api.impl.campaign.abilities.BaseDurationAbility</a>, and <a class="el" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a125c235acccac4028f1123e8bfe277e2">com.fs.starfarer.api.impl.campaign.abilities.BaseToggleAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00314">314</a> of file <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html">BaseAbilityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  314</span>                            {</div>
-<div class="line"><span class="lineno">  315</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  316</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a477b09a39d7f23ad432e4cdf57615285" name="a477b09a39d7f23ad432e4cdf57615285"></a>
@@ -1088,9 +961,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00052">52</a> of file <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html">BaseAbilityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   52</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a15549d8a5c8c5b5c0bffda444f5098ea">spec</a>.<a class="code hl_function" href="../../d4/df9/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1AbilitySpecAPI.html#a3b159529e487059aad50ed05deafbc5d">getUILoop</a>(); }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1AbilitySpecAPI_html_a3b159529e487059aad50ed05deafbc5d"><div class="ttname"><a href="../../d4/df9/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1AbilitySpecAPI.html#a3b159529e487059aad50ed05deafbc5d">com.fs.starfarer.api.loading.AbilitySpecAPI.getUILoop</a></div><div class="ttdeci">String getUILoop()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a82414a57a0409f46adb12cd9cbbd1e42" name="a82414a57a0409f46adb12cd9cbbd1e42"></a>
@@ -1111,8 +982,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#ad28f46e4c912940936ee0a4084d829ba">com.fs.starfarer.api.impl.campaign.abilities.BaseDurationAbility</a>, and <a class="el" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#ab05eca8563fdfb275a102f52e8cffa7e">com.fs.starfarer.api.impl.campaign.abilities.BaseToggleAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00054">54</a> of file <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html">BaseAbilityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   54</span>{ <span class="keywordflow">return</span> 1f; }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a45d75b25a98d5cb9b43fb88cfb2f3804" name="a45d75b25a98d5cb9b43fb88cfb2f3804"></a>
@@ -1133,8 +1003,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#af60ebcd60dd3016fe2844cc8c09cf70f">com.fs.starfarer.api.impl.campaign.abilities.BaseDurationAbility</a>, and <a class="el" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a99f944c081cdd1abf51a1405539008c5">com.fs.starfarer.api.impl.campaign.abilities.BaseToggleAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00053">53</a> of file <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html">BaseAbilityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   53</span>{ <span class="keywordflow">return</span> 1f; }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a752a22690f477e3fb2c0ee29bce8bfe2" name="a752a22690f477e3fb2c0ee29bce8bfe2"></a>
@@ -1153,9 +1022,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00056">56</a> of file <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html">BaseAbilityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   56</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a15549d8a5c8c5b5c0bffda444f5098ea">spec</a>.<a class="code hl_function" href="../../d4/df9/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1AbilitySpecAPI.html#a3b46547a0a611e7e8041bfdde3bb2d28">getWorldLoop</a>(); }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1AbilitySpecAPI_html_a3b46547a0a611e7e8041bfdde3bb2d28"><div class="ttname"><a href="../../d4/df9/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1AbilitySpecAPI.html#a3b46547a0a611e7e8041bfdde3bb2d28">com.fs.starfarer.api.loading.AbilitySpecAPI.getWorldLoop</a></div><div class="ttdeci">String getWorldLoop()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab50c4bdb8bcb37566d638e4c1feaacfd" name="ab50c4bdb8bcb37566d638e4c1feaacfd"></a>
@@ -1176,8 +1043,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#abd349a84bf05e01cc70eb50a34e7987e">com.fs.starfarer.api.impl.campaign.abilities.BaseDurationAbility</a>, and <a class="el" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a46eec76eab013e869ec7b72ca0e6daf3">com.fs.starfarer.api.impl.campaign.abilities.BaseToggleAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00058">58</a> of file <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html">BaseAbilityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   58</span>{ <span class="keywordflow">return</span> 1f; }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a7d5aea893cd12e2c7031911f5bbb302e" name="a7d5aea893cd12e2c7031911f5bbb302e"></a>
@@ -1198,8 +1064,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#a1f401def1ee8686a808d670dfab89d96">com.fs.starfarer.api.impl.campaign.abilities.BaseDurationAbility</a>, and <a class="el" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a1053bc9856da0485a675780940a2a272">com.fs.starfarer.api.impl.campaign.abilities.BaseToggleAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00057">57</a> of file <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html">BaseAbilityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   57</span>{ <span class="keywordflow">return</span> 1f; }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2e9e39ccbd5d39ae13b255974fef719c" name="a2e9e39ccbd5d39ae13b255974fef719c"></a>
@@ -1218,10 +1083,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00140">140</a> of file <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html">BaseAbilityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  140</span>                             {</div>
-<div class="line"><span class="lineno">  141</span>        <span class="keywordflow">return</span> <span class="keywordtype">id</span> + <span class="stringliteral">&quot;_ability_mod&quot;</span>;</div>
-<div class="line"><span class="lineno">  142</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae569eb91cd9a8c43041ef5ccfc2c954e" name="ae569eb91cd9a8c43041ef5ccfc2c954e"></a>
@@ -1240,9 +1102,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00047">47</a> of file <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html">BaseAbilityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   47</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a15549d8a5c8c5b5c0bffda444f5098ea">spec</a>.<a class="code hl_function" href="../../d4/df9/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1AbilitySpecAPI.html#a9be7ce981640b450f3f0707b3f376487">getUIOff</a>(); }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1AbilitySpecAPI_html_a9be7ce981640b450f3f0707b3f376487"><div class="ttname"><a href="../../d4/df9/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1AbilitySpecAPI.html#a9be7ce981640b450f3f0707b3f376487">com.fs.starfarer.api.loading.AbilitySpecAPI.getUIOff</a></div><div class="ttdeci">String getUIOff()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac0602a702124071d5e44f493b559b3dd" name="ac0602a702124071d5e44f493b559b3dd"></a>
@@ -1261,9 +1121,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00048">48</a> of file <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html">BaseAbilityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   48</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a15549d8a5c8c5b5c0bffda444f5098ea">spec</a>.<a class="code hl_function" href="../../d4/df9/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1AbilitySpecAPI.html#a2cf1bf23aef4ddd1bc6f8f48ab19c2bc">getWorldOff</a>(); }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1AbilitySpecAPI_html_a2cf1bf23aef4ddd1bc6f8f48ab19c2bc"><div class="ttname"><a href="../../d4/df9/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1AbilitySpecAPI.html#a2cf1bf23aef4ddd1bc6f8f48ab19c2bc">com.fs.starfarer.api.loading.AbilitySpecAPI.getWorldOff</a></div><div class="ttdeci">String getWorldOff()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a1f5ec97ccc4b6158e89475b353f5c242" name="a1f5ec97ccc4b6158e89475b353f5c242"></a>
@@ -1282,9 +1140,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00045">45</a> of file <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html">BaseAbilityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   45</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a15549d8a5c8c5b5c0bffda444f5098ea">spec</a>.<a class="code hl_function" href="../../d4/df9/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1AbilitySpecAPI.html#ac3f504dbc825510a28b1c9b8a0c145bd">getUIOn</a>(); }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1AbilitySpecAPI_html_ac3f504dbc825510a28b1c9b8a0c145bd"><div class="ttname"><a href="../../d4/df9/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1AbilitySpecAPI.html#ac3f504dbc825510a28b1c9b8a0c145bd">com.fs.starfarer.api.loading.AbilitySpecAPI.getUIOn</a></div><div class="ttdeci">String getUIOn()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a3bf989eb2236666788a75b122d864392" name="a3bf989eb2236666788a75b122d864392"></a>
@@ -1303,9 +1159,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00046">46</a> of file <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html">BaseAbilityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   46</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a15549d8a5c8c5b5c0bffda444f5098ea">spec</a>.<a class="code hl_function" href="../../d4/df9/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1AbilitySpecAPI.html#a0fb980ba4a61bf25810302ce78f293f9">getWorldOn</a>(); }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1AbilitySpecAPI_html_a0fb980ba4a61bf25810302ce78f293f9"><div class="ttname"><a href="../../d4/df9/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1AbilitySpecAPI.html#a0fb980ba4a61bf25810302ce78f293f9">com.fs.starfarer.api.loading.AbilitySpecAPI.getWorldOn</a></div><div class="ttdeci">String getWorldOn()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5bf283dfaedaeb49d108017beeb03e8a" name="a5bf283dfaedaeb49d108017beeb03e8a"></a>
@@ -1328,10 +1182,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../d0/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#adb95dd34b9027fbfd0fc2794d7d80afd">com.fs.starfarer.api.impl.campaign.abilities.TransponderAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00237">237</a> of file <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html">BaseAbilityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  237</span>                                    {</div>
-<div class="line"><span class="lineno">  238</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a9d2408f6489b56d90a93b2a21ea0f340">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#afb72bc74f75ccbbf240564b26b94e17b">getFaction</a>().<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#ab16cdc9529073cf9bd427665fc1a8b0c">getBrightUIColor</a>();</div>
-<div class="line"><span class="lineno">  239</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8a1ed7ce89588491b632338db6d4825e" name="a8a1ed7ce89588491b632338db6d4825e"></a>
@@ -1355,10 +1206,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#a2a53d8320bef0bdb778cee1e09465da6">com.fs.starfarer.api.impl.campaign.abilities.BaseDurationAbility</a>, <a class="el" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a2ce592aecdfd219c19d7424a40946d6a">com.fs.starfarer.api.impl.campaign.abilities.BaseToggleAbility</a>, and <a class="el" href="../../d0/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#a95b736d1772c5e3a8fd7dcfbb76e6936">com.fs.starfarer.api.impl.campaign.abilities.TransponderAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00245">245</a> of file <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html">BaseAbilityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  245</span>                                       {</div>
-<div class="line"><span class="lineno">  246</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  247</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aaf824c27f797330eee1d7e928c20f8fa" name="aaf824c27f797330eee1d7e928c20f8fa"></a>
@@ -1379,10 +1227,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../db/d80/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1AbilityPlugin.html#a26042ff84dd31890a75cf04dfdb954a2">com.fs.starfarer.api.characters.AbilityPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00303">303</a> of file <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html">BaseAbilityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  303</span>                                    {</div>
-<div class="line"><span class="lineno">  304</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a15549d8a5c8c5b5c0bffda444f5098ea">spec</a>;</div>
-<div class="line"><span class="lineno">  305</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2776a642144f0a8c42560633964e7e09" name="a2776a642144f0a8c42560633964e7e09"></a>
@@ -1403,13 +1248,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../db/d80/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1AbilityPlugin.html#ae95e83739a30818fa7073ae7b70bc999">com.fs.starfarer.api.characters.AbilityPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00212">212</a> of file <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html">BaseAbilityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  212</span>                                  {</div>
-<div class="line"><span class="lineno">  213</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a15549d8a5c8c5b5c0bffda444f5098ea">spec</a>.<a class="code hl_function" href="../../d4/df9/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1AbilitySpecAPI.html#ad1a3b8efd1ebd4be4a8bc75c71b83a00">getIconName</a>();</div>
-<div class="line"><span class="lineno">  214</span><span class="comment">//      if (spec.getIconName() != null) return spec.getIconName();</span></div>
-<div class="line"><span class="lineno">  215</span><span class="comment">//      return Global.getSettings().getSpriteName(&quot;abilities&quot;, &quot;empty_slot&quot;);</span></div>
-<div class="line"><span class="lineno">  216</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1AbilitySpecAPI_html_ad1a3b8efd1ebd4be4a8bc75c71b83a00"><div class="ttname"><a href="../../d4/df9/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1AbilitySpecAPI.html#ad1a3b8efd1ebd4be4a8bc75c71b83a00">com.fs.starfarer.api.loading.AbilitySpecAPI.getIconName</a></div><div class="ttdeci">String getIconName()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a03c40222145b37de6e1eef11f81f3151" name="a03c40222145b37de6e1eef11f81f3151"></a>
@@ -1430,10 +1269,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../db/d80/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1AbilityPlugin.html#a5bb671557ad848763707d11545cae2ba">com.fs.starfarer.api.characters.AbilityPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00203">203</a> of file <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html">BaseAbilityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  203</span>                                   {</div>
-<div class="line"><span class="lineno">  204</span>        <span class="keywordflow">return</span> 350f;</div>
-<div class="line"><span class="lineno">  205</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="adbeb36fa95bac2d4f44715d32404672f" name="adbeb36fa95bac2d4f44715d32404672f"></a>
@@ -1456,10 +1292,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#a7cc286321294599d8c6ceeea51a228f6">com.fs.starfarer.api.impl.campaign.abilities.BaseDurationAbility</a>, and <a class="el" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a9de869853b7a8a1635c0635162f6f402">com.fs.starfarer.api.impl.campaign.abilities.BaseToggleAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00188">188</a> of file <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html">BaseAbilityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  188</span>                                                {</div>
-<div class="line"><span class="lineno">  189</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  190</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a35207ab01150d1c1521fa7ebf0ef4a75" name="a35207ab01150d1c1521fa7ebf0ef4a75"></a>
@@ -1482,10 +1315,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../d9/d47/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1DistressCallAbility.html#a0094b782b634181efaf1facf15a66119">com.fs.starfarer.api.impl.campaign.abilities.DistressCallAbility</a>, <a class="el" href="../../d7/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility.html#a014941dc585cd783372c8e81592ce33e">com.fs.starfarer.api.impl.campaign.abilities.EmergencyBurnAbility</a>, <a class="el" href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a43211831ed98f5579abca31e98b29f6b">com.fs.starfarer.api.impl.campaign.abilities.FractureJumpAbility</a>, <a class="el" href="../../d2/d8e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1GoDarkAbility.html#aaeaefd45ff6be61ba0ae9cd70876ef52">com.fs.starfarer.api.impl.campaign.abilities.GoDarkAbility</a>, <a class="el" href="../../d5/d41/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1GraviticScanAbility.html#ac9a27458233c9b843dc488ad16783f56">com.fs.starfarer.api.impl.campaign.abilities.GraviticScanAbility</a>, <a class="el" href="../../d8/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1InterdictionPulseAbility.html#a31649e69343cecb596acf10a517dec21">com.fs.starfarer.api.impl.campaign.abilities.InterdictionPulseAbility</a>, <a class="el" href="../../d2/db9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1RemoteSurveyAbility.html#aab14e68e1a0aa86e8c997812fccc7c96">com.fs.starfarer.api.impl.campaign.abilities.RemoteSurveyAbility</a>, <a class="el" href="../../d6/d45/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ScavengeAbility.html#ae90a95070c03af616e71c277753a3e2f">com.fs.starfarer.api.impl.campaign.abilities.ScavengeAbility</a>, <a class="el" href="../../d1/d02/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1SensorBurstAbility.html#a140b501dca1b062ec1f0122eb8ecc14a">com.fs.starfarer.api.impl.campaign.abilities.SensorBurstAbility</a>, <a class="el" href="../../da/da2/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1SustainedBurnAbility.html#ae3c08086a4795d5b3a8f9e1ecff85c3c">com.fs.starfarer.api.impl.campaign.abilities.SustainedBurnAbility</a>, and <a class="el" href="../../d0/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#a8b8bc166a28f358ce3f990b22aa3c63f">com.fs.starfarer.api.impl.campaign.abilities.TransponderAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00192">192</a> of file <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html">BaseAbilityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  192</span>                                {</div>
-<div class="line"><span class="lineno">  193</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  194</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5d2ee296179f8a625f99cbee68ed6ef1" name="a5d2ee296179f8a625f99cbee68ed6ef1"></a>
@@ -1517,13 +1347,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../db/d80/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1AbilityPlugin.html#a6489d0dac5482ead49634197925be9c7">com.fs.starfarer.api.characters.AbilityPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00031">31</a> of file <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html">BaseAbilityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   31</span>                                                          {</div>
-<div class="line"><span class="lineno">   32</span>        this.id = <a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#ada12cfe94f3fa3b78c2471a6274a4fd9">id</a>;</div>
-<div class="line"><span class="lineno">   33</span>        this.entity = <a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a9d2408f6489b56d90a93b2a21ea0f340">entity</a>;</div>
-<div class="line"><span class="lineno">   34</span>        <a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#afa28056d36f8724843b68554522cc186">readResolve</a>();</div>
-<div class="line"><span class="lineno">   35</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin_html_afa28056d36f8724843b68554522cc186"><div class="ttname"><a href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#afa28056d36f8724843b68554522cc186">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin.readResolve</a></div><div class="ttdeci">Object readResolve()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00037">BaseAbilityPlugin.java:37</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a0f72446d839019d50feb583f4952cbb7" name="a0f72446d839019d50feb583f4952cbb7"></a>
@@ -1550,18 +1374,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00061">61</a> of file <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html">BaseAbilityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   61</span>                                           {</div>
-<div class="line"><span class="lineno">   62</span>        CampaignFleetAPI fleet = <a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#abdc51d7defc6b6bf60924a01ec361d2d">getFleet</a>();</div>
-<div class="line"><span class="lineno">   63</span>        <span class="keywordflow">if</span> (fleet == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   64</span>        </div>
-<div class="line"><span class="lineno">   65</span>        <span class="keywordflow">for</span> (AbilityPlugin curr : fleet.getAbilities().values()) {</div>
-<div class="line"><span class="lineno">   66</span>            <span class="keywordflow">if</span> (curr == <span class="keyword">this</span>) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   67</span>            <span class="keywordflow">if</span> (!<a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a2a5f692d2c11b1c3c3bb66d972116b9d">isCompatible</a>(curr) &amp;&amp; curr.isActive()) {</div>
-<div class="line"><span class="lineno">   68</span>                curr.deactivate();</div>
-<div class="line"><span class="lineno">   69</span>            }</div>
-<div class="line"><span class="lineno">   70</span>        }</div>
-<div class="line"><span class="lineno">   71</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab9652440c6c6ef10d1893168f636c121" name="ab9652440c6c6ef10d1893168f636c121"></a>
@@ -1585,10 +1398,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#a126ff986caa68d277470f3049ae61418">com.fs.starfarer.api.impl.campaign.abilities.BaseDurationAbility</a>, and <a class="el" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#af91d6e2ffa81c95835cfd099c0b7c579">com.fs.starfarer.api.impl.campaign.abilities.BaseToggleAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00249">249</a> of file <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html">BaseAbilityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  249</span>                              {</div>
-<div class="line"><span class="lineno">  250</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  251</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a62da104c1ab0ba015a0a193cad0a549b" name="a62da104c1ab0ba015a0a193cad0a549b"></a>
@@ -1610,12 +1420,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../db/d80/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1AbilityPlugin.html#ad5b7f9e90afd34447222c833260fc132">com.fs.starfarer.api.characters.AbilityPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00253">253</a> of file <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html">BaseAbilityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  253</span>                                          {</div>
-<div class="line"><span class="lineno">  254</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#ab9652440c6c6ef10d1893168f636c121">isActive</a>() || <a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#ad64dcb9e23c56cab636978f2f5dc49ec">isInProgress</a>();</div>
-<div class="line"><span class="lineno">  255</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin_html_ab9652440c6c6ef10d1893168f636c121"><div class="ttname"><a href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#ab9652440c6c6ef10d1893168f636c121">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin.isActive</a></div><div class="ttdeci">boolean isActive()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00249">BaseAbilityPlugin.java:249</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin_html_ad64dcb9e23c56cab636978f2f5dc49ec"><div class="ttname"><a href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#ad64dcb9e23c56cab636978f2f5dc49ec">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin.isInProgress</a></div><div class="ttdeci">boolean isInProgress()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00257">BaseAbilityPlugin.java:257</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2a5f692d2c11b1c3c3bb66d972116b9d" name="a2a5f692d2c11b1c3c3bb66d972116b9d"></a>
@@ -1643,16 +1448,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00085">85</a> of file <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html">BaseAbilityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   85</span>                                                        {</div>
-<div class="line"><span class="lineno">   86</span>        <span class="keywordflow">for</span> (String tag : <a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a15549d8a5c8c5b5c0bffda444f5098ea">spec</a>.<a class="code hl_function" href="../../d4/df9/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1AbilitySpecAPI.html#a3f8a5bb53ecbac1835e0423ad463308a">getTags</a>()) {</div>
-<div class="line"><span class="lineno">   87</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a15549d8a5c8c5b5c0bffda444f5098ea">spec</a>.<a class="code hl_function" href="../../d4/df9/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1AbilitySpecAPI.html#a3adcefc3c7bd876fea1549cc16e4b488">isPositiveTag</a>(tag) &amp;&amp; other.getSpec().hasTag(tag)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   88</span>            <span class="keywordflow">if</span> (other.getSpec().hasOppositeTag(tag)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   89</span>        }</div>
-<div class="line"><span class="lineno">   90</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   91</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1AbilitySpecAPI_html_a3adcefc3c7bd876fea1549cc16e4b488"><div class="ttname"><a href="../../d4/df9/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1AbilitySpecAPI.html#a3adcefc3c7bd876fea1549cc16e4b488">com.fs.starfarer.api.loading.AbilitySpecAPI.isPositiveTag</a></div><div class="ttdeci">boolean isPositiveTag(String tag)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1AbilitySpecAPI_html_a3f8a5bb53ecbac1835e0423ad463308a"><div class="ttname"><a href="../../d4/df9/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1AbilitySpecAPI.html#a3f8a5bb53ecbac1835e0423ad463308a">com.fs.starfarer.api.loading.AbilitySpecAPI.getTags</a></div><div class="ttdeci">Set&lt; String &gt; getTags()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ad6e3605521c9a92989384500fd02ef3b" name="ad6e3605521c9a92989384500fd02ef3b"></a>
@@ -1675,10 +1471,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../d7/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility.html#adce121816bda723eca27af04e9fe9d40">com.fs.starfarer.api.impl.campaign.abilities.EmergencyBurnAbility</a>, <a class="el" href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a9fef09b56f3d65902ca9aab5e8bcb14c">com.fs.starfarer.api.impl.campaign.abilities.FractureJumpAbility</a>, and <a class="el" href="../../d0/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#a2eeed6992e241543363dced512ad091e">com.fs.starfarer.api.impl.campaign.abilities.TransponderAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00278">278</a> of file <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html">BaseAbilityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  278</span>                                                 {</div>
-<div class="line"><span class="lineno">  279</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  280</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab6442ae3199bd7900a0473ccb8bccea5" name="ab6442ae3199bd7900a0473ccb8bccea5"></a>
@@ -1700,10 +1493,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d7/d63/interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html#a2b9a206acf99d1cdc1511885d14bb58c">com.fs.starfarer.api.EveryFrameScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00164">164</a> of file <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html">BaseAbilityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  164</span>                            {</div>
-<div class="line"><span class="lineno">  165</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  166</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ad64dcb9e23c56cab636978f2f5dc49ec" name="ad64dcb9e23c56cab636978f2f5dc49ec"></a>
@@ -1726,11 +1516,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#ad18412c3f9e89aa16678541cdf08f2b2">com.fs.starfarer.api.impl.campaign.abilities.BaseDurationAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00257">257</a> of file <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html">BaseAbilityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  257</span>                                  {</div>
-<div class="line"><span class="lineno">  258</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a8a1ed7ce89588491b632338db6d4825e">getProgressFraction</a>() &gt; 0;</div>
-<div class="line"><span class="lineno">  259</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin_html_a8a1ed7ce89588491b632338db6d4825e"><div class="ttname"><a href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a8a1ed7ce89588491b632338db6d4825e">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin.getProgressFraction</a></div><div class="ttdeci">float getProgressFraction()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00245">BaseAbilityPlugin.java:245</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a735b1d3fa7cefe6db074838fc9ab19ea" name="a735b1d3fa7cefe6db074838fc9ab19ea"></a>
@@ -1753,11 +1539,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../d7/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility.html#a915cfc0ff37f5953ed3b56a3daf759c5">com.fs.starfarer.api.impl.campaign.abilities.EmergencyBurnAbility</a>, <a class="el" href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a386879b42c22c8eb870480014dd2eaaf">com.fs.starfarer.api.impl.campaign.abilities.FractureJumpAbility</a>, and <a class="el" href="../../d0/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#a8de11140e699fbb298d64827707983e1">com.fs.starfarer.api.impl.campaign.abilities.TransponderAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00270">270</a> of file <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html">BaseAbilityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  270</span>                                  {</div>
-<div class="line"><span class="lineno">  271</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a45fb1f3bce0ff8531b1940c9c8fa5f77">getCooldownFraction</a>() &lt; 1f;</div>
-<div class="line"><span class="lineno">  272</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin_html_a45fb1f3bce0ff8531b1940c9c8fa5f77"><div class="ttname"><a href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a45fb1f3bce0ff8531b1940c9c8fa5f77">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin.getCooldownFraction</a></div><div class="ttdeci">float getCooldownFraction()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00184">BaseAbilityPlugin.java:184</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a112bb05ba9c6b8a7b5ab921d0f809ec9" name="a112bb05ba9c6b8a7b5ab921d0f809ec9"></a>
@@ -1778,10 +1560,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../db/d80/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1AbilityPlugin.html#a91c26c7fbc5091b288a732d6b0f3de85">com.fs.starfarer.api.characters.AbilityPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00199">199</a> of file <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html">BaseAbilityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  199</span>                                         {</div>
-<div class="line"><span class="lineno">  200</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  201</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a0b2dce178d2bbe6f3a229da1568e74bc" name="a0b2dce178d2bbe6f3a229da1568e74bc"></a>
@@ -1805,11 +1584,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#ac04092fe5109fdf398792cb01f739ae7">com.fs.starfarer.api.impl.campaign.abilities.BaseDurationAbility</a>, <a class="el" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a206fef8ef4f4dba10d8ba3f71e4e9c90">com.fs.starfarer.api.impl.campaign.abilities.BaseToggleAbility</a>, <a class="el" href="../../d9/d47/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1DistressCallAbility.html#ae978aed469c0301070de9d332d78c2b2">com.fs.starfarer.api.impl.campaign.abilities.DistressCallAbility</a>, <a class="el" href="../../d7/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility.html#a5d4fb59e45df824ef548b31fcc20261d">com.fs.starfarer.api.impl.campaign.abilities.EmergencyBurnAbility</a>, <a class="el" href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a4e7e4ac01a607fc1fb3c5f514fd49c6f">com.fs.starfarer.api.impl.campaign.abilities.FractureJumpAbility</a>, <a class="el" href="../../d5/d41/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1GraviticScanAbility.html#a84487a9a83b68de9c51c466f5928e76c">com.fs.starfarer.api.impl.campaign.abilities.GraviticScanAbility</a>, <a class="el" href="../../d8/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1InterdictionPulseAbility.html#a169a161441ef5d4b6ad06476ec601665">com.fs.starfarer.api.impl.campaign.abilities.InterdictionPulseAbility</a>, <a class="el" href="../../d2/db9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1RemoteSurveyAbility.html#a5a225c23893e1a702d92afb31c4787ae">com.fs.starfarer.api.impl.campaign.abilities.RemoteSurveyAbility</a>, and <a class="el" href="../../d6/d45/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ScavengeAbility.html#a61a3a5de454399371671ac9cf14ac68f">com.fs.starfarer.api.impl.campaign.abilities.ScavengeAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00176">176</a> of file <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html">BaseAbilityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  176</span>                              {</div>
-<div class="line"><span class="lineno">  177</span>        <span class="keywordflow">return</span> !<a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a735b1d3fa7cefe6db074838fc9ab19ea">isOnCooldown</a>() &amp;&amp; <a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a0482cb5cb825c9dfa42e77d793062b6b">disableFrames</a> &lt;= 0;</div>
-<div class="line"><span class="lineno">  178</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin_html_a735b1d3fa7cefe6db074838fc9ab19ea"><div class="ttname"><a href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a735b1d3fa7cefe6db074838fc9ab19ea">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin.isOnCooldown</a></div><div class="ttdeci">boolean isOnCooldown()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00270">BaseAbilityPlugin.java:270</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a32767181fbae7eb4e3cb960c6430da97" name="a32767181fbae7eb4e3cb960c6430da97"></a>
@@ -1833,10 +1608,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#a19b9b6889ed5257a75615d8fdb47bdc3">com.fs.starfarer.api.impl.campaign.abilities.BaseDurationAbility</a>, <a class="el" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a9b3c71fcb3b733099b79393aada2ea7f">com.fs.starfarer.api.impl.campaign.abilities.BaseToggleAbility</a>, and <a class="el" href="../../d0/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#aa9f4865b51b3dd7fafaa2e2586a48ae2">com.fs.starfarer.api.impl.campaign.abilities.TransponderAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00208">208</a> of file <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html">BaseAbilityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  208</span>                              {</div>
-<div class="line"><span class="lineno">  209</span>        </div>
-<div class="line"><span class="lineno">  210</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="afa28056d36f8724843b68554522cc186" name="afa28056d36f8724843b68554522cc186"></a>
@@ -1865,11 +1637,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../d9/d47/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1DistressCallAbility.html#aa0df7cb9d2defaea0f93e8921589d64e">com.fs.starfarer.api.impl.campaign.abilities.DistressCallAbility</a>, and <a class="el" href="../../d0/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#abca8886764e08477a2a185128faf7cab">com.fs.starfarer.api.impl.campaign.abilities.TransponderAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00037">37</a> of file <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html">BaseAbilityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   37</span>                                   {</div>
-<div class="line"><span class="lineno">   38</span>        <a class="code hl_variable" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a15549d8a5c8c5b5c0bffda444f5098ea">spec</a> = Global.getSettings().getAbilitySpec(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">   39</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">   40</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a3d48a61cf8916f838b2316ad7bd83874" name="a3d48a61cf8916f838b2316ad7bd83874"></a>
@@ -1903,9 +1671,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../d5/d41/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1GraviticScanAbility.html#a8afacbdce6dd10288b83dcf101e9be78">com.fs.starfarer.api.impl.campaign.abilities.GraviticScanAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00311">311</a> of file <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html">BaseAbilityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  311</span>                                                                         {</div>
-<div class="line"><span class="lineno">  312</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8084655ea4bbd00f132c45b1e06dbcbd" name="a8084655ea4bbd00f132c45b1e06dbcbd"></a>
@@ -1929,10 +1695,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#a6fa75cde045f14d150507a269d52071b">com.fs.starfarer.api.impl.campaign.abilities.BaseDurationAbility</a>, <a class="el" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a0cc2a432f934a4a2d755e8283c5653d0">com.fs.starfarer.api.impl.campaign.abilities.BaseToggleAbility</a>, and <a class="el" href="../../d0/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#a3e78fb350363a1cb6415bcce38fb42cc">com.fs.starfarer.api.impl.campaign.abilities.TransponderAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00168">168</a> of file <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html">BaseAbilityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  168</span>                                    {</div>
-<div class="line"><span class="lineno">  169</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  170</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aff67f5bf25f16e73a51d55aa6ee9bef1" name="aff67f5bf25f16e73a51d55aa6ee9bef1"></a>
@@ -1985,10 +1748,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#aaa0ad6cdf640fbabfc3ed34c473e5908">com.fs.starfarer.api.impl.campaign.abilities.BaseDurationAbility</a>, <a class="el" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#aee19795994d3c0a0cb44c5908fdbba51">com.fs.starfarer.api.impl.campaign.abilities.BaseToggleAbility</a>, <a class="el" href="../../d2/d8e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1GoDarkAbility.html#a3900bdc72d61aa48a315c6ca05ea6475">com.fs.starfarer.api.impl.campaign.abilities.GoDarkAbility</a>, <a class="el" href="../../d5/d41/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1GraviticScanAbility.html#acd692346fa000207a1bb40611ae4d311">com.fs.starfarer.api.impl.campaign.abilities.GraviticScanAbility</a>, and <a class="el" href="../../da/da2/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1SustainedBurnAbility.html#a1cfbda7e86291f26da881774247e2834">com.fs.starfarer.api.impl.campaign.abilities.SustainedBurnAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00172">172</a> of file <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html">BaseAbilityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  172</span>                                         {</div>
-<div class="line"><span class="lineno">  173</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#ab9652440c6c6ef10d1893168f636c121">isActive</a>();</div>
-<div class="line"><span class="lineno">  174</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af8e51571a1c0c6f4a0f7e42dc141ba27" name="af8e51571a1c0c6f4a0f7e42dc141ba27"></a>
@@ -2011,10 +1771,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../d7/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility.html#a5195d4aed3eeb696c108b12a1c9c1c55">com.fs.starfarer.api.impl.campaign.abilities.EmergencyBurnAbility</a>, and <a class="el" href="../../da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a20dc63004fba4813e4124c8ba6ea60fb">com.fs.starfarer.api.impl.campaign.abilities.FractureJumpAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00261">261</a> of file <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html">BaseAbilityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  261</span>                                           {</div>
-<div class="line"><span class="lineno">  262</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a45fb1f3bce0ff8531b1940c9c8fa5f77">getCooldownFraction</a>() &lt; 1;</div>
-<div class="line"><span class="lineno">  263</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a04356644e34e985a592747da481a1e4a" name="a04356644e34e985a592747da481a1e4a"></a>
@@ -2037,10 +1794,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#a66dc8ac55816d3ca4ba23e2ec1a5b3da">com.fs.starfarer.api.impl.campaign.abilities.BaseDurationAbility</a>, <a class="el" href="../../dc/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a9452c3fb21490f2df87b01217bc0ebb9">com.fs.starfarer.api.impl.campaign.abilities.BaseToggleAbility</a>, <a class="el" href="../../d2/d8e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1GoDarkAbility.html#ab7a30abf57908d30fe67b32c184310e0">com.fs.starfarer.api.impl.campaign.abilities.GoDarkAbility</a>, <a class="el" href="../../d5/d41/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1GraviticScanAbility.html#a78f8d798261f2f9cf1723c04a3569803">com.fs.starfarer.api.impl.campaign.abilities.GraviticScanAbility</a>, <a class="el" href="../../da/da2/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1SustainedBurnAbility.html#ad66c7bef084caa7d579066e4b4bc3530">com.fs.starfarer.api.impl.campaign.abilities.SustainedBurnAbility</a>, and <a class="el" href="../../d0/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#a4cfa6023b8355cabf30de6d5ca69f6f9">com.fs.starfarer.api.impl.campaign.abilities.TransponderAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00265">265</a> of file <a class="el" href="../../d8/db2/BaseAbilityPlugin_8java_source.html">BaseAbilityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  265</span>                                           {</div>
-<div class="line"><span class="lineno">  266</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a8a1ed7ce89588491b632338db6d4825e">getProgressFraction</a>() &gt; 0;</div>
-<div class="line"><span class="lineno">  267</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

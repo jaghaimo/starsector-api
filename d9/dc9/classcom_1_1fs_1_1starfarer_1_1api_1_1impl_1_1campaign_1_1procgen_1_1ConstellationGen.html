@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -154,70 +155,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d57/ConstellationGen_8java_source.html#l00217">217</a> of file <a class="el" href="../../dd/d57/ConstellationGen_8java_source.html">ConstellationGen.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  217</span>                                                                                              {</div>
-<div class="line"><span class="lineno">  218</span>        <span class="keyword">final</span> SpringSystem springs = <span class="keyword">new</span> SpringSystem();</div>
-<div class="line"><span class="lineno">  219</span>        <span class="keywordflow">if</span> (systems.isEmpty()) <span class="keywordflow">return</span> springs;</div>
-<div class="line"><span class="lineno">  220</span>        </div>
-<div class="line"><span class="lineno">  221</span>        Vector2f loc = <span class="keyword">new</span> Vector2f(0, 0);</div>
-<div class="line"><span class="lineno">  222</span>        <span class="comment">//loc = new Vector2f(systems.get(0).getLocation());</span></div>
-<div class="line"><span class="lineno">  223</span>        <span class="keywordtype">boolean</span> first = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  224</span>        <span class="keywordflow">for</span> (StarSystemAPI system : systems) {</div>
-<div class="line"><span class="lineno">  225</span>            <span class="keywordtype">float</span> radius = system.getMaxRadiusInHyperspace();</div>
-<div class="line"><span class="lineno">  226</span>            <span class="keywordflow">if</span> (radius &lt; 500) radius = 500;</div>
-<div class="line"><span class="lineno">  227</span>            </div>
-<div class="line"><span class="lineno">  228</span>            <span class="keywordtype">float</span> mass = radius;</div>
-<div class="line"><span class="lineno">  229</span>            SpringNode node = springs.addNode(system, radius, mass,</div>
-<div class="line"><span class="lineno">  230</span>                                    loc.x + random.nextFloat(), loc.y + random.nextFloat());</div>
-<div class="line"><span class="lineno">  231</span>            <span class="keywordflow">if</span> (first) {</div>
-<div class="line"><span class="lineno">  232</span>                node.moveable = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  233</span>                first = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  234</span>            }</div>
-<div class="line"><span class="lineno">  235</span>        }</div>
-<div class="line"><span class="lineno">  236</span>        </div>
-<div class="line"><span class="lineno">  237</span>        List&lt;SpringNode&gt; copy = <span class="keyword">new</span> ArrayList&lt;SpringNode&gt;(springs.nodes);</div>
-<div class="line"><span class="lineno">  238</span>        SpringNode curr = copy.get((<span class="keywordtype">int</span>) (copy.size() * random.nextDouble()));</div>
-<div class="line"><span class="lineno">  239</span>        copy.remove(curr);</div>
-<div class="line"><span class="lineno">  240</span>        </div>
-<div class="line"><span class="lineno">  241</span>        <span class="keywordtype">float</span> pullK = 1000f;</div>
-<div class="line"><span class="lineno">  242</span>        <span class="keywordtype">float</span> pushK = 500f;</div>
-<div class="line"><span class="lineno">  243</span>        <span class="comment">// create constellation shape via branching spring thing</span></div>
-<div class="line"><span class="lineno">  244</span>        <span class="keywordflow">while</span> (!copy.isEmpty()) {</div>
-<div class="line"><span class="lineno">  245</span>            <span class="keywordtype">int</span> numBranches = random.nextInt(3) + 1;</div>
-<div class="line"><span class="lineno">  246</span>            <span class="comment">//numBranches = 3;</span></div>
-<div class="line"><span class="lineno">  247</span>            </div>
-<div class="line"><span class="lineno">  248</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; numBranches; i++) {</div>
-<div class="line"><span class="lineno">  249</span>                <span class="keywordflow">if</span> (copy.isEmpty()) <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  250</span>                </div>
-<div class="line"><span class="lineno">  251</span>                SpringNode other = copy.get((<span class="keywordtype">int</span>) (copy.size() * random.nextDouble()));</div>
-<div class="line"><span class="lineno">  252</span>                copy.remove(other);</div>
-<div class="line"><span class="lineno">  253</span>                </div>
-<div class="line"><span class="lineno">  254</span>                <span class="comment">//float d = (curr.radius + other.radius) + 250f + random.nextFloat() * 1000f;</span></div>
-<div class="line"><span class="lineno">  255</span>                <span class="keywordtype">float</span> d = (curr.radius + other.radius) + StarSystemGenerator.MIN_STAR_DIST + </div>
-<div class="line"><span class="lineno">  256</span>                                        random.nextFloat() * (StarSystemGenerator.MAX_STAR_DIST - StarSystemGenerator.MIN_STAR_DIST);</div>
-<div class="line"><span class="lineno">  257</span>                springs.addConnection(curr, other, pullK, d, <span class="keyword">true</span>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  258</span>                <span class="comment">//System.out.println(&quot;Dist: &quot; + d);</span></div>
-<div class="line"><span class="lineno">  259</span>                <span class="keywordflow">if</span> (i == numBranches - 1) {</div>
-<div class="line"><span class="lineno">  260</span>                    curr = other;</div>
-<div class="line"><span class="lineno">  261</span>                }</div>
-<div class="line"><span class="lineno">  262</span>            }</div>
-<div class="line"><span class="lineno">  263</span>        }</div>
-<div class="line"><span class="lineno">  264</span>        </div>
-<div class="line"><span class="lineno">  265</span>        <span class="comment">// and add push-only connections for anything not connected by the main shape</span></div>
-<div class="line"><span class="lineno">  266</span>        <span class="keywordflow">for</span> (SpringNode n1 : springs.nodes) {</div>
-<div class="line"><span class="lineno">  267</span>            <span class="keywordflow">for</span> (SpringNode n2 : springs.nodes) {</div>
-<div class="line"><span class="lineno">  268</span>                <span class="keywordflow">if</span> (n1 == n2) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  269</span>                <span class="keywordtype">float</span> d = (n1.radius + n2.radius) + 5000f;</div>
-<div class="line"><span class="lineno">  270</span>                springs.addConnection(n1, n2, pushK, d, <span class="keyword">true</span>, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  271</span>            }</div>
-<div class="line"><span class="lineno">  272</span>        }</div>
-<div class="line"><span class="lineno">  273</span>        </div>
-<div class="line"><span class="lineno">  274</span>        <span class="keywordflow">for</span> (SpringNode node : springs.nodes) {</div>
-<div class="line"><span class="lineno">  275</span>            StarSystemAPI system = (StarSystemAPI) node.custom;</div>
-<div class="line"><span class="lineno">  276</span>            system.getLocation().set(node.loc);</div>
-<div class="line"><span class="lineno">  277</span>        }</div>
-<div class="line"><span class="lineno">  278</span>        <span class="keywordflow">return</span> springs;</div>
-<div class="line"><span class="lineno">  279</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a18444237e512a857eee1e527ce4da0f4" name="a18444237e512a857eee1e527ce4da0f4"></a>
@@ -261,56 +199,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d57/ConstellationGen_8java_source.html#l00282">282</a> of file <a class="el" href="../../dd/d57/ConstellationGen_8java_source.html">ConstellationGen.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  282</span>                                                                                                                       {</div>
-<div class="line"><span class="lineno">  283</span>        SpringSystem springs = <a class="code hl_function" href="../../d9/dc9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ConstellationGen.html#aeaae297188ac8f7bdb742fc560039b65">createSpringSystem</a>(systems, random);</div>
-<div class="line"><span class="lineno">  284</span>        </div>
-<div class="line"><span class="lineno">  285</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 1000; i++) {</div>
-<div class="line"><span class="lineno">  286</span>            springs.advance(0.25f);</div>
-<div class="line"><span class="lineno">  287</span>            <span class="keywordflow">if</span> (springs.isDone()) <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  288</span>        }</div>
-<div class="line"><span class="lineno">  289</span>        </div>
-<div class="line"><span class="lineno">  290</span>        <span class="keywordflow">if</span> (!springs.isDone()) {</div>
-<div class="line"><span class="lineno">  291</span>            springs = <a class="code hl_function" href="../../d9/dc9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ConstellationGen.html#aeaae297188ac8f7bdb742fc560039b65">createSpringSystem</a>(systems, random);</div>
-<div class="line"><span class="lineno">  292</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 1000; i++) {</div>
-<div class="line"><span class="lineno">  293</span>                springs.advance(0.25f);</div>
-<div class="line"><span class="lineno">  294</span>                <span class="keywordflow">if</span> (springs.isDone()) <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  295</span>            }</div>
-<div class="line"><span class="lineno">  296</span>        }</div>
-<div class="line"><span class="lineno">  297</span>        </div>
-<div class="line"><span class="lineno">  298</span>        <span class="comment">//if (!springs.isDone()) return springs;</span></div>
-<div class="line"><span class="lineno">  299</span> </div>
-<div class="line"><span class="lineno">  300</span>        <span class="keywordtype">float</span> minX = Float.MAX_VALUE;</div>
-<div class="line"><span class="lineno">  301</span>        <span class="keywordtype">float</span> maxX = -Float.MAX_VALUE;</div>
-<div class="line"><span class="lineno">  302</span>        <span class="keywordtype">float</span> minY = Float.MAX_VALUE;</div>
-<div class="line"><span class="lineno">  303</span>        <span class="keywordtype">float</span> maxY = -Float.MAX_VALUE;</div>
-<div class="line"><span class="lineno">  304</span>        </div>
-<div class="line"><span class="lineno">  305</span>        <span class="keywordflow">for</span> (SpringNode node : springs.nodes) {</div>
-<div class="line"><span class="lineno">  306</span>            <span class="keywordtype">float</span> x = node.loc.x;</div>
-<div class="line"><span class="lineno">  307</span>            <span class="keywordtype">float</span> y = node.loc.y;</div>
-<div class="line"><span class="lineno">  308</span>            <span class="keywordflow">if</span> (x &lt; minX) minX = x;</div>
-<div class="line"><span class="lineno">  309</span>            <span class="keywordflow">if</span> (x &gt; maxX) maxX = x;</div>
-<div class="line"><span class="lineno">  310</span>            <span class="keywordflow">if</span> (y &lt; minY) minY = y;</div>
-<div class="line"><span class="lineno">  311</span>            <span class="keywordflow">if</span> (y &gt; maxY) maxY = y;</div>
-<div class="line"><span class="lineno">  312</span>        }</div>
-<div class="line"><span class="lineno">  313</span>        </div>
-<div class="line"><span class="lineno">  314</span>        <span class="keywordtype">float</span> midX = minX + (maxX - minX) * 0.5f;</div>
-<div class="line"><span class="lineno">  315</span>        <span class="keywordtype">float</span> midY = minY + (maxY - minY) * 0.5f;</div>
-<div class="line"><span class="lineno">  316</span>        </div>
-<div class="line"><span class="lineno">  317</span>        <span class="keywordflow">for</span> (SpringNode node : springs.nodes) {</div>
-<div class="line"><span class="lineno">  318</span>            node.loc.x = (int)(node.loc.x - midX + centerPoint.x);</div>
-<div class="line"><span class="lineno">  319</span>            node.loc.y = (int)(node.loc.y - midY + centerPoint.y);</div>
-<div class="line"><span class="lineno">  320</span>        }</div>
-<div class="line"><span class="lineno">  321</span> </div>
-<div class="line"><span class="lineno">  322</span>        </div>
-<div class="line"><span class="lineno">  323</span>        <span class="keywordflow">for</span> (SpringNode node : springs.nodes) {</div>
-<div class="line"><span class="lineno">  324</span>            StarSystemAPI system = (StarSystemAPI) node.custom;</div>
-<div class="line"><span class="lineno">  325</span>            system.getLocation().set(node.loc);</div>
-<div class="line"><span class="lineno">  326</span>        }</div>
-<div class="line"><span class="lineno">  327</span>        </div>
-<div class="line"><span class="lineno">  328</span>        <span class="keywordflow">return</span> springs;</div>
-<div class="line"><span class="lineno">  329</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ConstellationGen_html_aeaae297188ac8f7bdb742fc560039b65"><div class="ttname"><a href="../../d9/dc9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ConstellationGen.html#aeaae297188ac8f7bdb742fc560039b65">com.fs.starfarer.api.impl.campaign.procgen.ConstellationGen.createSpringSystem</a></div><div class="ttdeci">static SpringSystem createSpringSystem(List&lt; StarSystemAPI &gt; systems, Random random)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d57/ConstellationGen_8java_source.html#l00217">ConstellationGen.java:217</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

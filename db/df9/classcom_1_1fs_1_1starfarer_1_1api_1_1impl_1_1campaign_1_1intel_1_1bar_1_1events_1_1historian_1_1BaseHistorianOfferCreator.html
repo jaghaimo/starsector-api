@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -168,45 +169,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d3f/BaseHistorianOfferCreator_8java_source.html#l00088">88</a> of file <a class="el" href="../../d4/d3f/BaseHistorianOfferCreator_8java_source.html">BaseHistorianOfferCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   88</span>                                                                {</div>
-<div class="line"><span class="lineno">   89</span>        WeightedRandomPicker&lt;StarSystemAPI&gt; picker = <span class="keyword">new</span> WeightedRandomPicker&lt;StarSystemAPI&gt;(random);</div>
-<div class="line"><span class="lineno">   90</span>        <span class="keywordflow">for</span> (StarSystemAPI system : Global.getSector().getStarSystems()) {</div>
-<div class="line"><span class="lineno">   91</span>            <span class="keywordflow">if</span> (system.hasTag(Tags.THEME_CORE_POPULATED)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   92</span>            <span class="keywordflow">if</span> (system.hasTag(Tags.THEME_REMNANT_MAIN)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   93</span>            <span class="keywordflow">if</span> (system.hasTag(Tags.THEME_REMNANT_RESURGENT)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   94</span>            </div>
-<div class="line"><span class="lineno">   95</span>            <span class="keywordflow">if</span> (!system.hasTag(Tags.THEME_INTERESTING) &amp;&amp; </div>
-<div class="line"><span class="lineno">   96</span>                    !system.hasTag(Tags.THEME_INTERESTING_MINOR)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   97</span>            </div>
-<div class="line"><span class="lineno">   98</span>            <span class="keywordtype">float</span> sinceVisit = Global.getSector().getClock().getElapsedDaysSince(system.getLastPlayerVisitTimestamp());</div>
-<div class="line"><span class="lineno">   99</span>            <span class="keywordflow">if</span> (sinceVisit &lt; 360) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  100</span>            </div>
-<div class="line"><span class="lineno">  101</span>            picker.add(system);</div>
-<div class="line"><span class="lineno">  102</span>        }</div>
-<div class="line"><span class="lineno">  103</span>        </div>
-<div class="line"><span class="lineno">  104</span>        StarSystemAPI system = picker.pick();</div>
-<div class="line"><span class="lineno">  105</span>        <span class="keywordflow">if</span> (system == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  106</span> </div>
-<div class="line"><span class="lineno">  107</span>        EntityLocation loc = BaseThemeGenerator.pickHiddenLocationNotNearStar(random, system, 100f, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  108</span>        <span class="keywordflow">if</span> (loc == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  109</span>        </div>
-<div class="line"><span class="lineno">  110</span>        <span class="comment">//AddedEntity added = BaseThemeGenerator.addNonSalvageEntity(system, loc, Entities.STABLE_LOCATION, Factions.NEUTRAL);</span></div>
-<div class="line"><span class="lineno">  111</span>        AddedEntity added = BaseThemeGenerator.addEntity(random, system, loc, Entities.EQUIPMENT_CACHE, Factions.NEUTRAL);</div>
-<div class="line"><span class="lineno">  112</span>        </div>
-<div class="line"><span class="lineno">  113</span>        <span class="keywordflow">if</span> (added == <span class="keyword">null</span> || added.entity == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  114</span>        </div>
-<div class="line"><span class="lineno">  115</span>        <span class="comment">//added.entity.removeTag(Tags.SALVAGEABLE);</span></div>
-<div class="line"><span class="lineno">  116</span><span class="comment">//      added.entity.setDiscoverable(null);</span></div>
-<div class="line"><span class="lineno">  117</span><span class="comment">//      added.entity.setDiscoveryXP(null);</span></div>
-<div class="line"><span class="lineno">  118</span><span class="comment">//      added.entity.setSensorProfile(null);</span></div>
-<div class="line"><span class="lineno">  119</span>        </div>
-<div class="line"><span class="lineno">  120</span>        <span class="comment">//Misc.setDefenderOverride(added.entity, new DefenderDataOverride(Factions.DERELICT, 1f, 100f, 100f));</span></div>
-<div class="line"><span class="lineno">  121</span>        </div>
-<div class="line"><span class="lineno">  122</span>        added.entity.addTag(Tags.EXPIRES); <span class="comment">// so it doesn&#39;t get targeted by &quot;analyze entity&quot; missions</span></div>
-<div class="line"><span class="lineno">  123</span>        </div>
-<div class="line"><span class="lineno">  124</span>        <span class="keywordflow">return</span> added.entity;</div>
-<div class="line"><span class="lineno">  125</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2ead302d321a3eb33a8c5c7c425bfffe" name="a2ead302d321a3eb33a8c5c7c425bfffe"></a>
@@ -238,10 +201,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../d6/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1BlueprintOfferCreator.html#a0aa0f9f0fc8a8c0526c1a4291f70ea89">com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.BlueprintOfferCreator</a>, and <a class="el" href="../../dc/d8d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1DonationOfferCreator.html#abcd05ca4101fb65514d87ea4e8749491">com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.DonationOfferCreator</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d3f/BaseHistorianOfferCreator_8java_source.html#l00025">25</a> of file <a class="el" href="../../d4/d3f/BaseHistorianOfferCreator_8java_source.html">BaseHistorianOfferCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   25</span>                                                                                 {</div>
-<div class="line"><span class="lineno">   26</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   27</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a0843dcf40bc72e276e01dae369c0b3e3" name="a0843dcf40bc72e276e01dae369c0b3e3"></a>
@@ -260,11 +220,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d3f/BaseHistorianOfferCreator_8java_source.html#l00033">33</a> of file <a class="el" href="../../d4/d3f/BaseHistorianOfferCreator_8java_source.html">BaseHistorianOfferCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   33</span>                                {</div>
-<div class="line"><span class="lineno">   34</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../db/df9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1BaseHistorianOfferCreator.html#ad9f68fa9dc36d94727bcd2dff6f5e0b0">frequency</a>;</div>
-<div class="line"><span class="lineno">   35</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1BaseHistorianOfferCreator_html_ad9f68fa9dc36d94727bcd2dff6f5e0b0"><div class="ttname"><a href="../../db/df9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1BaseHistorianOfferCreator.html#ad9f68fa9dc36d94727bcd2dff6f5e0b0">com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.BaseHistorianOfferCreator.frequency</a></div><div class="ttdeci">float frequency</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d3f/BaseHistorianOfferCreator_8java_source.html#l00023">BaseHistorianOfferCreator.java:23</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab4908566f2578e7380b4c268a90d577b" name="ab4908566f2578e7380b4c268a90d577b"></a>
@@ -286,10 +242,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../d6/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1BlueprintOfferCreator.html#ab9a5b28752c3d7e701c1e4b3ce077b8f">com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.BlueprintOfferCreator</a>, <a class="el" href="../../dc/d78/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1FighterBlueprintOfferCreator.html#a36ed54c9ec9d466d7b6d5def3717835e">com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.FighterBlueprintOfferCreator</a>, <a class="el" href="../../d2/d2d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1ShipBlueprintOfferCreator.html#a17630e1e589c2541d43738e1f5b08c1c">com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.ShipBlueprintOfferCreator</a>, <a class="el" href="../../d6/d95/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1SpecialItemOfferCreator.html#a20e31ceabc2a2444c1c73bd899696cd8">com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.SpecialItemOfferCreator</a>, and <a class="el" href="../../d5/d8f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1WeaponBlueprintOfferCreator.html#a9d7e0c891160f8ab2d17720e9e8c03c7">com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.WeaponBlueprintOfferCreator</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d3f/BaseHistorianOfferCreator_8java_source.html#l00127">127</a> of file <a class="el" href="../../d4/d3f/BaseHistorianOfferCreator_8java_source.html">BaseHistorianOfferCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  127</span>                                                       {</div>
-<div class="line"><span class="lineno">  128</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  129</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2dc97cb32ae2f2e21f017592f284dc92" name="a2dc97cb32ae2f2e21f017592f284dc92"></a>
@@ -310,10 +263,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../dc/d8d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1DonationOfferCreator.html#aea7f79ddec9ece190b71a15af33c576d">com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.DonationOfferCreator</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d3f/BaseHistorianOfferCreator_8java_source.html#l00029">29</a> of file <a class="el" href="../../d4/d3f/BaseHistorianOfferCreator_8java_source.html">BaseHistorianOfferCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   29</span>                                  {</div>
-<div class="line"><span class="lineno">   30</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   31</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa50cbcea3e02df85dc23e71cc878513c" name="aa50cbcea3e02df85dc23e71cc878513c"></a>
@@ -335,10 +285,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../d6/d95/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1SpecialItemOfferCreator.html#a708922b606e2fe598bad51c41144199e">com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.SpecialItemOfferCreator</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d3f/BaseHistorianOfferCreator_8java_source.html#l00131">131</a> of file <a class="el" href="../../d4/d3f/BaseHistorianOfferCreator_8java_source.html">BaseHistorianOfferCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  131</span>                                                     {</div>
-<div class="line"><span class="lineno">  132</span>        </div>
-<div class="line"><span class="lineno">  133</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a02f1c92de3ead821e7e394384aa55841" name="a02f1c92de3ead821e7e394384aa55841"></a>
@@ -368,30 +315,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d3f/BaseHistorianOfferCreator_8java_source.html#l00043">43</a> of file <a class="el" href="../../d4/d3f/BaseHistorianOfferCreator_8java_source.html">BaseHistorianOfferCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   43</span>                                                                              {</div>
-<div class="line"><span class="lineno">   44</span>        WeightedRandomPicker&lt;SectorEntityToken&gt; picker = <span class="keyword">new</span> WeightedRandomPicker&lt;SectorEntityToken&gt;(random);</div>
-<div class="line"><span class="lineno">   45</span>        <span class="keywordflow">for</span> (StarSystemAPI system : Global.getSector().getStarSystems()) {</div>
-<div class="line"><span class="lineno">   46</span>            <span class="keywordflow">if</span> (system.hasTag(Tags.THEME_CORE_POPULATED)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   47</span>            <span class="keywordflow">if</span> (!allowDerelict &amp;&amp; system.hasTag(Tags.THEME_DERELICT)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   48</span>            </div>
-<div class="line"><span class="lineno">   49</span>            <span class="keywordflow">if</span> (system.hasTag(Tags.THEME_DERELICT) || </div>
-<div class="line"><span class="lineno">   50</span>                    system.hasTag(Tags.THEME_RUINS) ||</div>
-<div class="line"><span class="lineno">   51</span>                    system.hasTag(Tags.THEME_REMNANT)) {</div>
-<div class="line"><span class="lineno">   52</span>                </div>
-<div class="line"><span class="lineno">   53</span>                <span class="keywordflow">for</span> (SectorEntityToken entity : system.getEntitiesWithTag(Tags.SALVAGEABLE)) {</div>
-<div class="line"><span class="lineno">   54</span>                    <span class="keywordtype">float</span> w = 1f;</div>
-<div class="line"><span class="lineno">   55</span>                    </div>
-<div class="line"><span class="lineno">   56</span>                    <span class="comment">// skip derelict ships etc that will expire</span></div>
-<div class="line"><span class="lineno">   57</span>                    <span class="keywordflow">if</span> (entity.hasTag(Tags.EXPIRES)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   58</span>                    <span class="keywordflow">if</span> (entity.hasTag(Tags.NOT_RANDOM_MISSION_TARGET)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   59</span>                    <span class="keywordflow">if</span> (entity.getCircularOrbitRadius() &gt; 10000f) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   60</span>                    picker.add(entity, w);</div>
-<div class="line"><span class="lineno">   61</span>                }</div>
-<div class="line"><span class="lineno">   62</span>            }</div>
-<div class="line"><span class="lineno">   63</span>        }</div>
-<div class="line"><span class="lineno">   64</span>        <span class="keywordflow">return</span> picker.pick();</div>
-<div class="line"><span class="lineno">   65</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a49843444eac2d64c18e46163759792d0" name="a49843444eac2d64c18e46163759792d0"></a>
@@ -411,26 +335,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d3f/BaseHistorianOfferCreator_8java_source.html#l00068">68</a> of file <a class="el" href="../../d4/d3f/BaseHistorianOfferCreator_8java_source.html">BaseHistorianOfferCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   68</span>                                                        {</div>
-<div class="line"><span class="lineno">   69</span>        WeightedRandomPicker&lt;PlanetAPI&gt; picker = <span class="keyword">new</span> WeightedRandomPicker&lt;PlanetAPI&gt;(random);</div>
-<div class="line"><span class="lineno">   70</span>        <span class="keywordflow">for</span> (StarSystemAPI system : Global.getSector().getStarSystems()) {</div>
-<div class="line"><span class="lineno">   71</span>            <span class="keywordflow">if</span> (system.hasTag(Tags.THEME_CORE_POPULATED)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   72</span>            </div>
-<div class="line"><span class="lineno">   73</span>            <span class="keywordflow">if</span> (!system.hasTag(Tags.THEME_INTERESTING) &amp;&amp; </div>
-<div class="line"><span class="lineno">   74</span>                    !system.hasTag(Tags.THEME_INTERESTING_MINOR)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   75</span>            </div>
-<div class="line"><span class="lineno">   76</span>            <span class="keywordflow">for</span> (PlanetAPI planet : system.getPlanets()) {</div>
-<div class="line"><span class="lineno">   77</span>                <span class="keywordflow">if</span> (planet.isStar()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   78</span>                </div>
-<div class="line"><span class="lineno">   79</span>                <span class="keywordflow">if</span> (Misc.hasUnexploredRuins(planet.getMarket())) {</div>
-<div class="line"><span class="lineno">   80</span>                    <span class="keywordtype">float</span> w = 1f;</div>
-<div class="line"><span class="lineno">   81</span>                    picker.add(planet, w);</div>
-<div class="line"><span class="lineno">   82</span>                }</div>
-<div class="line"><span class="lineno">   83</span>            }</div>
-<div class="line"><span class="lineno">   84</span>        }</div>
-<div class="line"><span class="lineno">   85</span>        <span class="keywordflow">return</span> picker.pick();</div>
-<div class="line"><span class="lineno">   86</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aeaaa90d69be1f0d4b61de46d734e50e3" name="aeaaa90d69be1f0d4b61de46d734e50e3"></a>
@@ -450,10 +355,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d3f/BaseHistorianOfferCreator_8java_source.html#l00037">37</a> of file <a class="el" href="../../d4/d3f/BaseHistorianOfferCreator_8java_source.html">BaseHistorianOfferCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   37</span>                                              {</div>
-<div class="line"><span class="lineno">   38</span>        this.frequency = <a class="code hl_variable" href="../../db/df9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1BaseHistorianOfferCreator.html#ad9f68fa9dc36d94727bcd2dff6f5e0b0">frequency</a>;</div>
-<div class="line"><span class="lineno">   39</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

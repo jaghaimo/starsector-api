@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -161,15 +162,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d04/HitArea_8java_source.html#l00006">6</a> of file <a class="el" href="../../d3/d04/HitArea_8java_source.html">HitArea.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    6</span>                              {</div>
-<div class="line"><span class="lineno">    7</span>        <span class="keywordflow">try</span> {</div>
-<div class="line"><span class="lineno">    8</span>            HitArea copy = (HitArea) super.clone();</div>
-<div class="line"><span class="lineno">    9</span>            <span class="keywordflow">return</span> copy;</div>
-<div class="line"><span class="lineno">   10</span>        } <span class="keywordflow">catch</span> (CloneNotSupportedException e) {</div>
-<div class="line"><span class="lineno">   11</span>            <span class="keywordflow">throw</span> <span class="keyword">new</span> RuntimeException(e);</div>
-<div class="line"><span class="lineno">   12</span>        }</div>
-<div class="line"><span class="lineno">   13</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab5ec1107fc538526f96343c808511689" name="ab5ec1107fc538526f96343c808511689"></a>
@@ -189,29 +182,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d04/HitArea_8java_source.html#l00015">15</a> of file <a class="el" href="../../d3/d04/HitArea_8java_source.html">HitArea.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   15</span>                                                           {</div>
-<div class="line"><span class="lineno">   16</span>        HitArea copy = <span class="keyword">new</span> HitArea();</div>
-<div class="line"><span class="lineno">   17</span>        <span class="keywordtype">float</span> sign = action.actor.facing;</div>
-<div class="line"><span class="lineno">   18</span>        </div>
-<div class="line"><span class="lineno">   19</span>        copy.x = action.actor.loc.x + <a class="code hl_variable" href="../../d8/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1HitArea.html#aa1eae5f40f880881c7f98e02fc82fe1c">x</a> * action.anim.scale * sign;</div>
-<div class="line"><span class="lineno">   20</span>        copy.y = action.actor.loc.y + <a class="code hl_variable" href="../../d8/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1HitArea.html#adec00c0014840b0324c2bdbd988d2456">y</a> * action.anim.scale;</div>
-<div class="line"><span class="lineno">   21</span>        copy.h = <a class="code hl_variable" href="../../d8/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1HitArea.html#a652242c0c14ddcec690a884d24f53a34">h</a> * action.anim.scale;</div>
-<div class="line"><span class="lineno">   22</span>        <span class="keywordflow">if</span> (sign &gt; 0) {</div>
-<div class="line"><span class="lineno">   23</span>            copy.w = <a class="code hl_variable" href="../../d8/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1HitArea.html#a6793f76db6c277f7c738c231d85bf9ab">w</a> * action.anim.scale;</div>
-<div class="line"><span class="lineno">   24</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   25</span>            copy.x = action.actor.loc.x + <a class="code hl_variable" href="../../d8/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1HitArea.html#aa1eae5f40f880881c7f98e02fc82fe1c">x</a> * action.anim.scale * sign - <a class="code hl_variable" href="../../d8/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1HitArea.html#a6793f76db6c277f7c738c231d85bf9ab">w</a> * action.anim.scale;</div>
-<div class="line"><span class="lineno">   26</span>            copy.w = <a class="code hl_variable" href="../../d8/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1HitArea.html#a6793f76db6c277f7c738c231d85bf9ab">w</a> * action.anim.scale;</div>
-<div class="line"><span class="lineno">   27</span>        }</div>
-<div class="line"><span class="lineno">   28</span>            </div>
-<div class="line"><span class="lineno">   29</span>        </div>
-<div class="line"><span class="lineno">   30</span>        <span class="keywordflow">return</span> copy;</div>
-<div class="line"><span class="lineno">   31</span>        </div>
-<div class="line"><span class="lineno">   32</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1HitArea_html_a652242c0c14ddcec690a884d24f53a34"><div class="ttname"><a href="../../d8/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1HitArea.html#a652242c0c14ddcec690a884d24f53a34">com.fs.starfarer.api.impl.campaign.eventide.HitArea.h</a></div><div class="ttdeci">float h</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d04/HitArea_8java_source.html#l00004">HitArea.java:4</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1HitArea_html_a6793f76db6c277f7c738c231d85bf9ab"><div class="ttname"><a href="../../d8/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1HitArea.html#a6793f76db6c277f7c738c231d85bf9ab">com.fs.starfarer.api.impl.campaign.eventide.HitArea.w</a></div><div class="ttdeci">float w</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d04/HitArea_8java_source.html#l00004">HitArea.java:4</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1HitArea_html_aa1eae5f40f880881c7f98e02fc82fe1c"><div class="ttname"><a href="../../d8/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1HitArea.html#aa1eae5f40f880881c7f98e02fc82fe1c">com.fs.starfarer.api.impl.campaign.eventide.HitArea.x</a></div><div class="ttdeci">float x</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d04/HitArea_8java_source.html#l00004">HitArea.java:4</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1HitArea_html_adec00c0014840b0324c2bdbd988d2456"><div class="ttname"><a href="../../d8/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1HitArea.html#adec00c0014840b0324c2bdbd988d2456">com.fs.starfarer.api.impl.campaign.eventide.HitArea.y</a></div><div class="ttdeci">float y</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d04/HitArea_8java_source.html#l00004">HitArea.java:4</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a08039439b13cda7567e48729b0ac56cf" name="a08039439b13cda7567e48729b0ac56cf"></a>
@@ -231,14 +202,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d04/HitArea_8java_source.html#l00034">34</a> of file <a class="el" href="../../d3/d04/HitArea_8java_source.html">HitArea.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   34</span>                                             {</div>
-<div class="line"><span class="lineno">   35</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d8/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1HitArea.html#aa1eae5f40f880881c7f98e02fc82fe1c">x</a> &gt; other.x + other.w) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   36</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d8/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1HitArea.html#aa1eae5f40f880881c7f98e02fc82fe1c">x</a> + <a class="code hl_variable" href="../../d8/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1HitArea.html#a6793f76db6c277f7c738c231d85bf9ab">w</a> &lt; other.x) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   37</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d8/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1HitArea.html#adec00c0014840b0324c2bdbd988d2456">y</a> &gt; other.y + other.h) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   38</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d8/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1HitArea.html#adec00c0014840b0324c2bdbd988d2456">y</a> + <a class="code hl_variable" href="../../d8/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1HitArea.html#a652242c0c14ddcec690a884d24f53a34">h</a> &lt; other.y) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   39</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   40</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

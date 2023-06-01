@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -194,24 +195,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/d77/PKDefenderPluginImpl_8java_source.html#l00126">126</a> of file <a class="el" href="../../d1/d77/PKDefenderPluginImpl_8java_source.html">PKDefenderPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  126</span>                                                                                                                             {</div>
-<div class="line"><span class="lineno">  127</span>        AICoreOfficerPlugin plugin = Misc.getAICoreOfficerPlugin(Commodities.ALPHA_CORE);</div>
-<div class="line"><span class="lineno">  128</span>        </div>
-<div class="line"><span class="lineno">  129</span>        FleetMemberAPI member = fleet.getFleetData().addFleetMember(variantId);</div>
-<div class="line"><span class="lineno">  130</span>        member.setId(<span class="stringliteral">&quot;xivtf_&quot;</span> + random.nextLong());</div>
-<div class="line"><span class="lineno">  131</span>        </div>
-<div class="line"><span class="lineno">  132</span>        <span class="comment">//System.out.println(&quot;ID for &quot; + variantId + &quot;: &quot; + member.getId());</span></div>
-<div class="line"><span class="lineno">  133</span>        </div>
-<div class="line"><span class="lineno">  134</span>        <span class="comment">//member.setId(&quot;xivtf_&quot; + random.nextLong());</span></div>
-<div class="line"><span class="lineno">  135</span>        <span class="keywordflow">if</span> (shipName != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  136</span>            member.setShipName(shipName);</div>
-<div class="line"><span class="lineno">  137</span>        }</div>
-<div class="line"><span class="lineno">  138</span>        <span class="keywordflow">if</span> (aiCore != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  139</span>            PersonAPI person = plugin.createPerson(aiCore, fleet.getFaction().getId(), random);</div>
-<div class="line"><span class="lineno">  140</span>            member.setCaptain(person);</div>
-<div class="line"><span class="lineno">  141</span>        }</div>
-<div class="line"><span class="lineno">  142</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab52cc20a16b6d6913e64333439dc4f48" name="ab52cc20a16b6d6913e64333439dc4f48"></a>
@@ -233,17 +217,7 @@ Static Public Member Functions</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/da5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseGenericPlugin.html#a18416d989407c639624eb22c7b813370">com.fs.starfarer.api.impl.campaign.BaseGenericPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d1/d77/PKDefenderPluginImpl_8java_source.html#l00197">197</a> of file <a class="el" href="../../d1/d77/PKDefenderPluginImpl_8java_source.html">PKDefenderPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  197</span>                                                  {</div>
-<div class="line"><span class="lineno">  198</span>        <span class="keywordflow">if</span> (!(params instanceof SDMParams)) <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  199</span>        SDMParams p = (SDMParams) params;</div>
-<div class="line"><span class="lineno">  200</span>        </div>
-<div class="line"><span class="lineno">  201</span>        <span class="keywordflow">if</span> (p.entity != <span class="keyword">null</span> &amp;&amp; p.entity.getMemoryWithoutUpdate().contains(</div>
-<div class="line"><span class="lineno">  202</span>                MiscellaneousThemeGenerator.PK_CACHE_KEY)) {</div>
-<div class="line"><span class="lineno">  203</span>            <span class="keywordflow">return</span> 2;</div>
-<div class="line"><span class="lineno">  204</span>        }</div>
-<div class="line"><span class="lineno">  205</span>        <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno">  206</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a901b19441a82afa3e8fcc750fbd86dbc" name="a901b19441a82afa3e8fcc750fbd86dbc"></a>
@@ -285,10 +259,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/d77/PKDefenderPluginImpl_8java_source.html#l00035">35</a> of file <a class="el" href="../../d1/d77/PKDefenderPluginImpl_8java_source.html">PKDefenderPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   35</span>                                                                                             {</div>
-<div class="line"><span class="lineno">   36</span>        <span class="keywordflow">return</span> maxSize; </div>
-<div class="line"><span class="lineno">   37</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a6901a3acd0e63caa87b0bf2ef55140c5" name="a6901a3acd0e63caa87b0bf2ef55140c5"></a>
@@ -330,10 +301,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/d77/PKDefenderPluginImpl_8java_source.html#l00031">31</a> of file <a class="el" href="../../d1/d77/PKDefenderPluginImpl_8java_source.html">PKDefenderPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   31</span>                                                                                             {</div>
-<div class="line"><span class="lineno">   32</span>        <span class="keywordflow">return</span> minSize;</div>
-<div class="line"><span class="lineno">   33</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5b383daeff95bc542a54ea54d9b0df9c" name="a5b383daeff95bc542a54ea54d9b0df9c"></a>
@@ -375,10 +343,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/d77/PKDefenderPluginImpl_8java_source.html#l00039">39</a> of file <a class="el" href="../../d1/d77/PKDefenderPluginImpl_8java_source.html">PKDefenderPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   39</span>                                                                                                     {</div>
-<div class="line"><span class="lineno">   40</span>        <span class="keywordflow">return</span> probability;</div>
-<div class="line"><span class="lineno">   41</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab88d4750df664117046a95b4876b80f4" name="ab88d4750df664117046a95b4876b80f4"></a>
@@ -420,10 +385,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/d77/PKDefenderPluginImpl_8java_source.html#l00207">207</a> of file <a class="el" href="../../d1/d77/PKDefenderPluginImpl_8java_source.html">PKDefenderPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  207</span>                                                                                             {</div>
-<div class="line"><span class="lineno">  208</span>        <span class="keywordflow">return</span> quality;</div>
-<div class="line"><span class="lineno">  209</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a608c631aeb3f6affb4e227fd3e9bd589" name="a608c631aeb3f6affb4e227fd3e9bd589"></a>
@@ -465,12 +427,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/d77/PKDefenderPluginImpl_8java_source.html#l00026">26</a> of file <a class="el" href="../../d1/d77/PKDefenderPluginImpl_8java_source.html">PKDefenderPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   26</span>                                                                                               {</div>
-<div class="line"><span class="lineno">   27</span>        <span class="comment">// doesn&#39;t matter, just something non-zero so we end up with a fleet</span></div>
-<div class="line"><span class="lineno">   28</span>        <span class="comment">// the auto-generated fleet will get replaced by this anyway</span></div>
-<div class="line"><span class="lineno">   29</span>        <span class="keywordflow">return</span> strength;</div>
-<div class="line"><span class="lineno">   30</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aebf7621ae2b529c2abce70c9f621cb21" name="aebf7621ae2b529c2abce70c9f621cb21"></a>
@@ -508,58 +465,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/d77/PKDefenderPluginImpl_8java_source.html#l00144">144</a> of file <a class="el" href="../../d1/d77/PKDefenderPluginImpl_8java_source.html">PKDefenderPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  144</span>                                                                                                {</div>
-<div class="line"><span class="lineno">  145</span>        <span class="keywordflow">if</span> (member.getCaptain() == <span class="keyword">null</span> || !member.getCaptain().isAICore()) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  146</span>        </div>
-<div class="line"><span class="lineno">  147</span>        PersonAPI person = member.getCaptain();</div>
-<div class="line"><span class="lineno">  148</span>        person.getStats().setSkipRefresh(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  149</span>        String aiCoreId = person.getAICoreId(); </div>
-<div class="line"><span class="lineno">  150</span>        </div>
-<div class="line"><span class="lineno">  151</span>        <span class="keywordflow">if</span> (integrate) {</div>
-<div class="line"><span class="lineno">  152</span>            person.getStats().setLevel(person.getStats().getLevel() + 1);</div>
-<div class="line"><span class="lineno">  153</span>            person.getStats().setSkillLevel(Skills.BALLISTIC_MASTERY, 2);</div>
-<div class="line"><span class="lineno">  154</span>        }</div>
-<div class="line"><span class="lineno">  155</span>        </div>
-<div class="line"><span class="lineno">  156</span>        <span class="keywordtype">boolean</span> alpha = Commodities.ALPHA_CORE.equals(aiCoreId);</div>
-<div class="line"><span class="lineno">  157</span>        <span class="keywordtype">boolean</span> beta = Commodities.BETA_CORE.equals(aiCoreId);</div>
-<div class="line"><span class="lineno">  158</span>        <span class="keywordtype">boolean</span> gamma = Commodities.GAMMA_CORE.equals(aiCoreId);</div>
-<div class="line"><span class="lineno">  159</span>        </div>
-<div class="line"><span class="lineno">  160</span>        <span class="keywordflow">if</span> (member.isCapital() || member.isCruiser()) {</div>
-<div class="line"><span class="lineno">  161</span>            person.getStats().setSkillLevel(Skills.COMBAT_ENDURANCE, 0);</div>
-<div class="line"><span class="lineno">  162</span>            person.getStats().setSkillLevel(Skills.MISSILE_SPECIALIZATION, 2);</div>
-<div class="line"><span class="lineno">  163</span>        }</div>
-<div class="line"><span class="lineno">  164</span>        </div>
-<div class="line"><span class="lineno">  165</span>        <span class="comment">// actually, the base skills are pretty much fine, so just add ballistic mastery if integrating, and</span></div>
-<div class="line"><span class="lineno">  166</span>        <span class="comment">// that&#39;s all</span></div>
-<div class="line"><span class="lineno">  167</span>        </div>
-<div class="line"><span class="lineno">  168</span>        <span class="comment">// Base skills, for reference (pulled from AICoreOfficerPluginImpl)</span></div>
-<div class="line"><span class="lineno">  169</span>        <span class="comment">// ALPHA CORE</span></div>
-<div class="line"><span class="lineno">  170</span><span class="comment">//      person.getStats().setLevel(7);</span></div>
-<div class="line"><span class="lineno">  171</span><span class="comment">//      person.getStats().setSkillLevel(Skills.HELMSMANSHIP, 2);</span></div>
-<div class="line"><span class="lineno">  172</span><span class="comment">//      person.getStats().setSkillLevel(Skills.TARGET_ANALYSIS, 2);</span></div>
-<div class="line"><span class="lineno">  173</span><span class="comment">//      person.getStats().setSkillLevel(Skills.IMPACT_MITIGATION, 2);</span></div>
-<div class="line"><span class="lineno">  174</span><span class="comment">//      person.getStats().setSkillLevel(Skills.FIELD_MODULATION, 2);</span></div>
-<div class="line"><span class="lineno">  175</span><span class="comment">//      person.getStats().setSkillLevel(Skills.GUNNERY_IMPLANTS, 2);</span></div>
-<div class="line"><span class="lineno">  176</span><span class="comment">//      person.getStats().setSkillLevel(Skills.COMBAT_ENDURANCE, 2);</span></div>
-<div class="line"><span class="lineno">  177</span><span class="comment">//      person.getStats().setSkillLevel(Skills.DAMAGE_CONTROL, 2);</span></div>
-<div class="line"><span class="lineno">  178</span>        </div>
-<div class="line"><span class="lineno">  179</span>        <span class="comment">// BETA CORE</span></div>
-<div class="line"><span class="lineno">  180</span><span class="comment">//      person.getStats().setLevel(5);</span></div>
-<div class="line"><span class="lineno">  181</span><span class="comment">//      person.getStats().setSkillLevel(Skills.HELMSMANSHIP, 2);</span></div>
-<div class="line"><span class="lineno">  182</span><span class="comment">//      person.getStats().setSkillLevel(Skills.TARGET_ANALYSIS, 2);</span></div>
-<div class="line"><span class="lineno">  183</span><span class="comment">//      person.getStats().setSkillLevel(Skills.IMPACT_MITIGATION, 2);</span></div>
-<div class="line"><span class="lineno">  184</span><span class="comment">//      person.getStats().setSkillLevel(Skills.GUNNERY_IMPLANTS, 2);</span></div>
-<div class="line"><span class="lineno">  185</span><span class="comment">//      person.getStats().setSkillLevel(Skills.COMBAT_ENDURANCE, 2);</span></div>
-<div class="line"><span class="lineno">  186</span> </div>
-<div class="line"><span class="lineno">  187</span>        <span class="comment">// GAMMA CORE</span></div>
-<div class="line"><span class="lineno">  188</span><span class="comment">//      person.getStats().setLevel(3);</span></div>
-<div class="line"><span class="lineno">  189</span><span class="comment">//      person.getStats().setSkillLevel(Skills.HELMSMANSHIP, 2);</span></div>
-<div class="line"><span class="lineno">  190</span><span class="comment">//      person.getStats().setSkillLevel(Skills.IMPACT_MITIGATION, 2);</span></div>
-<div class="line"><span class="lineno">  191</span><span class="comment">//      person.getStats().setSkillLevel(Skills.COMBAT_ENDURANCE, 2);</span></div>
-<div class="line"><span class="lineno">  192</span>        </div>
-<div class="line"><span class="lineno">  193</span>        person.getStats().setSkipRefresh(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  194</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af651211414a67ffe3bc917a739d7d2de" name="af651211414a67ffe3bc917a739d7d2de"></a>
@@ -601,87 +507,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/d77/PKDefenderPluginImpl_8java_source.html#l00047">47</a> of file <a class="el" href="../../d1/d77/PKDefenderPluginImpl_8java_source.html">PKDefenderPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   47</span>                                                                                                      {</div>
-<div class="line"><span class="lineno">   48</span>        </div>
-<div class="line"><span class="lineno">   49</span>        Misc.addDefeatTrigger(fleet, <span class="stringliteral">&quot;PK14thDefeated&quot;</span>);</div>
-<div class="line"><span class="lineno">   50</span>        </div>
-<div class="line"><span class="lineno">   51</span>        fleet.setNoFactionInName(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   52</span>        fleet.setName(<span class="stringliteral">&quot;Remnants of Task Force Safeguard&quot;</span>);</div>
-<div class="line"><span class="lineno">   53</span>        </div>
-<div class="line"><span class="lineno">   54</span>        AICoreOfficerPlugin plugin = Misc.getAICoreOfficerPlugin(Commodities.ALPHA_CORE);</div>
-<div class="line"><span class="lineno">   55</span>        </div>
-<div class="line"><span class="lineno">   56</span>        fleet.getFleetData().clear();</div>
-<div class="line"><span class="lineno">   57</span>        fleet.getFleetData().setShipNameRandom(random);</div>
-<div class="line"><span class="lineno">   58</span>        </div>
-<div class="line"><span class="lineno">   59</span>        </div>
-<div class="line"><span class="lineno">   60</span>        FleetMemberAPI member = fleet.getFleetData().addFleetMember(<span class="stringliteral">&quot;legion_xiv_Automated&quot;</span>);</div>
-<div class="line"><span class="lineno">   61</span>        <span class="comment">//member.setShipName(&quot;HSS Sentinel&quot;);</span></div>
-<div class="line"><span class="lineno">   62</span>        member.setId(<span class="stringliteral">&quot;xivtf_&quot;</span> + random.nextLong());</div>
-<div class="line"><span class="lineno">   63</span>        PersonAPI person = plugin.createPerson(Commodities.ALPHA_CORE, fleet.getFaction().getId(), random);</div>
-<div class="line"><span class="lineno">   64</span>        person.getStats().setSkipRefresh(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   65</span>        person.getStats().setSkillLevel(Skills.CARRIER_GROUP, 1);</div>
-<div class="line"><span class="lineno">   66</span>        person.getStats().setSkillLevel(Skills.FIGHTER_UPLINK, 1);</div>
-<div class="line"><span class="lineno">   67</span>        person.getStats().setSkipRefresh(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   68</span>        </div>
-<div class="line"><span class="lineno">   69</span>        member.setCaptain(person);</div>
-<div class="line"><span class="lineno">   70</span>        ShipVariantAPI v = member.getVariant().clone();</div>
-<div class="line"><span class="lineno">   71</span>        v.setSource(VariantSource.REFIT);</div>
-<div class="line"><span class="lineno">   72</span>        v.addTag(Tags.TAG_NO_AUTOFIT);</div>
-<div class="line"><span class="lineno">   73</span>        v.addTag(Tags.TAG_AUTOMATED_NO_PENALTY);</div>
-<div class="line"><span class="lineno">   74</span>        member.setVariant(v, <span class="keyword">false</span>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   75</span>        fleet.setCommander(person);</div>
-<div class="line"><span class="lineno">   76</span>        </div>
-<div class="line"><span class="lineno">   77</span>        <a class="code hl_function" href="../../d0/dfe/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1PKDefenderPluginImpl.html#a999aea0f7c74488c916364f5ebcec31b">addAutomated</a>(fleet, <span class="stringliteral">&quot;onslaught_xiv_Elite&quot;</span>, <span class="keyword">null</span>, Commodities.ALPHA_CORE, random);</div>
-<div class="line"><span class="lineno">   78</span>        </div>
-<div class="line"><span class="lineno">   79</span>        <a class="code hl_function" href="../../d0/dfe/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1PKDefenderPluginImpl.html#a999aea0f7c74488c916364f5ebcec31b">addAutomated</a>(fleet, <span class="stringliteral">&quot;dominator_XIV_Elite&quot;</span>, <span class="keyword">null</span>, Commodities.BETA_CORE, random);</div>
-<div class="line"><span class="lineno">   80</span>        <a class="code hl_function" href="../../d0/dfe/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1PKDefenderPluginImpl.html#a999aea0f7c74488c916364f5ebcec31b">addAutomated</a>(fleet, <span class="stringliteral">&quot;eagle_xiv_Elite&quot;</span>, <span class="keyword">null</span>, Commodities.BETA_CORE, random);</div>
-<div class="line"><span class="lineno">   81</span>        <a class="code hl_function" href="../../d0/dfe/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1PKDefenderPluginImpl.html#a999aea0f7c74488c916364f5ebcec31b">addAutomated</a>(fleet, <span class="stringliteral">&quot;falcon_xiv_Elite&quot;</span>, <span class="keyword">null</span>, Commodities.BETA_CORE, random);</div>
-<div class="line"><span class="lineno">   82</span>        <a class="code hl_function" href="../../d0/dfe/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1PKDefenderPluginImpl.html#a999aea0f7c74488c916364f5ebcec31b">addAutomated</a>(fleet, <span class="stringliteral">&quot;falcon_xiv_Escort&quot;</span>, <span class="keyword">null</span>, Commodities.BETA_CORE, random);</div>
-<div class="line"><span class="lineno">   83</span>        </div>
-<div class="line"><span class="lineno">   84</span>        <a class="code hl_function" href="../../d0/dfe/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1PKDefenderPluginImpl.html#a999aea0f7c74488c916364f5ebcec31b">addAutomated</a>(fleet, <span class="stringliteral">&quot;enforcer_XIV_Elite&quot;</span>, <span class="keyword">null</span>, Commodities.GAMMA_CORE, random);</div>
-<div class="line"><span class="lineno">   85</span>        <a class="code hl_function" href="../../d0/dfe/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1PKDefenderPluginImpl.html#a999aea0f7c74488c916364f5ebcec31b">addAutomated</a>(fleet, <span class="stringliteral">&quot;enforcer_XIV_Elite&quot;</span>, <span class="keyword">null</span>, Commodities.GAMMA_CORE, random);</div>
-<div class="line"><span class="lineno">   86</span>        <a class="code hl_function" href="../../d0/dfe/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1PKDefenderPluginImpl.html#a999aea0f7c74488c916364f5ebcec31b">addAutomated</a>(fleet, <span class="stringliteral">&quot;enforcer_XIV_Elite&quot;</span>, <span class="keyword">null</span>, Commodities.GAMMA_CORE, random);</div>
-<div class="line"><span class="lineno">   87</span> </div>
-<div class="line"><span class="lineno">   88</span>        </div>
-<div class="line"><span class="lineno">   89</span>        <span class="keywordflow">for</span> (FleetMemberAPI curr : fleet.getFleetData().getMembersListCopy()) {</div>
-<div class="line"><span class="lineno">   90</span>            <a class="code hl_function" href="../../d0/dfe/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1PKDefenderPluginImpl.html#aebf7621ae2b529c2abce70c9f621cb21">makeAICoreSkillsGoodForLowTech</a>(curr, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   91</span>            curr.getRepairTracker().setCR(curr.getRepairTracker().getMaxCR());</div>
-<div class="line"><span class="lineno">   92</span>        }</div>
-<div class="line"><span class="lineno">   93</span>        </div>
-<div class="line"><span class="lineno">   94</span>        <span class="keywordflow">for</span> (FleetMemberAPI curr : fleet.getFleetData().getMembersListCopy()) {</div>
-<div class="line"><span class="lineno">   95</span>            v = curr.getVariant().clone();</div>
-<div class="line"><span class="lineno">   96</span>            v.setSource(VariantSource.REFIT);</div>
-<div class="line"><span class="lineno">   97</span>            curr.setVariant(v, <span class="keyword">false</span>, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   98</span>        }</div>
-<div class="line"><span class="lineno">   99</span>        </div>
-<div class="line"><span class="lineno">  100</span>        <span class="keywordflow">if</span> (fleet.getInflater() instanceof DefaultFleetInflater) {</div>
-<div class="line"><span class="lineno">  101</span>            DefaultFleetInflater dfi = (DefaultFleetInflater) fleet.getInflater();</div>
-<div class="line"><span class="lineno">  102</span>            DefaultFleetInflaterParams dfip = (DefaultFleetInflaterParams)dfi.getParams();</div>
-<div class="line"><span class="lineno">  103</span>            dfip.allWeapons = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  104</span>            dfip.averageSMods = 3;</div>
-<div class="line"><span class="lineno">  105</span>            dfip.quality = 0.4f;</div>
-<div class="line"><span class="lineno">  106</span>            </div>
-<div class="line"><span class="lineno">  107</span>            <span class="comment">// what a HACK</span></div>
-<div class="line"><span class="lineno">  108</span>            DModManager.assumeAllShipsAreAutomated = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  109</span>            fleet.inflateIfNeeded();</div>
-<div class="line"><span class="lineno">  110</span>            fleet.setInflater(<span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  111</span>            DModManager.assumeAllShipsAreAutomated = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  112</span>        }</div>
-<div class="line"><span class="lineno">  113</span>        </div>
-<div class="line"><span class="lineno">  114</span>        <span class="keywordflow">for</span> (FleetMemberAPI curr : fleet.getFleetData().getMembersListCopy()) {</div>
-<div class="line"><span class="lineno">  115</span>            curr.getVariant().addPermaMod(HullMods.AUTOMATED);</div>
-<div class="line"><span class="lineno">  116</span>            curr.getVariant().setVariantDisplayName(<span class="stringliteral">&quot;Automated&quot;</span>);</div>
-<div class="line"><span class="lineno">  117</span>            curr.getVariant().addTag(Tags.TAG_AUTOMATED_NO_PENALTY);</div>
-<div class="line"><span class="lineno">  118</span>            curr.getVariant().addTag(Tags.VARIANT_UNRESTORABLE);</div>
-<div class="line"><span class="lineno">  119</span>            curr.getVariant().addTag(Tags.TAG_RETAIN_SMODS_ON_RECOVERY);</div>
-<div class="line"><span class="lineno">  120</span>            <span class="keywordflow">if</span> (curr.isCapital()) {</div>
-<div class="line"><span class="lineno">  121</span>                curr.getVariant().addTag(Tags.VARIANT_ALWAYS_RECOVERABLE);</div>
-<div class="line"><span class="lineno">  122</span>            }</div>
-<div class="line"><span class="lineno">  123</span>        }</div>
-<div class="line"><span class="lineno">  124</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1PKDefenderPluginImpl_html_a999aea0f7c74488c916364f5ebcec31b"><div class="ttname"><a href="../../d0/dfe/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1PKDefenderPluginImpl.html#a999aea0f7c74488c916364f5ebcec31b">com.fs.starfarer.api.impl.campaign.procgen.themes.PKDefenderPluginImpl.addAutomated</a></div><div class="ttdeci">static void addAutomated(CampaignFleetAPI fleet, String variantId, String shipName, String aiCore, Random random)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d77/PKDefenderPluginImpl_8java_source.html#l00126">PKDefenderPluginImpl.java:126</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1PKDefenderPluginImpl_html_aebf7621ae2b529c2abce70c9f621cb21"><div class="ttname"><a href="../../d0/dfe/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1PKDefenderPluginImpl.html#aebf7621ae2b529c2abce70c9f621cb21">com.fs.starfarer.api.impl.campaign.procgen.themes.PKDefenderPluginImpl.makeAICoreSkillsGoodForLowTech</a></div><div class="ttdeci">static void makeAICoreSkillsGoodForLowTech(FleetMemberAPI member, boolean integrate)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d77/PKDefenderPluginImpl_8java_source.html#l00144">PKDefenderPluginImpl.java:144</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a15957bd6499b979c0831a922b83dfc91" name="a15957bd6499b979c0831a922b83dfc91"></a>
@@ -717,10 +543,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/d77/PKDefenderPluginImpl_8java_source.html#l00043">43</a> of file <a class="el" href="../../d1/d77/PKDefenderPluginImpl_8java_source.html">PKDefenderPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   43</span>                                                                                              {</div>
-<div class="line"><span class="lineno">   44</span> </div>
-<div class="line"><span class="lineno">   45</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

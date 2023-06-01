@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -195,13 +196,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d0e/GateCMD_8java_source.html#l00081">81</a> of file <a class="el" href="../../d4/d0e/GateCMD_8java_source.html">GateCMD.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   81</span>                                                                    {</div>
-<div class="line"><span class="lineno">   82</span>        <span class="keywordtype">float</span> dist = Misc.getDistanceToPlayerLY(targetGate);</div>
-<div class="line"><span class="lineno">   83</span>        <span class="keywordtype">float</span> fuelPerLY = Global.getSector().getPlayerFleet().getLogistics().getFuelCostPerLightYear();</div>
-<div class="line"><span class="lineno">   84</span>        </div>
-<div class="line"><span class="lineno">   85</span>        <span class="keywordflow">return</span> (<span class="keywordtype">int</span>) Math.ceil(dist * fuelPerLY * Misc.GATE_FUEL_COST_MULT);</div>
-<div class="line"><span class="lineno">   86</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5b3fc50c54bbccc41c76005fcec223e4" name="a5b3fc50c54bbccc41c76005fcec223e4"></a>
@@ -245,52 +240,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d0/d5c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1CommandPlugin.html#a72a44c5127e60136b87d3b37613fd0e0">com.fs.starfarer.api.campaign.rules.CommandPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d0e/GateCMD_8java_source.html#l00043">43</a> of file <a class="el" href="../../d4/d0e/GateCMD_8java_source.html">GateCMD.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   43</span>                                                                                                                             {</div>
-<div class="line"><span class="lineno">   44</span>        </div>
-<div class="line"><span class="lineno">   45</span>        this.dialog = <a class="code hl_variable" href="../../d0/dfe/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1GateCMD.html#a6d80976afdb32a81d8c2effac7b53c6f">dialog</a>;</div>
-<div class="line"><span class="lineno">   46</span>        this.memoryMap = <a class="code hl_variable" href="../../d0/dfe/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1GateCMD.html#abbc335bb4dd80d4b8f608de12fe5e738">memoryMap</a>;</div>
-<div class="line"><span class="lineno">   47</span>        </div>
-<div class="line"><span class="lineno">   48</span>        String command = params.get(0).getString(<a class="code hl_variable" href="../../d0/dfe/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1GateCMD.html#abbc335bb4dd80d4b8f608de12fe5e738">memoryMap</a>);</div>
-<div class="line"><span class="lineno">   49</span>        <span class="keywordflow">if</span> (command == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   50</span>        </div>
-<div class="line"><span class="lineno">   51</span>        <a class="code hl_variable" href="../../d0/dfe/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1GateCMD.html#afa2f8c121daee9a284fff275c4b843d0">memory</a> = <a class="code hl_function" href="../../d7/dd6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1BaseCommandPlugin.html#af355b9be7db57d00eaf6a6f0637f2edb">getEntityMemory</a>(<a class="code hl_variable" href="../../d0/dfe/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1GateCMD.html#abbc335bb4dd80d4b8f608de12fe5e738">memoryMap</a>);</div>
-<div class="line"><span class="lineno">   52</span>        </div>
-<div class="line"><span class="lineno">   53</span>        <a class="code hl_variable" href="../../d0/dfe/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1GateCMD.html#a7cf21f692a51150abef8149a75912d6d">entity</a> = <a class="code hl_variable" href="../../d0/dfe/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1GateCMD.html#a6d80976afdb32a81d8c2effac7b53c6f">dialog</a>.<a class="code hl_function" href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#aab8d898bf278af177dcaa802e64135be">getInteractionTarget</a>();</div>
-<div class="line"><span class="lineno">   54</span>        <a class="code hl_variable" href="../../d0/dfe/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1GateCMD.html#a7b14dfb2ae570c2c233f7f70670ac40b">text</a> = <a class="code hl_variable" href="../../d0/dfe/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1GateCMD.html#a6d80976afdb32a81d8c2effac7b53c6f">dialog</a>.<a class="code hl_function" href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#a52d00add8a9c52795f652f493ac37244">getTextPanel</a>();</div>
-<div class="line"><span class="lineno">   55</span>        <a class="code hl_variable" href="../../d0/dfe/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1GateCMD.html#a68591075abca10ac10e90cf3f9a48608">options</a> = <a class="code hl_variable" href="../../d0/dfe/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1GateCMD.html#a6d80976afdb32a81d8c2effac7b53c6f">dialog</a>.<a class="code hl_function" href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#af4f0b5fdb66110b1d0565b433abaf65c">getOptionPanel</a>();</div>
-<div class="line"><span class="lineno">   56</span>        </div>
-<div class="line"><span class="lineno">   57</span>        <a class="code hl_variable" href="../../d0/dfe/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1GateCMD.html#a5140e190e7fd90bda35a3e74b9399f5c">playerFleet</a> = Global.getSector().getPlayerFleet();</div>
-<div class="line"><span class="lineno">   58</span>        <a class="code hl_variable" href="../../d0/dfe/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1GateCMD.html#a63bf6a12d23b425a6101b2b2fdde9e7f">playerCargo</a> = <a class="code hl_variable" href="../../d0/dfe/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1GateCMD.html#a5140e190e7fd90bda35a3e74b9399f5c">playerFleet</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#ab219cada372a13654e8e912aba977b05">getCargo</a>();</div>
-<div class="line"><span class="lineno">   59</span>        </div>
-<div class="line"><span class="lineno">   60</span>        <span class="keywordflow">if</span> (command.equals(<span class="stringliteral">&quot;selectDestination&quot;</span>)) {</div>
-<div class="line"><span class="lineno">   61</span>            <a class="code hl_function" href="../../d0/dfe/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1GateCMD.html#a43d5ff009837bdb262a5c327df82fd2b">selectDestination</a>();</div>
-<div class="line"><span class="lineno">   62</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (command.equals(<span class="stringliteral">&quot;notifyScanned&quot;</span>)) {</div>
-<div class="line"><span class="lineno">   63</span>            <a class="code hl_function" href="../../d0/dfe/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1GateCMD.html#a1e57f49fab1c3df4a6adac1de3da9876">notifyScanned</a>(<a class="code hl_variable" href="../../d0/dfe/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1GateCMD.html#a7cf21f692a51150abef8149a75912d6d">entity</a>);</div>
-<div class="line"><span class="lineno">   64</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (command.equals(<span class="stringliteral">&quot;explode&quot;</span>)) {</div>
-<div class="line"><span class="lineno">   65</span>            <a class="code hl_function" href="../../d0/dfe/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1GateCMD.html#a657f7cc9c40355a8c78ee5875b73d0a1">explode</a>(<a class="code hl_variable" href="../../d0/dfe/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1GateCMD.html#a7cf21f692a51150abef8149a75912d6d">entity</a>);</div>
-<div class="line"><span class="lineno">   66</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (command.equals(<span class="stringliteral">&quot;isPopulated&quot;</span>)) {</div>
-<div class="line"><span class="lineno">   67</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="../../d0/dfe/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1GateCMD.html#aa010d22888e5fdcd4b6fcd5fbf3992a7">isPopulated</a>(<a class="code hl_variable" href="../../d0/dfe/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1GateCMD.html#a7cf21f692a51150abef8149a75912d6d">entity</a>);</div>
-<div class="line"><span class="lineno">   68</span>        }</div>
-<div class="line"><span class="lineno">   69</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   70</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1BaseCommandPlugin_html_af355b9be7db57d00eaf6a6f0637f2edb"><div class="ttname"><a href="../../d7/dd6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1BaseCommandPlugin.html#af355b9be7db57d00eaf6a6f0637f2edb">com.fs.starfarer.api.impl.campaign.rulecmd.BaseCommandPlugin.getEntityMemory</a></div><div class="ttdeci">static MemoryAPI getEntityMemory(Map&lt; String, MemoryAPI &gt; memoryMap)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dbe/BaseCommandPlugin_8java_source.html#l00020">BaseCommandPlugin.java:20</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1GateCMD_html_a1e57f49fab1c3df4a6adac1de3da9876"><div class="ttname"><a href="../../d0/dfe/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1GateCMD.html#a1e57f49fab1c3df4a6adac1de3da9876">com.fs.starfarer.api.impl.campaign.rulecmd.missions.GateCMD.notifyScanned</a></div><div class="ttdeci">static void notifyScanned(SectorEntityToken gate)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d0e/GateCMD_8java_source.html#l00167">GateCMD.java:167</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1GateCMD_html_a43d5ff009837bdb262a5c327df82fd2b"><div class="ttname"><a href="../../d0/dfe/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1GateCMD.html#a43d5ff009837bdb262a5c327df82fd2b">com.fs.starfarer.api.impl.campaign.rulecmd.missions.GateCMD.selectDestination</a></div><div class="ttdeci">void selectDestination()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d0e/GateCMD_8java_source.html#l00088">GateCMD.java:88</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1GateCMD_html_a5140e190e7fd90bda35a3e74b9399f5c"><div class="ttname"><a href="../../d0/dfe/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1GateCMD.html#a5140e190e7fd90bda35a3e74b9399f5c">com.fs.starfarer.api.impl.campaign.rulecmd.missions.GateCMD.playerFleet</a></div><div class="ttdeci">CampaignFleetAPI playerFleet</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d0e/GateCMD_8java_source.html#l00034">GateCMD.java:34</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1GateCMD_html_a63bf6a12d23b425a6101b2b2fdde9e7f"><div class="ttname"><a href="../../d0/dfe/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1GateCMD.html#a63bf6a12d23b425a6101b2b2fdde9e7f">com.fs.starfarer.api.impl.campaign.rulecmd.missions.GateCMD.playerCargo</a></div><div class="ttdeci">CargoAPI playerCargo</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d0e/GateCMD_8java_source.html#l00038">GateCMD.java:38</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1GateCMD_html_a657f7cc9c40355a8c78ee5875b73d0a1"><div class="ttname"><a href="../../d0/dfe/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1GateCMD.html#a657f7cc9c40355a8c78ee5875b73d0a1">com.fs.starfarer.api.impl.campaign.rulecmd.missions.GateCMD.explode</a></div><div class="ttdeci">static void explode(SectorEntityToken gate)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d0e/GateCMD_8java_source.html#l00175">GateCMD.java:175</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1GateCMD_html_a68591075abca10ac10e90cf3f9a48608"><div class="ttname"><a href="../../d0/dfe/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1GateCMD.html#a68591075abca10ac10e90cf3f9a48608">com.fs.starfarer.api.impl.campaign.rulecmd.missions.GateCMD.options</a></div><div class="ttdeci">OptionPanelAPI options</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d0e/GateCMD_8java_source.html#l00037">GateCMD.java:37</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1GateCMD_html_a6d80976afdb32a81d8c2effac7b53c6f"><div class="ttname"><a href="../../d0/dfe/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1GateCMD.html#a6d80976afdb32a81d8c2effac7b53c6f">com.fs.starfarer.api.impl.campaign.rulecmd.missions.GateCMD.dialog</a></div><div class="ttdeci">InteractionDialogAPI dialog</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d0e/GateCMD_8java_source.html#l00040">GateCMD.java:40</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1GateCMD_html_a7b14dfb2ae570c2c233f7f70670ac40b"><div class="ttname"><a href="../../d0/dfe/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1GateCMD.html#a7b14dfb2ae570c2c233f7f70670ac40b">com.fs.starfarer.api.impl.campaign.rulecmd.missions.GateCMD.text</a></div><div class="ttdeci">TextPanelAPI text</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d0e/GateCMD_8java_source.html#l00036">GateCMD.java:36</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1GateCMD_html_a7cf21f692a51150abef8149a75912d6d"><div class="ttname"><a href="../../d0/dfe/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1GateCMD.html#a7cf21f692a51150abef8149a75912d6d">com.fs.starfarer.api.impl.campaign.rulecmd.missions.GateCMD.entity</a></div><div class="ttdeci">SectorEntityToken entity</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d0e/GateCMD_8java_source.html#l00035">GateCMD.java:35</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1GateCMD_html_aa010d22888e5fdcd4b6fcd5fbf3992a7"><div class="ttname"><a href="../../d0/dfe/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1GateCMD.html#aa010d22888e5fdcd4b6fcd5fbf3992a7">com.fs.starfarer.api.impl.campaign.rulecmd.missions.GateCMD.isPopulated</a></div><div class="ttdeci">static boolean isPopulated(SectorEntityToken targetGate)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d0e/GateCMD_8java_source.html#l00072">GateCMD.java:72</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1GateCMD_html_abbc335bb4dd80d4b8f608de12fe5e738"><div class="ttname"><a href="../../d0/dfe/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1GateCMD.html#abbc335bb4dd80d4b8f608de12fe5e738">com.fs.starfarer.api.impl.campaign.rulecmd.missions.GateCMD.memoryMap</a></div><div class="ttdeci">Map&lt; String, MemoryAPI &gt; memoryMap</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d0e/GateCMD_8java_source.html#l00041">GateCMD.java:41</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1GateCMD_html_afa2f8c121daee9a284fff275c4b843d0"><div class="ttname"><a href="../../d0/dfe/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1GateCMD.html#afa2f8c121daee9a284fff275c4b843d0">com.fs.starfarer.api.impl.campaign.rulecmd.missions.GateCMD.memory</a></div><div class="ttdeci">MemoryAPI memory</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d0e/GateCMD_8java_source.html#l00039">GateCMD.java:39</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI_html_a52d00add8a9c52795f652f493ac37244"><div class="ttname"><a href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#a52d00add8a9c52795f652f493ac37244">com.fs.starfarer.api.campaign.InteractionDialogAPI.getTextPanel</a></div><div class="ttdeci">TextPanelAPI getTextPanel()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI_html_aab8d898bf278af177dcaa802e64135be"><div class="ttname"><a href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#aab8d898bf278af177dcaa802e64135be">com.fs.starfarer.api.campaign.InteractionDialogAPI.getInteractionTarget</a></div><div class="ttdeci">SectorEntityToken getInteractionTarget()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI_html_af4f0b5fdb66110b1d0565b433abaf65c"><div class="ttname"><a href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#af4f0b5fdb66110b1d0565b433abaf65c">com.fs.starfarer.api.campaign.InteractionDialogAPI.getOptionPanel</a></div><div class="ttdeci">OptionPanelAPI getOptionPanel()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_ab219cada372a13654e8e912aba977b05"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#ab219cada372a13654e8e912aba977b05">com.fs.starfarer.api.campaign.SectorEntityToken.getCargo</a></div><div class="ttdeci">CargoAPI getCargo()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a657f7cc9c40355a8c78ee5875b73d0a1" name="a657f7cc9c40355a8c78ee5875b73d0a1"></a>
@@ -318,10 +268,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d0e/GateCMD_8java_source.html#l00175">175</a> of file <a class="el" href="../../d4/d0e/GateCMD_8java_source.html">GateCMD.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  175</span>                                                       {</div>
-<div class="line"><span class="lineno">  176</span>        gate.getContainingLocation().addScript(<span class="keyword">new</span> GateExplosionScript(gate));</div>
-<div class="line"><span class="lineno">  177</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa010d22888e5fdcd4b6fcd5fbf3992a7" name="aa010d22888e5fdcd4b6fcd5fbf3992a7"></a>
@@ -349,15 +296,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d0e/GateCMD_8java_source.html#l00072">72</a> of file <a class="el" href="../../d4/d0e/GateCMD_8java_source.html">GateCMD.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   72</span>                                                                    {</div>
-<div class="line"><span class="lineno">   73</span>        <span class="keywordflow">if</span> (targetGate.getContainingLocation() == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   74</span>        </div>
-<div class="line"><span class="lineno">   75</span>        LocationAPI loc = targetGate.getContainingLocation();</div>
-<div class="line"><span class="lineno">   76</span>        <span class="keywordflow">if</span> (loc.hasTag(Tags.THEME_CORE_POPULATED)) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   77</span>        </div>
-<div class="line"><span class="lineno">   78</span>        <span class="keywordflow">return</span> !Misc.getMarketsInLocation(loc).isEmpty();</div>
-<div class="line"><span class="lineno">   79</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a1e57f49fab1c3df4a6adac1de3da9876" name="a1e57f49fab1c3df4a6adac1de3da9876"></a>
@@ -385,11 +324,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d0e/GateCMD_8java_source.html#l00167">167</a> of file <a class="el" href="../../d4/d0e/GateCMD_8java_source.html">GateCMD.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  167</span>                                                             {</div>
-<div class="line"><span class="lineno">  168</span>        GateEntityPlugin.getGateData().scanned.add(gate);</div>
-<div class="line"><span class="lineno">  169</span>        gate.getCustomPlugin().advance(0f); <span class="comment">// makes gate activate if already did quest</span></div>
-<div class="line"><span class="lineno">  170</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a43d5ff009837bdb262a5c327df82fd2b" name="a43d5ff009837bdb262a5c327df82fd2b"></a>
@@ -416,92 +351,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d0e/GateCMD_8java_source.html#l00088">88</a> of file <a class="el" href="../../d4/d0e/GateCMD_8java_source.html">GateCMD.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   88</span>                                       {</div>
-<div class="line"><span class="lineno">   89</span>        <span class="keyword">final</span> ArrayList&lt;SectorEntityToken&gt; gates = </div>
-<div class="line"><span class="lineno">   90</span>                <span class="keyword">new</span> ArrayList&lt;SectorEntityToken&gt;(GateEntityPlugin.getGateData().scanned);</div>
-<div class="line"><span class="lineno">   91</span>        gates.remove(<a class="code hl_variable" href="../../d0/dfe/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1GateCMD.html#a7cf21f692a51150abef8149a75912d6d">entity</a>);</div>
-<div class="line"><span class="lineno">   92</span>        <a class="code hl_variable" href="../../d0/dfe/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1GateCMD.html#a6d80976afdb32a81d8c2effac7b53c6f">dialog</a>.<a class="code hl_function" href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#afd82f07dfd298a82a9c4a7b07751d2bd">showCampaignEntityPicker</a>(<span class="stringliteral">&quot;Select destination&quot;</span>, <span class="stringliteral">&quot;Destination:&quot;</span>, <span class="stringliteral">&quot;Initiate transit&quot;</span>, </div>
-<div class="line"><span class="lineno">   93</span>                Global.getSector().getPlayerFaction(), gates, </div>
-<div class="line"><span class="lineno">   94</span>            <span class="keyword">new</span> BaseCampaignEntityPickerListener() {</div>
-<div class="line"><span class="lineno">   95</span>                <span class="keyword">public</span> <span class="keywordtype">void</span> pickedEntity(SectorEntityToken <a class="code hl_variable" href="../../d0/dfe/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1GateCMD.html#a7cf21f692a51150abef8149a75912d6d">entity</a>) {</div>
-<div class="line"><span class="lineno">   96</span>                    <span class="keywordtype">int</span> cost = <a class="code hl_function" href="../../d0/dfe/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1GateCMD.html#aae8d1d3e883204e74787d3ae505cce34">computeFuelCost</a>(<a class="code hl_variable" href="../../d0/dfe/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1GateCMD.html#a7cf21f692a51150abef8149a75912d6d">entity</a>);</div>
-<div class="line"><span class="lineno">   97</span>                    Global.getSector().getPlayerFleet().getCargo().removeFuel(cost);</div>
-<div class="line"><span class="lineno">   98</span>                    </div>
-<div class="line"><span class="lineno">   99</span>                    <a class="code hl_variable" href="../../d0/dfe/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1GateCMD.html#a6d80976afdb32a81d8c2effac7b53c6f">dialog</a>.<a class="code hl_function" href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#ae9c683962601d07e56898cab5a223d2f">dismiss</a>();</div>
-<div class="line"><span class="lineno">  100</span>                    Global.getSector().setPaused(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  101</span>                    JumpDestination dest = <span class="keyword">new</span> JumpDestination(<a class="code hl_variable" href="../../d0/dfe/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1GateCMD.html#a7cf21f692a51150abef8149a75912d6d">entity</a>, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  102</span>                    Global.getSector().doHyperspaceTransition(<a class="code hl_variable" href="../../d0/dfe/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1GateCMD.html#a5140e190e7fd90bda35a3e74b9399f5c">playerFleet</a>, GateCMD.this.entity, dest, 2f);</div>
-<div class="line"><span class="lineno">  103</span>                    </div>
-<div class="line"><span class="lineno">  104</span>                    <span class="keywordtype">float</span> distLY = Misc.getDistanceLY(<a class="code hl_variable" href="../../d0/dfe/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1GateCMD.html#a7cf21f692a51150abef8149a75912d6d">entity</a>, GateCMD.this.entity);</div>
-<div class="line"><span class="lineno">  105</span>                    <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d0/dfe/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1GateCMD.html#a7cf21f692a51150abef8149a75912d6d">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a0bd8783c7dc6da12c6befaf2e4bcbe3d">getCustomPlugin</a>() instanceof GateEntityPlugin) {</div>
-<div class="line"><span class="lineno">  106</span>                        GateEntityPlugin plugin = (GateEntityPlugin) <a class="code hl_variable" href="../../d0/dfe/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1GateCMD.html#a7cf21f692a51150abef8149a75912d6d">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a0bd8783c7dc6da12c6befaf2e4bcbe3d">getCustomPlugin</a>();</div>
-<div class="line"><span class="lineno">  107</span>                        plugin.showBeingUsed(distLY);</div>
-<div class="line"><span class="lineno">  108</span>                    }</div>
-<div class="line"><span class="lineno">  109</span>                    <span class="keywordflow">if</span> (GateCMD.this.entity.getCustomPlugin() instanceof GateEntityPlugin) {</div>
-<div class="line"><span class="lineno">  110</span>                        GateEntityPlugin plugin = (GateEntityPlugin) GateCMD.this.entity.getCustomPlugin();</div>
-<div class="line"><span class="lineno">  111</span>                        plugin.showBeingUsed(distLY);</div>
-<div class="line"><span class="lineno">  112</span>                    }</div>
-<div class="line"><span class="lineno">  113</span>                    </div>
-<div class="line"><span class="lineno">  114</span>                    ListenerUtil.reportFleetTransitingGate(Global.getSector().getPlayerFleet(),</div>
-<div class="line"><span class="lineno">  115</span>                                                           GateCMD.this.entity, <a class="code hl_variable" href="../../d0/dfe/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1GateCMD.html#a7cf21f692a51150abef8149a75912d6d">entity</a>);</div>
-<div class="line"><span class="lineno">  116</span>                }</div>
-<div class="line"><span class="lineno">  117</span>                <span class="keyword">public</span> <span class="keywordtype">void</span> cancelledEntityPicking() {</div>
-<div class="line"><span class="lineno">  118</span>                    </div>
-<div class="line"><span class="lineno">  119</span>                }</div>
-<div class="line"><span class="lineno">  120</span>                <span class="keyword">public</span> String getMenuItemNameOverrideFor(SectorEntityToken <a class="code hl_variable" href="../../d0/dfe/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1GateCMD.html#a7cf21f692a51150abef8149a75912d6d">entity</a>) {</div>
-<div class="line"><span class="lineno">  121</span>                    <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  122</span>                }</div>
-<div class="line"><span class="lineno">  123</span>                <span class="keyword">public</span> String getSelectedTextOverrideFor(SectorEntityToken <a class="code hl_variable" href="../../d0/dfe/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1GateCMD.html#a7cf21f692a51150abef8149a75912d6d">entity</a>) {</div>
-<div class="line"><span class="lineno">  124</span>                    <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d0/dfe/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1GateCMD.html#a7cf21f692a51150abef8149a75912d6d">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a4fa77e45f0774df8a8980dc438598678">getName</a>() + <span class="stringliteral">&quot; - &quot;</span> + <a class="code hl_variable" href="../../d0/dfe/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1GateCMD.html#a7cf21f692a51150abef8149a75912d6d">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a06362480c6a17326650354460c6d7442">getContainingLocation</a>().<a class="code hl_function" href="../../d2/d2c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI.html#a477e66fe3efbca5c3bea1ebf1c77471e">getNameWithTypeShort</a>();</div>
-<div class="line"><span class="lineno">  125</span>                }</div>
-<div class="line"><span class="lineno">  126</span>                <span class="keyword">public</span> <span class="keywordtype">void</span> createInfoText(TooltipMakerAPI info, SectorEntityToken <a class="code hl_variable" href="../../d0/dfe/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1GateCMD.html#a7cf21f692a51150abef8149a75912d6d">entity</a>) {</div>
-<div class="line"><span class="lineno">  127</span>                    </div>
-<div class="line"><span class="lineno">  128</span>                    <span class="keywordtype">int</span> cost = <a class="code hl_function" href="../../d0/dfe/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1GateCMD.html#aae8d1d3e883204e74787d3ae505cce34">computeFuelCost</a>(<a class="code hl_variable" href="../../d0/dfe/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1GateCMD.html#a7cf21f692a51150abef8149a75912d6d">entity</a>);</div>
-<div class="line"><span class="lineno">  129</span>                    <span class="keywordtype">int</span> available = (int) Global.getSector().getPlayerFleet().getCargo().getFuel();</div>
-<div class="line"><span class="lineno">  130</span>                    </div>
-<div class="line"><span class="lineno">  131</span>                    Color reqColor = Misc.getHighlightColor();</div>
-<div class="line"><span class="lineno">  132</span>                    Color availableColor = Misc.getHighlightColor();</div>
-<div class="line"><span class="lineno">  133</span>                    <span class="keywordflow">if</span> (cost &gt; available) {</div>
-<div class="line"><span class="lineno">  134</span>                        reqColor = Misc.getNegativeHighlightColor();</div>
-<div class="line"><span class="lineno">  135</span>                    }</div>
-<div class="line"><span class="lineno">  136</span>                    </div>
-<div class="line"><span class="lineno">  137</span>                    info.setParaSmallInsignia();</div>
-<div class="line"><span class="lineno">  138</span><span class="comment">//                  LabelAPI label = info.addPara(&quot;Transit requires %s fuel. &quot;</span></div>
-<div class="line"><span class="lineno">  139</span><span class="comment">//                          + &quot;You have %s units of fuel available.&quot;, 0f,</span></div>
-<div class="line"><span class="lineno">  140</span><span class="comment">//                          Misc.getTextColor(),</span></div>
-<div class="line"><span class="lineno">  141</span><span class="comment">//                          //Misc.getGrayColor(),</span></div>
-<div class="line"><span class="lineno">  142</span><span class="comment">//                          availColor, Misc.getWithDGS(cost), Misc.getWithDGS(available));</span></div>
-<div class="line"><span class="lineno">  143</span><span class="comment">//                  label.setHighlightColors(reqColor, availColor);</span></div>
-<div class="line"><span class="lineno">  144</span>                    </div>
-<div class="line"><span class="lineno">  145</span>                    info.beginGrid(200f, 2, Misc.getGrayColor());</div>
-<div class="line"><span class="lineno">  146</span>                    info.setGridFontSmallInsignia();</div>
-<div class="line"><span class="lineno">  147</span>                    info.addToGrid(0, 0, <span class="stringliteral">&quot;    Fuel required:&quot;</span>, Misc.getWithDGS(cost), reqColor);</div>
-<div class="line"><span class="lineno">  148</span>                    info.addToGrid(1, 0, <span class="stringliteral">&quot;    Fuel available:&quot;</span>, Misc.getWithDGS(available), availableColor);</div>
-<div class="line"><span class="lineno">  149</span>                    info.addGrid(0);;</div>
-<div class="line"><span class="lineno">  150</span>                }</div>
-<div class="line"><span class="lineno">  151</span>                <span class="keyword">public</span> <span class="keywordtype">boolean</span> canConfirmSelection(SectorEntityToken <a class="code hl_variable" href="../../d0/dfe/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1GateCMD.html#a7cf21f692a51150abef8149a75912d6d">entity</a>) {</div>
-<div class="line"><span class="lineno">  152</span>                    <span class="keywordtype">int</span> cost = <a class="code hl_function" href="../../d0/dfe/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1GateCMD.html#aae8d1d3e883204e74787d3ae505cce34">computeFuelCost</a>(<a class="code hl_variable" href="../../d0/dfe/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1GateCMD.html#a7cf21f692a51150abef8149a75912d6d">entity</a>);</div>
-<div class="line"><span class="lineno">  153</span>                    <span class="keywordtype">int</span> available = (int) Global.getSector().getPlayerFleet().getCargo().getFuel();</div>
-<div class="line"><span class="lineno">  154</span>                    <span class="keywordflow">return</span> cost &lt;= available;</div>
-<div class="line"><span class="lineno">  155</span>                }</div>
-<div class="line"><span class="lineno">  156</span>                <span class="keyword">public</span> <span class="keywordtype">float</span> getFuelColorAlphaMult() {</div>
-<div class="line"><span class="lineno">  157</span>                    <span class="keywordflow">return</span> 0.5f;</div>
-<div class="line"><span class="lineno">  158</span>                }</div>
-<div class="line"><span class="lineno">  159</span>                <span class="keyword">public</span> <span class="keywordtype">float</span> getFuelRangeMult() { <span class="comment">// just for showing it on the map when picking destination</span></div>
-<div class="line"><span class="lineno">  160</span>                    <span class="keywordflow">if</span> (<span class="keyword">true</span>) <span class="keywordflow">return</span> 0f;</div>
-<div class="line"><span class="lineno">  161</span>                    <span class="keywordflow">if</span> (Misc.GATE_FUEL_COST_MULT &lt;= 0) <span class="keywordflow">return</span> 0f;</div>
-<div class="line"><span class="lineno">  162</span>                    <span class="keywordflow">return</span> 1f / Misc.GATE_FUEL_COST_MULT;</div>
-<div class="line"><span class="lineno">  163</span>                }</div>
-<div class="line"><span class="lineno">  164</span>            });</div>
-<div class="line"><span class="lineno">  165</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1GateCMD_html_aae8d1d3e883204e74787d3ae505cce34"><div class="ttname"><a href="../../d0/dfe/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1GateCMD.html#aae8d1d3e883204e74787d3ae505cce34">com.fs.starfarer.api.impl.campaign.rulecmd.missions.GateCMD.computeFuelCost</a></div><div class="ttdeci">static int computeFuelCost(SectorEntityToken targetGate)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d0e/GateCMD_8java_source.html#l00081">GateCMD.java:81</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI_html_ae9c683962601d07e56898cab5a223d2f"><div class="ttname"><a href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#ae9c683962601d07e56898cab5a223d2f">com.fs.starfarer.api.campaign.InteractionDialogAPI.dismiss</a></div><div class="ttdeci">void dismiss()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI_html_afd82f07dfd298a82a9c4a7b07751d2bd"><div class="ttname"><a href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#afd82f07dfd298a82a9c4a7b07751d2bd">com.fs.starfarer.api.campaign.InteractionDialogAPI.showCampaignEntityPicker</a></div><div class="ttdeci">void showCampaignEntityPicker(String title, String selectedText, String okText, FactionAPI factionForUIColors, List&lt; SectorEntityToken &gt; entities, CampaignEntityPickerListener listener)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI_html_a477e66fe3efbca5c3bea1ebf1c77471e"><div class="ttname"><a href="../../d2/d2c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI.html#a477e66fe3efbca5c3bea1ebf1c77471e">com.fs.starfarer.api.campaign.LocationAPI.getNameWithTypeShort</a></div><div class="ttdeci">String getNameWithTypeShort()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_a06362480c6a17326650354460c6d7442"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a06362480c6a17326650354460c6d7442">com.fs.starfarer.api.campaign.SectorEntityToken.getContainingLocation</a></div><div class="ttdeci">LocationAPI getContainingLocation()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_a0bd8783c7dc6da12c6befaf2e4bcbe3d"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a0bd8783c7dc6da12c6befaf2e4bcbe3d">com.fs.starfarer.api.campaign.SectorEntityToken.getCustomPlugin</a></div><div class="ttdeci">CustomCampaignEntityPlugin getCustomPlugin()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_a4fa77e45f0774df8a8980dc438598678"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a4fa77e45f0774df8a8980dc438598678">com.fs.starfarer.api.campaign.SectorEntityToken.getName</a></div><div class="ttdeci">String getName()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

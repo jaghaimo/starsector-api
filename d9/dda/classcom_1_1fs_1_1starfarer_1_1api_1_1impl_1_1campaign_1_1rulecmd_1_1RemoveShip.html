@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -173,13 +174,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/da3/RemoveShip_8java_source.html#l00035">35</a> of file <a class="el" href="../../d2/da3/RemoveShip_8java_source.html">RemoveShip.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   35</span>                                                                                 {</div>
-<div class="line"><span class="lineno">   36</span>        text.setFontSmallInsignia();</div>
-<div class="line"><span class="lineno">   37</span>        text.addParagraph(<span class="stringliteral">&quot;Lost &quot;</span> + member.getVariant().getFullDesignationWithHullNameForShip(), Misc.getNegativeHighlightColor());</div>
-<div class="line"><span class="lineno">   38</span>        text.highlightInLastPara(Misc.getHighlightColor(), member.getVariant().getFullDesignationWithHullNameForShip());</div>
-<div class="line"><span class="lineno">   39</span>        text.setFontInsignia();</div>
-<div class="line"><span class="lineno">   40</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aebd1085ae9ac4452f0fff161381c4c1c" name="aebd1085ae9ac4452f0fff161381c4c1c"></a>
@@ -223,22 +218,7 @@ Static Public Member Functions</h2></td></tr>
 <p>Implements <a class="el" href="../../d0/d5c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1CommandPlugin.html#a72a44c5127e60136b87d3b37613fd0e0">com.fs.starfarer.api.campaign.rules.CommandPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/da3/RemoveShip_8java_source.html#l00020">20</a> of file <a class="el" href="../../d2/da3/RemoveShip_8java_source.html">RemoveShip.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   20</span>                                                                                                                             {</div>
-<div class="line"><span class="lineno">   21</span>        <span class="keywordflow">if</span> (dialog == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   22</span>        </div>
-<div class="line"><span class="lineno">   23</span>        VarAndMemory var = params.get(0).getVarNameAndMemory(memoryMap);</div>
-<div class="line"><span class="lineno">   24</span><span class="comment">//      ShipVariantAPI variant = (ShipVariantAPI) var.memory.get(var.name);</span></div>
-<div class="line"><span class="lineno">   25</span><span class="comment">//      FleetMemberAPI member = Global.getFactory().createFleetMember(FleetMemberType.SHIP, variant);</span></div>
-<div class="line"><span class="lineno">   26</span>        </div>
-<div class="line"><span class="lineno">   27</span>        FleetMemberAPI member = (FleetMemberAPI) var.memory.get(var.name);</div>
-<div class="line"><span class="lineno">   28</span>        <span class="keywordflow">if</span> (member != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   29</span>            Global.getSector().getPlayerFleet().getFleetData().removeFleetMember(member);</div>
-<div class="line"><span class="lineno">   30</span>            <a class="code hl_function" href="../../d9/dda/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1RemoveShip.html#a912d7c1726eb79acb66b114f0de91cf1">addShipLossText</a>(member, dialog.getTextPanel());</div>
-<div class="line"><span class="lineno">   31</span>        }</div>
-<div class="line"><span class="lineno">   32</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   33</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1RemoveShip_html_a912d7c1726eb79acb66b114f0de91cf1"><div class="ttname"><a href="../../d9/dda/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1RemoveShip.html#a912d7c1726eb79acb66b114f0de91cf1">com.fs.starfarer.api.impl.campaign.rulecmd.RemoveShip.addShipLossText</a></div><div class="ttdeci">static void addShipLossText(FleetMemberAPI member, TextPanelAPI text)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/da3/RemoveShip_8java_source.html#l00035">RemoveShip.java:35</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

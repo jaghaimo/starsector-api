@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -799,51 +800,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html#l00089">89</a> of file <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html">HostileActivityEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   89</span>                                       {</div>
-<div class="line"><span class="lineno">   90</span>        super();</div>
-<div class="line"><span class="lineno">   91</span>        </div>
-<div class="line"><span class="lineno">   92</span>        Global.getSector().getEconomy().addUpdateListener(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">   93</span>        </div>
-<div class="line"><span class="lineno">   94</span>        Global.getSector().getMemoryWithoutUpdate().set(<a class="code hl_variable" href="../../db/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#ad4d91da7d54c404683ad775e2a6e8d1e">KEY</a>, <span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">   95</span>        </div>
-<div class="line"><span class="lineno">   96</span>        <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#aabb5537513d54b1dda9c4ae42c4a9b3c">setMaxProgress</a>(500);</div>
-<div class="line"><span class="lineno">   97</span>        <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a8a54ea51a20325d20ab698a3a3849a1a">addStage</a>(Stage.START, 0);</div>
-<div class="line"><span class="lineno">   98</span>        <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a8a54ea51a20325d20ab698a3a3849a1a">addStage</a>(Stage.HA_1, 50, StageIconSize.MEDIUM);</div>
-<div class="line"><span class="lineno">   99</span>        <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a8a54ea51a20325d20ab698a3a3849a1a">addStage</a>(Stage.MINOR_EVENT, 100, StageIconSize.SMALL);</div>
-<div class="line"><span class="lineno">  100</span>        <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a8a54ea51a20325d20ab698a3a3849a1a">addStage</a>(Stage.HA_2, 150, StageIconSize.MEDIUM);</div>
-<div class="line"><span class="lineno">  101</span>        <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a8a54ea51a20325d20ab698a3a3849a1a">addStage</a>(Stage.INCREASED_DEFENSES, 200, <span class="keyword">true</span>, StageIconSize.LARGE);</div>
-<div class="line"><span class="lineno">  102</span>        <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a8a54ea51a20325d20ab698a3a3849a1a">addStage</a>(Stage.HA_3, 250, StageIconSize.MEDIUM);</div>
-<div class="line"><span class="lineno">  103</span>        <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a8a54ea51a20325d20ab698a3a3849a1a">addStage</a>(Stage.HA_4, 350, StageIconSize.MEDIUM);</div>
-<div class="line"><span class="lineno">  104</span>        <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a8a54ea51a20325d20ab698a3a3849a1a">addStage</a>(Stage.HA_EVENT, 500, <span class="keyword">true</span>, StageIconSize.LARGE);</div>
-<div class="line"><span class="lineno">  105</span>        </div>
-<div class="line"><span class="lineno">  106</span>        <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#aa588730c330c4e705f7b03c77e3cdd05">setRandomized</a>(Stage.MINOR_EVENT, RandomizedStageType.BAD, 50, 75, <span class="keyword">false</span>, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  107</span>        <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#aa588730c330c4e705f7b03c77e3cdd05">setRandomized</a>(Stage.HA_EVENT, RandomizedStageType.BAD, 400, 450, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  108</span>        </div>
-<div class="line"><span class="lineno">  109</span>        <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#aaea47402cf58486cd60052a0e9297933">getDataFor</a>(Stage.INCREASED_DEFENSES).sendIntelUpdateOnReaching = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  110</span> </div>
-<div class="line"><span class="lineno">  111</span>        </div>
-<div class="line"><span class="lineno">  112</span>        <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a477a5ee57e58b47c4206e74800868b5e">addFactor</a>(<span class="keyword">new</span> HADefensiveMeasuresFactor());</div>
-<div class="line"><span class="lineno">  113</span>        <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a477a5ee57e58b47c4206e74800868b5e">addFactor</a>(<span class="keyword">new</span> HAShipsDestroyedFactorHint());</div>
-<div class="line"><span class="lineno">  114</span>        </div>
-<div class="line"><span class="lineno">  115</span>        <a class="code hl_function" href="../../db/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#a5386480d383886684ac6e91cf5349c43">addActivity</a>(<span class="keyword">new</span> PirateHostileActivityFactor(<span class="keyword">this</span>), <span class="keyword">new</span> KantasProtectionPirateActivityCause2(<span class="keyword">this</span>));</div>
-<div class="line"><span class="lineno">  116</span>        <a class="code hl_function" href="../../db/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#a5386480d383886684ac6e91cf5349c43">addActivity</a>(<span class="keyword">new</span> PirateHostileActivityFactor(<span class="keyword">this</span>), <span class="keyword">new</span> StandardPirateActivityCause2(<span class="keyword">this</span>));</div>
-<div class="line"><span class="lineno">  117</span>        <a class="code hl_function" href="../../db/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#a5386480d383886684ac6e91cf5349c43">addActivity</a>(<span class="keyword">new</span> PirateHostileActivityFactor(<span class="keyword">this</span>), <span class="keyword">new</span> PirateBasePirateActivityCause2(<span class="keyword">this</span>));</div>
-<div class="line"><span class="lineno">  118</span>        <a class="code hl_function" href="../../db/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#a5386480d383886684ac6e91cf5349c43">addActivity</a>(<span class="keyword">new</span> PirateHostileActivityFactor(<span class="keyword">this</span>), <span class="keyword">new</span> KantasWrathPirateActivityCause2(<span class="keyword">this</span>));</div>
-<div class="line"><span class="lineno">  119</span>        </div>
-<div class="line"><span class="lineno">  120</span>        <a class="code hl_function" href="../../db/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#a5386480d383886684ac6e91cf5349c43">addActivity</a>(<span class="keyword">new</span> LuddicPathHostileActivityFactor(<span class="keyword">this</span>), <span class="keyword">new</span> LuddicPathAgreementHostileActivityCause2(<span class="keyword">this</span>));</div>
-<div class="line"><span class="lineno">  121</span>        <a class="code hl_function" href="../../db/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#a5386480d383886684ac6e91cf5349c43">addActivity</a>(<span class="keyword">new</span> LuddicPathHostileActivityFactor(<span class="keyword">this</span>), <span class="keyword">new</span> StandardLuddicPathActivityCause2(<span class="keyword">this</span>));</div>
-<div class="line"><span class="lineno">  122</span>        </div>
-<div class="line"><span class="lineno">  123</span>        <span class="comment">// now that the event is fully constructed, add it and send notification</span></div>
-<div class="line"><span class="lineno">  124</span>        Global.getSector().getIntelManager().addIntel(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  125</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_html_a477a5ee57e58b47c4206e74800868b5e"><div class="ttname"><a href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a477a5ee57e58b47c4206e74800868b5e">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.addFactor</a></div><div class="ttdeci">void addFactor(EventFactor factor)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d56/BaseEventIntel_8java_source.html#l00733">BaseEventIntel.java:733</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_html_a8a54ea51a20325d20ab698a3a3849a1a"><div class="ttname"><a href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a8a54ea51a20325d20ab698a3a3849a1a">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.addStage</a></div><div class="ttdeci">void addStage(Object id, int progress)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d56/BaseEventIntel_8java_source.html#l00651">BaseEventIntel.java:651</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_html_aa588730c330c4e705f7b03c77e3cdd05"><div class="ttname"><a href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#aa588730c330c4e705f7b03c77e3cdd05">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.setRandomized</a></div><div class="ttdeci">void setRandomized(Object stageId, RandomizedStageType type, int resetAt, int rollAt, boolean sendUpdateWhenReached)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d56/BaseEventIntel_8java_source.html#l00906">BaseEventIntel.java:906</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_html_aabb5537513d54b1dda9c4ae42c4a9b3c"><div class="ttname"><a href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#aabb5537513d54b1dda9c4ae42c4a9b3c">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.setMaxProgress</a></div><div class="ttdeci">void setMaxProgress(int maxProgress)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d56/BaseEventIntel_8java_source.html#l00614">BaseEventIntel.java:614</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_html_aaea47402cf58486cd60052a0e9297933"><div class="ttname"><a href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#aaea47402cf58486cd60052a0e9297933">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.getDataFor</a></div><div class="ttdeci">EventStageData getDataFor(Object stageId)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d56/BaseEventIntel_8java_source.html#l00685">BaseEventIntel.java:685</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel_html_a5386480d383886684ac6e91cf5349c43"><div class="ttname"><a href="../../db/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#a5386480d383886684ac6e91cf5349c43">com.fs.starfarer.api.impl.campaign.intel.events.HostileActivityEventIntel.addActivity</a></div><div class="ttdeci">void addActivity(BaseHostileActivityFactor factor, HostileActivityCause2 cause)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d57/HostileActivityEventIntel_8java_source.html#l00586">HostileActivityEventIntel.java:586</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel_html_ad4d91da7d54c404683ad775e2a6e8d1e"><div class="ttname"><a href="../../db/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#ad4d91da7d54c404683ad775e2a6e8d1e">com.fs.starfarer.api.impl.campaign.intel.events.HostileActivityEventIntel.KEY</a></div><div class="ttdeci">static String KEY</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d57/HostileActivityEventIntel_8java_source.html#l00052">HostileActivityEventIntel.java:52</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -874,16 +831,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html#l00586">586</a> of file <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html">HostileActivityEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  586</span>                                                                                           {</div>
-<div class="line"><span class="lineno">  587</span>        BaseHostileActivityFactor curr = <a class="code hl_function" href="../../db/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#a78c955fd621030603d41d81a743729a7">getActivityOfClass</a>(factor.getClass());</div>
-<div class="line"><span class="lineno">  588</span>        <span class="keywordflow">if</span> (curr == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  589</span>            <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a477a5ee57e58b47c4206e74800868b5e">addFactor</a>(factor);</div>
-<div class="line"><span class="lineno">  590</span>            curr = factor;</div>
-<div class="line"><span class="lineno">  591</span>        }</div>
-<div class="line"><span class="lineno">  592</span>        curr.addCause(cause);</div>
-<div class="line"><span class="lineno">  593</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel_html_a78c955fd621030603d41d81a743729a7"><div class="ttname"><a href="../../db/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#a78c955fd621030603d41d81a743729a7">com.fs.starfarer.api.impl.campaign.intel.events.HostileActivityEventIntel.getActivityOfClass</a></div><div class="ttdeci">BaseHostileActivityFactor getActivityOfClass(Class c)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d57/HostileActivityEventIntel_8java_source.html#l00634">HostileActivityEventIntel.java:634</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac04e5ef6277de8a395f3ec1341df830c" name="ac04e5ef6277de8a395f3ec1341df830c"></a>
@@ -941,64 +889,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a0e96a2214e041593cef5055b1ca1209d">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html#l00162">162</a> of file <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html">HostileActivityEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  163</span>                                                             {</div>
-<div class="line"><span class="lineno">  164</span>        </div>
-<div class="line"><span class="lineno">  165</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ac3614e4bfe72000518328b2dd394ce90">addEventFactorBulletPoints</a>(info, mode, isUpdate, tc, initPad)) {</div>
-<div class="line"><span class="lineno">  166</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  167</span>        }</div>
-<div class="line"><span class="lineno">  168</span>        </div>
-<div class="line"><span class="lineno">  169</span>        <span class="keywordflow">if</span> (isUpdate &amp;&amp; <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a9ba572be19912ec6b816dc7b69352660">getListInfoParam</a>() instanceof HAERandomEventData) {</div>
-<div class="line"><span class="lineno">  170</span>            HAERandomEventData data = (HAERandomEventData) <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a9ba572be19912ec6b816dc7b69352660">getListInfoParam</a>();</div>
-<div class="line"><span class="lineno">  171</span>            <span class="keywordflow">if</span> (data.isReset) {</div>
-<div class="line"><span class="lineno">  172</span>                data.factor.addBulletPointForEventReset(<span class="keyword">this</span>, data.stage, info, mode, isUpdate, tc, initPad);</div>
-<div class="line"><span class="lineno">  173</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  174</span>                data.factor.addBulletPointForEvent(<span class="keyword">this</span>, data.stage, info, mode, isUpdate, tc, initPad);</div>
-<div class="line"><span class="lineno">  175</span>            }</div>
-<div class="line"><span class="lineno">  176</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  177</span>        }</div>
-<div class="line"><span class="lineno">  178</span>        </div>
-<div class="line"><span class="lineno">  179</span>        <span class="comment">// handled generically in BaseEventIntel class when the factor is added</span></div>
-<div class="line"><span class="lineno">  180</span><span class="comment">//      if (isUpdate &amp;&amp; getListInfoParam() instanceof HAShipsDestroyedFactor) {</span></div>
-<div class="line"><span class="lineno">  181</span><span class="comment">//          HAShipsDestroyedFactor factor = (HAShipsDestroyedFactor) getListInfoParam();</span></div>
-<div class="line"><span class="lineno">  182</span><span class="comment">//          info.addPara(&quot;Hostile ships destroyed: %s points&quot;, initPad, tc, factor.getProgressColor(this), </span></div>
-<div class="line"><span class="lineno">  183</span><span class="comment">//                  factor.getProgressStr(this));</span></div>
-<div class="line"><span class="lineno">  184</span><span class="comment">//          return;</span></div>
-<div class="line"><span class="lineno">  185</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  186</span>        </div>
-<div class="line"><span class="lineno">  187</span>        <span class="keywordflow">if</span> (isUpdate &amp;&amp; <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a9ba572be19912ec6b816dc7b69352660">getListInfoParam</a>() instanceof EventStageData) {</div>
-<div class="line"><span class="lineno">  188</span>            EventStageData esd = (EventStageData) <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a9ba572be19912ec6b816dc7b69352660">getListInfoParam</a>();</div>
-<div class="line"><span class="lineno">  189</span>            <span class="keywordflow">if</span> (EnumSet.of(Stage.START, Stage.HA_1, Stage.HA_2, Stage.HA_3, Stage.HA_4).contains(esd.id)) {</div>
-<div class="line"><span class="lineno">  190</span>                String delta = <span class="stringliteral">&quot;increased&quot;</span>;</div>
-<div class="line"><span class="lineno">  191</span>                <span class="keywordflow">if</span> (!<a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a11afa5be0dfe89b956a5e358e52f1b3d">prevProgressDeltaWasPositive</a>) delta = <span class="stringliteral">&quot;reduced&quot;</span>;</div>
-<div class="line"><span class="lineno">  192</span>                </div>
-<div class="line"><span class="lineno">  193</span>                Pair&lt;String, Color&gt; p = <a class="code hl_function" href="../../db/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#ad729cfc90b88518c6c913c0ad37bd97e">getImpactDisplayData</a>((Stage) esd.id);</div>
-<div class="line"><span class="lineno">  194</span>                String impact = p.one;</div>
-<div class="line"><span class="lineno">  195</span>                Color impactColor = p.two;</div>
-<div class="line"><span class="lineno">  196</span>                info.addPara(<span class="stringliteral">&quot;Impact &quot;</span> + delta + <span class="stringliteral">&quot; to: %s&quot;</span>, initPad, tc, impactColor, impact);</div>
-<div class="line"><span class="lineno">  197</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  198</span>            }</div>
-<div class="line"><span class="lineno">  199</span>        }</div>
-<div class="line"><span class="lineno">  200</span>        </div>
-<div class="line"><span class="lineno">  201</span>        EventStageData esd = <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a3642aecf210dacfc23c64e0292ba45c2">getLastActiveStage</a>(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  202</span>        <span class="keywordflow">if</span> (esd != <span class="keyword">null</span> &amp;&amp; EnumSet.of(Stage.START, Stage.HA_1, Stage.HA_2, Stage.HA_3, Stage.HA_4).contains(esd.id)) {</div>
-<div class="line"><span class="lineno">  203</span>            Pair&lt;String, Color&gt; p = <a class="code hl_function" href="../../db/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#ad729cfc90b88518c6c913c0ad37bd97e">getImpactDisplayData</a>((Stage) esd.id);</div>
-<div class="line"><span class="lineno">  204</span>            String impact = p.one;</div>
-<div class="line"><span class="lineno">  205</span>            Color impactColor = p.two;</div>
-<div class="line"><span class="lineno">  206</span><span class="comment">//          if (p.one.equals(&quot;extreme&quot;)) {</span></div>
-<div class="line"><span class="lineno">  207</span><span class="comment">//              System.out.println(&quot;wefwefwe&quot;);</span></div>
-<div class="line"><span class="lineno">  208</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">  209</span>            info.addPara(<span class="stringliteral">&quot;Colony impact: %s&quot;</span>, initPad, tc, impactColor, impact);</div>
-<div class="line"><span class="lineno">  210</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  211</span>        }</div>
-<div class="line"><span class="lineno">  212</span>        </div>
-<div class="line"><span class="lineno">  213</span>        <span class="comment">//super.addBulletPoints(info, mode, isUpdate, tc, initPad);</span></div>
-<div class="line"><span class="lineno">  214</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_a9ba572be19912ec6b816dc7b69352660"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a9ba572be19912ec6b816dc7b69352660">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.getListInfoParam</a></div><div class="ttdeci">Object getListInfoParam()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00140">BaseIntelPlugin.java:140</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_html_a11afa5be0dfe89b956a5e358e52f1b3d"><div class="ttname"><a href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a11afa5be0dfe89b956a5e358e52f1b3d">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.prevProgressDeltaWasPositive</a></div><div class="ttdeci">transient boolean prevProgressDeltaWasPositive</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d56/BaseEventIntel_8java_source.html#l00813">BaseEventIntel.java:813</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_html_a3642aecf210dacfc23c64e0292ba45c2"><div class="ttname"><a href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a3642aecf210dacfc23c64e0292ba45c2">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.getLastActiveStage</a></div><div class="ttdeci">EventStageData getLastActiveStage(boolean includeOneOffEvents)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d56/BaseEventIntel_8java_source.html#l00670">BaseEventIntel.java:670</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_html_ac3614e4bfe72000518328b2dd394ce90"><div class="ttname"><a href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ac3614e4bfe72000518328b2dd394ce90">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.addEventFactorBulletPoints</a></div><div class="ttdeci">boolean addEventFactorBulletPoints(TooltipMakerAPI info, ListInfoMode mode, boolean isUpdate, Color tc, float initPad)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d56/BaseEventIntel_8java_source.html#l00180">BaseEventIntel.java:180</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel_html_ad729cfc90b88518c6c913c0ad37bd97e"><div class="ttname"><a href="../../db/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#ad729cfc90b88518c6c913c0ad37bd97e">com.fs.starfarer.api.impl.campaign.intel.events.HostileActivityEventIntel.getImpactDisplayData</a></div><div class="ttdeci">static Pair&lt; String, Color &gt; getImpactDisplayData(Stage id)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d57/HostileActivityEventIntel_8java_source.html#l00141">HostileActivityEventIntel.java:141</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a62401ca30ff2d57ed1d0c61dd0c44169" name="a62401ca30ff2d57ed1d0c61dd0c44169"></a>
@@ -1036,198 +927,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a044f95e28bad28ac90cddfab894295ac">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html#l00217">217</a> of file <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html">HostileActivityEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  217</span>                                                                                           {</div>
-<div class="line"><span class="lineno">  218</span>        <span class="keywordtype">float</span> opad = 10f;</div>
-<div class="line"><span class="lineno">  219</span>        <span class="keywordtype">float</span> small = 0f;</div>
-<div class="line"><span class="lineno">  220</span>        Color h = Misc.getHighlightColor();</div>
-<div class="line"><span class="lineno">  221</span>        </div>
-<div class="line"><span class="lineno">  222</span>        <span class="comment">//setProgress(0);</span></div>
-<div class="line"><span class="lineno">  223</span>        <span class="comment">//setProgress(210);</span></div>
-<div class="line"><span class="lineno">  224</span>        <span class="comment">//setProgress(600);</span></div>
-<div class="line"><span class="lineno">  225</span>        <span class="comment">//setProgress(899);</span></div>
-<div class="line"><span class="lineno">  226</span>        <span class="comment">//setProgress(499);</span></div>
-<div class="line"><span class="lineno">  227</span>        <span class="comment">//setProgress(400);</span></div>
-<div class="line"><span class="lineno">  228</span>        </div>
-<div class="line"><span class="lineno">  229</span>        <a class="code hl_function" href="../../db/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#a680de1a3205fefd93cf97d59ce655566">updatePenalties</a>();</div>
-<div class="line"><span class="lineno">  230</span>        </div>
-<div class="line"><span class="lineno">  231</span>        List&lt;HAEStarSystemDangerData&gt; systemData = <a class="code hl_function" href="../../db/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#a66a6bcb987c733bf94f20dff8d5289be">computePlayerSystemDangerData</a>();</div>
-<div class="line"><span class="lineno">  232</span>        </div>
-<div class="line"><span class="lineno">  233</span>        EventStageData stage = <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#aaea47402cf58486cd60052a0e9297933">getDataFor</a>(stageId);</div>
-<div class="line"><span class="lineno">  234</span>        <span class="keywordflow">if</span> (stage == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  235</span>        </div>
-<div class="line"><span class="lineno">  236</span>        <span class="keywordflow">if</span> (stage.rollData instanceof HAERandomEventData) {</div>
-<div class="line"><span class="lineno">  237</span>            HAERandomEventData data = (HAERandomEventData) stage.rollData;</div>
-<div class="line"><span class="lineno">  238</span>            data.factor.addStageDescriptionForEvent(<span class="keyword">this</span>, stage, info);</div>
-<div class="line"><span class="lineno">  239</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  240</span>        }</div>
-<div class="line"><span class="lineno">  241</span>        </div>
-<div class="line"><span class="lineno">  242</span>        <span class="comment">//if (stageId == Stage.START) {</span></div>
-<div class="line"><span class="lineno">  243</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#af4809d9ea77ac2d93e7998fe40173587">isStageActiveAndLast</a>(stageId)) {</div>
-<div class="line"><span class="lineno">  244</span><span class="comment">//          if (stageId == Stage.START) {</span></div>
-<div class="line"><span class="lineno">  245</span><span class="comment">//              info.addTitle(&quot;Minimal impact&quot;);</span></div>
-<div class="line"><span class="lineno">  246</span><span class="comment">//          } else if (stage.id == Stage.HA_1) {</span></div>
-<div class="line"><span class="lineno">  247</span><span class="comment">//              info.addTitle(&quot;Low impact&quot;);</span></div>
-<div class="line"><span class="lineno">  248</span><span class="comment">//          } else if (stage.id == Stage.HA_2) {</span></div>
-<div class="line"><span class="lineno">  249</span><span class="comment">//              info.addTitle(&quot;Moderate impact&quot;);</span></div>
-<div class="line"><span class="lineno">  250</span><span class="comment">//          } else if (stage.id == Stage.HA_3) {</span></div>
-<div class="line"><span class="lineno">  251</span><span class="comment">//              info.addTitle(&quot;High impact&quot;);</span></div>
-<div class="line"><span class="lineno">  252</span><span class="comment">//          } else if (stage.id == Stage.HA_4) {</span></div>
-<div class="line"><span class="lineno">  253</span><span class="comment">//              info.addTitle(&quot;Extreme impact&quot;);</span></div>
-<div class="line"><span class="lineno">  254</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">  255</span>            </div>
-<div class="line"><span class="lineno">  256</span>            <span class="keywordflow">if</span> (stageId == Stage.START) {</div>
-<div class="line"><span class="lineno">  257</span>                info.addPara(<span class="stringliteral">&quot;Various hostile forces are threatening your colonies. &quot;</span></div>
-<div class="line"><span class="lineno">  258</span>                    + <span class="stringliteral">&quot;If left unchecked, your hardest-hit colonies will have &quot;</span></div>
-<div class="line"><span class="lineno">  259</span>                    + <span class="stringliteral">&quot;to devote more resources to defensive measures, reducing their stability and accessibility.&quot;</span>, small);</div>
-<div class="line"><span class="lineno">  260</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  261</span>                Range affects = <span class="keyword">new</span> Range(((Stage)stageId).name() + <span class="stringliteral">&quot;_affects&quot;</span>);</div>
-<div class="line"><span class="lineno">  262</span>                <span class="keywordtype">int</span> numSystems = (int) Math.max(Math.min(systemData.size(), affects.min), Math.round((<span class="keywordtype">float</span>) systemData.size() * affects.max));</div>
-<div class="line"><span class="lineno">  263</span>                <span class="keywordtype">int</span> numColonies = 0;</div>
-<div class="line"><span class="lineno">  264</span>                <span class="keywordtype">int</span> num = 0;</div>
-<div class="line"><span class="lineno">  265</span>                List&lt;String&gt; systemsList = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
-<div class="line"><span class="lineno">  266</span>                <span class="keywordflow">for</span> (HAEStarSystemDangerData curr : systemData) {</div>
-<div class="line"><span class="lineno">  267</span>                    numColonies += Misc.getMarketsInLocation(curr.system, Factions.PLAYER).size();</div>
-<div class="line"><span class="lineno">  268</span>                    num++;</div>
-<div class="line"><span class="lineno">  269</span>                    <span class="keywordflow">if</span> (num &lt;= 3) {</div>
-<div class="line"><span class="lineno">  270</span>                        systemsList.add(curr.system.getNameWithNoType());</div>
-<div class="line"><span class="lineno">  271</span>                    }</div>
-<div class="line"><span class="lineno">  272</span>                    <span class="keywordflow">if</span> (num &gt;= numSystems) <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  273</span>                }</div>
-<div class="line"><span class="lineno">  274</span>                <span class="keywordtype">int</span> extra = numSystems - systemsList.size();</div>
-<div class="line"><span class="lineno">  275</span>                <span class="keywordflow">if</span> (extra &gt; 0) {</div>
-<div class="line"><span class="lineno">  276</span>                    systemsList.remove(systemsList.size() - 1);</div>
-<div class="line"><span class="lineno">  277</span>                    systemsList.add(<span class="stringliteral">&quot;&quot;</span> + (extra + 1) + <span class="stringliteral">&quot; other&quot;</span>);</div>
-<div class="line"><span class="lineno">  278</span>                }</div>
-<div class="line"><span class="lineno">  279</span>                String isOrAre = <span class="stringliteral">&quot;are&quot;</span>;</div>
-<div class="line"><span class="lineno">  280</span>                String coloniesStr = <span class="stringliteral">&quot;colonies&quot;</span>;</div>
-<div class="line"><span class="lineno">  281</span>                <span class="keywordflow">if</span> (numColonies == 1) {</div>
-<div class="line"><span class="lineno">  282</span>                    isOrAre = <span class="stringliteral">&quot;is&quot;</span>;</div>
-<div class="line"><span class="lineno">  283</span>                    coloniesStr = <span class="stringliteral">&quot;colony&quot;</span>;</div>
-<div class="line"><span class="lineno">  284</span>                }</div>
-<div class="line"><span class="lineno">  285</span>                String systemsStr = <span class="stringliteral">&quot;systems&quot;</span>;</div>
-<div class="line"><span class="lineno">  286</span>                <span class="keywordflow">if</span> (numSystems == 1) systemsStr = <span class="stringliteral">&quot;system&quot;</span>;</div>
-<div class="line"><span class="lineno">  287</span>                </div>
-<div class="line"><span class="lineno">  288</span>                String desc1 = <span class="stringliteral">&quot;minor&quot;</span>;</div>
-<div class="line"><span class="lineno">  289</span>                String desc2 = <span class="stringliteral">&quot;some&quot;</span>;</div>
-<div class="line"><span class="lineno">  290</span>                <span class="keywordflow">if</span> (stageId == Stage.HA_2) {</div>
-<div class="line"><span class="lineno">  291</span>                    desc1 = <span class="stringliteral">&quot;moderate&quot;</span>;</div>
-<div class="line"><span class="lineno">  292</span>                    desc2 = <span class="stringliteral">&quot;considerable&quot;</span>;</div>
-<div class="line"><span class="lineno">  293</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (stageId == Stage.HA_3) {</div>
-<div class="line"><span class="lineno">  294</span>                    desc1 = <span class="stringliteral">&quot;serious&quot;</span>;</div>
-<div class="line"><span class="lineno">  295</span>                    desc2 = <span class="stringliteral">&quot;a lot of&quot;</span>;</div>
-<div class="line"><span class="lineno">  296</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (stageId == Stage.HA_4) {</div>
-<div class="line"><span class="lineno">  297</span>                    desc1 = <span class="stringliteral">&quot;extreme&quot;</span>;</div>
-<div class="line"><span class="lineno">  298</span>                    desc2 = <span class="stringliteral">&quot;much of their&quot;</span>;</div>
-<div class="line"><span class="lineno">  299</span>                }</div>
-<div class="line"><span class="lineno">  300</span>                </div>
-<div class="line"><span class="lineno">  301</span>                String combined = <span class="stringliteral">&quot;Your &quot;</span> + coloniesStr + <span class="stringliteral">&quot; in the &quot;</span> + Misc.getAndJoined(systemsList) + <span class="stringliteral">&quot; &quot;</span> + systemsStr + </div>
-<div class="line"><span class="lineno">  302</span>                        <span class="stringliteral">&quot; &quot;</span> + isOrAre;</div>
-<div class="line"><span class="lineno">  303</span>                <span class="keywordflow">if</span> (numSystems == systemData.size() &amp;&amp; numColonies &gt; 1) {</div>
-<div class="line"><span class="lineno">  304</span>                    combined = <span class="stringliteral">&quot;All of your colonies are&quot;</span>;</div>
-<div class="line"><span class="lineno">  305</span>                }</div>
-<div class="line"><span class="lineno">  306</span>                info.addPara(combined + <span class="stringliteral">&quot; forced to make &quot;</span> + desc1 + </div>
-<div class="line"><span class="lineno">  307</span>                        <span class="stringliteral">&quot; concessions to security considerations and devote &quot;</span> + </div>
-<div class="line"><span class="lineno">  308</span>                        desc2 + <span class="stringliteral">&quot; resources to defensive measures. &quot;</span> +</div>
-<div class="line"><span class="lineno">  309</span>                        <span class="stringliteral">&quot;Stability reduced by %s, accessibility reduced by %s.&quot;</span>, small, h,</div>
-<div class="line"><span class="lineno">  310</span>                        <span class="stringliteral">&quot;&quot;</span> + (<span class="keywordtype">int</span>) <a class="code hl_variable" href="../../db/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#a2971a281600983868c0f67c98712974b">stabilityPenalty</a>, </div>
-<div class="line"><span class="lineno">  311</span>                        <span class="stringliteral">&quot;&quot;</span> + (<span class="keywordtype">int</span>) Math.round(<a class="code hl_variable" href="../../db/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#a4e6d33c93060e6400c2699eb96ed1644">accessibilityPenalty</a> * 100f) + <span class="stringliteral">&quot;%&quot;</span>);</div>
-<div class="line"><span class="lineno">  312</span>            }</div>
-<div class="line"><span class="lineno">  313</span>            </div>
-<div class="line"><span class="lineno">  314</span>            <span class="keywordtype">float</span> systemW = 230f;</div>
-<div class="line"><span class="lineno">  315</span>            <span class="keywordtype">float</span> threatW = 300f;</div>
-<div class="line"><span class="lineno">  316</span>            info.beginTable(<a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#aef7175eff8878a18ebb3099d3a7ab59f">getFactionForUIColors</a>(), 20f, </div>
-<div class="line"><span class="lineno">  317</span>                    <span class="stringliteral">&quot;Star system&quot;</span>, systemW,</div>
-<div class="line"><span class="lineno">  318</span>                    <span class="stringliteral">&quot;Danger&quot;</span>, 100f,</div>
-<div class="line"><span class="lineno">  319</span>                    <span class="stringliteral">&quot;Primary threats&quot;</span>, threatW</div>
-<div class="line"><span class="lineno">  320</span>                    );</div>
-<div class="line"><span class="lineno">  321</span>            info.makeTableItemsClickable();</div>
-<div class="line"><span class="lineno">  322</span>            </div>
-<div class="line"><span class="lineno">  323</span>            <span class="keywordtype">int</span> maxSystemsToList = 4;</div>
-<div class="line"><span class="lineno">  324</span>            <span class="keywordtype">int</span> numListed = 0;</div>
-<div class="line"><span class="lineno">  325</span>            info.addTableHeaderTooltip(0, <span class="stringliteral">&quot;Star system with hostile activity, and the name (or number) of your colonies found there.\n\nUp to four of the hardest-hit systems are listed here.&quot;</span>);</div>
-<div class="line"><span class="lineno">  326</span>            info.addTableHeaderTooltip(1, <span class="stringliteral">&quot;Danger level of the stronger fleets likely to be found in the system. &quot;</span></div>
-<div class="line"><span class="lineno">  327</span>                    + <span class="stringliteral">&quot;Approximate, there may be exceptions. Does not include hostile fleets that may be present there for other reasons.&quot;</span>);</div>
-<div class="line"><span class="lineno">  328</span>            info.addTableHeaderTooltip(2, <span class="stringliteral">&quot;The most dangerous types of threats likely to be found in the system. &quot;</span></div>
-<div class="line"><span class="lineno">  329</span>                    + <span class="stringliteral">&quot;Not comprehensive, and does not include hostile fleets that may be present there for other reasons.&quot;</span>);</div>
-<div class="line"><span class="lineno">  330</span>            </div>
-<div class="line"><span class="lineno">  331</span>            <span class="comment">//List&lt;HAEStarSystemDangerData&gt; systemData = computePlayerSystemDangerData();</span></div>
-<div class="line"><span class="lineno">  332</span> </div>
-<div class="line"><span class="lineno">  333</span>            <span class="keywordflow">for</span> (<span class="keyword">final</span> HAEStarSystemDangerData sys : systemData) {</div>
-<div class="line"><span class="lineno">  334</span>                <span class="keywordflow">if</span> (sys.sortMag &lt;= 0) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  335</span>                </div>
-<div class="line"><span class="lineno">  336</span>                <span class="keywordtype">float</span> mag = sys.sortMag;</div>
-<div class="line"><span class="lineno">  337</span>                String danger = <a class="code hl_function" href="../../db/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#ababe257c00d2f0ae10b7e3cdaeec4216">getDangerString</a>(mag);</div>
-<div class="line"><span class="lineno">  338</span>                </div>
-<div class="line"><span class="lineno">  339</span>                <span class="keywordtype">int</span> maxThreats = 3;</div>
-<div class="line"><span class="lineno">  340</span>                <span class="keywordtype">int</span> count = 0;</div>
-<div class="line"><span class="lineno">  341</span>                List&lt;String&gt; threats = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
-<div class="line"><span class="lineno">  342</span>                List&lt;Color&gt; colors = <span class="keyword">new</span> ArrayList&lt;Color&gt;();</div>
-<div class="line"><span class="lineno">  343</span>                <span class="keywordflow">for</span> (HAEFactorDangerData data : sys.factorData) {</div>
-<div class="line"><span class="lineno">  344</span>                    <span class="keywordflow">if</span> (data.mag &lt;= 0) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  345</span>                    threats.add(data.factor.getNameForThreatList(count == 0));</div>
-<div class="line"><span class="lineno">  346</span>                    colors.add(data.factor.getNameColorForThreatList());</div>
-<div class="line"><span class="lineno">  347</span>                    count++;</div>
-<div class="line"><span class="lineno">  348</span>                    <span class="keywordflow">if</span> (count &gt;= maxThreats) {</div>
-<div class="line"><span class="lineno">  349</span>                        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  350</span>                    }</div>
-<div class="line"><span class="lineno">  351</span>                }</div>
-<div class="line"><span class="lineno">  352</span>                String threatStr = Misc.getJoined(<span class="stringliteral">&quot;&quot;</span>, threats);</div>
-<div class="line"><span class="lineno">  353</span> </div>
-<div class="line"><span class="lineno">  354</span>                LabelAPI label = info.createLabel(threatStr, Misc.getTextColor(), threatW);</div>
-<div class="line"><span class="lineno">  355</span>                label.setHighlightColors(colors.toArray(<span class="keyword">new</span> Color[0]));</div>
-<div class="line"><span class="lineno">  356</span>                label.setHighlight(threats.toArray(<span class="keyword">new</span> String[0]));</div>
-<div class="line"><span class="lineno">  357</span>                </div>
-<div class="line"><span class="lineno">  358</span>                String systemName = sys.system.getNameWithNoType();</div>
-<div class="line"><span class="lineno">  359</span>                <span class="comment">//String systemName = sys.system.getNameWithLowercaseTypeShort();</span></div>
-<div class="line"><span class="lineno">  360</span>                List&lt;MarketAPI&gt; colonies = Misc.getMarketsInLocation(sys.system, Factions.PLAYER);</div>
-<div class="line"><span class="lineno">  361</span>                String colStr = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">  362</span>                <span class="keywordflow">if</span> (colonies.size() == 1) {</div>
-<div class="line"><span class="lineno">  363</span>                    colStr = colonies.get(0).getName();</div>
-<div class="line"><span class="lineno">  364</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  365</span>                    colStr = <span class="stringliteral">&quot;&quot;</span> + colonies.size() + <span class="stringliteral">&quot; colonies&quot;</span>;</div>
-<div class="line"><span class="lineno">  366</span>                }</div>
-<div class="line"><span class="lineno">  367</span>                systemName += <span class="stringliteral">&quot; - &quot;</span> + colStr + <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">  368</span>                </div>
-<div class="line"><span class="lineno">  369</span><span class="comment">//              LabelAPI systemLabel = info.createLabel(systemName, Misc.getBasePlayerColor(), systemW);</span></div>
-<div class="line"><span class="lineno">  370</span><span class="comment">//              systemLabel.setHighlightColors(Misc.getBasePlayerColor());</span></div>
-<div class="line"><span class="lineno">  371</span><span class="comment">//              systemLabel.setHighlight(colStr);</span></div>
-<div class="line"><span class="lineno">  372</span>                </div>
-<div class="line"><span class="lineno">  373</span>                info.addRowWithGlow(Alignment.LMID, Misc.getBasePlayerColor(), systemName,</div>
-<div class="line"><span class="lineno">  374</span>                                    Alignment.MID, <a class="code hl_function" href="../../db/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#aeb00bb572607d21fe22168ad213772e0">getDangerColor</a>(mag), danger,</div>
-<div class="line"><span class="lineno">  375</span>                                    Alignment.MID, <span class="keyword">null</span>, label);</div>
-<div class="line"><span class="lineno">  376</span>                info.addTooltipToAddedRow(<span class="keyword">new</span> BaseFactorTooltip() {</div>
-<div class="line"><span class="lineno">  377</span>                    @Override</div>
-<div class="line"><span class="lineno">  378</span>                    <span class="keyword">public</span> <span class="keywordtype">void</span> createTooltip(TooltipMakerAPI tooltip, <span class="keywordtype">boolean</span> expanded, Object tooltipParam) {</div>
-<div class="line"><span class="lineno">  379</span>                        <span class="keywordtype">float</span> w = tooltip.getWidthSoFar();</div>
-<div class="line"><span class="lineno">  380</span>                        <span class="keywordtype">float</span> h = Math.round(w / 1.6f);</div>
-<div class="line"><span class="lineno">  381</span>                        tooltip.addSectorMap(w, h, sys.system, 0f);</div>
-<div class="line"><span class="lineno">  382</span>                        tooltip.addPara(<span class="stringliteral">&quot;Click to open map&quot;</span>, Misc.getGrayColor(), 5f);</div>
-<div class="line"><span class="lineno">  383</span>                    }</div>
-<div class="line"><span class="lineno">  384</span>                    </div>
-<div class="line"><span class="lineno">  385</span>                }, TooltipLocation.LEFT, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  386</span>                </div>
-<div class="line"><span class="lineno">  387</span>                info.setIdForAddedRow(sys);</div>
-<div class="line"><span class="lineno">  388</span>                </div>
-<div class="line"><span class="lineno">  389</span>                numListed++;</div>
-<div class="line"><span class="lineno">  390</span>                <span class="keywordflow">if</span> (numListed &gt;= maxSystemsToList) {</div>
-<div class="line"><span class="lineno">  391</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  392</span>                }</div>
-<div class="line"><span class="lineno">  393</span>            }</div>
-<div class="line"><span class="lineno">  394</span>            info.addTable(<span class="stringliteral">&quot;None&quot;</span>, -1, opad);</div>
-<div class="line"><span class="lineno">  395</span>            info.addSpacer(3f);</div>
-<div class="line"><span class="lineno">  396</span>            </div>
-<div class="line"><span class="lineno">  397</span>            </div>
-<div class="line"><span class="lineno">  398</span>        }</div>
-<div class="line"><span class="lineno">  399</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_aef7175eff8878a18ebb3099d3a7ab59f"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#aef7175eff8878a18ebb3099d3a7ab59f">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.getFactionForUIColors</a></div><div class="ttdeci">FactionAPI getFactionForUIColors()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00319">BaseIntelPlugin.java:319</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_html_af4809d9ea77ac2d93e7998fe40173587"><div class="ttname"><a href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#af4809d9ea77ac2d93e7998fe40173587">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.isStageActiveAndLast</a></div><div class="ttdeci">boolean isStageActiveAndLast(Object stageId)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d56/BaseEventIntel_8java_source.html#l00627">BaseEventIntel.java:627</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel_html_a2971a281600983868c0f67c98712974b"><div class="ttname"><a href="../../db/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#a2971a281600983868c0f67c98712974b">com.fs.starfarer.api.impl.campaign.intel.events.HostileActivityEventIntel.stabilityPenalty</a></div><div class="ttdeci">float stabilityPenalty</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d57/HostileActivityEventIntel_8java_source.html#l00083">HostileActivityEventIntel.java:83</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel_html_a4e6d33c93060e6400c2699eb96ed1644"><div class="ttname"><a href="../../db/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#a4e6d33c93060e6400c2699eb96ed1644">com.fs.starfarer.api.impl.campaign.intel.events.HostileActivityEventIntel.accessibilityPenalty</a></div><div class="ttdeci">float accessibilityPenalty</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d57/HostileActivityEventIntel_8java_source.html#l00082">HostileActivityEventIntel.java:82</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel_html_a66a6bcb987c733bf94f20dff8d5289be"><div class="ttname"><a href="../../db/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#a66a6bcb987c733bf94f20dff8d5289be">com.fs.starfarer.api.impl.campaign.intel.events.HostileActivityEventIntel.computePlayerSystemDangerData</a></div><div class="ttdeci">List&lt; HAEStarSystemDangerData &gt; computePlayerSystemDangerData()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d57/HostileActivityEventIntel_8java_source.html#l00645">HostileActivityEventIntel.java:645</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel_html_a680de1a3205fefd93cf97d59ce655566"><div class="ttname"><a href="../../db/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#a680de1a3205fefd93cf97d59ce655566">com.fs.starfarer.api.impl.campaign.intel.events.HostileActivityEventIntel.updatePenalties</a></div><div class="ttdeci">void updatePenalties()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d57/HostileActivityEventIntel_8java_source.html#l00760">HostileActivityEventIntel.java:760</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel_html_ababe257c00d2f0ae10b7e3cdaeec4216"><div class="ttname"><a href="../../db/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#ababe257c00d2f0ae10b7e3cdaeec4216">com.fs.starfarer.api.impl.campaign.intel.events.HostileActivityEventIntel.getDangerString</a></div><div class="ttdeci">String getDangerString(float mag)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d57/HostileActivityEventIntel_8java_source.html#l00704">HostileActivityEventIntel.java:704</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel_html_aeb00bb572607d21fe22168ad213772e0"><div class="ttname"><a href="../../db/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#aeb00bb572607d21fe22168ad213772e0">com.fs.starfarer.api.impl.campaign.intel.events.HostileActivityEventIntel.getDangerColor</a></div><div class="ttdeci">Color getDangerColor(float mag)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d57/HostileActivityEventIntel_8java_source.html#l00719">HostileActivityEventIntel.java:719</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a440e519c2fc86b5b4a51b3d2e507209d" name="a440e519c2fc86b5b4a51b3d2e507209d"></a>
@@ -1246,14 +946,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html#l00804">804</a> of file <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html">HostileActivityEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  804</span>                                                   {</div>
-<div class="line"><span class="lineno">  805</span>        <span class="keywordflow">for</span> (MarketAPI curr : Misc.getPlayerMarkets(<span class="keyword">false</span>)) {</div>
-<div class="line"><span class="lineno">  806</span>            <span class="keywordflow">if</span> (curr.hasCondition(Conditions.HOSTILE_ACTIVITY)) {</div>
-<div class="line"><span class="lineno">  807</span>                curr.removeCondition(Conditions.HOSTILE_ACTIVITY);</div>
-<div class="line"><span class="lineno">  808</span>            }</div>
-<div class="line"><span class="lineno">  809</span>        }</div>
-<div class="line"><span class="lineno">  810</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a617c7630201ec573f5c9654643a88bc7" name="a617c7630201ec573f5c9654643a88bc7"></a>
@@ -1273,9 +966,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html#l00824">824</a> of file <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html">HostileActivityEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  824</span>                                                     {</div>
-<div class="line"><span class="lineno">  825</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af5c50a2fb07e5f327ccd5f82eb7d17f8" name="af5c50a2fb07e5f327ccd5f82eb7d17f8"></a>
@@ -1295,36 +986,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html#l00666">666</a> of file <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html">HostileActivityEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  666</span>                                                                           {</div>
-<div class="line"><span class="lineno">  667</span>        HAEStarSystemDangerData data = <span class="keyword">new</span> HAEStarSystemDangerData();</div>
-<div class="line"><span class="lineno">  668</span>        data.system = system;</div>
-<div class="line"><span class="lineno">  669</span>        </div>
-<div class="line"><span class="lineno">  670</span>        <span class="keywordtype">float</span> maxMag = 0f;</div>
-<div class="line"><span class="lineno">  671</span>        <span class="keywordtype">float</span> total = 0f;</div>
-<div class="line"><span class="lineno">  672</span>        <span class="keywordflow">for</span> (EventFactor factor : <a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ad00fcb944d26c95dcd71888578da03d1">factors</a>) {</div>
-<div class="line"><span class="lineno">  673</span>            <span class="keywordflow">if</span> (factor instanceof BaseHostileActivityFactor) {</div>
-<div class="line"><span class="lineno">  674</span>                HAEFactorDangerData curr = <span class="keyword">new</span> HAEFactorDangerData();</div>
-<div class="line"><span class="lineno">  675</span>                curr.factor = (HostileActivityFactor) factor;</div>
-<div class="line"><span class="lineno">  676</span>                curr.mag = ((BaseHostileActivityFactor) factor).getEffectMagnitude(system);</div>
-<div class="line"><span class="lineno">  677</span>                data.factorData.add(curr);</div>
-<div class="line"><span class="lineno">  678</span>                maxMag = Math.max(maxMag, curr.mag);</div>
-<div class="line"><span class="lineno">  679</span>                total += curr.mag;</div>
-<div class="line"><span class="lineno">  680</span>            }</div>
-<div class="line"><span class="lineno">  681</span>        }</div>
-<div class="line"><span class="lineno">  682</span>        data.maxMag = maxMag;</div>
-<div class="line"><span class="lineno">  683</span>        data.totalMag = total;</div>
-<div class="line"><span class="lineno">  684</span>        data.sortMag = data.maxMag * 0.75f + data.totalMag * 0.25f;</div>
-<div class="line"><span class="lineno">  685</span>        </div>
-<div class="line"><span class="lineno">  686</span>        Collections.sort(data.factorData, <span class="keyword">new</span> Comparator&lt;HAEFactorDangerData&gt;() {</div>
-<div class="line"><span class="lineno">  687</span>            <span class="keyword">public</span> <span class="keywordtype">int</span> compare(HAEFactorDangerData o1, HAEFactorDangerData o2) {</div>
-<div class="line"><span class="lineno">  688</span>                <span class="keywordflow">return</span> (<span class="keywordtype">int</span>) Math.signum(o2.mag - o1.mag);</div>
-<div class="line"><span class="lineno">  689</span>            }</div>
-<div class="line"><span class="lineno">  690</span>        });</div>
-<div class="line"><span class="lineno">  691</span>        </div>
-<div class="line"><span class="lineno">  692</span>        <span class="keywordflow">return</span> data;</div>
-<div class="line"><span class="lineno">  693</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_html_ad00fcb944d26c95dcd71888578da03d1"><div class="ttname"><a href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ad00fcb944d26c95dcd71888578da03d1">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.factors</a></div><div class="ttdeci">List&lt; EventFactor &gt; factors</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d56/BaseEventIntel_8java_source.html#l00139">BaseEventIntel.java:139</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a66a6bcb987c733bf94f20dff8d5289be" name="a66a6bcb987c733bf94f20dff8d5289be"></a>
@@ -1343,28 +1005,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html#l00645">645</a> of file <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html">HostileActivityEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  645</span>                                                                         {</div>
-<div class="line"><span class="lineno">  646</span>        List&lt;HAEStarSystemDangerData&gt; systemData = <span class="keyword">new</span> ArrayList&lt;HAEStarSystemDangerData&gt;();</div>
-<div class="line"><span class="lineno">  647</span>        <span class="keywordflow">for</span> (StarSystemAPI system : Misc.getPlayerSystems(<span class="keyword">false</span>)) {</div>
-<div class="line"><span class="lineno">  648</span>            HAEStarSystemDangerData data = <a class="code hl_function" href="../../db/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#af5c50a2fb07e5f327ccd5f82eb7d17f8">computeDangerData</a>(system);</div>
-<div class="line"><span class="lineno">  649</span>            systemData.add(data);</div>
-<div class="line"><span class="lineno">  650</span>        }</div>
-<div class="line"><span class="lineno">  651</span>        Collections.sort(systemData, <span class="keyword">new</span> Comparator&lt;HAEStarSystemDangerData&gt;() {</div>
-<div class="line"><span class="lineno">  652</span>            <span class="keyword">public</span> <span class="keywordtype">int</span> compare(HAEStarSystemDangerData o1, HAEStarSystemDangerData o2) {</div>
-<div class="line"><span class="lineno">  653</span>                <span class="keywordtype">int</span> result = (int) Math.signum(o2.sortMag - o1.sortMag);</div>
-<div class="line"><span class="lineno">  654</span>                <span class="keywordflow">if</span> (result == 0) {</div>
-<div class="line"><span class="lineno">  655</span>                    result = (int) Math.signum(o2.totalMag - o1.totalMag);</div>
-<div class="line"><span class="lineno">  656</span>                }</div>
-<div class="line"><span class="lineno">  657</span>                <span class="keywordflow">if</span> (result == 0) {</div>
-<div class="line"><span class="lineno">  658</span>                    result = (int) Math.signum(o2.system.getId().hashCode() - o1.system.getId().hashCode());</div>
-<div class="line"><span class="lineno">  659</span>                }</div>
-<div class="line"><span class="lineno">  660</span>                <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">  661</span>            }</div>
-<div class="line"><span class="lineno">  662</span>        });</div>
-<div class="line"><span class="lineno">  663</span>        <span class="keywordflow">return</span> systemData;</div>
-<div class="line"><span class="lineno">  664</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel_html_af5c50a2fb07e5f327ccd5f82eb7d17f8"><div class="ttname"><a href="../../db/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#af5c50a2fb07e5f327ccd5f82eb7d17f8">com.fs.starfarer.api.impl.campaign.intel.events.HostileActivityEventIntel.computeDangerData</a></div><div class="ttdeci">HAEStarSystemDangerData computeDangerData(StarSystemAPI system)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d57/HostileActivityEventIntel_8java_source.html#l00666">HostileActivityEventIntel.java:666</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a854a6721692ace749847279169077942" name="a854a6721692ace749847279169077942"></a>
@@ -1392,15 +1033,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html#l00909">909</a> of file <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html">HostileActivityEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  909</span>                                                                         {</div>
-<div class="line"><span class="lineno">  910</span>        <span class="keywordflow">if</span> (fleetPointsDestroyed &lt;= 0) <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  911</span>        </div>
-<div class="line"><span class="lineno">  912</span>        <span class="keywordtype">int</span> points = Math.round(fleetPointsDestroyed / <a class="code hl_variable" href="../../db/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#ad105bc30e254ba091ddb729aade0c55e">FP_PER_POINT</a>);</div>
-<div class="line"><span class="lineno">  913</span>        <span class="keywordflow">if</span> (points &lt; 1) points = 1;</div>
-<div class="line"><span class="lineno">  914</span>        <span class="keywordflow">return</span> points;</div>
-<div class="line"><span class="lineno">  915</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel_html_ad105bc30e254ba091ddb729aade0c55e"><div class="ttname"><a href="../../db/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#ad105bc30e254ba091ddb729aade0c55e">com.fs.starfarer.api.impl.campaign.intel.events.HostileActivityEventIntel.FP_PER_POINT</a></div><div class="ttdeci">static float FP_PER_POINT</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d57/HostileActivityEventIntel_8java_source.html#l00054">HostileActivityEventIntel.java:54</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aabf0f925dcfd7f1b191a034e05491265" name="aabf0f925dcfd7f1b191a034e05491265"></a>
@@ -1419,11 +1052,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html#l00755">755</a> of file <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html">HostileActivityEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  755</span>                                 {</div>
-<div class="line"><span class="lineno">  756</span>        <a class="code hl_function" href="../../db/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#a09958002e8cec57c9f868e746a1894b4">syncHostileActivityConditionsWithEventProgress</a>();</div>
-<div class="line"><span class="lineno">  757</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel_html_a09958002e8cec57c9f868e746a1894b4"><div class="ttname"><a href="../../db/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#a09958002e8cec57c9f868e746a1894b4">com.fs.starfarer.api.impl.campaign.intel.events.HostileActivityEventIntel.syncHostileActivityConditionsWithEventProgress</a></div><div class="ttdeci">void syncHostileActivityConditionsWithEventProgress()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d57/HostileActivityEventIntel_8java_source.html#l00773">HostileActivityEventIntel.java:773</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab1a3bab81b9a1a952ba12bfc6a8a4777" name="ab1a3bab81b9a1a952ba12bfc6a8a4777"></a>
@@ -1450,11 +1079,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html#l00085">85</a> of file <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html">HostileActivityEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   85</span>                                                  {</div>
-<div class="line"><span class="lineno">   86</span>        <span class="keywordflow">return</span> (<a class="code hl_function" href="../../db/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#aaec108243ebe0610f59eb741880922a2">HostileActivityEventIntel</a>) Global.getSector().getMemoryWithoutUpdate().get(<a class="code hl_variable" href="../../db/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#ad4d91da7d54c404683ad775e2a6e8d1e">KEY</a>);</div>
-<div class="line"><span class="lineno">   87</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel_html_aaec108243ebe0610f59eb741880922a2"><div class="ttname"><a href="../../db/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#aaec108243ebe0610f59eb741880922a2">com.fs.starfarer.api.impl.campaign.intel.events.HostileActivityEventIntel.HostileActivityEventIntel</a></div><div class="ttdeci">HostileActivityEventIntel()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d57/HostileActivityEventIntel_8java_source.html#l00089">HostileActivityEventIntel.java:89</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae359903447cac063740ecd1284c7e0bd" name="ae359903447cac063740ecd1284c7e0bd"></a>
@@ -1473,10 +1098,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html#l00812">812</a> of file <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html">HostileActivityEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  812</span>                                           {</div>
-<div class="line"><span class="lineno">  813</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../db/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#a4e6d33c93060e6400c2699eb96ed1644">accessibilityPenalty</a>;</div>
-<div class="line"><span class="lineno">  814</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a31754b04a22654148341776458ba3525" name="a31754b04a22654148341776458ba3525"></a>
@@ -1506,16 +1128,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html#l00610">610</a> of file <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html">HostileActivityEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  610</span>                                                                                         {</div>
-<div class="line"><span class="lineno">  611</span>        BaseHostileActivityFactor curr = <a class="code hl_function" href="../../db/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#a78c955fd621030603d41d81a743729a7">getActivityOfClass</a>(activityClass);</div>
-<div class="line"><span class="lineno">  612</span>        <span class="keywordflow">if</span> (curr == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  613</span>        </div>
-<div class="line"><span class="lineno">  614</span>        HostileActivityCause2 cause = curr.getCauseOfClass(causeClass);</div>
-<div class="line"><span class="lineno">  615</span>        <span class="keywordflow">if</span> (cause == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  616</span>        </div>
-<div class="line"><span class="lineno">  617</span>        <span class="keywordflow">return</span> cause;</div>
-<div class="line"><span class="lineno">  618</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a78c955fd621030603d41d81a743729a7" name="a78c955fd621030603d41d81a743729a7"></a>
@@ -1535,17 +1148,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html#l00634">634</a> of file <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html">HostileActivityEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  634</span>                                                                 {</div>
-<div class="line"><span class="lineno">  635</span>        Iterator&lt;EventFactor&gt; iter = <a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ad00fcb944d26c95dcd71888578da03d1">factors</a>.iterator();</div>
-<div class="line"><span class="lineno">  636</span>        <span class="keywordflow">while</span> (iter.hasNext()) {</div>
-<div class="line"><span class="lineno">  637</span>            EventFactor curr = iter.next();</div>
-<div class="line"><span class="lineno">  638</span>            <span class="keywordflow">if</span> (curr.getClass() == c) {</div>
-<div class="line"><span class="lineno">  639</span>                <span class="keywordflow">return</span> (BaseHostileActivityFactor) curr;</div>
-<div class="line"><span class="lineno">  640</span>            }</div>
-<div class="line"><span class="lineno">  641</span>        }</div>
-<div class="line"><span class="lineno">  642</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  643</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a51d8df726641e38a3326ff5d9de76051" name="a51d8df726641e38a3326ff5d9de76051"></a>
@@ -1566,13 +1169,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a7b64cd609d54e4e7db47a5c2fe236e20">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html#l00549">549</a> of file <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html">HostileActivityEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  549</span>                               {</div>
-<div class="line"><span class="lineno">  550</span>        Color color = Misc.getNegativeHighlightColor();</div>
-<div class="line"><span class="lineno">  551</span>        <span class="comment">//color = Misc.getBasePlayerColor();</span></div>
-<div class="line"><span class="lineno">  552</span>        color = Misc.interpolateColor(color, Color.black, 0.25f);</div>
-<div class="line"><span class="lineno">  553</span>        <span class="keywordflow">return</span> color;</div>
-<div class="line"><span class="lineno">  554</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a72c9ce949d0205dc40a9feeeaf4941d1" name="a72c9ce949d0205dc40a9feeeaf4941d1"></a>
@@ -1593,10 +1190,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a0f0ca2b35a1c33db0d6b5d8c9a85f583">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html#l00557">557</a> of file <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html">HostileActivityEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  557</span>                                                {</div>
-<div class="line"><span class="lineno">  558</span>        <span class="keywordflow">return</span> super.getBarProgressIndicatorColor();</div>
-<div class="line"><span class="lineno">  559</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="acf1d5f7fe9faf35ff71b907b210adb1d" name="acf1d5f7fe9faf35ff71b907b210adb1d"></a>
@@ -1616,15 +1210,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html#l00695">695</a> of file <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html">HostileActivityEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  695</span>                                               {</div>
-<div class="line"><span class="lineno">  696</span>        <span class="keywordflow">if</span> (mag &lt;= 0f) <span class="keywordflow">return</span> LocationDanger.NONE;</div>
-<div class="line"><span class="lineno">  697</span>        <span class="keywordflow">if</span> (mag &lt; 0.25f) <span class="keywordflow">return</span> LocationDanger.MINIMAL;</div>
-<div class="line"><span class="lineno">  698</span>        <span class="keywordflow">if</span> (mag &lt; 0.5f) <span class="keywordflow">return</span> LocationDanger.LOW;</div>
-<div class="line"><span class="lineno">  699</span>        <span class="keywordflow">if</span> (mag &lt; 0.75f) <span class="keywordflow">return</span> LocationDanger.MEDIUM;</div>
-<div class="line"><span class="lineno">  700</span>        <span class="keywordflow">if</span> (mag &lt; 1f) <span class="keywordflow">return</span> LocationDanger.HIGH;</div>
-<div class="line"><span class="lineno">  701</span>        <span class="keywordflow">return</span> LocationDanger.EXTREME;</div>
-<div class="line"><span class="lineno">  702</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aeb00bb572607d21fe22168ad213772e0" name="aeb00bb572607d21fe22168ad213772e0"></a>
@@ -1644,18 +1230,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html#l00719">719</a> of file <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html">HostileActivityEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  719</span>                                           {</div>
-<div class="line"><span class="lineno">  720</span>        LocationDanger d = <a class="code hl_function" href="../../db/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#acf1d5f7fe9faf35ff71b907b210adb1d">getDanger</a>(mag);</div>
-<div class="line"><span class="lineno">  721</span>        <span class="keywordflow">if</span> (d == LocationDanger.NONE || d == LocationDanger.MINIMAL) {</div>
-<div class="line"><span class="lineno">  722</span>            <span class="keywordflow">return</span> Misc.getPositiveHighlightColor();</div>
-<div class="line"><span class="lineno">  723</span>        }</div>
-<div class="line"><span class="lineno">  724</span>        <span class="keywordflow">if</span> (d == LocationDanger.EXTREME || d == LocationDanger.HIGH) {</div>
-<div class="line"><span class="lineno">  725</span>            <span class="keywordflow">return</span> Misc.getNegativeHighlightColor();</div>
-<div class="line"><span class="lineno">  726</span>        }</div>
-<div class="line"><span class="lineno">  727</span>        <span class="keywordflow">return</span> Misc.getHighlightColor();</div>
-<div class="line"><span class="lineno">  728</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel_html_acf1d5f7fe9faf35ff71b907b210adb1d"><div class="ttname"><a href="../../db/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#acf1d5f7fe9faf35ff71b907b210adb1d">com.fs.starfarer.api.impl.campaign.intel.events.HostileActivityEventIntel.getDanger</a></div><div class="ttdeci">LocationDanger getDanger(float mag)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d57/HostileActivityEventIntel_8java_source.html#l00695">HostileActivityEventIntel.java:695</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ababe257c00d2f0ae10b7e3cdaeec4216" name="ababe257c00d2f0ae10b7e3cdaeec4216"></a>
@@ -1675,10 +1250,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html#l00704">704</a> of file <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html">HostileActivityEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  704</span>                                             {</div>
-<div class="line"><span class="lineno">  705</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../db/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#ababe257c00d2f0ae10b7e3cdaeec4216">getDangerString</a>(<a class="code hl_function" href="../../db/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#acf1d5f7fe9faf35ff71b907b210adb1d">getDanger</a>(mag));</div>
-<div class="line"><span class="lineno">  706</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a010c880d3643654e597805c2421cad97" name="a010c880d3643654e597805c2421cad97"></a>
@@ -1698,18 +1270,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html#l00707">707</a> of file <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html">HostileActivityEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  707</span>                                                    {</div>
-<div class="line"><span class="lineno">  708</span>        <span class="keywordflow">switch</span> (d) {</div>
-<div class="line"><span class="lineno">  709</span>        <span class="keywordflow">case</span> EXTREME: <span class="keywordflow">return</span> <span class="stringliteral">&quot;Extreme&quot;</span>;</div>
-<div class="line"><span class="lineno">  710</span>        <span class="keywordflow">case</span> HIGH: <span class="keywordflow">return</span> <span class="stringliteral">&quot;High&quot;</span>;</div>
-<div class="line"><span class="lineno">  711</span>        <span class="keywordflow">case</span> MEDIUM: <span class="keywordflow">return</span> <span class="stringliteral">&quot;Medium&quot;</span>;</div>
-<div class="line"><span class="lineno">  712</span>        <span class="keywordflow">case</span> LOW: <span class="keywordflow">return</span> <span class="stringliteral">&quot;Low&quot;</span>;</div>
-<div class="line"><span class="lineno">  713</span>        <span class="keywordflow">case</span> MINIMAL: <span class="keywordflow">return</span> <span class="stringliteral">&quot;Minimal&quot;</span>;</div>
-<div class="line"><span class="lineno">  714</span>        <span class="keywordflow">case</span> NONE: <span class="keywordflow">return</span> <span class="stringliteral">&quot;None&quot;</span>;</div>
-<div class="line"><span class="lineno">  715</span>        }</div>
-<div class="line"><span class="lineno">  716</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Unknown&quot;</span>;</div>
-<div class="line"><span class="lineno">  717</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae1376126a5ff9d303ecc43961d539291" name="ae1376126a5ff9d303ecc43961d539291"></a>
@@ -1731,10 +1292,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a6499624a08c9565334e2395989f542c9">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html#l00479">479</a> of file <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html">HostileActivityEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  479</span>                            {</div>
-<div class="line"><span class="lineno">  480</span>        <span class="keywordflow">return</span> Global.getSettings().getSpriteName(<span class="stringliteral">&quot;events&quot;</span>, <span class="stringliteral">&quot;hostile_activity&quot;</span>);</div>
-<div class="line"><span class="lineno">  481</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ad729cfc90b88518c6c913c0ad37bd97e" name="ad729cfc90b88518c6c913c0ad37bd97e"></a>
@@ -1762,27 +1320,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html#l00141">141</a> of file <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html">HostileActivityEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  141</span>                                                                     {</div>
-<div class="line"><span class="lineno">  142</span>        Pair&lt;String, Color&gt; p = <span class="keyword">new</span> Pair&lt;String, Color&gt;();</div>
-<div class="line"><span class="lineno">  143</span>        <span class="keywordflow">if</span> (<span class="keywordtype">id</span> == Stage.START) {</div>
-<div class="line"><span class="lineno">  144</span>            p.one = <span class="stringliteral">&quot;minimal&quot;</span>;</div>
-<div class="line"><span class="lineno">  145</span>            p.two = Misc.getPositiveHighlightColor();</div>
-<div class="line"><span class="lineno">  146</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keywordtype">id</span> == Stage.HA_1) {</div>
-<div class="line"><span class="lineno">  147</span>            p.one = <span class="stringliteral">&quot;low&quot;</span>;</div>
-<div class="line"><span class="lineno">  148</span>            p.two = Misc.getPositiveHighlightColor();</div>
-<div class="line"><span class="lineno">  149</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keywordtype">id</span> == Stage.HA_2) {</div>
-<div class="line"><span class="lineno">  150</span>            p.one = <span class="stringliteral">&quot;moderate&quot;</span>;</div>
-<div class="line"><span class="lineno">  151</span>            p.two = Misc.getHighlightColor();</div>
-<div class="line"><span class="lineno">  152</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keywordtype">id</span> == Stage.HA_3) {</div>
-<div class="line"><span class="lineno">  153</span>            p.one = <span class="stringliteral">&quot;high&quot;</span>;</div>
-<div class="line"><span class="lineno">  154</span>            p.two = Misc.getNegativeHighlightColor();</div>
-<div class="line"><span class="lineno">  155</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keywordtype">id</span> == Stage.HA_4) {</div>
-<div class="line"><span class="lineno">  156</span>            p.one = <span class="stringliteral">&quot;extreme&quot;</span>;</div>
-<div class="line"><span class="lineno">  157</span>            p.two = Misc.getNegativeHighlightColor();</div>
-<div class="line"><span class="lineno">  158</span>        }</div>
-<div class="line"><span class="lineno">  159</span>        <span class="keywordflow">return</span> p;</div>
-<div class="line"><span class="lineno">  160</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa841fbac2b76b21bc03d840e1e146ef6" name="aa841fbac2b76b21bc03d840e1e146ef6"></a>
@@ -1811,12 +1349,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a766d58aa3cc1f11bf282350948f9501e">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html#l00994">994</a> of file <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html">HostileActivityEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  994</span>                                                      {</div>
-<div class="line"><span class="lineno">  995</span>        Set&lt;String&gt; tags = super.getIntelTags(map);</div>
-<div class="line"><span class="lineno">  996</span>        tags.add(Tags.INTEL_COLONIES);</div>
-<div class="line"><span class="lineno">  997</span>        <span class="keywordflow">return</span> tags;</div>
-<div class="line"><span class="lineno">  998</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a0227a53ca7b24770963d9b99052b3671" name="a0227a53ca7b24770963d9b99052b3671"></a>
@@ -1845,10 +1378,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a582fe7cb29e8f2f65670d4dd74418235">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html#l00576">576</a> of file <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html">HostileActivityEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  576</span>                               {</div>
-<div class="line"><span class="lineno">  577</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Hostile Activity&quot;</span>;</div>
-<div class="line"><span class="lineno">  578</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae979d88c12f76aa5dd97263dd36bcfff" name="ae979d88c12f76aa5dd97263dd36bcfff"></a>
@@ -1867,10 +1397,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html#l00816">816</a> of file <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html">HostileActivityEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  816</span>                                       {</div>
-<div class="line"><span class="lineno">  817</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../db/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#a2971a281600983868c0f67c98712974b">stabilityPenalty</a>;</div>
-<div class="line"><span class="lineno">  818</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab24f893a837022dfa60d0db2ceb6d778" name="ab24f893a837022dfa60d0db2ceb6d778"></a>
@@ -1900,15 +1427,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a7ca063a5f64cdc0790766679e8fd23d0">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html#l00486">486</a> of file <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html">HostileActivityEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  486</span>                                                  {</div>
-<div class="line"><span class="lineno">  487</span>        EventStageData esd = <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#aaea47402cf58486cd60052a0e9297933">getDataFor</a>(stageId);</div>
-<div class="line"><span class="lineno">  488</span>        <span class="keywordflow">if</span> (esd != <span class="keyword">null</span> &amp;&amp; esd.id == Stage.HA_EVENT &amp;&amp; esd.rollData != <span class="keyword">null</span> &amp;&amp; <a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a78d4e00e402d57c4b2dd98012b52c202">RANDOM_EVENT_NONE</a>.equals(esd.rollData)) {</div>
-<div class="line"><span class="lineno">  489</span>            <span class="keywordflow">return</span> Global.getSettings().getSpriteName(<span class="stringliteral">&quot;events&quot;</span>, <span class="stringliteral">&quot;stage_unknown_neutral&quot;</span>);</div>
-<div class="line"><span class="lineno">  490</span>        }</div>
-<div class="line"><span class="lineno">  491</span>        <span class="keywordflow">return</span> super.getStageIcon(stageId);</div>
-<div class="line"><span class="lineno">  492</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_html_a78d4e00e402d57c4b2dd98012b52c202"><div class="ttname"><a href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a78d4e00e402d57c4b2dd98012b52c202">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.RANDOM_EVENT_NONE</a></div><div class="ttdeci">static final String RANDOM_EVENT_NONE</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d56/BaseEventIntel_8java_source.html#l00039">BaseEventIntel.java:39</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9292db44c05ff333d8542b28e7dfad5a" name="a9292db44c05ff333d8542b28e7dfad5a"></a>
@@ -1938,34 +1457,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#abdabd006be834a1d8b3db6a3a446257d">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html#l00519">519</a> of file <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html">HostileActivityEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  519</span>                                                      {</div>
-<div class="line"><span class="lineno">  520</span>        EventStageData esd = <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#aaea47402cf58486cd60052a0e9297933">getDataFor</a>(stageId);</div>
-<div class="line"><span class="lineno">  521</span>        <span class="keywordflow">if</span> (esd == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  522</span>        </div>
-<div class="line"><span class="lineno">  523</span><span class="comment">//      if (esd.id == Stage.MINOR_EVENT) {</span></div>
-<div class="line"><span class="lineno">  524</span><span class="comment">//          System.out.println(&quot;ewfwfew&quot;);</span></div>
-<div class="line"><span class="lineno">  525</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  526</span>        </div>
-<div class="line"><span class="lineno">  527</span>        <span class="comment">//setProgress(48);</span></div>
-<div class="line"><span class="lineno">  528</span>        <span class="comment">//setProgress(74);</span></div>
-<div class="line"><span class="lineno">  529</span>        </div>
-<div class="line"><span class="lineno">  530</span>        <span class="keywordflow">if</span> (esd.rollData instanceof HAERandomEventData) {</div>
-<div class="line"><span class="lineno">  531</span>            HAERandomEventData data = (HAERandomEventData) esd.rollData;</div>
-<div class="line"><span class="lineno">  532</span>            <span class="keywordflow">return</span> data.factor.getEventStageIcon(<span class="keyword">this</span>, esd);</div>
-<div class="line"><span class="lineno">  533</span>        }</div>
-<div class="line"><span class="lineno">  534</span><span class="comment">//      if (esd.id == Stage.HA_EVENT) {</span></div>
-<div class="line"><span class="lineno">  535</span><span class="comment">//          System.out.println(&quot;wefwefwe&quot;);</span></div>
-<div class="line"><span class="lineno">  536</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  537</span>        <span class="comment">//if (stageId == Stage.START) return null;</span></div>
-<div class="line"><span class="lineno">  538</span>    </div>
-<div class="line"><span class="lineno">  539</span>        <span class="keywordflow">if</span> (EnumSet.of(Stage.HA_1, Stage.HA_2, Stage.HA_3, Stage.HA_4, </div>
-<div class="line"><span class="lineno">  540</span>                Stage.INCREASED_DEFENSES, Stage.START).contains(esd.id)) {</div>
-<div class="line"><span class="lineno">  541</span>            <span class="keywordflow">return</span> Global.getSettings().getSpriteName(<span class="stringliteral">&quot;events&quot;</span>, <span class="stringliteral">&quot;hostile_activity_&quot;</span> + ((Stage)esd.id).name());</div>
-<div class="line"><span class="lineno">  542</span>        }</div>
-<div class="line"><span class="lineno">  543</span>        <span class="comment">// should not happen - the above cases should handle all possibilities - but just in case</span></div>
-<div class="line"><span class="lineno">  544</span>        <span class="keywordflow">return</span> Global.getSettings().getSpriteName(<span class="stringliteral">&quot;events&quot;</span>, <span class="stringliteral">&quot;hostile_activity&quot;</span>);</div>
-<div class="line"><span class="lineno">  545</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aaa024b02d0dedb07e4a7d8f9ed37d1c3" name="aaa024b02d0dedb07e4a7d8f9ed37d1c3"></a>
@@ -1995,16 +1487,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#aa6b97feefb5a4f931194eaf3b8846f77">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html#l00563">563</a> of file <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html">HostileActivityEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  563</span>                                                     {</div>
-<div class="line"><span class="lineno">  564</span>        <span class="keywordflow">if</span> (stageId == Stage.HA_EVENT) {</div>
-<div class="line"><span class="lineno">  565</span>            <span class="keywordflow">return</span> 1;</div>
-<div class="line"><span class="lineno">  566</span>        }</div>
-<div class="line"><span class="lineno">  567</span>        <span class="keywordflow">if</span> (stageId == Stage.MINOR_EVENT) {</div>
-<div class="line"><span class="lineno">  568</span>            <span class="keywordflow">return</span> 1;</div>
-<div class="line"><span class="lineno">  569</span>        }</div>
-<div class="line"><span class="lineno">  570</span>        <span class="keywordflow">return</span> super.getStageImportance(stageId);</div>
-<div class="line"><span class="lineno">  571</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa7ed429116e0e99bed64655b28dfde8c" name="aa7ed429116e0e99bed64655b28dfde8c"></a>
@@ -2026,29 +1509,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a572febfa378ddf88ac04252011049d3a">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html#l00495">495</a> of file <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html">HostileActivityEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  495</span>                                                          {</div>
-<div class="line"><span class="lineno">  496</span>        <span class="keyword">final</span> EventStageData esd = <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#aaea47402cf58486cd60052a0e9297933">getDataFor</a>(stageId);</div>
-<div class="line"><span class="lineno">  497</span>        <span class="keywordflow">if</span> (esd != <span class="keyword">null</span> &amp;&amp; esd.id == Stage.HA_EVENT &amp;&amp; esd.rollData != <span class="keyword">null</span> &amp;&amp; <a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a78d4e00e402d57c4b2dd98012b52c202">RANDOM_EVENT_NONE</a>.equals(esd.rollData)) {</div>
-<div class="line"><span class="lineno">  498</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> TooltipCreator() {</div>
-<div class="line"><span class="lineno">  499</span>                <span class="keyword">public</span> <span class="keywordtype">boolean</span> isTooltipExpandable(Object tooltipParam) {</div>
-<div class="line"><span class="lineno">  500</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  501</span>                }</div>
-<div class="line"><span class="lineno">  502</span>                <span class="keyword">public</span> <span class="keywordtype">float</span> getTooltipWidth(Object tooltipParam) {</div>
-<div class="line"><span class="lineno">  503</span>                    <span class="keywordflow">return</span> BaseEventFactor.TOOLTIP_WIDTH;</div>
-<div class="line"><span class="lineno">  504</span>                }</div>
-<div class="line"><span class="lineno">  505</span>                </div>
-<div class="line"><span class="lineno">  506</span>                <span class="keyword">public</span> <span class="keywordtype">void</span> createTooltip(TooltipMakerAPI tooltip, <span class="keywordtype">boolean</span> expanded, Object tooltipParam) {</div>
-<div class="line"><span class="lineno">  507</span>                    <span class="keywordtype">float</span> opad = 10f;</div>
-<div class="line"><span class="lineno">  508</span>                    Color h = Misc.getHighlightColor();</div>
-<div class="line"><span class="lineno">  509</span>                    tooltip.addPara(<span class="stringliteral">&quot;Hostile activity waxes and wanes with time. When this stage is reached, &quot;</span></div>
-<div class="line"><span class="lineno">  510</span>                            + <span class="stringliteral">&quot;event progress will be reset to a lower value.&quot;</span>,</div>
-<div class="line"><span class="lineno">  511</span>                            opad);</div>
-<div class="line"><span class="lineno">  512</span>                }</div>
-<div class="line"><span class="lineno">  513</span>            };</div>
-<div class="line"><span class="lineno">  514</span>        }</div>
-<div class="line"><span class="lineno">  515</span>        <span class="keywordflow">return</span> super.getStageTooltip(stageId);</div>
-<div class="line"><span class="lineno">  516</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ad55d9604b8d1a620f9d60c70a4a7dfe4" name="ad55d9604b8d1a620f9d60c70a4a7dfe4"></a>
@@ -2070,68 +1531,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ad124619eb847be5b7e089bf2860cdf6a">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html#l00414">414</a> of file <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html">HostileActivityEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  414</span>                                                              {</div>
-<div class="line"><span class="lineno">  415</span>        <span class="keyword">final</span> EventStageData esd = <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#aaea47402cf58486cd60052a0e9297933">getDataFor</a>(stageId);</div>
-<div class="line"><span class="lineno">  416</span>        </div>
-<div class="line"><span class="lineno">  417</span>        <span class="keywordflow">if</span> (esd != <span class="keyword">null</span> &amp;&amp; esd.rollData instanceof HAERandomEventData) {</div>
-<div class="line"><span class="lineno">  418</span>            HAERandomEventData data = (HAERandomEventData) esd.rollData;</div>
-<div class="line"><span class="lineno">  419</span>            <span class="keywordflow">return</span> data.factor.getStageTooltipImpl(<span class="keyword">this</span>, esd);</div>
-<div class="line"><span class="lineno">  420</span>        }</div>
-<div class="line"><span class="lineno">  421</span>        </div>
-<div class="line"><span class="lineno">  422</span>        <span class="keywordflow">if</span> (esd != <span class="keyword">null</span> &amp;&amp; EnumSet.of(Stage.HA_1, Stage.HA_2, Stage.HA_3, Stage.HA_4).contains(esd.id)) {</div>
-<div class="line"><span class="lineno">  423</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> BaseFactorTooltip() {</div>
-<div class="line"><span class="lineno">  424</span>                @Override</div>
-<div class="line"><span class="lineno">  425</span>                <span class="keyword">public</span> <span class="keywordtype">void</span> createTooltip(TooltipMakerAPI tooltip, <span class="keywordtype">boolean</span> expanded, Object tooltipParam) {</div>
-<div class="line"><span class="lineno">  426</span>                    <span class="keywordtype">float</span> opad = 10f;</div>
-<div class="line"><span class="lineno">  427</span>                    Range affects = <span class="keyword">new</span> Range(((Stage)esd.id).name() + <span class="stringliteral">&quot;_affects&quot;</span>);</div>
-<div class="line"><span class="lineno">  428</span>                    Range impact = <span class="keyword">new</span> Range(((Stage)esd.id).name() + <span class="stringliteral">&quot;_impact&quot;</span>);</div>
-<div class="line"><span class="lineno">  429</span>                    <span class="keywordtype">float</span> stability = impact.min;</div>
-<div class="line"><span class="lineno">  430</span>                    <span class="keywordtype">float</span> access = impact.max;</div>
-<div class="line"><span class="lineno">  431</span>                    </div>
-<div class="line"><span class="lineno">  432</span>                    <span class="keywordflow">if</span> (esd.id == Stage.HA_1) {</div>
-<div class="line"><span class="lineno">  433</span>                        tooltip.addTitle(<span class="stringliteral">&quot;Low impact&quot;</span>);</div>
-<div class="line"><span class="lineno">  434</span>                    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (esd.id == Stage.HA_2) {</div>
-<div class="line"><span class="lineno">  435</span>                        tooltip.addTitle(<span class="stringliteral">&quot;Moderate impact&quot;</span>);</div>
-<div class="line"><span class="lineno">  436</span>                    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (esd.id == Stage.HA_3) {</div>
-<div class="line"><span class="lineno">  437</span>                        tooltip.addTitle(<span class="stringliteral">&quot;High impact&quot;</span>);</div>
-<div class="line"><span class="lineno">  438</span>                    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (esd.id == Stage.HA_4) {</div>
-<div class="line"><span class="lineno">  439</span>                        tooltip.addTitle(<span class="stringliteral">&quot;Extreme impact&quot;</span>);</div>
-<div class="line"><span class="lineno">  440</span>                    }</div>
-<div class="line"><span class="lineno">  441</span>                    </div>
-<div class="line"><span class="lineno">  442</span>                    tooltip.addPara(<span class="stringliteral">&quot;Colony stability reduced by %s, accessibility reduced by %s.&quot;</span>, opad,</div>
-<div class="line"><span class="lineno">  443</span>                            Misc.getHighlightColor(),</div>
-<div class="line"><span class="lineno">  444</span>                            <span class="stringliteral">&quot;&quot;</span> + (<span class="keywordtype">int</span>) stability, </div>
-<div class="line"><span class="lineno">  445</span>                            <span class="stringliteral">&quot;&quot;</span> + (<span class="keywordtype">int</span>) Math.round(access * 100f) + <span class="stringliteral">&quot;%&quot;</span>);</div>
-<div class="line"><span class="lineno">  446</span>                    </div>
-<div class="line"><span class="lineno">  447</span>                    <span class="keywordflow">if</span> (affects.max &gt;= 1f) {</div>
-<div class="line"><span class="lineno">  448</span>                        tooltip.addPara(<span class="stringliteral">&quot;All of your colonies are affected.&quot;</span>, opad);</div>
-<div class="line"><span class="lineno">  449</span>                    } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  450</span>                        tooltip.addPara(<span class="stringliteral">&quot;Affects colonies in %s of your hardest-hit star systems, or &quot;</span></div>
-<div class="line"><span class="lineno">  451</span>                                + <span class="stringliteral">&quot;in at least %s of your star systems, whichever is higher.&quot;</span>, opad,</div>
-<div class="line"><span class="lineno">  452</span>                                Misc.getHighlightColor(),</div>
-<div class="line"><span class="lineno">  453</span>                                <span class="stringliteral">&quot;&quot;</span> + (<span class="keywordtype">int</span>) affects.min, </div>
-<div class="line"><span class="lineno">  454</span>                                <span class="stringliteral">&quot;&quot;</span> + (<span class="keywordtype">int</span>) Math.round(affects.max * 100f) + <span class="stringliteral">&quot;%&quot;</span>);</div>
-<div class="line"><span class="lineno">  455</span>                    }</div>
-<div class="line"><span class="lineno">  456</span>                    </div>
-<div class="line"><span class="lineno">  457</span>                    esd.addProgressReq(tooltip, opad);</div>
-<div class="line"><span class="lineno">  458</span>                }</div>
-<div class="line"><span class="lineno">  459</span>            };</div>
-<div class="line"><span class="lineno">  460</span>        }</div>
-<div class="line"><span class="lineno">  461</span>        <span class="keywordflow">if</span> (esd != <span class="keyword">null</span> &amp;&amp; esd.id == Stage.INCREASED_DEFENSES) {</div>
-<div class="line"><span class="lineno">  462</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> BaseFactorTooltip() {</div>
-<div class="line"><span class="lineno">  463</span>                @Override</div>
-<div class="line"><span class="lineno">  464</span>                <span class="keyword">public</span> <span class="keywordtype">void</span> createTooltip(TooltipMakerAPI tooltip, <span class="keywordtype">boolean</span> expanded, Object tooltipParam) {</div>
-<div class="line"><span class="lineno">  465</span>                    <span class="keywordtype">float</span> opad = 10f;</div>
-<div class="line"><span class="lineno">  466</span>                    tooltip.addTitle(<span class="stringliteral">&quot;Increased defenses&quot;</span>);</div>
-<div class="line"><span class="lineno">  467</span>                    tooltip.addPara(<span class="stringliteral">&quot;When this stage is reached, your colonies will implement additional &quot;</span></div>
-<div class="line"><span class="lineno">  468</span>                            + <span class="stringliteral">&quot;defensive measures, substantially reducing the event&#39;s rate of progress.&quot;</span>, opad);</div>
-<div class="line"><span class="lineno">  469</span>                    esd.addProgressReq(tooltip, opad);</div>
-<div class="line"><span class="lineno">  470</span>                }</div>
-<div class="line"><span class="lineno">  471</span>            };</div>
-<div class="line"><span class="lineno">  472</span>        }</div>
-<div class="line"><span class="lineno">  473</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  474</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af488751a174a8fb21d620a73094fd0bc" name="af488751a174a8fb21d620a73094fd0bc"></a>
@@ -2151,11 +1551,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html#l00736">736</a> of file <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html">HostileActivityEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  736</span>                                                                 {</div>
-<div class="line"><span class="lineno">  737</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../db/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#af488751a174a8fb21d620a73094fd0bc">getTotalActivityMagnitude</a>(system, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  738</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel_html_af488751a174a8fb21d620a73094fd0bc"><div class="ttname"><a href="../../db/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#af488751a174a8fb21d620a73094fd0bc">com.fs.starfarer.api.impl.campaign.intel.events.HostileActivityEventIntel.getTotalActivityMagnitude</a></div><div class="ttdeci">float getTotalActivityMagnitude(StarSystemAPI system)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d57/HostileActivityEventIntel_8java_source.html#l00736">HostileActivityEventIntel.java:736</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab607758e7184f22ca9f0cc8f1c02dc9c" name="ab607758e7184f22ca9f0cc8f1c02dc9c"></a>
@@ -2185,22 +1581,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html#l00739">739</a> of file <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html">HostileActivityEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  739</span>                                                                                 {</div>
-<div class="line"><span class="lineno">  740</span>        <span class="comment">//if (true) return 0.1f;</span></div>
-<div class="line"><span class="lineno">  741</span>        <span class="keywordtype">float</span> total = 0f;</div>
-<div class="line"><span class="lineno">  742</span>        <span class="keywordflow">for</span> (EventFactor factor : <a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ad00fcb944d26c95dcd71888578da03d1">factors</a>) {</div>
-<div class="line"><span class="lineno">  743</span>            <span class="keywordflow">if</span> (factor instanceof BaseHostileActivityFactor) {</div>
-<div class="line"><span class="lineno">  744</span>                total += ((BaseHostileActivityFactor) factor).getEffectMagnitude(system);</div>
-<div class="line"><span class="lineno">  745</span>            }</div>
-<div class="line"><span class="lineno">  746</span>        }</div>
-<div class="line"><span class="lineno">  747</span>        </div>
-<div class="line"><span class="lineno">  748</span>        <span class="keywordflow">if</span> (capped &amp;&amp; total &gt; 1f) total = 1f;</div>
-<div class="line"><span class="lineno">  749</span>        </div>
-<div class="line"><span class="lineno">  750</span>        total = Math.round(total * 100f) / 100f;</div>
-<div class="line"><span class="lineno">  751</span>        </div>
-<div class="line"><span class="lineno">  752</span>        <span class="keywordflow">return</span> total;</div>
-<div class="line"><span class="lineno">  753</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a055bffa203459e08df3257d129ba7f58" name="a055bffa203459e08df3257d129ba7f58"></a>
@@ -2220,13 +1601,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html#l00730">730</a> of file <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html">HostileActivityEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  730</span>                                                                    {</div>
-<div class="line"><span class="lineno">  731</span>        <span class="keywordtype">float</span> mag = <a class="code hl_function" href="../../db/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#af488751a174a8fb21d620a73094fd0bc">getTotalActivityMagnitude</a>(system, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  732</span>        mag *= <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a50cfcff548038a06e628f917c787be72">getProgressFraction</a>();</div>
-<div class="line"><span class="lineno">  733</span>        <span class="keywordflow">return</span> mag * 1000f;</div>
-<div class="line"><span class="lineno">  734</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_html_a50cfcff548038a06e628f917c787be72"><div class="ttname"><a href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a50cfcff548038a06e628f917c787be72">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.getProgressFraction</a></div><div class="ttdeci">float getProgressFraction()</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d56/BaseEventIntel_8java_source.html#l00935">BaseEventIntel.java:935</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a68e410252975f170fc241764aa41cb43" name="a68e410252975f170fc241764aa41cb43"></a>
@@ -2245,11 +1620,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html#l00820">820</a> of file <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html">HostileActivityEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  820</span>                                              {</div>
-<div class="line"><span class="lineno">  821</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#ac265e304e3d245a6ae16be73e0b918b0">isEnding</a>();</div>
-<div class="line"><span class="lineno">  822</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_ac265e304e3d245a6ae16be73e0b918b0"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#ac265e304e3d245a6ae16be73e0b918b0">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.isEnding</a></div><div class="ttdeci">boolean isEnding()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00126">BaseIntelPlugin.java:126</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a01f4072c366ee2743b26b2ccada496e7" name="a01f4072c366ee2743b26b2ccada496e7"></a>
@@ -2270,10 +1641,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#aa5765240073b259857ba68583a38782e">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html#l00581">581</a> of file <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html">HostileActivityEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  581</span>                                                               {</div>
-<div class="line"><span class="lineno">  582</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  583</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ad28e739e04c8981811bb8e4c2e804f47" name="ad28e739e04c8981811bb8e4c2e804f47"></a>
@@ -2302,11 +1670,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a48d9f60d637e9a68fc33e36df7809cde">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html#l00136">136</a> of file <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html">HostileActivityEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  136</span>                                 {</div>
-<div class="line"><span class="lineno">  137</span>        super.notifyEnded();</div>
-<div class="line"><span class="lineno">  138</span>        Global.getSector().getMemoryWithoutUpdate().unset(<a class="code hl_variable" href="../../db/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#ad4d91da7d54c404683ad775e2a6e8d1e">KEY</a>);</div>
-<div class="line"><span class="lineno">  139</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2e029c82a9aa422ece700c702cb826a2" name="a2e029c82a9aa422ece700c702cb826a2"></a>
@@ -2335,13 +1699,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a129e179baf5d397ba346dd99cf43fb1c">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html#l00129">129</a> of file <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html">HostileActivityEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  129</span>                                  {</div>
-<div class="line"><span class="lineno">  130</span>        super.notifyEnding();</div>
-<div class="line"><span class="lineno">  131</span>        Global.getSector().getEconomy().removeUpdateListener(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  132</span>        <a class="code hl_function" href="../../db/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#a440e519c2fc86b5b4a51b3d2e507209d">cleanUpHostileActivityConditions</a>();</div>
-<div class="line"><span class="lineno">  133</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel_html_a440e519c2fc86b5b4a51b3d2e507209d"><div class="ttname"><a href="../../db/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#a440e519c2fc86b5b4a51b3d2e507209d">com.fs.starfarer.api.impl.campaign.intel.events.HostileActivityEventIntel.cleanUpHostileActivityConditions</a></div><div class="ttdeci">void cleanUpHostileActivityConditions()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d57/HostileActivityEventIntel_8java_source.html#l00804">HostileActivityEventIntel.java:804</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a0fdf9ba7ce2fd731b1d730ca4b6b3e4d" name="a0fdf9ba7ce2fd731b1d730ca4b6b3e4d"></a>
@@ -2371,34 +1729,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#af1f5f12f5473a8118b460c337c8a9af4">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html#l00919">919</a> of file <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html">HostileActivityEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  919</span>                                                            {</div>
-<div class="line"><span class="lineno">  920</span>        <span class="keywordflow">if</span> (stage.rollData instanceof HAERandomEventData) {</div>
-<div class="line"><span class="lineno">  921</span>            HAERandomEventData data = (HAERandomEventData) stage.rollData;</div>
-<div class="line"><span class="lineno">  922</span>            <span class="keywordtype">boolean</span> fired = data.factor.fireEvent(<span class="keyword">this</span>, stage);</div>
-<div class="line"><span class="lineno">  923</span>            stage.rollData = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  924</span>            </div>
-<div class="line"><span class="lineno">  925</span>            <span class="keywordflow">if</span> (stage.id == Stage.HA_EVENT) {</div>
-<div class="line"><span class="lineno">  926</span>                <span class="comment">//int resetProgress = getDataFor(Stage.HA_1).progress + 10 + random.nextInt(100);</span></div>
-<div class="line"><span class="lineno">  927</span>                <span class="comment">//int resetProgress = getDataFor(Stage.HA_2).progress + 10 + random.nextInt(30);</span></div>
-<div class="line"><span class="lineno">  928</span>                <span class="keywordtype">int</span> resetProgress = <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#aaea47402cf58486cd60052a0e9297933">getDataFor</a>(Stage.INCREASED_DEFENSES).progress + 1 + <a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#adf15d041480bd48f43df1aaf51de0262">random</a>.nextInt(5);</div>
-<div class="line"><span class="lineno">  929</span>                <span class="keywordflow">if</span> (!fired) {</div>
-<div class="line"><span class="lineno">  930</span>                    resetProgress = <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#aaea47402cf58486cd60052a0e9297933">getDataFor</a>(Stage.HA_EVENT).progressToRollAt - <a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#adf15d041480bd48f43df1aaf51de0262">random</a>.nextInt(100);</div>
-<div class="line"><span class="lineno">  931</span>                }</div>
-<div class="line"><span class="lineno">  932</span>                <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ab5b560e81b4ed5ef19262a77b5ca34f6">setProgress</a>(resetProgress);</div>
-<div class="line"><span class="lineno">  933</span>            }</div>
-<div class="line"><span class="lineno">  934</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (stage.id == Stage.HA_EVENT &amp;&amp;</div>
-<div class="line"><span class="lineno">  935</span>                (stage.rollData == <span class="keyword">null</span> || <a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a78d4e00e402d57c4b2dd98012b52c202">RANDOM_EVENT_NONE</a>.equals(stage.rollData))) {</div>
-<div class="line"><span class="lineno">  936</span>            stage.rollData = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  937</span>            <span class="comment">//int resetProgress = getDataFor(Stage.HA_1).progress + 10 + random.nextInt(100);</span></div>
-<div class="line"><span class="lineno">  938</span>            <span class="comment">//int resetProgress = getDataFor(Stage.HA_2).progress + 10 + random.nextInt(30);</span></div>
-<div class="line"><span class="lineno">  939</span>            <span class="keywordtype">int</span> resetProgress = <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#aaea47402cf58486cd60052a0e9297933">getDataFor</a>(Stage.INCREASED_DEFENSES).progress + 1 + <a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#adf15d041480bd48f43df1aaf51de0262">random</a>.nextInt(5);</div>
-<div class="line"><span class="lineno">  940</span>            <span class="comment">//resetProgress = 199;</span></div>
-<div class="line"><span class="lineno">  941</span>            <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ab5b560e81b4ed5ef19262a77b5ca34f6">setProgress</a>(resetProgress);</div>
-<div class="line"><span class="lineno">  942</span>        }</div>
-<div class="line"><span class="lineno">  943</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_html_ab5b560e81b4ed5ef19262a77b5ca34f6"><div class="ttname"><a href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ab5b560e81b4ed5ef19262a77b5ca34f6">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.setProgress</a></div><div class="ttdeci">void setProgress(int progress)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d56/BaseEventIntel_8java_source.html#l00814">BaseEventIntel.java:814</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_html_adf15d041480bd48f43df1aaf51de0262"><div class="ttname"><a href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#adf15d041480bd48f43df1aaf51de0262">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.random</a></div><div class="ttdeci">Random random</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d56/BaseEventIntel_8java_source.html#l00140">BaseEventIntel.java:140</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a7557d2bbe380bfb630303062ca945ce2" name="a7557d2bbe380bfb630303062ca945ce2"></a>
@@ -2418,10 +1749,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html#l00621">621</a> of file <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html">HostileActivityEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  621</span>                                                                 {</div>
-<div class="line"><span class="lineno">  622</span>        <a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ad00fcb944d26c95dcd71888578da03d1">factors</a>.remove(plugin);</div>
-<div class="line"><span class="lineno">  623</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aec8a04efd7dc43a392b427d499c20846" name="aec8a04efd7dc43a392b427d499c20846"></a>
@@ -2451,21 +1779,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html#l00596">596</a> of file <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html">HostileActivityEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  596</span>                                                                           {</div>
-<div class="line"><span class="lineno">  597</span>        BaseHostileActivityFactor curr = <a class="code hl_function" href="../../db/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#a78c955fd621030603d41d81a743729a7">getActivityOfClass</a>(activityClass);</div>
-<div class="line"><span class="lineno">  598</span>        <span class="keywordflow">if</span> (curr == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  599</span>        </div>
-<div class="line"><span class="lineno">  600</span>        HostileActivityCause2 cause = curr.getCauseOfClass(causeClass);</div>
-<div class="line"><span class="lineno">  601</span>        <span class="keywordflow">if</span> (cause == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  602</span>        </div>
-<div class="line"><span class="lineno">  603</span>        curr.getCauses().remove(cause);</div>
-<div class="line"><span class="lineno">  604</span>        </div>
-<div class="line"><span class="lineno">  605</span>        <span class="keywordflow">if</span> (curr.getCauses().isEmpty()) {</div>
-<div class="line"><span class="lineno">  606</span>            <a class="code hl_function" href="../../db/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#a7557d2bbe380bfb630303062ca945ce2">removeActivity</a>(curr);</div>
-<div class="line"><span class="lineno">  607</span>        }</div>
-<div class="line"><span class="lineno">  608</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel_html_a7557d2bbe380bfb630303062ca945ce2"><div class="ttname"><a href="../../db/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#a7557d2bbe380bfb630303062ca945ce2">com.fs.starfarer.api.impl.campaign.intel.events.HostileActivityEventIntel.removeActivity</a></div><div class="ttdeci">void removeActivity(BaseHostileActivityFactor plugin)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d57/HostileActivityEventIntel_8java_source.html#l00621">HostileActivityEventIntel.java:621</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="acdf7ce880e29bcbb8e6205299df94dc6" name="acdf7ce880e29bcbb8e6205299df94dc6"></a>
@@ -2485,16 +1799,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html#l00624">624</a> of file <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html">HostileActivityEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  624</span>                                               {</div>
-<div class="line"><span class="lineno">  625</span>        Iterator&lt;EventFactor&gt; iter = <a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ad00fcb944d26c95dcd71888578da03d1">factors</a>.iterator();</div>
-<div class="line"><span class="lineno">  626</span>        <span class="keywordflow">while</span> (iter.hasNext()) {</div>
-<div class="line"><span class="lineno">  627</span>            EventFactor curr = iter.next();</div>
-<div class="line"><span class="lineno">  628</span>            <span class="keywordflow">if</span> (curr.getClass() == c) {</div>
-<div class="line"><span class="lineno">  629</span>                iter.remove();</div>
-<div class="line"><span class="lineno">  630</span>            }</div>
-<div class="line"><span class="lineno">  631</span>        }</div>
-<div class="line"><span class="lineno">  632</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="adb20d7eba36b7c3b0f567a23235ec152" name="adb20d7eba36b7c3b0f567a23235ec152"></a>
@@ -2540,86 +1845,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d5/d7b/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1FleetEventListener.html#a6dff203922d9929930959967dfddb927">com.fs.starfarer.api.campaign.listeners.FleetEventListener</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html#l00831">831</a> of file <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html">HostileActivityEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  831</span>                                                                                                               {</div>
-<div class="line"><span class="lineno">  832</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a76be49f1d836a62e192edd4ba597a6cc">isEnded</a>() || <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#ac265e304e3d245a6ae16be73e0b918b0">isEnding</a>()) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  833</span>        </div>
-<div class="line"><span class="lineno">  834</span>        <span class="keywordflow">if</span> (!battle.isPlayerInvolved()) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  835</span>        </div>
-<div class="line"><span class="lineno">  836</span>        <span class="keywordflow">if</span> (Global.getSector().getCurrentLocation() instanceof StarSystemAPI &amp;&amp;</div>
-<div class="line"><span class="lineno">  837</span>                battle.getPlayerSide().contains(primaryWinner)) {</div>
-<div class="line"><span class="lineno">  838</span>            StarSystemAPI system = (StarSystemAPI) Global.getSector().getCurrentLocation(); </div>
-<div class="line"><span class="lineno">  839</span>            <span class="keywordflow">for</span> (CampaignFleetAPI otherFleet : battle.getNonPlayerSideSnapshot()) {</div>
-<div class="line"><span class="lineno">  840</span>                <span class="keywordflow">if</span> (otherFleet.isStationMode()) {</div>
-<div class="line"><span class="lineno">  841</span>                    {</div>
-<div class="line"><span class="lineno">  842</span>                        PirateBaseIntel intel = PirateBaseIntel.getIntelFor(system);</div>
-<div class="line"><span class="lineno">  843</span>                        <span class="keywordflow">if</span> (intel != <span class="keyword">null</span> &amp;&amp; Misc.getStationFleet(intel.getMarket()) == otherFleet &amp;&amp; </div>
-<div class="line"><span class="lineno">  844</span>                                HA_CMD.baseInvolved(system, intel)) {</div>
-<div class="line"><span class="lineno">  845</span>                            <span class="keywordtype">int</span> tier = intel.getTier().ordinal();</div>
-<div class="line"><span class="lineno">  846</span>                            <span class="keywordflow">if</span> (tier &lt; 0) tier = 0;</div>
-<div class="line"><span class="lineno">  847</span>                            <span class="keywordflow">if</span> (tier &gt; 4) tier = 4;</div>
-<div class="line"><span class="lineno">  848</span>                            <span class="keywordtype">int</span> points = -1 * Global.getSettings().getIntFromArray(<span class="stringliteral">&quot;HA_pirateBase&quot;</span>, tier);</div>
-<div class="line"><span class="lineno">  849</span>                            HAPirateBaseDestroyedFactor factor = <span class="keyword">new</span> HAPirateBaseDestroyedFactor(points);</div>
-<div class="line"><span class="lineno">  850</span>                            <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a477a5ee57e58b47c4206e74800868b5e">addFactor</a>(factor);</div>
-<div class="line"><span class="lineno">  851</span>                            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  852</span>                        }</div>
-<div class="line"><span class="lineno">  853</span>                    }</div>
-<div class="line"><span class="lineno">  854</span>                    {</div>
-<div class="line"><span class="lineno">  855</span>                        LuddicPathBaseIntel intel = LuddicPathBaseIntel.getIntelFor(system);</div>
-<div class="line"><span class="lineno">  856</span>                        <span class="keywordflow">if</span> (intel != <span class="keyword">null</span> &amp;&amp; Misc.getStationFleet(intel.getMarket()) == otherFleet) {</div>
-<div class="line"><span class="lineno">  857</span>                            <span class="keywordtype">float</span> totalInterest = 0f;</div>
-<div class="line"><span class="lineno">  858</span>                            <span class="keywordtype">float</span> activeCells = 0f;</div>
-<div class="line"><span class="lineno">  859</span>                            <span class="keywordflow">for</span> (StarSystemAPI curr : Misc.getPlayerSystems(<span class="keyword">false</span>)) {</div>
-<div class="line"><span class="lineno">  860</span>                                totalInterest += StandardLuddicPathActivityCause2.getPatherInterest(curr, 0f, 0f, 1f);</div>
-<div class="line"><span class="lineno">  861</span>                                activeCells += StandardLuddicPathActivityCause2.getPatherInterest(curr, 0f, 0f, 1f, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  862</span>                            }</div>
-<div class="line"><span class="lineno">  863</span>                            </div>
-<div class="line"><span class="lineno">  864</span>                            <span class="keywordflow">if</span> (totalInterest &gt; 0) {</div>
-<div class="line"><span class="lineno">  865</span>                                <span class="keywordtype">int</span> flat = Global.getSettings().getInt(<span class="stringliteral">&quot;HA_patherBaseFlat&quot;</span>);</div>
-<div class="line"><span class="lineno">  866</span>                                <span class="keywordtype">int</span> perCell = Global.getSettings().getInt(<span class="stringliteral">&quot;HA_patherBasePerActiveCell&quot;</span>);</div>
-<div class="line"><span class="lineno">  867</span>                                <span class="keywordtype">int</span> max = Global.getSettings().getInt(<span class="stringliteral">&quot;HA_patherBaseMax&quot;</span>);</div>
-<div class="line"><span class="lineno">  868</span> </div>
-<div class="line"><span class="lineno">  869</span>                                <span class="keywordtype">int</span> points = -1 * Math.min(max, (flat + perCell * (<span class="keywordtype">int</span>) Math.round(activeCells)));</div>
-<div class="line"><span class="lineno">  870</span>                                HAPatherBaseDestroyedFactor factor = <span class="keyword">new</span> HAPatherBaseDestroyedFactor(points);</div>
-<div class="line"><span class="lineno">  871</span>                                <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a477a5ee57e58b47c4206e74800868b5e">addFactor</a>(factor);</div>
-<div class="line"><span class="lineno">  872</span>                            }</div>
-<div class="line"><span class="lineno">  873</span>                            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  874</span>                        }</div>
-<div class="line"><span class="lineno">  875</span>                    }</div>
-<div class="line"><span class="lineno">  876</span>                }</div>
-<div class="line"><span class="lineno">  877</span>            }</div>
-<div class="line"><span class="lineno">  878</span>            </div>
-<div class="line"><span class="lineno">  879</span>        }</div>
-<div class="line"><span class="lineno">  880</span>        </div>
-<div class="line"><span class="lineno">  881</span>        <span class="keywordtype">boolean</span> nearAny = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  882</span>        <span class="keywordflow">for</span> (StarSystemAPI system : Misc.getPlayerSystems(<span class="keyword">false</span>)) {</div>
-<div class="line"><span class="lineno">  883</span>            nearAny |= Misc.isNear(primaryWinner, system.getLocation());</div>
-<div class="line"><span class="lineno">  884</span>            <span class="keywordflow">if</span> (nearAny) <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  885</span>        }</div>
-<div class="line"><span class="lineno">  886</span>        <span class="keywordflow">if</span> (!nearAny) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  887</span>        </div>
-<div class="line"><span class="lineno">  888</span>        <span class="keywordtype">float</span> fpDestroyed = 0;</div>
-<div class="line"><span class="lineno">  889</span>        CampaignFleetAPI first = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  890</span>        <span class="keywordflow">for</span> (CampaignFleetAPI otherFleet : battle.getNonPlayerSideSnapshot()) {</div>
-<div class="line"><span class="lineno">  891</span>            <span class="comment">//if (!Global.getSector().getPlayerFaction().isHostileTo(otherFleet.getFaction())) continue;</span></div>
-<div class="line"><span class="lineno">  892</span>            <span class="keywordflow">for</span> (FleetMemberAPI loss : Misc.getSnapshotMembersLost(otherFleet)) {</div>
-<div class="line"><span class="lineno">  893</span>                fpDestroyed += loss.getFleetPointCost();</div>
-<div class="line"><span class="lineno">  894</span>                <span class="keywordflow">if</span> (first == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  895</span>                    first = otherFleet;</div>
-<div class="line"><span class="lineno">  896</span>                }</div>
-<div class="line"><span class="lineno">  897</span>            }</div>
-<div class="line"><span class="lineno">  898</span>        }</div>
-<div class="line"><span class="lineno">  899</span>    </div>
-<div class="line"><span class="lineno">  900</span>        <span class="keywordtype">int</span> points = <a class="code hl_function" href="../../db/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#a854a6721692ace749847279169077942">computerProgressPoints</a>(fpDestroyed);</div>
-<div class="line"><span class="lineno">  901</span>        <span class="keywordflow">if</span> (points &gt; 0) {</div>
-<div class="line"><span class="lineno">  902</span>            <span class="comment">//points = 700;</span></div>
-<div class="line"><span class="lineno">  903</span>            HAShipsDestroyedFactor factor = <span class="keyword">new</span> HAShipsDestroyedFactor(-1 * points);</div>
-<div class="line"><span class="lineno">  904</span>            <span class="comment">//sendUpdateIfPlayerHasIntel(factor, false); // addFactor now sends update</span></div>
-<div class="line"><span class="lineno">  905</span>            <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a477a5ee57e58b47c4206e74800868b5e">addFactor</a>(factor);</div>
-<div class="line"><span class="lineno">  906</span>        }</div>
-<div class="line"><span class="lineno">  907</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_a76be49f1d836a62e192edd4ba597a6cc"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a76be49f1d836a62e192edd4ba597a6cc">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.isEnded</a></div><div class="ttdeci">boolean isEnded()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00130">BaseIntelPlugin.java:130</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel_html_a854a6721692ace749847279169077942"><div class="ttname"><a href="../../db/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#a854a6721692ace749847279169077942">com.fs.starfarer.api.impl.campaign.intel.events.HostileActivityEventIntel.computerProgressPoints</a></div><div class="ttdeci">static int computerProgressPoints(float fleetPointsDestroyed)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d57/HostileActivityEventIntel_8java_source.html#l00909">HostileActivityEventIntel.java:909</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="afcf877bf043fdbd58e335109aabe08b6" name="afcf877bf043fdbd58e335109aabe08b6"></a>
@@ -2657,9 +1883,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d5/d7b/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1FleetEventListener.html#a80bf021b96aa1c0f11ee40000e5d3666">com.fs.starfarer.api.campaign.listeners.FleetEventListener</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html#l00828">828</a> of file <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html">HostileActivityEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  828</span>                                                                                                                {</div>
-<div class="line"><span class="lineno">  829</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2432b9873d73a089d8bca3c0e54e24f2" name="a2432b9873d73a089d8bca3c0e54e24f2"></a>
@@ -2678,15 +1902,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html#l00945">945</a> of file <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html">HostileActivityEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  945</span>                                {</div>
-<div class="line"><span class="lineno">  946</span>        EventStageData stage = <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#aaea47402cf58486cd60052a0e9297933">getDataFor</a>(Stage.HA_EVENT);</div>
-<div class="line"><span class="lineno">  947</span>        <span class="keywordtype">int</span> resetProgress = stage.progressToRollAt - <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a4f64210f6e66721bbe6730c6b14a3d23">getRandom</a>().nextInt(100);</div>
-<div class="line"><span class="lineno">  948</span>        <a class="code hl_function" href="../../db/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#ac4bba58a3d9c968dde2ea4ac853dd357">resetRandomizedStage</a>(stage);</div>
-<div class="line"><span class="lineno">  949</span>        <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ab5b560e81b4ed5ef19262a77b5ca34f6">setProgress</a>(resetProgress);</div>
-<div class="line"><span class="lineno">  950</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_html_a4f64210f6e66721bbe6730c6b14a3d23"><div class="ttname"><a href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a4f64210f6e66721bbe6730c6b14a3d23">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.getRandom</a></div><div class="ttdeci">Random getRandom()</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d56/BaseEventIntel_8java_source.html#l00922">BaseEventIntel.java:922</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel_html_ac4bba58a3d9c968dde2ea4ac853dd357"><div class="ttname"><a href="../../db/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#ac4bba58a3d9c968dde2ea4ac853dd357">com.fs.starfarer.api.impl.campaign.intel.events.HostileActivityEventIntel.resetRandomizedStage</a></div><div class="ttdeci">void resetRandomizedStage(EventStageData stage)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d57/HostileActivityEventIntel_8java_source.html#l00953">HostileActivityEventIntel.java:953</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac4bba58a3d9c968dde2ea4ac853dd357" name="ac4bba58a3d9c968dde2ea4ac853dd357"></a>
@@ -2708,15 +1924,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a7023e30da731e1291c4406cbb3ed8946">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html#l00953">953</a> of file <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html">HostileActivityEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  953</span>                                                           {</div>
-<div class="line"><span class="lineno">  954</span>        <span class="keywordflow">if</span> (stage.rollData instanceof HAERandomEventData) {</div>
-<div class="line"><span class="lineno">  955</span>            HAERandomEventData data = (HAERandomEventData) stage.rollData;</div>
-<div class="line"><span class="lineno">  956</span>            data.isReset = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  957</span>            data.factor.resetEvent(<span class="keyword">this</span>, stage);</div>
-<div class="line"><span class="lineno">  958</span>        }</div>
-<div class="line"><span class="lineno">  959</span>        super.resetRandomizedStage(stage);</div>
-<div class="line"><span class="lineno">  960</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a4c4eced6a00e86d90636104c2fce4223" name="a4c4eced6a00e86d90636104c2fce4223"></a>
@@ -2738,36 +1946,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a977ab68ffe55cbd97fc60e6655c9eb8c">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html#l00963">963</a> of file <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html">HostileActivityEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  963</span>                                                          {</div>
-<div class="line"><span class="lineno">  964</span>        <span class="keywordflow">if</span> (stage.id == Stage.HA_EVENT || stage.id == Stage.MINOR_EVENT) {</div>
-<div class="line"><span class="lineno">  965</span>            <span class="keywordtype">float</span> total = 0f;</div>
-<div class="line"><span class="lineno">  966</span>            <span class="keywordflow">for</span> (EventFactor factor : <a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ad00fcb944d26c95dcd71888578da03d1">factors</a>) {</div>
-<div class="line"><span class="lineno">  967</span>                <span class="keywordflow">if</span> (factor instanceof BaseHostileActivityFactor) {</div>
-<div class="line"><span class="lineno">  968</span>                    total += factor.getProgress(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  969</span>                }</div>
-<div class="line"><span class="lineno">  970</span>            }</div>
-<div class="line"><span class="lineno">  971</span>            <span class="keywordflow">if</span> (total &lt; 1f) total = 1f;</div>
-<div class="line"><span class="lineno">  972</span>            WeightedRandomPicker&lt;HostileActivityFactor&gt; picker = <span class="keyword">new</span> WeightedRandomPicker&lt;HostileActivityFactor&gt;(<a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#adf15d041480bd48f43df1aaf51de0262">random</a>);</div>
-<div class="line"><span class="lineno">  973</span>            <span class="keywordflow">for</span> (EventFactor factor : <a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ad00fcb944d26c95dcd71888578da03d1">factors</a>) {</div>
-<div class="line"><span class="lineno">  974</span>                <span class="keywordflow">if</span> (factor instanceof BaseHostileActivityFactor) {</div>
-<div class="line"><span class="lineno">  975</span>                    BaseHostileActivityFactor curr = (BaseHostileActivityFactor) factor;</div>
-<div class="line"><span class="lineno">  976</span>                    curr.setRandomizedStageSeed(<a class="code hl_variable" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#adf15d041480bd48f43df1aaf51de0262">random</a>.nextLong()); <span class="comment">// seed will be reused by .rollEvent()</span></div>
-<div class="line"><span class="lineno">  977</span>                    <span class="keywordtype">float</span> f = curr.getEventFrequency(<span class="keyword">this</span>, stage);</div>
-<div class="line"><span class="lineno">  978</span>                    <span class="keywordtype">float</span> w = factor.getProgress(<span class="keyword">this</span>) / total;</div>
-<div class="line"><span class="lineno">  979</span>                    <span class="keywordflow">if</span> (w &gt; 0) {</div>
-<div class="line"><span class="lineno">  980</span>                        w = 0.5f + 0.5f * w;</div>
-<div class="line"><span class="lineno">  981</span>                    }</div>
-<div class="line"><span class="lineno">  982</span>                    picker.add(curr, f * w);</div>
-<div class="line"><span class="lineno">  983</span>                }</div>
-<div class="line"><span class="lineno">  984</span>            }</div>
-<div class="line"><span class="lineno">  985</span>            </div>
-<div class="line"><span class="lineno">  986</span>            HostileActivityFactor pick = picker.pick();</div>
-<div class="line"><span class="lineno">  987</span>            <span class="keywordflow">if</span> (pick == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  988</span>            </div>
-<div class="line"><span class="lineno">  989</span>            pick.rollEvent(<span class="keyword">this</span>, stage);</div>
-<div class="line"><span class="lineno">  990</span>        }</div>
-<div class="line"><span class="lineno">  991</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a09958002e8cec57c9f868e746a1894b4" name="a09958002e8cec57c9f868e746a1894b4"></a>
@@ -2786,37 +1965,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html#l00773">773</a> of file <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html">HostileActivityEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  773</span>                                                                 {</div>
-<div class="line"><span class="lineno">  774</span>        EventStageData esd = <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a3642aecf210dacfc23c64e0292ba45c2">getLastActiveStage</a>(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  775</span>        <span class="keywordflow">if</span> (esd == <span class="keyword">null</span> || !EnumSet.of(Stage.HA_1, Stage.HA_2, Stage.HA_3, Stage.HA_4).contains(esd.id)) {</div>
-<div class="line"><span class="lineno">  776</span>            <a class="code hl_function" href="../../db/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#a440e519c2fc86b5b4a51b3d2e507209d">cleanUpHostileActivityConditions</a>();</div>
-<div class="line"><span class="lineno">  777</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  778</span>        }</div>
-<div class="line"><span class="lineno">  779</span>        </div>
-<div class="line"><span class="lineno">  780</span>        <a class="code hl_function" href="../../db/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#a680de1a3205fefd93cf97d59ce655566">updatePenalties</a>();</div>
-<div class="line"><span class="lineno">  781</span>        </div>
-<div class="line"><span class="lineno">  782</span>        Range affects = <span class="keyword">new</span> Range(((Stage)esd.id).name() + <span class="stringliteral">&quot;_affects&quot;</span>);</div>
-<div class="line"><span class="lineno">  783</span>        List&lt;HAEStarSystemDangerData&gt; sysData = <a class="code hl_function" href="../../db/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#a66a6bcb987c733bf94f20dff8d5289be">computePlayerSystemDangerData</a>();</div>
-<div class="line"><span class="lineno">  784</span>        <span class="comment">//int numSystems = (int) Math.max(affects.min, Math.round((float) sysData.size() * affects.max));</span></div>
-<div class="line"><span class="lineno">  785</span>        <span class="keywordtype">int</span> numSystems = (int) Math.max(Math.min(sysData.size(), affects.min), Math.round((<span class="keywordtype">float</span>) sysData.size() * affects.max));</div>
-<div class="line"><span class="lineno">  786</span>        </div>
-<div class="line"><span class="lineno">  787</span>        </div>
-<div class="line"><span class="lineno">  788</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; sysData.size(); i++) {</div>
-<div class="line"><span class="lineno">  789</span>            HAEStarSystemDangerData sys = sysData.get(i);</div>
-<div class="line"><span class="lineno">  790</span>            <span class="keywordflow">for</span> (MarketAPI market : Misc.getMarketsInLocation(sys.system, Factions.PLAYER)) {</div>
-<div class="line"><span class="lineno">  791</span>                <span class="keywordflow">if</span> (i &lt; numSystems) {</div>
-<div class="line"><span class="lineno">  792</span>                    <span class="keywordflow">if</span> (!market.hasCondition(Conditions.HOSTILE_ACTIVITY)) {</div>
-<div class="line"><span class="lineno">  793</span>                        market.addCondition(Conditions.HOSTILE_ACTIVITY, <span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  794</span>                    }       </div>
-<div class="line"><span class="lineno">  795</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  796</span>                    <span class="keywordflow">if</span> (market.hasCondition(Conditions.HOSTILE_ACTIVITY)) {</div>
-<div class="line"><span class="lineno">  797</span>                        market.removeCondition(Conditions.HOSTILE_ACTIVITY);</div>
-<div class="line"><span class="lineno">  798</span>                    }</div>
-<div class="line"><span class="lineno">  799</span>                }</div>
-<div class="line"><span class="lineno">  800</span>            }</div>
-<div class="line"><span class="lineno">  801</span>        }</div>
-<div class="line"><span class="lineno">  802</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a20ad068bd77828f305235d1a48a81f0d" name="a20ad068bd77828f305235d1a48a81f0d"></a>
@@ -2848,18 +1997,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#ae7e86368aa8d0b19825d51db8b3ecf59">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html#l00401">401</a> of file <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html">HostileActivityEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  401</span>                                                                       {</div>
-<div class="line"><span class="lineno">  402</span>        <span class="keywordflow">if</span> (data.rowId instanceof HAEStarSystemDangerData) {</div>
-<div class="line"><span class="lineno">  403</span>            HAEStarSystemDangerData d = (HAEStarSystemDangerData) data.rowId;</div>
-<div class="line"><span class="lineno">  404</span>            List&lt;MarketAPI&gt; m = Misc.getMarketsInLocation(d.system, Factions.PLAYER);</div>
-<div class="line"><span class="lineno">  405</span>            <span class="keywordflow">if</span> (m.size() == 1) {</div>
-<div class="line"><span class="lineno">  406</span>                ui.showOnMap(m.get(0).getPrimaryEntity());</div>
-<div class="line"><span class="lineno">  407</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  408</span>                ui.showOnMap(d.system.getHyperspaceAnchor());</div>
-<div class="line"><span class="lineno">  409</span>            }</div>
-<div class="line"><span class="lineno">  410</span>        }</div>
-<div class="line"><span class="lineno">  411</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a680de1a3205fefd93cf97d59ce655566" name="a680de1a3205fefd93cf97d59ce655566"></a>
@@ -2878,19 +2016,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html#l00760">760</a> of file <a class="el" href="../../d0/d57/HostileActivityEventIntel_8java_source.html">HostileActivityEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  760</span>                                  {</div>
-<div class="line"><span class="lineno">  761</span>        EventStageData esd = <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a3642aecf210dacfc23c64e0292ba45c2">getLastActiveStage</a>(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  762</span>        <span class="keywordflow">if</span> (esd == <span class="keyword">null</span> || !EnumSet.of(Stage.HA_1, Stage.HA_2, Stage.HA_3, Stage.HA_4).contains(esd.id)) {</div>
-<div class="line"><span class="lineno">  763</span>            <a class="code hl_variable" href="../../db/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#a2971a281600983868c0f67c98712974b">stabilityPenalty</a> = 0;</div>
-<div class="line"><span class="lineno">  764</span>            <a class="code hl_variable" href="../../db/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#a4e6d33c93060e6400c2699eb96ed1644">accessibilityPenalty</a> = 0;</div>
-<div class="line"><span class="lineno">  765</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  766</span>        }</div>
-<div class="line"><span class="lineno">  767</span>        </div>
-<div class="line"><span class="lineno">  768</span>        Range impact = <span class="keyword">new</span> Range(((Stage)esd.id).name() + <span class="stringliteral">&quot;_impact&quot;</span>);</div>
-<div class="line"><span class="lineno">  769</span>        <a class="code hl_variable" href="../../db/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#a2971a281600983868c0f67c98712974b">stabilityPenalty</a> = impact.min;</div>
-<div class="line"><span class="lineno">  770</span>        <a class="code hl_variable" href="../../db/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#a4e6d33c93060e6400c2699eb96ed1644">accessibilityPenalty</a> = impact.max; </div>
-<div class="line"><span class="lineno">  771</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

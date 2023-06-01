@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -397,10 +398,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a820be4dfb8c152daef470bf6a2c933b5">com.fs.starfarer.api.impl.campaign.terrain.BaseTerrain</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/ddf/RingSystemTerrainPlugin_8java_source.html#l00058">58</a> of file <a class="el" href="../../da/ddf/RingSystemTerrainPlugin_8java_source.html">RingSystemTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   58</span>                                      {</div>
-<div class="line"><span class="lineno">   59</span>        super.advance(amount);</div>
-<div class="line"><span class="lineno">   60</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa90c7db990f060cc4a27f3058f4a9e3a" name="aa90c7db990f060cc4a27f3058f4a9e3a"></a>
@@ -432,21 +430,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a2e05e8288a8a1fad8cdcda3caaa03342">com.fs.starfarer.api.impl.campaign.terrain.BaseTerrain</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/ddf/RingSystemTerrainPlugin_8java_source.html#l00068">68</a> of file <a class="el" href="../../da/ddf/RingSystemTerrainPlugin_8java_source.html">RingSystemTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   68</span>                                                                  {</div>
-<div class="line"><span class="lineno">   69</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a98ba084e2722ae038b3961e580dbc821">entity</a> instanceof CampaignFleetAPI) {</div>
-<div class="line"><span class="lineno">   70</span>            CampaignFleetAPI fleet = (CampaignFleetAPI) <a class="code hl_variable" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a98ba084e2722ae038b3961e580dbc821">entity</a>;</div>
-<div class="line"><span class="lineno">   71</span>            <span class="comment">//if (fleet.getCurrBurnLevel() &lt;= MAX_SNEAK_BURN_LEVEL) {</span></div>
-<div class="line"><span class="lineno">   72</span>            <span class="keywordflow">if</span> (Misc.isSlowMoving(fleet)) {</div>
-<div class="line"><span class="lineno">   73</span>                fleet.getStats().addTemporaryModMult(0.1f, <a class="code hl_function" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#ad9dda3f05df5e1af8babd85bd4685df4">getModId</a>() + <span class="stringliteral">&quot;_1&quot;</span>,</div>
-<div class="line"><span class="lineno">   74</span>                                    <span class="stringliteral">&quot;Hiding inside ring system&quot;</span>, <a class="code hl_function" href="../../dc/d35/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RingSystemTerrainPlugin.html#a9cefb4b68d82c557136eacb7abeea383">getVisibilityMult</a>(fleet), </div>
-<div class="line"><span class="lineno">   75</span>                                    fleet.getStats().getDetectedRangeMod());</div>
-<div class="line"><span class="lineno">   76</span>            }</div>
-<div class="line"><span class="lineno">   77</span>        }</div>
-<div class="line"><span class="lineno">   78</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain_html_a98ba084e2722ae038b3961e580dbc821"><div class="ttname"><a href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a98ba084e2722ae038b3961e580dbc821">com.fs.starfarer.api.impl.campaign.terrain.BaseTerrain.entity</a></div><div class="ttdeci">SectorEntityToken entity</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/daa/BaseTerrain_8java_source.html#l00025">BaseTerrain.java:25</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain_html_ad9dda3f05df5e1af8babd85bd4685df4"><div class="ttname"><a href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#ad9dda3f05df5e1af8babd85bd4685df4">com.fs.starfarer.api.impl.campaign.terrain.BaseTerrain.getModId</a></div><div class="ttdeci">String getModId()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/daa/BaseTerrain_8java_source.html#l00174">BaseTerrain.java:174</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RingSystemTerrainPlugin_html_a9cefb4b68d82c557136eacb7abeea383"><div class="ttname"><a href="../../dc/d35/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RingSystemTerrainPlugin.html#a9cefb4b68d82c557136eacb7abeea383">com.fs.starfarer.api.impl.campaign.terrain.RingSystemTerrainPlugin.getVisibilityMult</a></div><div class="ttdeci">static float getVisibilityMult(CampaignFleetAPI fleet)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/ddf/RingSystemTerrainPlugin_8java_source.html#l00021">RingSystemTerrainPlugin.java:21</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a709d57856ef23ead731ec6e1a4712ff6" name="a709d57856ef23ead731ec6e1a4712ff6"></a>
@@ -478,44 +462,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a88ad23e734055396eac133fe98844b7e">com.fs.starfarer.api.impl.campaign.terrain.BaseTerrain</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/ddf/RingSystemTerrainPlugin_8java_source.html#l00094">94</a> of file <a class="el" href="../../da/ddf/RingSystemTerrainPlugin_8java_source.html">RingSystemTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   94</span>                                                                         {</div>
-<div class="line"><span class="lineno">   95</span>        <span class="keywordtype">float</span> pad = 10f;</div>
-<div class="line"><span class="lineno">   96</span>        <span class="keywordtype">float</span> small = 5f;</div>
-<div class="line"><span class="lineno">   97</span>        Color gray = Misc.getGrayColor();</div>
-<div class="line"><span class="lineno">   98</span>        Color highlight = Misc.getHighlightColor();</div>
-<div class="line"><span class="lineno">   99</span>        Color fuel = Global.getSettings().getColor(<span class="stringliteral">&quot;progressBarFuelColor&quot;</span>);</div>
-<div class="line"><span class="lineno">  100</span>        Color bad = Misc.getNegativeHighlightColor();</div>
-<div class="line"><span class="lineno">  101</span>        </div>
-<div class="line"><span class="lineno">  102</span>        tooltip.addTitle(<a class="code hl_function" href="../../dc/d35/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RingSystemTerrainPlugin.html#ab6cb27229138cad49df998c111348749">getNameForTooltip</a>());</div>
-<div class="line"><span class="lineno">  103</span>        tooltip.addPara(Global.getSettings().getDescription(<a class="code hl_function" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a64e74dbdabe21aabe78bd51158487eaa">getTerrainId</a>(), Type.TERRAIN).getText1(), pad);</div>
-<div class="line"><span class="lineno">  104</span>        <span class="keywordtype">float</span> nextPad = pad;</div>
-<div class="line"><span class="lineno">  105</span>        <span class="keywordflow">if</span> (expanded) {</div>
-<div class="line"><span class="lineno">  106</span>            tooltip.addSectionHeading(<span class="stringliteral">&quot;Travel&quot;</span>, Alignment.MID, pad);</div>
-<div class="line"><span class="lineno">  107</span>            nextPad = small;</div>
-<div class="line"><span class="lineno">  108</span>        }</div>
-<div class="line"><span class="lineno">  109</span><span class="comment">//      tooltip.addPara(&quot;Reduces the range at which stationary fleets inside it can be detected by %s.&quot;, nextPad,</span></div>
-<div class="line"><span class="lineno">  110</span><span class="comment">//              highlight, </span></div>
-<div class="line"><span class="lineno">  111</span><span class="comment">//              &quot;&quot; + (int) ((1f - VISIBLITY_MULT) * 100) + &quot;%&quot;</span></div>
-<div class="line"><span class="lineno">  112</span><span class="comment">//      );</span></div>
-<div class="line"><span class="lineno">  113</span>        String stop = Global.getSettings().getControlStringForEnumName(<span class="stringliteral">&quot;GO_SLOW&quot;</span>);</div>
-<div class="line"><span class="lineno">  114</span>        tooltip.addPara(<span class="stringliteral">&quot;Reduces the range at which stationary or slow-moving* fleets inside it can be detected by %s.&quot;</span>, nextPad,</div>
-<div class="line"><span class="lineno">  115</span>                highlight, </div>
-<div class="line"><span class="lineno">  116</span>                <span class="stringliteral">&quot;&quot;</span> + (<span class="keywordtype">int</span>) ((1f - VISIBLITY_MULT) * 100) + <span class="stringliteral">&quot;%&quot;</span></div>
-<div class="line"><span class="lineno">  117</span>        );</div>
-<div class="line"><span class="lineno">  118</span>        tooltip.addPara(<span class="stringliteral">&quot;*Press and hold %s to stop; combine with holding the left mouse button down to move slowly.&quot;</span>, nextPad,</div>
-<div class="line"><span class="lineno">  119</span>                Misc.getGrayColor(), highlight, </div>
-<div class="line"><span class="lineno">  120</span>                stop</div>
-<div class="line"><span class="lineno">  121</span>        );</div>
-<div class="line"><span class="lineno">  122</span>        </div>
-<div class="line"><span class="lineno">  123</span>        <span class="keywordflow">if</span> (expanded) {</div>
-<div class="line"><span class="lineno">  124</span>            tooltip.addSectionHeading(<span class="stringliteral">&quot;Combat&quot;</span>, Alignment.MID, pad);</div>
-<div class="line"><span class="lineno">  125</span>            tooltip.addPara(<span class="stringliteral">&quot;Numerous small bodies that make up the ring system present on the battlefield. Not large enough to be an in-combat navigational hazard.&quot;</span>, small);</div>
-<div class="line"><span class="lineno">  126</span>        }</div>
-<div class="line"><span class="lineno">  127</span>        <span class="comment">//tooltip.addPara(&quot;Does not stack with other similar terrain effects.&quot;, pad);</span></div>
-<div class="line"><span class="lineno">  128</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain_html_a64e74dbdabe21aabe78bd51158487eaa"><div class="ttname"><a href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a64e74dbdabe21aabe78bd51158487eaa">com.fs.starfarer.api.impl.campaign.terrain.BaseTerrain.getTerrainId</a></div><div class="ttdeci">String getTerrainId()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/daa/BaseTerrain_8java_source.html#l00046">BaseTerrain.java:46</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RingSystemTerrainPlugin_html_ab6cb27229138cad49df998c111348749"><div class="ttname"><a href="../../dc/d35/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RingSystemTerrainPlugin.html#ab6cb27229138cad49df998c111348749">com.fs.starfarer.api.impl.campaign.terrain.RingSystemTerrainPlugin.getNameForTooltip</a></div><div class="ttdeci">String getNameForTooltip()</div><div class="ttdef"><b>Definition:</b> <a href="../../da/ddf/RingSystemTerrainPlugin_8java_source.html#l00085">RingSystemTerrainPlugin.java:85</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a44d9f7844c3d74f97574f51a9f5f289f" name="a44d9f7844c3d74f97574f51a9f5f289f"></a>
@@ -536,10 +483,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a7bafc952258dfb4adc5c4e5a8d59206f">com.fs.starfarer.api.impl.campaign.terrain.BaseTerrain</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/ddf/RingSystemTerrainPlugin_8java_source.html#l00138">138</a> of file <a class="el" href="../../da/ddf/RingSystemTerrainPlugin_8java_source.html">RingSystemTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  138</span>                                      {</div>
-<div class="line"><span class="lineno">  139</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;ringsystem-like&quot;</span>;</div>
-<div class="line"><span class="lineno">  140</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab6cb27229138cad49df998c111348749" name="ab6cb27229138cad49df998c111348749"></a>
@@ -560,11 +504,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a02089efe190ff0330d552e38ee04b8f1">com.fs.starfarer.api.impl.campaign.terrain.BaseTerrain</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/ddf/RingSystemTerrainPlugin_8java_source.html#l00085">85</a> of file <a class="el" href="../../da/ddf/RingSystemTerrainPlugin_8java_source.html">RingSystemTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   85</span>                                      {</div>
-<div class="line"><span class="lineno">   86</span>        <span class="keywordflow">if</span> (nameForTooltip == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="stringliteral">&quot;Ring System&quot;</span>;</div>
-<div class="line"><span class="lineno">   87</span>        <span class="keywordflow">return</span> nameForTooltip;</div>
-<div class="line"><span class="lineno">   88</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a0885d7622c06ac86b7565146a19b5c28" name="a0885d7622c06ac86b7565146a19b5c28"></a>
@@ -585,10 +525,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a9d84199f96d4f75a9807113cea23dd61">com.fs.starfarer.api.impl.campaign.terrain.BaseTerrain</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/ddf/RingSystemTerrainPlugin_8java_source.html#l00134">134</a> of file <a class="el" href="../../da/ddf/RingSystemTerrainPlugin_8java_source.html">RingSystemTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  134</span>                                   {</div>
-<div class="line"><span class="lineno">  135</span>        <span class="keywordflow">return</span> 350f;</div>
-<div class="line"><span class="lineno">  136</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9cefb4b68d82c557136eacb7abeea383" name="a9cefb4b68d82c557136eacb7abeea383"></a>
@@ -616,13 +553,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/ddf/RingSystemTerrainPlugin_8java_source.html#l00021">21</a> of file <a class="el" href="../../da/ddf/RingSystemTerrainPlugin_8java_source.html">RingSystemTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   21</span>                                                                  {</div>
-<div class="line"><span class="lineno">   22</span>        <span class="keywordflow">if</span> (fleet != <span class="keyword">null</span> &amp;&amp; fleet.isPlayerFleet()) {</div>
-<div class="line"><span class="lineno">   23</span>            <span class="keywordflow">return</span> VISIBLITY_MULT;</div>
-<div class="line"><span class="lineno">   24</span>        }</div>
-<div class="line"><span class="lineno">   25</span>        <span class="keywordflow">return</span> VISIBLITY_MULT_NPC;</div>
-<div class="line"><span class="lineno">   26</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a6503f54a01097f8aa93d4604f1e25e49" name="a6503f54a01097f8aa93d4604f1e25e49"></a>
@@ -644,10 +575,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a6d0778d2c9caf511d17338cee3ffbd5c">com.fs.starfarer.api.impl.campaign.terrain.BaseTerrain</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/ddf/RingSystemTerrainPlugin_8java_source.html#l00142">142</a> of file <a class="el" href="../../da/ddf/RingSystemTerrainPlugin_8java_source.html">RingSystemTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  142</span>                                          {</div>
-<div class="line"><span class="lineno">  143</span>        <span class="keywordflow">return</span> flag == TerrainAIFlags.HIDING_STATIONARY;</div>
-<div class="line"><span class="lineno">  144</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a3ab06af095d7534bcf1c5bde12db55a6" name="a3ab06af095d7534bcf1c5bde12db55a6"></a>
@@ -668,10 +596,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a27e7fc8cc4b3d1882800b49c03d3abb3">com.fs.starfarer.api.impl.campaign.terrain.BaseTerrain</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/ddf/RingSystemTerrainPlugin_8java_source.html#l00080">80</a> of file <a class="el" href="../../da/ddf/RingSystemTerrainPlugin_8java_source.html">RingSystemTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   80</span>                                {</div>
-<div class="line"><span class="lineno">   81</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   82</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aedfa2a3e104aa6ac837274800662a2de" name="aedfa2a3e104aa6ac837274800662a2de"></a>
@@ -709,17 +634,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/de6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseRingTerrain.html#afc23414f87015330c30b625edcd48e73">com.fs.starfarer.api.impl.campaign.terrain.BaseRingTerrain</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/ddf/RingSystemTerrainPlugin_8java_source.html#l00028">28</a> of file <a class="el" href="../../da/ddf/RingSystemTerrainPlugin_8java_source.html">RingSystemTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   28</span>                                                                               {</div>
-<div class="line"><span class="lineno">   29</span>        super.init(<a class="code hl_variable" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a075ff680d11a0f394d9f399d13129c2d">terrainId</a>, <a class="code hl_variable" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a98ba084e2722ae038b3961e580dbc821">entity</a>, param);</div>
-<div class="line"><span class="lineno">   30</span>        <a class="code hl_variable" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a6e7b52077a0f438b0dc442ef0084a222">name</a> = <a class="code hl_variable" href="../../da/de6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseRingTerrain.html#ad5c67e9bd3959f1d9680f8aac4da8dfc">params</a>.name;</div>
-<div class="line"><span class="lineno">   31</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a6e7b52077a0f438b0dc442ef0084a222">name</a> == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   32</span>            <a class="code hl_variable" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a6e7b52077a0f438b0dc442ef0084a222">name</a> = <span class="stringliteral">&quot;Ring System&quot;</span>;</div>
-<div class="line"><span class="lineno">   33</span>        }</div>
-<div class="line"><span class="lineno">   34</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseRingTerrain_html_ad5c67e9bd3959f1d9680f8aac4da8dfc"><div class="ttname"><a href="../../da/de6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseRingTerrain.html#ad5c67e9bd3959f1d9680f8aac4da8dfc">com.fs.starfarer.api.impl.campaign.terrain.BaseRingTerrain.params</a></div><div class="ttdeci">RingParams params</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d16/BaseRingTerrain_8java_source.html#l00042">BaseRingTerrain.java:42</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain_html_a075ff680d11a0f394d9f399d13129c2d"><div class="ttname"><a href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a075ff680d11a0f394d9f399d13129c2d">com.fs.starfarer.api.impl.campaign.terrain.BaseTerrain.terrainId</a></div><div class="ttdeci">String terrainId</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/daa/BaseTerrain_8java_source.html#l00026">BaseTerrain.java:26</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain_html_a6e7b52077a0f438b0dc442ef0084a222"><div class="ttname"><a href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a6e7b52077a0f438b0dc442ef0084a222">com.fs.starfarer.api.impl.campaign.terrain.BaseTerrain.name</a></div><div class="ttdeci">String name</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/daa/BaseTerrain_8java_source.html#l00027">BaseTerrain.java:27</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8001d63afc4ddc39dd3e9885063e3513" name="a8001d63afc4ddc39dd3e9885063e3513"></a>
@@ -740,10 +655,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a299a5fba052249b61751a713596209d8">com.fs.starfarer.api.impl.campaign.terrain.BaseTerrain</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/ddf/RingSystemTerrainPlugin_8java_source.html#l00130">130</a> of file <a class="el" href="../../da/ddf/RingSystemTerrainPlugin_8java_source.html">RingSystemTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  130</span>                                         {</div>
-<div class="line"><span class="lineno">  131</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  132</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab0a4770d206d414b510cd468edea911c" name="ab0a4770d206d414b510cd468edea911c"></a>
@@ -775,10 +687,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/de6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseRingTerrain.html#af80f6c6d528fa671c595d0aedf90a048">com.fs.starfarer.api.impl.campaign.terrain.BaseRingTerrain</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/ddf/RingSystemTerrainPlugin_8java_source.html#l00063">63</a> of file <a class="el" href="../../da/ddf/RingSystemTerrainPlugin_8java_source.html">RingSystemTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   63</span>                                                                         {</div>
-<div class="line"><span class="lineno">   64</span>        super.render(layer, viewport);</div>
-<div class="line"><span class="lineno">   65</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af962a10704f3742e8e334f4a7ea262da" name="af962a10704f3742e8e334f4a7ea262da"></a>
@@ -817,28 +726,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/de6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseRingTerrain.html#a16a9658d4f11b61d7e030b4b25442e6b">com.fs.starfarer.api.impl.campaign.terrain.BaseRingTerrain</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/ddf/RingSystemTerrainPlugin_8java_source.html#l00037">37</a> of file <a class="el" href="../../da/ddf/RingSystemTerrainPlugin_8java_source.html">RingSystemTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   37</span>                                                           {</div>
-<div class="line"><span class="lineno">   38</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/de6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseRingTerrain.html#ad5c67e9bd3959f1d9680f8aac4da8dfc">params</a> == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   39</span>        <span class="keywordflow">if</span> (rr == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   40</span>            rr = <span class="keyword">new</span> RingRenderer(<span class="stringliteral">&quot;systemMap&quot;</span>, <span class="stringliteral">&quot;map_ring&quot;</span>);</div>
-<div class="line"><span class="lineno">   41</span>        }</div>
-<div class="line"><span class="lineno">   42</span>        <span class="comment">//Color color = new Color(175, 175, 105, 255);</span></div>
-<div class="line"><span class="lineno">   43</span>        Color color = Global.getSettings().getColor(<span class="stringliteral">&quot;ringSystemMapColor&quot;</span>);</div>
-<div class="line"><span class="lineno">   44</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a98ba084e2722ae038b3961e580dbc821">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#ab5817eaffb8acbeb246513b37bf391ac">getOrbitFocus</a>() instanceof PlanetAPI) {</div>
-<div class="line"><span class="lineno">   45</span>            PlanetAPI planet = (PlanetAPI) <a class="code hl_variable" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a98ba084e2722ae038b3961e580dbc821">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#ab5817eaffb8acbeb246513b37bf391ac">getOrbitFocus</a>();</div>
-<div class="line"><span class="lineno">   46</span>            <span class="comment">//color = Misc.interpolateColor(color, planet.getSpec().getIconColor(), 0.5f);</span></div>
-<div class="line"><span class="lineno">   47</span>        }</div>
-<div class="line"><span class="lineno">   48</span>        <span class="keywordtype">boolean</span> spiral = params.bandWidthInEngine / 2f + 10f &gt;= <a class="code hl_variable" href="../../da/de6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseRingTerrain.html#ad5c67e9bd3959f1d9680f8aac4da8dfc">params</a>.middleRadius;</div>
-<div class="line"><span class="lineno">   49</span>        rr.<a class="code hl_function" href="../../d6/db7/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RingRenderer.html#a497c98d391b3b1394caf6a1a8bda1b83">render</a>(<a class="code hl_variable" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a98ba084e2722ae038b3961e580dbc821">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#aedf9cd58593dcb6afd4d488bb017eafc">getLocation</a>(),</div>
-<div class="line"><span class="lineno">   50</span>                  params.middleRadius - params.bandWidthInEngine * 0.5f,</div>
-<div class="line"><span class="lineno">   51</span>                  params.middleRadius + params.bandWidthInEngine * 0.5f,</div>
-<div class="line"><span class="lineno">   52</span>                  color,</div>
-<div class="line"><span class="lineno">   53</span>                  spiral, factor, alphaMult);</div>
-<div class="line"><span class="lineno">   54</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RingRenderer_html_a497c98d391b3b1394caf6a1a8bda1b83"><div class="ttname"><a href="../../d6/db7/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RingRenderer.html#a497c98d391b3b1394caf6a1a8bda1b83">com.fs.starfarer.api.impl.campaign.terrain.RingRenderer.render</a></div><div class="ttdeci">void render(Vector2f loc, float minR, float maxR, Color color, boolean spiral, float factor, float alphaMult)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dea/RingRenderer_8java_source.html#l00023">RingRenderer.java:23</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_ab5817eaffb8acbeb246513b37bf391ac"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#ab5817eaffb8acbeb246513b37bf391ac">com.fs.starfarer.api.campaign.SectorEntityToken.getOrbitFocus</a></div><div class="ttdeci">SectorEntityToken getOrbitFocus()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_aedf9cd58593dcb6afd4d488bb017eafc"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#aedf9cd58593dcb6afd4d488bb017eafc">com.fs.starfarer.api.campaign.SectorEntityToken.getLocation</a></div><div class="ttdeci">Vector2f getLocation()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a85391202d5aea448f1e8cdd252ccaa0b" name="a85391202d5aea448f1e8cdd252ccaa0b"></a>
@@ -858,10 +746,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/ddf/RingSystemTerrainPlugin_8java_source.html#l00090">90</a> of file <a class="el" href="../../da/ddf/RingSystemTerrainPlugin_8java_source.html">RingSystemTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   90</span>                                                         {</div>
-<div class="line"><span class="lineno">   91</span>        this.nameForTooltip = nameForTooltip;</div>
-<div class="line"><span class="lineno">   92</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

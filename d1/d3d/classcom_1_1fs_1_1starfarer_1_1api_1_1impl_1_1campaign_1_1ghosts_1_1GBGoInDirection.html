@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -182,15 +183,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/df5/GBGoInDirection_8java_source.html#l00013">13</a> of file <a class="el" href="../../d2/df5/GBGoInDirection_8java_source.html">GBGoInDirection.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   13</span>                                                                         {</div>
-<div class="line"><span class="lineno">   14</span>        super(<a class="code hl_variable" href="../../da/d7f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1BaseGhostBehavior.html#aa39a5f3da979234bcec2a128a637f4bd">duration</a>);</div>
-<div class="line"><span class="lineno">   15</span>        this.direction = <a class="code hl_variable" href="../../d1/d3d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBGoInDirection.html#a852d8c0734d9c77afb57ec0746ce2fae">direction</a>;</div>
-<div class="line"><span class="lineno">   16</span>        this.maxBurn = <a class="code hl_variable" href="../../d1/d3d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBGoInDirection.html#af2b68bee84dbcaeb2520e11e89c9afd9">maxBurn</a>;</div>
-<div class="line"><span class="lineno">   17</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1BaseGhostBehavior_html_aa39a5f3da979234bcec2a128a637f4bd"><div class="ttname"><a href="../../da/d7f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1BaseGhostBehavior.html#aa39a5f3da979234bcec2a128a637f4bd">com.fs.starfarer.api.impl.campaign.ghosts.BaseGhostBehavior.duration</a></div><div class="ttdeci">float duration</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d8f/BaseGhostBehavior_8java_source.html#l00009">BaseGhostBehavior.java:9</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBGoInDirection_html_a852d8c0734d9c77afb57ec0746ce2fae"><div class="ttname"><a href="../../d1/d3d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBGoInDirection.html#a852d8c0734d9c77afb57ec0746ce2fae">com.fs.starfarer.api.impl.campaign.ghosts.GBGoInDirection.direction</a></div><div class="ttdeci">float direction</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/df5/GBGoInDirection_8java_source.html#l00010">GBGoInDirection.java:10</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBGoInDirection_html_af2b68bee84dbcaeb2520e11e89c9afd9"><div class="ttname"><a href="../../d1/d3d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBGoInDirection.html#af2b68bee84dbcaeb2520e11e89c9afd9">com.fs.starfarer.api.impl.campaign.ghosts.GBGoInDirection.maxBurn</a></div><div class="ttdeci">int maxBurn</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/df5/GBGoInDirection_8java_source.html#l00011">GBGoInDirection.java:11</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -223,16 +216,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d7f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1BaseGhostBehavior.html#a3f55bdd1c4909a69c1c5db6ae381c4b1">com.fs.starfarer.api.impl.campaign.ghosts.BaseGhostBehavior</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/df5/GBGoInDirection_8java_source.html#l00022">22</a> of file <a class="el" href="../../d2/df5/GBGoInDirection_8java_source.html">GBGoInDirection.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   22</span>                                                         {</div>
-<div class="line"><span class="lineno">   23</span>        super.advance(amount, ghost);</div>
-<div class="line"><span class="lineno">   24</span>        </div>
-<div class="line"><span class="lineno">   25</span>        Vector2f loc = Misc.getUnitVectorAtDegreeAngle(<a class="code hl_variable" href="../../d1/d3d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBGoInDirection.html#a852d8c0734d9c77afb57ec0746ce2fae">direction</a>);</div>
-<div class="line"><span class="lineno">   26</span>        loc.scale(10000f);</div>
-<div class="line"><span class="lineno">   27</span>        Vector2f.add(loc, ghost.getEntity().getLocation(), loc);</div>
-<div class="line"><span class="lineno">   28</span>        ghost.moveTo(loc, <a class="code hl_variable" href="../../d1/d3d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBGoInDirection.html#af2b68bee84dbcaeb2520e11e89c9afd9">maxBurn</a>);</div>
-<div class="line"><span class="lineno">   29</span>        </div>
-<div class="line"><span class="lineno">   30</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

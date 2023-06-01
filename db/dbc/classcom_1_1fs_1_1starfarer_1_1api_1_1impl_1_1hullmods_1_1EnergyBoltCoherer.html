@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -329,36 +330,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a33c67bf29e82daaad9e6a6ffcf0ee0b2">com.fs.starfarer.api.combat.BaseHullMod</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d55/EnergyBoltCoherer_8java_source.html#l00067">67</a> of file <a class="el" href="../../dc/d55/EnergyBoltCoherer_8java_source.html">EnergyBoltCoherer.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   67</span>                                                                                                                                       {</div>
-<div class="line"><span class="lineno">   68</span>        <span class="keywordtype">float</span> pad = 3f;</div>
-<div class="line"><span class="lineno">   69</span>        <span class="keywordtype">float</span> opad = 10f;</div>
-<div class="line"><span class="lineno">   70</span>        Color h = Misc.getHighlightColor();</div>
-<div class="line"><span class="lineno">   71</span>        Color bad = Misc.getNegativeHighlightColor();</div>
-<div class="line"><span class="lineno">   72</span>        </div>
-<div class="line"><span class="lineno">   73</span>        </div>
-<div class="line"><span class="lineno">   74</span>        <span class="keywordflow">if</span> (!Misc.isAutomated(ship)) {</div>
-<div class="line"><span class="lineno">   75</span>            tooltip.addPara(<span class="stringliteral">&quot;Originally designed by the Tri-Tachyon Corporation for use on its combat droneships, &quot;</span></div>
-<div class="line"><span class="lineno">   76</span>                    + <span class="stringliteral">&quot;the coherence field strength has to be dialed down to allow operation on crewed vessels.&quot;</span>, opad);</div>
-<div class="line"><span class="lineno">   77</span>            tooltip.addPara(<span class="stringliteral">&quot;Increases the base range of all non-beam Energy and Hybrid weapons by %s.&quot;</span>, opad, h,</div>
-<div class="line"><span class="lineno">   78</span>                    <span class="stringliteral">&quot;&quot;</span> + (<span class="keywordtype">int</span>)<a class="code hl_variable" href="../../db/dbc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1EnergyBoltCoherer.html#a530288affd178bc287cafaca5eef2bbb">CREWED_RANGE_BONUS</a>);</div>
-<div class="line"><span class="lineno">   79</span>            tooltip.addPara(<span class="stringliteral">&quot;The coherence field is unstable under combat conditions, with stresses on the hull &quot;</span></div>
-<div class="line"><span class="lineno">   80</span>                    + <span class="stringliteral">&quot;resulting in spot failures that release bursts of lethal radiation. &quot;</span></div>
-<div class="line"><span class="lineno">   81</span>                    + <span class="stringliteral">&quot;Crew casualties in combat are increased by %s.&quot;</span>, opad, h,</div>
-<div class="line"><span class="lineno">   82</span>                    <span class="stringliteral">&quot;&quot;</span> + (<span class="keywordtype">int</span>) <a class="code hl_variable" href="../../db/dbc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1EnergyBoltCoherer.html#afa2c953d70805ea8bf5f311315ec1cb0">CREW_CASUALTIES</a> + <span class="stringliteral">&quot;%&quot;</span>);</div>
-<div class="line"><span class="lineno">   83</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   84</span>            tooltip.addPara(<span class="stringliteral">&quot;Increases the base range of all non-beam Energy and Hybrid weapons by %s.&quot;</span>, opad, h,</div>
-<div class="line"><span class="lineno">   85</span>                <span class="stringliteral">&quot;&quot;</span> + (<span class="keywordtype">int</span>)<a class="code hl_variable" href="../../db/dbc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1EnergyBoltCoherer.html#a1ccfa2f9260d3813cef72788b4fb9815">RANGE_BONUS</a>);</div>
-<div class="line"><span class="lineno">   86</span>        }</div>
-<div class="line"><span class="lineno">   87</span>        </div>
-<div class="line"><span class="lineno">   88</span>        tooltip.addSectionHeading(<span class="stringliteral">&quot;Interactions with other modifiers&quot;</span>, Alignment.MID, opad);</div>
-<div class="line"><span class="lineno">   89</span>        tooltip.addPara(<span class="stringliteral">&quot;Since the base range is increased, this range modifier&quot;</span></div>
-<div class="line"><span class="lineno">   90</span>                + <span class="stringliteral">&quot; - unlike most other flat modifiers in the game - &quot;</span></div>
-<div class="line"><span class="lineno">   91</span>                + <span class="stringliteral">&quot;is increased by percentage modifiers from other hullmods and skills.&quot;</span>, opad);</div>
-<div class="line"><span class="lineno">   92</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1EnergyBoltCoherer_html_a1ccfa2f9260d3813cef72788b4fb9815"><div class="ttname"><a href="../../db/dbc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1EnergyBoltCoherer.html#a1ccfa2f9260d3813cef72788b4fb9815">com.fs.starfarer.api.impl.hullmods.EnergyBoltCoherer.RANGE_BONUS</a></div><div class="ttdeci">static float RANGE_BONUS</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d55/EnergyBoltCoherer_8java_source.html#l00018">EnergyBoltCoherer.java:18</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1EnergyBoltCoherer_html_a530288affd178bc287cafaca5eef2bbb"><div class="ttname"><a href="../../db/dbc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1EnergyBoltCoherer.html#a530288affd178bc287cafaca5eef2bbb">com.fs.starfarer.api.impl.hullmods.EnergyBoltCoherer.CREWED_RANGE_BONUS</a></div><div class="ttdeci">static float CREWED_RANGE_BONUS</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d55/EnergyBoltCoherer_8java_source.html#l00019">EnergyBoltCoherer.java:19</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1EnergyBoltCoherer_html_afa2c953d70805ea8bf5f311315ec1cb0"><div class="ttname"><a href="../../db/dbc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1EnergyBoltCoherer.html#afa2c953d70805ea8bf5f311315ec1cb0">com.fs.starfarer.api.impl.hullmods.EnergyBoltCoherer.CREW_CASUALTIES</a></div><div class="ttdeci">static float CREW_CASUALTIES</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d55/EnergyBoltCoherer_8java_source.html#l00021">EnergyBoltCoherer.java:21</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a86e62f73fa0780deb696a5faad440d0d" name="a86e62f73fa0780deb696a5faad440d0d"></a>
@@ -397,10 +369,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#aade4030b287b2c896f920683f0eead56">com.fs.starfarer.api.combat.BaseHullMod</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d55/EnergyBoltCoherer_8java_source.html#l00030">30</a> of file <a class="el" href="../../dc/d55/EnergyBoltCoherer_8java_source.html">EnergyBoltCoherer.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   30</span>                                                                       {</div>
-<div class="line"><span class="lineno">   31</span>        ship.addListener(<span class="keyword">new</span> EnergyBoltCohererRangeModifier());</div>
-<div class="line"><span class="lineno">   32</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab029ca2aa7254c665def7a5e5c54800c" name="ab029ca2aa7254c665def7a5e5c54800c"></a>
@@ -438,12 +407,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a3859215f6c3408946bf590a2ce5c0e74">com.fs.starfarer.api.combat.BaseHullMod</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d55/EnergyBoltCoherer_8java_source.html#l00023">23</a> of file <a class="el" href="../../dc/d55/EnergyBoltCoherer_8java_source.html">EnergyBoltCoherer.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   23</span>                                                                                                        {</div>
-<div class="line"><span class="lineno">   24</span>        <span class="keywordflow">if</span> (!Misc.isAutomated(stats)) {</div>
-<div class="line"><span class="lineno">   25</span>            stats.getCrewLossMult().modifyPercent(<span class="keywordtype">id</span>, <a class="code hl_variable" href="../../db/dbc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1EnergyBoltCoherer.html#afa2c953d70805ea8bf5f311315ec1cb0">CREW_CASUALTIES</a>);</div>
-<div class="line"><span class="lineno">   26</span>        }</div>
-<div class="line"><span class="lineno">   27</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9da4c4d095f9e9782cdde1a309312008" name="a9da4c4d095f9e9782cdde1a309312008"></a>
@@ -475,10 +439,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a5f6ac9583ca5b1606fda3e53f15c3d14">com.fs.starfarer.api.combat.BaseHullMod</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d55/EnergyBoltCoherer_8java_source.html#l00057">57</a> of file <a class="el" href="../../dc/d55/EnergyBoltCoherer_8java_source.html">EnergyBoltCoherer.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   57</span>                                                                    {</div>
-<div class="line"><span class="lineno">   58</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   59</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="afd8372b494edf8b35e112c7e370b294e" name="afd8372b494edf8b35e112c7e370b294e"></a>
@@ -525,10 +486,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a3ea50f57642925029054d03f5362630b">com.fs.starfarer.api.combat.BaseHullMod</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d55/EnergyBoltCoherer_8java_source.html#l00062">62</a> of file <a class="el" href="../../dc/d55/EnergyBoltCoherer_8java_source.html">EnergyBoltCoherer.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   62</span>                                                                                                        {</div>
-<div class="line"><span class="lineno">   63</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   64</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -150,12 +151,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d33/PhaseCorps_8java_source.html#l00043">43</a> of file <a class="el" href="../../d3/d33/PhaseCorps_8java_source.html">PhaseCorps.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   43</span>                                                             {</div>
-<div class="line"><span class="lineno">   44</span>        FleetMemberAPI member = stats.getFleetMember();</div>
-<div class="line"><span class="lineno">   45</span>        <span class="keywordflow">if</span> (member == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   46</span>        <span class="keywordflow">return</span> member.isPhaseShip();</div>
-<div class="line"><span class="lineno">   47</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a63ad0e46a097adc42c64a30726582553" name="a63ad0e46a097adc42c64a30726582553"></a>
@@ -183,19 +179,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d33/PhaseCorps_8java_source.html#l00031">31</a> of file <a class="el" href="../../d3/d33/PhaseCorps_8java_source.html">PhaseCorps.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   31</span>                                                                       {</div>
-<div class="line"><span class="lineno">   32</span>        <span class="keywordflow">if</span> (stats.getEntity() instanceof ShipAPI) {</div>
-<div class="line"><span class="lineno">   33</span>            ShipAPI ship = (ShipAPI) stats.getEntity();</div>
-<div class="line"><span class="lineno">   34</span>            <span class="keywordflow">if</span> (!ship.getHullSpec().isPhase()) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   35</span>            <span class="keywordflow">return</span> !ship.getCaptain().isDefault();</div>
-<div class="line"><span class="lineno">   36</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   37</span>            FleetMemberAPI member = stats.getFleetMember();</div>
-<div class="line"><span class="lineno">   38</span>            <span class="keywordflow">if</span> (member == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   39</span>            <span class="keywordflow">if</span> (!member.isPhaseShip()) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   40</span>            <span class="keywordflow">return</span> !member.getCaptain().isDefault();</div>
-<div class="line"><span class="lineno">   41</span>        }</div>
-<div class="line"><span class="lineno">   42</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

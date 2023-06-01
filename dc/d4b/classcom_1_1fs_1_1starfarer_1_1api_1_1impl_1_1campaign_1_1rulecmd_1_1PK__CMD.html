@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -185,75 +186,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d93/PK__CMD_8java_source.html#l00082">82</a> of file <a class="el" href="../../d6/d93/PK__CMD_8java_source.html">PK_CMD.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   82</span>                                                                                 {</div>
-<div class="line"><span class="lineno">   83</span>        <span class="comment">//int crew = 100;</span></div>
-<div class="line"><span class="lineno">   84</span>        <span class="comment">//cargo.removeCrew(crew);</span></div>
-<div class="line"><span class="lineno">   85</span>        <span class="comment">//AddRemoveCommodity.addCommodityLossText(Commodities.CREW, crew, text);</span></div>
-<div class="line"><span class="lineno">   86</span>        <span class="comment">// Crew removal handled in rules.</span></div>
-<div class="line"><span class="lineno">   87</span>        </div>
-<div class="line"><span class="lineno">   88</span>        PlanetAPI planet = RecoverAPlanetkiller.getTundra();</div>
-<div class="line"><span class="lineno">   89</span>        MarketAPI market = planet.getMarket();</div>
-<div class="line"><span class="lineno">   90</span>        </div>
-<div class="line"><span class="lineno">   91</span>        <span class="comment">//market.addTag(Tags.MARKET_NO_OFFICER_SPAWN);</span></div>
-<div class="line"><span class="lineno">   92</span> </div>
-<div class="line"><span class="lineno">   93</span>        market.setSurveyLevel(SurveyLevel.FULL);</div>
-<div class="line"><span class="lineno">   94</span>        <span class="keywordflow">for</span> (MarketConditionAPI mc : market.getConditions()) {</div>
-<div class="line"><span class="lineno">   95</span>            mc.setSurveyed(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   96</span>        }</div>
-<div class="line"><span class="lineno">   97</span>        </div>
-<div class="line"><span class="lineno">   98</span>        market.setName(planet.getName());</div>
-<div class="line"><span class="lineno">   99</span>        planet.setFaction(Factions.HEGEMONY);</div>
-<div class="line"><span class="lineno">  100</span>        </div>
-<div class="line"><span class="lineno">  101</span>        market.setDaysInExistence(0);</div>
-<div class="line"><span class="lineno">  102</span>        market.setPlanetConditionMarketOnly(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  103</span>        market.setFactionId(Factions.HEGEMONY);</div>
-<div class="line"><span class="lineno">  104</span>        market.addCondition(Conditions.POPULATION_3);</div>
-<div class="line"><span class="lineno">  105</span>        market.addIndustry(Industries.POPULATION);</div>
-<div class="line"><span class="lineno">  106</span>        market.addIndustry(Industries.FARMING);</div>
-<div class="line"><span class="lineno">  107</span>        </div>
-<div class="line"><span class="lineno">  108</span>        market.setSize(3);</div>
-<div class="line"><span class="lineno">  109</span>        </div>
-<div class="line"><span class="lineno">  110</span>        market.addSubmarket(Submarkets.SUBMARKET_OPEN);</div>
-<div class="line"><span class="lineno">  111</span>        market.addSubmarket(Submarkets.SUBMARKET_BLACK);</div>
-<div class="line"><span class="lineno">  112</span>        market.addSubmarket(Submarkets.SUBMARKET_STORAGE);</div>
-<div class="line"><span class="lineno">  113</span>        <span class="comment">//((StoragePlugin)market.getSubmarket(Submarkets.SUBMARKET_STORAGE).getPlugin()).setPlayerPaidToUnlock(true);</span></div>
-<div class="line"><span class="lineno">  114</span>        </div>
-<div class="line"><span class="lineno">  115</span>        market.getSubmarket(Submarkets.SUBMARKET_OPEN).getPlugin().updateCargoPrePlayerInteraction();</div>
-<div class="line"><span class="lineno">  116</span>        market.getSubmarket(Submarkets.SUBMARKET_OPEN).getPlugin().getCargo().clear();</div>
-<div class="line"><span class="lineno">  117</span>        <span class="keywordflow">if</span> (market.getSubmarket(Submarkets.SUBMARKET_OPEN).getPlugin().getCargo().getMothballedShips() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  118</span>            market.getSubmarket(Submarkets.SUBMARKET_OPEN).getPlugin().getCargo().getMothballedShips().clear();</div>
-<div class="line"><span class="lineno">  119</span>        }</div>
-<div class="line"><span class="lineno">  120</span>        market.getSubmarket(Submarkets.SUBMARKET_BLACK).getPlugin().updateCargoPrePlayerInteraction();</div>
-<div class="line"><span class="lineno">  121</span>        market.getSubmarket(Submarkets.SUBMARKET_BLACK).getPlugin().getCargo().clear();</div>
-<div class="line"><span class="lineno">  122</span>        <span class="keywordflow">if</span> (market.getSubmarket(Submarkets.SUBMARKET_BLACK).getPlugin().getCargo().getMothballedShips() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  123</span>            market.getSubmarket(Submarkets.SUBMARKET_BLACK).getPlugin().getCargo().getMothballedShips().clear();</div>
-<div class="line"><span class="lineno">  124</span>        }</div>
-<div class="line"><span class="lineno">  125</span>        </div>
-<div class="line"><span class="lineno">  126</span>        market.getTariff().modifyFlat(<span class="stringliteral">&quot;default_tariff&quot;</span>, market.getFaction().getTariffFraction());</div>
-<div class="line"><span class="lineno">  127</span>        </div>
-<div class="line"><span class="lineno">  128</span>        planet.setMarket(market);</div>
-<div class="line"><span class="lineno">  129</span>        market.setPrimaryEntity(planet);</div>
-<div class="line"><span class="lineno">  130</span>        market.setPlayerOwned(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  131</span>        </div>
-<div class="line"><span class="lineno">  132</span>        Global.getSector().getEconomy().addMarket(market, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  133</span>        Global.getSector().getEconomy().tripleStep();</div>
-<div class="line"><span class="lineno">  134</span>        market.advance(0f);</div>
-<div class="line"><span class="lineno">  135</span>        market.getConstructionQueue().addToEnd(Industries.SPACEPORT, 0);</div>
-<div class="line"><span class="lineno">  136</span>        </div>
-<div class="line"><span class="lineno">  137</span>        <span class="comment">//market.getConditions();</span></div>
-<div class="line"><span class="lineno">  138</span>        </div>
-<div class="line"><span class="lineno">  139</span>        SharedData.getData().getMarketsWithoutTradeFleetSpawn().add(market.getId());</div>
-<div class="line"><span class="lineno">  140</span>        </div>
-<div class="line"><span class="lineno">  141</span>        PersonAPI skiron = People.getPerson(People.SKIRON);</div>
-<div class="line"><span class="lineno">  142</span>        market.setAdmin(skiron);</div>
-<div class="line"><span class="lineno">  143</span>        market.getCommDirectory().addPerson(skiron, 0);</div>
-<div class="line"><span class="lineno">  144</span>        market.addPerson(skiron);</div>
-<div class="line"><span class="lineno">  145</span>        </div>
-<div class="line"><span class="lineno">  146</span>        market.getPrimaryEntity().setInteractionImage(<span class="stringliteral">&quot;illustrations&quot;</span>, <span class="stringliteral">&quot;sentinel2&quot;</span>);</div>
-<div class="line"><span class="lineno">  147</span> </div>
-<div class="line"><span class="lineno">  148</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  149</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae2e43151ec8dacc11d706731a51fba3a" name="ae2e43151ec8dacc11d706731a51fba3a"></a>
@@ -297,46 +230,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="../../d0/d5c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1CommandPlugin.html#a72a44c5127e60136b87d3b37613fd0e0">com.fs.starfarer.api.campaign.rules.CommandPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d93/PK__CMD_8java_source.html#l00046">46</a> of file <a class="el" href="../../d6/d93/PK__CMD_8java_source.html">PK_CMD.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   46</span>                                                                                                                             {</div>
-<div class="line"><span class="lineno">   47</span>        <span class="keywordflow">if</span> (dialog == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   48</span>        </div>
-<div class="line"><span class="lineno">   49</span>        OptionPanelAPI options = dialog.getOptionPanel();</div>
-<div class="line"><span class="lineno">   50</span>        TextPanelAPI text = dialog.getTextPanel();</div>
-<div class="line"><span class="lineno">   51</span>        CampaignFleetAPI pf = Global.getSector().getPlayerFleet();</div>
-<div class="line"><span class="lineno">   52</span>        CargoAPI cargo = pf.getCargo();</div>
-<div class="line"><span class="lineno">   53</span>        </div>
-<div class="line"><span class="lineno">   54</span>        </div>
-<div class="line"><span class="lineno">   55</span>        String action = params.get(0).getString(memoryMap);</div>
-<div class="line"><span class="lineno">   56</span>        </div>
-<div class="line"><span class="lineno">   57</span>        MemoryAPI memory = memoryMap.get(MemKeys.LOCAL);</div>
-<div class="line"><span class="lineno">   58</span>        <span class="keywordflow">if</span> (memory == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">false</span>; <span class="comment">// should not be possible unless there are other big problems already</span></div>
-<div class="line"><span class="lineno">   59</span>        </div>
-<div class="line"><span class="lineno">   60</span><span class="comment">//      MarketAPI market = dialog.getInteractionTarget().getMarket();</span></div>
-<div class="line"><span class="lineno">   61</span><span class="comment">//      StarSystemAPI system = null;</span></div>
-<div class="line"><span class="lineno">   62</span><span class="comment">//      if (dialog.getInteractionTarget().getContainingLocation() instanceof StarSystemAPI) {</span></div>
-<div class="line"><span class="lineno">   63</span><span class="comment">//          system = (StarSystemAPI) dialog.getInteractionTarget().getContainingLocation();</span></div>
-<div class="line"><span class="lineno">   64</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">   65</span>                </div>
-<div class="line"><span class="lineno">   66</span>        <span class="keywordflow">if</span> (<span class="stringliteral">&quot;removePKDefenses&quot;</span>.equals(action)) {</div>
-<div class="line"><span class="lineno">   67</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="../../dc/d4b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1PK__CMD.html#a679fa66f970fdef72269053b8b46364b">removePKDefenses</a>(dialog, memory);</div>
-<div class="line"><span class="lineno">   68</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="stringliteral">&quot;convertSentinelToColony&quot;</span>.equals(action)) {</div>
-<div class="line"><span class="lineno">   69</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="../../dc/d4b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1PK__CMD.html#aa5910cc9577362800d8b8048d39bab0b">convertSentinelToColony</a>(text, cargo);</div>
-<div class="line"><span class="lineno">   70</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="stringliteral">&quot;rightPostToAcceptPK&quot;</span>.equals(action)) {</div>
-<div class="line"><span class="lineno">   71</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="../../dc/d4b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1PK__CMD.html#a59b90904ee1eed111df85c36bb1ac436">rightPostToAcceptPK</a>(dialog);</div>
-<div class="line"><span class="lineno">   72</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="stringliteral">&quot;rightPostToTellAboutSentinel&quot;</span>.equals(action)) {</div>
-<div class="line"><span class="lineno">   73</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="../../dc/d4b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1PK__CMD.html#aac79b4f9e799e703e6f0581373255a5f">rightPostToTellAboutSentinel</a>(dialog);</div>
-<div class="line"><span class="lineno">   74</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="stringliteral">&quot;giveExecutor&quot;</span>.equals(action)) {</div>
-<div class="line"><span class="lineno">   75</span>            <a class="code hl_function" href="../../dc/d4b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1PK__CMD.html#a1045a7a7402ee30c5149ebcfd86d4b24">giveExecutor</a>(dialog, params, memoryMap);</div>
-<div class="line"><span class="lineno">   76</span>        }</div>
-<div class="line"><span class="lineno">   77</span>        </div>
-<div class="line"><span class="lineno">   78</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   79</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1PK__CMD_html_a1045a7a7402ee30c5149ebcfd86d4b24"><div class="ttname"><a href="../../dc/d4b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1PK__CMD.html#a1045a7a7402ee30c5149ebcfd86d4b24">com.fs.starfarer.api.impl.campaign.rulecmd.PK_CMD.giveExecutor</a></div><div class="ttdeci">void giveExecutor(InteractionDialogAPI dialog, List&lt; Token &gt; params, Map&lt; String, MemoryAPI &gt; memoryMap)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d93/PK__CMD_8java_source.html#l00153">PK_CMD.java:153</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1PK__CMD_html_a59b90904ee1eed111df85c36bb1ac436"><div class="ttname"><a href="../../dc/d4b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1PK__CMD.html#a59b90904ee1eed111df85c36bb1ac436">com.fs.starfarer.api.impl.campaign.rulecmd.PK_CMD.rightPostToAcceptPK</a></div><div class="ttdeci">boolean rightPostToAcceptPK(InteractionDialogAPI dialog)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d93/PK__CMD_8java_source.html#l00166">PK_CMD.java:166</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1PK__CMD_html_a679fa66f970fdef72269053b8b46364b"><div class="ttname"><a href="../../dc/d4b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1PK__CMD.html#a679fa66f970fdef72269053b8b46364b">com.fs.starfarer.api.impl.campaign.rulecmd.PK_CMD.removePKDefenses</a></div><div class="ttdeci">boolean removePKDefenses(InteractionDialogAPI dialog, MemoryAPI memory)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d93/PK__CMD_8java_source.html#l00185">PK_CMD.java:185</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1PK__CMD_html_aa5910cc9577362800d8b8048d39bab0b"><div class="ttname"><a href="../../dc/d4b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1PK__CMD.html#aa5910cc9577362800d8b8048d39bab0b">com.fs.starfarer.api.impl.campaign.rulecmd.PK_CMD.convertSentinelToColony</a></div><div class="ttdeci">boolean convertSentinelToColony(TextPanelAPI text, CargoAPI cargo)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d93/PK__CMD_8java_source.html#l00082">PK_CMD.java:82</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1PK__CMD_html_aac79b4f9e799e703e6f0581373255a5f"><div class="ttname"><a href="../../dc/d4b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1PK__CMD.html#aac79b4f9e799e703e6f0581373255a5f">com.fs.starfarer.api.impl.campaign.rulecmd.PK_CMD.rightPostToTellAboutSentinel</a></div><div class="ttdeci">boolean rightPostToTellAboutSentinel(InteractionDialogAPI dialog)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d93/PK__CMD_8java_source.html#l00177">PK_CMD.java:177</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a1045a7a7402ee30c5149ebcfd86d4b24" name="a1045a7a7402ee30c5149ebcfd86d4b24"></a>
@@ -380,18 +274,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d93/PK__CMD_8java_source.html#l00153">153</a> of file <a class="el" href="../../d6/d93/PK__CMD_8java_source.html">PK_CMD.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  153</span>                                                                                                                   {</div>
-<div class="line"><span class="lineno">  154</span>        <span class="keywordtype">boolean</span> removeSpecial = params.get(1).getBoolean(memoryMap);</div>
-<div class="line"><span class="lineno">  155</span>        </div>
-<div class="line"><span class="lineno">  156</span>        ShipVariantAPI v = Global.getSettings().getVariant(<span class="stringliteral">&quot;executor_Hull&quot;</span>).clone();</div>
-<div class="line"><span class="lineno">  157</span>        <span class="keywordflow">if</span> (removeSpecial) {</div>
-<div class="line"><span class="lineno">  158</span>            v.addSuppressedMod(HullMods.ANDRADA_MODS);</div>
-<div class="line"><span class="lineno">  159</span>        }</div>
-<div class="line"><span class="lineno">  160</span>        FleetMemberAPI member = Global.getFactory().createFleetMember(FleetMemberType.SHIP, v);</div>
-<div class="line"><span class="lineno">  161</span>        Global.getSector().getPlayerFleet().getFleetData().addFleetMember(member);</div>
-<div class="line"><span class="lineno">  162</span>        AddShip.addShipGainText(member, dialog.getTextPanel());</div>
-<div class="line"><span class="lineno">  163</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a679fa66f970fdef72269053b8b46364b" name="a679fa66f970fdef72269053b8b46364b"></a>
@@ -429,26 +312,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d93/PK__CMD_8java_source.html#l00185">185</a> of file <a class="el" href="../../d6/d93/PK__CMD_8java_source.html">PK_CMD.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  185</span>                                                                                      {</div>
-<div class="line"><span class="lineno">  186</span>        CampaignFleetAPI defenders = memory.getFleet(<span class="stringliteral">&quot;$defenderFleet&quot;</span>);</div>
-<div class="line"><span class="lineno">  187</span>        <span class="keywordflow">if</span> (defenders != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  188</span>            memory.unset(<span class="stringliteral">&quot;$defenderFleet&quot;</span>);</div>
-<div class="line"><span class="lineno">  189</span>            memory.set(<span class="stringliteral">&quot;$defenderFleetDefeated&quot;</span>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  190</span>            memory.set(<span class="stringliteral">&quot;$hasDefenders&quot;</span>, <span class="keyword">false</span>, 0);</div>
-<div class="line"><span class="lineno">  191</span>            dialog.getInteractionTarget().getContainingLocation().addEntity(defenders);</div>
-<div class="line"><span class="lineno">  192</span>            defenders.setAI(<span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  193</span>            defenders.setNullAIActionText(<span class="stringliteral">&quot;dormant&quot;</span>);</div>
-<div class="line"><span class="lineno">  194</span>            Vector2f loc = dialog.getInteractionTarget().getLocation();</div>
-<div class="line"><span class="lineno">  195</span>            defenders.setLocation(loc.x, loc.y + 100f);</div>
-<div class="line"><span class="lineno">  196</span>            defenders.setCircularOrbit(dialog.getInteractionTarget().getOrbitFocus(), 90f, 100f, 20f);</div>
-<div class="line"><span class="lineno">  197</span>            defenders.getMemoryWithoutUpdate().set(<span class="stringliteral">&quot;$pkDefenderFleet&quot;</span>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  198</span>            defenders.getMemoryWithoutUpdate().set(MemFlags.FLEET_IGNORED_BY_OTHER_FLEETS, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  199</span>            <span class="comment">//Misc.addDefeatTrigger(defenders, &quot;PK14thDefeated&quot;); // handled elsewhere so the trigger is set in all cases</span></div>
-<div class="line"><span class="lineno">  200</span>            Misc.makeNoRepImpact(defenders, <span class="stringliteral">&quot;pk&quot;</span>);</div>
-<div class="line"><span class="lineno">  201</span>        }</div>
-<div class="line"><span class="lineno">  202</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  203</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a59b90904ee1eed111df85c36bb1ac436" name="a59b90904ee1eed111df85c36bb1ac436"></a>
@@ -476,17 +340,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d93/PK__CMD_8java_source.html#l00166">166</a> of file <a class="el" href="../../d6/d93/PK__CMD_8java_source.html">PK_CMD.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  166</span>                                                                       {</div>
-<div class="line"><span class="lineno">  167</span>        PersonAPI person = dialog.getInteractionTarget().getActivePerson();</div>
-<div class="line"><span class="lineno">  168</span>        <span class="keywordflow">if</span> (person.getMemoryWithoutUpdate().getBoolean(LuddicPathBaseIntel.PATHER_BASE_COMMANDER)) {</div>
-<div class="line"><span class="lineno">  169</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  170</span>        }</div>
-<div class="line"><span class="lineno">  171</span>        <span class="keywordflow">return</span> Ranks.POST_BASE_COMMANDER.equals(person.getPostId()) ||</div>
-<div class="line"><span class="lineno">  172</span>                   Ranks.POST_STATION_COMMANDER.equals(person.getPostId()) ||</div>
-<div class="line"><span class="lineno">  173</span>                   <span class="comment">//Ranks.POST_ADMINISTRATOR.equals(person.getPostId()) || // just military, no regular admins</span></div>
-<div class="line"><span class="lineno">  174</span>                   Ranks.POST_OUTPOST_COMMANDER.equals(person.getPostId());</div>
-<div class="line"><span class="lineno">  175</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aac79b4f9e799e703e6f0581373255a5f" name="aac79b4f9e799e703e6f0581373255a5f"></a>
@@ -514,14 +368,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d93/PK__CMD_8java_source.html#l00177">177</a> of file <a class="el" href="../../d6/d93/PK__CMD_8java_source.html">PK_CMD.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  177</span>                                                                                {</div>
-<div class="line"><span class="lineno">  178</span>        PersonAPI person = dialog.getInteractionTarget().getActivePerson();</div>
-<div class="line"><span class="lineno">  179</span>        <span class="keywordflow">return</span> Ranks.POST_BASE_COMMANDER.equals(person.getPostId()) ||</div>
-<div class="line"><span class="lineno">  180</span>                Ranks.POST_STATION_COMMANDER.equals(person.getPostId()) ||</div>
-<div class="line"><span class="lineno">  181</span>                Ranks.POST_ADMINISTRATOR.equals(person.getPostId()) ||</div>
-<div class="line"><span class="lineno">  182</span>                Ranks.POST_OUTPOST_COMMANDER.equals(person.getPostId());</div>
-<div class="line"><span class="lineno">  183</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

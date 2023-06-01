@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -177,51 +178,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="../../d0/d5c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1CommandPlugin.html#a72a44c5127e60136b87d3b37613fd0e0">com.fs.starfarer.api.campaign.rules.CommandPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../de/d95/Faction__CMD_8java_source.html#l00039">39</a> of file <a class="el" href="../../de/d95/Faction__CMD_8java_source.html">Faction_CMD.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   39</span>                                                                                                                             {</div>
-<div class="line"><span class="lineno">   40</span>        <span class="keywordflow">if</span> (dialog == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   41</span>        </div>
-<div class="line"><span class="lineno">   42</span>        OptionPanelAPI options = dialog.getOptionPanel();</div>
-<div class="line"><span class="lineno">   43</span>        TextPanelAPI text = dialog.getTextPanel();</div>
-<div class="line"><span class="lineno">   44</span>        CampaignFleetAPI pf = Global.getSector().getPlayerFleet();</div>
-<div class="line"><span class="lineno">   45</span>        CargoAPI cargo = pf.getCargo();</div>
-<div class="line"><span class="lineno">   46</span>        </div>
-<div class="line"><span class="lineno">   47</span>        SectorEntityToken entity = dialog.getInteractionTarget();</div>
-<div class="line"><span class="lineno">   48</span>        <span class="keywordflow">if</span> (entity == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   49</span>        </div>
-<div class="line"><span class="lineno">   50</span>        String action = params.get(0).getString(memoryMap);</div>
-<div class="line"><span class="lineno">   51</span>        </div>
-<div class="line"><span class="lineno">   52</span>        MemoryAPI memory = memoryMap.get(MemKeys.LOCAL);</div>
-<div class="line"><span class="lineno">   53</span>        <span class="keywordflow">if</span> (memory == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">false</span>; <span class="comment">// should not be possible unless there are other big problems already</span></div>
-<div class="line"><span class="lineno">   54</span>        </div>
-<div class="line"><span class="lineno">   55</span>        <span class="comment">//MarketAPI market = dialog.getInteractionTarget().getMarket();</span></div>
-<div class="line"><span class="lineno">   56</span>        <span class="comment">/*StarSystemAPI system = null;</span></div>
-<div class="line"><span class="lineno">   57</span><span class="comment">        if (dialog.getInteractionTarget().getContainingLocation() instanceof StarSystemAPI) {</span></div>
-<div class="line"><span class="lineno">   58</span><span class="comment">            system = (StarSystemAPI) dialog.getInteractionTarget().getContainingLocation();</span></div>
-<div class="line"><span class="lineno">   59</span><span class="comment">        }*/</span></div>
-<div class="line"><span class="lineno">   60</span>        </div>
-<div class="line"><span class="lineno">   61</span>        <span class="keywordflow">if</span> (<span class="stringliteral">&quot;commissioningFactionIsAtWarWith&quot;</span>.equals(action)) {</div>
-<div class="line"><span class="lineno">   62</span>            <span class="comment">//faction.getId().</span></div>
-<div class="line"><span class="lineno">   63</span>            <span class="keywordflow">if</span> (params.size() &gt;= 1) {</div>
-<div class="line"><span class="lineno">   64</span>                </div>
-<div class="line"><span class="lineno">   65</span>                <span class="comment">// is this a real faction? I hope so.</span></div>
-<div class="line"><span class="lineno">   66</span>                String target_faction_id = params.get(0).getString(memoryMap);</div>
-<div class="line"><span class="lineno">   67</span>                FactionAPI target_faction = Global.getSector().getFaction(target_faction_id);</div>
-<div class="line"><span class="lineno">   68</span>                <span class="comment">//FactionAPI com_faction = Misc.getCommissionFaction();</span></div>
-<div class="line"><span class="lineno">   69</span>                <span class="keywordflow">if</span>(target_faction != <span class="keyword">null</span> )</div>
-<div class="line"><span class="lineno">   70</span>                {</div>
-<div class="line"><span class="lineno">   71</span>                    <span class="keywordflow">return</span> Misc.getCommissionFaction().isHostileTo(target_faction);</div>
-<div class="line"><span class="lineno">   72</span>                }</div>
-<div class="line"><span class="lineno">   73</span>                <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">   74</span>                {   </div>
-<div class="line"><span class="lineno">   75</span>                    System.out.print(target_faction_id + <span class="stringliteral">&quot; is an invalid FactionID!&quot;</span>);</div>
-<div class="line"><span class="lineno">   76</span>                    <span class="comment">// Maybe this should do something else?</span></div>
-<div class="line"><span class="lineno">   77</span>                }</div>
-<div class="line"><span class="lineno">   78</span>            }</div>
-<div class="line"><span class="lineno">   79</span>        }</div>
-<div class="line"><span class="lineno">   80</span> </div>
-<div class="line"><span class="lineno">   81</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   82</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

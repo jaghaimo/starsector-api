@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -175,35 +176,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="../../d0/d5c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1CommandPlugin.html#a72a44c5127e60136b87d3b37613fd0e0">com.fs.starfarer.api.campaign.rules.CommandPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/db2/unsetAll_8java_source.html#l00014">14</a> of file <a class="el" href="../../dd/db2/unsetAll_8java_source.html">unsetAll.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   14</span>                                                                                                                             {</div>
-<div class="line"><span class="lineno">   15</span> </div>
-<div class="line"><span class="lineno">   16</span>        String <span class="keywordtype">string</span> = params.get(0).string;</div>
-<div class="line"><span class="lineno">   17</span>        <span class="keywordtype">int</span> index = <span class="keywordtype">string</span>.indexOf(<span class="stringliteral">&quot;.&quot;</span>);</div>
-<div class="line"><span class="lineno">   18</span>        String memoryKey;</div>
-<div class="line"><span class="lineno">   19</span>        String varPrefix;</div>
-<div class="line"><span class="lineno">   20</span>        <span class="keywordflow">if</span> (index &gt; 0) {</div>
-<div class="line"><span class="lineno">   21</span>            memoryKey = <span class="keywordtype">string</span>.substring(1, index);</div>
-<div class="line"><span class="lineno">   22</span>            varPrefix = <span class="stringliteral">&quot;$&quot;</span> + <span class="keywordtype">string</span>.substring(index + 1);</div>
-<div class="line"><span class="lineno">   23</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   24</span>            memoryKey = MemKeys.LOCAL;</div>
-<div class="line"><span class="lineno">   25</span>            varPrefix = string;</div>
-<div class="line"><span class="lineno">   26</span>        }</div>
-<div class="line"><span class="lineno">   27</span>        </div>
-<div class="line"><span class="lineno">   28</span>        MemoryAPI memory = memoryMap.get(memoryKey);</div>
-<div class="line"><span class="lineno">   29</span>        List&lt;String&gt; unset = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
-<div class="line"><span class="lineno">   30</span>        <span class="keywordflow">for</span> (String key : memory.getKeys()) {</div>
-<div class="line"><span class="lineno">   31</span>            <span class="keywordflow">if</span> (key.startsWith(varPrefix)) {</div>
-<div class="line"><span class="lineno">   32</span>                unset.add(key);</div>
-<div class="line"><span class="lineno">   33</span>            }</div>
-<div class="line"><span class="lineno">   34</span>        }</div>
-<div class="line"><span class="lineno">   35</span>        <span class="keywordflow">for</span> (String key : unset) {</div>
-<div class="line"><span class="lineno">   36</span>            memory.unset(key);</div>
-<div class="line"><span class="lineno">   37</span>        }</div>
-<div class="line"><span class="lineno">   38</span> </div>
-<div class="line"><span class="lineno">   39</span>        </div>
-<div class="line"><span class="lineno">   40</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   41</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

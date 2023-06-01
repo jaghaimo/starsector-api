@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -362,74 +363,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d63/MiscellaneousThemeGenerator_8java_source.html#l00678">678</a> of file <a class="el" href="../../d6/d63/MiscellaneousThemeGenerator_8java_source.html">MiscellaneousThemeGenerator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  678</span>                                                              {</div>
-<div class="line"><span class="lineno">  679</span>        </div>
-<div class="line"><span class="lineno">  680</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a7059afbea0e3f7e46f33265f07243d3a">DEBUG</a>) System.out.println(<span class="stringliteral">&quot;Adding coronal tap to [&quot;</span> + system.getNameWithLowercaseType() + <span class="stringliteral">&quot;, &quot;</span> + system.getLocation());</div>
-<div class="line"><span class="lineno">  681</span>        </div>
-<div class="line"><span class="lineno">  682</span>        String factionId = Factions.NEUTRAL;</div>
-<div class="line"><span class="lineno">  683</span>        </div>
-<div class="line"><span class="lineno">  684</span>        AddedEntity entity = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  685</span>        <span class="keywordflow">if</span> (system.getType() == StarSystemType.TRINARY_2CLOSE) {</div>
-<div class="line"><span class="lineno">  686</span>            EntityLocation loc = <span class="keyword">new</span> EntityLocation();</div>
-<div class="line"><span class="lineno">  687</span>            loc.location = <span class="keyword">new</span> Vector2f();</div>
-<div class="line"><span class="lineno">  688</span>            entity = <a class="code hl_function" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a37a0a87451d87557f4e34158148fcf73">addEntity</a>(<a class="code hl_variable" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#ac76a462cf7fa44da2d20f4da80800574">random</a>, system, loc, Entities.CORONAL_TAP, factionId);</div>
-<div class="line"><span class="lineno">  689</span>            <span class="keywordflow">if</span> (entity != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  690</span>                system.addScript(<span class="keyword">new</span> MakeCoronalTapFaceNearestStar(entity.entity));</div>
-<div class="line"><span class="lineno">  691</span>            }</div>
-<div class="line"><span class="lineno">  692</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  693</span>            WeightedRandomPicker&lt;PlanetAPI&gt; picker = <span class="keyword">new</span> WeightedRandomPicker&lt;PlanetAPI&gt;();</div>
-<div class="line"><span class="lineno">  694</span>            WeightedRandomPicker&lt;PlanetAPI&gt; fallback = <span class="keyword">new</span> WeightedRandomPicker&lt;PlanetAPI&gt;();</div>
-<div class="line"><span class="lineno">  695</span>            <span class="keywordflow">for</span> (PlanetAPI planet : system.getPlanets()) {</div>
-<div class="line"><span class="lineno">  696</span>                <span class="keywordflow">if</span> (!planet.isNormalStar()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  697</span>                <span class="keywordflow">if</span> (planet.getTypeId().equals(StarTypes.BLUE_GIANT) ||</div>
-<div class="line"><span class="lineno">  698</span>                        planet.getTypeId().equals(StarTypes.BLUE_SUPERGIANT)) {</div>
-<div class="line"><span class="lineno">  699</span>                    picker.add(planet);</div>
-<div class="line"><span class="lineno">  700</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  701</span>                    fallback.add(planet);</div>
-<div class="line"><span class="lineno">  702</span>                }</div>
-<div class="line"><span class="lineno">  703</span>            }</div>
-<div class="line"><span class="lineno">  704</span>            <span class="keywordflow">if</span> (picker.isEmpty()) {</div>
-<div class="line"><span class="lineno">  705</span>                picker.addAll(fallback);</div>
-<div class="line"><span class="lineno">  706</span>            }</div>
-<div class="line"><span class="lineno">  707</span>            </div>
-<div class="line"><span class="lineno">  708</span>            PlanetAPI star = picker.pick();</div>
-<div class="line"><span class="lineno">  709</span>            <span class="keywordflow">if</span> (star != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  710</span>                CustomEntitySpecAPI spec = Global.getSettings().getCustomEntitySpec(Entities.CORONAL_TAP);</div>
-<div class="line"><span class="lineno">  711</span>                EntityLocation loc = <span class="keyword">new</span> EntityLocation();</div>
-<div class="line"><span class="lineno">  712</span>                <span class="keywordtype">float</span> orbitRadius = star.getRadius() + spec.getDefaultRadius() + 100f;</div>
-<div class="line"><span class="lineno">  713</span>                <span class="keywordtype">float</span> orbitDays = orbitRadius / 20f;</div>
-<div class="line"><span class="lineno">  714</span>                loc.orbit = Global.getFactory().createCircularOrbitPointingDown(star, <a class="code hl_variable" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#ac76a462cf7fa44da2d20f4da80800574">random</a>.nextFloat() * 360f, orbitRadius, orbitDays);</div>
-<div class="line"><span class="lineno">  715</span>                entity = <a class="code hl_function" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a37a0a87451d87557f4e34158148fcf73">addEntity</a>(<a class="code hl_variable" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#ac76a462cf7fa44da2d20f4da80800574">random</a>, system, loc, Entities.CORONAL_TAP, factionId);</div>
-<div class="line"><span class="lineno">  716</span>            }</div>
-<div class="line"><span class="lineno">  717</span>        }</div>
-<div class="line"><span class="lineno">  718</span>        </div>
-<div class="line"><span class="lineno">  719</span>        </div>
-<div class="line"><span class="lineno">  720</span>        <span class="keywordflow">if</span> (entity != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  721</span>            system.addScript(<span class="keyword">new</span> CoronalTapParticleScript(entity.entity));</div>
-<div class="line"><span class="lineno">  722</span><span class="comment">//          system.addCorona(entity.entity, Terrain.CORONA_JET,</span></div>
-<div class="line"><span class="lineno">  723</span><span class="comment">//                  500f, // radius outside planet</span></div>
-<div class="line"><span class="lineno">  724</span><span class="comment">//                  15f, // burn level of &quot;wind&quot;</span></div>
-<div class="line"><span class="lineno">  725</span><span class="comment">//                  0f, // flare probability</span></div>
-<div class="line"><span class="lineno">  726</span><span class="comment">//                  1f // CR loss mult while in it</span></div>
-<div class="line"><span class="lineno">  727</span><span class="comment">//                  );</span></div>
-<div class="line"><span class="lineno">  728</span>            </div>
-<div class="line"><span class="lineno">  729</span><span class="comment">//          system.addTag(Tags.THEME_DERELICT);</span></div>
-<div class="line"><span class="lineno">  730</span>            system.addTag(Tags.HAS_CORONAL_TAP);</div>
-<div class="line"><span class="lineno">  731</span>        }</div>
-<div class="line"><span class="lineno">  732</span>        </div>
-<div class="line"><span class="lineno">  733</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a7059afbea0e3f7e46f33265f07243d3a">DEBUG</a>) {</div>
-<div class="line"><span class="lineno">  734</span>            <span class="keywordflow">if</span> (entity != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  735</span>                System.out.println(String.format(<span class="stringliteral">&quot;  Added coronal tap to %s&quot;</span>, system.getNameWithLowercaseType()));</div>
-<div class="line"><span class="lineno">  736</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  737</span>                System.out.println(String.format(<span class="stringliteral">&quot;  Failed to add coronal tap to %s&quot;</span>, system.getNameWithLowercaseType()));</div>
-<div class="line"><span class="lineno">  738</span>            }</div>
-<div class="line"><span class="lineno">  739</span>        }</div>
-<div class="line"><span class="lineno">  740</span>        <span class="keywordflow">return</span> entity;</div>
-<div class="line"><span class="lineno">  741</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator_html_a37a0a87451d87557f4e34158148fcf73"><div class="ttname"><a href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a37a0a87451d87557f4e34158148fcf73">com.fs.starfarer.api.impl.campaign.procgen.themes.BaseThemeGenerator.addEntity</a></div><div class="ttdeci">static AddedEntity addEntity(Random random, StarSystemAPI system, WeightedRandomPicker&lt; EntityLocation &gt; locs, String type, String faction)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d80/BaseThemeGenerator_8java_source.html#l01421">BaseThemeGenerator.java:1421</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator_html_a7059afbea0e3f7e46f33265f07243d3a"><div class="ttname"><a href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a7059afbea0e3f7e46f33265f07243d3a">com.fs.starfarer.api.impl.campaign.procgen.themes.BaseThemeGenerator.DEBUG</a></div><div class="ttdeci">static boolean DEBUG</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d80/BaseThemeGenerator_8java_source.html#l00104">BaseThemeGenerator.java:104</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator_html_ac76a462cf7fa44da2d20f4da80800574"><div class="ttname"><a href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#ac76a462cf7fa44da2d20f4da80800574">com.fs.starfarer.api.impl.campaign.procgen.themes.BaseThemeGenerator.random</a></div><div class="ttdeci">Random random</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d80/BaseThemeGenerator_8java_source.html#l00156">BaseThemeGenerator.java:156</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2d10cbd82eb35b791008d78891fd4a9a" name="a2d10cbd82eb35b791008d78891fd4a9a"></a>
@@ -457,75 +391,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d63/MiscellaneousThemeGenerator_8java_source.html#l00580">580</a> of file <a class="el" href="../../d6/d63/MiscellaneousThemeGenerator_8java_source.html">MiscellaneousThemeGenerator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  580</span>                                                           {</div>
-<div class="line"><span class="lineno">  581</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a7059afbea0e3f7e46f33265f07243d3a">DEBUG</a>) System.out.println(<span class="stringliteral">&quot;Adding coronal taps...&quot;</span>);</div>
-<div class="line"><span class="lineno">  582</span>        </div>
-<div class="line"><span class="lineno">  583</span>        List&lt;Constellation&gt; list = <span class="keyword">new</span> ArrayList&lt;Constellation&gt;(context.constellations);</div>
-<div class="line"><span class="lineno">  584</span>        </div>
-<div class="line"><span class="lineno">  585</span>        WeightedRandomPicker&lt;StarSystemAPI&gt; tapSystems = <span class="keyword">new</span> WeightedRandomPicker&lt;StarSystemAPI&gt;(StarSystemGenerator.random);</div>
-<div class="line"><span class="lineno">  586</span>        WeightedRandomPicker&lt;StarSystemAPI&gt; backup = <span class="keyword">new</span> WeightedRandomPicker&lt;StarSystemAPI&gt;(StarSystemGenerator.random);</div>
-<div class="line"><span class="lineno">  587</span>        <span class="keywordflow">for</span> (Constellation c : list) {</div>
-<div class="line"><span class="lineno">  588</span>            <span class="keywordflow">for</span> (StarSystemAPI system : c.getSystems()) {</div>
-<div class="line"><span class="lineno">  589</span>                <span class="keywordflow">if</span> (system.hasTag(Tags.THEME_SPECIAL)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  590</span>                </div>
-<div class="line"><span class="lineno">  591</span>                <span class="keywordtype">float</span> w = 0f;</div>
-<div class="line"><span class="lineno">  592</span>                <span class="keywordflow">if</span> (system.hasTag(Tags.THEME_REMNANT)) {</div>
-<div class="line"><span class="lineno">  593</span>                    w = 10f;</div>
-<div class="line"><span class="lineno">  594</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (system.hasTag(Tags.THEME_DERELICT)) {</div>
-<div class="line"><span class="lineno">  595</span>                    w = 10f;</div>
-<div class="line"><span class="lineno">  596</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (system.hasTag(Tags.THEME_RUINS)) {</div>
-<div class="line"><span class="lineno">  597</span>                    w = 10f;</div>
-<div class="line"><span class="lineno">  598</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (system.hasTag(Tags.THEME_MISC)) {</div>
-<div class="line"><span class="lineno">  599</span>                    w = 5f;</div>
-<div class="line"><span class="lineno">  600</span>                }</div>
-<div class="line"><span class="lineno">  601</span>    </div>
-<div class="line"><span class="lineno">  602</span>                <span class="keywordflow">if</span> (w &lt;= 0) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  603</span>    </div>
-<div class="line"><span class="lineno">  604</span>                <span class="keywordflow">if</span> (system.getType() == StarSystemType.TRINARY_2CLOSE) {</div>
-<div class="line"><span class="lineno">  605</span>                    w *= 5f;</div>
-<div class="line"><span class="lineno">  606</span>                }</div>
-<div class="line"><span class="lineno">  607</span>    </div>
-<div class="line"><span class="lineno">  608</span>                <span class="keywordtype">boolean</span> hasBlueStar = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  609</span>                <span class="keywordtype">boolean</span> hasNormalStar = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  610</span>                <span class="keywordflow">for</span> (PlanetAPI planet : system.getPlanets()) {</div>
-<div class="line"><span class="lineno">  611</span>                    <span class="keywordflow">if</span> (!planet.isNormalStar()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  612</span>                    <span class="keywordflow">if</span> (planet.getTypeId().equals(StarTypes.BLUE_GIANT) ||</div>
-<div class="line"><span class="lineno">  613</span>                            planet.getTypeId().equals(StarTypes.BLUE_SUPERGIANT)) { </div>
-<div class="line"><span class="lineno">  614</span>                        hasBlueStar = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  615</span>                    }</div>
-<div class="line"><span class="lineno">  616</span>                    hasNormalStar = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  617</span>                }</div>
-<div class="line"><span class="lineno">  618</span>                </div>
-<div class="line"><span class="lineno">  619</span>                <span class="keywordflow">if</span> (!hasNormalStar) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  620</span>                </div>
-<div class="line"><span class="lineno">  621</span>                WeightedRandomPicker&lt;StarSystemAPI&gt; use = tapSystems;</div>
-<div class="line"><span class="lineno">  622</span>                <span class="keywordflow">if</span> (!hasBlueStar) {</div>
-<div class="line"><span class="lineno">  623</span>                    use = backup;</div>
-<div class="line"><span class="lineno">  624</span>                }</div>
-<div class="line"><span class="lineno">  625</span>                use.add(system, w);</div>
-<div class="line"><span class="lineno">  626</span>            }</div>
-<div class="line"><span class="lineno">  627</span>        }</div>
-<div class="line"><span class="lineno">  628</span>        </div>
-<div class="line"><span class="lineno">  629</span>        </div>
-<div class="line"><span class="lineno">  630</span>        <span class="keywordflow">if</span> (tapSystems.isEmpty()) {</div>
-<div class="line"><span class="lineno">  631</span>            tapSystems.addAll(backup);</div>
-<div class="line"><span class="lineno">  632</span>        }</div>
-<div class="line"><span class="lineno">  633</span>        </div>
-<div class="line"><span class="lineno">  634</span>        <span class="keywordtype">int</span> numTaps = 2 + <a class="code hl_variable" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#ac76a462cf7fa44da2d20f4da80800574">random</a>.nextInt(2);</div>
-<div class="line"><span class="lineno">  635</span>        numTaps = 2;</div>
-<div class="line"><span class="lineno">  636</span>        <span class="keywordtype">int</span> added = 0;</div>
-<div class="line"><span class="lineno">  637</span>        <span class="keywordflow">while</span> (added &lt; numTaps &amp;&amp; !tapSystems.isEmpty()) {</div>
-<div class="line"><span class="lineno">  638</span>            StarSystemAPI pick = tapSystems.pickAndRemove();</div>
-<div class="line"><span class="lineno">  639</span>            AddedEntity tap = <a class="code hl_function" href="../../d8/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator.html#a386bb6035813a670741ca795bb6fbba7">addCoronalTap</a>(pick);</div>
-<div class="line"><span class="lineno">  640</span>            <span class="keywordflow">if</span> (tap != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  641</span>                added++;</div>
-<div class="line"><span class="lineno">  642</span>            }</div>
-<div class="line"><span class="lineno">  643</span>        }</div>
-<div class="line"><span class="lineno">  644</span>        </div>
-<div class="line"><span class="lineno">  645</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a7059afbea0e3f7e46f33265f07243d3a">DEBUG</a>) System.out.println(<span class="stringliteral">&quot;Done adding coronal taps\n\n\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  646</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator_html_a386bb6035813a670741ca795bb6fbba7"><div class="ttname"><a href="../../d8/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator.html#a386bb6035813a670741ca795bb6fbba7">com.fs.starfarer.api.impl.campaign.procgen.themes.MiscellaneousThemeGenerator.addCoronalTap</a></div><div class="ttdeci">AddedEntity addCoronalTap(StarSystemAPI system)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d63/MiscellaneousThemeGenerator_8java_source.html#l00678">MiscellaneousThemeGenerator.java:678</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9cbd637d0befc41804e431d3e90ea1e4" name="a9cbd637d0befc41804e431d3e90ea1e4"></a>
@@ -593,64 +459,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d63/MiscellaneousThemeGenerator_8java_source.html#l00243">243</a> of file <a class="el" href="../../d6/d63/MiscellaneousThemeGenerator_8java_source.html">MiscellaneousThemeGenerator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  246</span>                                              {</div>
-<div class="line"><span class="lineno">  247</span>        <span class="keywordflow">if</span> (Global.getSettings().getVariant(variant) != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  248</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a7059afbea0e3f7e46f33265f07243d3a">DEBUG</a>) System.out.println(<span class="stringliteral">&quot;Adding &quot;</span> + variant + <span class="stringliteral">&quot; to star systems&quot;</span>);</div>
-<div class="line"><span class="lineno">  249</span>            </div>
-<div class="line"><span class="lineno">  250</span>            Set&lt;String&gt; tags = <span class="keyword">new</span> HashSet&lt;String&gt;(Arrays.asList(allowedThemes));</div>
-<div class="line"><span class="lineno">  251</span>            </div>
-<div class="line"><span class="lineno">  252</span>            <span class="keywordtype">int</span> numSalvageable = minSalvageable + <a class="code hl_variable" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#ac76a462cf7fa44da2d20f4da80800574">random</a>.nextInt(maxSalvageable - minSalvageable + 1);</div>
-<div class="line"><span class="lineno">  253</span>            <span class="keywordtype">int</span> numNonSalvageable = minNonSalvageable + <a class="code hl_variable" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#ac76a462cf7fa44da2d20f4da80800574">random</a>.nextInt(maxNonSalvageable - minNonSalvageable + 1);</div>
-<div class="line"><span class="lineno">  254</span>            </div>
-<div class="line"><span class="lineno">  255</span>            List&lt;Constellation&gt; list = <span class="keyword">new</span> ArrayList&lt;Constellation&gt;(context.constellations);</div>
-<div class="line"><span class="lineno">  256</span>            Collections.shuffle(list, <a class="code hl_variable" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#ac76a462cf7fa44da2d20f4da80800574">random</a>);</div>
-<div class="line"><span class="lineno">  257</span>            </div>
-<div class="line"><span class="lineno">  258</span>            List&lt;StarSystemData&gt; systems = <span class="keyword">new</span> ArrayList&lt;StarSystemData&gt;();</div>
-<div class="line"><span class="lineno">  259</span>            <span class="keywordflow">for</span> (Constellation c : list) {</div>
-<div class="line"><span class="lineno">  260</span>                <span class="keywordflow">for</span> (StarSystemAPI system : c.getSystems()) {</div>
-<div class="line"><span class="lineno">  261</span>                    StarSystemData data = <a class="code hl_function" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a070c6390c5d6e1b76b4b3fff61b095dd">computeSystemData</a>(system);</div>
-<div class="line"><span class="lineno">  262</span>                    systems.add(data);</div>
-<div class="line"><span class="lineno">  263</span>                }</div>
-<div class="line"><span class="lineno">  264</span>            }</div>
-<div class="line"><span class="lineno">  265</span>                </div>
-<div class="line"><span class="lineno">  266</span>            Collections.shuffle(systems, <a class="code hl_variable" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#ac76a462cf7fa44da2d20f4da80800574">random</a>);</div>
-<div class="line"><span class="lineno">  267</span>            <span class="keywordflow">for</span> (StarSystemData data  : systems) {</div>
-<div class="line"><span class="lineno">  268</span>                <span class="keywordtype">boolean</span> matches = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  269</span>                <span class="keywordflow">for</span> (String tag : data.system.getTags()) {</div>
-<div class="line"><span class="lineno">  270</span>                    <span class="keywordflow">if</span> (tags.contains(tag)) {</div>
-<div class="line"><span class="lineno">  271</span>                        matches = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  272</span>                        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  273</span>                    }</div>
-<div class="line"><span class="lineno">  274</span>                }</div>
-<div class="line"><span class="lineno">  275</span>                <span class="keywordflow">if</span> (!matches) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  276</span> </div>
-<div class="line"><span class="lineno">  277</span>                EntityLocation loc = <a class="code hl_function" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a62fd269fd3021d9460a49fc7c33cf333">pickAnyLocation</a>(<a class="code hl_variable" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#ac76a462cf7fa44da2d20f4da80800574">random</a>, data.system, 70f, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  278</span>                AddedEntity ae = <a class="code hl_function" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a313fb67464c33082e10193ccb7a6479b">addDerelictShip</a>(data, loc, variant);</div>
-<div class="line"><span class="lineno">  279</span>                <span class="keywordflow">if</span> (ae != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  280</span>                    <span class="keywordflow">if</span> (numSalvageable &gt; 0) {</div>
-<div class="line"><span class="lineno">  281</span>                        numSalvageable--;</div>
-<div class="line"><span class="lineno">  282</span>                        ShipRecoverySpecialCreator creator = <span class="keyword">new</span> ShipRecoverySpecialCreator(<a class="code hl_variable" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#ac76a462cf7fa44da2d20f4da80800574">random</a>, 0, 0, <span class="keyword">false</span>, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  283</span>                        Object specialData = creator.createSpecial(ae.entity, <span class="keyword">new</span> SpecialCreationContext());</div>
-<div class="line"><span class="lineno">  284</span>                        <span class="keywordflow">if</span> (specialData != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  285</span>                            Misc.setSalvageSpecial(ae.entity, specialData);</div>
-<div class="line"><span class="lineno">  286</span>                        }</div>
-<div class="line"><span class="lineno">  287</span>                    } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  288</span>                        numNonSalvageable--;</div>
-<div class="line"><span class="lineno">  289</span>                        SalvageSpecialAssigner.assignSpecials(ae.entity, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  290</span>                    }</div>
-<div class="line"><span class="lineno">  291</span>                    <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a7059afbea0e3f7e46f33265f07243d3a">DEBUG</a>) System.out.println(<span class="stringliteral">&quot;      Added &quot;</span> + variant + <span class="stringliteral">&quot; to &quot;</span> + data.system + <span class="stringliteral">&quot;\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  292</span>                }</div>
-<div class="line"><span class="lineno">  293</span>                <span class="keywordflow">if</span> (numSalvageable + numNonSalvageable &lt;= 0) <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  294</span>            }</div>
-<div class="line"><span class="lineno">  295</span>            <span class="comment">//if (numSalvageable + numNonSalvageable &lt;= 0) break;</span></div>
-<div class="line"><span class="lineno">  296</span>            </div>
-<div class="line"><span class="lineno">  297</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a7059afbea0e3f7e46f33265f07243d3a">DEBUG</a>) System.out.println(<span class="stringliteral">&quot;Finished adding &quot;</span> + variant + <span class="stringliteral">&quot; to star systems\n\n\n\n\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  298</span>        }</div>
-<div class="line"><span class="lineno">  299</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator_html_a070c6390c5d6e1b76b4b3fff61b095dd"><div class="ttname"><a href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a070c6390c5d6e1b76b4b3fff61b095dd">com.fs.starfarer.api.impl.campaign.procgen.themes.BaseThemeGenerator.computeSystemData</a></div><div class="ttdeci">static StarSystemData computeSystemData(StarSystemAPI system)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d80/BaseThemeGenerator_8java_source.html#l01545">BaseThemeGenerator.java:1545</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator_html_a313fb67464c33082e10193ccb7a6479b"><div class="ttname"><a href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a313fb67464c33082e10193ccb7a6479b">com.fs.starfarer.api.impl.campaign.procgen.themes.BaseThemeGenerator.addDerelictShip</a></div><div class="ttdeci">void addDerelictShip(StarSystemData data, EntityLocation loc, WeightedRandomPicker&lt; String &gt; factions)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d80/BaseThemeGenerator_8java_source.html#l00650">BaseThemeGenerator.java:650</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator_html_a62fd269fd3021d9460a49fc7c33cf333"><div class="ttname"><a href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a62fd269fd3021d9460a49fc7c33cf333">com.fs.starfarer.api.impl.campaign.procgen.themes.BaseThemeGenerator.pickAnyLocation</a></div><div class="ttdeci">static EntityLocation pickAnyLocation(Random random, StarSystemAPI system, float gap, Set&lt; SectorEntityToken &gt; exclude)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d80/BaseThemeGenerator_8java_source.html#l00728">BaseThemeGenerator.java:728</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="acb7b64a70416888a9edf43bfcc614699" name="acb7b64a70416888a9edf43bfcc614699"></a>
@@ -678,89 +487,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d63/MiscellaneousThemeGenerator_8java_source.html#l00502">502</a> of file <a class="el" href="../../d6/d63/MiscellaneousThemeGenerator_8java_source.html">MiscellaneousThemeGenerator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  502</span>                                                          {</div>
-<div class="line"><span class="lineno">  503</span><span class="comment">//      List&lt;SectorEntityToken&gt; gates = new ArrayList&lt;SectorEntityToken&gt;();</span></div>
-<div class="line"><span class="lineno">  504</span><span class="comment">//      List&lt;StarSystemAPI&gt; systems = new ArrayList&lt;StarSystemAPI&gt;();</span></div>
-<div class="line"><span class="lineno">  505</span><span class="comment">//      List&lt;Constellation&gt; list = new ArrayList&lt;Constellation&gt;(context.constellations);</span></div>
-<div class="line"><span class="lineno">  506</span><span class="comment">//      for (Constellation c : list) {</span></div>
-<div class="line"><span class="lineno">  507</span><span class="comment">//          for (StarSystemAPI system : c.getSystems()) {</span></div>
-<div class="line"><span class="lineno">  508</span><span class="comment">//              gates.addAll(system.getEntitiesWithTag(Tags.GATE));</span></div>
-<div class="line"><span class="lineno">  509</span><span class="comment">//              systems.add(system);</span></div>
-<div class="line"><span class="lineno">  510</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">  511</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  512</span> </div>
-<div class="line"><span class="lineno">  513</span>        List&lt;StarSystemAPI&gt; systems = <span class="keyword">new</span> ArrayList&lt;StarSystemAPI&gt;(Global.getSector().getStarSystems());</div>
-<div class="line"><span class="lineno">  514</span>        List&lt;SectorEntityToken&gt; gates = <span class="keyword">new</span> ArrayList&lt;SectorEntityToken&gt;();</div>
-<div class="line"><span class="lineno">  515</span>        </div>
-<div class="line"><span class="lineno">  516</span>        <span class="keywordflow">for</span> (StarSystemAPI system : <span class="keyword">new</span> ArrayList&lt;StarSystemAPI&gt;(systems)) {</div>
-<div class="line"><span class="lineno">  517</span>            <span class="comment">//if (system.hasTag(Tags.THEME_CORE)) continue; // this isn&#39;t set yet</span></div>
-<div class="line"><span class="lineno">  518</span>            <span class="keywordtype">boolean</span> galatia = system.getBaseName().toLowerCase().equals(<span class="stringliteral">&quot;galatia&quot;</span>);</div>
-<div class="line"><span class="lineno">  519</span>            <span class="keywordflow">if</span> (system.getTags().isEmpty() || galatia) {</div>
-<div class="line"><span class="lineno">  520</span>                systems.remove(system);</div>
-<div class="line"><span class="lineno">  521</span>                <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  522</span>            }</div>
-<div class="line"><span class="lineno">  523</span>            gates.addAll(system.getEntitiesWithTag(Tags.GATE));</div>
-<div class="line"><span class="lineno">  524</span>        }</div>
-<div class="line"><span class="lineno">  525</span>        </div>
-<div class="line"><span class="lineno">  526</span>        </div>
-<div class="line"><span class="lineno">  527</span>        <span class="keywordtype">int</span> addGates = <a class="code hl_variable" href="../../d8/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator.html#a0f77d3a6cfdaae9585a49e5b1e6cc5de">MIN_GATES</a> + <a class="code hl_variable" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#ac76a462cf7fa44da2d20f4da80800574">random</a>.nextInt(<a class="code hl_variable" href="../../d8/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator.html#af315977bf09309429907f0ef5eb13c58">MAX_GATES</a> - <a class="code hl_variable" href="../../d8/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator.html#a0f77d3a6cfdaae9585a49e5b1e6cc5de">MIN_GATES</a> + 1) - gates.size();</div>
-<div class="line"><span class="lineno">  528</span>        <span class="keywordflow">if</span> (addGates &lt; <a class="code hl_variable" href="../../d8/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator.html#a362cb95009846bdd6c207d61e5a005ed">MIN_GATES_TO_ADD</a>) addGates = <a class="code hl_variable" href="../../d8/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator.html#a362cb95009846bdd6c207d61e5a005ed">MIN_GATES_TO_ADD</a>;</div>
-<div class="line"><span class="lineno">  529</span>        <span class="keywordflow">if</span> (addGates &lt;= 0) {</div>
-<div class="line"><span class="lineno">  530</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a7059afbea0e3f7e46f33265f07243d3a">DEBUG</a>) System.out.println(<span class="stringliteral">&quot;  Already have &quot;</span> + gates.size() + <span class="stringliteral">&quot; gates, not adding any&quot;</span>);</div>
-<div class="line"><span class="lineno">  531</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  532</span>        }</div>
-<div class="line"><span class="lineno">  533</span>        </div>
-<div class="line"><span class="lineno">  534</span>        List&lt;StarSystemData&gt; all = <span class="keyword">new</span> ArrayList&lt;<a class="code hl_function" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a8fb99f082c683571272ad052259e92e6">BaseThemeGenerator</a>.StarSystemData&gt;();</div>
-<div class="line"><span class="lineno">  535</span>        </div>
-<div class="line"><span class="lineno">  536</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a7059afbea0e3f7e46f33265f07243d3a">DEBUG</a>) System.out.println(<span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><span class="lineno">  537</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a7059afbea0e3f7e46f33265f07243d3a">DEBUG</a>) System.out.println(<span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><span class="lineno">  538</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a7059afbea0e3f7e46f33265f07243d3a">DEBUG</a>) System.out.println(<span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><span class="lineno">  539</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a7059afbea0e3f7e46f33265f07243d3a">DEBUG</a>) System.out.println(<span class="stringliteral">&quot;  Adding &quot;</span> + addGates + <span class="stringliteral">&quot; extra gates, for a total of &quot;</span> + (addGates + gates.size()));</div>
-<div class="line"><span class="lineno">  540</span>        </div>
-<div class="line"><span class="lineno">  541</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; addGates; i++) {</div>
-<div class="line"><span class="lineno">  542</span>            <span class="keywordtype">float</span> maxDist = 0;</div>
-<div class="line"><span class="lineno">  543</span>            StarSystemAPI farthest = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  544</span>            <span class="keywordflow">for</span> (StarSystemAPI system : systems) {</div>
-<div class="line"><span class="lineno">  545</span>                <span class="keywordflow">if</span> (system.getPlanets().size() &lt; 3) <span class="keywordflow">continue</span>; <span class="comment">// skip empty systems</span></div>
-<div class="line"><span class="lineno">  546</span>                </div>
-<div class="line"><span class="lineno">  547</span>                <span class="keywordtype">float</span> minDist = Float.MAX_VALUE;</div>
-<div class="line"><span class="lineno">  548</span>                <span class="keywordflow">for</span> (SectorEntityToken gate : gates) {</div>
-<div class="line"><span class="lineno">  549</span>                    <span class="keywordtype">float</span> dist = Misc.getDistanceLY(gate, system.getCenter());</div>
-<div class="line"><span class="lineno">  550</span>                    <span class="keywordflow">if</span> (dist &lt; minDist) minDist = dist;</div>
-<div class="line"><span class="lineno">  551</span>                }</div>
-<div class="line"><span class="lineno">  552</span>                <span class="keywordflow">if</span> (minDist &gt; maxDist) {</div>
-<div class="line"><span class="lineno">  553</span>                    maxDist = minDist;</div>
-<div class="line"><span class="lineno">  554</span>                    farthest = system;</div>
-<div class="line"><span class="lineno">  555</span>                }</div>
-<div class="line"><span class="lineno">  556</span>            }</div>
-<div class="line"><span class="lineno">  557</span>            <span class="keywordflow">if</span> (farthest != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  558</span>                StarSystemData data = <span class="keyword">new</span> StarSystemData();</div>
-<div class="line"><span class="lineno">  559</span>                data.system = farthest;</div>
-<div class="line"><span class="lineno">  560</span>                WeightedRandomPicker&lt;String&gt; factions = SalvageSpecialAssigner.getNearbyFactions(<a class="code hl_variable" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#ac76a462cf7fa44da2d20f4da80800574">random</a>, farthest.getCenter(),</div>
-<div class="line"><span class="lineno">  561</span>                                                                                15f, 5f, 5f);</div>
-<div class="line"><span class="lineno">  562</span>                AddedEntity gate = <a class="code hl_function" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a9d35c6563710e554ce4f13769b9a9656">addInactiveGate</a>(data, 1f, 0.5f, 0.5f, factions);</div>
-<div class="line"><span class="lineno">  563</span>                <span class="keywordflow">if</span> (gate != <span class="keyword">null</span> &amp;&amp; gate.entity != <span class="keyword">null</span>) gates.add(gate.entity);</div>
-<div class="line"><span class="lineno">  564</span>            }</div>
-<div class="line"><span class="lineno">  565</span>        }</div>
-<div class="line"><span class="lineno">  566</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a7059afbea0e3f7e46f33265f07243d3a">DEBUG</a>) System.out.println(<span class="stringliteral">&quot;  Done adding extra gates&quot;</span>);</div>
-<div class="line"><span class="lineno">  567</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a7059afbea0e3f7e46f33265f07243d3a">DEBUG</a>) System.out.println(<span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><span class="lineno">  568</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a7059afbea0e3f7e46f33265f07243d3a">DEBUG</a>) System.out.println(<span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><span class="lineno">  569</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a7059afbea0e3f7e46f33265f07243d3a">DEBUG</a>) System.out.println(<span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><span class="lineno">  570</span>        </div>
-<div class="line"><span class="lineno">  571</span>        SpecialCreationContext specialContext = <span class="keyword">new</span> SpecialCreationContext();</div>
-<div class="line"><span class="lineno">  572</span>        specialContext.themeId = <a class="code hl_function" href="../../d8/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator.html#a0593d15ff66c612194d8d1d38bed49a5">getThemeId</a>();</div>
-<div class="line"><span class="lineno">  573</span>        SalvageSpecialAssigner.assignSpecials(all, specialContext);</div>
-<div class="line"><span class="lineno">  574</span>        </div>
-<div class="line"><span class="lineno">  575</span>        </div>
-<div class="line"><span class="lineno">  576</span>        </div>
-<div class="line"><span class="lineno">  577</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator_html_a8fb99f082c683571272ad052259e92e6"><div class="ttname"><a href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a8fb99f082c683571272ad052259e92e6">com.fs.starfarer.api.impl.campaign.procgen.themes.BaseThemeGenerator.BaseThemeGenerator</a></div><div class="ttdeci">BaseThemeGenerator()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d80/BaseThemeGenerator_8java_source.html#l00157">BaseThemeGenerator.java:157</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator_html_a9d35c6563710e554ce4f13769b9a9656"><div class="ttname"><a href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a9d35c6563710e554ce4f13769b9a9656">com.fs.starfarer.api.impl.campaign.procgen.themes.BaseThemeGenerator.addInactiveGate</a></div><div class="ttdeci">AddedEntity addInactiveGate(StarSystemData data, float prob, float probDebris, float probShips, WeightedRandomPicker&lt; String &gt; factions)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d80/BaseThemeGenerator_8java_source.html#l00463">BaseThemeGenerator.java:463</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator_html_a0593d15ff66c612194d8d1d38bed49a5"><div class="ttname"><a href="../../d8/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator.html#a0593d15ff66c612194d8d1d38bed49a5">com.fs.starfarer.api.impl.campaign.procgen.themes.MiscellaneousThemeGenerator.getThemeId</a></div><div class="ttdeci">String getThemeId()</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d63/MiscellaneousThemeGenerator_8java_source.html#l00073">MiscellaneousThemeGenerator.java:73</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator_html_a0f77d3a6cfdaae9585a49e5b1e6cc5de"><div class="ttname"><a href="../../d8/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator.html#a0f77d3a6cfdaae9585a49e5b1e6cc5de">com.fs.starfarer.api.impl.campaign.procgen.themes.MiscellaneousThemeGenerator.MIN_GATES</a></div><div class="ttdeci">static int MIN_GATES</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d63/MiscellaneousThemeGenerator_8java_source.html#l00068">MiscellaneousThemeGenerator.java:68</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator_html_a362cb95009846bdd6c207d61e5a005ed"><div class="ttname"><a href="../../d8/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator.html#a362cb95009846bdd6c207d61e5a005ed">com.fs.starfarer.api.impl.campaign.procgen.themes.MiscellaneousThemeGenerator.MIN_GATES_TO_ADD</a></div><div class="ttdeci">static int MIN_GATES_TO_ADD</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d63/MiscellaneousThemeGenerator_8java_source.html#l00070">MiscellaneousThemeGenerator.java:70</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator_html_af315977bf09309429907f0ef5eb13c58"><div class="ttname"><a href="../../d8/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator.html#af315977bf09309429907f0ef5eb13c58">com.fs.starfarer.api.impl.campaign.procgen.themes.MiscellaneousThemeGenerator.MAX_GATES</a></div><div class="ttdeci">static int MAX_GATES</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d63/MiscellaneousThemeGenerator_8java_source.html#l00069">MiscellaneousThemeGenerator.java:69</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a17de359362be65ac0d86f8d2de22ecb4" name="a17de359362be65ac0d86f8d2de22ecb4"></a>
@@ -788,91 +515,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d63/MiscellaneousThemeGenerator_8java_source.html#l00744">744</a> of file <a class="el" href="../../d6/d63/MiscellaneousThemeGenerator_8java_source.html">MiscellaneousThemeGenerator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  744</span>                                                        {</div>
-<div class="line"><span class="lineno">  745</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a7059afbea0e3f7e46f33265f07243d3a">DEBUG</a>) System.out.println(<span class="stringliteral">&quot;Looking for system to hide PK in&quot;</span>);</div>
-<div class="line"><span class="lineno">  746</span>        </div>
-<div class="line"><span class="lineno">  747</span>        List&lt;StarSystemAPI&gt; preferred = <span class="keyword">new</span> ArrayList&lt;StarSystemAPI&gt;();</div>
-<div class="line"><span class="lineno">  748</span>        List&lt;StarSystemAPI&gt; other = <span class="keyword">new</span> ArrayList&lt;StarSystemAPI&gt;();</div>
-<div class="line"><span class="lineno">  749</span>        </div>
-<div class="line"><span class="lineno">  750</span>        <span class="keywordflow">for</span> (Constellation c : context.constellations) {</div>
-<div class="line"><span class="lineno">  751</span>            <span class="keywordflow">for</span> (StarSystemAPI system : c.getSystems()) {</div>
-<div class="line"><span class="lineno">  752</span>                <span class="keywordflow">if</span> (system.hasTag(Tags.THEME_SPECIAL)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  753</span>                </div>
-<div class="line"><span class="lineno">  754</span>                <span class="keywordflow">if</span> (system.isNebula()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  755</span>                <span class="keywordflow">if</span> (system.hasPulsar()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  756</span>                <span class="keywordflow">if</span> (system.hasBlackHole()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  757</span>                </div>
-<div class="line"><span class="lineno">  758</span>                <span class="keywordtype">boolean</span> misc = system.hasTag(Tags.THEME_MISC_SKIP) || system.hasTag(Tags.THEME_MISC);</div>
-<div class="line"><span class="lineno">  759</span>                <span class="keywordflow">if</span> (system.hasTag(Tags.THEME_DERELICT)) misc = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  760</span>                </div>
-<div class="line"><span class="lineno">  761</span>                <span class="keywordtype">boolean</span> nonLargeDerelict = system.hasTag(Tags.THEME_DERELICT) &amp;&amp; </div>
-<div class="line"><span class="lineno">  762</span>                                        !system.hasTag(Tags.THEME_DERELICT_MOTHERSHIP) &amp;&amp;</div>
-<div class="line"><span class="lineno">  763</span>                                        !system.hasTag(Tags.THEME_DERELICT_CRYOSLEEPER) &amp;&amp;</div>
-<div class="line"><span class="lineno">  764</span>                                        !system.hasTag(Tags.THEME_DERELICT_SURVEY_SHIP);</div>
-<div class="line"><span class="lineno">  765</span>                </div>
-<div class="line"><span class="lineno">  766</span>                <span class="keywordtype">boolean</span> secondaryRuins = system.hasTag(Tags.THEME_RUINS_SECONDARY);</div>
-<div class="line"><span class="lineno">  767</span>                <span class="keywordtype">boolean</span> remnantNoFleets = system.hasTag(Tags.THEME_REMNANT_NO_FLEETS);</div>
-<div class="line"><span class="lineno">  768</span>                <span class="keywordtype">boolean</span> unsafe = system.hasTag(Tags.THEME_UNSAFE);</div>
-<div class="line"><span class="lineno">  769</span>                </div>
-<div class="line"><span class="lineno">  770</span>                <span class="keywordflow">if</span> (unsafe || !(misc || nonLargeDerelict || secondaryRuins || remnantNoFleets)) {</div>
-<div class="line"><span class="lineno">  771</span>                    <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  772</span>                }</div>
-<div class="line"><span class="lineno">  773</span>                </div>
-<div class="line"><span class="lineno">  774</span>                <span class="keywordtype">int</span> count = 0;</div>
-<div class="line"><span class="lineno">  775</span>                <span class="keywordflow">for</span> (PlanetAPI curr : system.getPlanets()) {</div>
-<div class="line"><span class="lineno">  776</span>                    <span class="keywordflow">if</span> (curr.isStar()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  777</span>                    <span class="keywordflow">if</span> (curr.isMoon()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  778</span>                    <span class="keywordflow">if</span> (curr.isGasGiant()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  779</span>                    <span class="keywordflow">if</span> (!curr.getMarket().isPlanetConditionMarketOnly()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  780</span>                    <span class="keywordflow">if</span> (curr.getCircularOrbitRadius() &lt; 6000) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  781</span>                    <span class="keywordflow">if</span> (curr.hasTag(Tags.NOT_RANDOM_MISSION_TARGET)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  782</span>                    count++;</div>
-<div class="line"><span class="lineno">  783</span>                }</div>
-<div class="line"><span class="lineno">  784</span>                </div>
-<div class="line"><span class="lineno">  785</span>                <span class="keywordflow">if</span> (count &gt; 0) {</div>
-<div class="line"><span class="lineno">  786</span>                    preferred.add(system);</div>
-<div class="line"><span class="lineno">  787</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  788</span>                    other.add(system);</div>
-<div class="line"><span class="lineno">  789</span>                }</div>
-<div class="line"><span class="lineno">  790</span>            }</div>
-<div class="line"><span class="lineno">  791</span>        }</div>
-<div class="line"><span class="lineno">  792</span>        </div>
-<div class="line"><span class="lineno">  793</span>        Comparator&lt;StarSystemAPI&gt; comp = <span class="keyword">new</span> Comparator&lt;StarSystemAPI&gt;() {</div>
-<div class="line"><span class="lineno">  794</span>            <span class="keyword">public</span> <span class="keywordtype">int</span> compare(StarSystemAPI o1, StarSystemAPI o2) {</div>
-<div class="line"><span class="lineno">  795</span>                <span class="keywordflow">return</span> (<span class="keywordtype">int</span>) Math.signum(o2.getLocation().length() - o1.getLocation().length());</div>
-<div class="line"><span class="lineno">  796</span>            }</div>
-<div class="line"><span class="lineno">  797</span>        };</div>
-<div class="line"><span class="lineno">  798</span> </div>
-<div class="line"><span class="lineno">  799</span>        List&lt;StarSystemAPI&gt; sorted = <span class="keyword">new</span> ArrayList&lt;StarSystemAPI&gt;();</div>
-<div class="line"><span class="lineno">  800</span>        <span class="keywordflow">if</span> (!preferred.isEmpty()) {</div>
-<div class="line"><span class="lineno">  801</span>            sorted.addAll(preferred);</div>
-<div class="line"><span class="lineno">  802</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  803</span>            sorted.addAll(other);</div>
-<div class="line"><span class="lineno">  804</span>        }</div>
-<div class="line"><span class="lineno">  805</span>        <span class="keywordflow">if</span> (sorted.isEmpty()) {</div>
-<div class="line"><span class="lineno">  806</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a7059afbea0e3f7e46f33265f07243d3a">DEBUG</a>) System.out.println(<span class="stringliteral">&quot;FAILED TO FIND SUITABLE SYSTEM FOR PK&quot;</span>);</div>
-<div class="line"><span class="lineno">  807</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  808</span>        }</div>
-<div class="line"><span class="lineno">  809</span>        Collections.sort(sorted, comp);</div>
-<div class="line"><span class="lineno">  810</span>        </div>
-<div class="line"><span class="lineno">  811</span>        </div>
-<div class="line"><span class="lineno">  812</span>        <span class="comment">// pick from some of the matching systems furthest from core</span></div>
-<div class="line"><span class="lineno">  813</span>        WeightedRandomPicker&lt;StarSystemAPI&gt; picker = <span class="keyword">new</span> WeightedRandomPicker&lt;StarSystemAPI&gt;(<a class="code hl_variable" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#ac76a462cf7fa44da2d20f4da80800574">random</a>);</div>
-<div class="line"><span class="lineno">  814</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 20 &amp;&amp; i &lt; sorted.size(); i++) {</div>
-<div class="line"><span class="lineno">  815</span>            <span class="comment">//sorted.get(i).addTag(Tags.PK_SYSTEM);</span></div>
-<div class="line"><span class="lineno">  816</span>            picker.add(sorted.get(i), 1f);</div>
-<div class="line"><span class="lineno">  817</span>        }</div>
-<div class="line"><span class="lineno">  818</span>        </div>
-<div class="line"><span class="lineno">  819</span>        StarSystemAPI system = picker.pick();</div>
-<div class="line"><span class="lineno">  820</span>        </div>
-<div class="line"><span class="lineno">  821</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a7059afbea0e3f7e46f33265f07243d3a">DEBUG</a>) System.out.println(<span class="stringliteral">&quot;Adding PK to [&quot;</span> + system.getName() + <span class="stringliteral">&quot;] at [&quot;</span> + system.getLocation() + <span class="stringliteral">&quot;]&quot;</span>);</div>
-<div class="line"><span class="lineno">  822</span>        <a class="code hl_function" href="../../d8/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator.html#a1de69eb7351aace16ec01b06c27adf3c">setUpPKSystem</a>(system);</div>
-<div class="line"><span class="lineno">  823</span>        </div>
-<div class="line"><span class="lineno">  824</span>        </div>
-<div class="line"><span class="lineno">  825</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a7059afbea0e3f7e46f33265f07243d3a">DEBUG</a>) System.out.println(<span class="stringliteral">&quot;Finished adding PK system\n\n\n\n\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  826</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator_html_a1de69eb7351aace16ec01b06c27adf3c"><div class="ttname"><a href="../../d8/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator.html#a1de69eb7351aace16ec01b06c27adf3c">com.fs.starfarer.api.impl.campaign.procgen.themes.MiscellaneousThemeGenerator.setUpPKSystem</a></div><div class="ttdeci">void setUpPKSystem(StarSystemAPI system)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d63/MiscellaneousThemeGenerator_8java_source.html#l00828">MiscellaneousThemeGenerator.java:828</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aaddd3ed763ca89904c4bfb16eb32c78d" name="aaddd3ed763ca89904c4bfb16eb32c78d"></a>
@@ -900,96 +543,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d63/MiscellaneousThemeGenerator_8java_source.html#l00155">155</a> of file <a class="el" href="../../d6/d63/MiscellaneousThemeGenerator_8java_source.html">MiscellaneousThemeGenerator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  155</span>                                                         {</div>
-<div class="line"><span class="lineno">  156</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a7059afbea0e3f7e46f33265f07243d3a">DEBUG</a>) System.out.println(<span class="stringliteral">&quot;Looking for planetary shield planet&quot;</span>);</div>
-<div class="line"><span class="lineno">  157</span>        </div>
-<div class="line"><span class="lineno">  158</span>        PlanetAPI bestHab = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  159</span>        PlanetAPI bestNonHab = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  160</span><span class="comment">//      OrbitGap gapHab = null;</span></div>
-<div class="line"><span class="lineno">  161</span><span class="comment">//      OrbitGap gapNonHab = null;</span></div>
-<div class="line"><span class="lineno">  162</span>        <span class="keywordtype">float</span> habDist = 0;</div>
-<div class="line"><span class="lineno">  163</span>        <span class="keywordtype">float</span> nonHabDist = 0;</div>
-<div class="line"><span class="lineno">  164</span> </div>
-<div class="line"><span class="lineno">  165</span>        <span class="comment">// looking for a habitable planet furthest from the Sector&#39;s center, with a bit of </span></div>
-<div class="line"><span class="lineno">  166</span>        <span class="comment">// a random factor</span></div>
-<div class="line"><span class="lineno">  167</span>        <span class="keywordtype">int</span> systemsChecked = 0;</div>
-<div class="line"><span class="lineno">  168</span>        <span class="keywordflow">for</span> (Constellation c : context.constellations) {</div>
-<div class="line"><span class="lineno">  169</span>            <span class="keywordflow">for</span> (StarSystemAPI system : c.getSystems()) {</div>
-<div class="line"><span class="lineno">  170</span>                <span class="keywordflow">if</span> (system.hasTag(Tags.THEME_SPECIAL)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  171</span>                </div>
-<div class="line"><span class="lineno">  172</span>                <span class="keywordflow">if</span> (!system.hasTag(Tags.THEME_MISC_SKIP) &amp;&amp; </div>
-<div class="line"><span class="lineno">  173</span>                        !system.hasTag(Tags.THEME_MISC)) {</div>
-<div class="line"><span class="lineno">  174</span>                    <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  175</span>                }</div>
-<div class="line"><span class="lineno">  176</span>                <span class="comment">//[theme_derelict, theme_derelict_probes, theme_misc_skip, theme_derelict_survey_ship]</span></div>
-<div class="line"><span class="lineno">  177</span>                <span class="keywordflow">if</span> (system.hasTag(Tags.THEME_DERELICT)) {</div>
-<div class="line"><span class="lineno">  178</span>                    <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  179</span>                }</div>
-<div class="line"><span class="lineno">  180</span>                </div>
-<div class="line"><span class="lineno">  181</span>                systemsChecked++;</div>
-<div class="line"><span class="lineno">  182</span>                </div>
-<div class="line"><span class="lineno">  183</span>                <span class="keywordflow">for</span> (PlanetAPI curr : system.getPlanets()) {</div>
-<div class="line"><span class="lineno">  184</span>                    <span class="keywordflow">if</span> (curr.isStar()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  185</span>                    <span class="keywordflow">if</span> (curr.isMoon()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  186</span>                    <span class="keywordflow">if</span> (!curr.getMarket().isPlanetConditionMarketOnly()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  187</span>                    </div>
-<div class="line"><span class="lineno">  188</span>                    <span class="keywordflow">if</span> (curr.hasTag(Tags.NOT_RANDOM_MISSION_TARGET)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  189</span>                    </div>
-<div class="line"><span class="lineno">  190</span>                    <span class="keywordtype">float</span> dist = system.getLocation().length() + <a class="code hl_variable" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#ac76a462cf7fa44da2d20f4da80800574">random</a>.nextFloat() * 6000;</div>
-<div class="line"><span class="lineno">  191</span>                    <span class="keywordflow">if</span> (curr.getMarket().hasCondition(Conditions.HABITABLE)) {</div>
-<div class="line"><span class="lineno">  192</span>                        <span class="keywordflow">if</span> (dist &gt; habDist) {</div>
-<div class="line"><span class="lineno">  193</span><span class="comment">//                          List&lt;OrbitGap&gt; gaps = findGaps(curr, 50f, 500f, 100f);</span></div>
-<div class="line"><span class="lineno">  194</span><span class="comment">//                          if (!gaps.isEmpty()) {</span></div>
-<div class="line"><span class="lineno">  195</span>                                habDist = dist;</div>
-<div class="line"><span class="lineno">  196</span>                                bestHab = curr;</div>
-<div class="line"><span class="lineno">  197</span><span class="comment">//                              gapHab = gaps.get(0);</span></div>
-<div class="line"><span class="lineno">  198</span><span class="comment">//                          }</span></div>
-<div class="line"><span class="lineno">  199</span>                        }</div>
-<div class="line"><span class="lineno">  200</span>                    } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  201</span>                        <span class="keywordflow">if</span> (dist &gt; nonHabDist) {</div>
-<div class="line"><span class="lineno">  202</span><span class="comment">//                          List&lt;OrbitGap&gt; gaps = findGaps(curr, 50f, 500f, 100f);</span></div>
-<div class="line"><span class="lineno">  203</span><span class="comment">//                          if (!gaps.isEmpty()) {</span></div>
-<div class="line"><span class="lineno">  204</span>                                nonHabDist = dist;</div>
-<div class="line"><span class="lineno">  205</span>                                bestNonHab = curr;</div>
-<div class="line"><span class="lineno">  206</span><span class="comment">//                              gapNonHab = gaps.get(0);</span></div>
-<div class="line"><span class="lineno">  207</span><span class="comment">//                          }</span></div>
-<div class="line"><span class="lineno">  208</span>                        }</div>
-<div class="line"><span class="lineno">  209</span>                    }</div>
-<div class="line"><span class="lineno">  210</span>                }</div>
-<div class="line"><span class="lineno">  211</span>            }</div>
-<div class="line"><span class="lineno">  212</span>        }</div>
-<div class="line"><span class="lineno">  213</span>        </div>
-<div class="line"><span class="lineno">  214</span>        PlanetAPI planet = bestHab;</div>
-<div class="line"><span class="lineno">  215</span>        <span class="comment">//OrbitGap gap = gapHab;</span></div>
-<div class="line"><span class="lineno">  216</span>        <span class="keywordflow">if</span> (planet == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  217</span>            planet = bestNonHab;</div>
-<div class="line"><span class="lineno">  218</span>            <span class="comment">//gap = gapNonHab;</span></div>
-<div class="line"><span class="lineno">  219</span>        }</div>
-<div class="line"><span class="lineno">  220</span> </div>
-<div class="line"><span class="lineno">  221</span>        <span class="keywordflow">if</span> (planet != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  222</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a7059afbea0e3f7e46f33265f07243d3a">DEBUG</a>) System.out.println(<span class="stringliteral">&quot;Adding Planetary Shield to [&quot;</span> + planet.getName() + <span class="stringliteral">&quot;] in [&quot;</span> + planet.getContainingLocation().getNameWithLowercaseType() + <span class="stringliteral">&quot;]&quot;</span>);</div>
-<div class="line"><span class="lineno">  223</span>            PlanetaryShield.applyVisuals(planet);</div>
-<div class="line"><span class="lineno">  224</span>            Global.getSector().getMemoryWithoutUpdate().set(<a class="code hl_variable" href="../../d8/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator.html#a83d4c70d58535e982ebb05cd334d4c8e">PLANETARY_SHIELD_PLANET_KEY</a>, planet);</div>
-<div class="line"><span class="lineno">  225</span>            planet.getMemoryWithoutUpdate().set(<a class="code hl_variable" href="../../d8/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator.html#ada68afbf111ff0437b5f72891ca97fca">PLANETARY_SHIELD_PLANET</a>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  226</span>            </div>
-<div class="line"><span class="lineno">  227</span>            <span class="keywordtype">long</span> seed = StarSystemGenerator.random.nextLong();</div>
-<div class="line"><span class="lineno">  228</span>            planet.getMemoryWithoutUpdate().set(MemFlags.SALVAGE_SEED, seed);</div>
-<div class="line"><span class="lineno">  229</span>            planet.getMemoryWithoutUpdate().set(MemFlags.SALVAGE_SPEC_ID_OVERRIDE, <span class="stringliteral">&quot;red_planet&quot;</span>);</div>
-<div class="line"><span class="lineno">  230</span>            planet.addTag(Tags.NOT_RANDOM_MISSION_TARGET);</div>
-<div class="line"><span class="lineno">  231</span>            <span class="comment">//planet.addTag(Tags.SALVAGEABLE);</span></div>
-<div class="line"><span class="lineno">  232</span>            </div>
-<div class="line"><span class="lineno">  233</span><span class="comment">//          SectorEntityToken beacon = Misc.addWarningBeacon(planet, gap, Tags.BEACON_HIGH);</span></div>
-<div class="line"><span class="lineno">  234</span><span class="comment">//          beacon.getMemoryWithoutUpdate().set(PLANETARY_SHIELD_BEACON, true);</span></div>
-<div class="line"><span class="lineno">  235</span><span class="comment">//          beacon.getMemoryWithoutUpdate().set(MemFlags.SALVAGE_SEED, seed);</span></div>
-<div class="line"><span class="lineno">  236</span>            </div>
-<div class="line"><span class="lineno">  237</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  238</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a7059afbea0e3f7e46f33265f07243d3a">DEBUG</a>) System.out.println(<span class="stringliteral">&quot;Failed to find a planet in remnant systems&quot;</span>);</div>
-<div class="line"><span class="lineno">  239</span>        }</div>
-<div class="line"><span class="lineno">  240</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a7059afbea0e3f7e46f33265f07243d3a">DEBUG</a>) System.out.println(<span class="stringliteral">&quot;Finished adding Planetary Shield planet\n\n\n\n\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  241</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator_html_a83d4c70d58535e982ebb05cd334d4c8e"><div class="ttname"><a href="../../d8/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator.html#a83d4c70d58535e982ebb05cd334d4c8e">com.fs.starfarer.api.impl.campaign.procgen.themes.MiscellaneousThemeGenerator.PLANETARY_SHIELD_PLANET_KEY</a></div><div class="ttdeci">static String PLANETARY_SHIELD_PLANET_KEY</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d63/MiscellaneousThemeGenerator_8java_source.html#l00062">MiscellaneousThemeGenerator.java:62</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator_html_ada68afbf111ff0437b5f72891ca97fca"><div class="ttname"><a href="../../d8/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator.html#ada68afbf111ff0437b5f72891ca97fca">com.fs.starfarer.api.impl.campaign.procgen.themes.MiscellaneousThemeGenerator.PLANETARY_SHIELD_PLANET</a></div><div class="ttdeci">static String PLANETARY_SHIELD_PLANET</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d63/MiscellaneousThemeGenerator_8java_source.html#l00063">MiscellaneousThemeGenerator.java:63</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a0ce3dc6787aaca702999f892b330e51a" name="a0ce3dc6787aaca702999f892b330e51a"></a>
@@ -1017,166 +571,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d63/MiscellaneousThemeGenerator_8java_source.html#l00302">302</a> of file <a class="el" href="../../d6/d63/MiscellaneousThemeGenerator_8java_source.html">MiscellaneousThemeGenerator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  302</span>                                                                     {</div>
-<div class="line"><span class="lineno">  303</span>        </div>
-<div class="line"><span class="lineno">  304</span>        <span class="keywordtype">int</span> num = 2 + <a class="code hl_variable" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#ac76a462cf7fa44da2d20f4da80800574">random</a>.nextInt(3);</div>
-<div class="line"><span class="lineno">  305</span>        </div>
-<div class="line"><span class="lineno">  306</span>        <span class="comment">//System.out.println(&quot;RANDOM CHECK: &quot; + random.nextLong());</span></div>
-<div class="line"><span class="lineno">  307</span>        </div>
-<div class="line"><span class="lineno">  308</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a7059afbea0e3f7e46f33265f07243d3a">DEBUG</a>) System.out.println(<span class="stringliteral">&quot;Adding up to &quot;</span> + num + <span class="stringliteral">&quot; solar shades and mirrors&quot;</span>);</div>
-<div class="line"><span class="lineno">  309</span>        List&lt;Constellation&gt; list = <span class="keyword">new</span> ArrayList&lt;Constellation&gt;(context.constellations);</div>
-<div class="line"><span class="lineno">  310</span>        WeightedRandomPicker&lt;PlanetAPI&gt; picker = <span class="keyword">new</span> WeightedRandomPicker&lt;PlanetAPI&gt;(<a class="code hl_variable" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#ac76a462cf7fa44da2d20f4da80800574">random</a>);</div>
-<div class="line"><span class="lineno">  311</span>        <span class="keywordflow">for</span> (Constellation c : list) {</div>
-<div class="line"><span class="lineno">  312</span>            <span class="keywordflow">for</span> (StarSystemAPI system : c.getSystems()) {</div>
-<div class="line"><span class="lineno">  313</span>                <span class="keywordflow">if</span> (system.hasTag(Tags.THEME_CORE)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  314</span>                <span class="keywordflow">if</span> (system.isNebula()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  315</span>                </div>
-<div class="line"><span class="lineno">  316</span>                <span class="keywordflow">for</span> (PlanetAPI planet : system.getPlanets()) {</div>
-<div class="line"><span class="lineno">  317</span>                    <span class="keywordflow">if</span> (planet.isStar()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  318</span>                    </div>
-<div class="line"><span class="lineno">  319</span>                    SectorEntityToken focus = planet.getOrbitFocus();</div>
-<div class="line"><span class="lineno">  320</span>                    <span class="keywordflow">if</span> (!(focus instanceof PlanetAPI)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  321</span>                    <span class="keywordflow">if</span> (!((PlanetAPI) focus).isNormalStar()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  322</span>                    </div>
-<div class="line"><span class="lineno">  323</span>                    </div>
-<div class="line"><span class="lineno">  324</span>                    PlanetGenDataSpec spec = (PlanetGenDataSpec) </div>
-<div class="line"><span class="lineno">  325</span>                                            Global.getSettings().getSpec(PlanetGenDataSpec.class, planet.getSpec().getPlanetType(), <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  326</span>                    <span class="keywordflow">if</span> (spec == <span class="keyword">null</span>) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  327</span>                    </div>
-<div class="line"><span class="lineno">  328</span>                    String cat = spec.getCategory();</div>
-<div class="line"><span class="lineno">  329</span>                    <span class="keywordflow">if</span> (cat == <span class="keyword">null</span>) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  330</span>                    </div>
-<div class="line"><span class="lineno">  331</span>                    <span class="keywordtype">float</span> weight = 0f;</div>
-<div class="line"><span class="lineno">  332</span>                    <span class="keywordflow">if</span> (Planets.CAT_HAB1.equals(cat)) {</div>
-<div class="line"><span class="lineno">  333</span>                        weight = 1f;</div>
-<div class="line"><span class="lineno">  334</span>                    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (Planets.CAT_HAB2.equals(cat)) {</div>
-<div class="line"><span class="lineno">  335</span>                        weight = 1f;</div>
-<div class="line"><span class="lineno">  336</span>                    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (Planets.CAT_HAB3.equals(cat)) {</div>
-<div class="line"><span class="lineno">  337</span>                        weight = 1f;</div>
-<div class="line"><span class="lineno">  338</span>                    }</div>
-<div class="line"><span class="lineno">  339</span>                    </div>
-<div class="line"><span class="lineno">  340</span>                    <span class="keywordflow">if</span> (weight &lt;= 0) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  341</span>                    </div>
-<div class="line"><span class="lineno">  342</span>                    weight = 0;</div>
-<div class="line"><span class="lineno">  343</span>                    </div>
-<div class="line"><span class="lineno">  344</span>                    <span class="keywordflow">if</span> (planet.hasCondition(Conditions.HOT)) {</div>
-<div class="line"><span class="lineno">  345</span>                        weight += 5f;</div>
-<div class="line"><span class="lineno">  346</span>                    }</div>
-<div class="line"><span class="lineno">  347</span>                    <span class="keywordflow">if</span> (planet.hasCondition(Conditions.POOR_LIGHT)) {</div>
-<div class="line"><span class="lineno">  348</span>                        weight += 5f;</div>
-<div class="line"><span class="lineno">  349</span>                    }</div>
-<div class="line"><span class="lineno">  350</span>                    <span class="keywordflow">if</span> (planet.hasCondition(Conditions.WATER_SURFACE)) {</div>
-<div class="line"><span class="lineno">  351</span>                        weight += 5f;</div>
-<div class="line"><span class="lineno">  352</span>                    }</div>
-<div class="line"><span class="lineno">  353</span>                    <span class="keywordflow">if</span> (Misc.hasFarmland(planet.getMarket())) {</div>
-<div class="line"><span class="lineno">  354</span>                        weight += 10f;</div>
-<div class="line"><span class="lineno">  355</span>                    }</div>
-<div class="line"><span class="lineno">  356</span>                    </div>
-<div class="line"><span class="lineno">  357</span>                    <span class="keywordflow">if</span> (weight &lt;= 0) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  358</span>                    </div>
-<div class="line"><span class="lineno">  359</span>                    <span class="comment">// +250 beyond normal radius</span></div>
-<div class="line"><span class="lineno">  360</span>                    <span class="keywordtype">boolean</span> enoughRoom = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  361</span>                    <span class="keywordflow">for</span> (PlanetAPI other : system.getPlanets()) {</div>
-<div class="line"><span class="lineno">  362</span>                        <span class="keywordflow">if</span> (other.getOrbitFocus() == planet) {</div>
-<div class="line"><span class="lineno">  363</span>                            <span class="keywordflow">if</span> (other.getCircularOrbitRadius() &lt; planet.getRadius() + other.getRadius() + 320) {</div>
-<div class="line"><span class="lineno">  364</span>                                enoughRoom = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  365</span>                                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  366</span>                            }</div>
-<div class="line"><span class="lineno">  367</span>                        }</div>
-<div class="line"><span class="lineno">  368</span>                    }</div>
-<div class="line"><span class="lineno">  369</span>                    <span class="keywordflow">if</span> (!enoughRoom) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  370</span>                    </div>
-<div class="line"><span class="lineno">  371</span>                    </div>
-<div class="line"><span class="lineno">  372</span>                    picker.add(planet, weight);</div>
-<div class="line"><span class="lineno">  373</span>                }</div>
-<div class="line"><span class="lineno">  374</span>            }</div>
-<div class="line"><span class="lineno">  375</span>        }</div>
-<div class="line"><span class="lineno">  376</span>        </div>
-<div class="line"><span class="lineno">  377</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a7059afbea0e3f7e46f33265f07243d3a">DEBUG</a>) System.out.println(<span class="stringliteral">&quot;Found &quot;</span> + picker.getItems().size() + <span class="stringliteral">&quot; candidates&quot;</span>);</div>
-<div class="line"><span class="lineno">  378</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; num &amp;&amp; !picker.isEmpty(); i++) {</div>
-<div class="line"><span class="lineno">  379</span>            PlanetAPI planet = picker.pickAndRemove();</div>
-<div class="line"><span class="lineno">  380</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a7059afbea0e3f7e46f33265f07243d3a">DEBUG</a>) System.out.println(<span class="stringliteral">&quot;Adding solar shades and mirrors to [&quot;</span> + planet.getName() + <span class="stringliteral">&quot;] in [&quot;</span> + </div>
-<div class="line"><span class="lineno">  381</span>                    planet.getStarSystem() + <span class="stringliteral">&quot; located at &quot;</span> + planet.getLocationInHyperspace());</div>
-<div class="line"><span class="lineno">  382</span>            </div>
-<div class="line"><span class="lineno">  383</span>            planet.getMarket().addCondition(Conditions.SOLAR_ARRAY);</div>
-<div class="line"><span class="lineno">  384</span>            </div>
-<div class="line"><span class="lineno">  385</span>            StarSystemAPI system = planet.getStarSystem();</div>
-<div class="line"><span class="lineno">  386</span>            PlanetAPI star = (PlanetAPI) planet.getOrbitFocus();</div>
-<div class="line"><span class="lineno">  387</span>            </div>
-<div class="line"><span class="lineno">  388</span>            <span class="keywordtype">boolean</span> shade = planet.hasCondition(Conditions.HOT) ||</div>
-<div class="line"><span class="lineno">  389</span>                                planet.getTypeId().equals(Planets.DESERT) ||</div>
-<div class="line"><span class="lineno">  390</span>                                planet.getTypeId().equals(Planets.DESERT1) ||</div>
-<div class="line"><span class="lineno">  391</span>                                planet.getTypeId().equals(Planets.ARID) ||</div>
-<div class="line"><span class="lineno">  392</span>                                star.getTypeId().equals(StarTypes.BLUE_GIANT) ||</div>
-<div class="line"><span class="lineno">  393</span>                                star.getTypeId().equals(StarTypes.BLUE_SUPERGIANT);</div>
-<div class="line"><span class="lineno">  394</span>            <span class="keywordtype">boolean</span> mirror = planet.hasCondition(Conditions.POOR_LIGHT) ||</div>
-<div class="line"><span class="lineno">  395</span>                                planet.getTypeId().equals(Planets.PLANET_TERRAN_ECCENTRIC) ||</div>
-<div class="line"><span class="lineno">  396</span><span class="comment">//                              star.getTypeId().equals(StarTypes.RED_SUPERGIANT) ||</span></div>
-<div class="line"><span class="lineno">  397</span><span class="comment">//                              star.getTypeId().equals(StarTypes.RED_GIANT) ||</span></div>
-<div class="line"><span class="lineno">  398</span>                                star.getTypeId().equals(StarTypes.RED_DWARF) ||</div>
-<div class="line"><span class="lineno">  399</span>                                star.getTypeId().equals(StarTypes.BROWN_DWARF);</div>
-<div class="line"><span class="lineno">  400</span>            </div>
-<div class="line"><span class="lineno">  401</span>            <span class="keywordtype">boolean</span> forceFew = <span class="keyword">false</span>; </div>
-<div class="line"><span class="lineno">  402</span>            <span class="keywordflow">if</span> (!shade &amp;&amp; !mirror) {</div>
-<div class="line"><span class="lineno">  403</span>                mirror = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  404</span>                shade = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  405</span>                forceFew = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  406</span>            }</div>
-<div class="line"><span class="lineno">  407</span>            </div>
-<div class="line"><span class="lineno">  408</span>            String faction = Factions.NEUTRAL;</div>
-<div class="line"><span class="lineno">  409</span>            <span class="keywordtype">float</span> period = planet.getCircularOrbitPeriod();</div>
-<div class="line"><span class="lineno">  410</span>            <span class="keywordtype">float</span> angle = planet.getCircularOrbitAngle();</div>
-<div class="line"><span class="lineno">  411</span>            <span class="keywordtype">float</span> radius = 270f + planet.getRadius();</div>
-<div class="line"><span class="lineno">  412</span>            <span class="comment">//String name = planet.getName();</span></div>
-<div class="line"><span class="lineno">  413</span>            </div>
-<div class="line"><span class="lineno">  414</span>            <span class="keywordtype">float</span> xp = 300f;</div>
-<div class="line"><span class="lineno">  415</span>            <span class="keywordtype">float</span> profile = 2000f;</div>
-<div class="line"><span class="lineno">  416</span>            </div>
-<div class="line"><span class="lineno">  417</span>            <span class="keywordflow">if</span> (mirror) {</div>
-<div class="line"><span class="lineno">  418</span>                <span class="keywordtype">boolean</span> manyMirrors = <a class="code hl_variable" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#ac76a462cf7fa44da2d20f4da80800574">random</a>.nextBoolean();</div>
-<div class="line"><span class="lineno">  419</span>                </div>
-<div class="line"><span class="lineno">  420</span>                SectorEntityToken mirror2 = system.addCustomEntity(<span class="keyword">null</span>, <span class="stringliteral">&quot;Stellar Mirror Beta&quot;</span>, Entities.STELLAR_MIRROR, faction);  </div>
-<div class="line"><span class="lineno">  421</span>                SectorEntityToken mirror3 = system.addCustomEntity(<span class="keyword">null</span>, <span class="stringliteral">&quot;Stellar Mirror Gamma&quot;</span>, Entities.STELLAR_MIRROR, faction);</div>
-<div class="line"><span class="lineno">  422</span>                SectorEntityToken mirror4 = system.addCustomEntity(<span class="keyword">null</span>, <span class="stringliteral">&quot;Stellar Mirror Delta&quot;</span>, Entities.STELLAR_MIRROR, faction);</div>
-<div class="line"><span class="lineno">  423</span>                mirror2.setCircularOrbitPointingDown(planet, angle - 30, radius, period);   </div>
-<div class="line"><span class="lineno">  424</span>                mirror3.setCircularOrbitPointingDown(planet, angle + 0, radius, period);    </div>
-<div class="line"><span class="lineno">  425</span>                mirror4.setCircularOrbitPointingDown(planet, angle + 30, radius, period);</div>
-<div class="line"><span class="lineno">  426</span>                <a class="code hl_function" href="../../d8/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator.html#a38e78a73c282277d3e10b92bd07c65c6">makeDiscoverable</a>(mirror2, xp, profile);</div>
-<div class="line"><span class="lineno">  427</span>                <a class="code hl_function" href="../../d8/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator.html#a38e78a73c282277d3e10b92bd07c65c6">makeDiscoverable</a>(mirror3, xp, profile);</div>
-<div class="line"><span class="lineno">  428</span>                <a class="code hl_function" href="../../d8/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator.html#a38e78a73c282277d3e10b92bd07c65c6">makeDiscoverable</a>(mirror4, xp, profile);</div>
-<div class="line"><span class="lineno">  429</span>                </div>
-<div class="line"><span class="lineno">  430</span>                <span class="keywordflow">if</span> (manyMirrors &amp;&amp; !forceFew) {</div>
-<div class="line"><span class="lineno">  431</span>                    SectorEntityToken mirror1 = system.addCustomEntity(<span class="keyword">null</span>, <span class="stringliteral">&quot;Stellar Mirror Alpha&quot;</span>, Entities.STELLAR_MIRROR, faction);</div>
-<div class="line"><span class="lineno">  432</span>                    SectorEntityToken mirror5 = system.addCustomEntity(<span class="keyword">null</span>, <span class="stringliteral">&quot;Stellar Mirror Epsilon&quot;</span>, Entities.STELLAR_MIRROR, faction);</div>
-<div class="line"><span class="lineno">  433</span>                    mirror1.setCircularOrbitPointingDown(planet, angle - 60, radius, period);</div>
-<div class="line"><span class="lineno">  434</span>                    mirror5.setCircularOrbitPointingDown(planet, angle + 60, radius, period);</div>
-<div class="line"><span class="lineno">  435</span>                    <a class="code hl_function" href="../../d8/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator.html#a38e78a73c282277d3e10b92bd07c65c6">makeDiscoverable</a>(mirror1, xp, profile);</div>
-<div class="line"><span class="lineno">  436</span>                    <a class="code hl_function" href="../../d8/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator.html#a38e78a73c282277d3e10b92bd07c65c6">makeDiscoverable</a>(mirror5, xp, profile);</div>
-<div class="line"><span class="lineno">  437</span>                }</div>
-<div class="line"><span class="lineno">  438</span>            }</div>
-<div class="line"><span class="lineno">  439</span>            </div>
-<div class="line"><span class="lineno">  440</span>            <span class="keywordflow">if</span> (shade) {</div>
-<div class="line"><span class="lineno">  441</span>                <span class="keywordtype">boolean</span> manyShades = <a class="code hl_variable" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#ac76a462cf7fa44da2d20f4da80800574">random</a>.nextBoolean();</div>
-<div class="line"><span class="lineno">  442</span>                SectorEntityToken shade2 = system.addCustomEntity(<span class="keyword">null</span>, <span class="stringliteral">&quot;Stellar Shade Psi&quot;</span>, Entities.STELLAR_SHADE, faction);</div>
-<div class="line"><span class="lineno">  443</span>                shade2.setCircularOrbitPointingDown(planet, angle + 180 + 0, radius + 25, period);</div>
-<div class="line"><span class="lineno">  444</span>                <a class="code hl_function" href="../../d8/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator.html#a38e78a73c282277d3e10b92bd07c65c6">makeDiscoverable</a>(shade2, xp, profile);</div>
-<div class="line"><span class="lineno">  445</span>                </div>
-<div class="line"><span class="lineno">  446</span>                <span class="keywordflow">if</span> (manyShades &amp;&amp; !forceFew) {</div>
-<div class="line"><span class="lineno">  447</span>                    SectorEntityToken shade1 = system.addCustomEntity(<span class="keyword">null</span>, <span class="stringliteral">&quot;Stellar Shade Omega&quot;</span>, Entities.STELLAR_SHADE, faction);</div>
-<div class="line"><span class="lineno">  448</span>                    SectorEntityToken shade3 = system.addCustomEntity(<span class="keyword">null</span>, <span class="stringliteral">&quot;Stellar Shade Chi&quot;</span>, Entities.STELLAR_SHADE, faction);</div>
-<div class="line"><span class="lineno">  449</span>                    shade1.setCircularOrbitPointingDown(planet, angle + 180 - 26, radius - 10, period);</div>
-<div class="line"><span class="lineno">  450</span>                    shade3.setCircularOrbitPointingDown(planet, angle + 180 + 26, radius - 10, period);</div>
-<div class="line"><span class="lineno">  451</span>                    <a class="code hl_function" href="../../d8/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator.html#a38e78a73c282277d3e10b92bd07c65c6">makeDiscoverable</a>(shade1, xp, profile);</div>
-<div class="line"><span class="lineno">  452</span>                    <a class="code hl_function" href="../../d8/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator.html#a38e78a73c282277d3e10b92bd07c65c6">makeDiscoverable</a>(shade3, xp, profile);</div>
-<div class="line"><span class="lineno">  453</span>                }</div>
-<div class="line"><span class="lineno">  454</span>            }</div>
-<div class="line"><span class="lineno">  455</span>            </div>
-<div class="line"><span class="lineno">  456</span>        }</div>
-<div class="line"><span class="lineno">  457</span>        </div>
-<div class="line"><span class="lineno">  458</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a7059afbea0e3f7e46f33265f07243d3a">DEBUG</a>) System.out.println(<span class="stringliteral">&quot;Done adding solar shades and mirrors&quot;</span>);</div>
-<div class="line"><span class="lineno">  459</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator_html_a38e78a73c282277d3e10b92bd07c65c6"><div class="ttname"><a href="../../d8/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator.html#a38e78a73c282277d3e10b92bd07c65c6">com.fs.starfarer.api.impl.campaign.procgen.themes.MiscellaneousThemeGenerator.makeDiscoverable</a></div><div class="ttdeci">static void makeDiscoverable(SectorEntityToken entity, float xp, float sensorProfile)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d63/MiscellaneousThemeGenerator_8java_source.html#l00461">MiscellaneousThemeGenerator.java:461</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a93d581d19c27ebf67c2c7a93813f589b" name="a93d581d19c27ebf67c2c7a93813f589b"></a>
@@ -1208,81 +603,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a78709393230ece8dfe6f1cf0e57d6179">com.fs.starfarer.api.impl.campaign.procgen.themes.BaseThemeGenerator</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d63/MiscellaneousThemeGenerator_8java_source.html#l00088">88</a> of file <a class="el" href="../../d6/d63/MiscellaneousThemeGenerator_8java_source.html">MiscellaneousThemeGenerator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   88</span>                                                                                        {</div>
-<div class="line"><span class="lineno">   89</span>        </div>
-<div class="line"><span class="lineno">   90</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a7059afbea0e3f7e46f33265f07243d3a">DEBUG</a>) System.out.println(<span class="stringliteral">&quot;\n\n\n&quot;</span>);</div>
-<div class="line"><span class="lineno">   91</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a7059afbea0e3f7e46f33265f07243d3a">DEBUG</a>) System.out.println(<span class="stringliteral">&quot;Generating misc derelicts etc in all systems&quot;</span>);</div>
-<div class="line"><span class="lineno">   92</span>        <span class="comment">//getSortedAvailableConstellations(context, true, new Vector2f(), null).size()</span></div>
-<div class="line"><span class="lineno">   93</span>        List&lt;StarSystemData&gt; all = <span class="keyword">new</span> ArrayList&lt;StarSystemData&gt;();</div>
-<div class="line"><span class="lineno">   94</span>        </div>
-<div class="line"><span class="lineno">   95</span>        <span class="comment">/* this adds misc stuff to systems that are:</span></div>
-<div class="line"><span class="lineno">   96</span><span class="comment">            1) Not tagged with some other theme</span></div>
-<div class="line"><span class="lineno">   97</span><span class="comment">            2) But does add misc stuff to derelict-tagged systems</span></div>
-<div class="line"><span class="lineno">   98</span><span class="comment">            So, basicallly it covers:</span></div>
-<div class="line"><span class="lineno">   99</span><span class="comment">                derelict theme + whatever few constellations didn&#39;t get anything from any theme</span></div>
-<div class="line"><span class="lineno">  100</span><span class="comment">        */</span></div>
-<div class="line"><span class="lineno">  101</span>        <span class="keywordflow">for</span> (Constellation c : context.constellations) {</div>
-<div class="line"><span class="lineno">  102</span>            String theme = context.majorThemes.get(c);</div>
-<div class="line"><span class="lineno">  103</span>            </div>
-<div class="line"><span class="lineno">  104</span>            List&lt;StarSystemData&gt; systems = <span class="keyword">new</span> ArrayList&lt;StarSystemData&gt;();</div>
-<div class="line"><span class="lineno">  105</span>            <span class="keywordflow">for</span> (StarSystemAPI system : c.getSystems()) {</div>
-<div class="line"><span class="lineno">  106</span>                StarSystemData data = <a class="code hl_function" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a070c6390c5d6e1b76b4b3fff61b095dd">computeSystemData</a>(system);</div>
-<div class="line"><span class="lineno">  107</span>                systems.add(data);</div>
-<div class="line"><span class="lineno">  108</span>            }</div>
-<div class="line"><span class="lineno">  109</span>            </div>
-<div class="line"><span class="lineno">  110</span>            <span class="keywordflow">for</span> (StarSystemData data  : systems) {</div>
-<div class="line"><span class="lineno">  111</span>                <span class="comment">//if (data.system.getName().toLowerCase().contains(&quot;alpha mok morred&quot;)) {</span></div>
-<div class="line"><span class="lineno">  112</span><span class="comment">//              if (data.system.getName().toLowerCase().contains(&quot;vasuki&quot;)) {</span></div>
-<div class="line"><span class="lineno">  113</span><span class="comment">//                  System.out.println(&quot;efwefwef&quot;);</span></div>
-<div class="line"><span class="lineno">  114</span><span class="comment">//              }</span></div>
-<div class="line"><span class="lineno">  115</span>                <span class="keywordtype">boolean</span> derelict = data.system.hasTag(Tags.THEME_DERELICT);</div>
-<div class="line"><span class="lineno">  116</span>                <span class="keywordflow">if</span> (!derelict &amp;&amp; theme != <span class="keyword">null</span> &amp;&amp; !data.system.getTags().isEmpty()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  117</span><span class="comment">//              if (!derelict &amp;&amp; theme != null &amp;&amp; !theme.equals(Themes.DERELICTS) &amp;&amp;</span></div>
-<div class="line"><span class="lineno">  118</span><span class="comment">//                      !theme.equals(Themes.NO_THEME)) continue;</span></div>
-<div class="line"><span class="lineno">  119</span>                </div>
-<div class="line"><span class="lineno">  120</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#ac76a462cf7fa44da2d20f4da80800574">random</a>.nextFloat() &gt; <a class="code hl_variable" href="../../d8/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator.html#a6111a126f975f4a7172a2f82bcd41a3f">PROB_TO_ADD_SOMETHING</a> || (derelict &amp;&amp; theme != <span class="keyword">null</span>)) {</div>
-<div class="line"><span class="lineno">  121</span>                    data.system.addTag(Tags.THEME_MISC_SKIP);</div>
-<div class="line"><span class="lineno">  122</span>                    <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  123</span>                }</div>
-<div class="line"><span class="lineno">  124</span> </div>
-<div class="line"><span class="lineno">  125</span>                <a class="code hl_function" href="../../d8/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator.html#a5bd87f521aa5d0d9bb8523f07c37da1e">populateNonMain</a>(data);</div>
-<div class="line"><span class="lineno">  126</span>                all.add(data);</div>
-<div class="line"><span class="lineno">  127</span>                data.system.addTag(Tags.THEME_MISC);</div>
-<div class="line"><span class="lineno">  128</span>                data.system.addTag(Tags.THEME_INTERESTING_MINOR);</div>
-<div class="line"><span class="lineno">  129</span>            }</div>
-<div class="line"><span class="lineno">  130</span>        }</div>
-<div class="line"><span class="lineno">  131</span>        </div>
-<div class="line"><span class="lineno">  132</span>        </div>
-<div class="line"><span class="lineno">  133</span>        SpecialCreationContext specialContext = <span class="keyword">new</span> SpecialCreationContext();</div>
-<div class="line"><span class="lineno">  134</span>        specialContext.themeId = <a class="code hl_function" href="../../d8/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator.html#a0593d15ff66c612194d8d1d38bed49a5">getThemeId</a>();</div>
-<div class="line"><span class="lineno">  135</span>        SalvageSpecialAssigner.assignSpecials(all, specialContext);</div>
-<div class="line"><span class="lineno">  136</span>        </div>
-<div class="line"><span class="lineno">  137</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a7059afbea0e3f7e46f33265f07243d3a">DEBUG</a>) System.out.println(<span class="stringliteral">&quot;Finished generating misc derelicts\n\n\n\n\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  138</span>        </div>
-<div class="line"><span class="lineno">  139</span>        </div>
-<div class="line"><span class="lineno">  140</span>        <a class="code hl_function" href="../../d8/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator.html#a9cbd637d0befc41804e431d3e90ea1e4">addDerelicts</a>(context, <span class="stringliteral">&quot;legion_xiv_Elite&quot;</span>, 2, 3, 1, 2, Tags.THEME_REMNANT);</div>
-<div class="line"><span class="lineno">  141</span>        <a class="code hl_function" href="../../d8/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator.html#a9cbd637d0befc41804e431d3e90ea1e4">addDerelicts</a>(context, <span class="stringliteral">&quot;phantom_Elite&quot;</span>, 1, 2, 0, 1, Tags.THEME_REMNANT, Tags.THEME_RUINS, Tags.THEME_DERELICT, Tags.THEME_UNSAFE);</div>
-<div class="line"><span class="lineno">  142</span>        <a class="code hl_function" href="../../d8/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator.html#a9cbd637d0befc41804e431d3e90ea1e4">addDerelicts</a>(context, <span class="stringliteral">&quot;revenant_Elite&quot;</span>, 1, 2, 0, 1, Tags.THEME_REMNANT, Tags.THEME_RUINS, Tags.THEME_DERELICT, Tags.THEME_UNSAFE);</div>
-<div class="line"><span class="lineno">  143</span>        </div>
-<div class="line"><span class="lineno">  144</span>        </div>
-<div class="line"><span class="lineno">  145</span>        <a class="code hl_function" href="../../d8/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator.html#aaddd3ed763ca89904c4bfb16eb32c78d">addRedPlanet</a>(context);</div>
-<div class="line"><span class="lineno">  146</span>        <a class="code hl_function" href="../../d8/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator.html#a17de359362be65ac0d86f8d2de22ecb4">addPKSystem</a>(context);</div>
-<div class="line"><span class="lineno">  147</span>        </div>
-<div class="line"><span class="lineno">  148</span>        <a class="code hl_function" href="../../d8/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator.html#a0ce3dc6787aaca702999f892b330e51a">addSolarShadesAndMirrors</a>(context);</div>
-<div class="line"><span class="lineno">  149</span>        </div>
-<div class="line"><span class="lineno">  150</span>        <a class="code hl_function" href="../../d8/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator.html#a2d10cbd82eb35b791008d78891fd4a9a">addCoronalTaps</a>(context);</div>
-<div class="line"><span class="lineno">  151</span>        </div>
-<div class="line"><span class="lineno">  152</span>        <a class="code hl_function" href="../../d8/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator.html#acb7b64a70416888a9edf43bfcc614699">addExtraGates</a>(context);</div>
-<div class="line"><span class="lineno">  153</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator_html_a0ce3dc6787aaca702999f892b330e51a"><div class="ttname"><a href="../../d8/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator.html#a0ce3dc6787aaca702999f892b330e51a">com.fs.starfarer.api.impl.campaign.procgen.themes.MiscellaneousThemeGenerator.addSolarShadesAndMirrors</a></div><div class="ttdeci">void addSolarShadesAndMirrors(ThemeGenContext context)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d63/MiscellaneousThemeGenerator_8java_source.html#l00302">MiscellaneousThemeGenerator.java:302</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator_html_a17de359362be65ac0d86f8d2de22ecb4"><div class="ttname"><a href="../../d8/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator.html#a17de359362be65ac0d86f8d2de22ecb4">com.fs.starfarer.api.impl.campaign.procgen.themes.MiscellaneousThemeGenerator.addPKSystem</a></div><div class="ttdeci">void addPKSystem(ThemeGenContext context)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d63/MiscellaneousThemeGenerator_8java_source.html#l00744">MiscellaneousThemeGenerator.java:744</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator_html_a2d10cbd82eb35b791008d78891fd4a9a"><div class="ttname"><a href="../../d8/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator.html#a2d10cbd82eb35b791008d78891fd4a9a">com.fs.starfarer.api.impl.campaign.procgen.themes.MiscellaneousThemeGenerator.addCoronalTaps</a></div><div class="ttdeci">void addCoronalTaps(ThemeGenContext context)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d63/MiscellaneousThemeGenerator_8java_source.html#l00580">MiscellaneousThemeGenerator.java:580</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator_html_a5bd87f521aa5d0d9bb8523f07c37da1e"><div class="ttname"><a href="../../d8/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator.html#a5bd87f521aa5d0d9bb8523f07c37da1e">com.fs.starfarer.api.impl.campaign.procgen.themes.MiscellaneousThemeGenerator.populateNonMain</a></div><div class="ttdeci">void populateNonMain(StarSystemData data)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d63/MiscellaneousThemeGenerator_8java_source.html#l00468">MiscellaneousThemeGenerator.java:468</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator_html_a6111a126f975f4a7172a2f82bcd41a3f"><div class="ttname"><a href="../../d8/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator.html#a6111a126f975f4a7172a2f82bcd41a3f">com.fs.starfarer.api.impl.campaign.procgen.themes.MiscellaneousThemeGenerator.PROB_TO_ADD_SOMETHING</a></div><div class="ttdeci">static float PROB_TO_ADD_SOMETHING</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d63/MiscellaneousThemeGenerator_8java_source.html#l00066">MiscellaneousThemeGenerator.java:66</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator_html_a9cbd637d0befc41804e431d3e90ea1e4"><div class="ttname"><a href="../../d8/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator.html#a9cbd637d0befc41804e431d3e90ea1e4">com.fs.starfarer.api.impl.campaign.procgen.themes.MiscellaneousThemeGenerator.addDerelicts</a></div><div class="ttdeci">void addDerelicts(ThemeGenContext context, String variant, int minNonSalvageable, int maxNonSalvageable, int minSalvageable, int maxSalvageable, String ... allowedThemes)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d63/MiscellaneousThemeGenerator_8java_source.html#l00243">MiscellaneousThemeGenerator.java:243</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator_html_aaddd3ed763ca89904c4bfb16eb32c78d"><div class="ttname"><a href="../../d8/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator.html#aaddd3ed763ca89904c4bfb16eb32c78d">com.fs.starfarer.api.impl.campaign.procgen.themes.MiscellaneousThemeGenerator.addRedPlanet</a></div><div class="ttdeci">void addRedPlanet(ThemeGenContext context)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d63/MiscellaneousThemeGenerator_8java_source.html#l00155">MiscellaneousThemeGenerator.java:155</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator_html_acb7b64a70416888a9edf43bfcc614699"><div class="ttname"><a href="../../d8/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator.html#acb7b64a70416888a9edf43bfcc614699">com.fs.starfarer.api.impl.campaign.procgen.themes.MiscellaneousThemeGenerator.addExtraGates</a></div><div class="ttdeci">void addExtraGates(ThemeGenContext context)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d63/MiscellaneousThemeGenerator_8java_source.html#l00502">MiscellaneousThemeGenerator.java:502</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2b60785cadb737f56d94bd1d1b592595" name="a2b60785cadb737f56d94bd1d1b592595"></a>
@@ -1304,10 +625,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a2dd0161bbc1a3101098e92dcd96b9d66">com.fs.starfarer.api.impl.campaign.procgen.themes.BaseThemeGenerator</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d63/MiscellaneousThemeGenerator_8java_source.html#l00083">83</a> of file <a class="el" href="../../d6/d63/MiscellaneousThemeGenerator_8java_source.html">MiscellaneousThemeGenerator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   83</span>                          {</div>
-<div class="line"><span class="lineno">   84</span>        <span class="keywordflow">return</span> 1000000;</div>
-<div class="line"><span class="lineno">   85</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="abed2f2e43192e6964ae36781a00007c1" name="abed2f2e43192e6964ae36781a00007c1"></a>
@@ -1345,26 +663,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d63/MiscellaneousThemeGenerator_8java_source.html#l01093">1093</a> of file <a class="el" href="../../d6/d63/MiscellaneousThemeGenerator_8java_source.html">MiscellaneousThemeGenerator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1093</span>                                                                                                         {</div>
-<div class="line"><span class="lineno"> 1094</span>        List&lt;CampaignFleetAPI&gt; stations = <span class="keyword">new</span> ArrayList&lt;CampaignFleetAPI&gt;();</div>
-<div class="line"><span class="lineno"> 1095</span>        <span class="keywordflow">for</span> (StarSystemAPI system : Global.getSector().getStarSystems()) {</div>
-<div class="line"><span class="lineno"> 1096</span>            <span class="keywordflow">if</span> (!system.hasTag(Tags.THEME_REMNANT_MAIN)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno"> 1097</span>            <span class="keywordflow">if</span> (system.hasTag(Tags.THEME_REMNANT_DESTROYED)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno"> 1098</span>            </div>
-<div class="line"><span class="lineno"> 1099</span>            <span class="keywordflow">for</span> (CampaignFleetAPI fleet : system.getFleets()) {</div>
-<div class="line"><span class="lineno"> 1100</span>                <span class="keywordflow">if</span> (!fleet.isStationMode()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno"> 1101</span>                <span class="keywordflow">if</span> (!Factions.REMNANTS.equals(fleet.getFaction().getId())) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno"> 1102</span>                </div>
-<div class="line"><span class="lineno"> 1103</span>                <span class="keywordtype">boolean</span> damaged = fleet.getMemoryWithoutUpdate().getBoolean(<span class="stringliteral">&quot;$damagedStation&quot;</span>);</div>
-<div class="line"><span class="lineno"> 1104</span>                <span class="keywordflow">if</span> (damaged &amp;&amp; !includeDamaged) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno"> 1105</span>                <span class="keywordflow">if</span> (!damaged &amp;&amp; onlyDamaged) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno"> 1106</span>                </div>
-<div class="line"><span class="lineno"> 1107</span>                stations.add(fleet);</div>
-<div class="line"><span class="lineno"> 1108</span>            }</div>
-<div class="line"><span class="lineno"> 1109</span>        }</div>
-<div class="line"><span class="lineno"> 1110</span>        <span class="keywordflow">return</span> stations;</div>
-<div class="line"><span class="lineno"> 1111</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a0593d15ff66c612194d8d1d38bed49a5" name="a0593d15ff66c612194d8d1d38bed49a5"></a>
@@ -1385,10 +684,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a6f534d5b5154a514cf5e12bf465291a9">com.fs.starfarer.api.impl.campaign.procgen.themes.BaseThemeGenerator</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d63/MiscellaneousThemeGenerator_8java_source.html#l00073">73</a> of file <a class="el" href="../../d6/d63/MiscellaneousThemeGenerator_8java_source.html">MiscellaneousThemeGenerator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   73</span>                               {</div>
-<div class="line"><span class="lineno">   74</span>        <span class="keywordflow">return</span> Themes.MISC;</div>
-<div class="line"><span class="lineno">   75</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa02ba9dd23dd1f8ffe6ecbd0c3411044" name="aa02ba9dd23dd1f8ffe6ecbd0c3411044"></a>
@@ -1413,10 +709,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a61e5a404c8661511b0340068ea785c46">com.fs.starfarer.api.impl.campaign.procgen.themes.BaseThemeGenerator</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d63/MiscellaneousThemeGenerator_8java_source.html#l00078">78</a> of file <a class="el" href="../../d6/d63/MiscellaneousThemeGenerator_8java_source.html">MiscellaneousThemeGenerator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   78</span>                             {</div>
-<div class="line"><span class="lineno">   79</span>        <span class="keywordflow">return</span> 0f;</div>
-<div class="line"><span class="lineno">   80</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a38e78a73c282277d3e10b92bd07c65c6" name="a38e78a73c282277d3e10b92bd07c65c6"></a>
@@ -1460,12 +753,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d63/MiscellaneousThemeGenerator_8java_source.html#l00461">461</a> of file <a class="el" href="../../d6/d63/MiscellaneousThemeGenerator_8java_source.html">MiscellaneousThemeGenerator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  461</span>                                                                                                 {</div>
-<div class="line"><span class="lineno">  462</span>        entity.setDiscoverable(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  463</span>        entity.setDiscoveryXP(xp);</div>
-<div class="line"><span class="lineno">  464</span>        entity.setSensorProfile(sensorProfile);</div>
-<div class="line"><span class="lineno">  465</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5bd87f521aa5d0d9bb8523f07c37da1e" name="a5bd87f521aa5d0d9bb8523f07c37da1e"></a>
@@ -1485,45 +773,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d63/MiscellaneousThemeGenerator_8java_source.html#l00468">468</a> of file <a class="el" href="../../d6/d63/MiscellaneousThemeGenerator_8java_source.html">MiscellaneousThemeGenerator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  468</span>                                                     {</div>
-<div class="line"><span class="lineno">  469</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a7059afbea0e3f7e46f33265f07243d3a">DEBUG</a>) System.out.println(<span class="stringliteral">&quot; Generating misc derelicts in system &quot;</span> + data.system.getName());</div>
-<div class="line"><span class="lineno">  470</span>        <span class="keywordtype">boolean</span> special = data.isBlackHole() || data.isNebula() || data.isPulsar();</div>
-<div class="line"><span class="lineno">  471</span>        <span class="keywordflow">if</span> (special) {</div>
-<div class="line"><span class="lineno">  472</span>            <a class="code hl_function" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a55e491596b9f2d6510b19cbbc547f570">addResearchStations</a>(data, 0.25f, 1, 1, <a class="code hl_function" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#aa81917f7b9fe0b40ccc1f2a4a8688643">createStringPicker</a>(Entities.STATION_RESEARCH, 10f));</div>
-<div class="line"><span class="lineno">  473</span>        }</div>
-<div class="line"><span class="lineno">  474</span>        </div>
-<div class="line"><span class="lineno">  475</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#ac76a462cf7fa44da2d20f4da80800574">random</a>.nextFloat() &lt; 0.5f) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  476</span>        </div>
-<div class="line"><span class="lineno">  477</span>        WeightedRandomPicker&lt;String&gt; factions = SalvageSpecialAssigner.getNearbyFactions(<a class="code hl_variable" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#ac76a462cf7fa44da2d20f4da80800574">random</a>, data.system.getCenter(),</div>
-<div class="line"><span class="lineno">  478</span>                                                        15f, 10f, 10f);</div>
-<div class="line"><span class="lineno">  479</span>        </div>
-<div class="line"><span class="lineno">  480</span>        <a class="code hl_function" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a0318acbfb5fb846f454347be99194219">addShipGraveyard</a>(data, 0.05f, 1, 1, factions);</div>
-<div class="line"><span class="lineno">  481</span>        </div>
-<div class="line"><span class="lineno">  482</span>        <a class="code hl_function" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#abe6372e626afa055b3b9c551fd53f54a">addDebrisFields</a>(data, 0.25f, 1, 2);</div>
-<div class="line"><span class="lineno">  483</span> </div>
-<div class="line"><span class="lineno">  484</span>        <a class="code hl_function" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a7eb2768ea34256eb9200a29dd1e86bd9">addDerelictShips</a>(data, 0.5f, 0, 3, factions);</div>
-<div class="line"><span class="lineno">  485</span>        </div>
-<div class="line"><span class="lineno">  486</span>        <a class="code hl_function" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a73513649957409cd5918584950304b3c">addCaches</a>(data, 0.25f, 0, 2, <a class="code hl_function" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#aa81917f7b9fe0b40ccc1f2a4a8688643">createStringPicker</a>( </div>
-<div class="line"><span class="lineno">  487</span>                Entities.WEAPONS_CACHE, 4f,</div>
-<div class="line"><span class="lineno">  488</span>                Entities.WEAPONS_CACHE_SMALL, 10f,</div>
-<div class="line"><span class="lineno">  489</span>                Entities.WEAPONS_CACHE_HIGH, 4f,</div>
-<div class="line"><span class="lineno">  490</span>                Entities.WEAPONS_CACHE_SMALL_HIGH, 10f,</div>
-<div class="line"><span class="lineno">  491</span>                Entities.WEAPONS_CACHE_LOW, 4f,</div>
-<div class="line"><span class="lineno">  492</span>                Entities.WEAPONS_CACHE_SMALL_LOW, 10f,</div>
-<div class="line"><span class="lineno">  493</span>                Entities.SUPPLY_CACHE, 4f,</div>
-<div class="line"><span class="lineno">  494</span>                Entities.SUPPLY_CACHE_SMALL, 10f,</div>
-<div class="line"><span class="lineno">  495</span>                Entities.EQUIPMENT_CACHE, 4f,</div>
-<div class="line"><span class="lineno">  496</span>                Entities.EQUIPMENT_CACHE_SMALL, 10f</div>
-<div class="line"><span class="lineno">  497</span>                ));</div>
-<div class="line"><span class="lineno">  498</span>        </div>
-<div class="line"><span class="lineno">  499</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator_html_a0318acbfb5fb846f454347be99194219"><div class="ttname"><a href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a0318acbfb5fb846f454347be99194219">com.fs.starfarer.api.impl.campaign.procgen.themes.BaseThemeGenerator.addShipGraveyard</a></div><div class="ttdeci">void addShipGraveyard(StarSystemData data, float chanceToAddAny, int min, int max, WeightedRandomPicker&lt; String &gt; factions)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d80/BaseThemeGenerator_8java_source.html#l00165">BaseThemeGenerator.java:165</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator_html_a55e491596b9f2d6510b19cbbc547f570"><div class="ttname"><a href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a55e491596b9f2d6510b19cbbc547f570">com.fs.starfarer.api.impl.campaign.procgen.themes.BaseThemeGenerator.addResearchStations</a></div><div class="ttdeci">void addResearchStations(StarSystemData data, float chanceToAddAny, int min, int max, WeightedRandomPicker&lt; String &gt; stationTypes)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d80/BaseThemeGenerator_8java_source.html#l00332">BaseThemeGenerator.java:332</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator_html_a73513649957409cd5918584950304b3c"><div class="ttname"><a href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a73513649957409cd5918584950304b3c">com.fs.starfarer.api.impl.campaign.procgen.themes.BaseThemeGenerator.addCaches</a></div><div class="ttdeci">void addCaches(StarSystemData data, float chanceToAddAny, int min, int max, WeightedRandomPicker&lt; String &gt; cacheTypes)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d80/BaseThemeGenerator_8java_source.html#l00552">BaseThemeGenerator.java:552</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator_html_a7eb2768ea34256eb9200a29dd1e86bd9"><div class="ttname"><a href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a7eb2768ea34256eb9200a29dd1e86bd9">com.fs.starfarer.api.impl.campaign.procgen.themes.BaseThemeGenerator.addDerelictShips</a></div><div class="ttdeci">void addDerelictShips(StarSystemData data, float chanceToAddAny, int min, int max, WeightedRandomPicker&lt; String &gt; factions)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d80/BaseThemeGenerator_8java_source.html#l00234">BaseThemeGenerator.java:234</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator_html_aa81917f7b9fe0b40ccc1f2a4a8688643"><div class="ttname"><a href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#aa81917f7b9fe0b40ccc1f2a4a8688643">com.fs.starfarer.api.impl.campaign.procgen.themes.BaseThemeGenerator.createStringPicker</a></div><div class="ttdeci">WeightedRandomPicker&lt; String &gt; createStringPicker(Object ... params)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d80/BaseThemeGenerator_8java_source.html#l00629">BaseThemeGenerator.java:629</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator_html_abe6372e626afa055b3b9c551fd53f54a"><div class="ttname"><a href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#abe6372e626afa055b3b9c551fd53f54a">com.fs.starfarer.api.impl.campaign.procgen.themes.BaseThemeGenerator.addDebrisFields</a></div><div class="ttdeci">void addDebrisFields(StarSystemData data, float chanceToAddAny, int min, int max)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d80/BaseThemeGenerator_8java_source.html#l00569">BaseThemeGenerator.java:569</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a1de69eb7351aace16ec01b06c27adf3c" name="a1de69eb7351aace16ec01b06c27adf3c"></a>
@@ -1551,276 +801,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d63/MiscellaneousThemeGenerator_8java_source.html#l00828">828</a> of file <a class="el" href="../../d6/d63/MiscellaneousThemeGenerator_8java_source.html">MiscellaneousThemeGenerator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  828</span>                                                       {</div>
-<div class="line"><span class="lineno">  829</span>        system.addTag(Tags.THEME_SPECIAL);</div>
-<div class="line"><span class="lineno">  830</span>        system.addTag(Tags.PK_SYSTEM);</div>
-<div class="line"><span class="lineno">  831</span>        </div>
-<div class="line"><span class="lineno">  832</span>        Global.getSector().getPersistentData().put(<a class="code hl_variable" href="../../d8/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator.html#a5492b67898a6584c686cb0e52d3ccf28">PK_SYSTEM_KEY</a>, system);</div>
-<div class="line"><span class="lineno">  833</span>        Global.getSector().getMemoryWithoutUpdate().set(<a class="code hl_variable" href="../../d8/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator.html#a5492b67898a6584c686cb0e52d3ccf28">PK_SYSTEM_KEY</a>, system.getId());</div>
-<div class="line"><span class="lineno">  834</span>        </div>
-<div class="line"><span class="lineno">  835</span>        <span class="comment">// - pick a planet at 6k range or higher to make into a tundra world</span></div>
-<div class="line"><span class="lineno">  836</span>        <span class="comment">// - turn any planets with a lower hazard rating into barren and reassign their conditions </span></div>
-<div class="line"><span class="lineno">  837</span>        </div>
-<div class="line"><span class="lineno">  838</span>        PlanetAPI tundra = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  839</span>        <span class="keywordflow">for</span> (PlanetAPI curr : system.getPlanets()) {</div>
-<div class="line"><span class="lineno">  840</span>            <span class="keywordflow">if</span> (curr.isStar()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  841</span>            <span class="comment">//if (curr.isMoon()) continue;</span></div>
-<div class="line"><span class="lineno">  842</span>            <span class="keywordflow">if</span> (curr.isGasGiant()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  843</span>            <span class="keywordflow">if</span> (curr.getMarket() == <span class="keyword">null</span>) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  844</span>            <span class="keywordflow">if</span> (!curr.getMarket().isPlanetConditionMarketOnly()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  845</span>            <span class="keywordflow">if</span> (curr.getCircularOrbitRadius() &lt; 6000) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  846</span>            </div>
-<div class="line"><span class="lineno">  847</span>            tundra = curr;</div>
-<div class="line"><span class="lineno">  848</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  849</span>        }</div>
-<div class="line"><span class="lineno">  850</span>        </div>
-<div class="line"><span class="lineno">  851</span>        <span class="comment">//pick = null;</span></div>
-<div class="line"><span class="lineno">  852</span>        </div>
-<div class="line"><span class="lineno">  853</span>        <span class="comment">// if there&#39;s no planet in a suitable range, create one</span></div>
-<div class="line"><span class="lineno">  854</span>        <span class="comment">// could end up with a tundra world really far out if the system is full of stuff</span></div>
-<div class="line"><span class="lineno">  855</span>        <span class="comment">// but has no planets, but it&#39;s unlikely</span></div>
-<div class="line"><span class="lineno">  856</span>        <span class="keywordflow">if</span> (tundra == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  857</span>            List&lt;OrbitGap&gt; gaps = <a class="code hl_function" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a8fb99f082c683571272ad052259e92e6">BaseThemeGenerator</a>.findGaps(system.getCenter(), 6000, 20000, 800);</div>
-<div class="line"><span class="lineno">  858</span>            <span class="keywordtype">float</span> orbitRadius = 7000;</div>
-<div class="line"><span class="lineno">  859</span>            <span class="keywordflow">if</span> (!gaps.isEmpty()) {</div>
-<div class="line"><span class="lineno">  860</span>                orbitRadius = (gaps.get(0).start + gaps.get(0).end) * 0.5f;</div>
-<div class="line"><span class="lineno">  861</span>            }</div>
-<div class="line"><span class="lineno">  862</span>            <span class="keywordtype">float</span> orbitDays = orbitRadius / (20f + <a class="code hl_variable" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#ac76a462cf7fa44da2d20f4da80800574">random</a>.nextFloat() * 5f);</div>
-<div class="line"><span class="lineno">  863</span>            <span class="keywordtype">float</span> radius = 100f + <a class="code hl_variable" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#ac76a462cf7fa44da2d20f4da80800574">random</a>.nextFloat() * 50f;</div>
-<div class="line"><span class="lineno">  864</span>            <span class="keywordtype">float</span> angle = <a class="code hl_variable" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#ac76a462cf7fa44da2d20f4da80800574">random</a>.nextFloat() * 360f;</div>
-<div class="line"><span class="lineno">  865</span>            String type = Planets.BARREN;</div>
-<div class="line"><span class="lineno">  866</span>            NamePick namePick = ProcgenUsedNames.pickName(NameGenData.TAG_PLANET, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  867</span>            String name = namePick.nameWithRomanSuffixIfAny;</div>
-<div class="line"><span class="lineno">  868</span>            tundra = system.addPlanet(Misc.genUID(), system.getStar(), name, type, angle, radius, orbitRadius, orbitDays);</div>
-<div class="line"><span class="lineno">  869</span>            </div>
-<div class="line"><span class="lineno">  870</span>            <span class="keywordflow">if</span> (tundra == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  871</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a7059afbea0e3f7e46f33265f07243d3a">DEBUG</a>) System.out.println(<span class="stringliteral">&quot;FAILED TO CREATE PLANET IN PK SYSTEM&quot;</span>);</div>
-<div class="line"><span class="lineno">  872</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  873</span>            }</div>
-<div class="line"><span class="lineno">  874</span>        }</div>
-<div class="line"><span class="lineno">  875</span>        </div>
-<div class="line"><span class="lineno">  876</span>        tundra.setName(<span class="stringliteral">&quot;Sentinel&quot;</span>);</div>
-<div class="line"><span class="lineno">  877</span>        tundra.addTag(Tags.NOT_RANDOM_MISSION_TARGET);</div>
-<div class="line"><span class="lineno">  878</span>        tundra.getMemoryWithoutUpdate().set(<a class="code hl_variable" href="../../d8/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator.html#a46fc0e93a620cc5cdc1e4b8762330a71">PK_PLANET_KEY</a>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  879</span>        Global.getSector().getPersistentData().put(<a class="code hl_variable" href="../../d8/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator.html#a46fc0e93a620cc5cdc1e4b8762330a71">PK_PLANET_KEY</a>, tundra);</div>
-<div class="line"><span class="lineno">  880</span>        </div>
-<div class="line"><span class="lineno">  881</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a7059afbea0e3f7e46f33265f07243d3a">DEBUG</a>) System.out.println(<span class="stringliteral">&quot;Setting planet [&quot;</span> + tundra.getName() + <span class="stringliteral">&quot;] to tundra&quot;</span>);</div>
-<div class="line"><span class="lineno">  882</span>        tundra.changeType(Planets.TUNDRA, <a class="code hl_variable" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#ac76a462cf7fa44da2d20f4da80800574">random</a>);</div>
-<div class="line"><span class="lineno">  883</span>        tundra.getMarket().getConditions().clear();</div>
-<div class="line"><span class="lineno">  884</span>        PlanetConditionGenerator.generateConditionsForPlanet(<span class="keyword">null</span>, tundra, system.getAge());</div>
-<div class="line"><span class="lineno">  885</span>        tundra.getMarket().removeCondition(Conditions.DECIVILIZED);</div>
-<div class="line"><span class="lineno">  886</span>        tundra.getMarket().removeCondition(Conditions.DECIVILIZED_SUBPOP);</div>
-<div class="line"><span class="lineno">  887</span>        tundra.getMarket().removeCondition(Conditions.RUINS_EXTENSIVE);</div>
-<div class="line"><span class="lineno">  888</span>        tundra.getMarket().removeCondition(Conditions.RUINS_SCATTERED);</div>
-<div class="line"><span class="lineno">  889</span>        tundra.getMarket().removeCondition(Conditions.RUINS_VAST);</div>
-<div class="line"><span class="lineno">  890</span>        tundra.getMarket().removeCondition(Conditions.RUINS_WIDESPREAD);</div>
-<div class="line"><span class="lineno">  891</span>        tundra.getMarket().removeCondition(Conditions.INIMICAL_BIOSPHERE);</div>
-<div class="line"><span class="lineno">  892</span>        </div>
-<div class="line"><span class="lineno">  893</span>        tundra.getMarket().removeCondition(Conditions.FARMLAND_POOR);</div>
-<div class="line"><span class="lineno">  894</span>        tundra.getMarket().removeCondition(Conditions.FARMLAND_ADEQUATE);</div>
-<div class="line"><span class="lineno">  895</span>        tundra.getMarket().removeCondition(Conditions.FARMLAND_RICH);</div>
-<div class="line"><span class="lineno">  896</span>        tundra.getMarket().removeCondition(Conditions.FARMLAND_BOUNTIFUL);</div>
-<div class="line"><span class="lineno">  897</span>        tundra.getMarket().addCondition(Conditions.FARMLAND_POOR);</div>
-<div class="line"><span class="lineno">  898</span> </div>
-<div class="line"><span class="lineno">  899</span>        </div>
-<div class="line"><span class="lineno">  900</span>        <span class="comment">// make sure the tundra world is the best habitable world in-system so there&#39;s no questions</span></div>
-<div class="line"><span class="lineno">  901</span>        <span class="comment">// as to why it was chosen by the survivors</span></div>
-<div class="line"><span class="lineno">  902</span>        <span class="keywordtype">float</span> pickHazard = tundra.getMarket().getHazardValue();</div>
-<div class="line"><span class="lineno">  903</span>        </div>
-<div class="line"><span class="lineno">  904</span>        <span class="keywordflow">for</span> (PlanetAPI curr : system.getPlanets()) {</div>
-<div class="line"><span class="lineno">  905</span>            <span class="keywordflow">if</span> (curr.isStar()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  906</span>            <span class="keywordflow">if</span> (curr.isGasGiant()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  907</span>            <span class="keywordflow">if</span> (curr.getMarket() == <span class="keyword">null</span>) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  908</span>            <span class="keywordflow">if</span> (!curr.getMarket().isPlanetConditionMarketOnly()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  909</span>            <span class="keywordflow">if</span> (curr == tundra) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  910</span>            </div>
-<div class="line"><span class="lineno">  911</span>            <span class="keywordtype">float</span> h = curr.getMarket().getHazardValue();</div>
-<div class="line"><span class="lineno">  912</span>            <span class="keywordflow">if</span> (curr.hasCondition(Conditions.HABITABLE) &amp;&amp; h &lt;= pickHazard) {</div>
-<div class="line"><span class="lineno">  913</span>                curr.changeType(Planets.BARREN_VENUSLIKE, <a class="code hl_variable" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#ac76a462cf7fa44da2d20f4da80800574">random</a>);</div>
-<div class="line"><span class="lineno">  914</span>                curr.getMarket().getConditions().clear();</div>
-<div class="line"><span class="lineno">  915</span>                PlanetConditionGenerator.generateConditionsForPlanet(<span class="keyword">null</span>, curr, system.getAge());</div>
-<div class="line"><span class="lineno">  916</span>            }</div>
-<div class="line"><span class="lineno">  917</span>        }</div>
-<div class="line"><span class="lineno">  918</span>        </div>
-<div class="line"><span class="lineno">  919</span>        <span class="keywordflow">for</span> (SectorEntityToken curr : system.getEntitiesWithTag(Tags.STABLE_LOCATION)) {</div>
-<div class="line"><span class="lineno">  920</span>            system.removeEntity(curr);</div>
-<div class="line"><span class="lineno">  921</span>        }</div>
-<div class="line"><span class="lineno">  922</span>        <span class="keywordflow">for</span> (SectorEntityToken curr : system.getEntitiesWithTag(Tags.OBJECTIVE)) {</div>
-<div class="line"><span class="lineno">  923</span>            system.removeEntity(curr);</div>
-<div class="line"><span class="lineno">  924</span>        }</div>
-<div class="line"><span class="lineno">  925</span>        </div>
-<div class="line"><span class="lineno">  926</span>        </div>
-<div class="line"><span class="lineno">  927</span>        List&lt;OrbitGap&gt; gaps = <a class="code hl_function" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a8fb99f082c683571272ad052259e92e6">BaseThemeGenerator</a>.findGaps(system.getCenter(), 2000, 20000, 800);</div>
-<div class="line"><span class="lineno">  928</span>        <span class="keywordtype">float</span> orbitRadius = 7000;</div>
-<div class="line"><span class="lineno">  929</span>        <span class="keywordflow">if</span> (!gaps.isEmpty()) {</div>
-<div class="line"><span class="lineno">  930</span>            orbitRadius = (gaps.get(0).start + gaps.get(0).end) * 0.5f;</div>
-<div class="line"><span class="lineno">  931</span>        }</div>
-<div class="line"><span class="lineno">  932</span>        <span class="keywordtype">float</span> radius = 500f + 200f * <a class="code hl_variable" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#ac76a462cf7fa44da2d20f4da80800574">random</a>.nextFloat();</div>
-<div class="line"><span class="lineno">  933</span>        <span class="keywordtype">float</span> area = radius * radius * 3.14f;</div>
-<div class="line"><span class="lineno">  934</span>        <span class="keywordtype">int</span> count = (int) (area / 80000f);</div>
-<div class="line"><span class="lineno">  935</span>        count *= 2;</div>
-<div class="line"><span class="lineno">  936</span>        <span class="keywordflow">if</span> (count &lt; 10) count = 10;</div>
-<div class="line"><span class="lineno">  937</span>        <span class="keywordflow">if</span> (count &gt; 100) count = 100;</div>
-<div class="line"><span class="lineno">  938</span>        <span class="keywordtype">float</span> angle = <a class="code hl_variable" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#ac76a462cf7fa44da2d20f4da80800574">random</a>.nextFloat() * 360f;</div>
-<div class="line"><span class="lineno">  939</span>        <span class="keywordtype">float</span> orbitDays = orbitRadius / (20f + <a class="code hl_variable" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#ac76a462cf7fa44da2d20f4da80800574">random</a>.nextFloat() * 5f);</div>
-<div class="line"><span class="lineno">  940</span>        </div>
-<div class="line"><span class="lineno">  941</span>        SectorEntityToken field = system.addTerrain(Terrain.ASTEROID_FIELD,</div>
-<div class="line"><span class="lineno">  942</span>                <span class="keyword">new</span> AsteroidFieldParams(</div>
-<div class="line"><span class="lineno">  943</span>                    radius, <span class="comment">// min radius</span></div>
-<div class="line"><span class="lineno">  944</span>                    radius + 100f, <span class="comment">// max radius</span></div>
-<div class="line"><span class="lineno">  945</span>                    count, <span class="comment">// min asteroid count</span></div>
-<div class="line"><span class="lineno">  946</span>                    count, <span class="comment">// max asteroid count</span></div>
-<div class="line"><span class="lineno">  947</span>                    4f, <span class="comment">// min asteroid radius </span></div>
-<div class="line"><span class="lineno">  948</span>                    16f, <span class="comment">// max asteroid radius</span></div>
-<div class="line"><span class="lineno">  949</span>                    <span class="keyword">null</span>)); <span class="comment">// null for default name</span></div>
-<div class="line"><span class="lineno">  950</span>        </div>
-<div class="line"><span class="lineno">  951</span>        field.setCircularOrbit(system.getCenter(), angle, orbitRadius, orbitDays);</div>
-<div class="line"><span class="lineno">  952</span>        </div>
-<div class="line"><span class="lineno">  953</span>        SectorEntityToken cache = <a class="code hl_function" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a8fb99f082c683571272ad052259e92e6">BaseThemeGenerator</a>.addSalvageEntity(system, Entities.HIDDEN_CACHE, Factions.NEUTRAL);</div>
-<div class="line"><span class="lineno">  954</span>        cache.getMemoryWithoutUpdate().set(<a class="code hl_variable" href="../../d8/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator.html#aae1e0e51fa28861e3a4ccc750fffce18">PK_CACHE_KEY</a>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  955</span>        cache.addTag(Tags.NOT_RANDOM_MISSION_TARGET);</div>
-<div class="line"><span class="lineno">  956</span>        <span class="comment">//cache.getLocation().set(10000, 10000);</span></div>
-<div class="line"><span class="lineno">  957</span>        cache.setCircularOrbit(field, 0, 0, 100f);</div>
-<div class="line"><span class="lineno">  958</span>        Misc.setDefenderOverride(cache, <span class="keyword">new</span> DefenderDataOverride(Factions.HEGEMONY, 1f, 20, 20, 1));</div>
-<div class="line"><span class="lineno">  959</span>        </div>
-<div class="line"><span class="lineno">  960</span>        <span class="comment">// Misc.addDefeatTrigger(fleet, trigger);</span></div>
-<div class="line"><span class="lineno">  961</span>        </div>
-<div class="line"><span class="lineno">  962</span>        <span class="comment">// add a ship graveyard around the cache - Luddic Path ships, presumably from another</span></div>
-<div class="line"><span class="lineno">  963</span>        <span class="comment">// Path operative that got farther along but never reported back</span></div>
-<div class="line"><span class="lineno">  964</span>        StarSystemData data = <span class="keyword">new</span> StarSystemData();</div>
-<div class="line"><span class="lineno">  965</span>        WeightedRandomPicker&lt;String&gt; derelictShipFactions = <span class="keyword">new</span> WeightedRandomPicker&lt;String&gt;(<a class="code hl_variable" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#ac76a462cf7fa44da2d20f4da80800574">random</a>);</div>
-<div class="line"><span class="lineno">  966</span>        derelictShipFactions.add(Factions.LUDDIC_PATH);</div>
-<div class="line"><span class="lineno">  967</span>        WeightedRandomPicker&lt;String&gt; hulls = <span class="keyword">new</span> WeightedRandomPicker&lt;String&gt;(<a class="code hl_variable" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#ac76a462cf7fa44da2d20f4da80800574">random</a>);</div>
-<div class="line"><span class="lineno">  968</span>        hulls.add(<span class="stringliteral">&quot;prometheus2&quot;</span>, 1f);</div>
-<div class="line"><span class="lineno">  969</span>        hulls.add(<span class="stringliteral">&quot;colossus2&quot;</span>, 1f);</div>
-<div class="line"><span class="lineno">  970</span>        hulls.add(<span class="stringliteral">&quot;colossus2&quot;</span>, 1f);</div>
-<div class="line"><span class="lineno">  971</span>        hulls.add(<span class="stringliteral">&quot;colossus2&quot;</span>, 1f);</div>
-<div class="line"><span class="lineno">  972</span>        hulls.add(<span class="stringliteral">&quot;eradicator&quot;</span>, 1f);</div>
-<div class="line"><span class="lineno">  973</span>        hulls.add(<span class="stringliteral">&quot;enforcer&quot;</span>, 1f);</div>
-<div class="line"><span class="lineno">  974</span>        hulls.add(<span class="stringliteral">&quot;sunder&quot;</span>, 1f);</div>
-<div class="line"><span class="lineno">  975</span>        hulls.add(<span class="stringliteral">&quot;venture_pather&quot;</span>, 1f);</div>
-<div class="line"><span class="lineno">  976</span>        hulls.add(<span class="stringliteral">&quot;manticore_luddic_path&quot;</span>, 1f);</div>
-<div class="line"><span class="lineno">  977</span>        hulls.add(<span class="stringliteral">&quot;cerberus_luddic_path&quot;</span>, 1f);</div>
-<div class="line"><span class="lineno">  978</span>        hulls.add(<span class="stringliteral">&quot;hound_luddic_path&quot;</span>, 1f);</div>
-<div class="line"><span class="lineno">  979</span>        hulls.add(<span class="stringliteral">&quot;buffalo2&quot;</span>, 1f);</div>
-<div class="line"><span class="lineno">  980</span>        <a class="code hl_function" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a0318acbfb5fb846f454347be99194219">addShipGraveyard</a>(data, field, derelictShipFactions, hulls);</div>
-<div class="line"><span class="lineno">  981</span>        <span class="keywordflow">for</span> (AddedEntity ae : data.generated) {</div>
-<div class="line"><span class="lineno">  982</span>            SalvageSpecialAssigner.assignSpecials(ae.entity, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  983</span>        }</div>
-<div class="line"><span class="lineno">  984</span>        </div>
-<div class="line"><span class="lineno">  985</span>        <span class="comment">// add some remnant derelicts around a fringe jump-point</span></div>
-<div class="line"><span class="lineno">  986</span>        <span class="comment">// where the fight was</span></div>
-<div class="line"><span class="lineno">  987</span>        <span class="keywordtype">float</span> max = 0f;</div>
-<div class="line"><span class="lineno">  988</span>        JumpPointAPI fringePoint = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  989</span>        List&lt;JumpPointAPI&gt; points = system.getEntities(JumpPointAPI.class);</div>
-<div class="line"><span class="lineno">  990</span>        <span class="keywordflow">for</span> (JumpPointAPI curr : points) {</div>
-<div class="line"><span class="lineno">  991</span>            <span class="keywordtype">float</span> dist = curr.getCircularOrbitRadius();</div>
-<div class="line"><span class="lineno">  992</span>            <span class="keywordflow">if</span> (dist &gt; max) {</div>
-<div class="line"><span class="lineno">  993</span>                max = dist;</div>
-<div class="line"><span class="lineno">  994</span>                fringePoint = curr;</div>
-<div class="line"><span class="lineno">  995</span>            }</div>
-<div class="line"><span class="lineno">  996</span>        }</div>
-<div class="line"><span class="lineno">  997</span>        </div>
-<div class="line"><span class="lineno">  998</span>        <span class="keywordflow">if</span> (fringePoint != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  999</span>            data = <span class="keyword">new</span> StarSystemData();</div>
-<div class="line"><span class="lineno"> 1000</span>            WeightedRandomPicker&lt;String&gt; remnantShipFactions = <span class="keyword">new</span> WeightedRandomPicker&lt;String&gt;(<a class="code hl_variable" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#ac76a462cf7fa44da2d20f4da80800574">random</a>);</div>
-<div class="line"><span class="lineno"> 1001</span>            remnantShipFactions.add(Factions.REMNANTS);</div>
-<div class="line"><span class="lineno"> 1002</span>            hulls = <span class="keyword">new</span> WeightedRandomPicker&lt;String&gt;(<a class="code hl_variable" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#ac76a462cf7fa44da2d20f4da80800574">random</a>);</div>
-<div class="line"><span class="lineno"> 1003</span>            hulls.add(<span class="stringliteral">&quot;radiant&quot;</span>, 0.25f);</div>
-<div class="line"><span class="lineno"> 1004</span>            hulls.add(<span class="stringliteral">&quot;nova&quot;</span>, 0.5f);</div>
-<div class="line"><span class="lineno"> 1005</span>            hulls.add(<span class="stringliteral">&quot;brilliant&quot;</span>, 1f);</div>
-<div class="line"><span class="lineno"> 1006</span>            hulls.add(<span class="stringliteral">&quot;apex&quot;</span>, 1f);</div>
-<div class="line"><span class="lineno"> 1007</span>            hulls.add(<span class="stringliteral">&quot;scintilla&quot;</span>, 1f);</div>
-<div class="line"><span class="lineno"> 1008</span>            hulls.add(<span class="stringliteral">&quot;scintilla&quot;</span>, 1f);</div>
-<div class="line"><span class="lineno"> 1009</span>            hulls.add(<span class="stringliteral">&quot;fulgent&quot;</span>, 1f);</div>
-<div class="line"><span class="lineno"> 1010</span>            hulls.add(<span class="stringliteral">&quot;fulgent&quot;</span>, 1f);</div>
-<div class="line"><span class="lineno"> 1011</span>            hulls.add(<span class="stringliteral">&quot;glimmer&quot;</span>, 1f);</div>
-<div class="line"><span class="lineno"> 1012</span>            hulls.add(<span class="stringliteral">&quot;glimmer&quot;</span>, 1f);</div>
-<div class="line"><span class="lineno"> 1013</span>            hulls.add(<span class="stringliteral">&quot;lumen&quot;</span>, 1f);</div>
-<div class="line"><span class="lineno"> 1014</span>            hulls.add(<span class="stringliteral">&quot;lumen&quot;</span>, 1f);</div>
-<div class="line"><span class="lineno"> 1015</span>            <a class="code hl_function" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a0318acbfb5fb846f454347be99194219">addShipGraveyard</a>(data, fringePoint, remnantShipFactions, hulls);</div>
-<div class="line"><span class="lineno"> 1016</span>            <a class="code hl_function" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#abe92a892e7fbc08fb4a50cba202ed9ee">addDebrisField</a>(data, fringePoint, 400f);</div>
-<div class="line"><span class="lineno"> 1017</span>            </div>
-<div class="line"><span class="lineno"> 1018</span>            <span class="keywordflow">for</span> (AddedEntity ae : data.generated) {</div>
-<div class="line"><span class="lineno"> 1019</span>                SalvageSpecialAssigner.assignSpecials(ae.entity, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno"> 1020</span>                <span class="keywordflow">if</span> (ae.entity.getCustomPlugin() instanceof DerelictShipEntityPlugin) {</div>
-<div class="line"><span class="lineno"> 1021</span>                    DerelictShipEntityPlugin plugin = (DerelictShipEntityPlugin) ae.entity.getCustomPlugin();</div>
-<div class="line"><span class="lineno"> 1022</span>                    plugin.getData().ship.condition = ShipCondition.WRECKED;</div>
-<div class="line"><span class="lineno"> 1023</span>                }</div>
-<div class="line"><span class="lineno"> 1024</span>            }</div>
-<div class="line"><span class="lineno"> 1025</span>        }</div>
-<div class="line"><span class="lineno"> 1026</span>        </div>
-<div class="line"><span class="lineno"> 1027</span>        <span class="comment">// Improvised dockyard where presumably the ship conversion took place</span></div>
-<div class="line"><span class="lineno"> 1028</span>        SectorEntityToken dockyard = system.addCustomEntity(<span class="stringliteral">&quot;pk_dockyard&quot;</span>,</div>
-<div class="line"><span class="lineno"> 1029</span>                <span class="stringliteral">&quot;Sentinel Gantries&quot;</span>, Entities.ORBITAL_DOCKYARD, <span class="stringliteral">&quot;neutral&quot;</span>);</div>
-<div class="line"><span class="lineno"> 1030</span> </div>
-<div class="line"><span class="lineno"> 1031</span>        dockyard.setCircularOrbitPointingDown(tundra, 45, 300, 30);     </div>
-<div class="line"><span class="lineno"> 1032</span>        dockyard.setCustomDescriptionId(<span class="stringliteral">&quot;pk_orbital_dockyard&quot;</span>);</div>
-<div class="line"><span class="lineno"> 1033</span>        dockyard.getMemoryWithoutUpdate().set(<span class="stringliteral">&quot;$pkDockyard&quot;</span>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno"> 1034</span>        </div>
-<div class="line"><span class="lineno"> 1035</span>        <span class="comment">//neutralStation.setInteractionImage(&quot;illustrations&quot;, &quot;abandoned_station2&quot;);</span></div>
-<div class="line"><span class="lineno"> 1036</span>        Misc.setAbandonedStationMarket(<span class="stringliteral">&quot;pk_dockyard&quot;</span>, dockyard);</div>
-<div class="line"><span class="lineno"> 1037</span>        </div>
-<div class="line"><span class="lineno"> 1038</span>        </div>
-<div class="line"><span class="lineno"> 1039</span>        <span class="comment">// add some unused stuff to the dockyard</span></div>
-<div class="line"><span class="lineno"> 1040</span>        CargoAPI cargo = dockyard.getMarket().getSubmarket(Submarkets.SUBMARKET_STORAGE).getCargo();</div>
-<div class="line"><span class="lineno"> 1041</span>        cargo.initMothballedShips(Factions.HEGEMONY);</div>
-<div class="line"><span class="lineno"> 1042</span>        </div>
-<div class="line"><span class="lineno"> 1043</span>        CampaignFleetAPI temp = Global.getFactory().createEmptyFleet(Factions.HEGEMONY, <span class="keyword">null</span>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno"> 1044</span>        temp.getFleetData().addFleetMember(<span class="stringliteral">&quot;enforcer_XIV_Elite&quot;</span>);</div>
-<div class="line"><span class="lineno"> 1045</span>        temp.getFleetData().addFleetMember(<span class="stringliteral">&quot;enforcer_XIV_Elite&quot;</span>);</div>
-<div class="line"><span class="lineno"> 1046</span>        temp.getFleetData().addFleetMember(<span class="stringliteral">&quot;eagle_xiv_Elite&quot;</span>);</div>
-<div class="line"><span class="lineno"> 1047</span>        temp.getFleetData().addFleetMember(<span class="stringliteral">&quot;dominator_XIV_Elite&quot;</span>);</div>
-<div class="line"><span class="lineno"> 1048</span>        DefaultFleetInflaterParams p = <span class="keyword">new</span> DefaultFleetInflaterParams();</div>
-<div class="line"><span class="lineno"> 1049</span>        p.quality = -1;</div>
-<div class="line"><span class="lineno"> 1050</span>        temp.setInflater(<span class="keyword">new</span> DefaultFleetInflater(p));</div>
-<div class="line"><span class="lineno"> 1051</span>        temp.inflateIfNeeded();</div>
-<div class="line"><span class="lineno"> 1052</span>        temp.setInflater(<span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno"> 1053</span> </div>
-<div class="line"><span class="lineno"> 1054</span>        <span class="keywordtype">int</span> index = 0;</div>
-<div class="line"><span class="lineno"> 1055</span>        <span class="keywordflow">for</span> (FleetMemberAPI member : temp.getFleetData().getMembersListCopy()) {</div>
-<div class="line"><span class="lineno"> 1056</span>            <span class="keywordflow">for</span> (String slotId : member.getVariant().getFittedWeaponSlots()) {</div>
-<div class="line"><span class="lineno"> 1057</span>                String weaponId = member.getVariant().getWeaponId(slotId);</div>
-<div class="line"><span class="lineno"> 1058</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#ac76a462cf7fa44da2d20f4da80800574">random</a>.nextFloat() &lt; 0.5f) {</div>
-<div class="line"><span class="lineno"> 1059</span>                    member.getVariant().clearSlot(slotId);</div>
-<div class="line"><span class="lineno"> 1060</span>                }</div>
-<div class="line"><span class="lineno"> 1061</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#ac76a462cf7fa44da2d20f4da80800574">random</a>.nextFloat() &lt; 0.25f) {</div>
-<div class="line"><span class="lineno"> 1062</span>                    cargo.addWeapons(weaponId, 1);</div>
-<div class="line"><span class="lineno"> 1063</span>                }</div>
-<div class="line"><span class="lineno"> 1064</span>            }</div>
-<div class="line"><span class="lineno"> 1065</span>            <span class="keywordflow">if</span> (index == 0 || index == 2) {</div>
-<div class="line"><span class="lineno"> 1066</span>                cargo.getMothballedShips().addFleetMember(member);</div>
-<div class="line"><span class="lineno"> 1067</span>            }</div>
-<div class="line"><span class="lineno"> 1068</span>            index++;</div>
-<div class="line"><span class="lineno"> 1069</span>        }</div>
-<div class="line"><span class="lineno"> 1070</span>        cargo.addCommodity(Commodities.METALS, 50f + <a class="code hl_variable" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#ac76a462cf7fa44da2d20f4da80800574">random</a>.nextInt(51));</div>
-<div class="line"><span class="lineno"> 1071</span>        </div>
-<div class="line"><span class="lineno"> 1072</span>        List&lt;CampaignFleetAPI&gt; stations = <a class="code hl_function" href="../../d8/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator.html#abed2f2e43192e6964ae36781a00007c1">getRemnantStations</a>(<span class="keyword">true</span>, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno"> 1073</span>        <span class="keywordtype">float</span> minDist = Float.MAX_VALUE;</div>
-<div class="line"><span class="lineno"> 1074</span>        CampaignFleetAPI nexus = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno"> 1075</span>        <span class="keywordflow">for</span> (CampaignFleetAPI curr : stations) {</div>
-<div class="line"><span class="lineno"> 1076</span>            <span class="keywordtype">float</span> dist = Misc.getDistanceLY(tundra, curr);</div>
-<div class="line"><span class="lineno"> 1077</span>            <span class="keywordflow">if</span> (dist &lt; minDist) {</div>
-<div class="line"><span class="lineno"> 1078</span>                minDist = dist;</div>
-<div class="line"><span class="lineno"> 1079</span>                nexus = curr;</div>
-<div class="line"><span class="lineno"> 1080</span>            }</div>
-<div class="line"><span class="lineno"> 1081</span>        }</div>
-<div class="line"><span class="lineno"> 1082</span>        <span class="keywordflow">if</span> (nexus != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno"> 1083</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a7059afbea0e3f7e46f33265f07243d3a">DEBUG</a>) System.out.println(<span class="stringliteral">&quot;Found Remnant nexus in [&quot;</span> + nexus.getContainingLocation().getName() + <span class="stringliteral">&quot;]&quot;</span>);</div>
-<div class="line"><span class="lineno"> 1084</span>            nexus.getMemoryWithoutUpdate().set(<a class="code hl_variable" href="../../d8/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator.html#aac7276b4a69e28245593ba3dc9829a33">PK_NEXUS_KEY</a>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno"> 1085</span>            Global.getSector().getPersistentData().put(<a class="code hl_variable" href="../../d8/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator.html#aac7276b4a69e28245593ba3dc9829a33">PK_NEXUS_KEY</a>, nexus);</div>
-<div class="line"><span class="lineno"> 1086</span>            Global.getSector().getMemoryWithoutUpdate().set(<a class="code hl_variable" href="../../d8/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator.html#aac7276b4a69e28245593ba3dc9829a33">PK_NEXUS_KEY</a>, nexus.getContainingLocation().getId());</div>
-<div class="line"><span class="lineno"> 1087</span>            </div>
-<div class="line"><span class="lineno"> 1088</span>            Misc.addDefeatTrigger(nexus, <span class="stringliteral">&quot;PKNexusDefeated&quot;</span>);</div>
-<div class="line"><span class="lineno"> 1089</span>        }</div>
-<div class="line"><span class="lineno"> 1090</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator_html_abe92a892e7fbc08fb4a50cba202ed9ee"><div class="ttname"><a href="../../d6/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#abe92a892e7fbc08fb4a50cba202ed9ee">com.fs.starfarer.api.impl.campaign.procgen.themes.BaseThemeGenerator.addDebrisField</a></div><div class="ttdeci">AddedEntity addDebrisField(StarSystemData data, SectorEntityToken focus, float radius)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d80/BaseThemeGenerator_8java_source.html#l00608">BaseThemeGenerator.java:608</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator_html_a46fc0e93a620cc5cdc1e4b8762330a71"><div class="ttname"><a href="../../d8/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator.html#a46fc0e93a620cc5cdc1e4b8762330a71">com.fs.starfarer.api.impl.campaign.procgen.themes.MiscellaneousThemeGenerator.PK_PLANET_KEY</a></div><div class="ttdeci">static String PK_PLANET_KEY</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d63/MiscellaneousThemeGenerator_8java_source.html#l00058">MiscellaneousThemeGenerator.java:58</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator_html_a5492b67898a6584c686cb0e52d3ccf28"><div class="ttname"><a href="../../d8/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator.html#a5492b67898a6584c686cb0e52d3ccf28">com.fs.starfarer.api.impl.campaign.procgen.themes.MiscellaneousThemeGenerator.PK_SYSTEM_KEY</a></div><div class="ttdeci">static String PK_SYSTEM_KEY</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d63/MiscellaneousThemeGenerator_8java_source.html#l00057">MiscellaneousThemeGenerator.java:57</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator_html_aac7276b4a69e28245593ba3dc9829a33"><div class="ttname"><a href="../../d8/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator.html#aac7276b4a69e28245593ba3dc9829a33">com.fs.starfarer.api.impl.campaign.procgen.themes.MiscellaneousThemeGenerator.PK_NEXUS_KEY</a></div><div class="ttdeci">static String PK_NEXUS_KEY</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d63/MiscellaneousThemeGenerator_8java_source.html#l00060">MiscellaneousThemeGenerator.java:60</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator_html_aae1e0e51fa28861e3a4ccc750fffce18"><div class="ttname"><a href="../../d8/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator.html#aae1e0e51fa28861e3a4ccc750fffce18">com.fs.starfarer.api.impl.campaign.procgen.themes.MiscellaneousThemeGenerator.PK_CACHE_KEY</a></div><div class="ttdeci">static String PK_CACHE_KEY</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d63/MiscellaneousThemeGenerator_8java_source.html#l00059">MiscellaneousThemeGenerator.java:59</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator_html_abed2f2e43192e6964ae36781a00007c1"><div class="ttname"><a href="../../d8/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemeGenerator.html#abed2f2e43192e6964ae36781a00007c1">com.fs.starfarer.api.impl.campaign.procgen.themes.MiscellaneousThemeGenerator.getRemnantStations</a></div><div class="ttdeci">static List&lt; CampaignFleetAPI &gt; getRemnantStations(boolean includeDamaged, boolean onlyDamaged)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d63/MiscellaneousThemeGenerator_8java_source.html#l01093">MiscellaneousThemeGenerator.java:1093</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

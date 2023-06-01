@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -303,20 +304,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a3859215f6c3408946bf590a2ce5c0e74">com.fs.starfarer.api.combat.BaseHullMod</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/dc4/CompromisedStructure_8java_source.html#l00030">30</a> of file <a class="el" href="../../d9/dc4/CompromisedStructure_8java_source.html">CompromisedStructure.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   30</span>                                                                                                        {</div>
-<div class="line"><span class="lineno">   31</span>        </div>
-<div class="line"><span class="lineno">   32</span>        <span class="keywordtype">float</span> effect = stats.getDynamic().getValue(Stats.DMOD_EFFECT_MULT);</div>
-<div class="line"><span class="lineno">   33</span>        <span class="keywordtype">float</span> armorMult = <a class="code hl_variable" href="../../d7/d6b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1CompromisedStructure.html#a24cd270a28ffd4ec556488434926b4db">ARMOR_PENALTY_MULT</a> + (1f - <a class="code hl_variable" href="../../d7/d6b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1CompromisedStructure.html#a24cd270a28ffd4ec556488434926b4db">ARMOR_PENALTY_MULT</a>) * (1f - effect);</div>
-<div class="line"><span class="lineno">   34</span>        <span class="keywordtype">float</span> hullMult = <a class="code hl_variable" href="../../d7/d6b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1CompromisedStructure.html#a25ba70fa71c9934b6de8ec5b3c4df9ed">HULL_PENALTY_MULT</a> + (1f - <a class="code hl_variable" href="../../d7/d6b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1CompromisedStructure.html#a25ba70fa71c9934b6de8ec5b3c4df9ed">HULL_PENALTY_MULT</a>) * (1f - effect);</div>
-<div class="line"><span class="lineno">   35</span>        </div>
-<div class="line"><span class="lineno">   36</span>        stats.getArmorBonus().modifyMult(<span class="keywordtype">id</span>, armorMult);</div>
-<div class="line"><span class="lineno">   37</span>        stats.getHullBonus().modifyMult(<span class="keywordtype">id</span>, hullMult);</div>
-<div class="line"><span class="lineno">   38</span>        <a class="code hl_function" href="../../d7/d6b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1CompromisedStructure.html#a1037b27f172cf5e2927e149f68a95d8a">modifyCost</a>(hullSize, stats, <span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">   39</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1CompromisedStructure_html_a1037b27f172cf5e2927e149f68a95d8a"><div class="ttname"><a href="../../d7/d6b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1CompromisedStructure.html#a1037b27f172cf5e2927e149f68a95d8a">com.fs.starfarer.api.impl.hullmods.CompromisedStructure.modifyCost</a></div><div class="ttdeci">static void modifyCost(HullSize hullSize, MutableShipStatsAPI stats, String id)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dc4/CompromisedStructure_8java_source.html#l00012">CompromisedStructure.java:12</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1CompromisedStructure_html_a24cd270a28ffd4ec556488434926b4db"><div class="ttname"><a href="../../d7/d6b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1CompromisedStructure.html#a24cd270a28ffd4ec556488434926b4db">com.fs.starfarer.api.impl.hullmods.CompromisedStructure.ARMOR_PENALTY_MULT</a></div><div class="ttdeci">static float ARMOR_PENALTY_MULT</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dc4/CompromisedStructure_8java_source.html#l00027">CompromisedStructure.java:27</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1CompromisedStructure_html_a25ba70fa71c9934b6de8ec5b3c4df9ed"><div class="ttname"><a href="../../d7/d6b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1CompromisedStructure.html#a25ba70fa71c9934b6de8ec5b3c4df9ed">com.fs.starfarer.api.impl.hullmods.CompromisedStructure.HULL_PENALTY_MULT</a></div><div class="ttdeci">static float HULL_PENALTY_MULT</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dc4/CompromisedStructure_8java_source.html#l00028">CompromisedStructure.java:28</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a0d45a442d67fc642e9c0f39a42bb49b8" name="a0d45a442d67fc642e9c0f39a42bb49b8"></a>
@@ -354,14 +342,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/dc4/CompromisedStructure_8java_source.html#l00020">20</a> of file <a class="el" href="../../d9/dc4/CompromisedStructure_8java_source.html">CompromisedStructure.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   20</span>                                                                     {</div>
-<div class="line"><span class="lineno">   21</span>        <span class="keywordflow">if</span> (index - startIndex == 0) {</div>
-<div class="line"><span class="lineno">   22</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span> + (int) Math.round((1f - <a class="code hl_variable" href="../../d7/d6b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1CompromisedStructure.html#a5c94c0684d85b16ae0c16f20be721b2d">DEPLOYMENT_COST_MULT</a>) * 100f) + <span class="stringliteral">&quot;%&quot;</span>;</div>
-<div class="line"><span class="lineno">   23</span>        }</div>
-<div class="line"><span class="lineno">   24</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   25</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1CompromisedStructure_html_a5c94c0684d85b16ae0c16f20be721b2d"><div class="ttname"><a href="../../d7/d6b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1CompromisedStructure.html#a5c94c0684d85b16ae0c16f20be721b2d">com.fs.starfarer.api.impl.hullmods.CompromisedStructure.DEPLOYMENT_COST_MULT</a></div><div class="ttdeci">static float DEPLOYMENT_COST_MULT</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dc4/CompromisedStructure_8java_source.html#l00010">CompromisedStructure.java:10</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="afeba3816af69c92f7a31da6aff40ef0f" name="afeba3816af69c92f7a31da6aff40ef0f"></a>
@@ -399,20 +380,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a81fc41471bf3bff9e51db9106e2e1bd2">com.fs.starfarer.api.combat.BaseHullMod</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/dc4/CompromisedStructure_8java_source.html#l00041">41</a> of file <a class="el" href="../../d9/dc4/CompromisedStructure_8java_source.html">CompromisedStructure.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   41</span>                                                                                  {</div>
-<div class="line"><span class="lineno">   42</span>        <span class="keywordtype">float</span> effect = 1f;</div>
-<div class="line"><span class="lineno">   43</span>        <span class="keywordflow">if</span> (ship != <span class="keyword">null</span>) effect = ship.getMutableStats().getDynamic().getValue(Stats.DMOD_EFFECT_MULT);</div>
-<div class="line"><span class="lineno">   44</span>        </div>
-<div class="line"><span class="lineno">   45</span>        <span class="keywordtype">float</span> armorMult = <a class="code hl_variable" href="../../d7/d6b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1CompromisedStructure.html#a24cd270a28ffd4ec556488434926b4db">ARMOR_PENALTY_MULT</a> + (1f - <a class="code hl_variable" href="../../d7/d6b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1CompromisedStructure.html#a24cd270a28ffd4ec556488434926b4db">ARMOR_PENALTY_MULT</a>) * (1f - effect);</div>
-<div class="line"><span class="lineno">   46</span>        <span class="keywordtype">float</span> hullMult = <a class="code hl_variable" href="../../d7/d6b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1CompromisedStructure.html#a25ba70fa71c9934b6de8ec5b3c4df9ed">HULL_PENALTY_MULT</a> + (1f - <a class="code hl_variable" href="../../d7/d6b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1CompromisedStructure.html#a25ba70fa71c9934b6de8ec5b3c4df9ed">HULL_PENALTY_MULT</a>) * (1f - effect);</div>
-<div class="line"><span class="lineno">   47</span>        </div>
-<div class="line"><span class="lineno">   48</span>        <span class="keywordflow">if</span> (index == 0) <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span> + (int) Math.round((1f - armorMult) * 100f) + <span class="stringliteral">&quot;%&quot;</span>;</div>
-<div class="line"><span class="lineno">   49</span>        <span class="keywordflow">if</span> (index == 1) <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span> + (int) Math.round((1f - hullMult) * 100f) + <span class="stringliteral">&quot;%&quot;</span>;</div>
-<div class="line"><span class="lineno">   50</span>        <span class="keywordflow">if</span> (index &gt;= 2) <span class="keywordflow">return</span> <a class="code hl_function" href="../../d7/d6b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1CompromisedStructure.html#a0d45a442d67fc642e9c0f39a42bb49b8">getCostDescParam</a>(index, 2); </div>
-<div class="line"><span class="lineno">   51</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   52</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1CompromisedStructure_html_a0d45a442d67fc642e9c0f39a42bb49b8"><div class="ttname"><a href="../../d7/d6b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1CompromisedStructure.html#a0d45a442d67fc642e9c0f39a42bb49b8">com.fs.starfarer.api.impl.hullmods.CompromisedStructure.getCostDescParam</a></div><div class="ttdeci">static String getCostDescParam(int index, int startIndex)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dc4/CompromisedStructure_8java_source.html#l00020">CompromisedStructure.java:20</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a1037b27f172cf5e2927e149f68a95d8a" name="a1037b27f172cf5e2927e149f68a95d8a"></a>
@@ -456,15 +424,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/dc4/CompromisedStructure_8java_source.html#l00012">12</a> of file <a class="el" href="../../d9/dc4/CompromisedStructure_8java_source.html">CompromisedStructure.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   12</span>                                                                                           {</div>
-<div class="line"><span class="lineno">   13</span>        stats.getSuppliesToRecover().modifyMult(<span class="keywordtype">id</span>, <a class="code hl_variable" href="../../d7/d6b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1CompromisedStructure.html#a5c94c0684d85b16ae0c16f20be721b2d">DEPLOYMENT_COST_MULT</a>);</div>
-<div class="line"><span class="lineno">   14</span>        </div>
-<div class="line"><span class="lineno">   15</span>        <span class="keywordtype">float</span> effect = stats.getDynamic().getValue(Stats.DMOD_REDUCE_MAINTENANCE, 0);</div>
-<div class="line"><span class="lineno">   16</span>        <span class="keywordflow">if</span> (effect &gt; 0) {</div>
-<div class="line"><span class="lineno">   17</span>            stats.getSuppliesPerMonth().modifyMult(<span class="keywordtype">id</span>, <a class="code hl_variable" href="../../d7/d6b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1CompromisedStructure.html#a5c94c0684d85b16ae0c16f20be721b2d">DEPLOYMENT_COST_MULT</a>);</div>
-<div class="line"><span class="lineno">   18</span>        }</div>
-<div class="line"><span class="lineno">   19</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -208,112 +209,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html#l00210">210</a> of file <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html">SalvageEntityGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  210</span>                                                                         {</div>
-<div class="line"><span class="lineno">  211</span>        <span class="keywordtype">id</span> = row.getString(<span class="stringliteral">&quot;id&quot;</span>);</div>
-<div class="line"><span class="lineno">  212</span>        </div>
-<div class="line"><span class="lineno">  213</span>        stationRole = row.getString(<span class="stringliteral">&quot;stationRole&quot;</span>);</div>
-<div class="line"><span class="lineno">  214</span>        </div>
-<div class="line"><span class="lineno">  215</span>        nameOverride = row.optString(<span class="stringliteral">&quot;name&quot;</span>);</div>
-<div class="line"><span class="lineno">  216</span>        <span class="keywordflow">if</span> (nameOverride != <span class="keyword">null</span> &amp;&amp; nameOverride.isEmpty()) nameOverride = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  217</span>        </div>
-<div class="line"><span class="lineno">  218</span>        salvageRating = (float) row.optDouble(<span class="stringliteral">&quot;rating&quot;</span>, 0);</div>
-<div class="line"><span class="lineno">  219</span>        detectionRange = (float) row.optDouble(<span class="stringliteral">&quot;detection_range&quot;</span>, 0);</div>
-<div class="line"><span class="lineno">  220</span>        </div>
-<div class="line"><span class="lineno">  221</span>        <span class="keywordtype">float</span> baseXP = 200 + 1 * (salvageRating * 20f);</div>
-<div class="line"><span class="lineno">  222</span>        <span class="comment">//baseXP /= 3f;</span></div>
-<div class="line"><span class="lineno">  223</span>        baseXP = Misc.getRounded(baseXP);</div>
-<div class="line"><span class="lineno">  224</span><span class="comment">//      if (id.equals(&quot;ruins_vast&quot;)) {</span></div>
-<div class="line"><span class="lineno">  225</span><span class="comment">//          System.out.println(&quot;wefwefe&quot;);</span></div>
-<div class="line"><span class="lineno">  226</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  227</span>        xpDiscover = (float) row.optDouble(<span class="stringliteral">&quot;xpDiscover&quot;</span>, baseXP);</div>
-<div class="line"><span class="lineno">  228</span>        xpSalvage = (float) row.optDouble(<span class="stringliteral">&quot;xpSalvage&quot;</span>, baseXP * 3f);</div>
-<div class="line"><span class="lineno">  229</span>        </div>
-<div class="line"><span class="lineno">  230</span>        radiusOverride = (float) row.optDouble(<span class="stringliteral">&quot;radius&quot;</span>, -1);</div>
-<div class="line"><span class="lineno">  231</span>        </div>
-<div class="line"><span class="lineno">  232</span>        defQuality = (float) row.optDouble(<span class="stringliteral">&quot;defQuality&quot;</span>, 1f);</div>
-<div class="line"><span class="lineno">  233</span>        </div>
-<div class="line"><span class="lineno">  234</span>        probDefenders = (float) row.optDouble(<span class="stringliteral">&quot;probDefenders&quot;</span>, 0);</div>
-<div class="line"><span class="lineno">  235</span>        minStr = (float) row.optDouble(<span class="stringliteral">&quot;minStr&quot;</span>, 0);</div>
-<div class="line"><span class="lineno">  236</span>        maxStr = (float) row.optDouble(<span class="stringliteral">&quot;maxStr&quot;</span>, 0);</div>
-<div class="line"><span class="lineno">  237</span>        maxDefenderSize = (float) row.optDouble(<span class="stringliteral">&quot;maxSize&quot;</span>, 4);</div>
-<div class="line"><span class="lineno">  238</span>        minDefenderSize = (float) row.optDouble(<span class="stringliteral">&quot;minSize&quot;</span>, 0);</div>
-<div class="line"><span class="lineno">  239</span>        </div>
-<div class="line"><span class="lineno">  240</span>        defFaction = row.optString(<span class="stringliteral">&quot;defFaction&quot;</span>, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  241</span>        <span class="keywordflow">if</span> (defFaction != <span class="keyword">null</span> &amp;&amp; defFaction.isEmpty()) defFaction = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  242</span>        </div>
-<div class="line"><span class="lineno">  243</span>        probStation = (float) row.optDouble(<span class="stringliteral">&quot;probStation&quot;</span>, 0);</div>
-<div class="line"><span class="lineno">  244</span>        </div>
-<div class="line"><span class="lineno">  245</span>        type = Misc.mapToEnum(row, <span class="stringliteral">&quot;type&quot;</span>, DiscoverabilityType.class, DiscoverabilityType.DISCOVERABLE);</div>
-<div class="line"><span class="lineno">  246</span>        </div>
-<div class="line"><span class="lineno">  247</span>        <span class="keywordflow">if</span> (row.has(<span class="stringliteral">&quot;drop_value&quot;</span>) &amp;&amp; !row.getString(<span class="stringliteral">&quot;drop_value&quot;</span>).isEmpty()) {</div>
-<div class="line"><span class="lineno">  248</span>            <span class="comment">//readToMap(row.getString(&quot;drop_value&quot;), dropValue);</span></div>
-<div class="line"><span class="lineno">  249</span>            String [] parts = row.getString(<span class="stringliteral">&quot;drop_value&quot;</span>).split(<span class="stringliteral">&quot;,&quot;</span>);</div>
-<div class="line"><span class="lineno">  250</span>            <span class="keywordflow">for</span> (String part : parts) {</div>
-<div class="line"><span class="lineno">  251</span>                part = part.trim();</div>
-<div class="line"><span class="lineno">  252</span>                String [] pair = part.split(<span class="stringliteral">&quot;:&quot;</span>);</div>
-<div class="line"><span class="lineno">  253</span>                String key = pair[0].trim();</div>
-<div class="line"><span class="lineno">  254</span>                String value = pair[1].trim();</div>
-<div class="line"><span class="lineno">  255</span>                </div>
-<div class="line"><span class="lineno">  256</span>                DropData data = <span class="keyword">new</span> DropData();</div>
-<div class="line"><span class="lineno">  257</span>                data.group = key;</div>
-<div class="line"><span class="lineno">  258</span>                data.value = Integer.valueOf(value);</div>
-<div class="line"><span class="lineno">  259</span>                data.chances = -1;</div>
-<div class="line"><span class="lineno">  260</span>                </div>
-<div class="line"><span class="lineno">  261</span>                dropValue.add(data);</div>
-<div class="line"><span class="lineno">  262</span>            }</div>
-<div class="line"><span class="lineno">  263</span>        }</div>
-<div class="line"><span class="lineno">  264</span>        </div>
-<div class="line"><span class="lineno">  265</span>        <span class="keywordflow">if</span> (row.has(<span class="stringliteral">&quot;drop_random&quot;</span>) &amp;&amp; !row.getString(<span class="stringliteral">&quot;drop_random&quot;</span>).isEmpty()) {</div>
-<div class="line"><span class="lineno">  266</span>            <span class="comment">//readToMap(row.getString(&quot;drop_random&quot;), dropRandom);</span></div>
-<div class="line"><span class="lineno">  267</span>            String [] parts = row.getString(<span class="stringliteral">&quot;drop_random&quot;</span>).split(<span class="stringliteral">&quot;,&quot;</span>);</div>
-<div class="line"><span class="lineno">  268</span>            <span class="keywordflow">for</span> (String part : parts) {</div>
-<div class="line"><span class="lineno">  269</span>                part = part.trim();</div>
-<div class="line"><span class="lineno">  270</span>                String [] pair = part.split(<span class="stringliteral">&quot;:&quot;</span>);</div>
-<div class="line"><span class="lineno">  271</span>                String key = pair[0].trim();</div>
-<div class="line"><span class="lineno">  272</span>                String value = pair[1].trim();</div>
-<div class="line"><span class="lineno">  273</span>                </div>
-<div class="line"><span class="lineno">  274</span>                DropData data = <span class="keyword">new</span> DropData();</div>
-<div class="line"><span class="lineno">  275</span>                data.group = key;</div>
-<div class="line"><span class="lineno">  276</span>                </div>
-<div class="line"><span class="lineno">  277</span>                <span class="keywordflow">if</span> (value.contains(<span class="stringliteral">&quot;x&quot;</span>)) {</div>
-<div class="line"><span class="lineno">  278</span>                    String [] chancesXValue = value.split(<span class="stringliteral">&quot;x&quot;</span>);</div>
-<div class="line"><span class="lineno">  279</span>                    <span class="keywordflow">if</span> (chancesXValue[0].trim().contains(<span class="stringliteral">&quot;-&quot;</span>)) {</div>
-<div class="line"><span class="lineno">  280</span>                        data.chances = Integer.valueOf(chancesXValue[0].trim().split(<span class="stringliteral">&quot;-&quot;</span>)[0]);</div>
-<div class="line"><span class="lineno">  281</span>                        data.maxChances = Integer.valueOf(chancesXValue[0].trim().split(<span class="stringliteral">&quot;-&quot;</span>)[1]);</div>
-<div class="line"><span class="lineno">  282</span>                    } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  283</span>                        data.chances = Integer.valueOf(chancesXValue[0].trim());</div>
-<div class="line"><span class="lineno">  284</span>                    }</div>
-<div class="line"><span class="lineno">  285</span>                    data.value = Integer.valueOf(chancesXValue[1].trim()); </div>
-<div class="line"><span class="lineno">  286</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  287</span>                    data.value = -1;</div>
-<div class="line"><span class="lineno">  288</span>                    </div>
-<div class="line"><span class="lineno">  289</span>                    <span class="keywordflow">if</span> (value.contains(<span class="stringliteral">&quot;-&quot;</span>)) {</div>
-<div class="line"><span class="lineno">  290</span>                        data.chances = Integer.valueOf(value.trim().split(<span class="stringliteral">&quot;-&quot;</span>)[0]);</div>
-<div class="line"><span class="lineno">  291</span>                        data.maxChances = Integer.valueOf(value.trim().split(<span class="stringliteral">&quot;-&quot;</span>)[1]);</div>
-<div class="line"><span class="lineno">  292</span>                    } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  293</span>                        <span class="keywordtype">float</span> c = Float.valueOf(value); </div>
-<div class="line"><span class="lineno">  294</span>                        data.chances = (int) Math.max(c, 1);</div>
-<div class="line"><span class="lineno">  295</span>                        <span class="keywordflow">if</span> (c &lt; 1) data.valueMult = c;</div>
-<div class="line"><span class="lineno">  296</span>                    }</div>
-<div class="line"><span class="lineno">  297</span>                    <span class="comment">//data.chances = Integer.valueOf(value);</span></div>
-<div class="line"><span class="lineno">  298</span>                }</div>
-<div class="line"><span class="lineno">  299</span>                </div>
-<div class="line"><span class="lineno">  300</span>                dropRandom.add(data);</div>
-<div class="line"><span class="lineno">  301</span>            }</div>
-<div class="line"><span class="lineno">  302</span>        }</div>
-<div class="line"><span class="lineno">  303</span>        </div>
-<div class="line"><span class="lineno">  304</span>        String tags = row.optString(<span class="stringliteral">&quot;tags&quot;</span>, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  305</span>        <span class="keywordflow">if</span> (tags != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  306</span>            String [] split = tags.split(<span class="stringliteral">&quot;,&quot;</span>);</div>
-<div class="line"><span class="lineno">  307</span>            <span class="keywordflow">for</span> (String tag : split) {</div>
-<div class="line"><span class="lineno">  308</span>                tag = tag.trim();</div>
-<div class="line"><span class="lineno">  309</span>                <span class="keywordflow">if</span> (tag.isEmpty()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  310</span>                <a class="code hl_function" href="../../de/d56/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1SalvageEntityGenDataSpec.html#adee2e23cb712028e9c0506d93126d2b9">addTag</a>(tag);</div>
-<div class="line"><span class="lineno">  311</span>            }</div>
-<div class="line"><span class="lineno">  312</span>        }</div>
-<div class="line"><span class="lineno">  313</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1SalvageEntityGenDataSpec_html_adee2e23cb712028e9c0506d93126d2b9"><div class="ttname"><a href="../../de/d56/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1SalvageEntityGenDataSpec.html#adee2e23cb712028e9c0506d93126d2b9">com.fs.starfarer.api.impl.campaign.procgen.SalvageEntityGenDataSpec.addTag</a></div><div class="ttdeci">void addTag(String tag)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html#l00328">SalvageEntityGenDataSpec.java:328</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -334,10 +230,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html#l00328">328</a> of file <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html">SalvageEntityGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  328</span>                                   {</div>
-<div class="line"><span class="lineno">  329</span>        tags.add(tag);</div>
-<div class="line"><span class="lineno">  330</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a230fe826f31fb8bf3a3ef5d46f2e9a29" name="a230fe826f31fb8bf3a3ef5d46f2e9a29"></a>
@@ -356,10 +249,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html#l00315">315</a> of file <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html">SalvageEntityGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  315</span>                                  {</div>
-<div class="line"><span class="lineno">  316</span>        <span class="keywordflow">return</span> defFaction;</div>
-<div class="line"><span class="lineno">  317</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a60148d6c766710f30bae49f610f52fbf" name="a60148d6c766710f30bae49f610f52fbf"></a>
@@ -378,10 +268,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html#l00429">429</a> of file <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html">SalvageEntityGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  429</span>                                 {</div>
-<div class="line"><span class="lineno">  430</span>        <span class="keywordflow">return</span> defQuality;</div>
-<div class="line"><span class="lineno">  431</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a1a5c7614b87ecc401ba85d4c372677d3" name="a1a5c7614b87ecc401ba85d4c372677d3"></a>
@@ -400,10 +287,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html#l00364">364</a> of file <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html">SalvageEntityGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  364</span>                                     {</div>
-<div class="line"><span class="lineno">  365</span>        <span class="keywordflow">return</span> detectionRange;</div>
-<div class="line"><span class="lineno">  366</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="abb0612d8a3db72fd8dcf7c954cc98a45" name="abb0612d8a3db72fd8dcf7c954cc98a45"></a>
@@ -422,10 +306,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html#l00387">387</a> of file <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html">SalvageEntityGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  387</span>                                          {</div>
-<div class="line"><span class="lineno">  388</span>        <span class="keywordflow">return</span> dropRandom;</div>
-<div class="line"><span class="lineno">  389</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a809c97099145f1c5ed95e22defd9d9be" name="a809c97099145f1c5ed95e22defd9d9be"></a>
@@ -444,10 +325,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html#l00384">384</a> of file <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html">SalvageEntityGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  384</span>                                         {</div>
-<div class="line"><span class="lineno">  385</span>        <span class="keywordflow">return</span> dropValue;</div>
-<div class="line"><span class="lineno">  386</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a4fc18e42bb749b804fbb9e4be5b95c5c" name="a4fc18e42bb749b804fbb9e4be5b95c5c"></a>
@@ -466,10 +344,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html#l00352">352</a> of file <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html">SalvageEntityGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  352</span>                          {</div>
-<div class="line"><span class="lineno">  353</span>        <span class="keywordflow">return</span> id;</div>
-<div class="line"><span class="lineno">  354</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2cd57d1490b1245dbb55dcb5fc65590c" name="a2cd57d1490b1245dbb55dcb5fc65590c"></a>
@@ -488,10 +363,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html#l00414">414</a> of file <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html">SalvageEntityGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  414</span>                                      {</div>
-<div class="line"><span class="lineno">  415</span>        <span class="keywordflow">return</span> maxDefenderSize;</div>
-<div class="line"><span class="lineno">  416</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a40d518e19b30be33bdf6388946c45d28" name="a40d518e19b30be33bdf6388946c45d28"></a>
@@ -510,10 +382,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html#l00408">408</a> of file <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html">SalvageEntityGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  408</span>                             {</div>
-<div class="line"><span class="lineno">  409</span>        <span class="keywordflow">return</span> maxStr;</div>
-<div class="line"><span class="lineno">  410</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a4101d97bcda6c0e051c4fa2a00a5ff04" name="a4101d97bcda6c0e051c4fa2a00a5ff04"></a>
@@ -532,10 +401,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html#l00421">421</a> of file <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html">SalvageEntityGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  421</span>                                      {</div>
-<div class="line"><span class="lineno">  422</span>        <span class="keywordflow">return</span> minDefenderSize;</div>
-<div class="line"><span class="lineno">  423</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a52b83fc13f63b888686d7b9ce110f182" name="a52b83fc13f63b888686d7b9ce110f182"></a>
@@ -554,10 +420,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html#l00402">402</a> of file <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html">SalvageEntityGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  402</span>                             {</div>
-<div class="line"><span class="lineno">  403</span>        <span class="keywordflow">return</span> minStr;</div>
-<div class="line"><span class="lineno">  404</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a346d94e25e784cf6dcdeb0bd966afb3e" name="a346d94e25e784cf6dcdeb0bd966afb3e"></a>
@@ -576,10 +439,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html#l00344">344</a> of file <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html">SalvageEntityGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  344</span>                                    {</div>
-<div class="line"><span class="lineno">  345</span>        <span class="keywordflow">return</span> nameOverride;</div>
-<div class="line"><span class="lineno">  346</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a84813348282c4be9316ec91924b85691" name="a84813348282c4be9316ec91924b85691"></a>
@@ -598,10 +458,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html#l00396">396</a> of file <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html">SalvageEntityGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  396</span>                                    {</div>
-<div class="line"><span class="lineno">  397</span>        <span class="keywordflow">return</span> probDefenders;</div>
-<div class="line"><span class="lineno">  398</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a39f379b3726f8175b646a055bb7e65e8" name="a39f379b3726f8175b646a055bb7e65e8"></a>
@@ -620,10 +477,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html#l00437">437</a> of file <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html">SalvageEntityGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  437</span>                                  {</div>
-<div class="line"><span class="lineno">  438</span>        <span class="keywordflow">return</span> probStation;</div>
-<div class="line"><span class="lineno">  439</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a78a2ae8f00be9c66439ccce0cf49b082" name="a78a2ae8f00be9c66439ccce0cf49b082"></a>
@@ -642,10 +496,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html#l00336">336</a> of file <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html">SalvageEntityGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  336</span>                                     {</div>
-<div class="line"><span class="lineno">  337</span>        <span class="keywordflow">return</span> radiusOverride;</div>
-<div class="line"><span class="lineno">  338</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a70b9231fcb112c8598a4ef056980ff0e" name="a70b9231fcb112c8598a4ef056980ff0e"></a>
@@ -664,10 +515,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html#l00358">358</a> of file <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html">SalvageEntityGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  358</span>                                    {</div>
-<div class="line"><span class="lineno">  359</span>        <span class="keywordflow">return</span> salvageRating;</div>
-<div class="line"><span class="lineno">  360</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a217116e717283f929cee500eeb2adb06" name="a217116e717283f929cee500eeb2adb06"></a>
@@ -686,10 +534,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html#l00445">445</a> of file <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html">SalvageEntityGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  445</span>                                   {</div>
-<div class="line"><span class="lineno">  446</span>        <span class="keywordflow">return</span> stationRole;</div>
-<div class="line"><span class="lineno">  447</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a0a3967ad2b559fcb229635674b78d422" name="a0a3967ad2b559fcb229635674b78d422"></a>
@@ -708,10 +553,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html#l00324">324</a> of file <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html">SalvageEntityGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  324</span>                                 {</div>
-<div class="line"><span class="lineno">  325</span>        <span class="keywordflow">return</span> tags;</div>
-<div class="line"><span class="lineno">  326</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a67a6e76f3d0cfa4ee6b9cf6109582e14" name="a67a6e76f3d0cfa4ee6b9cf6109582e14"></a>
@@ -730,10 +572,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html#l00390">390</a> of file <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html">SalvageEntityGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  390</span>                                         {</div>
-<div class="line"><span class="lineno">  391</span>        <span class="keywordflow">return</span> type;</div>
-<div class="line"><span class="lineno">  392</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a09ba45ca804afe91ac268b0f82ee3bd7" name="a09ba45ca804afe91ac268b0f82ee3bd7"></a>
@@ -752,10 +591,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html#l00370">370</a> of file <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html">SalvageEntityGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  370</span>                                 {</div>
-<div class="line"><span class="lineno">  371</span>        <span class="keywordflow">return</span> xpDiscover;</div>
-<div class="line"><span class="lineno">  372</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae14d8cd154758023fc734e32e80356ee" name="ae14d8cd154758023fc734e32e80356ee"></a>
@@ -774,10 +610,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html#l00376">376</a> of file <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html">SalvageEntityGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  376</span>                                {</div>
-<div class="line"><span class="lineno">  377</span>        <span class="keywordflow">return</span> xpSalvage;</div>
-<div class="line"><span class="lineno">  378</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a91d81ff1099c7ac81727e9b1fa58b8f0" name="a91d81ff1099c7ac81727e9b1fa58b8f0"></a>
@@ -797,10 +630,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html#l00332">332</a> of file <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html">SalvageEntityGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  332</span>                                      {</div>
-<div class="line"><span class="lineno">  333</span>        <span class="keywordflow">return</span> tags.contains(tag);</div>
-<div class="line"><span class="lineno">  334</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="acab3218271a8db6ac8fd4ab17a914d42" name="acab3218271a8db6ac8fd4ab17a914d42"></a>
@@ -820,10 +650,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html#l00319">319</a> of file <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html">SalvageEntityGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  319</span>                                                 {</div>
-<div class="line"><span class="lineno">  320</span>        this.defFaction = defFaction;</div>
-<div class="line"><span class="lineno">  321</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a200d271b55166e34d639f993e0b1374c" name="a200d271b55166e34d639f993e0b1374c"></a>
@@ -843,10 +670,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html#l00433">433</a> of file <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html">SalvageEntityGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  433</span>                                                {</div>
-<div class="line"><span class="lineno">  434</span>        this.defQuality = defQuality;</div>
-<div class="line"><span class="lineno">  435</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a63148ade7db9e789d1f86b4f36f64166" name="a63148ade7db9e789d1f86b4f36f64166"></a>
@@ -866,10 +690,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html#l00367">367</a> of file <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html">SalvageEntityGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  367</span>                                                        {</div>
-<div class="line"><span class="lineno">  368</span>        this.detectionRange = detectionRange;</div>
-<div class="line"><span class="lineno">  369</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac3d24e5e304c6f423c0528ead49b36cc" name="ac3d24e5e304c6f423c0528ead49b36cc"></a>
@@ -889,10 +710,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html#l00355">355</a> of file <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html">SalvageEntityGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  355</span>                                 {</div>
-<div class="line"><span class="lineno">  356</span>        this.id = id;</div>
-<div class="line"><span class="lineno">  357</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a614855c43f27a507297a70ee676a83e9" name="a614855c43f27a507297a70ee676a83e9"></a>
@@ -912,10 +730,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html#l00417">417</a> of file <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html">SalvageEntityGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  417</span>                                                  {</div>
-<div class="line"><span class="lineno">  418</span>        this.maxDefenderSize = maxSize;</div>
-<div class="line"><span class="lineno">  419</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a6c8dd959c096c69774da895df4588eb0" name="a6c8dd959c096c69774da895df4588eb0"></a>
@@ -935,10 +750,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html#l00411">411</a> of file <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html">SalvageEntityGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  411</span>                                        {</div>
-<div class="line"><span class="lineno">  412</span>        this.maxStr = maxStr;</div>
-<div class="line"><span class="lineno">  413</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2a88a3a7b9c580aab477b75323a1c9a4" name="a2a88a3a7b9c580aab477b75323a1c9a4"></a>
@@ -958,10 +770,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html#l00425">425</a> of file <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html">SalvageEntityGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  425</span>                                                          {</div>
-<div class="line"><span class="lineno">  426</span>        this.minDefenderSize = minDefenderSize;</div>
-<div class="line"><span class="lineno">  427</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a7b2ae10eae3685ccb45b8d6a9f34b325" name="a7b2ae10eae3685ccb45b8d6a9f34b325"></a>
@@ -981,10 +790,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html#l00405">405</a> of file <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html">SalvageEntityGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  405</span>                                        {</div>
-<div class="line"><span class="lineno">  406</span>        this.minStr = minStr;</div>
-<div class="line"><span class="lineno">  407</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a55ab1facec0903a33384b11cb8b54fb1" name="a55ab1facec0903a33384b11cb8b54fb1"></a>
@@ -1004,10 +810,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html#l00348">348</a> of file <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html">SalvageEntityGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  348</span>                                                     {</div>
-<div class="line"><span class="lineno">  349</span>        this.nameOverride = nameOverride;</div>
-<div class="line"><span class="lineno">  350</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af4439371af8b691eae93ac66cd9f45bc" name="af4439371af8b691eae93ac66cd9f45bc"></a>
@@ -1027,10 +830,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html#l00399">399</a> of file <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html">SalvageEntityGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  399</span>                                                      {</div>
-<div class="line"><span class="lineno">  400</span>        this.probDefenders = probDefenders;</div>
-<div class="line"><span class="lineno">  401</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af7b02c68bcec2f99f2b66a164bc12e6a" name="af7b02c68bcec2f99f2b66a164bc12e6a"></a>
@@ -1050,10 +850,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html#l00441">441</a> of file <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html">SalvageEntityGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  441</span>                                                  {</div>
-<div class="line"><span class="lineno">  442</span>        this.probStation = probStation;</div>
-<div class="line"><span class="lineno">  443</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac3533b5cce29165812d930a7e87734e8" name="ac3533b5cce29165812d930a7e87734e8"></a>
@@ -1073,10 +870,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html#l00340">340</a> of file <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html">SalvageEntityGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  340</span>                                                        {</div>
-<div class="line"><span class="lineno">  341</span>        this.radiusOverride = radiusOverride;</div>
-<div class="line"><span class="lineno">  342</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ad6fd3b0cfc9c6cddb3f24bf19b4ca402" name="ad6fd3b0cfc9c6cddb3f24bf19b4ca402"></a>
@@ -1096,10 +890,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html#l00361">361</a> of file <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html">SalvageEntityGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  361</span>                                                      {</div>
-<div class="line"><span class="lineno">  362</span>        this.salvageRating = salvageRating;</div>
-<div class="line"><span class="lineno">  363</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a68dc04cc02c08f7ffbe67e745b38c550" name="a68dc04cc02c08f7ffbe67e745b38c550"></a>
@@ -1119,10 +910,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html#l00449">449</a> of file <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html">SalvageEntityGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  449</span>                                                   {</div>
-<div class="line"><span class="lineno">  450</span>        this.stationRole = stationRole;</div>
-<div class="line"><span class="lineno">  451</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="afed12c298ca2cc20d25e18a27a288613" name="afed12c298ca2cc20d25e18a27a288613"></a>
@@ -1142,10 +930,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html#l00393">393</a> of file <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html">SalvageEntityGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  393</span>                                                  {</div>
-<div class="line"><span class="lineno">  394</span>        this.type = type;</div>
-<div class="line"><span class="lineno">  395</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab2640b6041029b1a9a3385078cc9b681" name="ab2640b6041029b1a9a3385078cc9b681"></a>
@@ -1165,10 +950,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html#l00373">373</a> of file <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html">SalvageEntityGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  373</span>                                                {</div>
-<div class="line"><span class="lineno">  374</span>        this.xpDiscover = xpDiscover;</div>
-<div class="line"><span class="lineno">  375</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa3a3c154aa987d7683a8a290363c5747" name="aa3a3c154aa987d7683a8a290363c5747"></a>
@@ -1188,10 +970,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html#l00379">379</a> of file <a class="el" href="../../da/db2/SalvageEntityGenDataSpec_8java_source.html">SalvageEntityGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  379</span>                                              {</div>
-<div class="line"><span class="lineno">  380</span>        this.xpSalvage = xpSalvage;</div>
-<div class="line"><span class="lineno">  381</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -215,9 +216,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d68/CryoblasterEffect_8java_source.html#l00029">29</a> of file <a class="el" href="../../d6/d68/CryoblasterEffect_8java_source.html">CryoblasterEffect.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   29</span>                               {</div>
-<div class="line"><span class="lineno">   30</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="acb6181def3ce5d6ae1a69f7e17ceb80e" name="acb6181def3ce5d6ae1a69f7e17ceb80e"></a>
@@ -237,31 +236,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d68/CryoblasterEffect_8java_source.html#l00145">145</a> of file <a class="el" href="../../d6/d68/CryoblasterEffect_8java_source.html">CryoblasterEffect.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  145</span>                                                         {</div>
-<div class="line"><span class="lineno">  146</span>        this.proj = <a class="code hl_variable" href="../../de/dd3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryoblasterEffect.html#a632affb0836e2a8895ee0240380ec0bc">proj</a>;</div>
-<div class="line"><span class="lineno">  147</span>        </div>
-<div class="line"><span class="lineno">  148</span>        <a class="code hl_variable" href="../../de/dd3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryoblasterEffect.html#a2eeecb530db80589636d77eb1e086408">projVel</a> = <span class="keyword">new</span> Vector2f(<a class="code hl_variable" href="../../de/dd3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryoblasterEffect.html#a632affb0836e2a8895ee0240380ec0bc">proj</a>.<a class="code hl_function" href="../../db/d65/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEntityAPI.html#a7ca6afdc56ef599c0a70ce1b4cf95a60">getVelocity</a>());</div>
-<div class="line"><span class="lineno">  149</span>        <a class="code hl_variable" href="../../de/dd3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryoblasterEffect.html#a76eb587a5b401a256d323ca5ae014cc6">projLoc</a> = <span class="keyword">new</span> Vector2f(<a class="code hl_variable" href="../../de/dd3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryoblasterEffect.html#a632affb0836e2a8895ee0240380ec0bc">proj</a>.<a class="code hl_function" href="../../db/d65/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEntityAPI.html#a3cb99493d950e63b61a8b09804d87c93">getLocation</a>());</div>
-<div class="line"><span class="lineno">  150</span>        </div>
-<div class="line"><span class="lineno">  151</span>        <span class="keywordtype">int</span> num = 30;</div>
-<div class="line"><span class="lineno">  152</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; num; i++) {</div>
-<div class="line"><span class="lineno">  153</span>            <a class="code hl_variable" href="../../de/dd3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryoblasterEffect.html#a8512576d17e36470cea40f4a1a051a23">particles</a>.add(<span class="keyword">new</span> ParticleData(<a class="code hl_variable" href="../../de/dd3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryoblasterEffect.html#a632affb0836e2a8895ee0240380ec0bc">proj</a>));</div>
-<div class="line"><span class="lineno">  154</span>        }</div>
-<div class="line"><span class="lineno">  155</span>        </div>
-<div class="line"><span class="lineno">  156</span>        <span class="keywordtype">float</span> index = 0;</div>
-<div class="line"><span class="lineno">  157</span>        <span class="keywordflow">for</span> (ParticleData p : <a class="code hl_variable" href="../../de/dd3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryoblasterEffect.html#a8512576d17e36470cea40f4a1a051a23">particles</a>) {</div>
-<div class="line"><span class="lineno">  158</span>            <span class="comment">//p.offset = Misc.getPointWithinRadius(p.offset, width * 0.5f);</span></div>
-<div class="line"><span class="lineno">  159</span>            p.offset = Misc.getPointWithinRadius(p.offset, 20f);</div>
-<div class="line"><span class="lineno">  160</span>            index++;</div>
-<div class="line"><span class="lineno">  161</span>        }</div>
-<div class="line"><span class="lineno">  162</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryoblasterEffect_html_a2eeecb530db80589636d77eb1e086408"><div class="ttname"><a href="../../de/dd3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryoblasterEffect.html#a2eeecb530db80589636d77eb1e086408">com.fs.starfarer.api.impl.combat.CryoblasterEffect.projVel</a></div><div class="ttdeci">Vector2f projVel</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d68/CryoblasterEffect_8java_source.html#l00143">CryoblasterEffect.java:143</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryoblasterEffect_html_a632affb0836e2a8895ee0240380ec0bc"><div class="ttname"><a href="../../de/dd3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryoblasterEffect.html#a632affb0836e2a8895ee0240380ec0bc">com.fs.starfarer.api.impl.combat.CryoblasterEffect.proj</a></div><div class="ttdeci">DamagingProjectileAPI proj</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d68/CryoblasterEffect_8java_source.html#l00142">CryoblasterEffect.java:142</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryoblasterEffect_html_a76eb587a5b401a256d323ca5ae014cc6"><div class="ttname"><a href="../../de/dd3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryoblasterEffect.html#a76eb587a5b401a256d323ca5ae014cc6">com.fs.starfarer.api.impl.combat.CryoblasterEffect.projLoc</a></div><div class="ttdeci">Vector2f projLoc</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d68/CryoblasterEffect_8java_source.html#l00144">CryoblasterEffect.java:144</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryoblasterEffect_html_a8512576d17e36470cea40f4a1a051a23"><div class="ttname"><a href="../../de/dd3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryoblasterEffect.html#a8512576d17e36470cea40f4a1a051a23">com.fs.starfarer.api.impl.combat.CryoblasterEffect.particles</a></div><div class="ttdeci">List&lt; ParticleData &gt; particles</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d68/CryoblasterEffect_8java_source.html#l00140">CryoblasterEffect.java:140</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEntityAPI_html_a3cb99493d950e63b61a8b09804d87c93"><div class="ttname"><a href="../../db/d65/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEntityAPI.html#a3cb99493d950e63b61a8b09804d87c93">com.fs.starfarer.api.combat.CombatEntityAPI.getLocation</a></div><div class="ttdeci">Vector2f getLocation()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEntityAPI_html_a7ca6afdc56ef599c0a70ce1b4cf95a60"><div class="ttname"><a href="../../db/d65/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEntityAPI.html#a7ca6afdc56ef599c0a70ce1b4cf95a60">com.fs.starfarer.api.combat.CombatEntityAPI.getVelocity</a></div><div class="ttdeci">Vector2f getVelocity()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -284,46 +259,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d57/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseCombatLayeredRenderingPlugin.html#a2d2e8dfaee925e15a129d25bb2f62a5e">com.fs.starfarer.api.combat.BaseCombatLayeredRenderingPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d68/CryoblasterEffect_8java_source.html#l00180">180</a> of file <a class="el" href="../../d6/d68/CryoblasterEffect_8java_source.html">CryoblasterEffect.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  180</span>                                      {</div>
-<div class="line"><span class="lineno">  181</span>        <span class="keywordflow">if</span> (Global.getCombatEngine().isPaused()) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  182</span>        </div>
-<div class="line"><span class="lineno">  183</span>        <a class="code hl_variable" href="../../d9/d57/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseCombatLayeredRenderingPlugin.html#a92f4c57817c498ac47bd89ea72eea90c">entity</a>.<a class="code hl_function" href="../../db/d65/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEntityAPI.html#a3cb99493d950e63b61a8b09804d87c93">getLocation</a>().set(<a class="code hl_variable" href="../../de/dd3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryoblasterEffect.html#a632affb0836e2a8895ee0240380ec0bc">proj</a>.<a class="code hl_function" href="../../db/d65/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEntityAPI.html#a3cb99493d950e63b61a8b09804d87c93">getLocation</a>());</div>
-<div class="line"><span class="lineno">  184</span>        </div>
-<div class="line"><span class="lineno">  185</span>        <span class="keywordtype">float</span> max = 0f;</div>
-<div class="line"><span class="lineno">  186</span>        <span class="keywordflow">for</span> (ParticleData p : <a class="code hl_variable" href="../../de/dd3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryoblasterEffect.html#a8512576d17e36470cea40f4a1a051a23">particles</a>) {</div>
-<div class="line"><span class="lineno">  187</span>            p.advance(amount);</div>
-<div class="line"><span class="lineno">  188</span>            max = Math.max(max, p.offset.lengthSquared());</div>
-<div class="line"><span class="lineno">  189</span>        }</div>
-<div class="line"><span class="lineno">  190</span>        </div>
-<div class="line"><span class="lineno">  191</span>        <span class="comment">// BALLISTIC_AS_BEAM don&#39;t get some stuff set right away, catch it in the first few frames</span></div>
-<div class="line"><span class="lineno">  192</span>        <span class="comment">// but after that the particles move independently</span></div>
-<div class="line"><span class="lineno">  193</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../de/dd3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryoblasterEffect.html#a632affb0836e2a8895ee0240380ec0bc">proj</a>.<a class="code hl_function" href="../../d2/dd5/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DamagingProjectileAPI.html#a345d8a865b01ebbb79d6ffc16111122b">getElapsed</a>() &lt; 0.1f) {</div>
-<div class="line"><span class="lineno">  194</span>            <a class="code hl_variable" href="../../de/dd3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryoblasterEffect.html#a2eeecb530db80589636d77eb1e086408">projVel</a>.set(<a class="code hl_variable" href="../../de/dd3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryoblasterEffect.html#a632affb0836e2a8895ee0240380ec0bc">proj</a>.<a class="code hl_function" href="../../db/d65/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEntityAPI.html#a7ca6afdc56ef599c0a70ce1b4cf95a60">getVelocity</a>());</div>
-<div class="line"><span class="lineno">  195</span>            <a class="code hl_variable" href="../../de/dd3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryoblasterEffect.html#a76eb587a5b401a256d323ca5ae014cc6">projLoc</a>.set(<a class="code hl_variable" href="../../de/dd3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryoblasterEffect.html#a632affb0836e2a8895ee0240380ec0bc">proj</a>.<a class="code hl_function" href="../../db/d65/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEntityAPI.html#a3cb99493d950e63b61a8b09804d87c93">getLocation</a>());</div>
-<div class="line"><span class="lineno">  196</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  197</span>            projLoc.x += projVel.x * amount;</div>
-<div class="line"><span class="lineno">  198</span>            projLoc.y += projVel.y * amount;</div>
-<div class="line"><span class="lineno">  199</span>            </div>
-<div class="line"><span class="lineno">  200</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../de/dd3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryoblasterEffect.html#a632affb0836e2a8895ee0240380ec0bc">proj</a>.<a class="code hl_function" href="../../d2/dd5/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DamagingProjectileAPI.html#a55e07b08d611010cebb2a60c822b7870">didDamage</a>()) {</div>
-<div class="line"><span class="lineno">  201</span>                <span class="keywordflow">if</span> (!<a class="code hl_variable" href="../../de/dd3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryoblasterEffect.html#a603b27457fde0f9070c7af05656ad535">resetTrailSpeed</a>) {</div>
-<div class="line"><span class="lineno">  202</span>                    <span class="keywordflow">for</span> (ParticleData p : <a class="code hl_variable" href="../../de/dd3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryoblasterEffect.html#a8512576d17e36470cea40f4a1a051a23">particles</a>) {</div>
-<div class="line"><span class="lineno">  203</span>                        Vector2f.add(p.vel, <a class="code hl_variable" href="../../de/dd3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryoblasterEffect.html#a2eeecb530db80589636d77eb1e086408">projVel</a>, p.vel);</div>
-<div class="line"><span class="lineno">  204</span>                    }</div>
-<div class="line"><span class="lineno">  205</span>                    <a class="code hl_variable" href="../../de/dd3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryoblasterEffect.html#a2eeecb530db80589636d77eb1e086408">projVel</a>.scale(0f);</div>
-<div class="line"><span class="lineno">  206</span>                    <a class="code hl_variable" href="../../de/dd3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryoblasterEffect.html#a603b27457fde0f9070c7af05656ad535">resetTrailSpeed</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  207</span>                }</div>
-<div class="line"><span class="lineno">  208</span>                <span class="keywordflow">for</span> (ParticleData p : <a class="code hl_variable" href="../../de/dd3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryoblasterEffect.html#a8512576d17e36470cea40f4a1a051a23">particles</a>) {</div>
-<div class="line"><span class="lineno">  209</span>                    <span class="keywordtype">float</span> dist = p.offset.length();</div>
-<div class="line"><span class="lineno">  210</span>                    p.vel.scale(Math.min(1f, dist / 100f));</div>
-<div class="line"><span class="lineno">  211</span>                }</div>
-<div class="line"><span class="lineno">  212</span>            }</div>
-<div class="line"><span class="lineno">  213</span>        }</div>
-<div class="line"><span class="lineno">  214</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseCombatLayeredRenderingPlugin_html_a92f4c57817c498ac47bd89ea72eea90c"><div class="ttname"><a href="../../d9/d57/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseCombatLayeredRenderingPlugin.html#a92f4c57817c498ac47bd89ea72eea90c">com.fs.starfarer.api.combat.BaseCombatLayeredRenderingPlugin.entity</a></div><div class="ttdeci">CombatEntityAPI entity</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d4c/BaseCombatLayeredRenderingPlugin_8java_source.html#l00008">BaseCombatLayeredRenderingPlugin.java:8</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryoblasterEffect_html_a603b27457fde0f9070c7af05656ad535"><div class="ttname"><a href="../../de/dd3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryoblasterEffect.html#a603b27457fde0f9070c7af05656ad535">com.fs.starfarer.api.impl.combat.CryoblasterEffect.resetTrailSpeed</a></div><div class="ttdeci">boolean resetTrailSpeed</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d68/CryoblasterEffect_8java_source.html#l00179">CryoblasterEffect.java:179</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DamagingProjectileAPI_html_a345d8a865b01ebbb79d6ffc16111122b"><div class="ttname"><a href="../../d2/dd5/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DamagingProjectileAPI.html#a345d8a865b01ebbb79d6ffc16111122b">com.fs.starfarer.api.combat.DamagingProjectileAPI.getElapsed</a></div><div class="ttdeci">float getElapsed()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DamagingProjectileAPI_html_a55e07b08d611010cebb2a60c822b7870"><div class="ttname"><a href="../../d2/dd5/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DamagingProjectileAPI.html#a55e07b08d611010cebb2a60c822b7870">com.fs.starfarer.api.combat.DamagingProjectileAPI.didDamage</a></div><div class="ttdeci">boolean didDamage()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a461ec564910907ca2dd8b21b2101ff5a" name="a461ec564910907ca2dd8b21b2101ff5a"></a>
@@ -344,11 +280,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d57/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseCombatLayeredRenderingPlugin.html#a6fd9b30909bab79555989fe6803dec53">com.fs.starfarer.api.combat.BaseCombatLayeredRenderingPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d68/CryoblasterEffect_8java_source.html#l00171">171</a> of file <a class="el" href="../../d6/d68/CryoblasterEffect_8java_source.html">CryoblasterEffect.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  171</span>                                                         {</div>
-<div class="line"><span class="lineno">  172</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../de/dd3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryoblasterEffect.html#ab191838f56f85489031f33f70a95b9f9">layers</a>;</div>
-<div class="line"><span class="lineno">  173</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryoblasterEffect_html_ab191838f56f85489031f33f70a95b9f9"><div class="ttname"><a href="../../de/dd3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryoblasterEffect.html#ab191838f56f85489031f33f70a95b9f9">com.fs.starfarer.api.impl.combat.CryoblasterEffect.layers</a></div><div class="ttdeci">EnumSet&lt; CombatEngineLayers &gt; layers</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d68/CryoblasterEffect_8java_source.html#l00169">CryoblasterEffect.java:169</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af42037c97a8a587e84204055c48fa8d1" name="af42037c97a8a587e84204055c48fa8d1"></a>
@@ -369,10 +301,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d57/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseCombatLayeredRenderingPlugin.html#a95cd97f2472068041da5922ab7ba4fd6">com.fs.starfarer.api.combat.BaseCombatLayeredRenderingPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d68/CryoblasterEffect_8java_source.html#l00164">164</a> of file <a class="el" href="../../d6/d68/CryoblasterEffect_8java_source.html">CryoblasterEffect.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  164</span>                                   {</div>
-<div class="line"><span class="lineno">  165</span>        <span class="keywordflow">return</span> 700f;</div>
-<div class="line"><span class="lineno">  166</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5f2f4940a8752418a988918c2422c383" name="a5f2f4940a8752418a988918c2422c383"></a>
@@ -394,10 +323,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d57/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseCombatLayeredRenderingPlugin.html#ad956008dacfa97f6a8ac9d8310d8f4fb">com.fs.starfarer.api.combat.BaseCombatLayeredRenderingPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d68/CryoblasterEffect_8java_source.html#l00175">175</a> of file <a class="el" href="../../d6/d68/CryoblasterEffect_8java_source.html">CryoblasterEffect.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  175</span>                                             {</div>
-<div class="line"><span class="lineno">  176</span>        super.init(<a class="code hl_variable" href="../../d9/d57/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseCombatLayeredRenderingPlugin.html#a92f4c57817c498ac47bd89ea72eea90c">entity</a>);</div>
-<div class="line"><span class="lineno">  177</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a0fc84f3d9a932f11c45a44da3cccb230" name="a0fc84f3d9a932f11c45a44da3cccb230"></a>
@@ -418,11 +344,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d57/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseCombatLayeredRenderingPlugin.html#a6bdd71c8dee8c82d374fd5dac2ec75f6">com.fs.starfarer.api.combat.BaseCombatLayeredRenderingPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d68/CryoblasterEffect_8java_source.html#l00217">217</a> of file <a class="el" href="../../d6/d68/CryoblasterEffect_8java_source.html">CryoblasterEffect.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  217</span>                               {</div>
-<div class="line"><span class="lineno">  218</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../de/dd3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryoblasterEffect.html#a632affb0836e2a8895ee0240380ec0bc">proj</a>.<a class="code hl_function" href="../../db/d65/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEntityAPI.html#ad8b5e7ed8adefe0b69281915fa56efce">isExpired</a>() || !Global.getCombatEngine().isEntityInPlay(<a class="code hl_variable" href="../../de/dd3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryoblasterEffect.html#a632affb0836e2a8895ee0240380ec0bc">proj</a>);</div>
-<div class="line"><span class="lineno">  219</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEntityAPI_html_ad8b5e7ed8adefe0b69281915fa56efce"><div class="ttname"><a href="../../db/d65/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEntityAPI.html#ad8b5e7ed8adefe0b69281915fa56efce">com.fs.starfarer.api.combat.CombatEntityAPI.isExpired</a></div><div class="ttdeci">boolean isExpired()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a522bafae765db89cf6fea06f14f6aeaa" name="a522bafae765db89cf6fea06f14f6aeaa"></a>
@@ -460,13 +382,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../df/d88/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1OnFireEffectPlugin.html#a311cdd64c43363b408cb61e077f6e629">com.fs.starfarer.api.combat.OnFireEffectPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d68/CryoblasterEffect_8java_source.html#l00056">56</a> of file <a class="el" href="../../d6/d68/CryoblasterEffect_8java_source.html">CryoblasterEffect.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   56</span>                                                                                                   {</div>
-<div class="line"><span class="lineno">   57</span>        <a class="code hl_function" href="../../de/dd3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryoblasterEffect.html#a22e393341dc83476a83a5db27af36b42">CryoblasterEffect</a> trail = <span class="keyword">new</span> <a class="code hl_function" href="../../de/dd3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryoblasterEffect.html#a22e393341dc83476a83a5db27af36b42">CryoblasterEffect</a>(projectile);</div>
-<div class="line"><span class="lineno">   58</span>        CombatEntityAPI e = engine.addLayeredRenderingPlugin(trail);</div>
-<div class="line"><span class="lineno">   59</span>        e.getLocation().set(projectile.getLocation());</div>
-<div class="line"><span class="lineno">   60</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryoblasterEffect_html_a22e393341dc83476a83a5db27af36b42"><div class="ttname"><a href="../../de/dd3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryoblasterEffect.html#a22e393341dc83476a83a5db27af36b42">com.fs.starfarer.api.impl.combat.CryoblasterEffect.CryoblasterEffect</a></div><div class="ttdeci">CryoblasterEffect()</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d68/CryoblasterEffect_8java_source.html#l00029">CryoblasterEffect.java:29</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="afaed630ffe8bdbe07767f26ed8183ef7" name="afaed630ffe8bdbe07767f26ed8183ef7"></a>
@@ -522,30 +438,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../dd/d68/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1OnHitEffectPlugin.html#ab4367dd15bcdc484344365a661313f23">com.fs.starfarer.api.combat.OnHitEffectPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d68/CryoblasterEffect_8java_source.html#l00032">32</a> of file <a class="el" href="../../d6/d68/CryoblasterEffect_8java_source.html">CryoblasterEffect.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   32</span>                                                                                                                                                                              {</div>
-<div class="line"><span class="lineno">   33</span>        Color color = projectile.getProjectileSpec().getFringeColor();</div>
-<div class="line"><span class="lineno">   34</span>        color = Misc.setAlpha(color, 100);</div>
-<div class="line"><span class="lineno">   35</span>        </div>
-<div class="line"><span class="lineno">   36</span>        Vector2f vel = <span class="keyword">new</span> Vector2f();</div>
-<div class="line"><span class="lineno">   37</span>        <span class="keywordflow">if</span> (target instanceof ShipAPI) {</div>
-<div class="line"><span class="lineno">   38</span>            vel.set(target.getVelocity());</div>
-<div class="line"><span class="lineno">   39</span>        }</div>
-<div class="line"><span class="lineno">   40</span>        </div>
-<div class="line"><span class="lineno">   41</span>        <span class="keywordtype">float</span> sizeMult = Misc.getHitGlowSize(100f, projectile.getDamage().getBaseDamage(), damageResult) / 100f;</div>
-<div class="line"><span class="lineno">   42</span>        </div>
-<div class="line"><span class="lineno">   43</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 7; i++) {</div>
-<div class="line"><span class="lineno">   44</span>            <span class="comment">//float size = projectile.getProjectileSpec().getWidth() * (0.75f + (float) Math.random() * 0.5f);</span></div>
-<div class="line"><span class="lineno">   45</span>            <span class="keywordtype">float</span> size = 40f * (0.75f + (float) Math.random() * 0.5f);</div>
-<div class="line"><span class="lineno">   46</span>            </div>
-<div class="line"><span class="lineno">   47</span>            <span class="keywordtype">float</span> dur = 1f;</div>
-<div class="line"><span class="lineno">   48</span>            <span class="comment">//dur = 0.25f;</span></div>
-<div class="line"><span class="lineno">   49</span>            <span class="keywordtype">float</span> rampUp = 0f;</div>
-<div class="line"><span class="lineno">   50</span>            Color c = Misc.scaleAlpha(color, projectile.getBrightness());</div>
-<div class="line"><span class="lineno">   51</span>            engine.addNebulaParticle(point, vel, size, 5f + 3f * sizeMult,</div>
-<div class="line"><span class="lineno">   52</span>                                            rampUp, 0f, dur, c, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   53</span>        }</div>
-<div class="line"><span class="lineno">   54</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a30ad5fed57f460d0245482314552e46a" name="a30ad5fed57f460d0245482314552e46a"></a>
@@ -577,44 +470,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d57/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseCombatLayeredRenderingPlugin.html#a58ca7ae5434cf4f58fb667283fde9142">com.fs.starfarer.api.combat.BaseCombatLayeredRenderingPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d68/CryoblasterEffect_8java_source.html#l00221">221</a> of file <a class="el" href="../../d6/d68/CryoblasterEffect_8java_source.html">CryoblasterEffect.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  221</span>                                                                       {</div>
-<div class="line"><span class="lineno">  222</span><span class="comment">//      float x = entity.getLocation().x;</span></div>
-<div class="line"><span class="lineno">  223</span><span class="comment">//      float y = entity.getLocation().y;</span></div>
-<div class="line"><span class="lineno">  224</span>        <span class="keywordtype">float</span> x = <a class="code hl_variable" href="../../de/dd3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryoblasterEffect.html#a76eb587a5b401a256d323ca5ae014cc6">projLoc</a>.x;</div>
-<div class="line"><span class="lineno">  225</span>        <span class="keywordtype">float</span> y = <a class="code hl_variable" href="../../de/dd3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryoblasterEffect.html#a76eb587a5b401a256d323ca5ae014cc6">projLoc</a>.y;</div>
-<div class="line"><span class="lineno">  226</span>        </div>
-<div class="line"><span class="lineno">  227</span>        Color color = <a class="code hl_variable" href="../../de/dd3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryoblasterEffect.html#a632affb0836e2a8895ee0240380ec0bc">proj</a>.<a class="code hl_function" href="../../d2/dd5/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DamagingProjectileAPI.html#ad13588a7ca86a0fcd3cd9ad706a4db7e">getProjectileSpec</a>().<a class="code hl_function" href="../../d2/d5b/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1ProjectileSpecAPI.html#aaf0d41fb27ff46c1d97cc7357993c9c1">getFringeColor</a>();</div>
-<div class="line"><span class="lineno">  228</span>        color = Misc.setAlpha(color, 30);</div>
-<div class="line"><span class="lineno">  229</span>        <span class="keywordtype">float</span> b = <a class="code hl_variable" href="../../de/dd3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryoblasterEffect.html#a632affb0836e2a8895ee0240380ec0bc">proj</a>.<a class="code hl_function" href="../../d2/dd5/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DamagingProjectileAPI.html#a62886287f4115193a95e24edf2a1867e">getBrightness</a>();</div>
-<div class="line"><span class="lineno">  230</span>        b *= viewport.getAlphaMult();</div>
-<div class="line"><span class="lineno">  231</span>        </div>
-<div class="line"><span class="lineno">  232</span><span class="comment">//      Vector2f farAhead = Misc.getUnitVectorAtDegreeAngle(proj.getFacing());</span></div>
-<div class="line"><span class="lineno">  233</span><span class="comment">//      farAhead.scale(10000f);</span></div>
-<div class="line"><span class="lineno">  234</span><span class="comment">//      Vector2f.add(proj.getLocation(), farAhead, farAhead);</span></div>
-<div class="line"><span class="lineno">  235</span>        </div>
-<div class="line"><span class="lineno">  236</span>        <span class="keywordflow">for</span> (ParticleData p : <a class="code hl_variable" href="../../de/dd3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryoblasterEffect.html#a8512576d17e36470cea40f4a1a051a23">particles</a>) {</div>
-<div class="line"><span class="lineno">  237</span>            <span class="comment">//float size = proj.getProjectileSpec().getWidth() * 0.6f;</span></div>
-<div class="line"><span class="lineno">  238</span>            <span class="keywordtype">float</span> size = 25f;</div>
-<div class="line"><span class="lineno">  239</span>            size *= p.scale;</div>
-<div class="line"><span class="lineno">  240</span>            </div>
-<div class="line"><span class="lineno">  241</span>            Vector2f loc = <span class="keyword">new</span> Vector2f(x + p.offset.x, y + p.offset.y);</div>
-<div class="line"><span class="lineno">  242</span>            </div>
-<div class="line"><span class="lineno">  243</span>            <span class="keywordtype">float</span> alphaMult = 1f;</div>
-<div class="line"><span class="lineno">  244</span>            <span class="comment">//float dParticle = Misc.getDistance(farAhead, loc);</span></div>
-<div class="line"><span class="lineno">  245</span>            </div>
-<div class="line"><span class="lineno">  246</span>            <span class="keywordtype">float</span> a = alphaMult;</div>
-<div class="line"><span class="lineno">  247</span>            </div>
-<div class="line"><span class="lineno">  248</span>            p.sprite.setAngle(p.angle);</div>
-<div class="line"><span class="lineno">  249</span>            p.sprite.setSize(size, size);</div>
-<div class="line"><span class="lineno">  250</span>            p.sprite.setAlphaMult(b * a * p.fader.getBrightness());</div>
-<div class="line"><span class="lineno">  251</span>            p.sprite.setColor(color);</div>
-<div class="line"><span class="lineno">  252</span>            p.sprite.renderAtCenter(loc.x, loc.y);</div>
-<div class="line"><span class="lineno">  253</span>        }</div>
-<div class="line"><span class="lineno">  254</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DamagingProjectileAPI_html_a62886287f4115193a95e24edf2a1867e"><div class="ttname"><a href="../../d2/dd5/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DamagingProjectileAPI.html#a62886287f4115193a95e24edf2a1867e">com.fs.starfarer.api.combat.DamagingProjectileAPI.getBrightness</a></div><div class="ttdeci">float getBrightness()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DamagingProjectileAPI_html_ad13588a7ca86a0fcd3cd9ad706a4db7e"><div class="ttname"><a href="../../d2/dd5/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DamagingProjectileAPI.html#ad13588a7ca86a0fcd3cd9ad706a4db7e">com.fs.starfarer.api.combat.DamagingProjectileAPI.getProjectileSpec</a></div><div class="ttdeci">ProjectileSpecAPI getProjectileSpec()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1ProjectileSpecAPI_html_aaf0d41fb27ff46c1d97cc7357993c9c1"><div class="ttname"><a href="../../d2/d5b/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1ProjectileSpecAPI.html#aaf0d41fb27ff46c1d97cc7357993c9c1">com.fs.starfarer.api.loading.ProjectileSpecAPI.getFringeColor</a></div><div class="ttdeci">Color getFringeColor()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

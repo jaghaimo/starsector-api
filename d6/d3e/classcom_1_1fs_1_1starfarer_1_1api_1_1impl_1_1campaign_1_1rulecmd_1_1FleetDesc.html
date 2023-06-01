@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -175,141 +176,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="../../d0/d5c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1CommandPlugin.html#a72a44c5127e60136b87d3b37613fd0e0">com.fs.starfarer.api.campaign.rules.CommandPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../de/d0b/FleetDesc_8java_source.html#l00026">26</a> of file <a class="el" href="../../de/d0b/FleetDesc_8java_source.html">FleetDesc.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   26</span>                                                                                                                             {</div>
-<div class="line"><span class="lineno">   27</span>        <span class="keywordflow">if</span> (dialog == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   28</span>        <span class="keywordflow">if</span> (!(dialog.getInteractionTarget() instanceof CampaignFleetAPI)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   29</span>        </div>
-<div class="line"><span class="lineno">   30</span>        CampaignFleetAPI playerFleet = Global.getSector().getPlayerFleet();</div>
-<div class="line"><span class="lineno">   31</span>        CampaignFleetAPI fleet = (CampaignFleetAPI) dialog.getInteractionTarget();</div>
-<div class="line"><span class="lineno">   32</span>        </div>
-<div class="line"><span class="lineno">   33</span>        FactionAPI faction = fleet.getFaction();</div>
-<div class="line"><span class="lineno">   34</span>        TextPanelAPI text = dialog.getTextPanel();</div>
-<div class="line"><span class="lineno">   35</span>        </div>
-<div class="line"><span class="lineno">   36</span>        <span class="keywordflow">if</span> (Global.getSettings().isDevMode() &amp;&amp; !Global.getSettings().getBoolean(<span class="stringliteral">&quot;playtestingMode&quot;</span>)) {</div>
-<div class="line"><span class="lineno">   37</span>            text.addParagraph(<span class="stringliteral">&quot;Admiral skills:&quot;</span>);</div>
-<div class="line"><span class="lineno">   38</span>            <span class="keywordflow">for</span> (SkillLevelAPI skill : fleet.getCommanderStats().getSkillsCopy()) {</div>
-<div class="line"><span class="lineno">   39</span>                <span class="keywordflow">if</span> (skill.getSkill().isAdmiralSkill()) {</div>
-<div class="line"><span class="lineno">   40</span>                    text.addParagraph(<span class="stringliteral">&quot;    &quot;</span> + skill.getSkill().getId());</div>
-<div class="line"><span class="lineno">   41</span>                }</div>
-<div class="line"><span class="lineno">   42</span>            }</div>
-<div class="line"><span class="lineno">   43</span>        }</div>
-<div class="line"><span class="lineno">   44</span>        </div>
-<div class="line"><span class="lineno">   45</span>        </div>
-<div class="line"><span class="lineno">   46</span>        MemoryAPI mem = fleet.getMemoryWithoutUpdate();</div>
-<div class="line"><span class="lineno">   47</span>        <span class="keywordflow">if</span> (!mem.contains(<span class="stringliteral">&quot;$shownFleetDescAlready&quot;</span>)) {</div>
-<div class="line"><span class="lineno">   48</span>            mem.set(<span class="stringliteral">&quot;$shownFleetDescAlready&quot;</span>, <span class="keyword">true</span>, 0);</div>
-<div class="line"><span class="lineno">   49</span>        }</div>
-<div class="line"><span class="lineno">   50</span>        </div>
-<div class="line"><span class="lineno">   51</span>        <span class="keywordtype">boolean</span> smuggler = mem.getBoolean(MemFlags.MEMORY_KEY_SMUGGLER);</div>
-<div class="line"><span class="lineno">   52</span>        <span class="keywordtype">boolean</span> trader = mem.getBoolean(MemFlags.MEMORY_KEY_TRADE_FLEET);</div>
-<div class="line"><span class="lineno">   53</span>        </div>
-<div class="line"><span class="lineno">   54</span>        Color hl = Misc.getHighlightColor();</div>
-<div class="line"><span class="lineno">   55</span>        Color red = Misc.getNegativeHighlightColor();</div>
-<div class="line"><span class="lineno">   56</span>        </div>
-<div class="line"><span class="lineno">   57</span>        RouteData route = RouteManager.getInstance().getRoute(EconomyFleetRouteManager.SOURCE_ID, fleet);</div>
-<div class="line"><span class="lineno">   58</span>        <span class="keywordflow">if</span> ((trader || smuggler) &amp;&amp; route != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   59</span>            EconomyRouteData data = (EconomyRouteData) route.getCustom();</div>
-<div class="line"><span class="lineno">   60</span>            </div>
-<div class="line"><span class="lineno">   61</span>            Integer <span class="keywordtype">id</span> = route.getCurrentSegmentId();</div>
-<div class="line"><span class="lineno">   62</span>            </div>
-<div class="line"><span class="lineno">   63</span>            String from = data.from.getName();</div>
-<div class="line"><span class="lineno">   64</span>            String to = data.to.getName();</div>
-<div class="line"><span class="lineno">   65</span>            <span class="comment">//int index = route.getCurrentIndex();</span></div>
-<div class="line"><span class="lineno">   66</span>            <span class="keywordflow">if</span> (<span class="keywordtype">id</span> &gt;= EconomyFleetRouteManager.ROUTE_DST_LOAD) {</div>
-<div class="line"><span class="lineno">   67</span>                from = data.to.getName();</div>
-<div class="line"><span class="lineno">   68</span>                to = data.from.getName();</div>
-<div class="line"><span class="lineno">   69</span>            }</div>
-<div class="line"><span class="lineno">   70</span>            String cargo = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">   71</span> </div>
-<div class="line"><span class="lineno">   72</span>            <span class="keywordflow">if</span> (<span class="keywordtype">id</span> &lt;= EconomyFleetRouteManager.ROUTE_DST_UNLOAD) {</div>
-<div class="line"><span class="lineno">   73</span>                cargo = EconomyRouteData.getCargoList(data.cargoDeliver);</div>
-<div class="line"><span class="lineno">   74</span>                <span class="keywordflow">if</span> (!cargo.isEmpty() &amp;&amp; <span class="keywordtype">id</span> == EconomyFleetRouteManager.ROUTE_SRC_LOAD) cargo += <span class="stringliteral">&quot; (being loaded)&quot;</span>;</div>
-<div class="line"><span class="lineno">   75</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   76</span>                cargo = EconomyRouteData.getCargoList(data.cargoReturn);</div>
-<div class="line"><span class="lineno">   77</span>                <span class="keywordflow">if</span> (!cargo.isEmpty() &amp;&amp; <span class="keywordtype">id</span> == EconomyFleetRouteManager.ROUTE_DST_LOAD) cargo += <span class="stringliteral">&quot; (being loaded)&quot;</span>;</div>
-<div class="line"><span class="lineno">   78</span>            }</div>
-<div class="line"><span class="lineno">   79</span>            </div>
-<div class="line"><span class="lineno">   80</span>            <span class="keywordflow">if</span> (trader || smuggler) {</div>
-<div class="line"><span class="lineno">   81</span>                LabelAPI label = text.addParagraph(<span class="stringliteral">&quot;You encounter &quot;</span> + fleet.getFaction().getPersonNamePrefixAOrAn() + <span class="stringliteral">&quot; &quot;</span> + </div>
-<div class="line"><span class="lineno">   82</span>                        fleet.getFaction().getPersonNamePrefix() + <span class="stringliteral">&quot; &quot;</span>+ fleet.getName().toLowerCase() + <span class="stringliteral">&quot;.&quot;</span>);</div>
-<div class="line"><span class="lineno">   83</span>                label.highlightFirst(fleet.getFaction().getPersonNamePrefix());</div>
-<div class="line"><span class="lineno">   84</span>                label.setHighlightColor(fleet.getFaction().getBaseUIColor());</div>
-<div class="line"><span class="lineno">   85</span>                </div>
-<div class="line"><span class="lineno">   86</span>                text.setFontSmallInsignia();</div>
-<div class="line"><span class="lineno">   87</span>                </div>
-<div class="line"><span class="lineno">   88</span>                text.addParagraph(<span class="stringliteral">&quot;--------------------------------------------------------------------------------------------------------------&quot;</span>);</div>
-<div class="line"><span class="lineno">   89</span>                <span class="keywordflow">if</span> (data.from.isHidden()) {</div>
-<div class="line"><span class="lineno">   90</span>                    text.addPara(<span class="stringliteral">&quot;Port of origin: %s&quot;</span>, hl, <span class="stringliteral">&quot;Unknown&quot;</span>);</div>
-<div class="line"><span class="lineno">   91</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   92</span>                    text.addPara(<span class="stringliteral">&quot;Port of origin: %s&quot;</span>, hl, data.from.getName());</div>
-<div class="line"><span class="lineno">   93</span>                }</div>
-<div class="line"><span class="lineno">   94</span>                text.addPara(<span class="stringliteral">&quot;Current destination: %s&quot;</span>, hl, to);</div>
-<div class="line"><span class="lineno">   95</span>                <span class="keywordflow">if</span> (from.equals(data.to.getName())) {</div>
-<div class="line"><span class="lineno">   96</span>                    text.addPara(<span class="stringliteral">&quot;Returning from: %s&quot;</span>, hl, data.to.getName());</div>
-<div class="line"><span class="lineno">   97</span>                }</div>
-<div class="line"><span class="lineno">   98</span>                <span class="keywordflow">if</span> (cargo.isEmpty()) {</div>
-<div class="line"><span class="lineno">   99</span>                    text.addPara(<span class="stringliteral">&quot;No cargo&quot;</span>);</div>
-<div class="line"><span class="lineno">  100</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  101</span>                    text.addPara(<span class="stringliteral">&quot;Cargo: %s&quot;</span>, hl, cargo);</div>
-<div class="line"><span class="lineno">  102</span>                    <span class="comment">//text.addPara(cargo);</span></div>
-<div class="line"><span class="lineno">  103</span>                }</div>
-<div class="line"><span class="lineno">  104</span>                </div>
-<div class="line"><span class="lineno">  105</span>                text.addParagraph(<span class="stringliteral">&quot;--------------------------------------------------------------------------------------------------------------&quot;</span>);</div>
-<div class="line"><span class="lineno">  106</span>                text.setFontInsignia();</div>
-<div class="line"><span class="lineno">  107</span>                </div>
-<div class="line"><span class="lineno">  108</span>                <span class="keywordtype">int</span> penalty = Math.round(ShippingDisruption.getPenaltyForShippingLost(data.from.getSize(), data.size) * 100f);</div>
-<div class="line"><span class="lineno">  109</span>                </div>
-<div class="line"><span class="lineno">  110</span> </div>
-<div class="line"><span class="lineno">  111</span>                <span class="keywordflow">if</span> (!fleet.getFaction().isPlayerFaction()) {</div>
-<div class="line"><span class="lineno">  112</span>                    <span class="keywordflow">if</span> (data.from.isHidden()) {</div>
-<div class="line"><span class="lineno">  113</span>                        text.addPara(<span class="stringliteral">&quot;If this fleet does not reach its destination safely, it will cause a shortage &quot;</span> +</div>
-<div class="line"><span class="lineno">  114</span>                                <span class="stringliteral">&quot;of the commodities it carries. &quot;</span> +</div>
-<div class="line"><span class="lineno">  115</span>                                <span class="stringliteral">&quot;In addition, its loss would reduce the accessibility of its port of origin by %s for up to three months.&quot;</span>,</div>
-<div class="line"><span class="lineno">  116</span>                                Misc.getTextColor(), Misc.getHighlightColor(), <span class="stringliteral">&quot;&quot;</span> + penalty + <span class="stringliteral">&quot;%&quot;</span>);</div>
-<div class="line"><span class="lineno">  117</span>                    } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  118</span>                        text.addPara(<span class="stringliteral">&quot;If this fleet does not reach its destination safely, it will cause a shortage &quot;</span> +</div>
-<div class="line"><span class="lineno">  119</span>                                <span class="stringliteral">&quot;of the commodities it carries. &quot;</span> +</div>
-<div class="line"><span class="lineno">  120</span>                                <span class="stringliteral">&quot;In addition, its loss would reduce the accessbility of &quot;</span> + data.from.getName() + <span class="stringliteral">&quot; by %s for up to three months.&quot;</span>,</div>
-<div class="line"><span class="lineno">  121</span>                                Misc.getTextColor(), Misc.getHighlightColor(), <span class="stringliteral">&quot;&quot;</span> + penalty + <span class="stringliteral">&quot;%&quot;</span>);</div>
-<div class="line"><span class="lineno">  122</span>                    }</div>
-<div class="line"><span class="lineno">  123</span>                }</div>
-<div class="line"><span class="lineno">  124</span>            }</div>
-<div class="line"><span class="lineno">  125</span>        }</div>
-<div class="line"><span class="lineno">  126</span>        </div>
-<div class="line"><span class="lineno">  127</span>        <span class="keywordflow">if</span> (!fleet.getFaction().isPlayerFaction() &amp;&amp; !fleet.getFaction().isNeutralFaction()) {</div>
-<div class="line"><span class="lineno">  128</span>            <span class="keywordflow">if</span> (fleet.getMemoryWithoutUpdate().getBoolean(MemFlags.MEMORY_KEY_NO_REP_IMPACT)) {</div>
-<div class="line"><span class="lineno">  129</span>                <span class="keywordflow">if</span> (Misc.isDecentralized(fleet.getFaction())) {</div>
-<div class="line"><span class="lineno">  130</span><span class="comment">//                  text.addPara(&quot;This fleet&#39;s behavior falls outside the accepted norms of the faction it nominally belongs to. &quot; +</span></div>
-<div class="line"><span class="lineno">  131</span><span class="comment">//                               &quot;Engaging it in battle will not cause any changes to your reputation.&quot;,</span></div>
-<div class="line"><span class="lineno">  132</span><span class="comment">//                               Misc.getHighlightColor(), &quot;will not cause any changes to your reputation&quot;);</span></div>
-<div class="line"><span class="lineno">  133</span>                    text.addPara(<span class="stringliteral">&quot;Engaging this fleet in battle will not cause any changes to your reputation with the faction it nominally belongs to.&quot;</span>,</div>
-<div class="line"><span class="lineno">  134</span>                            Misc.getHighlightColor(), <span class="stringliteral">&quot;will not cause any changes to your reputation&quot;</span>);</div>
-<div class="line"><span class="lineno">  135</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  136</span>                    text.addPara(<span class="stringliteral">&quot;This fleet is operating without official sanction from the faction it nominally belongs to. &quot;</span> +</div>
-<div class="line"><span class="lineno">  137</span>                            <span class="stringliteral">&quot;Engaging it in battle will not cause any changes to your reputation.&quot;</span>,</div>
-<div class="line"><span class="lineno">  138</span>                            Misc.getHighlightColor(), <span class="stringliteral">&quot;will not cause any changes to your reputation&quot;</span>);</div>
-<div class="line"><span class="lineno">  139</span>                }</div>
-<div class="line"><span class="lineno">  140</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (fleet.getMemoryWithoutUpdate().getBoolean(MemFlags.MEMORY_KEY_LOW_REP_IMPACT) &amp;&amp; fleet.knowsWhoPlayerIs()) {</div>
-<div class="line"><span class="lineno">  141</span>                <span class="keywordflow">if</span> (Misc.isDecentralized(fleet.getFaction())) {</div>
-<div class="line"><span class="lineno">  142</span><span class="comment">//                  text.addPara(&quot;This fleet&#39;s behavior falls outside the accepted norms of the faction it nominally belongs to. &quot; +</span></div>
-<div class="line"><span class="lineno">  143</span><span class="comment">//                          &quot;Engaging it in battle will not cause immediate hostilities &quot; +</span></div>
-<div class="line"><span class="lineno">  144</span><span class="comment">//                          &quot;with the faction it belongs to, though it will slightly strain the relationship.&quot;,</span></div>
-<div class="line"><span class="lineno">  145</span><span class="comment">//                          Misc.getHighlightColor(), &quot;will not cause immediate hostilities&quot;);</span></div>
-<div class="line"><span class="lineno">  146</span>                    text.addPara(<span class="stringliteral">&quot;Engaging this fleet in battle will not cause immediate hostilities &quot;</span> +</div>
-<div class="line"><span class="lineno">  147</span>                            <span class="stringliteral">&quot;with the faction it nominally belongs to, though it will slightly strain the relationship.&quot;</span>,</div>
-<div class="line"><span class="lineno">  148</span>                            Misc.getHighlightColor(), <span class="stringliteral">&quot;will not cause immediate hostilities&quot;</span>);</div>
-<div class="line"><span class="lineno">  149</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  150</span>                    text.addPara(<span class="stringliteral">&quot;This fleet is either operating in a legal gray area or its behavior &quot;</span> +</div>
-<div class="line"><span class="lineno">  151</span>                            <span class="stringliteral">&quot;falls outside accepted norms. Engaging it in battle will not cause immediate hostilities &quot;</span> +</div>
-<div class="line"><span class="lineno">  152</span>                            <span class="stringliteral">&quot;with the faction it nominally belongs to, though it will slightly strain the relationship.&quot;</span>,</div>
-<div class="line"><span class="lineno">  153</span>                            Misc.getHighlightColor(), <span class="stringliteral">&quot;will not cause immediate hostilities&quot;</span>);</div>
-<div class="line"><span class="lineno">  154</span>                }</div>
-<div class="line"><span class="lineno">  155</span>            }</div>
-<div class="line"><span class="lineno">  156</span>        }</div>
-<div class="line"><span class="lineno">  157</span>        </div>
-<div class="line"><span class="lineno">  158</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  159</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -175,10 +176,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/daf/CampaignPingSpec_8java_source.html#l00034">34</a> of file <a class="el" href="../../d9/daf/CampaignPingSpec_8java_source.html">CampaignPingSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   34</span>                              {</div>
-<div class="line"><span class="lineno">   35</span>        super();</div>
-<div class="line"><span class="lineno">   36</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a3a9afaa22613c2dcb4c3ceca3344a51e" name="a3a9afaa22613c2dcb4c3ceca3344a51e"></a>
@@ -214,32 +212,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/daf/CampaignPingSpec_8java_source.html#l00038">38</a> of file <a class="el" href="../../d9/daf/CampaignPingSpec_8java_source.html">CampaignPingSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   38</span>                                                                                          {</div>
-<div class="line"><span class="lineno">   39</span>        this.id = id;</div>
-<div class="line"><span class="lineno">   40</span>        </div>
-<div class="line"><span class="lineno">   41</span>        this.color = color;</div>
-<div class="line"><span class="lineno">   42</span>        </div>
-<div class="line"><span class="lineno">   43</span>        sounds = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
-<div class="line"><span class="lineno">   44</span>        JSONArray arr = json.optJSONArray(<span class="stringliteral">&quot;sounds&quot;</span>);</div>
-<div class="line"><span class="lineno">   45</span>        <span class="keywordflow">if</span> (arr != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   46</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; arr.length(); i++) {</div>
-<div class="line"><span class="lineno">   47</span>                sounds.add(arr.getString(i));</div>
-<div class="line"><span class="lineno">   48</span>            }</div>
-<div class="line"><span class="lineno">   49</span>        }</div>
-<div class="line"><span class="lineno">   50</span>    </div>
-<div class="line"><span class="lineno">   51</span>        inFraction = (float) json.optDouble(<span class="stringliteral">&quot;inFraction&quot;</span>, 0.1f);</div>
-<div class="line"><span class="lineno">   52</span>        minRange = (float) json.optDouble(<span class="stringliteral">&quot;minRange&quot;</span>, 0f);</div>
-<div class="line"><span class="lineno">   53</span>        range = (float) json.getDouble(<span class="stringliteral">&quot;range&quot;</span>);</div>
-<div class="line"><span class="lineno">   54</span>        width = (float) json.getDouble(<span class="stringliteral">&quot;width&quot;</span>);</div>
-<div class="line"><span class="lineno">   55</span>        duration = (float) json.getDouble(<span class="stringliteral">&quot;duration&quot;</span>);</div>
-<div class="line"><span class="lineno">   56</span>        delay = (float) json.optDouble(<span class="stringliteral">&quot;delay&quot;</span>, 1f);</div>
-<div class="line"><span class="lineno">   57</span>        alphaMult = (float) json.optDouble(<span class="stringliteral">&quot;alphaMult&quot;</span>, 1f);</div>
-<div class="line"><span class="lineno">   58</span>        num = json.optInt(<span class="stringliteral">&quot;num&quot;</span>, 1);</div>
-<div class="line"><span class="lineno">   59</span>        </div>
-<div class="line"><span class="lineno">   60</span>        invert = json.optBoolean(<span class="stringliteral">&quot;invert&quot;</span>, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   61</span>        useFactionColor = json.optBoolean(<span class="stringliteral">&quot;useFactionColor&quot;</span>, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   62</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -259,10 +232,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/daf/CampaignPingSpec_8java_source.html#l00064">64</a> of file <a class="el" href="../../d9/daf/CampaignPingSpec_8java_source.html">CampaignPingSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   64</span>                                {</div>
-<div class="line"><span class="lineno">   65</span>        <span class="keywordflow">return</span> alphaMult;</div>
-<div class="line"><span class="lineno">   66</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a1e2157e682f6b6857c69ad3746b75f28" name="a1e2157e682f6b6857c69ad3746b75f28"></a>
@@ -281,10 +251,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/daf/CampaignPingSpec_8java_source.html#l00084">84</a> of file <a class="el" href="../../d9/daf/CampaignPingSpec_8java_source.html">CampaignPingSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   84</span>                            {</div>
-<div class="line"><span class="lineno">   85</span>        <span class="keywordflow">return</span> color;</div>
-<div class="line"><span class="lineno">   86</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a87992a5aa5d1c86f25a5d8a888fd1223" name="a87992a5aa5d1c86f25a5d8a888fd1223"></a>
@@ -303,10 +270,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/daf/CampaignPingSpec_8java_source.html#l00096">96</a> of file <a class="el" href="../../d9/daf/CampaignPingSpec_8java_source.html">CampaignPingSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   96</span>                            {</div>
-<div class="line"><span class="lineno">   97</span>        <span class="keywordflow">return</span> delay;</div>
-<div class="line"><span class="lineno">   98</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a7a91a58a81a6f5f5053e9cef1ebba478" name="a7a91a58a81a6f5f5053e9cef1ebba478"></a>
@@ -325,10 +289,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/daf/CampaignPingSpec_8java_source.html#l00092">92</a> of file <a class="el" href="../../d9/daf/CampaignPingSpec_8java_source.html">CampaignPingSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   92</span>                               {</div>
-<div class="line"><span class="lineno">   93</span>        <span class="keywordflow">return</span> duration;</div>
-<div class="line"><span class="lineno">   94</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab047c98eba93e64767a7f467d8c539a6" name="ab047c98eba93e64767a7f467d8c539a6"></a>
@@ -347,10 +308,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/daf/CampaignPingSpec_8java_source.html#l00076">76</a> of file <a class="el" href="../../d9/daf/CampaignPingSpec_8java_source.html">CampaignPingSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   76</span>                          {</div>
-<div class="line"><span class="lineno">   77</span>        <span class="keywordflow">return</span> id;</div>
-<div class="line"><span class="lineno">   78</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a3b26c8777ead94aa02e06c8dbbfa0572" name="a3b26c8777ead94aa02e06c8dbbfa0572"></a>
@@ -369,10 +327,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/daf/CampaignPingSpec_8java_source.html#l00068">68</a> of file <a class="el" href="../../d9/daf/CampaignPingSpec_8java_source.html">CampaignPingSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   68</span>                                 {</div>
-<div class="line"><span class="lineno">   69</span>        <span class="keywordflow">return</span> inFraction;</div>
-<div class="line"><span class="lineno">   70</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a6aae4979cb41593d13669ec280260f17" name="a6aae4979cb41593d13669ec280260f17"></a>
@@ -391,10 +346,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/daf/CampaignPingSpec_8java_source.html#l00112">112</a> of file <a class="el" href="../../d9/daf/CampaignPingSpec_8java_source.html">CampaignPingSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  112</span>                               {</div>
-<div class="line"><span class="lineno">  113</span>        <span class="keywordflow">return</span> minRange;</div>
-<div class="line"><span class="lineno">  114</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac1724bc8264116e693aa36d8dc3e90d2" name="ac1724bc8264116e693aa36d8dc3e90d2"></a>
@@ -413,10 +365,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/daf/CampaignPingSpec_8java_source.html#l00104">104</a> of file <a class="el" href="../../d9/daf/CampaignPingSpec_8java_source.html">CampaignPingSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  104</span>                        {</div>
-<div class="line"><span class="lineno">  105</span>        <span class="keywordflow">return</span> num;</div>
-<div class="line"><span class="lineno">  106</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a0368a9fa6d27f2dc340e1eadb2b109c5" name="a0368a9fa6d27f2dc340e1eadb2b109c5"></a>
@@ -435,10 +384,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/daf/CampaignPingSpec_8java_source.html#l00088">88</a> of file <a class="el" href="../../d9/daf/CampaignPingSpec_8java_source.html">CampaignPingSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   88</span>                            {</div>
-<div class="line"><span class="lineno">   89</span>        <span class="keywordflow">return</span> range;</div>
-<div class="line"><span class="lineno">   90</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="acad8a37d524ce98a5deeaaa08bd0679d" name="acad8a37d524ce98a5deeaaa08bd0679d"></a>
@@ -457,10 +403,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/daf/CampaignPingSpec_8java_source.html#l00080">80</a> of file <a class="el" href="../../d9/daf/CampaignPingSpec_8java_source.html">CampaignPingSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   80</span>                                    {</div>
-<div class="line"><span class="lineno">   81</span>        <span class="keywordflow">return</span> sounds;</div>
-<div class="line"><span class="lineno">   82</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a60cfa216b9a4a7e4e9fcf0d652fb1ee9" name="a60cfa216b9a4a7e4e9fcf0d652fb1ee9"></a>
@@ -479,10 +422,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/daf/CampaignPingSpec_8java_source.html#l00108">108</a> of file <a class="el" href="../../d9/daf/CampaignPingSpec_8java_source.html">CampaignPingSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  108</span>                            {</div>
-<div class="line"><span class="lineno">  109</span>        <span class="keywordflow">return</span> width;</div>
-<div class="line"><span class="lineno">  110</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a3afe41776129c3c8609b3bedb2cf0fcb" name="a3afe41776129c3c8609b3bedb2cf0fcb"></a>
@@ -501,10 +441,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/daf/CampaignPingSpec_8java_source.html#l00100">100</a> of file <a class="el" href="../../d9/daf/CampaignPingSpec_8java_source.html">CampaignPingSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  100</span>                              {</div>
-<div class="line"><span class="lineno">  101</span>        <span class="keywordflow">return</span> invert;</div>
-<div class="line"><span class="lineno">  102</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a726e90b447507dddf211db024b9ff1a1" name="a726e90b447507dddf211db024b9ff1a1"></a>
@@ -523,10 +460,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/daf/CampaignPingSpec_8java_source.html#l00072">72</a> of file <a class="el" href="../../d9/daf/CampaignPingSpec_8java_source.html">CampaignPingSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   72</span>                                       {</div>
-<div class="line"><span class="lineno">   73</span>        <span class="keywordflow">return</span> useFactionColor;</div>
-<div class="line"><span class="lineno">   74</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a00c25455aa885343cc50c2a0385298b3" name="a00c25455aa885343cc50c2a0385298b3"></a>
@@ -546,10 +480,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/daf/CampaignPingSpec_8java_source.html#l00148">148</a> of file <a class="el" href="../../d9/daf/CampaignPingSpec_8java_source.html">CampaignPingSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  148</span>                                              {</div>
-<div class="line"><span class="lineno">  149</span>        this.alphaMult = alphaMult;</div>
-<div class="line"><span class="lineno">  150</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ad2d7ce617da951b45620eb4f231a0ceb" name="ad2d7ce617da951b45620eb4f231a0ceb"></a>
@@ -569,10 +500,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/daf/CampaignPingSpec_8java_source.html#l00124">124</a> of file <a class="el" href="../../d9/daf/CampaignPingSpec_8java_source.html">CampaignPingSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  124</span>                                      {</div>
-<div class="line"><span class="lineno">  125</span>        this.color = color;</div>
-<div class="line"><span class="lineno">  126</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="abb9f8ff1420d5d00d2395526ad6eddf1" name="abb9f8ff1420d5d00d2395526ad6eddf1"></a>
@@ -592,10 +520,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/daf/CampaignPingSpec_8java_source.html#l00140">140</a> of file <a class="el" href="../../d9/daf/CampaignPingSpec_8java_source.html">CampaignPingSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  140</span>                                      {</div>
-<div class="line"><span class="lineno">  141</span>        this.delay = delay;</div>
-<div class="line"><span class="lineno">  142</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a381f5e3b7ea95fdefbf1e436130e070c" name="a381f5e3b7ea95fdefbf1e436130e070c"></a>
@@ -615,10 +540,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/daf/CampaignPingSpec_8java_source.html#l00136">136</a> of file <a class="el" href="../../d9/daf/CampaignPingSpec_8java_source.html">CampaignPingSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  136</span>                                            {</div>
-<div class="line"><span class="lineno">  137</span>        this.duration = duration;</div>
-<div class="line"><span class="lineno">  138</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a7e29a4e1f734200c98cefa989fdeded7" name="a7e29a4e1f734200c98cefa989fdeded7"></a>
@@ -638,10 +560,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/daf/CampaignPingSpec_8java_source.html#l00116">116</a> of file <a class="el" href="../../d9/daf/CampaignPingSpec_8java_source.html">CampaignPingSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  116</span>                                 {</div>
-<div class="line"><span class="lineno">  117</span>        this.id = id;</div>
-<div class="line"><span class="lineno">  118</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a4db588bbf677a0258f3f55ae452e388d" name="a4db588bbf677a0258f3f55ae452e388d"></a>
@@ -661,10 +580,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/daf/CampaignPingSpec_8java_source.html#l00152">152</a> of file <a class="el" href="../../d9/daf/CampaignPingSpec_8java_source.html">CampaignPingSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  152</span>                                                {</div>
-<div class="line"><span class="lineno">  153</span>        this.inFraction = inFraction;</div>
-<div class="line"><span class="lineno">  154</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac03157f70989e9a4e85543799a31b897" name="ac03157f70989e9a4e85543799a31b897"></a>
@@ -684,10 +600,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/daf/CampaignPingSpec_8java_source.html#l00156">156</a> of file <a class="el" href="../../d9/daf/CampaignPingSpec_8java_source.html">CampaignPingSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  156</span>                                          {</div>
-<div class="line"><span class="lineno">  157</span>        this.invert = invert;</div>
-<div class="line"><span class="lineno">  158</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab6be35b241aa8d2b371f2ac4dcf66293" name="ab6be35b241aa8d2b371f2ac4dcf66293"></a>
@@ -707,10 +620,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/daf/CampaignPingSpec_8java_source.html#l00128">128</a> of file <a class="el" href="../../d9/daf/CampaignPingSpec_8java_source.html">CampaignPingSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  128</span>                                            {</div>
-<div class="line"><span class="lineno">  129</span>        this.minRange = minRange;</div>
-<div class="line"><span class="lineno">  130</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="abb6b5235681504fe2966f6229e08c9b8" name="abb6b5235681504fe2966f6229e08c9b8"></a>
@@ -730,10 +640,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/daf/CampaignPingSpec_8java_source.html#l00164">164</a> of file <a class="el" href="../../d9/daf/CampaignPingSpec_8java_source.html">CampaignPingSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  164</span>                                {</div>
-<div class="line"><span class="lineno">  165</span>        this.num = num;</div>
-<div class="line"><span class="lineno">  166</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8d09f9c3d545dce42cc701c3475b308f" name="a8d09f9c3d545dce42cc701c3475b308f"></a>
@@ -753,10 +660,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/daf/CampaignPingSpec_8java_source.html#l00132">132</a> of file <a class="el" href="../../d9/daf/CampaignPingSpec_8java_source.html">CampaignPingSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  132</span>                                      {</div>
-<div class="line"><span class="lineno">  133</span>        this.range = range;</div>
-<div class="line"><span class="lineno">  134</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ad95c20973e6de40d89ddbc7000b741b1" name="ad95c20973e6de40d89ddbc7000b741b1"></a>
@@ -776,10 +680,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/daf/CampaignPingSpec_8java_source.html#l00120">120</a> of file <a class="el" href="../../d9/daf/CampaignPingSpec_8java_source.html">CampaignPingSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  120</span>                                               {</div>
-<div class="line"><span class="lineno">  121</span>        this.sounds = sounds;</div>
-<div class="line"><span class="lineno">  122</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8f98360413e7f8d74c06b4b6b783aebd" name="a8f98360413e7f8d74c06b4b6b783aebd"></a>
@@ -799,10 +700,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/daf/CampaignPingSpec_8java_source.html#l00160">160</a> of file <a class="el" href="../../d9/daf/CampaignPingSpec_8java_source.html">CampaignPingSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  160</span>                                                            {</div>
-<div class="line"><span class="lineno">  161</span>        this.useFactionColor = useFactionColor;</div>
-<div class="line"><span class="lineno">  162</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ad10468223e293da84e1f26ab425b64e0" name="ad10468223e293da84e1f26ab425b64e0"></a>
@@ -822,10 +720,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/daf/CampaignPingSpec_8java_source.html#l00144">144</a> of file <a class="el" href="../../d9/daf/CampaignPingSpec_8java_source.html">CampaignPingSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  144</span>                                      {</div>
-<div class="line"><span class="lineno">  145</span>        this.width = width;</div>
-<div class="line"><span class="lineno">  146</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

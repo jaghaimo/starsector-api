@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -163,9 +164,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/dd0/CollisionGridUtil_8java_source.html#l00018">18</a> of file <a class="el" href="../../d6/dd0/CollisionGridUtil_8java_source.html">CollisionGridUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   18</span>                                   {</div>
-<div class="line"><span class="lineno">   19</span>        }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ad2c3deeb6390025943470b8a121b4eba" name="ad2c3deeb6390025943470b8a121b4eba"></a>
@@ -215,27 +214,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/dd0/CollisionGridUtil_8java_source.html#l00020">20</a> of file <a class="el" href="../../d6/dd0/CollisionGridUtil_8java_source.html">CollisionGridUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   20</span>                                                                             {</div>
-<div class="line"><span class="lineno">   21</span>            <a class="code hl_variable" href="../../d2/dfd/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil_1_1BucketIterator.html#a59abf5cd56dc4af6206724f684febe11">objects</a> = <span class="keyword">new</span> LinkedHashSet&lt;Object&gt;();</div>
-<div class="line"><span class="lineno">   22</span>            <span class="keywordflow">if</span> (startX &lt; 0) startX = 0;</div>
-<div class="line"><span class="lineno">   23</span>            <span class="keywordflow">if</span> (endX &gt;= <a class="code hl_variable" href="../../d3/d31/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil.html#a3f24367f6df373b375c087a151389267">width</a>) endX = <a class="code hl_variable" href="../../d3/d31/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil.html#a3f24367f6df373b375c087a151389267">width</a> - 1;</div>
-<div class="line"><span class="lineno">   24</span>            <span class="keywordflow">if</span> (startY &lt; 0) startY = 0;</div>
-<div class="line"><span class="lineno">   25</span>            <span class="keywordflow">if</span> (endY &gt;= <a class="code hl_variable" href="../../d3/d31/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil.html#a9aeaf01e68a48b01e8a544aec4c14795">height</a>) endY = <a class="code hl_variable" href="../../d3/d31/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil.html#a9aeaf01e68a48b01e8a544aec4c14795">height</a> - 1;</div>
-<div class="line"><span class="lineno">   26</span>            </div>
-<div class="line"><span class="lineno">   27</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = startX; i &lt;= endX; i++) {</div>
-<div class="line"><span class="lineno">   28</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = startY; j &lt;= endY; j++) {</div>
-<div class="line"><span class="lineno">   29</span>                    <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d3/d31/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil.html#a562280b13d41e99e55c31dae09197295">buckets</a>[i][j] == <span class="keyword">null</span>) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   30</span>                    <a class="code hl_variable" href="../../d2/dfd/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil_1_1BucketIterator.html#a59abf5cd56dc4af6206724f684febe11">objects</a>.addAll(<a class="code hl_variable" href="../../d3/d31/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil.html#a562280b13d41e99e55c31dae09197295">buckets</a>[i][j]);</div>
-<div class="line"><span class="lineno">   31</span>                }</div>
-<div class="line"><span class="lineno">   32</span>            }</div>
-<div class="line"><span class="lineno">   33</span>            <a class="code hl_variable" href="../../d2/dfd/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil_1_1BucketIterator.html#a334f024d6fc3652860e3ee92b38d4c6a">curr</a> = <a class="code hl_variable" href="../../d2/dfd/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil_1_1BucketIterator.html#a59abf5cd56dc4af6206724f684febe11">objects</a>.iterator();</div>
-<div class="line"><span class="lineno">   34</span>        }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil_1_1BucketIterator_html_a334f024d6fc3652860e3ee92b38d4c6a"><div class="ttname"><a href="../../d2/dfd/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil_1_1BucketIterator.html#a334f024d6fc3652860e3ee92b38d4c6a">com.fs.starfarer.api.util.CollisionGridUtil.BucketIterator.curr</a></div><div class="ttdeci">Iterator&lt; Object &gt; curr</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dd0/CollisionGridUtil_8java_source.html#l00016">CollisionGridUtil.java:16</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil_1_1BucketIterator_html_a59abf5cd56dc4af6206724f684febe11"><div class="ttname"><a href="../../d2/dfd/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil_1_1BucketIterator.html#a59abf5cd56dc4af6206724f684febe11">com.fs.starfarer.api.util.CollisionGridUtil.BucketIterator.objects</a></div><div class="ttdeci">Set&lt; Object &gt; objects</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dd0/CollisionGridUtil_8java_source.html#l00017">CollisionGridUtil.java:17</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil_html_a3f24367f6df373b375c087a151389267"><div class="ttname"><a href="../../d3/d31/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil.html#a3f24367f6df373b375c087a151389267">com.fs.starfarer.api.util.CollisionGridUtil.width</a></div><div class="ttdeci">int width</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dd0/CollisionGridUtil_8java_source.html#l00056">CollisionGridUtil.java:56</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil_html_a562280b13d41e99e55c31dae09197295"><div class="ttname"><a href="../../d3/d31/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil.html#a562280b13d41e99e55c31dae09197295">com.fs.starfarer.api.util.CollisionGridUtil.buckets</a></div><div class="ttdeci">List&lt; Object &gt;[][] buckets</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dd0/CollisionGridUtil_8java_source.html#l00054">CollisionGridUtil.java:54</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil_html_a9aeaf01e68a48b01e8a544aec4c14795"><div class="ttname"><a href="../../d3/d31/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil.html#a9aeaf01e68a48b01e8a544aec4c14795">com.fs.starfarer.api.util.CollisionGridUtil.height</a></div><div class="ttdeci">int height</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dd0/CollisionGridUtil_8java_source.html#l00056">CollisionGridUtil.java:56</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -255,14 +234,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/dd0/CollisionGridUtil_8java_source.html#l00035">35</a> of file <a class="el" href="../../d6/dd0/CollisionGridUtil_8java_source.html">CollisionGridUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   35</span>                                           {</div>
-<div class="line"><span class="lineno">   36</span>            <a class="code hl_function" href="../../d2/dfd/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil_1_1BucketIterator.html#a26d817cdef6d039c7b7f78c4261e0444">BucketIterator</a> copy = <span class="keyword">new</span> <a class="code hl_function" href="../../d2/dfd/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil_1_1BucketIterator.html#a26d817cdef6d039c7b7f78c4261e0444">BucketIterator</a>();</div>
-<div class="line"><span class="lineno">   37</span>            copy.objects = <a class="code hl_variable" href="../../d2/dfd/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil_1_1BucketIterator.html#a59abf5cd56dc4af6206724f684febe11">objects</a>;</div>
-<div class="line"><span class="lineno">   38</span>            copy.curr = copy.objects.iterator();</div>
-<div class="line"><span class="lineno">   39</span>            <span class="keywordflow">return</span> copy;</div>
-<div class="line"><span class="lineno">   40</span>        }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil_1_1BucketIterator_html_a26d817cdef6d039c7b7f78c4261e0444"><div class="ttname"><a href="../../d2/dfd/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil_1_1BucketIterator.html#a26d817cdef6d039c7b7f78c4261e0444">com.fs.starfarer.api.util.CollisionGridUtil.BucketIterator.BucketIterator</a></div><div class="ttdeci">BucketIterator()</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dd0/CollisionGridUtil_8java_source.html#l00018">CollisionGridUtil.java:18</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa69871d0ce63fed4d998c18fbfc031cf" name="aa69871d0ce63fed4d998c18fbfc031cf"></a>
@@ -281,10 +253,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/dd0/CollisionGridUtil_8java_source.html#l00041">41</a> of file <a class="el" href="../../d6/dd0/CollisionGridUtil_8java_source.html">CollisionGridUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   41</span>                                 {</div>
-<div class="line"><span class="lineno">   42</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d2/dfd/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil_1_1BucketIterator.html#a334f024d6fc3652860e3ee92b38d4c6a">curr</a>.hasNext();</div>
-<div class="line"><span class="lineno">   43</span>        }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a479e732ac431145a4998a1fa9dcbc27b" name="a479e732ac431145a4998a1fa9dcbc27b"></a>
@@ -303,10 +272,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/dd0/CollisionGridUtil_8java_source.html#l00044">44</a> of file <a class="el" href="../../d6/dd0/CollisionGridUtil_8java_source.html">CollisionGridUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   44</span>                             {</div>
-<div class="line"><span class="lineno">   45</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d2/dfd/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil_1_1BucketIterator.html#a334f024d6fc3652860e3ee92b38d4c6a">curr</a>.next();</div>
-<div class="line"><span class="lineno">   46</span>        }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac68e88525797140d7a76fe5268f05513" name="ac68e88525797140d7a76fe5268f05513"></a>
@@ -325,10 +291,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/dd0/CollisionGridUtil_8java_source.html#l00047">47</a> of file <a class="el" href="../../d6/dd0/CollisionGridUtil_8java_source.html">CollisionGridUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   47</span>                             {</div>
-<div class="line"><span class="lineno">   48</span>            <span class="keywordflow">throw</span> <span class="keyword">new</span> UnsupportedOperationException();</div>
-<div class="line"><span class="lineno">   49</span>        }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

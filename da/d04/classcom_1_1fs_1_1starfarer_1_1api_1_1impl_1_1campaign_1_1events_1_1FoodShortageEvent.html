@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -459,154 +460,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a892d9c8e77f8c51654d4399169a80540">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dca/FoodShortageEvent_8java_source.html#l00255">255</a> of file <a class="el" href="../../d4/dca/FoodShortageEvent_8java_source.html">FoodShortageEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  255</span>                                      {</div>
-<div class="line"><span class="lineno">  256</span>        <span class="keywordflow">if</span> (Global.getSector().isPaused()) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  257</span>        </div>
-<div class="line"><span class="lineno">  258</span>        <span class="comment">//float econInterval = Global.getSettings().getFloat(&quot;economyIntervalnGameDays&quot;);</span></div>
-<div class="line"><span class="lineno">  259</span>        <span class="keywordtype">float</span> days = Global.getSector().getClock().convertToDays(amount);</div>
-<div class="line"><span class="lineno">  260</span>        </div>
-<div class="line"><span class="lineno">  261</span>        <span class="keywordflow">if</span> (!<a class="code hl_function" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#ac5c47dbb1c74444a7517c8d031192459">isEventStarted</a>()) {</div>
-<div class="line"><span class="lineno">  262</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  263</span>        }</div>
-<div class="line"><span class="lineno">  264</span>        </div>
-<div class="line"><span class="lineno">  265</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../da/d04/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent.html#a1a3aba76c47c6eae925122add587bf3b">isDone</a>()) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  266</span>        </div>
-<div class="line"><span class="lineno">  267</span>        elapsedDays += days;</div>
-<div class="line"><span class="lineno">  268</span>        </div>
-<div class="line"><span class="lineno">  269</span>        <span class="keywordflow">if</span> (elapsedDays &gt; daysBeforeReliefCheck &amp;&amp; stage == 0) {</div>
-<div class="line"><span class="lineno">  270</span>            stage++;</div>
-<div class="line"><span class="lineno">  271</span>            </div>
-<div class="line"><span class="lineno">  272</span>            reliefMarket = <a class="code hl_function" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#ab6b2f0624cafeb655db2c050d5b06281">findNearestMarket</a>(<a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a>, <span class="keyword">new</span> MarketFilter() {</div>
-<div class="line"><span class="lineno">  273</span>                <span class="keyword">public</span> <span class="keywordtype">boolean</span> acceptMarket(MarketAPI <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a>) {</div>
-<div class="line"><span class="lineno">  274</span>                    <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a> == FoodShortageEvent.this.market) {</div>
-<div class="line"><span class="lineno">  275</span>                        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  276</span>                    }</div>
-<div class="line"><span class="lineno">  277</span>                    <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a97645caff4adca5efcf3a462fb13ca0f">getFaction</a>().<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#accc67a07a27de570f239d753fa7efc5d">isHostileTo</a>(FoodShortageEvent.this.market.getFaction())) {</div>
-<div class="line"><span class="lineno">  278</span>                        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  279</span>                    }</div>
-<div class="line"><span class="lineno">  280</span>                    <span class="keywordflow">if</span> (SharedData.getData().getMarketsThatSentRelief().contains(<a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a1c2b30198b83f80a06c4943c81c203d5">getId</a>())) {</div>
-<div class="line"><span class="lineno">  281</span>                        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  282</span>                    }</div>
-<div class="line"><span class="lineno">  283</span>                    <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a6186b555a108bee51ba3ee878d07032d">getCommodityData</a>(Commodities.FOOD).<a class="code hl_function" href="../../d3/dd7/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommodityOnMarketAPI.html#a43a885ee4a1344011a25972553527e74">getStockpile</a>() &lt; baseFoodToMeetShortage) {</div>
-<div class="line"><span class="lineno">  284</span>                        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  285</span>                    }</div>
-<div class="line"><span class="lineno">  286</span>                    </div>
-<div class="line"><span class="lineno">  287</span>                    CampaignEventManagerAPI manager = Global.getSector().getEventManager();</div>
-<div class="line"><span class="lineno">  288</span>                    EventProbabilityAPI ep = manager.getProbability(Events.FOOD_SHORTAGE, <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a>);</div>
-<div class="line"><span class="lineno">  289</span>                    <span class="keywordflow">if</span> (ep.getProbability() &gt; 0.1) {</div>
-<div class="line"><span class="lineno">  290</span>                        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  291</span>                    }</div>
-<div class="line"><span class="lineno">  292</span>                    <span class="keywordflow">if</span> (manager.isOngoing(ep)) {</div>
-<div class="line"><span class="lineno">  293</span>                        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  294</span>                    }</div>
-<div class="line"><span class="lineno">  295</span>                    <span class="keywordflow">if</span> ((<span class="keywordtype">float</span>) Math.random() * 10f &gt; <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a2632307f40c3a4bc2dba30e35eca2284">getStabilityValue</a>()) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  296</span>                    </div>
-<div class="line"><span class="lineno">  297</span>                    <span class="keywordflow">return</span> <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af6f714c59a16687b5cde142091a54150">getSize</a>() &gt;= FoodShortageEvent.this.market.getSize();</div>
-<div class="line"><span class="lineno">  298</span>                }</div>
-<div class="line"><span class="lineno">  299</span>            });</div>
-<div class="line"><span class="lineno">  300</span>            <span class="comment">//reliefMarket = Global.getSector().getEconomy().getMarket(&quot;sindria&quot;);</span></div>
-<div class="line"><span class="lineno">  301</span>            </div>
-<div class="line"><span class="lineno">  302</span>            <span class="comment">//if ((float) Math.random() &gt; 0.67f || market.getFaction().getId().equals(&quot;pirates&quot;)) {</span></div>
-<div class="line"><span class="lineno">  303</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a97645caff4adca5efcf3a462fb13ca0f">getFaction</a>().<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a7edcdc203f5ab26478e89e5d31e3bf85">getId</a>().equals(<span class="stringliteral">&quot;pirates&quot;</span>)) {</div>
-<div class="line"><span class="lineno">  304</span>                reliefMarket = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  305</span>            }</div>
-<div class="line"><span class="lineno">  306</span>            </div>
-<div class="line"><span class="lineno">  307</span>            <span class="keywordflow">if</span> (reliefMarket != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  308</span>                SharedData.getData().getMarketsThatSentRelief().add(reliefMarket.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a1c2b30198b83f80a06c4943c81c203d5">getId</a>(), 14f + (float) Math.random() * 14f);</div>
-<div class="line"><span class="lineno">  309</span>                Global.getSector().reportEventStage(<span class="keyword">this</span>, <span class="stringliteral">&quot;warning_relief&quot;</span>, reliefMarket.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af1677b531fa1a657e17b732868c7b953">getPrimaryEntity</a>(), messagePriority);</div>
-<div class="line"><span class="lineno">  310</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  311</span>                <a class="code hl_variable" href="../../da/d04/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent.html#a12cc384acaa1ab76cf194b20d5e3d50c">log</a>.info(<a class="code hl_function" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#ad95fb45243d453e6a41ce156d3997861">getLoggingId</a>() + <span class="stringliteral">&quot; No relief market found&quot;</span>);</div>
-<div class="line"><span class="lineno">  312</span>                applyReliefFleetDidNotMakeItConsequences();</div>
-<div class="line"><span class="lineno">  313</span>                Global.getSector().reportEventStage(<span class="keyword">this</span>, <span class="stringliteral">&quot;relief_unavailable&quot;</span>, messagePriority);</div>
-<div class="line"><span class="lineno">  314</span>            }</div>
-<div class="line"><span class="lineno">  315</span>        }</div>
-<div class="line"><span class="lineno">  316</span>        </div>
-<div class="line"><span class="lineno">  317</span>        <span class="keywordflow">if</span> (elapsedDays &gt; daysBeforeReliefSend &amp;&amp; stage == 1) {</div>
-<div class="line"><span class="lineno">  318</span>            stage++;</div>
-<div class="line"><span class="lineno">  319</span>            <span class="keywordflow">if</span> (reliefMarket != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  320</span>                createReliefFleet();</div>
-<div class="line"><span class="lineno">  321</span>                <span class="keywordflow">if</span> (reliefFleet == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  322</span>                    <a class="code hl_variable" href="../../da/d04/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent.html#a12cc384acaa1ab76cf194b20d5e3d50c">log</a>.info(<a class="code hl_function" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#ad95fb45243d453e6a41ce156d3997861">getLoggingId</a>() + <span class="stringliteral">&quot; Failed to spawn relief fleet&quot;</span>);</div>
-<div class="line"><span class="lineno">  323</span>                    applyReliefFleetDidNotMakeItConsequences();</div>
-<div class="line"><span class="lineno">  324</span>                    Global.getSector().reportEventStage(<span class="keyword">this</span>, <span class="stringliteral">&quot;relief_unavailable&quot;</span>, messagePriority);</div>
-<div class="line"><span class="lineno">  325</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  326</span>                    originalReliefFleetPoints = reliefFleet.<a class="code hl_function" href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a2f64517a0c1bd9f51740fee49142d806">getFleetPoints</a>();</div>
-<div class="line"><span class="lineno">  327</span>                    </div>
-<div class="line"><span class="lineno">  328</span>                    SectorEntityToken <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#aa9dc186620955830e7bd8c065f3c9707">entity</a> = reliefMarket.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af1677b531fa1a657e17b732868c7b953">getPrimaryEntity</a>();</div>
-<div class="line"><span class="lineno">  329</span>                    reliefMarket.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af1677b531fa1a657e17b732868c7b953">getPrimaryEntity</a>().<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a06362480c6a17326650354460c6d7442">getContainingLocation</a>().<a class="code hl_function" href="../../d2/d2c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI.html#aa74c923b52bd9dd0adf14cc394f49b60">addEntity</a>(reliefFleet);</div>
-<div class="line"><span class="lineno">  330</span>                    reliefFleet.<a class="code hl_function" href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#ace05f3858a77d9f164ed7fc24590440f">setLocation</a>(<a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#aa9dc186620955830e7bd8c065f3c9707">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#aedf9cd58593dcb6afd4d488bb017eafc">getLocation</a>().x, <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#aa9dc186620955830e7bd8c065f3c9707">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#aedf9cd58593dcb6afd4d488bb017eafc">getLocation</a>().y);</div>
-<div class="line"><span class="lineno">  331</span>                    </div>
-<div class="line"><span class="lineno">  332</span>                    reliefFleet.<a class="code hl_function" href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#ac2560f0dc107b3b3a8fa3f6935243681">addAssignment</a>(FleetAssignment.ORBIT_PASSIVE, reliefMarket.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af1677b531fa1a657e17b732868c7b953">getPrimaryEntity</a>(), 2,</div>
-<div class="line"><span class="lineno">  333</span>                            <span class="stringliteral">&quot;loading food from &quot;</span> + reliefMarket.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a7e5b6e8035c61f63cd8b331df994233b">getName</a>(), <span class="keyword">new</span> Script() {</div>
-<div class="line"><span class="lineno">  334</span>                        <span class="keyword">public</span> <span class="keywordtype">void</span> run() {</div>
-<div class="line"><span class="lineno">  335</span>                            reliefFleet.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#ab219cada372a13654e8e912aba977b05">getCargo</a>().<a class="code hl_function" href="../../dc/d7b/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#ad69f0c7e417fed4f2f2aa5e164eb390a">addItems</a>(CargoItemType.RESOURCES, Commodities.FOOD, </div>
-<div class="line"><span class="lineno">  336</span>                                        reliefFleet.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#ab219cada372a13654e8e912aba977b05">getCargo</a>().<a class="code hl_function" href="../../dc/d7b/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#aad7edd183b2f5602116ee89f4eebd8b7">getMaxCapacity</a>() * (1f - FleetFactory.SUPPLIES_FRACTION));</div>
-<div class="line"><span class="lineno">  337</span>                        }</div>
-<div class="line"><span class="lineno">  338</span>                    });</div>
-<div class="line"><span class="lineno">  339</span>                    reliefFleet.<a class="code hl_function" href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#ac2560f0dc107b3b3a8fa3f6935243681">addAssignment</a>(FleetAssignment.DELIVER_RESOURCES, <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af1677b531fa1a657e17b732868c7b953">getPrimaryEntity</a>(), 1000,</div>
-<div class="line"><span class="lineno">  340</span>                                              <span class="stringliteral">&quot;delivering food relief from &quot;</span> + reliefMarket.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a7e5b6e8035c61f63cd8b331df994233b">getName</a>() + <span class="stringliteral">&quot; to &quot;</span> + <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a7e5b6e8035c61f63cd8b331df994233b">getName</a>());</div>
-<div class="line"><span class="lineno">  341</span>                    reliefFleet.<a class="code hl_function" href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#ac2560f0dc107b3b3a8fa3f6935243681">addAssignment</a>(FleetAssignment.ORBIT_PASSIVE, <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af1677b531fa1a657e17b732868c7b953">getPrimaryEntity</a>(), 2,</div>
-<div class="line"><span class="lineno">  342</span>                                              <span class="stringliteral">&quot;offloading food at &quot;</span> + <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a7e5b6e8035c61f63cd8b331df994233b">getName</a>(), <span class="keyword">new</span> Script() {</div>
-<div class="line"><span class="lineno">  343</span>                        <span class="keyword">public</span> <span class="keywordtype">void</span> run() {</div>
-<div class="line"><span class="lineno">  344</span>                            endEvent(Ending.RELIEF_ARRIVED);</div>
-<div class="line"><span class="lineno">  345</span>                        }</div>
-<div class="line"><span class="lineno">  346</span>                    });             </div>
-<div class="line"><span class="lineno">  347</span>                    reliefFleet.<a class="code hl_function" href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#ac2560f0dc107b3b3a8fa3f6935243681">addAssignment</a>(FleetAssignment.GO_TO_LOCATION_AND_DESPAWN, reliefMarket.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af1677b531fa1a657e17b732868c7b953">getPrimaryEntity</a>(), 1000,</div>
-<div class="line"><span class="lineno">  348</span>                                              <span class="stringliteral">&quot;returning to &quot;</span> + reliefMarket.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a7e5b6e8035c61f63cd8b331df994233b">getName</a>() + <span class="stringliteral">&quot; after delivering food relief to &quot;</span> + <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a7e5b6e8035c61f63cd8b331df994233b">getName</a>());</div>
-<div class="line"><span class="lineno">  349</span>                    </div>
-<div class="line"><span class="lineno">  350</span>                    Global.getSector().reportEventStage(<span class="keyword">this</span>, <span class="stringliteral">&quot;relief_sent&quot;</span>, reliefMarket.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af1677b531fa1a657e17b732868c7b953">getPrimaryEntity</a>(), messagePriority);</div>
-<div class="line"><span class="lineno">  351</span>                    <a class="code hl_variable" href="../../da/d04/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent.html#a12cc384acaa1ab76cf194b20d5e3d50c">log</a>.info(<a class="code hl_function" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#ad95fb45243d453e6a41ce156d3997861">getLoggingId</a>() + <span class="stringliteral">&quot; Sending relief fleet from &quot;</span> + reliefMarket.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a7e5b6e8035c61f63cd8b331df994233b">getName</a>());</div>
-<div class="line"><span class="lineno">  352</span>                }</div>
-<div class="line"><span class="lineno">  353</span>            }</div>
-<div class="line"><span class="lineno">  354</span>        }</div>
-<div class="line"><span class="lineno">  355</span>        </div>
-<div class="line"><span class="lineno">  356</span>        <span class="keywordflow">if</span> (reliefFleet != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  357</span>            <span class="keywordtype">float</span> currPoints = reliefFleet.<a class="code hl_function" href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a2f64517a0c1bd9f51740fee49142d806">getFleetPoints</a>();</div>
-<div class="line"><span class="lineno">  358</span>            <span class="keywordflow">if</span> (currPoints &lt; originalReliefFleetPoints * 0.5f) {</div>
-<div class="line"><span class="lineno">  359</span>                Global.getSector().reportEventStage(<span class="keyword">this</span>, <span class="stringliteral">&quot;relief_aborted&quot;</span>, reliefMarket.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af1677b531fa1a657e17b732868c7b953">getPrimaryEntity</a>(), messagePriority);</div>
-<div class="line"><span class="lineno">  360</span>                <a class="code hl_variable" href="../../da/d04/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent.html#a12cc384acaa1ab76cf194b20d5e3d50c">log</a>.info(<a class="code hl_function" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#ad95fb45243d453e6a41ce156d3997861">getLoggingId</a>() + <span class="stringliteral">&quot; Relief aborted, fleet returning to &quot;</span> + reliefMarket.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a7e5b6e8035c61f63cd8b331df994233b">getName</a>());</div>
-<div class="line"><span class="lineno">  361</span>                </div>
-<div class="line"><span class="lineno">  362</span>                reliefFleet.<a class="code hl_function" href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a44e274b99c131a9fac2eab31d5442416">clearAssignments</a>();</div>
-<div class="line"><span class="lineno">  363</span>                reliefFleet.<a class="code hl_function" href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#ac2560f0dc107b3b3a8fa3f6935243681">addAssignment</a>(FleetAssignment.GO_TO_LOCATION_AND_DESPAWN, reliefMarket.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af1677b531fa1a657e17b732868c7b953">getPrimaryEntity</a>(), 1000);</div>
-<div class="line"><span class="lineno">  364</span>                applyReliefFleetDidNotMakeItConsequences();</div>
-<div class="line"><span class="lineno">  365</span>                reliefFleet = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  366</span>            }</div>
-<div class="line"><span class="lineno">  367</span>        }</div>
-<div class="line"><span class="lineno">  368</span>        </div>
-<div class="line"><span class="lineno">  369</span>        <span class="keywordflow">if</span> ((elapsedDays &gt; maxDurationDays || elapsedDays &gt; <a class="code hl_variable" href="../../da/d04/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent.html#a15f720905348fbc35848cb0c860605b6">MAX_POSSIBLE_DURATION</a>) &amp;&amp; stage == 2) {</div>
-<div class="line"><span class="lineno">  370</span>            endEvent(Ending.DURATION_EXPIRED);</div>
-<div class="line"><span class="lineno">  371</span>            stage++;</div>
-<div class="line"><span class="lineno">  372</span>        }</div>
-<div class="line"><span class="lineno">  373</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin_html_a82135608621e80f71b991a0c839669e2"><div class="ttname"><a href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin.market</a></div><div class="ttdeci">MarketAPI market</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00043">BaseEventPlugin.java:43</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin_html_aa9dc186620955830e7bd8c065f3c9707"><div class="ttname"><a href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#aa9dc186620955830e7bd8c065f3c9707">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin.entity</a></div><div class="ttdeci">SectorEntityToken entity</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00044">BaseEventPlugin.java:44</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin_html_ab6b2f0624cafeb655db2c050d5b06281"><div class="ttname"><a href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#ab6b2f0624cafeb655db2c050d5b06281">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin.findNearestMarket</a></div><div class="ttdeci">static MarketAPI findNearestMarket(MarketAPI from, MarketFilter filter)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00326">BaseEventPlugin.java:326</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin_html_ac5c47dbb1c74444a7517c8d031192459"><div class="ttname"><a href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#ac5c47dbb1c74444a7517c8d031192459">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin.isEventStarted</a></div><div class="ttdeci">boolean isEventStarted()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00106">BaseEventPlugin.java:106</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin_html_ad95fb45243d453e6a41ce156d3997861"><div class="ttname"><a href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#ad95fb45243d453e6a41ce156d3997861">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin.getLoggingId</a></div><div class="ttdeci">String getLoggingId()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00082">BaseEventPlugin.java:82</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent_html_a12cc384acaa1ab76cf194b20d5e3d50c"><div class="ttname"><a href="../../da/d04/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent.html#a12cc384acaa1ab76cf194b20d5e3d50c">com.fs.starfarer.api.impl.campaign.events.FoodShortageEvent.log</a></div><div class="ttdeci">static Logger log</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dca/FoodShortageEvent_8java_source.html#l00046">FoodShortageEvent.java:46</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent_html_a15f720905348fbc35848cb0c860605b6"><div class="ttname"><a href="../../da/d04/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent.html#a15f720905348fbc35848cb0c860605b6">com.fs.starfarer.api.impl.campaign.events.FoodShortageEvent.MAX_POSSIBLE_DURATION</a></div><div class="ttdeci">static float MAX_POSSIBLE_DURATION</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dca/FoodShortageEvent_8java_source.html#l00053">FoodShortageEvent.java:53</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent_html_a1a3aba76c47c6eae925122add587bf3b"><div class="ttname"><a href="../../da/d04/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent.html#a1a3aba76c47c6eae925122add587bf3b">com.fs.starfarer.api.impl.campaign.events.FoodShortageEvent.isDone</a></div><div class="ttdeci">boolean isDone()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dca/FoodShortageEvent_8java_source.html#l00513">FoodShortageEvent.java:513</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI_html_a2f64517a0c1bd9f51740fee49142d806"><div class="ttname"><a href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a2f64517a0c1bd9f51740fee49142d806">com.fs.starfarer.api.campaign.CampaignFleetAPI.getFleetPoints</a></div><div class="ttdeci">int getFleetPoints()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI_html_a44e274b99c131a9fac2eab31d5442416"><div class="ttname"><a href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a44e274b99c131a9fac2eab31d5442416">com.fs.starfarer.api.campaign.CampaignFleetAPI.clearAssignments</a></div><div class="ttdeci">void clearAssignments()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI_html_ac2560f0dc107b3b3a8fa3f6935243681"><div class="ttname"><a href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#ac2560f0dc107b3b3a8fa3f6935243681">com.fs.starfarer.api.campaign.CampaignFleetAPI.addAssignment</a></div><div class="ttdeci">void addAssignment(FleetAssignment assignment, SectorEntityToken target, float maxDurationInDays)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI_html_ace05f3858a77d9f164ed7fc24590440f"><div class="ttname"><a href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#ace05f3858a77d9f164ed7fc24590440f">com.fs.starfarer.api.campaign.CampaignFleetAPI.setLocation</a></div><div class="ttdeci">void setLocation(float x, float y)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI_html_aad7edd183b2f5602116ee89f4eebd8b7"><div class="ttname"><a href="../../dc/d7b/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#aad7edd183b2f5602116ee89f4eebd8b7">com.fs.starfarer.api.campaign.CargoAPI.getMaxCapacity</a></div><div class="ttdeci">float getMaxCapacity()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI_html_ad69f0c7e417fed4f2f2aa5e164eb390a"><div class="ttname"><a href="../../dc/d7b/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#ad69f0c7e417fed4f2f2aa5e164eb390a">com.fs.starfarer.api.campaign.CargoAPI.addItems</a></div><div class="ttdeci">void addItems(CargoAPI.CargoItemType itemType, Object data, float quantity)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI_html_a7edcdc203f5ab26478e89e5d31e3bf85"><div class="ttname"><a href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a7edcdc203f5ab26478e89e5d31e3bf85">com.fs.starfarer.api.campaign.FactionAPI.getId</a></div><div class="ttdeci">String getId()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI_html_accc67a07a27de570f239d753fa7efc5d"><div class="ttname"><a href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#accc67a07a27de570f239d753fa7efc5d">com.fs.starfarer.api.campaign.FactionAPI.isHostileTo</a></div><div class="ttdeci">boolean isHostileTo(FactionAPI other)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI_html_aa74c923b52bd9dd0adf14cc394f49b60"><div class="ttname"><a href="../../d2/d2c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI.html#aa74c923b52bd9dd0adf14cc394f49b60">com.fs.starfarer.api.campaign.LocationAPI.addEntity</a></div><div class="ttdeci">void addEntity(SectorEntityToken entity)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_a06362480c6a17326650354460c6d7442"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a06362480c6a17326650354460c6d7442">com.fs.starfarer.api.campaign.SectorEntityToken.getContainingLocation</a></div><div class="ttdeci">LocationAPI getContainingLocation()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_ab219cada372a13654e8e912aba977b05"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#ab219cada372a13654e8e912aba977b05">com.fs.starfarer.api.campaign.SectorEntityToken.getCargo</a></div><div class="ttdeci">CargoAPI getCargo()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_aedf9cd58593dcb6afd4d488bb017eafc"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#aedf9cd58593dcb6afd4d488bb017eafc">com.fs.starfarer.api.campaign.SectorEntityToken.getLocation</a></div><div class="ttdeci">Vector2f getLocation()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommodityOnMarketAPI_html_a43a885ee4a1344011a25972553527e74"><div class="ttname"><a href="../../d3/dd7/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommodityOnMarketAPI.html#a43a885ee4a1344011a25972553527e74">com.fs.starfarer.api.campaign.econ.CommodityOnMarketAPI.getStockpile</a></div><div class="ttdeci">float getStockpile()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a1c2b30198b83f80a06c4943c81c203d5"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a1c2b30198b83f80a06c4943c81c203d5">com.fs.starfarer.api.campaign.econ.MarketAPI.getId</a></div><div class="ttdeci">String getId()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a2632307f40c3a4bc2dba30e35eca2284"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a2632307f40c3a4bc2dba30e35eca2284">com.fs.starfarer.api.campaign.econ.MarketAPI.getStabilityValue</a></div><div class="ttdeci">float getStabilityValue()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a6186b555a108bee51ba3ee878d07032d"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a6186b555a108bee51ba3ee878d07032d">com.fs.starfarer.api.campaign.econ.MarketAPI.getCommodityData</a></div><div class="ttdeci">CommodityOnMarketAPI getCommodityData(String commodityId)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a7e5b6e8035c61f63cd8b331df994233b"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a7e5b6e8035c61f63cd8b331df994233b">com.fs.starfarer.api.campaign.econ.MarketAPI.getName</a></div><div class="ttdeci">String getName()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a97645caff4adca5efcf3a462fb13ca0f"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a97645caff4adca5efcf3a462fb13ca0f">com.fs.starfarer.api.campaign.econ.MarketAPI.getFaction</a></div><div class="ttdeci">FactionAPI getFaction()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_af1677b531fa1a657e17b732868c7b953"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af1677b531fa1a657e17b732868c7b953">com.fs.starfarer.api.campaign.econ.MarketAPI.getPrimaryEntity</a></div><div class="ttdeci">SectorEntityToken getPrimaryEntity()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_af6f714c59a16687b5cde142091a54150"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af6f714c59a16687b5cde142091a54150">com.fs.starfarer.api.campaign.econ.MarketAPI.getSize</a></div><div class="ttdeci">int getSize()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a57af72da87a4a9b160d8d3d1a01044a0" name="a57af72da87a4a9b160d8d3d1a01044a0"></a>
@@ -625,10 +479,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dca/FoodShortageEvent_8java_source.html#l00241">241</a> of file <a class="el" href="../../d4/dca/FoodShortageEvent_8java_source.html">FoodShortageEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  241</span>                                         {</div>
-<div class="line"><span class="lineno">  242</span>        <span class="keywordflow">return</span> 1;</div>
-<div class="line"><span class="lineno">  243</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a1865ecba482a77204d88ab42b4ce3bbd" name="a1865ecba482a77204d88ab42b4ce3bbd"></a>
@@ -647,13 +498,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dca/FoodShortageEvent_8java_source.html#l00249">249</a> of file <a class="el" href="../../d4/dca/FoodShortageEvent_8java_source.html">FoodShortageEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  249</span>                                     {</div>
-<div class="line"><span class="lineno">  250</span>        <span class="keywordtype">float</span> base = <a class="code hl_function" href="../../da/d04/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent.html#a3f335e14d392e9ff6909d03a2fabf016">getStabilityImpact</a>();</div>
-<div class="line"><span class="lineno">  251</span>        <span class="keywordtype">float</span> mult = Math.min(1f, netDeliveredByPlayerBlack / baseFoodToMeetShortage);</div>
-<div class="line"><span class="lineno">  252</span>        <span class="keywordflow">return</span> Math.round(base * mult);</div>
-<div class="line"><span class="lineno">  253</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent_html_a3f335e14d392e9ff6909d03a2fabf016"><div class="ttname"><a href="../../da/d04/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent.html#a3f335e14d392e9ff6909d03a2fabf016">com.fs.starfarer.api.impl.campaign.events.FoodShortageEvent.getStabilityImpact</a></div><div class="ttdeci">float getStabilityImpact()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dca/FoodShortageEvent_8java_source.html#l00217">FoodShortageEvent.java:217</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a305a2a7254754676553d19a1d91edd50" name="a305a2a7254754676553d19a1d91edd50"></a>
@@ -674,16 +519,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#aef42b16a88a66024a330092d6f08eb9b">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dca/FoodShortageEvent_8java_source.html#l00737">737</a> of file <a class="el" href="../../d4/dca/FoodShortageEvent_8java_source.html">FoodShortageEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  737</span>                                 {</div>
-<div class="line"><span class="lineno">  738</span>        <span class="keywordflow">if</span> (!<a class="code hl_function" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#ac5c47dbb1c74444a7517c8d031192459">isEventStarted</a>()) {</div>
-<div class="line"><span class="lineno">  739</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;Possible food shortage - &quot;</span> + <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a7e5b6e8035c61f63cd8b331df994233b">getName</a>() + <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">  740</span>        }</div>
-<div class="line"><span class="lineno">  741</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../da/d04/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent.html#a1a3aba76c47c6eae925122add587bf3b">isDone</a>()) {</div>
-<div class="line"><span class="lineno">  742</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;Food shortage - &quot;</span> + <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a7e5b6e8035c61f63cd8b331df994233b">getName</a>() + <span class="stringliteral">&quot; (over)&quot;</span>;</div>
-<div class="line"><span class="lineno">  743</span>        }</div>
-<div class="line"><span class="lineno">  744</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Food shortage - &quot;</span> + <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a7e5b6e8035c61f63cd8b331df994233b">getName</a>() + <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">  745</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a54e75c680fca898ccaca54a5aa9da120" name="a54e75c680fca898ccaca54a5aa9da120"></a>
@@ -712,19 +548,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a3020d01a879fc0b9d383e46f7d9c53bf">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dca/FoodShortageEvent_8java_source.html#l00710">710</a> of file <a class="el" href="../../d4/dca/FoodShortageEvent_8java_source.html">FoodShortageEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  710</span>                                                      {</div>
-<div class="line"><span class="lineno">  711</span>        <span class="keywordflow">return</span> super.getHighlightColors(stageId);</div>
-<div class="line"><span class="lineno">  712</span><span class="comment">//      String [] highlights = getHighlights(stageId);</span></div>
-<div class="line"><span class="lineno">  713</span><span class="comment">//      if (highlights != null) {</span></div>
-<div class="line"><span class="lineno">  714</span><span class="comment">//          Color c = Global.getSettings().getColor(&quot;buttonShortcut&quot;);</span></div>
-<div class="line"><span class="lineno">  715</span><span class="comment">//          Color [] colors = new Color[highlights.length];</span></div>
-<div class="line"><span class="lineno">  716</span><span class="comment">//          Arrays.fill(colors, c);</span></div>
-<div class="line"><span class="lineno">  717</span><span class="comment">//          return colors;</span></div>
-<div class="line"><span class="lineno">  718</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  719</span><span class="comment">//      //return null;</span></div>
-<div class="line"><span class="lineno">  720</span><span class="comment">//      return null;</span></div>
-<div class="line"><span class="lineno">  721</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5ef38ee0e75fe773e2d70c3cc025cb47" name="a5ef38ee0e75fe773e2d70c3cc025cb47"></a>
@@ -753,38 +577,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a00dc5b856ba666734d16d72b420e763d">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dca/FoodShortageEvent_8java_source.html#l00678">678</a> of file <a class="el" href="../../d4/dca/FoodShortageEvent_8java_source.html">FoodShortageEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  678</span>                                                  {</div>
-<div class="line"><span class="lineno">  679</span>        List&lt;String&gt; result = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
-<div class="line"><span class="lineno">  680</span>        <span class="keywordflow">if</span> (<span class="stringliteral">&quot;start&quot;</span>.equals(stageId)) {</div>
-<div class="line"><span class="lineno">  681</span>            <a class="code hl_function" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a975fca0b61107178b5d2918dc55458a7">addTokensToList</a>(result, <span class="stringliteral">&quot;$stabilityPenalty&quot;</span>, <span class="stringliteral">&quot;$neededFood&quot;</span>);</div>
-<div class="line"><span class="lineno">  682</span>        }</div>
-<div class="line"><span class="lineno">  683</span>        <span class="keywordflow">if</span> (<span class="stringliteral">&quot;relief_unavailable&quot;</span>.equals(stageId)) {</div>
-<div class="line"><span class="lineno">  684</span>            <a class="code hl_function" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a975fca0b61107178b5d2918dc55458a7">addTokensToList</a>(result, <span class="stringliteral">&quot;$stabilityPenaltyRelief&quot;</span>);</div>
-<div class="line"><span class="lineno">  685</span>        }</div>
-<div class="line"><span class="lineno">  686</span>        <span class="keywordflow">if</span> (<span class="stringliteral">&quot;relief_aborted&quot;</span>.equals(stageId)) {</div>
-<div class="line"><span class="lineno">  687</span>            <a class="code hl_function" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a975fca0b61107178b5d2918dc55458a7">addTokensToList</a>(result, <span class="stringliteral">&quot;$stabilityPenaltyRelief&quot;</span>);</div>
-<div class="line"><span class="lineno">  688</span>        }</div>
-<div class="line"><span class="lineno">  689</span>        <span class="keywordflow">if</span> (<span class="stringliteral">&quot;relief_lost&quot;</span>.equals(stageId)) {</div>
-<div class="line"><span class="lineno">  690</span>            <a class="code hl_function" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a975fca0b61107178b5d2918dc55458a7">addTokensToList</a>(result, <span class="stringliteral">&quot;$stabilityPenaltyRelief&quot;</span>);</div>
-<div class="line"><span class="lineno">  691</span>        }</div>
-<div class="line"><span class="lineno">  692</span>        <span class="keywordflow">if</span> (<span class="stringliteral">&quot;end_relief_arrived&quot;</span>.equals(stageId)) {</div>
-<div class="line"><span class="lineno">  693</span>            <a class="code hl_function" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a975fca0b61107178b5d2918dc55458a7">addTokensToList</a>(result, <span class="stringliteral">&quot;$stabilityPenaltyEnd&quot;</span>);</div>
-<div class="line"><span class="lineno">  694</span>        }</div>
-<div class="line"><span class="lineno">  695</span>        <span class="keywordflow">if</span> (<span class="stringliteral">&quot;end_expired&quot;</span>.equals(stageId)) {</div>
-<div class="line"><span class="lineno">  696</span>            <a class="code hl_function" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a975fca0b61107178b5d2918dc55458a7">addTokensToList</a>(result, <span class="stringliteral">&quot;$stabilityPenaltyExpire&quot;</span>);</div>
-<div class="line"><span class="lineno">  697</span>        }</div>
-<div class="line"><span class="lineno">  698</span>        <span class="keywordflow">if</span> (<span class="stringliteral">&quot;end_player&quot;</span>.equals(stageId)) {</div>
-<div class="line"><span class="lineno">  699</span>            <a class="code hl_function" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a975fca0b61107178b5d2918dc55458a7">addTokensToList</a>(result, <span class="stringliteral">&quot;$stabilityPenaltyEnd&quot;</span>);</div>
-<div class="line"><span class="lineno">  700</span>        }</div>
-<div class="line"><span class="lineno">  701</span>        <span class="keywordflow">if</span> (<span class="stringliteral">&quot;end_player_black&quot;</span>.equals(stageId)) {</div>
-<div class="line"><span class="lineno">  702</span>            <a class="code hl_function" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a975fca0b61107178b5d2918dc55458a7">addTokensToList</a>(result, <span class="stringliteral">&quot;$stabilityPenaltyEndBlack&quot;</span>);</div>
-<div class="line"><span class="lineno">  703</span>        }</div>
-<div class="line"><span class="lineno">  704</span>        <span class="keywordflow">if</span> (<span class="stringliteral">&quot;end_player_fast&quot;</span>.equals(stageId)) {</div>
-<div class="line"><span class="lineno">  705</span>        }</div>
-<div class="line"><span class="lineno">  706</span>        <span class="keywordflow">return</span> result.toArray(<span class="keyword">new</span> String[0]);</div>
-<div class="line"><span class="lineno">  707</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin_html_a975fca0b61107178b5d2918dc55458a7"><div class="ttname"><a href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a975fca0b61107178b5d2918dc55458a7">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin.addTokensToList</a></div><div class="ttdeci">void addTokensToList(List&lt; String &gt; list, String ... keys)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00393">BaseEventPlugin.java:393</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aca8352034e79da4fec360118e4694c9e" name="aca8352034e79da4fec360118e4694c9e"></a>
@@ -805,12 +598,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#ad9fe317284841355f94d9d3db565eff5">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dca/FoodShortageEvent_8java_source.html#l00731">731</a> of file <a class="el" href="../../d4/dca/FoodShortageEvent_8java_source.html">FoodShortageEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  731</span>                                                     {</div>
-<div class="line"><span class="lineno">  732</span>        List&lt;PriceUpdatePlugin&gt; updates = <span class="keyword">new</span> ArrayList&lt;PriceUpdatePlugin&gt;();</div>
-<div class="line"><span class="lineno">  733</span>        updates.add(<span class="keyword">new</span> PriceUpdate(<a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a6186b555a108bee51ba3ee878d07032d">getCommodityData</a>(Commodities.FOOD)));</div>
-<div class="line"><span class="lineno">  734</span>        <span class="keywordflow">return</span> updates;</div>
-<div class="line"><span class="lineno">  735</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a57fc50fd5f1e6981e76da95f761e17c8" name="a57fc50fd5f1e6981e76da95f761e17c8"></a>
@@ -829,10 +617,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dca/FoodShortageEvent_8java_source.html#l00245">245</a> of file <a class="el" href="../../d4/dca/FoodShortageEvent_8java_source.html">FoodShortageEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  245</span>                                         {</div>
-<div class="line"><span class="lineno">  246</span>        <span class="keywordflow">return</span> 1;</div>
-<div class="line"><span class="lineno">  247</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a7bc57529e3a3790083d67ee3a5a9daa8" name="a7bc57529e3a3790083d67ee3a5a9daa8"></a>
@@ -853,12 +638,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#abd961aa7802b8e214ae9842644eeac94">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dca/FoodShortageEvent_8java_source.html#l00724">724</a> of file <a class="el" href="../../d4/dca/FoodShortageEvent_8java_source.html">FoodShortageEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  724</span>                                                {</div>
-<div class="line"><span class="lineno">  725</span>        List&lt;String&gt; commodities = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
-<div class="line"><span class="lineno">  726</span>        commodities.add(Commodities.FOOD);</div>
-<div class="line"><span class="lineno">  727</span>        <span class="keywordflow">return</span> commodities;</div>
-<div class="line"><span class="lineno">  728</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa8f6d0e06b6211887e6fdbe9542fd217" name="aa8f6d0e06b6211887e6fdbe9542fd217"></a>
@@ -877,10 +657,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dca/FoodShortageEvent_8java_source.html#l00237">237</a> of file <a class="el" href="../../d4/dca/FoodShortageEvent_8java_source.html">FoodShortageEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  237</span>                                        {</div>
-<div class="line"><span class="lineno">  238</span>        <span class="keywordflow">return</span> 2;</div>
-<div class="line"><span class="lineno">  239</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a306da90cebf2197c2737345c85f17bcc" name="a306da90cebf2197c2737345c85f17bcc"></a>
@@ -899,10 +676,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dca/FoodShortageEvent_8java_source.html#l00615">615</a> of file <a class="el" href="../../d4/dca/FoodShortageEvent_8java_source.html">FoodShortageEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  615</span>                                                  {</div>
-<div class="line"><span class="lineno">  616</span>        <span class="keywordflow">return</span> Math.max(0, baseFoodToMeetShortage - netDeliveredByPlayerBlack - netDeliveredByPlayerOther);</div>
-<div class="line"><span class="lineno">  617</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a3f335e14d392e9ff6909d03a2fabf016" name="a3f335e14d392e9ff6909d03a2fabf016"></a>
@@ -921,26 +695,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dca/FoodShortageEvent_8java_source.html#l00217">217</a> of file <a class="el" href="../../d4/dca/FoodShortageEvent_8java_source.html">FoodShortageEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  217</span>                                      {</div>
-<div class="line"><span class="lineno">  218</span>        <span class="keywordflow">switch</span> ((<span class="keywordtype">int</span>) <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af6f714c59a16687b5cde142091a54150">getSize</a>()) {</div>
-<div class="line"><span class="lineno">  219</span>        <span class="keywordflow">case</span> 0:</div>
-<div class="line"><span class="lineno">  220</span>        <span class="keywordflow">case</span> 1:</div>
-<div class="line"><span class="lineno">  221</span>            <span class="keywordflow">return</span> 4;</div>
-<div class="line"><span class="lineno">  222</span>        <span class="keywordflow">case</span> 2:</div>
-<div class="line"><span class="lineno">  223</span>        <span class="keywordflow">case</span> 3:</div>
-<div class="line"><span class="lineno">  224</span>            <span class="keywordflow">return</span> 3;</div>
-<div class="line"><span class="lineno">  225</span>        <span class="keywordflow">case</span> 4:</div>
-<div class="line"><span class="lineno">  226</span>        <span class="keywordflow">case</span> 5:</div>
-<div class="line"><span class="lineno">  227</span>            <span class="keywordflow">return</span> 2;</div>
-<div class="line"><span class="lineno">  228</span>        <span class="keywordflow">case</span> 6:</div>
-<div class="line"><span class="lineno">  229</span>        <span class="keywordflow">case</span> 7:</div>
-<div class="line"><span class="lineno">  230</span>        <span class="keywordflow">case</span> 8:</div>
-<div class="line"><span class="lineno">  231</span>        <span class="keywordflow">case</span> 9:</div>
-<div class="line"><span class="lineno">  232</span>            <span class="keywordflow">return</span> 1;</div>
-<div class="line"><span class="lineno">  233</span>        }</div>
-<div class="line"><span class="lineno">  234</span>        <span class="keywordflow">return</span> 1f;      </div>
-<div class="line"><span class="lineno">  235</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab8665c65102212da0ae6f8e5ff2fae9e" name="ab8665c65102212da0ae6f8e5ff2fae9e"></a>
@@ -962,10 +717,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a4a1163afd1a5e01cede86521b91bf4bf">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dca/FoodShortageEvent_8java_source.html#l00525">525</a> of file <a class="el" href="../../d4/dca/FoodShortageEvent_8java_source.html">FoodShortageEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  525</span>                                        {</div>
-<div class="line"><span class="lineno">  526</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;likely&quot;</span>;</div>
-<div class="line"><span class="lineno">  527</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a0d87902f81242f200bc897204402794d" name="a0d87902f81242f200bc897204402794d"></a>
@@ -987,10 +739,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#adeb439b2b8eb082c0317820a91cc1f7b">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dca/FoodShortageEvent_8java_source.html#l00529">529</a> of file <a class="el" href="../../d4/dca/FoodShortageEvent_8java_source.html">FoodShortageEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  529</span>                                          {</div>
-<div class="line"><span class="lineno">  530</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;possible&quot;</span>;</div>
-<div class="line"><span class="lineno">  531</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9cbaacb24f9f5afd084373bcd8bab166" name="a9cbaacb24f9f5afd084373bcd8bab166"></a>
@@ -1012,76 +761,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#aa67b1f6c564a4765a764cfb90a60f4c9">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dca/FoodShortageEvent_8java_source.html#l00619">619</a> of file <a class="el" href="../../d4/dca/FoodShortageEvent_8java_source.html">FoodShortageEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  619</span>                                                      {</div>
-<div class="line"><span class="lineno">  620</span>        Map&lt;String, String&gt; map = super.getTokenReplacements();</div>
-<div class="line"><span class="lineno">  621</span> </div>
-<div class="line"><span class="lineno">  622</span>        <span class="comment">/*</span></div>
-<div class="line"><span class="lineno">  623</span><span class="comment">         $targetFaction</span></div>
-<div class="line"><span class="lineno">  624</span><span class="comment">         $reliefSystem</span></div>
-<div class="line"><span class="lineno">  625</span><span class="comment">         $reliefEntity</span></div>
-<div class="line"><span class="lineno">  626</span><span class="comment">         $playerName</span></div>
-<div class="line"><span class="lineno">  627</span><span class="comment">         */</span></div>
-<div class="line"><span class="lineno">  628</span>        map.put(<span class="stringliteral">&quot;$targetFaction&quot;</span>, <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#abe1c16c1836db2f6bacef1b8b0814872">eventTarget</a>.<a class="code hl_function" href="../../dc/d60/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventTarget.html#a4fdba2ae8cd89b839d2ea941da3ceba5">getEntity</a>().<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#afb72bc74f75ccbbf240564b26b94e17b">getFaction</a>().<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a152197efac6967a0a459e4579b8ab1ef">getDisplayName</a>());</div>
-<div class="line"><span class="lineno">  629</span>        </div>
-<div class="line"><span class="lineno">  630</span>        <span class="keywordflow">if</span> (reliefMarket != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  631</span>            SectorEntityToken primary = reliefMarket.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af1677b531fa1a657e17b732868c7b953">getPrimaryEntity</a>();</div>
-<div class="line"><span class="lineno">  632</span>            LocationAPI loc = primary.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a06362480c6a17326650354460c6d7442">getContainingLocation</a>();</div>
-<div class="line"><span class="lineno">  633</span>            <span class="keywordflow">if</span> (loc instanceof StarSystemAPI) {</div>
-<div class="line"><span class="lineno">  634</span>                <span class="comment">//map.put(&quot;$reliefSystem&quot;, ((StarSystemAPI)loc).getBaseName() + &quot; star system&quot;);</span></div>
-<div class="line"><span class="lineno">  635</span>                map.put(<span class="stringliteral">&quot;$reliefSystem&quot;</span>, ((StarSystemAPI)loc).getBaseName());</div>
-<div class="line"><span class="lineno">  636</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  637</span>                map.put(<span class="stringliteral">&quot;$reliefSystem&quot;</span>, <span class="stringliteral">&quot;hyperspace&quot;</span>);</div>
-<div class="line"><span class="lineno">  638</span>            }</div>
-<div class="line"><span class="lineno">  639</span>            </div>
-<div class="line"><span class="lineno">  640</span>            map.put(<span class="stringliteral">&quot;$reliefMarket&quot;</span>, primary.getName());</div>
-<div class="line"><span class="lineno">  641</span><span class="comment">//          map.put(&quot;$reliefSystem&quot;, &quot;Askonia&quot;);</span></div>
-<div class="line"><span class="lineno">  642</span><span class="comment">//          map.put(&quot;$reliefEntity&quot;, &quot;Volturn&quot;);</span></div>
-<div class="line"><span class="lineno">  643</span>            <span class="keywordflow">if</span> (reliefFleet != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  644</span>                <span class="keywordtype">float</span> dist = Misc.getDistance(primary.getLocationInHyperspace(), <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af1677b531fa1a657e17b732868c7b953">getPrimaryEntity</a>().<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#ad373e58a550382cbf5be116191a67569">getLocationInHyperspace</a>());</div>
-<div class="line"><span class="lineno">  645</span>                <span class="keywordtype">float</span> eta = dist / reliefFleet.<a class="code hl_function" href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#aa3e90e08c7029f5dae7bc1d4d59e3285">getFleetData</a>().<a class="code hl_function" href="../../d2/dfb/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetDataAPI.html#aac3da6109643b61c9fbf54915cef5271">getTravelSpeed</a>();</div>
-<div class="line"><span class="lineno">  646</span>                 <span class="comment">// since travel speed is units/second, not per day</span></div>
-<div class="line"><span class="lineno">  647</span>                eta /= Global.getSector().getClock().getSecondsPerDay();</div>
-<div class="line"><span class="lineno">  648</span>                eta += 2f;</div>
-<div class="line"><span class="lineno">  649</span>                </div>
-<div class="line"><span class="lineno">  650</span>                String s = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  651</span>                <span class="keywordflow">if</span> (eta &lt;= 3f) {</div>
-<div class="line"><span class="lineno">  652</span>                    s = <span class="stringliteral">&quot;within a few days&quot;</span>;</div>
-<div class="line"><span class="lineno">  653</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (eta &lt;= 7) {</div>
-<div class="line"><span class="lineno">  654</span>                    s = <span class="stringliteral">&quot;within a week&quot;</span>;</div>
-<div class="line"><span class="lineno">  655</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (eta &lt;= 14) {</div>
-<div class="line"><span class="lineno">  656</span>                    s = <span class="stringliteral">&quot;within a couple of weeks&quot;</span>;</div>
-<div class="line"><span class="lineno">  657</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (eta &lt;= 30) {</div>
-<div class="line"><span class="lineno">  658</span>                    s = <span class="stringliteral">&quot;within a month&quot;</span>;</div>
-<div class="line"><span class="lineno">  659</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  660</span>                    s = <span class="stringliteral">&quot;in the coming months&quot;</span>;</div>
-<div class="line"><span class="lineno">  661</span>                }</div>
-<div class="line"><span class="lineno">  662</span>                map.put(<span class="stringliteral">&quot;$eta&quot;</span>, s);</div>
-<div class="line"><span class="lineno">  663</span>            }</div>
-<div class="line"><span class="lineno">  664</span>        }</div>
-<div class="line"><span class="lineno">  665</span>        </div>
-<div class="line"><span class="lineno">  666</span>        <span class="keywordtype">int</span> needed = (int) Misc.getRounded(<a class="code hl_function" href="../../da/d04/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent.html#a306da90cebf2197c2737345c85f17bcc">getRemainingFoodToMeetShortage</a>());</div>
-<div class="line"><span class="lineno">  667</span>        map.put(<span class="stringliteral">&quot;$neededFood&quot;</span>, <span class="stringliteral">&quot;&quot;</span> + needed);</div>
-<div class="line"><span class="lineno">  668</span>        </div>
-<div class="line"><span class="lineno">  669</span>        map.put(<span class="stringliteral">&quot;$stabilityPenalty&quot;</span>, <span class="stringliteral">&quot;&quot;</span> + (<span class="keywordtype">int</span>) <a class="code hl_function" href="../../da/d04/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent.html#a3f335e14d392e9ff6909d03a2fabf016">getStabilityImpact</a>());</div>
-<div class="line"><span class="lineno">  670</span>        map.put(<span class="stringliteral">&quot;$stabilityPenaltyRelief&quot;</span>, <span class="stringliteral">&quot;&quot;</span> + (<span class="keywordtype">int</span>) <a class="code hl_function" href="../../da/d04/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent.html#aa8f6d0e06b6211887e6fdbe9542fd217">getReliefAbortUnrest</a>());</div>
-<div class="line"><span class="lineno">  671</span>        map.put(<span class="stringliteral">&quot;$stabilityPenaltyExpire&quot;</span>, <span class="stringliteral">&quot;&quot;</span> + (<span class="keywordtype">int</span>) (<a class="code hl_function" href="../../da/d04/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent.html#a57af72da87a4a9b160d8d3d1a01044a0">getAddedExpiredUnrest</a>() + <a class="code hl_function" href="../../da/d04/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent.html#a3f335e14d392e9ff6909d03a2fabf016">getStabilityImpact</a>()));</div>
-<div class="line"><span class="lineno">  672</span>        map.put(<span class="stringliteral">&quot;$stabilityPenaltyEnd&quot;</span>, <span class="stringliteral">&quot;&quot;</span> + (<span class="keywordtype">int</span>) Math.max(0, <a class="code hl_function" href="../../da/d04/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent.html#a3f335e14d392e9ff6909d03a2fabf016">getStabilityImpact</a>() - <a class="code hl_function" href="../../da/d04/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent.html#a57fc50fd5f1e6981e76da95f761e17c8">getReducedEndedUnrest</a>()));</div>
-<div class="line"><span class="lineno">  673</span>        map.put(<span class="stringliteral">&quot;$stabilityPenaltyEndBlack&quot;</span>, <span class="stringliteral">&quot;&quot;</span> + (<span class="keywordtype">int</span>) (<a class="code hl_function" href="../../da/d04/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent.html#a3f335e14d392e9ff6909d03a2fabf016">getStabilityImpact</a>() + <a class="code hl_function" href="../../da/d04/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent.html#a1865ecba482a77204d88ab42b4ce3bbd">getEndBlackUnrest</a>()));</div>
-<div class="line"><span class="lineno">  674</span>        <span class="keywordflow">return</span> map;</div>
-<div class="line"><span class="lineno">  675</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventTarget_html_a4fdba2ae8cd89b839d2ea941da3ceba5"><div class="ttname"><a href="../../dc/d60/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventTarget.html#a4fdba2ae8cd89b839d2ea941da3ceba5">com.fs.starfarer.api.campaign.events.CampaignEventTarget.getEntity</a></div><div class="ttdeci">SectorEntityToken getEntity()</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d27/CampaignEventTarget_8java_source.html#l00061">CampaignEventTarget.java:61</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin_html_abe1c16c1836db2f6bacef1b8b0814872"><div class="ttname"><a href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#abe1c16c1836db2f6bacef1b8b0814872">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin.eventTarget</a></div><div class="ttdeci">CampaignEventTarget eventTarget</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00042">BaseEventPlugin.java:42</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent_html_a1865ecba482a77204d88ab42b4ce3bbd"><div class="ttname"><a href="../../da/d04/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent.html#a1865ecba482a77204d88ab42b4ce3bbd">com.fs.starfarer.api.impl.campaign.events.FoodShortageEvent.getEndBlackUnrest</a></div><div class="ttdeci">float getEndBlackUnrest()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dca/FoodShortageEvent_8java_source.html#l00249">FoodShortageEvent.java:249</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent_html_a306da90cebf2197c2737345c85f17bcc"><div class="ttname"><a href="../../da/d04/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent.html#a306da90cebf2197c2737345c85f17bcc">com.fs.starfarer.api.impl.campaign.events.FoodShortageEvent.getRemainingFoodToMeetShortage</a></div><div class="ttdeci">float getRemainingFoodToMeetShortage()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dca/FoodShortageEvent_8java_source.html#l00615">FoodShortageEvent.java:615</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent_html_a57af72da87a4a9b160d8d3d1a01044a0"><div class="ttname"><a href="../../da/d04/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent.html#a57af72da87a4a9b160d8d3d1a01044a0">com.fs.starfarer.api.impl.campaign.events.FoodShortageEvent.getAddedExpiredUnrest</a></div><div class="ttdeci">float getAddedExpiredUnrest()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dca/FoodShortageEvent_8java_source.html#l00241">FoodShortageEvent.java:241</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent_html_a57fc50fd5f1e6981e76da95f761e17c8"><div class="ttname"><a href="../../da/d04/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent.html#a57fc50fd5f1e6981e76da95f761e17c8">com.fs.starfarer.api.impl.campaign.events.FoodShortageEvent.getReducedEndedUnrest</a></div><div class="ttdeci">float getReducedEndedUnrest()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dca/FoodShortageEvent_8java_source.html#l00245">FoodShortageEvent.java:245</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent_html_aa8f6d0e06b6211887e6fdbe9542fd217"><div class="ttname"><a href="../../da/d04/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent.html#aa8f6d0e06b6211887e6fdbe9542fd217">com.fs.starfarer.api.impl.campaign.events.FoodShortageEvent.getReliefAbortUnrest</a></div><div class="ttdeci">float getReliefAbortUnrest()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dca/FoodShortageEvent_8java_source.html#l00237">FoodShortageEvent.java:237</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI_html_aa3e90e08c7029f5dae7bc1d4d59e3285"><div class="ttname"><a href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#aa3e90e08c7029f5dae7bc1d4d59e3285">com.fs.starfarer.api.campaign.CampaignFleetAPI.getFleetData</a></div><div class="ttdeci">FleetDataAPI getFleetData()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI_html_a152197efac6967a0a459e4579b8ab1ef"><div class="ttname"><a href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a152197efac6967a0a459e4579b8ab1ef">com.fs.starfarer.api.campaign.FactionAPI.getDisplayName</a></div><div class="ttdeci">String getDisplayName()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetDataAPI_html_aac3da6109643b61c9fbf54915cef5271"><div class="ttname"><a href="../../d2/dfb/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetDataAPI.html#aac3da6109643b61c9fbf54915cef5271">com.fs.starfarer.api.campaign.FleetDataAPI.getTravelSpeed</a></div><div class="ttdeci">float getTravelSpeed()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_ad373e58a550382cbf5be116191a67569"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#ad373e58a550382cbf5be116191a67569">com.fs.starfarer.api.campaign.SectorEntityToken.getLocationInHyperspace</a></div><div class="ttdeci">Vector2f getLocationInHyperspace()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_afb72bc74f75ccbbf240564b26b94e17b"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#afb72bc74f75ccbbf240564b26b94e17b">com.fs.starfarer.api.campaign.SectorEntityToken.getFaction</a></div><div class="ttdeci">FactionAPI getFaction()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2b73ca0e0f638cb912bd53f2a3647b58" name="a2b73ca0e0f638cb912bd53f2a3647b58"></a>
@@ -1103,10 +783,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a696a37edbdd38a05a19184883b1c6115">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dca/FoodShortageEvent_8java_source.html#l00521">521</a> of file <a class="el" href="../../d4/dca/FoodShortageEvent_8java_source.html">FoodShortageEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  521</span>                                                          {</div>
-<div class="line"><span class="lineno">  522</span>        <span class="keywordflow">return</span> messagePriority;</div>
-<div class="line"><span class="lineno">  523</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aacff32a6613290eba9f969249cdea152" name="aacff32a6613290eba9f969249cdea152"></a>
@@ -1128,10 +805,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#afdc8099d9df144312e390638433e788b">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dca/FoodShortageEvent_8java_source.html#l00517">517</a> of file <a class="el" href="../../d4/dca/FoodShortageEvent_8java_source.html">FoodShortageEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  517</span>                                                            {</div>
-<div class="line"><span class="lineno">  518</span>        <span class="keywordflow">return</span> messagePriority;</div>
-<div class="line"><span class="lineno">  519</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8671a0e3b39701b28290e1b7f51453a9" name="a8671a0e3b39701b28290e1b7f51453a9"></a>
@@ -1170,10 +844,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a85df425421b0ba2ec216cb3058f88297">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dca/FoodShortageEvent_8java_source.html#l00100">100</a> of file <a class="el" href="../../d4/dca/FoodShortageEvent_8java_source.html">FoodShortageEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  100</span>                                                                   {</div>
-<div class="line"><span class="lineno">  101</span>        super.init(type, <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#abe1c16c1836db2f6bacef1b8b0814872">eventTarget</a>, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  102</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a1a3aba76c47c6eae925122add587bf3b" name="a1a3aba76c47c6eae925122add587bf3b"></a>
@@ -1194,10 +865,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#ab897ab2cfdb15c8183902a077567171b">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dca/FoodShortageEvent_8java_source.html#l00513">513</a> of file <a class="el" href="../../d4/dca/FoodShortageEvent_8java_source.html">FoodShortageEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  513</span>                            {</div>
-<div class="line"><span class="lineno">  514</span>        <span class="keywordflow">return</span> ended;</div>
-<div class="line"><span class="lineno">  515</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a16dbfb893a64d752d978ce3e074644b5" name="a16dbfb893a64d752d978ce3e074644b5"></a>
@@ -1243,14 +911,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#aaf835c7c0fa6646864f95dfe16115ce7">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dca/FoodShortageEvent_8java_source.html#l00607">607</a> of file <a class="el" href="../../d4/dca/FoodShortageEvent_8java_source.html">FoodShortageEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  607</span>                                                                                                      {</div>
-<div class="line"><span class="lineno">  608</span>        <span class="keywordflow">if</span> (fleet == reliefFleet) {</div>
-<div class="line"><span class="lineno">  609</span>            Global.getSector().reportEventStage(<span class="keyword">this</span>, <span class="stringliteral">&quot;relief_lost&quot;</span>, reliefMarket.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af1677b531fa1a657e17b732868c7b953">getPrimaryEntity</a>(), messagePriority);</div>
-<div class="line"><span class="lineno">  610</span>            applyReliefFleetDidNotMakeItConsequences();</div>
-<div class="line"><span class="lineno">  611</span>            reliefFleet = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  612</span>        }</div>
-<div class="line"><span class="lineno">  613</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9fa1aec3b24da581318d04992ced1fd6" name="a9fa1aec3b24da581318d04992ced1fd6"></a>
@@ -1272,60 +933,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a5b5d29ae3d29aecfefe97e3bff2e1815">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dca/FoodShortageEvent_8java_source.html#l00553">553</a> of file <a class="el" href="../../d4/dca/FoodShortageEvent_8java_source.html">FoodShortageEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  553</span>                                                                                   {</div>
-<div class="line"><span class="lineno">  554</span>        <span class="keywordflow">if</span> (!<a class="code hl_function" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#ac5c47dbb1c74444a7517c8d031192459">isEventStarted</a>()) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  555</span>        </div>
-<div class="line"><span class="lineno">  556</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a> == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  557</span>        <span class="keywordflow">if</span> (transaction.getMarket() != <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  558</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../da/d04/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent.html#a1a3aba76c47c6eae925122add587bf3b">isDone</a>()) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  559</span>        </div>
-<div class="line"><span class="lineno">  560</span><span class="comment">//      if (market.getId().equals(&quot;jangala&quot;)) {</span></div>
-<div class="line"><span class="lineno">  561</span><span class="comment">//          System.out.println(&quot;123sfe&quot;);</span></div>
-<div class="line"><span class="lineno">  562</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  563</span>        </div>
-<div class="line"><span class="lineno">  564</span>        SubmarketPlugin plugin = transaction.getSubmarket().getPlugin();</div>
-<div class="line"><span class="lineno">  565</span>        <span class="keywordflow">if</span> (!plugin.isParticipatesInEconomy()) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  566</span>        </div>
-<div class="line"><span class="lineno">  567</span>        <span class="keywordtype">float</span> bought = transaction.getQuantityBought(Commodities.FOOD);</div>
-<div class="line"><span class="lineno">  568</span>        <span class="keywordtype">float</span> sold = transaction.getQuantitySold(Commodities.FOOD);</div>
-<div class="line"><span class="lineno">  569</span>        <span class="keywordtype">float</span> netBought = bought - sold;</div>
-<div class="line"><span class="lineno">  570</span>        </div>
-<div class="line"><span class="lineno">  571</span>        <span class="keywordflow">if</span> (netBought == 0) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  572</span>        </div>
-<div class="line"><span class="lineno">  573</span><span class="comment">//      CampaignEventManagerAPI manager = Global.getSector().getEventManager();</span></div>
-<div class="line"><span class="lineno">  574</span><span class="comment">//      EventProbabilityAPI ep = manager.getProbability(getEventType(), getEventTarget());</span></div>
-<div class="line"><span class="lineno">  575</span>        </div>
-<div class="line"><span class="lineno">  576</span>        </div>
-<div class="line"><span class="lineno">  577</span>        CommodityOnMarketAPI com = <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a6186b555a108bee51ba3ee878d07032d">getCommodityData</a>(Commodities.FOOD);</div>
-<div class="line"><span class="lineno">  578</span>        <span class="keywordtype">float</span> postTransactionLevel = com.<a class="code hl_function" href="../../d3/dd7/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommodityOnMarketAPI.html#a43a885ee4a1344011a25972553527e74">getStockpile</a>();</div>
-<div class="line"><span class="lineno">  579</span>        </div>
-<div class="line"><span class="lineno">  580</span>        <span class="keywordflow">if</span> (plugin.isBlackMarket()) {</div>
-<div class="line"><span class="lineno">  581</span>            netDeliveredByPlayerBlack -= bought;</div>
-<div class="line"><span class="lineno">  582</span>            netDeliveredByPlayerBlack += sold;</div>
-<div class="line"><span class="lineno">  583</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  584</span>            netDeliveredByPlayerOther -= bought;</div>
-<div class="line"><span class="lineno">  585</span>            netDeliveredByPlayerOther += sold;</div>
-<div class="line"><span class="lineno">  586</span>        }</div>
-<div class="line"><span class="lineno">  587</span>        </div>
-<div class="line"><span class="lineno">  588</span>        <span class="keywordflow">if</span> (postTransactionLevel &gt;= preEventFoodLevel &amp;&amp;</div>
-<div class="line"><span class="lineno">  589</span>                netDeliveredByPlayerOther + netDeliveredByPlayerBlack &gt;= <a class="code hl_variable" href="../../da/d04/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent.html#a713d8c8228d2ef3283d89831a4d387c5">MIN_FRACTION_FOR_PLAYER_ENDING_EVENT</a> * baseFoodToMeetShortage) {</div>
-<div class="line"><span class="lineno">  590</span>            <span class="keywordflow">if</span> (netDeliveredByPlayerBlack &gt;= <a class="code hl_variable" href="../../da/d04/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent.html#a713d8c8228d2ef3283d89831a4d387c5">MIN_FRACTION_FOR_PLAYER_ENDING_EVENT</a> * baseFoodToMeetShortage) {</div>
-<div class="line"><span class="lineno">  591</span>                endEvent(Ending.PLAYER_ENDED_BLACK);</div>
-<div class="line"><span class="lineno">  592</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  593</span>                endEvent(Ending.PLAYER_ENDED);</div>
-<div class="line"><span class="lineno">  594</span>            }</div>
-<div class="line"><span class="lineno">  595</span>            <span class="comment">// added in endEvent() before rep gain</span></div>
-<div class="line"><span class="lineno">  596</span><span class="comment">//          InteractionDialogAPI dialog = Global.getSector().getCampaignUI().getCurrentInteractionDialog();</span></div>
-<div class="line"><span class="lineno">  597</span><span class="comment">//          if (dialog != null &amp;&amp; dialog.getPlugin().getMemoryMap() != null) {</span></div>
-<div class="line"><span class="lineno">  598</span><span class="comment">//              //dialog.getTextPanel().clear();</span></div>
-<div class="line"><span class="lineno">  599</span><span class="comment">//              //dialog.getTextPanel().addParagraph(&quot;Financial transaction confirmed&quot;, Global.getSettings().getColor(&quot;buttonText&quot;));</span></div>
-<div class="line"><span class="lineno">  600</span><span class="comment">//              dialog.getVisualPanel().hideCore();</span></div>
-<div class="line"><span class="lineno">  601</span><span class="comment">//              FireBest.fire(null, dialog, dialog.getPlugin().getMemoryMap(), &quot;FoodShortageEndedByPlayerSale&quot;);</span></div>
-<div class="line"><span class="lineno">  602</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">  603</span>        }</div>
-<div class="line"><span class="lineno">  604</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent_html_a713d8c8228d2ef3283d89831a4d387c5"><div class="ttname"><a href="../../da/d04/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent.html#a713d8c8228d2ef3283d89831a4d387c5">com.fs.starfarer.api.impl.campaign.events.FoodShortageEvent.MIN_FRACTION_FOR_PLAYER_ENDING_EVENT</a></div><div class="ttdeci">static float MIN_FRACTION_FOR_PLAYER_ENDING_EVENT</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dca/FoodShortageEvent_8java_source.html#l00054">FoodShortageEvent.java:54</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a3cd2c30b6e364f27e554330e68cd612f" name="a3cd2c30b6e364f27e554330e68cd612f"></a>
@@ -1347,82 +955,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#aa016b5c97932063aa9184483bd01c5ee">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dca/FoodShortageEvent_8java_source.html#l00104">104</a> of file <a class="el" href="../../d4/dca/FoodShortageEvent_8java_source.html">FoodShortageEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  104</span>                             {</div>
-<div class="line"><span class="lineno">  105</span>        super.startEvent(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  106</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a> == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  107</span>        </div>
-<div class="line"><span class="lineno">  108</span>        <span class="keywordflow">switch</span> (<a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af6f714c59a16687b5cde142091a54150">getSize</a>()) {</div>
-<div class="line"><span class="lineno">  109</span>        <span class="keywordflow">case</span> 1:</div>
-<div class="line"><span class="lineno">  110</span>        <span class="keywordflow">case</span> 2:</div>
-<div class="line"><span class="lineno">  111</span>        <span class="keywordflow">case</span> 3:</div>
-<div class="line"><span class="lineno">  112</span>            messagePriority = MessagePriority.<a class="code hl_variable" href="../../d4/d8c/enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1MessagePriority.html#ab24f43658c92314a53b497d35d828acb">SYSTEM</a>;</div>
-<div class="line"><span class="lineno">  113</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  114</span>        <span class="keywordflow">case</span> 4:</div>
-<div class="line"><span class="lineno">  115</span>        <span class="keywordflow">case</span> 5:</div>
-<div class="line"><span class="lineno">  116</span>            messagePriority = MessagePriority.<a class="code hl_variable" href="../../d4/d8c/enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1MessagePriority.html#a3711b177ee18fffc395df8e615376422">CLUSTER</a>;</div>
-<div class="line"><span class="lineno">  117</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  118</span>        <span class="keywordflow">case</span> 6:</div>
-<div class="line"><span class="lineno">  119</span>        <span class="keywordflow">case</span> 7:</div>
-<div class="line"><span class="lineno">  120</span>        <span class="keywordflow">case</span> 8:</div>
-<div class="line"><span class="lineno">  121</span>        <span class="keywordflow">case</span> 9:</div>
-<div class="line"><span class="lineno">  122</span>            messagePriority = MessagePriority.<a class="code hl_variable" href="../../d4/d8c/enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1MessagePriority.html#ac3d1f2e4268bd3ae655c6eab139deff8">SECTOR</a>;</div>
-<div class="line"><span class="lineno">  123</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  124</span>        }</div>
-<div class="line"><span class="lineno">  125</span>        </div>
-<div class="line"><span class="lineno">  126</span>        <span class="comment">// moved to FoodShortage condition</span></div>
-<div class="line"><span class="lineno">  127</span><span class="comment">//      String sellId = Stats.getPlayerSellImpactMultId(Commodities.FOOD);</span></div>
-<div class="line"><span class="lineno">  128</span><span class="comment">//      market.getStats().getDynamic().getStat(sellId).modifyFlat(getId() + &quot;_mod&quot;, getStabilityImpact());</span></div>
-<div class="line"><span class="lineno">  129</span>        </div>
-<div class="line"><span class="lineno">  130</span>        baseFoodToMeetShortage = getBaseShortageAmount();</div>
-<div class="line"><span class="lineno">  131</span>        <span class="comment">//foodToMeetShortage = baseFoodToMeetShortage;</span></div>
-<div class="line"><span class="lineno">  132</span>        </div>
-<div class="line"><span class="lineno">  133</span>        maxDurationDays = 20f + (float) Math.random() * 20f;</div>
-<div class="line"><span class="lineno">  134</span>        </div>
-<div class="line"><span class="lineno">  135</span>        daysBeforeReliefCheck = 7f + (float) Math.random() * 7f;</div>
-<div class="line"><span class="lineno">  136</span>        daysBeforeReliefSend = daysBeforeReliefCheck + (float) Math.random() * 7f;</div>
-<div class="line"><span class="lineno">  137</span>        </div>
-<div class="line"><span class="lineno">  138</span>        foodShortageConditionToken = <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#ab83e76a338104a130f716183d8896b1f">addCondition</a>(Conditions.EVENT_FOOD_SHORTAGE, <span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  139</span>        CommodityOnMarketAPI com = <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a6186b555a108bee51ba3ee878d07032d">getCommodityData</a>(Commodities.FOOD);</div>
-<div class="line"><span class="lineno">  140</span>        </div>
-<div class="line"><span class="lineno">  141</span>        preEventFoodLevel = com.getStockpile();</div>
-<div class="line"><span class="lineno">  142</span>        com.setStockpile(com.getStockpile() * getStockpileMult());</div>
-<div class="line"><span class="lineno">  143</span>        com.getPlayerSupplyPriceMod().modifyMult(<a class="code hl_variable" href="../../da/d04/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent.html#ad58526aea547f0a615e9e1e6c2ea0404">PRICE_MOD_ID</a>, <a class="code hl_variable" href="../../da/d04/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent.html#a455e8b58a536c418306b746dea3533dc">FOOD_PRICE_MULT</a>);</div>
-<div class="line"><span class="lineno">  144</span>        com.getPlayerSupplyPriceMod().modifyFlat(<a class="code hl_variable" href="../../da/d04/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent.html#ad58526aea547f0a615e9e1e6c2ea0404">PRICE_MOD_ID</a>, <a class="code hl_variable" href="../../da/d04/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent.html#a73e6a5dc8ba94282aea3b89a44541708">FOOD_PRICE_FLAT</a>);</div>
-<div class="line"><span class="lineno">  145</span>        </div>
-<div class="line"><span class="lineno">  146</span>        </div>
-<div class="line"><span class="lineno">  147</span>        SubmarketAPI open = <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a73b2a6f9453797c1898032cc6c071ced">getSubmarket</a>(<span class="stringliteral">&quot;open_market&quot;</span>);</div>
-<div class="line"><span class="lineno">  148</span>        <span class="keywordflow">if</span> (open != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  149</span>            <span class="keywordtype">float</span> food = open.<a class="code hl_function" href="../../d4/d17/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1SubmarketAPI.html#a165fff79df7393d4558085a6750cc321">getCargo</a>().<a class="code hl_function" href="../../dc/d7b/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a1b064a41ed08586f74d34c41a778b055">getQuantity</a>(CargoItemType.RESOURCES, Commodities.FOOD);</div>
-<div class="line"><span class="lineno">  150</span>            open.getCargo().removeItems(CargoItemType.RESOURCES, Commodities.FOOD, food);</div>
-<div class="line"><span class="lineno">  151</span>        }</div>
-<div class="line"><span class="lineno">  152</span>        </div>
-<div class="line"><span class="lineno">  153</span>        SubmarketAPI black = <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a73b2a6f9453797c1898032cc6c071ced">getSubmarket</a>(<span class="stringliteral">&quot;black_market&quot;</span>);</div>
-<div class="line"><span class="lineno">  154</span>        <span class="keywordflow">if</span> (black != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  155</span>            black.<a class="code hl_function" href="../../d4/d17/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1SubmarketAPI.html#aa9d35ce084598ffe865ff6c90b4f6dca">getPlugin</a>().<a class="code hl_function" href="../../d7/d80/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SubmarketPlugin.html#a7d2f261c97980524fd3f464883287897">updateCargoPrePlayerInteraction</a>();</div>
-<div class="line"><span class="lineno">  156</span>            black.getCargo().addItems(CargoItemType.RESOURCES, Commodities.FOOD,</div>
-<div class="line"><span class="lineno">  157</span>                                      (<span class="keywordtype">int</span>)Math.max(1, baseFoodToMeetShortage * (0.1f + (<span class="keywordtype">float</span>) Math.random() * 0.05f)));</div>
-<div class="line"><span class="lineno">  158</span>        }</div>
-<div class="line"><span class="lineno">  159</span>        </div>
-<div class="line"><span class="lineno">  160</span>        Global.getSector().reportEventStage(<span class="keyword">this</span>, <span class="stringliteral">&quot;start&quot;</span>, messagePriority);</div>
-<div class="line"><span class="lineno">  161</span>        </div>
-<div class="line"><span class="lineno">  162</span>        <a class="code hl_variable" href="../../da/d04/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent.html#a12cc384acaa1ab76cf194b20d5e3d50c">log</a>.info(<a class="code hl_function" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#ad95fb45243d453e6a41ce156d3997861">getLoggingId</a>() + <span class="stringliteral">&quot; Starting food shortage&quot;</span> + </div>
-<div class="line"><span class="lineno">  163</span>                 <span class="stringliteral">&quot;, food needed: &quot;</span> + (int) baseFoodToMeetShortage +</div>
-<div class="line"><span class="lineno">  164</span>                 <span class="stringliteral">&quot;, stockpile mult: &quot;</span> + getStockpileMult() + </div>
-<div class="line"><span class="lineno">  165</span>                 <span class="stringliteral">&quot;, max duration: &quot;</span> + (int) maxDurationDays + <span class="stringliteral">&quot; days&quot;</span>);</div>
-<div class="line"><span class="lineno">  166</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent_html_a455e8b58a536c418306b746dea3533dc"><div class="ttname"><a href="../../da/d04/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent.html#a455e8b58a536c418306b746dea3533dc">com.fs.starfarer.api.impl.campaign.events.FoodShortageEvent.FOOD_PRICE_MULT</a></div><div class="ttdeci">static float FOOD_PRICE_MULT</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dca/FoodShortageEvent_8java_source.html#l00050">FoodShortageEvent.java:50</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent_html_a73e6a5dc8ba94282aea3b89a44541708"><div class="ttname"><a href="../../da/d04/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent.html#a73e6a5dc8ba94282aea3b89a44541708">com.fs.starfarer.api.impl.campaign.events.FoodShortageEvent.FOOD_PRICE_FLAT</a></div><div class="ttdeci">static float FOOD_PRICE_FLAT</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dca/FoodShortageEvent_8java_source.html#l00051">FoodShortageEvent.java:51</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent_html_ad58526aea547f0a615e9e1e6c2ea0404"><div class="ttname"><a href="../../da/d04/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent.html#ad58526aea547f0a615e9e1e6c2ea0404">com.fs.starfarer.api.impl.campaign.events.FoodShortageEvent.PRICE_MOD_ID</a></div><div class="ttdeci">static String PRICE_MOD_ID</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dca/FoodShortageEvent_8java_source.html#l00048">FoodShortageEvent.java:48</a></div></div>
-<div class="ttc" id="aenumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1MessagePriority_html_a3711b177ee18fffc395df8e615376422"><div class="ttname"><a href="../../d4/d8c/enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1MessagePriority.html#a3711b177ee18fffc395df8e615376422">com.fs.starfarer.api.campaign.comm.MessagePriority.CLUSTER</a></div><div class="ttdeci">CLUSTER</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db2/MessagePriority_8java_source.html#l00011">MessagePriority.java:11</a></div></div>
-<div class="ttc" id="aenumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1MessagePriority_html_ab24f43658c92314a53b497d35d828acb"><div class="ttname"><a href="../../d4/d8c/enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1MessagePriority.html#ab24f43658c92314a53b497d35d828acb">com.fs.starfarer.api.campaign.comm.MessagePriority.SYSTEM</a></div><div class="ttdeci">SYSTEM</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db2/MessagePriority_8java_source.html#l00012">MessagePriority.java:12</a></div></div>
-<div class="ttc" id="aenumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1MessagePriority_html_ac3d1f2e4268bd3ae655c6eab139deff8"><div class="ttname"><a href="../../d4/d8c/enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1MessagePriority.html#ac3d1f2e4268bd3ae655c6eab139deff8">com.fs.starfarer.api.campaign.comm.MessagePriority.SECTOR</a></div><div class="ttdeci">SECTOR</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db2/MessagePriority_8java_source.html#l00010">MessagePriority.java:10</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI_html_a1b064a41ed08586f74d34c41a778b055"><div class="ttname"><a href="../../dc/d7b/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a1b064a41ed08586f74d34c41a778b055">com.fs.starfarer.api.campaign.CargoAPI.getQuantity</a></div><div class="ttdeci">float getQuantity(CargoAPI.CargoItemType type, Object data)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SubmarketPlugin_html_a7d2f261c97980524fd3f464883287897"><div class="ttname"><a href="../../d7/d80/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SubmarketPlugin.html#a7d2f261c97980524fd3f464883287897">com.fs.starfarer.api.campaign.SubmarketPlugin.updateCargoPrePlayerInteraction</a></div><div class="ttdeci">void updateCargoPrePlayerInteraction()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a73b2a6f9453797c1898032cc6c071ced"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a73b2a6f9453797c1898032cc6c071ced">com.fs.starfarer.api.campaign.econ.MarketAPI.getSubmarket</a></div><div class="ttdeci">SubmarketAPI getSubmarket(String specId)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_ab83e76a338104a130f716183d8896b1f"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#ab83e76a338104a130f716183d8896b1f">com.fs.starfarer.api.campaign.econ.MarketAPI.addCondition</a></div><div class="ttdeci">String addCondition(String id)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1SubmarketAPI_html_a165fff79df7393d4558085a6750cc321"><div class="ttname"><a href="../../d4/d17/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1SubmarketAPI.html#a165fff79df7393d4558085a6750cc321">com.fs.starfarer.api.campaign.econ.SubmarketAPI.getCargo</a></div><div class="ttdeci">CargoAPI getCargo()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1SubmarketAPI_html_aa9d35ce084598ffe865ff6c90b4f6dca"><div class="ttname"><a href="../../d4/d17/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1SubmarketAPI.html#aa9d35ce084598ffe865ff6c90b4f6dca">com.fs.starfarer.api.campaign.econ.SubmarketAPI.getPlugin</a></div><div class="ttdeci">SubmarketPlugin getPlugin()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

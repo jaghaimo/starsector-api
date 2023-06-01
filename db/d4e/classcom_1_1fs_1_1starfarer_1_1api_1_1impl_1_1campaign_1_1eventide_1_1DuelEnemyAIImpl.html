@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -161,10 +162,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/d1e/DuelEnemyAIImpl_8java_source.html#l00021">21</a> of file <a class="el" href="../../df/d1e/DuelEnemyAIImpl_8java_source.html">DuelEnemyAIImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   21</span>                             {</div>
-<div class="line"><span class="lineno">   22</span>        </div>
-<div class="line"><span class="lineno">   23</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -197,137 +195,7 @@ Public Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d7/d2f/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1DuelEnemyAI.html#a33182c31d2503436cf43546d94f8a90d">com.fs.starfarer.api.impl.campaign.eventide.DuelEnemyAI</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/d1e/DuelEnemyAIImpl_8java_source.html#l00026">26</a> of file <a class="el" href="../../df/d1e/DuelEnemyAIImpl_8java_source.html">DuelEnemyAIImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   26</span>                                                      {</div>
-<div class="line"><span class="lineno">   27</span>        Actor actor = duel.enemy;</div>
-<div class="line"><span class="lineno">   28</span>        Actor opponent = duel.player;</div>
-<div class="line"><span class="lineno">   29</span>        </div>
-<div class="line"><span class="lineno">   30</span>        <span class="keywordflow">if</span> (opponent.health &lt;= 0) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   31</span>        </div>
-<div class="line"><span class="lineno">   32</span>        <a class="code hl_variable" href="../../db/d4e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1DuelEnemyAIImpl.html#a4012c8484c89be5d8e3b24ad4bdf7c59">initialDelay</a> -= amount;</div>
-<div class="line"><span class="lineno">   33</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../db/d4e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1DuelEnemyAIImpl.html#a4012c8484c89be5d8e3b24ad4bdf7c59">initialDelay</a> &gt; 0) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   34</span>        </div>
-<div class="line"><span class="lineno">   35</span>        <a class="code hl_variable" href="../../db/d4e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1DuelEnemyAIImpl.html#acec500ddecade1d2e059eeab4f5f5644">recentBlocks</a> -= amount * 0.25f;</div>
-<div class="line"><span class="lineno">   36</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../db/d4e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1DuelEnemyAIImpl.html#acec500ddecade1d2e059eeab4f5f5644">recentBlocks</a> &lt; 0) <a class="code hl_variable" href="../../db/d4e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1DuelEnemyAIImpl.html#acec500ddecade1d2e059eeab4f5f5644">recentBlocks</a> = 0;</div>
-<div class="line"><span class="lineno">   37</span>        </div>
-<div class="line"><span class="lineno">   38</span>        <a class="code hl_variable" href="../../db/d4e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1DuelEnemyAIImpl.html#ae0b07f320c7b4227e3804b7e6c2598d4">moveDelay</a> -= amount;</div>
-<div class="line"><span class="lineno">   39</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../db/d4e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1DuelEnemyAIImpl.html#ae0b07f320c7b4227e3804b7e6c2598d4">moveDelay</a> &lt; 0) <a class="code hl_variable" href="../../db/d4e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1DuelEnemyAIImpl.html#ae0b07f320c7b4227e3804b7e6c2598d4">moveDelay</a> = 0;</div>
-<div class="line"><span class="lineno">   40</span>        <a class="code hl_variable" href="../../db/d4e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1DuelEnemyAIImpl.html#a4f54050301f822128adfa68a6071c394">noBlockDur</a> -= amount;</div>
-<div class="line"><span class="lineno">   41</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../db/d4e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1DuelEnemyAIImpl.html#a4f54050301f822128adfa68a6071c394">noBlockDur</a> &lt; 0) <a class="code hl_variable" href="../../db/d4e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1DuelEnemyAIImpl.html#a4f54050301f822128adfa68a6071c394">noBlockDur</a> = 0;</div>
-<div class="line"><span class="lineno">   42</span>        </div>
-<div class="line"><span class="lineno">   43</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../db/d4e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1DuelEnemyAIImpl.html#a70093b0033c6f7c691852e7c9ab276c0">next</a> != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   44</span>            next.delay -= amount;</div>
-<div class="line"><span class="lineno">   45</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../db/d4e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1DuelEnemyAIImpl.html#a70093b0033c6f7c691852e7c9ab276c0">next</a>.delay &lt;= 0) {</div>
-<div class="line"><span class="lineno">   46</span>                actor.doAction(<a class="code hl_variable" href="../../db/d4e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1DuelEnemyAIImpl.html#a70093b0033c6f7c691852e7c9ab276c0">next</a>.actionId, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   47</span>                <a class="code hl_variable" href="../../db/d4e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1DuelEnemyAIImpl.html#a70093b0033c6f7c691852e7c9ab276c0">next</a> = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   48</span>            }</div>
-<div class="line"><span class="lineno">   49</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   50</span>        }</div>
-<div class="line"><span class="lineno">   51</span>    </div>
-<div class="line"><span class="lineno">   52</span>        <span class="comment">//float attackRange = 165;</span></div>
-<div class="line"><span class="lineno">   53</span>        <span class="keywordtype">float</span> attackRange = 142;</div>
-<div class="line"><span class="lineno">   54</span>        <span class="keywordtype">float</span> tooCloseRange = 50;</div>
-<div class="line"><span class="lineno">   55</span>        <span class="keywordtype">float</span> waitRange = attackRange + 50;</div>
-<div class="line"><span class="lineno">   56</span>        </div>
-<div class="line"><span class="lineno">   57</span>        <span class="keywordtype">float</span> dist = duel.getDistance();</div>
-<div class="line"><span class="lineno">   58</span>        </div>
-<div class="line"><span class="lineno">   59</span>        <span class="keywordtype">boolean</span> actorAttacking = actor.currAction != <span class="keyword">null</span> &amp;&amp; actor.currAction.anim.hasAttackFrames() &amp;&amp;</div>
-<div class="line"><span class="lineno">   60</span>                            !actor.currAction.scoredHit &amp;&amp; !actor.currAction.wasBlocked;  </div>
-<div class="line"><span class="lineno">   61</span>        <span class="keywordtype">boolean</span> actorBlocking = actor.currAction != <span class="keyword">null</span> &amp;&amp; actor.currAction.anim.hasBlockFrames() &amp;&amp;</div>
-<div class="line"><span class="lineno">   62</span>                            !actor.currAction.performedBlock;</div>
-<div class="line"><span class="lineno">   63</span>        <span class="keywordflow">if</span> (actor.nextAction != <span class="keyword">null</span> &amp;&amp; actor.nextAction.anim.hasBlockFrames()) {</div>
-<div class="line"><span class="lineno">   64</span>            actorBlocking = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   65</span>        }</div>
-<div class="line"><span class="lineno">   66</span>        </div>
-<div class="line"><span class="lineno">   67</span>        <span class="keywordtype">boolean</span> actorPerformedBlock = actor.currAction != <span class="keyword">null</span> &amp;&amp; actor.currAction.performedBlock;  </div>
-<div class="line"><span class="lineno">   68</span>        <span class="keywordtype">boolean</span> opponentAttacking = opponent.currAction != <span class="keyword">null</span> &amp;&amp; opponent.currAction.anim.hasAttackFrames() &amp;&amp;</div>
-<div class="line"><span class="lineno">   69</span>                            !opponent.currAction.scoredHit &amp;&amp; !opponent.currAction.wasBlocked;  </div>
-<div class="line"><span class="lineno">   70</span>        <span class="keywordtype">boolean</span> opponentBlocking = opponent.currAction != <span class="keyword">null</span> &amp;&amp; opponent.currAction.anim.hasBlockFrames() &amp;&amp;</div>
-<div class="line"><span class="lineno">   71</span>                            !opponent.currAction.performedBlock;</div>
-<div class="line"><span class="lineno">   72</span>        </div>
-<div class="line"><span class="lineno">   73</span>        <span class="keywordflow">if</span> (actorBlocking || actorAttacking) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   74</span>        </div>
-<div class="line"><span class="lineno">   75</span>        <span class="keywordtype">boolean</span> blockOnlyMode = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   76</span>        <span class="keywordtype">boolean</span> allowAttack = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   77</span>    <span class="comment">//  blockOnlyMode = true;</span></div>
-<div class="line"><span class="lineno">   78</span>    <span class="comment">//  allowAttack = false;</span></div>
-<div class="line"><span class="lineno">   79</span>        </div>
-<div class="line"><span class="lineno">   80</span>        <span class="keywordflow">if</span> (opponentAttacking &amp;&amp; dist &lt; attackRange + 10 &amp;&amp; opponent.currAction.framesUntilAttackFrame() &lt; 4) {</div>
-<div class="line"><span class="lineno">   81</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../db/d4e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1DuelEnemyAIImpl.html#a4f54050301f822128adfa68a6071c394">noBlockDur</a> &gt; 0) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   82</span>            </div>
-<div class="line"><span class="lineno">   83</span>            <span class="keywordflow">if</span> (1f + (<span class="keywordtype">float</span>) Math.random() * 4f &lt; <a class="code hl_variable" href="../../db/d4e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1DuelEnemyAIImpl.html#acec500ddecade1d2e059eeab4f5f5644">recentBlocks</a>) {</div>
-<div class="line"><span class="lineno">   84</span>                <a class="code hl_variable" href="../../db/d4e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1DuelEnemyAIImpl.html#a4f54050301f822128adfa68a6071c394">noBlockDur</a> = 0.5f + (float) Math.random() * 0.2f;</div>
-<div class="line"><span class="lineno">   85</span>                <span class="keywordflow">if</span> (!blockOnlyMode) {</div>
-<div class="line"><span class="lineno">   86</span>                    actor.doAction(Actions.MOVE_BACK, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   87</span>                    <a class="code hl_variable" href="../../db/d4e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1DuelEnemyAIImpl.html#a70093b0033c6f7c691852e7c9ab276c0">next</a> = <span class="keyword">new</span> WaitThenAct(0.1f, Actions.MOVE_BACK);</div>
-<div class="line"><span class="lineno">   88</span>                }</div>
-<div class="line"><span class="lineno">   89</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   90</span>            }</div>
-<div class="line"><span class="lineno">   91</span>            <span class="comment">//next = new WaitThenAct(0.1f + (float) Math.random() * 0.1f, Actions.BLOCK_LOW);</span></div>
-<div class="line"><span class="lineno">   92</span>            <span class="keywordtype">float</span> delay = 0.2f * (float) Math.random();</div>
-<div class="line"><span class="lineno">   93</span>            <span class="comment">//delay = 0f;</span></div>
-<div class="line"><span class="lineno">   94</span>            <span class="comment">//delay += (float) Math.random() * Math.min(0.2f, recentBlocks * 0.1f);</span></div>
-<div class="line"><span class="lineno">   95</span>            <a class="code hl_variable" href="../../db/d4e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1DuelEnemyAIImpl.html#a70093b0033c6f7c691852e7c9ab276c0">next</a> = <span class="keyword">new</span> WaitThenAct(delay, Actions.BLOCK);</div>
-<div class="line"><span class="lineno">   96</span>            <a class="code hl_variable" href="../../db/d4e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1DuelEnemyAIImpl.html#acec500ddecade1d2e059eeab4f5f5644">recentBlocks</a>++;</div>
-<div class="line"><span class="lineno">   97</span>            <span class="keywordflow">if</span> (blockOnlyMode) <a class="code hl_variable" href="../../db/d4e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1DuelEnemyAIImpl.html#acec500ddecade1d2e059eeab4f5f5644">recentBlocks</a> = 0;</div>
-<div class="line"><span class="lineno">   98</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../db/d4e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1DuelEnemyAIImpl.html#acec500ddecade1d2e059eeab4f5f5644">recentBlocks</a> &gt; 4f) <a class="code hl_variable" href="../../db/d4e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1DuelEnemyAIImpl.html#acec500ddecade1d2e059eeab4f5f5644">recentBlocks</a> = 4f;</div>
-<div class="line"><span class="lineno">   99</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  100</span>        }</div>
-<div class="line"><span class="lineno">  101</span>        </div>
-<div class="line"><span class="lineno">  102</span>        <span class="keywordflow">if</span> (opponentAttacking) {</div>
-<div class="line"><span class="lineno">  103</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  104</span>        }</div>
-<div class="line"><span class="lineno">  105</span>        </div>
-<div class="line"><span class="lineno">  106</span>        <span class="keywordflow">if</span> (actorPerformedBlock) {</div>
-<div class="line"><span class="lineno">  107</span>            <a class="code hl_variable" href="../../db/d4e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1DuelEnemyAIImpl.html#ae0b07f320c7b4227e3804b7e6c2598d4">moveDelay</a> = 0.1f + (float) Math.random() * 0.05f;</div>
-<div class="line"><span class="lineno">  108</span>            <span class="comment">//moveDelay = 0.1f;</span></div>
-<div class="line"><span class="lineno">  109</span>            <span class="comment">//moveDelay = 0f;</span></div>
-<div class="line"><span class="lineno">  110</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  111</span>        }</div>
-<div class="line"><span class="lineno">  112</span>        </div>
-<div class="line"><span class="lineno">  113</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../db/d4e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1DuelEnemyAIImpl.html#ae0b07f320c7b4227e3804b7e6c2598d4">moveDelay</a> &lt;= 0 &amp;&amp; !blockOnlyMode) {</div>
-<div class="line"><span class="lineno">  114</span>            <span class="keywordflow">if</span> (dist &gt; waitRange) {</div>
-<div class="line"><span class="lineno">  115</span>                actor.doAction(Actions.MOVE_FORWARD, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  116</span>                <a class="code hl_variable" href="../../db/d4e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1DuelEnemyAIImpl.html#ae0b07f320c7b4227e3804b7e6c2598d4">moveDelay</a> = 0.3f + (float) Math.random() * 0.2f;</div>
-<div class="line"><span class="lineno">  117</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  118</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (dist &gt; attackRange) {</div>
-<div class="line"><span class="lineno">  119</span>                actor.doAction(Actions.MOVE_FORWARD, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  120</span>                <a class="code hl_variable" href="../../db/d4e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1DuelEnemyAIImpl.html#ae0b07f320c7b4227e3804b7e6c2598d4">moveDelay</a> = 0.3f + (float) Math.random() * 0.2f;</div>
-<div class="line"><span class="lineno">  121</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  122</span>            }</div>
-<div class="line"><span class="lineno">  123</span>        }</div>
-<div class="line"><span class="lineno">  124</span>        </div>
-<div class="line"><span class="lineno">  125</span>        <span class="keywordflow">if</span> ((dist &lt; attackRange || actorPerformedBlock) &amp;&amp; <a class="code hl_variable" href="../../db/d4e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1DuelEnemyAIImpl.html#ae0b07f320c7b4227e3804b7e6c2598d4">moveDelay</a> &lt;= 0 &amp;&amp; (!blockOnlyMode || allowAttack)) {</div>
-<div class="line"><span class="lineno">  126</span>            actor.doAction(Actions.ATTACK, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  127</span>            <a class="code hl_variable" href="../../db/d4e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1DuelEnemyAIImpl.html#ae0b07f320c7b4227e3804b7e6c2598d4">moveDelay</a> = 0.1f + (float) Math.random() * 2f;</div>
-<div class="line"><span class="lineno">  128</span>            <span class="comment">//next = new WaitThenAct((float) Math.random() * 0.1f, Actions.ATTACK_HIGH);</span></div>
-<div class="line"><span class="lineno">  129</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  130</span>        }</div>
-<div class="line"><span class="lineno">  131</span>        </div>
-<div class="line"><span class="lineno">  132</span>        <span class="comment">//if (true) return;</span></div>
-<div class="line"><span class="lineno">  133</span><span class="comment">//      if (dist &lt; tooCloseRange &amp;&amp; !opponentAttacking) {</span></div>
-<div class="line"><span class="lineno">  134</span><span class="comment">//          </span></div>
-<div class="line"><span class="lineno">  135</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  136</span>        </div>
-<div class="line"><span class="lineno">  137</span>        </div>
-<div class="line"><span class="lineno">  138</span><span class="comment">//      if (opponentAttacking &amp;&amp; !actorBlocking) {</span></div>
-<div class="line"><span class="lineno">  139</span><span class="comment">//          actor.doAction(Actions.BLOCK_LOW, false);</span></div>
-<div class="line"><span class="lineno">  140</span><span class="comment">//          //moveDelay = 0.4f;</span></div>
-<div class="line"><span class="lineno">  141</span><span class="comment">//      } else {</span></div>
-<div class="line"><span class="lineno">  142</span> </div>
-<div class="line"><span class="lineno">  143</span><span class="comment">//      else if (moveDelay &lt;= 0) {</span></div>
-<div class="line"><span class="lineno">  144</span><span class="comment">//          actor.doAction(Actions.ATTACK_HIGH, false);</span></div>
-<div class="line"><span class="lineno">  145</span><span class="comment">//          moveDelay = 0.5f;</span></div>
-<div class="line"><span class="lineno">  146</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  147</span>        </div>
-<div class="line"><span class="lineno">  148</span>        <span class="comment">//System.out.println(&quot;Dist: &quot; + dist);</span></div>
-<div class="line"><span class="lineno">  149</span>        </div>
-<div class="line"><span class="lineno">  150</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1DuelEnemyAIImpl_html_a4012c8484c89be5d8e3b24ad4bdf7c59"><div class="ttname"><a href="../../db/d4e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1DuelEnemyAIImpl.html#a4012c8484c89be5d8e3b24ad4bdf7c59">com.fs.starfarer.api.impl.campaign.eventide.DuelEnemyAIImpl.initialDelay</a></div><div class="ttdeci">float initialDelay</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d1e/DuelEnemyAIImpl_8java_source.html#l00015">DuelEnemyAIImpl.java:15</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1DuelEnemyAIImpl_html_a4f54050301f822128adfa68a6071c394"><div class="ttname"><a href="../../db/d4e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1DuelEnemyAIImpl.html#a4f54050301f822128adfa68a6071c394">com.fs.starfarer.api.impl.campaign.eventide.DuelEnemyAIImpl.noBlockDur</a></div><div class="ttdeci">float noBlockDur</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d1e/DuelEnemyAIImpl_8java_source.html#l00019">DuelEnemyAIImpl.java:19</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1DuelEnemyAIImpl_html_a70093b0033c6f7c691852e7c9ab276c0"><div class="ttname"><a href="../../db/d4e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1DuelEnemyAIImpl.html#a70093b0033c6f7c691852e7c9ab276c0">com.fs.starfarer.api.impl.campaign.eventide.DuelEnemyAIImpl.next</a></div><div class="ttdeci">WaitThenAct next</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d1e/DuelEnemyAIImpl_8java_source.html#l00017">DuelEnemyAIImpl.java:17</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1DuelEnemyAIImpl_html_acec500ddecade1d2e059eeab4f5f5644"><div class="ttname"><a href="../../db/d4e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1DuelEnemyAIImpl.html#acec500ddecade1d2e059eeab4f5f5644">com.fs.starfarer.api.impl.campaign.eventide.DuelEnemyAIImpl.recentBlocks</a></div><div class="ttdeci">float recentBlocks</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d1e/DuelEnemyAIImpl_8java_source.html#l00018">DuelEnemyAIImpl.java:18</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1DuelEnemyAIImpl_html_ae0b07f320c7b4227e3804b7e6c2598d4"><div class="ttname"><a href="../../db/d4e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1DuelEnemyAIImpl.html#ae0b07f320c7b4227e3804b7e6c2598d4">com.fs.starfarer.api.impl.campaign.eventide.DuelEnemyAIImpl.moveDelay</a></div><div class="ttdeci">float moveDelay</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d1e/DuelEnemyAIImpl_8java_source.html#l00016">DuelEnemyAIImpl.java:16</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a66b94680dc3fbdad824dc247bb8d4506" name="a66b94680dc3fbdad824dc247bb8d4506"></a>
@@ -349,10 +217,7 @@ Public Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d7/d2f/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1DuelEnemyAI.html#a280c05196f3168fd10c11ca2888c91db">com.fs.starfarer.api.impl.campaign.eventide.DuelEnemyAI</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/d1e/DuelEnemyAIImpl_8java_source.html#l00152">152</a> of file <a class="el" href="../../df/d1e/DuelEnemyAIImpl_8java_source.html">DuelEnemyAIImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  152</span>                                        {</div>
-<div class="line"><span class="lineno">  153</span>        </div>
-<div class="line"><span class="lineno">  154</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

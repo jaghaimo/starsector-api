@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -156,10 +157,7 @@ Public Member Functions</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d0/df3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventCreator.html#a2286c0b927caf6e1ef5cb9b21f58a19d">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseBarEventCreator</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d27/TriTachMajorLoanBarEventCreator_8java_source.html#l00010">10</a> of file <a class="el" href="../../d2/d27/TriTachMajorLoanBarEventCreator_8java_source.html">TriTachMajorLoanBarEventCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   10</span>                                             {</div>
-<div class="line"><span class="lineno">   11</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> TriTachMajorLoanBarEvent();</div>
-<div class="line"><span class="lineno">   12</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a742db56662fcd717a458f3047b5ee310" name="a742db56662fcd717a458f3047b5ee310"></a>
@@ -180,10 +178,7 @@ Public Member Functions</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d0/df3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventCreator.html#a4cb22c5e6e6ea66221bbaa8f46fdd2eb">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseBarEventCreator</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d27/TriTachMajorLoanBarEventCreator_8java_source.html#l00029">29</a> of file <a class="el" href="../../d2/d27/TriTachMajorLoanBarEventCreator_8java_source.html">TriTachMajorLoanBarEventCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   29</span>                                                      {</div>
-<div class="line"><span class="lineno">   30</span>        <span class="keywordflow">return</span> TriTachMajorLoanBarEvent.REPAYMENT_DAYS_MAJOR + 400f * (float) Math.random();</div>
-<div class="line"><span class="lineno">   31</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae7bb8a2674c919a687e9d0310052023b" name="ae7bb8a2674c919a687e9d0310052023b"></a>
@@ -204,19 +199,7 @@ Public Member Functions</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d0/df3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventCreator.html#a6033c54dc6d8358704fc390dc480bf8d">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseBarEventCreator</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d27/TriTachMajorLoanBarEventCreator_8java_source.html#l00015">15</a> of file <a class="el" href="../../d2/d27/TriTachMajorLoanBarEventCreator_8java_source.html">TriTachMajorLoanBarEventCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   15</span>                                              {</div>
-<div class="line"><span class="lineno">   16</span>        <span class="keywordflow">if</span> (Global.getSector().getFaction(Factions.TRITACHYON).getRelToPlayer().isAtBest(RepLevel.HOSTILE)) {</div>
-<div class="line"><span class="lineno">   17</span>            <span class="keywordflow">return</span> 0f;</div>
-<div class="line"><span class="lineno">   18</span>        }</div>
-<div class="line"><span class="lineno">   19</span>        </div>
-<div class="line"><span class="lineno">   20</span>        <span class="keywordtype">float</span> repaid = Global.getSector().getMemoryWithoutUpdate().getFloat(TriTachLoanIntel.NUM_REPAID_LOANS);</div>
-<div class="line"><span class="lineno">   21</span>        <span class="keywordflow">if</span> (repaid &lt;= 0){</div>
-<div class="line"><span class="lineno">   22</span>            <span class="keywordflow">return</span> 0f;</div>
-<div class="line"><span class="lineno">   23</span>        }</div>
-<div class="line"><span class="lineno">   24</span>        </div>
-<div class="line"><span class="lineno">   25</span>        <span class="keywordflow">return</span> super.getBarEventFrequencyWeight();</div>
-<div class="line"><span class="lineno">   26</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

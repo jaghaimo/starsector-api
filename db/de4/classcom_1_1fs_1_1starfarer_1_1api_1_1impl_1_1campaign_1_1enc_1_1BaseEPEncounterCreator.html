@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -216,9 +217,7 @@ Static Public Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../db/d48/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1OutsideSystemRemnantEPEC.html#acc94fab4140cc8f18a9b4f887adf9747">com.fs.starfarer.api.impl.campaign.enc.OutsideSystemRemnantEPEC</a>, <a class="el" href="../../d7/ddd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1SlipstreamLuddicPathEPEC.html#a8bb7f6a274f79eceb8ae634db455c829">com.fs.starfarer.api.impl.campaign.enc.SlipstreamLuddicPathEPEC</a>, <a class="el" href="../../df/d86/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1SlipstreamMercenaryEPEC.html#ae3edce982b3f2fd0f746c78469c02c43">com.fs.starfarer.api.impl.campaign.enc.SlipstreamMercenaryEPEC</a>, <a class="el" href="../../d6/d18/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1SlipstreamPirateEPEC.html#a799dfdbb27ecf9bf5e904e16e4350ab4">com.fs.starfarer.api.impl.campaign.enc.SlipstreamPirateEPEC</a>, and <a class="el" href="../../df/dab/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1SlipstreamScavengerEPEC.html#a740148265fc2b525776ffb88ea54a034">com.fs.starfarer.api.impl.campaign.enc.SlipstreamScavengerEPEC</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d43/BaseEPEncounterCreator_8java_source.html#l00049">49</a> of file <a class="el" href="../../dc/d43/BaseEPEncounterCreator_8java_source.html">BaseEPEncounterCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   49</span>                                                                                {</div>
-<div class="line"><span class="lineno">   50</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="acebd999859009321af0a877b80c6d95e" name="acebd999859009321af0a877b80c6d95e"></a>
@@ -246,11 +245,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d43/BaseEPEncounterCreator_8java_source.html#l00066">66</a> of file <a class="el" href="../../dc/d43/BaseEPEncounterCreator_8java_source.html">BaseEPEncounterCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   66</span>                                                                                    {</div>
-<div class="line"><span class="lineno">   67</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../db/de4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator.html#acebd999859009321af0a877b80c6d95e">getClosestLuddicPathBase</a>(locInHyper, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   68</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator_html_acebd999859009321af0a877b80c6d95e"><div class="ttname"><a href="../../db/de4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator.html#acebd999859009321af0a877b80c6d95e">com.fs.starfarer.api.impl.campaign.enc.BaseEPEncounterCreator.getClosestLuddicPathBase</a></div><div class="ttdeci">static LuddicPathBaseIntel getClosestLuddicPathBase(Vector2f locInHyper)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d43/BaseEPEncounterCreator_8java_source.html#l00066">BaseEPEncounterCreator.java:66</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a06f5f55efc391337005e4983b0e83986" name="a06f5f55efc391337005e4983b0e83986"></a>
@@ -288,23 +283,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d43/BaseEPEncounterCreator_8java_source.html#l00069">69</a> of file <a class="el" href="../../dc/d43/BaseEPEncounterCreator_8java_source.html">BaseEPEncounterCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   69</span>                                                                                                             {</div>
-<div class="line"><span class="lineno">   70</span>        LuddicPathBaseIntel closest = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   71</span>        <span class="keywordtype">float</span> minDist = Float.MAX_VALUE;</div>
-<div class="line"><span class="lineno">   72</span>        <span class="keywordflow">for</span> (IntelInfoPlugin p : Global.getSector().getIntelManager().getIntel(LuddicPathBaseIntel.class)) {</div>
-<div class="line"><span class="lineno">   73</span>            LuddicPathBaseIntel intel = (LuddicPathBaseIntel) p;</div>
-<div class="line"><span class="lineno">   74</span>            <span class="keywordflow">if</span> (intel.getEntity() == <span class="keyword">null</span> || !intel.getEntity().isAlive()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   75</span>            <span class="keywordtype">float</span> dist = Misc.getDistance(intel.getEntity().getLocationInHyperspace(), locInHyper);</div>
-<div class="line"><span class="lineno">   76</span>            <span class="keywordflow">if</span> (onlyInProximity &amp;&amp; dist &gt; <a class="code hl_variable" href="../../db/de4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator.html#a76beb0e2684274b0307b4de4838be064">PATHER_AMBUSH_MAX_RANGE</a>) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   77</span>            <span class="keywordflow">if</span> (dist &lt; minDist) {</div>
-<div class="line"><span class="lineno">   78</span>                minDist = dist;</div>
-<div class="line"><span class="lineno">   79</span>                closest = intel;</div>
-<div class="line"><span class="lineno">   80</span>            }</div>
-<div class="line"><span class="lineno">   81</span>        }</div>
-<div class="line"><span class="lineno">   82</span>        <span class="keywordflow">return</span> closest;</div>
-<div class="line"><span class="lineno">   83</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator_html_a76beb0e2684274b0307b4de4838be064"><div class="ttname"><a href="../../db/de4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator.html#a76beb0e2684274b0307b4de4838be064">com.fs.starfarer.api.impl.campaign.enc.BaseEPEncounterCreator.PATHER_AMBUSH_MAX_RANGE</a></div><div class="ttdeci">static float PATHER_AMBUSH_MAX_RANGE</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d43/BaseEPEncounterCreator_8java_source.html#l00015">BaseEPEncounterCreator.java:15</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a66bc02d8314b49abb2fce3e6d9eac41d" name="a66bc02d8314b49abb2fce3e6d9eac41d"></a>
@@ -332,11 +311,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d43/BaseEPEncounterCreator_8java_source.html#l00097">97</a> of file <a class="el" href="../../dc/d43/BaseEPEncounterCreator_8java_source.html">BaseEPEncounterCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   97</span>                                                                            {</div>
-<div class="line"><span class="lineno">   98</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../db/de4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator.html#a66bc02d8314b49abb2fce3e6d9eac41d">getClosestPirateBase</a>(locInHyper, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   99</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator_html_a66bc02d8314b49abb2fce3e6d9eac41d"><div class="ttname"><a href="../../db/de4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator.html#a66bc02d8314b49abb2fce3e6d9eac41d">com.fs.starfarer.api.impl.campaign.enc.BaseEPEncounterCreator.getClosestPirateBase</a></div><div class="ttdeci">static PirateBaseIntel getClosestPirateBase(Vector2f locInHyper)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d43/BaseEPEncounterCreator_8java_source.html#l00097">BaseEPEncounterCreator.java:97</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5b0409f7efa7f15ffa98c770887c4b6c" name="a5b0409f7efa7f15ffa98c770887c4b6c"></a>
@@ -374,23 +349,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d43/BaseEPEncounterCreator_8java_source.html#l00100">100</a> of file <a class="el" href="../../dc/d43/BaseEPEncounterCreator_8java_source.html">BaseEPEncounterCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  100</span>                                                                                                     {</div>
-<div class="line"><span class="lineno">  101</span>        PirateBaseIntel closest = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  102</span>        <span class="keywordtype">float</span> minDist = Float.MAX_VALUE;</div>
-<div class="line"><span class="lineno">  103</span>        <span class="keywordflow">for</span> (IntelInfoPlugin p : Global.getSector().getIntelManager().getIntel(PirateBaseIntel.class)) {</div>
-<div class="line"><span class="lineno">  104</span>            PirateBaseIntel intel = (PirateBaseIntel) p;</div>
-<div class="line"><span class="lineno">  105</span>            <span class="keywordflow">if</span> (intel.getEntity() == <span class="keyword">null</span> || !intel.getEntity().isAlive()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  106</span>            <span class="keywordtype">float</span> dist = Misc.getDistance(intel.getEntity().getLocationInHyperspace(), locInHyper);</div>
-<div class="line"><span class="lineno">  107</span>            <span class="keywordflow">if</span> (onlyInProximity &amp;&amp; dist &gt; <a class="code hl_variable" href="../../db/de4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator.html#a37388f09b98e509d10f76653ff00065d">PIRATE_AMBUSH_MAX_RANGE</a>) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  108</span>            <span class="keywordflow">if</span> (dist &lt; minDist) {</div>
-<div class="line"><span class="lineno">  109</span>                minDist = dist;</div>
-<div class="line"><span class="lineno">  110</span>                closest = intel;</div>
-<div class="line"><span class="lineno">  111</span>            }</div>
-<div class="line"><span class="lineno">  112</span>        }</div>
-<div class="line"><span class="lineno">  113</span>        <span class="keywordflow">return</span> closest;</div>
-<div class="line"><span class="lineno">  114</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator_html_a37388f09b98e509d10f76653ff00065d"><div class="ttname"><a href="../../db/de4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator.html#a37388f09b98e509d10f76653ff00065d">com.fs.starfarer.api.impl.campaign.enc.BaseEPEncounterCreator.PIRATE_AMBUSH_MAX_RANGE</a></div><div class="ttdeci">static float PIRATE_AMBUSH_MAX_RANGE</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d43/BaseEPEncounterCreator_8java_source.html#l00018">BaseEPEncounterCreator.java:18</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="abf8bbdce14e55cce0be8869051b68cde" name="abf8bbdce14e55cce0be8869051b68cde"></a>
@@ -418,11 +377,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d43/BaseEPEncounterCreator_8java_source.html#l00149">149</a> of file <a class="el" href="../../dc/d43/BaseEPEncounterCreator_8java_source.html">BaseEPEncounterCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  149</span>                                                                               {</div>
-<div class="line"><span class="lineno">  150</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../db/de4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator.html#abf8bbdce14e55cce0be8869051b68cde">getClosestSystemWithRuins</a>(locInHyper, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  151</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator_html_abf8bbdce14e55cce0be8869051b68cde"><div class="ttname"><a href="../../db/de4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator.html#abf8bbdce14e55cce0be8869051b68cde">com.fs.starfarer.api.impl.campaign.enc.BaseEPEncounterCreator.getClosestSystemWithRuins</a></div><div class="ttdeci">static StarSystemAPI getClosestSystemWithRuins(Vector2f locInHyper)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d43/BaseEPEncounterCreator_8java_source.html#l00149">BaseEPEncounterCreator.java:149</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a6429d1d739240ed6941168723e2c93b2" name="a6429d1d739240ed6941168723e2c93b2"></a>
@@ -460,23 +415,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d43/BaseEPEncounterCreator_8java_source.html#l00152">152</a> of file <a class="el" href="../../dc/d43/BaseEPEncounterCreator_8java_source.html">BaseEPEncounterCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  152</span>                                                                                                        {</div>
-<div class="line"><span class="lineno">  153</span>        StarSystemAPI closest = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  154</span>        <span class="keywordtype">float</span> minDist = Float.MAX_VALUE;</div>
-<div class="line"><span class="lineno">  155</span>        <span class="keywordflow">for</span> (StarSystemAPI curr : Global.getSector().getStarSystems()) {</div>
-<div class="line"><span class="lineno">  156</span>            <span class="keywordflow">if</span> (curr.hasTag(Tags.THEME_RUINS_MAIN)) {</div>
-<div class="line"><span class="lineno">  157</span>                <span class="keywordtype">float</span> dist = Misc.getDistance(curr.getLocation(), locInHyper);</div>
-<div class="line"><span class="lineno">  158</span>                <span class="keywordflow">if</span> (onlyInProximity &amp;&amp; dist &gt; <a class="code hl_variable" href="../../db/de4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator.html#a6fbec19192903fe6de5d5b9ca63430b5">RUINS_MAX_RANGE</a>) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  159</span>                <span class="keywordflow">if</span> (dist &lt; minDist) {</div>
-<div class="line"><span class="lineno">  160</span>                    minDist = dist;</div>
-<div class="line"><span class="lineno">  161</span>                    closest = curr;</div>
-<div class="line"><span class="lineno">  162</span>                }</div>
-<div class="line"><span class="lineno">  163</span>            }</div>
-<div class="line"><span class="lineno">  164</span>        }</div>
-<div class="line"><span class="lineno">  165</span>        <span class="keywordflow">return</span> closest;</div>
-<div class="line"><span class="lineno">  166</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator_html_a6fbec19192903fe6de5d5b9ca63430b5"><div class="ttname"><a href="../../db/de4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator.html#a6fbec19192903fe6de5d5b9ca63430b5">com.fs.starfarer.api.impl.campaign.enc.BaseEPEncounterCreator.RUINS_MAX_RANGE</a></div><div class="ttdeci">static float RUINS_MAX_RANGE</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d43/BaseEPEncounterCreator_8java_source.html#l00021">BaseEPEncounterCreator.java:21</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a16fe6a0d707ab8f47d6b05eb6b375fd5" name="a16fe6a0d707ab8f47d6b05eb6b375fd5"></a>
@@ -504,26 +443,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d43/BaseEPEncounterCreator_8java_source.html#l00117">117</a> of file <a class="el" href="../../dc/d43/BaseEPEncounterCreator_8java_source.html">BaseEPEncounterCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  117</span>                                                                    {</div>
-<div class="line"><span class="lineno">  118</span>        Vector2f min = Misc.getCoreMin();</div>
-<div class="line"><span class="lineno">  119</span>        Vector2f max = Misc.getCoreMax();</div>
-<div class="line"><span class="lineno">  120</span>        Vector2f core = Misc.getCoreCenter();</div>
-<div class="line"><span class="lineno">  121</span>        </div>
-<div class="line"><span class="lineno">  122</span>        <span class="keywordtype">float</span> across = Misc.getDistance(min, max);</div>
-<div class="line"><span class="lineno">  123</span>        <span class="keywordtype">float</span> fullProximityAt = across * 0.5f;</div>
-<div class="line"><span class="lineno">  124</span>        fullProximityAt = Math.min(<a class="code hl_variable" href="../../db/de4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator.html#a30459c27de6521402d31a24db18aa426">CORE_PROXIMITY_MAX_RANGE</a> / 2f, fullProximityAt);</div>
-<div class="line"><span class="lineno">  125</span>        </div>
-<div class="line"><span class="lineno">  126</span>        <span class="keywordtype">float</span> dist = Misc.getDistance(core, locInHyper);</div>
-<div class="line"><span class="lineno">  127</span>        <span class="keywordflow">if</span> (dist &lt; fullProximityAt) {</div>
-<div class="line"><span class="lineno">  128</span>            <span class="keywordflow">return</span> 1f;</div>
-<div class="line"><span class="lineno">  129</span>        }</div>
-<div class="line"><span class="lineno">  130</span>        <span class="keywordtype">float</span> f = 1f - (dist - fullProximityAt) / (<a class="code hl_variable" href="../../db/de4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator.html#a30459c27de6521402d31a24db18aa426">CORE_PROXIMITY_MAX_RANGE</a> - fullProximityAt);</div>
-<div class="line"><span class="lineno">  131</span>        <span class="keywordflow">if</span> (f &lt; 0f) f = 0f;</div>
-<div class="line"><span class="lineno">  132</span>        <span class="keywordflow">if</span> (f &gt; 1f) f = 1f;</div>
-<div class="line"><span class="lineno">  133</span>        <span class="keywordflow">return</span> f;</div>
-<div class="line"><span class="lineno">  134</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator_html_a30459c27de6521402d31a24db18aa426"><div class="ttname"><a href="../../db/de4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator.html#a30459c27de6521402d31a24db18aa426">com.fs.starfarer.api.impl.campaign.enc.BaseEPEncounterCreator.CORE_PROXIMITY_MAX_RANGE</a></div><div class="ttdeci">static float CORE_PROXIMITY_MAX_RANGE</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d43/BaseEPEncounterCreator_8java_source.html#l00023">BaseEPEncounterCreator.java:23</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a203b29b88367dfea899c1c2678c90852" name="a203b29b88367dfea899c1c2678c90852"></a>
@@ -544,10 +464,7 @@ Static Public Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d4/d0e/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1EPEncounterCreator.html#a917b40a40859ed84d4ac007c54e3244c">com.fs.starfarer.api.impl.campaign.enc.EPEncounterCreator</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d43/BaseEPEncounterCreator_8java_source.html#l00041">41</a> of file <a class="el" href="../../dc/d43/BaseEPEncounterCreator_8java_source.html">BaseEPEncounterCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   41</span>                                        {</div>
-<div class="line"><span class="lineno">   42</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">   43</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2272e74d2fb2c9d68eeb768a73a0f856" name="a2272e74d2fb2c9d68eeb768a73a0f856"></a>
@@ -568,10 +485,7 @@ Static Public Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d4/d0e/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1EPEncounterCreator.html#aec2bef7b87d6ce4adbdd5e3a17de0fdf">com.fs.starfarer.api.impl.campaign.enc.EPEncounterCreator</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d43/BaseEPEncounterCreator_8java_source.html#l00037">37</a> of file <a class="el" href="../../dc/d43/BaseEPEncounterCreator_8java_source.html">BaseEPEncounterCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   37</span>                                        {</div>
-<div class="line"><span class="lineno">   38</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">   39</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8611cdd627b4d42ed22a162cec395a4e" name="a8611cdd627b4d42ed22a162cec395a4e"></a>
@@ -605,10 +519,7 @@ Static Public Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../dc/d3a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1OutsideSystemNoEPEC.html#a48071cf60f79cdde11e339d1f4e602a8">com.fs.starfarer.api.impl.campaign.enc.OutsideSystemNoEPEC</a>, <a class="el" href="../../db/d48/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1OutsideSystemRemnantEPEC.html#ae74f6e02e6fc7aeafe9eaac63b0d4b85">com.fs.starfarer.api.impl.campaign.enc.OutsideSystemRemnantEPEC</a>, <a class="el" href="../../d7/ddd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1SlipstreamLuddicPathEPEC.html#a801025ede3c419a594e8dc8a01be137e">com.fs.starfarer.api.impl.campaign.enc.SlipstreamLuddicPathEPEC</a>, <a class="el" href="../../df/d86/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1SlipstreamMercenaryEPEC.html#a3f00d03d18024ba11ad59fd7036657de">com.fs.starfarer.api.impl.campaign.enc.SlipstreamMercenaryEPEC</a>, <a class="el" href="../../d3/df7/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1SlipstreamNoEPEC.html#ae01f833078a832b2fe79a631bb3e7edf">com.fs.starfarer.api.impl.campaign.enc.SlipstreamNoEPEC</a>, <a class="el" href="../../d6/d18/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1SlipstreamPirateEPEC.html#ac2fad1a871a38eb0c6668926a836891f">com.fs.starfarer.api.impl.campaign.enc.SlipstreamPirateEPEC</a>, and <a class="el" href="../../df/dab/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1SlipstreamScavengerEPEC.html#a5b17010e6f0088a94d0a65ed8dca8f64">com.fs.starfarer.api.impl.campaign.enc.SlipstreamScavengerEPEC</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d43/BaseEPEncounterCreator_8java_source.html#l00045">45</a> of file <a class="el" href="../../dc/d43/BaseEPEncounterCreator_8java_source.html">BaseEPEncounterCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   45</span>                                                                                      {</div>
-<div class="line"><span class="lineno">   46</span>        <span class="keywordflow">return</span> 10f;</div>
-<div class="line"><span class="lineno">   47</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8a077d33fd85849573c963ebb10ffe72" name="a8a077d33fd85849573c963ebb10ffe72"></a>
@@ -629,10 +540,7 @@ Static Public Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d4/d0e/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1EPEncounterCreator.html#a6c6ca75e251bd53280d57077d3f33e84">com.fs.starfarer.api.impl.campaign.enc.EPEncounterCreator</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d43/BaseEPEncounterCreator_8java_source.html#l00026">26</a> of file <a class="el" href="../../dc/d43/BaseEPEncounterCreator_8java_source.html">BaseEPEncounterCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   26</span>                          {</div>
-<div class="line"><span class="lineno">   27</span>        <span class="keywordflow">return</span> getClass().getSimpleName();</div>
-<div class="line"><span class="lineno">   28</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a503d504e01738fe82b10fc49439ff3e8" name="a503d504e01738fe82b10fc49439ff3e8"></a>
@@ -670,20 +578,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d43/BaseEPEncounterCreator_8java_source.html#l00054">54</a> of file <a class="el" href="../../dc/d43/BaseEPEncounterCreator_8java_source.html">BaseEPEncounterCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   54</span>                                                                                                        {</div>
-<div class="line"><span class="lineno">   55</span>        <span class="keywordflow">if</span> (base == <span class="keyword">null</span>) <span class="keywordflow">return</span> 0f;</div>
-<div class="line"><span class="lineno">   56</span>        <span class="keywordtype">float</span> dist = Misc.getDistance(base.getEntity().getLocationInHyperspace(), locInHyper);</div>
-<div class="line"><span class="lineno">   57</span>        <span class="keywordflow">if</span> (dist &lt; <a class="code hl_variable" href="../../db/de4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator.html#a5d7283148a3f3763432bb9f42f3b52b4">PATHER_AMBUSH_RANGE_FOR_FULL_PROXIMITY_FACTOR</a>) {</div>
-<div class="line"><span class="lineno">   58</span>            <span class="keywordflow">return</span> 1f;</div>
-<div class="line"><span class="lineno">   59</span>        }</div>
-<div class="line"><span class="lineno">   60</span>        <span class="keywordtype">float</span> f = 1f - (dist - <a class="code hl_variable" href="../../db/de4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator.html#a5d7283148a3f3763432bb9f42f3b52b4">PATHER_AMBUSH_RANGE_FOR_FULL_PROXIMITY_FACTOR</a>) / (<a class="code hl_variable" href="../../db/de4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator.html#a76beb0e2684274b0307b4de4838be064">PATHER_AMBUSH_MAX_RANGE</a> - <a class="code hl_variable" href="../../db/de4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator.html#a5d7283148a3f3763432bb9f42f3b52b4">PATHER_AMBUSH_RANGE_FOR_FULL_PROXIMITY_FACTOR</a>);</div>
-<div class="line"><span class="lineno">   61</span>        <span class="keywordflow">if</span> (f &lt; 0f) f = 0f;</div>
-<div class="line"><span class="lineno">   62</span>        <span class="keywordflow">if</span> (f &gt; 1f) f = 1f;</div>
-<div class="line"><span class="lineno">   63</span>        <span class="keywordflow">return</span> f;</div>
-<div class="line"><span class="lineno">   64</span>                </div>
-<div class="line"><span class="lineno">   65</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator_html_a5d7283148a3f3763432bb9f42f3b52b4"><div class="ttname"><a href="../../db/de4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator.html#a5d7283148a3f3763432bb9f42f3b52b4">com.fs.starfarer.api.impl.campaign.enc.BaseEPEncounterCreator.PATHER_AMBUSH_RANGE_FOR_FULL_PROXIMITY_FACTOR</a></div><div class="ttdeci">static float PATHER_AMBUSH_RANGE_FOR_FULL_PROXIMITY_FACTOR</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d43/BaseEPEncounterCreator_8java_source.html#l00014">BaseEPEncounterCreator.java:14</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa1ab1a60696ce5a9fbb17d21148b6824" name="aa1ab1a60696ce5a9fbb17d21148b6824"></a>
@@ -721,20 +616,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d43/BaseEPEncounterCreator_8java_source.html#l00085">85</a> of file <a class="el" href="../../dc/d43/BaseEPEncounterCreator_8java_source.html">BaseEPEncounterCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   85</span>                                                                                                {</div>
-<div class="line"><span class="lineno">   86</span>        <span class="keywordflow">if</span> (base == <span class="keyword">null</span>) <span class="keywordflow">return</span> 0f;</div>
-<div class="line"><span class="lineno">   87</span>        <span class="keywordtype">float</span> dist = Misc.getDistance(base.getEntity().getLocationInHyperspace(), locInHyper);</div>
-<div class="line"><span class="lineno">   88</span>        <span class="keywordflow">if</span> (dist &lt; <a class="code hl_variable" href="../../db/de4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator.html#ae1395b2c353b18ec142807b23ae34593">PIRATE_AMBUSH_RANGE_FOR_FULL_PROXIMITY_FACTOR</a>) {</div>
-<div class="line"><span class="lineno">   89</span>            <span class="keywordflow">return</span> 1f;</div>
-<div class="line"><span class="lineno">   90</span>        }</div>
-<div class="line"><span class="lineno">   91</span>        <span class="keywordtype">float</span> f = 1f - (dist - <a class="code hl_variable" href="../../db/de4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator.html#ae1395b2c353b18ec142807b23ae34593">PIRATE_AMBUSH_RANGE_FOR_FULL_PROXIMITY_FACTOR</a>) / (<a class="code hl_variable" href="../../db/de4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator.html#a37388f09b98e509d10f76653ff00065d">PIRATE_AMBUSH_MAX_RANGE</a> - <a class="code hl_variable" href="../../db/de4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator.html#ae1395b2c353b18ec142807b23ae34593">PIRATE_AMBUSH_RANGE_FOR_FULL_PROXIMITY_FACTOR</a>);</div>
-<div class="line"><span class="lineno">   92</span>        <span class="keywordflow">if</span> (f &lt; 0f) f = 0f;</div>
-<div class="line"><span class="lineno">   93</span>        <span class="keywordflow">if</span> (f &gt; 1f) f = 1f;</div>
-<div class="line"><span class="lineno">   94</span>        <span class="keywordflow">return</span> f;</div>
-<div class="line"><span class="lineno">   95</span>                </div>
-<div class="line"><span class="lineno">   96</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator_html_ae1395b2c353b18ec142807b23ae34593"><div class="ttname"><a href="../../db/de4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator.html#ae1395b2c353b18ec142807b23ae34593">com.fs.starfarer.api.impl.campaign.enc.BaseEPEncounterCreator.PIRATE_AMBUSH_RANGE_FOR_FULL_PROXIMITY_FACTOR</a></div><div class="ttdeci">static float PIRATE_AMBUSH_RANGE_FOR_FULL_PROXIMITY_FACTOR</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d43/BaseEPEncounterCreator_8java_source.html#l00017">BaseEPEncounterCreator.java:17</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2bca1d8c7f6e779385b034082487710e" name="a2bca1d8c7f6e779385b034082487710e"></a>
@@ -755,10 +637,7 @@ Static Public Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d4/d0e/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1EPEncounterCreator.html#a8d9cb9414ac146001c4046fc22f65cdc">com.fs.starfarer.api.impl.campaign.enc.EPEncounterCreator</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d43/BaseEPEncounterCreator_8java_source.html#l00033">33</a> of file <a class="el" href="../../dc/d43/BaseEPEncounterCreator_8java_source.html">BaseEPEncounterCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   33</span>                                      {</div>
-<div class="line"><span class="lineno">   34</span>        <span class="keywordflow">return</span> 90f;</div>
-<div class="line"><span class="lineno">   35</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae9baee8f99aec6acde509f3b394aad52" name="ae9baee8f99aec6acde509f3b394aad52"></a>
@@ -779,10 +658,7 @@ Static Public Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d4/d0e/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1EPEncounterCreator.html#a5882abe664ef61998d37d17195c6fdf5">com.fs.starfarer.api.impl.campaign.enc.EPEncounterCreator</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d43/BaseEPEncounterCreator_8java_source.html#l00030">30</a> of file <a class="el" href="../../dc/d43/BaseEPEncounterCreator_8java_source.html">BaseEPEncounterCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   30</span>                                      {</div>
-<div class="line"><span class="lineno">   31</span>        <span class="keywordflow">return</span> 30f;</div>
-<div class="line"><span class="lineno">   32</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a181a2ecae22e7049c014b2fe0d873387" name="a181a2ecae22e7049c014b2fe0d873387"></a>
@@ -820,19 +696,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d43/BaseEPEncounterCreator_8java_source.html#l00136">136</a> of file <a class="el" href="../../dc/d43/BaseEPEncounterCreator_8java_source.html">BaseEPEncounterCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  136</span>                                                                                           {</div>
-<div class="line"><span class="lineno">  137</span>        <span class="keywordflow">if</span> (system == <span class="keyword">null</span>) <span class="keywordflow">return</span> 0f;</div>
-<div class="line"><span class="lineno">  138</span>        <span class="keywordtype">float</span> dist = Misc.getDistance(system.getLocation(), locInHyper);</div>
-<div class="line"><span class="lineno">  139</span>        <span class="keywordflow">if</span> (dist &lt; <a class="code hl_variable" href="../../db/de4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator.html#a05e3b119be7a0d2ce43b84bf8a2621cc">RUINS_RANGE_FOR_FULL_PROXIMITY_FACTOR</a>) {</div>
-<div class="line"><span class="lineno">  140</span>            <span class="keywordflow">return</span> 1f;</div>
-<div class="line"><span class="lineno">  141</span>        }</div>
-<div class="line"><span class="lineno">  142</span>        <span class="keywordtype">float</span> f = 1f - (dist - <a class="code hl_variable" href="../../db/de4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator.html#a05e3b119be7a0d2ce43b84bf8a2621cc">RUINS_RANGE_FOR_FULL_PROXIMITY_FACTOR</a>) / (<a class="code hl_variable" href="../../db/de4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator.html#a6fbec19192903fe6de5d5b9ca63430b5">RUINS_MAX_RANGE</a> - <a class="code hl_variable" href="../../db/de4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator.html#a05e3b119be7a0d2ce43b84bf8a2621cc">RUINS_RANGE_FOR_FULL_PROXIMITY_FACTOR</a>);</div>
-<div class="line"><span class="lineno">  143</span>        <span class="keywordflow">if</span> (f &lt; 0f) f = 0f;</div>
-<div class="line"><span class="lineno">  144</span>        <span class="keywordflow">if</span> (f &gt; 1f) f = 1f;</div>
-<div class="line"><span class="lineno">  145</span>        <span class="keywordflow">return</span> f;</div>
-<div class="line"><span class="lineno">  146</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator_html_a05e3b119be7a0d2ce43b84bf8a2621cc"><div class="ttname"><a href="../../db/de4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator.html#a05e3b119be7a0d2ce43b84bf8a2621cc">com.fs.starfarer.api.impl.campaign.enc.BaseEPEncounterCreator.RUINS_RANGE_FOR_FULL_PROXIMITY_FACTOR</a></div><div class="ttdeci">static float RUINS_RANGE_FOR_FULL_PROXIMITY_FACTOR</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d43/BaseEPEncounterCreator_8java_source.html#l00020">BaseEPEncounterCreator.java:20</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

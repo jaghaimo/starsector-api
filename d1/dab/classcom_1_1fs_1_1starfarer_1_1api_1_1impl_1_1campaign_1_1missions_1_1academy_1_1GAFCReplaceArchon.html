@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -139,37 +140,7 @@ Public Member Functions</h2></td></tr>
 <p>Implements <a class="el" href="../../dd/dc1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1Script.html#a7e737390a93b3bcb11608cb64b30a30d">com.fs.starfarer.api.Script</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d0b/GAFCReplaceArchon_8java_source.html#l00016">16</a> of file <a class="el" href="../../dd/d0b/GAFCReplaceArchon_8java_source.html">GAFCReplaceArchon.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   16</span>                      {</div>
-<div class="line"><span class="lineno">   17</span>        <span class="comment">//ImportantPeopleAPI ip = Global.getSector().getImportantPeople();</span></div>
-<div class="line"><span class="lineno">   18</span>        </div>
-<div class="line"><span class="lineno">   19</span>        MarketAPI laicaille = Global.getSector().getEconomy().getMarket(<span class="stringliteral">&quot;laicaille_habitat&quot;</span>);</div>
-<div class="line"><span class="lineno">   20</span>        <span class="keywordflow">if</span> (laicaille == <span class="keyword">null</span>) <span class="keywordflow">return</span>; <span class="comment">// if it somehow managed to decivilize or something</span></div>
-<div class="line"><span class="lineno">   21</span>        </div>
-<div class="line"><span class="lineno">   22</span>        PersonAPI laicailleArchon = Global.getSector().getImportantPeople().getPerson(People.LAICAILLE_ARCHON);</div>
-<div class="line"><span class="lineno">   23</span>        laicailleArchon.setPostId(Ranks.POST_CITIZEN);</div>
-<div class="line"><span class="lineno">   24</span>        laicailleArchon.addTag(Tags.INVOLUNTARY_RETIREMENT); <span class="comment">// so player can talk to them later.</span></div>
-<div class="line"><span class="lineno">   25</span>        laicailleArchon.setImportance(laicailleArchon.getImportance().prev());</div>
-<div class="line"><span class="lineno">   26</span>        laicaille.getCommDirectory().removePerson(laicailleArchon);</div>
-<div class="line"><span class="lineno">   27</span>        laicaille.getCommDirectory().addPerson(laicailleArchon, 1000); <span class="comment">// back of the comm directory for you, buddy</span></div>
-<div class="line"><span class="lineno">   28</span>    </div>
-<div class="line"><span class="lineno">   29</span>    </div>
-<div class="line"><span class="lineno">   30</span>        PersonAPI newArchon = Global.getSector().getFaction(Factions.PERSEAN).createRandomPerson();</div>
-<div class="line"><span class="lineno">   31</span>        newArchon.setRankId(Ranks.GROUND_COLONEL);</div>
-<div class="line"><span class="lineno">   32</span>        newArchon.setPostId(Ranks.POST_BASE_COMMANDER);</div>
-<div class="line"><span class="lineno">   33</span>        </div>
-<div class="line"><span class="lineno">   34</span>        <span class="comment">// gens Hannan; Kazeronian imperialists, basically.</span></div>
-<div class="line"><span class="lineno">   35</span>        newArchon.getName().setLast(<span class="stringliteral">&quot;Hannan&quot;</span>); </div>
-<div class="line"><span class="lineno">   36</span>        newArchon.setImportance(PersonImportance.HIGH);</div>
-<div class="line"><span class="lineno">   37</span>        newArchon.addTag(Tags.REPLACEMENT_ARCHON);</div>
-<div class="line"><span class="lineno">   38</span>        </div>
-<div class="line"><span class="lineno">   39</span>        <span class="comment">// an aristocratic git</span></div>
-<div class="line"><span class="lineno">   40</span>        newArchon.setVoice(Voices.ARISTO); </div>
-<div class="line"><span class="lineno">   41</span>        </div>
-<div class="line"><span class="lineno">   42</span>        laicaille.getCommDirectory().addPerson(newArchon, 0);</div>
-<div class="line"><span class="lineno">   43</span>        laicaille.addPerson(newArchon);</div>
-<div class="line"><span class="lineno">   44</span>        </div>
-<div class="line"><span class="lineno">   45</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

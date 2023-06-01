@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -182,15 +183,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d82/GBGoAwayFrom_8java_source.html#l00014">14</a> of file <a class="el" href="../../d3/d82/GBGoAwayFrom_8java_source.html">GBGoAwayFrom.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   14</span>                                                                             {</div>
-<div class="line"><span class="lineno">   15</span>        super(<a class="code hl_variable" href="../../da/d7f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1BaseGhostBehavior.html#aa39a5f3da979234bcec2a128a637f4bd">duration</a>);</div>
-<div class="line"><span class="lineno">   16</span>        this.from = <a class="code hl_variable" href="../../d8/dc0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBGoAwayFrom.html#a5d542dbce7ae1e400fed0b55d6095b08">from</a>;</div>
-<div class="line"><span class="lineno">   17</span>        this.maxBurn = <a class="code hl_variable" href="../../d8/dc0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBGoAwayFrom.html#a53e76d46aa9b077f080ee54dc4f26d5d">maxBurn</a>;</div>
-<div class="line"><span class="lineno">   18</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1BaseGhostBehavior_html_aa39a5f3da979234bcec2a128a637f4bd"><div class="ttname"><a href="../../da/d7f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1BaseGhostBehavior.html#aa39a5f3da979234bcec2a128a637f4bd">com.fs.starfarer.api.impl.campaign.ghosts.BaseGhostBehavior.duration</a></div><div class="ttdeci">float duration</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d8f/BaseGhostBehavior_8java_source.html#l00009">BaseGhostBehavior.java:9</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBGoAwayFrom_html_a53e76d46aa9b077f080ee54dc4f26d5d"><div class="ttname"><a href="../../d8/dc0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBGoAwayFrom.html#a53e76d46aa9b077f080ee54dc4f26d5d">com.fs.starfarer.api.impl.campaign.ghosts.GBGoAwayFrom.maxBurn</a></div><div class="ttdeci">int maxBurn</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d82/GBGoAwayFrom_8java_source.html#l00012">GBGoAwayFrom.java:12</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBGoAwayFrom_html_a5d542dbce7ae1e400fed0b55d6095b08"><div class="ttname"><a href="../../d8/dc0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBGoAwayFrom.html#a5d542dbce7ae1e400fed0b55d6095b08">com.fs.starfarer.api.impl.campaign.ghosts.GBGoAwayFrom.from</a></div><div class="ttdeci">SectorEntityToken from</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d82/GBGoAwayFrom_8java_source.html#l00011">GBGoAwayFrom.java:11</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -223,24 +216,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d7f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1BaseGhostBehavior.html#a3f55bdd1c4909a69c1c5db6ae381c4b1">com.fs.starfarer.api.impl.campaign.ghosts.BaseGhostBehavior</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d82/GBGoAwayFrom_8java_source.html#l00023">23</a> of file <a class="el" href="../../d3/d82/GBGoAwayFrom_8java_source.html">GBGoAwayFrom.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   23</span>                                                         {</div>
-<div class="line"><span class="lineno">   24</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d8/dc0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBGoAwayFrom.html#a5d542dbce7ae1e400fed0b55d6095b08">from</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a06362480c6a17326650354460c6d7442">getContainingLocation</a>() != ghost.getEntity().getContainingLocation() || !<a class="code hl_variable" href="../../d8/dc0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBGoAwayFrom.html#a5d542dbce7ae1e400fed0b55d6095b08">from</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#ab1db2d22e578b234c90ac09f11fe0905">isAlive</a>()) {</div>
-<div class="line"><span class="lineno">   25</span>            <a class="code hl_function" href="../../da/d7f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1BaseGhostBehavior.html#aa3a1eb0f2eff5d332ae49bc398e48f77">end</a>();</div>
-<div class="line"><span class="lineno">   26</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   27</span>        }</div>
-<div class="line"><span class="lineno">   28</span>        super.advance(amount, ghost);</div>
-<div class="line"><span class="lineno">   29</span>        </div>
-<div class="line"><span class="lineno">   30</span>        Vector2f loc = Misc.getUnitVectorAtDegreeAngle(Misc.getAngleInDegrees(<a class="code hl_variable" href="../../d8/dc0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBGoAwayFrom.html#a5d542dbce7ae1e400fed0b55d6095b08">from</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#aedf9cd58593dcb6afd4d488bb017eafc">getLocation</a>(), ghost.getEntity().getLocation()));</div>
-<div class="line"><span class="lineno">   31</span>        loc.scale(10000f);</div>
-<div class="line"><span class="lineno">   32</span>        Vector2f.add(loc, ghost.getEntity().getLocation(), loc);</div>
-<div class="line"><span class="lineno">   33</span>        ghost.moveTo(loc, <a class="code hl_variable" href="../../d8/dc0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBGoAwayFrom.html#a53e76d46aa9b077f080ee54dc4f26d5d">maxBurn</a>);</div>
-<div class="line"><span class="lineno">   34</span>        </div>
-<div class="line"><span class="lineno">   35</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1BaseGhostBehavior_html_aa3a1eb0f2eff5d332ae49bc398e48f77"><div class="ttname"><a href="../../da/d7f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1BaseGhostBehavior.html#aa3a1eb0f2eff5d332ae49bc398e48f77">com.fs.starfarer.api.impl.campaign.ghosts.BaseGhostBehavior.end</a></div><div class="ttdeci">void end()</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d8f/BaseGhostBehavior_8java_source.html#l00033">BaseGhostBehavior.java:33</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_a06362480c6a17326650354460c6d7442"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a06362480c6a17326650354460c6d7442">com.fs.starfarer.api.campaign.SectorEntityToken.getContainingLocation</a></div><div class="ttdeci">LocationAPI getContainingLocation()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_ab1db2d22e578b234c90ac09f11fe0905"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#ab1db2d22e578b234c90ac09f11fe0905">com.fs.starfarer.api.campaign.SectorEntityToken.isAlive</a></div><div class="ttdeci">boolean isAlive()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_aedf9cd58593dcb6afd4d488bb017eafc"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#aedf9cd58593dcb6afd4d488bb017eafc">com.fs.starfarer.api.campaign.SectorEntityToken.getLocation</a></div><div class="ttdeci">Vector2f getLocation()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

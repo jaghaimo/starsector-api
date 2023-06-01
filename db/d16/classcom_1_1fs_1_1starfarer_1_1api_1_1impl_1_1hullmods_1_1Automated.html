@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -327,27 +328,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a33c67bf29e82daaad9e6a6ffcf0ee0b2">com.fs.starfarer.api.combat.BaseHullMod</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d7d/Automated_8java_source.html#l00037">37</a> of file <a class="el" href="../../dd/d7d/Automated_8java_source.html">Automated.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   37</span>                                                                                                                                       {</div>
-<div class="line"><span class="lineno">   38</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a5b8ef320d4aacd94df8a64148fd85a76">isInPlayerFleet</a>(ship)) {</div>
-<div class="line"><span class="lineno">   39</span>            <span class="keywordtype">float</span> opad = 10f;</div>
-<div class="line"><span class="lineno">   40</span>            <span class="keywordtype">boolean</span> noPenalty = <a class="code hl_function" href="../../db/d16/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1Automated.html#a8f07f0e468a4e3a3cb49ce73ffd08964">isAutomatedNoPenalty</a>(ship);</div>
-<div class="line"><span class="lineno">   41</span>            String usually = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">   42</span>            <span class="keywordflow">if</span> (noPenalty) usually = <span class="stringliteral">&quot;usually &quot;</span>;</div>
-<div class="line"><span class="lineno">   43</span><span class="comment">//          tooltip.addPara(&quot;Automated ships &quot; + usually + &quot;require specialized equipment and expertise to maintain. In a &quot; +</span></div>
-<div class="line"><span class="lineno">   44</span><span class="comment">//                  &quot;fleet lacking these, they&#39;re virtually useless, with their maximum combat &quot; +</span></div>
-<div class="line"><span class="lineno">   45</span><span class="comment">//                  &quot;readiness being reduced by %s.&quot;, opad, Misc.getHighlightColor(),</span></div>
-<div class="line"><span class="lineno">   46</span><span class="comment">//                  &quot;&quot; + (int)Math.round(MAX_CR_PENALTY * 100f) + &quot;%&quot;);</span></div>
-<div class="line"><span class="lineno">   47</span>            <span class="keywordflow">if</span> (noPenalty) {</div>
-<div class="line"><span class="lineno">   48</span>                tooltip.addPara(<span class="stringliteral">&quot;However, this ship was automated in a fashion that does not require special expertise &quot;</span></div>
-<div class="line"><span class="lineno">   49</span>                        + <span class="stringliteral">&quot;to maintain. Some of the techniques used are poorly understood, likely dating to &quot;</span></div>
-<div class="line"><span class="lineno">   50</span>                        + <span class="stringliteral">&quot;an earlier period.&quot;</span>, opad, Misc.getHighlightColor(),</div>
-<div class="line"><span class="lineno">   51</span>                        <span class="stringliteral">&quot;does not require special expertise&quot;</span>);</div>
-<div class="line"><span class="lineno">   52</span>            }</div>
-<div class="line"><span class="lineno">   53</span>        }</div>
-<div class="line"><span class="lineno">   54</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod_html_a5b8ef320d4aacd94df8a64148fd85a76"><div class="ttname"><a href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a5b8ef320d4aacd94df8a64148fd85a76">com.fs.starfarer.api.combat.BaseHullMod.isInPlayerFleet</a></div><div class="ttdeci">boolean isInPlayerFleet(MutableShipStatsAPI stats)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/da7/BaseHullMod_8java_source.html#l00268">BaseHullMod.java:268</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1Automated_html_a8f07f0e468a4e3a3cb49ce73ffd08964"><div class="ttname"><a href="../../db/d16/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1Automated.html#a8f07f0e468a4e3a3cb49ce73ffd08964">com.fs.starfarer.api.impl.hullmods.Automated.isAutomatedNoPenalty</a></div><div class="ttdeci">static boolean isAutomatedNoPenalty(MutableShipStatsAPI stats)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7d/Automated_8java_source.html#l00056">Automated.java:56</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a7d628e9dbdab9b69168c90990a7a4bc5" name="a7d628e9dbdab9b69168c90990a7a4bc5"></a>
@@ -386,10 +367,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#aade4030b287b2c896f920683f0eead56">com.fs.starfarer.api.combat.BaseHullMod</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d7d/Automated_8java_source.html#l00026">26</a> of file <a class="el" href="../../dd/d7d/Automated_8java_source.html">Automated.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   26</span>                                                                       {</div>
-<div class="line"><span class="lineno">   27</span>        ship.setInvalidTransferCommandTarget(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   28</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a7e49f9b7bccf07cb8de0f1c390e596b9" name="a7e49f9b7bccf07cb8de0f1c390e596b9"></a>
@@ -427,16 +405,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a3859215f6c3408946bf590a2ce5c0e74">com.fs.starfarer.api.combat.BaseHullMod</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d7d/Automated_8java_source.html#l00016">16</a> of file <a class="el" href="../../dd/d7d/Automated_8java_source.html">Automated.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   16</span>                                                                                                        {</div>
-<div class="line"><span class="lineno">   17</span>        stats.getMinCrewMod().modifyMult(<span class="keywordtype">id</span>, 0);</div>
-<div class="line"><span class="lineno">   18</span>        stats.getMaxCrewMod().modifyMult(<span class="keywordtype">id</span>, 0);</div>
-<div class="line"><span class="lineno">   19</span>        </div>
-<div class="line"><span class="lineno">   20</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a5b8ef320d4aacd94df8a64148fd85a76">isInPlayerFleet</a>(stats) &amp;&amp; !<a class="code hl_function" href="../../db/d16/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1Automated.html#a8f07f0e468a4e3a3cb49ce73ffd08964">isAutomatedNoPenalty</a>(stats)) {</div>
-<div class="line"><span class="lineno">   21</span>            stats.getMaxCombatReadiness().modifyFlat(<span class="keywordtype">id</span>, -<a class="code hl_variable" href="../../db/d16/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1Automated.html#a1d1133cc2ec30d02a8f5435c90684e04">MAX_CR_PENALTY</a>, <span class="stringliteral">&quot;Automated ship penalty&quot;</span>);</div>
-<div class="line"><span class="lineno">   22</span>        }</div>
-<div class="line"><span class="lineno">   23</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1Automated_html_a1d1133cc2ec30d02a8f5435c90684e04"><div class="ttname"><a href="../../db/d16/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1Automated.html#a1d1133cc2ec30d02a8f5435c90684e04">com.fs.starfarer.api.impl.hullmods.Automated.MAX_CR_PENALTY</a></div><div class="ttdeci">static float MAX_CR_PENALTY</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7d/Automated_8java_source.html#l00014">Automated.java:14</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="adde419c8c2595db6a800fb8b93b25d83" name="adde419c8c2595db6a800fb8b93b25d83"></a>
@@ -468,11 +437,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a5f6ac9583ca5b1606fda3e53f15c3d14">com.fs.starfarer.api.combat.BaseHullMod</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d7d/Automated_8java_source.html#l00032">32</a> of file <a class="el" href="../../dd/d7d/Automated_8java_source.html">Automated.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   32</span>                                                                    {</div>
-<div class="line"><span class="lineno">   33</span>        <span class="keywordflow">if</span> (index == 0) <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span> + (int)Math.round(<a class="code hl_variable" href="../../db/d16/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1Automated.html#a1d1133cc2ec30d02a8f5435c90684e04">MAX_CR_PENALTY</a> * 100f) + <span class="stringliteral">&quot;%&quot;</span>;</div>
-<div class="line"><span class="lineno">   34</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   35</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a86cfbc3f49b66c0c759ece4c90c0fb71" name="a86cfbc3f49b66c0c759ece4c90c0fb71"></a>
@@ -500,12 +465,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d7d/Automated_8java_source.html#l00072">72</a> of file <a class="el" href="../../dd/d7d/Automated_8java_source.html">Automated.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   72</span>                                                                      {</div>
-<div class="line"><span class="lineno">   73</span>        <span class="keywordflow">if</span> (member == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   74</span>        <span class="keywordflow">return</span> member.getHullSpec().hasTag(Tags.TAG_AUTOMATED_NO_PENALTY) ||</div>
-<div class="line"><span class="lineno">   75</span>                member.getVariant().hasTag(Tags.TAG_AUTOMATED_NO_PENALTY);</div>
-<div class="line"><span class="lineno">   76</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8f07f0e468a4e3a3cb49ce73ffd08964" name="a8f07f0e468a4e3a3cb49ce73ffd08964"></a>
@@ -533,14 +493,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d7d/Automated_8java_source.html#l00056">56</a> of file <a class="el" href="../../dd/d7d/Automated_8java_source.html">Automated.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   56</span>                                                                          {</div>
-<div class="line"><span class="lineno">   57</span>        <span class="keywordflow">if</span> (stats == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   58</span>        FleetMemberAPI member = stats.getFleetMember();</div>
-<div class="line"><span class="lineno">   59</span>        <span class="keywordflow">if</span> (member == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   60</span>        <span class="keywordflow">return</span> member.getHullSpec().hasTag(Tags.TAG_AUTOMATED_NO_PENALTY) ||</div>
-<div class="line"><span class="lineno">   61</span>                member.getVariant().hasTag(Tags.TAG_AUTOMATED_NO_PENALTY);</div>
-<div class="line"><span class="lineno">   62</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa5330ec341ee6f5a26e0263b97cc8be5" name="aa5330ec341ee6f5a26e0263b97cc8be5"></a>
@@ -568,14 +521,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d7d/Automated_8java_source.html#l00064">64</a> of file <a class="el" href="../../dd/d7d/Automated_8java_source.html">Automated.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   64</span>                                                             {</div>
-<div class="line"><span class="lineno">   65</span>        <span class="keywordflow">if</span> (ship == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   66</span>        FleetMemberAPI member = ship.getFleetMember();</div>
-<div class="line"><span class="lineno">   67</span>        <span class="keywordflow">if</span> (member == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   68</span>        <span class="keywordflow">return</span> member.getHullSpec().hasTag(Tags.TAG_AUTOMATED_NO_PENALTY) ||</div>
-<div class="line"><span class="lineno">   69</span>                member.getVariant().hasTag(Tags.TAG_AUTOMATED_NO_PENALTY);</div>
-<div class="line"><span class="lineno">   70</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

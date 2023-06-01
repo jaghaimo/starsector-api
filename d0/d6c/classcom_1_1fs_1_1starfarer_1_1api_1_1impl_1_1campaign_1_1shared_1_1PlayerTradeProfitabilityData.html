@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -151,10 +152,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/dc2/PlayerTradeProfitabilityData_8java_source.html#l00049">49</a> of file <a class="el" href="../../da/dc2/PlayerTradeProfitabilityData_8java_source.html">PlayerTradeProfitabilityData.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   49</span>                                          {</div>
-<div class="line"><span class="lineno">   50</span>        tracker = Misc.createEconIntervalTracker();</div>
-<div class="line"><span class="lineno">   51</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -175,19 +173,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/dc2/PlayerTradeProfitabilityData_8java_source.html#l00089">89</a> of file <a class="el" href="../../da/dc2/PlayerTradeProfitabilityData_8java_source.html">PlayerTradeProfitabilityData.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   89</span>                                    {</div>
-<div class="line"><span class="lineno">   90</span>        tracker.<a class="code hl_function" href="../../da/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html#a61881d44415cda2c50c3354c3f0a4d8a">advance</a>(days);</div>
-<div class="line"><span class="lineno">   91</span>        <span class="keywordflow">if</span> (tracker.intervalElapsed()) {</div>
-<div class="line"><span class="lineno">   92</span>            <span class="keywordtype">float</span> factor = 1f - Misc.getGenericRollingAverageFactor();</div>
-<div class="line"><span class="lineno">   93</span>            <span class="keywordflow">for</span> (CommodityData cd : <span class="keyword">new</span> ArrayList&lt;CommodityData&gt;(dataBought.values())) {</div>
-<div class="line"><span class="lineno">   94</span>                cd.setQuantity(cd.getQuantity() * factor);</div>
-<div class="line"><span class="lineno">   95</span>                cd.setTotalPrice(cd.getTotalPrice() * factor);</div>
-<div class="line"><span class="lineno">   96</span>                <span class="keywordflow">if</span> (cd.getQuantity() &lt; 1) dataBought.remove(cd.getCommodityId());</div>
-<div class="line"><span class="lineno">   97</span>            }</div>
-<div class="line"><span class="lineno">   98</span>        }</div>
-<div class="line"><span class="lineno">   99</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil_html_a61881d44415cda2c50c3354c3f0a4d8a"><div class="ttname"><a href="../../da/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html#a61881d44415cda2c50c3354c3f0a4d8a">com.fs.starfarer.api.util.IntervalUtil.advance</a></div><div class="ttdeci">void advance(float amount)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de3/IntervalUtil_8java_source.html#l00039">IntervalUtil.java:39</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a0f68b0711ce9e58cad550fcc87b0775c" name="a0f68b0711ce9e58cad550fcc87b0775c"></a>
@@ -206,10 +192,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/dc2/PlayerTradeProfitabilityData_8java_source.html#l00110">110</a> of file <a class="el" href="../../da/dc2/PlayerTradeProfitabilityData_8java_source.html">PlayerTradeProfitabilityData.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  110</span>                               {</div>
-<div class="line"><span class="lineno">  111</span>        <span class="keywordflow">return</span> accruedXP;</div>
-<div class="line"><span class="lineno">  112</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a677a011fa523ff1420cb5e8c571ba3d6" name="a677a011fa523ff1420cb5e8c571ba3d6"></a>
@@ -229,15 +212,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/dc2/PlayerTradeProfitabilityData_8java_source.html#l00101">101</a> of file <a class="el" href="../../da/dc2/PlayerTradeProfitabilityData_8java_source.html">PlayerTradeProfitabilityData.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  101</span>                                                              {</div>
-<div class="line"><span class="lineno">  102</span>        CommodityData cd = dataBought.get(commodityId);</div>
-<div class="line"><span class="lineno">  103</span>        <span class="keywordflow">if</span> (cd == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  104</span>            cd = <span class="keyword">new</span> CommodityData(commodityId);</div>
-<div class="line"><span class="lineno">  105</span>            dataBought.put(commodityId, cd);</div>
-<div class="line"><span class="lineno">  106</span>        }</div>
-<div class="line"><span class="lineno">  107</span>        <span class="keywordflow">return</span> cd;</div>
-<div class="line"><span class="lineno">  108</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa9f4c7537f46818ed4526023a6cb45f1" name="aa9f4c7537f46818ed4526023a6cb45f1"></a>
@@ -273,13 +248,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/dc2/PlayerTradeProfitabilityData_8java_source.html#l00053">53</a> of file <a class="el" href="../../da/dc2/PlayerTradeProfitabilityData_8java_source.html">PlayerTradeProfitabilityData.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   53</span>                                                                                      {</div>
-<div class="line"><span class="lineno">   54</span>        CommodityData data = <a class="code hl_function" href="../../d0/d6c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PlayerTradeProfitabilityData.html#a677a011fa523ff1420cb5e8c571ba3d6">getBoughtDataFor</a>(commodityId);</div>
-<div class="line"><span class="lineno">   55</span>        data.setQuantity(data.getQuantity() + quantity);</div>
-<div class="line"><span class="lineno">   56</span>        data.setTotalPrice(data.getTotalPrice() + totalPrice);</div>
-<div class="line"><span class="lineno">   57</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PlayerTradeProfitabilityData_html_a677a011fa523ff1420cb5e8c571ba3d6"><div class="ttname"><a href="../../d0/d6c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PlayerTradeProfitabilityData.html#a677a011fa523ff1420cb5e8c571ba3d6">com.fs.starfarer.api.impl.campaign.shared.PlayerTradeProfitabilityData.getBoughtDataFor</a></div><div class="ttdeci">CommodityData getBoughtDataFor(String commodityId)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dc2/PlayerTradeProfitabilityData_8java_source.html#l00101">PlayerTradeProfitabilityData.java:101</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ade14c9c8ebe15a74ed4cc68bc9bb96e1" name="ade14c9c8ebe15a74ed4cc68bc9bb96e1"></a>
@@ -315,35 +284,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/dc2/PlayerTradeProfitabilityData_8java_source.html#l00059">59</a> of file <a class="el" href="../../da/dc2/PlayerTradeProfitabilityData_8java_source.html">PlayerTradeProfitabilityData.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   59</span>                                                                                    {</div>
-<div class="line"><span class="lineno">   60</span>        CommodityData data = <a class="code hl_function" href="../../d0/d6c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PlayerTradeProfitabilityData.html#a677a011fa523ff1420cb5e8c571ba3d6">getBoughtDataFor</a>(commodityId);</div>
-<div class="line"><span class="lineno">   61</span>        <span class="keywordflow">if</span> (data.getQuantity() &lt; 1 || quantity &lt; 1) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   62</span>        <span class="keywordtype">float</span> avgBuyPrice = data.getTotalPrice() / data.getQuantity();</div>
-<div class="line"><span class="lineno">   63</span>        </div>
-<div class="line"><span class="lineno">   64</span>        <span class="keywordtype">float</span> net = quantity;</div>
-<div class="line"><span class="lineno">   65</span>        <span class="keywordflow">if</span> (quantity &gt; data.getQuantity()) net = data.getQuantity();</div>
-<div class="line"><span class="lineno">   66</span>        data.setQuantity(data.getQuantity() - net);</div>
-<div class="line"><span class="lineno">   67</span> </div>
-<div class="line"><span class="lineno">   68</span>        <span class="keywordflow">if</span> (net &lt; 1) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   69</span>        </div>
-<div class="line"><span class="lineno">   70</span>        <span class="keywordtype">float</span> paidForNet = avgBuyPrice * net;</div>
-<div class="line"><span class="lineno">   71</span>        data.setTotalPrice(Math.max(0, data.getTotalPrice() - paidForNet));</div>
-<div class="line"><span class="lineno">   72</span>        </div>
-<div class="line"><span class="lineno">   73</span>        <span class="keywordtype">float</span> receivedForNet = net * totalPrice / quantity;</div>
-<div class="line"><span class="lineno">   74</span>        </div>
-<div class="line"><span class="lineno">   75</span>        <span class="keywordtype">float</span> profit = receivedForNet - paidForNet;</div>
-<div class="line"><span class="lineno">   76</span>        <span class="keywordflow">if</span> (profit &lt;= 0) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   77</span>        </div>
-<div class="line"><span class="lineno">   78</span>        <span class="keywordtype">float</span> xpPerCredit = Global.getSettings().getFloat(<span class="stringliteral">&quot;economyPlayerXPPerCreditOfProfit&quot;</span>);</div>
-<div class="line"><span class="lineno">   79</span>        </div>
-<div class="line"><span class="lineno">   80</span>        <span class="keywordtype">long</span> xp = (long) (profit * xpPerCredit);</div>
-<div class="line"><span class="lineno">   81</span>        </div>
-<div class="line"><span class="lineno">   82</span>        accruedXP += xp;</div>
-<div class="line"><span class="lineno">   83</span>        </div>
-<div class="line"><span class="lineno">   84</span>        <a class="code hl_variable" href="../../d0/d6c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PlayerTradeProfitabilityData.html#a84e06d8a28ccecf0776916a6dc2b8f09">log</a>.info(<span class="stringliteral">&quot;Player accrued &quot;</span> + xp + <span class="stringliteral">&quot; xp for selling &quot;</span> + commodityId + <span class="stringliteral">&quot; (profit per unit: &quot;</span> + (<span class="keywordtype">int</span>) (profit / net) + <span class="stringliteral">&quot;)&quot;</span>);</div>
-<div class="line"><span class="lineno">   85</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PlayerTradeProfitabilityData_html_a84e06d8a28ccecf0776916a6dc2b8f09"><div class="ttname"><a href="../../d0/d6c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PlayerTradeProfitabilityData.html#a84e06d8a28ccecf0776916a6dc2b8f09">com.fs.starfarer.api.impl.campaign.shared.PlayerTradeProfitabilityData.log</a></div><div class="ttdeci">static Logger log</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dc2/PlayerTradeProfitabilityData_8java_source.html#l00014">PlayerTradeProfitabilityData.java:14</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="acf47c07c978ccbe821a56f1b40611765" name="acf47c07c978ccbe821a56f1b40611765"></a>
@@ -363,10 +304,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/dc2/PlayerTradeProfitabilityData_8java_source.html#l00114">114</a> of file <a class="el" href="../../da/dc2/PlayerTradeProfitabilityData_8java_source.html">PlayerTradeProfitabilityData.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  114</span>                                             {</div>
-<div class="line"><span class="lineno">  115</span>        this.accruedXP = accruedXP;</div>
-<div class="line"><span class="lineno">  116</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

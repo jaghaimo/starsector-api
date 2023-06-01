@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -200,11 +201,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d10/CoreImmigrationPluginImpl_8java_source.html#l00031">31</a> of file <a class="el" href="../../d8/d10/CoreImmigrationPluginImpl_8java_source.html">CoreImmigrationPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   31</span>                                                       {</div>
-<div class="line"><span class="lineno">   32</span>        this.market = <a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf994083100285ade0c7b53353505e9c">market</a>;</div>
-<div class="line"><span class="lineno">   33</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl_html_acf994083100285ade0c7b53353505e9c"><div class="ttname"><a href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf994083100285ade0c7b53353505e9c">com.fs.starfarer.api.impl.campaign.population.CoreImmigrationPluginImpl.market</a></div><div class="ttdeci">MarketAPI market</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d10/CoreImmigrationPluginImpl_8java_source.html#l00028">CoreImmigrationPluginImpl.java:28</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -244,111 +241,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d5/d71/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1ImmigrationPlugin.html#ae3e1616b71734aec6834da2d54637dcb">com.fs.starfarer.api.campaign.econ.ImmigrationPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d10/CoreImmigrationPluginImpl_8java_source.html#l00035">35</a> of file <a class="el" href="../../d8/d10/CoreImmigrationPluginImpl_8java_source.html">CoreImmigrationPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   35</span>                                                          {</div>
-<div class="line"><span class="lineno">   36</span><span class="comment">//      if (market.getName().equals(&quot;Umbra&quot;)) {</span></div>
-<div class="line"><span class="lineno">   37</span><span class="comment">//          System.out.println(&quot;ewfwefew&quot;);</span></div>
-<div class="line"><span class="lineno">   38</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">   39</span>        </div>
-<div class="line"><span class="lineno">   40</span><span class="comment">//      if (market.getName().equals(&quot;Jangala&quot;)) {</span></div>
-<div class="line"><span class="lineno">   41</span><span class="comment">//          System.out.println(&quot;wefwefwe&quot;);</span></div>
-<div class="line"><span class="lineno">   42</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">   43</span>        </div>
-<div class="line"><span class="lineno">   44</span>        <span class="keywordtype">float</span> f = days / 30f; <span class="comment">// incoming is per month</span></div>
-<div class="line"><span class="lineno">   45</span>        </div>
-<div class="line"><span class="lineno">   46</span>        <span class="keywordtype">boolean</span> firstTime = !<a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf994083100285ade0c7b53353505e9c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a24a812b89fa5f97b7c15b0e6368e3bc3">wasIncomingSetBefore</a>();</div>
-<div class="line"><span class="lineno">   47</span>        Global.getSettings().profilerBegin(<span class="stringliteral">&quot;Computing incoming&quot;</span>);</div>
-<div class="line"><span class="lineno">   48</span>        <a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf994083100285ade0c7b53353505e9c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a28266149fd217c78132ac677c0651427">setIncoming</a>(<a class="code hl_function" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#a97784782b35aaa5f5fbf155994f2b2ae">computeIncoming</a>(uiUpdateOnly, f));</div>
-<div class="line"><span class="lineno">   49</span>        Global.getSettings().profilerEnd();</div>
-<div class="line"><span class="lineno">   50</span>        </div>
-<div class="line"><span class="lineno">   51</span><span class="comment">//      if (market.getName().equals(&quot;Jangala&quot;)) {</span></div>
-<div class="line"><span class="lineno">   52</span><span class="comment">//          System.out.println(&quot;wefwefwe&quot;);</span></div>
-<div class="line"><span class="lineno">   53</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">   54</span>        </div>
-<div class="line"><span class="lineno">   55</span><span class="comment">//      if (market.isPlayerOwned()) {</span></div>
-<div class="line"><span class="lineno">   56</span><span class="comment">//          //market.setSize(2);</span></div>
-<div class="line"><span class="lineno">   57</span><span class="comment">//          while (market.getSize() &lt; 7) {</span></div>
-<div class="line"><span class="lineno">   58</span><span class="comment">//              increaseMarketSize();</span></div>
-<div class="line"><span class="lineno">   59</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">   60</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">   61</span>        </div>
-<div class="line"><span class="lineno">   62</span>        <span class="keywordflow">if</span> (uiUpdateOnly) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   63</span>        </div>
-<div class="line"><span class="lineno">   64</span>        </div>
-<div class="line"><span class="lineno">   65</span>        <span class="keywordtype">int</span> iter = 1;</div>
-<div class="line"><span class="lineno">   66</span>        <span class="keywordflow">if</span> (firstTime) {</div>
-<div class="line"><span class="lineno">   67</span>            iter = 100;</div>
-<div class="line"><span class="lineno">   68</span>        }</div>
-<div class="line"><span class="lineno">   69</span>        </div>
-<div class="line"><span class="lineno">   70</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; iter; i++) {</div>
-<div class="line"><span class="lineno">   71</span>            </div>
-<div class="line"><span class="lineno">   72</span>        <span class="keywordflow">if</span> (iter &gt; 1) {</div>
-<div class="line"><span class="lineno">   73</span>            f = (iter - i) * 0.1f;</div>
-<div class="line"><span class="lineno">   74</span>        }</div>
-<div class="line"><span class="lineno">   75</span>        </div>
-<div class="line"><span class="lineno">   76</span>        PopulationComposition pop = <a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf994083100285ade0c7b53353505e9c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a034a81819aba6cb80a2c7c01bb112826">getPopulation</a>();</div>
-<div class="line"><span class="lineno">   77</span>        PopulationComposition inc = <a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf994083100285ade0c7b53353505e9c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a451b9cba401dcfac901ff108f4a939d1">getIncoming</a>();</div>
-<div class="line"><span class="lineno">   78</span>        </div>
-<div class="line"><span class="lineno">   79</span>        <span class="keywordflow">for</span> (String <span class="keywordtype">id</span> : inc.getComp().keySet()) {</div>
-<div class="line"><span class="lineno">   80</span>            pop.<a class="code hl_function" href="../../df/dd7/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1PopulationComposition.html#a4c683cfcdc32cec78336f0e42de3f026">add</a>(<span class="keywordtype">id</span>, inc.get(<span class="keywordtype">id</span>) * f);</div>
-<div class="line"><span class="lineno">   81</span>        }</div>
-<div class="line"><span class="lineno">   82</span>        </div>
-<div class="line"><span class="lineno">   83</span><span class="comment">//      if (market.getName().equals(&quot;Ang&quot;)) {</span></div>
-<div class="line"><span class="lineno">   84</span><span class="comment">//          System.out.println(&quot;efwefwefew&quot;);</span></div>
-<div class="line"><span class="lineno">   85</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">   86</span>        <span class="keywordtype">float</span> min = <a class="code hl_function" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#a04de9904cf15ef5697036cf91bb3803e">getWeightForMarketSize</a>(<a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf994083100285ade0c7b53353505e9c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af6f714c59a16687b5cde142091a54150">getSize</a>());</div>
-<div class="line"><span class="lineno">   87</span>        <span class="keywordtype">float</span> max = <a class="code hl_function" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#a04de9904cf15ef5697036cf91bb3803e">getWeightForMarketSize</a>(<a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf994083100285ade0c7b53353505e9c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af6f714c59a16687b5cde142091a54150">getSize</a>() + 1);</div>
-<div class="line"><span class="lineno">   88</span>        <span class="comment">//if (market.getSize() &gt;= 10) max = min;</span></div>
-<div class="line"><span class="lineno">   89</span>        </div>
-<div class="line"><span class="lineno">   90</span>        </div>
-<div class="line"><span class="lineno">   91</span>        <span class="keywordtype">float</span> newWeight = pop.getWeightValue() + inc.getWeightValue() * f;</div>
-<div class="line"><span class="lineno">   92</span>        <span class="comment">//newWeight = pop.getWeightValue() + inc.getWeightValue() * f + 2000;</span></div>
-<div class="line"><span class="lineno">   93</span>        <span class="keywordflow">if</span> (newWeight &lt; min || Global.getSector().isInNewGameAdvance()) newWeight = min;</div>
-<div class="line"><span class="lineno">   94</span>        <span class="keywordflow">if</span> (newWeight &gt; max) {</div>
-<div class="line"><span class="lineno">   95</span>            <a class="code hl_function" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#aa920c2cfcc50f3c1467b11d5f17768a4">increaseMarketSize</a>();</div>
-<div class="line"><span class="lineno">   96</span>            newWeight = max;</div>
-<div class="line"><span class="lineno">   97</span>        }</div>
-<div class="line"><span class="lineno">   98</span>        pop.setWeight(newWeight);</div>
-<div class="line"><span class="lineno">   99</span>        pop.normalize();</div>
-<div class="line"><span class="lineno">  100</span>        </div>
-<div class="line"><span class="lineno">  101</span>        <span class="comment">// up to 5% of the non-faction population gets converted to faction, per month, more or less</span></div>
-<div class="line"><span class="lineno">  102</span>        <span class="keywordtype">float</span> conversionFraction = 0.05f * <a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf994083100285ade0c7b53353505e9c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a2632307f40c3a4bc2dba30e35eca2284">getStabilityValue</a>() / 10f;</div>
-<div class="line"><span class="lineno">  103</span>        conversionFraction *= f;</div>
-<div class="line"><span class="lineno">  104</span>        <span class="keywordflow">if</span> (conversionFraction &gt; 0) {</div>
-<div class="line"><span class="lineno">  105</span>            pop.add(<a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf994083100285ade0c7b53353505e9c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#aa132dbebb3e9e38ad71a576a4ea5ac9b">getFactionId</a>(), (pop.getWeightValue() - pop.get(<a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf994083100285ade0c7b53353505e9c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#aa132dbebb3e9e38ad71a576a4ea5ac9b">getFactionId</a>())) * conversionFraction);</div>
-<div class="line"><span class="lineno">  106</span>        }</div>
-<div class="line"><span class="lineno">  107</span>        </div>
-<div class="line"><span class="lineno">  108</span>        </div>
-<div class="line"><span class="lineno">  109</span>        <span class="comment">// add some poor/pirate population at stability below 5 </span></div>
-<div class="line"><span class="lineno">  110</span>        <span class="keywordtype">float</span> pirateFraction = 0.01f * Math.max(0, (5f - <a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf994083100285ade0c7b53353505e9c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a2632307f40c3a4bc2dba30e35eca2284">getStabilityValue</a>()) / 5f);</div>
-<div class="line"><span class="lineno">  111</span>        pirateFraction *= f;</div>
-<div class="line"><span class="lineno">  112</span>        <span class="keywordflow">if</span> (pirateFraction &gt; 0) {</div>
-<div class="line"><span class="lineno">  113</span>            pop.add(Factions.PIRATES, pop.getWeightValue() * pirateFraction);</div>
-<div class="line"><span class="lineno">  114</span>            pop.add(Factions.POOR, pop.getWeightValue() * pirateFraction);</div>
-<div class="line"><span class="lineno">  115</span>        }</div>
-<div class="line"><span class="lineno">  116</span> </div>
-<div class="line"><span class="lineno">  117</span>        </div>
-<div class="line"><span class="lineno">  118</span>        <span class="keywordflow">for</span> (String fid : <span class="keyword">new</span> ArrayList&lt;String&gt;(pop.getComp().keySet())) {</div>
-<div class="line"><span class="lineno">  119</span>            <span class="keywordflow">if</span> (Global.getSector().getFaction(fid) == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  120</span>                pop.getComp().remove(fid);</div>
-<div class="line"><span class="lineno">  121</span>            }</div>
-<div class="line"><span class="lineno">  122</span>        }</div>
-<div class="line"><span class="lineno">  123</span>        </div>
-<div class="line"><span class="lineno">  124</span>        pop.normalize();</div>
-<div class="line"><span class="lineno">  125</span>        </div>
-<div class="line"><span class="lineno">  126</span>        }</div>
-<div class="line"><span class="lineno">  127</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl_html_a04de9904cf15ef5697036cf91bb3803e"><div class="ttname"><a href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#a04de9904cf15ef5697036cf91bb3803e">com.fs.starfarer.api.impl.campaign.population.CoreImmigrationPluginImpl.getWeightForMarketSize</a></div><div class="ttdeci">float getWeightForMarketSize(float size)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d10/CoreImmigrationPluginImpl_8java_source.html#l00374">CoreImmigrationPluginImpl.java:374</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl_html_a97784782b35aaa5f5fbf155994f2b2ae"><div class="ttname"><a href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#a97784782b35aaa5f5fbf155994f2b2ae">com.fs.starfarer.api.impl.campaign.population.CoreImmigrationPluginImpl.computeIncoming</a></div><div class="ttdeci">PopulationComposition computeIncoming(boolean uiUpdateOnly, float f)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d10/CoreImmigrationPluginImpl_8java_source.html#l00190">CoreImmigrationPluginImpl.java:190</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl_html_aa920c2cfcc50f3c1467b11d5f17768a4"><div class="ttname"><a href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#aa920c2cfcc50f3c1467b11d5f17768a4">com.fs.starfarer.api.impl.campaign.population.CoreImmigrationPluginImpl.increaseMarketSize</a></div><div class="ttdeci">void increaseMarketSize()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d10/CoreImmigrationPluginImpl_8java_source.html#l00129">CoreImmigrationPluginImpl.java:129</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1PopulationComposition_html_a4c683cfcdc32cec78336f0e42de3f026"><div class="ttname"><a href="../../df/dd7/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1PopulationComposition.html#a4c683cfcdc32cec78336f0e42de3f026">com.fs.starfarer.api.impl.campaign.population.PopulationComposition.add</a></div><div class="ttdeci">void add(String id, float value)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d23/PopulationComposition_8java_source.html#l00041">PopulationComposition.java:41</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a034a81819aba6cb80a2c7c01bb112826"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a034a81819aba6cb80a2c7c01bb112826">com.fs.starfarer.api.campaign.econ.MarketAPI.getPopulation</a></div><div class="ttdeci">PopulationComposition getPopulation()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a24a812b89fa5f97b7c15b0e6368e3bc3"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a24a812b89fa5f97b7c15b0e6368e3bc3">com.fs.starfarer.api.campaign.econ.MarketAPI.wasIncomingSetBefore</a></div><div class="ttdeci">boolean wasIncomingSetBefore()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a2632307f40c3a4bc2dba30e35eca2284"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a2632307f40c3a4bc2dba30e35eca2284">com.fs.starfarer.api.campaign.econ.MarketAPI.getStabilityValue</a></div><div class="ttdeci">float getStabilityValue()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a28266149fd217c78132ac677c0651427"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a28266149fd217c78132ac677c0651427">com.fs.starfarer.api.campaign.econ.MarketAPI.setIncoming</a></div><div class="ttdeci">void setIncoming(PopulationComposition incoming)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a451b9cba401dcfac901ff108f4a939d1"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a451b9cba401dcfac901ff108f4a939d1">com.fs.starfarer.api.campaign.econ.MarketAPI.getIncoming</a></div><div class="ttdeci">PopulationComposition getIncoming()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_aa132dbebb3e9e38ad71a576a4ea5ac9b"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#aa132dbebb3e9e38ad71a576a4ea5ac9b">com.fs.starfarer.api.campaign.econ.MarketAPI.getFactionId</a></div><div class="ttdeci">String getFactionId()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_af6f714c59a16687b5cde142091a54150"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af6f714c59a16687b5cde142091a54150">com.fs.starfarer.api.campaign.econ.MarketAPI.getSize</a></div><div class="ttdeci">int getSize()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae133ec1dbf5a841facd54cfc54bc078f" name="ae133ec1dbf5a841facd54cfc54bc078f"></a>
@@ -392,37 +285,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d10/CoreImmigrationPluginImpl_8java_source.html#l00332">332</a> of file <a class="el" href="../../d8/d10/CoreImmigrationPluginImpl_8java_source.html">CoreImmigrationPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  332</span>                                                                                             {</div>
-<div class="line"><span class="lineno">  333</span><span class="comment">//      if (market.getName().equals(&quot;Jangala&quot;)) {</span></div>
-<div class="line"><span class="lineno">  334</span><span class="comment">//          System.out.println(&quot;ewfwfew&quot;);</span></div>
-<div class="line"><span class="lineno">  335</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  336</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf994083100285ade0c7b53353505e9c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a3d88f6cbbfcb4926cec79f3e9ee42272">isImmigrationIncentivesOn</a>()) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  337</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf994083100285ade0c7b53353505e9c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af6f714c59a16687b5cde142091a54150">getSize</a>() &gt;= Misc.MAX_COLONY_SIZE) {</div>
-<div class="line"><span class="lineno">  338</span>            <a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf994083100285ade0c7b53353505e9c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a50428bb4356602db3a4eae24200d2831">setImmigrationIncentivesOn</a>(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  339</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  340</span>        }</div>
-<div class="line"><span class="lineno">  341</span>        </div>
-<div class="line"><span class="lineno">  342</span>        </div>
-<div class="line"><span class="lineno">  343</span>        <span class="keywordtype">float</span> points = -<a class="code hl_function" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#adb50f9e4bfa35b97f03f991597fff31c">getImmigrationHazardPenalty</a>(<a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf994083100285ade0c7b53353505e9c">market</a>) + <a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#a066c1b028c08eb4aa6beef64d6cf67d7">INCENTIVE_POINTS_EXTRA</a>;</div>
-<div class="line"><span class="lineno">  344</span>        <span class="comment">//float cost = INCENTIVE_CREDITS_PER_POINT * points * f;</span></div>
-<div class="line"><span class="lineno">  345</span>        <span class="keywordtype">float</span> cost = <a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf994083100285ade0c7b53353505e9c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a2b7d7e71cdc5b551f5a62b95cfcc82b9">getImmigrationIncentivesCost</a>() * f;</div>
-<div class="line"><span class="lineno">  346</span>        </div>
-<div class="line"><span class="lineno">  347</span>        <span class="keywordflow">if</span> (points &gt; 0) {</div>
-<div class="line"><span class="lineno">  348</span>            inc.getWeight().modifyFlat(<span class="stringliteral">&quot;inc_incentives&quot;</span>, points, <span class="stringliteral">&quot;Hazard pay&quot;</span>);</div>
-<div class="line"><span class="lineno">  349</span>            <span class="keywordflow">if</span> (!uiUpdateOnly) {</div>
-<div class="line"><span class="lineno">  350</span>                <a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf994083100285ade0c7b53353505e9c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#ad4b3b4d4cac25bc98d66f56eae7bd414">setIncentiveCredits</a>(<a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf994083100285ade0c7b53353505e9c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#aa51af72f4283b05590c78d7182e8d515">getIncentiveCredits</a>() + cost);</div>
-<div class="line"><span class="lineno">  351</span>            }</div>
-<div class="line"><span class="lineno">  352</span>        }</div>
-<div class="line"><span class="lineno">  353</span> </div>
-<div class="line"><span class="lineno">  354</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl_html_a066c1b028c08eb4aa6beef64d6cf67d7"><div class="ttname"><a href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#a066c1b028c08eb4aa6beef64d6cf67d7">com.fs.starfarer.api.impl.campaign.population.CoreImmigrationPluginImpl.INCENTIVE_POINTS_EXTRA</a></div><div class="ttdeci">static float INCENTIVE_POINTS_EXTRA</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d10/CoreImmigrationPluginImpl_8java_source.html#l00024">CoreImmigrationPluginImpl.java:24</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl_html_adb50f9e4bfa35b97f03f991597fff31c"><div class="ttname"><a href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#adb50f9e4bfa35b97f03f991597fff31c">com.fs.starfarer.api.impl.campaign.population.CoreImmigrationPluginImpl.getImmigrationHazardPenalty</a></div><div class="ttdeci">static float getImmigrationHazardPenalty(MarketAPI market)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d10/CoreImmigrationPluginImpl_8java_source.html#l00317">CoreImmigrationPluginImpl.java:317</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a2b7d7e71cdc5b551f5a62b95cfcc82b9"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a2b7d7e71cdc5b551f5a62b95cfcc82b9">com.fs.starfarer.api.campaign.econ.MarketAPI.getImmigrationIncentivesCost</a></div><div class="ttdeci">float getImmigrationIncentivesCost()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a3d88f6cbbfcb4926cec79f3e9ee42272"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a3d88f6cbbfcb4926cec79f3e9ee42272">com.fs.starfarer.api.campaign.econ.MarketAPI.isImmigrationIncentivesOn</a></div><div class="ttdeci">boolean isImmigrationIncentivesOn()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a50428bb4356602db3a4eae24200d2831"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a50428bb4356602db3a4eae24200d2831">com.fs.starfarer.api.campaign.econ.MarketAPI.setImmigrationIncentivesOn</a></div><div class="ttdeci">void setImmigrationIncentivesOn(Boolean incentivesOn)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_aa51af72f4283b05590c78d7182e8d515"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#aa51af72f4283b05590c78d7182e8d515">com.fs.starfarer.api.campaign.econ.MarketAPI.getIncentiveCredits</a></div><div class="ttdeci">float getIncentiveCredits()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_ad4b3b4d4cac25bc98d66f56eae7bd414"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#ad4b3b4d4cac25bc98d66f56eae7bd414">com.fs.starfarer.api.campaign.econ.MarketAPI.setIncentiveCredits</a></div><div class="ttdeci">void setIncentiveCredits(float incentiveCredits)</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a97784782b35aaa5f5fbf155994f2b2ae" name="a97784782b35aaa5f5fbf155994f2b2ae"></a>
@@ -452,142 +315,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d10/CoreImmigrationPluginImpl_8java_source.html#l00190">190</a> of file <a class="el" href="../../d8/d10/CoreImmigrationPluginImpl_8java_source.html">CoreImmigrationPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  190</span>                                                                                {</div>
-<div class="line"><span class="lineno">  191</span>        PopulationComposition inc = <span class="keyword">new</span> PopulationComposition();</div>
-<div class="line"><span class="lineno">  192</span>        </div>
-<div class="line"><span class="lineno">  193</span>        <span class="keywordtype">float</span> stability = <a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf994083100285ade0c7b53353505e9c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a2632307f40c3a4bc2dba30e35eca2284">getStabilityValue</a>();</div>
-<div class="line"><span class="lineno">  194</span>        </div>
-<div class="line"><span class="lineno">  195</span><span class="comment">//      if (stability &gt; 0) {</span></div>
-<div class="line"><span class="lineno">  196</span><span class="comment">//          inc.getWeight().modifyFlat(&quot;inc_st&quot;, stability, &quot;Stability&quot;);</span></div>
-<div class="line"><span class="lineno">  197</span><span class="comment">//      } else {</span></div>
-<div class="line"><span class="lineno">  198</span><span class="comment">//          inc.getWeight().modifyFlat(&quot;inc_st&quot;, ZERO_STABILITY_PENALTY, &quot;Stability&quot;);</span></div>
-<div class="line"><span class="lineno">  199</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  200</span>        <span class="keywordflow">if</span> (stability &lt; 5) {</div>
-<div class="line"><span class="lineno">  201</span>            inc.getWeight().modifyFlat(<span class="stringliteral">&quot;inc_st&quot;</span>, stability - 5, <span class="stringliteral">&quot;Instability&quot;</span>);</div>
-<div class="line"><span class="lineno">  202</span>        }</div>
-<div class="line"><span class="lineno">  203</span>        </div>
-<div class="line"><span class="lineno">  204</span>        <span class="keywordtype">int</span> numInd = Misc.getNumIndustries(<a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf994083100285ade0c7b53353505e9c">market</a>);</div>
-<div class="line"><span class="lineno">  205</span>        <span class="keywordflow">if</span> (numInd &lt;= 0 &amp;&amp; <a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#a05d2b4924c909332d562b55800483c96">GROWTH_NO_INDUSTRIES</a> != 0 &amp;&amp; <a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf994083100285ade0c7b53353505e9c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af6f714c59a16687b5cde142091a54150">getSize</a>() &gt; 3) {</div>
-<div class="line"><span class="lineno">  206</span>            <span class="keywordtype">float</span> weight = <a class="code hl_function" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#a04de9904cf15ef5697036cf91bb3803e">getWeightForMarketSize</a>(<a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf994083100285ade0c7b53353505e9c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af6f714c59a16687b5cde142091a54150">getSize</a>());</div>
-<div class="line"><span class="lineno">  207</span>            <span class="keywordtype">float</span> penalty = -Math.round(weight * <a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#a05d2b4924c909332d562b55800483c96">GROWTH_NO_INDUSTRIES</a>);</div>
-<div class="line"><span class="lineno">  208</span>            inc.getWeight().modifyFlat(<span class="stringliteral">&quot;inc_noInd&quot;</span>, penalty, <span class="stringliteral">&quot;No industries&quot;</span>);</div>
-<div class="line"><span class="lineno">  209</span>        }</div>
-<div class="line"><span class="lineno">  210</span>        </div>
-<div class="line"><span class="lineno">  211</span>        </div>
-<div class="line"><span class="lineno">  212</span>        <span class="comment">//inc.getWeight().modifyFlat(&quot;inc_size&quot;, -market.getSize(), &quot;Colony size&quot;);</span></div>
-<div class="line"><span class="lineno">  213</span>        </div>
-<div class="line"><span class="lineno">  214</span>        <span class="keywordtype">float</span> a = Math.round(<a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf994083100285ade0c7b53353505e9c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a8db1c2727d55b0aeddb14f2a2f446a4c">getAccessibilityMod</a>().<a class="code hl_function" href="../../dc/d19/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus.html#af16110c6c18625c9f384078ce824bdda">computeEffective</a>(0f) * 100f) / 100f;</div>
-<div class="line"><span class="lineno">  215</span>        <span class="keywordtype">int</span> accessibilityMod = (int) (a / Misc.PER_UNIT_SHIPPING);</div>
-<div class="line"><span class="lineno">  216</span>        inc.getWeight().modifyFlat(<span class="stringliteral">&quot;inc_access&quot;</span>, accessibilityMod, <span class="stringliteral">&quot;Accessibility&quot;</span>);</div>
-<div class="line"><span class="lineno">  217</span>        </div>
-<div class="line"><span class="lineno">  218</span>        </div>
-<div class="line"><span class="lineno">  219</span>        <span class="keywordtype">float</span> hazMod = <a class="code hl_function" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#adb50f9e4bfa35b97f03f991597fff31c">getImmigrationHazardPenalty</a>(<a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf994083100285ade0c7b53353505e9c">market</a>);</div>
-<div class="line"><span class="lineno">  220</span>        <span class="keywordflow">if</span> (hazMod != 0) {</div>
-<div class="line"><span class="lineno">  221</span>            <span class="keywordtype">float</span> hazardSizeMult = <a class="code hl_function" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#a35c24230e84b9f89b0f9a003e521d4ab">getImmigrationHazardPenaltySizeMult</a>(<a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf994083100285ade0c7b53353505e9c">market</a>);</div>
-<div class="line"><span class="lineno">  222</span>            inc.getWeight().modifyFlat(<span class="stringliteral">&quot;inc_hazard&quot;</span>, hazMod, </div>
-<div class="line"><span class="lineno">  223</span>                    <span class="stringliteral">&quot;Hazard rating (&quot;</span> + Strings.X + Misc.getRoundedValueMaxOneAfterDecimal(hazardSizeMult) + </div>
-<div class="line"><span class="lineno">  224</span>                    <span class="stringliteral">&quot; based on colony size)&quot;</span>);</div>
-<div class="line"><span class="lineno">  225</span>        }</div>
-<div class="line"><span class="lineno">  226</span>        </div>
-<div class="line"><span class="lineno">  227</span><span class="comment">//      float dMult = getDistFromCoreMult(market);</span></div>
-<div class="line"><span class="lineno">  228</span><span class="comment">//      float dPenalty = Math.round(dMult * MAX_DIST_PENALTY);</span></div>
-<div class="line"><span class="lineno">  229</span><span class="comment">//      if (dPenalty &gt; 0) {</span></div>
-<div class="line"><span class="lineno">  230</span><span class="comment">//          inc.getWeight().modifyFlat(&quot;inc_dist&quot;, -dPenalty, &quot;Distance from core worlds&quot;);</span></div>
-<div class="line"><span class="lineno">  231</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  232</span>        </div>
-<div class="line"><span class="lineno">  233</span>        MarketAPI biggestInSystem = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  234</span>        List&lt;MarketAPI&gt; inReach = Global.getSector().getEconomy().getMarketsWithSameGroup(<a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf994083100285ade0c7b53353505e9c">market</a>);</div>
-<div class="line"><span class="lineno">  235</span>        <span class="comment">//Global.getSettings().profilerEnd();</span></div>
-<div class="line"><span class="lineno">  236</span>        <span class="keywordflow">for</span> (MarketAPI curr : inReach) {</div>
-<div class="line"><span class="lineno">  237</span>            <span class="keywordflow">if</span> (curr == <a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf994083100285ade0c7b53353505e9c">market</a>) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  238</span> </div>
-<div class="line"><span class="lineno">  239</span>            <span class="keywordflow">if</span> (curr.getFaction().isHostileTo(<a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf994083100285ade0c7b53353505e9c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a97645caff4adca5efcf3a462fb13ca0f">getFaction</a>())) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  240</span>            </div>
-<div class="line"><span class="lineno">  241</span>            <span class="keywordflow">if</span> (Misc.getDistanceLY(curr.getLocationInHyperspace(), <a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf994083100285ade0c7b53353505e9c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#ac7c52901d8193892f65ffba9ac182a4e">getLocationInHyperspace</a>()) &lt;= 0) {</div>
-<div class="line"><span class="lineno">  242</span>                <span class="keywordflow">if</span> (biggestInSystem == <span class="keyword">null</span> || curr.getSize() &gt; biggestInSystem.getSize()) {</div>
-<div class="line"><span class="lineno">  243</span>                    biggestInSystem = curr;</div>
-<div class="line"><span class="lineno">  244</span>                }</div>
-<div class="line"><span class="lineno">  245</span>            }</div>
-<div class="line"><span class="lineno">  246</span>        }</div>
-<div class="line"><span class="lineno">  247</span>        </div>
-<div class="line"><span class="lineno">  248</span><span class="comment">//      float hostileFactions = 0;</span></div>
-<div class="line"><span class="lineno">  249</span><span class="comment">//      for (FactionAPI faction : Global.getSector().getAllFactions()) {</span></div>
-<div class="line"><span class="lineno">  250</span><span class="comment">//          if (faction.getCustomBoolean(Factions.CUSTOM_HOSTILITY_IMPACT_ON_GROWTH)) {</span></div>
-<div class="line"><span class="lineno">  251</span><span class="comment">//              if (faction.isHostileTo(market.getFaction())) {</span></div>
-<div class="line"><span class="lineno">  252</span><span class="comment">//                  hostileFactions++;</span></div>
-<div class="line"><span class="lineno">  253</span><span class="comment">//              }</span></div>
-<div class="line"><span class="lineno">  254</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">  255</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  256</span><span class="comment">//      </span></div>
-<div class="line"><span class="lineno">  257</span><span class="comment">//      if (hostileFactions &gt; 0) {</span></div>
-<div class="line"><span class="lineno">  258</span><span class="comment">//          inc.getWeight().modifyFlat(&quot;inc_hosfac&quot;, -hostileFactions * FACTION_HOSTILITY_IMPACT,</span></div>
-<div class="line"><span class="lineno">  259</span><span class="comment">//                  &quot;Open hostilities with major factions&quot;);</span></div>
-<div class="line"><span class="lineno">  260</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  261</span>        </div>
-<div class="line"><span class="lineno">  262</span>        <span class="keywordflow">if</span> (biggestInSystem != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  263</span>            <span class="keywordtype">float</span> sDiff = biggestInSystem.getSize() - <a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf994083100285ade0c7b53353505e9c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af6f714c59a16687b5cde142091a54150">getSize</a>();</div>
-<div class="line"><span class="lineno">  264</span>            sDiff *= 2;</div>
-<div class="line"><span class="lineno">  265</span>            <span class="keywordflow">if</span> (sDiff &gt; 0) {</div>
-<div class="line"><span class="lineno">  266</span>                inc.getWeight().modifyFlat(<span class="stringliteral">&quot;inc_insys&quot;</span>, sDiff, <span class="stringliteral">&quot;Larger non-hostile colony in same system&quot;</span>);</div>
-<div class="line"><span class="lineno">  267</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (sDiff &lt; 0) {</div>
-<div class="line"><span class="lineno">  268</span>                <span class="comment">//inc.getWeight().modifyFlat(&quot;inc_insys&quot;, sDiff, &quot;Smaller non-hostile market in same system&quot;);</span></div>
-<div class="line"><span class="lineno">  269</span>            }</div>
-<div class="line"><span class="lineno">  270</span>        }</div>
-<div class="line"><span class="lineno">  271</span><span class="comment">//      else if (biggestInReach != null) {</span></div>
-<div class="line"><span class="lineno">  272</span><span class="comment">//          float sDiff = biggestInReach.getSize() - market.getSize();</span></div>
-<div class="line"><span class="lineno">  273</span><span class="comment">//          if (sDiff &gt; 0) {</span></div>
-<div class="line"><span class="lineno">  274</span><span class="comment">//              inc.getWeight().modifyFlat(&quot;inc_inreach&quot;, sDiff, &quot;Larger non-hostile market within reach&quot;);</span></div>
-<div class="line"><span class="lineno">  275</span><span class="comment">//          } else if (sDiff &lt; 0) {</span></div>
-<div class="line"><span class="lineno">  276</span><span class="comment">//              //inc.getWeight().modifyFlat(&quot;inc_inreach&quot;, sDiff, &quot;Smaller non-hostile market within reach&quot;);</span></div>
-<div class="line"><span class="lineno">  277</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">  278</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  279</span>        </div>
-<div class="line"><span class="lineno">  280</span>        <span class="comment">// so that the &quot;baseline&quot; incoming composition is based on the number of industries</span></div>
-<div class="line"><span class="lineno">  281</span>        <span class="comment">// thus each industry can use a per-industry modifier without having outsize influence</span></div>
-<div class="line"><span class="lineno">  282</span>        <span class="comment">// for example Farming can bring in X more Luddic Church immigration, and the impact</span></div>
-<div class="line"><span class="lineno">  283</span>        <span class="comment">// this has will be diminished if there are more industries beyond Farming</span></div>
-<div class="line"><span class="lineno">  284</span>        <span class="keywordtype">float</span> numIndustries = <a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf994083100285ade0c7b53353505e9c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#ac5acce3843ed0b9764a1f79e69491970">getIndustries</a>().size();</div>
-<div class="line"><span class="lineno">  285</span>        inc.add(Factions.PIRATES, 1f * numIndustries);</div>
-<div class="line"><span class="lineno">  286</span>        inc.add(Factions.POOR, 1f * numIndustries);</div>
-<div class="line"><span class="lineno">  287</span>        </div>
-<div class="line"><span class="lineno">  288</span>        String bulkFaction = Factions.INDEPENDENT;</div>
-<div class="line"><span class="lineno">  289</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf994083100285ade0c7b53353505e9c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a97645caff4adca5efcf3a462fb13ca0f">getFaction</a>().<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#accc67a07a27de570f239d753fa7efc5d">isHostileTo</a>(bulkFaction)) {</div>
-<div class="line"><span class="lineno">  290</span>            bulkFaction = <a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf994083100285ade0c7b53353505e9c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#aa132dbebb3e9e38ad71a576a4ea5ac9b">getFactionId</a>();</div>
-<div class="line"><span class="lineno">  291</span>        }</div>
-<div class="line"><span class="lineno">  292</span>        inc.add(bulkFaction, 10f * numIndustries);</div>
-<div class="line"><span class="lineno">  293</span>        </div>
-<div class="line"><span class="lineno">  294</span>        <a class="code hl_function" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#ae133ec1dbf5a841facd54cfc54bc078f">applyIncentives</a>(inc, uiUpdateOnly, f);</div>
-<div class="line"><span class="lineno">  295</span>        </div>
-<div class="line"><span class="lineno">  296</span>        </div>
-<div class="line"><span class="lineno">  297</span>        <span class="keywordflow">for</span> (MarketImmigrationModifier mod : <a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf994083100285ade0c7b53353505e9c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#ae97b2d40b40e3c79b4282bb022acd627">getAllImmigrationModifiers</a>()) {</div>
-<div class="line"><span class="lineno">  298</span>            mod.modifyIncoming(<a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf994083100285ade0c7b53353505e9c">market</a>, inc);</div>
-<div class="line"><span class="lineno">  299</span>        }</div>
-<div class="line"><span class="lineno">  300</span>        </div>
-<div class="line"><span class="lineno">  301</span><span class="comment">//      if (market.getName().equals(&quot;Mazalot&quot;)) {</span></div>
-<div class="line"><span class="lineno">  302</span><span class="comment">//          System.out.println(&quot;wefwefwe&quot;);</span></div>
-<div class="line"><span class="lineno">  303</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  304</span>        </div>
-<div class="line"><span class="lineno">  305</span>        <span class="keywordflow">for</span> (String fid : <span class="keyword">new</span> ArrayList&lt;String&gt;(inc.getComp().keySet())) {</div>
-<div class="line"><span class="lineno">  306</span>            <span class="keywordflow">if</span> (Global.getSector().getFaction(fid) == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  307</span>                inc.getComp().remove(fid);</div>
-<div class="line"><span class="lineno">  308</span>            }</div>
-<div class="line"><span class="lineno">  309</span>        }</div>
-<div class="line"><span class="lineno">  310</span>        </div>
-<div class="line"><span class="lineno">  311</span>        inc.normalizeToPositive();</div>
-<div class="line"><span class="lineno">  312</span>        </div>
-<div class="line"><span class="lineno">  313</span>        <span class="keywordflow">return</span> inc;</div>
-<div class="line"><span class="lineno">  314</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus_html_af16110c6c18625c9f384078ce824bdda"><div class="ttname"><a href="../../dc/d19/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus.html#af16110c6c18625c9f384078ce824bdda">com.fs.starfarer.api.combat.StatBonus.computeEffective</a></div><div class="ttdeci">float computeEffective(float baseValue)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d6c/StatBonus_8java_source.html#l00250">StatBonus.java:250</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl_html_a05d2b4924c909332d562b55800483c96"><div class="ttname"><a href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#a05d2b4924c909332d562b55800483c96">com.fs.starfarer.api.impl.campaign.population.CoreImmigrationPluginImpl.GROWTH_NO_INDUSTRIES</a></div><div class="ttdeci">static float GROWTH_NO_INDUSTRIES</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d10/CoreImmigrationPluginImpl_8java_source.html#l00019">CoreImmigrationPluginImpl.java:19</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl_html_a35c24230e84b9f89b0f9a003e521d4ab"><div class="ttname"><a href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#a35c24230e84b9f89b0f9a003e521d4ab">com.fs.starfarer.api.impl.campaign.population.CoreImmigrationPluginImpl.getImmigrationHazardPenaltySizeMult</a></div><div class="ttdeci">static float getImmigrationHazardPenaltySizeMult(MarketAPI market)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d10/CoreImmigrationPluginImpl_8java_source.html#l00324">CoreImmigrationPluginImpl.java:324</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl_html_ae133ec1dbf5a841facd54cfc54bc078f"><div class="ttname"><a href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#ae133ec1dbf5a841facd54cfc54bc078f">com.fs.starfarer.api.impl.campaign.population.CoreImmigrationPluginImpl.applyIncentives</a></div><div class="ttdeci">void applyIncentives(PopulationComposition inc, boolean uiUpdateOnly, float f)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d10/CoreImmigrationPluginImpl_8java_source.html#l00332">CoreImmigrationPluginImpl.java:332</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI_html_accc67a07a27de570f239d753fa7efc5d"><div class="ttname"><a href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#accc67a07a27de570f239d753fa7efc5d">com.fs.starfarer.api.campaign.FactionAPI.isHostileTo</a></div><div class="ttdeci">boolean isHostileTo(FactionAPI other)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a8db1c2727d55b0aeddb14f2a2f446a4c"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a8db1c2727d55b0aeddb14f2a2f446a4c">com.fs.starfarer.api.campaign.econ.MarketAPI.getAccessibilityMod</a></div><div class="ttdeci">StatBonus getAccessibilityMod()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a97645caff4adca5efcf3a462fb13ca0f"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a97645caff4adca5efcf3a462fb13ca0f">com.fs.starfarer.api.campaign.econ.MarketAPI.getFaction</a></div><div class="ttdeci">FactionAPI getFaction()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_ac5acce3843ed0b9764a1f79e69491970"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#ac5acce3843ed0b9764a1f79e69491970">com.fs.starfarer.api.campaign.econ.MarketAPI.getIndustries</a></div><div class="ttdeci">List&lt; Industry &gt; getIndustries()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_ac7c52901d8193892f65ffba9ac182a4e"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#ac7c52901d8193892f65ffba9ac182a4e">com.fs.starfarer.api.campaign.econ.MarketAPI.getLocationInHyperspace</a></div><div class="ttdeci">Vector2f getLocationInHyperspace()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_ae97b2d40b40e3c79b4282bb022acd627"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#ae97b2d40b40e3c79b4282bb022acd627">com.fs.starfarer.api.campaign.econ.MarketAPI.getAllImmigrationModifiers</a></div><div class="ttdeci">List&lt; MarketImmigrationModifier &gt; getAllImmigrationModifiers()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5c61b119420d56eecca345dec75b2bc0" name="a5c61b119420d56eecca345dec75b2bc0"></a>
@@ -609,13 +337,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d5/d71/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1ImmigrationPlugin.html#adfa29b8c8a5a8b67c49c95599bfc14f4">com.fs.starfarer.api.campaign.econ.ImmigrationPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d10/CoreImmigrationPluginImpl_8java_source.html#l00363">363</a> of file <a class="el" href="../../d8/d10/CoreImmigrationPluginImpl_8java_source.html">CoreImmigrationPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  363</span>                                                              {</div>
-<div class="line"><span class="lineno">  364</span>        <span class="keywordtype">float</span> min = <a class="code hl_function" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#a04de9904cf15ef5697036cf91bb3803e">getWeightForMarketSize</a>(<a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf994083100285ade0c7b53353505e9c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af6f714c59a16687b5cde142091a54150">getSize</a>());</div>
-<div class="line"><span class="lineno">  365</span>        <span class="keywordtype">float</span> max = <a class="code hl_function" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#a04de9904cf15ef5697036cf91bb3803e">getWeightForMarketSize</a>(<a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf994083100285ade0c7b53353505e9c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af6f714c59a16687b5cde142091a54150">getSize</a>() + 1);</div>
-<div class="line"><span class="lineno">  366</span>        </div>
-<div class="line"><span class="lineno">  367</span>        <span class="keywordflow">return</span> points / (max - min);</div>
-<div class="line"><span class="lineno">  368</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="adb50f9e4bfa35b97f03f991597fff31c" name="adb50f9e4bfa35b97f03f991597fff31c"></a>
@@ -643,15 +365,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d10/CoreImmigrationPluginImpl_8java_source.html#l00317">317</a> of file <a class="el" href="../../d8/d10/CoreImmigrationPluginImpl_8java_source.html">CoreImmigrationPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  317</span>                                                                      {</div>
-<div class="line"><span class="lineno">  318</span>        <span class="keywordtype">float</span> hazMod = Math.round((<a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf994083100285ade0c7b53353505e9c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a7594998b4d8c5dd3682ce42582e1e3fc">getHazardValue</a>() - 1f) / <a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#af592dec7d9bcf7c67253ff0d4e297977">IMMIGRATION_PER_HAZARD</a>);</div>
-<div class="line"><span class="lineno">  319</span>        <span class="keywordflow">if</span> (hazMod &lt; 0) hazMod = 0;</div>
-<div class="line"><span class="lineno">  320</span>        <span class="keywordtype">float</span> hazardSizeMult = <a class="code hl_function" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#a35c24230e84b9f89b0f9a003e521d4ab">getImmigrationHazardPenaltySizeMult</a>(<a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf994083100285ade0c7b53353505e9c">market</a>);</div>
-<div class="line"><span class="lineno">  321</span>        <span class="keywordflow">return</span> -hazMod * hazardSizeMult; </div>
-<div class="line"><span class="lineno">  322</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl_html_af592dec7d9bcf7c67253ff0d4e297977"><div class="ttname"><a href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#af592dec7d9bcf7c67253ff0d4e297977">com.fs.starfarer.api.impl.campaign.population.CoreImmigrationPluginImpl.IMMIGRATION_PER_HAZARD</a></div><div class="ttdeci">static float IMMIGRATION_PER_HAZARD</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d10/CoreImmigrationPluginImpl_8java_source.html#l00020">CoreImmigrationPluginImpl.java:20</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a7594998b4d8c5dd3682ce42582e1e3fc"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a7594998b4d8c5dd3682ce42582e1e3fc">com.fs.starfarer.api.campaign.econ.MarketAPI.getHazardValue</a></div><div class="ttdeci">float getHazardValue()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a35c24230e84b9f89b0f9a003e521d4ab" name="a35c24230e84b9f89b0f9a003e521d4ab"></a>
@@ -679,12 +393,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d10/CoreImmigrationPluginImpl_8java_source.html#l00324">324</a> of file <a class="el" href="../../d8/d10/CoreImmigrationPluginImpl_8java_source.html">CoreImmigrationPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  324</span>                                                                              {</div>
-<div class="line"><span class="lineno">  325</span>        <span class="keywordtype">float</span> hazardSizeMult = 1f + (<a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf994083100285ade0c7b53353505e9c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af6f714c59a16687b5cde142091a54150">getSize</a>() - 3f) * <a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#a983ae0b108a412dd33f9256641540003">HAZARD_SIZE_MULT</a>;</div>
-<div class="line"><span class="lineno">  326</span>        <span class="keywordflow">return</span> hazardSizeMult; </div>
-<div class="line"><span class="lineno">  327</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl_html_a983ae0b108a412dd33f9256641540003"><div class="ttname"><a href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#a983ae0b108a412dd33f9256641540003">com.fs.starfarer.api.impl.campaign.population.CoreImmigrationPluginImpl.HAZARD_SIZE_MULT</a></div><div class="ttdeci">static float HAZARD_SIZE_MULT</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d10/CoreImmigrationPluginImpl_8java_source.html#l00021">CoreImmigrationPluginImpl.java:21</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a0525b4441fd6f7916d0dd97cec21504e" name="a0525b4441fd6f7916d0dd97cec21504e"></a>
@@ -706,13 +415,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d5/d71/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1ImmigrationPlugin.html#af16197e50811cad5656a63223a6bb466">com.fs.starfarer.api.campaign.econ.ImmigrationPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d10/CoreImmigrationPluginImpl_8java_source.html#l00356">356</a> of file <a class="el" href="../../d8/d10/CoreImmigrationPluginImpl_8java_source.html">CoreImmigrationPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  356</span>                                                                {</div>
-<div class="line"><span class="lineno">  357</span>        <span class="keywordtype">float</span> min = <a class="code hl_function" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#a04de9904cf15ef5697036cf91bb3803e">getWeightForMarketSize</a>(<a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf994083100285ade0c7b53353505e9c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af6f714c59a16687b5cde142091a54150">getSize</a>());</div>
-<div class="line"><span class="lineno">  358</span>        <span class="keywordtype">float</span> max = <a class="code hl_function" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#a04de9904cf15ef5697036cf91bb3803e">getWeightForMarketSize</a>(<a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf994083100285ade0c7b53353505e9c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af6f714c59a16687b5cde142091a54150">getSize</a>() + 1);</div>
-<div class="line"><span class="lineno">  359</span>        </div>
-<div class="line"><span class="lineno">  360</span>        <span class="keywordflow">return</span> (max - min) * fraction;</div>
-<div class="line"><span class="lineno">  361</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a04de9904cf15ef5697036cf91bb3803e" name="a04de9904cf15ef5697036cf91bb3803e"></a>
@@ -734,23 +437,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d5/d71/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1ImmigrationPlugin.html#a4060f0174af50e4528e9fee8953638cb">com.fs.starfarer.api.campaign.econ.ImmigrationPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d10/CoreImmigrationPluginImpl_8java_source.html#l00374">374</a> of file <a class="el" href="../../d8/d10/CoreImmigrationPluginImpl_8java_source.html">CoreImmigrationPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  374</span>                                                    {</div>
-<div class="line"><span class="lineno">  375</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf1b68ab29a707d89427e9f0fbd764f3">getWeightForMarketSizeStatic</a>(size);</div>
-<div class="line"><span class="lineno">  376</span><span class="comment">//      if (size &lt;= 1) return 100;</span></div>
-<div class="line"><span class="lineno">  377</span><span class="comment">//      if (size == 2) return 200;</span></div>
-<div class="line"><span class="lineno">  378</span><span class="comment">//      if (size == 3) return 400;</span></div>
-<div class="line"><span class="lineno">  379</span><span class="comment">//      if (size == 4) return 800;</span></div>
-<div class="line"><span class="lineno">  380</span><span class="comment">//      if (size == 5) return 1600;</span></div>
-<div class="line"><span class="lineno">  381</span><span class="comment">//      if (size == 6) return 3200;</span></div>
-<div class="line"><span class="lineno">  382</span><span class="comment">//      if (size == 7) return 6400;</span></div>
-<div class="line"><span class="lineno">  383</span><span class="comment">//      if (size == 8) return 12800;</span></div>
-<div class="line"><span class="lineno">  384</span><span class="comment">//      if (size == 9) return 25600;</span></div>
-<div class="line"><span class="lineno">  385</span><span class="comment">//      if (size == 10) return 51200;</span></div>
-<div class="line"><span class="lineno">  386</span><span class="comment">//      if (size == 11) return 102400;</span></div>
-<div class="line"><span class="lineno">  387</span><span class="comment">//      return 100000;</span></div>
-<div class="line"><span class="lineno">  388</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl_html_acf1b68ab29a707d89427e9f0fbd764f3"><div class="ttname"><a href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf1b68ab29a707d89427e9f0fbd764f3">com.fs.starfarer.api.impl.campaign.population.CoreImmigrationPluginImpl.getWeightForMarketSizeStatic</a></div><div class="ttdeci">static float getWeightForMarketSizeStatic(float size)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d10/CoreImmigrationPluginImpl_8java_source.html#l00370">CoreImmigrationPluginImpl.java:370</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="acf1b68ab29a707d89427e9f0fbd764f3" name="acf1b68ab29a707d89427e9f0fbd764f3"></a>
@@ -778,11 +465,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d10/CoreImmigrationPluginImpl_8java_source.html#l00370">370</a> of file <a class="el" href="../../d8/d10/CoreImmigrationPluginImpl_8java_source.html">CoreImmigrationPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  370</span>                                                                 {</div>
-<div class="line"><span class="lineno">  371</span>        <span class="comment">//return (float) (100f * Math.pow(2, size - 3));</span></div>
-<div class="line"><span class="lineno">  372</span>        <span class="keywordflow">return</span> (<span class="keywordtype">float</span>) (300f * Math.pow(2, size - 3));</div>
-<div class="line"><span class="lineno">  373</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa920c2cfcc50f3c1467b11d5f17768a4" name="aa920c2cfcc50f3c1467b11d5f17768a4"></a>
@@ -801,32 +484,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d10/CoreImmigrationPluginImpl_8java_source.html#l00129">129</a> of file <a class="el" href="../../d8/d10/CoreImmigrationPluginImpl_8java_source.html">CoreImmigrationPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  129</span>                                     {</div>
-<div class="line"><span class="lineno">  130</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf994083100285ade0c7b53353505e9c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af6f714c59a16687b5cde142091a54150">getSize</a>() &gt;= Misc.MAX_COLONY_SIZE || !<a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf994083100285ade0c7b53353505e9c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a64c3437824f8a05ba3e6dc8a8ab61e62">isPlayerOwned</a>()) {</div>
-<div class="line"><span class="lineno">  131</span>            <a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf994083100285ade0c7b53353505e9c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a034a81819aba6cb80a2c7c01bb112826">getPopulation</a>().<a class="code hl_function" href="../../df/dd7/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1PopulationComposition.html#a2c3f46d4dd5e72dd9b39fd708f752a36">setWeight</a>(<a class="code hl_function" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf1b68ab29a707d89427e9f0fbd764f3">getWeightForMarketSizeStatic</a>(<a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf994083100285ade0c7b53353505e9c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af6f714c59a16687b5cde142091a54150">getSize</a>()));</div>
-<div class="line"><span class="lineno">  132</span>            <a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf994083100285ade0c7b53353505e9c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a034a81819aba6cb80a2c7c01bb112826">getPopulation</a>().<a class="code hl_function" href="../../df/dd7/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1PopulationComposition.html#a360e45e0725201ca3f4b6e7a69c8ae7b">normalize</a>();</div>
-<div class="line"><span class="lineno">  133</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  134</span>        }</div>
-<div class="line"><span class="lineno">  135</span>        </div>
-<div class="line"><span class="lineno">  136</span>        <a class="code hl_function" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#aa920c2cfcc50f3c1467b11d5f17768a4">increaseMarketSize</a>(<a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf994083100285ade0c7b53353505e9c">market</a>);</div>
-<div class="line"><span class="lineno">  137</span>        </div>
-<div class="line"><span class="lineno">  138</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf994083100285ade0c7b53353505e9c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a64c3437824f8a05ba3e6dc8a8ab61e62">isPlayerOwned</a>()) {</div>
-<div class="line"><span class="lineno">  139</span>            MessageIntel intel = <span class="keyword">new</span> MessageIntel(<span class="stringliteral">&quot;Colony Growth - &quot;</span> + <a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf994083100285ade0c7b53353505e9c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a7e5b6e8035c61f63cd8b331df994233b">getName</a>(), Misc.getBasePlayerColor());</div>
-<div class="line"><span class="lineno">  140</span>            intel.addLine(BaseIntelPlugin.BULLET + <span class="stringliteral">&quot;Size increased to %s&quot;</span>,</div>
-<div class="line"><span class="lineno">  141</span>                    Misc.getTextColor(), </div>
-<div class="line"><span class="lineno">  142</span>                    <span class="keyword">new</span> String[] {<span class="stringliteral">&quot;&quot;</span> + (int)Math.round(market.getSize())},</div>
-<div class="line"><span class="lineno">  143</span>                    Misc.getHighlightColor());</div>
-<div class="line"><span class="lineno">  144</span>            </div>
-<div class="line"><span class="lineno">  145</span>            intel.setIcon(Global.getSector().getPlayerFaction().getCrest());</div>
-<div class="line"><span class="lineno">  146</span>            intel.setSound(BaseIntelPlugin.getSoundMajorPosting());</div>
-<div class="line"><span class="lineno">  147</span>            Global.getSector().getCampaignUI().addMessage(intel, MessageClickAction.COLONY_INFO, <a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf994083100285ade0c7b53353505e9c">market</a>);</div>
-<div class="line"><span class="lineno">  148</span>        }</div>
-<div class="line"><span class="lineno">  149</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1PopulationComposition_html_a2c3f46d4dd5e72dd9b39fd708f752a36"><div class="ttname"><a href="../../df/dd7/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1PopulationComposition.html#a2c3f46d4dd5e72dd9b39fd708f752a36">com.fs.starfarer.api.impl.campaign.population.PopulationComposition.setWeight</a></div><div class="ttdeci">void setWeight(float weight)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d23/PopulationComposition_8java_source.html#l00104">PopulationComposition.java:104</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1PopulationComposition_html_a360e45e0725201ca3f4b6e7a69c8ae7b"><div class="ttname"><a href="../../df/dd7/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1PopulationComposition.html#a360e45e0725201ca3f4b6e7a69c8ae7b">com.fs.starfarer.api.impl.campaign.population.PopulationComposition.normalize</a></div><div class="ttdeci">void normalize()</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d23/PopulationComposition_8java_source.html#l00123">PopulationComposition.java:123</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a64c3437824f8a05ba3e6dc8a8ab61e62"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a64c3437824f8a05ba3e6dc8a8ab61e62">com.fs.starfarer.api.campaign.econ.MarketAPI.isPlayerOwned</a></div><div class="ttdeci">boolean isPlayerOwned()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a7e5b6e8035c61f63cd8b331df994233b"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a7e5b6e8035c61f63cd8b331df994233b">com.fs.starfarer.api.campaign.econ.MarketAPI.getName</a></div><div class="ttdeci">String getName()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9b1453f524322ccfe9e8799bee99d6c5" name="a9b1453f524322ccfe9e8799bee99d6c5"></a>
@@ -854,29 +512,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d10/CoreImmigrationPluginImpl_8java_source.html#l00151">151</a> of file <a class="el" href="../../d8/d10/CoreImmigrationPluginImpl_8java_source.html">CoreImmigrationPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  151</span>                                                            {</div>
-<div class="line"><span class="lineno">  152</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf994083100285ade0c7b53353505e9c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af6f714c59a16687b5cde142091a54150">getSize</a>() &gt;= Misc.MAX_COLONY_SIZE) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  153</span>        </div>
-<div class="line"><span class="lineno">  154</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt;= 10; i++) {</div>
-<div class="line"><span class="lineno">  155</span>            <a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf994083100285ade0c7b53353505e9c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#ae754a2d0cbea2bbf5b54684e47966efd">removeCondition</a>(<span class="stringliteral">&quot;population_&quot;</span> + i);</div>
-<div class="line"><span class="lineno">  156</span>        }</div>
-<div class="line"><span class="lineno">  157</span>        <a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf994083100285ade0c7b53353505e9c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#ae754a2d0cbea2bbf5b54684e47966efd">removeCondition</a>(<span class="stringliteral">&quot;population_&quot;</span> + <a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf994083100285ade0c7b53353505e9c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af6f714c59a16687b5cde142091a54150">getSize</a>());</div>
-<div class="line"><span class="lineno">  158</span>        <a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf994083100285ade0c7b53353505e9c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#ab83e76a338104a130f716183d8896b1f">addCondition</a>(<span class="stringliteral">&quot;population_&quot;</span> + (<a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf994083100285ade0c7b53353505e9c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af6f714c59a16687b5cde142091a54150">getSize</a>() + 1));</div>
-<div class="line"><span class="lineno">  159</span>        </div>
-<div class="line"><span class="lineno">  160</span>        <a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf994083100285ade0c7b53353505e9c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a0f2b68c27fa525a4ef0709c478d8e2a6">setSize</a>(<a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf994083100285ade0c7b53353505e9c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af6f714c59a16687b5cde142091a54150">getSize</a>() + 1);</div>
-<div class="line"><span class="lineno">  161</span>        <a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf994083100285ade0c7b53353505e9c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a17380de7f1b5fb4891c626cfebd5c1cb">reapplyConditions</a>();</div>
-<div class="line"><span class="lineno">  162</span>        <a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf994083100285ade0c7b53353505e9c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#ae927a906b172c44b36884fb5bd9d1961">reapplyIndustries</a>();</div>
-<div class="line"><span class="lineno">  163</span>        </div>
-<div class="line"><span class="lineno">  164</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf994083100285ade0c7b53353505e9c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af6f714c59a16687b5cde142091a54150">getSize</a>() &gt;= Misc.MAX_COLONY_SIZE) {</div>
-<div class="line"><span class="lineno">  165</span>            <a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf994083100285ade0c7b53353505e9c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a50428bb4356602db3a4eae24200d2831">setImmigrationIncentivesOn</a>(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  166</span>        }</div>
-<div class="line"><span class="lineno">  167</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a0f2b68c27fa525a4ef0709c478d8e2a6"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a0f2b68c27fa525a4ef0709c478d8e2a6">com.fs.starfarer.api.campaign.econ.MarketAPI.setSize</a></div><div class="ttdeci">void setSize(int size)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a17380de7f1b5fb4891c626cfebd5c1cb"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a17380de7f1b5fb4891c626cfebd5c1cb">com.fs.starfarer.api.campaign.econ.MarketAPI.reapplyConditions</a></div><div class="ttdeci">void reapplyConditions()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_ab83e76a338104a130f716183d8896b1f"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#ab83e76a338104a130f716183d8896b1f">com.fs.starfarer.api.campaign.econ.MarketAPI.addCondition</a></div><div class="ttdeci">String addCondition(String id)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_ae754a2d0cbea2bbf5b54684e47966efd"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#ae754a2d0cbea2bbf5b54684e47966efd">com.fs.starfarer.api.campaign.econ.MarketAPI.removeCondition</a></div><div class="ttdeci">void removeCondition(String id)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_ae927a906b172c44b36884fb5bd9d1961"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#ae927a906b172c44b36884fb5bd9d1961">com.fs.starfarer.api.campaign.econ.MarketAPI.reapplyIndustries</a></div><div class="ttdeci">void reapplyIndustries()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab33841b0c5809ed2c9d91c4eb445d936" name="ab33841b0c5809ed2c9d91c4eb445d936"></a>
@@ -904,23 +540,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d10/CoreImmigrationPluginImpl_8java_source.html#l00169">169</a> of file <a class="el" href="../../d8/d10/CoreImmigrationPluginImpl_8java_source.html">CoreImmigrationPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  169</span>                                                          {</div>
-<div class="line"><span class="lineno">  170</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf994083100285ade0c7b53353505e9c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af6f714c59a16687b5cde142091a54150">getSize</a>() &lt;= 3) {</div>
-<div class="line"><span class="lineno">  171</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  172</span>        }</div>
-<div class="line"><span class="lineno">  173</span>        </div>
-<div class="line"><span class="lineno">  174</span>        <a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf994083100285ade0c7b53353505e9c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#ae754a2d0cbea2bbf5b54684e47966efd">removeCondition</a>(<span class="stringliteral">&quot;population_&quot;</span> + <a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf994083100285ade0c7b53353505e9c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af6f714c59a16687b5cde142091a54150">getSize</a>());</div>
-<div class="line"><span class="lineno">  175</span>        <a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf994083100285ade0c7b53353505e9c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#ab83e76a338104a130f716183d8896b1f">addCondition</a>(<span class="stringliteral">&quot;population_&quot;</span> + (<a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf994083100285ade0c7b53353505e9c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af6f714c59a16687b5cde142091a54150">getSize</a>() - 1));</div>
-<div class="line"><span class="lineno">  176</span>        </div>
-<div class="line"><span class="lineno">  177</span>        <a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf994083100285ade0c7b53353505e9c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a0f2b68c27fa525a4ef0709c478d8e2a6">setSize</a>(<a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf994083100285ade0c7b53353505e9c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af6f714c59a16687b5cde142091a54150">getSize</a>() - 1);</div>
-<div class="line"><span class="lineno">  178</span>        </div>
-<div class="line"><span class="lineno">  179</span>        <a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf994083100285ade0c7b53353505e9c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a034a81819aba6cb80a2c7c01bb112826">getPopulation</a>().<a class="code hl_function" href="../../df/dd7/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1PopulationComposition.html#a2c3f46d4dd5e72dd9b39fd708f752a36">setWeight</a>(<a class="code hl_function" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf1b68ab29a707d89427e9f0fbd764f3">getWeightForMarketSizeStatic</a>(<a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf994083100285ade0c7b53353505e9c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af6f714c59a16687b5cde142091a54150">getSize</a>()));</div>
-<div class="line"><span class="lineno">  180</span>        <a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf994083100285ade0c7b53353505e9c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a034a81819aba6cb80a2c7c01bb112826">getPopulation</a>().<a class="code hl_function" href="../../df/dd7/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1PopulationComposition.html#a360e45e0725201ca3f4b6e7a69c8ae7b">normalize</a>();</div>
-<div class="line"><span class="lineno">  181</span>        </div>
-<div class="line"><span class="lineno">  182</span>        <a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf994083100285ade0c7b53353505e9c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a17380de7f1b5fb4891c626cfebd5c1cb">reapplyConditions</a>();</div>
-<div class="line"><span class="lineno">  183</span>        <a class="code hl_variable" href="../../dd/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html#acf994083100285ade0c7b53353505e9c">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#ae927a906b172c44b36884fb5bd9d1961">reapplyIndustries</a>();</div>
-<div class="line"><span class="lineno">  184</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

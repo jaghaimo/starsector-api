@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -160,69 +161,7 @@ Static Public Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../de/d64/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1TerrainGenPlugin.html#aca9a5ae2809f5b40f3ed01e5a4fc6242">com.fs.starfarer.api.impl.campaign.procgen.TerrainGenPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d1a/NebulaSmallGenPlugin_8java_source.html#l00019">19</a> of file <a class="el" href="../../d5/d1a/NebulaSmallGenPlugin_8java_source.html">NebulaSmallGenPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   19</span>                                                                                  {</div>
-<div class="line"><span class="lineno">   20</span>        <span class="keywordflow">if</span> (context.lagrangeParent == <span class="keyword">null</span> || context.lagrangePointType == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   21</span>        </div>
-<div class="line"><span class="lineno">   22</span>        <span class="comment">//System.out.println(&quot;GENERATING L-POINT NEBULA AT &quot; + context.star.getId());</span></div>
-<div class="line"><span class="lineno">   23</span>        </div>
-<div class="line"><span class="lineno">   24</span>        SectorEntityToken parent = context.center;</div>
-<div class="line"><span class="lineno">   25</span>        <span class="keywordflow">if</span> (context.parent != <span class="keyword">null</span>) parent = context.parent;</div>
-<div class="line"><span class="lineno">   26</span>        <span class="keywordflow">if</span> (context.lagrangeParent != <span class="keyword">null</span>) parent = context.center;</div>
-<div class="line"><span class="lineno">   27</span>        </div>
-<div class="line"><span class="lineno">   28</span>        </div>
-<div class="line"><span class="lineno">   29</span>        WeightedRandomPicker&lt;Integer&gt; sizePicker = <span class="keyword">new</span> WeightedRandomPicker&lt;Integer&gt;(StarSystemGenerator.random);</div>
-<div class="line"><span class="lineno">   30</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 5; i &lt;= 15; i++) {</div>
-<div class="line"><span class="lineno">   31</span>            sizePicker.add(i, 20 - i);</div>
-<div class="line"><span class="lineno">   32</span>        }</div>
-<div class="line"><span class="lineno">   33</span>        </div>
-<div class="line"><span class="lineno">   34</span>        <span class="keywordtype">int</span> size = sizePicker.pick();</div>
-<div class="line"><span class="lineno">   35</span>        <span class="comment">//size = 100;</span></div>
-<div class="line"><span class="lineno">   36</span>        <span class="keywordtype">float</span> radius = NebulaTerrainPlugin.TILE_SIZE * (float) size / 2f;</div>
-<div class="line"><span class="lineno">   37</span>        </div>
-<div class="line"><span class="lineno">   38</span>        StarSystemAPI system = context.system;</div>
-<div class="line"><span class="lineno">   39</span>        <span class="keywordtype">float</span> orbitRadius = context.currentRadius + radius;</div>
-<div class="line"><span class="lineno">   40</span>        </div>
-<div class="line"><span class="lineno">   41</span>        <span class="keywordtype">float</span> orbitDays = orbitRadius / (20f + StarSystemGenerator.random.nextFloat() * 5f);</div>
-<div class="line"><span class="lineno">   42</span>        <span class="keywordtype">float</span> angle = StarSystemGenerator.random.nextFloat() * 360f;</div>
-<div class="line"><span class="lineno">   43</span>        <span class="keywordflow">if</span> (context.lagrangeParent != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   44</span>            orbitRadius = context.lagrangeParent.orbitRadius;</div>
-<div class="line"><span class="lineno">   45</span>            orbitDays = context.lagrangeParent.orbitDays;</div>
-<div class="line"><span class="lineno">   46</span>            <span class="keywordtype">float</span> angleOffset = -StarSystemGenerator.LAGRANGE_OFFSET;</div>
-<div class="line"><span class="lineno">   47</span>            <span class="keywordflow">if</span> (context.lagrangePointType == LagrangePointType.L5) angleOffset = StarSystemGenerator.LAGRANGE_OFFSET;</div>
-<div class="line"><span class="lineno">   48</span>            angle = context.lagrangeParent.orbitAngle + angleOffset;</div>
-<div class="line"><span class="lineno">   49</span>        }</div>
-<div class="line"><span class="lineno">   50</span>        </div>
-<div class="line"><span class="lineno">   51</span>        <span class="keywordflow">if</span> (radius &gt; orbitRadius * 0.5f) {</div>
-<div class="line"><span class="lineno">   52</span>            radius = orbitRadius * 0.5f;</div>
-<div class="line"><span class="lineno">   53</span>        }</div>
-<div class="line"><span class="lineno">   54</span>        </div>
-<div class="line"><span class="lineno">   55</span>        StringBuilder sb = <span class="keyword">new</span> StringBuilder();</div>
-<div class="line"><span class="lineno">   56</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; size * size; i++) {</div>
-<div class="line"><span class="lineno">   57</span>            sb.append(<span class="stringliteral">&quot;x&quot;</span>);</div>
-<div class="line"><span class="lineno">   58</span>        }</div>
-<div class="line"><span class="lineno">   59</span>        String initStr = sb.toString();</div>
-<div class="line"><span class="lineno">   60</span>        </div>
-<div class="line"><span class="lineno">   61</span>        String nebulaType = StarSystemGenerator.nebulaTypes.get(context.gen.getStarAge());</div>
-<div class="line"><span class="lineno">   62</span>        </div>
-<div class="line"><span class="lineno">   63</span>        SectorEntityToken nebula = system.addTerrain(Terrain.NEBULA, <span class="keyword">new</span> BaseTiledTerrain.TileParams(</div>
-<div class="line"><span class="lineno">   64</span>                initStr,</div>
-<div class="line"><span class="lineno">   65</span>                size, size, <span class="comment">// size of the nebula grid, should match above string</span></div>
-<div class="line"><span class="lineno">   66</span>                <span class="stringliteral">&quot;terrain&quot;</span>, nebulaType, 4, 4, <span class="keyword">null</span>));</div>
-<div class="line"><span class="lineno">   67</span>        nebula.setCircularOrbit(parent, angle, orbitRadius, orbitDays);</div>
-<div class="line"><span class="lineno">   68</span>        </div>
-<div class="line"><span class="lineno">   69</span>        NebulaTerrainPlugin nebulaPlugin = (NebulaTerrainPlugin)((CampaignTerrainAPI)nebula).getPlugin();</div>
-<div class="line"><span class="lineno">   70</span>        NebulaEditor editor = <span class="keyword">new</span> NebulaEditor(nebulaPlugin);</div>
-<div class="line"><span class="lineno">   71</span>        </div>
-<div class="line"><span class="lineno">   72</span>        editor.noisePrune(0.75f);</div>
-<div class="line"><span class="lineno">   73</span>        editor.clearArc(nebula.getLocation().x, nebula.getLocation().y, radius * 0.8f, radius * 3f, 0, 360f);</div>
-<div class="line"><span class="lineno">   74</span>        </div>
-<div class="line"><span class="lineno">   75</span>        GenResult result = <span class="keyword">new</span> GenResult();</div>
-<div class="line"><span class="lineno">   76</span>        result.onlyIncrementByWidth = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   77</span>        result.orbitalWidth = radius * 2f;</div>
-<div class="line"><span class="lineno">   78</span>        result.entities.add(nebula);</div>
-<div class="line"><span class="lineno">   79</span>        <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">   80</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae712efea1ee991c80267571a6582d79a" name="ae712efea1ee991c80267571a6582d79a"></a>
@@ -254,10 +193,7 @@ Static Public Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../de/d64/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1TerrainGenPlugin.html#a25af793d3d41b4dac5d49cf983293188">com.fs.starfarer.api.impl.campaign.procgen.TerrainGenPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d1a/NebulaSmallGenPlugin_8java_source.html#l00082">82</a> of file <a class="el" href="../../d5/d1a/NebulaSmallGenPlugin_8java_source.html">NebulaSmallGenPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   82</span>                                                                                     {</div>
-<div class="line"><span class="lineno">   83</span>        <span class="keywordflow">return</span> terrainData != <span class="keyword">null</span> &amp;&amp; terrainData.getId().equals(<span class="stringliteral">&quot;nebula_small&quot;</span>);</div>
-<div class="line"><span class="lineno">   84</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

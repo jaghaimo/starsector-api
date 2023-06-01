@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -223,33 +224,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d25/HistorianData_8java_source.html#l00071">71</a> of file <a class="el" href="../../d8/d25/HistorianData_8java_source.html">HistorianData.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   71</span>                           {</div>
-<div class="line"><span class="lineno">   72</span>        <a class="code hl_variable" href="../../d7/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#a5f4d3d45339a75e0baa7b4cf045a4e51">person</a> = Global.getSector().<a class="code hl_function" href="../../d9/df0/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#aad58bbad15a1cf74cd9203af72f9a2d6">getFaction</a>(Factions.INDEPENDENT).<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#aaf61f79ed3cf41528798d36c81a43801">createRandomPerson</a>();</div>
-<div class="line"><span class="lineno">   73</span>        </div>
-<div class="line"><span class="lineno">   74</span>        <span class="comment">// Diana Nesinjo</span></div>
-<div class="line"><span class="lineno">   75</span>        <span class="comment">// Jonn Isaaneid</span></div>
-<div class="line"><span class="lineno">   76</span>        </div>
-<div class="line"><span class="lineno">   77</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d7/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#a5f4d3d45339a75e0baa7b4cf045a4e51">person</a>.<a class="code hl_function" href="../../d9/df0/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#ae570defd266826457f552329af959bfd">getGender</a>() == Gender.MALE) {</div>
-<div class="line"><span class="lineno">   78</span>            <a class="code hl_variable" href="../../d7/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#a5f4d3d45339a75e0baa7b4cf045a4e51">person</a>.<a class="code hl_function" href="../../d9/df0/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#a3b830aaa56c0583e657faa94f9c609dd">setPortraitSprite</a>(Global.getSettings().getSpriteName(<span class="stringliteral">&quot;intel&quot;</span>, <span class="stringliteral">&quot;historian_male&quot;</span>));</div>
-<div class="line"><span class="lineno">   79</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   80</span>            <a class="code hl_variable" href="../../d7/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#a5f4d3d45339a75e0baa7b4cf045a4e51">person</a>.<a class="code hl_function" href="../../d9/df0/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#a3b830aaa56c0583e657faa94f9c609dd">setPortraitSprite</a>(Global.getSettings().getSpriteName(<span class="stringliteral">&quot;intel&quot;</span>, <span class="stringliteral">&quot;historian_female&quot;</span>));</div>
-<div class="line"><span class="lineno">   81</span>        }</div>
-<div class="line"><span class="lineno">   82</span>        </div>
-<div class="line"><span class="lineno">   83</span><span class="comment">//      creators.add(new DonationOfferCreator());</span></div>
-<div class="line"><span class="lineno">   84</span><span class="comment">//      creators.add(new ShipBlueprintOfferCreator(20f));</span></div>
-<div class="line"><span class="lineno">   85</span><span class="comment">//      creators.add(new WeaponBlueprintOfferCreator(10f));</span></div>
-<div class="line"><span class="lineno">   86</span><span class="comment">//      creators.add(new FighterBlueprintOfferCreator(10f));</span></div>
-<div class="line"><span class="lineno">   87</span><span class="comment">//      creators.add(new SpecialItemOfferCreator(10f));</span></div>
-<div class="line"><span class="lineno">   88</span>        <a class="code hl_function" href="../../d7/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#a677d3fe1d95969b18dcf232ff3204018">readResolve</a>();</div>
-<div class="line"><span class="lineno">   89</span>        <span class="comment">//HistorianBackstory.init(backstory);</span></div>
-<div class="line"><span class="lineno">   90</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData_html_a5f4d3d45339a75e0baa7b4cf045a4e51"><div class="ttname"><a href="../../d7/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#a5f4d3d45339a75e0baa7b4cf045a4e51">com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.HistorianData.person</a></div><div class="ttdeci">PersonAPI person</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d25/HistorianData_8java_source.html#l00060">HistorianData.java:60</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData_html_a677d3fe1d95969b18dcf232ff3204018"><div class="ttname"><a href="../../d7/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#a677d3fe1d95969b18dcf232ff3204018">com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.HistorianData.readResolve</a></div><div class="ttdeci">Object readResolve()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d25/HistorianData_8java_source.html#l00092">HistorianData.java:92</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI_html_aaf61f79ed3cf41528798d36c81a43801"><div class="ttname"><a href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#aaf61f79ed3cf41528798d36c81a43801">com.fs.starfarer.api.campaign.FactionAPI.createRandomPerson</a></div><div class="ttdeci">PersonAPI createRandomPerson()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI_html_a3b830aaa56c0583e657faa94f9c609dd"><div class="ttname"><a href="../../d9/df0/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#a3b830aaa56c0583e657faa94f9c609dd">com.fs.starfarer.api.characters.PersonAPI.setPortraitSprite</a></div><div class="ttdeci">void setPortraitSprite(String portraitSprite)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI_html_aad58bbad15a1cf74cd9203af72f9a2d6"><div class="ttname"><a href="../../d9/df0/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#aad58bbad15a1cf74cd9203af72f9a2d6">com.fs.starfarer.api.characters.PersonAPI.getFaction</a></div><div class="ttdeci">FactionAPI getFaction()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI_html_ae570defd266826457f552329af959bfd"><div class="ttname"><a href="../../d9/df0/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#ae570defd266826457f552329af959bfd">com.fs.starfarer.api.characters.PersonAPI.getGender</a></div><div class="ttdeci">Gender getGender()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -269,11 +244,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d25/HistorianData_8java_source.html#l00129">129</a> of file <a class="el" href="../../d8/d25/HistorianData_8java_source.html">HistorianData.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  129</span>                                                       {</div>
-<div class="line"><span class="lineno">  130</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d7/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#a69f209e4ae4e9cc50263f9489578d09d">backstory</a>;</div>
-<div class="line"><span class="lineno">  131</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData_html_a69f209e4ae4e9cc50263f9489578d09d"><div class="ttname"><a href="../../d7/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#a69f209e4ae4e9cc50263f9489578d09d">com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.HistorianData.backstory</a></div><div class="ttdeci">transient List&lt; HistorianBackstoryInfo &gt; backstory</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d25/HistorianData_8java_source.html#l00067">HistorianData.java:67</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2a6e639b48d28013c13a1147c1287ea4" name="a2a6e639b48d28013c13a1147c1287ea4"></a>
@@ -292,11 +263,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d25/HistorianData_8java_source.html#l00179">179</a> of file <a class="el" href="../../d8/d25/HistorianData_8java_source.html">HistorianData.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  179</span>                                                     {</div>
-<div class="line"><span class="lineno">  180</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d7/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#a3fe5680f149c9c002bc879259dff3cce">creators</a>;</div>
-<div class="line"><span class="lineno">  181</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData_html_a3fe5680f149c9c002bc879259dff3cce"><div class="ttname"><a href="../../d7/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#a3fe5680f149c9c002bc879259dff3cce">com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.HistorianData.creators</a></div><div class="ttdeci">transient List&lt; HistorianOfferCreator &gt; creators</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d25/HistorianData_8java_source.html#l00066">HistorianData.java:66</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="accfd8f58b3489fc39877704f68aa91c1" name="accfd8f58b3489fc39877704f68aa91c1"></a>
@@ -315,11 +282,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d25/HistorianData_8java_source.html#l00137">137</a> of file <a class="el" href="../../d8/d25/HistorianData_8java_source.html">HistorianData.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  137</span>                                        {</div>
-<div class="line"><span class="lineno">  138</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d7/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#a11d58213e7d390f8e9df4a9e296510bd">givenOffers</a>;</div>
-<div class="line"><span class="lineno">  139</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData_html_a11d58213e7d390f8e9df4a9e296510bd"><div class="ttname"><a href="../../d7/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#a11d58213e7d390f8e9df4a9e296510bd">com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.HistorianData.givenOffers</a></div><div class="ttdeci">Set&lt; String &gt; givenOffers</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d25/HistorianData_8java_source.html#l00069">HistorianData.java:69</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa548cbd8e06f98e7fee45b9b83ac2cce" name="aa548cbd8e06f98e7fee45b9b83ac2cce"></a>
@@ -346,14 +309,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d25/HistorianData_8java_source.html#l00250">250</a> of file <a class="el" href="../../d8/d25/HistorianData_8java_source.html">HistorianData.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  250</span>                                  {</div>
-<div class="line"><span class="lineno">  251</span>        String heOrShe = <span class="stringliteral">&quot;he&quot;</span>;</div>
-<div class="line"><span class="lineno">  252</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d7/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#a5f4d3d45339a75e0baa7b4cf045a4e51">person</a>.<a class="code hl_function" href="../../d9/df0/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#ae570defd266826457f552329af959bfd">getGender</a>() == Gender.FEMALE) {</div>
-<div class="line"><span class="lineno">  253</span>            heOrShe = <span class="stringliteral">&quot;she&quot;</span>;</div>
-<div class="line"><span class="lineno">  254</span>        }</div>
-<div class="line"><span class="lineno">  255</span>        <span class="keywordflow">return</span> heOrShe;</div>
-<div class="line"><span class="lineno">  256</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aff965720a19eaa677f2b056a260a3b63" name="aff965720a19eaa677f2b056a260a3b63"></a>
@@ -380,14 +336,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d25/HistorianData_8java_source.html#l00258">258</a> of file <a class="el" href="../../d8/d25/HistorianData_8java_source.html">HistorianData.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  258</span>                                   {</div>
-<div class="line"><span class="lineno">  259</span>        String himOrHer = <span class="stringliteral">&quot;him&quot;</span>;</div>
-<div class="line"><span class="lineno">  260</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d7/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#a5f4d3d45339a75e0baa7b4cf045a4e51">person</a>.<a class="code hl_function" href="../../d9/df0/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#ae570defd266826457f552329af959bfd">getGender</a>() == Gender.FEMALE) {</div>
-<div class="line"><span class="lineno">  261</span>            himOrHer = <span class="stringliteral">&quot;her&quot;</span>;</div>
-<div class="line"><span class="lineno">  262</span>        }</div>
-<div class="line"><span class="lineno">  263</span>        <span class="keywordflow">return</span> himOrHer;</div>
-<div class="line"><span class="lineno">  264</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a46bb94d73fa3f1865d0c5e4402e33537" name="a46bb94d73fa3f1865d0c5e4402e33537"></a>
@@ -414,14 +363,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d25/HistorianData_8java_source.html#l00266">266</a> of file <a class="el" href="../../d8/d25/HistorianData_8java_source.html">HistorianData.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  266</span>                                       {</div>
-<div class="line"><span class="lineno">  267</span>        String himOrHer = <span class="stringliteral">&quot;himself&quot;</span>;</div>
-<div class="line"><span class="lineno">  268</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d7/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#a5f4d3d45339a75e0baa7b4cf045a4e51">person</a>.<a class="code hl_function" href="../../d9/df0/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#ae570defd266826457f552329af959bfd">getGender</a>() == Gender.FEMALE) {</div>
-<div class="line"><span class="lineno">  269</span>            himOrHer = <span class="stringliteral">&quot;herself&quot;</span>;</div>
-<div class="line"><span class="lineno">  270</span>        }</div>
-<div class="line"><span class="lineno">  271</span>        <span class="keywordflow">return</span> himOrHer;</div>
-<div class="line"><span class="lineno">  272</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac94953c19c7f1c1cef03330917628c29" name="ac94953c19c7f1c1cef03330917628c29"></a>
@@ -448,14 +390,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d25/HistorianData_8java_source.html#l00274">274</a> of file <a class="el" href="../../d8/d25/HistorianData_8java_source.html">HistorianData.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  274</span>                                   {</div>
-<div class="line"><span class="lineno">  275</span>        String hisOrHer = <span class="stringliteral">&quot;his&quot;</span>;</div>
-<div class="line"><span class="lineno">  276</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d7/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#a5f4d3d45339a75e0baa7b4cf045a4e51">person</a>.<a class="code hl_function" href="../../d9/df0/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#ae570defd266826457f552329af959bfd">getGender</a>() == Gender.FEMALE) {</div>
-<div class="line"><span class="lineno">  277</span>            hisOrHer = <span class="stringliteral">&quot;her&quot;</span>;</div>
-<div class="line"><span class="lineno">  278</span>        }</div>
-<div class="line"><span class="lineno">  279</span>        <span class="keywordflow">return</span> hisOrHer;</div>
-<div class="line"><span class="lineno">  280</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab686ebe480905b290b826192c8261207" name="ab686ebe480905b290b826192c8261207"></a>
@@ -482,17 +417,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d25/HistorianData_8java_source.html#l00051">51</a> of file <a class="el" href="../../d8/d25/HistorianData_8java_source.html">HistorianData.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   51</span>                                              {</div>
-<div class="line"><span class="lineno">   52</span>        Object test = Global.getSector().getMemoryWithoutUpdate().get(<a class="code hl_variable" href="../../d7/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#ae824ee396c9b7c755c64722d88e63afe">KEY</a>);</div>
-<div class="line"><span class="lineno">   53</span>        <span class="keywordflow">if</span> (test == <span class="keyword">null</span>) {<span class="comment">// || true) {</span></div>
-<div class="line"><span class="lineno">   54</span>            test = <span class="keyword">new</span> <a class="code hl_function" href="../../d7/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#a8aa7cb9b64ae249449e79697aef0144d">HistorianData</a>();</div>
-<div class="line"><span class="lineno">   55</span>            Global.getSector().getMemoryWithoutUpdate().set(<a class="code hl_variable" href="../../d7/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#ae824ee396c9b7c755c64722d88e63afe">KEY</a>, test);</div>
-<div class="line"><span class="lineno">   56</span>        }</div>
-<div class="line"><span class="lineno">   57</span>        <span class="keywordflow">return</span> (<a class="code hl_function" href="../../d7/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#a8aa7cb9b64ae249449e79697aef0144d">HistorianData</a>) test; </div>
-<div class="line"><span class="lineno">   58</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData_html_a8aa7cb9b64ae249449e79697aef0144d"><div class="ttname"><a href="../../d7/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#a8aa7cb9b64ae249449e79697aef0144d">com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.HistorianData.HistorianData</a></div><div class="ttdeci">HistorianData()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d25/HistorianData_8java_source.html#l00071">HistorianData.java:71</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData_html_ae824ee396c9b7c755c64722d88e63afe"><div class="ttname"><a href="../../d7/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#ae824ee396c9b7c755c64722d88e63afe">com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.HistorianData.KEY</a></div><div class="ttdeci">static final String KEY</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d25/HistorianData_8java_source.html#l00045">HistorianData.java:45</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a678ce349df3b5b19e17f5846a7ea17a9" name="a678ce349df3b5b19e17f5846a7ea17a9"></a>
@@ -519,12 +444,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d25/HistorianData_8java_source.html#l00237">237</a> of file <a class="el" href="../../d8/d25/HistorianData_8java_source.html">HistorianData.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  237</span>                                     {</div>
-<div class="line"><span class="lineno">  238</span>        String manOrWoman = <span class="stringliteral">&quot;man&quot;</span>;</div>
-<div class="line"><span class="lineno">  239</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d7/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#a5f4d3d45339a75e0baa7b4cf045a4e51">person</a>.<a class="code hl_function" href="../../d9/df0/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#ae570defd266826457f552329af959bfd">getGender</a>() == Gender.FEMALE) manOrWoman = <span class="stringliteral">&quot;woman&quot;</span>;</div>
-<div class="line"><span class="lineno">  240</span>        <span class="keywordflow">return</span> manOrWoman;</div>
-<div class="line"><span class="lineno">  241</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a233f00c7b700ce3c78f7cddf6def7091" name="a233f00c7b700ce3c78f7cddf6def7091"></a>
@@ -554,53 +474,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d25/HistorianData_8java_source.html#l00187">187</a> of file <a class="el" href="../../d8/d25/HistorianData_8java_source.html">HistorianData.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  187</span>                                                                                      {</div>
-<div class="line"><span class="lineno">  188</span>        <span class="comment">//random = new Random();</span></div>
-<div class="line"><span class="lineno">  189</span>        </div>
-<div class="line"><span class="lineno">  190</span>        WeightedRandomPicker&lt;HistorianOfferCreator&gt; limited = <span class="keyword">new</span> WeightedRandomPicker&lt;HistorianOfferCreator&gt;(random);</div>
-<div class="line"><span class="lineno">  191</span>        List&lt;HistorianOffer&gt; always = <span class="keyword">new</span> ArrayList&lt;HistorianOffer&gt;();</div>
-<div class="line"><span class="lineno">  192</span>        </div>
-<div class="line"><span class="lineno">  193</span>        <span class="keywordflow">for</span> (HistorianOfferCreator c : <a class="code hl_variable" href="../../d7/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#a3fe5680f149c9c002bc879259dff3cce">creators</a>) {</div>
-<div class="line"><span class="lineno">  194</span>            <span class="keywordflow">if</span> (c.ignoresLimit()) { </div>
-<div class="line"><span class="lineno">  195</span>                HistorianOffer offer = c.createOffer(random, always);</div>
-<div class="line"><span class="lineno">  196</span>                <span class="keywordflow">if</span> (offer != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  197</span>                    offer.setCreator(c);</div>
-<div class="line"><span class="lineno">  198</span>                    always.add(offer);</div>
-<div class="line"><span class="lineno">  199</span>                }</div>
-<div class="line"><span class="lineno">  200</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  201</span>                limited.add(c, c.getFrequency());</div>
-<div class="line"><span class="lineno">  202</span>            }</div>
-<div class="line"><span class="lineno">  203</span>        }</div>
-<div class="line"><span class="lineno">  204</span>        </div>
-<div class="line"><span class="lineno">  205</span>        List&lt;HistorianOffer&gt; result = <span class="keyword">new</span> ArrayList&lt;HistorianOffer&gt;(always);</div>
-<div class="line"><span class="lineno">  206</span>        </div>
-<div class="line"><span class="lineno">  207</span>        <span class="keywordtype">int</span> num = 1 + random.nextInt(2 + <a class="code hl_function" href="../../d7/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#a7ae82c1924470a85dbdc083262e3d530">getTier</a>()) + always.size();</div>
-<div class="line"><span class="lineno">  208</span>        <span class="comment">//num += 5;</span></div>
-<div class="line"><span class="lineno">  209</span>        <span class="keywordtype">int</span> attempts = num + 5;</div>
-<div class="line"><span class="lineno">  210</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; attempts &amp;&amp; result.size() &lt; num; i++) {</div>
-<div class="line"><span class="lineno">  211</span>            HistorianOfferCreator c = limited.pick();</div>
-<div class="line"><span class="lineno">  212</span>            <span class="keywordflow">if</span> (c == <span class="keyword">null</span>) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  213</span>            HistorianOffer offer = c.createOffer(random, result);</div>
-<div class="line"><span class="lineno">  214</span>            <span class="keywordflow">if</span> (offer != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  215</span>                offer.setCreator(c);</div>
-<div class="line"><span class="lineno">  216</span>                result.add(offer);</div>
-<div class="line"><span class="lineno">  217</span>            }</div>
-<div class="line"><span class="lineno">  218</span>        }</div>
-<div class="line"><span class="lineno">  219</span>        </div>
-<div class="line"><span class="lineno">  220</span>        <span class="comment">//limited.add(new ShipBlueprintOffer());</span></div>
-<div class="line"><span class="lineno">  221</span>        <span class="comment">//limited.add(new DonationOffer(25000));</span></div>
-<div class="line"><span class="lineno">  222</span>        </div>
-<div class="line"><span class="lineno">  223</span>        Collections.sort(result, <span class="keyword">new</span> Comparator&lt;HistorianOffer&gt;() {</div>
-<div class="line"><span class="lineno">  224</span>            <span class="keyword">public</span> <span class="keywordtype">int</span> compare(HistorianOffer o1, HistorianOffer o2) {</div>
-<div class="line"><span class="lineno">  225</span>                <span class="keywordflow">return</span> (<span class="keywordtype">int</span>) Math.signum(o1.getSortOrder() - o2.getSortOrder());</div>
-<div class="line"><span class="lineno">  226</span>            }</div>
-<div class="line"><span class="lineno">  227</span>        });</div>
-<div class="line"><span class="lineno">  228</span>        </div>
-<div class="line"><span class="lineno">  229</span>        </div>
-<div class="line"><span class="lineno">  230</span>        <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">  231</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData_html_a7ae82c1924470a85dbdc083262e3d530"><div class="ttname"><a href="../../d7/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#a7ae82c1924470a85dbdc083262e3d530">com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.HistorianData.getTier</a></div><div class="ttdeci">int getTier()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d25/HistorianData_8java_source.html#l00153">HistorianData.java:153</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af4a08f7d1b011f1cc43e03a4e6c5fd5a" name="af4a08f7d1b011f1cc43e03a4e6c5fd5a"></a>
@@ -619,10 +493,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d25/HistorianData_8java_source.html#l00233">233</a> of file <a class="el" href="../../d8/d25/HistorianData_8java_source.html">HistorianData.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  233</span>                                 {</div>
-<div class="line"><span class="lineno">  234</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d7/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#a5f4d3d45339a75e0baa7b4cf045a4e51">person</a>;</div>
-<div class="line"><span class="lineno">  235</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="abb600d2c7f777fe82083db5981d6d84f" name="abb600d2c7f777fe82083db5981d6d84f"></a>
@@ -641,11 +512,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d25/HistorianData_8java_source.html#l00133">133</a> of file <a class="el" href="../../d8/d25/HistorianData_8java_source.html">HistorianData.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  133</span>                                           {</div>
-<div class="line"><span class="lineno">  134</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d7/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#a4e97305d553bd9f6d241d7f5fb7e3338">shownBackstory</a>;</div>
-<div class="line"><span class="lineno">  135</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData_html_a4e97305d553bd9f6d241d7f5fb7e3338"><div class="ttname"><a href="../../d7/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#a4e97305d553bd9f6d241d7f5fb7e3338">com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.HistorianData.shownBackstory</a></div><div class="ttdeci">Set&lt; String &gt; shownBackstory</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d25/HistorianData_8java_source.html#l00068">HistorianData.java:68</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a7ae82c1924470a85dbdc083262e3d530" name="a7ae82c1924470a85dbdc083262e3d530"></a>
@@ -664,11 +531,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d25/HistorianData_8java_source.html#l00153">153</a> of file <a class="el" href="../../d8/d25/HistorianData_8java_source.html">HistorianData.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  153</span>                         {</div>
-<div class="line"><span class="lineno">  154</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d7/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#a74906819d6099f6097503204bf892228">tier</a>;</div>
-<div class="line"><span class="lineno">  155</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData_html_a74906819d6099f6097503204bf892228"><div class="ttname"><a href="../../d7/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#a74906819d6099f6097503204bf892228">com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.HistorianData.tier</a></div><div class="ttdeci">int tier</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d25/HistorianData_8java_source.html#l00062">HistorianData.java:62</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a10e07f3e6b3c51c1b2fea6e9cf6e2587" name="a10e07f3e6b3c51c1b2fea6e9cf6e2587"></a>
@@ -695,14 +558,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d25/HistorianData_8java_source.html#l00243">243</a> of file <a class="el" href="../../d8/d25/HistorianData_8java_source.html">HistorianData.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  243</span>                                    {</div>
-<div class="line"><span class="lineno">  244</span>        String heOrShe = <span class="stringliteral">&quot;he&quot;</span>;</div>
-<div class="line"><span class="lineno">  245</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d7/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#a5f4d3d45339a75e0baa7b4cf045a4e51">person</a>.<a class="code hl_function" href="../../d9/df0/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#ae570defd266826457f552329af959bfd">getGender</a>() == Gender.FEMALE) {</div>
-<div class="line"><span class="lineno">  246</span>            heOrShe = <span class="stringliteral">&quot;she&quot;</span>;</div>
-<div class="line"><span class="lineno">  247</span>        }</div>
-<div class="line"><span class="lineno">  248</span>        <span class="keywordflow">return</span> Misc.ucFirst(heOrShe);</div>
-<div class="line"><span class="lineno">  249</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aec0c6ddcef92a8d39f16e8464064b70d" name="aec0c6ddcef92a8d39f16e8464064b70d"></a>
@@ -722,21 +578,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d25/HistorianData_8java_source.html#l00141">141</a> of file <a class="el" href="../../d8/d25/HistorianData_8java_source.html">HistorianData.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  141</span>                                                    {</div>
-<div class="line"><span class="lineno">  142</span>        <span class="keywordtype">float</span> w = 0f;</div>
-<div class="line"><span class="lineno">  143</span>        <span class="keywordflow">if</span> (tags.contains(<a class="code hl_variable" href="../../d7/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#aa721fe5f5645c42578ff6d6bb85841c3">TIER1</a>)) {</div>
-<div class="line"><span class="lineno">  144</span>            w = 1f;</div>
-<div class="line"><span class="lineno">  145</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (tags.contains(<a class="code hl_variable" href="../../d7/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#af40babafc88a371b4ba77ce2071b8c33">TIER2</a>) &amp;&amp; <a class="code hl_function" href="../../d7/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#a7ae82c1924470a85dbdc083262e3d530">getTier</a>() &gt;= 1) {</div>
-<div class="line"><span class="lineno">  146</span>            w = 5f;</div>
-<div class="line"><span class="lineno">  147</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (tags.contains(<a class="code hl_variable" href="../../d7/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#a5ef28393182df38534ab183bf868b70c">TIER3</a>) &amp;&amp; <a class="code hl_function" href="../../d7/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#a7ae82c1924470a85dbdc083262e3d530">getTier</a>() &gt;= 2) {</div>
-<div class="line"><span class="lineno">  148</span>            w = 10f;</div>
-<div class="line"><span class="lineno">  149</span>        }</div>
-<div class="line"><span class="lineno">  150</span>        <span class="keywordflow">return</span> w;</div>
-<div class="line"><span class="lineno">  151</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData_html_a5ef28393182df38534ab183bf868b70c"><div class="ttname"><a href="../../d7/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#a5ef28393182df38534ab183bf868b70c">com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.HistorianData.TIER3</a></div><div class="ttdeci">static String TIER3</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d25/HistorianData_8java_source.html#l00049">HistorianData.java:49</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData_html_aa721fe5f5645c42578ff6d6bb85841c3"><div class="ttname"><a href="../../d7/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#aa721fe5f5645c42578ff6d6bb85841c3">com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.HistorianData.TIER1</a></div><div class="ttdeci">static String TIER1</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d25/HistorianData_8java_source.html#l00047">HistorianData.java:47</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData_html_af40babafc88a371b4ba77ce2071b8c33"><div class="ttname"><a href="../../d7/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#af40babafc88a371b4ba77ce2071b8c33">com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.HistorianData.TIER2</a></div><div class="ttdeci">static String TIER2</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d25/HistorianData_8java_source.html#l00048">HistorianData.java:48</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a0027e437c8cf149e9486d0a6d513d034" name="a0027e437c8cf149e9486d0a6d513d034"></a>
@@ -755,10 +597,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d25/HistorianData_8java_source.html#l00161">161</a> of file <a class="el" href="../../d8/d25/HistorianData_8java_source.html">HistorianData.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  161</span>                           {</div>
-<div class="line"><span class="lineno">  162</span>        <a class="code hl_variable" href="../../d7/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#a74906819d6099f6097503204bf892228">tier</a>++;</div>
-<div class="line"><span class="lineno">  163</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ada4d9e8cb38678bf088d1bd936b97d64" name="ada4d9e8cb38678bf088d1bd936b97d64"></a>
@@ -777,11 +616,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d25/HistorianData_8java_source.html#l00282">282</a> of file <a class="el" href="../../d8/d25/HistorianData_8java_source.html">HistorianData.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  282</span>                                  {</div>
-<div class="line"><span class="lineno">  283</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d7/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#aa792c6c35ca3aa3d9a69efe95a72229c">introduced</a>;</div>
-<div class="line"><span class="lineno">  284</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData_html_aa792c6c35ca3aa3d9a69efe95a72229c"><div class="ttname"><a href="../../d7/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#aa792c6c35ca3aa3d9a69efe95a72229c">com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.HistorianData.introduced</a></div><div class="ttdeci">boolean introduced</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d25/HistorianData_8java_source.html#l00061">HistorianData.java:61</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a6dfe8a84b2087bf68f3d805eb173ddba" name="a6dfe8a84b2087bf68f3d805eb173ddba"></a>
@@ -800,10 +635,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d25/HistorianData_8java_source.html#l00165">165</a> of file <a class="el" href="../../d8/d25/HistorianData_8java_source.html">HistorianData.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  165</span>                               {</div>
-<div class="line"><span class="lineno">  166</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../d7/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#a7ae82c1924470a85dbdc083262e3d530">getTier</a>() &gt;= 2;</div>
-<div class="line"><span class="lineno">  167</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac036f3900f6d3d93370c48dc3267c453" name="ac036f3900f6d3d93370c48dc3267c453"></a>
@@ -822,10 +654,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d25/HistorianData_8java_source.html#l00175">175</a> of file <a class="el" href="../../d8/d25/HistorianData_8java_source.html">HistorianData.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  175</span>                                       {</div>
-<div class="line"><span class="lineno">  176</span>        <span class="keywordflow">return</span> Global.getSector().getMemoryWithoutUpdate().getBoolean(<span class="stringliteral">&quot;$historian_recentlyDonated&quot;</span>);</div>
-<div class="line"><span class="lineno">  177</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9a23d996376f66dc977f434ee6160210" name="a9a23d996376f66dc977f434ee6160210"></a>
@@ -845,21 +674,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d25/HistorianData_8java_source.html#l00114">114</a> of file <a class="el" href="../../d8/d25/HistorianData_8java_source.html">HistorianData.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  114</span>                                                                  {</div>
-<div class="line"><span class="lineno">  115</span>        WeightedRandomPicker&lt;HistorianBackstoryInfo&gt; picker = <span class="keyword">new</span> WeightedRandomPicker&lt;HistorianBackstoryInfo&gt;(random);</div>
-<div class="line"><span class="lineno">  116</span>        <span class="keywordflow">for</span> (HistorianBackstoryInfo info : <a class="code hl_variable" href="../../d7/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#a69f209e4ae4e9cc50263f9489578d09d">backstory</a>) {</div>
-<div class="line"><span class="lineno">  117</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d7/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#a4e97305d553bd9f6d241d7f5fb7e3338">shownBackstory</a>.contains(info.getId())) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  118</span>            picker.add(info, info.getWeight());</div>
-<div class="line"><span class="lineno">  119</span>        }</div>
-<div class="line"><span class="lineno">  120</span>        <span class="keywordflow">if</span> (picker.isEmpty()) {</div>
-<div class="line"><span class="lineno">  121</span>            <a class="code hl_variable" href="../../d7/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#a4e97305d553bd9f6d241d7f5fb7e3338">shownBackstory</a>.clear();</div>
-<div class="line"><span class="lineno">  122</span>            <span class="keywordflow">for</span> (HistorianBackstoryInfo info : <a class="code hl_variable" href="../../d7/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#a69f209e4ae4e9cc50263f9489578d09d">backstory</a>) {</div>
-<div class="line"><span class="lineno">  123</span>                picker.add(info, info.getWeight());</div>
-<div class="line"><span class="lineno">  124</span>            }   </div>
-<div class="line"><span class="lineno">  125</span>        }</div>
-<div class="line"><span class="lineno">  126</span>        <span class="keywordflow">return</span> picker.pick();</div>
-<div class="line"><span class="lineno">  127</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a677d3fe1d95969b18dcf232ff3204018" name="a677d3fe1d95969b18dcf232ff3204018"></a>
@@ -886,28 +701,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d25/HistorianData_8java_source.html#l00092">92</a> of file <a class="el" href="../../d8/d25/HistorianData_8java_source.html">HistorianData.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   92</span>                                   {</div>
-<div class="line"><span class="lineno">   93</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d7/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#a3fe5680f149c9c002bc879259dff3cce">creators</a> == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   94</span>            <a class="code hl_variable" href="../../d7/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#a3fe5680f149c9c002bc879259dff3cce">creators</a> = <span class="keyword">new</span> ArrayList&lt;HistorianOfferCreator&gt;();</div>
-<div class="line"><span class="lineno">   95</span>            <a class="code hl_variable" href="../../d7/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#a3fe5680f149c9c002bc879259dff3cce">creators</a>.add(<span class="keyword">new</span> DonationOfferCreator());</div>
-<div class="line"><span class="lineno">   96</span>            <a class="code hl_variable" href="../../d7/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#a3fe5680f149c9c002bc879259dff3cce">creators</a>.add(<span class="keyword">new</span> ShipBlueprintOfferCreator(20f));</div>
-<div class="line"><span class="lineno">   97</span>            <a class="code hl_variable" href="../../d7/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#a3fe5680f149c9c002bc879259dff3cce">creators</a>.add(<span class="keyword">new</span> WeaponBlueprintOfferCreator(10f));</div>
-<div class="line"><span class="lineno">   98</span>            <a class="code hl_variable" href="../../d7/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#a3fe5680f149c9c002bc879259dff3cce">creators</a>.add(<span class="keyword">new</span> FighterBlueprintOfferCreator(10f));</div>
-<div class="line"><span class="lineno">   99</span>            <a class="code hl_variable" href="../../d7/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#a3fe5680f149c9c002bc879259dff3cce">creators</a>.add(<span class="keyword">new</span> SpecialItemOfferCreator(10f));</div>
-<div class="line"><span class="lineno">  100</span>        }</div>
-<div class="line"><span class="lineno">  101</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d7/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#a69f209e4ae4e9cc50263f9489578d09d">backstory</a> == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  102</span>            <a class="code hl_variable" href="../../d7/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#a69f209e4ae4e9cc50263f9489578d09d">backstory</a> = <span class="keyword">new</span> ArrayList&lt;HistorianBackstoryInfo&gt;();</div>
-<div class="line"><span class="lineno">  103</span>            HistorianBackstory.init(<a class="code hl_variable" href="../../d7/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#a69f209e4ae4e9cc50263f9489578d09d">backstory</a>);</div>
-<div class="line"><span class="lineno">  104</span>        }</div>
-<div class="line"><span class="lineno">  105</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d7/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#a4e97305d553bd9f6d241d7f5fb7e3338">shownBackstory</a> == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  106</span>            <a class="code hl_variable" href="../../d7/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#a4e97305d553bd9f6d241d7f5fb7e3338">shownBackstory</a> = <span class="keyword">new</span> LinkedHashSet&lt;String&gt;();</div>
-<div class="line"><span class="lineno">  107</span>        }</div>
-<div class="line"><span class="lineno">  108</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d7/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#a11d58213e7d390f8e9df4a9e296510bd">givenOffers</a> == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  109</span>            <a class="code hl_variable" href="../../d7/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#a11d58213e7d390f8e9df4a9e296510bd">givenOffers</a> = <span class="keyword">new</span> LinkedHashSet&lt;String&gt;();</div>
-<div class="line"><span class="lineno">  110</span>        }</div>
-<div class="line"><span class="lineno">  111</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">  112</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae57b209a15e5dad4847a4417db57cd4e" name="ae57b209a15e5dad4847a4417db57cd4e"></a>
@@ -927,10 +721,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d25/HistorianData_8java_source.html#l00183">183</a> of file <a class="el" href="../../d8/d25/HistorianData_8java_source.html">HistorianData.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  183</span>                                                                  {</div>
-<div class="line"><span class="lineno">  184</span>        this.creators = <a class="code hl_variable" href="../../d7/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#a3fe5680f149c9c002bc879259dff3cce">creators</a>;</div>
-<div class="line"><span class="lineno">  185</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aee0fa93701e7b0a2bc8cb3b7b86d5d6d" name="aee0fa93701e7b0a2bc8cb3b7b86d5d6d"></a>
@@ -950,10 +741,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d25/HistorianData_8java_source.html#l00286">286</a> of file <a class="el" href="../../d8/d25/HistorianData_8java_source.html">HistorianData.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  286</span>                                                  {</div>
-<div class="line"><span class="lineno">  287</span>        this.introduced = <a class="code hl_variable" href="../../d7/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#aa792c6c35ca3aa3d9a69efe95a72229c">introduced</a>;</div>
-<div class="line"><span class="lineno">  288</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9c0af467919ff12fa81ba45b248dec03" name="a9c0af467919ff12fa81ba45b248dec03"></a>
@@ -972,11 +760,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d25/HistorianData_8java_source.html#l00170">170</a> of file <a class="el" href="../../d8/d25/HistorianData_8java_source.html">HistorianData.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  170</span>                                     {</div>
-<div class="line"><span class="lineno">  171</span>        <span class="keywordtype">float</span> dur = 60f + (float) Math.random() * 60f;</div>
-<div class="line"><span class="lineno">  172</span>        Global.getSector().getMemoryWithoutUpdate().set(<span class="stringliteral">&quot;$historian_recentlyDonated&quot;</span>, <span class="keyword">true</span>, dur);</div>
-<div class="line"><span class="lineno">  173</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a1e1469c44ff380ade932566452cb2c99" name="a1e1469c44ff380ade932566452cb2c99"></a>
@@ -996,10 +780,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d25/HistorianData_8java_source.html#l00157">157</a> of file <a class="el" href="../../d8/d25/HistorianData_8java_source.html">HistorianData.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  157</span>                                  {</div>
-<div class="line"><span class="lineno">  158</span>        this.tier = <a class="code hl_variable" href="../../d7/dfa/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#a74906819d6099f6097503204bf892228">tier</a>;</div>
-<div class="line"><span class="lineno">  159</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -180,81 +181,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/db5/ConditionGenDataSpec_8java_source.html#l00028">28</a> of file <a class="el" href="../../d4/db5/ConditionGenDataSpec_8java_source.html">ConditionGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   28</span>                                                                     {</div>
-<div class="line"><span class="lineno">   29</span>        <span class="keywordtype">id</span> = row.getString(<span class="stringliteral">&quot;id&quot;</span>);</div>
-<div class="line"><span class="lineno">   30</span>        group = row.getString(<span class="stringliteral">&quot;group&quot;</span>);</div>
-<div class="line"><span class="lineno">   31</span>        rank = (float) row.optDouble(<span class="stringliteral">&quot;rank&quot;</span>, 0);</div>
-<div class="line"><span class="lineno">   32</span>        order = (float) row.optDouble(<span class="stringliteral">&quot;order&quot;</span>, 0);</div>
-<div class="line"><span class="lineno">   33</span>        hazard = (float) row.optDouble(<span class="stringliteral">&quot;hazard&quot;</span>, 0);</div>
-<div class="line"><span class="lineno">   34</span>        xpMult = (float) row.optDouble(<span class="stringliteral">&quot;xpMult&quot;</span>, 0);</div>
-<div class="line"><span class="lineno">   35</span>        </div>
-<div class="line"><span class="lineno">   36</span>        requiresSurvey = row.optBoolean(<span class="stringliteral">&quot;reqSurvey&quot;</span>, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   37</span>        </div>
-<div class="line"><span class="lineno">   38</span>        </div>
-<div class="line"><span class="lineno">   39</span><span class="comment">//      for (Object o : Global.getSettings().getAllSpecs(CategoryGenDataSpec.class)) {</span></div>
-<div class="line"><span class="lineno">   40</span><span class="comment">//          ConditionGenDataSpec spec = (ConditionGenDataSpec) o;</span></div>
-<div class="line"><span class="lineno">   41</span><span class="comment">//          if (spec.getId().equals(&quot;ore_no_pick&quot;)) {</span></div>
-<div class="line"><span class="lineno">   42</span><span class="comment">//              spec.getMultipliers().put(&quot;&lt;your planet id&gt;&quot;, 0f);</span></div>
-<div class="line"><span class="lineno">   43</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">   44</span><span class="comment">//          if (spec.getId().equals(&quot;ore_sparse&quot;)) {</span></div>
-<div class="line"><span class="lineno">   45</span><span class="comment">//              spec.getMultipliers().put(&quot;&lt;your planet id&gt;&quot;, 4f);</span></div>
-<div class="line"><span class="lineno">   46</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">   47</span><span class="comment">//          if (spec.getId().equals(&quot;ore_moderate&quot;)) {</span></div>
-<div class="line"><span class="lineno">   48</span><span class="comment">//              spec.getMultipliers().put(&quot;&lt;your planet id&gt;&quot;, 10f);</span></div>
-<div class="line"><span class="lineno">   49</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">   50</span><span class="comment">//          if (spec.getId().equals(&quot;ore_abundant&quot;)) {</span></div>
-<div class="line"><span class="lineno">   51</span><span class="comment">//              spec.getMultipliers().put(&quot;&lt;your planet id&gt;&quot;, 5f);</span></div>
-<div class="line"><span class="lineno">   52</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">   53</span><span class="comment">//          if (spec.getId().equals(&quot;ore_rich&quot;)) {</span></div>
-<div class="line"><span class="lineno">   54</span><span class="comment">//              spec.getMultipliers().put(&quot;&lt;your planet id&gt;&quot;, 2f);</span></div>
-<div class="line"><span class="lineno">   55</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">   56</span><span class="comment">//          if (spec.getId().equals(&quot;ore_ultrarich&quot;)) {</span></div>
-<div class="line"><span class="lineno">   57</span><span class="comment">//              spec.getMultipliers().put(&quot;&lt;your planet id&gt;&quot;, 1f);</span></div>
-<div class="line"><span class="lineno">   58</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">   59</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">   60</span>        </div>
-<div class="line"><span class="lineno">   61</span>        <span class="keywordflow">for</span> (String key : JSONObject.getNames(row)) {</div>
-<div class="line"><span class="lineno">   62</span>            <span class="keywordtype">float</span> mult = (float) row.optDouble(key, 1f);</div>
-<div class="line"><span class="lineno">   63</span>            <span class="comment">//if (mult != 1) {</span></div>
-<div class="line"><span class="lineno">   64</span>            <span class="keywordflow">if</span> (row.has(key) &amp;&amp; !row.getString(key).isEmpty()) {</div>
-<div class="line"><span class="lineno">   65</span>                multipliers.put(key, mult);</div>
-<div class="line"><span class="lineno">   66</span>            }</div>
-<div class="line"><span class="lineno">   67</span>        }</div>
-<div class="line"><span class="lineno">   68</span>        </div>
-<div class="line"><span class="lineno">   69</span>        String requiresAllStr = row.optString(<span class="stringliteral">&quot;requiresAll&quot;</span>, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   70</span>        <span class="keywordflow">if</span> (requiresAllStr != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   71</span>            String [] split = requiresAllStr.split(<span class="stringliteral">&quot;,&quot;</span>);</div>
-<div class="line"><span class="lineno">   72</span>            <span class="keywordflow">for</span> (String condition : split) {</div>
-<div class="line"><span class="lineno">   73</span>                condition = condition.trim();</div>
-<div class="line"><span class="lineno">   74</span>                <span class="keywordflow">if</span> (condition.isEmpty()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   75</span>                <a class="code hl_function" href="../../dd/d7c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ConditionGenDataSpec.html#a9d825affeadbf46b0cda575920384d80">addRequiresAll</a>(condition);</div>
-<div class="line"><span class="lineno">   76</span>            }</div>
-<div class="line"><span class="lineno">   77</span>        }</div>
-<div class="line"><span class="lineno">   78</span>        </div>
-<div class="line"><span class="lineno">   79</span>        String requiresAnyStr = row.optString(<span class="stringliteral">&quot;requiresAny&quot;</span>, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   80</span>        <span class="keywordflow">if</span> (requiresAnyStr != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   81</span>            String [] split = requiresAnyStr.split(<span class="stringliteral">&quot;,&quot;</span>);</div>
-<div class="line"><span class="lineno">   82</span>            <span class="keywordflow">for</span> (String condition : split) {</div>
-<div class="line"><span class="lineno">   83</span>                condition = condition.trim();</div>
-<div class="line"><span class="lineno">   84</span>                <span class="keywordflow">if</span> (condition.isEmpty()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   85</span>                <a class="code hl_function" href="../../dd/d7c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ConditionGenDataSpec.html#ae2d4404e88d730b24c99f3ff1de9b1b7">addRequiresAny</a>(condition);</div>
-<div class="line"><span class="lineno">   86</span>            }</div>
-<div class="line"><span class="lineno">   87</span>        }</div>
-<div class="line"><span class="lineno">   88</span>        </div>
-<div class="line"><span class="lineno">   89</span>        String requiresNotAny = row.optString(<span class="stringliteral">&quot;requiresNotAny&quot;</span>, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   90</span>        <span class="keywordflow">if</span> (requiresNotAny != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   91</span>            String [] split = requiresNotAny.split(<span class="stringliteral">&quot;,&quot;</span>);</div>
-<div class="line"><span class="lineno">   92</span>            <span class="keywordflow">for</span> (String condition : split) {</div>
-<div class="line"><span class="lineno">   93</span>                condition = condition.trim();</div>
-<div class="line"><span class="lineno">   94</span>                <span class="keywordflow">if</span> (condition.isEmpty()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   95</span>                <a class="code hl_function" href="../../dd/d7c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ConditionGenDataSpec.html#ae64027cb6293f0e531a4361427b94145">addRequiresNotAny</a>(condition);</div>
-<div class="line"><span class="lineno">   96</span>            }</div>
-<div class="line"><span class="lineno">   97</span>        }</div>
-<div class="line"><span class="lineno">   98</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ConditionGenDataSpec_html_a9d825affeadbf46b0cda575920384d80"><div class="ttname"><a href="../../dd/d7c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ConditionGenDataSpec.html#a9d825affeadbf46b0cda575920384d80">com.fs.starfarer.api.impl.campaign.procgen.ConditionGenDataSpec.addRequiresAll</a></div><div class="ttdeci">void addRequiresAll(String condition)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db5/ConditionGenDataSpec_8java_source.html#l00123">ConditionGenDataSpec.java:123</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ConditionGenDataSpec_html_ae2d4404e88d730b24c99f3ff1de9b1b7"><div class="ttname"><a href="../../dd/d7c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ConditionGenDataSpec.html#ae2d4404e88d730b24c99f3ff1de9b1b7">com.fs.starfarer.api.impl.campaign.procgen.ConditionGenDataSpec.addRequiresAny</a></div><div class="ttdeci">void addRequiresAny(String condition)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db5/ConditionGenDataSpec_8java_source.html#l00135">ConditionGenDataSpec.java:135</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ConditionGenDataSpec_html_ae64027cb6293f0e531a4361427b94145"><div class="ttname"><a href="../../dd/d7c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ConditionGenDataSpec.html#ae64027cb6293f0e531a4361427b94145">com.fs.starfarer.api.impl.campaign.procgen.ConditionGenDataSpec.addRequiresNotAny</a></div><div class="ttdeci">void addRequiresNotAny(String condition)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db5/ConditionGenDataSpec_8java_source.html#l00146">ConditionGenDataSpec.java:146</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -275,10 +202,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/db5/ConditionGenDataSpec_8java_source.html#l00123">123</a> of file <a class="el" href="../../d4/db5/ConditionGenDataSpec_8java_source.html">ConditionGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  123</span>                                                 {</div>
-<div class="line"><span class="lineno">  124</span>        requiresAll.add(condition);</div>
-<div class="line"><span class="lineno">  125</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae2d4404e88d730b24c99f3ff1de9b1b7" name="ae2d4404e88d730b24c99f3ff1de9b1b7"></a>
@@ -298,10 +222,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/db5/ConditionGenDataSpec_8java_source.html#l00135">135</a> of file <a class="el" href="../../d4/db5/ConditionGenDataSpec_8java_source.html">ConditionGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  135</span>                                                 {</div>
-<div class="line"><span class="lineno">  136</span>        requiresAny.add(condition);</div>
-<div class="line"><span class="lineno">  137</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae64027cb6293f0e531a4361427b94145" name="ae64027cb6293f0e531a4361427b94145"></a>
@@ -321,10 +242,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/db5/ConditionGenDataSpec_8java_source.html#l00146">146</a> of file <a class="el" href="../../d4/db5/ConditionGenDataSpec_8java_source.html">ConditionGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  146</span>                                                    {</div>
-<div class="line"><span class="lineno">  147</span>        requiresNotAny.add(condition);</div>
-<div class="line"><span class="lineno">  148</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a1ba82b92a45b027f9f596ed907c74fe2" name="a1ba82b92a45b027f9f596ed907c74fe2"></a>
@@ -343,10 +261,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/db5/ConditionGenDataSpec_8java_source.html#l00169">169</a> of file <a class="el" href="../../d4/db5/ConditionGenDataSpec_8java_source.html">ConditionGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  169</span>                             {</div>
-<div class="line"><span class="lineno">  170</span>        <span class="keywordflow">return</span> group;</div>
-<div class="line"><span class="lineno">  171</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac6ab93c57dd84756b5c25fd284a9d0ec" name="ac6ab93c57dd84756b5c25fd284a9d0ec"></a>
@@ -365,10 +280,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/db5/ConditionGenDataSpec_8java_source.html#l00205">205</a> of file <a class="el" href="../../d4/db5/ConditionGenDataSpec_8java_source.html">ConditionGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  205</span>                             {</div>
-<div class="line"><span class="lineno">  206</span>        <span class="keywordflow">return</span> hazard;</div>
-<div class="line"><span class="lineno">  207</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a4ca39cc83edb3cd541bf619ac2f0cf4b" name="a4ca39cc83edb3cd541bf619ac2f0cf4b"></a>
@@ -387,10 +299,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/db5/ConditionGenDataSpec_8java_source.html#l00159">159</a> of file <a class="el" href="../../d4/db5/ConditionGenDataSpec_8java_source.html">ConditionGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  159</span>                          {</div>
-<div class="line"><span class="lineno">  160</span>        <span class="keywordflow">return</span> id;</div>
-<div class="line"><span class="lineno">  161</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab27887f17d77a3f944061667e0c7bf7b" name="ab27887f17d77a3f944061667e0c7bf7b"></a>
@@ -410,11 +319,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/db5/ConditionGenDataSpec_8java_source.html#l00110">110</a> of file <a class="el" href="../../d4/db5/ConditionGenDataSpec_8java_source.html">ConditionGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  110</span>                                           {</div>
-<div class="line"><span class="lineno">  111</span>        <span class="keywordflow">if</span> (!multipliers.containsKey(key)) <span class="keywordflow">return</span> 1f;</div>
-<div class="line"><span class="lineno">  112</span>        <span class="keywordflow">return</span> multipliers.get(key);</div>
-<div class="line"><span class="lineno">  113</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a61b9c6dd6cc72aa024f634606deb5a7f" name="a61b9c6dd6cc72aa024f634606deb5a7f"></a>
@@ -433,10 +338,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/db5/ConditionGenDataSpec_8java_source.html#l00154">154</a> of file <a class="el" href="../../d4/db5/ConditionGenDataSpec_8java_source.html">ConditionGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  154</span>                                               {</div>
-<div class="line"><span class="lineno">  155</span>        <span class="keywordflow">return</span> multipliers;</div>
-<div class="line"><span class="lineno">  156</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae005fb1146d749899f581c4d60a77622" name="ae005fb1146d749899f581c4d60a77622"></a>
@@ -455,10 +357,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/db5/ConditionGenDataSpec_8java_source.html#l00188">188</a> of file <a class="el" href="../../d4/db5/ConditionGenDataSpec_8java_source.html">ConditionGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  188</span>                            {</div>
-<div class="line"><span class="lineno">  189</span>        <span class="keywordflow">return</span> order;</div>
-<div class="line"><span class="lineno">  190</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="afaa8818c35b339c711c048791751b78f" name="afaa8818c35b339c711c048791751b78f"></a>
@@ -477,10 +376,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/db5/ConditionGenDataSpec_8java_source.html#l00179">179</a> of file <a class="el" href="../../d4/db5/ConditionGenDataSpec_8java_source.html">ConditionGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  179</span>                           {</div>
-<div class="line"><span class="lineno">  180</span>        <span class="keywordflow">return</span> rank;</div>
-<div class="line"><span class="lineno">  181</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a3a7eac7e5b4889ffbe8fc3bf13aee3e9" name="a3a7eac7e5b4889ffbe8fc3bf13aee3e9"></a>
@@ -499,10 +395,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/db5/ConditionGenDataSpec_8java_source.html#l00119">119</a> of file <a class="el" href="../../d4/db5/ConditionGenDataSpec_8java_source.html">ConditionGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  119</span>                                        {</div>
-<div class="line"><span class="lineno">  120</span>        <span class="keywordflow">return</span> requiresAll;</div>
-<div class="line"><span class="lineno">  121</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2e24aa8acd42d82287f7f30cf529bb8f" name="a2e24aa8acd42d82287f7f30cf529bb8f"></a>
@@ -521,10 +414,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/db5/ConditionGenDataSpec_8java_source.html#l00131">131</a> of file <a class="el" href="../../d4/db5/ConditionGenDataSpec_8java_source.html">ConditionGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  131</span>                                        {</div>
-<div class="line"><span class="lineno">  132</span>        <span class="keywordflow">return</span> requiresAny;</div>
-<div class="line"><span class="lineno">  133</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a7a9f5062a187530fc9928d173c91b9b1" name="a7a9f5062a187530fc9928d173c91b9b1"></a>
@@ -543,10 +433,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/db5/ConditionGenDataSpec_8java_source.html#l00142">142</a> of file <a class="el" href="../../d4/db5/ConditionGenDataSpec_8java_source.html">ConditionGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  142</span>                                           {</div>
-<div class="line"><span class="lineno">  143</span>        <span class="keywordflow">return</span> requiresNotAny;</div>
-<div class="line"><span class="lineno">  144</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a1f852b6057d3915901e1348270f1ccb8" name="a1f852b6057d3915901e1348270f1ccb8"></a>
@@ -565,10 +452,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/db5/ConditionGenDataSpec_8java_source.html#l00101">101</a> of file <a class="el" href="../../d4/db5/ConditionGenDataSpec_8java_source.html">ConditionGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  101</span>                             {</div>
-<div class="line"><span class="lineno">  102</span>        <span class="keywordflow">return</span> xpMult;</div>
-<div class="line"><span class="lineno">  103</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a434faf8a43e2478433f18b7a33f0999e" name="a434faf8a43e2478433f18b7a33f0999e"></a>
@@ -588,10 +472,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/db5/ConditionGenDataSpec_8java_source.html#l00115">115</a> of file <a class="el" href="../../d4/db5/ConditionGenDataSpec_8java_source.html">ConditionGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  115</span>                                             {</div>
-<div class="line"><span class="lineno">  116</span>        <span class="keywordflow">return</span> multipliers.containsKey(key);</div>
-<div class="line"><span class="lineno">  117</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a31833012587c2e2b3125efdbf913a919" name="a31833012587c2e2b3125efdbf913a919"></a>
@@ -610,10 +491,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/db5/ConditionGenDataSpec_8java_source.html#l00197">197</a> of file <a class="el" href="../../d4/db5/ConditionGenDataSpec_8java_source.html">ConditionGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  197</span>                                      {</div>
-<div class="line"><span class="lineno">  198</span>        <span class="keywordflow">return</span> requiresSurvey;</div>
-<div class="line"><span class="lineno">  199</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa96d6bbd0400bf4d4ae0afd67fe7955e" name="aa96d6bbd0400bf4d4ae0afd67fe7955e"></a>
@@ -633,10 +511,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/db5/ConditionGenDataSpec_8java_source.html#l00127">127</a> of file <a class="el" href="../../d4/db5/ConditionGenDataSpec_8java_source.html">ConditionGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  127</span>                                                         {</div>
-<div class="line"><span class="lineno">  128</span>        <span class="keywordflow">return</span> requiresAll.contains(condition);</div>
-<div class="line"><span class="lineno">  129</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a97f892cd733c5c0cf1cd65696268b131" name="a97f892cd733c5c0cf1cd65696268b131"></a>
@@ -656,10 +531,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/db5/ConditionGenDataSpec_8java_source.html#l00139">139</a> of file <a class="el" href="../../d4/db5/ConditionGenDataSpec_8java_source.html">ConditionGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  139</span>                                                         {</div>
-<div class="line"><span class="lineno">  140</span>        <span class="keywordflow">return</span> requiresAny.contains(condition);</div>
-<div class="line"><span class="lineno">  141</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a966300d021dcf7f2cd25139a53d5e201" name="a966300d021dcf7f2cd25139a53d5e201"></a>
@@ -679,10 +551,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/db5/ConditionGenDataSpec_8java_source.html#l00150">150</a> of file <a class="el" href="../../d4/db5/ConditionGenDataSpec_8java_source.html">ConditionGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  150</span>                                                            {</div>
-<div class="line"><span class="lineno">  151</span>        <span class="keywordflow">return</span> requiresNotAny.contains(condition);</div>
-<div class="line"><span class="lineno">  152</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a91bd94c1e295dac9eb49a4cd153c4f95" name="a91bd94c1e295dac9eb49a4cd153c4f95"></a>
@@ -702,10 +571,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/db5/ConditionGenDataSpec_8java_source.html#l00174">174</a> of file <a class="el" href="../../d4/db5/ConditionGenDataSpec_8java_source.html">ConditionGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  174</span>                                       {</div>
-<div class="line"><span class="lineno">  175</span>        this.group = group;</div>
-<div class="line"><span class="lineno">  176</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae016b3b0a9a6e3a254b456b29fb0c533" name="ae016b3b0a9a6e3a254b456b29fb0c533"></a>
@@ -725,10 +591,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/db5/ConditionGenDataSpec_8java_source.html#l00209">209</a> of file <a class="el" href="../../d4/db5/ConditionGenDataSpec_8java_source.html">ConditionGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  209</span>                                        {</div>
-<div class="line"><span class="lineno">  210</span>        this.hazard = hazard;</div>
-<div class="line"><span class="lineno">  211</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9c6c83fbe49a56e1dd9205a09245f9e4" name="a9c6c83fbe49a56e1dd9205a09245f9e4"></a>
@@ -748,10 +611,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/db5/ConditionGenDataSpec_8java_source.html#l00164">164</a> of file <a class="el" href="../../d4/db5/ConditionGenDataSpec_8java_source.html">ConditionGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  164</span>                                 {</div>
-<div class="line"><span class="lineno">  165</span>        this.id = id;</div>
-<div class="line"><span class="lineno">  166</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a0edcd422fa7e4cbf9a5b20ae8ffadb48" name="a0edcd422fa7e4cbf9a5b20ae8ffadb48"></a>
@@ -771,10 +631,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/db5/ConditionGenDataSpec_8java_source.html#l00192">192</a> of file <a class="el" href="../../d4/db5/ConditionGenDataSpec_8java_source.html">ConditionGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  192</span>                                      {</div>
-<div class="line"><span class="lineno">  193</span>        this.order = order;</div>
-<div class="line"><span class="lineno">  194</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ad52cfb975aafdc574053fa87bc6d4327" name="ad52cfb975aafdc574053fa87bc6d4327"></a>
@@ -794,10 +651,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/db5/ConditionGenDataSpec_8java_source.html#l00183">183</a> of file <a class="el" href="../../d4/db5/ConditionGenDataSpec_8java_source.html">ConditionGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  183</span>                                    {</div>
-<div class="line"><span class="lineno">  184</span>        this.rank = rank;</div>
-<div class="line"><span class="lineno">  185</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a3f4c8860733f4a9b2f995641288e1da7" name="a3f4c8860733f4a9b2f995641288e1da7"></a>
@@ -817,10 +671,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/db5/ConditionGenDataSpec_8java_source.html#l00201">201</a> of file <a class="el" href="../../d4/db5/ConditionGenDataSpec_8java_source.html">ConditionGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  201</span>                                                          {</div>
-<div class="line"><span class="lineno">  202</span>        this.requiresSurvey = requiresSurvey;</div>
-<div class="line"><span class="lineno">  203</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="afed80af195b0ea0d08d09530382f00a7" name="afed80af195b0ea0d08d09530382f00a7"></a>
@@ -840,10 +691,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/db5/ConditionGenDataSpec_8java_source.html#l00105">105</a> of file <a class="el" href="../../d4/db5/ConditionGenDataSpec_8java_source.html">ConditionGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  105</span>                                        {</div>
-<div class="line"><span class="lineno">  106</span>        this.xpMult = xpMult;</div>
-<div class="line"><span class="lineno">  107</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -139,11 +140,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d00/JitterUtil_8java_source.html#l00029">29</a> of file <a class="el" href="../../d6/d00/JitterUtil_8java_source.html">JitterUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   29</span>                              {</div>
-<div class="line"><span class="lineno">   30</span>        random.setSeed(seed);</div>
-<div class="line"><span class="lineno">   31</span>        <span class="keywordflow">return</span> random;</div>
-<div class="line"><span class="lineno">   32</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a3438816a06b0464ed2aecc7068caadd3" name="a3438816a06b0464ed2aecc7068caadd3"></a>
@@ -162,10 +159,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d00/JitterUtil_8java_source.html#l00040">40</a> of file <a class="el" href="../../d6/d00/JitterUtil_8java_source.html">JitterUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   40</span>                                       {</div>
-<div class="line"><span class="lineno">   41</span>        <span class="keywordflow">return</span> setSeedOnRender;</div>
-<div class="line"><span class="lineno">   42</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a4926401a22576cd61631f4913bff2412" name="a4926401a22576cd61631f4913bff2412"></a>
@@ -213,11 +207,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d00/JitterUtil_8java_source.html#l00034">34</a> of file <a class="el" href="../../d6/d00/JitterUtil_8java_source.html">JitterUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   34</span>                                                                                      {</div>
-<div class="line"><span class="lineno">   35</span>        <a class="code hl_function" href="../../d4/d85/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1JitterUtil.html#a4926401a22576cd61631f4913bff2412">render</a>(s, x, y, 0f, maxJitter, numCopies);</div>
-<div class="line"><span class="lineno">   36</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1JitterUtil_html_a4926401a22576cd61631f4913bff2412"><div class="ttname"><a href="../../d4/d85/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1JitterUtil.html#a4926401a22576cd61631f4913bff2412">com.fs.starfarer.api.util.JitterUtil.render</a></div><div class="ttdeci">void render(SpriteAPI s, float x, float y, float maxJitter, int numCopies)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d00/JitterUtil_8java_source.html#l00034">JitterUtil.java:34</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac6e6c261bf973a7d3501d083f2bd99cd" name="ac6e6c261bf973a7d3501d083f2bd99cd"></a>
@@ -271,44 +261,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d00/JitterUtil_8java_source.html#l00052">52</a> of file <a class="el" href="../../d6/d00/JitterUtil_8java_source.html">JitterUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   52</span>                                                                                                       {</div>
-<div class="line"><span class="lineno">   53</span>        <span class="keywordflow">if</span> (setSeedOnRender) {</div>
-<div class="line"><span class="lineno">   54</span>            random.setSeed(seed);</div>
-<div class="line"><span class="lineno">   55</span>        }</div>
-<div class="line"><span class="lineno">   56</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; numCopies; i++) {</div>
-<div class="line"><span class="lineno">   57</span>            Vector2f jv = <span class="keyword">new</span> Vector2f();</div>
-<div class="line"><span class="lineno">   58</span>            </div>
-<div class="line"><span class="lineno">   59</span><span class="comment">//          if (true) {</span></div>
-<div class="line"><span class="lineno">   60</span><span class="comment">//              float r = minJitter + (maxJitter - minJitter) * (float) random.nextFloat();</span></div>
-<div class="line"><span class="lineno">   61</span><span class="comment">//              r *= 0.5f;</span></div>
-<div class="line"><span class="lineno">   62</span><span class="comment">//              float angle = (float) ((float) random.nextFloat() * Math.PI * 2f);</span></div>
-<div class="line"><span class="lineno">   63</span><span class="comment">//              float jx = (float) Math.cos(angle) * r;</span></div>
-<div class="line"><span class="lineno">   64</span><span class="comment">//              float jy = (float) Math.sin(angle) * r;</span></div>
-<div class="line"><span class="lineno">   65</span><span class="comment">//              s.renderAtCenter(x + jx, y + jy);</span></div>
-<div class="line"><span class="lineno">   66</span><span class="comment">//              continue;</span></div>
-<div class="line"><span class="lineno">   67</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">   68</span>            </div>
-<div class="line"><span class="lineno">   69</span>            <span class="keywordflow">if</span> (circular) {</div>
-<div class="line"><span class="lineno">   70</span>                <span class="keywordtype">float</span> r = minJitter + (maxJitter - minJitter) * (<span class="keywordtype">float</span>) random.nextFloat();</div>
-<div class="line"><span class="lineno">   71</span>                jv = Misc.getPointAtRadius(jv, r, random);</div>
-<div class="line"><span class="lineno">   72</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   73</span>                <span class="keywordflow">if</span> (minJitter &lt;= 0) {</div>
-<div class="line"><span class="lineno">   74</span>                    jv.x = random.nextFloat() * maxJitter - maxJitter/2f;</div>
-<div class="line"><span class="lineno">   75</span>                    jv.y = random.nextFloat() * maxJitter - maxJitter/2f;</div>
-<div class="line"><span class="lineno">   76</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   77</span>                    jv.x = random.nextFloat() * (maxJitter - minJitter) + minJitter;</div>
-<div class="line"><span class="lineno">   78</span>                    jv.y = random.nextFloat() * (maxJitter - minJitter) + minJitter;</div>
-<div class="line"><span class="lineno">   79</span>                    <span class="keywordflow">if</span> (jv.x &lt; minJitter) jv.x = minJitter;</div>
-<div class="line"><span class="lineno">   80</span>                    <span class="keywordflow">if</span> (jv.y &lt; minJitter) jv.y = minJitter;</div>
-<div class="line"><span class="lineno">   81</span>                    jv.x *= Math.signum(random.nextFloat() - 0.5f);</div>
-<div class="line"><span class="lineno">   82</span>                    jv.y *= Math.signum(random.nextFloat() - 0.5f);</div>
-<div class="line"><span class="lineno">   83</span>                }</div>
-<div class="line"><span class="lineno">   84</span>            }</div>
-<div class="line"><span class="lineno">   85</span>            <span class="comment">//if (jv.lengthSquared() != 0) jv.normalise();</span></div>
-<div class="line"><span class="lineno">   86</span>            s.renderAtCenter(x + jv.x, y + jv.y);</div>
-<div class="line"><span class="lineno">   87</span>        }</div>
-<div class="line"><span class="lineno">   88</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5367dcda660215bda883bf8774e752e3" name="a5367dcda660215bda883bf8774e752e3"></a>
@@ -364,16 +317,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d00/JitterUtil_8java_source.html#l00011">11</a> of file <a class="el" href="../../d6/d00/JitterUtil_8java_source.html">JitterUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   11</span>                                                                                                       {</div>
-<div class="line"><span class="lineno">   12</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; numCopies; i++) {</div>
-<div class="line"><span class="lineno">   13</span>            Vector2f jv = <span class="keyword">new</span> Vector2f();</div>
-<div class="line"><span class="lineno">   14</span>            jv.x = (float) Math.random() * maxJitter - maxJitter/2f;</div>
-<div class="line"><span class="lineno">   15</span>            jv.y = (float) Math.random() * maxJitter - maxJitter/2f;</div>
-<div class="line"><span class="lineno">   16</span>            <span class="comment">//if (jv.lengthSquared() != 0) jv.normalise();</span></div>
-<div class="line"><span class="lineno">   17</span>            s.renderAtCenter(x + jv.x, y + jv.y);</div>
-<div class="line"><span class="lineno">   18</span>        }</div>
-<div class="line"><span class="lineno">   19</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="afeeae2b3ac0c34f001ece46f36af26dc" name="afeeae2b3ac0c34f001ece46f36af26dc"></a>
@@ -393,10 +337,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d00/JitterUtil_8java_source.html#l00044">44</a> of file <a class="el" href="../../d6/d00/JitterUtil_8java_source.html">JitterUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   44</span>                                                              {</div>
-<div class="line"><span class="lineno">   45</span>        this.setSeedOnRender = resetSeedOnRender;</div>
-<div class="line"><span class="lineno">   46</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a89e0d6f3f6f71f317b73a6ea2ca455c4" name="a89e0d6f3f6f71f317b73a6ea2ca455c4"></a>
@@ -416,10 +357,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d00/JitterUtil_8java_source.html#l00048">48</a> of file <a class="el" href="../../d6/d00/JitterUtil_8java_source.html">JitterUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   48</span>                                                       {</div>
-<div class="line"><span class="lineno">   49</span>        this.circular = circular;</div>
-<div class="line"><span class="lineno">   50</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ad436e0293a8be71762c57efb20bd7bc9" name="ad436e0293a8be71762c57efb20bd7bc9"></a>
@@ -438,11 +376,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d00/JitterUtil_8java_source.html#l00024">24</a> of file <a class="el" href="../../d6/d00/JitterUtil_8java_source.html">JitterUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   24</span>                             {</div>
-<div class="line"><span class="lineno">   25</span>        <span class="comment">//seed = (long)(Math.random() * 1000000000f);</span></div>
-<div class="line"><span class="lineno">   26</span>        seed = Misc.genRandomSeed();</div>
-<div class="line"><span class="lineno">   27</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

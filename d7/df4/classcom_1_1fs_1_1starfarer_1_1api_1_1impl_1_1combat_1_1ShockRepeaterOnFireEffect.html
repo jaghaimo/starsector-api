@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -163,60 +164,7 @@ Static Public Attributes</h2></td></tr>
 <p >(o instanceof CombatAsteroidAPI) &amp;&amp;</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/dc0/ShockRepeaterOnFireEffect_8java_source.html#l00073">73</a> of file <a class="el" href="../../d3/dc0/ShockRepeaterOnFireEffect_8java_source.html">ShockRepeaterOnFireEffect.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   73</span>                                                                                                                  {</div>
-<div class="line"><span class="lineno">   74</span>        <span class="keywordtype">float</span> range = weapon.getRange();</div>
-<div class="line"><span class="lineno">   75</span>        Vector2f from = projectile.getLocation();</div>
-<div class="line"><span class="lineno">   76</span>        </div>
-<div class="line"><span class="lineno">   77</span>        Iterator&lt;Object&gt; iter = Global.getCombatEngine().getAllObjectGrid().getCheckIterator(from,</div>
-<div class="line"><span class="lineno">   78</span>                                                                            range * 2f, range * 2f);</div>
-<div class="line"><span class="lineno">   79</span>        <span class="keywordtype">int</span> owner = weapon.getShip().getOwner();</div>
-<div class="line"><span class="lineno">   80</span>        CombatEntityAPI best = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   81</span>        <span class="keywordtype">float</span> minScore = Float.MAX_VALUE;</div>
-<div class="line"><span class="lineno">   82</span>        </div>
-<div class="line"><span class="lineno">   83</span>        ShipAPI ship = weapon.getShip();</div>
-<div class="line"><span class="lineno">   84</span>        <span class="keywordtype">boolean</span> ignoreFlares = ship != <span class="keyword">null</span> &amp;&amp; ship.getMutableStats().getDynamic().getValue(Stats.PD_IGNORES_FLARES, 0) &gt;= 1;</div>
-<div class="line"><span class="lineno">   85</span>        ignoreFlares |= weapon.hasAIHint(AIHints.IGNORES_FLARES);</div>
-<div class="line"><span class="lineno">   86</span>        </div>
-<div class="line"><span class="lineno">   87</span>        <span class="keywordflow">while</span> (iter.hasNext()) {</div>
-<div class="line"><span class="lineno">   88</span>            Object o = iter.next();</div>
-<div class="line"><span class="lineno">   89</span>            <span class="keywordflow">if</span> (!(o instanceof MissileAPI) &amp;&amp;</div>
-<div class="line"><span class="lineno">   91</span>                    !(o instanceof ShipAPI)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   92</span>            CombatEntityAPI other = (CombatEntityAPI) o;</div>
-<div class="line"><span class="lineno">   93</span>            <span class="keywordflow">if</span> (other.getOwner() == owner) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   94</span>            </div>
-<div class="line"><span class="lineno">   95</span>            <span class="keywordflow">if</span> (other instanceof ShipAPI) {</div>
-<div class="line"><span class="lineno">   96</span>                ShipAPI otherShip = (ShipAPI) other;</div>
-<div class="line"><span class="lineno">   97</span>                <span class="keywordflow">if</span> (otherShip.isHulk()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   98</span>                <span class="comment">//if (!otherShip.isAlive()) continue;</span></div>
-<div class="line"><span class="lineno">   99</span>                <span class="keywordflow">if</span> (otherShip.isPhased()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  100</span>            }</div>
-<div class="line"><span class="lineno">  101</span>            </div>
-<div class="line"><span class="lineno">  102</span>            <span class="keywordflow">if</span> (other.getCollisionClass() == CollisionClass.NONE) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  103</span>            </div>
-<div class="line"><span class="lineno">  104</span>            <span class="keywordflow">if</span> (ignoreFlares &amp;&amp; other instanceof MissileAPI) {</div>
-<div class="line"><span class="lineno">  105</span>                MissileAPI missile = (MissileAPI) other;</div>
-<div class="line"><span class="lineno">  106</span>                <span class="keywordflow">if</span> (missile.isFlare()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  107</span>            }</div>
-<div class="line"><span class="lineno">  108</span> </div>
-<div class="line"><span class="lineno">  109</span>            <span class="keywordtype">float</span> radius = Misc.getTargetingRadius(from, other, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  110</span>            <span class="keywordtype">float</span> dist = Misc.getDistance(from, other.getLocation()) - radius;</div>
-<div class="line"><span class="lineno">  111</span>            <span class="keywordflow">if</span> (dist &gt; range) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  112</span>            </div>
-<div class="line"><span class="lineno">  113</span>            <span class="keywordflow">if</span> (!Misc.isInArc(weapon.getCurrAngle(), <a class="code hl_variable" href="../../d7/df4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1ShockRepeaterOnFireEffect.html#a9bc9073d9267f79dbf368cdbe7340f29">ARC</a>, from, other.getLocation())) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  114</span>            </div>
-<div class="line"><span class="lineno">  115</span>            <span class="comment">//float angleTo = Misc.getAngleInDegrees(from, other.getLocation());</span></div>
-<div class="line"><span class="lineno">  116</span>            <span class="comment">//float score = Misc.getAngleDiff(weapon.getCurrAngle(), angleTo);</span></div>
-<div class="line"><span class="lineno">  117</span>            <span class="keywordtype">float</span> score = dist;</div>
-<div class="line"><span class="lineno">  118</span>            </div>
-<div class="line"><span class="lineno">  119</span>            <span class="keywordflow">if</span> (score &lt; minScore) {</div>
-<div class="line"><span class="lineno">  120</span>                minScore = score;</div>
-<div class="line"><span class="lineno">  121</span>                best = other;</div>
-<div class="line"><span class="lineno">  122</span>            }</div>
-<div class="line"><span class="lineno">  123</span>        }</div>
-<div class="line"><span class="lineno">  124</span>        <span class="keywordflow">return</span> best;</div>
-<div class="line"><span class="lineno">  125</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1ShockRepeaterOnFireEffect_html_a9bc9073d9267f79dbf368cdbe7340f29"><div class="ttname"><a href="../../d7/df4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1ShockRepeaterOnFireEffect.html#a9bc9073d9267f79dbf368cdbe7340f29">com.fs.starfarer.api.impl.combat.ShockRepeaterOnFireEffect.ARC</a></div><div class="ttdeci">static float ARC</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dc0/ShockRepeaterOnFireEffect_8java_source.html#l00027">ShockRepeaterOnFireEffect.java:27</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a28c45f3d017f26fa21122bdb224c1131" name="a28c45f3d017f26fa21122bdb224c1131"></a>
@@ -254,41 +202,7 @@ Static Public Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../df/d88/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1OnFireEffectPlugin.html#a311cdd64c43363b408cb61e077f6e629">com.fs.starfarer.api.combat.OnFireEffectPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/dc0/ShockRepeaterOnFireEffect_8java_source.html#l00029">29</a> of file <a class="el" href="../../d3/dc0/ShockRepeaterOnFireEffect_8java_source.html">ShockRepeaterOnFireEffect.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   29</span>                                                                                                   {</div>
-<div class="line"><span class="lineno">   30</span>        <span class="comment">//ARC = 30f;</span></div>
-<div class="line"><span class="lineno">   31</span>        <span class="keywordtype">float</span> emp = projectile.getEmpAmount();</div>
-<div class="line"><span class="lineno">   32</span>        <span class="keywordtype">float</span> dam = projectile.getDamageAmount();</div>
-<div class="line"><span class="lineno">   33</span>    </div>
-<div class="line"><span class="lineno">   34</span>        CombatEntityAPI target = <a class="code hl_function" href="../../d7/df4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1ShockRepeaterOnFireEffect.html#a180d355ae75898f046924ff2d1da2266">findTarget</a>(projectile, weapon, engine);</div>
-<div class="line"><span class="lineno">   35</span>        <span class="keywordtype">float</span> thickness = 20f;</div>
-<div class="line"><span class="lineno">   36</span>        <span class="keywordtype">float</span> coreWidthMult = 0.67f;</div>
-<div class="line"><span class="lineno">   37</span>        Color color = weapon.getSpec().getGlowColor();</div>
-<div class="line"><span class="lineno">   38</span>        <span class="keywordflow">if</span> (target != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   39</span>            EmpArcEntityAPI arc = engine.spawnEmpArc(projectile.getSource(), projectile.getLocation(), weapon.getShip(),</div>
-<div class="line"><span class="lineno">   40</span>                       target,</div>
-<div class="line"><span class="lineno">   41</span>                       DamageType.ENERGY, </div>
-<div class="line"><span class="lineno">   42</span>                       dam,</div>
-<div class="line"><span class="lineno">   43</span>                       emp, <span class="comment">// emp </span></div>
-<div class="line"><span class="lineno">   44</span>                       100000f, <span class="comment">// max range </span></div>
-<div class="line"><span class="lineno">   45</span>                       <span class="stringliteral">&quot;shock_repeater_emp_impact&quot;</span>,</div>
-<div class="line"><span class="lineno">   46</span>                       thickness, <span class="comment">// thickness</span></div>
-<div class="line"><span class="lineno">   47</span>                       color,</div>
-<div class="line"><span class="lineno">   48</span>                       <span class="keyword">new</span> Color(255,255,255,255)</div>
-<div class="line"><span class="lineno">   49</span>                       );</div>
-<div class="line"><span class="lineno">   50</span>            arc.setCoreWidthOverride(thickness * coreWidthMult);</div>
-<div class="line"><span class="lineno">   51</span>            arc.setSingleFlickerMode();</div>
-<div class="line"><span class="lineno">   52</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   53</span>            Vector2f from = <span class="keyword">new</span> Vector2f(projectile.getLocation());</div>
-<div class="line"><span class="lineno">   54</span>            Vector2f to = <a class="code hl_function" href="../../d7/df4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1ShockRepeaterOnFireEffect.html#a2c48139a1415e85025643e101c5a77c4">pickNoTargetDest</a>(projectile, weapon, engine);</div>
-<div class="line"><span class="lineno">   55</span>            EmpArcEntityAPI arc = engine.spawnEmpArcVisual(from, weapon.getShip(), to, weapon.getShip(), thickness, color, Color.white);</div>
-<div class="line"><span class="lineno">   56</span>            arc.setCoreWidthOverride(thickness * coreWidthMult);</div>
-<div class="line"><span class="lineno">   57</span>            arc.setSingleFlickerMode();</div>
-<div class="line"><span class="lineno">   58</span>            <span class="comment">//Global.getSoundPlayer().playSound(&quot;shock_repeater_emp_impact&quot;, 1f, 1f, to, new Vector2f());</span></div>
-<div class="line"><span class="lineno">   59</span>        }</div>
-<div class="line"><span class="lineno">   60</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1ShockRepeaterOnFireEffect_html_a180d355ae75898f046924ff2d1da2266"><div class="ttname"><a href="../../d7/df4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1ShockRepeaterOnFireEffect.html#a180d355ae75898f046924ff2d1da2266">com.fs.starfarer.api.impl.combat.ShockRepeaterOnFireEffect.findTarget</a></div><div class="ttdeci">CombatEntityAPI findTarget(DamagingProjectileAPI projectile, WeaponAPI weapon, CombatEngineAPI engine)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dc0/ShockRepeaterOnFireEffect_8java_source.html#l00073">ShockRepeaterOnFireEffect.java:73</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1ShockRepeaterOnFireEffect_html_a2c48139a1415e85025643e101c5a77c4"><div class="ttname"><a href="../../d7/df4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1ShockRepeaterOnFireEffect.html#a2c48139a1415e85025643e101c5a77c4">com.fs.starfarer.api.impl.combat.ShockRepeaterOnFireEffect.pickNoTargetDest</a></div><div class="ttdeci">Vector2f pickNoTargetDest(DamagingProjectileAPI projectile, WeaponAPI weapon, CombatEngineAPI engine)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dc0/ShockRepeaterOnFireEffect_8java_source.html#l00062">ShockRepeaterOnFireEffect.java:62</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2c48139a1415e85025643e101c5a77c4" name="a2c48139a1415e85025643e101c5a77c4"></a>
@@ -324,17 +238,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/dc0/ShockRepeaterOnFireEffect_8java_source.html#l00062">62</a> of file <a class="el" href="../../d3/dc0/ShockRepeaterOnFireEffect_8java_source.html">ShockRepeaterOnFireEffect.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   62</span>                                                                                                                 {</div>
-<div class="line"><span class="lineno">   63</span>        <span class="keywordtype">float</span> spread = 50f;</div>
-<div class="line"><span class="lineno">   64</span>        <span class="keywordtype">float</span> range = weapon.getRange() - spread;</div>
-<div class="line"><span class="lineno">   65</span>        Vector2f from = projectile.getLocation();</div>
-<div class="line"><span class="lineno">   66</span>        Vector2f dir = Misc.getUnitVectorAtDegreeAngle(weapon.getCurrAngle());</div>
-<div class="line"><span class="lineno">   67</span>        dir.scale(range);</div>
-<div class="line"><span class="lineno">   68</span>        Vector2f.add(from, dir, dir);</div>
-<div class="line"><span class="lineno">   69</span>        dir = Misc.getPointWithinRadius(dir, spread);</div>
-<div class="line"><span class="lineno">   70</span>        <span class="keywordflow">return</span> dir;</div>
-<div class="line"><span class="lineno">   71</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

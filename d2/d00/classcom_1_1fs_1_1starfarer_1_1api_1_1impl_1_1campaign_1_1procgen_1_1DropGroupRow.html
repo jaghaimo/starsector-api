@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -202,21 +203,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d11/DropGroupRow_8java_source.html#l00074">74</a> of file <a class="el" href="../../d4/d11/DropGroupRow_8java_source.html">DropGroupRow.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   74</span>                                                             {</div>
-<div class="line"><span class="lineno">   75</span>        commodity = row.getString(<span class="stringliteral">&quot;commodity&quot;</span>);</div>
-<div class="line"><span class="lineno">   76</span>        group = row.getString(<span class="stringliteral">&quot;group&quot;</span>);</div>
-<div class="line"><span class="lineno">   77</span>        </div>
-<div class="line"><span class="lineno">   78</span>        String fStr = row.getString(<span class="stringliteral">&quot;freq&quot;</span>);</div>
-<div class="line"><span class="lineno">   79</span>        <span class="keywordflow">if</span> (fStr.endsWith(<span class="stringliteral">&quot;%&quot;</span>)) {</div>
-<div class="line"><span class="lineno">   80</span>            percent = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   81</span>            fStr = fStr.substring(0, fStr.length() - 1);</div>
-<div class="line"><span class="lineno">   82</span>            freq = Float.parseFloat(fStr);</div>
-<div class="line"><span class="lineno">   83</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   84</span>            freq = (float) row.getDouble(<span class="stringliteral">&quot;freq&quot;</span>);</div>
-<div class="line"><span class="lineno">   85</span>        }</div>
-<div class="line"><span class="lineno">   86</span>        parseData();</div>
-<div class="line"><span class="lineno">   87</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a3fd71e011428cbd0a540db59a7af0cde" name="a3fd71e011428cbd0a540db59a7af0cde"></a>
@@ -252,17 +239,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d11/DropGroupRow_8java_source.html#l00144">144</a> of file <a class="el" href="../../d4/d11/DropGroupRow_8java_source.html">DropGroupRow.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  144</span>                                                                    {</div>
-<div class="line"><span class="lineno">  145</span>        this.commodity = commodity;</div>
-<div class="line"><span class="lineno">  146</span>        this.group = group;</div>
-<div class="line"><span class="lineno">  147</span>        this.freq = freq;</div>
-<div class="line"><span class="lineno">  148</span>        <span class="keywordflow">try</span> {</div>
-<div class="line"><span class="lineno">  149</span>            parseData();</div>
-<div class="line"><span class="lineno">  150</span>        } <span class="keywordflow">catch</span> (JSONException e) {</div>
-<div class="line"><span class="lineno">  151</span>            <span class="keywordflow">throw</span> <span class="keyword">new</span> RuntimeException(e);</div>
-<div class="line"><span class="lineno">  152</span>        }</div>
-<div class="line"><span class="lineno">  153</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -282,16 +259,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d11/DropGroupRow_8java_source.html#l00065">65</a> of file <a class="el" href="../../d4/d11/DropGroupRow_8java_source.html">DropGroupRow.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   65</span>                                {</div>
-<div class="line"><span class="lineno">   66</span>        <span class="keywordflow">try</span> {</div>
-<div class="line"><span class="lineno">   67</span>            <a class="code hl_function" href="../../d2/d00/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html#a270350741b9cde6c1d8d10a4f052fe41">DropGroupRow</a> copy = (<a class="code hl_function" href="../../d2/d00/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html#a270350741b9cde6c1d8d10a4f052fe41">DropGroupRow</a>) super.clone();</div>
-<div class="line"><span class="lineno">   68</span>            <span class="keywordflow">return</span> copy;</div>
-<div class="line"><span class="lineno">   69</span>        } <span class="keywordflow">catch</span> (CloneNotSupportedException e) {</div>
-<div class="line"><span class="lineno">   70</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   71</span>        }</div>
-<div class="line"><span class="lineno">   72</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow_html_a270350741b9cde6c1d8d10a4f052fe41"><div class="ttname"><a href="../../d2/d00/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html#a270350741b9cde6c1d8d10a4f052fe41">com.fs.starfarer.api.impl.campaign.procgen.DropGroupRow.DropGroupRow</a></div><div class="ttdeci">DropGroupRow(JSONObject row)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d11/DropGroupRow_8java_source.html#l00074">DropGroupRow.java:74</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af588d55715abaa24c4c7d84bea2c76ff" name="af588d55715abaa24c4c7d84bea2c76ff"></a>
@@ -310,36 +278,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d11/DropGroupRow_8java_source.html#l00176">176</a> of file <a class="el" href="../../d4/d11/DropGroupRow_8java_source.html">DropGroupRow.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  176</span>                                    {</div>
-<div class="line"><span class="lineno">  177</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d2/d00/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html#ad0486b07369ceda4f9155b70ef08c6b0">isMultiValued</a>()) <span class="keywordflow">throw</span> <span class="keyword">new</span> RuntimeException(<span class="stringliteral">&quot;Call resolveToSpecificItem() before calling getBaseUnitValue()&quot;</span>);</div>
-<div class="line"><span class="lineno">  178</span>        </div>
-<div class="line"><span class="lineno">  179</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d2/d00/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html#ae6658733fb328debdabd0927d28e6468">isWeapon</a>()) {</div>
-<div class="line"><span class="lineno">  180</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="../../d2/d00/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html#add958d170810179d5ae81bcd86718abb">getWeaponSpec</a>().<a class="code hl_function" href="../../d4/de5/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WeaponSpecAPI.html#aa74c3a3572e02a0704cfc2b563285141">getBaseValue</a>();</div>
-<div class="line"><span class="lineno">  181</span><span class="comment">//      } else if (isHullMod()) {</span></div>
-<div class="line"><span class="lineno">  182</span><span class="comment">//          return getHullModSpec().getBaseValue();</span></div>
-<div class="line"><span class="lineno">  183</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d2/d00/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html#afded02579a4188746cba5a3024e1bb85">isFighterWing</a>()) {</div>
-<div class="line"><span class="lineno">  184</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="../../d2/d00/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html#a98cc6df367959bb3e036f9d3837d4f12">getFighterWingSpec</a>().<a class="code hl_function" href="../../df/d90/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1FighterWingSpecAPI.html#aa2877edcb3d6623d1885a36a5df258d9">getBaseValue</a>();</div>
-<div class="line"><span class="lineno">  185</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d2/d00/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html#aac64b156990ee752933be3f49943be81">isSpecialItem</a>()) {</div>
-<div class="line"><span class="lineno">  186</span>            CargoStackAPI stack = Global.getFactory().createCargoStack(CargoItemType.SPECIAL, </div>
-<div class="line"><span class="lineno">  187</span>                    <span class="keyword">new</span> SpecialItemData(<a class="code hl_function" href="../../d2/d00/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html#a4eb3812a1985a8fd3ed0e48f13a8b62a">getSpecialItemId</a>(), <a class="code hl_function" href="../../d2/d00/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html#ab7864d694fd6b1b079b4f39817af5be0">getSpecialItemData</a>()), <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  188</span>            <span class="keywordflow">return</span> stack.getPlugin().getPrice(<span class="keyword">null</span>, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  189</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  190</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="../../d2/d00/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html#abefa7d15fcb8bf1684a732938d0de179">getSpec</a>().<a class="code hl_function" href="../../db/d8a/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommoditySpecAPI.html#a667cad9d981a043d6a4870a5313f4028">getBasePrice</a>();</div>
-<div class="line"><span class="lineno">  191</span>        }</div>
-<div class="line"><span class="lineno">  192</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow_html_a4eb3812a1985a8fd3ed0e48f13a8b62a"><div class="ttname"><a href="../../d2/d00/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html#a4eb3812a1985a8fd3ed0e48f13a8b62a">com.fs.starfarer.api.impl.campaign.procgen.DropGroupRow.getSpecialItemId</a></div><div class="ttdeci">String getSpecialItemId()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d11/DropGroupRow_8java_source.html#l00213">DropGroupRow.java:213</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow_html_a98cc6df367959bb3e036f9d3837d4f12"><div class="ttname"><a href="../../d2/d00/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html#a98cc6df367959bb3e036f9d3837d4f12">com.fs.starfarer.api.impl.campaign.procgen.DropGroupRow.getFighterWingSpec</a></div><div class="ttdeci">FighterWingSpecAPI getFighterWingSpec()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d11/DropGroupRow_8java_source.html#l00194">DropGroupRow.java:194</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow_html_aac64b156990ee752933be3f49943be81"><div class="ttname"><a href="../../d2/d00/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html#aac64b156990ee752933be3f49943be81">com.fs.starfarer.api.impl.campaign.procgen.DropGroupRow.isSpecialItem</a></div><div class="ttdeci">boolean isSpecialItem()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d11/DropGroupRow_8java_source.html#l00241">DropGroupRow.java:241</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow_html_ab7864d694fd6b1b079b4f39817af5be0"><div class="ttname"><a href="../../d2/d00/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html#ab7864d694fd6b1b079b4f39817af5be0">com.fs.starfarer.api.impl.campaign.procgen.DropGroupRow.getSpecialItemData</a></div><div class="ttdeci">String getSpecialItemData()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d11/DropGroupRow_8java_source.html#l00221">DropGroupRow.java:221</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow_html_abefa7d15fcb8bf1684a732938d0de179"><div class="ttname"><a href="../../d2/d00/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html#abefa7d15fcb8bf1684a732938d0de179">com.fs.starfarer.api.impl.campaign.procgen.DropGroupRow.getSpec</a></div><div class="ttdeci">CommoditySpecAPI getSpec()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d11/DropGroupRow_8java_source.html#l00155">DropGroupRow.java:155</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow_html_ad0486b07369ceda4f9155b70ef08c6b0"><div class="ttname"><a href="../../d2/d00/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html#ad0486b07369ceda4f9155b70ef08c6b0">com.fs.starfarer.api.impl.campaign.procgen.DropGroupRow.isMultiValued</a></div><div class="ttdeci">boolean isMultiValued()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d11/DropGroupRow_8java_source.html#l00257">DropGroupRow.java:257</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow_html_add958d170810179d5ae81bcd86718abb"><div class="ttname"><a href="../../d2/d00/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html#add958d170810179d5ae81bcd86718abb">com.fs.starfarer.api.impl.campaign.procgen.DropGroupRow.getWeaponSpec</a></div><div class="ttdeci">WeaponSpecAPI getWeaponSpec()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d11/DropGroupRow_8java_source.html#l00162">DropGroupRow.java:162</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow_html_ae6658733fb328debdabd0927d28e6468"><div class="ttname"><a href="../../d2/d00/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html#ae6658733fb328debdabd0927d28e6468">com.fs.starfarer.api.impl.campaign.procgen.DropGroupRow.isWeapon</a></div><div class="ttdeci">boolean isWeapon()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d11/DropGroupRow_8java_source.html#l00205">DropGroupRow.java:205</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow_html_afded02579a4188746cba5a3024e1bb85"><div class="ttname"><a href="../../d2/d00/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html#afded02579a4188746cba5a3024e1bb85">com.fs.starfarer.api.impl.campaign.procgen.DropGroupRow.isFighterWing</a></div><div class="ttdeci">boolean isFighterWing()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d11/DropGroupRow_8java_source.html#l00238">DropGroupRow.java:238</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommoditySpecAPI_html_a667cad9d981a043d6a4870a5313f4028"><div class="ttname"><a href="../../db/d8a/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommoditySpecAPI.html#a667cad9d981a043d6a4870a5313f4028">com.fs.starfarer.api.campaign.econ.CommoditySpecAPI.getBasePrice</a></div><div class="ttdeci">float getBasePrice()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1FighterWingSpecAPI_html_aa2877edcb3d6623d1885a36a5df258d9"><div class="ttname"><a href="../../df/d90/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1FighterWingSpecAPI.html#aa2877edcb3d6623d1885a36a5df258d9">com.fs.starfarer.api.loading.FighterWingSpecAPI.getBaseValue</a></div><div class="ttdeci">float getBaseValue()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WeaponSpecAPI_html_aa74c3a3572e02a0704cfc2b563285141"><div class="ttname"><a href="../../d4/de5/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WeaponSpecAPI.html#aa74c3a3572e02a0704cfc2b563285141">com.fs.starfarer.api.loading.WeaponSpecAPI.getBaseValue</a></div><div class="ttdeci">float getBaseValue()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa611305aabd6a5dba39928bce8973a4c" name="aa611305aabd6a5dba39928bce8973a4c"></a>
@@ -358,10 +297,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d11/DropGroupRow_8java_source.html#l00265">265</a> of file <a class="el" href="../../d4/d11/DropGroupRow_8java_source.html">DropGroupRow.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  265</span>                                 {</div>
-<div class="line"><span class="lineno">  266</span>        <span class="keywordflow">return</span> commodity;</div>
-<div class="line"><span class="lineno">  267</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a4a6a125c41977c029f0390e95a16493f" name="a4a6a125c41977c029f0390e95a16493f"></a>
@@ -380,11 +316,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d11/DropGroupRow_8java_source.html#l00245">245</a> of file <a class="el" href="../../d4/d11/DropGroupRow_8java_source.html">DropGroupRow.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  245</span>                                     {</div>
-<div class="line"><span class="lineno">  246</span>        <span class="keywordflow">return</span> commodity.substring(<a class="code hl_variable" href="../../d2/d00/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html#a171c6da4357443df370eb5d0cb0a9798">FIGHTER_PREFIX</a>.length());</div>
-<div class="line"><span class="lineno">  247</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow_html_a171c6da4357443df370eb5d0cb0a9798"><div class="ttname"><a href="../../d2/d00/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html#a171c6da4357443df370eb5d0cb0a9798">com.fs.starfarer.api.impl.campaign.procgen.DropGroupRow.FIGHTER_PREFIX</a></div><div class="ttdeci">static final String FIGHTER_PREFIX</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d11/DropGroupRow_8java_source.html#l00034">DropGroupRow.java:34</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a98cc6df367959bb3e036f9d3837d4f12" name="a98cc6df367959bb3e036f9d3837d4f12"></a>
@@ -403,14 +335,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d11/DropGroupRow_8java_source.html#l00194">194</a> of file <a class="el" href="../../d4/d11/DropGroupRow_8java_source.html">DropGroupRow.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  194</span>                                                   {</div>
-<div class="line"><span class="lineno">  195</span>        <span class="keywordflow">if</span> (!<a class="code hl_function" href="../../d2/d00/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html#afded02579a4188746cba5a3024e1bb85">isFighterWing</a>()) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  196</span>        </div>
-<div class="line"><span class="lineno">  197</span>        FighterWingSpecAPI spec = Global.getSettings().getFighterWingSpec(<a class="code hl_function" href="../../d2/d00/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html#a4a6a125c41977c029f0390e95a16493f">getFighterWingId</a>());</div>
-<div class="line"><span class="lineno">  198</span>        <span class="keywordflow">return</span> spec;</div>
-<div class="line"><span class="lineno">  199</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow_html_a4a6a125c41977c029f0390e95a16493f"><div class="ttname"><a href="../../d2/d00/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html#a4a6a125c41977c029f0390e95a16493f">com.fs.starfarer.api.impl.campaign.procgen.DropGroupRow.getFighterWingId</a></div><div class="ttdeci">String getFighterWingId()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d11/DropGroupRow_8java_source.html#l00245">DropGroupRow.java:245</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aede438583ce0db96f66338bced98b74a" name="aede438583ce0db96f66338bced98b74a"></a>
@@ -429,10 +354,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d11/DropGroupRow_8java_source.html#l00281">281</a> of file <a class="el" href="../../d4/d11/DropGroupRow_8java_source.html">DropGroupRow.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  281</span>                           {</div>
-<div class="line"><span class="lineno">  282</span>        <span class="keywordflow">return</span> freq;</div>
-<div class="line"><span class="lineno">  283</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2a77e068ed1ef4f15cb04ef01ac9f7e4" name="a2a77e068ed1ef4f15cb04ef01ac9f7e4"></a>
@@ -451,10 +373,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d11/DropGroupRow_8java_source.html#l00273">273</a> of file <a class="el" href="../../d4/d11/DropGroupRow_8java_source.html">DropGroupRow.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  273</span>                             {</div>
-<div class="line"><span class="lineno">  274</span>        <span class="keywordflow">return</span> group;</div>
-<div class="line"><span class="lineno">  275</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a33c5eaaaddbd89f4a8a781b9e71a9239" name="a33c5eaaaddbd89f4a8a781b9e71a9239"></a>
@@ -482,45 +401,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d11/DropGroupRow_8java_source.html#l00290">290</a> of file <a class="el" href="../../d4/d11/DropGroupRow_8java_source.html">DropGroupRow.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  290</span>                                                                             {</div>
-<div class="line"><span class="lineno">  291</span>        WeightedRandomPicker&lt;DropGroupRow&gt; picker = <span class="keyword">new</span> WeightedRandomPicker&lt;DropGroupRow&gt;();</div>
-<div class="line"><span class="lineno">  292</span>        Collection&lt;DropGroupRow&gt; specs = Global.getSettings().getAllSpecs(<a class="code hl_function" href="../../d2/d00/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html#a270350741b9cde6c1d8d10a4f052fe41">DropGroupRow</a>.class);</div>
-<div class="line"><span class="lineno">  293</span>        </div>
-<div class="line"><span class="lineno">  294</span>        <span class="keywordflow">for</span> (DropGroupRow spec : specs) {</div>
-<div class="line"><span class="lineno">  295</span><span class="comment">//          if (!spec.isMultiValued() &amp;&amp; spec.isHullMod() &amp;&amp; spec.getHullModSpec().hasTag(Tags.HULLMOD_NO_DROP)) {</span></div>
-<div class="line"><span class="lineno">  296</span><span class="comment">//              continue;</span></div>
-<div class="line"><span class="lineno">  297</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">  298</span>            <span class="keywordflow">if</span> (!spec.isMultiValued() &amp;&amp; spec.isFighterWing() &amp;&amp; spec.getFighterWingSpec().hasTag(Tags.WING_NO_DROP)) {</div>
-<div class="line"><span class="lineno">  299</span>                <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  300</span>            }</div>
-<div class="line"><span class="lineno">  301</span>            </div>
-<div class="line"><span class="lineno">  302</span>            <span class="keywordflow">if</span> (spec.getGroup().equals(group)) {</div>
-<div class="line"><span class="lineno">  303</span>                picker.add(spec, spec.getFreq());</div>
-<div class="line"><span class="lineno">  304</span>            }</div>
-<div class="line"><span class="lineno">  305</span>        }</div>
-<div class="line"><span class="lineno">  306</span>        </div>
-<div class="line"><span class="lineno">  307</span>        <span class="keywordflow">for</span> (DropGroupRow curr : picker.getItems()) {</div>
-<div class="line"><span class="lineno">  308</span>            <span class="keywordflow">if</span> (curr.isNothing() &amp;&amp; curr.percent) {</div>
-<div class="line"><span class="lineno">  309</span>                <span class="keywordtype">float</span> totalOther = picker.getTotal() - curr.freq;</div>
-<div class="line"><span class="lineno">  310</span>                </div>
-<div class="line"><span class="lineno">  311</span>                <span class="keywordtype">float</span> fNothing = curr.freq / 100f;</div>
-<div class="line"><span class="lineno">  312</span>                <span class="keywordflow">if</span> (fNothing &lt; 0) fNothing = 0;</div>
-<div class="line"><span class="lineno">  313</span>                <span class="keywordflow">if</span> (fNothing &gt; 1) fNothing = 1;</div>
-<div class="line"><span class="lineno">  314</span>                </div>
-<div class="line"><span class="lineno">  315</span>                <span class="keywordtype">float</span> weightNothing = totalOther * fNothing / (1f - fNothing);</div>
-<div class="line"><span class="lineno">  316</span>                </div>
-<div class="line"><span class="lineno">  317</span>                picker.setWeight(picker.getItems().indexOf(curr), weightNothing);</div>
-<div class="line"><span class="lineno">  318</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  319</span>            }</div>
-<div class="line"><span class="lineno">  320</span>        }</div>
-<div class="line"><span class="lineno">  321</span>        </div>
-<div class="line"><span class="lineno">  322</span>        <span class="keywordflow">if</span> (picker.isEmpty()) {</div>
-<div class="line"><span class="lineno">  323</span>            <span class="keywordflow">throw</span> <span class="keyword">new</span> RuntimeException(<span class="stringliteral">&quot;No drop data found for drop group [&quot;</span> + group + <span class="stringliteral">&quot;], probably an error in drop_groups.csv&quot;</span>);</div>
-<div class="line"><span class="lineno">  324</span>        }</div>
-<div class="line"><span class="lineno">  325</span>        </div>
-<div class="line"><span class="lineno">  326</span>        <span class="keywordflow">return</span> picker;</div>
-<div class="line"><span class="lineno">  327</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="abefa7d15fcb8bf1684a732938d0de179" name="abefa7d15fcb8bf1684a732938d0de179"></a>
@@ -539,14 +420,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d11/DropGroupRow_8java_source.html#l00155">155</a> of file <a class="el" href="../../d4/d11/DropGroupRow_8java_source.html">DropGroupRow.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  155</span>                                      {</div>
-<div class="line"><span class="lineno">  156</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d2/d00/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html#ab82078faa32fb5dec92bbebbdd35bf7f">isNothing</a>() || <a class="code hl_function" href="../../d2/d00/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html#ae6658733fb328debdabd0927d28e6468">isWeapon</a>()) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  157</span>        </div>
-<div class="line"><span class="lineno">  158</span>        CommoditySpecAPI spec = Global.getSector().getEconomy().getCommoditySpec(commodity);</div>
-<div class="line"><span class="lineno">  159</span>        <span class="keywordflow">return</span> spec;</div>
-<div class="line"><span class="lineno">  160</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow_html_ab82078faa32fb5dec92bbebbdd35bf7f"><div class="ttname"><a href="../../d2/d00/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html#ab82078faa32fb5dec92bbebbdd35bf7f">com.fs.starfarer.api.impl.campaign.procgen.DropGroupRow.isNothing</a></div><div class="ttdeci">boolean isNothing()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d11/DropGroupRow_8java_source.html#l00261">DropGroupRow.java:261</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab7864d694fd6b1b079b4f39817af5be0" name="ab7864d694fd6b1b079b4f39817af5be0"></a>
@@ -565,17 +439,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d11/DropGroupRow_8java_source.html#l00221">221</a> of file <a class="el" href="../../d4/d11/DropGroupRow_8java_source.html">DropGroupRow.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  221</span>                                       {</div>
-<div class="line"><span class="lineno">  222</span>        String afterPrefix = commodity.substring(<a class="code hl_variable" href="../../d2/d00/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html#a733a782738745dd17784670589b4db9b">ITEM_PREFIX</a>.length());</div>
-<div class="line"><span class="lineno">  223</span>        <span class="keywordtype">int</span> index = afterPrefix.indexOf(<span class="stringliteral">&quot;:&quot;</span>);</div>
-<div class="line"><span class="lineno">  224</span>        <span class="keywordflow">if</span> (index &gt;= 0) {</div>
-<div class="line"><span class="lineno">  225</span>            afterPrefix = afterPrefix.substring(index + 1);</div>
-<div class="line"><span class="lineno">  226</span>            <span class="keywordflow">return</span> afterPrefix;</div>
-<div class="line"><span class="lineno">  227</span>        }</div>
-<div class="line"><span class="lineno">  228</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  229</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow_html_a733a782738745dd17784670589b4db9b"><div class="ttname"><a href="../../d2/d00/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html#a733a782738745dd17784670589b4db9b">com.fs.starfarer.api.impl.campaign.procgen.DropGroupRow.ITEM_PREFIX</a></div><div class="ttdeci">static final String ITEM_PREFIX</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d11/DropGroupRow_8java_source.html#l00035">DropGroupRow.java:35</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a4eb3812a1985a8fd3ed0e48f13a8b62a" name="a4eb3812a1985a8fd3ed0e48f13a8b62a"></a>
@@ -594,15 +458,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d11/DropGroupRow_8java_source.html#l00213">213</a> of file <a class="el" href="../../d4/d11/DropGroupRow_8java_source.html">DropGroupRow.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  213</span>                                     {</div>
-<div class="line"><span class="lineno">  214</span>        String afterPrefix = commodity.substring(<a class="code hl_variable" href="../../d2/d00/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html#a733a782738745dd17784670589b4db9b">ITEM_PREFIX</a>.length());</div>
-<div class="line"><span class="lineno">  215</span>        <span class="keywordtype">int</span> index = afterPrefix.indexOf(<span class="stringliteral">&quot;:&quot;</span>);</div>
-<div class="line"><span class="lineno">  216</span>        <span class="keywordflow">if</span> (index &gt;= 0) {</div>
-<div class="line"><span class="lineno">  217</span>            afterPrefix = afterPrefix.substring(0, index);</div>
-<div class="line"><span class="lineno">  218</span>        }</div>
-<div class="line"><span class="lineno">  219</span>        <span class="keywordflow">return</span> afterPrefix;</div>
-<div class="line"><span class="lineno">  220</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aedf1c39893757a4bf82e71ef66131831" name="aedf1c39893757a4bf82e71ef66131831"></a>
@@ -621,13 +477,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d11/DropGroupRow_8java_source.html#l00231">231</a> of file <a class="el" href="../../d4/d11/DropGroupRow_8java_source.html">DropGroupRow.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  231</span>                                                   {</div>
-<div class="line"><span class="lineno">  232</span>        <span class="keywordflow">if</span> (!<a class="code hl_function" href="../../d2/d00/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html#aac64b156990ee752933be3f49943be81">isSpecialItem</a>()) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  233</span>        </div>
-<div class="line"><span class="lineno">  234</span>        SpecialItemSpecAPI spec = Global.getSettings().getSpecialItemSpec(<a class="code hl_function" href="../../d2/d00/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html#a4eb3812a1985a8fd3ed0e48f13a8b62a">getSpecialItemId</a>());</div>
-<div class="line"><span class="lineno">  235</span>        <span class="keywordflow">return</span> spec;</div>
-<div class="line"><span class="lineno">  236</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="abfa9caaa6c9c1f970ea75c891eb59d1b" name="abfa9caaa6c9c1f970ea75c891eb59d1b"></a>
@@ -646,11 +496,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d11/DropGroupRow_8java_source.html#l00209">209</a> of file <a class="el" href="../../d4/d11/DropGroupRow_8java_source.html">DropGroupRow.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  209</span>                                {</div>
-<div class="line"><span class="lineno">  210</span>        <span class="keywordflow">return</span> commodity.substring(<a class="code hl_variable" href="../../d2/d00/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html#a5712a1819552ecd1e35ad18cf9d28649">WEAPON_PREFIX</a>.length());</div>
-<div class="line"><span class="lineno">  211</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow_html_a5712a1819552ecd1e35ad18cf9d28649"><div class="ttname"><a href="../../d2/d00/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html#a5712a1819552ecd1e35ad18cf9d28649">com.fs.starfarer.api.impl.campaign.procgen.DropGroupRow.WEAPON_PREFIX</a></div><div class="ttdeci">static final String WEAPON_PREFIX</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d11/DropGroupRow_8java_source.html#l00032">DropGroupRow.java:32</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="add958d170810179d5ae81bcd86718abb" name="add958d170810179d5ae81bcd86718abb"></a>
@@ -669,14 +515,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d11/DropGroupRow_8java_source.html#l00162">162</a> of file <a class="el" href="../../d4/d11/DropGroupRow_8java_source.html">DropGroupRow.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  162</span>                                         {</div>
-<div class="line"><span class="lineno">  163</span>        <span class="keywordflow">if</span> (!<a class="code hl_function" href="../../d2/d00/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html#ae6658733fb328debdabd0927d28e6468">isWeapon</a>()) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  164</span>        </div>
-<div class="line"><span class="lineno">  165</span>        WeaponSpecAPI spec = Global.getSettings().getWeaponSpec(<a class="code hl_function" href="../../d2/d00/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html#abfa9caaa6c9c1f970ea75c891eb59d1b">getWeaponId</a>());</div>
-<div class="line"><span class="lineno">  166</span>        <span class="keywordflow">return</span> spec;</div>
-<div class="line"><span class="lineno">  167</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow_html_abfa9caaa6c9c1f970ea75c891eb59d1b"><div class="ttname"><a href="../../d2/d00/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html#abfa9caaa6c9c1f970ea75c891eb59d1b">com.fs.starfarer.api.impl.campaign.procgen.DropGroupRow.getWeaponId</a></div><div class="ttdeci">String getWeaponId()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d11/DropGroupRow_8java_source.html#l00209">DropGroupRow.java:209</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a31dc452d2a552d2401fb7eae23ae4342" name="a31dc452d2a552d2401fb7eae23ae4342"></a>
@@ -695,10 +534,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d11/DropGroupRow_8java_source.html#l00201">201</a> of file <a class="el" href="../../d4/d11/DropGroupRow_8java_source.html">DropGroupRow.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  201</span>                                 {</div>
-<div class="line"><span class="lineno">  202</span>        <span class="keywordflow">return</span> !<a class="code hl_function" href="../../d2/d00/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html#ab82078faa32fb5dec92bbebbdd35bf7f">isNothing</a>() &amp;&amp; !<a class="code hl_function" href="../../d2/d00/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html#ae6658733fb328debdabd0927d28e6468">isWeapon</a>() &amp;&amp; !<a class="code hl_function" href="../../d2/d00/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html#afded02579a4188746cba5a3024e1bb85">isFighterWing</a>() &amp;&amp; !<a class="code hl_function" href="../../d2/d00/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html#aac64b156990ee752933be3f49943be81">isSpecialItem</a>();</div>
-<div class="line"><span class="lineno">  203</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="afded02579a4188746cba5a3024e1bb85" name="afded02579a4188746cba5a3024e1bb85"></a>
@@ -717,10 +553,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d11/DropGroupRow_8java_source.html#l00238">238</a> of file <a class="el" href="../../d4/d11/DropGroupRow_8java_source.html">DropGroupRow.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  238</span>                                   {</div>
-<div class="line"><span class="lineno">  239</span>        <span class="keywordflow">return</span> commodity != <span class="keyword">null</span> &amp;&amp; commodity.startsWith(<a class="code hl_variable" href="../../d2/d00/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html#a171c6da4357443df370eb5d0cb0a9798">FIGHTER_PREFIX</a>);</div>
-<div class="line"><span class="lineno">  240</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ad0486b07369ceda4f9155b70ef08c6b0" name="ad0486b07369ceda4f9155b70ef08c6b0"></a>
@@ -739,10 +572,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d11/DropGroupRow_8java_source.html#l00257">257</a> of file <a class="el" href="../../d4/d11/DropGroupRow_8java_source.html">DropGroupRow.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  257</span>                                   {</div>
-<div class="line"><span class="lineno">  258</span>        <span class="keywordflow">return</span> multiValued;</div>
-<div class="line"><span class="lineno">  259</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab82078faa32fb5dec92bbebbdd35bf7f" name="ab82078faa32fb5dec92bbebbdd35bf7f"></a>
@@ -761,11 +591,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d11/DropGroupRow_8java_source.html#l00261">261</a> of file <a class="el" href="../../d4/d11/DropGroupRow_8java_source.html">DropGroupRow.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  261</span>                               {</div>
-<div class="line"><span class="lineno">  262</span>        <span class="keywordflow">return</span> commodity == <span class="keyword">null</span> || commodity.equals(<a class="code hl_variable" href="../../d2/d00/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html#a4e4b3ce5cf5b864a2219bbf1ad44dddf">NOTHING</a>);</div>
-<div class="line"><span class="lineno">  263</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow_html_a4e4b3ce5cf5b864a2219bbf1ad44dddf"><div class="ttname"><a href="../../d2/d00/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html#a4e4b3ce5cf5b864a2219bbf1ad44dddf">com.fs.starfarer.api.impl.campaign.procgen.DropGroupRow.NOTHING</a></div><div class="ttdeci">static final String NOTHING</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d11/DropGroupRow_8java_source.html#l00029">DropGroupRow.java:29</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aac64b156990ee752933be3f49943be81" name="aac64b156990ee752933be3f49943be81"></a>
@@ -784,10 +610,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d11/DropGroupRow_8java_source.html#l00241">241</a> of file <a class="el" href="../../d4/d11/DropGroupRow_8java_source.html">DropGroupRow.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  241</span>                                   {</div>
-<div class="line"><span class="lineno">  242</span>        <span class="keywordflow">return</span> commodity != <span class="keyword">null</span> &amp;&amp; commodity.startsWith(<a class="code hl_variable" href="../../d2/d00/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html#a733a782738745dd17784670589b4db9b">ITEM_PREFIX</a>);</div>
-<div class="line"><span class="lineno">  243</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae6658733fb328debdabd0927d28e6468" name="ae6658733fb328debdabd0927d28e6468"></a>
@@ -806,10 +629,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d11/DropGroupRow_8java_source.html#l00205">205</a> of file <a class="el" href="../../d4/d11/DropGroupRow_8java_source.html">DropGroupRow.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  205</span>                              {</div>
-<div class="line"><span class="lineno">  206</span>        <span class="keywordflow">return</span> commodity != <span class="keyword">null</span> &amp;&amp; commodity.startsWith(<a class="code hl_variable" href="../../d2/d00/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html#a5712a1819552ecd1e35ad18cf9d28649">WEAPON_PREFIX</a>);</div>
-<div class="line"><span class="lineno">  207</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a933127c4811b8520384f761b9f864837" name="a933127c4811b8520384f761b9f864837"></a>
@@ -829,245 +649,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d11/DropGroupRow_8java_source.html#l00330">330</a> of file <a class="el" href="../../d4/d11/DropGroupRow_8java_source.html">DropGroupRow.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  330</span>                                                             {</div>
-<div class="line"><span class="lineno">  331</span>        <span class="keywordflow">if</span> (random == <span class="keyword">null</span>) random = <span class="keyword">new</span> Random();</div>
-<div class="line"><span class="lineno">  332</span>        </div>
-<div class="line"><span class="lineno">  333</span>        <span class="keywordflow">if</span> (!<a class="code hl_function" href="../../d2/d00/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html#ad0486b07369ceda4f9155b70ef08c6b0">isMultiValued</a>()) <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">  334</span>        </div>
-<div class="line"><span class="lineno">  335</span>        <a class="code hl_function" href="../../d2/d00/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html#a270350741b9cde6c1d8d10a4f052fe41">DropGroupRow</a> copy = <a class="code hl_function" href="../../d2/d00/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html#aad0936511e7173e8e5e91f2eace2370c">clone</a>();</div>
-<div class="line"><span class="lineno">  336</span>        copy.multiValued = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  337</span>        </div>
-<div class="line"><span class="lineno">  338</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d2/d00/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html#aac64b156990ee752933be3f49943be81">isSpecialItem</a>()) {</div>
-<div class="line"><span class="lineno">  339</span><span class="comment">//          item_factory_core                                   resolved</span></div>
-<div class="line"><span class="lineno">  340</span><span class="comment">//          item_modspec:converted_hangar                       resolved</span></div>
-<div class="line"><span class="lineno">  341</span><span class="comment">//          item_modspec:{}                                     unresolved</span></div>
-<div class="line"><span class="lineno">  342</span><span class="comment">//          item_:{}                                            unresolved</span></div>
-<div class="line"><span class="lineno">  343</span><span class="comment">//          item_modspec:{tier:3, tags:[shields]}               unresolved</span></div>
-<div class="line"><span class="lineno">  344</span><span class="comment">//          item_:{tags:[modspec], p:{tier:3, tags:[engines]}   unresolved</span></div>
-<div class="line"><span class="lineno">  345</span>            </div>
-<div class="line"><span class="lineno">  346</span>            String test = commodity.replaceFirst(<a class="code hl_variable" href="../../d2/d00/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html#a733a782738745dd17784670589b4db9b">ITEM_PREFIX</a>, <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><span class="lineno">  347</span>            <span class="keywordtype">int</span> index = test.indexOf(<span class="charliteral">&#39;:&#39;</span>);</div>
-<div class="line"><span class="lineno">  348</span>            <span class="keywordflow">if</span> (index &lt; 0) {</div>
-<div class="line"><span class="lineno">  349</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  350</span>                <span class="keywordtype">boolean</span> getParamsFromP = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  351</span>                String itemId = test.substring(0, index);</div>
-<div class="line"><span class="lineno">  352</span>                String params = test.substring(index + 1);</div>
-<div class="line"><span class="lineno">  353</span>                </div>
-<div class="line"><span class="lineno">  354</span>                <span class="keywordflow">if</span> (!itemId.isEmpty()) {</div>
-<div class="line"><span class="lineno">  355</span>                    <span class="comment">// params are already set properly, and we have an item id - do nothing</span></div>
-<div class="line"><span class="lineno">  356</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  357</span>                    List&lt;SpecialItemSpecAPI&gt; specs = Global.getSettings().getAllSpecialItemSpecs();</div>
-<div class="line"><span class="lineno">  358</span>                    </div>
-<div class="line"><span class="lineno">  359</span>                    Iterator&lt;SpecialItemSpecAPI&gt; iter = specs.iterator();</div>
-<div class="line"><span class="lineno">  360</span><span class="comment">//                  while (iter.hasNext()) {</span></div>
-<div class="line"><span class="lineno">  361</span><span class="comment">//                      SpecialItemSpecAPI curr = iter.next();</span></div>
-<div class="line"><span class="lineno">  362</span><span class="comment">//                      if (curr.isHidden() || curr.isHiddenEverywhere()) iter.remove();</span></div>
-<div class="line"><span class="lineno">  363</span><span class="comment">//                  }</span></div>
-<div class="line"><span class="lineno">  364</span>                    </div>
-<div class="line"><span class="lineno">  365</span>                    <span class="keywordflow">if</span> (!tags.isEmpty()) {</div>
-<div class="line"><span class="lineno">  366</span>                        iter = specs.iterator();</div>
-<div class="line"><span class="lineno">  367</span>                        <span class="keywordflow">while</span> (iter.hasNext()) {</div>
-<div class="line"><span class="lineno">  368</span>                            SpecialItemSpecAPI curr = iter.next();</div>
-<div class="line"><span class="lineno">  369</span>                            <span class="keywordflow">for</span> (String tag : tags) {</div>
-<div class="line"><span class="lineno">  370</span>                                <span class="keywordtype">boolean</span> not = tag.startsWith(<span class="stringliteral">&quot;!&quot;</span>);</div>
-<div class="line"><span class="lineno">  371</span>                                tag = not ? tag.substring(1) : tag;</div>
-<div class="line"><span class="lineno">  372</span>                                <span class="keywordtype">boolean</span> has = curr.hasTag(tag);</div>
-<div class="line"><span class="lineno">  373</span>                                <span class="keywordflow">if</span> (not == has) {</div>
-<div class="line"><span class="lineno">  374</span>                                    iter.remove();</div>
-<div class="line"><span class="lineno">  375</span>                                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  376</span>                                }</div>
-<div class="line"><span class="lineno">  377</span>                            }</div>
-<div class="line"><span class="lineno">  378</span>                        }</div>
-<div class="line"><span class="lineno">  379</span>                    }</div>
-<div class="line"><span class="lineno">  380</span>                    </div>
-<div class="line"><span class="lineno">  381</span>                    WeightedRandomPicker&lt;SpecialItemSpecAPI&gt; picker = <span class="keyword">new</span> WeightedRandomPicker&lt;SpecialItemSpecAPI&gt;(random);</div>
-<div class="line"><span class="lineno">  382</span>                    <span class="keywordflow">for</span> (SpecialItemSpecAPI spec : specs) {</div>
-<div class="line"><span class="lineno">  383</span>                        picker.add(spec, 1f * spec.getRarity());</div>
-<div class="line"><span class="lineno">  384</span>                    }</div>
-<div class="line"><span class="lineno">  385</span>                    SpecialItemSpecAPI pick = picker.pick();</div>
-<div class="line"><span class="lineno">  386</span>                    <span class="keywordflow">if</span> (pick == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  387</span>                        copy.commodity = <a class="code hl_variable" href="../../d2/d00/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html#a4e4b3ce5cf5b864a2219bbf1ad44dddf">NOTHING</a>;</div>
-<div class="line"><span class="lineno">  388</span>                    } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  389</span>                        itemId = pick.getId(); </div>
-<div class="line"><span class="lineno">  390</span>                        getParamsFromP = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  391</span>                    }</div>
-<div class="line"><span class="lineno">  392</span>                }</div>
-<div class="line"><span class="lineno">  393</span>                </div>
-<div class="line"><span class="lineno">  394</span>                <span class="comment">// we&#39;ve picked an itemId to use</span></div>
-<div class="line"><span class="lineno">  395</span>                <span class="keywordflow">if</span> (!itemId.isEmpty()) {</div>
-<div class="line"><span class="lineno">  396</span><span class="comment">//                  item_:{tags:[modspec], p:{tier:3, tags:[engines]}   unresolved</span></div>
-<div class="line"><span class="lineno">  397</span>                    <span class="keywordflow">try</span> {</div>
-<div class="line"><span class="lineno">  398</span>                        <span class="keywordflow">if</span> (getParamsFromP) {</div>
-<div class="line"><span class="lineno">  399</span>                            JSONObject json = <span class="keyword">new</span> JSONObject(params);</div>
-<div class="line"><span class="lineno">  400</span>                            <span class="keywordflow">if</span> (json.has(<span class="stringliteral">&quot;p&quot;</span>)) {</div>
-<div class="line"><span class="lineno">  401</span>                                params = json.getJSONObject(<span class="stringliteral">&quot;p&quot;</span>).toString();</div>
-<div class="line"><span class="lineno">  402</span>                            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  403</span>                                params = <span class="stringliteral">&quot;{}&quot;</span>;</div>
-<div class="line"><span class="lineno">  404</span>                            }</div>
-<div class="line"><span class="lineno">  405</span>                        }</div>
-<div class="line"><span class="lineno">  406</span>                        </div>
-<div class="line"><span class="lineno">  407</span>                        SpecialItemSpecAPI spec = Global.getSettings().getSpecialItemSpec(itemId);</div>
-<div class="line"><span class="lineno">  408</span>                        SpecialItemPlugin plugin = spec.getNewPluginInstance(<span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  409</span>                        String itemData = plugin.resolveDropParamsToSpecificItemData(params, random);</div>
-<div class="line"><span class="lineno">  410</span>                        </div>
-<div class="line"><span class="lineno">  411</span>                        <span class="keywordflow">if</span> (itemData == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  412</span>                            copy.commodity = <a class="code hl_variable" href="../../d2/d00/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html#a4e4b3ce5cf5b864a2219bbf1ad44dddf">NOTHING</a>;</div>
-<div class="line"><span class="lineno">  413</span>                        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (itemData.isEmpty()) {</div>
-<div class="line"><span class="lineno">  414</span>                            copy.commodity = <a class="code hl_variable" href="../../d2/d00/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html#a733a782738745dd17784670589b4db9b">ITEM_PREFIX</a> + itemId;</div>
-<div class="line"><span class="lineno">  415</span>                        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  416</span>                            copy.commodity = <a class="code hl_variable" href="../../d2/d00/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html#a733a782738745dd17784670589b4db9b">ITEM_PREFIX</a> + itemId + <span class="stringliteral">&quot;:&quot;</span> + itemData;</div>
-<div class="line"><span class="lineno">  417</span>                        }</div>
-<div class="line"><span class="lineno">  418</span><span class="comment">//                      if (copy.commodity.contains(&quot;{&quot;)) {</span></div>
-<div class="line"><span class="lineno">  419</span><span class="comment">//                          System.out.println(&quot;wefwefew&quot;);</span></div>
-<div class="line"><span class="lineno">  420</span><span class="comment">//                      }</span></div>
-<div class="line"><span class="lineno">  421</span>                    } <span class="keywordflow">catch</span> (JSONException e) {</div>
-<div class="line"><span class="lineno">  422</span>                        <span class="keywordflow">throw</span> <span class="keyword">new</span> RuntimeException(<span class="stringliteral">&quot;Params: &quot;</span> + params, e);</div>
-<div class="line"><span class="lineno">  423</span>                    }</div>
-<div class="line"><span class="lineno">  424</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  425</span>                    copy.commodity = <a class="code hl_variable" href="../../d2/d00/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html#a4e4b3ce5cf5b864a2219bbf1ad44dddf">NOTHING</a>;</div>
-<div class="line"><span class="lineno">  426</span>                }</div>
-<div class="line"><span class="lineno">  427</span>            }</div>
-<div class="line"><span class="lineno">  428</span><span class="comment">//      } else if (isHullMod()) {</span></div>
-<div class="line"><span class="lineno">  429</span><span class="comment">//          List&lt;HullModSpecAPI&gt; specs = Global.getSettings().getAllHullModSpecs();</span></div>
-<div class="line"><span class="lineno">  430</span><span class="comment">//          </span></div>
-<div class="line"><span class="lineno">  431</span><span class="comment">//          Iterator&lt;HullModSpecAPI&gt; iter = specs.iterator();</span></div>
-<div class="line"><span class="lineno">  432</span><span class="comment">//          while (iter.hasNext()) {</span></div>
-<div class="line"><span class="lineno">  433</span><span class="comment">//              HullModSpecAPI curr = iter.next();</span></div>
-<div class="line"><span class="lineno">  434</span><span class="comment">//              if (curr.isHidden() || curr.isHiddenEverywhere()) iter.remove();</span></div>
-<div class="line"><span class="lineno">  435</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">  436</span><span class="comment">//          </span></div>
-<div class="line"><span class="lineno">  437</span><span class="comment">//          if (tier &gt;= 0) {</span></div>
-<div class="line"><span class="lineno">  438</span><span class="comment">//              iter = specs.iterator();</span></div>
-<div class="line"><span class="lineno">  439</span><span class="comment">//              while (iter.hasNext()) {</span></div>
-<div class="line"><span class="lineno">  440</span><span class="comment">//                  HullModSpecAPI curr = iter.next();</span></div>
-<div class="line"><span class="lineno">  444</span><span class="comment"></span><span class="comment">//                  if (curr.getTier() != tier) iter.remove();</span></div>
-<div class="line"><span class="lineno">  445</span><span class="comment">//              }</span></div>
-<div class="line"><span class="lineno">  446</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">  447</span><span class="comment">//          </span></div>
-<div class="line"><span class="lineno">  448</span><span class="comment">//          if (!tags.isEmpty()) {</span></div>
-<div class="line"><span class="lineno">  449</span><span class="comment">//              iter = specs.iterator();</span></div>
-<div class="line"><span class="lineno">  450</span><span class="comment">//              while (iter.hasNext()) {</span></div>
-<div class="line"><span class="lineno">  451</span><span class="comment">//                  HullModSpecAPI curr = iter.next();</span></div>
-<div class="line"><span class="lineno">  452</span><span class="comment">//                  for (String tag : tags) {</span></div>
-<div class="line"><span class="lineno">  453</span><span class="comment">//                      boolean not = tag.startsWith(&quot;!&quot;);</span></div>
-<div class="line"><span class="lineno">  454</span><span class="comment">//                      tag = not ? tag.substring(1) : tag;</span></div>
-<div class="line"><span class="lineno">  455</span><span class="comment">//                      boolean has = curr.hasTag(tag);</span></div>
-<div class="line"><span class="lineno">  456</span><span class="comment">//                      if (not == has) {</span></div>
-<div class="line"><span class="lineno">  457</span><span class="comment">//                          iter.remove();</span></div>
-<div class="line"><span class="lineno">  458</span><span class="comment">//                          break;</span></div>
-<div class="line"><span class="lineno">  459</span><span class="comment">//                      }</span></div>
-<div class="line"><span class="lineno">  460</span><span class="comment">//                  }</span></div>
-<div class="line"><span class="lineno">  461</span><span class="comment">//              }</span></div>
-<div class="line"><span class="lineno">  462</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">  463</span><span class="comment">//          </span></div>
-<div class="line"><span class="lineno">  464</span><span class="comment">//          WeightedRandomPicker&lt;HullModSpecAPI&gt; picker = new WeightedRandomPicker&lt;HullModSpecAPI&gt;(random);</span></div>
-<div class="line"><span class="lineno">  465</span><span class="comment">//          //picker.addAll(specs);</span></div>
-<div class="line"><span class="lineno">  466</span><span class="comment">//          for (HullModSpecAPI spec : specs) {</span></div>
-<div class="line"><span class="lineno">  467</span><span class="comment">//              picker.add(spec, 1f * spec.getRarity());</span></div>
-<div class="line"><span class="lineno">  468</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">  469</span><span class="comment">//          HullModSpecAPI pick = picker.pick();</span></div>
-<div class="line"><span class="lineno">  470</span><span class="comment">//          if (pick == null) {</span></div>
-<div class="line"><span class="lineno">  471</span><span class="comment">//              copy.commodity = NOTHING;</span></div>
-<div class="line"><span class="lineno">  472</span><span class="comment">//          } else {</span></div>
-<div class="line"><span class="lineno">  473</span><span class="comment">//              copy.commodity = MOD_PREFIX + pick.getId(); </span></div>
-<div class="line"><span class="lineno">  474</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">  475</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d2/d00/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html#ae6658733fb328debdabd0927d28e6468">isWeapon</a>()) {</div>
-<div class="line"><span class="lineno">  476</span>            List&lt;WeaponSpecAPI&gt; specs = Global.getSettings().getAllWeaponSpecs();</div>
-<div class="line"><span class="lineno">  477</span>            <span class="keywordflow">if</span> (tier &gt;= 0) {</div>
-<div class="line"><span class="lineno">  478</span>                Iterator&lt;WeaponSpecAPI&gt; iter = specs.iterator();</div>
-<div class="line"><span class="lineno">  479</span>                <span class="keywordflow">while</span> (iter.hasNext()) {</div>
-<div class="line"><span class="lineno">  480</span>                    WeaponSpecAPI curr = iter.next();</div>
-<div class="line"><span class="lineno">  481</span>                    <span class="keywordflow">if</span> (curr.getTier() != tier) iter.remove();</div>
-<div class="line"><span class="lineno">  482</span>                }</div>
-<div class="line"><span class="lineno">  483</span>            }</div>
-<div class="line"><span class="lineno">  484</span>            </div>
-<div class="line"><span class="lineno">  485</span>            <span class="keywordflow">if</span> (!tags.isEmpty()) {</div>
-<div class="line"><span class="lineno">  486</span>                Iterator&lt;WeaponSpecAPI&gt; iter = specs.iterator();</div>
-<div class="line"><span class="lineno">  487</span>                <span class="keywordflow">while</span> (iter.hasNext()) {</div>
-<div class="line"><span class="lineno">  488</span>                    WeaponSpecAPI curr = iter.next();</div>
-<div class="line"><span class="lineno">  489</span>                    <span class="keywordflow">for</span> (String tag : tags) {</div>
-<div class="line"><span class="lineno">  490</span>                        <span class="keywordtype">boolean</span> not = tag.startsWith(<span class="stringliteral">&quot;!&quot;</span>);</div>
-<div class="line"><span class="lineno">  491</span>                        tag = not ? tag.substring(1) : tag;</div>
-<div class="line"><span class="lineno">  492</span>                        <span class="keywordtype">boolean</span> has = curr.hasTag(tag);</div>
-<div class="line"><span class="lineno">  493</span>                        <span class="keywordflow">if</span> (not == has) {</div>
-<div class="line"><span class="lineno">  494</span>                            iter.remove();</div>
-<div class="line"><span class="lineno">  495</span>                            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  496</span>                        }</div>
-<div class="line"><span class="lineno">  497</span>                    }</div>
-<div class="line"><span class="lineno">  498</span>                }</div>
-<div class="line"><span class="lineno">  499</span>            }</div>
-<div class="line"><span class="lineno">  500</span>            </div>
-<div class="line"><span class="lineno">  501</span>            <span class="keywordflow">if</span> (weaponType != <span class="keyword">null</span> || weaponSize != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  502</span>                Iterator&lt;WeaponSpecAPI&gt; iter = specs.iterator();</div>
-<div class="line"><span class="lineno">  503</span>                <span class="keywordflow">while</span> (iter.hasNext()) {</div>
-<div class="line"><span class="lineno">  504</span>                    WeaponSpecAPI curr = iter.next();</div>
-<div class="line"><span class="lineno">  505</span>                    <span class="keywordflow">if</span> ((weaponType != <span class="keyword">null</span> &amp;&amp; curr.getType() != weaponType) ||</div>
-<div class="line"><span class="lineno">  506</span>                            (weaponSize != <span class="keyword">null</span> &amp;&amp; curr.getSize() != weaponSize)) {</div>
-<div class="line"><span class="lineno">  507</span>                        iter.remove();</div>
-<div class="line"><span class="lineno">  508</span>                    }</div>
-<div class="line"><span class="lineno">  509</span>                }</div>
-<div class="line"><span class="lineno">  510</span>            }</div>
-<div class="line"><span class="lineno">  511</span>            </div>
-<div class="line"><span class="lineno">  512</span>            </div>
-<div class="line"><span class="lineno">  513</span>            WeightedRandomPicker&lt;WeaponSpecAPI&gt; picker = <span class="keyword">new</span> WeightedRandomPicker&lt;WeaponSpecAPI&gt;(random);</div>
-<div class="line"><span class="lineno">  514</span>            <span class="comment">//picker.addAll(specs);</span></div>
-<div class="line"><span class="lineno">  515</span>            <span class="keywordflow">for</span> (WeaponSpecAPI spec : specs) {</div>
-<div class="line"><span class="lineno">  516</span>                picker.add(spec, 1f * spec.getRarity());</div>
-<div class="line"><span class="lineno">  517</span>            }</div>
-<div class="line"><span class="lineno">  518</span>            WeaponSpecAPI pick = picker.pick();</div>
-<div class="line"><span class="lineno">  519</span>            <span class="keywordflow">if</span> (pick == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  520</span>                copy.commodity = <a class="code hl_variable" href="../../d2/d00/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html#a4e4b3ce5cf5b864a2219bbf1ad44dddf">NOTHING</a>;</div>
-<div class="line"><span class="lineno">  521</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  522</span>                copy.commodity = <a class="code hl_variable" href="../../d2/d00/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html#a5712a1819552ecd1e35ad18cf9d28649">WEAPON_PREFIX</a> + pick.getWeaponId(); </div>
-<div class="line"><span class="lineno">  523</span>            }</div>
-<div class="line"><span class="lineno">  524</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d2/d00/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html#afded02579a4188746cba5a3024e1bb85">isFighterWing</a>()) {</div>
-<div class="line"><span class="lineno">  525</span>            List&lt;FighterWingSpecAPI&gt; specs = Global.getSettings().getAllFighterWingSpecs();</div>
-<div class="line"><span class="lineno">  526</span>            Iterator&lt;FighterWingSpecAPI&gt; iter = specs.iterator();</div>
-<div class="line"><span class="lineno">  527</span>            <span class="keywordflow">while</span> (iter.hasNext()) {</div>
-<div class="line"><span class="lineno">  528</span>                FighterWingSpecAPI curr = iter.next();</div>
-<div class="line"><span class="lineno">  529</span>                <span class="keywordflow">if</span> (curr.hasTag(Tags.WING_NO_DROP)) iter.remove();</div>
-<div class="line"><span class="lineno">  530</span>            }</div>
-<div class="line"><span class="lineno">  531</span>            <span class="keywordflow">if</span> (tier &gt;= 0) {</div>
-<div class="line"><span class="lineno">  532</span>                iter = specs.iterator();</div>
-<div class="line"><span class="lineno">  533</span>                <span class="keywordflow">while</span> (iter.hasNext()) {</div>
-<div class="line"><span class="lineno">  534</span>                    FighterWingSpecAPI curr = iter.next();</div>
-<div class="line"><span class="lineno">  535</span>                    <span class="keywordflow">if</span> (curr.getTier() != tier) iter.remove();</div>
-<div class="line"><span class="lineno">  536</span>                }</div>
-<div class="line"><span class="lineno">  537</span>            }</div>
-<div class="line"><span class="lineno">  538</span>            </div>
-<div class="line"><span class="lineno">  539</span>            <span class="keywordflow">if</span> (!tags.isEmpty()) {</div>
-<div class="line"><span class="lineno">  540</span>                iter = specs.iterator();</div>
-<div class="line"><span class="lineno">  541</span>                <span class="keywordflow">while</span> (iter.hasNext()) {</div>
-<div class="line"><span class="lineno">  542</span>                    FighterWingSpecAPI curr = iter.next();</div>
-<div class="line"><span class="lineno">  543</span>                    <span class="keywordflow">for</span> (String tag : tags) {</div>
-<div class="line"><span class="lineno">  544</span>                        <span class="keywordtype">boolean</span> not = tag.startsWith(<span class="stringliteral">&quot;!&quot;</span>);</div>
-<div class="line"><span class="lineno">  545</span>                        tag = not ? tag.substring(1) : tag;</div>
-<div class="line"><span class="lineno">  546</span>                        <span class="keywordtype">boolean</span> has = curr.hasTag(tag);</div>
-<div class="line"><span class="lineno">  547</span>                        <span class="keywordflow">if</span> (not == has) {</div>
-<div class="line"><span class="lineno">  548</span>                            iter.remove();</div>
-<div class="line"><span class="lineno">  549</span>                            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  550</span>                        }</div>
-<div class="line"><span class="lineno">  551</span>                    }</div>
-<div class="line"><span class="lineno">  552</span>                }</div>
-<div class="line"><span class="lineno">  553</span>            }</div>
-<div class="line"><span class="lineno">  554</span>            WeightedRandomPicker&lt;FighterWingSpecAPI&gt; picker = <span class="keyword">new</span> WeightedRandomPicker&lt;FighterWingSpecAPI&gt;(random);</div>
-<div class="line"><span class="lineno">  555</span>            <span class="comment">//picker.addAll(specs);</span></div>
-<div class="line"><span class="lineno">  556</span>            <span class="keywordflow">for</span> (FighterWingSpecAPI spec : specs) {</div>
-<div class="line"><span class="lineno">  557</span>                picker.add(spec, 1f * spec.getRarity());</div>
-<div class="line"><span class="lineno">  558</span>            }</div>
-<div class="line"><span class="lineno">  559</span>            FighterWingSpecAPI pick = picker.pick();</div>
-<div class="line"><span class="lineno">  560</span>            <span class="keywordflow">if</span> (pick == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  561</span>                copy.commodity = <a class="code hl_variable" href="../../d2/d00/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html#a4e4b3ce5cf5b864a2219bbf1ad44dddf">NOTHING</a>;</div>
-<div class="line"><span class="lineno">  562</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  563</span>                copy.commodity = <a class="code hl_variable" href="../../d2/d00/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html#a171c6da4357443df370eb5d0cb0a9798">FIGHTER_PREFIX</a> + pick.getId(); </div>
-<div class="line"><span class="lineno">  564</span>            }</div>
-<div class="line"><span class="lineno">  565</span>        }</div>
-<div class="line"><span class="lineno">  566</span>        </div>
-<div class="line"><span class="lineno">  567</span>        </div>
-<div class="line"><span class="lineno">  568</span>        <span class="keywordflow">return</span> copy;</div>
-<div class="line"><span class="lineno">  569</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow_html_aad0936511e7173e8e5e91f2eace2370c"><div class="ttname"><a href="../../d2/d00/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html#aad0936511e7173e8e5e91f2eace2370c">com.fs.starfarer.api.impl.campaign.procgen.DropGroupRow.clone</a></div><div class="ttdeci">DropGroupRow clone()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d11/DropGroupRow_8java_source.html#l00065">DropGroupRow.java:65</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a44fe466c1850408bc04a0e07a9247d40" name="a44fe466c1850408bc04a0e07a9247d40"></a>
@@ -1087,10 +669,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d11/DropGroupRow_8java_source.html#l00269">269</a> of file <a class="el" href="../../d4/d11/DropGroupRow_8java_source.html">DropGroupRow.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  269</span>                                               {</div>
-<div class="line"><span class="lineno">  270</span>        this.commodity = commodity;</div>
-<div class="line"><span class="lineno">  271</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a4b8ab06f0ad64d05966709fbae5eb6b3" name="a4b8ab06f0ad64d05966709fbae5eb6b3"></a>
@@ -1110,10 +689,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d11/DropGroupRow_8java_source.html#l00285">285</a> of file <a class="el" href="../../d4/d11/DropGroupRow_8java_source.html">DropGroupRow.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  285</span>                                    {</div>
-<div class="line"><span class="lineno">  286</span>        this.freq = freq;</div>
-<div class="line"><span class="lineno">  287</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae7e357b4e1bff5bea58c65942f1026ca" name="ae7e357b4e1bff5bea58c65942f1026ca"></a>
@@ -1133,10 +709,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d11/DropGroupRow_8java_source.html#l00277">277</a> of file <a class="el" href="../../d4/d11/DropGroupRow_8java_source.html">DropGroupRow.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  277</span>                                       {</div>
-<div class="line"><span class="lineno">  278</span>        this.group = group;</div>
-<div class="line"><span class="lineno">  279</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa7a9d44c33eef3464f62e89ae8d63a48" name="aa7a9d44c33eef3464f62e89ae8d63a48"></a>
@@ -1155,10 +728,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d11/DropGroupRow_8java_source.html#l00572">572</a> of file <a class="el" href="../../d4/d11/DropGroupRow_8java_source.html">DropGroupRow.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  572</span>                             {</div>
-<div class="line"><span class="lineno">  573</span>        <span class="keywordflow">return</span> super.toString() + <span class="stringliteral">&quot; &quot;</span> + commodity;</div>
-<div class="line"><span class="lineno">  574</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

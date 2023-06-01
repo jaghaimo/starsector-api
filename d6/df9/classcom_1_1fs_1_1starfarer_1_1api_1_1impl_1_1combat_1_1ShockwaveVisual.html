@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -198,76 +199,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/db0/ShockwaveVisual_8java_source.html#l00051">51</a> of file <a class="el" href="../../d7/db0/ShockwaveVisual_8java_source.html">ShockwaveVisual.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   51</span>                                                              {</div>
-<div class="line"><span class="lineno">   52</span>        CombatEngineAPI engine = Global.getCombatEngine();</div>
-<div class="line"><span class="lineno">   53</span> </div>
-<div class="line"><span class="lineno">   54</span>        <span class="keywordtype">float</span> baseSize = params.radius * 0.08f;</div>
-<div class="line"><span class="lineno">   55</span>        <span class="keywordtype">float</span> maxParticleSize = baseSize * 2f;</div>
-<div class="line"><span class="lineno">   56</span>        </div>
-<div class="line"><span class="lineno">   57</span>        <span class="keywordtype">float</span> fullArea = (float) (Math.PI * params.radius * params.radius);</div>
-<div class="line"><span class="lineno">   58</span>        <span class="keywordtype">float</span> particleArea = (float) (Math.PI * baseSize * baseSize);</div>
-<div class="line"><span class="lineno">   59</span>        </div>
-<div class="line"><span class="lineno">   60</span>        <span class="keywordtype">int</span> count = (int) Math.round(fullArea / particleArea * 1f);</div>
-<div class="line"><span class="lineno">   61</span>        count *= 2;</div>
-<div class="line"><span class="lineno">   62</span>        <span class="keywordflow">if</span> (count &gt; 300) count = 300;</div>
-<div class="line"><span class="lineno">   63</span>        </div>
-<div class="line"><span class="lineno">   64</span>        <span class="keywordtype">float</span> durMult = 2f;</div>
-<div class="line"><span class="lineno">   65</span>        <span class="comment">//durMult = params.durationMult;</span></div>
-<div class="line"><span class="lineno">   66</span> </div>
-<div class="line"><span class="lineno">   67</span>        <span class="keywordtype">float</span> maxSpeed = params.radius * 2f;</div>
-<div class="line"><span class="lineno">   68</span>        </div>
-<div class="line"><span class="lineno">   69</span>        Color negativeColor = <span class="keyword">new</span> Color(0, 0, 0, 255);</div>
-<div class="line"><span class="lineno">   70</span>        </div>
-<div class="line"><span class="lineno">   71</span>        <span class="comment">//baseSize *= 0.5f;</span></div>
-<div class="line"><span class="lineno">   72</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; count; i++) {</div>
-<div class="line"><span class="lineno">   73</span>            <span class="keywordtype">float</span> size = baseSize * (1f + (float) Math.random());</div>
-<div class="line"><span class="lineno">   74</span>            </div>
-<div class="line"><span class="lineno">   75</span>            Color randomColor = <span class="keyword">new</span> Color(Misc.random.nextInt(256), </div>
-<div class="line"><span class="lineno">   76</span>                        Misc.random.nextInt(256), Misc.random.nextInt(256), params.color.getAlpha());           </div>
-<div class="line"><span class="lineno">   77</span>            Color adjustedColor = Misc.interpolateColor(params.color, randomColor, 0.2f);</div>
-<div class="line"><span class="lineno">   78</span>            adjustedColor = params.color;</div>
-<div class="line"><span class="lineno">   79</span>            <span class="comment">//adjustedColor = Misc.setAlpha(adjustedColor, 50);</span></div>
-<div class="line"><span class="lineno">   80</span><span class="comment">//          ParticleData data = new ParticleData(adjustedColor, size, </span></div>
-<div class="line"><span class="lineno">   81</span><span class="comment">//                      (0.25f + (float) Math.random()) * 2f * durMult, 3f);</span></div>
-<div class="line"><span class="lineno">   82</span>            </div>
-<div class="line"><span class="lineno">   83</span>            <span class="keywordtype">float</span> r = (float) Math.random();</div>
-<div class="line"><span class="lineno">   84</span>            <span class="keywordtype">float</span> dist = params.radius * 0.2f * (0.1f + r * 0.9f);</div>
-<div class="line"><span class="lineno">   85</span>            <span class="keywordtype">float</span> dir = (float) Math.random() * 360f;</div>
-<div class="line"><span class="lineno">   86</span>            <span class="comment">//data.setOffset(dir, dist, dist);</span></div>
-<div class="line"><span class="lineno">   87</span>            Vector2f offset = Misc.getUnitVectorAtDegreeAngle(dir);</div>
-<div class="line"><span class="lineno">   88</span>            <span class="comment">//offset.scale(dist + (dist - dist) * (float) Math.random());</span></div>
-<div class="line"><span class="lineno">   89</span>            offset.scale(dist);</div>
-<div class="line"><span class="lineno">   90</span>            </div>
-<div class="line"><span class="lineno">   91</span><span class="comment">//          dir = Misc.getAngleInDegrees(data.offset);</span></div>
-<div class="line"><span class="lineno">   92</span><span class="comment">//          data.setVelocity(dir, baseSize * 0.25f, baseSize * 0.5f);</span></div>
-<div class="line"><span class="lineno">   93</span><span class="comment">//          data.vel.scale(1f / durMult);</span></div>
-<div class="line"><span class="lineno">   94</span>            </div>
-<div class="line"><span class="lineno">   95</span><span class="comment">//          data.swImpact = (float) Math.random();</span></div>
-<div class="line"><span class="lineno">   96</span><span class="comment">//          if (i &gt; count / 2) data.swImpact = 1;</span></div>
-<div class="line"><span class="lineno">   97</span>            </div>
-<div class="line"><span class="lineno">   98</span>            Vector2f loc = Vector2f.add(params.loc, offset, <span class="keyword">new</span> Vector2f());</div>
-<div class="line"><span class="lineno">   99</span>            </div>
-<div class="line"><span class="lineno">  100</span>            <span class="keywordtype">float</span> speed = maxSpeed * (0.25f + 0.75f * (float) Math.random());</div>
-<div class="line"><span class="lineno">  101</span>            Vector2f vel = Misc.getUnitVectorAtDegreeAngle(dir);</div>
-<div class="line"><span class="lineno">  102</span>            vel.scale(speed);</div>
-<div class="line"><span class="lineno">  103</span>            </div>
-<div class="line"><span class="lineno">  104</span>            <span class="keywordtype">float</span> rampUp = 0f;</div>
-<div class="line"><span class="lineno">  105</span>            <span class="keywordtype">float</span> dur = 1f;</div>
-<div class="line"><span class="lineno">  106</span>            </div>
-<div class="line"><span class="lineno">  107</span>            <span class="keywordtype">float</span> mult = 0.33f;</div>
-<div class="line"><span class="lineno">  108</span>            mult = 1f;</div>
-<div class="line"><span class="lineno">  109</span>            mult = 0.5f;</div>
-<div class="line"><span class="lineno">  110</span>            rampUp *= mult;</div>
-<div class="line"><span class="lineno">  111</span>            dur *= mult;</div>
-<div class="line"><span class="lineno">  112</span>            </div>
-<div class="line"><span class="lineno">  113</span>            engine.addNebulaParticle(loc, vel, size, 3f, rampUp, 0f, dur, adjustedColor);   </div>
-<div class="line"><span class="lineno">  114</span>            <span class="comment">//engine.addNegativeNebulaParticle(loc, vel, size, 3f, rampUp, 0f, dur, negativeColor); </span></div>
-<div class="line"><span class="lineno">  115</span>            <span class="comment">//engine.addNebulaSmokeParticle(loc, vel, size, 3f, rampUp, 0f, dur, negativeColor);    </span></div>
-<div class="line"><span class="lineno">  116</span>        }</div>
-<div class="line"><span class="lineno">  117</span>        </div>
-<div class="line"><span class="lineno">  118</span>        </div>
-<div class="line"><span class="lineno">  119</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -171,10 +172,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/dd3/DumpMemory_8java_source.html#l00110">110</a> of file <a class="el" href="../../d6/dd3/DumpMemory_8java_source.html">DumpMemory.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  110</span>                                                              {</div>
-<div class="line"><span class="lineno">  111</span>        dialog.getOptionPanel().addOption(<span class="stringliteral">&quot;&gt;&gt; (dev) dump memory&quot;</span>, DumpMemory.OPTION_ID, Misc.getGrayColor(), <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  112</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a94edb010c982e01f83020c0598f8e529" name="a94edb010c982e01f83020c0598f8e529"></a>
@@ -218,88 +216,7 @@ Static Public Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d0/d5c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1CommandPlugin.html#a72a44c5127e60136b87d3b37613fd0e0">com.fs.starfarer.api.campaign.rules.CommandPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/dd3/DumpMemory_8java_source.html#l00028">28</a> of file <a class="el" href="../../d6/dd3/DumpMemory_8java_source.html">DumpMemory.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   28</span>                                                                                                                             {</div>
-<div class="line"><span class="lineno">   29</span>        <span class="comment">//if (dialog == null) return false;</span></div>
-<div class="line"><span class="lineno">   30</span>        </div>
-<div class="line"><span class="lineno">   31</span>        <span class="comment">//System.out.println(&quot;Transponder: &quot; + dialog.getInteractionTarget().isTransponderOn());</span></div>
-<div class="line"><span class="lineno">   32</span>        </div>
-<div class="line"><span class="lineno">   33</span>        List&lt;String&gt; memKeys = <span class="keyword">new</span> ArrayList&lt;String&gt;(memoryMap.keySet());</div>
-<div class="line"><span class="lineno">   34</span>        Collections.sort(memKeys);</div>
-<div class="line"><span class="lineno">   35</span>        memKeys.remove(MemKeys.LOCAL);</div>
-<div class="line"><span class="lineno">   36</span>        memKeys.add(MemKeys.LOCAL);</div>
-<div class="line"><span class="lineno">   37</span>        </div>
-<div class="line"><span class="lineno">   38</span>        Color HIGHLIGHT_COLOR = Global.getSettings().getColor(<span class="stringliteral">&quot;buttonShortcut&quot;</span>);</div>
-<div class="line"><span class="lineno">   39</span>        Color GRAY_COLOR = <span class="keyword">new</span> Color(100,100,100);</div>
-<div class="line"><span class="lineno">   40</span>        </div>
-<div class="line"><span class="lineno">   41</span>        </div>
-<div class="line"><span class="lineno">   42</span>        <span class="keywordflow">for</span> (String memKey : memKeys) {</div>
-<div class="line"><span class="lineno">   43</span>            String text = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">   44</span>            MemoryAPI memory = memoryMap.get(memKey);</div>
-<div class="line"><span class="lineno">   45</span>            <span class="comment">//text += memKey.toUpperCase() + &quot;\n&quot;;</span></div>
-<div class="line"><span class="lineno">   46</span>            List&lt;String&gt; keys = <span class="keyword">new</span> ArrayList&lt;String&gt;(memory.getKeys());</div>
-<div class="line"><span class="lineno">   47</span>            Collections.sort(keys);</div>
-<div class="line"><span class="lineno">   48</span>            </div>
-<div class="line"><span class="lineno">   49</span>            List&lt;Color&gt; highlightColors = <span class="keyword">new</span> ArrayList&lt;Color&gt;();</div>
-<div class="line"><span class="lineno">   50</span>            List&lt;String&gt; highlightList = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
-<div class="line"><span class="lineno">   51</span>            <span class="keywordflow">for</span> (String key : keys) {</div>
-<div class="line"><span class="lineno">   52</span>                Object value = memory.get(key);</div>
-<div class="line"><span class="lineno">   53</span>                </div>
-<div class="line"><span class="lineno">   54</span>                String varName = <span class="stringliteral">&quot;$&quot;</span> + memKey + <span class="stringliteral">&quot;.&quot;</span>;</div>
-<div class="line"><span class="lineno">   55</span>                <span class="keywordflow">if</span> (memKey.equals(MemKeys.LOCAL)) {</div>
-<div class="line"><span class="lineno">   56</span>                    varName = <span class="stringliteral">&quot;$&quot;</span>;</div>
-<div class="line"><span class="lineno">   57</span>                }</div>
-<div class="line"><span class="lineno">   58</span>                <span class="keywordflow">if</span> (key.startsWith(<span class="stringliteral">&quot;$&quot;</span>)) {</div>
-<div class="line"><span class="lineno">   59</span>                    varName += key.substring(1);</div>
-<div class="line"><span class="lineno">   60</span>                    <span class="comment">//highlightList.add(key.substring(1));</span></div>
-<div class="line"><span class="lineno">   61</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   62</span>                    varName += key;</div>
-<div class="line"><span class="lineno">   63</span>                    <span class="comment">//highlightList.add(key);</span></div>
-<div class="line"><span class="lineno">   64</span>                }</div>
-<div class="line"><span class="lineno">   65</span>                </div>
-<div class="line"><span class="lineno">   66</span>                <span class="keywordflow">if</span> (varName.length() &gt; 35) {</div>
-<div class="line"><span class="lineno">   67</span>                    varName = varName.substring(0, 35) + <span class="stringliteral">&quot;...&quot;</span>;</div>
-<div class="line"><span class="lineno">   68</span>                }</div>
-<div class="line"><span class="lineno">   69</span>                </div>
-<div class="line"><span class="lineno">   70</span>                highlightColors.add(HIGHLIGHT_COLOR);</div>
-<div class="line"><span class="lineno">   71</span>                highlightList.add(varName);</div>
-<div class="line"><span class="lineno">   72</span> </div>
-<div class="line"><span class="lineno">   73</span>                text += varName;</div>
-<div class="line"><span class="lineno">   74</span>                <span class="keywordflow">if</span> (value instanceof Boolean || value instanceof String || value instanceof Float || value instanceof Integer || value instanceof Long) {</div>
-<div class="line"><span class="lineno">   75</span>                    text += <span class="stringliteral">&quot; = &quot;</span> + value.toString();</div>
-<div class="line"><span class="lineno">   76</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (value != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   77</span>                    text += <span class="stringliteral">&quot; = &quot;</span> + value.getClass().getSimpleName() + <span class="stringliteral">&quot;@&quot;</span> + value.hashCode();</div>
-<div class="line"><span class="lineno">   78</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   79</span>                    text += <span class="stringliteral">&quot; = &quot;</span> + <span class="stringliteral">&quot;null&quot;</span>;</div>
-<div class="line"><span class="lineno">   80</span>                }</div>
-<div class="line"><span class="lineno">   81</span>                <span class="keywordtype">float</span> expire = memory.getExpire(key);</div>
-<div class="line"><span class="lineno">   82</span>                <span class="keywordflow">if</span> (expire &gt;= 0) {</div>
-<div class="line"><span class="lineno">   83</span>                    String eText = <span class="stringliteral">&quot;(e=&quot;</span> + (float)((<span class="keywordtype">int</span>)(expire * 10)/10f) + <span class="stringliteral">&quot;)&quot;</span>;</div>
-<div class="line"><span class="lineno">   84</span>                    <span class="keywordflow">if</span> (expire == 0) {</div>
-<div class="line"><span class="lineno">   85</span>                        eText = <span class="stringliteral">&quot;(e=0)&quot;</span>;</div>
-<div class="line"><span class="lineno">   86</span>                    }</div>
-<div class="line"><span class="lineno">   87</span>                    highlightColors.add(GRAY_COLOR);</div>
-<div class="line"><span class="lineno">   88</span>                    highlightList.add(eText);</div>
-<div class="line"><span class="lineno">   89</span>                    text += <span class="stringliteral">&quot; &quot;</span> + eText;</div>
-<div class="line"><span class="lineno">   90</span>                }</div>
-<div class="line"><span class="lineno">   91</span>                text += <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><span class="lineno">   92</span>            }</div>
-<div class="line"><span class="lineno">   93</span>            <span class="keywordflow">if</span> (dialog != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   94</span>                <span class="comment">//dialog.getTextPanel().setFontSmallInsignia();</span></div>
-<div class="line"><span class="lineno">   95</span>                dialog.getTextPanel().addParagraph(text);</div>
-<div class="line"><span class="lineno">   96</span>                dialog.getTextPanel().setHighlightColorsInLastPara(highlightColors.toArray(<span class="keyword">new</span> Color[0]));</div>
-<div class="line"><span class="lineno">   97</span>                dialog.getTextPanel().highlightInLastPara(highlightList.toArray(<span class="keyword">new</span> String [0]));</div>
-<div class="line"><span class="lineno">   98</span>                <span class="comment">//dialog.getTextPanel().setFontInsignia();</span></div>
-<div class="line"><span class="lineno">   99</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  100</span>                <span class="keywordflow">if</span> (DebugFlags.PRINT_RULES_DEBUG_INFO) {</div>
-<div class="line"><span class="lineno">  101</span>                    System.out.println(text);   </div>
-<div class="line"><span class="lineno">  102</span>                }</div>
-<div class="line"><span class="lineno">  103</span>            }</div>
-<div class="line"><span class="lineno">  104</span>            <span class="comment">//dialog.getTextPanel().highlightInLastPara(HIGHLIGHT_COLOR, highlightList.toArray(new String [0]));</span></div>
-<div class="line"><span class="lineno">  105</span>        }</div>
-<div class="line"><span class="lineno">  106</span>        </div>
-<div class="line"><span class="lineno">  107</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  108</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

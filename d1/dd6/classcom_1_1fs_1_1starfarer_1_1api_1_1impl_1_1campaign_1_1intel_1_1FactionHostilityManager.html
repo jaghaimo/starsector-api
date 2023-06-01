@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -252,11 +253,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/dbe/FactionHostilityManager_8java_source.html#l00041">41</a> of file <a class="el" href="../../d2/dbe/FactionHostilityManager_8java_source.html">FactionHostilityManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   41</span>                                     {</div>
-<div class="line"><span class="lineno">   42</span>        Global.getSector().getMemoryWithoutUpdate().set(<a class="code hl_variable" href="../../d1/dd6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionHostilityManager.html#ace688a5fc3dbeb1d5a888ca0e446d417">KEY</a>, <span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">   43</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionHostilityManager_html_ace688a5fc3dbeb1d5a888ca0e446d417"><div class="ttname"><a href="../../d1/dd6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionHostilityManager.html#ace688a5fc3dbeb1d5a888ca0e446d417">com.fs.starfarer.api.impl.campaign.intel.FactionHostilityManager.KEY</a></div><div class="ttdeci">static final String KEY</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dbe/FactionHostilityManager_8java_source.html#l00030">FactionHostilityManager.java:30</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -285,16 +282,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d36/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseEventManager.html#a8cc603dac24c0febb498614814f72aca">com.fs.starfarer.api.impl.campaign.intel.BaseEventManager</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/dbe/FactionHostilityManager_8java_source.html#l00152">152</a> of file <a class="el" href="../../d2/dbe/FactionHostilityManager_8java_source.html">FactionHostilityManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  152</span>                                      {</div>
-<div class="line"><span class="lineno">  153</span>        <span class="comment">//amount *= 100f;</span></div>
-<div class="line"><span class="lineno">  154</span>        super.advance(amount);</div>
-<div class="line"><span class="lineno">  155</span>        </div>
-<div class="line"><span class="lineno">  156</span>        <span class="keywordtype">float</span> days = Global.getSector().getClock().convertToDays(amount);</div>
-<div class="line"><span class="lineno">  157</span>        <a class="code hl_variable" href="../../d1/dd6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionHostilityManager.html#a87901109f01fd10b355e31142d3367db">recentlyEnded</a>.<a class="code hl_function" href="../../dd/df5/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTracker.html#a841c73d428617df86cca633e7640f439">advance</a>(days);</div>
-<div class="line"><span class="lineno">  158</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionHostilityManager_html_a87901109f01fd10b355e31142d3367db"><div class="ttname"><a href="../../d1/dd6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionHostilityManager.html#a87901109f01fd10b355e31142d3367db">com.fs.starfarer.api.impl.campaign.intel.FactionHostilityManager.recentlyEnded</a></div><div class="ttdeci">TimeoutTracker&lt; String &gt; recentlyEnded</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dbe/FactionHostilityManager_8java_source.html#l00150">FactionHostilityManager.java:150</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTracker_html_a841c73d428617df86cca633e7640f439"><div class="ttname"><a href="../../dd/df5/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTracker.html#a841c73d428617df86cca633e7640f439">com.fs.starfarer.api.util.TimeoutTracker.advance</a></div><div class="ttdeci">void advance(float amount)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dcf/TimeoutTracker_8java_source.html#l00093">TimeoutTracker.java:93</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a006a6b7af94fcccb9d85566fb0340084" name="a006a6b7af94fcccb9d85566fb0340084"></a>
@@ -324,12 +312,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/dbe/FactionHostilityManager_8java_source.html#l00045">45</a> of file <a class="el" href="../../d2/dbe/FactionHostilityManager_8java_source.html">FactionHostilityManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   45</span>                                                                     {</div>
-<div class="line"><span class="lineno">   46</span>        FactionHostilityIntel intel = <a class="code hl_function" href="../../d1/dd6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionHostilityManager.html#af37adde6b9ec54903080a109cd387834">getHostilties</a>(a, b);</div>
-<div class="line"><span class="lineno">   47</span>        <span class="keywordflow">return</span> intel != <span class="keyword">null</span> &amp;&amp; !intel.isEnding();</div>
-<div class="line"><span class="lineno">   48</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionHostilityManager_html_af37adde6b9ec54903080a109cd387834"><div class="ttname"><a href="../../d1/dd6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionHostilityManager.html#af37adde6b9ec54903080a109cd387834">com.fs.starfarer.api.impl.campaign.intel.FactionHostilityManager.getHostilties</a></div><div class="ttdeci">FactionHostilityIntel getHostilties(FactionAPI a, FactionAPI b)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dbe/FactionHostilityManager_8java_source.html#l00050">FactionHostilityManager.java:50</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a616bfc050674fd447951037007313e4f" name="a616bfc050674fd447951037007313e4f"></a>
@@ -358,20 +341,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d36/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseEventManager.html#aff41483fc015b11cb473023197410855">com.fs.starfarer.api.impl.campaign.intel.BaseEventManager</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/dbe/FactionHostilityManager_8java_source.html#l00131">131</a> of file <a class="el" href="../../d2/dbe/FactionHostilityManager_8java_source.html">FactionHostilityManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  131</span>                                             {</div>
-<div class="line"><span class="lineno">  132</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d1/dd6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionHostilityManager.html#a8a17713a52888795b27816c124aca435">random</a>.nextFloat() &lt; <a class="code hl_variable" href="../../d1/dd6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionHostilityManager.html#a8ba50d040050ae4a3c145928253973f0">CHECK_PROB</a>) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  133</span>        </div>
-<div class="line"><span class="lineno">  134</span>        Pair&lt;FactionAPI, FactionAPI&gt; pick = <a class="code hl_function" href="../../d1/dd6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionHostilityManager.html#ae92250d47c828c465ab08dae141f06df">pickFactions</a>();</div>
-<div class="line"><span class="lineno">  135</span>        <span class="keywordflow">if</span> (pick == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  136</span>        </div>
-<div class="line"><span class="lineno">  137</span>        FactionHostilityIntel intel = <span class="keyword">new</span> FactionHostilityIntel(pick.one, pick.two);</div>
-<div class="line"><span class="lineno">  138</span>        </div>
-<div class="line"><span class="lineno">  139</span>        <span class="keywordflow">return</span> intel;</div>
-<div class="line"><span class="lineno">  140</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionHostilityManager_html_a8a17713a52888795b27816c124aca435"><div class="ttname"><a href="../../d1/dd6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionHostilityManager.html#a8a17713a52888795b27816c124aca435">com.fs.starfarer.api.impl.campaign.intel.FactionHostilityManager.random</a></div><div class="ttdeci">Random random</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dbe/FactionHostilityManager_8java_source.html#l00128">FactionHostilityManager.java:128</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionHostilityManager_html_a8ba50d040050ae4a3c145928253973f0"><div class="ttname"><a href="../../d1/dd6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionHostilityManager.html#a8ba50d040050ae4a3c145928253973f0">com.fs.starfarer.api.impl.campaign.intel.FactionHostilityManager.CHECK_PROB</a></div><div class="ttdeci">static final float CHECK_PROB</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dbe/FactionHostilityManager_8java_source.html#l00034">FactionHostilityManager.java:34</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionHostilityManager_html_ae92250d47c828c465ab08dae141f06df"><div class="ttname"><a href="../../d1/dd6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionHostilityManager.html#ae92250d47c828c465ab08dae141f06df">com.fs.starfarer.api.impl.campaign.intel.FactionHostilityManager.pickFactions</a></div><div class="ttdeci">Pair&lt; FactionAPI, FactionAPI &gt; pickFactions()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dbe/FactionHostilityManager_8java_source.html#l00160">FactionHostilityManager.java:160</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa9f96e12df3ac4ae8be1f766146469a4" name="aa9f96e12df3ac4ae8be1f766146469a4"></a>
@@ -400,11 +370,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d36/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseEventManager.html#a75897eaec5cf293916938e0760b40c70">com.fs.starfarer.api.impl.campaign.intel.BaseEventManager</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/dbe/FactionHostilityManager_8java_source.html#l00113">113</a> of file <a class="el" href="../../d2/dbe/FactionHostilityManager_8java_source.html">FactionHostilityManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  113</span>                                      {</div>
-<div class="line"><span class="lineno">  114</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d1/dd6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionHostilityManager.html#ae35cc3e746ee53a999fe3d82bc046a89">CHECK_DAYS</a>;</div>
-<div class="line"><span class="lineno">  115</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionHostilityManager_html_ae35cc3e746ee53a999fe3d82bc046a89"><div class="ttname"><a href="../../d1/dd6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionHostilityManager.html#ae35cc3e746ee53a999fe3d82bc046a89">com.fs.starfarer.api.impl.campaign.intel.FactionHostilityManager.CHECK_DAYS</a></div><div class="ttdeci">static final float CHECK_DAYS</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dbe/FactionHostilityManager_8java_source.html#l00033">FactionHostilityManager.java:33</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a122e4916b833b9560c0a0b709d2c5645" name="a122e4916b833b9560c0a0b709d2c5645"></a>
@@ -442,15 +408,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/dbe/FactionHostilityManager_8java_source.html#l00021">21</a> of file <a class="el" href="../../d2/dbe/FactionHostilityManager_8java_source.html">FactionHostilityManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   21</span>                                                                   {</div>
-<div class="line"><span class="lineno">   22</span>        String id1 = a.getId();</div>
-<div class="line"><span class="lineno">   23</span>        String id2 = b.getId();</div>
-<div class="line"><span class="lineno">   24</span>        <span class="keywordflow">if</span> (id1.compareTo(id2) &lt; 0) {</div>
-<div class="line"><span class="lineno">   25</span>            <span class="keywordflow">return</span> id1 + <span class="stringliteral">&quot;_&quot;</span> + id2;</div>
-<div class="line"><span class="lineno">   26</span>        }</div>
-<div class="line"><span class="lineno">   27</span>        <span class="keywordflow">return</span> id2 + <span class="stringliteral">&quot;_&quot;</span> + id1;</div>
-<div class="line"><span class="lineno">   28</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a6f16c2c57fe257fde668baf1863060e3" name="a6f16c2c57fe257fde668baf1863060e3"></a>
@@ -478,28 +436,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/dbe/FactionHostilityManager_8java_source.html#l00089">89</a> of file <a class="el" href="../../d2/dbe/FactionHostilityManager_8java_source.html">FactionHostilityManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   89</span>                                                                            {</div>
-<div class="line"><span class="lineno">   90</span>        List&lt;FactionAPI&gt; factions = Global.getSector().getAllFactions();</div>
-<div class="line"><span class="lineno">   91</span>        List&lt;FactionAPI&gt; result = <span class="keyword">new</span> ArrayList&lt;FactionAPI&gt;();</div>
-<div class="line"><span class="lineno">   92</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; factions.size(); i++) {</div>
-<div class="line"><span class="lineno">   93</span>            FactionAPI faction = factions.get(i);</div>
-<div class="line"><span class="lineno">   94</span>            <span class="keywordflow">if</span> (!faction.getCustom().optBoolean(Factions.CUSTOM_ENGAGES_IN_HOSTILITIES)) {</div>
-<div class="line"><span class="lineno">   95</span>                <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   96</span>            }</div>
-<div class="line"><span class="lineno">   97</span>            </div>
-<div class="line"><span class="lineno">   98</span>            <span class="keywordflow">if</span> (faction.isPlayerFaction()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   99</span>            </div>
-<div class="line"><span class="lineno">  100</span>            <span class="keywordflow">if</span> (checkNumMarkets) {</div>
-<div class="line"><span class="lineno">  101</span>                <span class="keywordtype">int</span> count = Misc.getFactionMarkets(faction).size();</div>
-<div class="line"><span class="lineno">  102</span>                <span class="keywordflow">if</span> (count &lt;= 0) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  103</span>            }</div>
-<div class="line"><span class="lineno">  104</span>            </div>
-<div class="line"><span class="lineno">  105</span>            result.add(faction);</div>
-<div class="line"><span class="lineno">  106</span>        }</div>
-<div class="line"><span class="lineno">  107</span>        </div>
-<div class="line"><span class="lineno">  108</span>        <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">  109</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aceede2839694c00fd6cc4634268c23ca" name="aceede2839694c00fd6cc4634268c23ca"></a>
@@ -519,18 +456,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/dbe/FactionHostilityManager_8java_source.html#l00061">61</a> of file <a class="el" href="../../d2/dbe/FactionHostilityManager_8java_source.html">FactionHostilityManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   61</span>                                                                                   {</div>
-<div class="line"><span class="lineno">   62</span>        List&lt;FactionHostilityIntel&gt; result = <span class="keyword">new</span> ArrayList&lt;FactionHostilityIntel&gt;();</div>
-<div class="line"><span class="lineno">   63</span>        <span class="keywordflow">for</span> (EveryFrameScript s : <a class="code hl_function" href="../../d9/d36/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseEventManager.html#a1b01338559086fd3ed6c5803e06c900e">getActive</a>()) {</div>
-<div class="line"><span class="lineno">   64</span>            FactionHostilityIntel intel = (FactionHostilityIntel) s;</div>
-<div class="line"><span class="lineno">   65</span>            <span class="keywordflow">if</span> (intel.getOne() == faction || intel.getTwo() == faction) {</div>
-<div class="line"><span class="lineno">   66</span>                result.add(intel);</div>
-<div class="line"><span class="lineno">   67</span>            }</div>
-<div class="line"><span class="lineno">   68</span>        }</div>
-<div class="line"><span class="lineno">   69</span>        <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">   70</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseEventManager_html_a1b01338559086fd3ed6c5803e06c900e"><div class="ttname"><a href="../../d9/d36/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseEventManager.html#a1b01338559086fd3ed6c5803e06c900e">com.fs.starfarer.api.impl.campaign.intel.BaseEventManager.getActive</a></div><div class="ttdeci">List&lt; EveryFrameScript &gt; getActive()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d4c/BaseEventManager_8java_source.html#l00189">BaseEventManager.java:189</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af37adde6b9ec54903080a109cd387834" name="af37adde6b9ec54903080a109cd387834"></a>
@@ -560,18 +486,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/dbe/FactionHostilityManager_8java_source.html#l00050">50</a> of file <a class="el" href="../../d2/dbe/FactionHostilityManager_8java_source.html">FactionHostilityManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   50</span>                                                                           {</div>
-<div class="line"><span class="lineno">   51</span>        String <span class="keywordtype">id</span> = <a class="code hl_function" href="../../d1/dd6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionHostilityManager.html#a122e4916b833b9560c0a0b709d2c5645">getConflictId</a>(a, b);</div>
-<div class="line"><span class="lineno">   52</span>        <span class="keywordflow">for</span> (EveryFrameScript s : <a class="code hl_function" href="../../d9/d36/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseEventManager.html#a1b01338559086fd3ed6c5803e06c900e">getActive</a>()) {</div>
-<div class="line"><span class="lineno">   53</span>            FactionHostilityIntel intel = (FactionHostilityIntel) s;</div>
-<div class="line"><span class="lineno">   54</span>            <span class="keywordflow">if</span> (intel.getId().equals(<span class="keywordtype">id</span>)) {</div>
-<div class="line"><span class="lineno">   55</span>                <span class="keywordflow">return</span> intel;</div>
-<div class="line"><span class="lineno">   56</span>            }</div>
-<div class="line"><span class="lineno">   57</span>        }</div>
-<div class="line"><span class="lineno">   58</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   59</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionHostilityManager_html_a122e4916b833b9560c0a0b709d2c5645"><div class="ttname"><a href="../../d1/dd6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionHostilityManager.html#a122e4916b833b9560c0a0b709d2c5645">com.fs.starfarer.api.impl.campaign.intel.FactionHostilityManager.getConflictId</a></div><div class="ttdeci">static String getConflictId(FactionAPI a, FactionAPI b)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dbe/FactionHostilityManager_8java_source.html#l00021">FactionHostilityManager.java:21</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a865507f34e337377084a3a18023a9935" name="a865507f34e337377084a3a18023a9935"></a>
@@ -598,12 +513,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/dbe/FactionHostilityManager_8java_source.html#l00036">36</a> of file <a class="el" href="../../d2/dbe/FactionHostilityManager_8java_source.html">FactionHostilityManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   36</span>                                                        {</div>
-<div class="line"><span class="lineno">   37</span>        Object test = Global.getSector().getMemoryWithoutUpdate().get(<a class="code hl_variable" href="../../d1/dd6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionHostilityManager.html#ace688a5fc3dbeb1d5a888ca0e446d417">KEY</a>);</div>
-<div class="line"><span class="lineno">   38</span>        <span class="keywordflow">return</span> (<a class="code hl_function" href="../../d1/dd6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionHostilityManager.html#a17195cef06b6ce84f86ad66e5caffa0c">FactionHostilityManager</a>) test; </div>
-<div class="line"><span class="lineno">   39</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionHostilityManager_html_a17195cef06b6ce84f86ad66e5caffa0c"><div class="ttname"><a href="../../d1/dd6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionHostilityManager.html#a17195cef06b6ce84f86ad66e5caffa0c">com.fs.starfarer.api.impl.campaign.intel.FactionHostilityManager.FactionHostilityManager</a></div><div class="ttdeci">FactionHostilityManager()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dbe/FactionHostilityManager_8java_source.html#l00041">FactionHostilityManager.java:41</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="adc2608550521ecc3849180ea5667a769" name="adc2608550521ecc3849180ea5667a769"></a>
@@ -632,14 +542,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d36/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseEventManager.html#a08642feced6cb3a8677ddc8e0285a539">com.fs.starfarer.api.impl.campaign.intel.BaseEventManager</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/dbe/FactionHostilityManager_8java_source.html#l00082">82</a> of file <a class="el" href="../../d2/dbe/FactionHostilityManager_8java_source.html">FactionHostilityManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   82</span>                                     {</div>
-<div class="line"><span class="lineno">   83</span>        List&lt;FactionAPI&gt; factions = <a class="code hl_function" href="../../d1/dd6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionHostilityManager.html#a6f16c2c57fe257fde668baf1863060e3">getEligibleFactions</a>(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   84</span>        </div>
-<div class="line"><span class="lineno">   85</span>        <span class="keywordtype">float</span> mult = Global.getSettings().getFloat(<span class="stringliteral">&quot;maxFactionHostilitiesMult&quot;</span>);</div>
-<div class="line"><span class="lineno">   86</span>        <span class="keywordflow">return</span> (<span class="keywordtype">int</span>) Math.ceil(factions.size() * mult);</div>
-<div class="line"><span class="lineno">   87</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionHostilityManager_html_a6f16c2c57fe257fde668baf1863060e3"><div class="ttname"><a href="../../d1/dd6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionHostilityManager.html#a6f16c2c57fe257fde668baf1863060e3">com.fs.starfarer.api.impl.campaign.intel.FactionHostilityManager.getEligibleFactions</a></div><div class="ttdeci">List&lt; FactionAPI &gt; getEligibleFactions(boolean checkNumMarkets)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dbe/FactionHostilityManager_8java_source.html#l00089">FactionHostilityManager.java:89</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a109ec6d16fe73f4b49d6eb961edc47e5" name="a109ec6d16fe73f4b49d6eb961edc47e5"></a>
@@ -668,13 +571,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d36/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseEventManager.html#a6053e09f1cca81ae7ca762190c4b4778">com.fs.starfarer.api.impl.campaign.intel.BaseEventManager</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/dbe/FactionHostilityManager_8java_source.html#l00074">74</a> of file <a class="el" href="../../d2/dbe/FactionHostilityManager_8java_source.html">FactionHostilityManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   74</span>                                     {</div>
-<div class="line"><span class="lineno">   75</span>        List&lt;FactionAPI&gt; factions = <a class="code hl_function" href="../../d1/dd6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionHostilityManager.html#a6f16c2c57fe257fde668baf1863060e3">getEligibleFactions</a>(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   76</span>        </div>
-<div class="line"><span class="lineno">   77</span>        <span class="keywordtype">float</span> mult = Global.getSettings().getFloat(<span class="stringliteral">&quot;minFactionHostilitiesMult&quot;</span>);</div>
-<div class="line"><span class="lineno">   78</span>        <span class="keywordflow">return</span> (<span class="keywordtype">int</span>) Math.ceil(factions.size() * mult);</div>
-<div class="line"><span class="lineno">   79</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a26dbfc7430dc6fc7751ca659170dc846" name="a26dbfc7430dc6fc7751ca659170dc846"></a>
@@ -693,10 +590,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/dbe/FactionHostilityManager_8java_source.html#l00146">146</a> of file <a class="el" href="../../d2/dbe/FactionHostilityManager_8java_source.html">FactionHostilityManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  146</span>                                                     {</div>
-<div class="line"><span class="lineno">  147</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d1/dd6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionHostilityManager.html#a87901109f01fd10b355e31142d3367db">recentlyEnded</a>;</div>
-<div class="line"><span class="lineno">  148</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9fb95a96bcf6eceab07a2eff7684e368" name="a9fb95a96bcf6eceab07a2eff7684e368"></a>
@@ -716,12 +610,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/dbe/FactionHostilityManager_8java_source.html#l00142">142</a> of file <a class="el" href="../../d2/dbe/FactionHostilityManager_8java_source.html">FactionHostilityManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  142</span>                                               {</div>
-<div class="line"><span class="lineno">  143</span>        <a class="code hl_variable" href="../../d1/dd6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionHostilityManager.html#a87901109f01fd10b355e31142d3367db">recentlyEnded</a>.<a class="code hl_function" href="../../dd/df5/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTracker.html#aa63bae77983b72131b0522c039d5d11a">add</a>(<span class="keywordtype">id</span>, <a class="code hl_variable" href="../../d1/dd6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionHostilityManager.html#adee1b947b97acf9feb4880d5eaa1a0a1">TIMEOUT_AFTER_ENDING</a>);</div>
-<div class="line"><span class="lineno">  144</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionHostilityManager_html_adee1b947b97acf9feb4880d5eaa1a0a1"><div class="ttname"><a href="../../d1/dd6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionHostilityManager.html#adee1b947b97acf9feb4880d5eaa1a0a1">com.fs.starfarer.api.impl.campaign.intel.FactionHostilityManager.TIMEOUT_AFTER_ENDING</a></div><div class="ttdeci">static final float TIMEOUT_AFTER_ENDING</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dbe/FactionHostilityManager_8java_source.html#l00032">FactionHostilityManager.java:32</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTracker_html_aa63bae77983b72131b0522c039d5d11a"><div class="ttname"><a href="../../dd/df5/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTracker.html#aa63bae77983b72131b0522c039d5d11a">com.fs.starfarer.api.util.TimeoutTracker.add</a></div><div class="ttdeci">void add(T item, float time)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dcf/TimeoutTracker_8java_source.html#l00030">TimeoutTracker.java:30</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae92250d47c828c465ab08dae141f06df" name="ae92250d47c828c465ab08dae141f06df"></a>
@@ -748,59 +637,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/dbe/FactionHostilityManager_8java_source.html#l00160">160</a> of file <a class="el" href="../../d2/dbe/FactionHostilityManager_8java_source.html">FactionHostilityManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  160</span>                                                          {</div>
-<div class="line"><span class="lineno">  161</span>        List&lt;FactionAPI&gt; factions = <span class="keyword">new</span> ArrayList&lt;FactionAPI&gt;();</div>
-<div class="line"><span class="lineno">  162</span>        Map&lt;FactionAPI, Integer&gt; marketCounts = <span class="keyword">new</span> HashMap&lt;FactionAPI, Integer&gt;();</div>
-<div class="line"><span class="lineno">  163</span>        </div>
-<div class="line"><span class="lineno">  164</span>        <span class="keywordflow">for</span> (FactionAPI faction : <a class="code hl_function" href="../../d1/dd6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionHostilityManager.html#a6f16c2c57fe257fde668baf1863060e3">getEligibleFactions</a>(<span class="keyword">false</span>)) {</div>
-<div class="line"><span class="lineno">  165</span>            <span class="keywordtype">int</span> count = Misc.getFactionMarkets(faction).size();</div>
-<div class="line"><span class="lineno">  166</span>            <span class="keywordflow">if</span> (count &lt;= 0) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  167</span>            marketCounts.put(faction, count);</div>
-<div class="line"><span class="lineno">  168</span>            </div>
-<div class="line"><span class="lineno">  169</span>            factions.add(faction);</div>
-<div class="line"><span class="lineno">  170</span>        }</div>
-<div class="line"><span class="lineno">  171</span>        </div>
-<div class="line"><span class="lineno">  172</span>        WeightedRandomPicker&lt;FactionAPI&gt; picker = <span class="keyword">new</span> WeightedRandomPicker&lt;FactionAPI&gt;(<a class="code hl_variable" href="../../d1/dd6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionHostilityManager.html#a8a17713a52888795b27816c124aca435">random</a>);</div>
-<div class="line"><span class="lineno">  173</span>        </div>
-<div class="line"><span class="lineno">  174</span>        <span class="keywordtype">boolean</span> weighCommissionedMore = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  175</span>        FactionAPI commission = Misc.getCommissionFaction();</div>
-<div class="line"><span class="lineno">  176</span>        <span class="keywordflow">if</span> (commission != <span class="keyword">null</span> &amp;&amp; <a class="code hl_function" href="../../d1/dd6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionHostilityManager.html#aceede2839694c00fd6cc4634268c23ca">getHostilitiesInvolving</a>(commission).isEmpty()) {</div>
-<div class="line"><span class="lineno">  177</span>            weighCommissionedMore = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  178</span>        }</div>
-<div class="line"><span class="lineno">  179</span>        </div>
-<div class="line"><span class="lineno">  180</span>        <span class="keywordflow">for</span> (FactionAPI faction : factions) {</div>
-<div class="line"><span class="lineno">  181</span>            <span class="keywordtype">float</span> w = 1f;</div>
-<div class="line"><span class="lineno">  182</span>            <span class="keywordflow">if</span> (commission == faction &amp;&amp; weighCommissionedMore) {</div>
-<div class="line"><span class="lineno">  183</span>                w = factions.size();</div>
-<div class="line"><span class="lineno">  184</span>            }</div>
-<div class="line"><span class="lineno">  185</span>            picker.add(faction, w);</div>
-<div class="line"><span class="lineno">  186</span>        }</div>
-<div class="line"><span class="lineno">  187</span>        </div>
-<div class="line"><span class="lineno">  188</span>        FactionAPI one = picker.pick();</div>
-<div class="line"><span class="lineno">  189</span>        <span class="keywordflow">if</span> (one == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  190</span>        </div>
-<div class="line"><span class="lineno">  191</span>        picker.clear();</div>
-<div class="line"><span class="lineno">  192</span>        <span class="keywordflow">for</span> (FactionAPI faction : factions) {</div>
-<div class="line"><span class="lineno">  193</span>            <span class="keywordflow">if</span> (faction == one) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  194</span>            <span class="keywordflow">if</span> (faction.isHostileTo(one)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  195</span>            <span class="keywordflow">if</span> (faction.isAtWorst(one, RepLevel.COOPERATIVE)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  196</span>            </div>
-<div class="line"><span class="lineno">  197</span>            String <span class="keywordtype">id</span> = <a class="code hl_function" href="../../d1/dd6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionHostilityManager.html#a122e4916b833b9560c0a0b709d2c5645">getConflictId</a>(one, faction);</div>
-<div class="line"><span class="lineno">  198</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d1/dd6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionHostilityManager.html#a87901109f01fd10b355e31142d3367db">recentlyEnded</a>.<a class="code hl_function" href="../../dd/df5/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTracker.html#ab246103a8a3f46bc7645f1647f32393b">contains</a>(<span class="keywordtype">id</span>)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  199</span>            </div>
-<div class="line"><span class="lineno">  200</span>            <span class="keywordtype">float</span> w = marketCounts.get(faction);</div>
-<div class="line"><span class="lineno">  201</span>            picker.add(faction, w);</div>
-<div class="line"><span class="lineno">  202</span>        }</div>
-<div class="line"><span class="lineno">  203</span>        </div>
-<div class="line"><span class="lineno">  204</span>        FactionAPI two = picker.pick();</div>
-<div class="line"><span class="lineno">  205</span>        <span class="keywordflow">if</span> (two == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  206</span>        </div>
-<div class="line"><span class="lineno">  207</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> Pair&lt;FactionAPI, FactionAPI&gt;(one, two);</div>
-<div class="line"><span class="lineno">  208</span>        </div>
-<div class="line"><span class="lineno">  209</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionHostilityManager_html_aceede2839694c00fd6cc4634268c23ca"><div class="ttname"><a href="../../d1/dd6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionHostilityManager.html#aceede2839694c00fd6cc4634268c23ca">com.fs.starfarer.api.impl.campaign.intel.FactionHostilityManager.getHostilitiesInvolving</a></div><div class="ttdeci">List&lt; FactionHostilityIntel &gt; getHostilitiesInvolving(FactionAPI faction)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dbe/FactionHostilityManager_8java_source.html#l00061">FactionHostilityManager.java:61</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTracker_html_ab246103a8a3f46bc7645f1647f32393b"><div class="ttname"><a href="../../dd/df5/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTracker.html#ab246103a8a3f46bc7645f1647f32393b">com.fs.starfarer.api.util.TimeoutTracker.contains</a></div><div class="ttdeci">boolean contains(T item)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dcf/TimeoutTracker_8java_source.html#l00108">TimeoutTracker.java:108</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a86c27f5159cd7b0a083fc688a5fe497b" name="a86c27f5159cd7b0a083fc688a5fe497b"></a>
@@ -830,15 +667,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/dbe/FactionHostilityManager_8java_source.html#l00121">121</a> of file <a class="el" href="../../d2/dbe/FactionHostilityManager_8java_source.html">FactionHostilityManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  121</span>                                                             {</div>
-<div class="line"><span class="lineno">  122</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d1/dd6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionHostilityManager.html#a006a6b7af94fcccb9d85566fb0340084">areHostilitiesOngoing</a>(a, b)) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  123</span>        </div>
-<div class="line"><span class="lineno">  124</span>        FactionHostilityIntel intel = <span class="keyword">new</span> FactionHostilityIntel(a, b);</div>
-<div class="line"><span class="lineno">  125</span>        <a class="code hl_function" href="../../d9/d36/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseEventManager.html#a36a5f4857cf1ac50ce44e31b85280f7b">addActive</a>(intel);</div>
-<div class="line"><span class="lineno">  126</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseEventManager_html_a36a5f4857cf1ac50ce44e31b85280f7b"><div class="ttname"><a href="../../d9/d36/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseEventManager.html#a36a5f4857cf1ac50ce44e31b85280f7b">com.fs.starfarer.api.impl.campaign.intel.BaseEventManager.addActive</a></div><div class="ttdeci">void addActive(EveryFrameScript event)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d4c/BaseEventManager_8java_source.html#l00176">BaseEventManager.java:176</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionHostilityManager_html_a006a6b7af94fcccb9d85566fb0340084"><div class="ttname"><a href="../../d1/dd6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionHostilityManager.html#a006a6b7af94fcccb9d85566fb0340084">com.fs.starfarer.api.impl.campaign.intel.FactionHostilityManager.areHostilitiesOngoing</a></div><div class="ttdeci">boolean areHostilitiesOngoing(FactionAPI a, FactionAPI b)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dbe/FactionHostilityManager_8java_source.html#l00045">FactionHostilityManager.java:45</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aba059b6d6198600849105874e1d71b88" name="aba059b6d6198600849105874e1d71b88"></a>
@@ -868,12 +697,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/dbe/FactionHostilityManager_8java_source.html#l00117">117</a> of file <a class="el" href="../../d2/dbe/FactionHostilityManager_8java_source.html">FactionHostilityManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  117</span>                                                     {</div>
-<div class="line"><span class="lineno">  118</span>        <a class="code hl_function" href="../../d1/dd6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionHostilityManager.html#aba059b6d6198600849105874e1d71b88">startHostilities</a>(Global.getSector().getFaction(a), Global.getSector().getFaction(b));</div>
-<div class="line"><span class="lineno">  119</span>        </div>
-<div class="line"><span class="lineno">  120</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionHostilityManager_html_aba059b6d6198600849105874e1d71b88"><div class="ttname"><a href="../../d1/dd6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionHostilityManager.html#aba059b6d6198600849105874e1d71b88">com.fs.starfarer.api.impl.campaign.intel.FactionHostilityManager.startHostilities</a></div><div class="ttdeci">void startHostilities(String a, String b)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dbe/FactionHostilityManager_8java_source.html#l00117">FactionHostilityManager.java:117</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

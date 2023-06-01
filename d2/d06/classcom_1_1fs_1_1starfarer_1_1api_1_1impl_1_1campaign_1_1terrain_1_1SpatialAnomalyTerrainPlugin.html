@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -439,31 +440,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a820be4dfb8c152daef470bf6a2c933b5">com.fs.starfarer.api.impl.campaign.terrain.BaseTerrain</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d1/db7/SpatialAnomalyTerrainPlugin_8java_source.html#l00061">61</a> of file <a class="el" href="../../d1/db7/SpatialAnomalyTerrainPlugin_8java_source.html">SpatialAnomalyTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   61</span>                                      {</div>
-<div class="line"><span class="lineno">   62</span>        super.advance(amount);</div>
-<div class="line"><span class="lineno">   63</span>        </div>
-<div class="line"><span class="lineno">   64</span>        <span class="keywordtype">float</span> period = (float)Math.PI * 2f;</div>
-<div class="line"><span class="lineno">   65</span>        <a class="code hl_variable" href="../../d2/d06/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SpatialAnomalyTerrainPlugin.html#a1263c9e7b50222a7a1f2f9d9bde7a8ea">phase</a> += period/10f * amount;</div>
-<div class="line"><span class="lineno">   66</span>        </div>
-<div class="line"><span class="lineno">   67</span>        <span class="keywordtype">float</span> days = Global.getSector().getClock().convertToDays(amount);</div>
-<div class="line"><span class="lineno">   68</span>        <a class="code hl_variable" href="../../d2/d06/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SpatialAnomalyTerrainPlugin.html#a0039713998e45642ff937490b1fc9b00">elapsed</a> +=  days;</div>
-<div class="line"><span class="lineno">   69</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d2/d06/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SpatialAnomalyTerrainPlugin.html#a0039713998e45642ff937490b1fc9b00">elapsed</a> &gt;= 0.3f) params.source = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   70</span>        </div>
-<div class="line"><span class="lineno">   71</span><span class="comment">//      elapsed = 0.5f;</span></div>
-<div class="line"><span class="lineno">   72</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d2/d06/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SpatialAnomalyTerrainPlugin.html#a0039713998e45642ff937490b1fc9b00">elapsed</a> &gt;= <a class="code hl_variable" href="../../d2/d06/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SpatialAnomalyTerrainPlugin.html#ab89eabafc0d4d583e5587da60dfedaef">params</a>.dur) {</div>
-<div class="line"><span class="lineno">   73</span>            <a class="code hl_function" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#af2dbd4a1fbf29e54ec6bafe86d356be5">getEntity</a>().<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a1ec021f9a5852449ec4db9806cd22c02">setExpired</a>(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   74</span>        }</div>
-<div class="line"><span class="lineno">   75</span>        </div>
-<div class="line"><span class="lineno">   76</span>        <a class="code hl_variable" href="../../d2/d06/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SpatialAnomalyTerrainPlugin.html#a1b4be733c6ccc7922120851417747962">renderer</a>.<a class="code hl_function" href="../../d1/dc6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AuroraRenderer.html#ae819019b5b0616bb9c791d1d1ef8d498">advance</a>(amount);</div>
-<div class="line"><span class="lineno">   77</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AuroraRenderer_html_ae819019b5b0616bb9c791d1d1ef8d498"><div class="ttname"><a href="../../d1/dc6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AuroraRenderer.html#ae819019b5b0616bb9c791d1d1ef8d498">com.fs.starfarer.api.impl.campaign.terrain.AuroraRenderer.advance</a></div><div class="ttdeci">void advance(float amount)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d8c/AuroraRenderer_8java_source.html#l00042">AuroraRenderer.java:42</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain_html_af2dbd4a1fbf29e54ec6bafe86d356be5"><div class="ttname"><a href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#af2dbd4a1fbf29e54ec6bafe86d356be5">com.fs.starfarer.api.impl.campaign.terrain.BaseTerrain.getEntity</a></div><div class="ttdeci">SectorEntityToken getEntity()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/daa/BaseTerrain_8java_source.html#l00042">BaseTerrain.java:42</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SpatialAnomalyTerrainPlugin_html_a0039713998e45642ff937490b1fc9b00"><div class="ttname"><a href="../../d2/d06/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SpatialAnomalyTerrainPlugin.html#a0039713998e45642ff937490b1fc9b00">com.fs.starfarer.api.impl.campaign.terrain.SpatialAnomalyTerrainPlugin.elapsed</a></div><div class="ttdeci">float elapsed</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/db7/SpatialAnomalyTerrainPlugin_8java_source.html#l00031">SpatialAnomalyTerrainPlugin.java:31</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SpatialAnomalyTerrainPlugin_html_a1263c9e7b50222a7a1f2f9d9bde7a8ea"><div class="ttname"><a href="../../d2/d06/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SpatialAnomalyTerrainPlugin.html#a1263c9e7b50222a7a1f2f9d9bde7a8ea">com.fs.starfarer.api.impl.campaign.terrain.SpatialAnomalyTerrainPlugin.phase</a></div><div class="ttdeci">transient float phase</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/db7/SpatialAnomalyTerrainPlugin_8java_source.html#l00060">SpatialAnomalyTerrainPlugin.java:60</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SpatialAnomalyTerrainPlugin_html_a1b4be733c6ccc7922120851417747962"><div class="ttname"><a href="../../d2/d06/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SpatialAnomalyTerrainPlugin.html#a1b4be733c6ccc7922120851417747962">com.fs.starfarer.api.impl.campaign.terrain.SpatialAnomalyTerrainPlugin.renderer</a></div><div class="ttdeci">AuroraRenderer renderer</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/db7/SpatialAnomalyTerrainPlugin_8java_source.html#l00032">SpatialAnomalyTerrainPlugin.java:32</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SpatialAnomalyTerrainPlugin_html_ab89eabafc0d4d583e5587da60dfedaef"><div class="ttname"><a href="../../d2/d06/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SpatialAnomalyTerrainPlugin.html#ab89eabafc0d4d583e5587da60dfedaef">com.fs.starfarer.api.impl.campaign.terrain.SpatialAnomalyTerrainPlugin.params</a></div><div class="ttdeci">SpatialAnomalyParams params</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/db7/SpatialAnomalyTerrainPlugin_8java_source.html#l00029">SpatialAnomalyTerrainPlugin.java:29</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_a1ec021f9a5852449ec4db9806cd22c02"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a1ec021f9a5852449ec4db9806cd22c02">com.fs.starfarer.api.campaign.SectorEntityToken.setExpired</a></div><div class="ttdeci">void setExpired(boolean expired)</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aeab2e5f03850cbcbb55b2dcbbd662a25" name="aeab2e5f03850cbcbb55b2dcbbd662a25"></a>
@@ -495,22 +472,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a2e05e8288a8a1fad8cdcda3caaa03342">com.fs.starfarer.api.impl.campaign.terrain.BaseTerrain</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d1/db7/SpatialAnomalyTerrainPlugin_8java_source.html#l00107">107</a> of file <a class="el" href="../../d1/db7/SpatialAnomalyTerrainPlugin_8java_source.html">SpatialAnomalyTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  107</span>                                                                  {</div>
-<div class="line"><span class="lineno">  108</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a98ba084e2722ae038b3961e580dbc821">entity</a> == <a class="code hl_variable" href="../../d2/d06/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SpatialAnomalyTerrainPlugin.html#ab89eabafc0d4d583e5587da60dfedaef">params</a>.source) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  109</span>        </div>
-<div class="line"><span class="lineno">  110</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a98ba084e2722ae038b3961e580dbc821">entity</a> instanceof CampaignFleetAPI) {</div>
-<div class="line"><span class="lineno">  111</span>            CampaignFleetAPI fleet = (CampaignFleetAPI) <a class="code hl_variable" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a98ba084e2722ae038b3961e580dbc821">entity</a>;</div>
-<div class="line"><span class="lineno">  112</span>            </div>
-<div class="line"><span class="lineno">  113</span>            <span class="keywordtype">float</span> penalty = 0.5f;</div>
-<div class="line"><span class="lineno">  114</span>            fleet.getStats().addTemporaryModMult(0.1f, <a class="code hl_function" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#ad9dda3f05df5e1af8babd85bd4685df4">getModId</a>() + <span class="stringliteral">&quot;_1&quot;</span>,</div>
-<div class="line"><span class="lineno">  115</span>                                <span class="stringliteral">&quot;Inside &quot;</span> + <a class="code hl_function" href="../../d2/d06/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SpatialAnomalyTerrainPlugin.html#a4c3c05c360f0ff3093cdd621c8765464">getTerrainName</a>().toLowerCase(), 1f - penalty, </div>
-<div class="line"><span class="lineno">  116</span>                                fleet.getStats().getFleetwideMaxBurnMod());</div>
-<div class="line"><span class="lineno">  117</span>        }</div>
-<div class="line"><span class="lineno">  118</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain_html_a98ba084e2722ae038b3961e580dbc821"><div class="ttname"><a href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a98ba084e2722ae038b3961e580dbc821">com.fs.starfarer.api.impl.campaign.terrain.BaseTerrain.entity</a></div><div class="ttdeci">SectorEntityToken entity</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/daa/BaseTerrain_8java_source.html#l00025">BaseTerrain.java:25</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain_html_ad9dda3f05df5e1af8babd85bd4685df4"><div class="ttname"><a href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#ad9dda3f05df5e1af8babd85bd4685df4">com.fs.starfarer.api.impl.campaign.terrain.BaseTerrain.getModId</a></div><div class="ttdeci">String getModId()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/daa/BaseTerrain_8java_source.html#l00174">BaseTerrain.java:174</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SpatialAnomalyTerrainPlugin_html_a4c3c05c360f0ff3093cdd621c8765464"><div class="ttname"><a href="../../d2/d06/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SpatialAnomalyTerrainPlugin.html#a4c3c05c360f0ff3093cdd621c8765464">com.fs.starfarer.api.impl.campaign.terrain.SpatialAnomalyTerrainPlugin.getTerrainName</a></div><div class="ttdeci">String getTerrainName()</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/db7/SpatialAnomalyTerrainPlugin_8java_source.html#l00130">SpatialAnomalyTerrainPlugin.java:130</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a7cd84df51d711d7cfc34eb34f12230f8" name="a7cd84df51d711d7cfc34eb34f12230f8"></a>
@@ -531,10 +493,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a7dfa0640f8921435e4f43eec2508c07e">com.fs.starfarer.api.impl.campaign.terrain.BaseTerrain</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d1/db7/SpatialAnomalyTerrainPlugin_8java_source.html#l00142">142</a> of file <a class="el" href="../../d1/db7/SpatialAnomalyTerrainPlugin_8java_source.html">SpatialAnomalyTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  142</span>                                            {</div>
-<div class="line"><span class="lineno">  143</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  144</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a6f615ed5406696e93a39a8deb1489e5d" name="a6f615ed5406696e93a39a8deb1489e5d"></a>
@@ -566,10 +525,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/de6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseRingTerrain.html#a9408314b06b72738858cd5a019ef16cc">com.fs.starfarer.api.impl.campaign.terrain.BaseRingTerrain</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d1/db7/SpatialAnomalyTerrainPlugin_8java_source.html#l00122">122</a> of file <a class="el" href="../../d1/db7/SpatialAnomalyTerrainPlugin_8java_source.html">SpatialAnomalyTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  122</span>                                                               {</div>
-<div class="line"><span class="lineno">  123</span>        <span class="keywordflow">return</span> super.containsPoint(point, radius);</div>
-<div class="line"><span class="lineno">  124</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a0014cd35693a0a29914727dc4935f640" name="a0014cd35693a0a29914727dc4935f640"></a>
@@ -591,10 +547,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/de6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseRingTerrain.html#adf4a8dc32c4257f6e714c8368cf849a2">com.fs.starfarer.api.impl.campaign.terrain.BaseRingTerrain</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d1/db7/SpatialAnomalyTerrainPlugin_8java_source.html#l00056">56</a> of file <a class="el" href="../../d1/db7/SpatialAnomalyTerrainPlugin_8java_source.html">SpatialAnomalyTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   56</span>                                                           {</div>
-<div class="line"><span class="lineno">   57</span>        <span class="keywordflow">return</span> layers;</div>
-<div class="line"><span class="lineno">   58</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af921bcbcb6096bedd90b1fea7c486648" name="af921bcbcb6096bedd90b1fea7c486648"></a>
@@ -614,10 +567,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/db7/SpatialAnomalyTerrainPlugin_8java_source.html#l00149">149</a> of file <a class="el" href="../../d1/db7/SpatialAnomalyTerrainPlugin_8java_source.html">SpatialAnomalyTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  149</span>                                                         {</div>
-<div class="line"><span class="lineno">  150</span>        <span class="keywordflow">return</span> 1f;</div>
-<div class="line"><span class="lineno">  151</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8c9af848ad1dfd9c6265c57c8612e56e" name="a8c9af848ad1dfd9c6265c57c8612e56e"></a>
@@ -636,10 +586,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/db7/SpatialAnomalyTerrainPlugin_8java_source.html#l00153">153</a> of file <a class="el" href="../../d1/db7/SpatialAnomalyTerrainPlugin_8java_source.html">SpatialAnomalyTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  153</span>                                               {</div>
-<div class="line"><span class="lineno">  154</span>        <span class="keywordflow">return</span> 256f;</div>
-<div class="line"><span class="lineno">  155</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a6d04986b9ea2b8361616a25c3571e258" name="a6d04986b9ea2b8361616a25c3571e258"></a>
@@ -658,10 +605,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/db7/SpatialAnomalyTerrainPlugin_8java_source.html#l00157">157</a> of file <a class="el" href="../../d1/db7/SpatialAnomalyTerrainPlugin_8java_source.html">SpatialAnomalyTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  157</span>                                               {</div>
-<div class="line"><span class="lineno">  158</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  159</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af6d63b9e562c7030fd709a70077d1f40" name="af6d63b9e562c7030fd709a70077d1f40"></a>
@@ -680,11 +624,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/db7/SpatialAnomalyTerrainPlugin_8java_source.html#l00161">161</a> of file <a class="el" href="../../d1/db7/SpatialAnomalyTerrainPlugin_8java_source.html">SpatialAnomalyTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  161</span>                                         {</div>
-<div class="line"><span class="lineno">  162</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#af2dbd4a1fbf29e54ec6bafe86d356be5">getEntity</a>().<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#aedf9cd58593dcb6afd4d488bb017eafc">getLocation</a>();</div>
-<div class="line"><span class="lineno">  163</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_aedf9cd58593dcb6afd4d488bb017eafc"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#aedf9cd58593dcb6afd4d488bb017eafc">com.fs.starfarer.api.campaign.SectorEntityToken.getLocation</a></div><div class="ttdeci">Vector2f getLocation()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a026482325def194b7ac1d11412b87a24" name="a026482325def194b7ac1d11412b87a24"></a>
@@ -704,10 +644,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/db7/SpatialAnomalyTerrainPlugin_8java_source.html#l00165">165</a> of file <a class="el" href="../../d1/db7/SpatialAnomalyTerrainPlugin_8java_source.html">SpatialAnomalyTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  165</span>                                                     {</div>
-<div class="line"><span class="lineno">  166</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> Color(255,165,100,255);</div>
-<div class="line"><span class="lineno">  167</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a3c1f0e37a3d567f5fb46bc10f981f634" name="a3c1f0e37a3d567f5fb46bc10f981f634"></a>
@@ -727,10 +664,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/db7/SpatialAnomalyTerrainPlugin_8java_source.html#l00169">169</a> of file <a class="el" href="../../d1/db7/SpatialAnomalyTerrainPlugin_8java_source.html">SpatialAnomalyTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  169</span>                                                       {</div>
-<div class="line"><span class="lineno">  170</span>        <span class="keywordflow">return</span> 1f;</div>
-<div class="line"><span class="lineno">  171</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af2d3a785dfe39ed44995f9699f3fe87c" name="af2d3a785dfe39ed44995f9699f3fe87c"></a>
@@ -749,11 +683,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/db7/SpatialAnomalyTerrainPlugin_8java_source.html#l00173">173</a> of file <a class="el" href="../../d1/db7/SpatialAnomalyTerrainPlugin_8java_source.html">SpatialAnomalyTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  173</span>                                        {</div>
-<div class="line"><span class="lineno">  174</span>        <span class="comment">//return params.bandWidthInEngine * 0.5f;</span></div>
-<div class="line"><span class="lineno">  175</span>        <span class="keywordflow">return</span> 50f;</div>
-<div class="line"><span class="lineno">  176</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a797918eb0325b038043cdd78b8684a7f" name="a797918eb0325b038043cdd78b8684a7f"></a>
@@ -772,10 +702,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/db7/SpatialAnomalyTerrainPlugin_8java_source.html#l00178">178</a> of file <a class="el" href="../../d1/db7/SpatialAnomalyTerrainPlugin_8java_source.html">SpatialAnomalyTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  178</span>                                        {</div>
-<div class="line"><span class="lineno">  179</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d2/d06/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SpatialAnomalyTerrainPlugin.html#ab89eabafc0d4d583e5587da60dfedaef">params</a>.bandWidthInEngine;</div>
-<div class="line"><span class="lineno">  180</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af94ba019ae9685c817e1e54ce0b891f6" name="af94ba019ae9685c817e1e54ce0b891f6"></a>
@@ -795,10 +722,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/db7/SpatialAnomalyTerrainPlugin_8java_source.html#l00182">182</a> of file <a class="el" href="../../d1/db7/SpatialAnomalyTerrainPlugin_8java_source.html">SpatialAnomalyTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  182</span>                                                   {</div>
-<div class="line"><span class="lineno">  183</span>        <span class="keywordflow">return</span> 0.5f;</div>
-<div class="line"><span class="lineno">  184</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac94c9a5e4a1bba7cf5e524210a49a602" name="ac94c9a5e4a1bba7cf5e524210a49a602"></a>
@@ -817,10 +741,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/db7/SpatialAnomalyTerrainPlugin_8java_source.html#l00186">186</a> of file <a class="el" href="../../d1/db7/SpatialAnomalyTerrainPlugin_8java_source.html">SpatialAnomalyTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  186</span>                                              {</div>
-<div class="line"><span class="lineno">  187</span>        <span class="keywordflow">return</span> 1f;</div>
-<div class="line"><span class="lineno">  188</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aee1212933ab4b1c810843828229ec854" name="aee1212933ab4b1c810843828229ec854"></a>
@@ -839,11 +760,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/db7/SpatialAnomalyTerrainPlugin_8java_source.html#l00190">190</a> of file <a class="el" href="../../d1/db7/SpatialAnomalyTerrainPlugin_8java_source.html">SpatialAnomalyTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  190</span>                                        {</div>
-<div class="line"><span class="lineno">  191</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d2/d06/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SpatialAnomalyTerrainPlugin.html#a20006d1f518bdb15405549949342eead">texture</a>;</div>
-<div class="line"><span class="lineno">  192</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SpatialAnomalyTerrainPlugin_html_a20006d1f518bdb15405549949342eead"><div class="ttname"><a href="../../d2/d06/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SpatialAnomalyTerrainPlugin.html#a20006d1f518bdb15405549949342eead">com.fs.starfarer.api.impl.campaign.terrain.SpatialAnomalyTerrainPlugin.texture</a></div><div class="ttdeci">transient SpriteAPI texture</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/db7/SpatialAnomalyTerrainPlugin_8java_source.html#l00028">SpatialAnomalyTerrainPlugin.java:28</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa9ae83912ba6cc63b06f15f9457b3ae3" name="aa9ae83912ba6cc63b06f15f9457b3ae3"></a>
@@ -863,10 +780,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/db7/SpatialAnomalyTerrainPlugin_8java_source.html#l00194">194</a> of file <a class="el" href="../../d1/db7/SpatialAnomalyTerrainPlugin_8java_source.html">SpatialAnomalyTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  194</span>                                                     {</div>
-<div class="line"><span class="lineno">  195</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  196</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="add544b6be2781ada27f4eab451308016" name="add544b6be2781ada27f4eab451308016"></a>
@@ -886,10 +800,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/db7/SpatialAnomalyTerrainPlugin_8java_source.html#l00198">198</a> of file <a class="el" href="../../d1/db7/SpatialAnomalyTerrainPlugin_8java_source.html">SpatialAnomalyTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  198</span>                                                     {</div>
-<div class="line"><span class="lineno">  199</span>        <span class="keywordflow">return</span> 1f;</div>
-<div class="line"><span class="lineno">  200</span>    }   </div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae3e9c77f81fc7d84341dbd89142b07dc" name="ae3e9c77f81fc7d84341dbd89142b07dc"></a>
@@ -910,10 +821,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a7bafc952258dfb4adc5c4e5a8d59206f">com.fs.starfarer.api.impl.campaign.terrain.BaseTerrain</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d1/db7/SpatialAnomalyTerrainPlugin_8java_source.html#l00138">138</a> of file <a class="el" href="../../d1/db7/SpatialAnomalyTerrainPlugin_8java_source.html">SpatialAnomalyTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  138</span>                                      {</div>
-<div class="line"><span class="lineno">  139</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;spatial_anomaly&quot;</span>;</div>
-<div class="line"><span class="lineno">  140</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="addccf7a76c4bdc4e03d1b9a30d620e82" name="addccf7a76c4bdc4e03d1b9a30d620e82"></a>
@@ -934,10 +842,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a02089efe190ff0330d552e38ee04b8f1">com.fs.starfarer.api.impl.campaign.terrain.BaseTerrain</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d1/db7/SpatialAnomalyTerrainPlugin_8java_source.html#l00134">134</a> of file <a class="el" href="../../d1/db7/SpatialAnomalyTerrainPlugin_8java_source.html">SpatialAnomalyTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  134</span>                                      {</div>
-<div class="line"><span class="lineno">  135</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../d2/d06/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SpatialAnomalyTerrainPlugin.html#a4c3c05c360f0ff3093cdd621c8765464">getTerrainName</a>();</div>
-<div class="line"><span class="lineno">  136</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a4c3c05c360f0ff3093cdd621c8765464" name="a4c3c05c360f0ff3093cdd621c8765464"></a>
@@ -958,10 +863,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#ab849b7f53f512cab317440f32af61695">com.fs.starfarer.api.impl.campaign.terrain.BaseTerrain</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d1/db7/SpatialAnomalyTerrainPlugin_8java_source.html#l00130">130</a> of file <a class="el" href="../../d1/db7/SpatialAnomalyTerrainPlugin_8java_source.html">SpatialAnomalyTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  130</span>                                   {</div>
-<div class="line"><span class="lineno">  131</span>        <span class="keywordflow">return</span> super.getTerrainName();</div>
-<div class="line"><span class="lineno">  132</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a460a752acd568291216c24893a0a1c61" name="a460a752acd568291216c24893a0a1c61"></a>
@@ -982,10 +884,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a27e7fc8cc4b3d1882800b49c03d3abb3">com.fs.starfarer.api.impl.campaign.terrain.BaseTerrain</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d1/db7/SpatialAnomalyTerrainPlugin_8java_source.html#l00126">126</a> of file <a class="el" href="../../d1/db7/SpatialAnomalyTerrainPlugin_8java_source.html">SpatialAnomalyTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  126</span>                                {</div>
-<div class="line"><span class="lineno">  127</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  128</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a6936eba22e8c991725c077bf5ce7fe26" name="a6936eba22e8c991725c077bf5ce7fe26"></a>
@@ -1023,14 +922,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/de6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseRingTerrain.html#afc23414f87015330c30b625edcd48e73">com.fs.starfarer.api.impl.campaign.terrain.BaseRingTerrain</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d1/db7/SpatialAnomalyTerrainPlugin_8java_source.html#l00034">34</a> of file <a class="el" href="../../d1/db7/SpatialAnomalyTerrainPlugin_8java_source.html">SpatialAnomalyTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   34</span>                                                                               {</div>
-<div class="line"><span class="lineno">   35</span>        super.init(<a class="code hl_variable" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a075ff680d11a0f394d9f399d13129c2d">terrainId</a>, <a class="code hl_variable" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a98ba084e2722ae038b3961e580dbc821">entity</a>, param);</div>
-<div class="line"><span class="lineno">   36</span>        this.params = (SpatialAnomalyParams) param;</div>
-<div class="line"><span class="lineno">   37</span>        <a class="code hl_variable" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a6e7b52077a0f438b0dc442ef0084a222">name</a> = <span class="stringliteral">&quot;Spatial Anomaly&quot;</span>;</div>
-<div class="line"><span class="lineno">   38</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain_html_a075ff680d11a0f394d9f399d13129c2d"><div class="ttname"><a href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a075ff680d11a0f394d9f399d13129c2d">com.fs.starfarer.api.impl.campaign.terrain.BaseTerrain.terrainId</a></div><div class="ttdeci">String terrainId</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/daa/BaseTerrain_8java_source.html#l00026">BaseTerrain.java:26</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain_html_a6e7b52077a0f438b0dc442ef0084a222"><div class="ttname"><a href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a6e7b52077a0f438b0dc442ef0084a222">com.fs.starfarer.api.impl.campaign.terrain.BaseTerrain.name</a></div><div class="ttdeci">String name</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/daa/BaseTerrain_8java_source.html#l00027">BaseTerrain.java:27</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac77e6ac53a77d5e4d568d9ed65d73502" name="ac77e6ac53a77d5e4d568d9ed65d73502"></a>
@@ -1059,16 +951,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/de6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseRingTerrain.html#a133cceef7358314a57c3b47de80cc18c">com.fs.starfarer.api.impl.campaign.terrain.BaseRingTerrain</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d1/db7/SpatialAnomalyTerrainPlugin_8java_source.html#l00041">41</a> of file <a class="el" href="../../d1/db7/SpatialAnomalyTerrainPlugin_8java_source.html">SpatialAnomalyTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   41</span>                                   {</div>
-<div class="line"><span class="lineno">   42</span>        super.readResolve();</div>
-<div class="line"><span class="lineno">   43</span>        layers = EnumSet.of(CampaignEngineLayers.TERRAIN_7);</div>
-<div class="line"><span class="lineno">   44</span>        <a class="code hl_variable" href="../../d2/d06/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SpatialAnomalyTerrainPlugin.html#a20006d1f518bdb15405549949342eead">texture</a> = Global.getSettings().getSprite(<span class="stringliteral">&quot;terrain&quot;</span>, <span class="stringliteral">&quot;aurora&quot;</span>);</div>
-<div class="line"><span class="lineno">   45</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d2/d06/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SpatialAnomalyTerrainPlugin.html#a1b4be733c6ccc7922120851417747962">renderer</a> == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   46</span>            <a class="code hl_variable" href="../../d2/d06/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SpatialAnomalyTerrainPlugin.html#a1b4be733c6ccc7922120851417747962">renderer</a> = <span class="keyword">new</span> AuroraRenderer(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">   47</span>        }</div>
-<div class="line"><span class="lineno">   48</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">   49</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa1fb5d32019f260146fbb96823bee422" name="aa1fb5d32019f260146fbb96823bee422"></a>
@@ -1100,33 +983,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/de6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseRingTerrain.html#af80f6c6d528fa671c595d0aedf90a048">com.fs.starfarer.api.impl.campaign.terrain.BaseRingTerrain</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d1/db7/SpatialAnomalyTerrainPlugin_8java_source.html#l00079">79</a> of file <a class="el" href="../../d1/db7/SpatialAnomalyTerrainPlugin_8java_source.html">SpatialAnomalyTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   79</span>                                                                         {</div>
-<div class="line"><span class="lineno">   80</span>        <span class="keywordtype">float</span> alphaMult = viewport.getAlphaMult();</div>
-<div class="line"><span class="lineno">   81</span>        <span class="keywordtype">float</span> left = params.dur - <a class="code hl_variable" href="../../d2/d06/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SpatialAnomalyTerrainPlugin.html#a0039713998e45642ff937490b1fc9b00">elapsed</a>;</div>
-<div class="line"><span class="lineno">   82</span>        <span class="keywordflow">if</span> (left &lt; 0) left = 0;</div>
-<div class="line"><span class="lineno">   83</span>        <span class="keywordflow">if</span> (left &lt; 0.1f) {</div>
-<div class="line"><span class="lineno">   84</span>            alphaMult *= left / 0.1f;</div>
-<div class="line"><span class="lineno">   85</span>        }</div>
-<div class="line"><span class="lineno">   86</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d2/d06/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SpatialAnomalyTerrainPlugin.html#a0039713998e45642ff937490b1fc9b00">elapsed</a> &lt; 0.1f) {</div>
-<div class="line"><span class="lineno">   87</span>            alphaMult *= <a class="code hl_variable" href="../../d2/d06/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SpatialAnomalyTerrainPlugin.html#a0039713998e45642ff937490b1fc9b00">elapsed</a> / 0.1f;</div>
-<div class="line"><span class="lineno">   88</span>        }</div>
-<div class="line"><span class="lineno">   89</span>        </div>
-<div class="line"><span class="lineno">   90</span>        <a class="code hl_variable" href="../../d2/d06/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SpatialAnomalyTerrainPlugin.html#a1b4be733c6ccc7922120851417747962">renderer</a>.<a class="code hl_function" href="../../d1/dc6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AuroraRenderer.html#abb7fbc5503fff4b488323cc666886ec2">render</a>(alphaMult);</div>
-<div class="line"><span class="lineno">   91</span>        </div>
-<div class="line"><span class="lineno">   92</span><span class="comment">//      GL11.glTranslatef(entity.getLocation().x, entity.getLocation().y, 0);</span></div>
-<div class="line"><span class="lineno">   93</span><span class="comment">//      </span></div>
-<div class="line"><span class="lineno">   94</span><span class="comment">//      </span></div>
-<div class="line"><span class="lineno">   95</span><span class="comment">//      float r = params.bandWidthInEngine;</span></div>
-<div class="line"><span class="lineno">   96</span><span class="comment">//      </span></div>
-<div class="line"><span class="lineno">   97</span><span class="comment">//      GL11.glDisable(GL11.GL_TEXTURE_2D);</span></div>
-<div class="line"><span class="lineno">   98</span><span class="comment">//      GL11.glEnable(GL11.GL_BLEND);</span></div>
-<div class="line"><span class="lineno">   99</span><span class="comment">//      GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE);</span></div>
-<div class="line"><span class="lineno">  100</span><span class="comment">//      Misc.renderQuad(-r, -r, r * 2f, r * 2f, Color.gray, alphaMult);</span></div>
-<div class="line"><span class="lineno">  101</span><span class="comment">//      </span></div>
-<div class="line"><span class="lineno">  102</span><span class="comment">//      GL11.glPopMatrix();</span></div>
-<div class="line"><span class="lineno">  103</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AuroraRenderer_html_abb7fbc5503fff4b488323cc666886ec2"><div class="ttname"><a href="../../d1/dc6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AuroraRenderer.html#abb7fbc5503fff4b488323cc666886ec2">com.fs.starfarer.api.impl.campaign.terrain.AuroraRenderer.render</a></div><div class="ttdeci">void render(float alphaMult)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d8c/AuroraRenderer_8java_source.html#l00049">AuroraRenderer.java:49</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

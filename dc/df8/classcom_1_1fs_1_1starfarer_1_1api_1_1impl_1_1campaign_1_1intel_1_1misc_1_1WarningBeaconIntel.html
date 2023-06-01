@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -529,12 +530,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d91/WarningBeaconIntel_8java_source.html#l00024">24</a> of file <a class="el" href="../../d3/d91/WarningBeaconIntel_8java_source.html">WarningBeaconIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   24</span>                                                        {</div>
-<div class="line"><span class="lineno">   25</span>        this.beacon = <a class="code hl_variable" href="../../dc/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1WarningBeaconIntel.html#ad68ee44076af29500fed5f89a6bd7c22">beacon</a>;</div>
-<div class="line"><span class="lineno">   26</span>        <span class="comment">//Global.getSector().getIntelManager().addIntel(this);</span></div>
-<div class="line"><span class="lineno">   27</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1WarningBeaconIntel_html_ad68ee44076af29500fed5f89a6bd7c22"><div class="ttname"><a href="../../dc/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1WarningBeaconIntel.html#ad68ee44076af29500fed5f89a6bd7c22">com.fs.starfarer.api.impl.campaign.intel.misc.WarningBeaconIntel.beacon</a></div><div class="ttdeci">SectorEntityToken beacon</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d91/WarningBeaconIntel_8java_source.html#l00022">WarningBeaconIntel.java:22</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -575,49 +571,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a78b9181ed44f28dac2b1167e1ce4395c">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d91/WarningBeaconIntel_8java_source.html#l00051">51</a> of file <a class="el" href="../../d3/d91/WarningBeaconIntel_8java_source.html">WarningBeaconIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   51</span>                                                                            {</div>
-<div class="line"><span class="lineno">   52</span>        </div>
-<div class="line"><span class="lineno">   53</span>        Color h = Misc.getHighlightColor();</div>
-<div class="line"><span class="lineno">   54</span>        Color g = Misc.getGrayColor();</div>
-<div class="line"><span class="lineno">   55</span>        <span class="keywordtype">float</span> pad = 3f;</div>
-<div class="line"><span class="lineno">   56</span>        <span class="keywordtype">float</span> opad = 10f;</div>
-<div class="line"><span class="lineno">   57</span>        </div>
-<div class="line"><span class="lineno">   58</span>        <span class="keywordtype">float</span> initPad = pad;</div>
-<div class="line"><span class="lineno">   59</span>        <span class="keywordflow">if</span> (mode == ListInfoMode.IN_DESC) initPad = opad;</div>
-<div class="line"><span class="lineno">   60</span>        </div>
-<div class="line"><span class="lineno">   61</span>        Color tc = <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a9e443024a6224a5c170e5d1476514954">getBulletColorForMode</a>(mode);</div>
-<div class="line"><span class="lineno">   62</span>        </div>
-<div class="line"><span class="lineno">   63</span>        <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#adfa808a345b432134c9fb11227edc7df">bullet</a>(info);</div>
-<div class="line"><span class="lineno">   64</span>        <span class="keywordtype">boolean</span> isUpdate = <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a9ba572be19912ec6b816dc7b69352660">getListInfoParam</a>() != <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   65</span>        </div>
-<div class="line"><span class="lineno">   66</span>        String danger = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   67</span>        Color dangerColor = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   68</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../dc/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1WarningBeaconIntel.html#ac6a847a05a43b3b354a3bcb9c222fe97">isLow</a>()) {</div>
-<div class="line"><span class="lineno">   69</span>            danger = <span class="stringliteral">&quot;low&quot;</span>;</div>
-<div class="line"><span class="lineno">   70</span>            dangerColor = Misc.getPositiveHighlightColor();</div>
-<div class="line"><span class="lineno">   71</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="../../dc/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1WarningBeaconIntel.html#af5b8d2cd32b2a2f7465993aa17366d08">isMedium</a>()) {</div>
-<div class="line"><span class="lineno">   72</span>            danger = <span class="stringliteral">&quot;medium&quot;</span>;</div>
-<div class="line"><span class="lineno">   73</span>            dangerColor = h;</div>
-<div class="line"><span class="lineno">   74</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="../../dc/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1WarningBeaconIntel.html#a66f1444b2e866f61edf00b3e050953f8">isHigh</a>()) {</div>
-<div class="line"><span class="lineno">   75</span>            danger = <span class="stringliteral">&quot;high&quot;</span>;</div>
-<div class="line"><span class="lineno">   76</span>            dangerColor = Misc.getNegativeHighlightColor();</div>
-<div class="line"><span class="lineno">   77</span>        }</div>
-<div class="line"><span class="lineno">   78</span>        </div>
-<div class="line"><span class="lineno">   79</span>        <span class="keywordflow">if</span> (danger != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   80</span>            info.addPara(<span class="stringliteral">&quot;Danger level: &quot;</span> + danger, initPad, tc, dangerColor, danger);</div>
-<div class="line"><span class="lineno">   81</span>            initPad = 0f;</div>
-<div class="line"><span class="lineno">   82</span>        }</div>
-<div class="line"><span class="lineno">   83</span>        </div>
-<div class="line"><span class="lineno">   84</span>        <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a3e2fa48accd40a868889ad2f877bc578">unindent</a>(info);</div>
-<div class="line"><span class="lineno">   85</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_a3e2fa48accd40a868889ad2f877bc578"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a3e2fa48accd40a868889ad2f877bc578">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.unindent</a></div><div class="ttdeci">void unindent(TooltipMakerAPI info)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00570">BaseIntelPlugin.java:570</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_a9ba572be19912ec6b816dc7b69352660"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a9ba572be19912ec6b816dc7b69352660">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.getListInfoParam</a></div><div class="ttdeci">Object getListInfoParam()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00140">BaseIntelPlugin.java:140</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_a9e443024a6224a5c170e5d1476514954"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a9e443024a6224a5c170e5d1476514954">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.getBulletColorForMode</a></div><div class="ttdeci">Color getBulletColorForMode(ListInfoMode mode)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00633">BaseIntelPlugin.java:633</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_adfa808a345b432134c9fb11227edc7df"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#adfa808a345b432134c9fb11227edc7df">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.bullet</a></div><div class="ttdeci">void bullet(TooltipMakerAPI info)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00554">BaseIntelPlugin.java:554</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1WarningBeaconIntel_html_a66f1444b2e866f61edf00b3e050953f8"><div class="ttname"><a href="../../dc/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1WarningBeaconIntel.html#a66f1444b2e866f61edf00b3e050953f8">com.fs.starfarer.api.impl.campaign.intel.misc.WarningBeaconIntel.isHigh</a></div><div class="ttdeci">boolean isHigh()</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d91/WarningBeaconIntel_8java_source.html#l00047">WarningBeaconIntel.java:47</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1WarningBeaconIntel_html_ac6a847a05a43b3b354a3bcb9c222fe97"><div class="ttname"><a href="../../dc/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1WarningBeaconIntel.html#ac6a847a05a43b3b354a3bcb9c222fe97">com.fs.starfarer.api.impl.campaign.intel.misc.WarningBeaconIntel.isLow</a></div><div class="ttdeci">boolean isLow()</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d91/WarningBeaconIntel_8java_source.html#l00041">WarningBeaconIntel.java:41</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1WarningBeaconIntel_html_af5b8d2cd32b2a2f7465993aa17366d08"><div class="ttname"><a href="../../dc/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1WarningBeaconIntel.html#af5b8d2cd32b2a2f7465993aa17366d08">com.fs.starfarer.api.impl.campaign.intel.misc.WarningBeaconIntel.isMedium</a></div><div class="ttdeci">boolean isMedium()</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d91/WarningBeaconIntel_8java_source.html#l00044">WarningBeaconIntel.java:44</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af0005b30e310be13a958fd538fee862e" name="af0005b30e310be13a958fd538fee862e"></a>
@@ -649,15 +603,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#afa8bb8f2afc14a90ef02a999a66535e9">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d91/WarningBeaconIntel_8java_source.html#l00089">89</a> of file <a class="el" href="../../d3/d91/WarningBeaconIntel_8java_source.html">WarningBeaconIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   89</span>                                                                         {</div>
-<div class="line"><span class="lineno">   90</span>        Color c = <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#af44e4a0a7c61b8efbc4ef210c7061723">getTitleColor</a>(mode);</div>
-<div class="line"><span class="lineno">   91</span>        info.addPara(<a class="code hl_function" href="../../dc/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1WarningBeaconIntel.html#abf03babdefe5793ec8c2725ea040671b">getName</a>(), c, 0f);</div>
-<div class="line"><span class="lineno">   92</span>        <a class="code hl_function" href="../../dc/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1WarningBeaconIntel.html#a69245bb49225cc5d0b6acb77d40de8cd">addBulletPoints</a>(info, mode);</div>
-<div class="line"><span class="lineno">   93</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_af44e4a0a7c61b8efbc4ef210c7061723"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#af44e4a0a7c61b8efbc4ef210c7061723">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.getTitleColor</a></div><div class="ttdeci">Color getTitleColor(ListInfoMode mode)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00615">BaseIntelPlugin.java:615</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1WarningBeaconIntel_html_a69245bb49225cc5d0b6acb77d40de8cd"><div class="ttname"><a href="../../dc/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1WarningBeaconIntel.html#a69245bb49225cc5d0b6acb77d40de8cd">com.fs.starfarer.api.impl.campaign.intel.misc.WarningBeaconIntel.addBulletPoints</a></div><div class="ttdeci">void addBulletPoints(TooltipMakerAPI info, ListInfoMode mode)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d91/WarningBeaconIntel_8java_source.html#l00051">WarningBeaconIntel.java:51</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1WarningBeaconIntel_html_abf03babdefe5793ec8c2725ea040671b"><div class="ttname"><a href="../../dc/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1WarningBeaconIntel.html#abf03babdefe5793ec8c2725ea040671b">com.fs.starfarer.api.impl.campaign.intel.misc.WarningBeaconIntel.getName</a></div><div class="ttdeci">String getName()</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d91/WarningBeaconIntel_8java_source.html#l00154">WarningBeaconIntel.java:154</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="afad0736c10086d78703bbb8ae50f4fc4" name="afad0736c10086d78703bbb8ae50f4fc4"></a>
@@ -695,30 +641,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a8cccf49669fce7f61c75af3c8afc4bb9">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d91/WarningBeaconIntel_8java_source.html#l00096">96</a> of file <a class="el" href="../../d3/d91/WarningBeaconIntel_8java_source.html">WarningBeaconIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   96</span>                                                                                        {</div>
-<div class="line"><span class="lineno">   97</span>        Color h = Misc.getHighlightColor();</div>
-<div class="line"><span class="lineno">   98</span>        Color g = Misc.getGrayColor();</div>
-<div class="line"><span class="lineno">   99</span>        Color tc = Misc.getTextColor();</div>
-<div class="line"><span class="lineno">  100</span>        <span class="keywordtype">float</span> pad = 3f;</div>
-<div class="line"><span class="lineno">  101</span>        <span class="keywordtype">float</span> opad = 10f;</div>
-<div class="line"><span class="lineno">  102</span>        </div>
-<div class="line"><span class="lineno">  103</span>        </div>
-<div class="line"><span class="lineno">  104</span>        Description desc = Global.getSettings().getDescription(<span class="stringliteral">&quot;warning_beacon&quot;</span>, Type.CUSTOM);</div>
-<div class="line"><span class="lineno">  105</span>        info.addPara(desc.getText1FirstPara(), opad);</div>
-<div class="line"><span class="lineno">  106</span>        </div>
-<div class="line"><span class="lineno">  107</span>        <a class="code hl_function" href="../../dc/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1WarningBeaconIntel.html#a69245bb49225cc5d0b6acb77d40de8cd">addBulletPoints</a>(info, ListInfoMode.IN_DESC);</div>
-<div class="line"><span class="lineno">  108</span>        </div>
-<div class="line"><span class="lineno">  109</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dc/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1WarningBeaconIntel.html#ad68ee44076af29500fed5f89a6bd7c22">beacon</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#aca208794671c1be979d665d374deaa94">isInHyperspace</a>()) {</div>
-<div class="line"><span class="lineno">  110</span>            StarSystemAPI system = Misc.getNearbyStarSystem(<a class="code hl_variable" href="../../dc/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1WarningBeaconIntel.html#ad68ee44076af29500fed5f89a6bd7c22">beacon</a>, 1f);</div>
-<div class="line"><span class="lineno">  111</span>            <span class="keywordflow">if</span> (system != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  112</span>                info.addPara(<span class="stringliteral">&quot;This beacon is located near the &quot;</span> + system.getNameWithLowercaseType() + </div>
-<div class="line"><span class="lineno">  113</span>                        <span class="stringliteral">&quot;, warning of dangers that presumably lie within.&quot;</span>, opad);</div>
-<div class="line"><span class="lineno">  114</span>                </div>
-<div class="line"><span class="lineno">  115</span>            }</div>
-<div class="line"><span class="lineno">  116</span>        }</div>
-<div class="line"><span class="lineno">  117</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_aca208794671c1be979d665d374deaa94"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#aca208794671c1be979d665d374deaa94">com.fs.starfarer.api.campaign.SectorEntityToken.isInHyperspace</a></div><div class="ttdeci">boolean isInHyperspace()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ad344e1d10fbb5a78927fde1e9870bdf1" name="ad344e1d10fbb5a78927fde1e9870bdf1"></a>
@@ -739,10 +662,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#ae93559a4be65baa333b36619a2a82850">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d91/WarningBeaconIntel_8java_source.html#l00191">191</a> of file <a class="el" href="../../d3/d91/WarningBeaconIntel_8java_source.html">WarningBeaconIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  191</span>                                        {</div>
-<div class="line"><span class="lineno">  192</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;ui_discovered_entity&quot;</span>;</div>
-<div class="line"><span class="lineno">  193</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a24cb572a3c70bc2a8a74d8be52c8c9a8" name="a24cb572a3c70bc2a8a74d8be52c8c9a8"></a>
@@ -763,10 +683,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#aef7175eff8878a18ebb3099d3a7ab59f">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d91/WarningBeaconIntel_8java_source.html#l00166">166</a> of file <a class="el" href="../../d3/d91/WarningBeaconIntel_8java_source.html">WarningBeaconIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  166</span>                                              {</div>
-<div class="line"><span class="lineno">  167</span>        <span class="keywordflow">return</span> super.getFactionForUIColors();</div>
-<div class="line"><span class="lineno">  168</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5a6ed720df296a544498439b20612a4f" name="a5a6ed720df296a544498439b20612a4f"></a>
@@ -788,17 +705,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a6499624a08c9565334e2395989f542c9">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d91/WarningBeaconIntel_8java_source.html#l00120">120</a> of file <a class="el" href="../../d3/d91/WarningBeaconIntel_8java_source.html">WarningBeaconIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  120</span>                            {</div>
-<div class="line"><span class="lineno">  121</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../dc/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1WarningBeaconIntel.html#ac6a847a05a43b3b354a3bcb9c222fe97">isLow</a>()) {</div>
-<div class="line"><span class="lineno">  122</span>            <span class="keywordflow">return</span> Global.getSettings().getSpriteName(<span class="stringliteral">&quot;intel&quot;</span>, <span class="stringliteral">&quot;beacon_low&quot;</span>);</div>
-<div class="line"><span class="lineno">  123</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="../../dc/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1WarningBeaconIntel.html#af5b8d2cd32b2a2f7465993aa17366d08">isMedium</a>()) {</div>
-<div class="line"><span class="lineno">  124</span>            <span class="keywordflow">return</span> Global.getSettings().getSpriteName(<span class="stringliteral">&quot;intel&quot;</span>, <span class="stringliteral">&quot;beacon_medium&quot;</span>);</div>
-<div class="line"><span class="lineno">  125</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="../../dc/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1WarningBeaconIntel.html#a66f1444b2e866f61edf00b3e050953f8">isHigh</a>()) {</div>
-<div class="line"><span class="lineno">  126</span>            <span class="keywordflow">return</span> Global.getSettings().getSpriteName(<span class="stringliteral">&quot;intel&quot;</span>, <span class="stringliteral">&quot;beacon_high&quot;</span>);</div>
-<div class="line"><span class="lineno">  127</span>        }</div>
-<div class="line"><span class="lineno">  128</span>        <span class="keywordflow">return</span> Global.getSettings().getSpriteName(<span class="stringliteral">&quot;intel&quot;</span>, <span class="stringliteral">&quot;beacon_low&quot;</span>);</div>
-<div class="line"><span class="lineno">  129</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aafe029c572c11639f10d2b48ad081f70" name="aafe029c572c11639f10d2b48ad081f70"></a>
@@ -827,18 +734,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a4ef0af8cb71b4127afce850bc6a04514">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d91/WarningBeaconIntel_8java_source.html#l00132">132</a> of file <a class="el" href="../../d3/d91/WarningBeaconIntel_8java_source.html">WarningBeaconIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  132</span>                                                      {</div>
-<div class="line"><span class="lineno">  133</span>        Set&lt;String&gt; tags = super.getIntelTags(map);</div>
-<div class="line"><span class="lineno">  134</span>        tags.add(Tags.INTEL_BEACON);</div>
-<div class="line"><span class="lineno">  135</span>        </div>
-<div class="line"><span class="lineno">  136</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../dc/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1WarningBeaconIntel.html#a319d57777f98fd094e1c39b082bfbc35">getRemnantType</a>() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  137</span>            tags.add(Factions.REMNANTS);</div>
-<div class="line"><span class="lineno">  138</span>        }</div>
-<div class="line"><span class="lineno">  139</span>        </div>
-<div class="line"><span class="lineno">  140</span>        <span class="keywordflow">return</span> tags;</div>
-<div class="line"><span class="lineno">  141</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1WarningBeaconIntel_html_a319d57777f98fd094e1c39b082bfbc35"><div class="ttname"><a href="../../dc/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1WarningBeaconIntel.html#a319d57777f98fd094e1c39b082bfbc35">com.fs.starfarer.api.impl.campaign.intel.misc.WarningBeaconIntel.getRemnantType</a></div><div class="ttdeci">RemnantSystemType getRemnantType()</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d91/WarningBeaconIntel_8java_source.html#l00029">WarningBeaconIntel.java:29</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2c8943a3e6b7ac44899b25655a1f9ffa" name="a2c8943a3e6b7ac44899b25655a1f9ffa"></a>
@@ -860,16 +756,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a01f212769febb46bae89256b643c23eb">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d91/WarningBeaconIntel_8java_source.html#l00175">175</a> of file <a class="el" href="../../d3/d91/WarningBeaconIntel_8java_source.html">WarningBeaconIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  175</span>                                                              {</div>
-<div class="line"><span class="lineno">  176</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dc/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1WarningBeaconIntel.html#ad68ee44076af29500fed5f89a6bd7c22">beacon</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#aca208794671c1be979d665d374deaa94">isInHyperspace</a>() &amp;&amp; <span class="keyword">false</span>) {</div>
-<div class="line"><span class="lineno">  177</span>            StarSystemAPI system = Misc.getNearbyStarSystem(<a class="code hl_variable" href="../../dc/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1WarningBeaconIntel.html#ad68ee44076af29500fed5f89a6bd7c22">beacon</a>, 1f);</div>
-<div class="line"><span class="lineno">  178</span>            <span class="keywordflow">if</span> (system != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  179</span>                <span class="keywordflow">return</span> system.getHyperspaceAnchor();</div>
-<div class="line"><span class="lineno">  180</span>            }</div>
-<div class="line"><span class="lineno">  181</span>        }</div>
-<div class="line"><span class="lineno">  182</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../dc/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1WarningBeaconIntel.html#ad68ee44076af29500fed5f89a6bd7c22">beacon</a>;</div>
-<div class="line"><span class="lineno">  183</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="abf03babdefe5793ec8c2725ea040671b" name="abf03babdefe5793ec8c2725ea040671b"></a>
@@ -890,17 +777,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a582fe7cb29e8f2f65670d4dd74418235">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d91/WarningBeaconIntel_8java_source.html#l00154">154</a> of file <a class="el" href="../../d3/d91/WarningBeaconIntel_8java_source.html">WarningBeaconIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  154</span>                            {</div>
-<div class="line"><span class="lineno">  155</span><span class="comment">//      if (isLow()) {</span></div>
-<div class="line"><span class="lineno">  156</span><span class="comment">//          return &quot;Warning Beacon (Low)&quot;;</span></div>
-<div class="line"><span class="lineno">  157</span><span class="comment">//      } else if (isMedium()) {</span></div>
-<div class="line"><span class="lineno">  158</span><span class="comment">//          return &quot;Warning Beacon (Medium)&quot;;</span></div>
-<div class="line"><span class="lineno">  159</span><span class="comment">//      } else if (isHigh()) {</span></div>
-<div class="line"><span class="lineno">  160</span><span class="comment">//          return &quot;Warning Beacon (High)&quot;;</span></div>
-<div class="line"><span class="lineno">  161</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  162</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Warning Beacon&quot;</span>;</div>
-<div class="line"><span class="lineno">  163</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a319d57777f98fd094e1c39b082bfbc35" name="a319d57777f98fd094e1c39b082bfbc35"></a>
@@ -927,20 +804,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d91/WarningBeaconIntel_8java_source.html#l00029">29</a> of file <a class="el" href="../../d3/d91/WarningBeaconIntel_8java_source.html">WarningBeaconIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   29</span>                                                 {</div>
-<div class="line"><span class="lineno">   30</span>        RemnantSystemType remnantType = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   31</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dc/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1WarningBeaconIntel.html#ad68ee44076af29500fed5f89a6bd7c22">beacon</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#adcd558c1d95f9755066ddaf9a77311c1">getMemoryWithoutUpdate</a>().<a class="code hl_function" href="../../d0/de7/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html#a60c59adbba73fd159e49e3563116e6f1">contains</a>(RemnantSystemType.DESTROYED.getBeaconFlag())) {</div>
-<div class="line"><span class="lineno">   32</span>            remnantType = RemnantSystemType.DESTROYED;</div>
-<div class="line"><span class="lineno">   33</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dc/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1WarningBeaconIntel.html#ad68ee44076af29500fed5f89a6bd7c22">beacon</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#adcd558c1d95f9755066ddaf9a77311c1">getMemoryWithoutUpdate</a>().<a class="code hl_function" href="../../d0/de7/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html#a60c59adbba73fd159e49e3563116e6f1">contains</a>(RemnantSystemType.SUPPRESSED.getBeaconFlag())) {</div>
-<div class="line"><span class="lineno">   34</span>            remnantType = RemnantSystemType.SUPPRESSED;</div>
-<div class="line"><span class="lineno">   35</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dc/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1WarningBeaconIntel.html#ad68ee44076af29500fed5f89a6bd7c22">beacon</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#adcd558c1d95f9755066ddaf9a77311c1">getMemoryWithoutUpdate</a>().<a class="code hl_function" href="../../d0/de7/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html#a60c59adbba73fd159e49e3563116e6f1">contains</a>(RemnantSystemType.RESURGENT.getBeaconFlag())) {</div>
-<div class="line"><span class="lineno">   36</span>            remnantType = RemnantSystemType.RESURGENT;</div>
-<div class="line"><span class="lineno">   37</span>        }</div>
-<div class="line"><span class="lineno">   38</span>        <span class="keywordflow">return</span> remnantType;</div>
-<div class="line"><span class="lineno">   39</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_adcd558c1d95f9755066ddaf9a77311c1"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#adcd558c1d95f9755066ddaf9a77311c1">com.fs.starfarer.api.campaign.SectorEntityToken.getMemoryWithoutUpdate</a></div><div class="ttdeci">MemoryAPI getMemoryWithoutUpdate()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI_html_a60c59adbba73fd159e49e3563116e6f1"><div class="ttname"><a href="../../d0/de7/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html#a60c59adbba73fd159e49e3563116e6f1">com.fs.starfarer.api.campaign.rules.MemoryAPI.contains</a></div><div class="ttdeci">boolean contains(String key)</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a192249a07d3b5e67b842583d9990325c" name="a192249a07d3b5e67b842583d9990325c"></a>
@@ -961,10 +825,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a8fe6bfa41873bed91428d73fa6bac1b6">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d91/WarningBeaconIntel_8java_source.html#l00170">170</a> of file <a class="el" href="../../d3/d91/WarningBeaconIntel_8java_source.html">WarningBeaconIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  170</span>                                             {</div>
-<div class="line"><span class="lineno">  171</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../dc/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1WarningBeaconIntel.html#abf03babdefe5793ec8c2725ea040671b">getName</a>();</div>
-<div class="line"><span class="lineno">  172</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af198af31c5a0815e4490d2f3c4dd3a99" name="af198af31c5a0815e4490d2f3c4dd3a99"></a>
@@ -985,17 +846,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a6160e4bb36c43732e98a87a2f1e63b58">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d91/WarningBeaconIntel_8java_source.html#l00143">143</a> of file <a class="el" href="../../d3/d91/WarningBeaconIntel_8java_source.html">WarningBeaconIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  143</span>                                  {</div>
-<div class="line"><span class="lineno">  144</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../dc/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1WarningBeaconIntel.html#ac6a847a05a43b3b354a3bcb9c222fe97">isLow</a>()) {</div>
-<div class="line"><span class="lineno">  145</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;Warning Beacon 3&quot;</span>;</div>
-<div class="line"><span class="lineno">  146</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="../../dc/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1WarningBeaconIntel.html#af5b8d2cd32b2a2f7465993aa17366d08">isMedium</a>()) {</div>
-<div class="line"><span class="lineno">  147</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;Warning Beacon 2&quot;</span>;</div>
-<div class="line"><span class="lineno">  148</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="../../dc/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1WarningBeaconIntel.html#a66f1444b2e866f61edf00b3e050953f8">isHigh</a>()) {</div>
-<div class="line"><span class="lineno">  149</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;Warning Beacon 1&quot;</span>;</div>
-<div class="line"><span class="lineno">  150</span>        }</div>
-<div class="line"><span class="lineno">  151</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Warning Beacon 0&quot;</span>;</div>
-<div class="line"><span class="lineno">  152</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a66f1444b2e866f61edf00b3e050953f8" name="a66f1444b2e866f61edf00b3e050953f8"></a>
@@ -1022,11 +873,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d91/WarningBeaconIntel_8java_source.html#l00047">47</a> of file <a class="el" href="../../d3/d91/WarningBeaconIntel_8java_source.html">WarningBeaconIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   47</span>                               {</div>
-<div class="line"><span class="lineno">   48</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../dc/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1WarningBeaconIntel.html#ad68ee44076af29500fed5f89a6bd7c22">beacon</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#abed0787f3c057816961d1a07f2c55662">hasTag</a>(Tags.BEACON_HIGH);</div>
-<div class="line"><span class="lineno">   49</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_abed0787f3c057816961d1a07f2c55662"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#abed0787f3c057816961d1a07f2c55662">com.fs.starfarer.api.campaign.SectorEntityToken.hasTag</a></div><div class="ttdeci">boolean hasTag(String tag)</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac6a847a05a43b3b354a3bcb9c222fe97" name="ac6a847a05a43b3b354a3bcb9c222fe97"></a>
@@ -1053,10 +900,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d91/WarningBeaconIntel_8java_source.html#l00041">41</a> of file <a class="el" href="../../d3/d91/WarningBeaconIntel_8java_source.html">WarningBeaconIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   41</span>                              {</div>
-<div class="line"><span class="lineno">   42</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../dc/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1WarningBeaconIntel.html#ad68ee44076af29500fed5f89a6bd7c22">beacon</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#abed0787f3c057816961d1a07f2c55662">hasTag</a>(Tags.BEACON_LOW);</div>
-<div class="line"><span class="lineno">   43</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af5b8d2cd32b2a2f7465993aa17366d08" name="af5b8d2cd32b2a2f7465993aa17366d08"></a>
@@ -1083,10 +927,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d91/WarningBeaconIntel_8java_source.html#l00044">44</a> of file <a class="el" href="../../d3/d91/WarningBeaconIntel_8java_source.html">WarningBeaconIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   44</span>                                 {</div>
-<div class="line"><span class="lineno">   45</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../dc/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1WarningBeaconIntel.html#ad68ee44076af29500fed5f89a6bd7c22">beacon</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#abed0787f3c057816961d1a07f2c55662">hasTag</a>(Tags.BEACON_MEDIUM);</div>
-<div class="line"><span class="lineno">   46</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a86b6eb3b9e1daa41beba7d3e40b88043" name="a86b6eb3b9e1daa41beba7d3e40b88043"></a>
@@ -1107,10 +948,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#aede56a965d7570e8ea06cdf31d70e4de">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d91/WarningBeaconIntel_8java_source.html#l00186">186</a> of file <a class="el" href="../../d3/d91/WarningBeaconIntel_8java_source.html">WarningBeaconIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  186</span>                                       {</div>
-<div class="line"><span class="lineno">  187</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  188</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

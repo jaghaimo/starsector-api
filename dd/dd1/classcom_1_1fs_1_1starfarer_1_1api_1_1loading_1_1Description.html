@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -168,11 +169,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dbd/Description_8java_source.html#l00027">27</a> of file <a class="el" href="../../d4/dbd/Description_8java_source.html">Description.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   27</span>                                             {</div>
-<div class="line"><span class="lineno">   28</span>        this.type = type;</div>
-<div class="line"><span class="lineno">   29</span>        this.id = id;</div>
-<div class="line"><span class="lineno">   30</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -192,10 +189,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dbd/Description_8java_source.html#l00047">47</a> of file <a class="el" href="../../d4/dbd/Description_8java_source.html">Description.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   47</span>                             {</div>
-<div class="line"><span class="lineno">   48</span>        <span class="keywordflow">return</span> text1;</div>
-<div class="line"><span class="lineno">   49</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a92d30cc3cf6fe63879f61c119558008e" name="a92d30cc3cf6fe63879f61c119558008e"></a>
@@ -214,16 +208,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dbd/Description_8java_source.html#l00051">51</a> of file <a class="el" href="../../d4/dbd/Description_8java_source.html">Description.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   51</span>                                      {</div>
-<div class="line"><span class="lineno">   52</span>        <span class="keywordflow">if</span> (text1 != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   53</span>            <span class="keywordtype">int</span> index = text1.indexOf(<span class="charliteral">&#39;\n&#39;</span>);</div>
-<div class="line"><span class="lineno">   54</span>            <span class="keywordflow">if</span> (index != -1) {</div>
-<div class="line"><span class="lineno">   55</span>                <span class="keywordflow">return</span> text1.substring(0, index);</div>
-<div class="line"><span class="lineno">   56</span>            }</div>
-<div class="line"><span class="lineno">   57</span>        }</div>
-<div class="line"><span class="lineno">   58</span>        <span class="keywordflow">return</span> text1;</div>
-<div class="line"><span class="lineno">   59</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a30d435b1975dfd495b83bd76a86815ed" name="a30d435b1975dfd495b83bd76a86815ed"></a>
@@ -242,19 +227,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dbd/Description_8java_source.html#l00061">61</a> of file <a class="el" href="../../d4/dbd/Description_8java_source.html">Description.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   61</span>                                        {</div>
-<div class="line"><span class="lineno">   62</span>        List&lt;String&gt; result = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
-<div class="line"><span class="lineno">   63</span>        <span class="keywordflow">if</span> (text1 == <span class="keyword">null</span>) <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">   64</span>        </div>
-<div class="line"><span class="lineno">   65</span>        String [] temp = text1.split(<span class="stringliteral">&quot;\\n&quot;</span>);</div>
-<div class="line"><span class="lineno">   66</span>        <span class="keywordflow">for</span> (String p : temp) {</div>
-<div class="line"><span class="lineno">   67</span>            p = p.trim();</div>
-<div class="line"><span class="lineno">   68</span>            <span class="keywordflow">if</span> (p.isEmpty()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   69</span>            result.add(p);</div>
-<div class="line"><span class="lineno">   70</span>        }</div>
-<div class="line"><span class="lineno">   71</span>        <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">   72</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aee850e0f1e4d7ba0b0cb1fcf5d863104" name="aee850e0f1e4d7ba0b0cb1fcf5d863104"></a>
@@ -273,10 +246,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dbd/Description_8java_source.html#l00080">80</a> of file <a class="el" href="../../d4/dbd/Description_8java_source.html">Description.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   80</span>                             {</div>
-<div class="line"><span class="lineno">   81</span>        <span class="keywordflow">return</span> text2;</div>
-<div class="line"><span class="lineno">   82</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a88c8784146f945b8fdcf527857d67caa" name="a88c8784146f945b8fdcf527857d67caa"></a>
@@ -295,10 +265,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dbd/Description_8java_source.html#l00089">89</a> of file <a class="el" href="../../d4/dbd/Description_8java_source.html">Description.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   89</span>                             {</div>
-<div class="line"><span class="lineno">   90</span>        <span class="keywordflow">return</span> text3;</div>
-<div class="line"><span class="lineno">   91</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a99b0cd615f3c9bae0bcf6317efbc2031" name="a99b0cd615f3c9bae0bcf6317efbc2031"></a>
@@ -317,10 +284,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dbd/Description_8java_source.html#l00036">36</a> of file <a class="el" href="../../d4/dbd/Description_8java_source.html">Description.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   36</span>                             {</div>
-<div class="line"><span class="lineno">   37</span>        <span class="keywordflow">return</span> text4;</div>
-<div class="line"><span class="lineno">   38</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a78afe1176dd35aa737b07207ef33ca04" name="a78afe1176dd35aa737b07207ef33ca04"></a>
@@ -339,10 +303,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dbd/Description_8java_source.html#l00032">32</a> of file <a class="el" href="../../d4/dbd/Description_8java_source.html">Description.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   32</span>                           {</div>
-<div class="line"><span class="lineno">   33</span>        <span class="keywordflow">return</span> <span class="keywordtype">id</span> + <span class="stringliteral">&quot;_&quot;</span> + type.name();</div>
-<div class="line"><span class="lineno">   34</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8f292888330307c6f18ef5c391136acd" name="a8f292888330307c6f18ef5c391136acd"></a>
@@ -361,13 +322,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dbd/Description_8java_source.html#l00103">103</a> of file <a class="el" href="../../d4/dbd/Description_8java_source.html">Description.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  103</span>                              {</div>
-<div class="line"><span class="lineno">  104</span>        String str = <a class="code hl_function" href="../../dd/dd1/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1Description.html#ab5b58b295e427a65cc701fe723717faf">getText1</a>();</div>
-<div class="line"><span class="lineno">  105</span>        <span class="keywordflow">if</span> (str == <span class="keyword">null</span> || str.isEmpty() || str.equals(<span class="stringliteral">&quot;No description... yet&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  106</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  107</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1Description_html_ab5b58b295e427a65cc701fe723717faf"><div class="ttname"><a href="../../dd/dd1/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1Description.html#ab5b58b295e427a65cc701fe723717faf">com.fs.starfarer.api.loading.Description.getText1</a></div><div class="ttdeci">String getText1()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dbd/Description_8java_source.html#l00047">Description.java:47</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8a77da30a6893651159ed4f4300567b7" name="a8a77da30a6893651159ed4f4300567b7"></a>
@@ -386,13 +341,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dbd/Description_8java_source.html#l00098">98</a> of file <a class="el" href="../../d4/dbd/Description_8java_source.html">Description.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   98</span>                              {</div>
-<div class="line"><span class="lineno">   99</span>        String str = <a class="code hl_function" href="../../dd/dd1/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1Description.html#aee850e0f1e4d7ba0b0cb1fcf5d863104">getText2</a>();</div>
-<div class="line"><span class="lineno">  100</span>        <span class="keywordflow">if</span> (str == <span class="keyword">null</span> || str.isEmpty() || str.equals(<span class="stringliteral">&quot;No description... yet&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  101</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  102</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1Description_html_aee850e0f1e4d7ba0b0cb1fcf5d863104"><div class="ttname"><a href="../../dd/dd1/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1Description.html#aee850e0f1e4d7ba0b0cb1fcf5d863104">com.fs.starfarer.api.loading.Description.getText2</a></div><div class="ttdeci">String getText2()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dbd/Description_8java_source.html#l00080">Description.java:80</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab74f3e96dfe3d009d3a67eb07335b4d9" name="ab74f3e96dfe3d009d3a67eb07335b4d9"></a>
@@ -411,13 +360,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dbd/Description_8java_source.html#l00108">108</a> of file <a class="el" href="../../d4/dbd/Description_8java_source.html">Description.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  108</span>                              {</div>
-<div class="line"><span class="lineno">  109</span>        String str = <a class="code hl_function" href="../../dd/dd1/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1Description.html#a88c8784146f945b8fdcf527857d67caa">getText3</a>();</div>
-<div class="line"><span class="lineno">  110</span>        <span class="keywordflow">if</span> (str == <span class="keyword">null</span> || str.isEmpty() || str.equals(<span class="stringliteral">&quot;No description... yet&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  111</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  112</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1Description_html_a88c8784146f945b8fdcf527857d67caa"><div class="ttname"><a href="../../dd/dd1/classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1Description.html#a88c8784146f945b8fdcf527857d67caa">com.fs.starfarer.api.loading.Description.getText3</a></div><div class="ttdeci">String getText3()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dbd/Description_8java_source.html#l00089">Description.java:89</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a347d5e5a5ad8f75a4788652fe72e12e2" name="a347d5e5a5ad8f75a4788652fe72e12e2"></a>
@@ -436,10 +379,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dbd/Description_8java_source.html#l00043">43</a> of file <a class="el" href="../../d4/dbd/Description_8java_source.html">Description.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   43</span>                              {</div>
-<div class="line"><span class="lineno">   44</span>        <span class="keywordflow">return</span> text4 != <span class="keyword">null</span> &amp;&amp; !text4.isEmpty();</div>
-<div class="line"><span class="lineno">   45</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9b231319c156e0b2e13acd54187e470b" name="a9b231319c156e0b2e13acd54187e470b"></a>
@@ -459,11 +399,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dbd/Description_8java_source.html#l00075">75</a> of file <a class="el" href="../../d4/dbd/Description_8java_source.html">Description.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   75</span>                                       {</div>
-<div class="line"><span class="lineno">   76</span>        <span class="keywordflow">if</span> (text1 == <span class="keyword">null</span> || text1.equals(<span class="stringliteral">&quot;&quot;</span>)) text1 = <span class="stringliteral">&quot;No description... yet&quot;</span>;</div>
-<div class="line"><span class="lineno">   77</span>        this.text1 = text1.trim();</div>
-<div class="line"><span class="lineno">   78</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ad5940a0d41e2ce6b68c180fba58177c5" name="ad5940a0d41e2ce6b68c180fba58177c5"></a>
@@ -483,11 +419,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dbd/Description_8java_source.html#l00084">84</a> of file <a class="el" href="../../d4/dbd/Description_8java_source.html">Description.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   84</span>                                       {</div>
-<div class="line"><span class="lineno">   85</span>        <span class="keywordflow">if</span> (text2 == <span class="keyword">null</span> || text2.equals(<span class="stringliteral">&quot;&quot;</span>)) text2 = <span class="stringliteral">&quot;No description... yet&quot;</span>;</div>
-<div class="line"><span class="lineno">   86</span>        this.text2 = text2.trim();</div>
-<div class="line"><span class="lineno">   87</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a72e51896619c47593293a4da85246500" name="a72e51896619c47593293a4da85246500"></a>
@@ -507,11 +439,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dbd/Description_8java_source.html#l00093">93</a> of file <a class="el" href="../../d4/dbd/Description_8java_source.html">Description.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   93</span>                                       {</div>
-<div class="line"><span class="lineno">   94</span>        <span class="keywordflow">if</span> (text3 == <span class="keyword">null</span> || text3.equals(<span class="stringliteral">&quot;&quot;</span>)) text3 = <span class="stringliteral">&quot;No description... yet&quot;</span>;</div>
-<div class="line"><span class="lineno">   95</span>        this.text3 = text3.trim();</div>
-<div class="line"><span class="lineno">   96</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="adb6caf3b7fa4b66401bd8612411a7b03" name="adb6caf3b7fa4b66401bd8612411a7b03"></a>
@@ -531,10 +459,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dbd/Description_8java_source.html#l00040">40</a> of file <a class="el" href="../../d4/dbd/Description_8java_source.html">Description.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   40</span>                                       {</div>
-<div class="line"><span class="lineno">   41</span>        this.text4 = text4;</div>
-<div class="line"><span class="lineno">   42</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

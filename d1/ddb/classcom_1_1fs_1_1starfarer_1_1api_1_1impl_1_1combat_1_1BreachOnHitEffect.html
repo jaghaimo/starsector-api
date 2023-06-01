@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -178,55 +179,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d3b/BreachOnHitEffect_8java_source.html#l00026">26</a> of file <a class="el" href="../../d2/d3b/BreachOnHitEffect_8java_source.html">BreachOnHitEffect.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   26</span>                                                                                                                            {</div>
-<div class="line"><span class="lineno">   27</span>        CombatEngineAPI engine = Global.getCombatEngine();</div>
-<div class="line"><span class="lineno">   28</span> </div>
-<div class="line"><span class="lineno">   29</span>        ArmorGridAPI grid = target.getArmorGrid();</div>
-<div class="line"><span class="lineno">   30</span>        <span class="keywordtype">int</span>[] cell = grid.getCellAtLocation(point);</div>
-<div class="line"><span class="lineno">   31</span>        <span class="keywordflow">if</span> (cell == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   32</span>        </div>
-<div class="line"><span class="lineno">   33</span>        <span class="keywordtype">int</span> gridWidth = grid.getGrid().length;</div>
-<div class="line"><span class="lineno">   34</span>        <span class="keywordtype">int</span> gridHeight = grid.getGrid()[0].length;</div>
-<div class="line"><span class="lineno">   35</span>        </div>
-<div class="line"><span class="lineno">   36</span>        <span class="keywordtype">float</span> damageTypeMult = DisintegratorEffect.getDamageTypeMult(projectile.getSource(), target);</div>
-<div class="line"><span class="lineno">   37</span>        </div>
-<div class="line"><span class="lineno">   38</span>        <span class="keywordtype">float</span> damageDealt = 0f;</div>
-<div class="line"><span class="lineno">   39</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = -2; i &lt;= 2; i++) {</div>
-<div class="line"><span class="lineno">   40</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = -2; j &lt;= 2; j++) {</div>
-<div class="line"><span class="lineno">   41</span>                <span class="keywordflow">if</span> ((i == 2 || i == -2) &amp;&amp; (j == 2 || j == -2)) <span class="keywordflow">continue</span>; <span class="comment">// skip corners</span></div>
-<div class="line"><span class="lineno">   42</span>                </div>
-<div class="line"><span class="lineno">   43</span>                <span class="keywordtype">int</span> cx = cell[0] + i;</div>
-<div class="line"><span class="lineno">   44</span>                <span class="keywordtype">int</span> cy = cell[1] + j;</div>
-<div class="line"><span class="lineno">   45</span>                </div>
-<div class="line"><span class="lineno">   46</span>                <span class="keywordflow">if</span> (cx &lt; 0 || cx &gt;= gridWidth || cy &lt; 0 || cy &gt;= gridHeight) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   47</span>                </div>
-<div class="line"><span class="lineno">   48</span>                <span class="keywordtype">float</span> damMult = 1/30f;</div>
-<div class="line"><span class="lineno">   49</span>                <span class="keywordflow">if</span> (i == 0 &amp;&amp; j == 0) {</div>
-<div class="line"><span class="lineno">   50</span>                    damMult = 1/15f;</div>
-<div class="line"><span class="lineno">   51</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (i &lt;= 1 &amp;&amp; i &gt;= -1 &amp;&amp; j &lt;= 1 &amp;&amp; j &gt;= -1) { <span class="comment">// S hits</span></div>
-<div class="line"><span class="lineno">   52</span>                    damMult = 1/15f;</div>
-<div class="line"><span class="lineno">   53</span>                } <span class="keywordflow">else</span> { <span class="comment">// T hits</span></div>
-<div class="line"><span class="lineno">   54</span>                    damMult = 1/30f;</div>
-<div class="line"><span class="lineno">   55</span>                }</div>
-<div class="line"><span class="lineno">   56</span>                </div>
-<div class="line"><span class="lineno">   57</span>                <span class="keywordtype">float</span> armorInCell = grid.getArmorValue(cx, cy);</div>
-<div class="line"><span class="lineno">   58</span>                <span class="keywordtype">float</span> damage = armorDamage * damMult * damageTypeMult;</div>
-<div class="line"><span class="lineno">   59</span>                damage = Math.min(damage, armorInCell);</div>
-<div class="line"><span class="lineno">   60</span>                <span class="keywordflow">if</span> (damage &lt;= 0) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   61</span>                </div>
-<div class="line"><span class="lineno">   62</span>                target.getArmorGrid().setArmorValue(cx, cy, Math.max(0, armorInCell - damage));</div>
-<div class="line"><span class="lineno">   63</span>                damageDealt += damage;</div>
-<div class="line"><span class="lineno">   64</span>            }</div>
-<div class="line"><span class="lineno">   65</span>        }</div>
-<div class="line"><span class="lineno">   66</span>        </div>
-<div class="line"><span class="lineno">   67</span>        <span class="keywordflow">if</span> (damageDealt &gt; 0) {</div>
-<div class="line"><span class="lineno">   68</span>            <span class="keywordflow">if</span> (Misc.shouldShowDamageFloaty(projectile.getSource(), target)) {</div>
-<div class="line"><span class="lineno">   69</span>                engine.addFloatingDamageText(point, damageDealt, Misc.FLOATY_ARMOR_DAMAGE_COLOR, target, projectile.getSource());</div>
-<div class="line"><span class="lineno">   70</span>            }</div>
-<div class="line"><span class="lineno">   71</span>            target.syncWithArmorGridState();</div>
-<div class="line"><span class="lineno">   72</span>        }</div>
-<div class="line"><span class="lineno">   73</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9e204a9fa0661b022a70fd095e3f2b86" name="a9e204a9fa0661b022a70fd095e3f2b86"></a>
@@ -282,14 +235,7 @@ Static Public Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../dd/d68/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1OnHitEffectPlugin.html#ab4367dd15bcdc484344365a661313f23">com.fs.starfarer.api.combat.OnHitEffectPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d3b/BreachOnHitEffect_8java_source.html#l00019">19</a> of file <a class="el" href="../../d2/d3b/BreachOnHitEffect_8java_source.html">BreachOnHitEffect.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   20</span>                                                                                                                    {</div>
-<div class="line"><span class="lineno">   21</span>        <span class="keywordflow">if</span> (!shieldHit &amp;&amp; target instanceof ShipAPI) {</div>
-<div class="line"><span class="lineno">   22</span>            <a class="code hl_function" href="../../d1/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BreachOnHitEffect.html#a416d264abb0defbf7b6da081d0917dfa">dealArmorDamage</a>(projectile, (ShipAPI) target, point, <a class="code hl_variable" href="../../d1/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BreachOnHitEffect.html#ac490bb3376665574507117a9ebb8de3c">DAMAGE</a>);</div>
-<div class="line"><span class="lineno">   23</span>        }</div>
-<div class="line"><span class="lineno">   24</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BreachOnHitEffect_html_a416d264abb0defbf7b6da081d0917dfa"><div class="ttname"><a href="../../d1/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BreachOnHitEffect.html#a416d264abb0defbf7b6da081d0917dfa">com.fs.starfarer.api.impl.combat.BreachOnHitEffect.dealArmorDamage</a></div><div class="ttdeci">static void dealArmorDamage(DamagingProjectileAPI projectile, ShipAPI target, Vector2f point, float armorDamage)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d3b/BreachOnHitEffect_8java_source.html#l00026">BreachOnHitEffect.java:26</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BreachOnHitEffect_html_ac490bb3376665574507117a9ebb8de3c"><div class="ttname"><a href="../../d1/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BreachOnHitEffect.html#ac490bb3376665574507117a9ebb8de3c">com.fs.starfarer.api.impl.combat.BreachOnHitEffect.DAMAGE</a></div><div class="ttdeci">static float DAMAGE</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d3b/BreachOnHitEffect_8java_source.html#l00017">BreachOnHitEffect.java:17</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

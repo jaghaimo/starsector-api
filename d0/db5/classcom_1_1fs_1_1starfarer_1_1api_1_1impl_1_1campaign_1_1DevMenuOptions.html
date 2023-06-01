@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -168,15 +169,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/d13/DevMenuOptions_8java_source.html#l00058">58</a> of file <a class="el" href="../../d1/d13/DevMenuOptions_8java_source.html">DevMenuOptions.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   58</span>                                                               {</div>
-<div class="line"><span class="lineno">   59</span>        DumpMemory.addOption(dialog);</div>
-<div class="line"><span class="lineno">   60</span>        dialog.getOptionPanel().addOption(<span class="stringliteral">&quot;&gt;&gt; (dev) options&quot;</span>, <a class="code hl_variable" href="../../d0/db5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DevMenuOptions.html#a5adcadb8b321e3ec03ec13e7746d1962">TOP_MENU</a>, Misc.getGrayColor(), <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   61</span>        </div>
-<div class="line"><span class="lineno">   62</span>        <a class="code hl_variable" href="../../d0/db5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DevMenuOptions.html#a4641825dec83f05b381485f25ded6a49">savedOptions</a> = dialog.getOptionPanel().getSavedOptionList();</div>
-<div class="line"><span class="lineno">   63</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DevMenuOptions_html_a4641825dec83f05b381485f25ded6a49"><div class="ttname"><a href="../../d0/db5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DevMenuOptions.html#a4641825dec83f05b381485f25ded6a49">com.fs.starfarer.api.impl.campaign.DevMenuOptions.savedOptions</a></div><div class="ttdeci">static List savedOptions</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d13/DevMenuOptions_8java_source.html#l00066">DevMenuOptions.java:66</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DevMenuOptions_html_a5adcadb8b321e3ec03ec13e7746d1962"><div class="ttname"><a href="../../d0/db5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DevMenuOptions.html#a5adcadb8b321e3ec03ec13e7746d1962">com.fs.starfarer.api.impl.campaign.DevMenuOptions.TOP_MENU</a></div><div class="ttdeci">static String TOP_MENU</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d13/DevMenuOptions_8java_source.html#l00023">DevMenuOptions.java:23</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a13e2165b9cab65132fd545b268c28e44" name="a13e2165b9cab65132fd545b268c28e44"></a>
@@ -214,104 +207,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/d13/DevMenuOptions_8java_source.html#l00068">68</a> of file <a class="el" href="../../d1/d13/DevMenuOptions_8java_source.html">DevMenuOptions.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   68</span>                                                                           {</div>
-<div class="line"><span class="lineno">   69</span>        SectorEntityToken entity = dialog.getInteractionTarget();</div>
-<div class="line"><span class="lineno">   70</span>        Color g = Misc.getGrayColor();</div>
-<div class="line"><span class="lineno">   71</span>        <span class="keywordflow">if</span> (option == <a class="code hl_variable" href="../../d0/db5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DevMenuOptions.html#a5adcadb8b321e3ec03ec13e7746d1962">TOP_MENU</a>) {</div>
-<div class="line"><span class="lineno">   72</span>            dialog.getOptionPanel().clearOptions();</div>
-<div class="line"><span class="lineno">   73</span>            dialog.getOptionPanel().addOption(<span class="stringliteral">&quot;&gt;&gt;&gt; (dev) reputation&quot;</span>, <a class="code hl_variable" href="../../d0/db5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DevMenuOptions.html#a53735a3ef1524dacc0cbb62e26d81114">REP_MENU</a>, g, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   74</span>            dialog.getOptionPanel().addOption(<span class="stringliteral">&quot;&gt;&gt;&gt; (dev) music&quot;</span>, <a class="code hl_variable" href="../../d0/db5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DevMenuOptions.html#a0d7a2ac448ef601cd9cc597626879fca">MUSIC_MENU</a>, g, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   75</span>            dialog.getOptionPanel().addOption(<span class="stringliteral">&quot;&gt;&gt;&gt; (dev) back&quot;</span>, <a class="code hl_variable" href="../../d0/db5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DevMenuOptions.html#a1d48161fbb04ca4517fa43326fad8062">BACK_TO_OPTIONS</a>, g, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   76</span>            dialog.getOptionPanel().setShortcut(<a class="code hl_variable" href="../../d0/db5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DevMenuOptions.html#a1d48161fbb04ca4517fa43326fad8062">BACK_TO_OPTIONS</a>, Keyboard.KEY_ESCAPE, <span class="keyword">false</span>, <span class="keyword">false</span>, <span class="keyword">false</span>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   77</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (option == <a class="code hl_variable" href="../../d0/db5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DevMenuOptions.html#a53735a3ef1524dacc0cbb62e26d81114">REP_MENU</a>) {</div>
-<div class="line"><span class="lineno">   78</span>            </div>
-<div class="line"><span class="lineno">   79</span>            <span class="comment">//System.out.println(&quot;Go dark active: &quot; +dialog.getInteractionTarget().getAbility(Abilities.GO_DARK).isActive());</span></div>
-<div class="line"><span class="lineno">   80</span>            </div>
-<div class="line"><span class="lineno">   81</span>            dialog.getOptionPanel().clearOptions();</div>
-<div class="line"><span class="lineno">   82</span>            dialog.getOptionPanel().addOption(<span class="stringliteral">&quot;&gt;&gt;&gt;&gt; (dev) print&quot;</span>, <a class="code hl_variable" href="../../d0/db5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DevMenuOptions.html#a9ba44019fb4d53a2f144237ac676c0f0">PRINT_REP</a>, g, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   83</span>            dialog.getOptionPanel().addOption(<span class="stringliteral">&quot;&gt;&gt;&gt;&gt; (dev) increase&quot;</span>, <a class="code hl_variable" href="../../d0/db5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DevMenuOptions.html#a71769aa2db51656422d192f07aa0b2c0">INCREASE_REP</a>, g, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   84</span>            dialog.getOptionPanel().addOption(<span class="stringliteral">&quot;&gt;&gt;&gt;&gt; (dev) decrease&quot;</span>, <a class="code hl_variable" href="../../d0/db5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DevMenuOptions.html#a51e89fa08a7c2f64721980dd32613902">REDUCE_REP</a>, g, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   85</span>            dialog.getOptionPanel().addOption(<span class="stringliteral">&quot;&gt;&gt;&gt;&gt; (dev) back&quot;</span>, <a class="code hl_variable" href="../../d0/db5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DevMenuOptions.html#a53047da12387636f884e95b0917fef0f">BACK_TO_TOP</a>, g, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   86</span>            dialog.getOptionPanel().setShortcut(<a class="code hl_variable" href="../../d0/db5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DevMenuOptions.html#a53047da12387636f884e95b0917fef0f">BACK_TO_TOP</a>, Keyboard.KEY_ESCAPE, <span class="keyword">false</span>, <span class="keyword">false</span>, <span class="keyword">false</span>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   87</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (option == <a class="code hl_variable" href="../../d0/db5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DevMenuOptions.html#a0d7a2ac448ef601cd9cc597626879fca">MUSIC_MENU</a>) {</div>
-<div class="line"><span class="lineno">   88</span>            dialog.getOptionPanel().clearOptions();</div>
-<div class="line"><span class="lineno">   89</span>            dialog.getOptionPanel().addOption(<span class="stringliteral">&quot;&gt;&gt;&gt;&gt; (dev) print current music&quot;</span>, <a class="code hl_variable" href="../../d0/db5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DevMenuOptions.html#ac2bec2ba69a5f7ffd7423598676293c0">MUSIC_PRINT</a>, g, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   90</span>            dialog.getOptionPanel().addOption(<span class="stringliteral">&quot;&gt;&gt;&gt;&gt; (dev) restart music&quot;</span>, <a class="code hl_variable" href="../../d0/db5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DevMenuOptions.html#a83fd367e11ebab25abf4ce23f0f84108">MUSIC_RESTART</a>, g, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   91</span>            dialog.getOptionPanel().addOption(<span class="stringliteral">&quot;&gt;&gt;&gt;&gt; (dev) back&quot;</span>, <a class="code hl_variable" href="../../d0/db5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DevMenuOptions.html#a53047da12387636f884e95b0917fef0f">BACK_TO_TOP</a>, g, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   92</span>            dialog.getOptionPanel().setShortcut(<a class="code hl_variable" href="../../d0/db5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DevMenuOptions.html#a53047da12387636f884e95b0917fef0f">BACK_TO_TOP</a>, Keyboard.KEY_ESCAPE, <span class="keyword">false</span>, <span class="keyword">false</span>, <span class="keyword">false</span>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   93</span>        }</div>
-<div class="line"><span class="lineno">   94</span>        </div>
-<div class="line"><span class="lineno">   95</span>        <span class="keywordflow">if</span> (entity != <span class="keyword">null</span> &amp;&amp; entity.getFaction() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   96</span>            <span class="keywordflow">if</span> (option == <a class="code hl_variable" href="../../d0/db5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DevMenuOptions.html#a9ba44019fb4d53a2f144237ac676c0f0">PRINT_REP</a>) {</div>
-<div class="line"><span class="lineno">   97</span>                <span class="keywordflow">if</span> (entity.getActivePerson() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   98</span>                    dialog.getTextPanel().addParagraph(<span class="stringliteral">&quot;Reputation with &quot;</span> + entity.getActivePerson().getNameString() + <span class="stringliteral">&quot;: &quot;</span> + </div>
-<div class="line"><span class="lineno">   99</span>                            entity.getActivePerson().getRelToPlayer().getRel());</div>
-<div class="line"><span class="lineno">  100</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  101</span>                    dialog.getTextPanel().addParagraph(<span class="stringliteral">&quot;Reputation with &quot;</span> + entity.getFaction().getDisplayName() + <span class="stringliteral">&quot;: &quot;</span> + </div>
-<div class="line"><span class="lineno">  102</span>                                entity.getFaction().getRelationship(Factions.PLAYER));</div>
-<div class="line"><span class="lineno">  103</span>                }</div>
-<div class="line"><span class="lineno">  104</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (option == <a class="code hl_variable" href="../../d0/db5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DevMenuOptions.html#a71769aa2db51656422d192f07aa0b2c0">INCREASE_REP</a>) {</div>
-<div class="line"><span class="lineno">  105</span>                <span class="keywordflow">if</span> (entity.getActivePerson() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  106</span>                    CustomRepImpact impact = <span class="keyword">new</span> CustomRepImpact();</div>
-<div class="line"><span class="lineno">  107</span>                    impact.limit = RepLevel.COOPERATIVE;</div>
-<div class="line"><span class="lineno">  108</span>                    impact.delta = 0.1f;</div>
-<div class="line"><span class="lineno">  109</span>                    Global.getSector().adjustPlayerReputation(</div>
-<div class="line"><span class="lineno">  110</span>                            <span class="keyword">new</span> RepActionEnvelope(RepActions.CUSTOM, impact,</div>
-<div class="line"><span class="lineno">  111</span>                                                  <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">false</span>), entity.getActivePerson());</div>
-<div class="line"><span class="lineno">  112</span>                    dialog.getTextPanel().addParagraph(<span class="stringliteral">&quot;Reputation with &quot;</span> + entity.getActivePerson().getNameString() + <span class="stringliteral">&quot;: &quot;</span> + </div>
-<div class="line"><span class="lineno">  113</span>                            entity.getActivePerson().getRelToPlayer().getRel());</div>
-<div class="line"><span class="lineno">  114</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  115</span>                    entity.getFaction().adjustRelationship(Factions.PLAYER, 0.1f);</div>
-<div class="line"><span class="lineno">  116</span>                    dialog.getTextPanel().addParagraph(<span class="stringliteral">&quot;Reputation with &quot;</span> + entity.getFaction().getDisplayName() + <span class="stringliteral">&quot;: &quot;</span> + </div>
-<div class="line"><span class="lineno">  117</span>                            entity.getFaction().getRelationship(Factions.PLAYER));</div>
-<div class="line"><span class="lineno">  118</span>                }</div>
-<div class="line"><span class="lineno">  119</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (option == <a class="code hl_variable" href="../../d0/db5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DevMenuOptions.html#a51e89fa08a7c2f64721980dd32613902">REDUCE_REP</a>) {</div>
-<div class="line"><span class="lineno">  120</span>                <span class="keywordflow">if</span> (entity.getActivePerson() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  121</span>                    CustomRepImpact impact = <span class="keyword">new</span> CustomRepImpact();</div>
-<div class="line"><span class="lineno">  122</span>                    impact.limit = RepLevel.VENGEFUL;</div>
-<div class="line"><span class="lineno">  123</span>                    impact.delta = -0.1f;</div>
-<div class="line"><span class="lineno">  124</span>                    Global.getSector().adjustPlayerReputation(</div>
-<div class="line"><span class="lineno">  125</span>                            <span class="keyword">new</span> RepActionEnvelope(RepActions.CUSTOM, impact,</div>
-<div class="line"><span class="lineno">  126</span>                                                  <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">false</span>), entity.getActivePerson());</div>
-<div class="line"><span class="lineno">  127</span>                    dialog.getTextPanel().addParagraph(<span class="stringliteral">&quot;Reputation with &quot;</span> + entity.getActivePerson().getNameString() + <span class="stringliteral">&quot;: &quot;</span> + </div>
-<div class="line"><span class="lineno">  128</span>                            entity.getActivePerson().getRelToPlayer().getRel());</div>
-<div class="line"><span class="lineno">  129</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  130</span>                    entity.getFaction().adjustRelationship(Factions.PLAYER, -0.1f);</div>
-<div class="line"><span class="lineno">  131</span>                    dialog.getTextPanel().addParagraph(<span class="stringliteral">&quot;Reputation with &quot;</span> + entity.getFaction().getDisplayName() + <span class="stringliteral">&quot;: &quot;</span> + </div>
-<div class="line"><span class="lineno">  132</span>                            entity.getFaction().getRelationship(Factions.PLAYER));</div>
-<div class="line"><span class="lineno">  133</span>                }</div>
-<div class="line"><span class="lineno">  134</span>            }</div>
-<div class="line"><span class="lineno">  135</span>        }</div>
-<div class="line"><span class="lineno">  136</span>        </div>
-<div class="line"><span class="lineno">  137</span>        <span class="keywordflow">if</span> (option == <a class="code hl_variable" href="../../d0/db5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DevMenuOptions.html#a83fd367e11ebab25abf4ce23f0f84108">MUSIC_RESTART</a>) {</div>
-<div class="line"><span class="lineno">  138</span>            Global.getSoundPlayer().restartCurrentMusic();</div>
-<div class="line"><span class="lineno">  139</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (option == <a class="code hl_variable" href="../../d0/db5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DevMenuOptions.html#ac2bec2ba69a5f7ffd7423598676293c0">MUSIC_PRINT</a>) {</div>
-<div class="line"><span class="lineno">  140</span>            dialog.getTextPanel().addParagraph(<span class="stringliteral">&quot;Now playing: &quot;</span> + Global.getSoundPlayer().getCurrentMusicId());</div>
-<div class="line"><span class="lineno">  141</span>        }</div>
-<div class="line"><span class="lineno">  142</span>        </div>
-<div class="line"><span class="lineno">  143</span>        </div>
-<div class="line"><span class="lineno">  144</span>        </div>
-<div class="line"><span class="lineno">  145</span>        <span class="keywordflow">if</span> (option == <a class="code hl_variable" href="../../d0/db5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DevMenuOptions.html#a1d48161fbb04ca4517fa43326fad8062">BACK_TO_OPTIONS</a>) {</div>
-<div class="line"><span class="lineno">  146</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d0/db5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DevMenuOptions.html#a4641825dec83f05b381485f25ded6a49">savedOptions</a> != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  147</span>                dialog.getOptionPanel().restoreSavedOptions(<a class="code hl_variable" href="../../d0/db5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DevMenuOptions.html#a4641825dec83f05b381485f25ded6a49">savedOptions</a>);</div>
-<div class="line"><span class="lineno">  148</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  149</span>            }</div>
-<div class="line"><span class="lineno">  150</span>        }</div>
-<div class="line"><span class="lineno">  151</span>        <span class="keywordflow">if</span> (option == <a class="code hl_variable" href="../../d0/db5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DevMenuOptions.html#a53047da12387636f884e95b0917fef0f">BACK_TO_TOP</a>) {</div>
-<div class="line"><span class="lineno">  152</span>            <a class="code hl_function" href="../../d0/db5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DevMenuOptions.html#a13e2165b9cab65132fd545b268c28e44">execute</a>(dialog, <a class="code hl_variable" href="../../d0/db5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DevMenuOptions.html#a5adcadb8b321e3ec03ec13e7746d1962">TOP_MENU</a>);</div>
-<div class="line"><span class="lineno">  153</span>        }</div>
-<div class="line"><span class="lineno">  154</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DevMenuOptions_html_a0d7a2ac448ef601cd9cc597626879fca"><div class="ttname"><a href="../../d0/db5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DevMenuOptions.html#a0d7a2ac448ef601cd9cc597626879fca">com.fs.starfarer.api.impl.campaign.DevMenuOptions.MUSIC_MENU</a></div><div class="ttdeci">static String MUSIC_MENU</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d13/DevMenuOptions_8java_source.html#l00026">DevMenuOptions.java:26</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DevMenuOptions_html_a13e2165b9cab65132fd545b268c28e44"><div class="ttname"><a href="../../d0/db5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DevMenuOptions.html#a13e2165b9cab65132fd545b268c28e44">com.fs.starfarer.api.impl.campaign.DevMenuOptions.execute</a></div><div class="ttdeci">static void execute(InteractionDialogAPI dialog, String option)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d13/DevMenuOptions_8java_source.html#l00068">DevMenuOptions.java:68</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DevMenuOptions_html_a1d48161fbb04ca4517fa43326fad8062"><div class="ttname"><a href="../../d0/db5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DevMenuOptions.html#a1d48161fbb04ca4517fa43326fad8062">com.fs.starfarer.api.impl.campaign.DevMenuOptions.BACK_TO_OPTIONS</a></div><div class="ttdeci">static String BACK_TO_OPTIONS</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d13/DevMenuOptions_8java_source.html#l00027">DevMenuOptions.java:27</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DevMenuOptions_html_a51e89fa08a7c2f64721980dd32613902"><div class="ttname"><a href="../../d0/db5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DevMenuOptions.html#a51e89fa08a7c2f64721980dd32613902">com.fs.starfarer.api.impl.campaign.DevMenuOptions.REDUCE_REP</a></div><div class="ttdeci">static String REDUCE_REP</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d13/DevMenuOptions_8java_source.html#l00031">DevMenuOptions.java:31</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DevMenuOptions_html_a53047da12387636f884e95b0917fef0f"><div class="ttname"><a href="../../d0/db5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DevMenuOptions.html#a53047da12387636f884e95b0917fef0f">com.fs.starfarer.api.impl.campaign.DevMenuOptions.BACK_TO_TOP</a></div><div class="ttdeci">static String BACK_TO_TOP</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d13/DevMenuOptions_8java_source.html#l00028">DevMenuOptions.java:28</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DevMenuOptions_html_a53735a3ef1524dacc0cbb62e26d81114"><div class="ttname"><a href="../../d0/db5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DevMenuOptions.html#a53735a3ef1524dacc0cbb62e26d81114">com.fs.starfarer.api.impl.campaign.DevMenuOptions.REP_MENU</a></div><div class="ttdeci">static String REP_MENU</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d13/DevMenuOptions_8java_source.html#l00025">DevMenuOptions.java:25</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DevMenuOptions_html_a71769aa2db51656422d192f07aa0b2c0"><div class="ttname"><a href="../../d0/db5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DevMenuOptions.html#a71769aa2db51656422d192f07aa0b2c0">com.fs.starfarer.api.impl.campaign.DevMenuOptions.INCREASE_REP</a></div><div class="ttdeci">static String INCREASE_REP</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d13/DevMenuOptions_8java_source.html#l00030">DevMenuOptions.java:30</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DevMenuOptions_html_a83fd367e11ebab25abf4ce23f0f84108"><div class="ttname"><a href="../../d0/db5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DevMenuOptions.html#a83fd367e11ebab25abf4ce23f0f84108">com.fs.starfarer.api.impl.campaign.DevMenuOptions.MUSIC_RESTART</a></div><div class="ttdeci">static String MUSIC_RESTART</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d13/DevMenuOptions_8java_source.html#l00035">DevMenuOptions.java:35</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DevMenuOptions_html_a9ba44019fb4d53a2f144237ac676c0f0"><div class="ttname"><a href="../../d0/db5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DevMenuOptions.html#a9ba44019fb4d53a2f144237ac676c0f0">com.fs.starfarer.api.impl.campaign.DevMenuOptions.PRINT_REP</a></div><div class="ttdeci">static String PRINT_REP</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d13/DevMenuOptions_8java_source.html#l00032">DevMenuOptions.java:32</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DevMenuOptions_html_ac2bec2ba69a5f7ffd7423598676293c0"><div class="ttname"><a href="../../d0/db5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DevMenuOptions.html#ac2bec2ba69a5f7ffd7423598676293c0">com.fs.starfarer.api.impl.campaign.DevMenuOptions.MUSIC_PRINT</a></div><div class="ttdeci">static String MUSIC_PRINT</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d13/DevMenuOptions_8java_source.html#l00034">DevMenuOptions.java:34</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a83d10f2359dd27a826d7fd0d45a2382a" name="a83d10f2359dd27a826d7fd0d45a2382a"></a>
@@ -339,11 +235,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/d13/DevMenuOptions_8java_source.html#l00054">54</a> of file <a class="el" href="../../d1/d13/DevMenuOptions_8java_source.html">DevMenuOptions.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   54</span>                                                         {</div>
-<div class="line"><span class="lineno">   55</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d0/db5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DevMenuOptions.html#aac6f357f4061d4c99aade25ad7955ec6">options</a>.contains(optionData);</div>
-<div class="line"><span class="lineno">   56</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DevMenuOptions_html_aac6f357f4061d4c99aade25ad7955ec6"><div class="ttname"><a href="../../d0/db5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DevMenuOptions.html#aac6f357f4061d4c99aade25ad7955ec6">com.fs.starfarer.api.impl.campaign.DevMenuOptions.options</a></div><div class="ttdeci">static Set&lt; String &gt; options</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d13/DevMenuOptions_8java_source.html#l00037">DevMenuOptions.java:37</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

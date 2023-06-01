@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -154,47 +155,7 @@ Public Member Functions</h2></td></tr>
 <p>Implements <a class="el" href="../../da/d9c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BeamEffectPlugin.html#a6114bdaffeb81bc1af1d66ecaf09f938">com.fs.starfarer.api.combat.BeamEffectPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d89/TachyonLanceEffect_8java_source.html#l00019">19</a> of file <a class="el" href="../../dd/d89/TachyonLanceEffect_8java_source.html">TachyonLanceEffect.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   19</span>                                                                            {</div>
-<div class="line"><span class="lineno">   20</span>        CombatEntityAPI target = beam.getDamageTarget();</div>
-<div class="line"><span class="lineno">   21</span>        <span class="keywordflow">if</span> (target instanceof ShipAPI &amp;&amp; beam.getBrightness() &gt;= 1f) {</div>
-<div class="line"><span class="lineno">   22</span>            <span class="keywordtype">float</span> dur = beam.getDamage().getDpsDuration();</div>
-<div class="line"><span class="lineno">   23</span>            <span class="comment">// needed because when the ship is in fast-time, dpsDuration will not be reset every frame as it should be</span></div>
-<div class="line"><span class="lineno">   24</span>            <span class="keywordflow">if</span> (!wasZero) dur = 0;</div>
-<div class="line"><span class="lineno">   25</span>            wasZero = beam.getDamage().getDpsDuration() &lt;= 0;</div>
-<div class="line"><span class="lineno">   26</span>            fireInterval.<a class="code hl_function" href="../../da/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html#a61881d44415cda2c50c3354c3f0a4d8a">advance</a>(dur);</div>
-<div class="line"><span class="lineno">   27</span>            <span class="keywordflow">if</span> (fireInterval.intervalElapsed()) {</div>
-<div class="line"><span class="lineno">   28</span>                ShipAPI ship = (ShipAPI) target;</div>
-<div class="line"><span class="lineno">   29</span>                <span class="keywordtype">boolean</span> hitShield = target.getShield() != <span class="keyword">null</span> &amp;&amp; target.getShield().isWithinArc(beam.getTo());</div>
-<div class="line"><span class="lineno">   30</span>                <span class="keywordtype">float</span> pierceChance = ((ShipAPI)target).getHardFluxLevel() - 0.1f;</div>
-<div class="line"><span class="lineno">   31</span>                pierceChance *= ship.getMutableStats().getDynamic().getValue(Stats.SHIELD_PIERCED_MULT);</div>
-<div class="line"><span class="lineno">   32</span>                </div>
-<div class="line"><span class="lineno">   33</span>                <span class="keywordtype">boolean</span> piercedShield = hitShield &amp;&amp; (float) Math.random() &lt; pierceChance;</div>
-<div class="line"><span class="lineno">   34</span>                <span class="comment">//piercedShield = true;</span></div>
-<div class="line"><span class="lineno">   35</span>                </div>
-<div class="line"><span class="lineno">   36</span>                <span class="keywordflow">if</span> (!hitShield || piercedShield) {</div>
-<div class="line"><span class="lineno">   37</span>                    Vector2f point = beam.getRayEndPrevFrame();</div>
-<div class="line"><span class="lineno">   38</span>                    <span class="keywordtype">float</span> emp = beam.getDamage().getFluxComponent() * 0.5f;</div>
-<div class="line"><span class="lineno">   39</span>                    <span class="keywordtype">float</span> dam = beam.getDamage().getDamage() * 0.25f;</div>
-<div class="line"><span class="lineno">   40</span>                    engine.spawnEmpArcPierceShields(</div>
-<div class="line"><span class="lineno">   41</span>                                       beam.getSource(), point, beam.getDamageTarget(), beam.getDamageTarget(),</div>
-<div class="line"><span class="lineno">   42</span>                                       DamageType.ENERGY, </div>
-<div class="line"><span class="lineno">   43</span>                                       dam, <span class="comment">// damage</span></div>
-<div class="line"><span class="lineno">   44</span>                                       emp, <span class="comment">// emp </span></div>
-<div class="line"><span class="lineno">   45</span>                                       100000f, <span class="comment">// max range </span></div>
-<div class="line"><span class="lineno">   46</span>                                       <span class="stringliteral">&quot;tachyon_lance_emp_impact&quot;</span>,</div>
-<div class="line"><span class="lineno">   47</span>                                       beam.getWidth() + 5f,</div>
-<div class="line"><span class="lineno">   48</span>                                       beam.getFringeColor(),</div>
-<div class="line"><span class="lineno">   49</span>                                       beam.getCoreColor()</div>
-<div class="line"><span class="lineno">   50</span>                                       );</div>
-<div class="line"><span class="lineno">   51</span>                }</div>
-<div class="line"><span class="lineno">   52</span>            }</div>
-<div class="line"><span class="lineno">   53</span>        }</div>
-<div class="line"><span class="lineno">   54</span><span class="comment">//          Global.getSoundPlayer().playLoop(&quot;system_emp_emitter_loop&quot;, </span></div>
-<div class="line"><span class="lineno">   55</span><span class="comment">//                                           beam.getDamageTarget(), 1.5f, beam.getBrightness() * 0.5f,</span></div>
-<div class="line"><span class="lineno">   56</span><span class="comment">//                                           beam.getTo(), new Vector2f());</span></div>
-<div class="line"><span class="lineno">   57</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil_html_a61881d44415cda2c50c3354c3f0a4d8a"><div class="ttname"><a href="../../da/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html#a61881d44415cda2c50c3354c3f0a4d8a">com.fs.starfarer.api.util.IntervalUtil.advance</a></div><div class="ttdeci">void advance(float amount)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de3/IntervalUtil_8java_source.html#l00039">IntervalUtil.java:39</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

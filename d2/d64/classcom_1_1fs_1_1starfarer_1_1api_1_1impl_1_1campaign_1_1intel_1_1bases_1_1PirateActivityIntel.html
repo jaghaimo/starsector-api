@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -543,34 +544,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/de0/PirateActivityIntel_8java_source.html#l00029">29</a> of file <a class="el" href="../../d0/de0/PirateActivityIntel_8java_source.html">PirateActivityIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   29</span>                                                                             {</div>
-<div class="line"><span class="lineno">   30</span>        this.system = <a class="code hl_variable" href="../../d2/d64/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateActivityIntel.html#ae36ba6fe2f850cb274223292d6f1a45f">system</a>;</div>
-<div class="line"><span class="lineno">   31</span>        this.source = <a class="code hl_variable" href="../../d2/d64/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateActivityIntel.html#a6db319ac5d1389583f2ccef8fea07fde">source</a>;</div>
-<div class="line"><span class="lineno">   32</span>        </div>
-<div class="line"><span class="lineno">   33</span>        </div>
-<div class="line"><span class="lineno">   34</span>        <span class="keywordtype">boolean</span> hasPlayerMarkets = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   35</span>        <span class="keywordflow">for</span> (MarketAPI curr : Global.getSector().getEconomy().getMarkets(<a class="code hl_variable" href="../../d2/d64/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateActivityIntel.html#ae36ba6fe2f850cb274223292d6f1a45f">system</a>)) {</div>
-<div class="line"><span class="lineno">   36</span>            hasPlayerMarkets |= curr.isPlayerOwned();</div>
-<div class="line"><span class="lineno">   37</span>        }</div>
-<div class="line"><span class="lineno">   38</span>        <span class="keywordflow">if</span> (!hasPlayerMarkets) {</div>
-<div class="line"><span class="lineno">   39</span>            <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a36d4d66383f0cb3fd36c30b524aee5d6">setPostingLocation</a>(<a class="code hl_variable" href="../../d2/d64/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateActivityIntel.html#ae36ba6fe2f850cb274223292d6f1a45f">system</a>.<a class="code hl_function" href="../../db/d13/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1StarSystemAPI.html#ab8b2278a9fd2054a915f2384e320c14a">getCenter</a>());</div>
-<div class="line"><span class="lineno">   40</span>        }</div>
-<div class="line"><span class="lineno">   41</span>        </div>
-<div class="line"><span class="lineno">   42</span>        Global.getSector().addScript(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">   43</span>        </div>
-<div class="line"><span class="lineno">   44</span>        </div>
-<div class="line"><span class="lineno">   45</span>        <span class="comment">//Global.getSector().getIntelManager().queueIntel(this);</span></div>
-<div class="line"><span class="lineno">   46</span>        <span class="keywordflow">if</span> (!Misc.getMarketsInLocation(<a class="code hl_variable" href="../../d2/d64/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateActivityIntel.html#ae36ba6fe2f850cb274223292d6f1a45f">system</a>, Factions.PLAYER).isEmpty()) {</div>
-<div class="line"><span class="lineno">   47</span>            Global.getSector().getIntelManager().addIntel(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">   48</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   49</span>            Global.getSector().getIntelManager().queueIntel(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">   50</span>        }</div>
-<div class="line"><span class="lineno">   51</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_a36d4d66383f0cb3fd36c30b524aee5d6"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a36d4d66383f0cb3fd36c30b524aee5d6">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.setPostingLocation</a></div><div class="ttdeci">void setPostingLocation(SectorEntityToken postingLocation)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00525">BaseIntelPlugin.java:525</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateActivityIntel_html_a6db319ac5d1389583f2ccef8fea07fde"><div class="ttname"><a href="../../d2/d64/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateActivityIntel.html#a6db319ac5d1389583f2ccef8fea07fde">com.fs.starfarer.api.impl.campaign.intel.bases.PirateActivityIntel.source</a></div><div class="ttdeci">PirateBaseIntel source</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/de0/PirateActivityIntel_8java_source.html#l00027">PirateActivityIntel.java:27</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateActivityIntel_html_ae36ba6fe2f850cb274223292d6f1a45f"><div class="ttname"><a href="../../d2/d64/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateActivityIntel.html#ae36ba6fe2f850cb274223292d6f1a45f">com.fs.starfarer.api.impl.campaign.intel.bases.PirateActivityIntel.system</a></div><div class="ttdeci">StarSystemAPI system</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/de0/PirateActivityIntel_8java_source.html#l00026">PirateActivityIntel.java:26</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1StarSystemAPI_html_ab8b2278a9fd2054a915f2384e320c14a"><div class="ttname"><a href="../../db/d13/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1StarSystemAPI.html#ab8b2278a9fd2054a915f2384e320c14a">com.fs.starfarer.api.campaign.StarSystemAPI.getCenter</a></div><div class="ttdeci">SectorEntityToken getCenter()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -611,31 +585,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a78b9181ed44f28dac2b1167e1ce4395c">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/de0/PirateActivityIntel_8java_source.html#l00101">101</a> of file <a class="el" href="../../d0/de0/PirateActivityIntel_8java_source.html">PirateActivityIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  101</span>                                                                            {</div>
-<div class="line"><span class="lineno">  102</span>        </div>
-<div class="line"><span class="lineno">  103</span>        Color h = Misc.getHighlightColor();</div>
-<div class="line"><span class="lineno">  104</span>        Color g = Misc.getGrayColor();</div>
-<div class="line"><span class="lineno">  105</span>        <span class="keywordtype">float</span> pad = 3f;</div>
-<div class="line"><span class="lineno">  106</span>        <span class="keywordtype">float</span> opad = 10f;</div>
-<div class="line"><span class="lineno">  107</span>        </div>
-<div class="line"><span class="lineno">  108</span>        <span class="keywordtype">float</span> initPad = pad;</div>
-<div class="line"><span class="lineno">  109</span>        <span class="keywordflow">if</span> (mode == ListInfoMode.IN_DESC) initPad = opad;</div>
-<div class="line"><span class="lineno">  110</span>        </div>
-<div class="line"><span class="lineno">  111</span>        Color tc = <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a9e443024a6224a5c170e5d1476514954">getBulletColorForMode</a>(mode);</div>
-<div class="line"><span class="lineno">  112</span>        </div>
-<div class="line"><span class="lineno">  113</span>        <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#adfa808a345b432134c9fb11227edc7df">bullet</a>(info);</div>
-<div class="line"><span class="lineno">  114</span>        <span class="keywordtype">boolean</span> isUpdate = <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a9ba572be19912ec6b816dc7b69352660">getListInfoParam</a>() != <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  115</span>        </div>
-<div class="line"><span class="lineno">  116</span><span class="comment">//      info.addPara(&quot;Danger level: &quot; + danger, initPad, tc, dangerColor, danger);</span></div>
-<div class="line"><span class="lineno">  117</span><span class="comment">//      initPad = 0f;</span></div>
-<div class="line"><span class="lineno">  118</span>        </div>
-<div class="line"><span class="lineno">  119</span>        <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a3e2fa48accd40a868889ad2f877bc578">unindent</a>(info);</div>
-<div class="line"><span class="lineno">  120</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_a3e2fa48accd40a868889ad2f877bc578"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a3e2fa48accd40a868889ad2f877bc578">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.unindent</a></div><div class="ttdeci">void unindent(TooltipMakerAPI info)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00570">BaseIntelPlugin.java:570</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_a9ba572be19912ec6b816dc7b69352660"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a9ba572be19912ec6b816dc7b69352660">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.getListInfoParam</a></div><div class="ttdeci">Object getListInfoParam()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00140">BaseIntelPlugin.java:140</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_a9e443024a6224a5c170e5d1476514954"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a9e443024a6224a5c170e5d1476514954">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.getBulletColorForMode</a></div><div class="ttdeci">Color getBulletColorForMode(ListInfoMode mode)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00633">BaseIntelPlugin.java:633</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_adfa808a345b432134c9fb11227edc7df"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#adfa808a345b432134c9fb11227edc7df">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.bullet</a></div><div class="ttdeci">void bullet(TooltipMakerAPI info)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00554">BaseIntelPlugin.java:554</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a287d9356d66338a5d611529423d9127b" name="a287d9356d66338a5d611529423d9127b"></a>
@@ -665,29 +615,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a23503aedd518fbcfbbc1ed549ed81d38">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/de0/PirateActivityIntel_8java_source.html#l00083">83</a> of file <a class="el" href="../../d0/de0/PirateActivityIntel_8java_source.html">PirateActivityIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   83</span>                                             {</div>
-<div class="line"><span class="lineno">   84</span>        super.advanceImpl(amount);</div>
-<div class="line"><span class="lineno">   85</span>        </div>
-<div class="line"><span class="lineno">   86</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d2/d64/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateActivityIntel.html#a6db319ac5d1389583f2ccef8fea07fde">source</a>.<a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#ac265e304e3d245a6ae16be73e0b918b0">isEnding</a>() || <a class="code hl_variable" href="../../d2/d64/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateActivityIntel.html#a6db319ac5d1389583f2ccef8fea07fde">source</a>.<a class="code hl_function" href="../../da/d10/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateBaseIntel.html#abdb2b577247d2ab70b545cd2151d3069">getTarget</a>() != <a class="code hl_variable" href="../../d2/d64/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateActivityIntel.html#ae36ba6fe2f850cb274223292d6f1a45f">system</a>) {</div>
-<div class="line"><span class="lineno">   87</span>            <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#aa9964eb74c87437bc9870cef6c4f5d00">endAfterDelay</a>();</div>
-<div class="line"><span class="lineno">   88</span>            <span class="keywordflow">if</span> (DebugFlags.SEND_UPDATES_WHEN_NO_COMM || Global.getSector().getIntelManager().isPlayerInRangeOfCommRelay()) {</div>
-<div class="line"><span class="lineno">   89</span>                <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a9a95c1eccf4604952fd8a65605f24e31">sendUpdateIfPlayerHasIntel</a>(<span class="keyword">new</span> Object(), <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   90</span>            }</div>
-<div class="line"><span class="lineno">   91</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   92</span>        }</div>
-<div class="line"><span class="lineno">   93</span>        </div>
-<div class="line"><span class="lineno">   94</span>        <span class="keywordflow">for</span> (MarketAPI curr : <a class="code hl_variable" href="../../d2/d64/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateActivityIntel.html#a6db319ac5d1389583f2ccef8fea07fde">source</a>.<a class="code hl_function" href="../../da/d10/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateBaseIntel.html#af4b9e37686fe7e721e9e69906a61cef7">getAffectedMarkets</a>(<a class="code hl_variable" href="../../d2/d64/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateActivityIntel.html#ae36ba6fe2f850cb274223292d6f1a45f">system</a>)) {</div>
-<div class="line"><span class="lineno">   95</span>            <span class="keywordflow">if</span> (!curr.hasCondition(Conditions.PIRATE_ACTIVITY)) {</div>
-<div class="line"><span class="lineno">   96</span>                curr.addCondition(Conditions.PIRATE_ACTIVITY, <a class="code hl_variable" href="../../d2/d64/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateActivityIntel.html#a6db319ac5d1389583f2ccef8fea07fde">source</a>);</div>
-<div class="line"><span class="lineno">   97</span>            }</div>
-<div class="line"><span class="lineno">   98</span>        }</div>
-<div class="line"><span class="lineno">   99</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_a9a95c1eccf4604952fd8a65605f24e31"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a9a95c1eccf4604952fd8a65605f24e31">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.sendUpdateIfPlayerHasIntel</a></div><div class="ttdeci">void sendUpdateIfPlayerHasIntel(Object listInfoParam, TextPanelAPI textPanel)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00159">BaseIntelPlugin.java:159</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_aa9964eb74c87437bc9870cef6c4f5d00"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#aa9964eb74c87437bc9870cef6c4f5d00">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.endAfterDelay</a></div><div class="ttdeci">void endAfterDelay()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00098">BaseIntelPlugin.java:98</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_ac265e304e3d245a6ae16be73e0b918b0"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#ac265e304e3d245a6ae16be73e0b918b0">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.isEnding</a></div><div class="ttdeci">boolean isEnding()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00126">BaseIntelPlugin.java:126</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateBaseIntel_html_abdb2b577247d2ab70b545cd2151d3069"><div class="ttname"><a href="../../da/d10/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateBaseIntel.html#abdb2b577247d2ab70b545cd2151d3069">com.fs.starfarer.api.impl.campaign.intel.bases.PirateBaseIntel.getTarget</a></div><div class="ttdeci">StarSystemAPI getTarget()</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d29/PirateBaseIntel_8java_source.html#l01259">PirateBaseIntel.java:1259</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateBaseIntel_html_af4b9e37686fe7e721e9e69906a61cef7"><div class="ttname"><a href="../../da/d10/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateBaseIntel.html#af4b9e37686fe7e721e9e69906a61cef7">com.fs.starfarer.api.impl.campaign.intel.bases.PirateBaseIntel.getAffectedMarkets</a></div><div class="ttdeci">List&lt; MarketAPI &gt; getAffectedMarkets(StarSystemAPI system)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d29/PirateBaseIntel_8java_source.html#l01270">PirateBaseIntel.java:1270</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac6712c70425179eb7f92a81f53deb907" name="ac6712c70425179eb7f92a81f53deb907"></a>
@@ -716,12 +644,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#af99accb83f6d9f3a6a57277b5d187dde">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/de0/PirateActivityIntel_8java_source.html#l00054">54</a> of file <a class="el" href="../../d0/de0/PirateActivityIntel_8java_source.html">PirateActivityIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   54</span>                                                                      {</div>
-<div class="line"><span class="lineno">   55</span>        <span class="keywordflow">if</span> (DebugFlags.SEND_UPDATES_WHEN_NO_COMM &amp;&amp; <a class="code hl_variable" href="../../d2/d64/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateActivityIntel.html#a6db319ac5d1389583f2ccef8fea07fde">source</a>.<a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a4e9158c7cacf879d6f14b2bebce9af7a">isPlayerVisible</a>()) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   56</span>        <span class="keywordflow">return</span> super.canMakeVisibleToPlayer(playerInRelayRange);</div>
-<div class="line"><span class="lineno">   57</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_a4e9158c7cacf879d6f14b2bebce9af7a"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a4e9158c7cacf879d6f14b2bebce9af7a">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.isPlayerVisible</a></div><div class="ttdeci">boolean isPlayerVisible()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00378">BaseIntelPlugin.java:378</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aedfc51d1f7f948e2f7ba3d7a57c09deb" name="aedfc51d1f7f948e2f7ba3d7a57c09deb"></a>
@@ -753,15 +676,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#afa8bb8f2afc14a90ef02a999a66535e9">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/de0/PirateActivityIntel_8java_source.html#l00123">123</a> of file <a class="el" href="../../d0/de0/PirateActivityIntel_8java_source.html">PirateActivityIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  123</span>                                                                         {</div>
-<div class="line"><span class="lineno">  124</span>        Color c = <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#af44e4a0a7c61b8efbc4ef210c7061723">getTitleColor</a>(mode);</div>
-<div class="line"><span class="lineno">  125</span>        info.addPara(<a class="code hl_function" href="../../d2/d64/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateActivityIntel.html#a6b1c7d04970362b6b7e7b24133eb6900">getName</a>(), c, 0f);</div>
-<div class="line"><span class="lineno">  126</span>        <a class="code hl_function" href="../../d2/d64/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateActivityIntel.html#a90df64fa809e76edf9080e93cc682f9b">addBulletPoints</a>(info, mode);</div>
-<div class="line"><span class="lineno">  127</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_af44e4a0a7c61b8efbc4ef210c7061723"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#af44e4a0a7c61b8efbc4ef210c7061723">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.getTitleColor</a></div><div class="ttdeci">Color getTitleColor(ListInfoMode mode)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00615">BaseIntelPlugin.java:615</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateActivityIntel_html_a6b1c7d04970362b6b7e7b24133eb6900"><div class="ttname"><a href="../../d2/d64/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateActivityIntel.html#a6b1c7d04970362b6b7e7b24133eb6900">com.fs.starfarer.api.impl.campaign.intel.bases.PirateActivityIntel.getName</a></div><div class="ttdeci">String getName()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/de0/PirateActivityIntel_8java_source.html#l00217">PirateActivityIntel.java:217</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateActivityIntel_html_a90df64fa809e76edf9080e93cc682f9b"><div class="ttname"><a href="../../d2/d64/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateActivityIntel.html#a90df64fa809e76edf9080e93cc682f9b">com.fs.starfarer.api.impl.campaign.intel.bases.PirateActivityIntel.addBulletPoints</a></div><div class="ttdeci">void addBulletPoints(TooltipMakerAPI info, ListInfoMode mode)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/de0/PirateActivityIntel_8java_source.html#l00101">PirateActivityIntel.java:101</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a4acf6e5884d9342011fff75d31cc8faf" name="a4acf6e5884d9342011fff75d31cc8faf"></a>
@@ -799,73 +714,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a8cccf49669fce7f61c75af3c8afc4bb9">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/de0/PirateActivityIntel_8java_source.html#l00130">130</a> of file <a class="el" href="../../d0/de0/PirateActivityIntel_8java_source.html">PirateActivityIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  130</span>                                                                                        {</div>
-<div class="line"><span class="lineno">  131</span>        Color h = Misc.getHighlightColor();</div>
-<div class="line"><span class="lineno">  132</span>        Color g = Misc.getGrayColor();</div>
-<div class="line"><span class="lineno">  133</span>        Color tc = Misc.getTextColor();</div>
-<div class="line"><span class="lineno">  134</span>        <span class="keywordtype">float</span> pad = 3f;</div>
-<div class="line"><span class="lineno">  135</span>        <span class="keywordtype">float</span> opad = 10f;</div>
-<div class="line"><span class="lineno">  136</span>        </div>
-<div class="line"><span class="lineno">  137</span>        info.addImage(<a class="code hl_function" href="../../d2/d64/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateActivityIntel.html#a5736edc2b198704bb938811f2d2748c6">getFactionForUIColors</a>().getLogo(), width, 128, opad);</div>
-<div class="line"><span class="lineno">  138</span>        </div>
-<div class="line"><span class="lineno">  139</span>        info.addPara(<span class="stringliteral">&quot;Pirates have been targeting colonies and shipping &quot;</span> +</div>
-<div class="line"><span class="lineno">  140</span>                <span class="stringliteral">&quot;in the &quot;</span> + <a class="code hl_variable" href="../../d2/d64/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateActivityIntel.html#ae36ba6fe2f850cb274223292d6f1a45f">system</a>.<a class="code hl_function" href="../../d2/d2c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI.html#a9852a0789ec12b7c5826eab0d72df0f4">getNameWithLowercaseType</a>() + <span class="stringliteral">&quot;.&quot;</span>, opad);</div>
-<div class="line"><span class="lineno">  141</span>        </div>
-<div class="line"><span class="lineno">  142</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d2/d64/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateActivityIntel.html#a6db319ac5d1389583f2ccef8fea07fde">source</a>.<a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a4e9158c7cacf879d6f14b2bebce9af7a">isPlayerVisible</a>()) {</div>
-<div class="line"><span class="lineno">  143</span>            <span class="comment">//info.addPara(&quot;The pirates are based out of the &quot; + source.getSystem().getNameWithLowercaseType() + &quot;.&quot;, opad);</span></div>
-<div class="line"><span class="lineno">  144</span>            info.addPara(<span class="stringliteral">&quot;The pirates are based out of &quot;</span> +</div>
-<div class="line"><span class="lineno">  145</span>                    <a class="code hl_variable" href="../../d2/d64/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateActivityIntel.html#a6db319ac5d1389583f2ccef8fea07fde">source</a>.<a class="code hl_function" href="../../da/d10/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateBaseIntel.html#a06695dffeadb364553c7787cf5a58081">getMarket</a>().<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a7e5b6e8035c61f63cd8b331df994233b">getName</a>() + <span class="stringliteral">&quot; in the &quot;</span> + <a class="code hl_variable" href="../../d2/d64/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateActivityIntel.html#a6db319ac5d1389583f2ccef8fea07fde">source</a>.<a class="code hl_function" href="../../da/d10/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateBaseIntel.html#a07cbd2e27852bc3ca157d9bd7cc65c71">getSystem</a>().<a class="code hl_function" href="../../d2/d2c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI.html#a9852a0789ec12b7c5826eab0d72df0f4">getNameWithLowercaseType</a>() + <span class="stringliteral">&quot;.&quot;</span>, opad);</div>
-<div class="line"><span class="lineno">  146</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  147</span>            <span class="keywordtype">float</span> distLY = Misc.getDistanceLY(<a class="code hl_variable" href="../../d2/d64/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateActivityIntel.html#ae36ba6fe2f850cb274223292d6f1a45f">system</a>.<a class="code hl_function" href="../../db/d13/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1StarSystemAPI.html#a4cdf8b453574fe106175da4d5a0f90a7">getLocation</a>(), <a class="code hl_variable" href="../../d2/d64/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateActivityIntel.html#a6db319ac5d1389583f2ccef8fea07fde">source</a>.<a class="code hl_function" href="../../da/d10/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateBaseIntel.html#a07cbd2e27852bc3ca157d9bd7cc65c71">getSystem</a>().<a class="code hl_function" href="../../db/d13/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1StarSystemAPI.html#a4cdf8b453574fe106175da4d5a0f90a7">getLocation</a>());</div>
-<div class="line"><span class="lineno">  148</span>            <span class="keywordflow">if</span> (distLY &lt; 10) {</div>
-<div class="line"><span class="lineno">  149</span>                info.addPara(<span class="stringliteral">&quot;The location of the pirate base is unknown, but it&#39;s likely to be somewhere nearby.&quot;</span>, opad);</div>
-<div class="line"><span class="lineno">  150</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  151</span>                info.addPara(<span class="stringliteral">&quot;The location of the pirate base is unknown, but there are indications that it&#39;s quite distant.&quot;</span>, opad);</div>
-<div class="line"><span class="lineno">  152</span>            }</div>
-<div class="line"><span class="lineno">  153</span>        }</div>
-<div class="line"><span class="lineno">  154</span>        </div>
-<div class="line"><span class="lineno">  155</span>        info.addSectionHeading(<span class="stringliteral">&quot;Colonies affected&quot;</span>, <a class="code hl_function" href="../../d2/d64/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateActivityIntel.html#a5736edc2b198704bb938811f2d2748c6">getFactionForUIColors</a>().getBaseUIColor(),</div>
-<div class="line"><span class="lineno">  156</span>                              <a class="code hl_function" href="../../d2/d64/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateActivityIntel.html#a5736edc2b198704bb938811f2d2748c6">getFactionForUIColors</a>().getDarkUIColor(), Alignment.MID, opad);</div>
-<div class="line"><span class="lineno">  157</span>        </div>
-<div class="line"><span class="lineno">  158</span>        <span class="comment">//info.addPara(&quot;Colonies affected:&quot;, opad);</span></div>
-<div class="line"><span class="lineno">  159</span>        </div>
-<div class="line"><span class="lineno">  160</span>        MarketConditionAPI condition = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  161</span>        <span class="keywordtype">float</span> initPad = opad;</div>
-<div class="line"><span class="lineno">  162</span>        <span class="keywordflow">for</span> (MarketAPI curr : <a class="code hl_variable" href="../../d2/d64/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateActivityIntel.html#a6db319ac5d1389583f2ccef8fea07fde">source</a>.<a class="code hl_function" href="../../da/d10/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateBaseIntel.html#af4b9e37686fe7e721e9e69906a61cef7">getAffectedMarkets</a>(<a class="code hl_variable" href="../../d2/d64/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateActivityIntel.html#ae36ba6fe2f850cb274223292d6f1a45f">system</a>)) {</div>
-<div class="line"><span class="lineno">  163</span>            <span class="keywordflow">if</span> (condition == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  164</span>                condition = curr.getCondition(Conditions.PIRATE_ACTIVITY);</div>
-<div class="line"><span class="lineno">  165</span>            }</div>
-<div class="line"><span class="lineno">  166</span>            </div>
-<div class="line"><span class="lineno">  167</span>            <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#af6b4d6c756c2850bf6878f3c2fb6f5dc">addMarketToList</a>(info, curr, initPad, tc);</div>
-<div class="line"><span class="lineno">  168</span>            initPad = 0f;</div>
-<div class="line"><span class="lineno">  169</span>        }</div>
-<div class="line"><span class="lineno">  170</span>        </div>
-<div class="line"><span class="lineno">  171</span>        <span class="keywordflow">if</span> (condition != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  172</span>            MarketConditionPlugin plugin = condition.getPlugin();</div>
-<div class="line"><span class="lineno">  173</span><span class="comment">//          String text = condition.getSpec().getDesc();</span></div>
-<div class="line"><span class="lineno">  174</span><span class="comment">//          Map&lt;String, String&gt; tokens = plugin.getTokenReplacements();</span></div>
-<div class="line"><span class="lineno">  175</span><span class="comment">//          if (tokens != null) {</span></div>
-<div class="line"><span class="lineno">  176</span><span class="comment">//              for (String token : tokens.keySet()) {</span></div>
-<div class="line"><span class="lineno">  177</span><span class="comment">//                  String value = tokens.get(token);</span></div>
-<div class="line"><span class="lineno">  178</span><span class="comment">//                  text = text.replaceAll(&quot;(?s)\\&quot; + token, value);</span></div>
-<div class="line"><span class="lineno">  179</span><span class="comment">//              }</span></div>
-<div class="line"><span class="lineno">  180</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">  181</span><span class="comment">//          if (!text.isEmpty()) {</span></div>
-<div class="line"><span class="lineno">  182</span><span class="comment">//              info.addPara(text, opad);</span></div>
-<div class="line"><span class="lineno">  183</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">  184</span>            </div>
-<div class="line"><span class="lineno">  185</span>            ((PirateActivity)plugin).createTooltipAfterDescription(info, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  186</span>        }</div>
-<div class="line"><span class="lineno">  187</span>        </div>
-<div class="line"><span class="lineno">  188</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_af6b4d6c756c2850bf6878f3c2fb6f5dc"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#af6b4d6c756c2850bf6878f3c2fb6f5dc">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.addMarketToList</a></div><div class="ttdeci">static void addMarketToList(TooltipMakerAPI info, MarketAPI market, float pad)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00713">BaseIntelPlugin.java:713</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateActivityIntel_html_a5736edc2b198704bb938811f2d2748c6"><div class="ttname"><a href="../../d2/d64/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateActivityIntel.html#a5736edc2b198704bb938811f2d2748c6">com.fs.starfarer.api.impl.campaign.intel.bases.PirateActivityIntel.getFactionForUIColors</a></div><div class="ttdeci">FactionAPI getFactionForUIColors()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/de0/PirateActivityIntel_8java_source.html#l00226">PirateActivityIntel.java:226</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateBaseIntel_html_a06695dffeadb364553c7787cf5a58081"><div class="ttname"><a href="../../da/d10/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateBaseIntel.html#a06695dffeadb364553c7787cf5a58081">com.fs.starfarer.api.impl.campaign.intel.bases.PirateBaseIntel.getMarket</a></div><div class="ttdeci">MarketAPI getMarket()</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d29/PirateBaseIntel_8java_source.html#l01164">PirateBaseIntel.java:1164</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateBaseIntel_html_a07cbd2e27852bc3ca157d9bd7cc65c71"><div class="ttname"><a href="../../da/d10/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateBaseIntel.html#a07cbd2e27852bc3ca157d9bd7cc65c71">com.fs.starfarer.api.impl.campaign.intel.bases.PirateBaseIntel.getSystem</a></div><div class="ttdeci">StarSystemAPI getSystem()</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d29/PirateBaseIntel_8java_source.html#l00365">PirateBaseIntel.java:365</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI_html_a9852a0789ec12b7c5826eab0d72df0f4"><div class="ttname"><a href="../../d2/d2c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI.html#a9852a0789ec12b7c5826eab0d72df0f4">com.fs.starfarer.api.campaign.LocationAPI.getNameWithLowercaseType</a></div><div class="ttdeci">String getNameWithLowercaseType()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1StarSystemAPI_html_a4cdf8b453574fe106175da4d5a0f90a7"><div class="ttname"><a href="../../db/d13/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1StarSystemAPI.html#a4cdf8b453574fe106175da4d5a0f90a7">com.fs.starfarer.api.campaign.StarSystemAPI.getLocation</a></div><div class="ttdeci">Vector2f getLocation()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a7e5b6e8035c61f63cd8b331df994233b"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a7e5b6e8035c61f63cd8b331df994233b">com.fs.starfarer.api.campaign.econ.MarketAPI.getName</a></div><div class="ttdeci">String getName()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8fe9dc9080a6bc55811861c7d8f3bacc" name="a8fe9dc9080a6bc55811861c7d8f3bacc"></a>
@@ -886,11 +735,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#ae93559a4be65baa333b36619a2a82850">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/de0/PirateActivityIntel_8java_source.html#l00241">241</a> of file <a class="el" href="../../d0/de0/PirateActivityIntel_8java_source.html">PirateActivityIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  241</span>                                        {</div>
-<div class="line"><span class="lineno">  242</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a40be6c0ab52a7b188f3a9fc2f564bffd">getSoundMinorMessage</a>();</div>
-<div class="line"><span class="lineno">  243</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_a40be6c0ab52a7b188f3a9fc2f564bffd"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a40be6c0ab52a7b188f3a9fc2f564bffd">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.getSoundMinorMessage</a></div><div class="ttdeci">static String getSoundMinorMessage()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00674">BaseIntelPlugin.java:674</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5736edc2b198704bb938811f2d2748c6" name="a5736edc2b198704bb938811f2d2748c6"></a>
@@ -911,11 +756,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#aef7175eff8878a18ebb3099d3a7ab59f">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/de0/PirateActivityIntel_8java_source.html#l00226">226</a> of file <a class="el" href="../../d0/de0/PirateActivityIntel_8java_source.html">PirateActivityIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  226</span>                                              {</div>
-<div class="line"><span class="lineno">  227</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d2/d64/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateActivityIntel.html#a6db319ac5d1389583f2ccef8fea07fde">source</a>.<a class="code hl_function" href="../../da/d10/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateBaseIntel.html#a45728e87705064a630526351efdd1f8f">getFactionForUIColors</a>();</div>
-<div class="line"><span class="lineno">  228</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateBaseIntel_html_a45728e87705064a630526351efdd1f8f"><div class="ttname"><a href="../../da/d10/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateBaseIntel.html#a45728e87705064a630526351efdd1f8f">com.fs.starfarer.api.impl.campaign.intel.bases.PirateBaseIntel.getFactionForUIColors</a></div><div class="ttdeci">FactionAPI getFactionForUIColors()</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d29/PirateBaseIntel_8java_source.html#l00846">PirateBaseIntel.java:846</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aad9df79b0a2c471cf9ded5121a71f762" name="aad9df79b0a2c471cf9ded5121a71f762"></a>
@@ -937,10 +778,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a6499624a08c9565334e2395989f542c9">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/de0/PirateActivityIntel_8java_source.html#l00196">196</a> of file <a class="el" href="../../d0/de0/PirateActivityIntel_8java_source.html">PirateActivityIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  196</span>                            {</div>
-<div class="line"><span class="lineno">  197</span>        <span class="keywordflow">return</span> Global.getSettings().getSpriteName(<span class="stringliteral">&quot;intel&quot;</span>, <span class="stringliteral">&quot;pirate_activity&quot;</span>);</div>
-<div class="line"><span class="lineno">  198</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aabae59ec2b39406d499292efb6e65058" name="aabae59ec2b39406d499292efb6e65058"></a>
@@ -969,17 +807,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a4ef0af8cb71b4127afce850bc6a04514">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/de0/PirateActivityIntel_8java_source.html#l00201">201</a> of file <a class="el" href="../../d0/de0/PirateActivityIntel_8java_source.html">PirateActivityIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  201</span>                                                      {</div>
-<div class="line"><span class="lineno">  202</span>        Set&lt;String&gt; tags = super.getIntelTags(map);</div>
-<div class="line"><span class="lineno">  203</span>        tags.add(Factions.PIRATES);</div>
-<div class="line"><span class="lineno">  204</span>        </div>
-<div class="line"><span class="lineno">  205</span>        <span class="keywordflow">if</span> (!Misc.getMarketsInLocation(<a class="code hl_variable" href="../../d2/d64/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateActivityIntel.html#ae36ba6fe2f850cb274223292d6f1a45f">system</a>, Factions.PLAYER).isEmpty()) {</div>
-<div class="line"><span class="lineno">  206</span>            tags.add(Tags.INTEL_COLONIES);</div>
-<div class="line"><span class="lineno">  207</span>        }</div>
-<div class="line"><span class="lineno">  208</span>        </div>
-<div class="line"><span class="lineno">  209</span>        <span class="keywordflow">return</span> tags;</div>
-<div class="line"><span class="lineno">  210</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a66b31e6f6374a923dc125b80bca11616" name="a66b31e6f6374a923dc125b80bca11616"></a>
@@ -1001,10 +829,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a01f212769febb46bae89256b643c23eb">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/de0/PirateActivityIntel_8java_source.html#l00235">235</a> of file <a class="el" href="../../d0/de0/PirateActivityIntel_8java_source.html">PirateActivityIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  235</span>                                                              {</div>
-<div class="line"><span class="lineno">  236</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d2/d64/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateActivityIntel.html#ae36ba6fe2f850cb274223292d6f1a45f">system</a>.<a class="code hl_function" href="../../db/d13/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1StarSystemAPI.html#ab8b2278a9fd2054a915f2384e320c14a">getCenter</a>();</div>
-<div class="line"><span class="lineno">  237</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a6b1c7d04970362b6b7e7b24133eb6900" name="a6b1c7d04970362b6b7e7b24133eb6900"></a>
@@ -1025,15 +850,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a582fe7cb29e8f2f65670d4dd74418235">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/de0/PirateActivityIntel_8java_source.html#l00217">217</a> of file <a class="el" href="../../d0/de0/PirateActivityIntel_8java_source.html">PirateActivityIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  217</span>                            {</div>
-<div class="line"><span class="lineno">  218</span>        String base = <span class="stringliteral">&quot;Pirate Activity&quot;</span>;</div>
-<div class="line"><span class="lineno">  219</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#ac265e304e3d245a6ae16be73e0b918b0">isEnding</a>()) {</div>
-<div class="line"><span class="lineno">  220</span>            <span class="keywordflow">return</span> base + <span class="stringliteral">&quot; - Over&quot;</span>;</div>
-<div class="line"><span class="lineno">  221</span>        }</div>
-<div class="line"><span class="lineno">  222</span>        <span class="keywordflow">return</span> base + <span class="stringliteral">&quot; - &quot;</span> + <a class="code hl_variable" href="../../d2/d64/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateActivityIntel.html#ae36ba6fe2f850cb274223292d6f1a45f">system</a>.<a class="code hl_function" href="../../db/d13/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1StarSystemAPI.html#ad904987104a0d52eba1a7665e947ebea">getBaseName</a>();</div>
-<div class="line"><span class="lineno">  223</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1StarSystemAPI_html_ad904987104a0d52eba1a7665e947ebea"><div class="ttname"><a href="../../db/d13/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1StarSystemAPI.html#ad904987104a0d52eba1a7665e947ebea">com.fs.starfarer.api.campaign.StarSystemAPI.getBaseName</a></div><div class="ttdeci">String getBaseName()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a71e533cc2d200616ff680b987ec65dd5" name="a71e533cc2d200616ff680b987ec65dd5"></a>
@@ -1054,10 +871,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a8fe6bfa41873bed91428d73fa6bac1b6">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/de0/PirateActivityIntel_8java_source.html#l00230">230</a> of file <a class="el" href="../../d0/de0/PirateActivityIntel_8java_source.html">PirateActivityIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  230</span>                                             {</div>
-<div class="line"><span class="lineno">  231</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../d2/d64/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateActivityIntel.html#a6b1c7d04970362b6b7e7b24133eb6900">getName</a>();</div>
-<div class="line"><span class="lineno">  232</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a4a534cd4b7f70b0fb660a1bf3f2f6143" name="a4a534cd4b7f70b0fb660a1bf3f2f6143"></a>
@@ -1078,11 +892,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a6160e4bb36c43732e98a87a2f1e63b58">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/de0/PirateActivityIntel_8java_source.html#l00212">212</a> of file <a class="el" href="../../d0/de0/PirateActivityIntel_8java_source.html">PirateActivityIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  212</span>                                  {</div>
-<div class="line"><span class="lineno">  213</span>        String base = Misc.ucFirst(<a class="code hl_function" href="../../d2/d64/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateActivityIntel.html#a5736edc2b198704bb938811f2d2748c6">getFactionForUIColors</a>().getPersonNamePrefix());</div>
-<div class="line"><span class="lineno">  214</span>        <span class="keywordflow">return</span> base + <span class="stringliteral">&quot; C&quot;</span>; <span class="comment">// so it goes after &quot;Pirate Base&quot;</span></div>
-<div class="line"><span class="lineno">  215</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a07d575a2bd5617ff2e1f7ff02653f70c" name="a07d575a2bd5617ff2e1f7ff02653f70c"></a>
@@ -1101,10 +911,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/de0/PirateActivityIntel_8java_source.html#l00060">60</a> of file <a class="el" href="../../d0/de0/PirateActivityIntel_8java_source.html">PirateActivityIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   60</span>                                       {</div>
-<div class="line"><span class="lineno">   61</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d2/d64/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateActivityIntel.html#a6db319ac5d1389583f2ccef8fea07fde">source</a>;</div>
-<div class="line"><span class="lineno">   62</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a52a0e96e9ae0fba52328daae854d036f" name="a52a0e96e9ae0fba52328daae854d036f"></a>
@@ -1123,10 +930,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/de0/PirateActivityIntel_8java_source.html#l00191">191</a> of file <a class="el" href="../../d0/de0/PirateActivityIntel_8java_source.html">PirateActivityIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  191</span>                                     {</div>
-<div class="line"><span class="lineno">  192</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d2/d64/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateActivityIntel.html#ae36ba6fe2f850cb274223292d6f1a45f">system</a>;</div>
-<div class="line"><span class="lineno">  193</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a82651a0afbbce558922b9e4058eae834" name="a82651a0afbbce558922b9e4058eae834"></a>
@@ -1155,11 +959,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#aa97466aeeeda8efaa762a17d5dbb37b9">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/de0/PirateActivityIntel_8java_source.html#l00065">65</a> of file <a class="el" href="../../d0/de0/PirateActivityIntel_8java_source.html">PirateActivityIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   65</span>                                 {</div>
-<div class="line"><span class="lineno">   66</span>        super.notifyEnded();</div>
-<div class="line"><span class="lineno">   67</span>        Global.getSector().removeScript(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">   68</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a05c6c93fdd5d700ac2120acf1d435a2b" name="a05c6c93fdd5d700ac2120acf1d435a2b"></a>
@@ -1188,16 +988,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a7cb55f93ada9a3020919de0342c3199a">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/de0/PirateActivityIntel_8java_source.html#l00072">72</a> of file <a class="el" href="../../d0/de0/PirateActivityIntel_8java_source.html">PirateActivityIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   72</span>                                  {</div>
-<div class="line"><span class="lineno">   73</span>        super.notifyEnding();</div>
-<div class="line"><span class="lineno">   74</span>        </div>
-<div class="line"><span class="lineno">   75</span>        <span class="keywordflow">for</span> (MarketAPI curr : <a class="code hl_variable" href="../../d2/d64/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateActivityIntel.html#a6db319ac5d1389583f2ccef8fea07fde">source</a>.<a class="code hl_function" href="../../da/d10/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateBaseIntel.html#af4b9e37686fe7e721e9e69906a61cef7">getAffectedMarkets</a>(<a class="code hl_variable" href="../../d2/d64/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateActivityIntel.html#ae36ba6fe2f850cb274223292d6f1a45f">system</a>)) {</div>
-<div class="line"><span class="lineno">   76</span>            <span class="keywordflow">if</span> (curr.hasCondition(Conditions.PIRATE_ACTIVITY)) {</div>
-<div class="line"><span class="lineno">   77</span>                curr.removeCondition(Conditions.PIRATE_ACTIVITY);</div>
-<div class="line"><span class="lineno">   78</span>            }</div>
-<div class="line"><span class="lineno">   79</span>        }</div>
-<div class="line"><span class="lineno">   80</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

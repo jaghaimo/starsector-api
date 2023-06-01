@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -174,10 +175,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/d96/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1BaseSensorGhostCreator.html#a3367395827b69c6f4d50d05c45a50fc3">com.fs.starfarer.api.impl.campaign.ghosts.BaseSensorGhostCreator</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/dc8/RemoraGhostCreator_8java_source.html#l00053">53</a> of file <a class="el" href="../../d2/dc8/RemoraGhostCreator_8java_source.html">RemoraGhostCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   53</span>                                                           {</div>
-<div class="line"><span class="lineno">   54</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   55</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af6dfa77d92a91c8d8daa4f6242e51647" name="af6dfa77d92a91c8d8daa4f6242e51647"></a>
@@ -199,33 +197,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/d96/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1BaseSensorGhostCreator.html#a672d510486f4336ac8ce1b5883b1b228">com.fs.starfarer.api.impl.campaign.ghosts.BaseSensorGhostCreator</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/dc8/RemoraGhostCreator_8java_source.html#l00019">19</a> of file <a class="el" href="../../d2/dc8/RemoraGhostCreator_8java_source.html">RemoraGhostCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   19</span>                                                                     {</div>
-<div class="line"><span class="lineno">   20</span>        <span class="keywordflow">if</span> (!Global.getSector().getCurrentLocation().isHyperspace()) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   21</span>        CampaignFleetAPI pf = Global.getSector().getPlayerFleet();</div>
-<div class="line"><span class="lineno">   22</span>        </div>
-<div class="line"><span class="lineno">   23</span>        <span class="keywordtype">float</span> f = GhostFrequencies.getFringeFactor();</div>
-<div class="line"><span class="lineno">   24</span>        <span class="keywordtype">int</span> numRemora = 1 + manager.getRandom().nextInt(Math.round(f * 4f) + 1);</div>
-<div class="line"><span class="lineno">   25</span>        </div>
-<div class="line"><span class="lineno">   26</span>        List&lt;SensorGhost&gt; result = <span class="keyword">new</span> ArrayList&lt;SensorGhost&gt;();</div>
-<div class="line"><span class="lineno">   27</span>        </div>
-<div class="line"><span class="lineno">   28</span>        <span class="keywordtype">float</span> dur = 7f + manager.getRandom().nextFloat() * 5f;</div>
-<div class="line"><span class="lineno">   29</span> </div>
-<div class="line"><span class="lineno">   30</span>        Vector2f first = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   31</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; numRemora; i++) {</div>
-<div class="line"><span class="lineno">   32</span>            Vector2f loc = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   33</span>            <span class="keywordflow">if</span> (first != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   34</span>                loc = Misc.getPointWithinRadiusUniform(first, 300f, manager.getRandom());</div>
-<div class="line"><span class="lineno">   35</span>            }</div>
-<div class="line"><span class="lineno">   36</span>            RemoraGhost remora = <span class="keyword">new</span> RemoraGhost(manager, pf, dur + manager.getRandom().nextFloat() * 0.5f, loc);</div>
-<div class="line"><span class="lineno">   37</span>            <span class="keywordflow">if</span> (!remora.isCreationFailed()) {</div>
-<div class="line"><span class="lineno">   38</span>                result.add(remora);</div>
-<div class="line"><span class="lineno">   39</span>                first = remora.getEntity().getLocation();</div>
-<div class="line"><span class="lineno">   40</span>            }</div>
-<div class="line"><span class="lineno">   41</span>        }</div>
-<div class="line"><span class="lineno">   42</span>        </div>
-<div class="line"><span class="lineno">   43</span>        <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">   44</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae96e69de0e50ed45f5400c98235829ba" name="ae96e69de0e50ed45f5400c98235829ba"></a>
@@ -247,11 +219,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/d96/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1BaseSensorGhostCreator.html#a0b8e9e91bdbc699998d02c1013aa936a">com.fs.starfarer.api.impl.campaign.ghosts.BaseSensorGhostCreator</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/dc8/RemoraGhostCreator_8java_source.html#l00048">48</a> of file <a class="el" href="../../d2/dc8/RemoraGhostCreator_8java_source.html">RemoraGhostCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   48</span>                                                          {</div>
-<div class="line"><span class="lineno">   49</span>        <span class="comment">//return 100000f;</span></div>
-<div class="line"><span class="lineno">   50</span>        <span class="keywordflow">return</span> GhostFrequencies.getRemoraFrequency(manager);</div>
-<div class="line"><span class="lineno">   51</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

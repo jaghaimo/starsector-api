@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -418,10 +419,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/dbc/InvestigationEventCommSniffer_8java_source.html#l00015">15</a> of file <a class="el" href="../../d7/dbc/InvestigationEventCommSniffer_8java_source.html">InvestigationEventCommSniffer.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   15</span>                                           {</div>
-<div class="line"><span class="lineno">   16</span>        super();</div>
-<div class="line"><span class="lineno">   17</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -444,10 +442,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../de/d3d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEvent.html#a1f394f02b2ca0e671d14444eae4079a4">com.fs.starfarer.api.impl.campaign.events.InvestigationEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/dbc/InvestigationEventCommSniffer_8java_source.html#l00059">59</a> of file <a class="el" href="../../d7/dbc/InvestigationEventCommSniffer_8java_source.html">InvestigationEventCommSniffer.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   59</span>                                                      {</div>
-<div class="line"><span class="lineno">   60</span>        <span class="keywordflow">return</span> super.getTokenReplacements();</div>
-<div class="line"><span class="lineno">   61</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab9e6c22ccf4cd2d39a5457f03b18d542" name="ab9e6c22ccf4cd2d39a5457f03b18d542"></a>
@@ -469,53 +464,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../de/d3d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEvent.html#a1cbec1a0dafce7ad3cf3d51c6dd1628e">com.fs.starfarer.api.impl.campaign.events.InvestigationEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/dbc/InvestigationEventCommSniffer_8java_source.html#l00020">20</a> of file <a class="el" href="../../d7/dbc/InvestigationEventCommSniffer_8java_source.html">InvestigationEventCommSniffer.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   20</span>                             {</div>
-<div class="line"><span class="lineno">   21</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a5062e440ac3d3fb9a12bf3cac406e2c1">faction</a> == <span class="keyword">null</span> || <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a5062e440ac3d3fb9a12bf3cac406e2c1">faction</a>.<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#adacb688941524346625413acdc0008f7">isNeutralFaction</a>()) {</div>
-<div class="line"><span class="lineno">   22</span>            <a class="code hl_variable" href="../../de/d3d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEvent.html#ad2909d012f1895434485523b7091b85a">log</a>.info(<span class="stringliteral">&quot;Aborting comm sniffer invesitgation on &quot;</span> + <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#aa9dc186620955830e7bd8c065f3c9707">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a4fa77e45f0774df8a8980dc438598678">getName</a>() + <span class="stringliteral">&quot;, null or neutral faction&quot;</span>);</div>
-<div class="line"><span class="lineno">   23</span>            <a class="code hl_function" href="../../de/d3d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEvent.html#ad3420f552905f82cfe79adf1ad1c818b">endEvent</a>();</div>
-<div class="line"><span class="lineno">   24</span>        }</div>
-<div class="line"><span class="lineno">   25</span>        </div>
-<div class="line"><span class="lineno">   26</span>        Global.getSector().getIntel().getCommSnifferLocations().remove(<a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#aa9dc186620955830e7bd8c065f3c9707">entity</a>);</div>
-<div class="line"><span class="lineno">   27</span>        </div>
-<div class="line"><span class="lineno">   28</span>        InvestigationEventParams params = </div>
-<div class="line"><span class="lineno">   29</span>            <span class="keyword">new</span> InvestigationEventParams(<span class="stringliteral">&quot;Comm sniffer investigation - &quot;</span> + <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#aa9dc186620955830e7bd8c065f3c9707">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a4fa77e45f0774df8a8980dc438598678">getName</a>(), <span class="stringliteral">&quot;start_comm_sniffer&quot;</span>);</div>
-<div class="line"><span class="lineno">   30</span>        </div>
-<div class="line"><span class="lineno">   31</span>        params.warningPriority = MessagePriority.ENSURE_DELIVERY;</div>
-<div class="line"><span class="lineno">   32</span>        params.minInitialDelay = 0;</div>
-<div class="line"><span class="lineno">   33</span>        params.maxInitialDelay = 0f;</div>
-<div class="line"><span class="lineno">   34</span>        </div>
-<div class="line"><span class="lineno">   35</span>        <span class="keywordtype">float</span> guiltMult = <a class="code hl_function" href="../../de/d3d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEvent.html#a07052f4a871477e2dcf76070eba839c5">getPlayerRepGuiltMult</a>(<a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a5062e440ac3d3fb9a12bf3cac406e2c1">faction</a>);</div>
-<div class="line"><span class="lineno">   36</span>        </div>
-<div class="line"><span class="lineno">   37</span>        InvestigationResult clear = <span class="keyword">new</span> InvestigationResult(<span class="keyword">null</span>, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   38</span>        InvestigationResult guilty = <span class="keyword">new</span> InvestigationResult(<span class="stringliteral">&quot;player_guilty_comm_sniffer&quot;</span>, MessagePriority.ENSURE_DELIVERY);</div>
-<div class="line"><span class="lineno">   39</span>        params.results.add(clear);</div>
-<div class="line"><span class="lineno">   40</span>        params.results.add(guilty);</div>
-<div class="line"><span class="lineno">   41</span>        </div>
-<div class="line"><span class="lineno">   42</span>        clear.weight = 100f;</div>
-<div class="line"><span class="lineno">   43</span>        guilty.weight = 25f * guiltMult;</div>
-<div class="line"><span class="lineno">   44</span>        </div>
-<div class="line"><span class="lineno">   45</span>        guilty.onDelivery = <span class="keyword">new</span> BaseOnMessageDeliveryScript() {</div>
-<div class="line"><span class="lineno">   46</span>            <span class="keyword">public</span> <span class="keywordtype">void</span> beforeDelivery(CommMessageAPI message) {</div>
-<div class="line"><span class="lineno">   47</span>                Global.getSector().adjustPlayerReputation(</div>
-<div class="line"><span class="lineno">   48</span>                        <span class="keyword">new</span> RepActionEnvelope(RepActions.COMM_SNIFFER_INVESTIGATION_GUILTY, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">true</span>), </div>
-<div class="line"><span class="lineno">   49</span>                        <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a5062e440ac3d3fb9a12bf3cac406e2c1">faction</a>.<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a7edcdc203f5ab26478e89e5d31e3bf85">getId</a>());</div>
-<div class="line"><span class="lineno">   50</span>            }</div>
-<div class="line"><span class="lineno">   51</span>        };</div>
-<div class="line"><span class="lineno">   52</span>        </div>
-<div class="line"><span class="lineno">   53</span>        <a class="code hl_function" href="../../de/d3d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEvent.html#a76d49beb7a1f4d3c662d1651c0df70ac">setParam</a>(params);</div>
-<div class="line"><span class="lineno">   54</span>        </div>
-<div class="line"><span class="lineno">   55</span>        super.startEvent();</div>
-<div class="line"><span class="lineno">   56</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin_html_a5062e440ac3d3fb9a12bf3cac406e2c1"><div class="ttname"><a href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a5062e440ac3d3fb9a12bf3cac406e2c1">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin.faction</a></div><div class="ttdeci">FactionAPI faction</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00045">BaseEventPlugin.java:45</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin_html_aa9dc186620955830e7bd8c065f3c9707"><div class="ttname"><a href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#aa9dc186620955830e7bd8c065f3c9707">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin.entity</a></div><div class="ttdeci">SectorEntityToken entity</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00044">BaseEventPlugin.java:44</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEvent_html_a07052f4a871477e2dcf76070eba839c5"><div class="ttname"><a href="../../de/d3d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEvent.html#a07052f4a871477e2dcf76070eba839c5">com.fs.starfarer.api.impl.campaign.events.InvestigationEvent.getPlayerRepGuiltMult</a></div><div class="ttdeci">static float getPlayerRepGuiltMult(FactionAPI faction)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d7f/InvestigationEvent_8java_source.html#l00154">InvestigationEvent.java:154</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEvent_html_a76d49beb7a1f4d3c662d1651c0df70ac"><div class="ttname"><a href="../../de/d3d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEvent.html#a76d49beb7a1f4d3c662d1651c0df70ac">com.fs.starfarer.api.impl.campaign.events.InvestigationEvent.setParam</a></div><div class="ttdeci">void setParam(Object param)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d7f/InvestigationEvent_8java_source.html#l00079">InvestigationEvent.java:79</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEvent_html_ad2909d012f1895434485523b7091b85a"><div class="ttname"><a href="../../de/d3d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEvent.html#ad2909d012f1895434485523b7091b85a">com.fs.starfarer.api.impl.campaign.events.InvestigationEvent.log</a></div><div class="ttdeci">static Logger log</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d7f/InvestigationEvent_8java_source.html#l00032">InvestigationEvent.java:32</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEvent_html_ad3420f552905f82cfe79adf1ad1c818b"><div class="ttname"><a href="../../de/d3d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEvent.html#ad3420f552905f82cfe79adf1ad1c818b">com.fs.starfarer.api.impl.campaign.events.InvestigationEvent.endEvent</a></div><div class="ttdeci">void endEvent()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d7f/InvestigationEvent_8java_source.html#l00146">InvestigationEvent.java:146</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI_html_a7edcdc203f5ab26478e89e5d31e3bf85"><div class="ttname"><a href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a7edcdc203f5ab26478e89e5d31e3bf85">com.fs.starfarer.api.campaign.FactionAPI.getId</a></div><div class="ttdeci">String getId()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI_html_adacb688941524346625413acdc0008f7"><div class="ttname"><a href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#adacb688941524346625413acdc0008f7">com.fs.starfarer.api.campaign.FactionAPI.isNeutralFaction</a></div><div class="ttdeci">boolean isNeutralFaction()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_a4fa77e45f0774df8a8980dc438598678"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a4fa77e45f0774df8a8980dc438598678">com.fs.starfarer.api.campaign.SectorEntityToken.getName</a></div><div class="ttdeci">String getName()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

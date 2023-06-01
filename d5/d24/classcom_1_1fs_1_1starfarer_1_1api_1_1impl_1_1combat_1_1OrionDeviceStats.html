@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -227,12 +228,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d31/OrionDeviceStats_8java_source.html#l00123">123</a> of file <a class="el" href="../../d5/d31/OrionDeviceStats_8java_source.html">OrionDeviceStats.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  123</span>                              {</div>
-<div class="line"><span class="lineno">  124</span>        <a class="code hl_variable" href="../../d5/d24/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1OrionDeviceStats.html#aa8a9e2a5b8778f72047534c568143a46">p</a> = <span class="keyword">new</span> OrionDeviceParams();</div>
-<div class="line"><span class="lineno">  125</span>        <span class="comment">//p.recolorTowardsEngineColor = true;</span></div>
-<div class="line"><span class="lineno">  126</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1OrionDeviceStats_html_aa8a9e2a5b8778f72047534c568143a46"><div class="ttname"><a href="../../d5/d24/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1OrionDeviceStats.html#aa8a9e2a5b8778f72047534c568143a46">com.fs.starfarer.api.impl.combat.OrionDeviceStats.p</a></div><div class="ttdeci">OrionDeviceParams p</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d31/OrionDeviceStats_8java_source.html#l00120">OrionDeviceStats.java:120</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -285,10 +281,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../dc/d74/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1NovaBurstStats.html#a36a75bf3fb040b79cec9526d479b3042">com.fs.starfarer.api.impl.combat.NovaBurstStats</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d31/OrionDeviceStats_8java_source.html#l00183">183</a> of file <a class="el" href="../../d5/d31/OrionDeviceStats_8java_source.html">OrionDeviceStats.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  183</span>                                                                                           {</div>
-<div class="line"><span class="lineno">  184</span>        </div>
-<div class="line"><span class="lineno">  185</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a6c735f3610ee7c32559342a0af2c06f5" name="a6c735f3610ee7c32559342a0af2c06f5"></a>
@@ -332,50 +325,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseShipSystemScript.html#a4bc8ac2999423cda8da369b8498bd43a">com.fs.starfarer.api.impl.combat.BaseShipSystemScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d31/OrionDeviceStats_8java_source.html#l00144">144</a> of file <a class="el" href="../../d5/d31/OrionDeviceStats_8java_source.html">OrionDeviceStats.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  144</span>                                                                                            {</div>
-<div class="line"><span class="lineno">  145</span>        ShipAPI ship = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  146</span>        <span class="comment">//boolean player = false;</span></div>
-<div class="line"><span class="lineno">  147</span>        <span class="keywordflow">if</span> (stats.getEntity() instanceof ShipAPI) {</div>
-<div class="line"><span class="lineno">  148</span>            ship = (ShipAPI) stats.getEntity();</div>
-<div class="line"><span class="lineno">  149</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  150</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  151</span>        }</div>
-<div class="line"><span class="lineno">  152</span>        </div>
-<div class="line"><span class="lineno">  153</span>        <a class="code hl_function" href="../../d5/d24/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1OrionDeviceStats.html#a547ad58a9d96dc13a3fa5682ae438537">recolor</a>(ship);</div>
-<div class="line"><span class="lineno">  154</span>        </div>
-<div class="line"><span class="lineno">  155</span>        <span class="keywordflow">if</span> (effectLevel &gt;= 1 &amp;&amp; !<a class="code hl_variable" href="../../d5/d24/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1OrionDeviceStats.html#aeed854fdae5349e38336ba70dfab4e01">deployedBomb</a>) {</div>
-<div class="line"><span class="lineno">  156</span>            <span class="keywordflow">for</span> (WeaponSlotAPI slot : ship.getHullSpec().getAllWeaponSlotsCopy()) {</div>
-<div class="line"><span class="lineno">  157</span>                <span class="keywordflow">if</span> (slot.isSystemSlot()) {</div>
-<div class="line"><span class="lineno">  158</span>                    <a class="code hl_function" href="../../d5/d24/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1OrionDeviceStats.html#a01db937d48f55d796c91f5e8de2d64d2">spawnBomb</a>(ship, slot);</div>
-<div class="line"><span class="lineno">  159</span>                }</div>
-<div class="line"><span class="lineno">  160</span>            }</div>
-<div class="line"><span class="lineno">  161</span>            <a class="code hl_variable" href="../../d5/d24/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1OrionDeviceStats.html#aeed854fdae5349e38336ba70dfab4e01">deployedBomb</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  162</span>            <span class="comment">//pusherPlateOffset = 1f;</span></div>
-<div class="line"><span class="lineno">  163</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (state == State.COOLDOWN) {</div>
-<div class="line"><span class="lineno">  164</span>            <a class="code hl_variable" href="../../d5/d24/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1OrionDeviceStats.html#aeed854fdae5349e38336ba70dfab4e01">deployedBomb</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  165</span>        }</div>
-<div class="line"><span class="lineno">  166</span>        </div>
-<div class="line"><span class="lineno">  167</span>        </div>
-<div class="line"><span class="lineno">  168</span>        <span class="keywordtype">float</span> amount = Global.getCombatEngine().getElapsedInLastFrame();</div>
-<div class="line"><span class="lineno">  169</span>        <a class="code hl_variable" href="../../d5/d24/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1OrionDeviceStats.html#a88e7018f4026aa02416991f6f980a5ab">pusherState</a>.advance(amount);</div>
-<div class="line"><span class="lineno">  170</span>        </div>
-<div class="line"><span class="lineno">  171</span>        <span class="keywordflow">for</span> (WeaponAPI w : ship.getAllWeapons()) {</div>
-<div class="line"><span class="lineno">  172</span>            Vector2f offset = <span class="keyword">new</span> Vector2f(<a class="code hl_variable" href="../../d5/d24/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1OrionDeviceStats.html#aa8a9e2a5b8778f72047534c568143a46">p</a>.pusherPlateMaxOffset, 0f);</div>
-<div class="line"><span class="lineno">  173</span>            <span class="comment">//pusherPlateOffset = 1f;</span></div>
-<div class="line"><span class="lineno">  174</span>            offset.scale(<a class="code hl_variable" href="../../d5/d24/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1OrionDeviceStats.html#a88e7018f4026aa02416991f6f980a5ab">pusherState</a>.compression);</div>
-<div class="line"><span class="lineno">  175</span>            <span class="keywordflow">if</span> (w.getSpec().hasTag(<span class="stringliteral">&quot;pusherplate&quot;</span>)) {</div>
-<div class="line"><span class="lineno">  176</span>                w.setRenderOffsetForDecorativeBeamWeaponsOnly(offset);</div>
-<div class="line"><span class="lineno">  177</span>            }</div>
-<div class="line"><span class="lineno">  178</span>        }</div>
-<div class="line"><span class="lineno">  179</span>        </div>
-<div class="line"><span class="lineno">  180</span>        <a class="code hl_function" href="../../d5/d24/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1OrionDeviceStats.html#aa23f2448a9a0320b8f9eba1a08e1ac95">advanceImpl</a>(amount, ship, state, effectLevel);</div>
-<div class="line"><span class="lineno">  181</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1OrionDeviceStats_html_a01db937d48f55d796c91f5e8de2d64d2"><div class="ttname"><a href="../../d5/d24/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1OrionDeviceStats.html#a01db937d48f55d796c91f5e8de2d64d2">com.fs.starfarer.api.impl.combat.OrionDeviceStats.spawnBomb</a></div><div class="ttdeci">void spawnBomb(ShipAPI source, WeaponSlotAPI slot)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d31/OrionDeviceStats_8java_source.html#l00191">OrionDeviceStats.java:191</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1OrionDeviceStats_html_a547ad58a9d96dc13a3fa5682ae438537"><div class="ttname"><a href="../../d5/d24/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1OrionDeviceStats.html#a547ad58a9d96dc13a3fa5682ae438537">com.fs.starfarer.api.impl.combat.OrionDeviceStats.recolor</a></div><div class="ttdeci">void recolor(ShipAPI ship)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d31/OrionDeviceStats_8java_source.html#l00130">OrionDeviceStats.java:130</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1OrionDeviceStats_html_a88e7018f4026aa02416991f6f980a5ab"><div class="ttname"><a href="../../d5/d24/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1OrionDeviceStats.html#a88e7018f4026aa02416991f6f980a5ab">com.fs.starfarer.api.impl.combat.OrionDeviceStats.pusherState</a></div><div class="ttdeci">PusherPlateState pusherState</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d31/OrionDeviceStats_8java_source.html#l00121">OrionDeviceStats.java:121</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1OrionDeviceStats_html_aa23f2448a9a0320b8f9eba1a08e1ac95"><div class="ttname"><a href="../../d5/d24/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1OrionDeviceStats.html#aa23f2448a9a0320b8f9eba1a08e1ac95">com.fs.starfarer.api.impl.combat.OrionDeviceStats.advanceImpl</a></div><div class="ttdeci">void advanceImpl(float amount, ShipAPI ship, State state, float effectLevel)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d31/OrionDeviceStats_8java_source.html#l00183">OrionDeviceStats.java:183</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1OrionDeviceStats_html_aeed854fdae5349e38336ba70dfab4e01"><div class="ttname"><a href="../../d5/d24/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1OrionDeviceStats.html#aeed854fdae5349e38336ba70dfab4e01">com.fs.starfarer.api.impl.combat.OrionDeviceStats.deployedBomb</a></div><div class="ttdeci">boolean deployedBomb</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d31/OrionDeviceStats_8java_source.html#l00143">OrionDeviceStats.java:143</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab9f2af3c3dce987f439c6ae8e7a409d3" name="ab9f2af3c3dce987f439c6ae8e7a409d3"></a>
@@ -431,217 +381,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d31/OrionDeviceStats_8java_source.html#l00239">239</a> of file <a class="el" href="../../d5/d31/OrionDeviceStats_8java_source.html">OrionDeviceStats.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  240</span>                                                                                      {</div>
-<div class="line"><span class="lineno">  241</span>        </div>
-<div class="line"><span class="lineno">  242</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> BaseEveryFrameCombatPlugin() {</div>
-<div class="line"><span class="lineno">  243</span>            <span class="keywordtype">float</span> elapsed = 0f;</div>
-<div class="line"><span class="lineno">  244</span>            <span class="keywordtype">float</span> impactTime = 0f;</div>
-<div class="line"><span class="lineno">  245</span>            <span class="keywordtype">float</span> brakingTime = 0f;</div>
-<div class="line"><span class="lineno">  246</span>            <span class="keywordtype">float</span> forceAngle;</div>
-<div class="line"><span class="lineno">  247</span>            <span class="keywordtype">float</span> jitterTime = 0f;</div>
-<div class="line"><span class="lineno">  248</span>            <span class="keywordtype">boolean</span> triggered = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  249</span>            <span class="keywordtype">boolean</span> braking = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  250</span>            <span class="keywordtype">boolean</span> done = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  251</span>            </div>
-<div class="line"><span class="lineno">  252</span>            @Override</div>
-<div class="line"><span class="lineno">  253</span>            <span class="keyword">public</span> <span class="keywordtype">void</span> advance(<span class="keywordtype">float</span> amount, List&lt;InputEventAPI&gt; events) {</div>
-<div class="line"><span class="lineno">  254</span>                <span class="keywordflow">if</span> (Global.getCombatEngine().isPaused()) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  255</span>            </div>
-<div class="line"><span class="lineno">  256</span>                elapsed += amount;</div>
-<div class="line"><span class="lineno">  257</span>                </div>
-<div class="line"><span class="lineno">  258</span>                String impactCounterId = <span class="stringliteral">&quot;od_system_counter&quot;</span>;</div>
-<div class="line"><span class="lineno">  259</span>                </div>
-<div class="line"><span class="lineno">  260</span>                <span class="keywordflow">if</span> (bomb.isFizzling()) {</div>
-<div class="line"><span class="lineno">  261</span>                    <span class="keywordflow">if</span> (!triggered) {</div>
-<div class="line"><span class="lineno">  262</span>                        </div>
-<div class="line"><span class="lineno">  263</span>                        <a class="code hl_variable" href="../../d5/d24/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1OrionDeviceStats.html#a88e7018f4026aa02416991f6f980a5ab">pusherState</a>.addImpulse(<a class="code hl_variable" href="../../d5/d24/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1OrionDeviceStats.html#aa8a9e2a5b8778f72047534c568143a46">p</a>.pusherPlateImpulseForce, <a class="code hl_variable" href="../../d5/d24/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1OrionDeviceStats.html#aa8a9e2a5b8778f72047534c568143a46">p</a>.pusherPlateImpulseDuration);</div>
-<div class="line"><span class="lineno">  264</span>                        </div>
-<div class="line"><span class="lineno">  265</span>                        forceAngle = Misc.getAngleInDegrees(bomb.getLocation(), launchSlot.computePosition(ship));</div>
-<div class="line"><span class="lineno">  266</span>                        <span class="keywordtype">float</span> angleToShip = Misc.getAngleInDegrees(bomb.getLocation(), ship.getLocation());</div>
-<div class="line"><span class="lineno">  267</span>                        <span class="keywordflow">if</span> (Misc.getAngleDiff(angleToShip, forceAngle) &gt; 90f) {</div>
-<div class="line"><span class="lineno">  268</span>                            forceAngle += 180f;</div>
-<div class="line"><span class="lineno">  269</span>                        }</div>
-<div class="line"><span class="lineno">  270</span>                        </div>
-<div class="line"><span class="lineno">  271</span>                        <span class="keywordtype">float</span> diff = Misc.getAngleDiff(angleToShip, forceAngle);</div>
-<div class="line"><span class="lineno">  272</span>                        <span class="keywordtype">float</span> turnDir = Misc.getClosestTurnDirection(angleToShip, forceAngle);</div>
-<div class="line"><span class="lineno">  273</span>                        forceAngle = angleToShip + diff * turnDir * 0.2f;</div>
-<div class="line"><span class="lineno">  274</span>                        </div>
-<div class="line"><span class="lineno">  275</span>                        triggered = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  276</span>                        ship.getMutableStats().getDynamic().getMod(impactCounterId).modifyFlat(<span class="stringliteral">&quot;od_launch_&quot;</span> + launchLoc, 1f);</div>
-<div class="line"><span class="lineno">  277</span>                        </div>
-<div class="line"><span class="lineno">  278</span>                        <span class="keywordflow">if</span> (Global.getCombatEngine().getViewport().isNearViewport(ship.getLocation(), 800f)) {</div>
-<div class="line"><span class="lineno">  279</span>                            <span class="keywordtype">float</span> angle = forceAngle + 180f;</div>
-<div class="line"><span class="lineno">  280</span>                            </div>
-<div class="line"><span class="lineno">  281</span>                            <span class="keywordtype">int</span> numParticles = <a class="code hl_variable" href="../../d5/d24/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1OrionDeviceStats.html#aa8a9e2a5b8778f72047534c568143a46">p</a>.shapedExplosionNumParticles;</div>
-<div class="line"><span class="lineno">  282</span>                            <span class="keywordtype">float</span> minSize = <a class="code hl_variable" href="../../d5/d24/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1OrionDeviceStats.html#aa8a9e2a5b8778f72047534c568143a46">p</a>.shapedExplosionMinParticleSize;</div>
-<div class="line"><span class="lineno">  283</span>                            <span class="keywordtype">float</span> maxSize = <a class="code hl_variable" href="../../d5/d24/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1OrionDeviceStats.html#aa8a9e2a5b8778f72047534c568143a46">p</a>.shapedExplosionMaxParticleSize;</div>
-<div class="line"><span class="lineno">  284</span>                            Color pc = <a class="code hl_variable" href="../../d5/d24/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1OrionDeviceStats.html#aa8a9e2a5b8778f72047534c568143a46">p</a>.shapedExplosionColor;</div>
-<div class="line"><span class="lineno">  285</span>                            </div>
-<div class="line"><span class="lineno">  286</span>                            <span class="keywordtype">float</span> minDur = <a class="code hl_variable" href="../../d5/d24/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1OrionDeviceStats.html#aa8a9e2a5b8778f72047534c568143a46">p</a>.shapedExplosionMinParticleDur;</div>
-<div class="line"><span class="lineno">  287</span>                            <span class="keywordtype">float</span> maxDur = <a class="code hl_variable" href="../../d5/d24/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1OrionDeviceStats.html#aa8a9e2a5b8778f72047534c568143a46">p</a>.shapedExplosionMaxParticleDur;</div>
-<div class="line"><span class="lineno">  288</span>                            </div>
-<div class="line"><span class="lineno">  289</span>                            <span class="keywordtype">float</span> arc = <a class="code hl_variable" href="../../d5/d24/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1OrionDeviceStats.html#aa8a9e2a5b8778f72047534c568143a46">p</a>.shapedExplosionArc; </div>
-<div class="line"><span class="lineno">  290</span>                            <span class="keywordtype">float</span> scatter = <a class="code hl_variable" href="../../d5/d24/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1OrionDeviceStats.html#aa8a9e2a5b8778f72047534c568143a46">p</a>.shapedExplosionScatter;</div>
-<div class="line"><span class="lineno">  291</span>                            <span class="keywordtype">float</span> minVel = <a class="code hl_variable" href="../../d5/d24/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1OrionDeviceStats.html#aa8a9e2a5b8778f72047534c568143a46">p</a>.shapedExplosionMinParticleVel;</div>
-<div class="line"><span class="lineno">  292</span>                            <span class="keywordtype">float</span> maxVel = <a class="code hl_variable" href="../../d5/d24/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1OrionDeviceStats.html#aa8a9e2a5b8778f72047534c568143a46">p</a>.shapedExplosionMaxParticleVel;</div>
-<div class="line"><span class="lineno">  293</span>                            </div>
-<div class="line"><span class="lineno">  294</span>                            <span class="keywordtype">float</span> launchOffset = <a class="code hl_variable" href="../../d5/d24/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1OrionDeviceStats.html#aa8a9e2a5b8778f72047534c568143a46">p</a>.shapedExplosionOffset;</div>
-<div class="line"><span class="lineno">  295</span>                            <span class="keywordtype">float</span> endSizeMin = <a class="code hl_variable" href="../../d5/d24/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1OrionDeviceStats.html#aa8a9e2a5b8778f72047534c568143a46">p</a>.shapedExplosionEndSizeMin;</div>
-<div class="line"><span class="lineno">  296</span>                            <span class="keywordtype">float</span> endSizeMax = <a class="code hl_variable" href="../../d5/d24/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1OrionDeviceStats.html#aa8a9e2a5b8778f72047534c568143a46">p</a>.shapedExplosionEndSizeMax;</div>
-<div class="line"><span class="lineno">  297</span>                            </div>
-<div class="line"><span class="lineno">  298</span>                            Vector2f spawnPoint = Misc.getUnitVectorAtDegreeAngle(forceAngle);</div>
-<div class="line"><span class="lineno">  299</span>                            spawnPoint.scale(launchOffset);</div>
-<div class="line"><span class="lineno">  300</span>                            Vector2f.add(bomb.getLocation(), spawnPoint, spawnPoint);</div>
-<div class="line"><span class="lineno">  301</span>                            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; numParticles; i++) {</div>
-<div class="line"><span class="lineno">  302</span>                                <span class="comment">//p.setMaxAge(500 + (int)(Math.random() * 1000f));</span></div>
-<div class="line"><span class="lineno">  303</span>                                <span class="keywordtype">float</span> angleOffset = (float) Math.random();</div>
-<div class="line"><span class="lineno">  304</span>                                <span class="keywordflow">if</span> (angleOffset &gt; 0.2f) {</div>
-<div class="line"><span class="lineno">  305</span>                                    angleOffset *= angleOffset;</div>
-<div class="line"><span class="lineno">  306</span>                                }</div>
-<div class="line"><span class="lineno">  307</span>                                <span class="keywordtype">float</span> speedMult = 1f - angleOffset;</div>
-<div class="line"><span class="lineno">  308</span>                                speedMult = 0.5f + speedMult * 0.5f;</div>
-<div class="line"><span class="lineno">  309</span>                                angleOffset *= Math.signum((<span class="keywordtype">float</span>) Math.random() - 0.5f);</div>
-<div class="line"><span class="lineno">  310</span>                                angleOffset *= arc/2f;</div>
-<div class="line"><span class="lineno">  311</span>                                <span class="keywordtype">float</span> theta = (float) Math.toRadians(angle + angleOffset);</div>
-<div class="line"><span class="lineno">  312</span>                                <span class="keywordtype">float</span> r = (float) (Math.random() * Math.random() * scatter);</div>
-<div class="line"><span class="lineno">  313</span>                                <span class="keywordtype">float</span> x = (float)Math.cos(theta) * r;</div>
-<div class="line"><span class="lineno">  314</span>                                <span class="keywordtype">float</span> y = (float)Math.sin(theta) * r;</div>
-<div class="line"><span class="lineno">  315</span>                                Vector2f pLoc = <span class="keyword">new</span> Vector2f(spawnPoint.x + x, spawnPoint.y + y);</div>
-<div class="line"><span class="lineno">  316</span>    </div>
-<div class="line"><span class="lineno">  317</span>                                <span class="keywordtype">float</span> speed = minVel + (maxVel - minVel) * (<span class="keywordtype">float</span>) Math.random();</div>
-<div class="line"><span class="lineno">  318</span>                                speed *= speedMult;</div>
-<div class="line"><span class="lineno">  319</span>                                </div>
-<div class="line"><span class="lineno">  320</span>                                Vector2f pVel = Misc.getUnitVectorAtDegreeAngle((<span class="keywordtype">float</span>) Math.toDegrees(theta));</div>
-<div class="line"><span class="lineno">  321</span>                                pVel.scale(speed);</div>
-<div class="line"><span class="lineno">  322</span>                                </div>
-<div class="line"><span class="lineno">  323</span>                                <span class="keywordtype">float</span> pSize = minSize + (maxSize - minSize) * (<span class="keywordtype">float</span>) Math.random();</div>
-<div class="line"><span class="lineno">  324</span>                                <span class="keywordtype">float</span> pDur = minDur + (maxDur - minDur) * (<span class="keywordtype">float</span>) Math.random();</div>
-<div class="line"><span class="lineno">  325</span>                                <span class="keywordtype">float</span> endSize = endSizeMin + (endSizeMax - endSizeMin) * (<span class="keywordtype">float</span>) Math.random();</div>
-<div class="line"><span class="lineno">  326</span>                                <span class="comment">//Global.getCombatEngine().addSmoothParticle(pLoc, pVel, pSize, 1f, pDur, pc);</span></div>
-<div class="line"><span class="lineno">  327</span>                                Global.getCombatEngine().addNebulaParticle(pLoc, pVel, pSize, endSize, 0.1f, 0.5f, pDur, pc);</div>
-<div class="line"><span class="lineno">  328</span>                                <span class="comment">//Global.getCombatEngine().addNebulaSmoothParticle(pLoc, pVel, pSize, endSize, 0.1f, 0.5f, pDur, pc);</span></div>
-<div class="line"><span class="lineno">  329</span>                                <span class="comment">//Global.getCombatEngine().addSwirlyNebulaParticle(pLoc, pVel, pSize, endSize, 0.1f, 0.5f, pDur, pc, false);</span></div>
-<div class="line"><span class="lineno">  330</span>                            }</div>
-<div class="line"><span class="lineno">  331</span>                            <span class="comment">//Global.getCombatEngine().setPaused(true);</span></div>
-<div class="line"><span class="lineno">  332</span>                            </div>
-<div class="line"><span class="lineno">  333</span>                            <a class="code hl_function" href="../../d5/d24/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1OrionDeviceStats.html#acbbdf2699c0646354bba1784076b7ae1">notifySpawnedExplosionParticles</a>(bomb.getLocation());</div>
-<div class="line"><span class="lineno">  334</span>                        }</div>
-<div class="line"><span class="lineno">  335</span>                    }</div>
-<div class="line"><span class="lineno">  336</span>                }</div>
-<div class="line"><span class="lineno">  337</span>                </div>
-<div class="line"><span class="lineno">  338</span>                <span class="keywordtype">boolean</span> multipleImpacts = ship.getMutableStats().getDynamic().getMod(impactCounterId).computeEffective(0) &gt; 1;</div>
-<div class="line"><span class="lineno">  339</span>                </div>
-<div class="line"><span class="lineno">  340</span>                String <span class="keywordtype">id</span> = <span class="stringliteral">&quot;od_system_mod&quot;</span>;</div>
-<div class="line"><span class="lineno">  341</span>                ship.getMutableStats().getMaxSpeed().unmodifyFlat(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  342</span>                <span class="comment">//float maxSpeedWithoutBonus = ship.getMaxSpeedWithoutBoost();</span></div>
-<div class="line"><span class="lineno">  343</span>                <span class="keywordtype">float</span> maxSpeedWithoutBonus = ship.getMutableStats().getMaxSpeed().getModifiedValue();</div>
-<div class="line"><span class="lineno">  344</span>                </div>
-<div class="line"><span class="lineno">  345</span><span class="comment">//              if (!triggered) {</span></div>
-<div class="line"><span class="lineno">  346</span><span class="comment">//                  ship.giveCommand(ShipCommand.ACCELERATE, null, 0);</span></div>
-<div class="line"><span class="lineno">  347</span><span class="comment">//              }</span></div>
-<div class="line"><span class="lineno">  348</span>                </div>
-<div class="line"><span class="lineno">  349</span>                <span class="keywordflow">if</span> (triggered) {</div>
-<div class="line"><span class="lineno">  350</span>                    jitterTime += amount;</div>
-<div class="line"><span class="lineno">  351</span>                    <span class="keywordtype">float</span> intensity = bomb.getFlightTime() / bomb.getMaxFlightTime();</div>
-<div class="line"><span class="lineno">  352</span>                    <span class="keywordflow">if</span> (intensity &gt; 1f) intensity = 1f;</div>
-<div class="line"><span class="lineno">  353</span>                    <span class="keywordflow">if</span> (triggered) intensity = 1f;</div>
-<div class="line"><span class="lineno">  354</span>                    <span class="keywordflow">if</span> (braking) { </div>
-<div class="line"><span class="lineno">  355</span>                        intensity = 1f - brakingTime * 2f;</div>
-<div class="line"><span class="lineno">  356</span>                        <span class="keywordflow">if</span> (intensity &lt; 0) intensity = 0;</div>
-<div class="line"><span class="lineno">  357</span>                    }</div>
-<div class="line"><span class="lineno">  358</span>                    <span class="keywordtype">float</span> alt = 1f - (jitterTime / <a class="code hl_variable" href="../../d5/d24/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1OrionDeviceStats.html#aa8a9e2a5b8778f72047534c568143a46">p</a>.maxJitterDur);</div>
-<div class="line"><span class="lineno">  359</span>                    <span class="keywordflow">if</span> (alt &lt; intensity) {</div>
-<div class="line"><span class="lineno">  360</span>                        intensity = Math.max(alt, 0f);</div>
-<div class="line"><span class="lineno">  361</span>                    }</div>
-<div class="line"><span class="lineno">  362</span>                    Color jc = <a class="code hl_variable" href="../../d5/d24/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1OrionDeviceStats.html#aa8a9e2a5b8778f72047534c568143a46">p</a>.jitterColor;</div>
-<div class="line"><span class="lineno">  363</span>                    ship.setJitter(<span class="keyword">this</span>, jc, intensity, 3, 0f, 0f);</div>
-<div class="line"><span class="lineno">  364</span>                }</div>
-<div class="line"><span class="lineno">  365</span>                </div>
-<div class="line"><span class="lineno">  366</span>                <span class="keywordflow">if</span> (triggered &amp;&amp; !braking) {</div>
-<div class="line"><span class="lineno">  367</span>                    impactTime += amount * <a class="code hl_variable" href="../../d5/d24/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1OrionDeviceStats.html#aa8a9e2a5b8778f72047534c568143a46">p</a>.impactRateMult;</div>
-<div class="line"><span class="lineno">  368</span>                    </div>
-<div class="line"><span class="lineno">  369</span>                    <span class="keywordtype">float</span> mag = (1f - impactTime) * (1f - impactTime);</div>
-<div class="line"><span class="lineno">  370</span>                    </div>
-<div class="line"><span class="lineno">  371</span>                    <span class="comment">//mag = (float) Math.sin(impactTime * Math.PI);</span></div>
-<div class="line"><span class="lineno">  372</span>                    <span class="comment">//mag *= mag;</span></div>
-<div class="line"><span class="lineno">  373</span>                    <span class="keywordflow">if</span> (mag &gt; 0) mag = (float) Math.sqrt(mag);</div>
-<div class="line"><span class="lineno">  374</span>                    </div>
-<div class="line"><span class="lineno">  375</span>                    Vector2f forcePoint = launchSlot.computePosition(ship);</div>
-<div class="line"><span class="lineno">  376</span>                    </div>
-<div class="line"><span class="lineno">  377</span>                    <span class="keywordtype">float</span> dirToCenter = Misc.getAngleInDegrees(forcePoint, ship.getLocation());</div>
-<div class="line"><span class="lineno">  378</span>                    <span class="keywordtype">float</span> angleDiff = Misc.getAngleDiff(forceAngle, dirToCenter);</div>
-<div class="line"><span class="lineno">  379</span><span class="comment">//                  if (angleDiff &gt; 180f) { </span></div>
-<div class="line"><span class="lineno">  380</span><span class="comment">//                      angleDiff = 360f - angleDiff;</span></div>
-<div class="line"><span class="lineno">  381</span><span class="comment">//                  }</span></div>
-<div class="line"><span class="lineno">  382</span>                    </div>
-<div class="line"><span class="lineno">  383</span>                    <span class="keywordtype">float</span> totalAccel = <a class="code hl_variable" href="../../d5/d24/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1OrionDeviceStats.html#aa8a9e2a5b8778f72047534c568143a46">p</a>.impactAccel;</div>
-<div class="line"><span class="lineno">  384</span>                    <span class="keywordtype">float</span> portionAppliedToAngularVelocity = angleDiff * 1f / 90f;</div>
-<div class="line"><span class="lineno">  385</span>                    <span class="keywordflow">if</span> (portionAppliedToAngularVelocity &gt; 1f) portionAppliedToAngularVelocity = 1f;</div>
-<div class="line"><span class="lineno">  386</span>                    </div>
-<div class="line"><span class="lineno">  387</span>                    Vector2f acc = Misc.getUnitVectorAtDegreeAngle(forceAngle);</div>
-<div class="line"><span class="lineno">  388</span>                    acc.scale(totalAccel * (1f - portionAppliedToAngularVelocity * 0.2f));</div>
-<div class="line"><span class="lineno">  389</span>                    acc.scale(mag * amount);</div>
-<div class="line"><span class="lineno">  390</span>                    </div>
-<div class="line"><span class="lineno">  391</span>                    Vector2f.add(ship.getVelocity(), acc, ship.getVelocity());</div>
-<div class="line"><span class="lineno">  392</span>                    </div>
-<div class="line"><span class="lineno">  393</span>                    <span class="keywordtype">float</span> angVelChange = portionAppliedToAngularVelocity * ship.getMaxTurnRate() * 0.25f;</div>
-<div class="line"><span class="lineno">  394</span>                    angVelChange *= mag;</div>
-<div class="line"><span class="lineno">  395</span>                    angVelChange *= Misc.getClosestTurnDirection(forceAngle, dirToCenter);</div>
-<div class="line"><span class="lineno">  396</span>                    ship.setAngularVelocity(ship.getAngularVelocity() + angVelChange * amount);</div>
-<div class="line"><span class="lineno">  397</span>                    </div>
-<div class="line"><span class="lineno">  398</span>                    <span class="keywordtype">float</span> maxSpeedBoost = 1000f * Math.max(0f, (1f - portionAppliedToAngularVelocity) * 0.5f);</div>
-<div class="line"><span class="lineno">  399</span>                    </div>
-<div class="line"><span class="lineno">  400</span>                    <span class="keywordflow">if</span> (maxSpeedBoost &gt; 0) {</div>
-<div class="line"><span class="lineno">  401</span>                        ship.getMutableStats().getMaxSpeed().modifyFlat(<span class="keywordtype">id</span>, maxSpeedBoost);</div>
-<div class="line"><span class="lineno">  402</span>                    } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  403</span>                        ship.getMutableStats().getMaxSpeed().unmodifyFlat(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  404</span>                    }</div>
-<div class="line"><span class="lineno">  405</span>                    ship.getMutableStats().getDeceleration().modifyFlat(<span class="keywordtype">id</span>, 1f * Math.max(maxSpeedWithoutBonus, ship.getVelocity().length() - maxSpeedWithoutBonus));</div>
-<div class="line"><span class="lineno">  406</span>                    <span class="comment">//ship.getMutableStats().getTurnAcceleration().modifyFlat(id, 100f * (1f - mag));</span></div>
-<div class="line"><span class="lineno">  407</span>                    <span class="comment">//ship.giveCommand(ShipCommand.ACCELERATE, null, 0);</span></div>
-<div class="line"><span class="lineno">  408</span>                    ship.blockCommandForOneFrame(ShipCommand.ACCELERATE);</div>
-<div class="line"><span class="lineno">  409</span>                    ship.blockCommandForOneFrame(ShipCommand.ACCELERATE_BACKWARDS);</div>
-<div class="line"><span class="lineno">  410</span>                    ship.giveCommand(ShipCommand.DECELERATE, <span class="keyword">null</span>, 0);</div>
-<div class="line"><span class="lineno">  411</span>                    <span class="comment">//ship.getEngineController().forceShowAccelerating();</span></div>
-<div class="line"><span class="lineno">  412</span>                    <span class="keywordflow">if</span> (impactTime &gt;= 1f) {</div>
-<div class="line"><span class="lineno">  413</span>                        braking = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  414</span>                        <span class="comment">//ship.getMutableStats().getTurnAcceleration().unmodify(id);</span></div>
-<div class="line"><span class="lineno">  415</span>                        ship.getMutableStats().getMaxSpeed().unmodify(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  416</span>                    }</div>
-<div class="line"><span class="lineno">  417</span>                }</div>
-<div class="line"><span class="lineno">  418</span>                </div>
-<div class="line"><span class="lineno">  419</span>                <span class="keywordflow">if</span> (braking) {</div>
-<div class="line"><span class="lineno">  420</span>                    <span class="keywordflow">if</span> (!multipleImpacts) {</div>
-<div class="line"><span class="lineno">  421</span>                        ship.getMutableStats().getDeceleration().modifyFlat(<span class="keywordtype">id</span>, 2f * Math.max(maxSpeedWithoutBonus, ship.getVelocity().length() - maxSpeedWithoutBonus));</div>
-<div class="line"><span class="lineno">  422</span>                        <span class="comment">//ship.giveCommand(ShipCommand.ACCELERATE, null, 0);</span></div>
-<div class="line"><span class="lineno">  423</span>                        ship.blockCommandForOneFrame(ShipCommand.ACCELERATE);</div>
-<div class="line"><span class="lineno">  424</span>                        ship.blockCommandForOneFrame(ShipCommand.ACCELERATE_BACKWARDS);</div>
-<div class="line"><span class="lineno">  425</span>                        ship.giveCommand(ShipCommand.DECELERATE, <span class="keyword">null</span>, 0);</div>
-<div class="line"><span class="lineno">  426</span>                        <span class="comment">//ship.getEngineController().forceShowAccelerating();</span></div>
-<div class="line"><span class="lineno">  427</span>                    }</div>
-<div class="line"><span class="lineno">  428</span>                    brakingTime += amount;</div>
-<div class="line"><span class="lineno">  429</span>                    <span class="keywordtype">float</span> threshold = 3f;</div>
-<div class="line"><span class="lineno">  430</span>                    <span class="keywordflow">if</span> (multipleImpacts) threshold = 0.1f;</div>
-<div class="line"><span class="lineno">  431</span>                    <span class="keywordflow">if</span> (brakingTime &gt;= threshold || ship.getVelocity().length() &lt;= maxSpeedWithoutBonus) {</div>
-<div class="line"><span class="lineno">  432</span>                        done = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  433</span>                    }</div>
-<div class="line"><span class="lineno">  434</span>                }</div>
-<div class="line"><span class="lineno">  435</span>                </div>
-<div class="line"><span class="lineno">  436</span>                </div>
-<div class="line"><span class="lineno">  437</span>                <span class="keywordflow">if</span> ((!triggered &amp;&amp; elapsed &gt; 1f) || done) {</div>
-<div class="line"><span class="lineno">  438</span>                    Global.getCombatEngine().removePlugin(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  439</span>                    </div>
-<div class="line"><span class="lineno">  440</span>                    ship.getMutableStats().getDeceleration().unmodify(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  441</span>                    <span class="comment">//ship.getMutableStats().getTurnAcceleration().unmodify(id);</span></div>
-<div class="line"><span class="lineno">  442</span>                    ship.getMutableStats().getMaxSpeed().unmodify(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  443</span>                    </div>
-<div class="line"><span class="lineno">  444</span>                    ship.getMutableStats().getDynamic().getMod(impactCounterId).unmodifyFlat(<span class="stringliteral">&quot;od_launch_&quot;</span> + launchLoc);</div>
-<div class="line"><span class="lineno">  445</span>                }</div>
-<div class="line"><span class="lineno">  446</span>            }</div>
-<div class="line"><span class="lineno">  447</span>        };</div>
-<div class="line"><span class="lineno">  448</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1OrionDeviceStats_html_acbbdf2699c0646354bba1784076b7ae1"><div class="ttname"><a href="../../d5/d24/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1OrionDeviceStats.html#acbbdf2699c0646354bba1784076b7ae1">com.fs.starfarer.api.impl.combat.OrionDeviceStats.notifySpawnedExplosionParticles</a></div><div class="ttdeci">void notifySpawnedExplosionParticles(Vector2f bombLoc)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d31/OrionDeviceStats_8java_source.html#l00235">OrionDeviceStats.java:235</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a235dd7487be6e4381faf68250e706daa" name="a235dd7487be6e4381faf68250e706daa"></a>
@@ -673,13 +413,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseShipSystemScript.html#a2def38e794e68628fbd36c90dc210018">com.fs.starfarer.api.impl.combat.BaseShipSystemScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d31/OrionDeviceStats_8java_source.html#l00452">452</a> of file <a class="el" href="../../d5/d31/OrionDeviceStats_8java_source.html">OrionDeviceStats.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  452</span>                                                                {</div>
-<div class="line"><span class="lineno">  453</span>        <span class="keywordflow">if</span> (ship.getEngineController().isFlamedOut() || ship.getEngineController().isFlamingOut()) {</div>
-<div class="line"><span class="lineno">  454</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  455</span>        }</div>
-<div class="line"><span class="lineno">  456</span>        <span class="keywordflow">return</span> super.isUsable(system, ship);</div>
-<div class="line"><span class="lineno">  457</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="acbbdf2699c0646354bba1784076b7ae1" name="acbbdf2699c0646354bba1784076b7ae1"></a>
@@ -709,10 +443,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../dc/d74/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1NovaBurstStats.html#a3fa3d26f1212afa9377de7f2ff9e8b33">com.fs.starfarer.api.impl.combat.NovaBurstStats</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d31/OrionDeviceStats_8java_source.html#l00235">235</a> of file <a class="el" href="../../d5/d31/OrionDeviceStats_8java_source.html">OrionDeviceStats.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  235</span>                                                                     {</div>
-<div class="line"><span class="lineno">  236</span>        </div>
-<div class="line"><span class="lineno">  237</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a547ad58a9d96dc13a3fa5682ae438537" name="a547ad58a9d96dc13a3fa5682ae438537"></a>
@@ -740,19 +471,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d31/OrionDeviceStats_8java_source.html#l00130">130</a> of file <a class="el" href="../../d5/d31/OrionDeviceStats_8java_source.html">OrionDeviceStats.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  130</span>                                         {</div>
-<div class="line"><span class="lineno">  131</span>        <span class="keywordflow">if</span> (ship == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  132</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="../../d5/d24/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1OrionDeviceStats.html#aa8a9e2a5b8778f72047534c568143a46">p</a>.recolorTowardsEngineColor) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  133</span>        </div>
-<div class="line"><span class="lineno">  134</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d5/d24/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1OrionDeviceStats.html#a8caca843a2ce72a6874e9a74310b2404">orig</a> == <span class="keyword">null</span>) <a class="code hl_variable" href="../../d5/d24/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1OrionDeviceStats.html#a8caca843a2ce72a6874e9a74310b2404">orig</a> = <a class="code hl_variable" href="../../d5/d24/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1OrionDeviceStats.html#aa8a9e2a5b8778f72047534c568143a46">p</a>.shapedExplosionColor;</div>
-<div class="line"><span class="lineno">  135</span>        </div>
-<div class="line"><span class="lineno">  136</span>        Color curr = ship.getEngineController().getFlameColorShifter().getCurr();</div>
-<div class="line"><span class="lineno">  137</span>        </div>
-<div class="line"><span class="lineno">  138</span>        p.shapedExplosionColor = Misc.interpolateColor(<a class="code hl_variable" href="../../d5/d24/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1OrionDeviceStats.html#a8caca843a2ce72a6874e9a74310b2404">orig</a>, curr, 0.75f);</div>
-<div class="line"><span class="lineno">  139</span>        p.shapedExplosionColor = Misc.setAlpha(<a class="code hl_variable" href="../../d5/d24/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1OrionDeviceStats.html#aa8a9e2a5b8778f72047534c568143a46">p</a>.shapedExplosionColor, <a class="code hl_variable" href="../../d5/d24/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1OrionDeviceStats.html#a8caca843a2ce72a6874e9a74310b2404">orig</a>.getAlpha());</div>
-<div class="line"><span class="lineno">  140</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1OrionDeviceStats_html_a8caca843a2ce72a6874e9a74310b2404"><div class="ttname"><a href="../../d5/d24/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1OrionDeviceStats.html#a8caca843a2ce72a6874e9a74310b2404">com.fs.starfarer.api.impl.combat.OrionDeviceStats.orig</a></div><div class="ttdeci">Color orig</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d31/OrionDeviceStats_8java_source.html#l00129">OrionDeviceStats.java:129</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a01db937d48f55d796c91f5e8de2d64d2" name="a01db937d48f55d796c91f5e8de2d64d2"></a>
@@ -782,51 +501,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d31/OrionDeviceStats_8java_source.html#l00191">191</a> of file <a class="el" href="../../d5/d31/OrionDeviceStats_8java_source.html">OrionDeviceStats.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  191</span>                                                              {</div>
-<div class="line"><span class="lineno">  192</span>        CombatEngineAPI engine = Global.getCombatEngine();</div>
-<div class="line"><span class="lineno">  193</span>        Vector2f loc = slot.computePosition(source);</div>
-<div class="line"><span class="lineno">  194</span>        <span class="keywordtype">float</span> angle = slot.computeMidArcAngle(source);</div>
-<div class="line"><span class="lineno">  195</span>        </div>
-<div class="line"><span class="lineno">  196</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d5/d24/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1OrionDeviceStats.html#a88e7018f4026aa02416991f6f980a5ab">pusherState</a>.compression &gt; 0) {</div>
-<div class="line"><span class="lineno">  197</span>            Vector2f offset = <span class="keyword">new</span> Vector2f(<a class="code hl_variable" href="../../d5/d24/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1OrionDeviceStats.html#aa8a9e2a5b8778f72047534c568143a46">p</a>.pusherPlateMaxOffset, 0f);</div>
-<div class="line"><span class="lineno">  198</span>            offset.scale(<a class="code hl_variable" href="../../d5/d24/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1OrionDeviceStats.html#a88e7018f4026aa02416991f6f980a5ab">pusherState</a>.compression);</div>
-<div class="line"><span class="lineno">  199</span>            offset = Misc.rotateAroundOrigin(offset, source.getFacing());</div>
-<div class="line"><span class="lineno">  200</span>            Vector2f.add(loc, offset, loc);</div>
-<div class="line"><span class="lineno">  201</span>        }</div>
-<div class="line"><span class="lineno">  202</span>        </div>
-<div class="line"><span class="lineno">  203</span>        MissileAPI bomb = (MissileAPI) engine.spawnProjectile(source, <span class="keyword">null</span>, </div>
-<div class="line"><span class="lineno">  204</span>                                                              <a class="code hl_variable" href="../../d5/d24/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1OrionDeviceStats.html#aa8a9e2a5b8778f72047534c568143a46">p</a>.bombWeaponId, </div>
-<div class="line"><span class="lineno">  205</span>                                                              loc, </div>
-<div class="line"><span class="lineno">  206</span>                                                              angle, source.getVelocity());</div>
-<div class="line"><span class="lineno">  207</span>        <span class="keywordflow">if</span> (source != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  208</span>            Global.getCombatEngine().applyDamageModifiersToSpawnedProjectileWithNullWeapon(</div>
-<div class="line"><span class="lineno">  209</span>                                            source, WeaponType.MISSILE, <span class="keyword">false</span>, bomb.getDamage());</div>
-<div class="line"><span class="lineno">  210</span>        }</div>
-<div class="line"><span class="lineno">  211</span>        </div>
-<div class="line"><span class="lineno">  212</span>        <span class="keywordtype">float</span> fadeInTime = <a class="code hl_variable" href="../../d5/d24/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1OrionDeviceStats.html#aa8a9e2a5b8778f72047534c568143a46">p</a>.bombFadeInTime;</div>
-<div class="line"><span class="lineno">  213</span>        Vector2f inheritedVel = <span class="keyword">new</span> Vector2f(source.getVelocity());</div>
-<div class="line"><span class="lineno">  214</span>        inheritedVel.scale(<a class="code hl_variable" href="../../d5/d24/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1OrionDeviceStats.html#aa8a9e2a5b8778f72047534c568143a46">p</a>.bombInheritedVelocityFraction);</div>
-<div class="line"><span class="lineno">  215</span>        <span class="keywordtype">float</span> speed = <a class="code hl_variable" href="../../d5/d24/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1OrionDeviceStats.html#aa8a9e2a5b8778f72047534c568143a46">p</a>.bombSpeed;</div>
-<div class="line"><span class="lineno">  216</span>        </div>
-<div class="line"><span class="lineno">  217</span>        Vector2f vel = Misc.getUnitVectorAtDegreeAngle(angle);</div>
-<div class="line"><span class="lineno">  218</span>        vel.scale(speed);</div>
-<div class="line"><span class="lineno">  219</span>        Vector2f.add(vel, inheritedVel, vel);</div>
-<div class="line"><span class="lineno">  220</span>        bomb.getVelocity().set(vel);</div>
-<div class="line"><span class="lineno">  221</span>        bomb.fadeOutThenIn(fadeInTime);</div>
-<div class="line"><span class="lineno">  222</span>        </div>
-<div class="line"><span class="lineno">  223</span>        bomb.setCollisionClass(CollisionClass.NONE);</div>
-<div class="line"><span class="lineno">  224</span>        bomb.setEmpResistance(1000);</div>
-<div class="line"><span class="lineno">  225</span>        bomb.setEccmChanceOverride(1f);</div>
-<div class="line"><span class="lineno">  226</span>        </div>
-<div class="line"><span class="lineno">  227</span>        </div>
-<div class="line"><span class="lineno">  228</span>        <span class="keywordtype">float</span> liveTime = <a class="code hl_variable" href="../../d5/d24/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1OrionDeviceStats.html#aa8a9e2a5b8778f72047534c568143a46">p</a>.bombLiveTime;</div>
-<div class="line"><span class="lineno">  229</span>        bomb.setMaxFlightTime(liveTime);</div>
-<div class="line"><span class="lineno">  230</span>        </div>
-<div class="line"><span class="lineno">  231</span> </div>
-<div class="line"><span class="lineno">  232</span>        Global.getCombatEngine().addPlugin(<a class="code hl_function" href="../../d5/d24/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1OrionDeviceStats.html#ab9f2af3c3dce987f439c6ae8e7a409d3">createBombImpactPlugin</a>(source, slot, bomb, loc, angle));</div>
-<div class="line"><span class="lineno">  233</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1OrionDeviceStats_html_ab9f2af3c3dce987f439c6ae8e7a409d3"><div class="ttname"><a href="../../d5/d24/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1OrionDeviceStats.html#ab9f2af3c3dce987f439c6ae8e7a409d3">com.fs.starfarer.api.impl.combat.OrionDeviceStats.createBombImpactPlugin</a></div><div class="ttdeci">EveryFrameCombatPlugin createBombImpactPlugin(final ShipAPI ship, final WeaponSlotAPI launchSlot, final MissileAPI bomb, final Vector2f launchLoc, final float launchAngle)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d31/OrionDeviceStats_8java_source.html#l00239">OrionDeviceStats.java:239</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a0bca782530e36f8f37e1a5dd3860889e" name="a0bca782530e36f8f37e1a5dd3860889e"></a>
@@ -858,9 +533,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseShipSystemScript.html#a020712b9bb37e9ece4fbfd4c865c4037">com.fs.starfarer.api.impl.combat.BaseShipSystemScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d31/OrionDeviceStats_8java_source.html#l00188">188</a> of file <a class="el" href="../../d5/d31/OrionDeviceStats_8java_source.html">OrionDeviceStats.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  188</span>                                                              {</div>
-<div class="line"><span class="lineno">  189</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

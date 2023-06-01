@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -282,119 +283,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBountyCreator.html#a8102762c41812bbc953e75036d8e74f9">com.fs.starfarer.api.impl.campaign.missions.cb.BaseCustomBountyCreator</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/dd0/CBPather_8java_source.html#l00029">29</a> of file <a class="el" href="../../da/dd0/CBPather_8java_source.html">CBPather.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   29</span>                                                                                                                                  {</div>
-<div class="line"><span class="lineno">   30</span>        CustomBountyData data = <span class="keyword">new</span> CustomBountyData();</div>
-<div class="line"><span class="lineno">   31</span>        data.difficulty = difficulty;</div>
-<div class="line"><span class="lineno">   32</span>        </div>
-<div class="line"><span class="lineno">   33</span><span class="comment">//      if (difficulty &gt;= 4) {</span></div>
-<div class="line"><span class="lineno">   34</span><span class="comment">//          mission.requireSystemTags(ReqMode.ANY, Tags.THEME_RUINS, Tags.THEME_MISC, Tags.THEME_REMNANT_SECONDARY,</span></div>
-<div class="line"><span class="lineno">   35</span><span class="comment">//                                    Tags.THEME_DERELICT, Tags.THEME_REMNANT_DESTROYED);</span></div>
-<div class="line"><span class="lineno">   36</span><span class="comment">//      } else {</span></div>
-<div class="line"><span class="lineno">   37</span><span class="comment">//          mission.requireSystemTags(ReqMode.ANY, Tags.THEME_RUINS, Tags.THEME_MISC,</span></div>
-<div class="line"><span class="lineno">   38</span><span class="comment">//                                    Tags.THEME_DERELICT);</span></div>
-<div class="line"><span class="lineno">   39</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">   40</span>        mission.requireSystemInterestingAndNotUnsafeOrCore();</div>
-<div class="line"><span class="lineno">   41</span>        mission.requireSystemNotHasPulsar();</div>
-<div class="line"><span class="lineno">   42</span>        <span class="keywordflow">if</span> (difficulty &gt;= 4 &amp;&amp; mission.rollProbability(<a class="code hl_variable" href="../../df/d4d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CBPather.html#a8101d68f8b66eaa57b1fbfd8d90f12a5">PROB_IN_SYSTEM_WITH_BASE</a>)) {</div>
-<div class="line"><span class="lineno">   43</span>            mission.preferSystemHasBase(Factions.LUDDIC_PATH);</div>
-<div class="line"><span class="lineno">   44</span>        }</div>
-<div class="line"><span class="lineno">   45</span>        StarSystemAPI system = mission.pickSystem();</div>
-<div class="line"><span class="lineno">   46</span>        data.system = system;</div>
-<div class="line"><span class="lineno">   47</span>    </div>
-<div class="line"><span class="lineno">   48</span>        FleetSize size = FleetSize.MEDIUM;</div>
-<div class="line"><span class="lineno">   49</span>        FleetQuality quality = FleetQuality.DEFAULT;</div>
-<div class="line"><span class="lineno">   50</span>        String type = FleetTypes.PATROL_MEDIUM;</div>
-<div class="line"><span class="lineno">   51</span>        OfficerQuality oQuality = OfficerQuality.DEFAULT;</div>
-<div class="line"><span class="lineno">   52</span>        OfficerNum oNum = OfficerNum.DEFAULT;</div>
-<div class="line"><span class="lineno">   53</span>        </div>
-<div class="line"><span class="lineno">   54</span>        String factionId = Factions.LUDDIC_PATH;</div>
-<div class="line"><span class="lineno">   55</span>        </div>
-<div class="line"><span class="lineno">   56</span>        <span class="keywordflow">if</span> (difficulty &lt;= 0) {</div>
-<div class="line"><span class="lineno">   57</span>            size = FleetSize.TINY;</div>
-<div class="line"><span class="lineno">   58</span>            quality = FleetQuality.VERY_LOW;</div>
-<div class="line"><span class="lineno">   59</span>            oQuality = OfficerQuality.LOWER;</div>
-<div class="line"><span class="lineno">   60</span>            oNum = OfficerNum.FC_ONLY;</div>
-<div class="line"><span class="lineno">   61</span>            type = FleetTypes.PATROL_SMALL;</div>
-<div class="line"><span class="lineno">   62</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (difficulty == 1) {</div>
-<div class="line"><span class="lineno">   63</span>            size = FleetSize.VERY_SMALL;</div>
-<div class="line"><span class="lineno">   64</span>            quality = FleetQuality.VERY_LOW;</div>
-<div class="line"><span class="lineno">   65</span>            oQuality = OfficerQuality.LOWER;</div>
-<div class="line"><span class="lineno">   66</span>            oNum = OfficerNum.FC_ONLY;</div>
-<div class="line"><span class="lineno">   67</span>            type = FleetTypes.PATROL_SMALL;</div>
-<div class="line"><span class="lineno">   68</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (difficulty == 2) {</div>
-<div class="line"><span class="lineno">   69</span>            size = FleetSize.SMALL;</div>
-<div class="line"><span class="lineno">   70</span>            quality = FleetQuality.DEFAULT;</div>
-<div class="line"><span class="lineno">   71</span>            oQuality = OfficerQuality.LOWER;</div>
-<div class="line"><span class="lineno">   72</span>            oNum = OfficerNum.FEWER;</div>
-<div class="line"><span class="lineno">   73</span>            type = FleetTypes.PATROL_SMALL;</div>
-<div class="line"><span class="lineno">   74</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (difficulty == 3) {</div>
-<div class="line"><span class="lineno">   75</span>            size = FleetSize.SMALL;</div>
-<div class="line"><span class="lineno">   76</span>            quality = FleetQuality.DEFAULT;</div>
-<div class="line"><span class="lineno">   77</span>            oQuality = OfficerQuality.DEFAULT;</div>
-<div class="line"><span class="lineno">   78</span>            oNum = OfficerNum.DEFAULT;</div>
-<div class="line"><span class="lineno">   79</span>            type = FleetTypes.PATROL_MEDIUM;</div>
-<div class="line"><span class="lineno">   80</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (difficulty == 4 || difficulty == 5) {</div>
-<div class="line"><span class="lineno">   81</span>            size = FleetSize.MEDIUM;</div>
-<div class="line"><span class="lineno">   82</span>            quality = FleetQuality.DEFAULT;</div>
-<div class="line"><span class="lineno">   83</span>            oQuality = OfficerQuality.DEFAULT;</div>
-<div class="line"><span class="lineno">   84</span>            oNum = OfficerNum.DEFAULT;</div>
-<div class="line"><span class="lineno">   85</span>            type = FleetTypes.PATROL_MEDIUM;</div>
-<div class="line"><span class="lineno">   86</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (difficulty == 6) {</div>
-<div class="line"><span class="lineno">   87</span>            size = FleetSize.LARGE;</div>
-<div class="line"><span class="lineno">   88</span>            quality = FleetQuality.DEFAULT;</div>
-<div class="line"><span class="lineno">   89</span>            oQuality = OfficerQuality.DEFAULT;</div>
-<div class="line"><span class="lineno">   90</span>            oNum = OfficerNum.DEFAULT;</div>
-<div class="line"><span class="lineno">   91</span>            type = FleetTypes.PATROL_LARGE;</div>
-<div class="line"><span class="lineno">   92</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (difficulty == 7) {</div>
-<div class="line"><span class="lineno">   93</span>            size = FleetSize.LARGE;</div>
-<div class="line"><span class="lineno">   94</span>            quality = FleetQuality.HIGHER;</div>
-<div class="line"><span class="lineno">   95</span>            oQuality = OfficerQuality.DEFAULT;</div>
-<div class="line"><span class="lineno">   96</span>            oNum = OfficerNum.MORE;</div>
-<div class="line"><span class="lineno">   97</span>            type = FleetTypes.PATROL_LARGE;</div>
-<div class="line"><span class="lineno">   98</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (difficulty == 8) {</div>
-<div class="line"><span class="lineno">   99</span>            size = FleetSize.VERY_LARGE;</div>
-<div class="line"><span class="lineno">  100</span>            quality = FleetQuality.HIGHER;</div>
-<div class="line"><span class="lineno">  101</span>            oQuality = OfficerQuality.DEFAULT;</div>
-<div class="line"><span class="lineno">  102</span>            oNum = OfficerNum.MORE;</div>
-<div class="line"><span class="lineno">  103</span>            type = FleetTypes.PATROL_LARGE;</div>
-<div class="line"><span class="lineno">  104</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (difficulty == 9) {</div>
-<div class="line"><span class="lineno">  105</span>            size = FleetSize.HUGE;</div>
-<div class="line"><span class="lineno">  106</span>            quality = FleetQuality.HIGHER;</div>
-<div class="line"><span class="lineno">  107</span>            oQuality = OfficerQuality.HIGHER;</div>
-<div class="line"><span class="lineno">  108</span>            oNum = OfficerNum.MORE;</div>
-<div class="line"><span class="lineno">  109</span>            type = FleetTypes.PATROL_LARGE;</div>
-<div class="line"><span class="lineno">  110</span>        } <span class="keywordflow">else</span> {<span class="comment">// if (difficulty == 10) {</span></div>
-<div class="line"><span class="lineno">  111</span>            size = FleetSize.MAXIMUM;</div>
-<div class="line"><span class="lineno">  112</span>            quality = FleetQuality.HIGHER;</div>
-<div class="line"><span class="lineno">  113</span>            oQuality = OfficerQuality.HIGHER;</div>
-<div class="line"><span class="lineno">  114</span>            <span class="comment">//oNum = OfficerNum.ALL_SHIPS;</span></div>
-<div class="line"><span class="lineno">  115</span>            oNum = OfficerNum.MORE;</div>
-<div class="line"><span class="lineno">  116</span>            type = FleetTypes.PATROL_LARGE;</div>
-<div class="line"><span class="lineno">  117</span>        }</div>
-<div class="line"><span class="lineno">  118</span>        </div>
-<div class="line"><span class="lineno">  119</span>        <a class="code hl_function" href="../../d2/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBountyCreator.html#aaab6ac0e3b19aed7b02e6e921f9b2ca8">beginFleet</a>(mission, data);</div>
-<div class="line"><span class="lineno">  120</span>        mission.triggerCreateFleet(size, quality, factionId, type, data.system);</div>
-<div class="line"><span class="lineno">  121</span>        mission.triggerSetFleetOfficers(oNum, oQuality);</div>
-<div class="line"><span class="lineno">  122</span>        mission.triggerFleetPatherNoDefaultTithe();</div>
-<div class="line"><span class="lineno">  123</span>        mission.triggerAutoAdjustFleetSize(size, size.next());</div>
-<div class="line"><span class="lineno">  124</span>        mission.triggerSetStandardAggroPirateFlags();</div>
-<div class="line"><span class="lineno">  125</span>        mission.triggerPickLocationAtInSystemJumpPoint(data.system);</div>
-<div class="line"><span class="lineno">  126</span>        mission.triggerSpawnFleetAtPickedLocation(<span class="keyword">null</span>, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  127</span>        <span class="comment">//mission.triggerOrderFleetPatrol(data.system);</span></div>
-<div class="line"><span class="lineno">  128</span>        mission.triggerOrderFleetPatrol(data.system, <span class="keyword">true</span>, Tags.JUMP_POINT, Tags.SALVAGEABLE, Tags.PLANET, Tags.STATION);</div>
-<div class="line"><span class="lineno">  129</span>        data.fleet = <a class="code hl_function" href="../../d2/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBountyCreator.html#ae30bb83bcc3961a3bcd60d247ba7a44e">createFleet</a>(mission, data);</div>
-<div class="line"><span class="lineno">  130</span>        <span class="keywordflow">if</span> (data.fleet == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  131</span>        </div>
-<div class="line"><span class="lineno">  132</span>        <a class="code hl_function" href="../../d2/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBountyCreator.html#a46b26283774f9810f92ab40ea58ca02a">setRepChangesBasedOnDifficulty</a>(data, difficulty);</div>
-<div class="line"><span class="lineno">  133</span>        data.baseReward = CBStats.getBaseBounty(difficulty, CBStats.PATHER_MULT, mission);</div>
-<div class="line"><span class="lineno">  134</span>        </div>
-<div class="line"><span class="lineno">  135</span>        <span class="keywordflow">return</span> data;</div>
-<div class="line"><span class="lineno">  136</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBountyCreator_html_a46b26283774f9810f92ab40ea58ca02a"><div class="ttname"><a href="../../d2/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBountyCreator.html#a46b26283774f9810f92ab40ea58ca02a">com.fs.starfarer.api.impl.campaign.missions.cb.BaseCustomBountyCreator.setRepChangesBasedOnDifficulty</a></div><div class="ttdeci">void setRepChangesBasedOnDifficulty(CustomBountyData data, int difficulty)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/db7/BaseCustomBountyCreator_8java_source.html#l00312">BaseCustomBountyCreator.java:312</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBountyCreator_html_aaab6ac0e3b19aed7b02e6e921f9b2ca8"><div class="ttname"><a href="../../d2/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBountyCreator.html#aaab6ac0e3b19aed7b02e6e921f9b2ca8">com.fs.starfarer.api.impl.campaign.missions.cb.BaseCustomBountyCreator.beginFleet</a></div><div class="ttdeci">void beginFleet(HubMissionWithBarEvent mission, CustomBountyData data)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/db7/BaseCustomBountyCreator_8java_source.html#l00225">BaseCustomBountyCreator.java:225</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBountyCreator_html_ae30bb83bcc3961a3bcd60d247ba7a44e"><div class="ttname"><a href="../../d2/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBountyCreator.html#ae30bb83bcc3961a3bcd60d247ba7a44e">com.fs.starfarer.api.impl.campaign.missions.cb.BaseCustomBountyCreator.createFleet</a></div><div class="ttdeci">CampaignFleetAPI createFleet(HubMissionWithBarEvent mission, CustomBountyData data)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/db7/BaseCustomBountyCreator_8java_source.html#l00229">BaseCustomBountyCreator.java:229</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CBPather_html_a8101d68f8b66eaa57b1fbfd8d90f12a5"><div class="ttname"><a href="../../df/d4d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CBPather.html#a8101d68f8b66eaa57b1fbfd8d90f12a5">com.fs.starfarer.api.impl.campaign.missions.cb.CBPather.PROB_IN_SYSTEM_WITH_BASE</a></div><div class="ttdeci">static float PROB_IN_SYSTEM_WITH_BASE</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dd0/CBPather_8java_source.html#l00016">CBPather.java:16</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af87e6eb3b1f0ce0b48e734c1a61841fa" name="af87e6eb3b1f0ce0b48e734c1a61841fa"></a>
@@ -426,10 +315,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBountyCreator.html#a7729b5908a09e6f8caed631cbe2b9a24">com.fs.starfarer.api.impl.campaign.missions.cb.BaseCustomBountyCreator</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/dd0/CBPather_8java_source.html#l00024">24</a> of file <a class="el" href="../../da/dd0/CBPather_8java_source.html">CBPather.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   24</span>                                                                                              {</div>
-<div class="line"><span class="lineno">   25</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot; - Pather&quot;</span>;</div>
-<div class="line"><span class="lineno">   26</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a39667a11e0e51944eca3b840dc7adbae" name="a39667a11e0e51944eca3b840dc7adbae"></a>
@@ -461,11 +347,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBountyCreator.html#ac9908c47a53d64bf94559e9ea7879d34">com.fs.starfarer.api.impl.campaign.missions.cb.BaseCustomBountyCreator</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/dd0/CBPather_8java_source.html#l00019">19</a> of file <a class="el" href="../../da/dd0/CBPather_8java_source.html">CBPather.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   19</span>                                                                              {</div>
-<div class="line"><span class="lineno">   20</span>        <span class="keywordflow">if</span> (Factions.LUDDIC_PATH.equals(mission.getPerson().getFaction().getId())) <span class="keywordflow">return</span> 0f;</div>
-<div class="line"><span class="lineno">   21</span>        <span class="keywordflow">return</span> super.getFrequency(mission, difficulty) * CBStats.PATHER_FREQ;</div>
-<div class="line"><span class="lineno">   22</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

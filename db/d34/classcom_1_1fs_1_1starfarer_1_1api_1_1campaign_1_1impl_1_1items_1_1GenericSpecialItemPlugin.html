@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -250,30 +251,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d7e/GenericSpecialItemPlugin_8java_source.html#l00021">21</a> of file <a class="el" href="../../dd/d7e/GenericSpecialItemPlugin_8java_source.html">GenericSpecialItemPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   21</span>                                                                             {</div>
-<div class="line"><span class="lineno">   22</span>        String list = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">   23</span>        String [] params = <a class="code hl_variable" href="../../da/d11/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BaseSpecialItemPlugin.html#aa8bb41a5717a81aa5d8be0bda2a9fc47">spec</a>.<a class="code hl_function" href="../../de/d3f/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SpecialItemSpecAPI.html#a426d106fcd0552625056c43369131d9e">getParams</a>().split(<span class="stringliteral">&quot;,&quot;</span>);</div>
-<div class="line"><span class="lineno">   24</span>        String [] array = <span class="keyword">new</span> String[params.length];</div>
-<div class="line"><span class="lineno">   25</span>        <span class="keywordtype">int</span> i = 0;</div>
-<div class="line"><span class="lineno">   26</span>        <span class="keywordflow">for</span> (String curr : params) {</div>
-<div class="line"><span class="lineno">   27</span>            curr = curr.trim();</div>
-<div class="line"><span class="lineno">   28</span>            IndustrySpecAPI ind = Global.getSettings().getIndustrySpec(curr);</div>
-<div class="line"><span class="lineno">   29</span>            <span class="keywordflow">if</span> (ind == <span class="keyword">null</span>) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   30</span>            list += ind.getName() + <span class="stringliteral">&quot;, &quot;</span>;</div>
-<div class="line"><span class="lineno">   31</span>            array[i] = ind.getName();</div>
-<div class="line"><span class="lineno">   32</span>            i++;</div>
-<div class="line"><span class="lineno">   33</span>        }</div>
-<div class="line"><span class="lineno">   34</span>        <span class="keywordflow">if</span> (!list.isEmpty()) {</div>
-<div class="line"><span class="lineno">   35</span>            list = list.substring(0, list.length() - 2);</div>
-<div class="line"><span class="lineno">   36</span>            tooltip.addPara(list, pad, </div>
-<div class="line"><span class="lineno">   37</span>                    Misc.getGrayColor(), Misc.getBasePlayerColor(), array);</div>
-<div class="line"><span class="lineno">   38</span>                    <span class="comment">//Misc.getGrayColor(), Misc.getHighlightColor(), array);</span></div>
-<div class="line"><span class="lineno">   39</span>                    <span class="comment">//Misc.getGrayColor(), Misc.getTextColor(), array);</span></div>
-<div class="line"><span class="lineno">   40</span>        }</div>
-<div class="line"><span class="lineno">   41</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BaseSpecialItemPlugin_html_aa8bb41a5717a81aa5d8be0bda2a9fc47"><div class="ttname"><a href="../../da/d11/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BaseSpecialItemPlugin.html#aa8bb41a5717a81aa5d8be0bda2a9fc47">com.fs.starfarer.api.campaign.impl.items.BaseSpecialItemPlugin.spec</a></div><div class="ttdeci">SpecialItemSpecAPI spec</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/da5/BaseSpecialItemPlugin_8java_source.html#l00029">BaseSpecialItemPlugin.java:29</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SpecialItemSpecAPI_html_a426d106fcd0552625056c43369131d9e"><div class="ttname"><a href="../../de/d3f/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SpecialItemSpecAPI.html#a426d106fcd0552625056c43369131d9e">com.fs.starfarer.api.campaign.SpecialItemSpecAPI.getParams</a></div><div class="ttdeci">String getParams()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae85db595e23c1086d5daee860f3fa705" name="ae85db595e23c1086d5daee860f3fa705"></a>
@@ -329,52 +307,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d7e/GenericSpecialItemPlugin_8java_source.html#l00043">43</a> of file <a class="el" href="../../dd/d7e/GenericSpecialItemPlugin_8java_source.html">GenericSpecialItemPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   43</span>                                                                                                                                                     {</div>
-<div class="line"><span class="lineno">   44</span>        List&lt;String&gt; reqs = effect.getRequirements(industry);</div>
-<div class="line"><span class="lineno">   45</span>        List&lt;String&gt; unmet = effect.getUnmetRequirements(industry);</div>
-<div class="line"><span class="lineno">   46</span>        </div>
-<div class="line"><span class="lineno">   47</span>        <span class="keywordflow">if</span> (reqs == <span class="keyword">null</span>) reqs = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
-<div class="line"><span class="lineno">   48</span>        <span class="keywordflow">if</span> (unmet == <span class="keyword">null</span>) unmet = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
-<div class="line"><span class="lineno">   49</span>        </div>
-<div class="line"><span class="lineno">   50</span>        Color [] hl = <span class="keyword">new</span> Color[reqs.size()];</div>
-<div class="line"><span class="lineno">   51</span>        </div>
-<div class="line"><span class="lineno">   52</span>        <span class="keywordtype">int</span> i = 0;</div>
-<div class="line"><span class="lineno">   53</span>        String list = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">   54</span>        <span class="keywordflow">for</span> (String curr : reqs) {</div>
-<div class="line"><span class="lineno">   55</span>            list += curr + <span class="stringliteral">&quot;, &quot;</span>;</div>
-<div class="line"><span class="lineno">   56</span>            </div>
-<div class="line"><span class="lineno">   57</span>            <span class="keywordflow">if</span> (unmet.contains(curr)) {</div>
-<div class="line"><span class="lineno">   58</span>                hl[i] = Misc.getNegativeHighlightColor();</div>
-<div class="line"><span class="lineno">   59</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   60</span>                hl[i] = Misc.getBasePlayerColor();</div>
-<div class="line"><span class="lineno">   61</span>                <span class="comment">//hl[i] = Misc.getHighlightColor();</span></div>
-<div class="line"><span class="lineno">   62</span>                <span class="comment">//hl[i] = Misc.getTextColor();</span></div>
-<div class="line"><span class="lineno">   63</span>            }</div>
-<div class="line"><span class="lineno">   64</span>            i++;</div>
-<div class="line"><span class="lineno">   65</span>        }</div>
-<div class="line"><span class="lineno">   66</span>        <span class="keywordflow">if</span> (!list.isEmpty()) {</div>
-<div class="line"><span class="lineno">   67</span>            list = list.substring(0, list.length() - 2);</div>
-<div class="line"><span class="lineno">   68</span>            list = Misc.ucFirst(list);</div>
-<div class="line"><span class="lineno">   69</span>            reqs.set(0, Misc.ucFirst(reqs.get(0)));</div>
-<div class="line"><span class="lineno">   70</span>            </div>
-<div class="line"><span class="lineno">   71</span>            <span class="keywordtype">float</span> bulletWidth = 70f;</div>
-<div class="line"><span class="lineno">   72</span>            <span class="keywordflow">if</span> (withRequiresText) {</div>
-<div class="line"><span class="lineno">   73</span>                tooltip.setBulletWidth(bulletWidth);</div>
-<div class="line"><span class="lineno">   74</span>                tooltip.setBulletColor(Misc.getGrayColor());</div>
-<div class="line"><span class="lineno">   75</span>                tooltip.setBulletedListMode(<span class="stringliteral">&quot;Requires:&quot;</span>);</div>
-<div class="line"><span class="lineno">   76</span>            }</div>
-<div class="line"><span class="lineno">   77</span>            </div>
-<div class="line"><span class="lineno">   78</span>            LabelAPI label = tooltip.addPara(list, Misc.getGrayColor(), pad);</div>
-<div class="line"><span class="lineno">   79</span>            label.setHighlightColors(hl);</div>
-<div class="line"><span class="lineno">   80</span>            label.setHighlight(reqs.toArray(<span class="keyword">new</span> String[0]));</div>
-<div class="line"><span class="lineno">   81</span>            </div>
-<div class="line"><span class="lineno">   82</span>            <span class="keywordflow">if</span> (withRequiresText) {</div>
-<div class="line"><span class="lineno">   83</span>                tooltip.setBulletedListMode(<span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   84</span>            }</div>
-<div class="line"><span class="lineno">   85</span>        }</div>
-<div class="line"><span class="lineno">   86</span>        </div>
-<div class="line"><span class="lineno">   87</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa52c3a8c40ca8f0629e444336ed74267" name="aa52c3a8c40ca8f0629e444336ed74267"></a>
@@ -418,57 +351,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d11/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BaseSpecialItemPlugin.html#abbd9e80e13a8b5d71d01d670ab91ddda">com.fs.starfarer.api.campaign.impl.items.BaseSpecialItemPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d7e/GenericSpecialItemPlugin_8java_source.html#l00090">90</a> of file <a class="el" href="../../dd/d7e/GenericSpecialItemPlugin_8java_source.html">GenericSpecialItemPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   90</span>                                                                                                                                      {</div>
-<div class="line"><span class="lineno">   91</span>        <span class="comment">//super.createTooltip(tooltip, expanded, transferHandler, stackSource, false);</span></div>
-<div class="line"><span class="lineno">   92</span>        </div>
-<div class="line"><span class="lineno">   93</span>        <span class="keywordtype">float</span> pad = 0f;</div>
-<div class="line"><span class="lineno">   94</span>        <span class="keywordtype">float</span> opad = 10f;</div>
-<div class="line"><span class="lineno">   95</span>        </div>
-<div class="line"><span class="lineno">   96</span>        tooltip.addTitle(<a class="code hl_function" href="../../da/d11/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BaseSpecialItemPlugin.html#a345793881030ca3d3b0cb3e62ba8f9ef">getName</a>());</div>
-<div class="line"><span class="lineno">   97</span>        </div>
-<div class="line"><span class="lineno">   98</span>        LabelAPI design = Misc.addDesignTypePara(tooltip, <a class="code hl_function" href="../../da/d11/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BaseSpecialItemPlugin.html#a36d41fcf45c510c1d70ce8658ef81e46">getDesignType</a>(), opad);</div>
-<div class="line"><span class="lineno">   99</span>        </div>
-<div class="line"><span class="lineno">  100</span>        <span class="keywordtype">float</span> bulletWidth = 70f;</div>
-<div class="line"><span class="lineno">  101</span>        <span class="keywordflow">if</span> (design != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  102</span>            bulletWidth = design.computeTextWidth(<span class="stringliteral">&quot;Design type: &quot;</span>);</div>
-<div class="line"><span class="lineno">  103</span>        }</div>
-<div class="line"><span class="lineno">  104</span>        </div>
-<div class="line"><span class="lineno">  105</span>        InstallableItemEffect effect = ItemEffectsRepo.ITEM_EFFECTS.get(<a class="code hl_function" href="../../da/d11/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BaseSpecialItemPlugin.html#aaa66eaeda403f55d55cd53bc8f74b210">getId</a>());</div>
-<div class="line"><span class="lineno">  106</span>        <span class="keywordflow">if</span> (effect != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  107</span>            tooltip.setBulletWidth(bulletWidth);</div>
-<div class="line"><span class="lineno">  108</span>            tooltip.setBulletColor(Misc.getGrayColor());</div>
-<div class="line"><span class="lineno">  109</span>            </div>
-<div class="line"><span class="lineno">  110</span>            tooltip.setBulletedListMode(<span class="stringliteral">&quot;Installed in:&quot;</span>);</div>
-<div class="line"><span class="lineno">  111</span>            <a class="code hl_function" href="../../db/d34/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1GenericSpecialItemPlugin.html#a8fa70d628656b1f9f81b9743c3ff872c">addInstalledInSection</a>(tooltip, opad);</div>
-<div class="line"><span class="lineno">  112</span>            tooltip.setBulletedListMode(<span class="stringliteral">&quot;Requires:&quot;</span>);</div>
-<div class="line"><span class="lineno">  113</span>            <a class="code hl_function" href="../../db/d34/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1GenericSpecialItemPlugin.html#ae85db595e23c1086d5daee860f3fa705">addReqsSection</a>(<span class="keyword">null</span>, effect, tooltip, <span class="keyword">false</span>, pad);</div>
-<div class="line"><span class="lineno">  114</span>            </div>
-<div class="line"><span class="lineno">  115</span>            tooltip.setBulletedListMode(<span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  116</span>            </div>
-<div class="line"><span class="lineno">  117</span>            <span class="keywordflow">if</span> (!<a class="code hl_variable" href="../../da/d11/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BaseSpecialItemPlugin.html#aa8bb41a5717a81aa5d8be0bda2a9fc47">spec</a>.<a class="code hl_function" href="../../de/d3f/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SpecialItemSpecAPI.html#a907d39d4ac8c9e667ee26f217ce038d7">getDesc</a>().isEmpty()) {</div>
-<div class="line"><span class="lineno">  118</span>                Color c = Misc.getTextColor();</div>
-<div class="line"><span class="lineno">  119</span>                <span class="comment">//if (useGray) c = Misc.getGrayColor();</span></div>
-<div class="line"><span class="lineno">  120</span>                tooltip.addPara(<a class="code hl_variable" href="../../da/d11/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BaseSpecialItemPlugin.html#aa8bb41a5717a81aa5d8be0bda2a9fc47">spec</a>.<a class="code hl_function" href="../../de/d3f/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SpecialItemSpecAPI.html#a907d39d4ac8c9e667ee26f217ce038d7">getDesc</a>(), c, opad);</div>
-<div class="line"><span class="lineno">  121</span>            }</div>
-<div class="line"><span class="lineno">  122</span>            effect.addItemDescription(<span class="keyword">null</span>, tooltip, <span class="keyword">new</span> SpecialItemData(<a class="code hl_function" href="../../da/d11/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BaseSpecialItemPlugin.html#aaa66eaeda403f55d55cd53bc8f74b210">getId</a>(), <span class="keyword">null</span>), InstallableItemDescriptionMode.CARGO_TOOLTIP);</div>
-<div class="line"><span class="lineno">  123</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  124</span>            <span class="keywordflow">if</span> (!<a class="code hl_variable" href="../../da/d11/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BaseSpecialItemPlugin.html#aa8bb41a5717a81aa5d8be0bda2a9fc47">spec</a>.<a class="code hl_function" href="../../de/d3f/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SpecialItemSpecAPI.html#a907d39d4ac8c9e667ee26f217ce038d7">getDesc</a>().isEmpty()) {</div>
-<div class="line"><span class="lineno">  125</span>                Color c = Misc.getTextColor();</div>
-<div class="line"><span class="lineno">  126</span>                tooltip.addPara(<a class="code hl_variable" href="../../da/d11/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BaseSpecialItemPlugin.html#aa8bb41a5717a81aa5d8be0bda2a9fc47">spec</a>.<a class="code hl_function" href="../../de/d3f/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SpecialItemSpecAPI.html#a907d39d4ac8c9e667ee26f217ce038d7">getDesc</a>(), c, opad);</div>
-<div class="line"><span class="lineno">  127</span>            }</div>
-<div class="line"><span class="lineno">  128</span>        }</div>
-<div class="line"><span class="lineno">  129</span>            </div>
-<div class="line"><span class="lineno">  130</span> </div>
-<div class="line"><span class="lineno">  131</span>        <a class="code hl_function" href="../../da/d11/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BaseSpecialItemPlugin.html#a0c6d39d358eaa8f491426907c2995d61">addCostLabel</a>(tooltip, opad, transferHandler, stackSource);</div>
-<div class="line"><span class="lineno">  132</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BaseSpecialItemPlugin_html_a0c6d39d358eaa8f491426907c2995d61"><div class="ttname"><a href="../../da/d11/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BaseSpecialItemPlugin.html#a0c6d39d358eaa8f491426907c2995d61">com.fs.starfarer.api.campaign.impl.items.BaseSpecialItemPlugin.addCostLabel</a></div><div class="ttdeci">void addCostLabel(TooltipMakerAPI tooltip, float pad, CargoTransferHandlerAPI transferHandler, Object stackSource)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/da5/BaseSpecialItemPlugin_8java_source.html#l00111">BaseSpecialItemPlugin.java:111</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BaseSpecialItemPlugin_html_a345793881030ca3d3b0cb3e62ba8f9ef"><div class="ttname"><a href="../../da/d11/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BaseSpecialItemPlugin.html#a345793881030ca3d3b0cb3e62ba8f9ef">com.fs.starfarer.api.campaign.impl.items.BaseSpecialItemPlugin.getName</a></div><div class="ttdeci">String getName()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/da5/BaseSpecialItemPlugin_8java_source.html#l00092">BaseSpecialItemPlugin.java:92</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BaseSpecialItemPlugin_html_a36d41fcf45c510c1d70ce8658ef81e46"><div class="ttname"><a href="../../da/d11/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BaseSpecialItemPlugin.html#a36d41fcf45c510c1d70ce8658ef81e46">com.fs.starfarer.api.campaign.impl.items.BaseSpecialItemPlugin.getDesignType</a></div><div class="ttdeci">String getDesignType()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/da5/BaseSpecialItemPlugin_8java_source.html#l00303">BaseSpecialItemPlugin.java:303</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BaseSpecialItemPlugin_html_aaa66eaeda403f55d55cd53bc8f74b210"><div class="ttname"><a href="../../da/d11/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BaseSpecialItemPlugin.html#aaa66eaeda403f55d55cd53bc8f74b210">com.fs.starfarer.api.campaign.impl.items.BaseSpecialItemPlugin.getId</a></div><div class="ttdeci">String getId()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/da5/BaseSpecialItemPlugin_8java_source.html#l00034">BaseSpecialItemPlugin.java:34</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1GenericSpecialItemPlugin_html_a8fa70d628656b1f9f81b9743c3ff872c"><div class="ttname"><a href="../../db/d34/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1GenericSpecialItemPlugin.html#a8fa70d628656b1f9f81b9743c3ff872c">com.fs.starfarer.api.campaign.impl.items.GenericSpecialItemPlugin.addInstalledInSection</a></div><div class="ttdeci">void addInstalledInSection(TooltipMakerAPI tooltip, float pad)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7e/GenericSpecialItemPlugin_8java_source.html#l00021">GenericSpecialItemPlugin.java:21</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1GenericSpecialItemPlugin_html_ae85db595e23c1086d5daee860f3fa705"><div class="ttname"><a href="../../db/d34/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1GenericSpecialItemPlugin.html#ae85db595e23c1086d5daee860f3fa705">com.fs.starfarer.api.campaign.impl.items.GenericSpecialItemPlugin.addReqsSection</a></div><div class="ttdeci">static void addReqsSection(Industry industry, InstallableItemEffect effect, TooltipMakerAPI tooltip, boolean withRequiresText, float pad)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7e/GenericSpecialItemPlugin_8java_source.html#l00043">GenericSpecialItemPlugin.java:43</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SpecialItemSpecAPI_html_a907d39d4ac8c9e667ee26f217ce038d7"><div class="ttname"><a href="../../de/d3f/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SpecialItemSpecAPI.html#a907d39d4ac8c9e667ee26f217ce038d7">com.fs.starfarer.api.campaign.SpecialItemSpecAPI.getDesc</a></div><div class="ttdeci">String getDesc()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

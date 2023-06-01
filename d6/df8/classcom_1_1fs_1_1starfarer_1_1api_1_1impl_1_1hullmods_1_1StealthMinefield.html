@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -308,74 +309,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a107100a4b58129790cba1a26265c1ad8">com.fs.starfarer.api.combat.BaseHullMod</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d7d/StealthMinefield_8java_source.html#l00036">36</a> of file <a class="el" href="../../d3/d7d/StealthMinefield_8java_source.html">StealthMinefield.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   36</span>                                                            { </div>
-<div class="line"><span class="lineno">   37</span>        super.advanceInCombat(ship, amount);</div>
-<div class="line"><span class="lineno">   38</span> </div>
-<div class="line"><span class="lineno">   39</span>        <span class="comment">//if (true) return;</span></div>
-<div class="line"><span class="lineno">   40</span>        </div>
-<div class="line"><span class="lineno">   41</span>        CombatEngineAPI engine = Global.getCombatEngine();</div>
-<div class="line"><span class="lineno">   42</span>        </div>
-<div class="line"><span class="lineno">   43</span>        MinefieldData data = (MinefieldData) engine.getCustomData().get(<a class="code hl_variable" href="../../d6/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1StealthMinefield.html#a863ada8d5ffd38617de817007c30ae9e">MINEFIELD_DATA_KEY</a>);</div>
-<div class="line"><span class="lineno">   44</span>        <span class="keywordflow">if</span> (data == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   45</span>            data = <span class="keyword">new</span> MinefieldData();</div>
-<div class="line"><span class="lineno">   46</span>            data.source = ship;</div>
-<div class="line"><span class="lineno">   47</span>            engine.getCustomData().put(<a class="code hl_variable" href="../../d6/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1StealthMinefield.html#a863ada8d5ffd38617de817007c30ae9e">MINEFIELD_DATA_KEY</a>, data);</div>
-<div class="line"><span class="lineno">   48</span>        }</div>
-<div class="line"><span class="lineno">   49</span>        </div>
-<div class="line"><span class="lineno">   50</span>        <span class="keywordflow">if</span> (data.source != ship) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   51</span>        <span class="keywordflow">if</span> (!ship.isAlive()) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   52</span>        </div>
-<div class="line"><span class="lineno">   53</span>        </div>
-<div class="line"><span class="lineno">   54</span>        <span class="keywordflow">for</span> (IncomingMine inc : <span class="keyword">new</span> ArrayList&lt;IncomingMine&gt;(data.incoming)) {</div>
-<div class="line"><span class="lineno">   55</span>            inc.delay -= amount;</div>
-<div class="line"><span class="lineno">   56</span>            <span class="keywordflow">if</span> (inc.delay &lt;= 0) {</div>
-<div class="line"><span class="lineno">   57</span>                <a class="code hl_function" href="../../d6/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1StealthMinefield.html#ad31bb7236f56ee61a4a8570c348357cc">spawnMine</a>(ship, inc.mineLoc, inc.target);</div>
-<div class="line"><span class="lineno">   58</span>                data.incoming.remove(inc);</div>
-<div class="line"><span class="lineno">   59</span>            }</div>
-<div class="line"><span class="lineno">   60</span>        }</div>
-<div class="line"><span class="lineno">   61</span>        </div>
-<div class="line"><span class="lineno">   62</span>        data.tracker.advance(amount);</div>
-<div class="line"><span class="lineno">   63</span>        <span class="keywordflow">if</span> (!data.tracker.intervalElapsed()) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   64</span>        </div>
-<div class="line"><span class="lineno">   65</span>        WeightedRandomPicker&lt;IncomingMine&gt; picker = <span class="keyword">new</span> WeightedRandomPicker&lt;IncomingMine&gt;();</div>
-<div class="line"><span class="lineno">   66</span>        </div>
-<div class="line"><span class="lineno">   67</span>        <span class="keywordflow">for</span> (ShipAPI enemy : engine.getShips()) {</div>
-<div class="line"><span class="lineno">   68</span>            <span class="keywordflow">if</span> (enemy == ship) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   69</span>            <span class="keywordflow">if</span> (enemy.isHulk()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   70</span>            <span class="keywordflow">if</span> (enemy.getOwner() == ship.getOwner()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   71</span>            <span class="keywordflow">if</span> (enemy.isFighter()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   72</span>            <span class="keywordflow">if</span> (enemy.isDrone()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   73</span>            <span class="keywordflow">if</span> (enemy.isStation()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   74</span>            <span class="keywordflow">if</span> (enemy.isStationModule()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   75</span>            <span class="keywordflow">if</span> (enemy.getTravelDrive() != <span class="keyword">null</span> &amp;&amp; enemy.getTravelDrive().isActive()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   76</span>            </div>
-<div class="line"><span class="lineno">   77</span>            <span class="keywordflow">if</span> ((<span class="keywordtype">float</span>) Math.random() &gt; 0.25f) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   78</span>        </div>
-<div class="line"><span class="lineno">   79</span>            Vector2f mineLoc = Misc.getPointAtRadius(enemy.getLocation(), </div>
-<div class="line"><span class="lineno">   80</span>                                                     enemy.getCollisionRadius() + 400f + 200f * (<span class="keywordtype">float</span>) Math.random());</div>
-<div class="line"><span class="lineno">   81</span>            <span class="keywordtype">float</span> minOk = 400f + enemy.getCollisionRadius();</div>
-<div class="line"><span class="lineno">   82</span>            <span class="keywordflow">if</span> (!<a class="code hl_function" href="../../d6/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1StealthMinefield.html#a0b930c075f2aecb2d124b8be133796dd">isAreaClear</a>(mineLoc, minOk)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   83</span>            </div>
-<div class="line"><span class="lineno">   84</span>            IncomingMine inc = <span class="keyword">new</span> IncomingMine();</div>
-<div class="line"><span class="lineno">   85</span>            inc.delay = (float) Math.random() * 1.5f;</div>
-<div class="line"><span class="lineno">   86</span>            inc.target = enemy;</div>
-<div class="line"><span class="lineno">   87</span>            inc.mineLoc = mineLoc;</div>
-<div class="line"><span class="lineno">   88</span>            </div>
-<div class="line"><span class="lineno">   89</span>            picker.add(inc);</div>
-<div class="line"><span class="lineno">   90</span>        }</div>
-<div class="line"><span class="lineno">   91</span>        </div>
-<div class="line"><span class="lineno">   92</span>        <span class="keywordtype">int</span> numToSpawn = Math.max(1, Math.min(<span class="keyword">new</span> Random().nextInt(6) + 5, picker.getItems().size()));</div>
-<div class="line"><span class="lineno">   93</span>        </div>
-<div class="line"><span class="lineno">   94</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; numToSpawn &amp;&amp; !picker.isEmpty(); i++) {</div>
-<div class="line"><span class="lineno">   95</span>            IncomingMine inc = picker.pickAndRemove();</div>
-<div class="line"><span class="lineno">   96</span>            data.incoming.add(inc);</div>
-<div class="line"><span class="lineno">   97</span>        }</div>
-<div class="line"><span class="lineno">   98</span>        </div>
-<div class="line"><span class="lineno">   99</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1StealthMinefield_html_a0b930c075f2aecb2d124b8be133796dd"><div class="ttname"><a href="../../d6/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1StealthMinefield.html#a0b930c075f2aecb2d124b8be133796dd">com.fs.starfarer.api.impl.hullmods.StealthMinefield.isAreaClear</a></div><div class="ttdeci">boolean isAreaClear(Vector2f loc, float range)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d7d/StealthMinefield_8java_source.html#l00127">StealthMinefield.java:127</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1StealthMinefield_html_a863ada8d5ffd38617de817007c30ae9e"><div class="ttname"><a href="../../d6/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1StealthMinefield.html#a863ada8d5ffd38617de817007c30ae9e">com.fs.starfarer.api.impl.hullmods.StealthMinefield.MINEFIELD_DATA_KEY</a></div><div class="ttdeci">static String MINEFIELD_DATA_KEY</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d7d/StealthMinefield_8java_source.html#l00022">StealthMinefield.java:22</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1StealthMinefield_html_ad31bb7236f56ee61a4a8570c348357cc"><div class="ttname"><a href="../../d6/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1StealthMinefield.html#ad31bb7236f56ee61a4a8570c348357cc">com.fs.starfarer.api.impl.hullmods.StealthMinefield.spawnMine</a></div><div class="ttdeci">void spawnMine(ShipAPI source, Vector2f mineLoc, ShipAPI target)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d7d/StealthMinefield_8java_source.html#l00102">StealthMinefield.java:102</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a854a9fc9879b80681209d548dc94bfce" name="a854a9fc9879b80681209d548dc94bfce"></a>
@@ -404,10 +338,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../db/d23/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1StealthMinefieldLT.html#a1ed8d79913807262df8265a451a9937e">com.fs.starfarer.api.impl.hullmods.StealthMinefieldLT</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d7d/StealthMinefield_8java_source.html#l00123">123</a> of file <a class="el" href="../../d3/d7d/StealthMinefield_8java_source.html">StealthMinefield.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  123</span>                                   {</div>
-<div class="line"><span class="lineno">  124</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;minelayer2&quot;</span>;</div>
-<div class="line"><span class="lineno">  125</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a0b930c075f2aecb2d124b8be133796dd" name="a0b930c075f2aecb2d124b8be133796dd"></a>
@@ -437,28 +368,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d7d/StealthMinefield_8java_source.html#l00127">127</a> of file <a class="el" href="../../d3/d7d/StealthMinefield_8java_source.html">StealthMinefield.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  127</span>                                                          {</div>
-<div class="line"><span class="lineno">  128</span>        CombatEngineAPI engine = Global.getCombatEngine();</div>
-<div class="line"><span class="lineno">  129</span>        <span class="keywordflow">for</span> (ShipAPI other : engine.getShips()) {</div>
-<div class="line"><span class="lineno">  130</span>            <span class="keywordflow">if</span> (other.isFighter()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  131</span>            <span class="keywordflow">if</span> (other.isDrone()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  132</span>            </div>
-<div class="line"><span class="lineno">  133</span>            <span class="keywordtype">float</span> dist = Misc.getDistance(loc, other.getLocation());</div>
-<div class="line"><span class="lineno">  134</span>            <span class="keywordflow">if</span> (dist &lt; range) {</div>
-<div class="line"><span class="lineno">  135</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  136</span>            }</div>
-<div class="line"><span class="lineno">  137</span>        }</div>
-<div class="line"><span class="lineno">  138</span>        </div>
-<div class="line"><span class="lineno">  139</span>        <span class="keywordflow">for</span> (CombatEntityAPI other : Global.getCombatEngine().getAsteroids()) {</div>
-<div class="line"><span class="lineno">  140</span>            <span class="keywordtype">float</span> dist = Misc.getDistance(loc, other.getLocation());</div>
-<div class="line"><span class="lineno">  141</span>            <span class="keywordflow">if</span> (dist &lt; other.getCollisionRadius() + 100f) {</div>
-<div class="line"><span class="lineno">  142</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  143</span>            }</div>
-<div class="line"><span class="lineno">  144</span>        }</div>
-<div class="line"><span class="lineno">  145</span>        </div>
-<div class="line"><span class="lineno">  146</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  147</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ad31bb7236f56ee61a4a8570c348357cc" name="ad31bb7236f56ee61a4a8570c348357cc"></a>
@@ -494,28 +404,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d7d/StealthMinefield_8java_source.html#l00102">102</a> of file <a class="el" href="../../d3/d7d/StealthMinefield_8java_source.html">StealthMinefield.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  102</span>                                                                            {</div>
-<div class="line"><span class="lineno">  103</span>        <span class="keywordtype">float</span> mineDir = Misc.getAngleInDegrees(mineLoc, target.getLocation());</div>
-<div class="line"><span class="lineno">  104</span>        CombatEngineAPI engine = Global.getCombatEngine();</div>
-<div class="line"><span class="lineno">  105</span>        Vector2f currLoc = Misc.getPointAtRadius(mineLoc, 50f + (<span class="keywordtype">float</span>) Math.random() * 50f);</div>
-<div class="line"><span class="lineno">  106</span>        MissileAPI mine = (MissileAPI) engine.spawnProjectile(source, <span class="keyword">null</span>, </div>
-<div class="line"><span class="lineno">  107</span>                                                              <a class="code hl_function" href="../../d6/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1StealthMinefield.html#a854a9fc9879b80681209d548dc94bfce">getWeaponId</a>(), </div>
-<div class="line"><span class="lineno">  108</span>                                                              currLoc, </div>
-<div class="line"><span class="lineno">  109</span>                                                              mineDir, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  110</span>        <span class="keywordflow">if</span> (source != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  111</span>            Global.getCombatEngine().applyDamageModifiersToSpawnedProjectileWithNullWeapon(</div>
-<div class="line"><span class="lineno">  112</span>                                            source, WeaponType.MISSILE, <span class="keyword">false</span>, mine.getDamage());</div>
-<div class="line"><span class="lineno">  113</span><span class="comment">//          float extraDamageMult = source.getMutableStats().getMissileWeaponDamageMult().getModifiedValue();</span></div>
-<div class="line"><span class="lineno">  114</span><span class="comment">//          mine.getDamage().setMultiplier(mine.getDamage().getMultiplier() * extraDamageMult);</span></div>
-<div class="line"><span class="lineno">  115</span>        }</div>
-<div class="line"><span class="lineno">  116</span>        </div>
-<div class="line"><span class="lineno">  117</span>        mine.setFlightTime((<span class="keywordtype">float</span>) Math.random());</div>
-<div class="line"><span class="lineno">  118</span>        mine.fadeOutThenIn(1f);</div>
-<div class="line"><span class="lineno">  119</span>        </div>
-<div class="line"><span class="lineno">  120</span>        Global.getSoundPlayer().playSound(<span class="stringliteral">&quot;mine_spawn&quot;</span>, 1f, 1f, mine.getLocation(), mine.getVelocity());</div>
-<div class="line"><span class="lineno">  121</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1StealthMinefield_html_a854a9fc9879b80681209d548dc94bfce"><div class="ttname"><a href="../../d6/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1StealthMinefield.html#a854a9fc9879b80681209d548dc94bfce">com.fs.starfarer.api.impl.hullmods.StealthMinefield.getWeaponId</a></div><div class="ttdeci">String getWeaponId()</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d7d/StealthMinefield_8java_source.html#l00123">StealthMinefield.java:123</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

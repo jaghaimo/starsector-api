@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -177,33 +178,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="../../d0/d5c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1CommandPlugin.html#a72a44c5127e60136b87d3b37613fd0e0">com.fs.starfarer.api.campaign.rules.CommandPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d1/d17/SetNearbyFleetsVariable_8java_source.html#l00021">21</a> of file <a class="el" href="../../d1/d17/SetNearbyFleetsVariable_8java_source.html">SetNearbyFleetsVariable.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   21</span>                                                                                                                             {</div>
-<div class="line"><span class="lineno">   22</span>    </div>
-<div class="line"><span class="lineno">   23</span>        </div>
-<div class="line"><span class="lineno">   24</span>        <span class="keywordtype">float</span> range = Float.parseFloat(params.get(0).string);</div>
-<div class="line"><span class="lineno">   25</span>        String factionId = params.get(1).getString(memoryMap);</div>
-<div class="line"><span class="lineno">   26</span>        String varName = params.get(2).string;</div>
-<div class="line"><span class="lineno">   27</span>        String value = params.get(3).getString(memoryMap);</div>
-<div class="line"><span class="lineno">   28</span>        <span class="keywordtype">float</span> dur = Float.parseFloat(params.get(4).string);</div>
-<div class="line"><span class="lineno">   29</span>        </div>
-<div class="line"><span class="lineno">   30</span>        <span class="keyword">final</span> SectorEntityToken target = dialog.getInteractionTarget();</div>
-<div class="line"><span class="lineno">   31</span>        <span class="keywordflow">if</span> (target.getContainingLocation() == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   32</span>        </div>
-<div class="line"><span class="lineno">   33</span>        List&lt;CampaignFleetAPI&gt; fleets = target.getContainingLocation().getFleets();</div>
-<div class="line"><span class="lineno">   34</span>        <span class="keywordflow">for</span> (CampaignFleetAPI fleet : fleets) {</div>
-<div class="line"><span class="lineno">   35</span>            <span class="keywordflow">if</span> (fleet == target) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   36</span>            <span class="keywordflow">if</span> (!fleet.getFaction().getId().equals(factionId)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   37</span>            <span class="keywordflow">if</span> (fleet.getAI() instanceof CampaignFleetAIAPI) {</div>
-<div class="line"><span class="lineno">   38</span>                <span class="keywordtype">float</span> dist = Misc.getDistance(target.getLocation(), fleet.getLocation());</div>
-<div class="line"><span class="lineno">   39</span>                <span class="keywordflow">if</span> (dist &lt;= range) {</div>
-<div class="line"><span class="lineno">   40</span>                    fleet.getMemoryWithoutUpdate().set(varName, value, dur);</div>
-<div class="line"><span class="lineno">   41</span>                }</div>
-<div class="line"><span class="lineno">   42</span>            }</div>
-<div class="line"><span class="lineno">   43</span>        }</div>
-<div class="line"><span class="lineno">   44</span>        </div>
-<div class="line"><span class="lineno">   45</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   46</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

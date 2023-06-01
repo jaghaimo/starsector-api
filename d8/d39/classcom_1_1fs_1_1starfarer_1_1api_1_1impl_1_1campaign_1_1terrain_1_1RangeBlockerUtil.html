@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -156,18 +157,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/d19/RangeBlockerUtil_8java_source.html#l00023">23</a> of file <a class="el" href="../../da/d19/RangeBlockerUtil_8java_source.html">RangeBlockerUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   23</span>                                                            {</div>
-<div class="line"><span class="lineno">   24</span>        this.resolution = resolution;</div>
-<div class="line"><span class="lineno">   25</span>        this.maxRange = maxRange;</div>
-<div class="line"><span class="lineno">   26</span>        </div>
-<div class="line"><span class="lineno">   27</span>        <span class="comment">//degreesPerUnit = (float) Math.floor(360f / (float) resolution);</span></div>
-<div class="line"><span class="lineno">   28</span>        degreesPerUnit = 360f / (float) resolution;</div>
-<div class="line"><span class="lineno">   29</span>        </div>
-<div class="line"><span class="lineno">   30</span>        limits = <span class="keyword">new</span> <span class="keywordtype">float</span> [resolution];</div>
-<div class="line"><span class="lineno">   31</span>        curr = <span class="keyword">new</span> <span class="keywordtype">float</span> [resolution];</div>
-<div class="line"><span class="lineno">   32</span>        <span class="comment">//alphas = new float [resolution];</span></div>
-<div class="line"><span class="lineno">   33</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -204,17 +194,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/d19/RangeBlockerUtil_8java_source.html#l00083">83</a> of file <a class="el" href="../../da/d19/RangeBlockerUtil_8java_source.html">RangeBlockerUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   83</span>                                                                              {</div>
-<div class="line"><span class="lineno">   84</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; resolution; i++) {</div>
-<div class="line"><span class="lineno">   85</span>            curr[i] = Misc.approach(curr[i], limits[i], minApproachSpeed, diffMult, amount);</div>
-<div class="line"><span class="lineno">   86</span><span class="comment">//          if (curr[i] &gt; limits[i] + 100f) {</span></div>
-<div class="line"><span class="lineno">   87</span><span class="comment">//              alphas[i] = Misc.approach(alphas[i], 0f, 1f, 1f, amount);</span></div>
-<div class="line"><span class="lineno">   88</span><span class="comment">//          } else {</span></div>
-<div class="line"><span class="lineno">   89</span><span class="comment">//              alphas[i] = Misc.approach(alphas[i], 1f, 1f, 1f, amount);</span></div>
-<div class="line"><span class="lineno">   90</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">   91</span>        }</div>
-<div class="line"><span class="lineno">   92</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a05a34d565e9b49c15931a584ffd38b48" name="a05a34d565e9b49c15931a584ffd38b48"></a>
@@ -250,29 +230,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/d19/RangeBlockerUtil_8java_source.html#l00141">141</a> of file <a class="el" href="../../da/d19/RangeBlockerUtil_8java_source.html">RangeBlockerUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  141</span>                                                           {</div>
-<div class="line"><span class="lineno">  142</span>        <span class="comment">//float radius = Misc.computeAngleRadius(angle, limit);</span></div>
-<div class="line"><span class="lineno">  143</span>        <span class="keywordtype">float</span> offsetSize = Math.max(limit, maxRange * 0.1f);</div>
-<div class="line"><span class="lineno">  144</span>        </div>
-<div class="line"><span class="lineno">  145</span>        <span class="keywordflow">for</span> (<span class="keywordtype">float</span> f = angle - arc/2f; f &lt;= angle + arc/2f; f += degreesPerUnit) {</div>
-<div class="line"><span class="lineno">  146</span>            </div>
-<div class="line"><span class="lineno">  147</span>            <span class="keywordtype">float</span> offset = Math.abs(f - angle) / (arc / 2f);</div>
-<div class="line"><span class="lineno">  148</span>            <span class="keywordflow">if</span> (offset &gt; 1) offset = 1;</div>
-<div class="line"><span class="lineno">  149</span>            offset = (1f - (float) Math.cos(offset * 3.1416f / 2f));</div>
-<div class="line"><span class="lineno">  150</span>            offset += 1f;</div>
-<div class="line"><span class="lineno">  151</span>            offset *= offset;</div>
-<div class="line"><span class="lineno">  152</span>            offset -= 1f;</div>
-<div class="line"><span class="lineno">  153</span>            offset *= offsetSize;</div>
-<div class="line"><span class="lineno">  154</span>            <span class="comment">//offset = 0f;</span></div>
-<div class="line"><span class="lineno">  155</span>            offset = Math.abs(offset);</div>
-<div class="line"><span class="lineno">  156</span>            </div>
-<div class="line"><span class="lineno">  157</span>            <span class="keywordtype">int</span> index = <a class="code hl_function" href="../../d8/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RangeBlockerUtil.html#afa683bf4b83f02a21cc1a4bd0358a894">getIndexForAngle</a>(f);</div>
-<div class="line"><span class="lineno">  158</span>            limits[index] = Math.min(limit + offset, limits[index]);</div>
-<div class="line"><span class="lineno">  159</span>            isAnythingShortened = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  160</span>        }</div>
-<div class="line"><span class="lineno">  161</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RangeBlockerUtil_html_afa683bf4b83f02a21cc1a4bd0358a894"><div class="ttname"><a href="../../d8/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RangeBlockerUtil.html#afa683bf4b83f02a21cc1a4bd0358a894">com.fs.starfarer.api.impl.campaign.terrain.RangeBlockerUtil.getIndexForAngle</a></div><div class="ttdeci">int getIndexForAngle(float angle)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d19/RangeBlockerUtil_8java_source.html#l00163">RangeBlockerUtil.java:163</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab77ab3ac04d3f4c5c1be895e9e22d174" name="ab77ab3ac04d3f4c5c1be895e9e22d174"></a>
@@ -292,12 +250,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/d19/RangeBlockerUtil_8java_source.html#l00077">77</a> of file <a class="el" href="../../da/d19/RangeBlockerUtil_8java_source.html">RangeBlockerUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   77</span>                                         {</div>
-<div class="line"><span class="lineno">   78</span>        <span class="keywordflow">return</span> 1f;</div>
-<div class="line"><span class="lineno">   79</span><span class="comment">//      int index = getIndexForAngle(angle);</span></div>
-<div class="line"><span class="lineno">   80</span><span class="comment">//      return alphas[index];</span></div>
-<div class="line"><span class="lineno">   81</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af6fa823d0e2aee996a2350e0a37bb1a6" name="af6fa823d0e2aee996a2350e0a37bb1a6"></a>
@@ -317,24 +270,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/d19/RangeBlockerUtil_8java_source.html#l00059">59</a> of file <a class="el" href="../../da/d19/RangeBlockerUtil_8java_source.html">RangeBlockerUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   59</span>                                           {</div>
-<div class="line"><span class="lineno">   60</span>        angle = Misc.normalizeAngle(angle);</div>
-<div class="line"><span class="lineno">   61</span>        </div>
-<div class="line"><span class="lineno">   62</span>        <span class="keywordtype">float</span> index = angle / 360f * resolution;</div>
-<div class="line"><span class="lineno">   63</span>        <span class="keywordtype">int</span> i1 = (int) Math.floor(index);</div>
-<div class="line"><span class="lineno">   64</span>        <span class="keywordtype">int</span> i2 = (int) Math.ceil(index);</div>
-<div class="line"><span class="lineno">   65</span>        <span class="keywordflow">while</span> (i1 &gt;= resolution) i1 -= resolution;</div>
-<div class="line"><span class="lineno">   66</span>        <span class="keywordflow">while</span> (i2 &gt;= resolution) i2 -= resolution;</div>
-<div class="line"><span class="lineno">   67</span>        </div>
-<div class="line"><span class="lineno">   68</span>        <span class="keywordtype">float</span> v1 = curr[i1];</div>
-<div class="line"><span class="lineno">   69</span>        <span class="keywordtype">float</span> v2 = curr[i2];</div>
-<div class="line"><span class="lineno">   70</span>        </div>
-<div class="line"><span class="lineno">   71</span>        <span class="keywordflow">return</span> v1 + (v2 - v1) * (index - (<span class="keywordtype">int</span>) index);</div>
-<div class="line"><span class="lineno">   72</span>        </div>
-<div class="line"><span class="lineno">   73</span>        <span class="comment">//int index = getIndexForAngle(angle);</span></div>
-<div class="line"><span class="lineno">   74</span>        <span class="comment">//return curr[index];</span></div>
-<div class="line"><span class="lineno">   75</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="afa683bf4b83f02a21cc1a4bd0358a894" name="afa683bf4b83f02a21cc1a4bd0358a894"></a>
@@ -354,17 +290,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/d19/RangeBlockerUtil_8java_source.html#l00163">163</a> of file <a class="el" href="../../da/d19/RangeBlockerUtil_8java_source.html">RangeBlockerUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  163</span>                                             {</div>
-<div class="line"><span class="lineno">  164</span>        angle = Misc.normalizeAngle(angle);</div>
-<div class="line"><span class="lineno">  165</span>        </div>
-<div class="line"><span class="lineno">  166</span>        <span class="keywordtype">int</span> index = (int)Math.round(angle / 360f * (<span class="keywordtype">float</span>) resolution);</div>
-<div class="line"><span class="lineno">  167</span>        <span class="keywordflow">if</span> (index &lt; 0) index = 0;</div>
-<div class="line"><span class="lineno">  168</span>        <span class="comment">//if (index &gt; resolution - 1) index = resolution - 1;</span></div>
-<div class="line"><span class="lineno">  169</span>        <span class="keywordflow">while</span> (index &gt;= resolution) index -= resolution;</div>
-<div class="line"><span class="lineno">  170</span>        </div>
-<div class="line"><span class="lineno">  171</span>        <span class="keywordflow">return</span> index;</div>
-<div class="line"><span class="lineno">  172</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a551a878406601600df92703189f4ef8a" name="a551a878406601600df92703189f4ef8a"></a>
@@ -383,10 +309,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/d19/RangeBlockerUtil_8java_source.html#l00179">179</a> of file <a class="el" href="../../da/d19/RangeBlockerUtil_8java_source.html">RangeBlockerUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  179</span>                               {</div>
-<div class="line"><span class="lineno">  180</span>        <span class="keywordflow">return</span> maxRange;</div>
-<div class="line"><span class="lineno">  181</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5934a4eca0ad4e0f30016bb01efc0b6f" name="a5934a4eca0ad4e0f30016bb01efc0b6f"></a>
@@ -406,11 +329,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/d19/RangeBlockerUtil_8java_source.html#l00055">55</a> of file <a class="el" href="../../da/d19/RangeBlockerUtil_8java_source.html">RangeBlockerUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   55</span>                                                 {</div>
-<div class="line"><span class="lineno">   56</span>        <span class="keywordflow">return</span> maxRange - <a class="code hl_function" href="../../d8/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RangeBlockerUtil.html#af6fa823d0e2aee996a2350e0a37bb1a6">getCurrMaxAt</a>(angle);</div>
-<div class="line"><span class="lineno">   57</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RangeBlockerUtil_html_af6fa823d0e2aee996a2350e0a37bb1a6"><div class="ttname"><a href="../../d8/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RangeBlockerUtil.html#af6fa823d0e2aee996a2350e0a37bb1a6">com.fs.starfarer.api.impl.campaign.terrain.RangeBlockerUtil.getCurrMaxAt</a></div><div class="ttdeci">float getCurrMaxAt(float angle)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d19/RangeBlockerUtil_8java_source.html#l00059">RangeBlockerUtil.java:59</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5485ff3797a05dc9f8b3b8a270fc778b" name="a5485ff3797a05dc9f8b3b8a270fc778b"></a>
@@ -429,10 +348,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/d19/RangeBlockerUtil_8java_source.html#l00174">174</a> of file <a class="el" href="../../da/d19/RangeBlockerUtil_8java_source.html">RangeBlockerUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  174</span>                                         {</div>
-<div class="line"><span class="lineno">  175</span>        <span class="keywordflow">return</span> isAnythingShortened;</div>
-<div class="line"><span class="lineno">  176</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a13c0fbb9b76d73eeb7ffe637539e7636" name="a13c0fbb9b76d73eeb7ffe637539e7636"></a>
@@ -451,12 +367,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/d19/RangeBlockerUtil_8java_source.html#l00049">49</a> of file <a class="el" href="../../da/d19/RangeBlockerUtil_8java_source.html">RangeBlockerUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   49</span>                       {</div>
-<div class="line"><span class="lineno">   50</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; resolution; i++) {</div>
-<div class="line"><span class="lineno">   51</span>            curr[i] = limits[i];</div>
-<div class="line"><span class="lineno">   52</span>        }</div>
-<div class="line"><span class="lineno">   53</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af6c1ef8dfc9e512517bf70cd6cf1bad4" name="af6c1ef8dfc9e512517bf70cd6cf1bad4"></a>
@@ -492,16 +403,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/d19/RangeBlockerUtil_8java_source.html#l00041">41</a> of file <a class="el" href="../../da/d19/RangeBlockerUtil_8java_source.html">RangeBlockerUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   41</span>                                                                                                   {</div>
-<div class="line"><span class="lineno">   42</span>        <a class="code hl_function" href="../../d8/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RangeBlockerUtil.html#a8e9716d2f2b40521d5849bc211146df5">updateLimits</a>(entity, exclude, diffMult);</div>
-<div class="line"><span class="lineno">   43</span>        <a class="code hl_function" href="../../d8/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RangeBlockerUtil.html#a13c0fbb9b76d73eeb7ffe637539e7636">sync</a>();</div>
-<div class="line"><span class="lineno">   44</span><span class="comment">//      for (int i = 0; i &lt; resolution; i++) {</span></div>
-<div class="line"><span class="lineno">   45</span><span class="comment">//          alphas[i] = 1f;</span></div>
-<div class="line"><span class="lineno">   46</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">   47</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RangeBlockerUtil_html_a13c0fbb9b76d73eeb7ffe637539e7636"><div class="ttname"><a href="../../d8/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RangeBlockerUtil.html#a13c0fbb9b76d73eeb7ffe637539e7636">com.fs.starfarer.api.impl.campaign.terrain.RangeBlockerUtil.sync</a></div><div class="ttdeci">void sync()</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d19/RangeBlockerUtil_8java_source.html#l00049">RangeBlockerUtil.java:49</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RangeBlockerUtil_html_a8e9716d2f2b40521d5849bc211146df5"><div class="ttname"><a href="../../d8/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RangeBlockerUtil.html#a8e9716d2f2b40521d5849bc211146df5">com.fs.starfarer.api.impl.campaign.terrain.RangeBlockerUtil.updateLimits</a></div><div class="ttdeci">void updateLimits(SectorEntityToken entity, SectorEntityToken exclude, float diffMult)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d19/RangeBlockerUtil_8java_source.html#l00094">RangeBlockerUtil.java:94</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8e9716d2f2b40521d5849bc211146df5" name="a8e9716d2f2b40521d5849bc211146df5"></a>
@@ -537,53 +439,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/d19/RangeBlockerUtil_8java_source.html#l00094">94</a> of file <a class="el" href="../../da/d19/RangeBlockerUtil_8java_source.html">RangeBlockerUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   94</span>                                                                                                  {</div>
-<div class="line"><span class="lineno">   95</span>        <span class="comment">//if (true) return;</span></div>
-<div class="line"><span class="lineno">   96</span>        </div>
-<div class="line"><span class="lineno">   97</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; resolution; i++) {</div>
-<div class="line"><span class="lineno">   98</span>            limits[i] = maxRange;</div>
-<div class="line"><span class="lineno">   99</span>        }</div>
-<div class="line"><span class="lineno">  100</span> </div>
-<div class="line"><span class="lineno">  101</span>        isAnythingShortened = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  102</span>        </div>
-<div class="line"><span class="lineno">  103</span>        <span class="keywordflow">for</span> (PlanetAPI planet : entity.getContainingLocation().getPlanets()) {</div>
-<div class="line"><span class="lineno">  104</span>            <span class="keywordflow">if</span> (planet == entity || planet == exclude) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  105</span>            <span class="keywordtype">float</span> dist = Misc.getDistance(entity.getLocation(), planet.getLocation());</div>
-<div class="line"><span class="lineno">  106</span>            <span class="keywordflow">if</span> (dist &gt; maxRange) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  107</span>            </div>
-<div class="line"><span class="lineno">  108</span>            <span class="keywordtype">float</span> graceRadius = 100f;</div>
-<div class="line"><span class="lineno">  109</span>            graceRadius = 0f;</div>
-<div class="line"><span class="lineno">  110</span>            graceRadius = planet.getRadius() + 100f;</div>
-<div class="line"><span class="lineno">  111</span>            <span class="keywordtype">float</span> span = Misc.computeAngleSpan(planet.getRadius() + graceRadius, dist);</div>
-<div class="line"><span class="lineno">  112</span>            </div>
-<div class="line"><span class="lineno">  113</span>            <span class="keywordtype">float</span> angle = Misc.getAngleInDegrees(entity.getLocation(), planet.getLocation());</div>
-<div class="line"><span class="lineno">  114</span>            </div>
-<div class="line"><span class="lineno">  115</span>            <span class="keywordtype">float</span> offsetSize = maxRange * 0.2f;</div>
-<div class="line"><span class="lineno">  116</span>            </div>
-<div class="line"><span class="lineno">  117</span>            <span class="keywordtype">float</span> spanOffset = span * 0.4f * 1f / diffMult;</div>
-<div class="line"><span class="lineno">  118</span>            spanOffset = 0f;</div>
-<div class="line"><span class="lineno">  119</span>            <span class="keywordflow">for</span> (<span class="keywordtype">float</span> f = angle - span/2f - spanOffset; f &lt;= angle + span/2f - spanOffset; f += degreesPerUnit) {</div>
-<div class="line"><span class="lineno">  120</span>                <span class="keywordtype">float</span> offset = Math.abs(f - angle) / (span / 2f);</div>
-<div class="line"><span class="lineno">  121</span>                <span class="keywordflow">if</span> (offset &gt; 1) offset = 1;</div>
-<div class="line"><span class="lineno">  122</span>                offset = (1f - (float) Math.cos(offset * 3.1416f / 2f));</div>
-<div class="line"><span class="lineno">  123</span>                <span class="comment">//offset = (float) Math.sqrt(offset);</span></div>
-<div class="line"><span class="lineno">  124</span><span class="comment">//              offset += 1f;</span></div>
-<div class="line"><span class="lineno">  125</span>                offset *= offset;</div>
-<div class="line"><span class="lineno">  126</span><span class="comment">//              offset *= offset;</span></div>
-<div class="line"><span class="lineno">  127</span><span class="comment">//              offset -= 1f;</span></div>
-<div class="line"><span class="lineno">  128</span>                <span class="comment">//offset *= planet.getRadius() + graceRadius;</span></div>
-<div class="line"><span class="lineno">  129</span>                offset *= offsetSize;</div>
-<div class="line"><span class="lineno">  130</span>                </div>
-<div class="line"><span class="lineno">  131</span>                </div>
-<div class="line"><span class="lineno">  132</span>                <span class="keywordtype">int</span> index = <a class="code hl_function" href="../../d8/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RangeBlockerUtil.html#afa683bf4b83f02a21cc1a4bd0358a894">getIndexForAngle</a>(f);</div>
-<div class="line"><span class="lineno">  133</span>                limits[index] = Math.min(dist - (planet.getRadius()) * 0.5f + offset, limits[index]);</div>
-<div class="line"><span class="lineno">  134</span>                isAnythingShortened = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  135</span>            }</div>
-<div class="line"><span class="lineno">  136</span>        }</div>
-<div class="line"><span class="lineno">  137</span>        </div>
-<div class="line"><span class="lineno">  138</span>        wasUpdated = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  139</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9cf02facb7d0b6722f4935e3e952f008" name="a9cf02facb7d0b6722f4935e3e952f008"></a>
@@ -602,10 +458,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/d19/RangeBlockerUtil_8java_source.html#l00036">36</a> of file <a class="el" href="../../da/d19/RangeBlockerUtil_8java_source.html">RangeBlockerUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   36</span>                                    {</div>
-<div class="line"><span class="lineno">   37</span>        <span class="keywordflow">return</span> wasUpdated;</div>
-<div class="line"><span class="lineno">   38</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

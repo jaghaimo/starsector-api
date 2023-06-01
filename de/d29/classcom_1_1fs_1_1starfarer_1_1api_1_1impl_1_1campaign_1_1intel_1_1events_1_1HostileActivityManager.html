@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -158,20 +159,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d7/d63/interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html#a3a97090ca8cfdc230e9ad7e633407af6">com.fs.starfarer.api.EveryFrameScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/dd4/HostileActivityManager_8java_source.html#l00019">19</a> of file <a class="el" href="../../d9/dd4/HostileActivityManager_8java_source.html">HostileActivityManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   19</span>                                      {</div>
-<div class="line"><span class="lineno">   20</span>        <a class="code hl_variable" href="../../de/d29/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityManager.html#a4e57d3bea4de253f79ed9b1aa253e646">tracker</a>.<a class="code hl_function" href="../../da/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html#a61881d44415cda2c50c3354c3f0a4d8a">advance</a>(amount);</div>
-<div class="line"><span class="lineno">   21</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../de/d29/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityManager.html#a4e57d3bea4de253f79ed9b1aa253e646">tracker</a>.intervalElapsed()) {</div>
-<div class="line"><span class="lineno">   22</span>            <span class="keywordtype">boolean</span> playerHasColonies = !Misc.getPlayerMarkets(<span class="keyword">false</span>).isEmpty();</div>
-<div class="line"><span class="lineno">   23</span>            <span class="keywordflow">if</span> (HostileActivityEventIntel.get() == <span class="keyword">null</span> &amp;&amp; playerHasColonies) {</div>
-<div class="line"><span class="lineno">   24</span>                <span class="keyword">new</span> HostileActivityEventIntel();</div>
-<div class="line"><span class="lineno">   25</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (HostileActivityEventIntel.get() != <span class="keyword">null</span> &amp;&amp; !playerHasColonies) {</div>
-<div class="line"><span class="lineno">   26</span>                HostileActivityEventIntel.get().endImmediately();</div>
-<div class="line"><span class="lineno">   27</span>            }</div>
-<div class="line"><span class="lineno">   28</span>        }</div>
-<div class="line"><span class="lineno">   29</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityManager_html_a4e57d3bea4de253f79ed9b1aa253e646"><div class="ttname"><a href="../../de/d29/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityManager.html#a4e57d3bea4de253f79ed9b1aa253e646">com.fs.starfarer.api.impl.campaign.intel.events.HostileActivityManager.tracker</a></div><div class="ttdeci">IntervalUtil tracker</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dd4/HostileActivityManager_8java_source.html#l00009">HostileActivityManager.java:9</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil_html_a61881d44415cda2c50c3354c3f0a4d8a"><div class="ttname"><a href="../../da/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html#a61881d44415cda2c50c3354c3f0a4d8a">com.fs.starfarer.api.util.IntervalUtil.advance</a></div><div class="ttdeci">void advance(float amount)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de3/IntervalUtil_8java_source.html#l00039">IntervalUtil.java:39</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a3ec5efd9373dc2847be956b92b8f7501" name="a3ec5efd9373dc2847be956b92b8f7501"></a>
@@ -193,10 +181,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d7/d63/interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html#a2b9a206acf99d1cdc1511885d14bb58c">com.fs.starfarer.api.EveryFrameScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/dd4/HostileActivityManager_8java_source.html#l00011">11</a> of file <a class="el" href="../../d9/dd4/HostileActivityManager_8java_source.html">HostileActivityManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   11</span>                            {</div>
-<div class="line"><span class="lineno">   12</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   13</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab9e46b36a1b4d421912accc7270bc8d3" name="ab9e46b36a1b4d421912accc7270bc8d3"></a>
@@ -218,10 +203,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d7/d63/interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html#a6397d6c1c19a4dd0b58099219c0e0173">com.fs.starfarer.api.EveryFrameScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/dd4/HostileActivityManager_8java_source.html#l00015">15</a> of file <a class="el" href="../../d9/dd4/HostileActivityManager_8java_source.html">HostileActivityManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   15</span>                                    {</div>
-<div class="line"><span class="lineno">   16</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   17</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -243,9 +244,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/dff/TradeDisruption_8java_source.html#l00009">9</a> of file <a class="el" href="../../d8/dff/TradeDisruption_8java_source.html">TradeDisruption.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    9</span>                             {</div>
-<div class="line"><span class="lineno">   10</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -268,17 +267,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../db/d90/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1BaseMarketConditionPlugin.html#a06536345c4ccb9cf0adf76ca9724dd65">com.fs.starfarer.api.impl.campaign.econ.BaseMarketConditionPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/dff/TradeDisruption_8java_source.html#l00012">12</a> of file <a class="el" href="../../d8/dff/TradeDisruption_8java_source.html">TradeDisruption.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   12</span>                                 {</div>
-<div class="line"><span class="lineno">   13</span><span class="comment">//      for (AffectedCommodity com : event.getDisruptedCommodities()) {</span></div>
-<div class="line"><span class="lineno">   14</span><span class="comment">//          com.commodity.removeFromAverageStockpile(com.disruptionQuantity);</span></div>
-<div class="line"><span class="lineno">   15</span><span class="comment">//          com.commodity.setAverageStockpileAfterDemand(0f);</span></div>
-<div class="line"><span class="lineno">   16</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">   17</span><span class="comment">//      for (AffectedCommodity com : event.getDisruptedCommodities()) {</span></div>
-<div class="line"><span class="lineno">   18</span><span class="comment">//          com.commodity.getPlayerPriceMod().modifyPercent(id, com.pricePercent);</span></div>
-<div class="line"><span class="lineno">   19</span><span class="comment">//          com.commodity.getPlayerPriceMod().modifyFlat(id, com.priceFlat);</span></div>
-<div class="line"><span class="lineno">   20</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">   21</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab8ba555ae07a2665f19ddebb847cab9c" name="ab8ba555ae07a2665f19ddebb847cab9c"></a>
@@ -300,10 +289,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../db/d90/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1BaseMarketConditionPlugin.html#a052748b2937217f493b994ed255b50c7">com.fs.starfarer.api.impl.campaign.econ.BaseMarketConditionPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/dff/TradeDisruption_8java_source.html#l00037">37</a> of file <a class="el" href="../../d8/dff/TradeDisruption_8java_source.html">TradeDisruption.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   37</span>                                 {</div>
-<div class="line"><span class="lineno">   38</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   39</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a83a00189cb816d367ab58096a21f27c4" name="a83a00189cb816d367ab58096a21f27c4"></a>
@@ -325,18 +311,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../db/d90/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1BaseMarketConditionPlugin.html#a9711ad59f3f75e47ae15f5b3ff2be101">com.fs.starfarer.api.impl.campaign.econ.BaseMarketConditionPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/dff/TradeDisruption_8java_source.html#l00023">23</a> of file <a class="el" href="../../d8/dff/TradeDisruption_8java_source.html">TradeDisruption.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   23</span>                                   {</div>
-<div class="line"><span class="lineno">   24</span><span class="comment">//      for (AffectedCommodity com : event.getDisruptedCommodities()) {</span></div>
-<div class="line"><span class="lineno">   25</span><span class="comment">//          float dq = Math.min(com.disruptionQuantity, com.preDisruptionStockpile - com.commodity.getAverageStockpile());</span></div>
-<div class="line"><span class="lineno">   26</span><span class="comment">//          if (dq &lt; 0) dq = 0;</span></div>
-<div class="line"><span class="lineno">   27</span><span class="comment">//          com.commodity.addToAverageStockpile(dq);</span></div>
-<div class="line"><span class="lineno">   28</span><span class="comment">//          com.disruptionQuantity = dq;</span></div>
-<div class="line"><span class="lineno">   29</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">   30</span><span class="comment">//      for (CommodityOnMarketAPI com : market.getAllCommodities()) {</span></div>
-<div class="line"><span class="lineno">   31</span><span class="comment">//          com.getPlayerPriceMod().unmodify(id);</span></div>
-<div class="line"><span class="lineno">   32</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">   33</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

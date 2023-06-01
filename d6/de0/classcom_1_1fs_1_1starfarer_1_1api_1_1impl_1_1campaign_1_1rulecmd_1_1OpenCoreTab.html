@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -157,14 +158,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="../../d7/d89/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CoreInteractionListener.html#a0f621bceb06af12a10049a2428b83ed8">com.fs.starfarer.api.campaign.CoreInteractionListener</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/dce/OpenCoreTab_8java_source.html#l00047">47</a> of file <a class="el" href="../../d8/dce/OpenCoreTab_8java_source.html">OpenCoreTab.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   47</span>                                  {</div>
-<div class="line"><span class="lineno">   48</span>        <span class="comment">// update player memory - supplies/fuel the player has, etc</span></div>
-<div class="line"><span class="lineno">   49</span>        Global.getSector().getCharacterData().getMemory();</div>
-<div class="line"><span class="lineno">   50</span>        </div>
-<div class="line"><span class="lineno">   51</span>        </div>
-<div class="line"><span class="lineno">   52</span>        FireAll.fire(<span class="keyword">null</span>, dialog, memoryMap, <span class="stringliteral">&quot;PopulateOptions&quot;</span>);</div>
-<div class="line"><span class="lineno">   53</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a969099ad79bfc038d6299f77397a53ba" name="a969099ad79bfc038d6299f77397a53ba"></a>
@@ -209,32 +203,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="../../d0/d5c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1CommandPlugin.html#a72a44c5127e60136b87d3b37613fd0e0">com.fs.starfarer.api.campaign.rules.CommandPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/dce/OpenCoreTab_8java_source.html#l00026">26</a> of file <a class="el" href="../../d8/dce/OpenCoreTab_8java_source.html">OpenCoreTab.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   26</span>                                                                                                                             {</div>
-<div class="line"><span class="lineno">   27</span>        this.dialog = dialog;</div>
-<div class="line"><span class="lineno">   28</span>        this.memoryMap = memoryMap;</div>
-<div class="line"><span class="lineno">   29</span>        String tabIdStr = params.get(0).getString(memoryMap);</div>
-<div class="line"><span class="lineno">   30</span>        </div>
-<div class="line"><span class="lineno">   31</span>        CoreUITabId tabId = CoreUITabId.valueOf(tabIdStr);</div>
-<div class="line"><span class="lineno">   32</span>        dialog.<a class="code hl_function" href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#af4f0b5fdb66110b1d0565b433abaf65c">getOptionPanel</a>().<a class="code hl_function" href="../../da/d65/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OptionPanelAPI.html#a72ccab6cc04270d28959f8175d0821cb">clearOptions</a>();</div>
-<div class="line"><span class="lineno">   33</span>        </div>
-<div class="line"><span class="lineno">   34</span>        CoreUITradeMode mode = CoreUITradeMode.OPEN;</div>
-<div class="line"><span class="lineno">   35</span>        <span class="keywordflow">if</span> (params.size() &gt; 1) {</div>
-<div class="line"><span class="lineno">   36</span>            mode = CoreUITradeMode.valueOf(params.get(1).getString(memoryMap));</div>
-<div class="line"><span class="lineno">   37</span>        }</div>
-<div class="line"><span class="lineno">   38</span>        </div>
-<div class="line"><span class="lineno">   39</span>        <span class="comment">//memoryMap.get(MemKeys.LOCAL).set(&quot;$lastTradeMode&quot;, mode.name(), 0);</span></div>
-<div class="line"><span class="lineno">   40</span>        dialog.<a class="code hl_function" href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#a5619d9b7c7aec96fff1afb09c47fff1c">getVisualPanel</a>().<a class="code hl_function" href="../../d1/d60/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1VisualPanelAPI.html#a0110b9350846bcd11fce439a4485e48d">showCore</a>(tabId, dialog.<a class="code hl_function" href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#aab8d898bf278af177dcaa802e64135be">getInteractionTarget</a>(), mode, <span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">   41</span>        </div>
-<div class="line"><span class="lineno">   42</span>        Misc.stopPlayerFleet();</div>
-<div class="line"><span class="lineno">   43</span>        </div>
-<div class="line"><span class="lineno">   44</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   45</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI_html_a5619d9b7c7aec96fff1afb09c47fff1c"><div class="ttname"><a href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#a5619d9b7c7aec96fff1afb09c47fff1c">com.fs.starfarer.api.campaign.InteractionDialogAPI.getVisualPanel</a></div><div class="ttdeci">VisualPanelAPI getVisualPanel()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI_html_aab8d898bf278af177dcaa802e64135be"><div class="ttname"><a href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#aab8d898bf278af177dcaa802e64135be">com.fs.starfarer.api.campaign.InteractionDialogAPI.getInteractionTarget</a></div><div class="ttdeci">SectorEntityToken getInteractionTarget()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI_html_af4f0b5fdb66110b1d0565b433abaf65c"><div class="ttname"><a href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#af4f0b5fdb66110b1d0565b433abaf65c">com.fs.starfarer.api.campaign.InteractionDialogAPI.getOptionPanel</a></div><div class="ttdeci">OptionPanelAPI getOptionPanel()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OptionPanelAPI_html_a72ccab6cc04270d28959f8175d0821cb"><div class="ttname"><a href="../../da/d65/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OptionPanelAPI.html#a72ccab6cc04270d28959f8175d0821cb">com.fs.starfarer.api.campaign.OptionPanelAPI.clearOptions</a></div><div class="ttdeci">void clearOptions()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1VisualPanelAPI_html_a0110b9350846bcd11fce439a4485e48d"><div class="ttname"><a href="../../d1/d60/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1VisualPanelAPI.html#a0110b9350846bcd11fce439a4485e48d">com.fs.starfarer.api.campaign.VisualPanelAPI.showCore</a></div><div class="ttdeci">void showCore(CoreUITabId tabId, SectorEntityToken other, boolean noCost, CoreInteractionListener listener)</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

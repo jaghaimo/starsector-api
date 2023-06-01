@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -554,14 +555,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/dff/CommSnifferIntel_8java_source.html#l00043">43</a> of file <a class="el" href="../../d7/dff/CommSnifferIntel_8java_source.html">CommSnifferIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   43</span>                                                     {</div>
-<div class="line"><span class="lineno">   44</span>        this.relay = <a class="code hl_variable" href="../../d7/d15/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#a9802e79d4983e6bd0dce0319b0b2b63b">relay</a>;</div>
-<div class="line"><span class="lineno">   45</span>        Global.getSector().getIntelManager().addIntel(<span class="keyword">this</span>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   46</span>        Global.getSector().<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a6d79f43ddec9955c87214fac08b71a12">addScript</a>(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">   47</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel_html_a9802e79d4983e6bd0dce0319b0b2b63b"><div class="ttname"><a href="../../d7/d15/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#a9802e79d4983e6bd0dce0319b0b2b63b">com.fs.starfarer.api.impl.campaign.intel.misc.CommSnifferIntel.relay</a></div><div class="ttdeci">SectorEntityToken relay</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dff/CommSnifferIntel_8java_source.html#l00029">CommSnifferIntel.java:29</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_a6d79f43ddec9955c87214fac08b71a12"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a6d79f43ddec9955c87214fac08b71a12">com.fs.starfarer.api.campaign.SectorEntityToken.addScript</a></div><div class="ttdeci">void addScript(EveryFrameScript script)</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -602,31 +596,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a78b9181ed44f28dac2b1167e1ce4395c">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/dff/CommSnifferIntel_8java_source.html#l00089">89</a> of file <a class="el" href="../../d7/dff/CommSnifferIntel_8java_source.html">CommSnifferIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   89</span>                                                                            {</div>
-<div class="line"><span class="lineno">   90</span>        </div>
-<div class="line"><span class="lineno">   91</span>        Color h = Misc.getHighlightColor();</div>
-<div class="line"><span class="lineno">   92</span>        Color g = Misc.getGrayColor();</div>
-<div class="line"><span class="lineno">   93</span>        <span class="keywordtype">float</span> pad = 3f;</div>
-<div class="line"><span class="lineno">   94</span>        <span class="keywordtype">float</span> opad = 10f;</div>
-<div class="line"><span class="lineno">   95</span>        </div>
-<div class="line"><span class="lineno">   96</span>        <span class="keywordtype">float</span> initPad = pad;</div>
-<div class="line"><span class="lineno">   97</span>        <span class="keywordflow">if</span> (mode == ListInfoMode.IN_DESC) initPad = opad;</div>
-<div class="line"><span class="lineno">   98</span>        </div>
-<div class="line"><span class="lineno">   99</span>        Color tc = <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a9e443024a6224a5c170e5d1476514954">getBulletColorForMode</a>(mode);</div>
-<div class="line"><span class="lineno">  100</span>        </div>
-<div class="line"><span class="lineno">  101</span>        <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#adfa808a345b432134c9fb11227edc7df">bullet</a>(info);</div>
-<div class="line"><span class="lineno">  102</span>        <span class="keywordtype">boolean</span> isUpdate = <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a9ba572be19912ec6b816dc7b69352660">getListInfoParam</a>() != <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  103</span>        </div>
-<div class="line"><span class="lineno">  104</span><span class="comment">//      info.addPara(&quot;Danger level: &quot; + danger, initPad, tc, dangerColor, danger);</span></div>
-<div class="line"><span class="lineno">  105</span><span class="comment">//      initPad = 0f;</span></div>
-<div class="line"><span class="lineno">  106</span>        </div>
-<div class="line"><span class="lineno">  107</span>        <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a3e2fa48accd40a868889ad2f877bc578">unindent</a>(info);</div>
-<div class="line"><span class="lineno">  108</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_a3e2fa48accd40a868889ad2f877bc578"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a3e2fa48accd40a868889ad2f877bc578">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.unindent</a></div><div class="ttdeci">void unindent(TooltipMakerAPI info)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00570">BaseIntelPlugin.java:570</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_a9ba572be19912ec6b816dc7b69352660"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a9ba572be19912ec6b816dc7b69352660">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.getListInfoParam</a></div><div class="ttdeci">Object getListInfoParam()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00140">BaseIntelPlugin.java:140</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_a9e443024a6224a5c170e5d1476514954"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a9e443024a6224a5c170e5d1476514954">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.getBulletColorForMode</a></div><div class="ttdeci">Color getBulletColorForMode(ListInfoMode mode)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00633">BaseIntelPlugin.java:633</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_adfa808a345b432134c9fb11227edc7df"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#adfa808a345b432134c9fb11227edc7df">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.bullet</a></div><div class="ttdeci">void bullet(TooltipMakerAPI info)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00554">BaseIntelPlugin.java:554</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9e711e4051fa5845c0a4f2c2bd48a441" name="a9e711e4051fa5845c0a4f2c2bd48a441"></a>
@@ -656,35 +626,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a23503aedd518fbcfbbc1ed549ed81d38">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/dff/CommSnifferIntel_8java_source.html#l00063">63</a> of file <a class="el" href="../../d7/dff/CommSnifferIntel_8java_source.html">CommSnifferIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   63</span>                                             {</div>
-<div class="line"><span class="lineno">   64</span>        super.advanceImpl(amount);</div>
-<div class="line"><span class="lineno">   65</span>        </div>
-<div class="line"><span class="lineno">   66</span>        <span class="keywordtype">float</span> days = Misc.getDays(amount);</div>
-<div class="line"><span class="lineno">   67</span>        <a class="code hl_variable" href="../../d7/d15/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#a7c4b168dad1d3e054b22d0fce3d660c6">check</a>.<a class="code hl_function" href="../../da/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html#a61881d44415cda2c50c3354c3f0a4d8a">advance</a>(days);</div>
-<div class="line"><span class="lineno">   68</span>        </div>
-<div class="line"><span class="lineno">   69</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d7/d15/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#a7c4b168dad1d3e054b22d0fce3d660c6">check</a>.intervalElapsed()) {</div>
-<div class="line"><span class="lineno">   70</span>            <span class="keywordtype">float</span> p = <a class="code hl_function" href="../../d7/d15/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#a135c38fc269b0fcbc65454527e0c0dac">getCurrLoseProb</a>();</div>
-<div class="line"><span class="lineno">   71</span>            <span class="keywordflow">if</span> ((<span class="keywordtype">float</span>) Math.random() &lt; p) {</div>
-<div class="line"><span class="lineno">   72</span>                <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#aa9964eb74c87437bc9870cef6c4f5d00">endAfterDelay</a>();</div>
-<div class="line"><span class="lineno">   73</span>                <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a9a95c1eccf4604952fd8a65605f24e31">sendUpdateIfPlayerHasIntel</a>(<span class="keyword">new</span> Object(), <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   74</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   75</span>            }</div>
-<div class="line"><span class="lineno">   76</span>        }</div>
-<div class="line"><span class="lineno">   77</span>        </div>
-<div class="line"><span class="lineno">   78</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="../../d7/d15/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#a9802e79d4983e6bd0dce0319b0b2b63b">relay</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#ab1db2d22e578b234c90ac09f11fe0905">isAlive</a>() || !((CommRelayEntityPlugin)<a class="code hl_variable" href="../../d7/d15/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#a9802e79d4983e6bd0dce0319b0b2b63b">relay</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a0bd8783c7dc6da12c6befaf2e4bcbe3d">getCustomPlugin</a>()).isHacked()) {</div>
-<div class="line"><span class="lineno">   79</span>            <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#aa9964eb74c87437bc9870cef6c4f5d00">endAfterDelay</a>();</div>
-<div class="line"><span class="lineno">   80</span>            <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a9a95c1eccf4604952fd8a65605f24e31">sendUpdateIfPlayerHasIntel</a>(<span class="keyword">new</span> Object(), <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   81</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   82</span>        }</div>
-<div class="line"><span class="lineno">   83</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_a9a95c1eccf4604952fd8a65605f24e31"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a9a95c1eccf4604952fd8a65605f24e31">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.sendUpdateIfPlayerHasIntel</a></div><div class="ttdeci">void sendUpdateIfPlayerHasIntel(Object listInfoParam, TextPanelAPI textPanel)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00159">BaseIntelPlugin.java:159</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_aa9964eb74c87437bc9870cef6c4f5d00"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#aa9964eb74c87437bc9870cef6c4f5d00">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.endAfterDelay</a></div><div class="ttdeci">void endAfterDelay()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00098">BaseIntelPlugin.java:98</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel_html_a135c38fc269b0fcbc65454527e0c0dac"><div class="ttname"><a href="../../d7/d15/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#a135c38fc269b0fcbc65454527e0c0dac">com.fs.starfarer.api.impl.campaign.intel.misc.CommSnifferIntel.getCurrLoseProb</a></div><div class="ttdeci">float getCurrLoseProb()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dff/CommSnifferIntel_8java_source.html#l00117">CommSnifferIntel.java:117</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel_html_a7c4b168dad1d3e054b22d0fce3d660c6"><div class="ttname"><a href="../../d7/d15/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#a7c4b168dad1d3e054b22d0fce3d660c6">com.fs.starfarer.api.impl.campaign.intel.misc.CommSnifferIntel.check</a></div><div class="ttdeci">IntervalUtil check</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dff/CommSnifferIntel_8java_source.html#l00030">CommSnifferIntel.java:30</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil_html_a61881d44415cda2c50c3354c3f0a4d8a"><div class="ttname"><a href="../../da/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html#a61881d44415cda2c50c3354c3f0a4d8a">com.fs.starfarer.api.util.IntervalUtil.advance</a></div><div class="ttdeci">void advance(float amount)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de3/IntervalUtil_8java_source.html#l00039">IntervalUtil.java:39</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_a0bd8783c7dc6da12c6befaf2e4bcbe3d"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a0bd8783c7dc6da12c6befaf2e4bcbe3d">com.fs.starfarer.api.campaign.SectorEntityToken.getCustomPlugin</a></div><div class="ttdeci">CustomCampaignEntityPlugin getCustomPlugin()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_ab1db2d22e578b234c90ac09f11fe0905"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#ab1db2d22e578b234c90ac09f11fe0905">com.fs.starfarer.api.campaign.SectorEntityToken.isAlive</a></div><div class="ttdeci">boolean isAlive()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af04b277cbe094ed1db0ee0a8a94d6d9d" name="af04b277cbe094ed1db0ee0a8a94d6d9d"></a>
@@ -716,21 +658,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a888f7df0a6ac6e1539e730b22c54c903">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/dff/CommSnifferIntel_8java_source.html#l00227">227</a> of file <a class="el" href="../../d7/dff/CommSnifferIntel_8java_source.html">CommSnifferIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  227</span>                                                                     {</div>
-<div class="line"><span class="lineno">  228</span>        <span class="keywordflow">if</span> (buttonId == <a class="code hl_variable" href="../../d7/d15/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#ad4381fd132ff641822b2dfe686c0c219">UNINSTALL</a>) {</div>
-<div class="line"><span class="lineno">  229</span>            <span class="comment">//endAfterDelay();</span></div>
-<div class="line"><span class="lineno">  230</span>            <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#aded37538fc19c3bce23708407fcb0d29">endImmediately</a>();</div>
-<div class="line"><span class="lineno">  231</span>            <a class="code hl_variable" href="../../d7/d15/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#ac5bb6acacad99a90b06b0e8f0c277480">uninstalled</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  232</span>            <span class="keywordflow">if</span> (ui != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  233</span>                <span class="comment">//ui.updateUIForItem(this);</span></div>
-<div class="line"><span class="lineno">  234</span>                ui.recreateIntelUI();</div>
-<div class="line"><span class="lineno">  235</span>            }</div>
-<div class="line"><span class="lineno">  236</span>        }</div>
-<div class="line"><span class="lineno">  237</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_aded37538fc19c3bce23708407fcb0d29"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#aded37538fc19c3bce23708407fcb0d29">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.endImmediately</a></div><div class="ttdeci">void endImmediately()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00095">BaseIntelPlugin.java:95</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel_html_ac5bb6acacad99a90b06b0e8f0c277480"><div class="ttname"><a href="../../d7/d15/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#ac5bb6acacad99a90b06b0e8f0c277480">com.fs.starfarer.api.impl.campaign.intel.misc.CommSnifferIntel.uninstalled</a></div><div class="ttdeci">Boolean uninstalled</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dff/CommSnifferIntel_8java_source.html#l00031">CommSnifferIntel.java:31</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel_html_ad4381fd132ff641822b2dfe686c0c219"><div class="ttname"><a href="../../d7/d15/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#ad4381fd132ff641822b2dfe686c0c219">com.fs.starfarer.api.impl.campaign.intel.misc.CommSnifferIntel.UNINSTALL</a></div><div class="ttdeci">static final String UNINSTALL</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dff/CommSnifferIntel_8java_source.html#l00027">CommSnifferIntel.java:27</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9cecb216bf6c59048e10f2b3f775e14a" name="a9cecb216bf6c59048e10f2b3f775e14a"></a>
@@ -762,12 +690,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a52bf052e0d21489a4a3b47bf064c7ed2">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/dff/CommSnifferIntel_8java_source.html#l00240">240</a> of file <a class="el" href="../../d7/dff/CommSnifferIntel_8java_source.html">CommSnifferIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  240</span>                                                                                  {</div>
-<div class="line"><span class="lineno">  241</span>        prompt.addPara(<span class="stringliteral">&quot;Uninstalling this comm sniffer will reduce the chance &quot;</span> +</div>
-<div class="line"><span class="lineno">  242</span>                       <span class="stringliteral">&quot;that the remaining comm sniffers are detected.&quot;</span>, 0f);</div>
-<div class="line"><span class="lineno">  243</span>        <span class="comment">//prompt.addPara(&quot;Continue?&quot;, 10f);</span></div>
-<div class="line"><span class="lineno">  244</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a4679e1b813a7147e8277ce24e81ec5bc" name="a4679e1b813a7147e8277ce24e81ec5bc"></a>
@@ -799,15 +722,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#afa8bb8f2afc14a90ef02a999a66535e9">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/dff/CommSnifferIntel_8java_source.html#l00133">133</a> of file <a class="el" href="../../d7/dff/CommSnifferIntel_8java_source.html">CommSnifferIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  133</span>                                                                         {</div>
-<div class="line"><span class="lineno">  134</span>        Color c = <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#af44e4a0a7c61b8efbc4ef210c7061723">getTitleColor</a>(mode);</div>
-<div class="line"><span class="lineno">  135</span>        info.addPara(<a class="code hl_function" href="../../d7/d15/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#a9314669670fad15fcc40830c1f6443e6">getName</a>(), c, 0f);</div>
-<div class="line"><span class="lineno">  136</span>        <a class="code hl_function" href="../../d7/d15/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#a4af6c33b392393e2231793bbec36360d">addBulletPoints</a>(info, mode);</div>
-<div class="line"><span class="lineno">  137</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_af44e4a0a7c61b8efbc4ef210c7061723"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#af44e4a0a7c61b8efbc4ef210c7061723">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.getTitleColor</a></div><div class="ttdeci">Color getTitleColor(ListInfoMode mode)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00615">BaseIntelPlugin.java:615</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel_html_a4af6c33b392393e2231793bbec36360d"><div class="ttname"><a href="../../d7/d15/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#a4af6c33b392393e2231793bbec36360d">com.fs.starfarer.api.impl.campaign.intel.misc.CommSnifferIntel.addBulletPoints</a></div><div class="ttdeci">void addBulletPoints(TooltipMakerAPI info, ListInfoMode mode)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dff/CommSnifferIntel_8java_source.html#l00089">CommSnifferIntel.java:89</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel_html_a9314669670fad15fcc40830c1f6443e6"><div class="ttname"><a href="../../d7/d15/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#a9314669670fad15fcc40830c1f6443e6">com.fs.starfarer.api.impl.campaign.intel.misc.CommSnifferIntel.getName</a></div><div class="ttdeci">String getName()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dff/CommSnifferIntel_8java_source.html#l00268">CommSnifferIntel.java:268</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a79188443390cb1da64d54b05f0f60138" name="a79188443390cb1da64d54b05f0f60138"></a>
@@ -845,95 +760,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a8cccf49669fce7f61c75af3c8afc4bb9">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/dff/CommSnifferIntel_8java_source.html#l00140">140</a> of file <a class="el" href="../../d7/dff/CommSnifferIntel_8java_source.html">CommSnifferIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  140</span>                                                                                        {</div>
-<div class="line"><span class="lineno">  141</span>        Color h = Misc.getHighlightColor();</div>
-<div class="line"><span class="lineno">  142</span>        Color g = Misc.getGrayColor();</div>
-<div class="line"><span class="lineno">  143</span>        Color tc = Misc.getTextColor();</div>
-<div class="line"><span class="lineno">  144</span>        <span class="keywordtype">float</span> pad = 3f;</div>
-<div class="line"><span class="lineno">  145</span>        <span class="keywordtype">float</span> opad = 10f;</div>
-<div class="line"><span class="lineno">  146</span>        </div>
-<div class="line"><span class="lineno">  147</span>        info.addImage(Global.getSector().getPlayerFaction().getLogo(), width, 128, opad);</div>
-<div class="line"><span class="lineno">  148</span>        </div>
-<div class="line"><span class="lineno">  149</span>        String name = <a class="code hl_variable" href="../../d7/d15/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#a9802e79d4983e6bd0dce0319b0b2b63b">relay</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a4fa77e45f0774df8a8980dc438598678">getName</a>();</div>
-<div class="line"><span class="lineno">  150</span>        <span class="keywordflow">if</span> (name.equals(<a class="code hl_variable" href="../../d7/d15/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#a9802e79d4983e6bd0dce0319b0b2b63b">relay</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#afeabec88c6e0973ed2078f2ec45bd647">getCustomEntitySpec</a>().<a class="code hl_function" href="../../d1/dca/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CustomEntitySpecAPI.html#acc3eb31683511ec3b18798fb6873fe18">getDefaultName</a>())) {</div>
-<div class="line"><span class="lineno">  151</span>            name = name.toLowerCase();</div>
-<div class="line"><span class="lineno">  152</span>        }</div>
-<div class="line"><span class="lineno">  153</span>        </div>
-<div class="line"><span class="lineno">  154</span>        </div>
-<div class="line"><span class="lineno">  155</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#ac265e304e3d245a6ae16be73e0b918b0">isEnding</a>()) {</div>
-<div class="line"><span class="lineno">  156</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d7/d15/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#ac5bb6acacad99a90b06b0e8f0c277480">uninstalled</a> != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  157</span>                info.addPara(<span class="stringliteral">&quot;You&#39;ve uninstalled the comm sniffer at &quot;</span> + name + <span class="stringliteral">&quot;.&quot;</span>, opad);</div>
-<div class="line"><span class="lineno">  158</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  159</span>                info.addPara(<span class="stringliteral">&quot;The comm sniffer installed at &quot;</span> + name + <span class="stringliteral">&quot; is no longer responding to status queries.&quot;</span>, opad);</div>
-<div class="line"><span class="lineno">  160</span>            }</div>
-<div class="line"><span class="lineno">  161</span>            <a class="code hl_function" href="../../d7/d15/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#a4af6c33b392393e2231793bbec36360d">addBulletPoints</a>(info, ListInfoMode.IN_DESC);</div>
-<div class="line"><span class="lineno">  162</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  163</span>            info.addPara(<span class="stringliteral">&quot;You have installed a comm sniffer at &quot;</span> + name + <span class="stringliteral">&quot;.&quot;</span>, opad);</div>
-<div class="line"><span class="lineno">  164</span>            <span class="keywordflow">if</span> (!<a class="code hl_variable" href="../../d7/d15/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#a9802e79d4983e6bd0dce0319b0b2b63b">relay</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#aca208794671c1be979d665d374deaa94">isInHyperspace</a>()) {</div>
-<div class="line"><span class="lineno">  165</span>                info.addPara(<span class="stringliteral">&quot;It is providing you with up-to-date local intel for the &quot;</span> + </div>
-<div class="line"><span class="lineno">  166</span>                        <a class="code hl_variable" href="../../d7/d15/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#a9802e79d4983e6bd0dce0319b0b2b63b">relay</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a06362480c6a17326650354460c6d7442">getContainingLocation</a>().<a class="code hl_function" href="../../d2/d2c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI.html#a9852a0789ec12b7c5826eab0d72df0f4">getNameWithLowercaseType</a>() + <span class="stringliteral">&quot;.&quot;</span>, opad);</div>
-<div class="line"><span class="lineno">  167</span>            }</div>
-<div class="line"><span class="lineno">  168</span>            </div>
-<div class="line"><span class="lineno">  169</span>            <a class="code hl_function" href="../../d7/d15/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#a4af6c33b392393e2231793bbec36360d">addBulletPoints</a>(info, ListInfoMode.IN_DESC);</div>
-<div class="line"><span class="lineno">  170</span>            </div>
-<div class="line"><span class="lineno">  171</span>            <span class="keywordtype">float</span> p = <a class="code hl_function" href="../../d7/d15/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#a135c38fc269b0fcbc65454527e0c0dac">getCurrLoseProb</a>();</div>
-<div class="line"><span class="lineno">  172</span>            </div>
-<div class="line"><span class="lineno">  173</span>            String danger = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  174</span>            Color dangerColor = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  175</span>            <span class="keywordflow">if</span> (p &lt;= 0) {</div>
-<div class="line"><span class="lineno">  176</span><span class="comment">//              danger = &quot;vanishingly small&quot;;</span></div>
-<div class="line"><span class="lineno">  177</span><span class="comment">//              dangerColor = Misc.getPositiveHighlightColor();</span></div>
-<div class="line"><span class="lineno">  178</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (p &lt;= 0.33f) {</div>
-<div class="line"><span class="lineno">  179</span>                danger = <span class="stringliteral">&quot;low&quot;</span>;</div>
-<div class="line"><span class="lineno">  180</span>                dangerColor = Misc.getPositiveHighlightColor();</div>
-<div class="line"><span class="lineno">  181</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (p &lt;= 0.67f) {</div>
-<div class="line"><span class="lineno">  182</span>                danger = <span class="stringliteral">&quot;medium&quot;</span>;</div>
-<div class="line"><span class="lineno">  183</span>                dangerColor = h;</div>
-<div class="line"><span class="lineno">  184</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  185</span>                danger = <span class="stringliteral">&quot;high&quot;</span>;</div>
-<div class="line"><span class="lineno">  186</span>                dangerColor = Misc.getNegativeHighlightColor();</div>
-<div class="line"><span class="lineno">  187</span>            }</div>
-<div class="line"><span class="lineno">  188</span>            </div>
-<div class="line"><span class="lineno">  189</span>            <span class="comment">//int num = Global.getSector().getIntelManager().getIntelCount(CommSnifferIntel.class, false);</span></div>
-<div class="line"><span class="lineno">  190</span>            <span class="keywordtype">int</span> num = 0;</div>
-<div class="line"><span class="lineno">  191</span>            <span class="keywordflow">for</span> (IntelInfoPlugin i : Global.getSector().getIntelManager().getIntel(<a class="code hl_function" href="../../d7/d15/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#abd6726e4bc4292248193b8af6b00f563">CommSnifferIntel</a>.class)) {</div>
-<div class="line"><span class="lineno">  192</span>                <a class="code hl_function" href="../../d7/d15/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#abd6726e4bc4292248193b8af6b00f563">CommSnifferIntel</a> intel = (<a class="code hl_function" href="../../d7/d15/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#abd6726e4bc4292248193b8af6b00f563">CommSnifferIntel</a>) i;</div>
-<div class="line"><span class="lineno">  193</span>                <span class="keywordflow">if</span> (!intel.isEnding()) num++;</div>
-<div class="line"><span class="lineno">  194</span>            }</div>
-<div class="line"><span class="lineno">  195</span>            </div>
-<div class="line"><span class="lineno">  196</span>            String sniffers = <span class="stringliteral">&quot;sniffers&quot;</span>;</div>
-<div class="line"><span class="lineno">  197</span>            String any = <span class="stringliteral">&quot;any of them&quot;</span>;</div>
-<div class="line"><span class="lineno">  198</span>            <span class="keywordflow">if</span> (num == 1) {</div>
-<div class="line"><span class="lineno">  199</span>                sniffers = <span class="stringliteral">&quot;sniffer&quot;</span>;</div>
-<div class="line"><span class="lineno">  200</span>                any = <span class="stringliteral">&quot;it&quot;</span>;</div>
-<div class="line"><span class="lineno">  201</span>            }</div>
-<div class="line"><span class="lineno">  202</span>            <span class="keywordflow">if</span> (danger == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  203</span>                info.addPara(<span class="stringliteral">&quot;You have %s comm &quot;</span> + sniffers + <span class="stringliteral">&quot; installed in the comm network. &quot;</span> +</div>
-<div class="line"><span class="lineno">  204</span>                        <span class="stringliteral">&quot;There is no danger of &quot;</span> + any + <span class="stringliteral">&quot; being detected and cleared out.&quot;</span>, opad, </div>
-<div class="line"><span class="lineno">  205</span>                        h, <span class="stringliteral">&quot;&quot;</span> + num);</div>
-<div class="line"><span class="lineno">  206</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  207</span>                LabelAPI label = info.addPara(<span class="stringliteral">&quot;You have %s comm &quot;</span> + sniffers + <span class="stringliteral">&quot; installed in the comm network. The probability &quot;</span> +</div>
-<div class="line"><span class="lineno">  208</span>                        <span class="stringliteral">&quot;of &quot;</span> + any + <span class="stringliteral">&quot; being detected and cleared out is %s.&quot;</span>, opad, </div>
-<div class="line"><span class="lineno">  209</span>                        h, <span class="stringliteral">&quot;&quot;</span> + num, danger);</div>
-<div class="line"><span class="lineno">  210</span>                label.setHighlight(<span class="stringliteral">&quot;&quot;</span> + num, danger);</div>
-<div class="line"><span class="lineno">  211</span>                label.setHighlightColors(h, dangerColor);</div>
-<div class="line"><span class="lineno">  212</span>            }</div>
-<div class="line"><span class="lineno">  213</span>            </div>
-<div class="line"><span class="lineno">  214</span>            </div>
-<div class="line"><span class="lineno">  215</span>            ButtonAPI button = <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a3e79e3ff143db56265f3c529fa4b6bd7">addGenericButton</a>(info, width, <span class="stringliteral">&quot;Uninstall comm sniffer&quot;</span>, <a class="code hl_variable" href="../../d7/d15/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#ad4381fd132ff641822b2dfe686c0c219">UNINSTALL</a>);</div>
-<div class="line"><span class="lineno">  216</span>            button.setShortcut(Keyboard.KEY_U, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  217</span>        }</div>
-<div class="line"><span class="lineno">  218</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_a3e79e3ff143db56265f3c529fa4b6bd7"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a3e79e3ff143db56265f3c529fa4b6bd7">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.addGenericButton</a></div><div class="ttdeci">ButtonAPI addGenericButton(TooltipMakerAPI info, float width, String text, Object data)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00688">BaseIntelPlugin.java:688</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_ac265e304e3d245a6ae16be73e0b918b0"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#ac265e304e3d245a6ae16be73e0b918b0">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.isEnding</a></div><div class="ttdeci">boolean isEnding()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00126">BaseIntelPlugin.java:126</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel_html_abd6726e4bc4292248193b8af6b00f563"><div class="ttname"><a href="../../d7/d15/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#abd6726e4bc4292248193b8af6b00f563">com.fs.starfarer.api.impl.campaign.intel.misc.CommSnifferIntel.CommSnifferIntel</a></div><div class="ttdeci">CommSnifferIntel(SectorEntityToken relay)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dff/CommSnifferIntel_8java_source.html#l00043">CommSnifferIntel.java:43</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CustomEntitySpecAPI_html_acc3eb31683511ec3b18798fb6873fe18"><div class="ttname"><a href="../../d1/dca/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CustomEntitySpecAPI.html#acc3eb31683511ec3b18798fb6873fe18">com.fs.starfarer.api.campaign.CustomEntitySpecAPI.getDefaultName</a></div><div class="ttdeci">String getDefaultName()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI_html_a9852a0789ec12b7c5826eab0d72df0f4"><div class="ttname"><a href="../../d2/d2c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI.html#a9852a0789ec12b7c5826eab0d72df0f4">com.fs.starfarer.api.campaign.LocationAPI.getNameWithLowercaseType</a></div><div class="ttdeci">String getNameWithLowercaseType()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_a06362480c6a17326650354460c6d7442"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a06362480c6a17326650354460c6d7442">com.fs.starfarer.api.campaign.SectorEntityToken.getContainingLocation</a></div><div class="ttdeci">LocationAPI getContainingLocation()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_a4fa77e45f0774df8a8980dc438598678"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a4fa77e45f0774df8a8980dc438598678">com.fs.starfarer.api.campaign.SectorEntityToken.getName</a></div><div class="ttdeci">String getName()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_aca208794671c1be979d665d374deaa94"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#aca208794671c1be979d665d374deaa94">com.fs.starfarer.api.campaign.SectorEntityToken.isInHyperspace</a></div><div class="ttdeci">boolean isInHyperspace()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_afeabec88c6e0973ed2078f2ec45bd647"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#afeabec88c6e0973ed2078f2ec45bd647">com.fs.starfarer.api.campaign.SectorEntityToken.getCustomEntitySpec</a></div><div class="ttdeci">CustomEntitySpecAPI getCustomEntitySpec()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a51406eac3298b396eff22505825d3334" name="a51406eac3298b396eff22505825d3334"></a>
@@ -955,10 +782,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#ac1b47caf3d2b38c9c094b0c959f5bac8">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/dff/CommSnifferIntel_8java_source.html#l00247">247</a> of file <a class="el" href="../../d7/dff/CommSnifferIntel_8java_source.html">CommSnifferIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  247</span>                                                                {</div>
-<div class="line"><span class="lineno">  248</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  249</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8a5310df86c898170c93e48bfd03f589" name="a8a5310df86c898170c93e48bfd03f589"></a>
@@ -985,10 +809,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/dff/CommSnifferIntel_8java_source.html#l00113">113</a> of file <a class="el" href="../../d7/dff/CommSnifferIntel_8java_source.html">CommSnifferIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  113</span>                                      {</div>
-<div class="line"><span class="lineno">  114</span>        <span class="keywordflow">return</span> Global.getSettings().getFloat(<span class="stringliteral">&quot;probToLoseSnifferPerMonthPerExtra&quot;</span>);</div>
-<div class="line"><span class="lineno">  115</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aaa704547a273367880a9bc6a0964c740" name="aaa704547a273367880a9bc6a0964c740"></a>
@@ -1009,11 +830,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#ae93559a4be65baa333b36619a2a82850">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/dff/CommSnifferIntel_8java_source.html#l00305">305</a> of file <a class="el" href="../../d7/dff/CommSnifferIntel_8java_source.html">CommSnifferIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  305</span>                                        {</div>
-<div class="line"><span class="lineno">  306</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a40be6c0ab52a7b188f3a9fc2f564bffd">getSoundMinorMessage</a>();</div>
-<div class="line"><span class="lineno">  307</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_a40be6c0ab52a7b188f3a9fc2f564bffd"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a40be6c0ab52a7b188f3a9fc2f564bffd">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.getSoundMinorMessage</a></div><div class="ttdeci">static String getSoundMinorMessage()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00674">BaseIntelPlugin.java:674</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a135c38fc269b0fcbc65454527e0c0dac" name="a135c38fc269b0fcbc65454527e0c0dac"></a>
@@ -1040,23 +857,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/dff/CommSnifferIntel_8java_source.html#l00117">117</a> of file <a class="el" href="../../d7/dff/CommSnifferIntel_8java_source.html">CommSnifferIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  117</span>                                      {</div>
-<div class="line"><span class="lineno">  118</span>        <span class="keywordtype">float</span> curr = 0f;</div>
-<div class="line"><span class="lineno">  119</span>        <span class="keywordflow">for</span> (IntelInfoPlugin p : Global.getSector().getIntelManager().getIntel(<a class="code hl_function" href="../../d7/d15/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#abd6726e4bc4292248193b8af6b00f563">CommSnifferIntel</a>.class)) {</div>
-<div class="line"><span class="lineno">  120</span>            <a class="code hl_function" href="../../d7/d15/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#abd6726e4bc4292248193b8af6b00f563">CommSnifferIntel</a> intel = (<a class="code hl_function" href="../../d7/d15/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#abd6726e4bc4292248193b8af6b00f563">CommSnifferIntel</a>) p;</div>
-<div class="line"><span class="lineno">  121</span>            <span class="keywordflow">if</span> (!intel.isEnding()) curr++;</div>
-<div class="line"><span class="lineno">  122</span>        }</div>
-<div class="line"><span class="lineno">  123</span>        </div>
-<div class="line"><span class="lineno">  124</span>        <span class="keywordtype">float</span> max = <a class="code hl_function" href="../../d7/d15/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#a6b3afcfdf48775f33e199b689de91e12">getMax</a>();</div>
-<div class="line"><span class="lineno">  125</span>        <span class="keywordflow">if</span> (curr &lt;= max) <span class="keywordflow">return</span> 0f;</div>
-<div class="line"><span class="lineno">  126</span>        </div>
-<div class="line"><span class="lineno">  127</span>        <span class="keywordtype">float</span> p = (curr - max) * <a class="code hl_function" href="../../d7/d15/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#a8a5310df86c898170c93e48bfd03f589">getBaseLoseProb</a>();</div>
-<div class="line"><span class="lineno">  128</span>        <span class="keywordflow">if</span> (p &gt; 1) p = 1;</div>
-<div class="line"><span class="lineno">  129</span>        <span class="keywordflow">return</span> p;</div>
-<div class="line"><span class="lineno">  130</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel_html_a6b3afcfdf48775f33e199b689de91e12"><div class="ttname"><a href="../../d7/d15/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#a6b3afcfdf48775f33e199b689de91e12">com.fs.starfarer.api.impl.campaign.intel.misc.CommSnifferIntel.getMax</a></div><div class="ttdeci">float getMax()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dff/CommSnifferIntel_8java_source.html#l00110">CommSnifferIntel.java:110</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel_html_a8a5310df86c898170c93e48bfd03f589"><div class="ttname"><a href="../../d7/d15/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#a8a5310df86c898170c93e48bfd03f589">com.fs.starfarer.api.impl.campaign.intel.misc.CommSnifferIntel.getBaseLoseProb</a></div><div class="ttdeci">float getBaseLoseProb()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dff/CommSnifferIntel_8java_source.html#l00113">CommSnifferIntel.java:113</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2c5d91f68981050868e81c9b9eff2bed" name="a2c5d91f68981050868e81c9b9eff2bed"></a>
@@ -1084,16 +885,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/dff/CommSnifferIntel_8java_source.html#l00033">33</a> of file <a class="el" href="../../d7/dff/CommSnifferIntel_8java_source.html">CommSnifferIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   33</span>                                                                                            {</div>
-<div class="line"><span class="lineno">   34</span>        <span class="keywordflow">for</span> (IntelInfoPlugin p : Global.getSector().getIntelManager().getIntel(<a class="code hl_function" href="../../d7/d15/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#abd6726e4bc4292248193b8af6b00f563">CommSnifferIntel</a>.class)) {</div>
-<div class="line"><span class="lineno">   35</span>            <a class="code hl_function" href="../../d7/d15/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#abd6726e4bc4292248193b8af6b00f563">CommSnifferIntel</a> intel = (<a class="code hl_function" href="../../d7/d15/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#abd6726e4bc4292248193b8af6b00f563">CommSnifferIntel</a>) p;</div>
-<div class="line"><span class="lineno">   36</span>            <span class="keywordflow">if</span> (intel.getRelay() == <a class="code hl_variable" href="../../d7/d15/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#a9802e79d4983e6bd0dce0319b0b2b63b">relay</a>) {</div>
-<div class="line"><span class="lineno">   37</span>                <span class="keywordflow">return</span> intel;</div>
-<div class="line"><span class="lineno">   38</span>            }</div>
-<div class="line"><span class="lineno">   39</span>        }</div>
-<div class="line"><span class="lineno">   40</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   41</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a553dc4c87ef9c49edf51c57678321097" name="a553dc4c87ef9c49edf51c57678321097"></a>
@@ -1114,10 +906,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#aef7175eff8878a18ebb3099d3a7ab59f">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/dff/CommSnifferIntel_8java_source.html#l00284">284</a> of file <a class="el" href="../../d7/dff/CommSnifferIntel_8java_source.html">CommSnifferIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  284</span>                                              {</div>
-<div class="line"><span class="lineno">  285</span>        <span class="keywordflow">return</span> super.getFactionForUIColors();</div>
-<div class="line"><span class="lineno">  286</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a0fce3bcaa1a7b81852f659db009c5764" name="a0fce3bcaa1a7b81852f659db009c5764"></a>
@@ -1139,10 +928,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a6499624a08c9565334e2395989f542c9">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/dff/CommSnifferIntel_8java_source.html#l00253">253</a> of file <a class="el" href="../../d7/dff/CommSnifferIntel_8java_source.html">CommSnifferIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  253</span>                            {</div>
-<div class="line"><span class="lineno">  254</span>        <span class="keywordflow">return</span> Global.getSettings().getSpriteName(<span class="stringliteral">&quot;intel&quot;</span>, <span class="stringliteral">&quot;comm_sniffer&quot;</span>);</div>
-<div class="line"><span class="lineno">  255</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a97433e30de0b99096648a610784907a9" name="a97433e30de0b99096648a610784907a9"></a>
@@ -1171,12 +957,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a4ef0af8cb71b4127afce850bc6a04514">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/dff/CommSnifferIntel_8java_source.html#l00258">258</a> of file <a class="el" href="../../d7/dff/CommSnifferIntel_8java_source.html">CommSnifferIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  258</span>                                                      {</div>
-<div class="line"><span class="lineno">  259</span>        Set&lt;String&gt; tags = super.getIntelTags(map);</div>
-<div class="line"><span class="lineno">  260</span>        tags.add(Tags.INTEL_COMM_SNIFFERS);</div>
-<div class="line"><span class="lineno">  261</span>        <span class="keywordflow">return</span> tags;</div>
-<div class="line"><span class="lineno">  262</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a377421495b186ae317d23298bb11611c" name="a377421495b186ae317d23298bb11611c"></a>
@@ -1198,10 +979,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a01f212769febb46bae89256b643c23eb">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/dff/CommSnifferIntel_8java_source.html#l00293">293</a> of file <a class="el" href="../../d7/dff/CommSnifferIntel_8java_source.html">CommSnifferIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  293</span>                                                              {</div>
-<div class="line"><span class="lineno">  294</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d7/d15/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#a9802e79d4983e6bd0dce0319b0b2b63b">relay</a>;</div>
-<div class="line"><span class="lineno">  295</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a6b3afcfdf48775f33e199b689de91e12" name="a6b3afcfdf48775f33e199b689de91e12"></a>
@@ -1228,10 +1006,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/dff/CommSnifferIntel_8java_source.html#l00110">110</a> of file <a class="el" href="../../d7/dff/CommSnifferIntel_8java_source.html">CommSnifferIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  110</span>                             {</div>
-<div class="line"><span class="lineno">  111</span>        <span class="keywordflow">return</span> Global.getSettings().getInt(<span class="stringliteral">&quot;maxCommSniffersBeforeChanceToLose&quot;</span>);</div>
-<div class="line"><span class="lineno">  112</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9314669670fad15fcc40830c1f6443e6" name="a9314669670fad15fcc40830c1f6443e6"></a>
@@ -1252,22 +1027,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a582fe7cb29e8f2f65670d4dd74418235">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/dff/CommSnifferIntel_8java_source.html#l00268">268</a> of file <a class="el" href="../../d7/dff/CommSnifferIntel_8java_source.html">CommSnifferIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  268</span>                            {</div>
-<div class="line"><span class="lineno">  269</span>        String base = <span class="stringliteral">&quot;Comm Sniffer&quot;</span>;</div>
-<div class="line"><span class="lineno">  270</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#ac265e304e3d245a6ae16be73e0b918b0">isEnding</a>()) {</div>
-<div class="line"><span class="lineno">  271</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d7/d15/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#ac5bb6acacad99a90b06b0e8f0c277480">uninstalled</a> != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  272</span>                <span class="keywordflow">return</span> base + <span class="stringliteral">&quot; - Uninstalled&quot;</span>;</div>
-<div class="line"><span class="lineno">  273</span>            }</div>
-<div class="line"><span class="lineno">  274</span>            <span class="keywordflow">return</span> base + <span class="stringliteral">&quot; - Lost&quot;</span>;</div>
-<div class="line"><span class="lineno">  275</span>        }</div>
-<div class="line"><span class="lineno">  276</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a555e1cec23c9e9dc96866e3c37cd96d5">isNew</a>()) {</div>
-<div class="line"><span class="lineno">  277</span>            <span class="keywordflow">return</span> base + <span class="stringliteral">&quot; Installed&quot;</span>;</div>
-<div class="line"><span class="lineno">  278</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  279</span>            <span class="keywordflow">return</span> base;</div>
-<div class="line"><span class="lineno">  280</span>        }</div>
-<div class="line"><span class="lineno">  281</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_a555e1cec23c9e9dc96866e3c37cd96d5"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a555e1cec23c9e9dc96866e3c37cd96d5">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.isNew</a></div><div class="ttdeci">boolean isNew()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00402">BaseIntelPlugin.java:402</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae841f118f9ee25d56831ae0cd78bad41" name="ae841f118f9ee25d56831ae0cd78bad41"></a>
@@ -1286,10 +1046,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/dff/CommSnifferIntel_8java_source.html#l00085">85</a> of file <a class="el" href="../../d7/dff/CommSnifferIntel_8java_source.html">CommSnifferIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   85</span>                                        {</div>
-<div class="line"><span class="lineno">   86</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d7/d15/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#a9802e79d4983e6bd0dce0319b0b2b63b">relay</a>;</div>
-<div class="line"><span class="lineno">   87</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a50c969fbfa0a92bb28609b7e044715e3" name="a50c969fbfa0a92bb28609b7e044715e3"></a>
@@ -1310,10 +1067,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a8fe6bfa41873bed91428d73fa6bac1b6">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/dff/CommSnifferIntel_8java_source.html#l00288">288</a> of file <a class="el" href="../../d7/dff/CommSnifferIntel_8java_source.html">CommSnifferIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  288</span>                                             {</div>
-<div class="line"><span class="lineno">  289</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../d7/d15/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#a9314669670fad15fcc40830c1f6443e6">getName</a>();</div>
-<div class="line"><span class="lineno">  290</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="acd62c71b301e1958e7d3c6e1b9b43bae" name="acd62c71b301e1958e7d3c6e1b9b43bae"></a>
@@ -1334,10 +1088,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a6160e4bb36c43732e98a87a2f1e63b58">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/dff/CommSnifferIntel_8java_source.html#l00264">264</a> of file <a class="el" href="../../d7/dff/CommSnifferIntel_8java_source.html">CommSnifferIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  264</span>                                  {</div>
-<div class="line"><span class="lineno">  265</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Comm Sniffer&quot;</span>;</div>
-<div class="line"><span class="lineno">  266</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9df390db594fbd9c7ea2d2b58b4a5b14" name="a9df390db594fbd9c7ea2d2b58b4a5b14"></a>
@@ -1366,17 +1117,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#aa97466aeeeda8efaa762a17d5dbb37b9">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/dff/CommSnifferIntel_8java_source.html#l00050">50</a> of file <a class="el" href="../../d7/dff/CommSnifferIntel_8java_source.html">CommSnifferIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   50</span>                                 {</div>
-<div class="line"><span class="lineno">   51</span>        super.notifyEnded();</div>
-<div class="line"><span class="lineno">   52</span>        Global.getSector().removeScript(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">   53</span>        </div>
-<div class="line"><span class="lineno">   54</span>        CustomCampaignEntityPlugin plugin = <a class="code hl_variable" href="../../d7/d15/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#a9802e79d4983e6bd0dce0319b0b2b63b">relay</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a0bd8783c7dc6da12c6befaf2e4bcbe3d">getCustomPlugin</a>();</div>
-<div class="line"><span class="lineno">   55</span>        <span class="keywordflow">if</span> (plugin instanceof CampaignObjective) {</div>
-<div class="line"><span class="lineno">   56</span>            CampaignObjective o = (CampaignObjective) plugin;</div>
-<div class="line"><span class="lineno">   57</span>            o.setHacked(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   58</span>        }</div>
-<div class="line"><span class="lineno">   59</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="afdbe12b528e9e87c5734c2e5777ee53f" name="afdbe12b528e9e87c5734c2e5777ee53f"></a>
@@ -1397,13 +1138,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#aede56a965d7570e8ea06cdf31d70e4de">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/dff/CommSnifferIntel_8java_source.html#l00298">298</a> of file <a class="el" href="../../d7/dff/CommSnifferIntel_8java_source.html">CommSnifferIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  298</span>                                       {</div>
-<div class="line"><span class="lineno">  299</span>        <span class="comment">//return false;</span></div>
-<div class="line"><span class="lineno">  300</span>        <span class="comment">//return super.shouldRemoveIntel();</span></div>
-<div class="line"><span class="lineno">  301</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a76be49f1d836a62e192edd4ba597a6cc">isEnded</a>();</div>
-<div class="line"><span class="lineno">  302</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_a76be49f1d836a62e192edd4ba597a6cc"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a76be49f1d836a62e192edd4ba597a6cc">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.isEnded</a></div><div class="ttdeci">boolean isEnded()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00130">BaseIntelPlugin.java:130</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae6d1f831107b67e4cf986fc473fc971e" name="ae6d1f831107b67e4cf986fc473fc971e"></a>
@@ -1422,11 +1157,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/dff/CommSnifferIntel_8java_source.html#l00221">221</a> of file <a class="el" href="../../d7/dff/CommSnifferIntel_8java_source.html">CommSnifferIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  221</span>                            {</div>
-<div class="line"><span class="lineno">  222</span>        <a class="code hl_function" href="../../d7/d15/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#af04b277cbe094ed1db0ee0a8a94d6d9d">buttonPressConfirmed</a>(<a class="code hl_variable" href="../../d7/d15/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#ad4381fd132ff641822b2dfe686c0c219">UNINSTALL</a>, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  223</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel_html_af04b277cbe094ed1db0ee0a8a94d6d9d"><div class="ttname"><a href="../../d7/d15/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#af04b277cbe094ed1db0ee0a8a94d6d9d">com.fs.starfarer.api.impl.campaign.intel.misc.CommSnifferIntel.buttonPressConfirmed</a></div><div class="ttdeci">void buttonPressConfirmed(Object buttonId, IntelUIAPI ui)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dff/CommSnifferIntel_8java_source.html#l00227">CommSnifferIntel.java:227</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

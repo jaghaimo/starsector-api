@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -188,10 +189,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d9/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogPlugin.html#a80d7eadd2dabaf3166c4eda0f197dcb3">com.fs.starfarer.api.campaign.InteractionDialogPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/d19/StandardRespawnDialogPluginImpl_8java_source.html#l00184">184</a> of file <a class="el" href="../../da/d19/StandardRespawnDialogPluginImpl_8java_source.html">StandardRespawnDialogPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  184</span>                                      {</div>
-<div class="line"><span class="lineno">  185</span>        </div>
-<div class="line"><span class="lineno">  186</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af6a1c70d7e330a9f5e84c4b58cb3426f" name="af6a1c70d7e330a9f5e84c4b58cb3426f"></a>
@@ -213,10 +211,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d9/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogPlugin.html#aef5c14336603e974e9d175c38e8b653d">com.fs.starfarer.api.campaign.InteractionDialogPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/d19/StandardRespawnDialogPluginImpl_8java_source.html#l00056">56</a> of file <a class="el" href="../../da/d19/StandardRespawnDialogPluginImpl_8java_source.html">StandardRespawnDialogPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   56</span>                                                               {</div>
-<div class="line"><span class="lineno">   57</span>        <span class="comment">// no combat here, so this won&#39;t get called</span></div>
-<div class="line"><span class="lineno">   58</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac59fa02783f92ee40dcbd5bd717d1807" name="ac59fa02783f92ee40dcbd5bd717d1807"></a>
@@ -243,93 +238,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/d19/StandardRespawnDialogPluginImpl_8java_source.html#l00094">94</a> of file <a class="el" href="../../da/d19/StandardRespawnDialogPluginImpl_8java_source.html">StandardRespawnDialogPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   94</span>                                       {</div>
-<div class="line"><span class="lineno">   95</span> </div>
-<div class="line"><span class="lineno">   96</span>        <span class="keywordtype">float</span> fp = 10;</div>
-<div class="line"><span class="lineno">   97</span>        <span class="keywordtype">float</span> crew = 50;</div>
-<div class="line"><span class="lineno">   98</span>        </div>
-<div class="line"><span class="lineno">   99</span>        <span class="keywordtype">float</span> daysSince = Global.getSector().getClock().getElapsedDaysSince(SharedData.getData().getPlayerLosingBattleTimestamp());</div>
-<div class="line"><span class="lineno">  100</span>        <span class="keywordflow">if</span> (daysSince &lt; 2) {</div>
-<div class="line"><span class="lineno">  101</span>            fp = SharedData.getData().getPlayerPreLosingBattleFP();</div>
-<div class="line"><span class="lineno">  102</span>            crew = SharedData.getData().getPlayerPreLosingBattleCrew();</div>
-<div class="line"><span class="lineno">  103</span>        }</div>
-<div class="line"><span class="lineno">  104</span>        </div>
-<div class="line"><span class="lineno">  105</span>        CampaignFleetAPI <a class="code hl_variable" href="../../dc/dbf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1StandardRespawnDialogPluginImpl.html#ad1ed15180eb30e6c2aa5fbecff52b224">playerFleet</a> = Global.getSector().getPlayerFleet();</div>
-<div class="line"><span class="lineno">  106</span>        </div>
-<div class="line"><span class="lineno">  107</span>        </div>
-<div class="line"><span class="lineno">  108</span>        </div>
-<div class="line"><span class="lineno">  109</span>        <span class="keywordflow">for</span> (CampaignFleetAPI other : Global.getSector().getCurrentLocation().getFleets()) {</div>
-<div class="line"><span class="lineno">  110</span>            MemoryAPI mem = other.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#adcd558c1d95f9755066ddaf9a77311c1">getMemoryWithoutUpdate</a>();</div>
-<div class="line"><span class="lineno">  111</span>            <span class="keywordflow">if</span> (mem.getBoolean(MemFlags.MEMORY_KEY_MAKE_HOSTILE_WHILE_TOFF)) {</div>
-<div class="line"><span class="lineno">  112</span>                mem.<a class="code hl_function" href="../../d0/de7/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html#a78948065392959d77d699b9caffd67e8">removeAllRequired</a>(MemFlags.MEMORY_KEY_MAKE_HOSTILE_WHILE_TOFF);</div>
-<div class="line"><span class="lineno">  113</span>                <span class="comment">//System.out.println(&quot;Hostile: &quot; + mem.getBoolean(MemFlags.MEMORY_KEY_MAKE_HOSTILE_WHILE_TOFF));</span></div>
-<div class="line"><span class="lineno">  114</span>            }</div>
-<div class="line"><span class="lineno">  115</span>            mem.unset(MemFlags.MEMORY_KEY_SAW_PLAYER_WITH_TRANSPONDER_OFF);</div>
-<div class="line"><span class="lineno">  116</span>            </div>
-<div class="line"><span class="lineno">  117</span>            <span class="keywordflow">if</span> (!Misc.isPermaKnowsWhoPlayerIs(other)) {</div>
-<div class="line"><span class="lineno">  118</span>                mem.unset(MemFlags.MEMORY_KEY_SAW_PLAYER_WITH_TRANSPONDER_ON);</div>
-<div class="line"><span class="lineno">  119</span>            }</div>
-<div class="line"><span class="lineno">  120</span>        }</div>
-<div class="line"><span class="lineno">  121</span>        </div>
-<div class="line"><span class="lineno">  122</span>        CampaignFleetAPI fleet = FleetFactoryV3.createEmptyFleet(Factions.PLAYER, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  123</span>        fleet.setName(<span class="stringliteral">&quot;Fleet&quot;</span>);</div>
-<div class="line"><span class="lineno">  124</span> </div>
-<div class="line"><span class="lineno">  125</span>        Global.getSector().setCurrentLocation(Global.getSector().getHyperspace());</div>
-<div class="line"><span class="lineno">  126</span>        fleet.setLocation(1000000000f, 1000000000f);</div>
-<div class="line"><span class="lineno">  127</span>        </div>
-<div class="line"><span class="lineno">  128</span>        <span class="keywordflow">for</span> (OfficerDataAPI officer : <a class="code hl_variable" href="../../dc/dbf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1StandardRespawnDialogPluginImpl.html#ad1ed15180eb30e6c2aa5fbecff52b224">playerFleet</a>.<a class="code hl_function" href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#aa3e90e08c7029f5dae7bc1d4d59e3285">getFleetData</a>().<a class="code hl_function" href="../../d2/dfb/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetDataAPI.html#aa8a92dfcdabaca844bc576c674d01656">getOfficersCopy</a>()) {</div>
-<div class="line"><span class="lineno">  129</span>            fleet.getFleetData().addOfficer(officer);</div>
-<div class="line"><span class="lineno">  130</span>        }</div>
-<div class="line"><span class="lineno">  131</span> </div>
-<div class="line"><span class="lineno">  132</span>        Global.getSector().setPlayerFleet(fleet);</div>
-<div class="line"><span class="lineno">  133</span>        Global.getSector().setLastPlayerBattleTimestamp(Long.MIN_VALUE);</div>
-<div class="line"><span class="lineno">  134</span>        Global.getSector().setLastPlayerBattleWon(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  135</span>        </div>
-<div class="line"><span class="lineno">  136</span>        </div>
-<div class="line"><span class="lineno">  137</span>        fleet.getFleetData().setSyncNeeded();</div>
-<div class="line"><span class="lineno">  138</span>        fleet.getFleetData().syncIfNeeded();</div>
-<div class="line"><span class="lineno">  139</span>        </div>
-<div class="line"><span class="lineno">  140</span>        <span class="keywordflow">for</span> (FleetMemberAPI member : fleet.getFleetData().getMembersListCopy()) {</div>
-<div class="line"><span class="lineno">  141</span>            <span class="keywordtype">float</span> max = member.getRepairTracker().getMaxCR();</div>
-<div class="line"><span class="lineno">  142</span>            member.getRepairTracker().setCR(max);</div>
-<div class="line"><span class="lineno">  143</span>        }</div>
-<div class="line"><span class="lineno">  144</span> </div>
-<div class="line"><span class="lineno">  145</span>        </div>
-<div class="line"><span class="lineno">  146</span>        <span class="keywordflow">for</span> (String <span class="keywordtype">id</span> : Global.getSector().getCharacterData().getAbilities()) {</div>
-<div class="line"><span class="lineno">  147</span>            fleet.addAbility(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  148</span>        }</div>
-<div class="line"><span class="lineno">  149</span>        </div>
-<div class="line"><span class="lineno">  150</span>        <span class="keywordflow">if</span> (fleet.getAbility(Abilities.TRANSPONDER) != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  151</span>            fleet.getAbility(Abilities.TRANSPONDER).activate();</div>
-<div class="line"><span class="lineno">  152</span>        }</div>
-<div class="line"><span class="lineno">  153</span>        </div>
-<div class="line"><span class="lineno">  154</span>        Global.getSector().setPaused(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  155</span>        </div>
-<div class="line"><span class="lineno">  156</span><span class="comment">//      float minCredits = 2000;</span></div>
-<div class="line"><span class="lineno">  157</span><span class="comment">//      float newCredits = Math.max(credits * 0.8f, minCredits);</span></div>
-<div class="line"><span class="lineno">  158</span><span class="comment">//      float change = credits - newCredits;</span></div>
-<div class="line"><span class="lineno">  159</span><span class="comment">//</span></div>
-<div class="line"><span class="lineno">  160</span><span class="comment">//      fleet.getCargo().getCredits().add(newCredits);</span></div>
-<div class="line"><span class="lineno">  161</span><span class="comment">//      if (change &gt; 0) {</span></div>
-<div class="line"><span class="lineno">  162</span><span class="comment">//          addMessage(&quot;Lost &quot; + (int)(change) + &quot; credits&quot;);</span></div>
-<div class="line"><span class="lineno">  163</span><span class="comment">//      } else if (change &lt; 0) {</span></div>
-<div class="line"><span class="lineno">  164</span><span class="comment">//          addMessage(&quot;Gained &quot; + (int)(-change) + &quot; credits&quot;);</span></div>
-<div class="line"><span class="lineno">  165</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  166</span>        </div>
-<div class="line"><span class="lineno">  167</span>        Global.getSector().getCampaignUI().resetViewOffset();</div>
-<div class="line"><span class="lineno">  168</span>        </div>
-<div class="line"><span class="lineno">  169</span>        Misc.clearAreaAroundPlayer(2000f);</div>
-<div class="line"><span class="lineno">  170</span>        </div>
-<div class="line"><span class="lineno">  171</span>        PersonBountyEventData data = SharedData.getData().getPersonBountyEventData();</div>
-<div class="line"><span class="lineno">  172</span>        data.setLevel(Math.max(0, data.getLevel() - 1));</div>
-<div class="line"><span class="lineno">  173</span>        data.setSuccessesThisLevel(0);</div>
-<div class="line"><span class="lineno">  174</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1StandardRespawnDialogPluginImpl_html_ad1ed15180eb30e6c2aa5fbecff52b224"><div class="ttname"><a href="../../dc/dbf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1StandardRespawnDialogPluginImpl.html#ad1ed15180eb30e6c2aa5fbecff52b224">com.fs.starfarer.api.impl.campaign.StandardRespawnDialogPluginImpl.playerFleet</a></div><div class="ttdeci">CampaignFleetAPI playerFleet</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d19/StandardRespawnDialogPluginImpl_8java_source.html#l00037">StandardRespawnDialogPluginImpl.java:37</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI_html_aa3e90e08c7029f5dae7bc1d4d59e3285"><div class="ttname"><a href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#aa3e90e08c7029f5dae7bc1d4d59e3285">com.fs.starfarer.api.campaign.CampaignFleetAPI.getFleetData</a></div><div class="ttdeci">FleetDataAPI getFleetData()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetDataAPI_html_aa8a92dfcdabaca844bc576c674d01656"><div class="ttname"><a href="../../d2/dfb/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetDataAPI.html#aa8a92dfcdabaca844bc576c674d01656">com.fs.starfarer.api.campaign.FleetDataAPI.getOfficersCopy</a></div><div class="ttdeci">List&lt; OfficerDataAPI &gt; getOfficersCopy()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_adcd558c1d95f9755066ddaf9a77311c1"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#adcd558c1d95f9755066ddaf9a77311c1">com.fs.starfarer.api.campaign.SectorEntityToken.getMemoryWithoutUpdate</a></div><div class="ttdeci">MemoryAPI getMemoryWithoutUpdate()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI_html_a78948065392959d77d699b9caffd67e8"><div class="ttname"><a href="../../d0/de7/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html#a78948065392959d77d699b9caffd67e8">com.fs.starfarer.api.campaign.rules.MemoryAPI.removeAllRequired</a></div><div class="ttdeci">void removeAllRequired(String key)</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a896d0b9d91abc61a49ee90a8cba9fdf2" name="a896d0b9d91abc61a49ee90a8cba9fdf2"></a>
@@ -350,10 +259,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d9/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogPlugin.html#aea32ca8c29671cc5128ba0fa1684e296">com.fs.starfarer.api.campaign.InteractionDialogPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/d19/StandardRespawnDialogPluginImpl_8java_source.html#l00188">188</a> of file <a class="el" href="../../da/d19/StandardRespawnDialogPluginImpl_8java_source.html">StandardRespawnDialogPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  188</span>                               {</div>
-<div class="line"><span class="lineno">  189</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  190</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a59bdeee78db406f5ccd79bf1ccf4c90d" name="a59bdeee78db406f5ccd79bf1ccf4c90d"></a>
@@ -374,10 +280,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d9/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogPlugin.html#a68f205d2acc9d28acad2496227d7486e">com.fs.starfarer.api.campaign.InteractionDialogPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/d19/StandardRespawnDialogPluginImpl_8java_source.html#l00052">52</a> of file <a class="el" href="../../da/d19/StandardRespawnDialogPluginImpl_8java_source.html">StandardRespawnDialogPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   52</span>                                                 {</div>
-<div class="line"><span class="lineno">   53</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   54</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a41ce3242b8cf4c99b45ff695e6fecee3" name="a41ce3242b8cf4c99b45ff695e6fecee3"></a>
@@ -399,28 +302,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d9/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogPlugin.html#ad71422b0b24a8e67ea18dbc5979c96ef">com.fs.starfarer.api.campaign.InteractionDialogPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/d19/StandardRespawnDialogPluginImpl_8java_source.html#l00039">39</a> of file <a class="el" href="../../da/d19/StandardRespawnDialogPluginImpl_8java_source.html">StandardRespawnDialogPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   39</span>                                                  {</div>
-<div class="line"><span class="lineno">   40</span>        this.dialog = <a class="code hl_variable" href="../../dc/dbf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1StandardRespawnDialogPluginImpl.html#a7ac9de1ea3bb704171c8f8fb5b38bcbd">dialog</a>;</div>
-<div class="line"><span class="lineno">   41</span>        <a class="code hl_variable" href="../../dc/dbf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1StandardRespawnDialogPluginImpl.html#a82a7999f183261ae5825b1f822b1f1a3">textPanel</a> = <a class="code hl_variable" href="../../dc/dbf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1StandardRespawnDialogPluginImpl.html#a7ac9de1ea3bb704171c8f8fb5b38bcbd">dialog</a>.<a class="code hl_function" href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#a52d00add8a9c52795f652f493ac37244">getTextPanel</a>();</div>
-<div class="line"><span class="lineno">   42</span>        <a class="code hl_variable" href="../../dc/dbf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1StandardRespawnDialogPluginImpl.html#ac21da1f8c7773d1b02b61334b040e15d">options</a> = <a class="code hl_variable" href="../../dc/dbf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1StandardRespawnDialogPluginImpl.html#a7ac9de1ea3bb704171c8f8fb5b38bcbd">dialog</a>.<a class="code hl_function" href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#af4f0b5fdb66110b1d0565b433abaf65c">getOptionPanel</a>();</div>
-<div class="line"><span class="lineno">   43</span>        <a class="code hl_variable" href="../../dc/dbf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1StandardRespawnDialogPluginImpl.html#a5052bebe1ff7461785e75b96103c2ba7">visual</a> = <a class="code hl_variable" href="../../dc/dbf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1StandardRespawnDialogPluginImpl.html#a7ac9de1ea3bb704171c8f8fb5b38bcbd">dialog</a>.<a class="code hl_function" href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#a5619d9b7c7aec96fff1afb09c47fff1c">getVisualPanel</a>();</div>
-<div class="line"><span class="lineno">   44</span> </div>
-<div class="line"><span class="lineno">   45</span>        <a class="code hl_variable" href="../../dc/dbf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1StandardRespawnDialogPluginImpl.html#ad1ed15180eb30e6c2aa5fbecff52b224">playerFleet</a> = Global.getSector().getPlayerFleet();</div>
-<div class="line"><span class="lineno">   46</span>        </div>
-<div class="line"><span class="lineno">   47</span>        <a class="code hl_variable" href="../../dc/dbf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1StandardRespawnDialogPluginImpl.html#a5052bebe1ff7461785e75b96103c2ba7">visual</a>.<a class="code hl_function" href="../../d1/d60/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1VisualPanelAPI.html#a5ff4e9d628f1ba68ed8bb65ef8daf958">showImagePortion</a>(<span class="stringliteral">&quot;illustrations&quot;</span>, <span class="stringliteral">&quot;space_wreckage&quot;</span>, 640, 400, 0, 0, 480, 300);</div>
-<div class="line"><span class="lineno">   48</span>        </div>
-<div class="line"><span class="lineno">   49</span>        <a class="code hl_function" href="../../dc/dbf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1StandardRespawnDialogPluginImpl.html#ad4c06e90dda3ef1ec156638316fdfb67">optionSelected</a>(<span class="keyword">null</span>, OptionId.INIT);</div>
-<div class="line"><span class="lineno">   50</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1StandardRespawnDialogPluginImpl_html_a5052bebe1ff7461785e75b96103c2ba7"><div class="ttname"><a href="../../dc/dbf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1StandardRespawnDialogPluginImpl.html#a5052bebe1ff7461785e75b96103c2ba7">com.fs.starfarer.api.impl.campaign.StandardRespawnDialogPluginImpl.visual</a></div><div class="ttdeci">VisualPanelAPI visual</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d19/StandardRespawnDialogPluginImpl_8java_source.html#l00035">StandardRespawnDialogPluginImpl.java:35</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1StandardRespawnDialogPluginImpl_html_a7ac9de1ea3bb704171c8f8fb5b38bcbd"><div class="ttname"><a href="../../dc/dbf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1StandardRespawnDialogPluginImpl.html#a7ac9de1ea3bb704171c8f8fb5b38bcbd">com.fs.starfarer.api.impl.campaign.StandardRespawnDialogPluginImpl.dialog</a></div><div class="ttdeci">InteractionDialogAPI dialog</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d19/StandardRespawnDialogPluginImpl_8java_source.html#l00032">StandardRespawnDialogPluginImpl.java:32</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1StandardRespawnDialogPluginImpl_html_a82a7999f183261ae5825b1f822b1f1a3"><div class="ttname"><a href="../../dc/dbf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1StandardRespawnDialogPluginImpl.html#a82a7999f183261ae5825b1f822b1f1a3">com.fs.starfarer.api.impl.campaign.StandardRespawnDialogPluginImpl.textPanel</a></div><div class="ttdeci">TextPanelAPI textPanel</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d19/StandardRespawnDialogPluginImpl_8java_source.html#l00033">StandardRespawnDialogPluginImpl.java:33</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1StandardRespawnDialogPluginImpl_html_ac21da1f8c7773d1b02b61334b040e15d"><div class="ttname"><a href="../../dc/dbf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1StandardRespawnDialogPluginImpl.html#ac21da1f8c7773d1b02b61334b040e15d">com.fs.starfarer.api.impl.campaign.StandardRespawnDialogPluginImpl.options</a></div><div class="ttdeci">OptionPanelAPI options</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d19/StandardRespawnDialogPluginImpl_8java_source.html#l00034">StandardRespawnDialogPluginImpl.java:34</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1StandardRespawnDialogPluginImpl_html_ad4c06e90dda3ef1ec156638316fdfb67"><div class="ttname"><a href="../../dc/dbf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1StandardRespawnDialogPluginImpl.html#ad4c06e90dda3ef1ec156638316fdfb67">com.fs.starfarer.api.impl.campaign.StandardRespawnDialogPluginImpl.optionSelected</a></div><div class="ttdeci">void optionSelected(String text, Object optionData)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d19/StandardRespawnDialogPluginImpl_8java_source.html#l00060">StandardRespawnDialogPluginImpl.java:60</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI_html_a52d00add8a9c52795f652f493ac37244"><div class="ttname"><a href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#a52d00add8a9c52795f652f493ac37244">com.fs.starfarer.api.campaign.InteractionDialogAPI.getTextPanel</a></div><div class="ttdeci">TextPanelAPI getTextPanel()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI_html_a5619d9b7c7aec96fff1afb09c47fff1c"><div class="ttname"><a href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#a5619d9b7c7aec96fff1afb09c47fff1c">com.fs.starfarer.api.campaign.InteractionDialogAPI.getVisualPanel</a></div><div class="ttdeci">VisualPanelAPI getVisualPanel()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI_html_af4f0b5fdb66110b1d0565b433abaf65c"><div class="ttname"><a href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#af4f0b5fdb66110b1d0565b433abaf65c">com.fs.starfarer.api.campaign.InteractionDialogAPI.getOptionPanel</a></div><div class="ttdeci">OptionPanelAPI getOptionPanel()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1VisualPanelAPI_html_a5ff4e9d628f1ba68ed8bb65ef8daf958"><div class="ttname"><a href="../../d1/d60/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1VisualPanelAPI.html#a5ff4e9d628f1ba68ed8bb65ef8daf958">com.fs.starfarer.api.campaign.VisualPanelAPI.showImagePortion</a></div><div class="ttdeci">void showImagePortion(String category, String id, float x, float y, float w, float h, float xOffset, float yOffset, float displayWidth, float displayHeight)</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ade26b2fa8946875e5103c2549e65c4e1" name="ade26b2fa8946875e5103c2549e65c4e1"></a>
@@ -452,10 +334,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d9/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogPlugin.html#a6533393f43da9b96c0971c8fa4bde2e5">com.fs.starfarer.api.campaign.InteractionDialogPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/d19/StandardRespawnDialogPluginImpl_8java_source.html#l00180">180</a> of file <a class="el" href="../../da/d19/StandardRespawnDialogPluginImpl_8java_source.html">StandardRespawnDialogPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  180</span>                                                                       {</div>
-<div class="line"><span class="lineno">  181</span> </div>
-<div class="line"><span class="lineno">  182</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ad4c06e90dda3ef1ec156638316fdfb67" name="ad4c06e90dda3ef1ec156638316fdfb67"></a>
@@ -487,45 +366,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d9/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogPlugin.html#a72a7cc4415c05e23d6274632910b961d">com.fs.starfarer.api.campaign.InteractionDialogPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/d19/StandardRespawnDialogPluginImpl_8java_source.html#l00060">60</a> of file <a class="el" href="../../da/d19/StandardRespawnDialogPluginImpl_8java_source.html">StandardRespawnDialogPluginImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   60</span>                                                               {</div>
-<div class="line"><span class="lineno">   61</span>        <span class="keywordflow">if</span> (optionData == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   62</span>        </div>
-<div class="line"><span class="lineno">   63</span>        OptionId option = (OptionId) optionData;</div>
-<div class="line"><span class="lineno">   64</span>        </div>
-<div class="line"><span class="lineno">   65</span>        <span class="keywordflow">if</span> (text != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   66</span>            <span class="comment">//textPanel.addParagraph(text, Global.getSettings().getColor(&quot;buttonText&quot;));</span></div>
-<div class="line"><span class="lineno">   67</span>            <a class="code hl_variable" href="../../dc/dbf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1StandardRespawnDialogPluginImpl.html#a7ac9de1ea3bb704171c8f8fb5b38bcbd">dialog</a>.<a class="code hl_function" href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#ab4a7f82e8efd7e5c7d19498a1580b708">addOptionSelectedText</a>(option);</div>
-<div class="line"><span class="lineno">   68</span>        }</div>
-<div class="line"><span class="lineno">   69</span>        </div>
-<div class="line"><span class="lineno">   70</span>        <span class="keywordflow">switch</span> (option) {</div>
-<div class="line"><span class="lineno">   71</span>        <span class="keywordflow">case</span> INIT:</div>
-<div class="line"><span class="lineno">   72</span>            <a class="code hl_variable" href="../../dc/dbf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1StandardRespawnDialogPluginImpl.html#a82a7999f183261ae5825b1f822b1f1a3">textPanel</a>.<a class="code hl_function" href="../../d4/ddc/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1TextPanelAPI.html#a984f6aa6cc7da2f39c9d3a2193fc1d58">addParagraph</a>(<span class="stringliteral">&quot;Your fleet has been defeated!&quot;</span>);</div>
-<div class="line"><span class="lineno">   73</span>            </div>
-<div class="line"><span class="lineno">   74</span>            <a class="code hl_variable" href="../../dc/dbf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1StandardRespawnDialogPluginImpl.html#a82a7999f183261ae5825b1f822b1f1a3">textPanel</a>.<a class="code hl_function" href="../../d4/ddc/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1TextPanelAPI.html#a984f6aa6cc7da2f39c9d3a2193fc1d58">addParagraph</a>(<span class="stringliteral">&quot;Normally, if this happens you and your remaining crew will &quot;</span> +</div>
-<div class="line"><span class="lineno">   75</span>                    <span class="stringliteral">&quot;spend some time \&quot;behind the scenes\&quot; assembling a smaller fleet of recovered &quot;</span> +</div>
-<div class="line"><span class="lineno">   76</span>                    <span class="stringliteral">&quot;ships.&quot;</span>);</div>
-<div class="line"><span class="lineno">   77</span>    </div>
-<div class="line"><span class="lineno">   78</span>            <a class="code hl_variable" href="../../dc/dbf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1StandardRespawnDialogPluginImpl.html#a82a7999f183261ae5825b1f822b1f1a3">textPanel</a>.<a class="code hl_function" href="../../d4/ddc/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1TextPanelAPI.html#a984f6aa6cc7da2f39c9d3a2193fc1d58">addParagraph</a>(<span class="stringliteral">&quot;During the course of this tutorial, the only available option is to reload the last save.&quot;</span>);</div>
-<div class="line"><span class="lineno">   79</span>            </div>
-<div class="line"><span class="lineno">   80</span>            <a class="code hl_variable" href="../../dc/dbf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1StandardRespawnDialogPluginImpl.html#ac21da1f8c7773d1b02b61334b040e15d">options</a>.<a class="code hl_function" href="../../da/d65/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OptionPanelAPI.html#a72ccab6cc04270d28959f8175d0821cb">clearOptions</a>();</div>
-<div class="line"><span class="lineno">   81</span>            <a class="code hl_variable" href="../../dc/dbf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1StandardRespawnDialogPluginImpl.html#ac21da1f8c7773d1b02b61334b040e15d">options</a>.<a class="code hl_function" href="../../da/d65/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OptionPanelAPI.html#a57f02433899c784a146848ca9955130a">addOption</a>(<span class="stringliteral">&quot;Continue&quot;</span>, OptionId.RESPAWN, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   82</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   83</span>        <span class="keywordflow">case</span> RESPAWN:</div>
-<div class="line"><span class="lineno">   84</span>            </div>
-<div class="line"><span class="lineno">   85</span>            <a class="code hl_function" href="../../dc/dbf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1StandardRespawnDialogPluginImpl.html#ac59fa02783f92ee40dcbd5bd717d1807">createPlayerFleet</a>();</div>
-<div class="line"><span class="lineno">   86</span>            </div>
-<div class="line"><span class="lineno">   87</span>            <a class="code hl_variable" href="../../dc/dbf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1StandardRespawnDialogPluginImpl.html#a7ac9de1ea3bb704171c8f8fb5b38bcbd">dialog</a>.<a class="code hl_function" href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#ae9c683962601d07e56898cab5a223d2f">dismiss</a>();</div>
-<div class="line"><span class="lineno">   88</span>            Global.getSector().getCampaignUI().quickLoad();</div>
-<div class="line"><span class="lineno">   89</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   90</span>        }</div>
-<div class="line"><span class="lineno">   91</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1StandardRespawnDialogPluginImpl_html_ac59fa02783f92ee40dcbd5bd717d1807"><div class="ttname"><a href="../../dc/dbf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1StandardRespawnDialogPluginImpl.html#ac59fa02783f92ee40dcbd5bd717d1807">com.fs.starfarer.api.impl.campaign.StandardRespawnDialogPluginImpl.createPlayerFleet</a></div><div class="ttdeci">void createPlayerFleet()</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d19/StandardRespawnDialogPluginImpl_8java_source.html#l00094">StandardRespawnDialogPluginImpl.java:94</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI_html_ab4a7f82e8efd7e5c7d19498a1580b708"><div class="ttname"><a href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#ab4a7f82e8efd7e5c7d19498a1580b708">com.fs.starfarer.api.campaign.InteractionDialogAPI.addOptionSelectedText</a></div><div class="ttdeci">void addOptionSelectedText(Object optionId)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI_html_ae9c683962601d07e56898cab5a223d2f"><div class="ttname"><a href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#ae9c683962601d07e56898cab5a223d2f">com.fs.starfarer.api.campaign.InteractionDialogAPI.dismiss</a></div><div class="ttdeci">void dismiss()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OptionPanelAPI_html_a57f02433899c784a146848ca9955130a"><div class="ttname"><a href="../../da/d65/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OptionPanelAPI.html#a57f02433899c784a146848ca9955130a">com.fs.starfarer.api.campaign.OptionPanelAPI.addOption</a></div><div class="ttdeci">void addOption(String text, Object data)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OptionPanelAPI_html_a72ccab6cc04270d28959f8175d0821cb"><div class="ttname"><a href="../../da/d65/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OptionPanelAPI.html#a72ccab6cc04270d28959f8175d0821cb">com.fs.starfarer.api.campaign.OptionPanelAPI.clearOptions</a></div><div class="ttdeci">void clearOptions()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1TextPanelAPI_html_a984f6aa6cc7da2f39c9d3a2193fc1d58"><div class="ttname"><a href="../../d4/ddc/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1TextPanelAPI.html#a984f6aa6cc7da2f39c9d3a2193fc1d58">com.fs.starfarer.api.campaign.TextPanelAPI.addParagraph</a></div><div class="ttdeci">LabelAPI addParagraph(String text)</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

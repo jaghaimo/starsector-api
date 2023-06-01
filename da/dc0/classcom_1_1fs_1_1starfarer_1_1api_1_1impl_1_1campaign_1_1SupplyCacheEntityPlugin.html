@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -191,24 +192,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d5/d0a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html#a925b3cae820facd4cbb446add6bd48af">com.fs.starfarer.api.impl.campaign.BaseCustomEntityPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d58/SupplyCacheEntityPlugin_8java_source.html#l00033">33</a> of file <a class="el" href="../../d8/d58/SupplyCacheEntityPlugin_8java_source.html">SupplyCacheEntityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   33</span>                                      {</div>
-<div class="line"><span class="lineno">   34</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d5/d0a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html#a4de611a62107d116dd5d3e8bc980fa6a">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a0dfd224c22bfc35f7dda6f8a1c913472">isInCurrentLocation</a>()) {</div>
-<div class="line"><span class="lineno">   35</span>            <span class="keywordtype">float</span> totalCapacity = <a class="code hl_variable" href="../../d5/d0a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html#a4de611a62107d116dd5d3e8bc980fa6a">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a6a79c7cc3a0ec97f24a9de5f6f904d96">getRadius</a>();</div>
-<div class="line"><span class="lineno">   36</span>            <span class="keywordtype">int</span> minPieces = 5;</div>
-<div class="line"><span class="lineno">   37</span>            <span class="keywordtype">int</span> numPieces = (int) (totalCapacity / 4);</div>
-<div class="line"><span class="lineno">   38</span>            <span class="keywordflow">if</span> (numPieces &lt; minPieces) numPieces = minPieces;</div>
-<div class="line"><span class="lineno">   39</span>            <span class="keywordflow">if</span> (numPieces &gt; 40) numPieces = 40;</div>
-<div class="line"><span class="lineno">   40</span>            </div>
-<div class="line"><span class="lineno">   41</span>            manager.numPieces = numPieces;</div>
-<div class="line"><span class="lineno">   42</span>        }</div>
-<div class="line"><span class="lineno">   43</span>        </div>
-<div class="line"><span class="lineno">   44</span>        manager.<a class="code hl_function" href="../../db/d5a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1GenericFieldItemManager.html#a7abf9957e66372e3f62e4bf2432fb097">advance</a>(amount);</div>
-<div class="line"><span class="lineno">   45</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin_html_a4de611a62107d116dd5d3e8bc980fa6a"><div class="ttname"><a href="../../d5/d0a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html#a4de611a62107d116dd5d3e8bc980fa6a">com.fs.starfarer.api.impl.campaign.BaseCustomEntityPlugin.entity</a></div><div class="ttdeci">SectorEntityToken entity</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d0e/BaseCustomEntityPlugin_8java_source.html#l00012">BaseCustomEntityPlugin.java:12</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1GenericFieldItemManager_html_a7abf9957e66372e3f62e4bf2432fb097"><div class="ttname"><a href="../../db/d5a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1GenericFieldItemManager.html#a7abf9957e66372e3f62e4bf2432fb097">com.fs.starfarer.api.impl.campaign.GenericFieldItemManager.advance</a></div><div class="ttdeci">void advance(float amount)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d17/GenericFieldItemManager_8java_source.html#l00032">GenericFieldItemManager.java:32</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_a0dfd224c22bfc35f7dda6f8a1c913472"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a0dfd224c22bfc35f7dda6f8a1c913472">com.fs.starfarer.api.campaign.SectorEntityToken.isInCurrentLocation</a></div><div class="ttdeci">boolean isInCurrentLocation()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_a6a79c7cc3a0ec97f24a9de5f6f904d96"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a6a79c7cc3a0ec97f24a9de5f6f904d96">com.fs.starfarer.api.campaign.SectorEntityToken.getRadius</a></div><div class="ttdeci">float getRadius()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a4ee460b87d91e6381bed87d8a8e8e5da" name="a4ee460b87d91e6381bed87d8a8e8e5da"></a>
@@ -230,10 +214,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d5/d0a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html#a2ff76afdc7888a756f8bbfd3f4f7188b">com.fs.starfarer.api.impl.campaign.BaseCustomEntityPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d58/SupplyCacheEntityPlugin_8java_source.html#l00047">47</a> of file <a class="el" href="../../d8/d58/SupplyCacheEntityPlugin_8java_source.html">SupplyCacheEntityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   47</span>                                  {</div>
-<div class="line"><span class="lineno">   48</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d5/d0a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html#a4de611a62107d116dd5d3e8bc980fa6a">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a6a79c7cc3a0ec97f24a9de5f6f904d96">getRadius</a>() + 100f;</div>
-<div class="line"><span class="lineno">   49</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a4f51761f2bc123e294298110d51568f8" name="a4f51761f2bc123e294298110d51568f8"></a>
@@ -265,12 +246,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d5/d0a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html#aaca3cf8779de8f9fdbde9d5f29e4273a">com.fs.starfarer.api.impl.campaign.BaseCustomEntityPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d58/SupplyCacheEntityPlugin_8java_source.html#l00012">12</a> of file <a class="el" href="../../d8/d58/SupplyCacheEntityPlugin_8java_source.html">SupplyCacheEntityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   12</span>                                                                    {</div>
-<div class="line"><span class="lineno">   13</span>        super.init(<a class="code hl_variable" href="../../d5/d0a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html#a4de611a62107d116dd5d3e8bc980fa6a">entity</a>, pluginParams);</div>
-<div class="line"><span class="lineno">   14</span>        <span class="comment">//this.entity = (CustomCampaignEntityAPI) entity;</span></div>
-<div class="line"><span class="lineno">   15</span>        readResolve();</div>
-<div class="line"><span class="lineno">   16</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aad40499dbae5c024203e6bc209e46758" name="aad40499dbae5c024203e6bc209e46758"></a>
@@ -312,11 +288,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d5/d0a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html#abd301a7a5a32dda9f4166c3e11e036f4">com.fs.starfarer.api.impl.campaign.BaseCustomEntityPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d58/SupplyCacheEntityPlugin_8java_source.html#l00051">51</a> of file <a class="el" href="../../d8/d58/SupplyCacheEntityPlugin_8java_source.html">SupplyCacheEntityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   51</span>                                                                         {</div>
-<div class="line"><span class="lineno">   52</span>        manager.<a class="code hl_function" href="../../db/d5a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1GenericFieldItemManager.html#a70857efba109798f22125b6dd5bffbc3">render</a>(layer, viewport);</div>
-<div class="line"><span class="lineno">   53</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1GenericFieldItemManager_html_a70857efba109798f22125b6dd5bffbc3"><div class="ttname"><a href="../../db/d5a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1GenericFieldItemManager.html#a70857efba109798f22125b6dd5bffbc3">com.fs.starfarer.api.impl.campaign.GenericFieldItemManager.render</a></div><div class="ttdeci">void render(CampaignEngineLayers layer, ViewportAPI viewport)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d17/GenericFieldItemManager_8java_source.html#l00057">GenericFieldItemManager.java:57</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

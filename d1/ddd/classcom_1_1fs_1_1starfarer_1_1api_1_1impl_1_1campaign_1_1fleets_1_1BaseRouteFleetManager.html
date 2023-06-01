@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -172,11 +173,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/da5/BaseRouteFleetManager_8java_source.html#l00012">12</a> of file <a class="el" href="../../d9/da5/BaseRouteFleetManager_8java_source.html">BaseRouteFleetManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   12</span>                                                                       {</div>
-<div class="line"><span class="lineno">   13</span>        <a class="code hl_variable" href="../../d1/ddd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseRouteFleetManager.html#aa835aa3a5d9150fdae9d9900665df467">interval</a> = <span class="keyword">new</span> IntervalUtil(minInterval, maxInterval);</div>
-<div class="line"><span class="lineno">   14</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseRouteFleetManager_html_aa835aa3a5d9150fdae9d9900665df467"><div class="ttname"><a href="../../d1/ddd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseRouteFleetManager.html#aa835aa3a5d9150fdae9d9900665df467">com.fs.starfarer.api.impl.campaign.fleets.BaseRouteFleetManager.interval</a></div><div class="ttdeci">IntervalUtil interval</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/da5/BaseRouteFleetManager_8java_source.html#l00010">BaseRouteFleetManager.java:10</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -234,31 +231,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../d9/dfc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetRouteManager.html#a766e72ef11b2249a798033733eebe78d">com.fs.starfarer.api.impl.campaign.fleets.EconomyFleetRouteManager</a>, <a class="el" href="../../de/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscFleetRouteManager.html#aac72cff96db54de0806f1d30c34f92f3">com.fs.starfarer.api.impl.campaign.fleets.misc.MiscFleetRouteManager</a>, and <a class="el" href="../../d7/d2f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1PilgrimageFleetRouteManager.html#a2f15b61dd49f237adbd22a6735de0668">com.fs.starfarer.api.impl.campaign.fleets.PilgrimageFleetRouteManager</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/da5/BaseRouteFleetManager_8java_source.html#l00020">20</a> of file <a class="el" href="../../d9/da5/BaseRouteFleetManager_8java_source.html">BaseRouteFleetManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   20</span>                                      {</div>
-<div class="line"><span class="lineno">   21</span>        <span class="keywordtype">float</span> days = Global.getSector().getClock().convertToDays(amount);</div>
-<div class="line"><span class="lineno">   22</span><span class="comment">//      boolean econ = EconomyFleetRouteManager.class.isInstance(this);</span></div>
-<div class="line"><span class="lineno">   23</span><span class="comment">//      if (econ) {</span></div>
-<div class="line"><span class="lineno">   24</span><span class="comment">//          days *= 1000f;</span></div>
-<div class="line"><span class="lineno">   25</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">   26</span>        </div>
-<div class="line"><span class="lineno">   27</span>        <a class="code hl_variable" href="../../d1/ddd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseRouteFleetManager.html#aa835aa3a5d9150fdae9d9900665df467">interval</a>.<a class="code hl_function" href="../../da/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html#a61881d44415cda2c50c3354c3f0a4d8a">advance</a>(days);</div>
-<div class="line"><span class="lineno">   28</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d1/ddd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseRouteFleetManager.html#aa835aa3a5d9150fdae9d9900665df467">interval</a>.intervalElapsed()) {</div>
-<div class="line"><span class="lineno">   29</span>            String <span class="keywordtype">id</span> = <a class="code hl_function" href="../../d1/ddd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseRouteFleetManager.html#ab674f97e4ac62276babbe21b4afec1f0">getRouteSourceId</a>();</div>
-<div class="line"><span class="lineno">   30</span>            <span class="keywordtype">int</span> max = <a class="code hl_function" href="../../d1/ddd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseRouteFleetManager.html#a4762547515fd5bfae1227b7a0ed32df1">getMaxFleets</a>();</div>
-<div class="line"><span class="lineno">   31</span><span class="comment">//          if (econ) {</span></div>
-<div class="line"><span class="lineno">   32</span><span class="comment">//              max = 1;</span></div>
-<div class="line"><span class="lineno">   33</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">   34</span>            <span class="keywordtype">int</span> curr = RouteManager.getInstance().getNumRoutesFor(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">   35</span>            <span class="keywordflow">if</span> (curr &gt;= max) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   36</span>            </div>
-<div class="line"><span class="lineno">   37</span>            <a class="code hl_function" href="../../d1/ddd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseRouteFleetManager.html#aab8855e529c5f3e374e6b6b626ef190f">addRouteFleetIfPossible</a>();</div>
-<div class="line"><span class="lineno">   38</span>        }</div>
-<div class="line"><span class="lineno">   39</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseRouteFleetManager_html_a4762547515fd5bfae1227b7a0ed32df1"><div class="ttname"><a href="../../d1/ddd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseRouteFleetManager.html#a4762547515fd5bfae1227b7a0ed32df1">com.fs.starfarer.api.impl.campaign.fleets.BaseRouteFleetManager.getMaxFleets</a></div><div class="ttdeci">abstract int getMaxFleets()</div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseRouteFleetManager_html_aab8855e529c5f3e374e6b6b626ef190f"><div class="ttname"><a href="../../d1/ddd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseRouteFleetManager.html#aab8855e529c5f3e374e6b6b626ef190f">com.fs.starfarer.api.impl.campaign.fleets.BaseRouteFleetManager.addRouteFleetIfPossible</a></div><div class="ttdeci">abstract void addRouteFleetIfPossible()</div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseRouteFleetManager_html_ab674f97e4ac62276babbe21b4afec1f0"><div class="ttname"><a href="../../d1/ddd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseRouteFleetManager.html#ab674f97e4ac62276babbe21b4afec1f0">com.fs.starfarer.api.impl.campaign.fleets.BaseRouteFleetManager.getRouteSourceId</a></div><div class="ttdeci">abstract String getRouteSourceId()</div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil_html_a61881d44415cda2c50c3354c3f0a4d8a"><div class="ttname"><a href="../../da/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html#a61881d44415cda2c50c3354c3f0a4d8a">com.fs.starfarer.api.util.IntervalUtil.advance</a></div><div class="ttdeci">void advance(float amount)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de3/IntervalUtil_8java_source.html#l00039">IntervalUtil.java:39</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a4762547515fd5bfae1227b7a0ed32df1" name="a4762547515fd5bfae1227b7a0ed32df1"></a>
@@ -334,10 +307,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d7/d63/interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html#a2b9a206acf99d1cdc1511885d14bb58c">com.fs.starfarer.api.EveryFrameScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/da5/BaseRouteFleetManager_8java_source.html#l00041">41</a> of file <a class="el" href="../../d9/da5/BaseRouteFleetManager_8java_source.html">BaseRouteFleetManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   41</span>                            {</div>
-<div class="line"><span class="lineno">   42</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   43</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a13078e63911f0e9cdb318d6d9dbb3522" name="a13078e63911f0e9cdb318d6d9dbb3522"></a>
@@ -359,10 +329,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d7/d63/interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html#a6397d6c1c19a4dd0b58099219c0e0173">com.fs.starfarer.api.EveryFrameScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/da5/BaseRouteFleetManager_8java_source.html#l00045">45</a> of file <a class="el" href="../../d9/da5/BaseRouteFleetManager_8java_source.html">BaseRouteFleetManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   45</span>                                    {</div>
-<div class="line"><span class="lineno">   46</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   47</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

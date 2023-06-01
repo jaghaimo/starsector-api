@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -418,36 +419,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a892d9c8e77f8c51654d4399169a80540">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d0b/RepTrackerEvent_8java_source.html#l00094">94</a> of file <a class="el" href="../../d8/d0b/RepTrackerEvent_8java_source.html">RepTrackerEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   94</span>                                      {</div>
-<div class="line"><span class="lineno">   95</span>        <span class="keywordflow">if</span> (!<a class="code hl_function" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#ac5c47dbb1c74444a7517c8d031192459">isEventStarted</a>()) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   96</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d9/df6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1RepTrackerEvent.html#a19202139cc03ff51d0c0ce327192b7d8">isDone</a>()) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   97</span>        </div>
-<div class="line"><span class="lineno">   98</span>        <span class="keywordtype">float</span> days = Global.getSector().getClock().convertToDays(amount);</div>
-<div class="line"><span class="lineno">   99</span>        </div>
-<div class="line"><span class="lineno">  100</span>        tracker.<a class="code hl_function" href="../../da/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html#a61881d44415cda2c50c3354c3f0a4d8a">advance</a>(days);</div>
-<div class="line"><span class="lineno">  101</span>        <span class="keywordflow">if</span> (tracker.intervalElapsed()) {</div>
-<div class="line"><span class="lineno">  102</span>            <span class="keywordflow">for</span> (FactionAPI <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a5062e440ac3d3fb9a12bf3cac406e2c1">faction</a> : Global.getSector().getAllFactions()) {</div>
-<div class="line"><span class="lineno">  103</span>            <span class="comment">//List&lt;FactionAPI&gt; factions = Global.getSector().getAllFactions();</span></div>
-<div class="line"><span class="lineno">  104</span>            <span class="comment">//FactionAPI faction = factions.get(new Random().nextInt(factions.size()));</span></div>
-<div class="line"><span class="lineno">  105</span>                <span class="keywordflow">if</span> (!<a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a5062e440ac3d3fb9a12bf3cac406e2c1">faction</a>.<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#af016cc513682eb015b85966bd6af4162">isPlayerFaction</a>() &amp;&amp; !<a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a5062e440ac3d3fb9a12bf3cac406e2c1">faction</a>.<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#adacb688941524346625413acdc0008f7">isNeutralFaction</a>()) {</div>
-<div class="line"><span class="lineno">  106</span>                    checkForTradeReputationChanges(<a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a5062e440ac3d3fb9a12bf3cac406e2c1">faction</a>);</div>
-<div class="line"><span class="lineno">  107</span>                }</div>
-<div class="line"><span class="lineno">  108</span>            }</div>
-<div class="line"><span class="lineno">  109</span>            checkForXPGain();</div>
-<div class="line"><span class="lineno">  110</span>        }</div>
-<div class="line"><span class="lineno">  111</span>        </div>
-<div class="line"><span class="lineno">  112</span><span class="comment">//      repDecayTracker.advance(days);</span></div>
-<div class="line"><span class="lineno">  113</span><span class="comment">//      if (repDecayTracker.intervalElapsed()) {</span></div>
-<div class="line"><span class="lineno">  114</span><span class="comment">//          checkForRepDecay();</span></div>
-<div class="line"><span class="lineno">  115</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  116</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin_html_a5062e440ac3d3fb9a12bf3cac406e2c1"><div class="ttname"><a href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a5062e440ac3d3fb9a12bf3cac406e2c1">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin.faction</a></div><div class="ttdeci">FactionAPI faction</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00045">BaseEventPlugin.java:45</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin_html_ac5c47dbb1c74444a7517c8d031192459"><div class="ttname"><a href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#ac5c47dbb1c74444a7517c8d031192459">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin.isEventStarted</a></div><div class="ttdeci">boolean isEventStarted()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00106">BaseEventPlugin.java:106</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1RepTrackerEvent_html_a19202139cc03ff51d0c0ce327192b7d8"><div class="ttname"><a href="../../d9/df6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1RepTrackerEvent.html#a19202139cc03ff51d0c0ce327192b7d8">com.fs.starfarer.api.impl.campaign.events.RepTrackerEvent.isDone</a></div><div class="ttdeci">boolean isDone()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d0b/RepTrackerEvent_8java_source.html#l00314">RepTrackerEvent.java:314</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil_html_a61881d44415cda2c50c3354c3f0a4d8a"><div class="ttname"><a href="../../da/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html#a61881d44415cda2c50c3354c3f0a4d8a">com.fs.starfarer.api.util.IntervalUtil.advance</a></div><div class="ttdeci">void advance(float amount)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de3/IntervalUtil_8java_source.html#l00039">IntervalUtil.java:39</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI_html_adacb688941524346625413acdc0008f7"><div class="ttname"><a href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#adacb688941524346625413acdc0008f7">com.fs.starfarer.api.campaign.FactionAPI.isNeutralFaction</a></div><div class="ttdeci">boolean isNeutralFaction()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI_html_af016cc513682eb015b85966bd6af4162"><div class="ttname"><a href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#af016cc513682eb015b85966bd6af4162">com.fs.starfarer.api.campaign.FactionAPI.isPlayerFaction</a></div><div class="ttdeci">boolean isPlayerFaction()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab4742b2b5e84165019a0064b2f17561d" name="ab4742b2b5e84165019a0064b2f17561d"></a>
@@ -467,72 +439,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d0b/RepTrackerEvent_8java_source.html#l00255">255</a> of file <a class="el" href="../../d8/d0b/RepTrackerEvent_8java_source.html">RepTrackerEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  255</span>                                                                              {</div>
-<div class="line"><span class="lineno">  256</span>        </div>
-<div class="line"><span class="lineno">  257</span>        <span class="keywordtype">int</span> maxToSend = 3;</div>
-<div class="line"><span class="lineno">  258</span>        <span class="keywordtype">int</span> sent = 0;</div>
-<div class="line"><span class="lineno">  259</span>        <span class="keywordflow">for</span> (<span class="keyword">final</span> MarketTradeInfo curr : info) {</div>
-<div class="line"><span class="lineno">  260</span>            <span class="keywordtype">float</span> actionableTotal = curr.tradeTotal * 2f + curr.smugglingTotal * 0.5f;</div>
-<div class="line"><span class="lineno">  261</span>            <span class="comment">//float repMinus = (float) Math.floor(actionableTotal / volumeForRepChange);</span></div>
-<div class="line"><span class="lineno">  262</span>            List&lt;FactionAPI&gt; factions = <span class="keyword">new</span> ArrayList&lt;FactionAPI&gt;(Global.getSector().getAllFactions());</div>
-<div class="line"><span class="lineno">  263</span>            Collections.shuffle(factions);</div>
-<div class="line"><span class="lineno">  264</span>            <span class="keywordflow">for</span> (<span class="keyword">final</span> FactionAPI <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a5062e440ac3d3fb9a12bf3cac406e2c1">faction</a> : factions) {</div>
-<div class="line"><span class="lineno">  265</span>                <span class="comment">// pirates don&#39;t get mad about you trading with someone else</span></div>
-<div class="line"><span class="lineno">  266</span>                <span class="comment">//if (faction.getId().equals(Factions.PIRATES)) {</span></div>
-<div class="line"><span class="lineno">  267</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a5062e440ac3d3fb9a12bf3cac406e2c1">faction</a>.<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#ab4e9be2e54ba1d8b04182ddebb8f15a6">getCustom</a>().optBoolean(Factions.CUSTOM_IGNORE_TRADE_WITH_ENEMIES)) {</div>
-<div class="line"><span class="lineno">  268</span>                    <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  269</span>                }</div>
-<div class="line"><span class="lineno">  270</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a5062e440ac3d3fb9a12bf3cac406e2c1">faction</a>.<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#af016cc513682eb015b85966bd6af4162">isPlayerFaction</a>()) <span class="keywordflow">continue</span>; <span class="comment">// don&#39;t report player to themselves for trading with their own enemies</span></div>
-<div class="line"><span class="lineno">  271</span>                </div>
-<div class="line"><span class="lineno">  272</span>                <span class="keyword">final</span> MarketAPI other = BaseEventPlugin.findNearestMarket(curr.market, <span class="keyword">new</span> MarketFilter() {</div>
-<div class="line"><span class="lineno">  273</span>                    <span class="keyword">public</span> <span class="keywordtype">boolean</span> acceptMarket(MarketAPI <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a>) {</div>
-<div class="line"><span class="lineno">  274</span>                        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#aa132dbebb3e9e38ad71a576a4ea5ac9b">getFactionId</a>().equals(<a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a5062e440ac3d3fb9a12bf3cac406e2c1">faction</a>.<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a7edcdc203f5ab26478e89e5d31e3bf85">getId</a>())) {</div>
-<div class="line"><span class="lineno">  275</span>                            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  276</span>                        }</div>
-<div class="line"><span class="lineno">  277</span>                        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a97645caff4adca5efcf3a462fb13ca0f">getFaction</a>().<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#abbba73728cc347ef2fe8e02d89e79b37">isAtBest</a>(curr.market.getFaction(), RepLevel.HOSTILE)) {</div>
-<div class="line"><span class="lineno">  278</span>                            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  279</span>                        }</div>
-<div class="line"><span class="lineno">  280</span>                        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  281</span>                    }</div>
-<div class="line"><span class="lineno">  282</span>                });</div>
-<div class="line"><span class="lineno">  283</span>                <span class="keywordflow">if</span> (other == <span class="keyword">null</span>) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  284</span>    </div>
-<div class="line"><span class="lineno">  285</span>                <span class="keywordtype">float</span> dist = Misc.getDistanceLY(curr.market.getLocationInHyperspace(), other.getLocationInHyperspace());</div>
-<div class="line"><span class="lineno">  286</span>                <span class="comment">//if (dist &gt; 2f) continue;</span></div>
-<div class="line"><span class="lineno">  287</span>                <span class="keywordflow">if</span> (dist &gt; Global.getSettings().getFloat(<span class="stringliteral">&quot;economyMaxRangeForNegativeTradeRepImpactLY&quot;</span>)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  288</span>                </div>
-<div class="line"><span class="lineno">  289</span>                </div>
-<div class="line"><span class="lineno">  290</span>                <span class="keywordtype">float</span> [] repMinus = getRepPointsAndVolumeUsedFor(actionableTotal, <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a5062e440ac3d3fb9a12bf3cac406e2c1">faction</a>);</div>
-<div class="line"><span class="lineno">  291</span>                <span class="keywordflow">if</span> (repMinus[0] &lt;= 0) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  292</span>                </div>
-<div class="line"><span class="lineno">  293</span>                <span class="keywordflow">if</span> (dist &lt;= 0) { <span class="comment">// same star system</span></div>
-<div class="line"><span class="lineno">  294</span>                    repMinus[0] *= 2f;</div>
-<div class="line"><span class="lineno">  295</span>                }</div>
-<div class="line"><span class="lineno">  296</span>                </div>
-<div class="line"><span class="lineno">  297</span>                <span class="keyword">final</span> <span class="keywordtype">float</span> repChange = -repMinus[0];</div>
-<div class="line"><span class="lineno">  298</span>                </div>
-<div class="line"><span class="lineno">  299</span>                <a class="code hl_variable" href="../../d9/df6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1RepTrackerEvent.html#a42a88c122b8ef4ef04e679f2bab87b2a">log</a>.info(<span class="stringliteral">&quot;Sending rep change of &quot;</span> + repChange + <span class="stringliteral">&quot; with &quot;</span> + other.getFaction().getDisplayNameWithArticle() + </div>
-<div class="line"><span class="lineno">  300</span>                        <span class="stringliteral">&quot; due to trade with enemy (&quot;</span> + curr.market.getFaction().getDisplayNameWithArticle() + <span class="stringliteral">&quot;)&quot;</span>);</div>
-<div class="line"><span class="lineno">  301</span>                </div>
-<div class="line"><span class="lineno">  302</span>                RepActions action = RepActions.TRADE_WITH_ENEMY;</div>
-<div class="line"><span class="lineno">  303</span>                Global.getSector().adjustPlayerReputation(</div>
-<div class="line"><span class="lineno">  304</span>                        <span class="keyword">new</span> RepActionEnvelope(action, <span class="keyword">new</span> Float(Math.abs(repChange)), <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">false</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;Change caused by trade with enemies&quot;</span>), </div>
-<div class="line"><span class="lineno">  305</span>                        other.getFactionId());</div>
-<div class="line"><span class="lineno">  306</span> </div>
-<div class="line"><span class="lineno">  307</span>                sent++;</div>
-<div class="line"><span class="lineno">  308</span>                <span class="keywordflow">if</span> (sent &gt;= maxToSend) <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  309</span>            }</div>
-<div class="line"><span class="lineno">  310</span>            <span class="keywordflow">if</span> (sent &gt;= maxToSend) <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  311</span>        }</div>
-<div class="line"><span class="lineno">  312</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin_html_a82135608621e80f71b991a0c839669e2"><div class="ttname"><a href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin.market</a></div><div class="ttdeci">MarketAPI market</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00043">BaseEventPlugin.java:43</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1RepTrackerEvent_html_a42a88c122b8ef4ef04e679f2bab87b2a"><div class="ttname"><a href="../../d9/df6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1RepTrackerEvent.html#a42a88c122b8ef4ef04e679f2bab87b2a">com.fs.starfarer.api.impl.campaign.events.RepTrackerEvent.log</a></div><div class="ttdeci">static Logger log</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d0b/RepTrackerEvent_8java_source.html#l00037">RepTrackerEvent.java:37</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI_html_a7edcdc203f5ab26478e89e5d31e3bf85"><div class="ttname"><a href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a7edcdc203f5ab26478e89e5d31e3bf85">com.fs.starfarer.api.campaign.FactionAPI.getId</a></div><div class="ttdeci">String getId()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI_html_ab4e9be2e54ba1d8b04182ddebb8f15a6"><div class="ttname"><a href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#ab4e9be2e54ba1d8b04182ddebb8f15a6">com.fs.starfarer.api.campaign.FactionAPI.getCustom</a></div><div class="ttdeci">JSONObject getCustom()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI_html_abbba73728cc347ef2fe8e02d89e79b37"><div class="ttname"><a href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#abbba73728cc347ef2fe8e02d89e79b37">com.fs.starfarer.api.campaign.FactionAPI.isAtBest</a></div><div class="ttdeci">boolean isAtBest(String id, RepLevel level)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a97645caff4adca5efcf3a462fb13ca0f"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a97645caff4adca5efcf3a462fb13ca0f">com.fs.starfarer.api.campaign.econ.MarketAPI.getFaction</a></div><div class="ttdeci">FactionAPI getFaction()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_aa132dbebb3e9e38ad71a576a4ea5ac9b"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#aa132dbebb3e9e38ad71a576a4ea5ac9b">com.fs.starfarer.api.campaign.econ.MarketAPI.getFactionId</a></div><div class="ttdeci">String getFactionId()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a60f1f3a550d5ca251b369f9c5af03eb3" name="a60f1f3a550d5ca251b369f9c5af03eb3"></a>
@@ -571,12 +478,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a85df425421b0ba2ec216cb3058f88297">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d0b/RepTrackerEvent_8java_source.html#l00066">66</a> of file <a class="el" href="../../d8/d0b/RepTrackerEvent_8java_source.html">RepTrackerEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   66</span>                                                                   {</div>
-<div class="line"><span class="lineno">   67</span>        super.init(type, <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#abe1c16c1836db2f6bacef1b8b0814872">eventTarget</a>);</div>
-<div class="line"><span class="lineno">   68</span>        readResolve();</div>
-<div class="line"><span class="lineno">   69</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin_html_abe1c16c1836db2f6bacef1b8b0814872"><div class="ttname"><a href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#abe1c16c1836db2f6bacef1b8b0814872">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin.eventTarget</a></div><div class="ttdeci">CampaignEventTarget eventTarget</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00042">BaseEventPlugin.java:42</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a19202139cc03ff51d0c0ce327192b7d8" name="a19202139cc03ff51d0c0ce327192b7d8"></a>
@@ -597,10 +499,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#ab897ab2cfdb15c8183902a077567171b">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d0b/RepTrackerEvent_8java_source.html#l00314">314</a> of file <a class="el" href="../../d8/d0b/RepTrackerEvent_8java_source.html">RepTrackerEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  314</span>                            {</div>
-<div class="line"><span class="lineno">  315</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  316</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8d7c9a73813b4d59a1fbaff077f2f2c2" name="a8d7c9a73813b4d59a1fbaff077f2f2c2"></a>
@@ -622,10 +521,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#aa016b5c97932063aa9184483bd01c5ee">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d0b/RepTrackerEvent_8java_source.html#l00081">81</a> of file <a class="el" href="../../d8/d0b/RepTrackerEvent_8java_source.html">RepTrackerEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   81</span>                             {</div>
-<div class="line"><span class="lineno">   82</span>        super.startEvent();</div>
-<div class="line"><span class="lineno">   83</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

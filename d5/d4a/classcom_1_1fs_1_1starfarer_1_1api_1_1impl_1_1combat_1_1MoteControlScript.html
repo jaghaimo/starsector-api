@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -313,198 +314,7 @@ Static Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseShipSystemScript.html#a4bc8ac2999423cda8da369b8498bd43a">com.fs.starfarer.api.impl.combat.BaseShipSystemScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d7e/MoteControlScript_8java_source.html#l00182">182</a> of file <a class="el" href="../../d7/d7e/MoteControlScript_8java_source.html">MoteControlScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  182</span>                                                                                            {</div>
-<div class="line"><span class="lineno">  183</span>        ShipAPI ship = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  184</span>        <span class="keywordflow">if</span> (stats.getEntity() instanceof ShipAPI) {</div>
-<div class="line"><span class="lineno">  185</span>            ship = (ShipAPI) stats.getEntity();</div>
-<div class="line"><span class="lineno">  186</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  187</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  188</span>        }</div>
-<div class="line"><span class="lineno">  189</span>        </div>
-<div class="line"><span class="lineno">  190</span>        <span class="keywordtype">float</span> amount = Global.getCombatEngine().getElapsedInLastFrame();</div>
-<div class="line"><span class="lineno">  191</span>        </div>
-<div class="line"><span class="lineno">  192</span>        <span class="comment">//Global.getCombatEngine().setPaused(true);</span></div>
-<div class="line"><span class="lineno">  193</span>        </div>
-<div class="line"><span class="lineno">  194</span>        SharedMoteAIData data = <a class="code hl_function" href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#ae0ce28b23c6d33ad641a39b95fc19060">getSharedData</a>(ship);</div>
-<div class="line"><span class="lineno">  195</span>        data.elapsed += amount;</div>
-<div class="line"><span class="lineno">  196</span>        </div>
-<div class="line"><span class="lineno">  197</span>        <span class="keywordflow">if</span> (data.attractorRemaining &gt; 0) {</div>
-<div class="line"><span class="lineno">  198</span>            data.attractorRemaining -= amount;</div>
-<div class="line"><span class="lineno">  199</span>            <span class="keywordflow">if</span> (data.attractorRemaining &lt;= 0 || </div>
-<div class="line"><span class="lineno">  200</span>                    (data.attractorLock != <span class="keyword">null</span> &amp;&amp; !data.attractorLock.isAlive()) ||</div>
-<div class="line"><span class="lineno">  201</span>                    data.motes.isEmpty()) {</div>
-<div class="line"><span class="lineno">  202</span>                data.attractorTarget = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  203</span>                data.attractorLock = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  204</span>                data.attractorRemaining = 0;</div>
-<div class="line"><span class="lineno">  205</span>            }</div>
-<div class="line"><span class="lineno">  206</span>        }</div>
-<div class="line"><span class="lineno">  207</span>        <span class="keywordflow">if</span> (effectLevel &lt;= 0) {</div>
-<div class="line"><span class="lineno">  208</span>            <a class="code hl_variable" href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#a272bd0c3a38bd82c7bc6eb7dc97788b8">findNewTargetOnUse</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  209</span>        }</div>
-<div class="line"><span class="lineno">  210</span>        </div>
-<div class="line"><span class="lineno">  211</span>        CombatEngineAPI engine = Global.getCombatEngine();</div>
-<div class="line"><span class="lineno">  212</span>        </div>
-<div class="line"><span class="lineno">  213</span>        <a class="code hl_variable" href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#a13be0e23179c316f96eb10ef33e53f23">attractorParticleInterval</a>.<a class="code hl_function" href="../../da/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html#a61881d44415cda2c50c3354c3f0a4d8a">advance</a>(amount);</div>
-<div class="line"><span class="lineno">  214</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#a13be0e23179c316f96eb10ef33e53f23">attractorParticleInterval</a>.intervalElapsed()) {</div>
-<div class="line"><span class="lineno">  215</span>            <a class="code hl_function" href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#ac176bfb2e6cacc4048e25bad1a19fa62">spawnAttractorParticles</a>(ship);</div>
-<div class="line"><span class="lineno">  216</span>        }</div>
-<div class="line"><span class="lineno">  217</span>        </div>
-<div class="line"><span class="lineno">  218</span>        <a class="code hl_variable" href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#a26f7c5fabe3fc2452e0c1d08d172a613">launchInterval</a>.<a class="code hl_function" href="../../da/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html#a61881d44415cda2c50c3354c3f0a4d8a">advance</a>(amount * 5f);</div>
-<div class="line"><span class="lineno">  219</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#a26f7c5fabe3fc2452e0c1d08d172a613">launchInterval</a>.intervalElapsed()) {</div>
-<div class="line"><span class="lineno">  220</span>            Iterator&lt;MissileAPI&gt; iter = data.motes.iterator();</div>
-<div class="line"><span class="lineno">  221</span>            <span class="keywordflow">while</span> (iter.hasNext()) {</div>
-<div class="line"><span class="lineno">  222</span>                <span class="keywordflow">if</span> (!engine.isMissileAlive(iter.next())) {</div>
-<div class="line"><span class="lineno">  223</span>                    iter.remove();</div>
-<div class="line"><span class="lineno">  224</span>                }</div>
-<div class="line"><span class="lineno">  225</span>            }</div>
-<div class="line"><span class="lineno">  226</span>            </div>
-<div class="line"><span class="lineno">  227</span>            <span class="keywordflow">if</span> (ship.isHulk()) {</div>
-<div class="line"><span class="lineno">  228</span>                <span class="keywordflow">for</span> (MissileAPI mote : data.motes) {</div>
-<div class="line"><span class="lineno">  229</span>                    mote.flameOut();</div>
-<div class="line"><span class="lineno">  230</span>                }</div>
-<div class="line"><span class="lineno">  231</span>                data.motes.clear();</div>
-<div class="line"><span class="lineno">  232</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  233</span>            }</div>
-<div class="line"><span class="lineno">  234</span>            </div>
-<div class="line"><span class="lineno">  235</span>            <span class="keywordtype">int</span> maxMotes = <a class="code hl_function" href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#ac2deab478fa62dfff9e66695bf3eea27">getMaxMotes</a>(ship);</div>
-<div class="line"><span class="lineno">  236</span>            <span class="keywordflow">if</span> (data.motes.size() &lt; maxMotes &amp;&amp; data.attractorLock == <span class="keyword">null</span> &amp;&amp;<span class="comment">// false &amp;&amp; </span></div>
-<div class="line"><span class="lineno">  237</span>                    !ship.getFluxTracker().isOverloadedOrVenting()) {</div>
-<div class="line"><span class="lineno">  238</span>                <a class="code hl_function" href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#a77c08dff9b0924a8db19db65d9bc0312">findSlots</a>(ship);</div>
-<div class="line"><span class="lineno">  239</span>                </div>
-<div class="line"><span class="lineno">  240</span>                WeaponSlotAPI slot = <a class="code hl_variable" href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#a9e0032c548ed33d1276b9b709cad0553">launchSlots</a>.pick();</div>
-<div class="line"><span class="lineno">  241</span>                </div>
-<div class="line"><span class="lineno">  242</span>                Vector2f loc = slot.computePosition(ship);</div>
-<div class="line"><span class="lineno">  243</span>                <span class="keywordtype">float</span> dir = slot.computeMidArcAngle(ship);</div>
-<div class="line"><span class="lineno">  244</span>                <span class="keywordtype">float</span> arc = slot.getArc();</div>
-<div class="line"><span class="lineno">  245</span>                dir += arc * (float) Math.random() - arc /2f;</div>
-<div class="line"><span class="lineno">  246</span>                </div>
-<div class="line"><span class="lineno">  247</span>                String weaponId = <a class="code hl_function" href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#a911771bf9963c560ae5807a2e3651ecf">getWeaponId</a>(ship);</div>
-<div class="line"><span class="lineno">  248</span>                MissileAPI mote = (MissileAPI) engine.spawnProjectile(ship, <span class="keyword">null</span>, </div>
-<div class="line"><span class="lineno">  249</span>                          weaponId, </div>
-<div class="line"><span class="lineno">  250</span>                          loc, dir, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  251</span>                mote.setWeaponSpec(weaponId);</div>
-<div class="line"><span class="lineno">  252</span>                mote.setMissileAI(<span class="keyword">new</span> MoteAIScript(mote));</div>
-<div class="line"><span class="lineno">  253</span>                mote.getActiveLayers().remove(CombatEngineLayers.FF_INDICATORS_LAYER);</div>
-<div class="line"><span class="lineno">  254</span>                <span class="comment">// if they could flame out/be affected by emp, that&#39;d be bad since they don&#39;t expire for a</span></div>
-<div class="line"><span class="lineno">  255</span>                <span class="comment">// very long time so they&#39;d be stuck disabled permanently, for practical purposes</span></div>
-<div class="line"><span class="lineno">  256</span>                <span class="comment">// thus: total emp resistance (which can&#39;t target them anyway, but if it did.)</span></div>
-<div class="line"><span class="lineno">  257</span>                mote.setEmpResistance(10000);</div>
-<div class="line"><span class="lineno">  258</span>                data.motes.add(mote);</div>
-<div class="line"><span class="lineno">  259</span>                </div>
-<div class="line"><span class="lineno">  260</span>                engine.spawnMuzzleFlashOrSmoke(ship, slot, mote.getWeaponSpec(), 0, dir);</div>
-<div class="line"><span class="lineno">  261</span>                </div>
-<div class="line"><span class="lineno">  262</span>                Global.getSoundPlayer().playSound(<span class="stringliteral">&quot;mote_attractor_launch_mote&quot;</span>, 1f, 0.25f, loc, <span class="keyword">new</span> Vector2f());</div>
-<div class="line"><span class="lineno">  263</span>            }</div>
-<div class="line"><span class="lineno">  264</span>        }</div>
-<div class="line"><span class="lineno">  265</span>        </div>
-<div class="line"><span class="lineno">  266</span>        <span class="keywordtype">float</span> maxMotes = <a class="code hl_function" href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#ac2deab478fa62dfff9e66695bf3eea27">getMaxMotes</a>(ship);</div>
-<div class="line"><span class="lineno">  267</span>        <span class="keywordtype">float</span> fraction = data.motes.size() / (Math.max(1f, maxMotes));</div>
-<div class="line"><span class="lineno">  268</span>        <span class="keywordtype">float</span> volume = fraction * 3f;</div>
-<div class="line"><span class="lineno">  269</span>        <span class="keywordflow">if</span> (volume &gt; 1f) volume = 1f;</div>
-<div class="line"><span class="lineno">  270</span>        <span class="keywordflow">if</span> (data.motes.size() &gt; 3) {</div>
-<div class="line"><span class="lineno">  271</span>            Vector2f com = <span class="keyword">new</span> Vector2f();</div>
-<div class="line"><span class="lineno">  272</span>            <span class="keywordflow">for</span> (MissileAPI mote : data.motes) {</div>
-<div class="line"><span class="lineno">  273</span>                Vector2f.add(com, mote.getLocation(), com);</div>
-<div class="line"><span class="lineno">  274</span>            }</div>
-<div class="line"><span class="lineno">  275</span>            com.scale(1f / data.motes.size());</div>
-<div class="line"><span class="lineno">  276</span>            <span class="comment">//Global.getSoundPlayer().playLoop(&quot;mote_attractor_loop&quot;, ship, 1f, volume, com, new Vector2f());</span></div>
-<div class="line"><span class="lineno">  277</span>            Global.getSoundPlayer().playLoop(<a class="code hl_function" href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#a5384e10f8b82e45f460950d44ddf423c">getLoopSound</a>(ship), ship, 1f, volume, com, <span class="keyword">new</span> Vector2f());</div>
-<div class="line"><span class="lineno">  278</span>        }</div>
-<div class="line"><span class="lineno">  279</span>        </div>
-<div class="line"><span class="lineno">  280</span>        </div>
-<div class="line"><span class="lineno">  281</span>        <span class="keywordflow">if</span> (effectLevel &gt; 0 &amp;&amp; <a class="code hl_variable" href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#a272bd0c3a38bd82c7bc6eb7dc97788b8">findNewTargetOnUse</a>) {</div>
-<div class="line"><span class="lineno">  282</span>            <a class="code hl_function" href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#a8088b8fe748641907a2af4866531c818">calculateTargetData</a>(ship);</div>
-<div class="line"><span class="lineno">  283</span>            <a class="code hl_variable" href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#a272bd0c3a38bd82c7bc6eb7dc97788b8">findNewTargetOnUse</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  284</span>        }</div>
-<div class="line"><span class="lineno">  285</span>        </div>
-<div class="line"><span class="lineno">  286</span>        <span class="keywordflow">if</span> (effectLevel == 1) {</div>
-<div class="line"><span class="lineno">  287</span>            <span class="comment">// possible if system is reused immediately w/ no time to cool down, I think</span></div>
-<div class="line"><span class="lineno">  288</span>            <span class="keywordflow">if</span> (data.attractorTarget == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  289</span>                <a class="code hl_function" href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#a8088b8fe748641907a2af4866531c818">calculateTargetData</a>(ship);</div>
-<div class="line"><span class="lineno">  290</span>            }</div>
-<div class="line"><span class="lineno">  291</span>            <a class="code hl_function" href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#a77c08dff9b0924a8db19db65d9bc0312">findSlots</a>(ship);</div>
-<div class="line"><span class="lineno">  292</span>            </div>
-<div class="line"><span class="lineno">  293</span>            Vector2f slotLoc = <a class="code hl_variable" href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#a0f87aec30c18215e573330178dac3c19">attractor</a>.<a class="code hl_function" href="../../d9/dbe/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WeaponSlotAPI.html#a4e5587046bcdb6365803456a51d637e7">computePosition</a>(ship);</div>
-<div class="line"><span class="lineno">  294</span>            </div>
-<div class="line"><span class="lineno">  295</span>            CombatEntityAPI asteroid = engine.spawnAsteroid(0, data.attractorTarget.x, data.attractorTarget.y, 0, 0);</div>
-<div class="line"><span class="lineno">  296</span>            asteroid.setCollisionClass(CollisionClass.NONE);</div>
-<div class="line"><span class="lineno">  297</span>            CombatEntityAPI target = asteroid;</div>
-<div class="line"><span class="lineno">  298</span>            <span class="keywordflow">if</span> (data.attractorLock != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  299</span>                target = data.attractorLock;</div>
-<div class="line"><span class="lineno">  300</span>            }</div>
-<div class="line"><span class="lineno">  301</span>            </div>
-<div class="line"><span class="lineno">  302</span>            <span class="keywordtype">float</span> emp = 0;</div>
-<div class="line"><span class="lineno">  303</span>            <span class="keywordtype">float</span> dam = 0;</div>
-<div class="line"><span class="lineno">  304</span>            EmpArcEntityAPI arc = (EmpArcEntityAPI)engine.spawnEmpArc(ship, slotLoc, ship, target,</div>
-<div class="line"><span class="lineno">  305</span>                               DamageType.ENERGY, </div>
-<div class="line"><span class="lineno">  306</span>                               dam,</div>
-<div class="line"><span class="lineno">  307</span>                               emp, <span class="comment">// emp </span></div>
-<div class="line"><span class="lineno">  308</span>                               100000f, <span class="comment">// max range </span></div>
-<div class="line"><span class="lineno">  309</span>                               <span class="stringliteral">&quot;mote_attractor_targeted_ship&quot;</span>,</div>
-<div class="line"><span class="lineno">  310</span>                               40f, <span class="comment">// thickness</span></div>
-<div class="line"><span class="lineno">  311</span>                               <span class="comment">//new Color(100,165,255,255),</span></div>
-<div class="line"><span class="lineno">  312</span>                               MoteControlScript.getEMPColor(ship),</div>
-<div class="line"><span class="lineno">  313</span>                               <span class="keyword">new</span> Color(255,255,255,255)</div>
-<div class="line"><span class="lineno">  314</span>                               );</div>
-<div class="line"><span class="lineno">  315</span>            <span class="keywordflow">if</span> (data.attractorLock != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  316</span>                arc.setTargetToShipCenter(slotLoc, data.attractorLock);</div>
-<div class="line"><span class="lineno">  317</span>            }</div>
-<div class="line"><span class="lineno">  318</span>            arc.setCoreWidthOverride(30f);</div>
-<div class="line"><span class="lineno">  319</span>            </div>
-<div class="line"><span class="lineno">  320</span>            <span class="keywordflow">if</span> (data.attractorLock == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  321</span>                Global.getSoundPlayer().playSound(<span class="stringliteral">&quot;mote_attractor_targeted_empty_space&quot;</span>, 1f, 1f, data.attractorTarget, <span class="keyword">new</span> Vector2f());</div>
-<div class="line"><span class="lineno">  322</span>            }</div>
-<div class="line"><span class="lineno">  323</span>            </div>
-<div class="line"><span class="lineno">  324</span><span class="comment">//          Vector2f targetLoc = new Vector2f(target.getLocation());</span></div>
-<div class="line"><span class="lineno">  325</span><span class="comment">//          int glows = 100;</span></div>
-<div class="line"><span class="lineno">  326</span><span class="comment">//          float maxRadius = 500f;</span></div>
-<div class="line"><span class="lineno">  327</span><span class="comment">//          float minRadius = 300f;</span></div>
-<div class="line"><span class="lineno">  328</span><span class="comment">//          </span></div>
-<div class="line"><span class="lineno">  329</span><span class="comment">//          if (data.attractorLock != null) {</span></div>
-<div class="line"><span class="lineno">  330</span><span class="comment">//              maxRadius += data.attractorLock.getCollisionRadius();</span></div>
-<div class="line"><span class="lineno">  331</span><span class="comment">//              minRadius += data.attractorLock.getCollisionRadius();</span></div>
-<div class="line"><span class="lineno">  332</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">  333</span><span class="comment">//          </span></div>
-<div class="line"><span class="lineno">  334</span><span class="comment">//          float minDur = 0.5f;</span></div>
-<div class="line"><span class="lineno">  335</span><span class="comment">//          float maxDur = 0.75f;</span></div>
-<div class="line"><span class="lineno">  336</span><span class="comment">//          float minSize = 10f;</span></div>
-<div class="line"><span class="lineno">  337</span><span class="comment">//          float maxSize = 30f;</span></div>
-<div class="line"><span class="lineno">  338</span><span class="comment">//          Color color = MoteControlScript.getEMPColor(ship);</span></div>
-<div class="line"><span class="lineno">  339</span><span class="comment">//          for (int i = 0; i &lt; glows; i++) {</span></div>
-<div class="line"><span class="lineno">  340</span><span class="comment">//              float radius = minRadius + (float) Math.random() * (maxRadius - minRadius);</span></div>
-<div class="line"><span class="lineno">  341</span><span class="comment">//              Vector2f loc = Misc.getPointAtRadius(targetLoc, radius);</span></div>
-<div class="line"><span class="lineno">  342</span><span class="comment">//              Vector2f dir = Misc.getUnitVectorAtDegreeAngle(Misc.getAngleInDegrees(loc, targetLoc));</span></div>
-<div class="line"><span class="lineno">  343</span><span class="comment">//              float dist = Misc.getDistance(loc, targetLoc);</span></div>
-<div class="line"><span class="lineno">  344</span><span class="comment">//              </span></div>
-<div class="line"><span class="lineno">  345</span><span class="comment">//              float dur = minDur + (float) Math.random() * (maxDur - minDur);</span></div>
-<div class="line"><span class="lineno">  346</span><span class="comment">//              float speed = dist / dur;</span></div>
-<div class="line"><span class="lineno">  347</span><span class="comment">//              dir.scale(speed);</span></div>
-<div class="line"><span class="lineno">  348</span><span class="comment">//              </span></div>
-<div class="line"><span class="lineno">  349</span><span class="comment">//              float size = minSize + (float) Math.random() * (maxSize - minSize);</span></div>
-<div class="line"><span class="lineno">  350</span><span class="comment">//              </span></div>
-<div class="line"><span class="lineno">  351</span><span class="comment">//              engine.addHitParticle(loc, dir, size, 1f, 0.3f, dur, color);</span></div>
-<div class="line"><span class="lineno">  352</span><span class="comment">//              engine.addHitParticle(loc, dir, size * 0.33f, 1f, 0.3f, dur, Color.white);</span></div>
-<div class="line"><span class="lineno">  353</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">  354</span>            </div>
-<div class="line"><span class="lineno">  355</span>            </div>
-<div class="line"><span class="lineno">  356</span>            engine.removeEntity(asteroid);</div>
-<div class="line"><span class="lineno">  357</span>        }</div>
-<div class="line"><span class="lineno">  358</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript_html_a0f87aec30c18215e573330178dac3c19"><div class="ttname"><a href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#a0f87aec30c18215e573330178dac3c19">com.fs.starfarer.api.impl.combat.MoteControlScript.attractor</a></div><div class="ttdeci">WeaponSlotAPI attractor</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d7e/MoteControlScript_8java_source.html#l00163">MoteControlScript.java:163</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript_html_a13be0e23179c316f96eb10ef33e53f23"><div class="ttname"><a href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#a13be0e23179c316f96eb10ef33e53f23">com.fs.starfarer.api.impl.combat.MoteControlScript.attractorParticleInterval</a></div><div class="ttdeci">IntervalUtil attractorParticleInterval</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d7e/MoteControlScript_8java_source.html#l00161">MoteControlScript.java:161</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript_html_a26f7c5fabe3fc2452e0c1d08d172a613"><div class="ttname"><a href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#a26f7c5fabe3fc2452e0c1d08d172a613">com.fs.starfarer.api.impl.combat.MoteControlScript.launchInterval</a></div><div class="ttdeci">IntervalUtil launchInterval</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d7e/MoteControlScript_8java_source.html#l00160">MoteControlScript.java:160</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript_html_a272bd0c3a38bd82c7bc6eb7dc97788b8"><div class="ttname"><a href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#a272bd0c3a38bd82c7bc6eb7dc97788b8">com.fs.starfarer.api.impl.combat.MoteControlScript.findNewTargetOnUse</a></div><div class="ttdeci">boolean findNewTargetOnUse</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d7e/MoteControlScript_8java_source.html#l00166">MoteControlScript.java:166</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript_html_a5384e10f8b82e45f460950d44ddf423c"><div class="ttname"><a href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#a5384e10f8b82e45f460950d44ddf423c">com.fs.starfarer.api.impl.combat.MoteControlScript.getLoopSound</a></div><div class="ttdeci">static String getLoopSound(ShipAPI ship)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d7e/MoteControlScript_8java_source.html#l00134">MoteControlScript.java:134</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript_html_a77c08dff9b0924a8db19db65d9bc0312"><div class="ttname"><a href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#a77c08dff9b0924a8db19db65d9bc0312">com.fs.starfarer.api.impl.combat.MoteControlScript.findSlots</a></div><div class="ttdeci">void findSlots(ShipAPI ship)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d7e/MoteControlScript_8java_source.html#l00168">MoteControlScript.java:168</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript_html_a8088b8fe748641907a2af4866531c818"><div class="ttname"><a href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#a8088b8fe748641907a2af4866531c818">com.fs.starfarer.api.impl.combat.MoteControlScript.calculateTargetData</a></div><div class="ttdeci">void calculateTargetData(ShipAPI ship)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d7e/MoteControlScript_8java_source.html#l00410">MoteControlScript.java:410</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript_html_a911771bf9963c560ae5807a2e3651ecf"><div class="ttname"><a href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#a911771bf9963c560ae5807a2e3651ecf">com.fs.starfarer.api.impl.combat.MoteControlScript.getWeaponId</a></div><div class="ttdeci">static String getWeaponId(ShipAPI ship)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d7e/MoteControlScript_8java_source.html#l00112">MoteControlScript.java:112</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript_html_a9e0032c548ed33d1276b9b709cad0553"><div class="ttname"><a href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#a9e0032c548ed33d1276b9b709cad0553">com.fs.starfarer.api.impl.combat.MoteControlScript.launchSlots</a></div><div class="ttdeci">WeightedRandomPicker&lt; WeaponSlotAPI &gt; launchSlots</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d7e/MoteControlScript_8java_source.html#l00162">MoteControlScript.java:162</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript_html_ac176bfb2e6cacc4048e25bad1a19fa62"><div class="ttname"><a href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#ac176bfb2e6cacc4048e25bad1a19fa62">com.fs.starfarer.api.impl.combat.MoteControlScript.spawnAttractorParticles</a></div><div class="ttdeci">void spawnAttractorParticles(ShipAPI ship)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d7e/MoteControlScript_8java_source.html#l00360">MoteControlScript.java:360</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript_html_ac2deab478fa62dfff9e66695bf3eea27"><div class="ttname"><a href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#ac2deab478fa62dfff9e66695bf3eea27">com.fs.starfarer.api.impl.combat.MoteControlScript.getMaxMotes</a></div><div class="ttdeci">static int getMaxMotes(ShipAPI ship)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d7e/MoteControlScript_8java_source.html#l00130">MoteControlScript.java:130</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript_html_ae0ce28b23c6d33ad641a39b95fc19060"><div class="ttname"><a href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#ae0ce28b23c6d33ad641a39b95fc19060">com.fs.starfarer.api.impl.combat.MoteControlScript.getSharedData</a></div><div class="ttdeci">static SharedMoteAIData getSharedData(ShipAPI source)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d7e/MoteControlScript_8java_source.html#l00148">MoteControlScript.java:148</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil_html_a61881d44415cda2c50c3354c3f0a4d8a"><div class="ttname"><a href="../../da/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html#a61881d44415cda2c50c3354c3f0a4d8a">com.fs.starfarer.api.util.IntervalUtil.advance</a></div><div class="ttdeci">void advance(float amount)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de3/IntervalUtil_8java_source.html#l00039">IntervalUtil.java:39</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WeaponSlotAPI_html_a4e5587046bcdb6365803456a51d637e7"><div class="ttname"><a href="../../d9/dbe/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WeaponSlotAPI.html#a4e5587046bcdb6365803456a51d637e7">com.fs.starfarer.api.loading.WeaponSlotAPI.computePosition</a></div><div class="ttdeci">Vector2f computePosition(CombatEntityAPI ship)</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8088b8fe748641907a2af4866531c818" name="a8088b8fe748641907a2af4866531c818"></a>
@@ -524,33 +334,7 @@ Static Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d7e/MoteControlScript_8java_source.html#l00410">410</a> of file <a class="el" href="../../d7/d7e/MoteControlScript_8java_source.html">MoteControlScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  410</span>                                                  {</div>
-<div class="line"><span class="lineno">  411</span>        SharedMoteAIData data = <a class="code hl_function" href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#ae0ce28b23c6d33ad641a39b95fc19060">getSharedData</a>(ship);</div>
-<div class="line"><span class="lineno">  412</span>        Vector2f targetLoc = <a class="code hl_function" href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#a7b7c87b0195db903c0285f9ef28a8a51">getTargetLoc</a>(ship);</div>
-<div class="line"><span class="lineno">  413</span>        <span class="comment">//System.out.println(getTargetedLocation(ship));</span></div>
-<div class="line"><span class="lineno">  414</span>        data.attractorLock = <a class="code hl_function" href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#a124dc25479f21c21cccd45e30684a361">getLockTarget</a>(ship, targetLoc);</div>
-<div class="line"><span class="lineno">  415</span>        </div>
-<div class="line"><span class="lineno">  416</span>        data.attractorRemaining = <a class="code hl_variable" href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#a76505675e18e39c58e4aecc69f53c7d3">ATTRACTOR_DURATION</a>;</div>
-<div class="line"><span class="lineno">  417</span>        <span class="keywordflow">if</span> (data.attractorLock != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  418</span>            targetLoc = <span class="keyword">new</span> Vector2f(data.attractorLock.getLocation());</div>
-<div class="line"><span class="lineno">  419</span>            data.attractorRemaining = <a class="code hl_variable" href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#ac31469c9d716781a767aaa0e60ae8941">ATTRACTOR_DURATION_LOCK</a>;</div>
-<div class="line"><span class="lineno">  420</span>        }</div>
-<div class="line"><span class="lineno">  421</span>        data.attractorTarget = targetLoc;</div>
-<div class="line"><span class="lineno">  422</span>        </div>
-<div class="line"><span class="lineno">  423</span>        <span class="keywordflow">if</span> (data.attractorLock != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  424</span>            <span class="comment">// need to do this in a script because when the ship is phased, the charge-in time of the system (0.1s)</span></div>
-<div class="line"><span class="lineno">  425</span>            <span class="comment">// is not enough for the jitter to come to full effect (which requires 0.1s &quot;normal&quot; time)</span></div>
-<div class="line"><span class="lineno">  426</span>            Global.getCombatEngine().addPlugin(<a class="code hl_function" href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#afe7df232307403d65a9057fc35616d79">createTargetJitterPlugin</a>(data.attractorLock,</div>
-<div class="line"><span class="lineno">  427</span>                    ship.getSystem().getChargeUpDur(), ship.getSystem().getChargeDownDur(),</div>
-<div class="line"><span class="lineno">  428</span>                    MoteControlScript.getJitterColor(ship)));</div>
-<div class="line"><span class="lineno">  429</span>        }</div>
-<div class="line"><span class="lineno">  430</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript_html_a124dc25479f21c21cccd45e30684a361"><div class="ttname"><a href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#a124dc25479f21c21cccd45e30684a361">com.fs.starfarer.api.impl.combat.MoteControlScript.getLockTarget</a></div><div class="ttdeci">ShipAPI getLockTarget(ShipAPI from, Vector2f loc)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d7e/MoteControlScript_8java_source.html#l00496">MoteControlScript.java:496</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript_html_a76505675e18e39c58e4aecc69f53c7d3"><div class="ttname"><a href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#a76505675e18e39c58e4aecc69f53c7d3">com.fs.starfarer.api.impl.combat.MoteControlScript.ATTRACTOR_DURATION</a></div><div class="ttdeci">static float ATTRACTOR_DURATION</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d7e/MoteControlScript_8java_source.html#l00047">MoteControlScript.java:47</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript_html_a7b7c87b0195db903c0285f9ef28a8a51"><div class="ttname"><a href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#a7b7c87b0195db903c0285f9ef28a8a51">com.fs.starfarer.api.impl.combat.MoteControlScript.getTargetLoc</a></div><div class="ttdeci">Vector2f getTargetLoc(ShipAPI from)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d7e/MoteControlScript_8java_source.html#l00465">MoteControlScript.java:465</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript_html_ac31469c9d716781a767aaa0e60ae8941"><div class="ttname"><a href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#ac31469c9d716781a767aaa0e60ae8941">com.fs.starfarer.api.impl.combat.MoteControlScript.ATTRACTOR_DURATION_LOCK</a></div><div class="ttdeci">static float ATTRACTOR_DURATION_LOCK</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d7e/MoteControlScript_8java_source.html#l00046">MoteControlScript.java:46</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript_html_afe7df232307403d65a9057fc35616d79"><div class="ttname"><a href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#afe7df232307403d65a9057fc35616d79">com.fs.starfarer.api.impl.combat.MoteControlScript.createTargetJitterPlugin</a></div><div class="ttdeci">EveryFrameCombatPlugin createTargetJitterPlugin(final ShipAPI target, final float in, final float out, final Color jitterColor)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d7e/MoteControlScript_8java_source.html#l00524">MoteControlScript.java:524</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="afe7df232307403d65a9057fc35616d79" name="afe7df232307403d65a9057fc35616d79"></a>
@@ -600,39 +384,7 @@ Static Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d7e/MoteControlScript_8java_source.html#l00524">524</a> of file <a class="el" href="../../d7/d7e/MoteControlScript_8java_source.html">MoteControlScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  527</span>                                                                                       {</div>
-<div class="line"><span class="lineno">  528</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> BaseEveryFrameCombatPlugin() {</div>
-<div class="line"><span class="lineno">  529</span>            <span class="keywordtype">float</span> elapsed = 0f;</div>
-<div class="line"><span class="lineno">  530</span>            @Override</div>
-<div class="line"><span class="lineno">  531</span>            <span class="keyword">public</span> <span class="keywordtype">void</span> advance(<span class="keywordtype">float</span> amount, List&lt;InputEventAPI&gt; events) {</div>
-<div class="line"><span class="lineno">  532</span>                <span class="keywordflow">if</span> (Global.getCombatEngine().isPaused()) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  533</span>                </div>
-<div class="line"><span class="lineno">  534</span>                elapsed += amount;</div>
-<div class="line"><span class="lineno">  535</span>                </div>
-<div class="line"><span class="lineno">  536</span>                </div>
-<div class="line"><span class="lineno">  537</span>                <span class="keywordtype">float</span> level = 0f;</div>
-<div class="line"><span class="lineno">  538</span>                <span class="keywordflow">if</span> (elapsed &lt; in) {</div>
-<div class="line"><span class="lineno">  539</span>                    level = elapsed / in;</div>
-<div class="line"><span class="lineno">  540</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (elapsed &lt; in + out) {</div>
-<div class="line"><span class="lineno">  541</span>                    level = 1f - (elapsed - in) / out;</div>
-<div class="line"><span class="lineno">  542</span>                    level *= level;</div>
-<div class="line"><span class="lineno">  543</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  544</span>                    Global.getCombatEngine().removePlugin(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  545</span>                    <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  546</span>                }</div>
-<div class="line"><span class="lineno">  547</span>                </div>
-<div class="line"><span class="lineno">  548</span> </div>
-<div class="line"><span class="lineno">  549</span>                <span class="keywordflow">if</span> (level &gt; 0) {</div>
-<div class="line"><span class="lineno">  550</span>                    <span class="keywordtype">float</span> jitterLevel = level;</div>
-<div class="line"><span class="lineno">  551</span>                    <span class="keywordtype">float</span> maxRangeBonus = 50f;</div>
-<div class="line"><span class="lineno">  552</span>                    <span class="keywordtype">float</span> jitterRangeBonus = jitterLevel * maxRangeBonus;</div>
-<div class="line"><span class="lineno">  553</span>                    target.setJitterUnder(<span class="keyword">this</span>, jitterColor, jitterLevel, 10, 0f, jitterRangeBonus);</div>
-<div class="line"><span class="lineno">  554</span>                    target.setJitter(<span class="keyword">this</span>, jitterColor, jitterLevel, 4, 0f, 0 + jitterRangeBonus);</div>
-<div class="line"><span class="lineno">  555</span>                }</div>
-<div class="line"><span class="lineno">  556</span>            }</div>
-<div class="line"><span class="lineno">  557</span>        };</div>
-<div class="line"><span class="lineno">  558</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a77c08dff9b0924a8db19db65d9bc0312" name="a77c08dff9b0924a8db19db65d9bc0312"></a>
@@ -660,20 +412,7 @@ Static Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d7e/MoteControlScript_8java_source.html#l00168">168</a> of file <a class="el" href="../../d7/d7e/MoteControlScript_8java_source.html">MoteControlScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  168</span>                                           {</div>
-<div class="line"><span class="lineno">  169</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#a0f87aec30c18215e573330178dac3c19">attractor</a> != <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  170</span>        <span class="keywordflow">for</span> (WeaponSlotAPI slot : ship.getHullSpec().getAllWeaponSlotsCopy()) {</div>
-<div class="line"><span class="lineno">  171</span>            <span class="keywordflow">if</span> (slot.isSystemSlot()) {</div>
-<div class="line"><span class="lineno">  172</span>                <span class="keywordflow">if</span> (slot.getSlotSize() == WeaponSize.SMALL) {</div>
-<div class="line"><span class="lineno">  173</span>                    <a class="code hl_variable" href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#a9e0032c548ed33d1276b9b709cad0553">launchSlots</a>.add(slot);</div>
-<div class="line"><span class="lineno">  174</span>                }</div>
-<div class="line"><span class="lineno">  175</span>                <span class="keywordflow">if</span> (slot.getSlotSize() == WeaponSize.MEDIUM) {</div>
-<div class="line"><span class="lineno">  176</span>                    <a class="code hl_variable" href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#a0f87aec30c18215e573330178dac3c19">attractor</a> = slot;</div>
-<div class="line"><span class="lineno">  177</span>                }</div>
-<div class="line"><span class="lineno">  178</span>            }</div>
-<div class="line"><span class="lineno">  179</span>        }</div>
-<div class="line"><span class="lineno">  180</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a4cf1498a06e4ab338ec6f5694f0d2081" name="a4cf1498a06e4ab338ec6f5694f0d2081"></a>
@@ -701,11 +440,7 @@ Static Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d7e/MoteControlScript_8java_source.html#l00117">117</a> of file <a class="el" href="../../d7/d7e/MoteControlScript_8java_source.html">MoteControlScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  117</span>                                                           {</div>
-<div class="line"><span class="lineno">  118</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#a46769b1f881e8604af006534979b3a90">MOTE_DATA</a>.get(<a class="code hl_function" href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#a911771bf9963c560ae5807a2e3651ecf">getWeaponId</a>(ship)).antiFighterDamage;</div>
-<div class="line"><span class="lineno">  119</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript_html_a46769b1f881e8604af006534979b3a90"><div class="ttname"><a href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#a46769b1f881e8604af006534979b3a90">com.fs.starfarer.api.impl.combat.MoteControlScript.MOTE_DATA</a></div><div class="ttdeci">static Map&lt; String, MoteData &gt; MOTE_DATA</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d7e/MoteControlScript_8java_source.html#l00080">MoteControlScript.java:80</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a481b069a2125e40b0ee243ecfd49a678" name="a481b069a2125e40b0ee243ecfd49a678"></a>
@@ -733,10 +468,7 @@ Static Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d7e/MoteControlScript_8java_source.html#l00126">126</a> of file <a class="el" href="../../d7/d7e/MoteControlScript_8java_source.html">MoteControlScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  126</span>                                                  {</div>
-<div class="line"><span class="lineno">  127</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#a46769b1f881e8604af006534979b3a90">MOTE_DATA</a>.get(<a class="code hl_function" href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#a911771bf9963c560ae5807a2e3651ecf">getWeaponId</a>(ship)).empColor;</div>
-<div class="line"><span class="lineno">  128</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a34d34e3716e4005e43784a19127fc20c" name="a34d34e3716e4005e43784a19127fc20c"></a>
@@ -764,10 +496,7 @@ Static Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d7e/MoteControlScript_8java_source.html#l00120">120</a> of file <a class="el" href="../../d7/d7e/MoteControlScript_8java_source.html">MoteControlScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  120</span>                                                        {</div>
-<div class="line"><span class="lineno">  121</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#a46769b1f881e8604af006534979b3a90">MOTE_DATA</a>.get(<a class="code hl_function" href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#a911771bf9963c560ae5807a2e3651ecf">getWeaponId</a>(ship)).impactSound;</div>
-<div class="line"><span class="lineno">  122</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a433a307f49d629122399dff912074f76" name="a433a307f49d629122399dff912074f76"></a>
@@ -800,25 +529,7 @@ Static Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseShipSystemScript.html#a1b15ba8346c1deeaabf3dde34d5edc31">com.fs.starfarer.api.impl.combat.BaseShipSystemScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d7e/MoteControlScript_8java_source.html#l00433">433</a> of file <a class="el" href="../../d7/d7e/MoteControlScript_8java_source.html">MoteControlScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  433</span>                                                                  {</div>
-<div class="line"><span class="lineno">  434</span>        <span class="keywordflow">if</span> (system.isOutOfAmmo()) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  435</span>        <span class="keywordflow">if</span> (system.getState() != SystemState.IDLE) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  436</span>        </div>
-<div class="line"><span class="lineno">  437</span>        <span class="keywordtype">boolean</span> inRange = <a class="code hl_function" href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#a131867f9f1c9cba882f062cd480994d2">isMouseInRange</a>(ship);</div>
-<div class="line"><span class="lineno">  438</span>        <span class="comment">//Vector2f targetLoc = getTargetLoc(ship);</span></div>
-<div class="line"><span class="lineno">  439</span>        <span class="comment">//ShipAPI target = getLockTarget(ship, targetLoc);</span></div>
-<div class="line"><span class="lineno">  440</span>        </div>
-<div class="line"><span class="lineno">  441</span>        <span class="keywordflow">if</span> (!inRange) {</div>
-<div class="line"><span class="lineno">  442</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;OUT OF RANGE&quot;</span>;</div>
-<div class="line"><span class="lineno">  443</span>        }</div>
-<div class="line"><span class="lineno">  444</span><span class="comment">//      if (target != null) {</span></div>
-<div class="line"><span class="lineno">  445</span><span class="comment">//          return &quot;ENEMY SHIP&quot;;</span></div>
-<div class="line"><span class="lineno">  446</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  447</span><span class="comment">//      return &quot;AREA&quot;;</span></div>
-<div class="line"><span class="lineno">  448</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  449</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript_html_a131867f9f1c9cba882f062cd480994d2"><div class="ttname"><a href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#a131867f9f1c9cba882f062cd480994d2">com.fs.starfarer.api.impl.combat.MoteControlScript.isMouseInRange</a></div><div class="ttdeci">boolean isMouseInRange(ShipAPI from)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d7e/MoteControlScript_8java_source.html#l00479">MoteControlScript.java:479</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab51f64d0a672792139eeabe13a74e949" name="ab51f64d0a672792139eeabe13a74e949"></a>
@@ -846,10 +557,7 @@ Static Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d7e/MoteControlScript_8java_source.html#l00123">123</a> of file <a class="el" href="../../d7/d7e/MoteControlScript_8java_source.html">MoteControlScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  123</span>                                                     {</div>
-<div class="line"><span class="lineno">  124</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#a46769b1f881e8604af006534979b3a90">MOTE_DATA</a>.get(<a class="code hl_function" href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#a911771bf9963c560ae5807a2e3651ecf">getWeaponId</a>(ship)).jitterColor;</div>
-<div class="line"><span class="lineno">  125</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a124dc25479f21c21cccd45e30684a361" name="a124dc25479f21c21cccd45e30684a361"></a>
@@ -879,26 +587,7 @@ Static Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d7e/MoteControlScript_8java_source.html#l00496">496</a> of file <a class="el" href="../../d7/d7e/MoteControlScript_8java_source.html">MoteControlScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  496</span>                                                             {</div>
-<div class="line"><span class="lineno">  497</span>        Vector2f slotLoc = <a class="code hl_variable" href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#a0f87aec30c18215e573330178dac3c19">attractor</a>.<a class="code hl_function" href="../../d9/dbe/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WeaponSlotAPI.html#a4e5587046bcdb6365803456a51d637e7">computePosition</a>(from);</div>
-<div class="line"><span class="lineno">  498</span>        <span class="keywordflow">for</span> (ShipAPI other : Global.getCombatEngine().getShips()) {</div>
-<div class="line"><span class="lineno">  499</span>            <span class="keywordflow">if</span> (other.isFighter()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  500</span>            <span class="keywordflow">if</span> (other.getOwner() == from.getOwner()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  501</span>            <span class="keywordflow">if</span> (other.isHulk()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  502</span>            <span class="keywordflow">if</span> (!other.isTargetable()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  503</span>            </div>
-<div class="line"><span class="lineno">  504</span>            <span class="keywordtype">float</span> dist = Misc.getDistance(slotLoc, other.getLocation());</div>
-<div class="line"><span class="lineno">  505</span>            <span class="keywordflow">if</span> (dist &gt; <a class="code hl_function" href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#a49bf3ac279f4858700d1974c97334fc0">getRange</a>(from)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  506</span>            </div>
-<div class="line"><span class="lineno">  507</span>            dist = Misc.getDistance(loc, other.getLocation());</div>
-<div class="line"><span class="lineno">  508</span>            <span class="keywordflow">if</span> (dist &lt; other.getCollisionRadius() + 50f) {</div>
-<div class="line"><span class="lineno">  509</span>                <span class="keywordflow">return</span> other;</div>
-<div class="line"><span class="lineno">  510</span>            }</div>
-<div class="line"><span class="lineno">  511</span>        }</div>
-<div class="line"><span class="lineno">  512</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  513</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript_html_a49bf3ac279f4858700d1974c97334fc0"><div class="ttname"><a href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#a49bf3ac279f4858700d1974c97334fc0">com.fs.starfarer.api.impl.combat.MoteControlScript.getRange</a></div><div class="ttdeci">static float getRange(ShipAPI ship)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d7e/MoteControlScript_8java_source.html#l00515">MoteControlScript.java:515</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5384e10f8b82e45f460950d44ddf423c" name="a5384e10f8b82e45f460950d44ddf423c"></a>
@@ -926,10 +615,7 @@ Static Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d7e/MoteControlScript_8java_source.html#l00134">134</a> of file <a class="el" href="../../d7/d7e/MoteControlScript_8java_source.html">MoteControlScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  134</span>                                                    {</div>
-<div class="line"><span class="lineno">  135</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#a46769b1f881e8604af006534979b3a90">MOTE_DATA</a>.get(<a class="code hl_function" href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#a911771bf9963c560ae5807a2e3651ecf">getWeaponId</a>(ship)).loopSound;</div>
-<div class="line"><span class="lineno">  136</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac2deab478fa62dfff9e66695bf3eea27" name="ac2deab478fa62dfff9e66695bf3eea27"></a>
@@ -957,10 +643,7 @@ Static Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d7e/MoteControlScript_8java_source.html#l00130">130</a> of file <a class="el" href="../../d7/d7e/MoteControlScript_8java_source.html">MoteControlScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  130</span>                                                {</div>
-<div class="line"><span class="lineno">  131</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#a46769b1f881e8604af006534979b3a90">MOTE_DATA</a>.get(<a class="code hl_function" href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#a911771bf9963c560ae5807a2e3651ecf">getWeaponId</a>(ship)).maxMotes;</div>
-<div class="line"><span class="lineno">  132</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a49bf3ac279f4858700d1974c97334fc0" name="a49bf3ac279f4858700d1974c97334fc0"></a>
@@ -988,12 +671,7 @@ Static Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d7e/MoteControlScript_8java_source.html#l00515">515</a> of file <a class="el" href="../../d7/d7e/MoteControlScript_8java_source.html">MoteControlScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  515</span>                                               {</div>
-<div class="line"><span class="lineno">  516</span>        <span class="keywordflow">if</span> (ship == <span class="keyword">null</span>) <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#acd82d1b1663849e540590c2f2b2c7d2d">MAX_ATTRACTOR_RANGE</a>;</div>
-<div class="line"><span class="lineno">  517</span>        <span class="keywordflow">return</span> ship.getMutableStats().getSystemRangeBonus().computeEffective(<a class="code hl_variable" href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#acd82d1b1663849e540590c2f2b2c7d2d">MAX_ATTRACTOR_RANGE</a>);</div>
-<div class="line"><span class="lineno">  518</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript_html_acd82d1b1663849e540590c2f2b2c7d2d"><div class="ttname"><a href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#acd82d1b1663849e540590c2f2b2c7d2d">com.fs.starfarer.api.impl.combat.MoteControlScript.MAX_ATTRACTOR_RANGE</a></div><div class="ttdeci">static float MAX_ATTRACTOR_RANGE</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d7e/MoteControlScript_8java_source.html#l00036">MoteControlScript.java:36</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae0ce28b23c6d33ad641a39b95fc19060" name="ae0ce28b23c6d33ad641a39b95fc19060"></a>
@@ -1021,16 +699,7 @@ Static Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d7e/MoteControlScript_8java_source.html#l00148">148</a> of file <a class="el" href="../../d7/d7e/MoteControlScript_8java_source.html">MoteControlScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  148</span>                                                                 {</div>
-<div class="line"><span class="lineno">  149</span>        String key = source + <span class="stringliteral">&quot;_mote_AI_shared&quot;</span>;</div>
-<div class="line"><span class="lineno">  150</span>        SharedMoteAIData data = (SharedMoteAIData)Global.getCombatEngine().getCustomData().get(key);</div>
-<div class="line"><span class="lineno">  151</span>        <span class="keywordflow">if</span> (data == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  152</span>            data = <span class="keyword">new</span> SharedMoteAIData();</div>
-<div class="line"><span class="lineno">  153</span>            Global.getCombatEngine().getCustomData().put(key, data);</div>
-<div class="line"><span class="lineno">  154</span>        }</div>
-<div class="line"><span class="lineno">  155</span>        <span class="keywordflow">return</span> data;</div>
-<div class="line"><span class="lineno">  156</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="adb1765a5aa53a1e170667299e49dcdfb" name="adb1765a5aa53a1e170667299e49dcdfb"></a>
@@ -1068,10 +737,7 @@ Static Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseShipSystemScript.html#ab328cae8df05d23ccc045f4e32f5f9f0">com.fs.starfarer.api.impl.combat.BaseShipSystemScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d7e/MoteControlScript_8java_source.html#l00406">406</a> of file <a class="el" href="../../d7/d7e/MoteControlScript_8java_source.html">MoteControlScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  406</span>                                                                               {</div>
-<div class="line"><span class="lineno">  407</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  408</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a1ee983ca232472e04f3b8d27478b719c" name="a1ee983ca232472e04f3b8d27478b719c"></a>
@@ -1091,14 +757,7 @@ Static Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d7e/MoteControlScript_8java_source.html#l00457">457</a> of file <a class="el" href="../../d7/d7e/MoteControlScript_8java_source.html">MoteControlScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  457</span>                                                      {</div>
-<div class="line"><span class="lineno">  458</span>        Vector2f loc = from.getSystem().getTargetLoc();</div>
-<div class="line"><span class="lineno">  459</span>        <span class="keywordflow">if</span> (loc == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  460</span>            loc = <span class="keyword">new</span> Vector2f(from.getMouseTarget());</div>
-<div class="line"><span class="lineno">  461</span>        }</div>
-<div class="line"><span class="lineno">  462</span>        <span class="keywordflow">return</span> loc;</div>
-<div class="line"><span class="lineno">  463</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a7b7c87b0195db903c0285f9ef28a8a51" name="a7b7c87b0195db903c0285f9ef28a8a51"></a>
@@ -1118,21 +777,7 @@ Static Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d7e/MoteControlScript_8java_source.html#l00465">465</a> of file <a class="el" href="../../d7/d7e/MoteControlScript_8java_source.html">MoteControlScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  465</span>                                               {</div>
-<div class="line"><span class="lineno">  466</span>        <a class="code hl_function" href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#a77c08dff9b0924a8db19db65d9bc0312">findSlots</a>(from);</div>
-<div class="line"><span class="lineno">  467</span>        </div>
-<div class="line"><span class="lineno">  468</span>        Vector2f slotLoc = <a class="code hl_variable" href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#a0f87aec30c18215e573330178dac3c19">attractor</a>.<a class="code hl_function" href="../../d9/dbe/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WeaponSlotAPI.html#a4e5587046bcdb6365803456a51d637e7">computePosition</a>(from);</div>
-<div class="line"><span class="lineno">  469</span>        Vector2f targetLoc = <span class="keyword">new</span> Vector2f(<a class="code hl_function" href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#a1ee983ca232472e04f3b8d27478b719c">getTargetedLocation</a>(from));</div>
-<div class="line"><span class="lineno">  470</span>        <span class="keywordtype">float</span> dist = Misc.getDistance(slotLoc, targetLoc);</div>
-<div class="line"><span class="lineno">  471</span>        <span class="keywordflow">if</span> (dist &gt; <a class="code hl_function" href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#a49bf3ac279f4858700d1974c97334fc0">getRange</a>(from)) {</div>
-<div class="line"><span class="lineno">  472</span>            targetLoc = Misc.getUnitVectorAtDegreeAngle(Misc.getAngleInDegrees(slotLoc, targetLoc));</div>
-<div class="line"><span class="lineno">  473</span>            targetLoc.scale(<a class="code hl_function" href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#a49bf3ac279f4858700d1974c97334fc0">getRange</a>(from));</div>
-<div class="line"><span class="lineno">  474</span>            Vector2f.add(targetLoc, slotLoc, targetLoc);</div>
-<div class="line"><span class="lineno">  475</span>        }</div>
-<div class="line"><span class="lineno">  476</span>        <span class="keywordflow">return</span> targetLoc;</div>
-<div class="line"><span class="lineno">  477</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript_html_a1ee983ca232472e04f3b8d27478b719c"><div class="ttname"><a href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#a1ee983ca232472e04f3b8d27478b719c">com.fs.starfarer.api.impl.combat.MoteControlScript.getTargetedLocation</a></div><div class="ttdeci">Vector2f getTargetedLocation(ShipAPI from)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d7e/MoteControlScript_8java_source.html#l00457">MoteControlScript.java:457</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a911771bf9963c560ae5807a2e3651ecf" name="a911771bf9963c560ae5807a2e3651ecf"></a>
@@ -1160,14 +805,7 @@ Static Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d7e/MoteControlScript_8java_source.html#l00112">112</a> of file <a class="el" href="../../d7/d7e/MoteControlScript_8java_source.html">MoteControlScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  112</span>                                                   {</div>
-<div class="line"><span class="lineno">  113</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#a72cfe720813beb418d253dc7991b6936">isHighFrequency</a>(ship)) <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#a2681fa06e41b36920d0f0ed6051cd4f3">MOTELAUNCHER_HF</a>;</div>
-<div class="line"><span class="lineno">  114</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#aaa380ee68444b5976a6485beb1d88f24">MOTELAUNCHER</a>;</div>
-<div class="line"><span class="lineno">  115</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript_html_a2681fa06e41b36920d0f0ed6051cd4f3"><div class="ttname"><a href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#a2681fa06e41b36920d0f0ed6051cd4f3">com.fs.starfarer.api.impl.combat.MoteControlScript.MOTELAUNCHER_HF</a></div><div class="ttdeci">static String MOTELAUNCHER_HF</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d7e/MoteControlScript_8java_source.html#l00083">MoteControlScript.java:83</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript_html_a72cfe720813beb418d253dc7991b6936"><div class="ttname"><a href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#a72cfe720813beb418d253dc7991b6936">com.fs.starfarer.api.impl.combat.MoteControlScript.isHighFrequency</a></div><div class="ttdeci">static boolean isHighFrequency(ShipAPI ship)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d7e/MoteControlScript_8java_source.html#l00107">MoteControlScript.java:107</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript_html_aaa380ee68444b5976a6485beb1d88f24"><div class="ttname"><a href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#aaa380ee68444b5976a6485beb1d88f24">com.fs.starfarer.api.impl.combat.MoteControlScript.MOTELAUNCHER</a></div><div class="ttdeci">static String MOTELAUNCHER</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d7e/MoteControlScript_8java_source.html#l00082">MoteControlScript.java:82</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a72cfe720813beb418d253dc7991b6936" name="a72cfe720813beb418d253dc7991b6936"></a>
@@ -1195,11 +833,7 @@ Static Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d7e/MoteControlScript_8java_source.html#l00107">107</a> of file <a class="el" href="../../d7/d7e/MoteControlScript_8java_source.html">MoteControlScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  107</span>                                                        {</div>
-<div class="line"><span class="lineno">  108</span>        <span class="comment">//if (true) return true;</span></div>
-<div class="line"><span class="lineno">  109</span>        <span class="keywordflow">return</span> ship != <span class="keyword">null</span> &amp;&amp; ship.getVariant().hasHullMod(HullMods.HIGH_FREQUENCY_ATTRACTOR);</div>
-<div class="line"><span class="lineno">  110</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="adfac841d14ba26a7ce53f2d2d6469a16" name="adfac841d14ba26a7ce53f2d2d6469a16"></a>
@@ -1229,17 +863,7 @@ Static Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d7e/MoteControlScript_8java_source.html#l00484">484</a> of file <a class="el" href="../../d7/d7e/MoteControlScript_8java_source.html">MoteControlScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  484</span>                                                                 {</div>
-<div class="line"><span class="lineno">  485</span>        <a class="code hl_function" href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#a77c08dff9b0924a8db19db65d9bc0312">findSlots</a>(from);</div>
-<div class="line"><span class="lineno">  486</span>        </div>
-<div class="line"><span class="lineno">  487</span>        Vector2f slotLoc = <a class="code hl_variable" href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#a0f87aec30c18215e573330178dac3c19">attractor</a>.<a class="code hl_function" href="../../d9/dbe/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WeaponSlotAPI.html#a4e5587046bcdb6365803456a51d637e7">computePosition</a>(from);</div>
-<div class="line"><span class="lineno">  488</span>        <span class="keywordtype">float</span> dist = Misc.getDistance(slotLoc, loc);</div>
-<div class="line"><span class="lineno">  489</span>        <span class="keywordflow">if</span> (dist &gt; <a class="code hl_function" href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#a49bf3ac279f4858700d1974c97334fc0">getRange</a>(from)) {</div>
-<div class="line"><span class="lineno">  490</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  491</span>        }</div>
-<div class="line"><span class="lineno">  492</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  493</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a131867f9f1c9cba882f062cd480994d2" name="a131867f9f1c9cba882f062cd480994d2"></a>
@@ -1259,12 +883,7 @@ Static Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d7e/MoteControlScript_8java_source.html#l00479">479</a> of file <a class="el" href="../../d7/d7e/MoteControlScript_8java_source.html">MoteControlScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  479</span>                                                {</div>
-<div class="line"><span class="lineno">  480</span>        Vector2f targetLoc = <span class="keyword">new</span> Vector2f(from.getMouseTarget());</div>
-<div class="line"><span class="lineno">  481</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#adfac841d14ba26a7ce53f2d2d6469a16">isLocationInRange</a>(from, targetLoc);</div>
-<div class="line"><span class="lineno">  482</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript_html_adfac841d14ba26a7ce53f2d2d6469a16"><div class="ttname"><a href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#adfac841d14ba26a7ce53f2d2d6469a16">com.fs.starfarer.api.impl.combat.MoteControlScript.isLocationInRange</a></div><div class="ttdeci">boolean isLocationInRange(ShipAPI from, Vector2f loc)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d7e/MoteControlScript_8java_source.html#l00484">MoteControlScript.java:484</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2a8508d096a6d6522ca95415776f7a32" name="a2a8508d096a6d6522ca95415776f7a32"></a>
@@ -1296,10 +915,7 @@ Static Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseShipSystemScript.html#a2def38e794e68628fbd36c90dc210018">com.fs.starfarer.api.impl.combat.BaseShipSystemScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d7e/MoteControlScript_8java_source.html#l00453">453</a> of file <a class="el" href="../../d7/d7e/MoteControlScript_8java_source.html">MoteControlScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  453</span>                                                                {</div>
-<div class="line"><span class="lineno">  454</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  455</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac176bfb2e6cacc4048e25bad1a19fa62" name="ac176bfb2e6cacc4048e25bad1a19fa62"></a>
@@ -1327,48 +943,7 @@ Static Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d7e/MoteControlScript_8java_source.html#l00360">360</a> of file <a class="el" href="../../d7/d7e/MoteControlScript_8java_source.html">MoteControlScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  360</span>                                                         {</div>
-<div class="line"><span class="lineno">  361</span>        <span class="keywordflow">if</span> (<span class="keyword">true</span>) <span class="keywordflow">return</span>; <span class="comment">// just not liking this much</span></div>
-<div class="line"><span class="lineno">  362</span>        SharedMoteAIData data = <a class="code hl_function" href="../../d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html#ae0ce28b23c6d33ad641a39b95fc19060">getSharedData</a>(ship);</div>
-<div class="line"><span class="lineno">  363</span>        </div>
-<div class="line"><span class="lineno">  364</span>        <span class="keywordflow">if</span> (data.attractorTarget == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  365</span>        </div>
-<div class="line"><span class="lineno">  366</span>        CombatEngineAPI engine = Global.getCombatEngine();</div>
-<div class="line"><span class="lineno">  367</span>        </div>
-<div class="line"><span class="lineno">  368</span>        Vector2f targetLoc = data.attractorTarget;</div>
-<div class="line"><span class="lineno">  369</span>        </div>
-<div class="line"><span class="lineno">  370</span>        <span class="keywordtype">int</span> glows = 2;</div>
-<div class="line"><span class="lineno">  371</span>        <span class="keywordtype">float</span> maxRadius = 300f;</div>
-<div class="line"><span class="lineno">  372</span>        <span class="keywordtype">float</span> minRadius = 200f;</div>
-<div class="line"><span class="lineno">  373</span>        </div>
-<div class="line"><span class="lineno">  374</span>        <span class="keywordflow">if</span> (data.attractorLock != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  375</span>            maxRadius += data.attractorLock.getCollisionRadius();</div>
-<div class="line"><span class="lineno">  376</span>            minRadius += data.attractorLock.getCollisionRadius();</div>
-<div class="line"><span class="lineno">  377</span>            targetLoc = data.attractorLock.getShieldCenterEvenIfNoShield();</div>
-<div class="line"><span class="lineno">  378</span>        }</div>
-<div class="line"><span class="lineno">  379</span>        </div>
-<div class="line"><span class="lineno">  380</span>        <span class="keywordtype">float</span> minDur = 0.5f;</div>
-<div class="line"><span class="lineno">  381</span>        <span class="keywordtype">float</span> maxDur = 0.75f;</div>
-<div class="line"><span class="lineno">  382</span>        <span class="keywordtype">float</span> minSize = 15f;</div>
-<div class="line"><span class="lineno">  383</span>        <span class="keywordtype">float</span> maxSize = 30f;</div>
-<div class="line"><span class="lineno">  384</span>        Color color = MoteControlScript.getEMPColor(ship);</div>
-<div class="line"><span class="lineno">  385</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; glows; i++) {</div>
-<div class="line"><span class="lineno">  386</span>            <span class="keywordtype">float</span> radius = minRadius + (float) Math.random() * (maxRadius - minRadius);</div>
-<div class="line"><span class="lineno">  387</span>            Vector2f loc = Misc.getPointAtRadius(targetLoc, radius);</div>
-<div class="line"><span class="lineno">  388</span>            Vector2f dir = Misc.getUnitVectorAtDegreeAngle(Misc.getAngleInDegrees(loc, targetLoc));</div>
-<div class="line"><span class="lineno">  389</span>            <span class="keywordtype">float</span> dist = Misc.getDistance(loc, targetLoc);</div>
-<div class="line"><span class="lineno">  390</span>            </div>
-<div class="line"><span class="lineno">  391</span>            <span class="keywordtype">float</span> dur = minDur + (float) Math.random() * (maxDur - minDur);</div>
-<div class="line"><span class="lineno">  392</span>            <span class="keywordtype">float</span> speed = dist / dur;</div>
-<div class="line"><span class="lineno">  393</span>            dir.scale(speed);</div>
-<div class="line"><span class="lineno">  394</span>            </div>
-<div class="line"><span class="lineno">  395</span>            <span class="keywordtype">float</span> size = minSize + (float) Math.random() * (maxSize - minSize);</div>
-<div class="line"><span class="lineno">  396</span>            </div>
-<div class="line"><span class="lineno">  397</span>            engine.addHitParticle(loc, dir, size, 1f, 0.3f, dur, color);</div>
-<div class="line"><span class="lineno">  398</span>            engine.addHitParticle(loc, dir, size * 0.5f, 1f, 0.3f, dur, Color.white);</div>
-<div class="line"><span class="lineno">  399</span>        }</div>
-<div class="line"><span class="lineno">  400</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a85d8f40c517c881cb48772dae509a74c" name="a85d8f40c517c881cb48772dae509a74c"></a>
@@ -1400,9 +975,7 @@ Static Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseShipSystemScript.html#a020712b9bb37e9ece4fbfd4c865c4037">com.fs.starfarer.api.impl.combat.BaseShipSystemScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d7e/MoteControlScript_8java_source.html#l00403">403</a> of file <a class="el" href="../../d7/d7e/MoteControlScript_8java_source.html">MoteControlScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  403</span>                                                              {</div>
-<div class="line"><span class="lineno">  404</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

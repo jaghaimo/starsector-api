@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -208,27 +209,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/dd0/CollisionGridUtil_8java_source.html#l00059">59</a> of file <a class="el" href="../../d6/dd0/CollisionGridUtil_8java_source.html">CollisionGridUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   59</span>                                                                                             {</div>
-<div class="line"><span class="lineno">   60</span>        this.cellSize = <a class="code hl_variable" href="../../d3/d31/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil.html#a3bfdfcd4385779d5fd582e574b85e1b9">cellSize</a>;</div>
-<div class="line"><span class="lineno">   61</span>        </div>
-<div class="line"><span class="lineno">   62</span>        <a class="code hl_variable" href="../../d3/d31/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil.html#a51544be79baea12f93aed0ef0963f23e">leftOf</a> = -(int) Math.floor(minX / <a class="code hl_variable" href="../../d3/d31/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil.html#a3bfdfcd4385779d5fd582e574b85e1b9">cellSize</a>);</div>
-<div class="line"><span class="lineno">   63</span>        <a class="code hl_variable" href="../../d3/d31/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil.html#aabe524fb446bb27fa67c181391e522c5">rightOf</a> = (int) Math.ceil(maxX / <a class="code hl_variable" href="../../d3/d31/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil.html#a3bfdfcd4385779d5fd582e574b85e1b9">cellSize</a>);</div>
-<div class="line"><span class="lineno">   64</span>        <a class="code hl_variable" href="../../d3/d31/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil.html#a6c1ead2a60a39476ddf334a9c7ca91a3">below</a> = -(int) Math.floor(minY / <a class="code hl_variable" href="../../d3/d31/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil.html#a3bfdfcd4385779d5fd582e574b85e1b9">cellSize</a>);</div>
-<div class="line"><span class="lineno">   65</span>        <a class="code hl_variable" href="../../d3/d31/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil.html#a02b5b20e7d9fe614e625f92811e3ca0f">above</a> = (int) Math.ceil(maxY / <a class="code hl_variable" href="../../d3/d31/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil.html#a3bfdfcd4385779d5fd582e574b85e1b9">cellSize</a>);</div>
-<div class="line"><span class="lineno">   66</span>        </div>
-<div class="line"><span class="lineno">   67</span>        <a class="code hl_variable" href="../../d3/d31/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil.html#a3f24367f6df373b375c087a151389267">width</a> = <a class="code hl_variable" href="../../d3/d31/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil.html#a51544be79baea12f93aed0ef0963f23e">leftOf</a> + <a class="code hl_variable" href="../../d3/d31/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil.html#aabe524fb446bb27fa67c181391e522c5">rightOf</a>;</div>
-<div class="line"><span class="lineno">   68</span>        <a class="code hl_variable" href="../../d3/d31/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil.html#a9aeaf01e68a48b01e8a544aec4c14795">height</a> = <a class="code hl_variable" href="../../d3/d31/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil.html#a6c1ead2a60a39476ddf334a9c7ca91a3">below</a> + <a class="code hl_variable" href="../../d3/d31/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil.html#a02b5b20e7d9fe614e625f92811e3ca0f">above</a>;</div>
-<div class="line"><span class="lineno">   69</span>        <a class="code hl_variable" href="../../d3/d31/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil.html#a562280b13d41e99e55c31dae09197295">buckets</a> = <span class="keyword">new</span> List[<a class="code hl_variable" href="../../d3/d31/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil.html#a3f24367f6df373b375c087a151389267">width</a>][<a class="code hl_variable" href="../../d3/d31/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil.html#a9aeaf01e68a48b01e8a544aec4c14795">height</a>];</div>
-<div class="line"><span class="lineno">   70</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil_html_a02b5b20e7d9fe614e625f92811e3ca0f"><div class="ttname"><a href="../../d3/d31/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil.html#a02b5b20e7d9fe614e625f92811e3ca0f">com.fs.starfarer.api.util.CollisionGridUtil.above</a></div><div class="ttdeci">int above</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dd0/CollisionGridUtil_8java_source.html#l00056">CollisionGridUtil.java:56</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil_html_a3bfdfcd4385779d5fd582e574b85e1b9"><div class="ttname"><a href="../../d3/d31/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil.html#a3bfdfcd4385779d5fd582e574b85e1b9">com.fs.starfarer.api.util.CollisionGridUtil.cellSize</a></div><div class="ttdeci">float cellSize</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dd0/CollisionGridUtil_8java_source.html#l00053">CollisionGridUtil.java:53</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil_html_a3f24367f6df373b375c087a151389267"><div class="ttname"><a href="../../d3/d31/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil.html#a3f24367f6df373b375c087a151389267">com.fs.starfarer.api.util.CollisionGridUtil.width</a></div><div class="ttdeci">int width</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dd0/CollisionGridUtil_8java_source.html#l00056">CollisionGridUtil.java:56</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil_html_a51544be79baea12f93aed0ef0963f23e"><div class="ttname"><a href="../../d3/d31/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil.html#a51544be79baea12f93aed0ef0963f23e">com.fs.starfarer.api.util.CollisionGridUtil.leftOf</a></div><div class="ttdeci">int leftOf</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dd0/CollisionGridUtil_8java_source.html#l00056">CollisionGridUtil.java:56</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil_html_a562280b13d41e99e55c31dae09197295"><div class="ttname"><a href="../../d3/d31/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil.html#a562280b13d41e99e55c31dae09197295">com.fs.starfarer.api.util.CollisionGridUtil.buckets</a></div><div class="ttdeci">List&lt; Object &gt;[][] buckets</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dd0/CollisionGridUtil_8java_source.html#l00054">CollisionGridUtil.java:54</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil_html_a6c1ead2a60a39476ddf334a9c7ca91a3"><div class="ttname"><a href="../../d3/d31/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil.html#a6c1ead2a60a39476ddf334a9c7ca91a3">com.fs.starfarer.api.util.CollisionGridUtil.below</a></div><div class="ttdeci">int below</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dd0/CollisionGridUtil_8java_source.html#l00056">CollisionGridUtil.java:56</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil_html_a9aeaf01e68a48b01e8a544aec4c14795"><div class="ttname"><a href="../../d3/d31/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil.html#a9aeaf01e68a48b01e8a544aec4c14795">com.fs.starfarer.api.util.CollisionGridUtil.height</a></div><div class="ttdeci">int height</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dd0/CollisionGridUtil_8java_source.html#l00056">CollisionGridUtil.java:56</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil_html_aabe524fb446bb27fa67c181391e522c5"><div class="ttname"><a href="../../d3/d31/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil.html#aabe524fb446bb27fa67c181391e522c5">com.fs.starfarer.api.util.CollisionGridUtil.rightOf</a></div><div class="ttdeci">int rightOf</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dd0/CollisionGridUtil_8java_source.html#l00056">CollisionGridUtil.java:56</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -282,32 +263,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d6/d15/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CollisionGridAPI.html#af3316c86f3051e59637f40c5691f093d">com.fs.starfarer.api.combat.CollisionGridAPI</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/dd0/CollisionGridUtil_8java_source.html#l00072">72</a> of file <a class="el" href="../../d6/dd0/CollisionGridUtil_8java_source.html">CollisionGridUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   72</span>                                                                                        {</div>
-<div class="line"><span class="lineno">   73</span>        <span class="keywordtype">int</span> startX = (int) (<a class="code hl_variable" href="../../d3/d31/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil.html#a51544be79baea12f93aed0ef0963f23e">leftOf</a> + ((loc.x - objWidth/2f) / <a class="code hl_variable" href="../../d3/d31/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil.html#a3bfdfcd4385779d5fd582e574b85e1b9">cellSize</a>));</div>
-<div class="line"><span class="lineno">   74</span>        <span class="keywordtype">int</span> endX = (int) (<a class="code hl_variable" href="../../d3/d31/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil.html#a51544be79baea12f93aed0ef0963f23e">leftOf</a> + (loc.x + objWidth/2f) / <a class="code hl_variable" href="../../d3/d31/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil.html#a3bfdfcd4385779d5fd582e574b85e1b9">cellSize</a>);</div>
-<div class="line"><span class="lineno">   75</span>        </div>
-<div class="line"><span class="lineno">   76</span>        <span class="keywordtype">int</span> startY = (int) (<a class="code hl_variable" href="../../d3/d31/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil.html#a6c1ead2a60a39476ddf334a9c7ca91a3">below</a> + ((loc.y - objHeight/2f) / <a class="code hl_variable" href="../../d3/d31/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil.html#a3bfdfcd4385779d5fd582e574b85e1b9">cellSize</a>));</div>
-<div class="line"><span class="lineno">   77</span>        <span class="keywordtype">int</span> endY = (int) (<a class="code hl_variable" href="../../d3/d31/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil.html#a6c1ead2a60a39476ddf334a9c7ca91a3">below</a> + (loc.y + objHeight/2f) / <a class="code hl_variable" href="../../d3/d31/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil.html#a3bfdfcd4385779d5fd582e574b85e1b9">cellSize</a>);</div>
-<div class="line"><span class="lineno">   78</span>        </div>
-<div class="line"><span class="lineno">   79</span>        <span class="keywordtype">int</span> limit = Integer.MAX_VALUE / 2;</div>
-<div class="line"><span class="lineno">   80</span>        <span class="keywordflow">if</span> (startX &gt; limit) startX = limit;</div>
-<div class="line"><span class="lineno">   81</span>        <span class="keywordflow">if</span> (endX &gt; limit) endX = limit;</div>
-<div class="line"><span class="lineno">   82</span>        <span class="keywordflow">if</span> (startY &gt; limit) startY = limit;</div>
-<div class="line"><span class="lineno">   83</span>        <span class="keywordflow">if</span> (endY &gt; limit) endY = limit;</div>
-<div class="line"><span class="lineno">   84</span>        </div>
-<div class="line"><span class="lineno">   85</span>        <span class="keywordflow">if</span> (startX &lt; -limit) startX = -limit;</div>
-<div class="line"><span class="lineno">   86</span>        <span class="keywordflow">if</span> (endX &lt; -limit) endX = -limit;</div>
-<div class="line"><span class="lineno">   87</span>        <span class="keywordflow">if</span> (startY &lt; -limit) startY = -limit;</div>
-<div class="line"><span class="lineno">   88</span>        <span class="keywordflow">if</span> (endY &lt; -limit) endY = -limit;</div>
-<div class="line"><span class="lineno">   89</span>        </div>
-<div class="line"><span class="lineno">   90</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = startX; i &lt;= endX; i++) {</div>
-<div class="line"><span class="lineno">   91</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = startY; j &lt;= endY; j++) {</div>
-<div class="line"><span class="lineno">   92</span>                <a class="code hl_function" href="../../d3/d31/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil.html#ac0b9e947302521016efc5c5543e5e8c4">addToBucket</a>(i, j, <span class="keywordtype">object</span>);</div>
-<div class="line"><span class="lineno">   93</span>            }</div>
-<div class="line"><span class="lineno">   94</span>        }</div>
-<div class="line"><span class="lineno">   95</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil_html_ac0b9e947302521016efc5c5543e5e8c4"><div class="ttname"><a href="../../d3/d31/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil.html#ac0b9e947302521016efc5c5543e5e8c4">com.fs.starfarer.api.util.CollisionGridUtil.addToBucket</a></div><div class="ttdeci">void addToBucket(int cellX, int cellY, Object object)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dd0/CollisionGridUtil_8java_source.html#l00110">CollisionGridUtil.java:110</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac0b9e947302521016efc5c5543e5e8c4" name="ac0b9e947302521016efc5c5543e5e8c4"></a>
@@ -351,16 +307,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/dd0/CollisionGridUtil_8java_source.html#l00110">110</a> of file <a class="el" href="../../d6/dd0/CollisionGridUtil_8java_source.html">CollisionGridUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  110</span>                                                                    {</div>
-<div class="line"><span class="lineno">  111</span>        <span class="keywordflow">if</span> (cellX &lt; 0 || cellX &gt;= <a class="code hl_variable" href="../../d3/d31/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil.html#a3f24367f6df373b375c087a151389267">width</a> || cellY &lt; 0 || cellY &gt;= <a class="code hl_variable" href="../../d3/d31/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil.html#a9aeaf01e68a48b01e8a544aec4c14795">height</a>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  112</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="../../d3/d31/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil.html#a562280b13d41e99e55c31dae09197295">buckets</a>[cellX][cellY] == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  113</span>            <a class="code hl_variable" href="../../d3/d31/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil.html#a562280b13d41e99e55c31dae09197295">buckets</a>[cellX][cellY] = <span class="keyword">new</span> ArrayList&lt;Object&gt;();</div>
-<div class="line"><span class="lineno">  114</span>        }</div>
-<div class="line"><span class="lineno">  115</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="../../d3/d31/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil.html#a562280b13d41e99e55c31dae09197295">buckets</a>[cellX][cellY].contains(<span class="keywordtype">object</span>)) {</div>
-<div class="line"><span class="lineno">  116</span>            <a class="code hl_variable" href="../../d3/d31/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil.html#a562280b13d41e99e55c31dae09197295">buckets</a>[cellX][cellY].add(<span class="keywordtype">object</span>);</div>
-<div class="line"><span class="lineno">  117</span>        }</div>
-<div class="line"><span class="lineno">  118</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5b5df67407805a0a36d5716998c9d8b6" name="a5b5df67407805a0a36d5716998c9d8b6"></a>
@@ -407,19 +354,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d6/d15/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CollisionGridAPI.html#abb08a0abf6d32d2f24f84f8a3ae14d6b">com.fs.starfarer.api.combat.CollisionGridAPI</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/dd0/CollisionGridUtil_8java_source.html#l00126">126</a> of file <a class="el" href="../../d6/dd0/CollisionGridUtil_8java_source.html">CollisionGridUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  126</span>                                                                                            {</div>
-<div class="line"><span class="lineno">  127</span>        <span class="keywordtype">int</span> startX = (int) (<a class="code hl_variable" href="../../d3/d31/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil.html#a51544be79baea12f93aed0ef0963f23e">leftOf</a> + ((loc.x - objWidth/2f) / <a class="code hl_variable" href="../../d3/d31/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil.html#a3bfdfcd4385779d5fd582e574b85e1b9">cellSize</a>));</div>
-<div class="line"><span class="lineno">  128</span>        <span class="comment">//int endX = (int) (leftOf + Math.ceil((loc.x + objWidth/2f) / cellSize));</span></div>
-<div class="line"><span class="lineno">  129</span>        <span class="keywordtype">int</span> endX = (int) (<a class="code hl_variable" href="../../d3/d31/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil.html#a51544be79baea12f93aed0ef0963f23e">leftOf</a> + (loc.x + objWidth/2f) / <a class="code hl_variable" href="../../d3/d31/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil.html#a3bfdfcd4385779d5fd582e574b85e1b9">cellSize</a>);</div>
-<div class="line"><span class="lineno">  130</span>        </div>
-<div class="line"><span class="lineno">  131</span>        <span class="keywordtype">int</span> startY = (int) (<a class="code hl_variable" href="../../d3/d31/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil.html#a6c1ead2a60a39476ddf334a9c7ca91a3">below</a> + ((loc.y - objHeight/2f) / <a class="code hl_variable" href="../../d3/d31/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil.html#a3bfdfcd4385779d5fd582e574b85e1b9">cellSize</a>));</div>
-<div class="line"><span class="lineno">  132</span>        <span class="comment">//int endY = (int) (below + Math.ceil((loc.y + objHeight/2f) / cellSize));</span></div>
-<div class="line"><span class="lineno">  133</span>        <span class="keywordtype">int</span> endY = (int) (<a class="code hl_variable" href="../../d3/d31/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil.html#a6c1ead2a60a39476ddf334a9c7ca91a3">below</a> + (loc.y + objHeight/2f) / <a class="code hl_variable" href="../../d3/d31/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil.html#a3bfdfcd4385779d5fd582e574b85e1b9">cellSize</a>);</div>
-<div class="line"><span class="lineno">  134</span> </div>
-<div class="line"><span class="lineno">  135</span>        BucketIterator result = <span class="keyword">new</span> BucketIterator(startX, endX, startY, endY);</div>
-<div class="line"><span class="lineno">  136</span>        <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">  137</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a6aa96a4ab4ed296df4aa41ff44fba15a" name="a6aa96a4ab4ed296df4aa41ff44fba15a"></a>
@@ -463,12 +398,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/dd0/CollisionGridUtil_8java_source.html#l00120">120</a> of file <a class="el" href="../../d6/dd0/CollisionGridUtil_8java_source.html">CollisionGridUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  120</span>                                                                         {</div>
-<div class="line"><span class="lineno">  121</span>        <span class="keywordflow">if</span> (cellX &lt; 0 || cellX &gt;= <a class="code hl_variable" href="../../d3/d31/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil.html#a3f24367f6df373b375c087a151389267">width</a> || cellY &lt; 0 || cellY &gt;= <a class="code hl_variable" href="../../d3/d31/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil.html#a9aeaf01e68a48b01e8a544aec4c14795">height</a>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  122</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="../../d3/d31/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil.html#a562280b13d41e99e55c31dae09197295">buckets</a>[cellX][cellY] == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  123</span>        <a class="code hl_variable" href="../../d3/d31/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil.html#a562280b13d41e99e55c31dae09197295">buckets</a>[cellX][cellY].remove(<span class="keywordtype">object</span>);</div>
-<div class="line"><span class="lineno">  124</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af5bcd45a6cea8e608c0648925ac821ca" name="af5bcd45a6cea8e608c0648925ac821ca"></a>
@@ -521,20 +451,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d6/d15/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CollisionGridAPI.html#abac6c87134b106e29d352453c9228e88">com.fs.starfarer.api.combat.CollisionGridAPI</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/dd0/CollisionGridUtil_8java_source.html#l00097">97</a> of file <a class="el" href="../../d6/dd0/CollisionGridUtil_8java_source.html">CollisionGridUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   97</span>                                                                                           {</div>
-<div class="line"><span class="lineno">   98</span>        <span class="keywordtype">int</span> startX = (int) (<a class="code hl_variable" href="../../d3/d31/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil.html#a51544be79baea12f93aed0ef0963f23e">leftOf</a> + ((loc.x - objWidth/2f) / <a class="code hl_variable" href="../../d3/d31/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil.html#a3bfdfcd4385779d5fd582e574b85e1b9">cellSize</a>));</div>
-<div class="line"><span class="lineno">   99</span>        <span class="keywordtype">int</span> endX = (int) (<a class="code hl_variable" href="../../d3/d31/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil.html#a51544be79baea12f93aed0ef0963f23e">leftOf</a> + (loc.x + objWidth/2f) / <a class="code hl_variable" href="../../d3/d31/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil.html#a3bfdfcd4385779d5fd582e574b85e1b9">cellSize</a>);</div>
-<div class="line"><span class="lineno">  100</span>        </div>
-<div class="line"><span class="lineno">  101</span>        <span class="keywordtype">int</span> startY = (int) (<a class="code hl_variable" href="../../d3/d31/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil.html#a6c1ead2a60a39476ddf334a9c7ca91a3">below</a> + ((loc.y - objHeight/2f) / <a class="code hl_variable" href="../../d3/d31/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil.html#a3bfdfcd4385779d5fd582e574b85e1b9">cellSize</a>));</div>
-<div class="line"><span class="lineno">  102</span>        <span class="keywordtype">int</span> endY = (int) (<a class="code hl_variable" href="../../d3/d31/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil.html#a6c1ead2a60a39476ddf334a9c7ca91a3">below</a> + (loc.y + objHeight/2f) / <a class="code hl_variable" href="../../d3/d31/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil.html#a3bfdfcd4385779d5fd582e574b85e1b9">cellSize</a>);</div>
-<div class="line"><span class="lineno">  103</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = startX; i &lt;= endX; i++) {</div>
-<div class="line"><span class="lineno">  104</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = startY; j &lt;= endY; j++) {</div>
-<div class="line"><span class="lineno">  105</span>                <a class="code hl_function" href="../../d3/d31/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil.html#a6aa96a4ab4ed296df4aa41ff44fba15a">removeFromBucket</a>(i, j, <span class="keywordtype">object</span>);</div>
-<div class="line"><span class="lineno">  106</span>            }</div>
-<div class="line"><span class="lineno">  107</span>        }</div>
-<div class="line"><span class="lineno">  108</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil_html_a6aa96a4ab4ed296df4aa41ff44fba15a"><div class="ttname"><a href="../../d3/d31/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil.html#a6aa96a4ab4ed296df4aa41ff44fba15a">com.fs.starfarer.api.util.CollisionGridUtil.removeFromBucket</a></div><div class="ttdeci">void removeFromBucket(int cellX, int cellY, Object object)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dd0/CollisionGridUtil_8java_source.html#l00120">CollisionGridUtil.java:120</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -169,11 +170,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/dbe/PortsideBarData_8java_source.html#l00026">26</a> of file <a class="el" href="../../d5/dbe/PortsideBarData_8java_source.html">PortsideBarData.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   26</span>                             {</div>
-<div class="line"><span class="lineno">   27</span>        Global.getSector().getMemoryWithoutUpdate().set(<a class="code hl_variable" href="../../df/d5a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1PortsideBarData.html#addc3c2bfdcc317f0dae0bfb0aeac2150">KEY</a>, <span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">   28</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1PortsideBarData_html_addc3c2bfdcc317f0dae0bfb0aeac2150"><div class="ttname"><a href="../../df/d5a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1PortsideBarData.html#addc3c2bfdcc317f0dae0bfb0aeac2150">com.fs.starfarer.api.impl.campaign.intel.bar.PortsideBarData.KEY</a></div><div class="ttdeci">static final String KEY</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/dbe/PortsideBarData_8java_source.html#l00013">PortsideBarData.java:13</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -194,11 +191,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/dbe/PortsideBarData_8java_source.html#l00031">31</a> of file <a class="el" href="../../d5/dbe/PortsideBarData_8java_source.html">PortsideBarData.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   31</span>                                                 {</div>
-<div class="line"><span class="lineno">   32</span>        <a class="code hl_variable" href="../../df/d5a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1PortsideBarData.html#a27bc464770b8c6d3526886846d0d3bf4">active</a>.add(event);</div>
-<div class="line"><span class="lineno">   33</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1PortsideBarData_html_a27bc464770b8c6d3526886846d0d3bf4"><div class="ttname"><a href="../../df/d5a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1PortsideBarData.html#a27bc464770b8c6d3526886846d0d3bf4">com.fs.starfarer.api.impl.campaign.intel.bar.PortsideBarData.active</a></div><div class="ttdeci">List&lt; PortsideBarEvent &gt; active</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/dbe/PortsideBarData_8java_source.html#l00024">PortsideBarData.java:24</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a45555f28b2da7154a9e0eb1328047285" name="a45555f28b2da7154a9e0eb1328047285"></a>
@@ -226,23 +219,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d7/d63/interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html#a3a97090ca8cfdc230e9ad7e633407af6">com.fs.starfarer.api.EveryFrameScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/dbe/PortsideBarData_8java_source.html#l00055">55</a> of file <a class="el" href="../../d5/dbe/PortsideBarData_8java_source.html">PortsideBarData.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   55</span>                                      {</div>
-<div class="line"><span class="lineno">   56</span>        </div>
-<div class="line"><span class="lineno">   57</span>        Iterator&lt;PortsideBarEvent&gt; iter = <a class="code hl_variable" href="../../df/d5a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1PortsideBarData.html#a27bc464770b8c6d3526886846d0d3bf4">active</a>.iterator();</div>
-<div class="line"><span class="lineno">   58</span>        <span class="keywordflow">while</span> (iter.hasNext()) {</div>
-<div class="line"><span class="lineno">   59</span>            PortsideBarEvent curr = iter.next();</div>
-<div class="line"><span class="lineno">   60</span>            <span class="keywordflow">if</span> (curr.shouldRemoveEvent()) {</div>
-<div class="line"><span class="lineno">   61</span>                iter.remove();</div>
-<div class="line"><span class="lineno">   62</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   63</span>                curr.advance(amount);</div>
-<div class="line"><span class="lineno">   64</span>                <span class="keywordflow">if</span> (curr.shouldRemoveEvent()) {</div>
-<div class="line"><span class="lineno">   65</span>                    iter.remove();</div>
-<div class="line"><span class="lineno">   66</span>                }</div>
-<div class="line"><span class="lineno">   67</span>            }</div>
-<div class="line"><span class="lineno">   68</span>        }</div>
-<div class="line"><span class="lineno">   69</span>        </div>
-<div class="line"><span class="lineno">   70</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a67919873ea97516ab5546cec02caa4b6" name="a67919873ea97516ab5546cec02caa4b6"></a>
@@ -261,20 +238,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/dbe/PortsideBarData_8java_source.html#l00041">41</a> of file <a class="el" href="../../d5/dbe/PortsideBarData_8java_source.html">PortsideBarData.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   41</span>                                              {</div>
-<div class="line"><span class="lineno">   42</span><span class="comment">//      boolean exists = false;</span></div>
-<div class="line"><span class="lineno">   43</span><span class="comment">//      for (PortsideBarEvent curr : active) {</span></div>
-<div class="line"><span class="lineno">   44</span><span class="comment">//          if (curr instanceof HubMissionBarEventWrapper) {</span></div>
-<div class="line"><span class="lineno">   45</span><span class="comment">//              exists = true;</span></div>
-<div class="line"><span class="lineno">   46</span><span class="comment">//              break;</span></div>
-<div class="line"><span class="lineno">   47</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">   48</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">   49</span><span class="comment">//      if (!exists) {</span></div>
-<div class="line"><span class="lineno">   50</span><span class="comment">//          active.add(new HubMissionBarEventWrapper(&quot;cheapCom&quot;));</span></div>
-<div class="line"><span class="lineno">   51</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">   52</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../df/d5a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1PortsideBarData.html#a27bc464770b8c6d3526886846d0d3bf4">active</a>;</div>
-<div class="line"><span class="lineno">   53</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2d0a8d03b54e5a0b4155722baa84e482" name="a2d0a8d03b54e5a0b4155722baa84e482"></a>
@@ -301,12 +265,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/dbe/PortsideBarData_8java_source.html#l00019">19</a> of file <a class="el" href="../../d5/dbe/PortsideBarData_8java_source.html">PortsideBarData.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   19</span>                                                {</div>
-<div class="line"><span class="lineno">   20</span>        Object test = Global.getSector().getMemoryWithoutUpdate().get(<a class="code hl_variable" href="../../df/d5a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1PortsideBarData.html#addc3c2bfdcc317f0dae0bfb0aeac2150">KEY</a>);</div>
-<div class="line"><span class="lineno">   21</span>        <span class="keywordflow">return</span> (<a class="code hl_function" href="../../df/d5a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1PortsideBarData.html#a0c02c10fdb8d7ebb83ad7b1cd1cb22ac">PortsideBarData</a>) test; </div>
-<div class="line"><span class="lineno">   22</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1PortsideBarData_html_a0c02c10fdb8d7ebb83ad7b1cd1cb22ac"><div class="ttname"><a href="../../df/d5a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1PortsideBarData.html#a0c02c10fdb8d7ebb83ad7b1cd1cb22ac">com.fs.starfarer.api.impl.campaign.intel.bar.PortsideBarData.PortsideBarData</a></div><div class="ttdeci">PortsideBarData()</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/dbe/PortsideBarData_8java_source.html#l00026">PortsideBarData.java:26</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2fa27fe5eb0bd1fd88eb93171abf9bc2" name="a2fa27fe5eb0bd1fd88eb93171abf9bc2"></a>
@@ -328,10 +287,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d7/d63/interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html#a2b9a206acf99d1cdc1511885d14bb58c">com.fs.starfarer.api.EveryFrameScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/dbe/PortsideBarData_8java_source.html#l00072">72</a> of file <a class="el" href="../../d5/dbe/PortsideBarData_8java_source.html">PortsideBarData.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   72</span>                            {</div>
-<div class="line"><span class="lineno">   73</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   74</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac4cc8cffd215cddc5f7dce653271ee2b" name="ac4cc8cffd215cddc5f7dce653271ee2b"></a>
@@ -351,12 +307,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/dbe/PortsideBarData_8java_source.html#l00035">35</a> of file <a class="el" href="../../d5/dbe/PortsideBarData_8java_source.html">PortsideBarData.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   35</span>                                                    {</div>
-<div class="line"><span class="lineno">   36</span>        <a class="code hl_variable" href="../../df/d5a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1PortsideBarData.html#a27bc464770b8c6d3526886846d0d3bf4">active</a>.remove(event);</div>
-<div class="line"><span class="lineno">   37</span>        <span class="comment">// may or may not be there, but try to remove in any case</span></div>
-<div class="line"><span class="lineno">   38</span>        BarEventManager.getInstance().getActive().remove(event);</div>
-<div class="line"><span class="lineno">   39</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a31bba0512a46b17e834e2dd4319491f5" name="a31bba0512a46b17e834e2dd4319491f5"></a>
@@ -378,10 +329,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d7/d63/interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html#a6397d6c1c19a4dd0b58099219c0e0173">com.fs.starfarer.api.EveryFrameScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/dbe/PortsideBarData_8java_source.html#l00076">76</a> of file <a class="el" href="../../d5/dbe/PortsideBarData_8java_source.html">PortsideBarData.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   76</span>                                    {</div>
-<div class="line"><span class="lineno">   77</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   78</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

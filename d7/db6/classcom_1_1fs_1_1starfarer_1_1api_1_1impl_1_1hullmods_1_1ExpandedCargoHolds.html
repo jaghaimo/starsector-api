@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -304,23 +305,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a3859215f6c3408946bf590a2ce5c0e74">com.fs.starfarer.api.combat.BaseHullMod</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/ded/ExpandedCargoHolds_8java_source.html#l00022">22</a> of file <a class="el" href="../../dd/ded/ExpandedCargoHolds_8java_source.html">ExpandedCargoHolds.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   22</span>                                                                                                        {</div>
-<div class="line"><span class="lineno">   23</span>        <span class="keywordtype">float</span> mod = (Float) mag.get(hullSize);</div>
-<div class="line"><span class="lineno">   24</span>        <span class="keywordflow">if</span> (stats.getVariant() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   25</span>            mod = Math.max(stats.getVariant().getHullSpec().getCargo() * <a class="code hl_variable" href="../../d7/db6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ExpandedCargoHolds.html#a291f13a562901c12d419547dfc82ea61">MIN_FRACTION</a>, mod);</div>
-<div class="line"><span class="lineno">   26</span>        }</div>
-<div class="line"><span class="lineno">   27</span>        </div>
-<div class="line"><span class="lineno">   28</span>        <span class="keywordtype">boolean</span> sMod = <a class="code hl_function" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a17449d5c7699039330e0d40d7f51dcd3">isSMod</a>(stats);</div>
-<div class="line"><span class="lineno">   29</span>        <span class="keywordflow">if</span> (sMod) mod *= AdditionalBerthing.SMOD_MULT;</div>
-<div class="line"><span class="lineno">   30</span>        stats.getCargoMod().modifyFlat(<span class="keywordtype">id</span>, mod);</div>
-<div class="line"><span class="lineno">   31</span>        </div>
-<div class="line"><span class="lineno">   32</span>        <span class="keywordflow">if</span> (!sMod &amp;&amp; stats.getVariant() != <span class="keyword">null</span> &amp;&amp; stats.getVariant().hasHullMod(HullMods.CIVGRADE) &amp;&amp; !stats.getVariant().hasHullMod(HullMods.MILITARIZED_SUBSYSTEMS)) {</div>
-<div class="line"><span class="lineno">   33</span>            stats.getSuppliesPerMonth().modifyPercent(<span class="keywordtype">id</span>, AdditionalBerthing.MAINTENANCE_PERCENT);</div>
-<div class="line"><span class="lineno">   34</span>        }</div>
-<div class="line"><span class="lineno">   35</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod_html_a17449d5c7699039330e0d40d7f51dcd3"><div class="ttname"><a href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a17449d5c7699039330e0d40d7f51dcd3">com.fs.starfarer.api.combat.BaseHullMod.isSMod</a></div><div class="ttdeci">boolean isSMod(MutableShipStatsAPI stats)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/da7/BaseHullMod_8java_source.html#l00029">BaseHullMod.java:29</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ExpandedCargoHolds_html_a291f13a562901c12d419547dfc82ea61"><div class="ttname"><a href="../../d7/db6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ExpandedCargoHolds.html#a291f13a562901c12d419547dfc82ea61">com.fs.starfarer.api.impl.hullmods.ExpandedCargoHolds.MIN_FRACTION</a></div><div class="ttdeci">static float MIN_FRACTION</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/ded/ExpandedCargoHolds_8java_source.html#l00012">ExpandedCargoHolds.java:12</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a4a34e0b9379c275358770becf3947136" name="a4a34e0b9379c275358770becf3947136"></a>
@@ -352,16 +337,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a5f6ac9583ca5b1606fda3e53f15c3d14">com.fs.starfarer.api.combat.BaseHullMod</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/ded/ExpandedCargoHolds_8java_source.html#l00037">37</a> of file <a class="el" href="../../dd/ded/ExpandedCargoHolds_8java_source.html">ExpandedCargoHolds.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   37</span>                                                                    {</div>
-<div class="line"><span class="lineno">   38</span>        <span class="keywordflow">if</span> (index == 0) <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span> + ((Float) mag.get(HullSize.FRIGATE)).intValue();</div>
-<div class="line"><span class="lineno">   39</span>        <span class="keywordflow">if</span> (index == 1) <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span> + ((Float) mag.get(HullSize.DESTROYER)).intValue();</div>
-<div class="line"><span class="lineno">   40</span>        <span class="keywordflow">if</span> (index == 2) <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span> + ((Float) mag.get(HullSize.CRUISER)).intValue();</div>
-<div class="line"><span class="lineno">   41</span>        <span class="keywordflow">if</span> (index == 3) <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span> + ((Float) mag.get(HullSize.CAPITAL_SHIP)).intValue();</div>
-<div class="line"><span class="lineno">   42</span>        <span class="keywordflow">if</span> (index == 4) <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span> + (int) Math.round(<a class="code hl_variable" href="../../d7/db6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ExpandedCargoHolds.html#a291f13a562901c12d419547dfc82ea61">MIN_FRACTION</a> * 100f) + <span class="stringliteral">&quot;%&quot;</span>;</div>
-<div class="line"><span class="lineno">   43</span>        <span class="keywordflow">if</span> (index == 5) <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span> + (int)Math.round(AdditionalBerthing.MAINTENANCE_PERCENT) + <span class="stringliteral">&quot;%&quot;</span>;</div>
-<div class="line"><span class="lineno">   44</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   45</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

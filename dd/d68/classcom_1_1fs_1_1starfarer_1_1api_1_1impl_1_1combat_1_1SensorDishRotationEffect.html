@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -170,22 +171,7 @@ Static Public Member Functions</h2></td></tr>
 <p>Implements <a class="el" href="../../da/d61/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1EveryFrameWeaponEffectPlugin.html#a3b32dda6d3d8c3fcf5a13d84447791e1">com.fs.starfarer.api.combat.EveryFrameWeaponEffectPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d1e/SensorDishRotationEffect_8java_source.html#l00011">11</a> of file <a class="el" href="../../dd/d1e/SensorDishRotationEffect_8java_source.html">SensorDishRotationEffect.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   11</span>                                                                                {</div>
-<div class="line"><span class="lineno">   12</span>        <span class="keywordflow">if</span> (engine.isPaused()) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   13</span>        </div>
-<div class="line"><span class="lineno">   14</span>        <span class="keywordtype">float</span> curr = weapon.getCurrAngle();</div>
-<div class="line"><span class="lineno">   15</span>        </div>
-<div class="line"><span class="lineno">   16</span>        curr += currDir * amount * 10f;</div>
-<div class="line"><span class="lineno">   17</span>        <span class="keywordtype">float</span> arc = weapon.getArc();</div>
-<div class="line"><span class="lineno">   18</span>        <span class="keywordtype">float</span> facing = weapon.getArcFacing() + (weapon.getShip() != <span class="keyword">null</span> ? weapon.getShip().getFacing() : 0);</div>
-<div class="line"><span class="lineno">   19</span>        <span class="keywordflow">if</span> (!<a class="code hl_function" href="../../dd/d68/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1SensorDishRotationEffect.html#a7f77916eb804858fa122d5f880e7018c">isBetween</a>(facing - arc/2, facing + arc/2, curr)) {</div>
-<div class="line"><span class="lineno">   20</span>            currDir = -currDir;</div>
-<div class="line"><span class="lineno">   21</span>        }</div>
-<div class="line"><span class="lineno">   22</span>        </div>
-<div class="line"><span class="lineno">   23</span>        weapon.setFacing(curr);</div>
-<div class="line"><span class="lineno">   24</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1SensorDishRotationEffect_html_a7f77916eb804858fa122d5f880e7018c"><div class="ttname"><a href="../../dd/d68/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1SensorDishRotationEffect.html#a7f77916eb804858fa122d5f880e7018c">com.fs.starfarer.api.impl.combat.SensorDishRotationEffect.isBetween</a></div><div class="ttdeci">static boolean isBetween(float one, float two, float check)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d1e/SensorDishRotationEffect_8java_source.html#l00026">SensorDishRotationEffect.java:26</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a7f77916eb804858fa122d5f880e7018c" name="a7f77916eb804858fa122d5f880e7018c"></a>
@@ -229,22 +215,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d1e/SensorDishRotationEffect_8java_source.html#l00026">26</a> of file <a class="el" href="../../dd/d1e/SensorDishRotationEffect_8java_source.html">SensorDishRotationEffect.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   26</span>                                                                       {</div>
-<div class="line"><span class="lineno">   27</span>        one = <a class="code hl_function" href="../../dd/d68/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1SensorDishRotationEffect.html#a8bda74d1c3b018d3e899b102fe10d9e7">normalizeAngle</a>(one);</div>
-<div class="line"><span class="lineno">   28</span>        two = <a class="code hl_function" href="../../dd/d68/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1SensorDishRotationEffect.html#a8bda74d1c3b018d3e899b102fe10d9e7">normalizeAngle</a>(two);</div>
-<div class="line"><span class="lineno">   29</span>        check = <a class="code hl_function" href="../../dd/d68/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1SensorDishRotationEffect.html#a8bda74d1c3b018d3e899b102fe10d9e7">normalizeAngle</a>(check);</div>
-<div class="line"><span class="lineno">   30</span> </div>
-<div class="line"><span class="lineno">   31</span>        <span class="comment">//System.out.println(one + &quot;,&quot; + two + &quot;,&quot; + check);</span></div>
-<div class="line"><span class="lineno">   32</span>        <span class="keywordflow">if</span> (check &gt;= one &amp;&amp; check &lt;= two) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   33</span>        </div>
-<div class="line"><span class="lineno">   34</span>        <span class="keywordflow">if</span> (one &gt; two) {</div>
-<div class="line"><span class="lineno">   35</span>            <span class="keywordflow">if</span> (check &lt;= two) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   36</span>            <span class="keywordflow">if</span> (check &gt;= one) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   37</span>        }</div>
-<div class="line"><span class="lineno">   38</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   39</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1SensorDishRotationEffect_html_a8bda74d1c3b018d3e899b102fe10d9e7"><div class="ttname"><a href="../../dd/d68/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1SensorDishRotationEffect.html#a8bda74d1c3b018d3e899b102fe10d9e7">com.fs.starfarer.api.impl.combat.SensorDishRotationEffect.normalizeAngle</a></div><div class="ttdeci">static float normalizeAngle(float angleDeg)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d1e/SensorDishRotationEffect_8java_source.html#l00041">SensorDishRotationEffect.java:41</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8bda74d1c3b018d3e899b102fe10d9e7" name="a8bda74d1c3b018d3e899b102fe10d9e7"></a>
@@ -272,10 +243,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d1e/SensorDishRotationEffect_8java_source.html#l00041">41</a> of file <a class="el" href="../../dd/d1e/SensorDishRotationEffect_8java_source.html">SensorDishRotationEffect.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   41</span>                                                       {</div>
-<div class="line"><span class="lineno">   42</span>        <span class="keywordflow">return</span> (angleDeg % 360f + 360f) % 360f;</div>
-<div class="line"><span class="lineno">   43</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

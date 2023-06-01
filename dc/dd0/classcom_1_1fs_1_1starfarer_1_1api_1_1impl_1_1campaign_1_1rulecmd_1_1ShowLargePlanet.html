@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -175,20 +176,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="../../d0/d5c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1CommandPlugin.html#a72a44c5127e60136b87d3b37613fd0e0">com.fs.starfarer.api.campaign.rules.CommandPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../db/d74/ShowLargePlanet_8java_source.html#l00015">15</a> of file <a class="el" href="../../db/d74/ShowLargePlanet_8java_source.html">ShowLargePlanet.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   15</span>                                                                                                                             {</div>
-<div class="line"><span class="lineno">   16</span>        SectorEntityToken target = dialog.getInteractionTarget();</div>
-<div class="line"><span class="lineno">   17</span>        </div>
-<div class="line"><span class="lineno">   18</span>        <span class="keywordflow">if</span> (target.getMarket() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   19</span>            target = target.getMarket().getPlanetEntity();</div>
-<div class="line"><span class="lineno">   20</span>        }</div>
-<div class="line"><span class="lineno">   21</span>        <span class="keywordflow">if</span> (target instanceof PlanetAPI) {</div>
-<div class="line"><span class="lineno">   22</span>            <span class="keywordflow">if</span> (!Global.getSettings().getBoolean(<span class="stringliteral">&quot;3dPlanetBGInInteractionDialog&quot;</span>)) {</div>
-<div class="line"><span class="lineno">   23</span>                dialog.getVisualPanel().showLargePlanet((PlanetAPI) target);</div>
-<div class="line"><span class="lineno">   24</span>            }</div>
-<div class="line"><span class="lineno">   25</span>        }</div>
-<div class="line"><span class="lineno">   26</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   27</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

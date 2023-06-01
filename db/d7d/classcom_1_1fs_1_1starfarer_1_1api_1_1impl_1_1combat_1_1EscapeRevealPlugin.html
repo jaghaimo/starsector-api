@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -159,10 +160,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d39/EscapeRevealPlugin_8java_source.html#l00015">15</a> of file <a class="el" href="../../dd/d39/EscapeRevealPlugin_8java_source.html">EscapeRevealPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   15</span>                                                             {</div>
-<div class="line"><span class="lineno">   16</span>        this.context = context;</div>
-<div class="line"><span class="lineno">   17</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -195,28 +193,7 @@ Public Member Functions</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d8/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseEveryFrameCombatPlugin.html#a2369838995a799560103a0f44690f80b">com.fs.starfarer.api.combat.BaseEveryFrameCombatPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d39/EscapeRevealPlugin_8java_source.html#l00023">23</a> of file <a class="el" href="../../dd/d39/EscapeRevealPlugin_8java_source.html">EscapeRevealPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   23</span>                                                                  {</div>
-<div class="line"><span class="lineno">   24</span>        <span class="keywordflow">if</span> (elapsed &gt; 10f) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   25</span>        <span class="keywordflow">if</span> (!engine.<a class="code hl_function" href="../../df/d5a/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#ac2d9d76c6da9658515697f7af682e5d2">isPaused</a>()) elapsed += amount;</div>
-<div class="line"><span class="lineno">   26</span>    </div>
-<div class="line"><span class="lineno">   27</span>        <span class="keywordtype">float</span> width = engine.<a class="code hl_function" href="../../df/d5a/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a3d99a69dd7f5c628572e8fe98e317456">getMapWidth</a>();</div>
-<div class="line"><span class="lineno">   28</span>        <span class="keywordtype">float</span> height = engine.<a class="code hl_function" href="../../df/d5a/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#adb002adeb6053777bcdd38bf9702f9e1">getMapHeight</a>();</div>
-<div class="line"><span class="lineno">   29</span>        </div>
-<div class="line"><span class="lineno">   30</span>        <span class="keywordtype">float</span> minX = -width/2;</div>
-<div class="line"><span class="lineno">   31</span>        <span class="keywordtype">float</span> minY = -height/2;</div>
-<div class="line"><span class="lineno">   32</span>        engine.<a class="code hl_function" href="../../df/d5a/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a6e46f8407b2e3a3b6547356141376a03">getFogOfWar</a>(0).<a class="code hl_function" href="../../d3/d41/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FogOfWarAPI.html#addfb24b1a5c5abca4ed70f660f7dae4b">revealAroundPoint</a>(<span class="keyword">this</span>, minX + width/2f, minY,</div>
-<div class="line"><span class="lineno">   33</span>                                                context.<a class="code hl_function" href="../../d0/d85/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BattleCreationContext.html#a0271fb4db41005d8bcc7cf0a4b9eab10">getInitialEscapeRange</a>() + 1000f);</div>
-<div class="line"><span class="lineno">   34</span>        </div>
-<div class="line"><span class="lineno">   35</span>        engine.<a class="code hl_function" href="../../df/d5a/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a6e46f8407b2e3a3b6547356141376a03">getFogOfWar</a>(1).<a class="code hl_function" href="../../d3/d41/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FogOfWarAPI.html#addfb24b1a5c5abca4ed70f660f7dae4b">revealAroundPoint</a>(<span class="keyword">this</span>, minX + width/2f, minY,</div>
-<div class="line"><span class="lineno">   36</span>                                                context.<a class="code hl_function" href="../../d0/d85/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BattleCreationContext.html#a0271fb4db41005d8bcc7cf0a4b9eab10">getInitialEscapeRange</a>() + 1000f);       </div>
-<div class="line"><span class="lineno">   37</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BattleCreationContext_html_a0271fb4db41005d8bcc7cf0a4b9eab10"><div class="ttname"><a href="../../d0/d85/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BattleCreationContext.html#a0271fb4db41005d8bcc7cf0a4b9eab10">com.fs.starfarer.api.combat.BattleCreationContext.getInitialEscapeRange</a></div><div class="ttdeci">float getInitialEscapeRange()</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d21/BattleCreationContext_8java_source.html#l00121">BattleCreationContext.java:121</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI_html_a3d99a69dd7f5c628572e8fe98e317456"><div class="ttname"><a href="../../df/d5a/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a3d99a69dd7f5c628572e8fe98e317456">com.fs.starfarer.api.combat.CombatEngineAPI.getMapWidth</a></div><div class="ttdeci">float getMapWidth()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI_html_a6e46f8407b2e3a3b6547356141376a03"><div class="ttname"><a href="../../df/d5a/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a6e46f8407b2e3a3b6547356141376a03">com.fs.starfarer.api.combat.CombatEngineAPI.getFogOfWar</a></div><div class="ttdeci">FogOfWarAPI getFogOfWar(int owner)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI_html_ac2d9d76c6da9658515697f7af682e5d2"><div class="ttname"><a href="../../df/d5a/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#ac2d9d76c6da9658515697f7af682e5d2">com.fs.starfarer.api.combat.CombatEngineAPI.isPaused</a></div><div class="ttdeci">boolean isPaused()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI_html_adb002adeb6053777bcdd38bf9702f9e1"><div class="ttname"><a href="../../df/d5a/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#adb002adeb6053777bcdd38bf9702f9e1">com.fs.starfarer.api.combat.CombatEngineAPI.getMapHeight</a></div><div class="ttdeci">float getMapHeight()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FogOfWarAPI_html_addfb24b1a5c5abca4ed70f660f7dae4b"><div class="ttname"><a href="../../d3/d41/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FogOfWarAPI.html#addfb24b1a5c5abca4ed70f660f7dae4b">com.fs.starfarer.api.combat.FogOfWarAPI.revealAroundPoint</a></div><div class="ttdeci">void revealAroundPoint(Object source, float x, float y, float radius)</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aac2f5628dc00cc7039885d8ef1cb4dd2" name="aac2f5628dc00cc7039885d8ef1cb4dd2"></a>
@@ -244,10 +221,7 @@ Public Member Functions</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d8/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseEveryFrameCombatPlugin.html#addec3dedcaa837bfdb0712c36d17e060">com.fs.starfarer.api.combat.BaseEveryFrameCombatPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d39/EscapeRevealPlugin_8java_source.html#l00018">18</a> of file <a class="el" href="../../dd/d39/EscapeRevealPlugin_8java_source.html">EscapeRevealPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   18</span>                                             {</div>
-<div class="line"><span class="lineno">   19</span>        this.engine = engine;</div>
-<div class="line"><span class="lineno">   20</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

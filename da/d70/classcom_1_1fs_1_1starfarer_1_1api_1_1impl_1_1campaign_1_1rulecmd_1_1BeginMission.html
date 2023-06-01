@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -183,74 +184,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="../../d0/d5c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1CommandPlugin.html#a72a44c5127e60136b87d3b37613fd0e0">com.fs.starfarer.api.campaign.rules.CommandPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/dae/BeginMission_8java_source.html#l00028">28</a> of file <a class="el" href="../../dd/dae/BeginMission_8java_source.html">BeginMission.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   28</span>                                                                                                                             {</div>
-<div class="line"><span class="lineno">   29</span>        <span class="keywordflow">if</span> (dialog == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   30</span>        </div>
-<div class="line"><span class="lineno">   31</span>        String missionId = params.get(0).getString(memoryMap);</div>
-<div class="line"><span class="lineno">   32</span>        Boolean accept = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   33</span>        <span class="keywordflow">if</span> (params.size() &gt; 1) {</div>
-<div class="line"><span class="lineno">   34</span>            accept = params.get(1).getBoolean(memoryMap);</div>
-<div class="line"><span class="lineno">   35</span>        }</div>
-<div class="line"><span class="lineno">   36</span>        <span class="comment">// default behavior is to accept the mission right away w/o an AcceptMission command call</span></div>
-<div class="line"><span class="lineno">   37</span>        <span class="keywordflow">if</span> (accept == <span class="keyword">null</span>) accept = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   38</span>        </div>
-<div class="line"><span class="lineno">   39</span>        PersonMissionSpec spec = Global.getSettings().getMissionSpec(missionId);</div>
-<div class="line"><span class="lineno">   40</span>        <span class="keywordflow">if</span> (spec == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   41</span>            <span class="keywordflow">throw</span> <span class="keyword">new</span> RuntimeException(<span class="stringliteral">&quot;Mission with spec [&quot;</span> + missionId + <span class="stringliteral">&quot;] not found&quot;</span>);</div>
-<div class="line"><span class="lineno">   42</span>        }</div>
-<div class="line"><span class="lineno">   43</span>        </div>
-<div class="line"><span class="lineno">   44</span>        HubMission mission = spec.createMission();</div>
-<div class="line"><span class="lineno">   45</span>        </div>
-<div class="line"><span class="lineno">   46</span>        SectorEntityToken entity = dialog.getInteractionTarget();</div>
-<div class="line"><span class="lineno">   47</span>        PersonAPI person = entity.getActivePerson();</div>
-<div class="line"><span class="lineno">   48</span>        </div>
-<div class="line"><span class="lineno">   49</span>        <span class="keywordflow">if</span> (person == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   50</span><span class="comment">//          throw new RuntimeException(&quot;Attempting to BeginMission &quot; + missionId + </span></div>
-<div class="line"><span class="lineno">   51</span><span class="comment">//                                     &quot; in interaction with entity.getActivePerson() == null&quot;);</span></div>
-<div class="line"><span class="lineno">   52</span><span class="comment">//          String key = &quot;$beginMission_seedExtra&quot;;</span></div>
-<div class="line"><span class="lineno">   53</span><span class="comment">//          String extra = person.getMemoryWithoutUpdate().getString(key);</span></div>
-<div class="line"><span class="lineno">   54</span>            String extra = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">   55</span>            <span class="keywordtype">long</span> seed = BarEventManager.getInstance().getSeed(<span class="keyword">null</span>, person, extra);</div>
-<div class="line"><span class="lineno">   56</span><span class="comment">//          person.getMemoryWithoutUpdate().set(key, &quot;&quot; + seed); // so it&#39;s not the same seed for multiple missions</span></div>
-<div class="line"><span class="lineno">   57</span>            mission.setGenRandom(<span class="keyword">new</span> Random(seed));</div>
-<div class="line"><span class="lineno">   58</span>            </div>
-<div class="line"><span class="lineno">   59</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   60</span>            mission.setPersonOverride(person);</div>
-<div class="line"><span class="lineno">   61</span>            <span class="comment">//mission.setGenRandom(new Random(Misc.getSalvageSeed(entity)));</span></div>
-<div class="line"><span class="lineno">   62</span>            String key = <span class="stringliteral">&quot;$beginMission_seedExtra&quot;</span>;</div>
-<div class="line"><span class="lineno">   63</span>            String extra = person.getMemoryWithoutUpdate().getString(key);</div>
-<div class="line"><span class="lineno">   64</span>            <span class="keywordtype">long</span> seed = BarEventManager.getInstance().getSeed(<span class="keyword">null</span>, person, extra);</div>
-<div class="line"><span class="lineno">   65</span>            person.getMemoryWithoutUpdate().set(key, <span class="stringliteral">&quot;&quot;</span> + seed); <span class="comment">// so it&#39;s not the same seed for multiple missions</span></div>
-<div class="line"><span class="lineno">   66</span>            mission.setGenRandom(<span class="keyword">new</span> Random(seed));</div>
-<div class="line"><span class="lineno">   67</span>        }</div>
-<div class="line"><span class="lineno">   68</span>        </div>
-<div class="line"><span class="lineno">   69</span>        mission.createAndAbortIfFailed(entity.getMarket(), <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   70</span> </div>
-<div class="line"><span class="lineno">   71</span>        <span class="keywordflow">if</span> (mission.isMissionCreationAborted()) {</div>
-<div class="line"><span class="lineno">   72</span>            MemoryAPI memory = memoryMap.get(MemKeys.LOCAL);</div>
-<div class="line"><span class="lineno">   73</span>            <span class="keywordflow">if</span> (memory == <span class="keyword">null</span> &amp;&amp; dialog.getInteractionTarget() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   74</span>                <span class="keywordflow">if</span> (dialog.getInteractionTarget().getActivePerson() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   75</span>                    memory = dialog.getInteractionTarget().getActivePerson().getMemoryWithoutUpdate();  </div>
-<div class="line"><span class="lineno">   76</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   77</span>                    memory = dialog.getInteractionTarget().getMemoryWithoutUpdate();</div>
-<div class="line"><span class="lineno">   78</span>                }</div>
-<div class="line"><span class="lineno">   79</span>                <span class="keywordflow">if</span> (memory != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   80</span>                    memory.set(<span class="stringliteral">&quot;$missionCreationFailed&quot;</span>, mission.getMissionId());</div>
-<div class="line"><span class="lineno">   81</span>                }</div>
-<div class="line"><span class="lineno">   82</span>            }</div>
-<div class="line"><span class="lineno">   83</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   84</span>        }</div>
-<div class="line"><span class="lineno">   85</span>        </div>
-<div class="line"><span class="lineno">   86</span>        <span class="keywordflow">if</span> (accept) {</div>
-<div class="line"><span class="lineno">   87</span>            mission.accept(dialog, memoryMap);</div>
-<div class="line"><span class="lineno">   88</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   89</span>            Global.getSector().getMemoryWithoutUpdate().set(<a class="code hl_variable" href="../../da/d70/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1BeginMission.html#a73303789443401a876f26dd15cc50f4c">TEMP_MISSION_KEY</a>, mission, 0f);</div>
-<div class="line"><span class="lineno">   90</span>        }</div>
-<div class="line"><span class="lineno">   91</span>        </div>
-<div class="line"><span class="lineno">   92</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   93</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1BeginMission_html_a73303789443401a876f26dd15cc50f4c"><div class="ttname"><a href="../../da/d70/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1BeginMission.html#a73303789443401a876f26dd15cc50f4c">com.fs.starfarer.api.impl.campaign.rulecmd.BeginMission.TEMP_MISSION_KEY</a></div><div class="ttdeci">static String TEMP_MISSION_KEY</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dae/BeginMission_8java_source.html#l00026">BeginMission.java:26</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

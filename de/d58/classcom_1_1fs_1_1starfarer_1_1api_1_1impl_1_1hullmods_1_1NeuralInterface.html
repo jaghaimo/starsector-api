@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -323,39 +324,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a33c67bf29e82daaad9e6a6ffcf0ee0b2">com.fs.starfarer.api.combat.BaseHullMod</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d5e/NeuralInterface_8java_source.html#l00103">103</a> of file <a class="el" href="../../d0/d5e/NeuralInterface_8java_source.html">NeuralInterface.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  103</span>                                                                                                                                       {</div>
-<div class="line"><span class="lineno">  104</span>        <span class="keywordtype">float</span> pad = 3f;</div>
-<div class="line"><span class="lineno">  105</span>        <span class="keywordtype">float</span> opad = 10f;</div>
-<div class="line"><span class="lineno">  106</span>        Color h = Misc.getHighlightColor();</div>
-<div class="line"><span class="lineno">  107</span>        Color bad = Misc.getNegativeHighlightColor();</div>
-<div class="line"><span class="lineno">  108</span>        Color g = Misc.getGrayColor();</div>
-<div class="line"><span class="lineno">  109</span>        </div>
-<div class="line"><span class="lineno">  110</span>        tooltip.addSectionHeading(<span class="stringliteral">&quot;Neural system reset&quot;</span>, Alignment.MID, opad);</div>
-<div class="line"><span class="lineno">  111</span>        tooltip.addPara(<span class="stringliteral">&quot;After the transfer is complete, the target ship&#39;s system cooldown (if any) will be reset, &quot;</span></div>
-<div class="line"><span class="lineno">  112</span>                + <span class="stringliteral">&quot;and if the ship system uses charges, it will gain an additonal charge. This effect operates on &quot;</span></div>
-<div class="line"><span class="lineno">  113</span>                + <span class="stringliteral">&quot;a cooldown equal to %s the cooldown/charge regeneration time saved by it.&quot;</span>, opad, h,</div>
-<div class="line"><span class="lineno">  114</span>                <span class="stringliteral">&quot;&quot;</span> + (<span class="keywordtype">int</span>)<a class="code hl_variable" href="../../de/d58/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1NeuralInterface.html#ab86ab5d5b34af924cc3d1d002dc0f063">SYSTEM_RESET_TIMEOUT_MULT</a> + Strings.X);</div>
-<div class="line"><span class="lineno">  115</span>        </div>
-<div class="line"><span class="lineno">  116</span><span class="comment">//      tooltip.addPara(&quot;If installed on an automated ship, increases its &quot; </span></div>
-<div class="line"><span class="lineno">  117</span><span class="comment">//              + &quot;\&quot;automated ship points\&quot; value as if a Beta Core was installed on the ship.&quot;, opad);</span></div>
-<div class="line"><span class="lineno">  118</span>        </div>
-<div class="line"><span class="lineno">  119</span>        <span class="keywordflow">if</span> (Global.getCurrentState() == GameState.CAMPAIGN) {</div>
-<div class="line"><span class="lineno">  120</span>            <span class="keywordflow">if</span> (Global.getSector().getPlayerStats().getDynamic().getMod(Stats.HAS_NEURAL_LINK).computeEffective(0f) &lt;= 0f) {</div>
-<div class="line"><span class="lineno">  121</span>                tooltip.addPara(<span class="stringliteral">&quot;Requires the Neural Link skill to function&quot;</span>, Misc.getNegativeHighlightColor(), opad);</div>
-<div class="line"><span class="lineno">  122</span>            }</div>
-<div class="line"><span class="lineno">  123</span>        }</div>
-<div class="line"><span class="lineno">  124</span>        </div>
-<div class="line"><span class="lineno">  125</span>        <span class="keywordflow">if</span> (isForModSpec || ship == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  126</span>        </div>
-<div class="line"><span class="lineno">  127</span>        String control = Global.getSettings().getControlStringForEnumName(NeuralLinkScript.TRANSFER_CONTROL);</div>
-<div class="line"><span class="lineno">  128</span>        String desc = Global.getSettings().getControlDescriptionForEnumName(NeuralLinkScript.TRANSFER_CONTROL);</div>
-<div class="line"><span class="lineno">  129</span>        tooltip.addPara(<span class="stringliteral">&quot;Use the \&quot;&quot;</span> + desc + <span class="stringliteral">&quot;\&quot; control [&quot;</span> + control + <span class="stringliteral">&quot;] to switch between ships.&quot;</span>, opad,</div>
-<div class="line"><span class="lineno">  130</span>                g, h, control);</div>
-<div class="line"><span class="lineno">  131</span>        </div>
-<div class="line"><span class="lineno">  132</span>        </div>
-<div class="line"><span class="lineno">  133</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1NeuralInterface_html_ab86ab5d5b34af924cc3d1d002dc0f063"><div class="ttname"><a href="../../de/d58/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1NeuralInterface.html#ab86ab5d5b34af924cc3d1d002dc0f063">com.fs.starfarer.api.impl.hullmods.NeuralInterface.SYSTEM_RESET_TIMEOUT_MULT</a></div><div class="ttdeci">static float SYSTEM_RESET_TIMEOUT_MULT</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d5e/NeuralInterface_8java_source.html#l00023">NeuralInterface.java:23</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae0034fbf4089cb8b18a23a0da8865ee9" name="ae0034fbf4089cb8b18a23a0da8865ee9"></a>
@@ -394,57 +363,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a107100a4b58129790cba1a26265c1ad8">com.fs.starfarer.api.combat.BaseHullMod</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d5e/NeuralInterface_8java_source.html#l00028">28</a> of file <a class="el" href="../../d0/d5e/NeuralInterface_8java_source.html">NeuralInterface.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   28</span>                                                            {</div>
-<div class="line"><span class="lineno">   29</span>        String key = <a class="code hl_variable" href="../../de/d58/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1NeuralInterface.html#a7e652b182067897a187d05921f861a3a">SYSTEM_RESET_TIMEOUT_KEY</a>;</div>
-<div class="line"><span class="lineno">   30</span><span class="comment">//      Float timeout = (Float) Global.getCombatEngine().getCustomData().get(key);</span></div>
-<div class="line"><span class="lineno">   31</span><span class="comment">//      if (timeout == null) timeout = 0f;</span></div>
-<div class="line"><span class="lineno">   32</span><span class="comment">//      </span></div>
-<div class="line"><span class="lineno">   33</span><span class="comment">//      if (ship == Global.getCombatEngine().getPlayerShip()) {</span></div>
-<div class="line"><span class="lineno">   34</span><span class="comment">//          timeout -= amount;</span></div>
-<div class="line"><span class="lineno">   35</span><span class="comment">//          if (timeout &lt; 0) timeout = 0f;</span></div>
-<div class="line"><span class="lineno">   36</span><span class="comment">//          Global.getCombatEngine().getCustomData().put(key, timeout);</span></div>
-<div class="line"><span class="lineno">   37</span><span class="comment">//          //System.out.println(&quot;NI timeout: &quot; + timeout);</span></div>
-<div class="line"><span class="lineno">   38</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">   39</span>        </div>
-<div class="line"><span class="lineno">   40</span>        Float timeout = (Float) ship.getCustomData().get(key);</div>
-<div class="line"><span class="lineno">   41</span>        <span class="keywordflow">if</span> (timeout == <span class="keyword">null</span>) timeout = 0f;</div>
-<div class="line"><span class="lineno">   42</span>        timeout -= amount;</div>
-<div class="line"><span class="lineno">   43</span>        <span class="keywordflow">if</span> (timeout &lt; 0) timeout = 0f;</div>
-<div class="line"><span class="lineno">   44</span>        ship.setCustomData(key, timeout);</div>
-<div class="line"><span class="lineno">   45</span>        <span class="comment">//System.out.println(&quot;NI timeout: &quot; + timeout);</span></div>
-<div class="line"><span class="lineno">   46</span>        </div>
-<div class="line"><span class="lineno">   47</span>        <span class="keywordflow">if</span> (ship == Global.getCombatEngine().getPlayerShip()) {</div>
-<div class="line"><span class="lineno">   48</span>            <span class="keywordflow">if</span> (ship.getCustomData().containsKey(NeuralLinkScript.TRANSFER_COMPLETE_KEY)) {</div>
-<div class="line"><span class="lineno">   49</span>                ShipSystemAPI system = ship.getSystem();</div>
-<div class="line"><span class="lineno">   50</span>                <span class="keywordflow">if</span> (system != <span class="keyword">null</span> &amp;&amp; timeout &lt;= 0) {</div>
-<div class="line"><span class="lineno">   51</span>                    <span class="keywordtype">boolean</span> didSomething = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   52</span>                    <span class="comment">//float maxTimeout = 5f;</span></div>
-<div class="line"><span class="lineno">   53</span>                    <span class="keywordtype">float</span> maxTimeout = 0f;</div>
-<div class="line"><span class="lineno">   54</span>                    <span class="keywordflow">if</span> (system.getCooldownRemaining() &gt; 0f &amp;&amp; system.isCoolingDown()) {</div>
-<div class="line"><span class="lineno">   55</span>                        maxTimeout = Math.max(system.getCooldownRemaining(), maxTimeout);</div>
-<div class="line"><span class="lineno">   56</span>                        system.setCooldownRemaining(0);</div>
-<div class="line"><span class="lineno">   57</span>                        didSomething = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   58</span>                    }</div>
-<div class="line"><span class="lineno">   59</span>                    <span class="keywordflow">if</span> (system.getAmmo() &lt; system.getMaxAmmo() &amp;&amp; system.getAmmoPerSecond() &gt; 0) {</div>
-<div class="line"><span class="lineno">   60</span>                        system.setAmmo(system.getAmmo() + 1);</div>
-<div class="line"><span class="lineno">   61</span>                        didSomething = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   62</span>                        maxTimeout = Math.max(1f / system.getAmmoPerSecond() * (1f - system.getAmmoReloadProgress()), maxTimeout);</div>
-<div class="line"><span class="lineno">   63</span>                    }</div>
-<div class="line"><span class="lineno">   64</span>                    <span class="comment">//if (didSomething) {</span></div>
-<div class="line"><span class="lineno">   65</span>                    <span class="keywordflow">if</span> (maxTimeout &gt; 0) {</div>
-<div class="line"><span class="lineno">   66</span>                        maxTimeout *= <a class="code hl_variable" href="../../de/d58/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1NeuralInterface.html#ab86ab5d5b34af924cc3d1d002dc0f063">SYSTEM_RESET_TIMEOUT_MULT</a>;</div>
-<div class="line"><span class="lineno">   67</span>                        <span class="comment">//Global.getCombatEngine().getCustomData().put(key, SYSTEM_RESET_TIMEOUT);</span></div>
-<div class="line"><span class="lineno">   68</span>                        ship.setCustomData(key, maxTimeout);</div>
-<div class="line"><span class="lineno">   69</span>                    }</div>
-<div class="line"><span class="lineno">   70</span>                }</div>
-<div class="line"><span class="lineno">   71</span>                ship.removeCustomData(NeuralLinkScript.TRANSFER_COMPLETE_KEY);</div>
-<div class="line"><span class="lineno">   72</span>            }</div>
-<div class="line"><span class="lineno">   73</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   74</span>            ship.removeCustomData(NeuralLinkScript.TRANSFER_COMPLETE_KEY);</div>
-<div class="line"><span class="lineno">   75</span>        }</div>
-<div class="line"><span class="lineno">   76</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1NeuralInterface_html_a7e652b182067897a187d05921f861a3a"><div class="ttname"><a href="../../de/d58/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1NeuralInterface.html#a7e652b182067897a187d05921f861a3a">com.fs.starfarer.api.impl.hullmods.NeuralInterface.SYSTEM_RESET_TIMEOUT_KEY</a></div><div class="ttdeci">static final String SYSTEM_RESET_TIMEOUT_KEY</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d5e/NeuralInterface_8java_source.html#l00025">NeuralInterface.java:25</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa3dc1d37814072d372265f9476b96319" name="aa3dc1d37814072d372265f9476b96319"></a>
@@ -482,24 +401,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a3859215f6c3408946bf590a2ce5c0e74">com.fs.starfarer.api.combat.BaseHullMod</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d5e/NeuralInterface_8java_source.html#l00079">79</a> of file <a class="el" href="../../d0/d5e/NeuralInterface_8java_source.html">NeuralInterface.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   79</span>                                                                                                        {</div>
-<div class="line"><span class="lineno">   80</span>        stats.getDynamic().getMod(Stats.HAS_NEURAL_LINK).modifyFlat(<span class="keywordtype">id</span>, 1f);</div>
-<div class="line"><span class="lineno">   81</span>        </div>
-<div class="line"><span class="lineno">   82</span>        stats.getDynamic().getMod(Stats.DEPLOYMENT_POINTS_MOD).unmodify(SupportDoctrine.SUPPORT_DOCTRINE_DP_REDUCTION_ID);</div>
-<div class="line"><span class="lineno">   83</span>        </div>
-<div class="line"><span class="lineno">   84</span><span class="comment">//      if (stats.getFleetMember() != null &amp;&amp; stats.getFleetMember().getCaptain() != null) {</span></div>
-<div class="line"><span class="lineno">   85</span><span class="comment">//          PersonAPI p = stats.getFleetMember().getCaptain();</span></div>
-<div class="line"><span class="lineno">   86</span><span class="comment">//          if (p.isDefault() &amp;&amp; Misc.isAutomated(stats.getFleetMember())) {</span></div>
-<div class="line"><span class="lineno">   87</span><span class="comment">//              p.getMemoryWithoutUpdate().set(AICoreOfficerPluginImpl.AUTOMATED_POINTS_MULT, </span></div>
-<div class="line"><span class="lineno">   88</span><span class="comment">//                                             AICoreOfficerPluginImpl.BETA_MULT);</span></div>
-<div class="line"><span class="lineno">   89</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">   90</span><span class="comment">//          </span></div>
-<div class="line"><span class="lineno">   91</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">   92</span>        </div>
-<div class="line"><span class="lineno">   93</span>        <span class="comment">//stats.getDynamic().getMod(Stats.COORDINATED_MANEUVERS_FLAT).modifyFlat(id, (Float) mag.get(hullSize));</span></div>
-<div class="line"><span class="lineno">   94</span>        <span class="comment">//stats.getDynamic().getMod(Stats.COORDINATED_MANEUVERS_FLAT).modifyFlat(id, (Float) mag.get(hullSize));</span></div>
-<div class="line"><span class="lineno">   95</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="adba1535bbfdc5f0c8f6fcbac32265e83" name="adba1535bbfdc5f0c8f6fcbac32265e83"></a>
@@ -531,11 +433,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a5f6ac9583ca5b1606fda3e53f15c3d14">com.fs.starfarer.api.combat.BaseHullMod</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d5e/NeuralInterface_8java_source.html#l00097">97</a> of file <a class="el" href="../../d0/d5e/NeuralInterface_8java_source.html">NeuralInterface.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   97</span>                                                                    {</div>
-<div class="line"><span class="lineno">   98</span>        <span class="keywordflow">if</span> (index == 0) <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span> + (int)NeuralLinkScript.INSTANT_TRANSFER_DP;</div>
-<div class="line"><span class="lineno">   99</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  100</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aed48485875374b1757a3fb9a758cf74a" name="aed48485875374b1757a3fb9a758cf74a"></a>
@@ -559,16 +457,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../d2/da1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1NeuralIntegrator.html#aff7e037b5972acd253425df100ef14fd">com.fs.starfarer.api.impl.hullmods.NeuralIntegrator</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d5e/NeuralInterface_8java_source.html#l00145">145</a> of file <a class="el" href="../../d0/d5e/NeuralInterface_8java_source.html">NeuralInterface.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  145</span>                                                      {</div>
-<div class="line"><span class="lineno">  146</span>        <span class="keywordflow">if</span> (Misc.isAutomated(ship)) {</div>
-<div class="line"><span class="lineno">  147</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;Can not be installed on automated ships, install Neural Integrator instead&quot;</span>;</div>
-<div class="line"><span class="lineno">  148</span>        }</div>
-<div class="line"><span class="lineno">  149</span>        <span class="keywordflow">if</span> (ship.getHullSpec().getHints().contains(ShipTypeHints.NO_NEURAL_LINK)) {</div>
-<div class="line"><span class="lineno">  150</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;Can not be installed on this ship&quot;</span>;</div>
-<div class="line"><span class="lineno">  151</span>        }</div>
-<div class="line"><span class="lineno">  152</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  153</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab9b89e875bc888d367fddd70aef86ee6" name="ab9b89e875bc888d367fddd70aef86ee6"></a>
@@ -592,16 +481,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../d2/da1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1NeuralIntegrator.html#ade7685eea2febafa950e49742ca22535">com.fs.starfarer.api.impl.hullmods.NeuralIntegrator</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d5e/NeuralInterface_8java_source.html#l00135">135</a> of file <a class="el" href="../../d0/d5e/NeuralInterface_8java_source.html">NeuralInterface.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  135</span>                                                    {</div>
-<div class="line"><span class="lineno">  136</span>        <span class="keywordflow">if</span> (Misc.isAutomated(ship)) {</div>
-<div class="line"><span class="lineno">  137</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  138</span>        }</div>
-<div class="line"><span class="lineno">  139</span>        <span class="keywordflow">if</span> (ship.getHullSpec().getHints().contains(ShipTypeHints.NO_NEURAL_LINK)) {</div>
-<div class="line"><span class="lineno">  140</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  141</span>        }</div>
-<div class="line"><span class="lineno">  142</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  143</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -155,114 +156,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../de/d10/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1BaseAbilityAI.html#a35d5f52bfc28da2da9ffd1356092515f">com.fs.starfarer.api.impl.campaign.abilities.ai.BaseAbilityAI</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/db5/TransponderAbilityAI_8java_source.html#l00018">18</a> of file <a class="el" href="../../da/db5/TransponderAbilityAI_8java_source.html">TransponderAbilityAI.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   18</span>                                    {</div>
-<div class="line"><span class="lineno">   19</span>        interval.<a class="code hl_function" href="../../da/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html#a61881d44415cda2c50c3354c3f0a4d8a">advance</a>(days * EmergencyBurnAbilityAI.AI_FREQUENCY_MULT);</div>
-<div class="line"><span class="lineno">   20</span>        <span class="keywordflow">if</span> (!interval.intervalElapsed()) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   21</span>        </div>
-<div class="line"><span class="lineno">   22</span>        MemoryAPI mem = <a class="code hl_variable" href="../../de/d10/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1BaseAbilityAI.html#ae976f29162540d61416949ca142976a7">fleet</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#adcd558c1d95f9755066ddaf9a77311c1">getMemoryWithoutUpdate</a>();</div>
-<div class="line"><span class="lineno">   23</span>        </div>
-<div class="line"><span class="lineno">   24</span><span class="comment">//      if (fleet.isInCurrentLocation()) {</span></div>
-<div class="line"><span class="lineno">   25</span><span class="comment">//          float dist = Misc.getDistance(fleet.getLocation(), Global.getSector().getPlayerFleet().getLocation());</span></div>
-<div class="line"><span class="lineno">   26</span><span class="comment">//          if (dist &lt; fleet.getRadius() + Global.getSector().getPlayerFleet().getRadius() + 10f) {</span></div>
-<div class="line"><span class="lineno">   27</span><span class="comment">//              System.out.println(&quot;sdfsdfdsXX1e12&quot;);</span></div>
-<div class="line"><span class="lineno">   28</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">   29</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">   30</span>        </div>
-<div class="line"><span class="lineno">   31</span><span class="comment">//      if (ability.isActive()) {</span></div>
-<div class="line"><span class="lineno">   32</span><span class="comment">//          return;</span></div>
-<div class="line"><span class="lineno">   33</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">   34</span>        </div>
-<div class="line"><span class="lineno">   35</span>        <span class="keywordtype">boolean</span> smuggler = mem.<a class="code hl_function" href="../../d0/de7/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html#adb833cc81359cc239a89eae309480fc9">getBoolean</a>(MemFlags.MEMORY_KEY_SMUGGLER);</div>
-<div class="line"><span class="lineno">   36</span>        <span class="keywordtype">boolean</span> pirate = mem.getBoolean(MemFlags.MEMORY_KEY_PIRATE);</div>
-<div class="line"><span class="lineno">   37</span>        <span class="keywordtype">boolean</span> patrol = mem.getBoolean(MemFlags.MEMORY_KEY_PATROL_FLEET);</div>
-<div class="line"><span class="lineno">   38</span>        <span class="comment">//patrol |= mem.getBoolean(MemFlags.MEMORY_KEY_WAR_FLEET);</span></div>
-<div class="line"><span class="lineno">   39</span>        </div>
-<div class="line"><span class="lineno">   40</span>        <span class="keywordtype">boolean</span> trader = mem.getBoolean(MemFlags.MEMORY_KEY_TRADE_FLEET);</div>
-<div class="line"><span class="lineno">   41</span>        </div>
-<div class="line"><span class="lineno">   42</span>        <span class="keywordflow">if</span> (smuggler || pirate || mem.getBoolean(MemFlags.MEMORY_KEY_FORCE_TRANSPONDER_OFF)) {</div>
-<div class="line"><span class="lineno">   43</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../de/d10/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1BaseAbilityAI.html#ae50a2e4520bea1944dadea64a5c824c9">ability</a>.<a class="code hl_function" href="../../db/d80/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1AbilityPlugin.html#ab9ce11d41dd04fbe401faed7e4e9a13d">isActive</a>()) {</div>
-<div class="line"><span class="lineno">   44</span>                <a class="code hl_variable" href="../../de/d10/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1BaseAbilityAI.html#ae50a2e4520bea1944dadea64a5c824c9">ability</a>.<a class="code hl_function" href="../../db/d80/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1AbilityPlugin.html#a39dbc328c19accd5991195fbab765f9c">deactivate</a>();</div>
-<div class="line"><span class="lineno">   45</span>            }</div>
-<div class="line"><span class="lineno">   46</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   47</span>        }</div>
-<div class="line"><span class="lineno">   48</span>        </div>
-<div class="line"><span class="lineno">   49</span>        <span class="keywordflow">if</span> (patrol || trader) {</div>
-<div class="line"><span class="lineno">   50</span>            <span class="keywordflow">if</span> (!<a class="code hl_variable" href="../../de/d10/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1BaseAbilityAI.html#ae50a2e4520bea1944dadea64a5c824c9">ability</a>.<a class="code hl_function" href="../../db/d80/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1AbilityPlugin.html#ab9ce11d41dd04fbe401faed7e4e9a13d">isActive</a>()) {</div>
-<div class="line"><span class="lineno">   51</span>                <a class="code hl_variable" href="../../de/d10/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1BaseAbilityAI.html#ae50a2e4520bea1944dadea64a5c824c9">ability</a>.<a class="code hl_function" href="../../db/d80/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1AbilityPlugin.html#a10d9ec3aef37e57008cce74a5201b802">activate</a>();</div>
-<div class="line"><span class="lineno">   52</span>            }</div>
-<div class="line"><span class="lineno">   53</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   54</span>        }</div>
-<div class="line"><span class="lineno">   55</span>        </div>
-<div class="line"><span class="lineno">   56</span><span class="comment">//      if (fleet.getName().contains(&quot;Scavenger&quot;) &amp;&amp; </span></div>
-<div class="line"><span class="lineno">   57</span><span class="comment">//              Misc.getDistance(fleet.getLocation(), Global.getSector().getPlayerFleet().getLocation()) &lt; 1000f) {</span></div>
-<div class="line"><span class="lineno">   58</span><span class="comment">//          System.out.println(&quot;wefwefewf&quot;);</span></div>
-<div class="line"><span class="lineno">   59</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">   60</span>        </div>
-<div class="line"><span class="lineno">   61</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../de/d10/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1BaseAbilityAI.html#ae976f29162540d61416949ca142976a7">fleet</a>.<a class="code hl_function" href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a6cdef0efd31d52321de0991182154e01">isInHyperspace</a>()) {</div>
-<div class="line"><span class="lineno">   62</span>            <span class="keywordtype">float</span> nonHostileSize = 0;</div>
-<div class="line"><span class="lineno">   63</span>            <span class="keywordtype">float</span> hostileSize = 0;</div>
-<div class="line"><span class="lineno">   64</span>            <span class="keywordflow">for</span> (MarketAPI market : Misc.getNearbyMarkets(<a class="code hl_variable" href="../../de/d10/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1BaseAbilityAI.html#ae976f29162540d61416949ca142976a7">fleet</a>.<a class="code hl_function" href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a059da851c050a5b1c104809f4e700bef">getLocation</a>(), 1f)) {</div>
-<div class="line"><span class="lineno">   65</span>                <span class="keywordtype">float</span> size = market.getSize();</div>
-<div class="line"><span class="lineno">   66</span>                <span class="keywordflow">if</span> (market.getFaction().isHostileTo(<a class="code hl_variable" href="../../de/d10/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1BaseAbilityAI.html#ae976f29162540d61416949ca142976a7">fleet</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#afb72bc74f75ccbbf240564b26b94e17b">getFaction</a>())) {</div>
-<div class="line"><span class="lineno">   67</span>                    hostileSize += size;</div>
-<div class="line"><span class="lineno">   68</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   69</span>                    nonHostileSize += size;</div>
-<div class="line"><span class="lineno">   70</span>                }</div>
-<div class="line"><span class="lineno">   71</span>            }</div>
-<div class="line"><span class="lineno">   72</span>            </div>
-<div class="line"><span class="lineno">   73</span>            <span class="keywordflow">if</span> (nonHostileSize &gt; hostileSize) {</div>
-<div class="line"><span class="lineno">   74</span>                <span class="keywordflow">if</span> (!<a class="code hl_variable" href="../../de/d10/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1BaseAbilityAI.html#ae50a2e4520bea1944dadea64a5c824c9">ability</a>.<a class="code hl_function" href="../../db/d80/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1AbilityPlugin.html#ab9ce11d41dd04fbe401faed7e4e9a13d">isActive</a>()) {</div>
-<div class="line"><span class="lineno">   75</span>                <span class="comment">//if (!fleet.isTransponderOn()) {</span></div>
-<div class="line"><span class="lineno">   76</span>                    <a class="code hl_variable" href="../../de/d10/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1BaseAbilityAI.html#ae50a2e4520bea1944dadea64a5c824c9">ability</a>.<a class="code hl_function" href="../../db/d80/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1AbilityPlugin.html#a10d9ec3aef37e57008cce74a5201b802">activate</a>();</div>
-<div class="line"><span class="lineno">   77</span>                }</div>
-<div class="line"><span class="lineno">   78</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   79</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../de/d10/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1BaseAbilityAI.html#ae50a2e4520bea1944dadea64a5c824c9">ability</a>.<a class="code hl_function" href="../../db/d80/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1AbilityPlugin.html#ab9ce11d41dd04fbe401faed7e4e9a13d">isActive</a>()) {</div>
-<div class="line"><span class="lineno">   80</span>                <span class="comment">//if (fleet.isTransponderOn()) {</span></div>
-<div class="line"><span class="lineno">   81</span>                    <a class="code hl_variable" href="../../de/d10/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1BaseAbilityAI.html#ae50a2e4520bea1944dadea64a5c824c9">ability</a>.<a class="code hl_function" href="../../db/d80/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1AbilityPlugin.html#a39dbc328c19accd5991195fbab765f9c">deactivate</a>();</div>
-<div class="line"><span class="lineno">   82</span>                }</div>
-<div class="line"><span class="lineno">   83</span>            }</div>
-<div class="line"><span class="lineno">   84</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   85</span>        }</div>
-<div class="line"><span class="lineno">   86</span>        </div>
-<div class="line"><span class="lineno">   87</span>        MarketAPI nearestMarket = Misc.findNearestLocalMarket(<a class="code hl_variable" href="../../de/d10/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1BaseAbilityAI.html#ae976f29162540d61416949ca142976a7">fleet</a>, 1000000, <span class="keyword">new</span> MarketFilter() {</div>
-<div class="line"><span class="lineno">   88</span>            <span class="keyword">public</span> <span class="keywordtype">boolean</span> acceptMarket(MarketAPI market) {</div>
-<div class="line"><span class="lineno">   89</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   90</span>            }</div>
-<div class="line"><span class="lineno">   91</span>        });</div>
-<div class="line"><span class="lineno">   92</span> </div>
-<div class="line"><span class="lineno">   93</span>        <span class="keywordflow">if</span> (nearestMarket != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   94</span>            <span class="keywordflow">if</span> (nearestMarket.getFaction().isHostileTo(<a class="code hl_variable" href="../../de/d10/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1BaseAbilityAI.html#ae976f29162540d61416949ca142976a7">fleet</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#afb72bc74f75ccbbf240564b26b94e17b">getFaction</a>())) {</div>
-<div class="line"><span class="lineno">   95</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../de/d10/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1BaseAbilityAI.html#ae50a2e4520bea1944dadea64a5c824c9">ability</a>.<a class="code hl_function" href="../../db/d80/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1AbilityPlugin.html#ab9ce11d41dd04fbe401faed7e4e9a13d">isActive</a>()) {</div>
-<div class="line"><span class="lineno">   96</span>                    <a class="code hl_variable" href="../../de/d10/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1BaseAbilityAI.html#ae50a2e4520bea1944dadea64a5c824c9">ability</a>.<a class="code hl_function" href="../../db/d80/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1AbilityPlugin.html#a39dbc328c19accd5991195fbab765f9c">deactivate</a>();</div>
-<div class="line"><span class="lineno">   97</span>                }</div>
-<div class="line"><span class="lineno">   98</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   99</span>                <span class="keywordflow">if</span> (!<a class="code hl_variable" href="../../de/d10/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1BaseAbilityAI.html#ae50a2e4520bea1944dadea64a5c824c9">ability</a>.<a class="code hl_function" href="../../db/d80/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1AbilityPlugin.html#ab9ce11d41dd04fbe401faed7e4e9a13d">isActive</a>()) {</div>
-<div class="line"><span class="lineno">  100</span>                    <a class="code hl_variable" href="../../de/d10/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1BaseAbilityAI.html#ae50a2e4520bea1944dadea64a5c824c9">ability</a>.<a class="code hl_function" href="../../db/d80/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1AbilityPlugin.html#a10d9ec3aef37e57008cce74a5201b802">activate</a>();</div>
-<div class="line"><span class="lineno">  101</span>                }</div>
-<div class="line"><span class="lineno">  102</span>            }</div>
-<div class="line"><span class="lineno">  103</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  104</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  105</span><span class="comment">//          if (!ability.isActive()) {</span></div>
-<div class="line"><span class="lineno">  106</span><span class="comment">//              ability.activate();</span></div>
-<div class="line"><span class="lineno">  107</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">  108</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../de/d10/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1BaseAbilityAI.html#ae50a2e4520bea1944dadea64a5c824c9">ability</a>.<a class="code hl_function" href="../../db/d80/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1AbilityPlugin.html#ab9ce11d41dd04fbe401faed7e4e9a13d">isActive</a>()) {</div>
-<div class="line"><span class="lineno">  109</span>                <a class="code hl_variable" href="../../de/d10/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1BaseAbilityAI.html#ae50a2e4520bea1944dadea64a5c824c9">ability</a>.<a class="code hl_function" href="../../db/d80/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1AbilityPlugin.html#a39dbc328c19accd5991195fbab765f9c">deactivate</a>();</div>
-<div class="line"><span class="lineno">  110</span>            }</div>
-<div class="line"><span class="lineno">  111</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  112</span>        }</div>
-<div class="line"><span class="lineno">  113</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1BaseAbilityAI_html_ae50a2e4520bea1944dadea64a5c824c9"><div class="ttname"><a href="../../de/d10/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1BaseAbilityAI.html#ae50a2e4520bea1944dadea64a5c824c9">com.fs.starfarer.api.impl.campaign.abilities.ai.BaseAbilityAI.ability</a></div><div class="ttdeci">AbilityPlugin ability</div><div class="ttdef"><b>Definition:</b> <a href="../../da/ddd/BaseAbilityAI_8java_source.html#l00010">BaseAbilityAI.java:10</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1BaseAbilityAI_html_ae976f29162540d61416949ca142976a7"><div class="ttname"><a href="../../de/d10/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1BaseAbilityAI.html#ae976f29162540d61416949ca142976a7">com.fs.starfarer.api.impl.campaign.abilities.ai.BaseAbilityAI.fleet</a></div><div class="ttdeci">CampaignFleetAPI fleet</div><div class="ttdef"><b>Definition:</b> <a href="../../da/ddd/BaseAbilityAI_8java_source.html#l00009">BaseAbilityAI.java:9</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil_html_a61881d44415cda2c50c3354c3f0a4d8a"><div class="ttname"><a href="../../da/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html#a61881d44415cda2c50c3354c3f0a4d8a">com.fs.starfarer.api.util.IntervalUtil.advance</a></div><div class="ttdeci">void advance(float amount)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de3/IntervalUtil_8java_source.html#l00039">IntervalUtil.java:39</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI_html_a059da851c050a5b1c104809f4e700bef"><div class="ttname"><a href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a059da851c050a5b1c104809f4e700bef">com.fs.starfarer.api.campaign.CampaignFleetAPI.getLocation</a></div><div class="ttdeci">Vector2f getLocation()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI_html_a6cdef0efd31d52321de0991182154e01"><div class="ttname"><a href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a6cdef0efd31d52321de0991182154e01">com.fs.starfarer.api.campaign.CampaignFleetAPI.isInHyperspace</a></div><div class="ttdeci">boolean isInHyperspace()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_adcd558c1d95f9755066ddaf9a77311c1"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#adcd558c1d95f9755066ddaf9a77311c1">com.fs.starfarer.api.campaign.SectorEntityToken.getMemoryWithoutUpdate</a></div><div class="ttdeci">MemoryAPI getMemoryWithoutUpdate()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_afb72bc74f75ccbbf240564b26b94e17b"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#afb72bc74f75ccbbf240564b26b94e17b">com.fs.starfarer.api.campaign.SectorEntityToken.getFaction</a></div><div class="ttdeci">FactionAPI getFaction()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI_html_adb833cc81359cc239a89eae309480fc9"><div class="ttname"><a href="../../d0/de7/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html#adb833cc81359cc239a89eae309480fc9">com.fs.starfarer.api.campaign.rules.MemoryAPI.getBoolean</a></div><div class="ttdeci">boolean getBoolean(String key)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1AbilityPlugin_html_a10d9ec3aef37e57008cce74a5201b802"><div class="ttname"><a href="../../db/d80/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1AbilityPlugin.html#a10d9ec3aef37e57008cce74a5201b802">com.fs.starfarer.api.characters.AbilityPlugin.activate</a></div><div class="ttdeci">void activate()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1AbilityPlugin_html_a39dbc328c19accd5991195fbab765f9c"><div class="ttname"><a href="../../db/d80/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1AbilityPlugin.html#a39dbc328c19accd5991195fbab765f9c">com.fs.starfarer.api.characters.AbilityPlugin.deactivate</a></div><div class="ttdeci">void deactivate()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1AbilityPlugin_html_ab9ce11d41dd04fbe401faed7e4e9a13d"><div class="ttname"><a href="../../db/d80/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1AbilityPlugin.html#ab9ce11d41dd04fbe401faed7e4e9a13d">com.fs.starfarer.api.characters.AbilityPlugin.isActive</a></div><div class="ttdeci">boolean isActive()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

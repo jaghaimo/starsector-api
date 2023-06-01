@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -555,19 +556,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/dbc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html#afbd5dc647479b8c49fef2ed715644f82">com.fs.starfarer.api.impl.campaign.terrain.StarCoronaTerrainPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d1d/StarCoronaAkaMainyuTerrainPlugin_8java_source.html#l00053">53</a> of file <a class="el" href="../../d0/d1d/StarCoronaAkaMainyuTerrainPlugin_8java_source.html">StarCoronaAkaMainyuTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   53</span>                                                               {</div>
-<div class="line"><span class="lineno">   54</span>        SectorEntityToken star = <a class="code hl_variable" href="../../d2/dbc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html#a782a1a74f62510b7760e5183d33f24b6">params</a>.relatedEntity.getLightSource();</div>
-<div class="line"><span class="lineno">   55</span>        <span class="keywordflow">if</span> (star != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   56</span>            <span class="keywordtype">float</span> toStar = Misc.getAngleInDegrees(<a class="code hl_variable" href="../../d2/dbc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html#a782a1a74f62510b7760e5183d33f24b6">params</a>.relatedEntity.getLocation(), star.getLocation());</div>
-<div class="line"><span class="lineno">   57</span>            <span class="keywordflow">if</span> (!Misc.isInArc(toStar, <a class="code hl_variable" href="../../d3/d5a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaAkaMainyuTerrainPlugin.html#a7d0b6ef53b834b477b84003dbc6575fc">ARC</a>, <a class="code hl_variable" href="../../d2/dbc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html#a782a1a74f62510b7760e5183d33f24b6">params</a>.relatedEntity.getLocation(), point)) {</div>
-<div class="line"><span class="lineno">   58</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   59</span>            }</div>
-<div class="line"><span class="lineno">   60</span>        }</div>
-<div class="line"><span class="lineno">   61</span>        <span class="keywordflow">return</span> super.containsPoint(point, radius);</div>
-<div class="line"><span class="lineno">   62</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaAkaMainyuTerrainPlugin_html_a7d0b6ef53b834b477b84003dbc6575fc"><div class="ttname"><a href="../../d3/d5a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaAkaMainyuTerrainPlugin.html#a7d0b6ef53b834b477b84003dbc6575fc">com.fs.starfarer.api.impl.campaign.terrain.StarCoronaAkaMainyuTerrainPlugin.ARC</a></div><div class="ttdeci">static final float ARC</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d1d/StarCoronaAkaMainyuTerrainPlugin_8java_source.html#l00017">StarCoronaAkaMainyuTerrainPlugin.java:17</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin_html_a782a1a74f62510b7760e5183d33f24b6"><div class="ttname"><a href="../../d2/dbc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html#a782a1a74f62510b7760e5183d33f24b6">com.fs.starfarer.api.impl.campaign.terrain.StarCoronaTerrainPlugin.params</a></div><div class="ttdeci">CoronaParams params</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d87/StarCoronaTerrainPlugin_8java_source.html#l00054">StarCoronaTerrainPlugin.java:54</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a66243cd05686bd643271f26d7d9239fe" name="a66243cd05686bd643271f26d7d9239fe"></a>
@@ -599,27 +588,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/dbc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html#a22670f6b3862ca57dde0a45a549dc3ca">com.fs.starfarer.api.impl.campaign.terrain.StarCoronaTerrainPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d1d/StarCoronaAkaMainyuTerrainPlugin_8java_source.html#l00070">70</a> of file <a class="el" href="../../d0/d1d/StarCoronaAkaMainyuTerrainPlugin_8java_source.html">StarCoronaAkaMainyuTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   70</span>                                                                         {</div>
-<div class="line"><span class="lineno">   71</span>        <span class="keywordtype">float</span> pad = 10f;</div>
-<div class="line"><span class="lineno">   72</span>        <span class="keywordtype">float</span> small = 5f;</div>
-<div class="line"><span class="lineno">   73</span>        tooltip.addTitle(<span class="stringliteral">&quot;Ion Storm&quot;</span>);</div>
-<div class="line"><span class="lineno">   74</span>        tooltip.addPara(Global.getSettings().getDescription(<a class="code hl_function" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a64e74dbdabe21aabe78bd51158487eaa">getTerrainId</a>(), Type.TERRAIN).getText1(), pad);</div>
-<div class="line"><span class="lineno">   75</span>        <span class="keywordtype">float</span> nextPad = pad;</div>
-<div class="line"><span class="lineno">   76</span>        <span class="keywordflow">if</span> (expanded) {</div>
-<div class="line"><span class="lineno">   77</span>            tooltip.addSectionHeading(<span class="stringliteral">&quot;Travel&quot;</span>, Alignment.MID, small);</div>
-<div class="line"><span class="lineno">   78</span>            nextPad = small;</div>
-<div class="line"><span class="lineno">   79</span>        }</div>
-<div class="line"><span class="lineno">   80</span>        tooltip.addPara(<span class="stringliteral">&quot;The intense heat and radiation reduce the combat readiness of &quot;</span> +</div>
-<div class="line"><span class="lineno">   81</span>                        <span class="stringliteral">&quot;all ships in the magnetotail at a steady pace.&quot;</span>, nextPad);</div>
-<div class="line"><span class="lineno">   82</span>        tooltip.addPara(<span class="stringliteral">&quot;The ionized gas being ejected from the atmosphere makes the planet difficult to approach.&quot;</span>, pad);</div>
-<div class="line"><span class="lineno">   83</span>        </div>
-<div class="line"><span class="lineno">   84</span>        <span class="keywordflow">if</span> (expanded) {</div>
-<div class="line"><span class="lineno">   85</span>            tooltip.addSectionHeading(<span class="stringliteral">&quot;Combat&quot;</span>, Alignment.MID, pad);</div>
-<div class="line"><span class="lineno">   86</span>            tooltip.addPara(<span class="stringliteral">&quot;Reduces the peak performance time of ships and increases the rate of combat readiness degradation in protracted engagements.&quot;</span>, small);</div>
-<div class="line"><span class="lineno">   87</span>        }</div>
-<div class="line"><span class="lineno">   88</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain_html_a64e74dbdabe21aabe78bd51158487eaa"><div class="ttname"><a href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a64e74dbdabe21aabe78bd51158487eaa">com.fs.starfarer.api.impl.campaign.terrain.BaseTerrain.getTerrainId</a></div><div class="ttdeci">String getTerrainId()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/daa/BaseTerrain_8java_source.html#l00046">BaseTerrain.java:46</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ada65e0cb18f7c3781a0bf705b9fa2778" name="ada65e0cb18f7c3781a0bf705b9fa2778"></a>
@@ -641,21 +610,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/dbc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html#a15dc8f0cd5aa6a8175dc92198c35c91a">com.fs.starfarer.api.impl.campaign.terrain.StarCoronaTerrainPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d1d/StarCoronaAkaMainyuTerrainPlugin_8java_source.html#l00020">20</a> of file <a class="el" href="../../d0/d1d/StarCoronaAkaMainyuTerrainPlugin_8java_source.html">StarCoronaAkaMainyuTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   20</span>                                                         {</div>
-<div class="line"><span class="lineno">   21</span>        SectorEntityToken star = <a class="code hl_variable" href="../../d2/dbc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html#a782a1a74f62510b7760e5183d33f24b6">params</a>.relatedEntity.getLightSource();</div>
-<div class="line"><span class="lineno">   22</span>        <span class="keywordflow">if</span> (star != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   23</span>            <span class="keywordtype">float</span> toStar = Misc.getAngleInDegrees(<a class="code hl_variable" href="../../d2/dbc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html#a782a1a74f62510b7760e5183d33f24b6">params</a>.relatedEntity.getLocation(), star.getLocation());</div>
-<div class="line"><span class="lineno">   24</span>            <span class="keywordtype">float</span> diff = Misc.getAngleDiff(toStar, angle);</div>
-<div class="line"><span class="lineno">   25</span>            <span class="keywordtype">float</span> max = <a class="code hl_variable" href="../../d3/d5a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaAkaMainyuTerrainPlugin.html#a7d0b6ef53b834b477b84003dbc6575fc">ARC</a> / 2f;</div>
-<div class="line"><span class="lineno">   26</span>            <span class="keywordflow">if</span> (diff &lt; max) {</div>
-<div class="line"><span class="lineno">   27</span>                <span class="keywordflow">return</span> Math.max(0, 1f - diff / max);</div>
-<div class="line"><span class="lineno">   28</span>            }</div>
-<div class="line"><span class="lineno">   29</span>            <span class="keywordflow">return</span> 0f;</div>
-<div class="line"><span class="lineno">   30</span>        }</div>
-<div class="line"><span class="lineno">   31</span>        </div>
-<div class="line"><span class="lineno">   32</span>        <span class="keywordflow">return</span> 1f;</div>
-<div class="line"><span class="lineno">   33</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a4cd5537371688069d7520cc9c85d509d" name="a4cd5537371688069d7520cc9c85d509d"></a>
@@ -677,26 +632,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/dbc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html#af69047a581b5917785120ba97e278c50">com.fs.starfarer.api.impl.campaign.terrain.StarCoronaTerrainPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d1d/StarCoronaAkaMainyuTerrainPlugin_8java_source.html#l00036">36</a> of file <a class="el" href="../../d0/d1d/StarCoronaAkaMainyuTerrainPlugin_8java_source.html">StarCoronaAkaMainyuTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   36</span>                                                     {</div>
-<div class="line"><span class="lineno">   37</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d2/dbc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html#a78735a7b2125668990fe730b7debf2fe">color</a> == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   38</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d2/dbc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html#a782a1a74f62510b7760e5183d33f24b6">params</a>.relatedEntity instanceof PlanetAPI) {</div>
-<div class="line"><span class="lineno">   39</span>                <a class="code hl_variable" href="../../d2/dbc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html#a78735a7b2125668990fe730b7debf2fe">color</a> = ((PlanetAPI)<a class="code hl_variable" href="../../d2/dbc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html#a782a1a74f62510b7760e5183d33f24b6">params</a>.relatedEntity).getSpec().getAtmosphereColor();</div>
-<div class="line"><span class="lineno">   40</span>                <span class="comment">//color = Misc.interpolateColor(color, Color.white, 0.25f);</span></div>
-<div class="line"><span class="lineno">   41</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   42</span>                <a class="code hl_variable" href="../../d2/dbc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html#a78735a7b2125668990fe730b7debf2fe">color</a> = Color.white;</div>
-<div class="line"><span class="lineno">   43</span>            }</div>
-<div class="line"><span class="lineno">   44</span>            <a class="code hl_variable" href="../../d2/dbc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html#a78735a7b2125668990fe730b7debf2fe">color</a> = Misc.setAlpha(<a class="code hl_variable" href="../../d2/dbc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html#a78735a7b2125668990fe730b7debf2fe">color</a>, 155);</div>
-<div class="line"><span class="lineno">   45</span>        }</div>
-<div class="line"><span class="lineno">   46</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d2/dbc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html#a645b989d3d7cc2abbe09905cc6f63d4a">flareManager</a>.<a class="code hl_function" href="../../d4/dcb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1FlareManager.html#afafbae1252b3228ab4b9c9ca120486a6">isInActiveFlareArc</a>(angle)) {</div>
-<div class="line"><span class="lineno">   47</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d2/dbc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html#a645b989d3d7cc2abbe09905cc6f63d4a">flareManager</a>.<a class="code hl_function" href="../../d4/dcb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1FlareManager.html#aad612da48564752dee460dcf8cfc606d">getColorForAngle</a>(<a class="code hl_variable" href="../../d2/dbc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html#a78735a7b2125668990fe730b7debf2fe">color</a>, angle);</div>
-<div class="line"><span class="lineno">   48</span>        }</div>
-<div class="line"><span class="lineno">   49</span>        <span class="keywordflow">return</span> super.getAuroraColorForAngle(angle);</div>
-<div class="line"><span class="lineno">   50</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1FlareManager_html_aad612da48564752dee460dcf8cfc606d"><div class="ttname"><a href="../../d4/dcb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1FlareManager.html#aad612da48564752dee460dcf8cfc606d">com.fs.starfarer.api.impl.campaign.terrain.FlareManager.getColorForAngle</a></div><div class="ttdeci">Color getColorForAngle(Color baseColor, float angle)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dd7/FlareManager_8java_source.html#l00155">FlareManager.java:155</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1FlareManager_html_afafbae1252b3228ab4b9c9ca120486a6"><div class="ttname"><a href="../../d4/dcb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1FlareManager.html#afafbae1252b3228ab4b9c9ca120486a6">com.fs.starfarer.api.impl.campaign.terrain.FlareManager.isInActiveFlareArc</a></div><div class="ttdeci">boolean isInActiveFlareArc(Vector2f point)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dd7/FlareManager_8java_source.html#l00139">FlareManager.java:139</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin_html_a645b989d3d7cc2abbe09905cc6f63d4a"><div class="ttname"><a href="../../d2/dbc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html#a645b989d3d7cc2abbe09905cc6f63d4a">com.fs.starfarer.api.impl.campaign.terrain.StarCoronaTerrainPlugin.flareManager</a></div><div class="ttdeci">FlareManager flareManager</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d87/StarCoronaTerrainPlugin_8java_source.html#l00053">StarCoronaTerrainPlugin.java:53</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin_html_a78735a7b2125668990fe730b7debf2fe"><div class="ttname"><a href="../../d2/dbc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html#a78735a7b2125668990fe730b7debf2fe">com.fs.starfarer.api.impl.campaign.terrain.StarCoronaTerrainPlugin.color</a></div><div class="ttdeci">transient Color color</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d87/StarCoronaTerrainPlugin_8java_source.html#l00050">StarCoronaTerrainPlugin.java:50</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a6705153d00a8feb0d505265d578f92c2" name="a6705153d00a8feb0d505265d578f92c2"></a>
@@ -717,10 +653,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/dbc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html#a087dc40316e797ed62809ab927b01c61">com.fs.starfarer.api.impl.campaign.terrain.StarCoronaTerrainPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d1d/StarCoronaAkaMainyuTerrainPlugin_8java_source.html#l00065">65</a> of file <a class="el" href="../../d0/d1d/StarCoronaAkaMainyuTerrainPlugin_8java_source.html">StarCoronaAkaMainyuTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   65</span>                                   {</div>
-<div class="line"><span class="lineno">   66</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Ion Storm&quot;</span>;</div>
-<div class="line"><span class="lineno">   67</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

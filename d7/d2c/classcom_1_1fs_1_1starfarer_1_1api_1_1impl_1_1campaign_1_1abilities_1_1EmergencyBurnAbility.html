@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -505,54 +506,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#a1b79c85d7032a24bea4a4b599f765f52">com.fs.starfarer.api.impl.campaign.abilities.BaseDurationAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/dbc/EmergencyBurnAbility_8java_source.html#l00048">48</a> of file <a class="el" href="../../d9/dbc/EmergencyBurnAbility_8java_source.html">EmergencyBurnAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   48</span>                                  {</div>
-<div class="line"><span class="lineno">   49</span><span class="comment">//      if (entity.isInCurrentLocation()) {</span></div>
-<div class="line"><span class="lineno">   50</span><span class="comment">//          entity.addFloatingText(&quot;Emergency burn&quot;, entity.getFaction().getBaseUIColor(), 0.5f);</span></div>
-<div class="line"><span class="lineno">   51</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">   52</span>        </div>
-<div class="line"><span class="lineno">   53</span><span class="comment">//      AbilityPlugin goDark = entity.getAbility(Abilities.GO_DARK);</span></div>
-<div class="line"><span class="lineno">   54</span><span class="comment">//      if (goDark != null &amp;&amp; goDark.isActive()) {</span></div>
-<div class="line"><span class="lineno">   55</span><span class="comment">//          goDark.deactivate();</span></div>
-<div class="line"><span class="lineno">   56</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">   57</span><span class="comment">//      AbilityPlugin sb = entity.getAbility(Abilities.SUSTAINED_BURN);</span></div>
-<div class="line"><span class="lineno">   58</span><span class="comment">//      if (sb != null &amp;&amp; sb.isActive()) {</span></div>
-<div class="line"><span class="lineno">   59</span><span class="comment">//          sb.deactivate();</span></div>
-<div class="line"><span class="lineno">   60</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">   61</span>        </div>
-<div class="line"><span class="lineno">   62</span>        CampaignFleetAPI fleet = <a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#abdc51d7defc6b6bf60924a01ec361d2d">getFleet</a>();</div>
-<div class="line"><span class="lineno">   63</span>        <span class="keywordflow">if</span> (fleet == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   64</span>        </div>
-<div class="line"><span class="lineno">   65</span>        <span class="keywordtype">float</span> crCostFleetMult = fleet.getStats().getDynamic().getValue(Stats.EMERGENCY_BURN_CR_MULT);</div>
-<div class="line"><span class="lineno">   66</span>        <span class="keywordflow">if</span> (crCostFleetMult &gt; 0) {</div>
-<div class="line"><span class="lineno">   67</span>            <span class="keywordflow">for</span> (FleetMemberAPI member : <a class="code hl_function" href="../../d7/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility.html#ad3741143608edb4c5016fbe6e3a0f1a5">getNonReadyShips</a>()) {</div>
-<div class="line"><span class="lineno">   68</span>                <span class="keywordflow">if</span> ((<span class="keywordtype">float</span>) Math.random() &lt; <a class="code hl_variable" href="../../d7/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility.html#ae030fa877838906911ea86db7ee167f0">ACTIVATION_DAMAGE_PROB</a>) {</div>
-<div class="line"><span class="lineno">   69</span>                    Misc.applyDamage(member, <span class="keyword">null</span>, FleetMemberDamageLevel.LOW, <span class="keyword">false</span>, <span class="keyword">null</span>, <span class="keyword">null</span>,</div>
-<div class="line"><span class="lineno">   70</span>                            <span class="keyword">true</span>, <span class="keyword">null</span>, member.getShipName() + <span class="stringliteral">&quot; suffers damage from Emergency Burn activation&quot;</span>);</div>
-<div class="line"><span class="lineno">   71</span>                }</div>
-<div class="line"><span class="lineno">   72</span>            }</div>
-<div class="line"><span class="lineno">   73</span>            <span class="keywordflow">for</span> (FleetMemberAPI member : fleet.getFleetData().getMembersListCopy()) {</div>
-<div class="line"><span class="lineno">   74</span>                <span class="keywordtype">float</span> crLoss = member.getDeployCost() * <a class="code hl_variable" href="../../d7/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility.html#a821f5e0de006b43e139bba2b6548edcd">CR_COST_MULT</a> * crCostFleetMult;</div>
-<div class="line"><span class="lineno">   75</span>                member.getRepairTracker().applyCREvent(-crLoss, <span class="stringliteral">&quot;Emergency burn&quot;</span>);</div>
-<div class="line"><span class="lineno">   76</span>            }</div>
-<div class="line"><span class="lineno">   77</span>        }</div>
-<div class="line"><span class="lineno">   78</span>        </div>
-<div class="line"><span class="lineno">   79</span>        <span class="keywordtype">float</span> cost = <a class="code hl_function" href="../../d7/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility.html#a7dfc8418411fd26b2d4c48f9feb6d3ed">computeFuelCost</a>();</div>
-<div class="line"><span class="lineno">   80</span>        fleet.getCargo().removeFuel(cost);</div>
-<div class="line"><span class="lineno">   81</span>        </div>
-<div class="line"><span class="lineno">   82</span><span class="comment">//      float distLY = Misc.getDistanceToPlayerLY(fleet);</span></div>
-<div class="line"><span class="lineno">   83</span><span class="comment">//      //if (fleet.isPlayerFleet()) {</span></div>
-<div class="line"><span class="lineno">   84</span><span class="comment">//      if (distLY &lt; 4f) {</span></div>
-<div class="line"><span class="lineno">   85</span><span class="comment">//          SpatialAnomalyParams params = new SpatialAnomalyParams(fleet, 1f, fleet.getRadius() * 2f + 100f, null);</span></div>
-<div class="line"><span class="lineno">   86</span><span class="comment">//          SectorEntityToken anomaly = fleet.getContainingLocation().addTerrain(Terrain.SPATIAL_ANOMALY, params);</span></div>
-<div class="line"><span class="lineno">   87</span><span class="comment">//          anomaly.getLocation().set(fleet.getLocation());</span></div>
-<div class="line"><span class="lineno">   88</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">   89</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin_html_abdc51d7defc6b6bf60924a01ec361d2d"><div class="ttname"><a href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#abdc51d7defc6b6bf60924a01ec361d2d">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin.getFleet</a></div><div class="ttdeci">CampaignFleetAPI getFleet()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00144">BaseAbilityPlugin.java:144</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility_html_a7dfc8418411fd26b2d4c48f9feb6d3ed"><div class="ttname"><a href="../../d7/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility.html#a7dfc8418411fd26b2d4c48f9feb6d3ed">com.fs.starfarer.api.impl.campaign.abilities.EmergencyBurnAbility.computeFuelCost</a></div><div class="ttdeci">float computeFuelCost()</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dbc/EmergencyBurnAbility_8java_source.html#l00227">EmergencyBurnAbility.java:227</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility_html_a821f5e0de006b43e139bba2b6548edcd"><div class="ttname"><a href="../../d7/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility.html#a821f5e0de006b43e139bba2b6548edcd">com.fs.starfarer.api.impl.campaign.abilities.EmergencyBurnAbility.CR_COST_MULT</a></div><div class="ttdeci">static float CR_COST_MULT</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dbc/EmergencyBurnAbility_8java_source.html#l00029">EmergencyBurnAbility.java:29</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility_html_ad3741143608edb4c5016fbe6e3a0f1a5"><div class="ttname"><a href="../../d7/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility.html#ad3741143608edb4c5016fbe6e3a0f1a5">com.fs.starfarer.api.impl.campaign.abilities.EmergencyBurnAbility.getNonReadyShips</a></div><div class="ttdeci">List&lt; FleetMemberAPI &gt; getNonReadyShips()</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dbc/EmergencyBurnAbility_8java_source.html#l00199">EmergencyBurnAbility.java:199</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility_html_ae030fa877838906911ea86db7ee167f0"><div class="ttname"><a href="../../d7/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility.html#ae030fa877838906911ea86db7ee167f0">com.fs.starfarer.api.impl.campaign.abilities.EmergencyBurnAbility.ACTIVATION_DAMAGE_PROB</a></div><div class="ttdeci">static float ACTIVATION_DAMAGE_PROB</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dbc/EmergencyBurnAbility_8java_source.html#l00034">EmergencyBurnAbility.java:34</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac30a5c4776b5e65a09751f46f1c15261" name="ac30a5c4776b5e65a09751f46f1c15261"></a>
@@ -598,75 +552,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#aee269ddd5f701aa11a8acd69c9bd434f">com.fs.starfarer.api.impl.campaign.abilities.BaseDurationAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/dbc/EmergencyBurnAbility_8java_source.html#l00092">92</a> of file <a class="el" href="../../d9/dbc/EmergencyBurnAbility_8java_source.html">EmergencyBurnAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   92</span>                                                          {</div>
-<div class="line"><span class="lineno">   93</span><span class="comment">//      if (level &gt; 0) {</span></div>
-<div class="line"><span class="lineno">   94</span><span class="comment">//          AbilityPlugin goDark = entity.getAbility(Abilities.GO_DARK);</span></div>
-<div class="line"><span class="lineno">   95</span><span class="comment">//          if (goDark != null) goDark.forceDisable();</span></div>
-<div class="line"><span class="lineno">   96</span><span class="comment">//          AbilityPlugin sb = entity.getAbility(Abilities.SUSTAINED_BURN);</span></div>
-<div class="line"><span class="lineno">   97</span><span class="comment">//          if (sb != null) sb.forceDisable();</span></div>
-<div class="line"><span class="lineno">   98</span><span class="comment">//          </span></div>
-<div class="line"><span class="lineno">  105</span><span class="comment"></span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  106</span>        </div>
-<div class="line"><span class="lineno">  107</span>        CampaignFleetAPI fleet = <a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#abdc51d7defc6b6bf60924a01ec361d2d">getFleet</a>();</div>
-<div class="line"><span class="lineno">  108</span>        <span class="keywordflow">if</span> (fleet == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  109</span>        </div>
-<div class="line"><span class="lineno">  110</span>        fleet.getStats().getSensorRangeMod().modifyMult(<a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a2e9e39ccbd5d39ae13b255974fef719c">getModId</a>(), 1f + (<a class="code hl_variable" href="../../d7/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility.html#a0c43e5be3d49daec0a99d5c8299e6568">SENSOR_RANGE_MULT</a> - 1f) * <a class="code hl_variable" href="../../d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#a74548753f66b57cc2bcc46a8288c459f">level</a>, <span class="stringliteral">&quot;Emergency burn&quot;</span>);</div>
-<div class="line"><span class="lineno">  111</span>        fleet.getStats().getDetectedRangeMod().modifyPercent(<a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a2e9e39ccbd5d39ae13b255974fef719c">getModId</a>(), <a class="code hl_variable" href="../../d7/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility.html#a22447ba40bdf4a1b6cef8a0899d2e034">DETECTABILITY_PERCENT</a> * <a class="code hl_variable" href="../../d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#a74548753f66b57cc2bcc46a8288c459f">level</a>, <span class="stringliteral">&quot;Emergency burn&quot;</span>);</div>
-<div class="line"><span class="lineno">  112</span>        fleet.getStats().getFleetwideMaxBurnMod().modifyFlat(<a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a2e9e39ccbd5d39ae13b255974fef719c">getModId</a>(), (<span class="keywordtype">int</span>)(<a class="code hl_variable" href="../../d7/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility.html#a20d938437f0b7bfb15c4999c5cb9eee2">MAX_BURN_MOD</a> * <a class="code hl_variable" href="../../d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#a74548753f66b57cc2bcc46a8288c459f">level</a>), <span class="stringliteral">&quot;Emergency burn&quot;</span>);</div>
-<div class="line"><span class="lineno">  113</span>        fleet.getStats().getAccelerationMult().modifyMult(<a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a2e9e39ccbd5d39ae13b255974fef719c">getModId</a>(), 1f + (<a class="code hl_variable" href="../../d7/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility.html#a9465678ab2c72356f11a856670f6e52c">ACCELERATION_MULT</a> - 1f) * <a class="code hl_variable" href="../../d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#a74548753f66b57cc2bcc46a8288c459f">level</a>);</div>
-<div class="line"><span class="lineno">  114</span>        <span class="comment">//fleet.getCommanderStats().getDynamic().getStat(Stats.NAVIGATION_PENALTY_MULT).modifyMult(getModId(), 0f);//1f - level);</span></div>
-<div class="line"><span class="lineno">  115</span>        </div>
-<div class="line"><span class="lineno">  116</span>        <span class="keywordflow">for</span> (FleetMemberViewAPI view : fleet.getViews()) {</div>
-<div class="line"><span class="lineno">  117</span>            <span class="comment">//view.getContrailColor().shift(getModId(), view.getEngineColor().getBase(), 1f, 1f, 0.25f);</span></div>
-<div class="line"><span class="lineno">  118</span>            view.getContrailColor().shift(<a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a2e9e39ccbd5d39ae13b255974fef719c">getModId</a>(), <span class="keyword">new</span> Color(250,150,100,255), 1f, 1f, .75f);</div>
-<div class="line"><span class="lineno">  119</span>            <span class="comment">//view.getContrailColor().shift(getModId(), new Color(255,100,255), 1f, 1f, 0.5f);</span></div>
-<div class="line"><span class="lineno">  120</span>            <span class="comment">//view.getContrailDurMult().shift(getModId(), 0.5f, 1f, 1f, 1f);</span></div>
-<div class="line"><span class="lineno">  121</span>            <span class="comment">//view.getContrailWidthMult().shift(getModId(), 2f, 1f, 1f, 1f);</span></div>
-<div class="line"><span class="lineno">  122</span>            view.getEngineGlowSizeMult().shift(<a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a2e9e39ccbd5d39ae13b255974fef719c">getModId</a>(), 2f, 1f, 1f, 1f);</div>
-<div class="line"><span class="lineno">  123</span>            view.getEngineHeightMult().shift(<a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a2e9e39ccbd5d39ae13b255974fef719c">getModId</a>(), 5f, 1f, 1f, 1f);</div>
-<div class="line"><span class="lineno">  124</span>            view.getEngineWidthMult().shift(<a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a2e9e39ccbd5d39ae13b255974fef719c">getModId</a>(), 3f, 1f, 1f, 1f);</div>
-<div class="line"><span class="lineno">  125</span>        }</div>
-<div class="line"><span class="lineno">  126</span>        </div>
-<div class="line"><span class="lineno">  127</span>        <span class="comment">//member.getStats().getBaseCRRecoveryRatePercentPerDay()for (FleetMemberAPI member : fleet.getFleetData().getMembersListCopy()) {</span></div>
-<div class="line"><span class="lineno">  128</span>        String buffId = <a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a2e9e39ccbd5d39ae13b255974fef719c">getModId</a>();</div>
-<div class="line"><span class="lineno">  129</span>        <span class="keywordtype">float</span> buffDur = 0.1f;</div>
-<div class="line"><span class="lineno">  130</span>        <span class="keywordtype">boolean</span> needsSync = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  131</span>        <span class="keywordflow">for</span> (FleetMemberAPI member : fleet.getFleetData().getMembersListCopy()) {</div>
-<div class="line"><span class="lineno">  132</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#a74548753f66b57cc2bcc46a8288c459f">level</a> &lt;= 0) {</div>
-<div class="line"><span class="lineno">  133</span>                member.getBuffManager().removeBuff(buffId);</div>
-<div class="line"><span class="lineno">  134</span>                needsSync = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  135</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  136</span>                Buff test = member.getBuffManager().getBuff(buffId);</div>
-<div class="line"><span class="lineno">  137</span>                <span class="keywordflow">if</span> (test instanceof CRRecoveryBuff) {</div>
-<div class="line"><span class="lineno">  138</span>                    CRRecoveryBuff buff = (CRRecoveryBuff) test;</div>
-<div class="line"><span class="lineno">  139</span>                    buff.setDur(buffDur);</div>
-<div class="line"><span class="lineno">  140</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  141</span>                    member.getBuffManager().addBuff(<span class="keyword">new</span> CRRecoveryBuff(buffId, 0f, buffDur));</div>
-<div class="line"><span class="lineno">  142</span>                    needsSync = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  143</span>                }</div>
-<div class="line"><span class="lineno">  144</span>            }</div>
-<div class="line"><span class="lineno">  145</span>        }</div>
-<div class="line"><span class="lineno">  146</span>        </div>
-<div class="line"><span class="lineno">  147</span>        <span class="comment">//if (needsSync || fleet.isPlayerFleet()) {</span></div>
-<div class="line"><span class="lineno">  148</span>        <span class="keywordflow">if</span> (needsSync) {</div>
-<div class="line"><span class="lineno">  149</span>            fleet.forceSync();</div>
-<div class="line"><span class="lineno">  150</span>        }</div>
-<div class="line"><span class="lineno">  151</span>        </div>
-<div class="line"><span class="lineno">  152</span>        </div>
-<div class="line"><span class="lineno">  153</span><span class="comment">//      if (level &gt; 0) {</span></div>
-<div class="line"><span class="lineno">  154</span><span class="comment">//          SlipstreamTerrainPlugin slipstream = SlipstreamTerrainPlugin.getSlipstreamPlugin(fleet.getContainingLocation());</span></div>
-<div class="line"><span class="lineno">  155</span><span class="comment">//          if (slipstream != null) {</span></div>
-<div class="line"><span class="lineno">  156</span><span class="comment">//              slipstream.disrupt(fleet, 0.1f);</span></div>
-<div class="line"><span class="lineno">  157</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">  158</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  159</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin_html_a2e9e39ccbd5d39ae13b255974fef719c"><div class="ttname"><a href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a2e9e39ccbd5d39ae13b255974fef719c">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin.getModId</a></div><div class="ttdeci">String getModId()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00140">BaseAbilityPlugin.java:140</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility_html_a74548753f66b57cc2bcc46a8288c459f"><div class="ttname"><a href="../../d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#a74548753f66b57cc2bcc46a8288c459f">com.fs.starfarer.api.impl.campaign.abilities.BaseDurationAbility.level</a></div><div class="ttdeci">float level</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d40/BaseDurationAbility_8java_source.html#l00065">BaseDurationAbility.java:65</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility_html_a0c43e5be3d49daec0a99d5c8299e6568"><div class="ttname"><a href="../../d7/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility.html#a0c43e5be3d49daec0a99d5c8299e6568">com.fs.starfarer.api.impl.campaign.abilities.EmergencyBurnAbility.SENSOR_RANGE_MULT</a></div><div class="ttdeci">static float SENSOR_RANGE_MULT</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dbc/EmergencyBurnAbility_8java_source.html#l00024">EmergencyBurnAbility.java:24</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility_html_a20d938437f0b7bfb15c4999c5cb9eee2"><div class="ttname"><a href="../../d7/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility.html#a20d938437f0b7bfb15c4999c5cb9eee2">com.fs.starfarer.api.impl.campaign.abilities.EmergencyBurnAbility.MAX_BURN_MOD</a></div><div class="ttdeci">static float MAX_BURN_MOD</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dbc/EmergencyBurnAbility_8java_source.html#l00027">EmergencyBurnAbility.java:27</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility_html_a22447ba40bdf4a1b6cef8a0899d2e034"><div class="ttname"><a href="../../d7/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility.html#a22447ba40bdf4a1b6cef8a0899d2e034">com.fs.starfarer.api.impl.campaign.abilities.EmergencyBurnAbility.DETECTABILITY_PERCENT</a></div><div class="ttdeci">static float DETECTABILITY_PERCENT</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dbc/EmergencyBurnAbility_8java_source.html#l00026">EmergencyBurnAbility.java:26</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility_html_a9465678ab2c72356f11a856670f6e52c"><div class="ttname"><a href="../../d7/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility.html#a9465678ab2c72356f11a856670f6e52c">com.fs.starfarer.api.impl.campaign.abilities.EmergencyBurnAbility.ACCELERATION_MULT</a></div><div class="ttdeci">static float ACCELERATION_MULT</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dbc/EmergencyBurnAbility_8java_source.html#l00032">EmergencyBurnAbility.java:32</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a75311232de854d99d3c625227bea12fc" name="a75311232de854d99d3c625227bea12fc"></a>
@@ -695,17 +581,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#a95552e19a3ed75bafe0ccc9501302145">com.fs.starfarer.api.impl.campaign.abilities.BaseDurationAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/dbc/EmergencyBurnAbility_8java_source.html#l00167">167</a> of file <a class="el" href="../../d9/dbc/EmergencyBurnAbility_8java_source.html">EmergencyBurnAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  167</span>                                 {</div>
-<div class="line"><span class="lineno">  168</span>        CampaignFleetAPI fleet = <a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#abdc51d7defc6b6bf60924a01ec361d2d">getFleet</a>();</div>
-<div class="line"><span class="lineno">  169</span>        <span class="keywordflow">if</span> (fleet == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  170</span>        </div>
-<div class="line"><span class="lineno">  171</span>        fleet.getStats().getSensorRangeMod().unmodify(<a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a2e9e39ccbd5d39ae13b255974fef719c">getModId</a>());</div>
-<div class="line"><span class="lineno">  172</span>        fleet.getStats().getDetectedRangeMod().unmodify(<a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a2e9e39ccbd5d39ae13b255974fef719c">getModId</a>());</div>
-<div class="line"><span class="lineno">  173</span>        fleet.getStats().getFleetwideMaxBurnMod().unmodify(<a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a2e9e39ccbd5d39ae13b255974fef719c">getModId</a>());</div>
-<div class="line"><span class="lineno">  174</span>        fleet.getStats().getAccelerationMult().unmodify(<a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a2e9e39ccbd5d39ae13b255974fef719c">getModId</a>());</div>
-<div class="line"><span class="lineno">  175</span>        <span class="comment">//fleet.getCommanderStats().getDynamic().getStat(Stats.NAVIGATION_PENALTY_MULT).unmodify(getModId());</span></div>
-<div class="line"><span class="lineno">  176</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a7dfc8418411fd26b2d4c48f9feb6d3ed" name="a7dfc8418411fd26b2d4c48f9feb6d3ed"></a>
@@ -732,15 +608,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/dbc/EmergencyBurnAbility_8java_source.html#l00227">227</a> of file <a class="el" href="../../d9/dbc/EmergencyBurnAbility_8java_source.html">EmergencyBurnAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  227</span>                                      {</div>
-<div class="line"><span class="lineno">  228</span>        CampaignFleetAPI fleet = <a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#abdc51d7defc6b6bf60924a01ec361d2d">getFleet</a>();</div>
-<div class="line"><span class="lineno">  229</span>        <span class="keywordflow">if</span> (fleet == <span class="keyword">null</span>) <span class="keywordflow">return</span> 0f;</div>
-<div class="line"><span class="lineno">  230</span>        </div>
-<div class="line"><span class="lineno">  231</span>        <span class="keywordtype">float</span> cost = fleet.getLogistics().getFuelCostPerLightYear() * <a class="code hl_variable" href="../../d7/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility.html#a4169e754fac00170563106a1e35e3a22">FUEL_USE_MULT</a>;</div>
-<div class="line"><span class="lineno">  232</span>        <span class="keywordflow">return</span> cost;</div>
-<div class="line"><span class="lineno">  233</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility_html_a4169e754fac00170563106a1e35e3a22"><div class="ttname"><a href="../../d7/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility.html#a4169e754fac00170563106a1e35e3a22">com.fs.starfarer.api.impl.campaign.abilities.EmergencyBurnAbility.FUEL_USE_MULT</a></div><div class="ttdeci">static float FUEL_USE_MULT</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dbc/EmergencyBurnAbility_8java_source.html#l00030">EmergencyBurnAbility.java:30</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a98d44ec2bb8408ca5bff2cc0060c95ea" name="a98d44ec2bb8408ca5bff2cc0060c95ea"></a>
@@ -767,19 +635,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/dbc/EmergencyBurnAbility_8java_source.html#l00235">235</a> of file <a class="el" href="../../d9/dbc/EmergencyBurnAbility_8java_source.html">EmergencyBurnAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  235</span>                                        {</div>
-<div class="line"><span class="lineno">  236</span>        CampaignFleetAPI fleet = <a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#abdc51d7defc6b6bf60924a01ec361d2d">getFleet</a>();</div>
-<div class="line"><span class="lineno">  237</span>        <span class="keywordflow">if</span> (fleet == <span class="keyword">null</span>) <span class="keywordflow">return</span> 0f;</div>
-<div class="line"><span class="lineno">  238</span>        </div>
-<div class="line"><span class="lineno">  239</span>        <span class="keywordtype">float</span> crCostFleetMult = fleet.getStats().getDynamic().getValue(Stats.EMERGENCY_BURN_CR_MULT);</div>
-<div class="line"><span class="lineno">  240</span>        </div>
-<div class="line"><span class="lineno">  241</span>        <span class="keywordtype">float</span> cost = 0f;</div>
-<div class="line"><span class="lineno">  242</span>        <span class="keywordflow">for</span> (FleetMemberAPI member : fleet.getFleetData().getMembersListCopy()) {</div>
-<div class="line"><span class="lineno">  243</span>            cost += member.getDeploymentPointsCost() * <a class="code hl_variable" href="../../d7/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility.html#a821f5e0de006b43e139bba2b6548edcd">CR_COST_MULT</a> * crCostFleetMult;</div>
-<div class="line"><span class="lineno">  244</span>        }</div>
-<div class="line"><span class="lineno">  245</span>        <span class="keywordflow">return</span> cost;</div>
-<div class="line"><span class="lineno">  246</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a730330889cf025319d0d66a2e751e714" name="a730330889cf025319d0d66a2e751e714"></a>
@@ -818,96 +674,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a524c99aa9c5d81332f100b0bf6e8c699">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/dbc/EmergencyBurnAbility_8java_source.html#l00250">250</a> of file <a class="el" href="../../d9/dbc/EmergencyBurnAbility_8java_source.html">EmergencyBurnAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  250</span>                                                                         {</div>
-<div class="line"><span class="lineno">  251</span>        CampaignFleetAPI fleet = <a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#abdc51d7defc6b6bf60924a01ec361d2d">getFleet</a>();</div>
-<div class="line"><span class="lineno">  252</span>        <span class="keywordflow">if</span> (fleet == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  253</span>        </div>
-<div class="line"><span class="lineno">  254</span>        Color gray = Misc.getGrayColor();</div>
-<div class="line"><span class="lineno">  255</span>        Color highlight = Misc.getHighlightColor();</div>
-<div class="line"><span class="lineno">  256</span>        Color fuel = Global.getSettings().getColor(<span class="stringliteral">&quot;progressBarFuelColor&quot;</span>);</div>
-<div class="line"><span class="lineno">  257</span>        Color bad = Misc.getNegativeHighlightColor();</div>
-<div class="line"><span class="lineno">  258</span>        </div>
-<div class="line"><span class="lineno">  259</span>        LabelAPI title = tooltip.addTitle(<span class="stringliteral">&quot;Emergency Burn&quot;</span>);</div>
-<div class="line"><span class="lineno">  260</span><span class="comment">//      title.highlightLast(status);</span></div>
-<div class="line"><span class="lineno">  261</span><span class="comment">//      title.setHighlightColor(gray);</span></div>
-<div class="line"><span class="lineno">  262</span> </div>
-<div class="line"><span class="lineno">  263</span>        <span class="keywordtype">float</span> pad = 10f;</div>
-<div class="line"><span class="lineno">  264</span>        </div>
-<div class="line"><span class="lineno">  265</span>        <span class="keywordtype">float</span> fuelCost = <a class="code hl_function" href="../../d7/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility.html#a7dfc8418411fd26b2d4c48f9feb6d3ed">computeFuelCost</a>();</div>
-<div class="line"><span class="lineno">  266</span>        <span class="keywordtype">float</span> supplyCost = <a class="code hl_function" href="../../d7/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility.html#a98d44ec2bb8408ca5bff2cc0060c95ea">computeSupplyCost</a>();</div>
-<div class="line"><span class="lineno">  267</span>        </div>
-<div class="line"><span class="lineno">  268</span>        tooltip.addPara(<span class="stringliteral">&quot;Increases the maximum burn level by %s.&quot;</span> +</div>
-<div class="line"><span class="lineno">  269</span>                <span class="stringliteral">&quot; Reduces sensor range by %s and increases the range at&quot;</span> +</div>
-<div class="line"><span class="lineno">  270</span>                <span class="stringliteral">&quot; which the fleet can be detected by %s.&quot;</span>,<span class="comment">// +</span></div>
-<div class="line"><span class="lineno">  271</span><span class="comment">//              &quot; The fleet will also be unaffected by most terrain &quot; +</span></div>
-<div class="line"><span class="lineno">  272</span><span class="comment">//              &quot;movement penalties and hazards while the ability is active.&quot;,</span></div>
-<div class="line"><span class="lineno">  273</span>                pad,</div>
-<div class="line"><span class="lineno">  274</span>                highlight, </div>
-<div class="line"><span class="lineno">  275</span>                <span class="stringliteral">&quot;&quot;</span> + (<span class="keywordtype">int</span>) <a class="code hl_variable" href="../../d7/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility.html#a20d938437f0b7bfb15c4999c5cb9eee2">MAX_BURN_MOD</a>,</div>
-<div class="line"><span class="lineno">  276</span>                <span class="stringliteral">&quot;&quot;</span> + (<span class="keywordtype">int</span>)((1f - <a class="code hl_variable" href="../../d7/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility.html#a0c43e5be3d49daec0a99d5c8299e6568">SENSOR_RANGE_MULT</a>) * 100f) + <span class="stringliteral">&quot;%&quot;</span>,</div>
-<div class="line"><span class="lineno">  277</span>                <span class="comment">//&quot;&quot; + (int)((DETECTABILITY_MULT - 1f) * 100f) + &quot;%&quot;</span></div>
-<div class="line"><span class="lineno">  278</span>                <span class="stringliteral">&quot;&quot;</span> + (<span class="keywordtype">int</span>)(<a class="code hl_variable" href="../../d7/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility.html#a22447ba40bdf4a1b6cef8a0899d2e034">DETECTABILITY_PERCENT</a>) + <span class="stringliteral">&quot;%&quot;</span></div>
-<div class="line"><span class="lineno">  279</span>        );</div>
-<div class="line"><span class="lineno">  280</span>        </div>
-<div class="line"><span class="lineno">  281</span>        <span class="keywordflow">if</span> (supplyCost &gt; 0) {</div>
-<div class="line"><span class="lineno">  282</span>            tooltip.addPara(<span class="stringliteral">&quot;Consumes %s fuel and reduces the combat readiness&quot;</span> +</div>
-<div class="line"><span class="lineno">  283</span>                        <span class="stringliteral">&quot; of all ships, costing up to %s supplies to recover. Also prevents combat readiness recovery while active.&quot;</span>, pad, </div>
-<div class="line"><span class="lineno">  284</span>                        highlight,</div>
-<div class="line"><span class="lineno">  285</span>                        Misc.getRoundedValueMaxOneAfterDecimal(fuelCost),</div>
-<div class="line"><span class="lineno">  286</span>                        Misc.getRoundedValueMaxOneAfterDecimal(supplyCost));</div>
-<div class="line"><span class="lineno">  287</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  288</span>            tooltip.addPara(<span class="stringliteral">&quot;Consumes %s fuel and prevents combat readiness recovery while active.&quot;</span>, pad, </div>
-<div class="line"><span class="lineno">  289</span>                    highlight,</div>
-<div class="line"><span class="lineno">  290</span>                    Misc.getRoundedValueMaxOneAfterDecimal(fuelCost));</div>
-<div class="line"><span class="lineno">  291</span>        }</div>
-<div class="line"><span class="lineno">  292</span>        </div>
-<div class="line"><span class="lineno">  293</span>        <span class="keywordflow">if</span> (fuelCost &gt; fleet.getCargo().getFuel()) {</div>
-<div class="line"><span class="lineno">  294</span>            tooltip.addPara(<span class="stringliteral">&quot;Not enough fuel.&quot;</span>, bad, pad);</div>
-<div class="line"><span class="lineno">  295</span>        }</div>
-<div class="line"><span class="lineno">  296</span>        </div>
-<div class="line"><span class="lineno">  297</span>        List&lt;FleetMemberAPI&gt; nonReady = <a class="code hl_function" href="../../d7/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility.html#ad3741143608edb4c5016fbe6e3a0f1a5">getNonReadyShips</a>();</div>
-<div class="line"><span class="lineno">  298</span>        <span class="keywordflow">if</span> (!nonReady.isEmpty()) {</div>
-<div class="line"><span class="lineno">  299</span>            <span class="comment">//tooltip.addPara(&quot;Not all ships have enough combat readiness to initiate an emergency burn. Ships that require higher CR:&quot;, pad);</span></div>
-<div class="line"><span class="lineno">  300</span>            tooltip.addPara(<span class="stringliteral">&quot;Some ships don&#39;t have enough combat readiness to safely initiate an emergency burn &quot;</span> +</div>
-<div class="line"><span class="lineno">  301</span>                            <span class="stringliteral">&quot;and may suffer damage if the ability is activated:&quot;</span>, pad, </div>
-<div class="line"><span class="lineno">  302</span>                            Misc.getNegativeHighlightColor(), <span class="stringliteral">&quot;may suffer damage&quot;</span>);</div>
-<div class="line"><span class="lineno">  303</span>            <span class="comment">//tooltip.beginGridFlipped(getTooltipWidth(), 1, 30, pad);</span></div>
-<div class="line"><span class="lineno">  304</span>            <span class="comment">//tooltip.setGridLabelColor(bad);</span></div>
-<div class="line"><span class="lineno">  305</span>            <span class="keywordtype">int</span> j = 0;</div>
-<div class="line"><span class="lineno">  306</span>            <span class="keywordtype">int</span> max = 7;</div>
-<div class="line"><span class="lineno">  307</span>            <span class="keywordtype">float</span> initPad = 5f;</div>
-<div class="line"><span class="lineno">  308</span>            <span class="keywordflow">for</span> (FleetMemberAPI member : nonReady) {</div>
-<div class="line"><span class="lineno">  309</span>                <span class="keywordflow">if</span> (j &gt;= max) {</div>
-<div class="line"><span class="lineno">  310</span>                    <span class="keywordflow">if</span> (nonReady.size() &gt; max + 1) {</div>
-<div class="line"><span class="lineno">  311</span>                        tooltip.addToGrid(0, j++, <span class="stringliteral">&quot;... and several other ships&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, bad);</div>
-<div class="line"><span class="lineno">  312</span>                        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  313</span>                    }</div>
-<div class="line"><span class="lineno">  314</span>                }</div>
-<div class="line"><span class="lineno">  315</span>                </div>
-<div class="line"><span class="lineno">  316</span>                <span class="comment">//float crLoss = member.getDeployCost() * CR_COST_MULT;</span></div>
-<div class="line"><span class="lineno">  317</span>                <span class="comment">//String cost = &quot;&quot; + Math.round(crLoss * 100) + &quot;%&quot;;</span></div>
-<div class="line"><span class="lineno">  318</span>                String str = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">  319</span>                <span class="keywordflow">if</span> (!member.isFighterWing()) {</div>
-<div class="line"><span class="lineno">  320</span>                    str += member.getShipName() + <span class="stringliteral">&quot;, &quot;</span>;</div>
-<div class="line"><span class="lineno">  321</span>                    str += member.getHullSpec().getHullNameWithDashClass();</div>
-<div class="line"><span class="lineno">  322</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  323</span>                    str += member.getVariant().getFullDesignationWithHullName();</div>
-<div class="line"><span class="lineno">  324</span>                }</div>
-<div class="line"><span class="lineno">  325</span>                </div>
-<div class="line"><span class="lineno">  326</span>                tooltip.addPara(BaseIntelPlugin.INDENT + str, initPad);</div>
-<div class="line"><span class="lineno">  327</span>                initPad = 0f;</div>
-<div class="line"><span class="lineno">  328</span>                </div>
-<div class="line"><span class="lineno">  329</span>                <span class="comment">//tooltip.addToGrid(0, j++, str, cost, bad);</span></div>
-<div class="line"><span class="lineno">  330</span>            }</div>
-<div class="line"><span class="lineno">  331</span>            <span class="comment">//tooltip.addGrid(3f);</span></div>
-<div class="line"><span class="lineno">  332</span>        }</div>
-<div class="line"><span class="lineno">  333</span>        </div>
-<div class="line"><span class="lineno">  334</span>        <span class="comment">//tooltip.addPara(&quot;Disables \&quot;Go Dark\&quot; when activated.&quot;, pad);</span></div>
-<div class="line"><span class="lineno">  335</span>        <a class="code hl_function" href="../../d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#aca01e068aef63af5241219b9aa33c5d0">addIncompatibleToTooltip</a>(tooltip, expanded);</div>
-<div class="line"><span class="lineno">  336</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility_html_aca01e068aef63af5241219b9aa33c5d0"><div class="ttname"><a href="../../d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#aca01e068aef63af5241219b9aa33c5d0">com.fs.starfarer.api.impl.campaign.abilities.BaseDurationAbility.addIncompatibleToTooltip</a></div><div class="ttdeci">void addIncompatibleToTooltip(TooltipMakerAPI tooltip, boolean expanded)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d40/BaseDurationAbility_8java_source.html#l00153">BaseDurationAbility.java:153</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility_html_a98d44ec2bb8408ca5bff2cc0060c95ea"><div class="ttname"><a href="../../d7/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility.html#a98d44ec2bb8408ca5bff2cc0060c95ea">com.fs.starfarer.api.impl.campaign.abilities.EmergencyBurnAbility.computeSupplyCost</a></div><div class="ttdeci">float computeSupplyCost()</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dbc/EmergencyBurnAbility_8java_source.html#l00235">EmergencyBurnAbility.java:235</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a44b809ad13193f67ad7d2fb8a41b6c37" name="a44b809ad13193f67ad7d2fb8a41b6c37"></a>
@@ -936,11 +703,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#a598f0df48bcfc1718427ad8cee13cdc6">com.fs.starfarer.api.impl.campaign.abilities.BaseDurationAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/dbc/EmergencyBurnAbility_8java_source.html#l00162">162</a> of file <a class="el" href="../../d9/dbc/EmergencyBurnAbility_8java_source.html">EmergencyBurnAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  162</span>                                    {</div>
-<div class="line"><span class="lineno">  163</span>        <a class="code hl_function" href="../../d7/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility.html#a75311232de854d99d3c625227bea12fc">cleanupImpl</a>();</div>
-<div class="line"><span class="lineno">  164</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility_html_a75311232de854d99d3c625227bea12fc"><div class="ttname"><a href="../../d7/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility.html#a75311232de854d99d3c625227bea12fc">com.fs.starfarer.api.impl.campaign.abilities.EmergencyBurnAbility.cleanupImpl</a></div><div class="ttdeci">void cleanupImpl()</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dbc/EmergencyBurnAbility_8java_source.html#l00167">EmergencyBurnAbility.java:167</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5bbcac51c04b2d3e4801314c7891fb4e" name="a5bbcac51c04b2d3e4801314c7891fb4e"></a>
@@ -972,13 +735,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a9807387360d315e712b48e2da5af0741">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/dbc/EmergencyBurnAbility_8java_source.html#l00344">344</a> of file <a class="el" href="../../d9/dbc/EmergencyBurnAbility_8java_source.html">EmergencyBurnAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  344</span>                                                                                {</div>
-<div class="line"><span class="lineno">  345</span>        <span class="keywordflow">if</span> (engagedInHostilities) {</div>
-<div class="line"><span class="lineno">  346</span>            <a class="code hl_function" href="../../d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#a4c645f917e0db75e7ba759eddb0898f2">deactivate</a>();</div>
-<div class="line"><span class="lineno">  347</span>        }</div>
-<div class="line"><span class="lineno">  348</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility_html_a4c645f917e0db75e7ba759eddb0898f2"><div class="ttname"><a href="../../d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#a4c645f917e0db75e7ba759eddb0898f2">com.fs.starfarer.api.impl.campaign.abilities.BaseDurationAbility.deactivate</a></div><div class="ttdeci">void deactivate()</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d40/BaseDurationAbility_8java_source.html#l00233">BaseDurationAbility.java:233</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a087308db1de69ca6e3cb2d2de73421dd" name="a087308db1de69ca6e3cb2d2de73421dd"></a>
@@ -1006,10 +763,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#ac17f98876df21077a7e38da52149ea01">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/dbc/EmergencyBurnAbility_8java_source.html#l00351">351</a> of file <a class="el" href="../../d9/dbc/EmergencyBurnAbility_8java_source.html">EmergencyBurnAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  351</span>                                                    {</div>
-<div class="line"><span class="lineno">  352</span>        <a class="code hl_function" href="../../d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#a4c645f917e0db75e7ba759eddb0898f2">deactivate</a>();</div>
-<div class="line"><span class="lineno">  353</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aad4908d08dea44ea1eb18e1ee89e7d48" name="aad4908d08dea44ea1eb18e1ee89e7d48"></a>
@@ -1030,15 +784,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a2b7beaafff07fa48cea7e315d15012b1">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/dbc/EmergencyBurnAbility_8java_source.html#l00403">403</a> of file <a class="el" href="../../d9/dbc/EmergencyBurnAbility_8java_source.html">EmergencyBurnAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  403</span>                                    {</div>
-<div class="line"><span class="lineno">  404</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d7/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility.html#a1dac0fd7d96b099d40112ee660551f45">showAlarm</a>()) {</div>
-<div class="line"><span class="lineno">  405</span>            Color color = Misc.getNegativeHighlightColor();</div>
-<div class="line"><span class="lineno">  406</span>            <span class="keywordflow">return</span> Misc.scaleAlpha(color, Global.getSector().getCampaignUI().getSharedFader().getBrightness() * 0.5f);</div>
-<div class="line"><span class="lineno">  407</span>        }</div>
-<div class="line"><span class="lineno">  408</span>        <span class="keywordflow">return</span> super.getCooldownColor();</div>
-<div class="line"><span class="lineno">  409</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility_html_a1dac0fd7d96b099d40112ee660551f45"><div class="ttname"><a href="../../d7/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility.html#a1dac0fd7d96b099d40112ee660551f45">com.fs.starfarer.api.impl.campaign.abilities.EmergencyBurnAbility.showAlarm</a></div><div class="ttdeci">boolean showAlarm()</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dbc/EmergencyBurnAbility_8java_source.html#l00375">EmergencyBurnAbility.java:375</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a7b0f95d28cd52d04b77eeb25103d6b78" name="a7b0f95d28cd52d04b77eeb25103d6b78"></a>
@@ -1060,13 +806,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#aa41cf4e32a02c6e63625dbc2a70c3e73">com.fs.starfarer.api.impl.campaign.abilities.BaseDurationAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/dbc/EmergencyBurnAbility_8java_source.html#l00387">387</a> of file <a class="el" href="../../d9/dbc/EmergencyBurnAbility_8java_source.html">EmergencyBurnAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  387</span>                                       {</div>
-<div class="line"><span class="lineno">  388</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d7/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility.html#a1dac0fd7d96b099d40112ee660551f45">showAlarm</a>()) {</div>
-<div class="line"><span class="lineno">  389</span>            <span class="keywordflow">return</span> 0f;</div>
-<div class="line"><span class="lineno">  390</span>        }</div>
-<div class="line"><span class="lineno">  391</span>        <span class="keywordflow">return</span> super.getCooldownFraction();</div>
-<div class="line"><span class="lineno">  392</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aede657f1862ca9e23ca19372c13b16db" name="aede657f1862ca9e23ca19372c13b16db"></a>
@@ -1104,12 +844,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/dbc/EmergencyBurnAbility_8java_source.html#l00221">221</a> of file <a class="el" href="../../d9/dbc/EmergencyBurnAbility_8java_source.html">EmergencyBurnAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  221</span>                                                                                 {</div>
-<div class="line"><span class="lineno">  222</span>        <span class="keywordtype">float</span> crCostFleetMult = fleet.getStats().getDynamic().getValue(Stats.EMERGENCY_BURN_CR_MULT);</div>
-<div class="line"><span class="lineno">  223</span>        <span class="keywordtype">float</span> crLoss = member.getDeployCost() * <a class="code hl_variable" href="../../d7/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility.html#a821f5e0de006b43e139bba2b6548edcd">CR_COST_MULT</a> * crCostFleetMult;</div>
-<div class="line"><span class="lineno">  224</span>        <span class="keywordflow">return</span> Math.round(crLoss * 100f) / 100f;</div>
-<div class="line"><span class="lineno">  225</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ad3741143608edb4c5016fbe6e3a0f1a5" name="ad3741143608edb4c5016fbe6e3a0f1a5"></a>
@@ -1136,23 +871,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/dbc/EmergencyBurnAbility_8java_source.html#l00199">199</a> of file <a class="el" href="../../d9/dbc/EmergencyBurnAbility_8java_source.html">EmergencyBurnAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  199</span>                                                      {</div>
-<div class="line"><span class="lineno">  200</span>        List&lt;FleetMemberAPI&gt; result = <span class="keyword">new</span> ArrayList&lt;FleetMemberAPI&gt;();</div>
-<div class="line"><span class="lineno">  201</span>        CampaignFleetAPI fleet = <a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#abdc51d7defc6b6bf60924a01ec361d2d">getFleet</a>();</div>
-<div class="line"><span class="lineno">  202</span>        <span class="keywordflow">if</span> (fleet == <span class="keyword">null</span>) <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">  203</span>        </div>
-<div class="line"><span class="lineno">  204</span>        <span class="keywordflow">for</span> (FleetMemberAPI member : fleet.getFleetData().getMembersListCopy()) {</div>
-<div class="line"><span class="lineno">  205</span>            <span class="comment">//if (member.isMothballed()) continue;</span></div>
-<div class="line"><span class="lineno">  206</span>            <span class="comment">//float crLoss = member.getDeployCost() * CR_COST_MULT * crCostFleetMult;</span></div>
-<div class="line"><span class="lineno">  207</span>            <span class="keywordtype">float</span> crLoss = <a class="code hl_function" href="../../d7/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility.html#aede657f1862ca9e23ca19372c13b16db">getCRCost</a>(member, fleet);</div>
-<div class="line"><span class="lineno">  208</span>            <span class="keywordflow">if</span> (Math.round(member.getRepairTracker().getCR() * 100) &lt; Math.round(crLoss * 100)) {</div>
-<div class="line"><span class="lineno">  209</span>                result.add(member);</div>
-<div class="line"><span class="lineno">  210</span>            }</div>
-<div class="line"><span class="lineno">  211</span>        }</div>
-<div class="line"><span class="lineno">  212</span>        <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">  213</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility_html_aede657f1862ca9e23ca19372c13b16db"><div class="ttname"><a href="../../d7/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility.html#aede657f1862ca9e23ca19372c13b16db">com.fs.starfarer.api.impl.campaign.abilities.EmergencyBurnAbility.getCRCost</a></div><div class="ttdeci">static float getCRCost(FleetMemberAPI member, CampaignFleetAPI fleet)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dbc/EmergencyBurnAbility_8java_source.html#l00221">EmergencyBurnAbility.java:221</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a014941dc585cd783372c8e81592ce33e" name="a014941dc585cd783372c8e81592ce33e"></a>
@@ -1173,10 +892,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a35207ab01150d1c1521fa7ebf0ef4a75">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/dbc/EmergencyBurnAbility_8java_source.html#l00338">338</a> of file <a class="el" href="../../d9/dbc/EmergencyBurnAbility_8java_source.html">EmergencyBurnAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  338</span>                                {</div>
-<div class="line"><span class="lineno">  339</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  340</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="adce121816bda723eca27af04e9fe9d40" name="adce121816bda723eca27af04e9fe9d40"></a>
@@ -1197,13 +913,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#ad6e3605521c9a92989384500fd02ef3b">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/dbc/EmergencyBurnAbility_8java_source.html#l00412">412</a> of file <a class="el" href="../../d9/dbc/EmergencyBurnAbility_8java_source.html">EmergencyBurnAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  412</span>                                                 {</div>
-<div class="line"><span class="lineno">  413</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d7/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility.html#a1dac0fd7d96b099d40112ee660551f45">showAlarm</a>()) {</div>
-<div class="line"><span class="lineno">  414</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  415</span>        }</div>
-<div class="line"><span class="lineno">  416</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  417</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a915cfc0ff37f5953ed3b56a3daf759c5" name="a915cfc0ff37f5953ed3b56a3daf759c5"></a>
@@ -1224,10 +934,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a735b1d3fa7cefe6db074838fc9ab19ea">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/dbc/EmergencyBurnAbility_8java_source.html#l00398">398</a> of file <a class="el" href="../../d9/dbc/EmergencyBurnAbility_8java_source.html">EmergencyBurnAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  398</span>                                  {</div>
-<div class="line"><span class="lineno">  399</span>        <span class="keywordflow">return</span> super.getCooldownFraction() &lt; 1f;</div>
-<div class="line"><span class="lineno">  400</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5d4fb59e45df824ef548b31fcc20261d" name="a5d4fb59e45df824ef548b31fcc20261d"></a>
@@ -1249,16 +956,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#ac04092fe5109fdf398792cb01f739ae7">com.fs.starfarer.api.impl.campaign.abilities.BaseDurationAbility</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/dbc/EmergencyBurnAbility_8java_source.html#l00380">380</a> of file <a class="el" href="../../d9/dbc/EmergencyBurnAbility_8java_source.html">EmergencyBurnAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  380</span>                              {</div>
-<div class="line"><span class="lineno">  381</span>        <span class="keywordflow">return</span> super.isUsable() &amp;&amp; </div>
-<div class="line"><span class="lineno">  382</span>                    <a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#abdc51d7defc6b6bf60924a01ec361d2d">getFleet</a>() != <span class="keyword">null</span> &amp;&amp; </div>
-<div class="line"><span class="lineno">  383</span>                    <span class="comment">//getNonReadyShips().isEmpty() &amp;&amp;</span></div>
-<div class="line"><span class="lineno">  384</span>                    (<a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#abdc51d7defc6b6bf60924a01ec361d2d">getFleet</a>().<a class="code hl_function" href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a5823904c3782880c9c88f1eec64df2ec">isAIMode</a>() || <a class="code hl_function" href="../../d7/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility.html#a7dfc8418411fd26b2d4c48f9feb6d3ed">computeFuelCost</a>() &lt;= <a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#abdc51d7defc6b6bf60924a01ec361d2d">getFleet</a>().<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#ab219cada372a13654e8e912aba977b05">getCargo</a>().<a class="code hl_function" href="../../dc/d7b/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a97474623007a342af2bedf0d00d2ccfb">getFuel</a>());</div>
-<div class="line"><span class="lineno">  385</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI_html_a5823904c3782880c9c88f1eec64df2ec"><div class="ttname"><a href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a5823904c3782880c9c88f1eec64df2ec">com.fs.starfarer.api.campaign.CampaignFleetAPI.isAIMode</a></div><div class="ttdeci">boolean isAIMode()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI_html_a97474623007a342af2bedf0d00d2ccfb"><div class="ttname"><a href="../../dc/d7b/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a97474623007a342af2bedf0d00d2ccfb">com.fs.starfarer.api.campaign.CargoAPI.getFuel</a></div><div class="ttdeci">float getFuel()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_ab219cada372a13654e8e912aba977b05"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#ab219cada372a13654e8e912aba977b05">com.fs.starfarer.api.campaign.SectorEntityToken.getCargo</a></div><div class="ttdeci">CargoAPI getCargo()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a1dac0fd7d96b099d40112ee660551f45" name="a1dac0fd7d96b099d40112ee660551f45"></a>
@@ -1285,13 +983,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/dbc/EmergencyBurnAbility_8java_source.html#l00375">375</a> of file <a class="el" href="../../d9/dbc/EmergencyBurnAbility_8java_source.html">EmergencyBurnAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  375</span>                                  {</div>
-<div class="line"><span class="lineno">  376</span>        <span class="keywordflow">return</span> !<a class="code hl_function" href="../../d7/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility.html#ad3741143608edb4c5016fbe6e3a0f1a5">getNonReadyShips</a>().isEmpty() &amp;&amp; !<a class="code hl_function" href="../../d7/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility.html#a915cfc0ff37f5953ed3b56a3daf759c5">isOnCooldown</a>() &amp;&amp; !<a class="code hl_function" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a62da104c1ab0ba015a0a193cad0a549b">isActiveOrInProgress</a>() &amp;&amp; <a class="code hl_function" href="../../d7/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility.html#a5d4fb59e45df824ef548b31fcc20261d">isUsable</a>();</div>
-<div class="line"><span class="lineno">  377</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin_html_a62da104c1ab0ba015a0a193cad0a549b"><div class="ttname"><a href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a62da104c1ab0ba015a0a193cad0a549b">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin.isActiveOrInProgress</a></div><div class="ttdeci">boolean isActiveOrInProgress()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/db2/BaseAbilityPlugin_8java_source.html#l00253">BaseAbilityPlugin.java:253</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility_html_a5d4fb59e45df824ef548b31fcc20261d"><div class="ttname"><a href="../../d7/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility.html#a5d4fb59e45df824ef548b31fcc20261d">com.fs.starfarer.api.impl.campaign.abilities.EmergencyBurnAbility.isUsable</a></div><div class="ttdeci">boolean isUsable()</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dbc/EmergencyBurnAbility_8java_source.html#l00380">EmergencyBurnAbility.java:380</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility_html_a915cfc0ff37f5953ed3b56a3daf759c5"><div class="ttname"><a href="../../d7/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility.html#a915cfc0ff37f5953ed3b56a3daf759c5">com.fs.starfarer.api.impl.campaign.abilities.EmergencyBurnAbility.isOnCooldown</a></div><div class="ttdeci">boolean isOnCooldown()</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dbc/EmergencyBurnAbility_8java_source.html#l00398">EmergencyBurnAbility.java:398</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5195d4aed3eeb696c108b12a1c9c1c55" name="a5195d4aed3eeb696c108b12a1c9c1c55"></a>
@@ -1312,10 +1004,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/ddb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#af8e51571a1c0c6f4a0f7e42dc141ba27">com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/dbc/EmergencyBurnAbility_8java_source.html#l00394">394</a> of file <a class="el" href="../../d9/dbc/EmergencyBurnAbility_8java_source.html">EmergencyBurnAbility.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  394</span>                                           {</div>
-<div class="line"><span class="lineno">  395</span>        <span class="keywordflow">return</span> super.showCooldownIndicator();</div>
-<div class="line"><span class="lineno">  396</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

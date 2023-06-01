@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -281,10 +282,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a127952abff2dc53535433f1301cd16f1">com.fs.starfarer.api.combat.BaseHullMod</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/dda/RuggedConstruction_8java_source.html#l00055">55</a> of file <a class="el" href="../../dd/dda/RuggedConstruction_8java_source.html">RuggedConstruction.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   55</span>                                    {</div>
-<div class="line"><span class="lineno">   56</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   57</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ad895da1ca27c5cdb07ac457f803d7057" name="ad895da1ca27c5cdb07ac457f803d7057"></a>
@@ -322,32 +320,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a3859215f6c3408946bf590a2ce5c0e74">com.fs.starfarer.api.combat.BaseHullMod</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/dda/RuggedConstruction_8java_source.html#l00024">24</a> of file <a class="el" href="../../dd/dda/RuggedConstruction_8java_source.html">RuggedConstruction.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   24</span>                                                                                                        {</div>
-<div class="line"><span class="lineno">   25</span>        stats.getDynamic().getStat(Stats.DMOD_EFFECT_MULT).modifyMult(<span class="keywordtype">id</span>, <a class="code hl_variable" href="../../de/dec/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1RuggedConstruction.html#af1f4ef5305e0cf64444ac35dd49a8d76">DMOD_EFFECT_MULT</a>);</div>
-<div class="line"><span class="lineno">   26</span>        <span class="comment">//stats.getDynamic().getMod(Stats.DMOD_AVOID_PROB_MOD).modifyFlat(id, DMOD_AVOID_CHANCE * 0.01f);</span></div>
-<div class="line"><span class="lineno">   27</span>        stats.getDynamic().getMod(Stats.DMOD_ACQUIRE_PROB_MOD).modifyMult(<span class="keywordtype">id</span>, (1f - <a class="code hl_variable" href="../../de/dec/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1RuggedConstruction.html#a9fa01ea1d5ef3bc18bb0540281717c75">DMOD_AVOID_CHANCE</a> * 0.01f));</div>
-<div class="line"><span class="lineno">   28</span>        </div>
-<div class="line"><span class="lineno">   29</span>        stats.getDynamic().getMod(Stats.INDIVIDUAL_SHIP_RECOVERY_MOD).modifyFlat(<span class="keywordtype">id</span>, 1000f);</div>
-<div class="line"><span class="lineno">   30</span>        </div>
-<div class="line"><span class="lineno">   31</span>        <span class="comment">//stats.getDynamic().getStat(Stats.CR_LOSS_WHEN_DISABLED_MULT).modifyMult(id, CR_LOSS_WHEN_DISABLED);</span></div>
-<div class="line"><span class="lineno">   32</span>        <span class="comment">//stats.getDynamic().getMod(Stats.INSTA_REPAIR_FRACTION).modifyFlat(id, REPAIR_FRACTION + 0.45f);</span></div>
-<div class="line"><span class="lineno">   33</span>        <span class="comment">//stats.getDynamic().getMod(Stats.INSTA_REPAIR_FRACTION).modifyFlat(id, REPAIR_FRACTION);</span></div>
-<div class="line"><span class="lineno">   34</span>        </div>
-<div class="line"><span class="lineno">   35</span>        </div>
-<div class="line"><span class="lineno">   36</span><span class="comment">//      stats.getDynamic().getMod(Stats.RECOVERED_HULL_MIN).modifyFlat(id, MIN_HULL * 0.01f);</span></div>
-<div class="line"><span class="lineno">   37</span><span class="comment">//      stats.getDynamic().getMod(Stats.RECOVERED_HULL_MAX).modifyFlat(id, MAX_HULL * 0.01f);</span></div>
-<div class="line"><span class="lineno">   38</span><span class="comment">//      stats.getDynamic().getMod(Stats.RECOVERED_CR_MIN).modifyFlat(id, MIN_CR * 0.01f);</span></div>
-<div class="line"><span class="lineno">   39</span><span class="comment">//      stats.getDynamic().getMod(Stats.RECOVERED_CR_MAX).modifyFlat(id, MAX_CR * 0.01f);</span></div>
-<div class="line"><span class="lineno">   40</span>        </div>
-<div class="line"><span class="lineno">   41</span><span class="comment">//      stats.getMinArmorFraction().modifyFlat(id, 0.1f);</span></div>
-<div class="line"><span class="lineno">   42</span><span class="comment">//      stats.getBeamDamageTakenMult().modifyMult(id, 0.5f);</span></div>
-<div class="line"><span class="lineno">   43</span>        </div>
-<div class="line"><span class="lineno">   44</span>        stats.getSuppliesToRecover().modifyMult(<span class="keywordtype">id</span>, <a class="code hl_variable" href="../../de/dec/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1RuggedConstruction.html#aab1853bc40fe8793795261ce09ab6393">DEPLOYMENT_COST_MULT</a>);</div>
-<div class="line"><span class="lineno">   45</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1RuggedConstruction_html_a9fa01ea1d5ef3bc18bb0540281717c75"><div class="ttname"><a href="../../de/dec/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1RuggedConstruction.html#a9fa01ea1d5ef3bc18bb0540281717c75">com.fs.starfarer.api.impl.hullmods.RuggedConstruction.DMOD_AVOID_CHANCE</a></div><div class="ttdeci">static float DMOD_AVOID_CHANCE</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dda/RuggedConstruction_8java_source.html#l00022">RuggedConstruction.java:22</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1RuggedConstruction_html_aab1853bc40fe8793795261ce09ab6393"><div class="ttname"><a href="../../de/dec/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1RuggedConstruction.html#aab1853bc40fe8793795261ce09ab6393">com.fs.starfarer.api.impl.hullmods.RuggedConstruction.DEPLOYMENT_COST_MULT</a></div><div class="ttdeci">static float DEPLOYMENT_COST_MULT</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dda/RuggedConstruction_8java_source.html#l00010">RuggedConstruction.java:10</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1RuggedConstruction_html_af1f4ef5305e0cf64444ac35dd49a8d76"><div class="ttname"><a href="../../de/dec/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1RuggedConstruction.html#af1f4ef5305e0cf64444ac35dd49a8d76">com.fs.starfarer.api.impl.hullmods.RuggedConstruction.DMOD_EFFECT_MULT</a></div><div class="ttdeci">static float DMOD_EFFECT_MULT</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dda/RuggedConstruction_8java_source.html#l00021">RuggedConstruction.java:21</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a7273ff172f9ed09d8abc16847e019191" name="a7273ff172f9ed09d8abc16847e019191"></a>
@@ -379,13 +352,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a5f6ac9583ca5b1606fda3e53f15c3d14">com.fs.starfarer.api.combat.BaseHullMod</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/dda/RuggedConstruction_8java_source.html#l00047">47</a> of file <a class="el" href="../../dd/dda/RuggedConstruction_8java_source.html">RuggedConstruction.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   47</span>                                                                    {</div>
-<div class="line"><span class="lineno">   48</span>        <span class="keywordflow">if</span> (index == 0) <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span> + (int) Math.round((1f - <a class="code hl_variable" href="../../de/dec/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1RuggedConstruction.html#af1f4ef5305e0cf64444ac35dd49a8d76">DMOD_EFFECT_MULT</a>) * 100f) + <span class="stringliteral">&quot;%&quot;</span>;</div>
-<div class="line"><span class="lineno">   49</span>        <span class="keywordflow">if</span> (index == 1) <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span> + (int) <a class="code hl_variable" href="../../de/dec/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1RuggedConstruction.html#a9fa01ea1d5ef3bc18bb0540281717c75">DMOD_AVOID_CHANCE</a> + <span class="stringliteral">&quot;%&quot;</span>;</div>
-<div class="line"><span class="lineno">   50</span>        <span class="keywordflow">if</span> (index == 2) <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span> + (int) Math.round((1f - <a class="code hl_variable" href="../../de/dec/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1RuggedConstruction.html#aab1853bc40fe8793795261ce09ab6393">DEPLOYMENT_COST_MULT</a>) * 100f) + <span class="stringliteral">&quot;%&quot;</span>;</div>
-<div class="line"><span class="lineno">   51</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   52</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

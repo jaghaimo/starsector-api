@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -241,15 +242,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d81/MiscFleetRouteManager_8java_source.html#l00068">68</a> of file <a class="el" href="../../d3/d81/MiscFleetRouteManager_8java_source.html">MiscFleetRouteManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   68</span>                                   {</div>
-<div class="line"><span class="lineno">   69</span>        super(1f, 14f); <span class="comment">// whatever values; overridden below</span></div>
-<div class="line"><span class="lineno">   70</span>        </div>
-<div class="line"><span class="lineno">   71</span>        <span class="keywordtype">float</span> min = Global.getSettings().getFloatFromArray(<span class="stringliteral">&quot;miscSpawnInterval&quot;</span>, 0);</div>
-<div class="line"><span class="lineno">   72</span>        <span class="keywordtype">float</span> max = Global.getSettings().getFloatFromArray(<span class="stringliteral">&quot;miscSpawnInterval&quot;</span>, 1);</div>
-<div class="line"><span class="lineno">   73</span>        <a class="code hl_variable" href="../../d1/ddd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseRouteFleetManager.html#aa835aa3a5d9150fdae9d9900665df467">interval</a> = <span class="keyword">new</span> IntervalUtil(min, max);</div>
-<div class="line"><span class="lineno">   74</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseRouteFleetManager_html_aa835aa3a5d9150fdae9d9900665df467"><div class="ttname"><a href="../../d1/ddd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseRouteFleetManager.html#aa835aa3a5d9150fdae9d9900665df467">com.fs.starfarer.api.impl.campaign.fleets.BaseRouteFleetManager.interval</a></div><div class="ttdeci">IntervalUtil interval</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/da5/BaseRouteFleetManager_8java_source.html#l00010">BaseRouteFleetManager.java:10</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -279,80 +272,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d1/ddd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseRouteFleetManager.html#aab8855e529c5f3e374e6b6b626ef190f">com.fs.starfarer.api.impl.campaign.fleets.BaseRouteFleetManager</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d81/MiscFleetRouteManager_8java_source.html#l00125">125</a> of file <a class="el" href="../../d3/d81/MiscFleetRouteManager_8java_source.html">MiscFleetRouteManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  125</span>                                             {</div>
-<div class="line"><span class="lineno">  126</span>        </div>
-<div class="line"><span class="lineno">  127</span>        WeightedRandomPicker&lt;MiscFleetCreatorPlugin&gt; picker = <span class="keyword">new</span> WeightedRandomPicker&lt;MiscFleetCreatorPlugin&gt;(<a class="code hl_variable" href="../../de/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscFleetRouteManager.html#a680f37afb28806d08b4e17557cdc44f7">random</a>);</div>
-<div class="line"><span class="lineno">  128</span>        <span class="keywordflow">for</span> (MiscFleetCreatorPlugin curr : <a class="code hl_variable" href="../../de/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscFleetRouteManager.html#a0be2cb790858cf015a0edbaa587fcc0b">CREATORS</a>) {</div>
-<div class="line"><span class="lineno">  129</span>            <span class="keywordtype">int</span> count = 0;</div>
-<div class="line"><span class="lineno">  130</span>            <span class="keywordflow">for</span> (RouteData route : RouteManager.getInstance().getRoutesForSource(<a class="code hl_function" href="../../de/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscFleetRouteManager.html#ae186ff86954cb2fc6c091f8588355d0a">getRouteSourceId</a>())) {</div>
-<div class="line"><span class="lineno">  131</span>                <span class="keywordflow">if</span> (route.getCustom() instanceof MiscRouteData) {</div>
-<div class="line"><span class="lineno">  132</span>                    MiscRouteData <a class="code hl_variable" href="../../de/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscFleetRouteManager.html#ab2ba2cbb59545b2002641717a6d65304">data</a> = (MiscRouteData) route.getCustom();</div>
-<div class="line"><span class="lineno">  133</span>                    <span class="keywordflow">if</span> (curr.getId().equals(<a class="code hl_variable" href="../../de/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscFleetRouteManager.html#ab2ba2cbb59545b2002641717a6d65304">data</a>.creatorId)) {</div>
-<div class="line"><span class="lineno">  134</span>                        count++;</div>
-<div class="line"><span class="lineno">  135</span>                    }</div>
-<div class="line"><span class="lineno">  136</span>                }</div>
-<div class="line"><span class="lineno">  137</span>            }</div>
-<div class="line"><span class="lineno">  138</span>            <span class="keywordflow">if</span> (count &gt;= curr.getMaxFleetsForThisCreator()) {</div>
-<div class="line"><span class="lineno">  139</span>                <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  140</span>            }</div>
-<div class="line"><span class="lineno">  141</span>            </div>
-<div class="line"><span class="lineno">  142</span>            picker.add(curr, curr.getFrequency());</div>
-<div class="line"><span class="lineno">  143</span>        }</div>
-<div class="line"><span class="lineno">  144</span>        </div>
-<div class="line"><span class="lineno">  145</span>        MiscFleetCreatorPlugin creator = picker.pick();</div>
-<div class="line"><span class="lineno">  146</span>        <span class="keywordflow">if</span> (creator == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  147</span>        </div>
-<div class="line"><span class="lineno">  148</span>        MiscRouteData params = creator.createRouteParams(<span class="keyword">this</span>, <a class="code hl_variable" href="../../de/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscFleetRouteManager.html#a680f37afb28806d08b4e17557cdc44f7">random</a>);</div>
-<div class="line"><span class="lineno">  149</span>        </div>
-<div class="line"><span class="lineno">  150</span>        <span class="keywordflow">if</span> (params != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  151</span>            </div>
-<div class="line"><span class="lineno">  152</span>            MarketAPI from = params.from;</div>
-<div class="line"><span class="lineno">  153</span>            SectorEntityToken to = params.to;</div>
-<div class="line"><span class="lineno">  154</span>            <a class="code hl_variable" href="../../de/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscFleetRouteManager.html#a1af7254a9cb5027efc94f1ce38643dc6">log</a>.info(<span class="stringliteral">&quot;Created misc [&quot;</span> + creator.getId() + <span class="stringliteral">&quot;] &quot;</span> + from.getName() + <span class="stringliteral">&quot; to &quot;</span> + to.getName());</div>
-<div class="line"><span class="lineno">  155</span>            </div>
-<div class="line"><span class="lineno">  156</span>            <span class="comment">//Long seed = Misc.genRandomSeed();</span></div>
-<div class="line"><span class="lineno">  157</span>            Long seed = <a class="code hl_variable" href="../../de/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscFleetRouteManager.html#a680f37afb28806d08b4e17557cdc44f7">random</a>.nextLong();</div>
-<div class="line"><span class="lineno">  158</span>            String <span class="keywordtype">id</span> = <a class="code hl_function" href="../../de/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscFleetRouteManager.html#ae186ff86954cb2fc6c091f8588355d0a">getRouteSourceId</a>();</div>
-<div class="line"><span class="lineno">  159</span>            </div>
-<div class="line"><span class="lineno">  160</span>            OptionalFleetData extra = <span class="keyword">new</span> OptionalFleetData(from);</div>
-<div class="line"><span class="lineno">  161</span>            extra.factionId = params.factionId;</div>
-<div class="line"><span class="lineno">  162</span>            </div>
-<div class="line"><span class="lineno">  163</span>            RouteData route = RouteManager.getInstance().addRoute(<span class="keywordtype">id</span>, from, seed, extra, <span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  164</span>            route.setCustom(params);</div>
-<div class="line"><span class="lineno">  165</span>            </div>
-<div class="line"><span class="lineno">  166</span>            <span class="keywordtype">float</span> orbitDays = params.size * (0.75f + <a class="code hl_variable" href="../../de/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscFleetRouteManager.html#a680f37afb28806d08b4e17557cdc44f7">random</a>.nextFloat() * 0.5f);</div>
-<div class="line"><span class="lineno">  167</span>            orbitDays *= 30f;</div>
-<div class="line"><span class="lineno">  168</span>            <span class="keywordflow">if</span> (orbitDays &lt; 1f) orbitDays = 1f;</div>
-<div class="line"><span class="lineno">  169</span>            <span class="keywordflow">if</span> (orbitDays &gt; 3f) orbitDays = 3f;</div>
-<div class="line"><span class="lineno">  170</span>            </div>
-<div class="line"><span class="lineno">  171</span>            route.addSegment(<span class="keyword">new</span> RouteSegment(<a class="code hl_variable" href="../../de/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscFleetRouteManager.html#a055bbf34480d91a31a59921ddb4343d4">ROUTE_SRC_LOAD</a>, orbitDays, from.getPrimaryEntity()));</div>
-<div class="line"><span class="lineno">  172</span>            route.addSegment(<span class="keyword">new</span> RouteSegment(<a class="code hl_variable" href="../../de/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscFleetRouteManager.html#acacb98a2e0d71f0116e6681c4e0816e1">ROUTE_TRAVEL_DST</a>, from.getPrimaryEntity(), to));</div>
-<div class="line"><span class="lineno">  173</span>            route.addSegment(<span class="keyword">new</span> RouteSegment(<a class="code hl_variable" href="../../de/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscFleetRouteManager.html#a21d70028ddbee0e7894f46ed173551da">ROUTE_DST_UNLOAD</a>, orbitDays * 0.5f, to));</div>
-<div class="line"><span class="lineno">  174</span>            route.addSegment(<span class="keyword">new</span> RouteSegment(<a class="code hl_variable" href="../../de/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscFleetRouteManager.html#a2df01c5dca7a1f524bf2efe048f336cf">ROUTE_DST_LOAD</a>, orbitDays * 0.5f, to));</div>
-<div class="line"><span class="lineno">  175</span>            route.addSegment(<span class="keyword">new</span> RouteSegment(<a class="code hl_variable" href="../../de/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscFleetRouteManager.html#a1bd24d5e39965659539dcf39fe654ec5">ROUTE_TRAVEL_SRC</a>, to, from.getPrimaryEntity()));</div>
-<div class="line"><span class="lineno">  176</span>            route.addSegment(<span class="keyword">new</span> RouteSegment(<a class="code hl_variable" href="../../de/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscFleetRouteManager.html#aefc3368e7981886799d996c724ac8938">ROUTE_SRC_UNLOAD</a>, orbitDays, from.getPrimaryEntity()));</div>
-<div class="line"><span class="lineno">  177</span>            </div>
-<div class="line"><span class="lineno">  178</span>            <span class="keywordtype">float</span> min = Global.getSettings().getFloatFromArray(<span class="stringliteral">&quot;miscSpawnTimeoutPerMarket&quot;</span>, 0);</div>
-<div class="line"><span class="lineno">  179</span>            <span class="keywordtype">float</span> max = Global.getSettings().getFloatFromArray(<span class="stringliteral">&quot;miscSpawnTimeoutPerMarket&quot;</span>, 1);</div>
-<div class="line"><span class="lineno">  180</span>            <span class="keywordtype">float</span> timeout = min + (max - min) * <a class="code hl_variable" href="../../de/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscFleetRouteManager.html#a680f37afb28806d08b4e17557cdc44f7">random</a>.nextFloat();</div>
-<div class="line"><span class="lineno">  181</span>            </div>
-<div class="line"><span class="lineno">  182</span>            <a class="code hl_function" href="../../de/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscFleetRouteManager.html#a2732644f2bc60ee01afb381989443085">getTimeout</a>(creator.getId()).<a class="code hl_function" href="../../dd/df5/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTracker.html#aa63bae77983b72131b0522c039d5d11a">add</a>(from.getId(), timeout);</div>
-<div class="line"><span class="lineno">  183</span>        }</div>
-<div class="line"><span class="lineno">  184</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscFleetRouteManager_html_a055bbf34480d91a31a59921ddb4343d4"><div class="ttname"><a href="../../de/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscFleetRouteManager.html#a055bbf34480d91a31a59921ddb4343d4">com.fs.starfarer.api.impl.campaign.fleets.misc.MiscFleetRouteManager.ROUTE_SRC_LOAD</a></div><div class="ttdeci">static final Integer ROUTE_SRC_LOAD</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d81/MiscFleetRouteManager_8java_source.html#l00050">MiscFleetRouteManager.java:50</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscFleetRouteManager_html_a0be2cb790858cf015a0edbaa587fcc0b"><div class="ttname"><a href="../../de/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscFleetRouteManager.html#a0be2cb790858cf015a0edbaa587fcc0b">com.fs.starfarer.api.impl.campaign.fleets.misc.MiscFleetRouteManager.CREATORS</a></div><div class="ttdeci">static List&lt; MiscFleetCreatorPlugin &gt; CREATORS</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d81/MiscFleetRouteManager_8java_source.html#l00029">MiscFleetRouteManager.java:29</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscFleetRouteManager_html_a1af7254a9cb5027efc94f1ce38643dc6"><div class="ttname"><a href="../../de/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscFleetRouteManager.html#a1af7254a9cb5027efc94f1ce38643dc6">com.fs.starfarer.api.impl.campaign.fleets.misc.MiscFleetRouteManager.log</a></div><div class="ttdeci">static Logger log</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d81/MiscFleetRouteManager_8java_source.html#l00060">MiscFleetRouteManager.java:60</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscFleetRouteManager_html_a1bd24d5e39965659539dcf39fe654ec5"><div class="ttname"><a href="../../de/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscFleetRouteManager.html#a1bd24d5e39965659539dcf39fe654ec5">com.fs.starfarer.api.impl.campaign.fleets.misc.MiscFleetRouteManager.ROUTE_TRAVEL_SRC</a></div><div class="ttdeci">static final Integer ROUTE_TRAVEL_SRC</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d81/MiscFleetRouteManager_8java_source.html#l00056">MiscFleetRouteManager.java:56</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscFleetRouteManager_html_a21d70028ddbee0e7894f46ed173551da"><div class="ttname"><a href="../../de/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscFleetRouteManager.html#a21d70028ddbee0e7894f46ed173551da">com.fs.starfarer.api.impl.campaign.fleets.misc.MiscFleetRouteManager.ROUTE_DST_UNLOAD</a></div><div class="ttdeci">static final Integer ROUTE_DST_UNLOAD</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d81/MiscFleetRouteManager_8java_source.html#l00052">MiscFleetRouteManager.java:52</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscFleetRouteManager_html_a2732644f2bc60ee01afb381989443085"><div class="ttname"><a href="../../de/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscFleetRouteManager.html#a2732644f2bc60ee01afb381989443085">com.fs.starfarer.api.impl.campaign.fleets.misc.MiscFleetRouteManager.getTimeout</a></div><div class="ttdeci">TimeoutTracker&lt; String &gt; getTimeout(String creatorId)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d81/MiscFleetRouteManager_8java_source.html#l00092">MiscFleetRouteManager.java:92</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscFleetRouteManager_html_a2df01c5dca7a1f524bf2efe048f336cf"><div class="ttname"><a href="../../de/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscFleetRouteManager.html#a2df01c5dca7a1f524bf2efe048f336cf">com.fs.starfarer.api.impl.campaign.fleets.misc.MiscFleetRouteManager.ROUTE_DST_LOAD</a></div><div class="ttdeci">static final Integer ROUTE_DST_LOAD</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d81/MiscFleetRouteManager_8java_source.html#l00053">MiscFleetRouteManager.java:53</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscFleetRouteManager_html_a680f37afb28806d08b4e17557cdc44f7"><div class="ttname"><a href="../../de/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscFleetRouteManager.html#a680f37afb28806d08b4e17557cdc44f7">com.fs.starfarer.api.impl.campaign.fleets.misc.MiscFleetRouteManager.random</a></div><div class="ttdeci">Random random</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d81/MiscFleetRouteManager_8java_source.html#l00065">MiscFleetRouteManager.java:65</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscFleetRouteManager_html_ab2ba2cbb59545b2002641717a6d65304"><div class="ttname"><a href="../../de/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscFleetRouteManager.html#ab2ba2cbb59545b2002641717a6d65304">com.fs.starfarer.api.impl.campaign.fleets.misc.MiscFleetRouteManager.data</a></div><div class="ttdeci">transient LinkedHashMap data</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d81/MiscFleetRouteManager_8java_source.html#l00066">MiscFleetRouteManager.java:66</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscFleetRouteManager_html_acacb98a2e0d71f0116e6681c4e0816e1"><div class="ttname"><a href="../../de/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscFleetRouteManager.html#acacb98a2e0d71f0116e6681c4e0816e1">com.fs.starfarer.api.impl.campaign.fleets.misc.MiscFleetRouteManager.ROUTE_TRAVEL_DST</a></div><div class="ttdeci">static final Integer ROUTE_TRAVEL_DST</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d81/MiscFleetRouteManager_8java_source.html#l00051">MiscFleetRouteManager.java:51</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscFleetRouteManager_html_ae186ff86954cb2fc6c091f8588355d0a"><div class="ttname"><a href="../../de/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscFleetRouteManager.html#ae186ff86954cb2fc6c091f8588355d0a">com.fs.starfarer.api.impl.campaign.fleets.misc.MiscFleetRouteManager.getRouteSourceId</a></div><div class="ttdeci">String getRouteSourceId()</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d81/MiscFleetRouteManager_8java_source.html#l00113">MiscFleetRouteManager.java:113</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscFleetRouteManager_html_aefc3368e7981886799d996c724ac8938"><div class="ttname"><a href="../../de/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscFleetRouteManager.html#aefc3368e7981886799d996c724ac8938">com.fs.starfarer.api.impl.campaign.fleets.misc.MiscFleetRouteManager.ROUTE_SRC_UNLOAD</a></div><div class="ttdeci">static final Integer ROUTE_SRC_UNLOAD</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d81/MiscFleetRouteManager_8java_source.html#l00057">MiscFleetRouteManager.java:57</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTracker_html_aa63bae77983b72131b0522c039d5d11a"><div class="ttname"><a href="../../dd/df5/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTracker.html#aa63bae77983b72131b0522c039d5d11a">com.fs.starfarer.api.util.TimeoutTracker.add</a></div><div class="ttdeci">void add(T item, float time)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dcf/TimeoutTracker_8java_source.html#l00030">TimeoutTracker.java:30</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aac72cff96db54de0806f1d30c34f92f3" name="aac72cff96db54de0806f1d30c34f92f3"></a>
@@ -380,18 +300,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d1/ddd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseRouteFleetManager.html#a172d51f87995399d0dd99ba674b3359f">com.fs.starfarer.api.impl.campaign.fleets.BaseRouteFleetManager</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d81/MiscFleetRouteManager_8java_source.html#l00102">102</a> of file <a class="el" href="../../d3/d81/MiscFleetRouteManager_8java_source.html">MiscFleetRouteManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  102</span>                                      {</div>
-<div class="line"><span class="lineno">  103</span>        </div>
-<div class="line"><span class="lineno">  104</span>        <span class="comment">//super.advance(amount * 10f);</span></div>
-<div class="line"><span class="lineno">  105</span>        super.advance(amount);</div>
-<div class="line"><span class="lineno">  106</span>        </div>
-<div class="line"><span class="lineno">  107</span>        <span class="keywordtype">float</span> days = Global.getSector().getClock().convertToDays(amount);</div>
-<div class="line"><span class="lineno">  108</span>        <span class="keywordflow">for</span> (TimeoutTracker&lt;String&gt; curr : <a class="code hl_variable" href="../../de/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscFleetRouteManager.html#a94dfc4afc132915fcaf270c13264c2c5">recentlySent</a>.values()) {</div>
-<div class="line"><span class="lineno">  109</span>            curr.advance(days);</div>
-<div class="line"><span class="lineno">  110</span>        }</div>
-<div class="line"><span class="lineno">  111</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscFleetRouteManager_html_a94dfc4afc132915fcaf270c13264c2c5"><div class="ttname"><a href="../../de/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscFleetRouteManager.html#a94dfc4afc132915fcaf270c13264c2c5">com.fs.starfarer.api.impl.campaign.fleets.misc.MiscFleetRouteManager.recentlySent</a></div><div class="ttdeci">Map&lt; String, TimeoutTracker&lt; String &gt; &gt; recentlySent</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d81/MiscFleetRouteManager_8java_source.html#l00064">MiscFleetRouteManager.java:64</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a581c673701195777f09b98eb2c167cd6" name="a581c673701195777f09b98eb2c167cd6"></a>
@@ -419,15 +328,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d81/MiscFleetRouteManager_8java_source.html#l00191">191</a> of file <a class="el" href="../../d3/d81/MiscFleetRouteManager_8java_source.html">MiscFleetRouteManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  191</span>                                                               {</div>
-<div class="line"><span class="lineno">  192</span>        <span class="keywordflow">for</span> (MiscFleetCreatorPlugin curr : <a class="code hl_variable" href="../../de/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscFleetRouteManager.html#a0be2cb790858cf015a0edbaa587fcc0b">CREATORS</a>) {</div>
-<div class="line"><span class="lineno">  193</span>            <span class="keywordflow">if</span> (curr.getId().equals(<span class="keywordtype">id</span>)) {</div>
-<div class="line"><span class="lineno">  194</span>                <span class="keywordflow">return</span> curr;</div>
-<div class="line"><span class="lineno">  195</span>            }</div>
-<div class="line"><span class="lineno">  196</span>        }</div>
-<div class="line"><span class="lineno">  197</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  198</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a7dbb7481923e8e3a3e6c8d0491ee70d9" name="a7dbb7481923e8e3a3e6c8d0491ee70d9"></a>
@@ -446,10 +347,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d81/MiscFleetRouteManager_8java_source.html#l00256">256</a> of file <a class="el" href="../../d3/d81/MiscFleetRouteManager_8java_source.html">MiscFleetRouteManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  256</span>                                   {</div>
-<div class="line"><span class="lineno">  257</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../de/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscFleetRouteManager.html#ab2ba2cbb59545b2002641717a6d65304">data</a>;</div>
-<div class="line"><span class="lineno">  258</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a6413d483fdad4b8a479115dc4a40bd2e" name="a6413d483fdad4b8a479115dc4a40bd2e"></a>
@@ -478,13 +376,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d1/ddd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseRouteFleetManager.html#a4762547515fd5bfae1227b7a0ed32df1">com.fs.starfarer.api.impl.campaign.fleets.BaseRouteFleetManager</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d81/MiscFleetRouteManager_8java_source.html#l00117">117</a> of file <a class="el" href="../../d3/d81/MiscFleetRouteManager_8java_source.html">MiscFleetRouteManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  117</span>                                 {</div>
-<div class="line"><span class="lineno">  118</span>        <span class="comment">//if (true) return 1;</span></div>
-<div class="line"><span class="lineno">  119</span>        <span class="keywordtype">int</span> numMarkets = Global.getSector().getEconomy().getNumMarkets();</div>
-<div class="line"><span class="lineno">  120</span>        <span class="keywordtype">int</span> maxBasedOnMarkets = numMarkets * 1;</div>
-<div class="line"><span class="lineno">  121</span>        <span class="keywordflow">return</span> Math.min(maxBasedOnMarkets, Global.getSettings().getInt(<span class="stringliteral">&quot;maxMiscFleets&quot;</span>));</div>
-<div class="line"><span class="lineno">  122</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a0e503c516a4ab62e2ee8993bc42fc8bc" name="a0e503c516a4ab62e2ee8993bc42fc8bc"></a>
@@ -503,10 +395,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d81/MiscFleetRouteManager_8java_source.html#l00088">88</a> of file <a class="el" href="../../d3/d81/MiscFleetRouteManager_8java_source.html">MiscFleetRouteManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   88</span>                              {</div>
-<div class="line"><span class="lineno">   89</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../de/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscFleetRouteManager.html#a680f37afb28806d08b4e17557cdc44f7">random</a>;</div>
-<div class="line"><span class="lineno">   90</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae186ff86954cb2fc6c091f8588355d0a" name="ae186ff86954cb2fc6c091f8588355d0a"></a>
@@ -535,11 +424,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d1/ddd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseRouteFleetManager.html#ab674f97e4ac62276babbe21b4afec1f0">com.fs.starfarer.api.impl.campaign.fleets.BaseRouteFleetManager</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d81/MiscFleetRouteManager_8java_source.html#l00113">113</a> of file <a class="el" href="../../d3/d81/MiscFleetRouteManager_8java_source.html">MiscFleetRouteManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  113</span>                                        {</div>
-<div class="line"><span class="lineno">  114</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../de/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscFleetRouteManager.html#ac4392c18647142b54708f52c03fd4b9c">SOURCE_ID</a>;</div>
-<div class="line"><span class="lineno">  115</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscFleetRouteManager_html_ac4392c18647142b54708f52c03fd4b9c"><div class="ttname"><a href="../../de/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscFleetRouteManager.html#ac4392c18647142b54708f52c03fd4b9c">com.fs.starfarer.api.impl.campaign.fleets.misc.MiscFleetRouteManager.SOURCE_ID</a></div><div class="ttdeci">static final String SOURCE_ID</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d81/MiscFleetRouteManager_8java_source.html#l00059">MiscFleetRouteManager.java:59</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2732644f2bc60ee01afb381989443085" name="a2732644f2bc60ee01afb381989443085"></a>
@@ -559,15 +444,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d81/MiscFleetRouteManager_8java_source.html#l00092">92</a> of file <a class="el" href="../../d3/d81/MiscFleetRouteManager_8java_source.html">MiscFleetRouteManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   92</span>                                                               {</div>
-<div class="line"><span class="lineno">   93</span>        TimeoutTracker&lt;String&gt; result = <a class="code hl_variable" href="../../de/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscFleetRouteManager.html#a94dfc4afc132915fcaf270c13264c2c5">recentlySent</a>.get(creatorId);</div>
-<div class="line"><span class="lineno">   94</span>        <span class="keywordflow">if</span> (result == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   95</span>            result = <span class="keyword">new</span> TimeoutTracker&lt;String&gt;();</div>
-<div class="line"><span class="lineno">   96</span>            <a class="code hl_variable" href="../../de/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscFleetRouteManager.html#a94dfc4afc132915fcaf270c13264c2c5">recentlySent</a>.put(creatorId, result);</div>
-<div class="line"><span class="lineno">   97</span>        }</div>
-<div class="line"><span class="lineno">   98</span>        <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">   99</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a655ff493ca04d15f28e6c583000b3a7b" name="a655ff493ca04d15f28e6c583000b3a7b"></a>
@@ -594,16 +471,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d81/MiscFleetRouteManager_8java_source.html#l00076">76</a> of file <a class="el" href="../../d3/d81/MiscFleetRouteManager_8java_source.html">MiscFleetRouteManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   76</span>                                   {</div>
-<div class="line"><span class="lineno">   77</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../de/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscFleetRouteManager.html#a94dfc4afc132915fcaf270c13264c2c5">recentlySent</a> == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   78</span>            <a class="code hl_variable" href="../../de/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscFleetRouteManager.html#a94dfc4afc132915fcaf270c13264c2c5">recentlySent</a> = <span class="keyword">new</span> LinkedHashMap&lt;String, TimeoutTracker&lt;String&gt;&gt;();</div>
-<div class="line"><span class="lineno">   79</span>        }</div>
-<div class="line"><span class="lineno">   80</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../de/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscFleetRouteManager.html#ab2ba2cbb59545b2002641717a6d65304">data</a> == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   81</span>            <a class="code hl_variable" href="../../de/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscFleetRouteManager.html#ab2ba2cbb59545b2002641717a6d65304">data</a> = <span class="keyword">new</span> LinkedHashMap();</div>
-<div class="line"><span class="lineno">   82</span>        }</div>
-<div class="line"><span class="lineno">   83</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">   84</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a940a95e89301878fae7cdecfd9e20e2e" name="a940a95e89301878fae7cdecfd9e20e2e"></a>
@@ -623,10 +491,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d81/MiscFleetRouteManager_8java_source.html#l00252">252</a> of file <a class="el" href="../../d3/d81/MiscFleetRouteManager_8java_source.html">MiscFleetRouteManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  252</span>                                                                        {</div>
-<div class="line"><span class="lineno">  253</span>        </div>
-<div class="line"><span class="lineno">  254</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a4dd4d6f090f0a581c2750a174d5a2300" name="a4dd4d6f090f0a581c2750a174d5a2300"></a>
@@ -672,22 +537,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d5/d7b/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1FleetEventListener.html#a6dff203922d9929930959967dfddb927">com.fs.starfarer.api.campaign.listeners.FleetEventListener</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d81/MiscFleetRouteManager_8java_source.html#l00221">221</a> of file <a class="el" href="../../d3/d81/MiscFleetRouteManager_8java_source.html">MiscFleetRouteManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  221</span>                                                                                                               {</div>
-<div class="line"><span class="lineno">  222</span>        RouteData route = RouteManager.getInstance().getRoute(<a class="code hl_function" href="../../de/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscFleetRouteManager.html#ae186ff86954cb2fc6c091f8588355d0a">getRouteSourceId</a>(), fleet);</div>
-<div class="line"><span class="lineno">  223</span>        <span class="keywordflow">if</span> (route == <span class="keyword">null</span> || !(route.getCustom() instanceof MiscRouteData)) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  224</span>        </div>
-<div class="line"><span class="lineno">  225</span>        <span class="comment">//if (route.isExpired()) return;</span></div>
-<div class="line"><span class="lineno">  226</span>        <span class="keywordflow">if</span> (!battle.isPlayerInvolved()) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  227</span>        </div>
-<div class="line"><span class="lineno">  228</span>        MiscRouteData <a class="code hl_variable" href="../../de/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscFleetRouteManager.html#ab2ba2cbb59545b2002641717a6d65304">data</a> = (MiscRouteData) route.getCustom();</div>
-<div class="line"><span class="lineno">  229</span>        </div>
-<div class="line"><span class="lineno">  230</span>        MiscFleetCreatorPlugin curr = <a class="code hl_function" href="../../de/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscFleetRouteManager.html#a581c673701195777f09b98eb2c167cd6">getCreator</a>(<a class="code hl_variable" href="../../de/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscFleetRouteManager.html#ab2ba2cbb59545b2002641717a6d65304">data</a>.creatorId);</div>
-<div class="line"><span class="lineno">  231</span>        <span class="keywordflow">if</span> (curr != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  232</span>            curr.reportBattleOccurred(<span class="keyword">this</span>, fleet, primaryWinner, battle);</div>
-<div class="line"><span class="lineno">  233</span>        }</div>
-<div class="line"><span class="lineno">  234</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscFleetRouteManager_html_a581c673701195777f09b98eb2c167cd6"><div class="ttname"><a href="../../de/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscFleetRouteManager.html#a581c673701195777f09b98eb2c167cd6">com.fs.starfarer.api.impl.campaign.fleets.misc.MiscFleetRouteManager.getCreator</a></div><div class="ttdeci">static MiscFleetCreatorPlugin getCreator(String id)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d81/MiscFleetRouteManager_8java_source.html#l00191">MiscFleetRouteManager.java:191</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9195695ca8e31bdcd766634e3a8f1ece" name="a9195695ca8e31bdcd766634e3a8f1ece"></a>
@@ -725,18 +575,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d5/d7b/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1FleetEventListener.html#a80bf021b96aa1c0f11ee40000e5d3666">com.fs.starfarer.api.campaign.listeners.FleetEventListener</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d81/MiscFleetRouteManager_8java_source.html#l00236">236</a> of file <a class="el" href="../../d3/d81/MiscFleetRouteManager_8java_source.html">MiscFleetRouteManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  236</span>                                                                                                                {</div>
-<div class="line"><span class="lineno">  237</span>        RouteData route = RouteManager.getInstance().getRoute(<a class="code hl_function" href="../../de/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscFleetRouteManager.html#ae186ff86954cb2fc6c091f8588355d0a">getRouteSourceId</a>(), fleet);</div>
-<div class="line"><span class="lineno">  238</span>        <span class="keywordflow">if</span> (route == <span class="keyword">null</span> || !(route.getCustom() instanceof MiscRouteData)) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  239</span>        </div>
-<div class="line"><span class="lineno">  240</span>        MiscRouteData <a class="code hl_variable" href="../../de/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscFleetRouteManager.html#ab2ba2cbb59545b2002641717a6d65304">data</a> = (MiscRouteData) route.getCustom();</div>
-<div class="line"><span class="lineno">  241</span>        </div>
-<div class="line"><span class="lineno">  242</span>        MiscFleetCreatorPlugin curr = <a class="code hl_function" href="../../de/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscFleetRouteManager.html#a581c673701195777f09b98eb2c167cd6">getCreator</a>(<a class="code hl_variable" href="../../de/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscFleetRouteManager.html#ab2ba2cbb59545b2002641717a6d65304">data</a>.creatorId);</div>
-<div class="line"><span class="lineno">  243</span>        <span class="keywordflow">if</span> (curr != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  244</span>            curr.reportFleetDespawnedToListener(<span class="keyword">this</span>, fleet, reason, param);</div>
-<div class="line"><span class="lineno">  245</span>        }</div>
-<div class="line"><span class="lineno">  246</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aeb4e95e7caa2be01825c9d5c8f74ad08" name="aeb4e95e7caa2be01825c9d5c8f74ad08"></a>
@@ -756,10 +595,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d81/MiscFleetRouteManager_8java_source.html#l00187">187</a> of file <a class="el" href="../../d3/d81/MiscFleetRouteManager_8java_source.html">MiscFleetRouteManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  187</span>                                                                     {</div>
-<div class="line"><span class="lineno">  188</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  189</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8187db40e048dd6d53fb21b0557269a7" name="a8187db40e048dd6d53fb21b0557269a7"></a>
@@ -779,10 +615,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d81/MiscFleetRouteManager_8java_source.html#l00248">248</a> of file <a class="el" href="../../d3/d81/MiscFleetRouteManager_8java_source.html">MiscFleetRouteManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  248</span>                                                 {</div>
-<div class="line"><span class="lineno">  249</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  250</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aeacc27fa4e617a7ea3d9cef6e130c32d" name="aeacc27fa4e617a7ea3d9cef6e130c32d"></a>
@@ -802,26 +635,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d81/MiscFleetRouteManager_8java_source.html#l00201">201</a> of file <a class="el" href="../../d3/d81/MiscFleetRouteManager_8java_source.html">MiscFleetRouteManager.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  201</span>                                                        {</div>
-<div class="line"><span class="lineno">  202</span>        Random <a class="code hl_variable" href="../../de/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscFleetRouteManager.html#a680f37afb28806d08b4e17557cdc44f7">random</a> = this.<a class="code hl_variable" href="../../de/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscFleetRouteManager.html#a680f37afb28806d08b4e17557cdc44f7">random</a>;</div>
-<div class="line"><span class="lineno">  203</span>        <span class="keywordflow">if</span> (route.getSeed() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  204</span>            <a class="code hl_variable" href="../../de/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscFleetRouteManager.html#a680f37afb28806d08b4e17557cdc44f7">random</a> = <span class="keyword">new</span> Random(route.getSeed());</div>
-<div class="line"><span class="lineno">  205</span>        }</div>
-<div class="line"><span class="lineno">  206</span>        </div>
-<div class="line"><span class="lineno">  207</span>        MiscRouteData <a class="code hl_variable" href="../../de/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscFleetRouteManager.html#ab2ba2cbb59545b2002641717a6d65304">data</a> = (MiscRouteData) route.getCustom();</div>
-<div class="line"><span class="lineno">  208</span>        </div>
-<div class="line"><span class="lineno">  209</span>        MiscFleetCreatorPlugin curr = <a class="code hl_function" href="../../de/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscFleetRouteManager.html#a581c673701195777f09b98eb2c167cd6">getCreator</a>(<a class="code hl_variable" href="../../de/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscFleetRouteManager.html#ab2ba2cbb59545b2002641717a6d65304">data</a>.creatorId);</div>
-<div class="line"><span class="lineno">  210</span>        <span class="keywordflow">if</span> (curr != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  211</span>            CampaignFleetAPI fleet = curr.createFleet(<span class="keyword">this</span>, route, <a class="code hl_variable" href="../../de/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscFleetRouteManager.html#a680f37afb28806d08b4e17557cdc44f7">random</a>);</div>
-<div class="line"><span class="lineno">  212</span>            <span class="keywordflow">if</span> (fleet != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  213</span>                fleet.addEventListener(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  214</span>                fleet.addScript(<span class="keyword">new</span> MiscFleetAssignmentAI(fleet, route));</div>
-<div class="line"><span class="lineno">  215</span>            }</div>
-<div class="line"><span class="lineno">  216</span>            <span class="keywordflow">return</span> fleet;</div>
-<div class="line"><span class="lineno">  217</span>        }</div>
-<div class="line"><span class="lineno">  218</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  219</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

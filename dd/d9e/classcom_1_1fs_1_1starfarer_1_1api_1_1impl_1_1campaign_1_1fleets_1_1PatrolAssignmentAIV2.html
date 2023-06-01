@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -156,12 +157,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/dc3/PatrolAssignmentAIV2_8java_source.html#l00020">20</a> of file <a class="el" href="../../d8/dc3/PatrolAssignmentAIV2_8java_source.html">PatrolAssignmentAIV2.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   20</span>                                                                         {</div>
-<div class="line"><span class="lineno">   21</span>        this.stub = stub;</div>
-<div class="line"><span class="lineno">   22</span>        this.data = data;</div>
-<div class="line"><span class="lineno">   23</span>        giveInitialAssignment();</div>
-<div class="line"><span class="lineno">   24</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -190,71 +186,7 @@ Public Member Functions</h2></td></tr>
 <p>Implements <a class="el" href="../../d7/d63/interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html#a3a97090ca8cfdc230e9ad7e633407af6">com.fs.starfarer.api.EveryFrameScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/dc3/PatrolAssignmentAIV2_8java_source.html#l00046">46</a> of file <a class="el" href="../../d8/dc3/PatrolAssignmentAIV2_8java_source.html">PatrolAssignmentAIV2.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   46</span>                                      {</div>
-<div class="line"><span class="lineno">   47</span>        <span class="comment">//float days = Global.getSector().getClock().convertToDays(amount);</span></div>
-<div class="line"><span class="lineno">   48</span>        </div>
-<div class="line"><span class="lineno">   49</span>        FleetOrStubAPI fleet = getAssignable();</div>
-<div class="line"><span class="lineno">   50</span>        </div>
-<div class="line"><span class="lineno">   51</span>        <span class="keywordflow">if</span> (fleet.getCurrentAssignment() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   52</span>            <span class="keywordflow">if</span> (fleet instanceof CampaignFleetAPI) {</div>
-<div class="line"><span class="lineno">   53</span>                <span class="keywordtype">float</span> fp = ((CampaignFleetAPI)fleet).getFleetPoints();</div>
-<div class="line"><span class="lineno">   54</span>                <span class="keywordflow">if</span> (fp &lt; data.startingFleetPoints &amp;&amp; !orderedReturn) {</div>
-<div class="line"><span class="lineno">   55</span>                    orderedReturn = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   56</span>                    fleet.clearAssignments();</div>
-<div class="line"><span class="lineno">   57</span>                    </div>
-<div class="line"><span class="lineno">   58</span>                    fleet.addAssignment(FleetAssignment.GO_TO_LOCATION, data.sourceMarket.getPrimaryEntity(), 1000,</div>
-<div class="line"><span class="lineno">   59</span>                                        <span class="stringliteral">&quot;returning to &quot;</span> + data.sourceMarket.getName());</div>
-<div class="line"><span class="lineno">   60</span>                    fleet.addAssignment(FleetAssignment.ORBIT_PASSIVE, data.sourceMarket.getPrimaryEntity(), 1f,</div>
-<div class="line"><span class="lineno">   61</span>                                        <span class="stringliteral">&quot;standing down from patrol duty&quot;</span>);</div>
-<div class="line"><span class="lineno">   62</span>                    fleet.addAssignment(FleetAssignment.GO_TO_LOCATION_AND_DESPAWN, data.sourceMarket.getPrimaryEntity(), 1000);</div>
-<div class="line"><span class="lineno">   63</span>                }</div>
-<div class="line"><span class="lineno">   64</span>            }</div>
-<div class="line"><span class="lineno">   65</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   66</span>            <span class="keywordtype">float</span> daysToOrbit = getDaysToOrbit();</div>
-<div class="line"><span class="lineno">   67</span>            StarSystemAPI system = data.sourceMarket.getStarSystem();</div>
-<div class="line"><span class="lineno">   68</span>            <span class="keywordflow">if</span> (system == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   69</span>                fleet.addAssignment(FleetAssignment.DEFEND_LOCATION, data.sourceMarket.getPrimaryEntity(), 20,</div>
-<div class="line"><span class="lineno">   70</span>                                    <span class="stringliteral">&quot;patrolling around &quot;</span> + data.sourceMarket.getName());</div>
-<div class="line"><span class="lineno">   71</span>                fleet.addAssignment(FleetAssignment.GO_TO_LOCATION, data.sourceMarket.getPrimaryEntity(), 1000,</div>
-<div class="line"><span class="lineno">   72</span>                                    <span class="stringliteral">&quot;returning to &quot;</span> + data.sourceMarket.getName());</div>
-<div class="line"><span class="lineno">   73</span>                fleet.addAssignment(FleetAssignment.ORBIT_PASSIVE, data.sourceMarket.getPrimaryEntity(), daysToOrbit,</div>
-<div class="line"><span class="lineno">   74</span>                                    <span class="stringliteral">&quot;standing down from patrol duty&quot;</span>);</div>
-<div class="line"><span class="lineno">   75</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   76</span>                <span class="keywordflow">if</span> ((<span class="keywordtype">float</span>) Math.random() &gt; 0.95f) {</div>
-<div class="line"><span class="lineno">   77</span>                    fleet.addAssignment(FleetAssignment.PATROL_SYSTEM, system.getHyperspaceAnchor(), 20,</div>
-<div class="line"><span class="lineno">   78</span>                                        <span class="stringliteral">&quot;patrolling around the &quot;</span> + system.getBaseName() + <span class="stringliteral">&quot; star system&quot;</span>);</div>
-<div class="line"><span class="lineno">   79</span>                    fleet.addAssignment(FleetAssignment.GO_TO_LOCATION, data.sourceMarket.getPrimaryEntity(), 1000,</div>
-<div class="line"><span class="lineno">   80</span>                                        <span class="stringliteral">&quot;returning to &quot;</span> + data.sourceMarket.getName());</div>
-<div class="line"><span class="lineno">   81</span>                    fleet.addAssignment(FleetAssignment.ORBIT_PASSIVE, data.sourceMarket.getPrimaryEntity(), daysToOrbit,</div>
-<div class="line"><span class="lineno">   82</span>                                        <span class="stringliteral">&quot;standing down from patrol duty&quot;</span>);</div>
-<div class="line"><span class="lineno">   83</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   84</span>                    WeightedRandomPicker&lt;SectorEntityToken&gt; defenseTargets = <span class="keyword">new</span> WeightedRandomPicker&lt;SectorEntityToken&gt;();</div>
-<div class="line"><span class="lineno">   85</span>                    SectorEntityToken generalPatrol = data.sourceMarket.getPrimaryEntity().getContainingLocation().createToken(0, 0);</div>
-<div class="line"><span class="lineno">   86</span>                    </div>
-<div class="line"><span class="lineno">   87</span>                    defenseTargets.add(generalPatrol, 30);</div>
-<div class="line"><span class="lineno">   88</span>                    </div>
-<div class="line"><span class="lineno">   89</span>                    SectorEntityToken pick = defenseTargets.pick();</div>
-<div class="line"><span class="lineno">   90</span>                    </div>
-<div class="line"><span class="lineno">   91</span>                    <span class="keywordflow">if</span> (pick == generalPatrol) {</div>
-<div class="line"><span class="lineno">   92</span>                        fleet.addAssignment(FleetAssignment.PATROL_SYSTEM, system.getStar(), 30,</div>
-<div class="line"><span class="lineno">   93</span>                                <span class="stringliteral">&quot;patrolling the &quot;</span> + system.getBaseName() + <span class="stringliteral">&quot; star system&quot;</span>);</div>
-<div class="line"><span class="lineno">   94</span>                        fleet.addAssignment(FleetAssignment.GO_TO_LOCATION, data.sourceMarket.getPrimaryEntity(), 1000,</div>
-<div class="line"><span class="lineno">   95</span>                                <span class="stringliteral">&quot;returning to &quot;</span> + data.sourceMarket.getName());</div>
-<div class="line"><span class="lineno">   96</span>                        fleet.addAssignment(FleetAssignment.ORBIT_PASSIVE, data.sourceMarket.getPrimaryEntity(), daysToOrbit,</div>
-<div class="line"><span class="lineno">   97</span>                                <span class="stringliteral">&quot;standing down from patrol duty&quot;</span>);</div>
-<div class="line"><span class="lineno">   98</span>                    } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   99</span>                        fleet.addAssignment(FleetAssignment.DEFEND_LOCATION, pick, 30,</div>
-<div class="line"><span class="lineno">  100</span>                                <span class="stringliteral">&quot;patrolling around &quot;</span> + pick.getName());</div>
-<div class="line"><span class="lineno">  101</span>                        fleet.addAssignment(FleetAssignment.GO_TO_LOCATION, data.sourceMarket.getPrimaryEntity(), 1000,</div>
-<div class="line"><span class="lineno">  102</span>                                <span class="stringliteral">&quot;returning to &quot;</span> + data.sourceMarket.getName());</div>
-<div class="line"><span class="lineno">  103</span>                        fleet.addAssignment(FleetAssignment.ORBIT_PASSIVE, data.sourceMarket.getPrimaryEntity(), daysToOrbit,</div>
-<div class="line"><span class="lineno">  104</span>                                <span class="stringliteral">&quot;standing down from patrol duty&quot;</span>);</div>
-<div class="line"><span class="lineno">  105</span>                    }</div>
-<div class="line"><span class="lineno">  106</span>                }</div>
-<div class="line"><span class="lineno">  107</span>            }</div>
-<div class="line"><span class="lineno">  108</span>        }</div>
-<div class="line"><span class="lineno">  109</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af8321cf8fff9e0d5bad5631df188c2fe" name="af8321cf8fff9e0d5bad5631df188c2fe"></a>
@@ -276,10 +208,7 @@ Public Member Functions</h2></td></tr>
 <p>Implements <a class="el" href="../../d7/d63/interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html#a2b9a206acf99d1cdc1511885d14bb58c">com.fs.starfarer.api.EveryFrameScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/dc3/PatrolAssignmentAIV2_8java_source.html#l00130">130</a> of file <a class="el" href="../../d8/dc3/PatrolAssignmentAIV2_8java_source.html">PatrolAssignmentAIV2.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  130</span>                            {</div>
-<div class="line"><span class="lineno">  131</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  132</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a7e1c2a179b67fb18db74d0110d3e7dda" name="a7e1c2a179b67fb18db74d0110d3e7dda"></a>
@@ -301,10 +230,7 @@ Public Member Functions</h2></td></tr>
 <p>Implements <a class="el" href="../../d7/d63/interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html#a6397d6c1c19a4dd0b58099219c0e0173">com.fs.starfarer.api.EveryFrameScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/dc3/PatrolAssignmentAIV2_8java_source.html#l00133">133</a> of file <a class="el" href="../../d8/dc3/PatrolAssignmentAIV2_8java_source.html">PatrolAssignmentAIV2.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  133</span>                                    {</div>
-<div class="line"><span class="lineno">  134</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  135</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

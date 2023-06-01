@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -176,12 +177,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d4d/GhostFrequencies_8java_source.html#l00029">29</a> of file <a class="el" href="../../d0/d4d/GhostFrequencies_8java_source.html">GhostFrequencies.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   29</span>                                                                        {</div>
-<div class="line"><span class="lineno">   30</span>        <span class="keywordflow">return</span> 10f * <a class="code hl_function" href="../../df/de5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GhostFrequencies.html#a7bfe1aa27019705556ddf2ae42142946">getNotInCoreFactor</a>() * <a class="code hl_function" href="../../df/de5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GhostFrequencies.html#a663b4642aae5dae294e3d7d0a62b57f8">getSBFactor</a>(manager, 1f, 2f);</div>
-<div class="line"><span class="lineno">   31</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GhostFrequencies_html_a663b4642aae5dae294e3d7d0a62b57f8"><div class="ttname"><a href="../../df/de5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GhostFrequencies.html#a663b4642aae5dae294e3d7d0a62b57f8">com.fs.starfarer.api.impl.campaign.ghosts.GhostFrequencies.getSBFactor</a></div><div class="ttdeci">static float getSBFactor(SensorGhostManager manager, float factorIfNoBurst, float factorIfBurst)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d4d/GhostFrequencies_8java_source.html#l00110">GhostFrequencies.java:110</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GhostFrequencies_html_a7bfe1aa27019705556ddf2ae42142946"><div class="ttname"><a href="../../df/de5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GhostFrequencies.html#a7bfe1aa27019705556ddf2ae42142946">com.fs.starfarer.api.impl.campaign.ghosts.GhostFrequencies.getNotInCoreFactor</a></div><div class="ttdeci">static float getNotInCoreFactor()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d4d/GhostFrequencies_8java_source.html#l00123">GhostFrequencies.java:123</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a11362ed5a675a8cf9d7df65734b50977" name="a11362ed5a675a8cf9d7df65734b50977"></a>
@@ -208,32 +204,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d4d/GhostFrequencies_8java_source.html#l00126">126</a> of file <a class="el" href="../../d0/d4d/GhostFrequencies_8java_source.html">GhostFrequencies.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  126</span>                                        {</div>
-<div class="line"><span class="lineno">  127</span>        Vector2f loc = Global.getSector().getPlayerFleet().getLocationInHyperspace();</div>
-<div class="line"><span class="lineno">  128</span>        </div>
-<div class="line"><span class="lineno">  129</span>        Vector2f min = Misc.getCoreMin();</div>
-<div class="line"><span class="lineno">  130</span>        Vector2f max = Misc.getCoreMax();</div>
-<div class="line"><span class="lineno">  131</span>        Vector2f center = Misc.getCoreCenter();</div>
-<div class="line"><span class="lineno">  132</span>        </div>
-<div class="line"><span class="lineno">  133</span>        <span class="keywordtype">float</span> f = 1.4f;</div>
-<div class="line"><span class="lineno">  134</span>        <span class="keywordtype">float</span> a = (max.x - min.x) * 0.5f * f;</div>
-<div class="line"><span class="lineno">  135</span>        <span class="keywordtype">float</span> b = (max.y - min.y) * 0.5f * f;</div>
-<div class="line"><span class="lineno">  136</span>        <span class="keywordtype">float</span> x = loc.x - center.x;</div>
-<div class="line"><span class="lineno">  137</span>        <span class="keywordtype">float</span> y = loc.y - center.y;</div>
-<div class="line"><span class="lineno">  138</span>        </div>
-<div class="line"><span class="lineno">  139</span>        <span class="keywordtype">float</span> test = (x * x) / (a * a) + (y * y)/ (b * b);</div>
-<div class="line"><span class="lineno">  140</span>        <span class="comment">//System.out.println(&quot;Test: &quot; + test);</span></div>
-<div class="line"><span class="lineno">  141</span>        <span class="keywordtype">float</span> result = 0f;</div>
-<div class="line"><span class="lineno">  142</span>        <span class="keywordflow">if</span> (test &gt;= 1f) {</div>
-<div class="line"><span class="lineno">  143</span>            result = 0f;</div>
-<div class="line"><span class="lineno">  144</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (test &lt;= 0.75f) {</div>
-<div class="line"><span class="lineno">  145</span>            result = 1f;</div>
-<div class="line"><span class="lineno">  146</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  147</span>            result = 1f - (test - 0.75f) / 0.25f;</div>
-<div class="line"><span class="lineno">  148</span>        }</div>
-<div class="line"><span class="lineno">  149</span>        <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">  150</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ad3ba3525943e5a1042bf981bba23dc43" name="ad3ba3525943e5a1042bf981bba23dc43"></a>
@@ -261,10 +232,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d4d/GhostFrequencies_8java_source.html#l00035">35</a> of file <a class="el" href="../../d0/d4d/GhostFrequencies_8java_source.html">GhostFrequencies.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   35</span>                                                                     {</div>
-<div class="line"><span class="lineno">   36</span>        <span class="keywordflow">return</span> 5f * <a class="code hl_function" href="../../df/de5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GhostFrequencies.html#a663b4642aae5dae294e3d7d0a62b57f8">getSBFactor</a>(manager, 1f, 5f);</div>
-<div class="line"><span class="lineno">   37</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a59fcb85c7799c8682ba8469c6cc883da" name="a59fcb85c7799c8682ba8469c6cc883da"></a>
@@ -292,11 +260,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d4d/GhostFrequencies_8java_source.html#l00032">32</a> of file <a class="el" href="../../d0/d4d/GhostFrequencies_8java_source.html">GhostFrequencies.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   32</span>                                                                                   {</div>
-<div class="line"><span class="lineno">   33</span>        <span class="keywordflow">return</span> 10f * <a class="code hl_function" href="../../df/de5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GhostFrequencies.html#a7bfe1aa27019705556ddf2ae42142946">getNotInCoreFactor</a>() * (0.5f + 0.5f * <a class="code hl_function" href="../../df/de5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GhostFrequencies.html#ac4143ded1b05c61d3c0c6a035873b0a8">getFringeFactor</a>()) * <a class="code hl_function" href="../../df/de5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GhostFrequencies.html#a663b4642aae5dae294e3d7d0a62b57f8">getSBFactor</a>(manager, 1f, 2f);</div>
-<div class="line"><span class="lineno">   34</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GhostFrequencies_html_ac4143ded1b05c61d3c0c6a035873b0a8"><div class="ttname"><a href="../../df/de5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GhostFrequencies.html#ac4143ded1b05c61d3c0c6a035873b0a8">com.fs.starfarer.api.impl.campaign.ghosts.GhostFrequencies.getFringeFactor</a></div><div class="ttdeci">static float getFringeFactor()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d4d/GhostFrequencies_8java_source.html#l00087">GhostFrequencies.java:87</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac4143ded1b05c61d3c0c6a035873b0a8" name="ac4143ded1b05c61d3c0c6a035873b0a8"></a>
@@ -323,29 +287,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d4d/GhostFrequencies_8java_source.html#l00087">87</a> of file <a class="el" href="../../d0/d4d/GhostFrequencies_8java_source.html">GhostFrequencies.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   87</span>                                          {</div>
-<div class="line"><span class="lineno">   88</span>        Vector2f loc = Global.getSector().getPlayerFleet().getLocationInHyperspace();</div>
-<div class="line"><span class="lineno">   89</span>        <span class="keywordtype">float</span> sw = Global.getSettings().getFloat(<span class="stringliteral">&quot;sectorWidth&quot;</span>);</div>
-<div class="line"><span class="lineno">   90</span>        <span class="keywordtype">float</span> sh = Global.getSettings().getFloat(<span class="stringliteral">&quot;sectorHeight&quot;</span>);</div>
-<div class="line"><span class="lineno">   91</span>        <span class="keywordtype">float</span> f = 0.8f;</div>
-<div class="line"><span class="lineno">   92</span>        <span class="keywordtype">float</span> a = sw * 0.5f * f;</div>
-<div class="line"><span class="lineno">   93</span>        <span class="keywordtype">float</span> b = sh * 0.5f * f;</div>
-<div class="line"><span class="lineno">   94</span>        <span class="keywordtype">float</span> x = loc.x;</div>
-<div class="line"><span class="lineno">   95</span>        <span class="keywordtype">float</span> y = loc.y;</div>
-<div class="line"><span class="lineno">   96</span>        </div>
-<div class="line"><span class="lineno">   97</span>        <span class="keywordtype">float</span> test = (x * x) / (a * a) + (y * y)/ (b * b);</div>
-<div class="line"><span class="lineno">   98</span>        <span class="comment">//System.out.println(&quot;Test: &quot; + test);</span></div>
-<div class="line"><span class="lineno">   99</span>        <span class="keywordtype">float</span> result = 0f;</div>
-<div class="line"><span class="lineno">  100</span>        <span class="keywordflow">if</span> (test &gt;= 1f) {</div>
-<div class="line"><span class="lineno">  101</span>            result = 1f;</div>
-<div class="line"><span class="lineno">  102</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (test &lt;= 0.75f) {</div>
-<div class="line"><span class="lineno">  103</span>            result = 0f;</div>
-<div class="line"><span class="lineno">  104</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  105</span>            result = (test - 0.75f) / 0.25f;</div>
-<div class="line"><span class="lineno">  106</span>        }</div>
-<div class="line"><span class="lineno">  107</span>        <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">  108</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af092e2e2ec5047e9980e2c8dd5c6261a" name="af092e2e2ec5047e9980e2c8dd5c6261a"></a>
@@ -373,10 +315,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d4d/GhostFrequencies_8java_source.html#l00038">38</a> of file <a class="el" href="../../d0/d4d/GhostFrequencies_8java_source.html">GhostFrequencies.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   38</span>                                                                      {</div>
-<div class="line"><span class="lineno">   39</span>        <span class="keywordflow">return</span> 10f * <a class="code hl_function" href="../../df/de5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GhostFrequencies.html#a7bfe1aa27019705556ddf2ae42142946">getNotInCoreFactor</a>() * <a class="code hl_function" href="../../df/de5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GhostFrequencies.html#a663b4642aae5dae294e3d7d0a62b57f8">getSBFactor</a>(manager, 1f, 2f);</div>
-<div class="line"><span class="lineno">   40</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af5337f071083c248237392cd217a1b0f" name="af5337f071083c248237392cd217a1b0f"></a>
@@ -404,10 +343,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d4d/GhostFrequencies_8java_source.html#l00041">41</a> of file <a class="el" href="../../d0/d4d/GhostFrequencies_8java_source.html">GhostFrequencies.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   41</span>                                                                              {</div>
-<div class="line"><span class="lineno">   42</span>        <span class="keywordflow">return</span> 5f * (<a class="code hl_function" href="../../df/de5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GhostFrequencies.html#a7bfe1aa27019705556ddf2ae42142946">getNotInCoreFactor</a>() + <a class="code hl_function" href="../../df/de5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GhostFrequencies.html#ac4143ded1b05c61d3c0c6a035873b0a8">getFringeFactor</a>()) * <a class="code hl_function" href="../../df/de5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GhostFrequencies.html#a663b4642aae5dae294e3d7d0a62b57f8">getSBFactor</a>(manager, 1f, 0f);</div>
-<div class="line"><span class="lineno">   43</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aecb085b82a9b97e95dd119ae3867e1d6" name="aecb085b82a9b97e95dd119ae3867e1d6"></a>
@@ -435,10 +371,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d4d/GhostFrequencies_8java_source.html#l00044">44</a> of file <a class="el" href="../../d0/d4d/GhostFrequencies_8java_source.html">GhostFrequencies.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   44</span>                                                                          {</div>
-<div class="line"><span class="lineno">   45</span>        <span class="keywordflow">return</span> 5f * (<a class="code hl_function" href="../../df/de5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GhostFrequencies.html#a7bfe1aa27019705556ddf2ae42142946">getNotInCoreFactor</a>() + <a class="code hl_function" href="../../df/de5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GhostFrequencies.html#ac4143ded1b05c61d3c0c6a035873b0a8">getFringeFactor</a>()) * <a class="code hl_function" href="../../df/de5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GhostFrequencies.html#a663b4642aae5dae294e3d7d0a62b57f8">getSBFactor</a>(manager, 1f, 0f);</div>
-<div class="line"><span class="lineno">   46</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9e46d8212ba66ff954effea34129c68e" name="a9e46d8212ba66ff954effea34129c68e"></a>
@@ -466,10 +399,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d4d/GhostFrequencies_8java_source.html#l00047">47</a> of file <a class="el" href="../../d0/d4d/GhostFrequencies_8java_source.html">GhostFrequencies.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   47</span>                                                                       {</div>
-<div class="line"><span class="lineno">   48</span>        <span class="keywordflow">return</span> 10f * <a class="code hl_function" href="../../df/de5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GhostFrequencies.html#a7bfe1aa27019705556ddf2ae42142946">getNotInCoreFactor</a>() * (0.5f + 0.5f * <a class="code hl_function" href="../../df/de5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GhostFrequencies.html#ac4143ded1b05c61d3c0c6a035873b0a8">getFringeFactor</a>()) * <a class="code hl_function" href="../../df/de5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GhostFrequencies.html#a663b4642aae5dae294e3d7d0a62b57f8">getSBFactor</a>(manager, 1f, 0f);</div>
-<div class="line"><span class="lineno">   49</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a7b8b918d964dfd35e65fda6ea6a63fd0" name="a7b8b918d964dfd35e65fda6ea6a63fd0"></a>
@@ -497,23 +427,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d4d/GhostFrequencies_8java_source.html#l00014">14</a> of file <a class="el" href="../../d0/d4d/GhostFrequencies_8java_source.html">GhostFrequencies.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   14</span>                                                                        {</div>
-<div class="line"><span class="lineno">   15</span>        <span class="keywordflow">if</span> (manager.isSpawnTriggeredBySensorBurst()) <span class="keywordflow">return</span> 0f;</div>
-<div class="line"><span class="lineno">   16</span>        </div>
-<div class="line"><span class="lineno">   17</span>        <span class="keywordtype">float</span> total = 0f;</div>
-<div class="line"><span class="lineno">   18</span>        <span class="keywordflow">for</span> (SensorGhostCreator c : SensorGhostManager.CREATORS) {</div>
-<div class="line"><span class="lineno">   19</span>            <span class="keywordflow">if</span> (!(c instanceof NoGhostCreator)) {</div>
-<div class="line"><span class="lineno">   20</span>                <span class="keywordtype">float</span> f = c.getFrequency(manager);</div>
-<div class="line"><span class="lineno">   21</span>                <span class="comment">//System.out.println(c.getClass().getSimpleName() + &quot;: &quot; + f);</span></div>
-<div class="line"><span class="lineno">   22</span>                total += f; </div>
-<div class="line"><span class="lineno">   23</span>            }</div>
-<div class="line"><span class="lineno">   24</span>        }</div>
-<div class="line"><span class="lineno">   25</span>        <span class="keywordtype">float</span> mult = 0.5f + <a class="code hl_function" href="../../df/de5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GhostFrequencies.html#a11362ed5a675a8cf9d7df65734b50977">getCoreFactor</a>() * 5f;</div>
-<div class="line"><span class="lineno">   26</span>        <span class="keywordflow">return</span> Math.max(10f, total) * mult;</div>
-<div class="line"><span class="lineno">   27</span>        <span class="comment">//return 10f;</span></div>
-<div class="line"><span class="lineno">   28</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GhostFrequencies_html_a11362ed5a675a8cf9d7df65734b50977"><div class="ttname"><a href="../../df/de5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GhostFrequencies.html#a11362ed5a675a8cf9d7df65734b50977">com.fs.starfarer.api.impl.campaign.ghosts.GhostFrequencies.getCoreFactor</a></div><div class="ttdeci">static float getCoreFactor()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d4d/GhostFrequencies_8java_source.html#l00126">GhostFrequencies.java:126</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a7bfe1aa27019705556ddf2ae42142946" name="a7bfe1aa27019705556ddf2ae42142946"></a>
@@ -540,10 +454,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d4d/GhostFrequencies_8java_source.html#l00123">123</a> of file <a class="el" href="../../d0/d4d/GhostFrequencies_8java_source.html">GhostFrequencies.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  123</span>                                             {</div>
-<div class="line"><span class="lineno">  124</span>        <span class="keywordflow">return</span> 1f - <a class="code hl_function" href="../../df/de5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GhostFrequencies.html#a11362ed5a675a8cf9d7df65734b50977">getCoreFactor</a>();</div>
-<div class="line"><span class="lineno">  125</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa266a3872ef153e0b19aec4a57a28735" name="aa266a3872ef153e0b19aec4a57a28735"></a>
@@ -570,10 +481,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d4d/GhostFrequencies_8java_source.html#l00119">119</a> of file <a class="el" href="../../d0/d4d/GhostFrequencies_8java_source.html">GhostFrequencies.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  119</span>                                               {</div>
-<div class="line"><span class="lineno">  120</span>        <span class="keywordflow">return</span> 1f - <a class="code hl_function" href="../../df/de5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GhostFrequencies.html#ac4143ded1b05c61d3c0c6a035873b0a8">getFringeFactor</a>();</div>
-<div class="line"><span class="lineno">  121</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a46e70d5d774de71bea8b6b78a60083e1" name="a46e70d5d774de71bea8b6b78a60083e1"></a>
@@ -601,10 +509,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d4d/GhostFrequencies_8java_source.html#l00050">50</a> of file <a class="el" href="../../d0/d4d/GhostFrequencies_8java_source.html">GhostFrequencies.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   50</span>                                                                      {</div>
-<div class="line"><span class="lineno">   51</span>        <span class="keywordflow">return</span> 10f * <a class="code hl_function" href="../../df/de5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GhostFrequencies.html#a7bfe1aa27019705556ddf2ae42142946">getNotInCoreFactor</a>();</div>
-<div class="line"><span class="lineno">   52</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ad42da822e0e1a357717792032b6a8984" name="ad42da822e0e1a357717792032b6a8984"></a>
@@ -632,10 +537,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d4d/GhostFrequencies_8java_source.html#l00053">53</a> of file <a class="el" href="../../d0/d4d/GhostFrequencies_8java_source.html">GhostFrequencies.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   53</span>                                                                        {</div>
-<div class="line"><span class="lineno">   54</span>        <span class="keywordflow">return</span> 1f * <a class="code hl_function" href="../../df/de5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GhostFrequencies.html#ac4143ded1b05c61d3c0c6a035873b0a8">getFringeFactor</a>();</div>
-<div class="line"><span class="lineno">   55</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a6a315b3009739d5cdd92ae014e20f54a" name="a6a315b3009739d5cdd92ae014e20f54a"></a>
@@ -663,10 +565,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d4d/GhostFrequencies_8java_source.html#l00056">56</a> of file <a class="el" href="../../d0/d4d/GhostFrequencies_8java_source.html">GhostFrequencies.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   56</span>                                                                       {</div>
-<div class="line"><span class="lineno">   57</span>        <span class="keywordflow">return</span> 10f * <a class="code hl_function" href="../../df/de5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GhostFrequencies.html#a7bfe1aa27019705556ddf2ae42142946">getNotInCoreFactor</a>() * (0.25f + 0.75f * <a class="code hl_function" href="../../df/de5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GhostFrequencies.html#ac4143ded1b05c61d3c0c6a035873b0a8">getFringeFactor</a>()) * <a class="code hl_function" href="../../df/de5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GhostFrequencies.html#a663b4642aae5dae294e3d7d0a62b57f8">getSBFactor</a>(manager, 1f, 4f);</div>
-<div class="line"><span class="lineno">   58</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a663b4642aae5dae294e3d7d0a62b57f8" name="a663b4642aae5dae294e3d7d0a62b57f8"></a>
@@ -710,11 +609,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d4d/GhostFrequencies_8java_source.html#l00110">110</a> of file <a class="el" href="../../d0/d4d/GhostFrequencies_8java_source.html">GhostFrequencies.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  110</span>                                                                                                            {</div>
-<div class="line"><span class="lineno">  111</span>        <span class="keywordflow">if</span> (manager.isSpawnTriggeredBySensorBurst()) <span class="keywordflow">return</span> factorIfBurst;</div>
-<div class="line"><span class="lineno">  112</span>        <span class="keywordflow">return</span> factorIfNoBurst;</div>
-<div class="line"><span class="lineno">  113</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af46e6c7ec8b984482a52ed056e5399f4" name="af46e6c7ec8b984482a52ed056e5399f4"></a>
@@ -742,10 +637,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d4d/GhostFrequencies_8java_source.html#l00059">59</a> of file <a class="el" href="../../d0/d4d/GhostFrequencies_8java_source.html">GhostFrequencies.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   59</span>                                                                     {</div>
-<div class="line"><span class="lineno">   60</span>        <span class="keywordflow">return</span> 2f * <a class="code hl_function" href="../../df/de5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GhostFrequencies.html#ac4143ded1b05c61d3c0c6a035873b0a8">getFringeFactor</a>();</div>
-<div class="line"><span class="lineno">   61</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a1ee076a24c1027a4e1593d3c4b6eff2a" name="a1ee076a24c1027a4e1593d3c4b6eff2a"></a>
@@ -773,10 +665,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d4d/GhostFrequencies_8java_source.html#l00062">62</a> of file <a class="el" href="../../d0/d4d/GhostFrequencies_8java_source.html">GhostFrequencies.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   62</span>                                                                            {</div>
-<div class="line"><span class="lineno">   63</span>        <span class="keywordflow">return</span> 5f * <a class="code hl_function" href="../../df/de5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GhostFrequencies.html#a7bfe1aa27019705556ddf2ae42142946">getNotInCoreFactor</a>() * (0.5f + 0.5f * <a class="code hl_function" href="../../df/de5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GhostFrequencies.html#ac4143ded1b05c61d3c0c6a035873b0a8">getFringeFactor</a>()) * <a class="code hl_function" href="../../df/de5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GhostFrequencies.html#a663b4642aae5dae294e3d7d0a62b57f8">getSBFactor</a>(manager, 1f, 0f);</div>
-<div class="line"><span class="lineno">   64</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab16bb3d87a82d3f29db18f58f691e625" name="ab16bb3d87a82d3f29db18f58f691e625"></a>
@@ -804,10 +693,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d4d/GhostFrequencies_8java_source.html#l00065">65</a> of file <a class="el" href="../../d0/d4d/GhostFrequencies_8java_source.html">GhostFrequencies.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   65</span>                                                                               {</div>
-<div class="line"><span class="lineno">   66</span>        <span class="keywordflow">return</span> 5f * <a class="code hl_function" href="../../df/de5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GhostFrequencies.html#a7bfe1aa27019705556ddf2ae42142946">getNotInCoreFactor</a>() * (0.25f + 0.75f * <a class="code hl_function" href="../../df/de5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GhostFrequencies.html#ac4143ded1b05c61d3c0c6a035873b0a8">getFringeFactor</a>()) * <a class="code hl_function" href="../../df/de5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GhostFrequencies.html#a663b4642aae5dae294e3d7d0a62b57f8">getSBFactor</a>(manager, 1f, 2f);</div>
-<div class="line"><span class="lineno">   67</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa21896c1fdfd78cd692875238a515fcc" name="aa21896c1fdfd78cd692875238a515fcc"></a>
@@ -835,23 +721,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d4d/GhostFrequencies_8java_source.html#l00068">68</a> of file <a class="el" href="../../d0/d4d/GhostFrequencies_8java_source.html">GhostFrequencies.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   68</span>                                                                         {</div>
-<div class="line"><span class="lineno">   69</span>        <span class="keywordflow">if</span> (manager.hasGhostOfClass(ZigguratGhost.class)) {</div>
-<div class="line"><span class="lineno">   70</span>            <span class="keywordflow">return</span> 0f;</div>
-<div class="line"><span class="lineno">   71</span>        }</div>
-<div class="line"><span class="lineno">   72</span>        String <span class="keywordtype">id</span> = <a class="code hl_variable" href="../../df/de5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GhostFrequencies.html#a345a8dbaad824d000c9bec4086d35e59">ZIGGURAT</a>;</div>
-<div class="line"><span class="lineno">   73</span>        <span class="keywordtype">boolean</span> found = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   74</span>        <span class="keywordflow">for</span> (FleetMemberAPI member : Global.getSector().getPlayerFleet().getFleetData().getMembersListCopy()) {</div>
-<div class="line"><span class="lineno">   75</span>            <span class="keywordflow">if</span> (member.getHullSpec().getBaseHullId().equals(<span class="keywordtype">id</span>)) {</div>
-<div class="line"><span class="lineno">   76</span>                found = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   77</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   78</span>            }</div>
-<div class="line"><span class="lineno">   79</span>        }</div>
-<div class="line"><span class="lineno">   80</span>        <span class="keywordflow">if</span> (!found) <span class="keywordflow">return</span> 0f;</div>
-<div class="line"><span class="lineno">   81</span>        <span class="keywordflow">return</span> 10000f;</div>
-<div class="line"><span class="lineno">   82</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GhostFrequencies_html_a345a8dbaad824d000c9bec4086d35e59"><div class="ttname"><a href="../../df/de5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GhostFrequencies.html#a345a8dbaad824d000c9bec4086d35e59">com.fs.starfarer.api.impl.campaign.ghosts.GhostFrequencies.ZIGGURAT</a></div><div class="ttdeci">static String ZIGGURAT</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d4d/GhostFrequencies_8java_source.html#l00012">GhostFrequencies.java:12</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a74583d6c39f90f0728c89c404d2c9a32" name="a74583d6c39f90f0728c89c404d2c9a32"></a>
@@ -878,10 +748,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d4d/GhostFrequencies_8java_source.html#l00115">115</a> of file <a class="el" href="../../d0/d4d/GhostFrequencies_8java_source.html">GhostFrequencies.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  115</span>                                         {</div>
-<div class="line"><span class="lineno">  116</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../df/de5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GhostFrequencies.html#a11362ed5a675a8cf9d7df65734b50977">getCoreFactor</a>() &gt;= 1f;</div>
-<div class="line"><span class="lineno">  117</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

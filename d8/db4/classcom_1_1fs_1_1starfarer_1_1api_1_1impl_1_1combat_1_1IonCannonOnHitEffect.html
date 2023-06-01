@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -172,27 +173,7 @@ Public Member Functions</h2></td></tr>
 <p>Implements <a class="el" href="../../dd/d68/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1OnHitEffectPlugin.html#ab4367dd15bcdc484344365a661313f23">com.fs.starfarer.api.combat.OnHitEffectPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d99/IonCannonOnHitEffect_8java_source.html#l00018">18</a> of file <a class="el" href="../../d4/d99/IonCannonOnHitEffect_8java_source.html">IonCannonOnHitEffect.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   19</span>                                                                                                                    {</div>
-<div class="line"><span class="lineno">   20</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">float</span>) Math.random() &gt; 0.75f &amp;&amp; !shieldHit &amp;&amp; target instanceof ShipAPI) {</div>
-<div class="line"><span class="lineno">   21</span>            </div>
-<div class="line"><span class="lineno">   22</span>            <span class="keywordtype">float</span> emp = projectile.getEmpAmount();</div>
-<div class="line"><span class="lineno">   23</span>            <span class="keywordtype">float</span> dam = projectile.getDamageAmount();</div>
-<div class="line"><span class="lineno">   24</span>            </div>
-<div class="line"><span class="lineno">   25</span>            engine.spawnEmpArc(projectile.getSource(), point, target, target,</div>
-<div class="line"><span class="lineno">   26</span>                               DamageType.ENERGY, </div>
-<div class="line"><span class="lineno">   27</span>                               dam,</div>
-<div class="line"><span class="lineno">   28</span>                               emp, <span class="comment">// emp </span></div>
-<div class="line"><span class="lineno">   29</span>                               100000f, <span class="comment">// max range </span></div>
-<div class="line"><span class="lineno">   30</span>                               <span class="stringliteral">&quot;tachyon_lance_emp_impact&quot;</span>,</div>
-<div class="line"><span class="lineno">   31</span>                               20f, <span class="comment">// thickness</span></div>
-<div class="line"><span class="lineno">   32</span>                               <span class="keyword">new</span> Color(25,100,155,255),</div>
-<div class="line"><span class="lineno">   33</span>                               <span class="keyword">new</span> Color(255,255,255,255)</div>
-<div class="line"><span class="lineno">   34</span>                               );</div>
-<div class="line"><span class="lineno">   35</span>            </div>
-<div class="line"><span class="lineno">   36</span>            <span class="comment">//engine.spawnProjectile(null, null, &quot;plasma&quot;, point, 0, new Vector2f(0, 0));</span></div>
-<div class="line"><span class="lineno">   37</span>        }</div>
-<div class="line"><span class="lineno">   38</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

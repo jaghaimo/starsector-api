@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -221,46 +222,7 @@ Static Public Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseShipSystemScript.html#a4bc8ac2999423cda8da369b8498bd43a">com.fs.starfarer.api.impl.combat.BaseShipSystemScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d14/TargetingFeedStats_8java_source.html#l00023">23</a> of file <a class="el" href="../../d5/d14/TargetingFeedStats_8java_source.html">TargetingFeedStats.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   23</span>                                                                                            {</div>
-<div class="line"><span class="lineno">   24</span>        ShipAPI ship = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   25</span>        <span class="keywordflow">if</span> (stats.getEntity() instanceof ShipAPI) {</div>
-<div class="line"><span class="lineno">   26</span>            ship = (ShipAPI) stats.getEntity();</div>
-<div class="line"><span class="lineno">   27</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   28</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   29</span>        }</div>
-<div class="line"><span class="lineno">   30</span>        </div>
-<div class="line"><span class="lineno">   31</span>        </div>
-<div class="line"><span class="lineno">   32</span>        <span class="keywordflow">if</span> (effectLevel &gt; 0) {</div>
-<div class="line"><span class="lineno">   33</span>            <span class="keywordtype">float</span> jitterLevel = effectLevel;</div>
-<div class="line"><span class="lineno">   34</span>            <span class="keywordtype">float</span> maxRangeBonus = 5f;</div>
-<div class="line"><span class="lineno">   35</span>            <span class="keywordtype">float</span> jitterRangeBonus = jitterLevel * maxRangeBonus;</div>
-<div class="line"><span class="lineno">   36</span>            <span class="keywordflow">for</span> (ShipAPI fighter : getFighters(ship)) {</div>
-<div class="line"><span class="lineno">   37</span>                <span class="keywordflow">if</span> (fighter.isHulk()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   38</span>                MutableShipStatsAPI fStats = fighter.getMutableStats();</div>
-<div class="line"><span class="lineno">   39</span><span class="comment">//              fStats.getBallisticWeaponDamageMult().modifyPercent(id, DAMAGE_INCREASE_PERCENT * effectLevel);</span></div>
-<div class="line"><span class="lineno">   40</span><span class="comment">//              fStats.getEnergyWeaponDamageMult().modifyPercent(id, DAMAGE_INCREASE_PERCENT * effectLevel);</span></div>
-<div class="line"><span class="lineno">   41</span><span class="comment">//              fStats.getMissileWeaponDamageMult().modifyPercent(id, DAMAGE_INCREASE_PERCENT * effectLevel);</span></div>
-<div class="line"><span class="lineno">   42</span>                </div>
-<div class="line"><span class="lineno">   43</span>                fStats.getBallisticWeaponDamageMult().modifyMult(<span class="keywordtype">id</span>, 1f + 0.01f * <a class="code hl_variable" href="../../d8/d7f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1TargetingFeedStats.html#a60e14933a94261ffecc6ca6efb9e0440">DAMAGE_INCREASE_PERCENT</a> * effectLevel);</div>
-<div class="line"><span class="lineno">   44</span>                fStats.getEnergyWeaponDamageMult().modifyMult(<span class="keywordtype">id</span>, 1f + 0.01f * <a class="code hl_variable" href="../../d8/d7f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1TargetingFeedStats.html#a60e14933a94261ffecc6ca6efb9e0440">DAMAGE_INCREASE_PERCENT</a> * effectLevel);</div>
-<div class="line"><span class="lineno">   45</span>                fStats.getMissileWeaponDamageMult().modifyMult(<span class="keywordtype">id</span>, 1f + 0.01f * <a class="code hl_variable" href="../../d8/d7f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1TargetingFeedStats.html#a60e14933a94261ffecc6ca6efb9e0440">DAMAGE_INCREASE_PERCENT</a> * effectLevel);</div>
-<div class="line"><span class="lineno">   46</span>                </div>
-<div class="line"><span class="lineno">   47</span>                <span class="keywordflow">if</span> (jitterLevel &gt; 0) {</div>
-<div class="line"><span class="lineno">   48</span>                    <span class="comment">//fighter.setWeaponGlow(effectLevel, new Color(255,50,0,125), EnumSet.allOf(WeaponType.class));</span></div>
-<div class="line"><span class="lineno">   49</span>                    fighter.setWeaponGlow(effectLevel, Misc.setAlpha(<a class="code hl_variable" href="../../d8/d7f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1TargetingFeedStats.html#a73b70d39fc69bcc4b85c7a6f56afda8e">JITTER_UNDER_COLOR</a>, 255), EnumSet.allOf(WeaponType.class));</div>
-<div class="line"><span class="lineno">   50</span>                    </div>
-<div class="line"><span class="lineno">   51</span>                    fighter.setJitterUnder(<a class="code hl_variable" href="../../d8/d7f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1TargetingFeedStats.html#a01caf8c54f3282293f6383d61452bb8c">KEY_JITTER</a>, <a class="code hl_variable" href="../../d8/d7f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1TargetingFeedStats.html#a3322629dfadd0e8a64a261438fde4721">JITTER_COLOR</a>, jitterLevel, 5, 0f, jitterRangeBonus);</div>
-<div class="line"><span class="lineno">   52</span>                    fighter.setJitter(<a class="code hl_variable" href="../../d8/d7f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1TargetingFeedStats.html#a01caf8c54f3282293f6383d61452bb8c">KEY_JITTER</a>, <a class="code hl_variable" href="../../d8/d7f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1TargetingFeedStats.html#a73b70d39fc69bcc4b85c7a6f56afda8e">JITTER_UNDER_COLOR</a>, jitterLevel, 2, 0f, 0 + jitterRangeBonus * 1f);</div>
-<div class="line"><span class="lineno">   53</span>                    Global.getSoundPlayer().playLoop(<span class="stringliteral">&quot;system_targeting_feed_loop&quot;</span>, ship, 1f, 1f, fighter.getLocation(), fighter.getVelocity());</div>
-<div class="line"><span class="lineno">   54</span>                }</div>
-<div class="line"><span class="lineno">   55</span>            }</div>
-<div class="line"><span class="lineno">   56</span>        }</div>
-<div class="line"><span class="lineno">   57</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1TargetingFeedStats_html_a01caf8c54f3282293f6383d61452bb8c"><div class="ttname"><a href="../../d8/d7f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1TargetingFeedStats.html#a01caf8c54f3282293f6383d61452bb8c">com.fs.starfarer.api.impl.combat.TargetingFeedStats.KEY_JITTER</a></div><div class="ttdeci">static final Object KEY_JITTER</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d14/TargetingFeedStats_8java_source.html#l00015">TargetingFeedStats.java:15</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1TargetingFeedStats_html_a3322629dfadd0e8a64a261438fde4721"><div class="ttname"><a href="../../d8/d7f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1TargetingFeedStats.html#a3322629dfadd0e8a64a261438fde4721">com.fs.starfarer.api.impl.combat.TargetingFeedStats.JITTER_COLOR</a></div><div class="ttdeci">static final Color JITTER_COLOR</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d14/TargetingFeedStats_8java_source.html#l00020">TargetingFeedStats.java:20</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1TargetingFeedStats_html_a60e14933a94261ffecc6ca6efb9e0440"><div class="ttname"><a href="../../d8/d7f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1TargetingFeedStats.html#a60e14933a94261ffecc6ca6efb9e0440">com.fs.starfarer.api.impl.combat.TargetingFeedStats.DAMAGE_INCREASE_PERCENT</a></div><div class="ttdeci">static final float DAMAGE_INCREASE_PERCENT</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d14/TargetingFeedStats_8java_source.html#l00017">TargetingFeedStats.java:17</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1TargetingFeedStats_html_a73b70d39fc69bcc4b85c7a6f56afda8e"><div class="ttname"><a href="../../d8/d7f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1TargetingFeedStats.html#a73b70d39fc69bcc4b85c7a6f56afda8e">com.fs.starfarer.api.impl.combat.TargetingFeedStats.JITTER_UNDER_COLOR</a></div><div class="ttdeci">static final Color JITTER_UNDER_COLOR</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d14/TargetingFeedStats_8java_source.html#l00019">TargetingFeedStats.java:19</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2282e82a0e2a6adbb7936de7b0374076" name="a2282e82a0e2a6adbb7936de7b0374076"></a>
@@ -298,15 +260,7 @@ Static Public Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseShipSystemScript.html#ab328cae8df05d23ccc045f4e32f5f9f0">com.fs.starfarer.api.impl.combat.BaseShipSystemScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d14/TargetingFeedStats_8java_source.html#l00097">97</a> of file <a class="el" href="../../d5/d14/TargetingFeedStats_8java_source.html">TargetingFeedStats.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   97</span>                                                                               {</div>
-<div class="line"><span class="lineno">   98</span>        <span class="keywordtype">float</span> percent = <a class="code hl_variable" href="../../d8/d7f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1TargetingFeedStats.html#a60e14933a94261ffecc6ca6efb9e0440">DAMAGE_INCREASE_PERCENT</a> * effectLevel;</div>
-<div class="line"><span class="lineno">   99</span>        <span class="keywordflow">if</span> (index == 0) {</div>
-<div class="line"><span class="lineno">  100</span>            <span class="comment">//return new StatusData(&quot;+&quot; + (int)percent + &quot;% fighter damage&quot;, false);</span></div>
-<div class="line"><span class="lineno">  101</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> StatusData(<span class="stringliteral">&quot;&quot;</span> + Misc.getRoundedValueMaxOneAfterDecimal(1f + <a class="code hl_variable" href="../../d8/d7f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1TargetingFeedStats.html#a60e14933a94261ffecc6ca6efb9e0440">DAMAGE_INCREASE_PERCENT</a> * effectLevel * 0.01f) + <span class="stringliteral">&quot;x fighter damage&quot;</span>, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  102</span>        }</div>
-<div class="line"><span class="lineno">  103</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  104</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aeb9a18fffd7c16cb0f088d554e05ed07" name="aeb9a18fffd7c16cb0f088d554e05ed07"></a>
@@ -338,22 +292,7 @@ Static Public Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseShipSystemScript.html#a020712b9bb37e9ece4fbfd4c865c4037">com.fs.starfarer.api.impl.combat.BaseShipSystemScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d14/TargetingFeedStats_8java_source.html#l00080">80</a> of file <a class="el" href="../../d5/d14/TargetingFeedStats_8java_source.html">TargetingFeedStats.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   80</span>                                                              {</div>
-<div class="line"><span class="lineno">   81</span>        ShipAPI ship = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   82</span>        <span class="keywordflow">if</span> (stats.getEntity() instanceof ShipAPI) {</div>
-<div class="line"><span class="lineno">   83</span>            ship = (ShipAPI) stats.getEntity();</div>
-<div class="line"><span class="lineno">   84</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   85</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   86</span>        }</div>
-<div class="line"><span class="lineno">   87</span>        <span class="keywordflow">for</span> (ShipAPI fighter : getFighters(ship)) {</div>
-<div class="line"><span class="lineno">   88</span>            <span class="keywordflow">if</span> (fighter.isHulk()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   89</span>            MutableShipStatsAPI fStats = fighter.getMutableStats();</div>
-<div class="line"><span class="lineno">   90</span>            fStats.getBallisticWeaponDamageMult().unmodify(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">   91</span>            fStats.getEnergyWeaponDamageMult().unmodify(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">   92</span>            fStats.getMissileWeaponDamageMult().unmodify(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">   93</span>        }</div>
-<div class="line"><span class="lineno">   94</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

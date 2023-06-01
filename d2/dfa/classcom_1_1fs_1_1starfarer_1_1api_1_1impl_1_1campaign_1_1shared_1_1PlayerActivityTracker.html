@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -148,42 +149,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d34/PlayerActivityTracker_8java_source.html#l00108">108</a> of file <a class="el" href="../../d2/d34/PlayerActivityTracker_8java_source.html">PlayerActivityTracker.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  108</span>                                    {</div>
-<div class="line"><span class="lineno">  109</span>        <span class="comment">//submarketTradeData.clear();</span></div>
-<div class="line"><span class="lineno">  110</span>        List&lt;SubmarketAPI&gt; <span class="keyword">remove</span> = <span class="keyword">new</span> ArrayList&lt;SubmarketAPI&gt;();</div>
-<div class="line"><span class="lineno">  111</span>        <span class="keywordflow">for</span> (PlayerTradeDataForSubmarket data : submarketTradeData.values()) {</div>
-<div class="line"><span class="lineno">  112</span>            data.advance(days);</div>
-<div class="line"><span class="lineno">  113</span>            </div>
-<div class="line"><span class="lineno">  114</span>            MarketAPI market = Global.getSector().getEconomy().getMarket(data.getMarket().getId());</div>
-<div class="line"><span class="lineno">  115</span>            <span class="keywordflow">if</span> (market == <span class="keyword">null</span> || market.getSubmarket(data.getSubmarket().getSpecId()) == <span class="keyword">null</span> ||</div>
-<div class="line"><span class="lineno">  116</span>                    market.getSubmarket(data.getSubmarket().getSpecId()) != data.getSubmarket()) {</div>
-<div class="line"><span class="lineno">  117</span>                <span class="keyword">remove</span>.add(data.getSubmarket());</div>
-<div class="line"><span class="lineno">  118</span>            }</div>
-<div class="line"><span class="lineno">  119</span>        }</div>
-<div class="line"><span class="lineno">  120</span>        </div>
-<div class="line"><span class="lineno">  121</span>        <span class="keywordflow">for</span> (SubmarketAPI sub : <span class="keyword">remove</span>) {</div>
-<div class="line"><span class="lineno">  122</span>            submarketTradeData.remove(sub);</div>
-<div class="line"><span class="lineno">  123</span>        }</div>
-<div class="line"><span class="lineno">  124</span>        </div>
-<div class="line"><span class="lineno">  125</span>        List&lt;MarketAPI&gt; remove2 = <span class="keyword">new</span> ArrayList&lt;MarketAPI&gt;();</div>
-<div class="line"><span class="lineno">  126</span>        <span class="keywordflow">for</span> (MarketAPI curr : lastVisit.keySet()) {</div>
-<div class="line"><span class="lineno">  127</span>            <span class="keywordflow">if</span> (curr.getPrimaryEntity() == <span class="keyword">null</span> || !curr.getPrimaryEntity().isAlive()) {</div>
-<div class="line"><span class="lineno">  128</span>                remove2.add(curr);</div>
-<div class="line"><span class="lineno">  129</span>            }</div>
-<div class="line"><span class="lineno">  130</span>        }</div>
-<div class="line"><span class="lineno">  131</span>        <span class="keywordflow">for</span> (MarketAPI curr : remove2) {</div>
-<div class="line"><span class="lineno">  132</span>            lastVisit.remove(curr);</div>
-<div class="line"><span class="lineno">  133</span>        }</div>
-<div class="line"><span class="lineno">  134</span>        </div>
-<div class="line"><span class="lineno">  135</span>        profitabilityData.<a class="code hl_function" href="../../d0/d6c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PlayerTradeProfitabilityData.html#aa22e5f80185d34d21846a4b34126f7b3">advance</a>(days);</div>
-<div class="line"><span class="lineno">  136</span>        </div>
-<div class="line"><span class="lineno">  137</span>        repChangeTracker.<a class="code hl_function" href="../../d0/d76/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1ReputationChangeTracker.html#adfcb668a79343f2ddc4b6ef3a50d1bee">advance</a>(days);</div>
-<div class="line"><span class="lineno">  138</span>        </div>
-<div class="line"><span class="lineno">  139</span>        playerFleetStats.update();</div>
-<div class="line"><span class="lineno">  140</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PlayerTradeProfitabilityData_html_aa22e5f80185d34d21846a4b34126f7b3"><div class="ttname"><a href="../../d0/d6c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PlayerTradeProfitabilityData.html#aa22e5f80185d34d21846a4b34126f7b3">com.fs.starfarer.api.impl.campaign.shared.PlayerTradeProfitabilityData.advance</a></div><div class="ttdeci">void advance(float days)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dc2/PlayerTradeProfitabilityData_8java_source.html#l00089">PlayerTradeProfitabilityData.java:89</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1ReputationChangeTracker_html_adfcb668a79343f2ddc4b6ef3a50d1bee"><div class="ttname"><a href="../../d0/d76/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1ReputationChangeTracker.html#adfcb668a79343f2ddc4b6ef3a50d1bee">com.fs.starfarer.api.impl.campaign.shared.ReputationChangeTracker.advance</a></div><div class="ttdeci">void advance(float days)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d6e/ReputationChangeTracker_8java_source.html#l00038">ReputationChangeTracker.java:38</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a396401e0da4599be50a963836304ab6a" name="a396401e0da4599be50a963836304ab6a"></a>
@@ -203,12 +169,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d34/PlayerActivityTracker_8java_source.html#l00156">156</a> of file <a class="el" href="../../d2/d34/PlayerActivityTracker_8java_source.html">PlayerActivityTracker.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  156</span>                                                           {</div>
-<div class="line"><span class="lineno">  157</span>        Long timestamp = lastVisit.get(market);</div>
-<div class="line"><span class="lineno">  158</span>        <span class="keywordflow">if</span> (timestamp == <span class="keyword">null</span>) <span class="keywordflow">return</span> 10000f;</div>
-<div class="line"><span class="lineno">  159</span>        <span class="keywordflow">return</span> Global.getSector().getClock().getElapsedDaysSince(timestamp);</div>
-<div class="line"><span class="lineno">  160</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a37e8f817060e325d17e6692cfe9a5ea6" name="a37e8f817060e325d17e6692cfe9a5ea6"></a>
@@ -227,10 +188,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d34/PlayerActivityTracker_8java_source.html#l00173">173</a> of file <a class="el" href="../../d2/d34/PlayerActivityTracker_8java_source.html">PlayerActivityTracker.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  173</span>                                                    {</div>
-<div class="line"><span class="lineno">  174</span>        <span class="keywordflow">return</span> playerFleetStats;</div>
-<div class="line"><span class="lineno">  175</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a4be6738594df993a2b5a8102a19308df" name="a4be6738594df993a2b5a8102a19308df"></a>
@@ -250,15 +208,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d34/PlayerActivityTracker_8java_source.html#l00163">163</a> of file <a class="el" href="../../d2/d34/PlayerActivityTracker_8java_source.html">PlayerActivityTracker.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  163</span>                                                                                  {</div>
-<div class="line"><span class="lineno">  164</span>        PlayerTradeDataForSubmarket data = submarketTradeData.get(submarket);</div>
-<div class="line"><span class="lineno">  165</span>        <span class="keywordflow">if</span> (data == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  166</span>            data = <span class="keyword">new</span> PlayerTradeDataForSubmarket(submarket);</div>
-<div class="line"><span class="lineno">  167</span>            submarketTradeData.put(submarket, data);</div>
-<div class="line"><span class="lineno">  168</span>        }</div>
-<div class="line"><span class="lineno">  169</span>        <span class="keywordflow">return</span> data;</div>
-<div class="line"><span class="lineno">  170</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac4c3a19c15c555cf15f0f8aea56290f8" name="ac4c3a19c15c555cf15f0f8aea56290f8"></a>
@@ -277,10 +227,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d34/PlayerActivityTracker_8java_source.html#l00147">147</a> of file <a class="el" href="../../d2/d34/PlayerActivityTracker_8java_source.html">PlayerActivityTracker.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  147</span>                                                               {</div>
-<div class="line"><span class="lineno">  148</span>        <span class="keywordflow">return</span> profitabilityData;</div>
-<div class="line"><span class="lineno">  149</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae5c770bcf9a4f51677d920c9533e76f4" name="ae5c770bcf9a4f51677d920c9533e76f4"></a>
@@ -299,10 +246,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d34/PlayerActivityTracker_8java_source.html#l00142">142</a> of file <a class="el" href="../../d2/d34/PlayerActivityTracker_8java_source.html">PlayerActivityTracker.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  142</span>                                                         {</div>
-<div class="line"><span class="lineno">  143</span>        <span class="keywordflow">return</span> repChangeTracker;</div>
-<div class="line"><span class="lineno">  144</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a380e12a374f272743b616751c42ebf85" name="a380e12a374f272743b616751c42ebf85"></a>
@@ -321,10 +265,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d34/PlayerActivityTracker_8java_source.html#l00177">177</a> of file <a class="el" href="../../d2/d34/PlayerActivityTracker_8java_source.html">PlayerActivityTracker.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  177</span>                                                                                  {</div>
-<div class="line"><span class="lineno">  178</span>        <span class="keywordflow">return</span> submarketTradeData;</div>
-<div class="line"><span class="lineno">  179</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa4723c7bf79809b1bef42831784be641" name="aa4723c7bf79809b1bef42831784be641"></a>
@@ -351,19 +292,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d34/PlayerActivityTracker_8java_source.html#l00095">95</a> of file <a class="el" href="../../d2/d34/PlayerActivityTracker_8java_source.html">PlayerActivityTracker.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   95</span>                                   {</div>
-<div class="line"><span class="lineno">   96</span>        <span class="keywordflow">if</span> (profitabilityData == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   97</span>            profitabilityData = <span class="keyword">new</span> PlayerTradeProfitabilityData();</div>
-<div class="line"><span class="lineno">   98</span>        }</div>
-<div class="line"><span class="lineno">   99</span>        <span class="keywordflow">if</span> (repChangeTracker == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  100</span>            repChangeTracker = <span class="keyword">new</span> ReputationChangeTracker();</div>
-<div class="line"><span class="lineno">  101</span>        }</div>
-<div class="line"><span class="lineno">  102</span>        <span class="keywordflow">if</span> (playerFleetStats == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  103</span>            playerFleetStats = <span class="keyword">new</span> FleetStatsSnapshot();</div>
-<div class="line"><span class="lineno">  104</span>        }</div>
-<div class="line"><span class="lineno">  105</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">  106</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a37c6d319e1834b9ef29abe6e6c5d271a" name="a37c6d319e1834b9ef29abe6e6c5d271a"></a>
@@ -383,11 +312,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d34/PlayerActivityTracker_8java_source.html#l00151">151</a> of file <a class="el" href="../../d2/d34/PlayerActivityTracker_8java_source.html">PlayerActivityTracker.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  151</span>                                                  {</div>
-<div class="line"><span class="lineno">  152</span>        Long timestamp = Global.getSector().getClock().getTimestamp();</div>
-<div class="line"><span class="lineno">  153</span>        lastVisit.put(market, timestamp);</div>
-<div class="line"><span class="lineno">  154</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

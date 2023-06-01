@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -160,13 +161,7 @@ Public Member Functions</h2></td></tr>
 <p>Implements <a class="el" href="../../df/d88/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1OnFireEffectPlugin.html#a311cdd64c43363b408cb61e077f6e629">com.fs.starfarer.api.combat.OnFireEffectPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d1/df9/RiftTorpedoEffect_8java_source.html#l00048">48</a> of file <a class="el" href="../../d1/df9/RiftTorpedoEffect_8java_source.html">RiftTorpedoEffect.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   48</span>                                                                                                   {</div>
-<div class="line"><span class="lineno">   49</span>        RiftTrailEffect trail = <span class="keyword">new</span> RiftTrailEffect((MissileAPI) projectile, <span class="stringliteral">&quot;rifttorpedo_loop&quot;</span>);</div>
-<div class="line"><span class="lineno">   50</span>        ((MissileAPI) projectile).setEmpResistance(1000);</div>
-<div class="line"><span class="lineno">   51</span>        ((MissileAPI) projectile).setEccmChanceOverride(1f);</div>
-<div class="line"><span class="lineno">   52</span>        Global.getCombatEngine().addPlugin(trail);</div>
-<div class="line"><span class="lineno">   53</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a3c44c9a5919d96042aef3c78f7f66b42" name="a3c44c9a5919d96042aef3c78f7f66b42"></a>
@@ -222,28 +217,7 @@ Public Member Functions</h2></td></tr>
 <p>Implements <a class="el" href="../../dd/d68/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1OnHitEffectPlugin.html#ab4367dd15bcdc484344365a661313f23">com.fs.starfarer.api.combat.OnHitEffectPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d1/df9/RiftTorpedoEffect_8java_source.html#l00026">26</a> of file <a class="el" href="../../d1/df9/RiftTorpedoEffect_8java_source.html">RiftTorpedoEffect.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   26</span>                                                                                                                                                                              {</div>
-<div class="line"><span class="lineno">   27</span>        Color color = RiftCascadeEffect.STANDARD_RIFT_COLOR;</div>
-<div class="line"><span class="lineno">   28</span>        Object o = projectile.getWeapon().getSpec().getProjectileSpec();</div>
-<div class="line"><span class="lineno">   29</span>        <span class="keywordflow">if</span> (o instanceof MissileSpecAPI) {</div>
-<div class="line"><span class="lineno">   30</span>            MissileSpecAPI spec = (MissileSpecAPI) o;</div>
-<div class="line"><span class="lineno">   31</span>            color = spec.getExplosionColor();</div>
-<div class="line"><span class="lineno">   32</span>        }</div>
-<div class="line"><span class="lineno">   33</span>        </div>
-<div class="line"><span class="lineno">   34</span>        NEParams p = RiftCascadeMineExplosion.createStandardRiftParams(color, 40f);</div>
-<div class="line"><span class="lineno">   35</span>        p.fadeOut = 2f;</div>
-<div class="line"><span class="lineno">   36</span>        p.hitGlowSizeMult = 1f;</div>
-<div class="line"><span class="lineno">   37</span>        <span class="comment">// want a red rift, but still blue for subtracting from the red clouds</span></div>
-<div class="line"><span class="lineno">   38</span>        <span class="comment">// or not - actually looks better with the red being inverted and subtracted</span></div>
-<div class="line"><span class="lineno">   39</span>        <span class="comment">// despite this not matching the trail</span></div>
-<div class="line"><span class="lineno">   40</span>        <span class="comment">//p.invertForDarkening = NSProjEffect.STANDARD_RIFT_COLOR;</span></div>
-<div class="line"><span class="lineno">   41</span>        RiftCascadeMineExplosion.spawnStandardRift(projectile, p);</div>
-<div class="line"><span class="lineno">   42</span>        </div>
-<div class="line"><span class="lineno">   43</span>        Vector2f vel = <span class="keyword">new</span> Vector2f();</div>
-<div class="line"><span class="lineno">   44</span>        <span class="keywordflow">if</span> (target != <span class="keyword">null</span>) vel.set(target.getVelocity());</div>
-<div class="line"><span class="lineno">   45</span>        Global.getSoundPlayer().playSound(<span class="stringliteral">&quot;rifttorpedo_explosion&quot;</span>, 1f, 1f, point, vel);</div>
-<div class="line"><span class="lineno">   46</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

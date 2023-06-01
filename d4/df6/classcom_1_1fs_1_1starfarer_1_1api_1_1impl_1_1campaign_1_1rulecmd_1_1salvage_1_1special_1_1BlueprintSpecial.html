@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -253,9 +254,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/db3/BlueprintSpecial_8java_source.html#l00041">41</a> of file <a class="el" href="../../dd/db3/BlueprintSpecial_8java_source.html">BlueprintSpecial.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   41</span>                              {</div>
-<div class="line"><span class="lineno">   42</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -276,21 +275,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/db3/BlueprintSpecial_8java_source.html#l00091">91</a> of file <a class="el" href="../../dd/db3/BlueprintSpecial_8java_source.html">BlueprintSpecial.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   91</span>                                              {</div>
-<div class="line"><span class="lineno">   92</span>        </div>
-<div class="line"><span class="lineno">   93</span>        List&lt;DropData&gt; dropRandom = <span class="keyword">new</span> ArrayList&lt;DropData&gt;();</div>
-<div class="line"><span class="lineno">   94</span>        </div>
-<div class="line"><span class="lineno">   95</span>        DropData d = <span class="keyword">new</span> DropData();</div>
-<div class="line"><span class="lineno">   96</span>        d.chances = 1;</div>
-<div class="line"><span class="lineno">   97</span>        d.group = <span class="stringliteral">&quot;blueprints_guaranteed&quot;</span>;</div>
-<div class="line"><span class="lineno">   98</span>        dropRandom.add(d);</div>
-<div class="line"><span class="lineno">   99</span>        </div>
-<div class="line"><span class="lineno">  100</span>        CargoAPI result = SalvageEntity.generateSalvage(<a class="code hl_variable" href="../../d3/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html#a64ea9f5f42e454f9603a7ac6a5d6d612">random</a>, 1f, 1f, 1f, 1f, <span class="keyword">null</span>, dropRandom);</div>
-<div class="line"><span class="lineno">  101</span>        </div>
-<div class="line"><span class="lineno">  102</span>        <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">  103</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial_html_a64ea9f5f42e454f9603a7ac6a5d6d612"><div class="ttname"><a href="../../d3/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html#a64ea9f5f42e454f9603a7ac6a5d6d612">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.BaseSalvageSpecial.random</a></div><div class="ttdeci">Random random</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dfc/BaseSalvageSpecial_8java_source.html#l00034">BaseSalvageSpecial.java:34</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a1135d983401e07b5e5c597aa495272af" name="a1135d983401e07b5e5c597aa495272af"></a>
@@ -322,29 +307,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html#a27b2795ca95e07b0407dea2266f74c49">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.BaseSalvageSpecial</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/db3/BlueprintSpecial_8java_source.html#l00045">45</a> of file <a class="el" href="../../dd/db3/BlueprintSpecial_8java_source.html">BlueprintSpecial.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   45</span>                                                                      {</div>
-<div class="line"><span class="lineno">   46</span>        super.init(<a class="code hl_variable" href="../../d3/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html#a52a1f4bf10534c4251533752d1632277">dialog</a>, specialData);</div>
-<div class="line"><span class="lineno">   47</span>        </div>
-<div class="line"><span class="lineno">   48</span>        <a class="code hl_variable" href="../../d4/df6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BlueprintSpecial.html#aa56817624227b44509140888a3679b7d">data</a> = (BlueprintSpecialData) specialData;</div>
-<div class="line"><span class="lineno">   49</span>        </div>
-<div class="line"><span class="lineno">   50</span>        <span class="comment">//random = new Random();</span></div>
-<div class="line"><span class="lineno">   51</span>        </div>
-<div class="line"><span class="lineno">   52</span>        CargoAPI bp = <a class="code hl_function" href="../../d4/df6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BlueprintSpecial.html#a7ed4749bc3acbe9be3479a68c4b1a114">generateBP</a>(<a class="code hl_variable" href="../../d3/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html#a64ea9f5f42e454f9603a7ac6a5d6d612">random</a>);</div>
-<div class="line"><span class="lineno">   53</span>        bp.sort();</div>
-<div class="line"><span class="lineno">   54</span>        </div>
-<div class="line"><span class="lineno">   55</span>        <span class="keywordflow">if</span> (bp.getStacksCopy().size() &lt;= 0) {</div>
-<div class="line"><span class="lineno">   56</span>            <a class="code hl_function" href="../../d4/df6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BlueprintSpecial.html#afbb26c3bf02c3115a7b33a603da0b9b0">initNothing</a>();</div>
-<div class="line"><span class="lineno">   57</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   58</span>            <a class="code hl_function" href="../../d4/df6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BlueprintSpecial.html#a8540e4acd611ace82639741bd14ce144">initBP</a>(bp.getStacksCopy().get(0));</div>
-<div class="line"><span class="lineno">   59</span>        }</div>
-<div class="line"><span class="lineno">   60</span> </div>
-<div class="line"><span class="lineno">   61</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial_html_a52a1f4bf10534c4251533752d1632277"><div class="ttname"><a href="../../d3/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html#a52a1f4bf10534c4251533752d1632277">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.BaseSalvageSpecial.dialog</a></div><div class="ttdeci">InteractionDialogAPI dialog</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dfc/BaseSalvageSpecial_8java_source.html#l00033">BaseSalvageSpecial.java:33</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BlueprintSpecial_html_a7ed4749bc3acbe9be3479a68c4b1a114"><div class="ttname"><a href="../../d4/df6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BlueprintSpecial.html#a7ed4749bc3acbe9be3479a68c4b1a114">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.BlueprintSpecial.generateBP</a></div><div class="ttdeci">CargoAPI generateBP(Random random)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/db3/BlueprintSpecial_8java_source.html#l00091">BlueprintSpecial.java:91</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BlueprintSpecial_html_a8540e4acd611ace82639741bd14ce144"><div class="ttname"><a href="../../d4/df6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BlueprintSpecial.html#a8540e4acd611ace82639741bd14ce144">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.BlueprintSpecial.initBP</a></div><div class="ttdeci">void initBP(CargoStackAPI stack)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/db3/BlueprintSpecial_8java_source.html#l00069">BlueprintSpecial.java:69</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BlueprintSpecial_html_aa56817624227b44509140888a3679b7d"><div class="ttname"><a href="../../d4/df6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BlueprintSpecial.html#aa56817624227b44509140888a3679b7d">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.BlueprintSpecial.data</a></div><div class="ttdeci">BlueprintSpecialData data</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/db3/BlueprintSpecial_8java_source.html#l00039">BlueprintSpecial.java:39</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BlueprintSpecial_html_afbb26c3bf02c3115a7b33a603da0b9b0"><div class="ttname"><a href="../../d4/df6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BlueprintSpecial.html#afbb26c3bf02c3115a7b33a603da0b9b0">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.BlueprintSpecial.initNothing</a></div><div class="ttdeci">void initNothing()</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/db3/BlueprintSpecial_8java_source.html#l00063">BlueprintSpecial.java:63</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8540e4acd611ace82639741bd14ce144" name="a8540e4acd611ace82639741bd14ce144"></a>
@@ -372,27 +335,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/db3/BlueprintSpecial_8java_source.html#l00069">69</a> of file <a class="el" href="../../dd/db3/BlueprintSpecial_8java_source.html">BlueprintSpecial.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   69</span>                                               {</div>
-<div class="line"><span class="lineno">   70</span>        <span class="keywordflow">if</span> (!stack.isSpecialStack()) {</div>
-<div class="line"><span class="lineno">   71</span>            <a class="code hl_function" href="../../d4/df6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BlueprintSpecial.html#afbb26c3bf02c3115a7b33a603da0b9b0">initNothing</a>();</div>
-<div class="line"><span class="lineno">   72</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   73</span>        }</div>
-<div class="line"><span class="lineno">   74</span>        </div>
-<div class="line"><span class="lineno">   75</span>        <a class="code hl_function" href="../../d3/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html#a544240523ec9644e7f318558571e8b37">addText</a>(<span class="stringliteral">&quot;Your salvage crews find a well-hidden safe. After an EMP pulse and some delicate work &quot;</span> +</div>
-<div class="line"><span class="lineno">   76</span>                <span class="stringliteral">&quot;with a plasma cutter, the safe yields its contents.&quot;</span>);</div>
-<div class="line"><span class="lineno">   77</span>        </div>
-<div class="line"><span class="lineno">   78</span>        <a class="code hl_variable" href="../../d3/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html#ab6e02fe6a5bfe2321c79f0e83203c9ff">playerFleet</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#ab219cada372a13654e8e912aba977b05">getCargo</a>().<a class="code hl_function" href="../../dc/d7b/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a3b35d9aa67fb2d5e67d21ccf196596b1">addFromStack</a>(stack);</div>
-<div class="line"><span class="lineno">   79</span>        AddRemoveCommodity.addStackGainText(stack, <a class="code hl_variable" href="../../d3/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html#affb5500b3ddd423098ece1c609164b5f">text</a>, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   80</span>        </div>
-<div class="line"><span class="lineno">   81</span>        <a class="code hl_function" href="../../d3/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html#a1a337a2a4c502467d45f95b880cd412e">setDone</a>(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   82</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial_html_a1a337a2a4c502467d45f95b880cd412e"><div class="ttname"><a href="../../d3/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html#a1a337a2a4c502467d45f95b880cd412e">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.BaseSalvageSpecial.setDone</a></div><div class="ttdeci">void setDone(boolean done)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dfc/BaseSalvageSpecial_8java_source.html#l00157">BaseSalvageSpecial.java:157</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial_html_a544240523ec9644e7f318558571e8b37"><div class="ttname"><a href="../../d3/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html#a544240523ec9644e7f318558571e8b37">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.BaseSalvageSpecial.addText</a></div><div class="ttdeci">void addText(String format)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dfc/BaseSalvageSpecial_8java_source.html#l00173">BaseSalvageSpecial.java:173</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial_html_ab6e02fe6a5bfe2321c79f0e83203c9ff"><div class="ttname"><a href="../../d3/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html#ab6e02fe6a5bfe2321c79f0e83203c9ff">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.BaseSalvageSpecial.playerFleet</a></div><div class="ttdeci">CampaignFleetAPI playerFleet</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dfc/BaseSalvageSpecial_8java_source.html#l00042">BaseSalvageSpecial.java:42</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial_html_affb5500b3ddd423098ece1c609164b5f"><div class="ttname"><a href="../../d3/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html#affb5500b3ddd423098ece1c609164b5f">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.BaseSalvageSpecial.text</a></div><div class="ttdeci">TextPanelAPI text</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dfc/BaseSalvageSpecial_8java_source.html#l00037">BaseSalvageSpecial.java:37</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI_html_a3b35d9aa67fb2d5e67d21ccf196596b1"><div class="ttname"><a href="../../dc/d7b/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a3b35d9aa67fb2d5e67d21ccf196596b1">com.fs.starfarer.api.campaign.CargoAPI.addFromStack</a></div><div class="ttdeci">void addFromStack(CargoStackAPI stack)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_ab219cada372a13654e8e912aba977b05"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#ab219cada372a13654e8e912aba977b05">com.fs.starfarer.api.campaign.SectorEntityToken.getCargo</a></div><div class="ttdeci">CargoAPI getCargo()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="afbb26c3bf02c3115a7b33a603da0b9b0" name="afbb26c3bf02c3115a7b33a603da0b9b0"></a>
@@ -413,11 +356,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html#a5b4d2cee83738c3e6402bf7d76b29d05">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.BaseSalvageSpecial</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/db3/BlueprintSpecial_8java_source.html#l00063">63</a> of file <a class="el" href="../../dd/db3/BlueprintSpecial_8java_source.html">BlueprintSpecial.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   63</span>                              {</div>
-<div class="line"><span class="lineno">   64</span>        <a class="code hl_function" href="../../d3/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html#a544240523ec9644e7f318558571e8b37">addText</a>(<span class="stringliteral">&quot;Your salvage crews find a likely-looking safe, but it&#39;s unfortunately empty.&quot;</span>);</div>
-<div class="line"><span class="lineno">   65</span>        <a class="code hl_function" href="../../d3/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html#a1a337a2a4c502467d45f95b880cd412e">setDone</a>(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   66</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="abe21bd6396d4f51867ed99f4a743bf6b" name="abe21bd6396d4f51867ed99f4a743bf6b"></a>
@@ -449,10 +388,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html#a26913511fb9a1c78c35f00c251148d54">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.BaseSalvageSpecial</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/db3/BlueprintSpecial_8java_source.html#l00086">86</a> of file <a class="el" href="../../dd/db3/BlueprintSpecial_8java_source.html">BlueprintSpecial.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   86</span>                                                                     {</div>
-<div class="line"><span class="lineno">   87</span>        super.optionSelected(optionText, optionData);</div>
-<div class="line"><span class="lineno">   88</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

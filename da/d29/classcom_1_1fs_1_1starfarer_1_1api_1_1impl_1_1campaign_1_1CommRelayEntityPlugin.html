@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -257,33 +258,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d84/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCampaignObjectivePlugin.html#a136d7c8a7cb5a3bddc26aecb9efe97b1">com.fs.starfarer.api.impl.campaign.BaseCampaignObjectivePlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d1/ddc/CommRelayEntityPlugin_8java_source.html#l00088">88</a> of file <a class="el" href="../../d1/ddc/CommRelayEntityPlugin_8java_source.html">CommRelayEntityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   88</span>                                                                        {</div>
-<div class="line"><span class="lineno">   89</span><span class="comment">//      int bonus = Math.abs(Math.round(</span></div>
-<div class="line"><span class="lineno">   90</span><span class="comment">//              CommRelayCondition.NO_RELAY_PENALTY - CommRelayCondition.COMM_RELAY_BONUS));</span></div>
-<div class="line"><span class="lineno">   91</span><span class="comment">//      if (isMakeshift()) {</span></div>
-<div class="line"><span class="lineno">   92</span><span class="comment">//          bonus = Math.abs(Math.round(</span></div>
-<div class="line"><span class="lineno">   93</span><span class="comment">//              CommRelayCondition.NO_RELAY_PENALTY - CommRelayCondition.MAKESHIFT_COMM_RELAY_BONUS));</span></div>
-<div class="line"><span class="lineno">   94</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">   95</span>        <span class="keywordtype">int</span> bonus = Math.abs(Math.round(</div>
-<div class="line"><span class="lineno">   96</span>                CommRelayCondition.COMM_RELAY_BONUS));</div>
-<div class="line"><span class="lineno">   97</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../da/d29/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CommRelayEntityPlugin.html#ae0267e549a458587403360686fd0dfaa">isMakeshift</a>()) {</div>
-<div class="line"><span class="lineno">   98</span>            bonus = Math.abs(Math.round(</div>
-<div class="line"><span class="lineno">   99</span>                    CommRelayCondition.MAKESHIFT_COMM_RELAY_BONUS));</div>
-<div class="line"><span class="lineno">  100</span>        }</div>
-<div class="line"><span class="lineno">  101</span>            </div>
-<div class="line"><span class="lineno">  102</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d6/d84/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCampaignObjectivePlugin.html#a1dc303c6ef637622447c870cdf665224">isHacked</a>()) {</div>
-<div class="line"><span class="lineno">  103</span>            text.addPara(<span class="stringliteral">&quot;%s stability for in-system colonies&quot;</span>,</div>
-<div class="line"><span class="lineno">  104</span>                     pad, Misc.getHighlightColor(), <span class="stringliteral">&quot;+&quot;</span> + bonus);</div>
-<div class="line"><span class="lineno">  105</span>            text.addPara(<span class="stringliteral">&quot;Comm sniffer installed&quot;</span>, Misc.getTextColor(), pad);</div>
-<div class="line"><span class="lineno">  106</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  107</span>            text.addPara(<span class="stringliteral">&quot;%s stability for same-faction colonies in-system&quot;</span>,</div>
-<div class="line"><span class="lineno">  108</span>                     pad, Misc.getHighlightColor(), <span class="stringliteral">&quot;+&quot;</span> + bonus);</div>
-<div class="line"><span class="lineno">  109</span> </div>
-<div class="line"><span class="lineno">  110</span>        }</div>
-<div class="line"><span class="lineno">  111</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCampaignObjectivePlugin_html_a1dc303c6ef637622447c870cdf665224"><div class="ttname"><a href="../../d6/d84/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCampaignObjectivePlugin.html#a1dc303c6ef637622447c870cdf665224">com.fs.starfarer.api.impl.campaign.BaseCampaignObjectivePlugin.isHacked</a></div><div class="ttdeci">Boolean isHacked()</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d3a/BaseCampaignObjectivePlugin_8java_source.html#l00033">BaseCampaignObjectivePlugin.java:33</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CommRelayEntityPlugin_html_ae0267e549a458587403360686fd0dfaa"><div class="ttname"><a href="../../da/d29/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CommRelayEntityPlugin.html#ae0267e549a458587403360686fd0dfaa">com.fs.starfarer.api.impl.campaign.CommRelayEntityPlugin.isMakeshift</a></div><div class="ttdeci">boolean isMakeshift()</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/ddc/CommRelayEntityPlugin_8java_source.html#l00056">CommRelayEntityPlugin.java:56</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a63cd0ee3663d94d9f6cca8ab2ce4b7fd" name="a63cd0ee3663d94d9f6cca8ab2ce4b7fd"></a>
@@ -311,31 +286,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d5/d0a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html#a925b3cae820facd4cbb446add6bd48af">com.fs.starfarer.api.impl.campaign.BaseCustomEntityPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d1/ddc/CommRelayEntityPlugin_8java_source.html#l00034">34</a> of file <a class="el" href="../../d1/ddc/CommRelayEntityPlugin_8java_source.html">CommRelayEntityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   34</span>                                      {</div>
-<div class="line"><span class="lineno">   35</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d5/d0a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html#a4de611a62107d116dd5d3e8bc980fa6a">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a06362480c6a17326650354460c6d7442">getContainingLocation</a>() == <span class="keyword">null</span> || <a class="code hl_variable" href="../../d5/d0a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html#a4de611a62107d116dd5d3e8bc980fa6a">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#aca208794671c1be979d665d374deaa94">isInHyperspace</a>()) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   36</span>        </div>
-<div class="line"><span class="lineno">   37</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d5/d0a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html#a4de611a62107d116dd5d3e8bc980fa6a">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#adcd558c1d95f9755066ddaf9a77311c1">getMemoryWithoutUpdate</a>().<a class="code hl_function" href="../../d0/de7/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html#adb833cc81359cc239a89eae309480fc9">getBoolean</a>(MemFlags.OBJECTIVE_NON_FUNCTIONAL)) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   38</span>        </div>
-<div class="line"><span class="lineno">   39</span>        <span class="comment">// everything else is handled by the relay condition - it picks what relay to use and when to remove itself</span></div>
-<div class="line"><span class="lineno">   40</span>        <span class="keywordflow">for</span> (MarketAPI market : Misc.getMarketsInLocation(<a class="code hl_variable" href="../../d5/d0a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html#a4de611a62107d116dd5d3e8bc980fa6a">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a06362480c6a17326650354460c6d7442">getContainingLocation</a>())) {</div>
-<div class="line"><span class="lineno">   41</span>            CommRelayCondition mc = CommRelayCondition.get(market);</div>
-<div class="line"><span class="lineno">   42</span>            <span class="keywordflow">if</span> (mc == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   43</span>                market.addCondition(Conditions.COMM_RELAY);</div>
-<div class="line"><span class="lineno">   44</span>                mc = CommRelayCondition.get(market);</div>
-<div class="line"><span class="lineno">   45</span>            }</div>
-<div class="line"><span class="lineno">   46</span>            <span class="keywordflow">if</span> (mc != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   47</span>                mc.getRelays().add(<a class="code hl_variable" href="../../d5/d0a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html#a4de611a62107d116dd5d3e8bc980fa6a">entity</a>);</div>
-<div class="line"><span class="lineno">   48</span>            }</div>
-<div class="line"><span class="lineno">   49</span>        }</div>
-<div class="line"><span class="lineno">   50</span>        </div>
-<div class="line"><span class="lineno">   51</span>        checkIntelFromCommSniffer();</div>
-<div class="line"><span class="lineno">   52</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin_html_a4de611a62107d116dd5d3e8bc980fa6a"><div class="ttname"><a href="../../d5/d0a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html#a4de611a62107d116dd5d3e8bc980fa6a">com.fs.starfarer.api.impl.campaign.BaseCustomEntityPlugin.entity</a></div><div class="ttdeci">SectorEntityToken entity</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d0e/BaseCustomEntityPlugin_8java_source.html#l00012">BaseCustomEntityPlugin.java:12</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_a06362480c6a17326650354460c6d7442"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a06362480c6a17326650354460c6d7442">com.fs.starfarer.api.campaign.SectorEntityToken.getContainingLocation</a></div><div class="ttdeci">LocationAPI getContainingLocation()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_aca208794671c1be979d665d374deaa94"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#aca208794671c1be979d665d374deaa94">com.fs.starfarer.api.campaign.SectorEntityToken.isInHyperspace</a></div><div class="ttdeci">boolean isInHyperspace()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_adcd558c1d95f9755066ddaf9a77311c1"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#adcd558c1d95f9755066ddaf9a77311c1">com.fs.starfarer.api.campaign.SectorEntityToken.getMemoryWithoutUpdate</a></div><div class="ttdeci">MemoryAPI getMemoryWithoutUpdate()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI_html_adb833cc81359cc239a89eae309480fc9"><div class="ttname"><a href="../../d0/de7/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html#adb833cc81359cc239a89eae309480fc9">com.fs.starfarer.api.campaign.rules.MemoryAPI.getBoolean</a></div><div class="ttdeci">boolean getBoolean(String key)</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa3573bfc14923e302aec3bdd620de711" name="aa3573bfc14923e302aec3bdd620de711"></a>
@@ -367,11 +318,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d5/d0a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html#aaca3cf8779de8f9fdbde9d5f29e4273a">com.fs.starfarer.api.impl.campaign.BaseCustomEntityPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d1/ddc/CommRelayEntityPlugin_8java_source.html#l00025">25</a> of file <a class="el" href="../../d1/ddc/CommRelayEntityPlugin_8java_source.html">CommRelayEntityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   25</span>                                                                    {</div>
-<div class="line"><span class="lineno">   26</span>        super.init(<a class="code hl_variable" href="../../d5/d0a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html#a4de611a62107d116dd5d3e8bc980fa6a">entity</a>, pluginParams);</div>
-<div class="line"><span class="lineno">   27</span>        readResolve();</div>
-<div class="line"><span class="lineno">   28</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae0267e549a458587403360686fd0dfaa" name="ae0267e549a458587403360686fd0dfaa"></a>
@@ -398,11 +345,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/ddc/CommRelayEntityPlugin_8java_source.html#l00056">56</a> of file <a class="el" href="../../d1/ddc/CommRelayEntityPlugin_8java_source.html">CommRelayEntityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   56</span>                                    {</div>
-<div class="line"><span class="lineno">   57</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d5/d0a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html#a4de611a62107d116dd5d3e8bc980fa6a">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#abed0787f3c057816961d1a07f2c55662">hasTag</a>(Tags.MAKESHIFT);</div>
-<div class="line"><span class="lineno">   58</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_abed0787f3c057816961d1a07f2c55662"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#abed0787f3c057816961d1a07f2c55662">com.fs.starfarer.api.campaign.SectorEntityToken.hasTag</a></div><div class="ttdeci">boolean hasTag(String tag)</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a680f8e8a3b40c51c74c71894f3b39f67" name="a680f8e8a3b40c51c74c71894f3b39f67"></a>
@@ -434,23 +377,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d84/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCampaignObjectivePlugin.html#a609dc1fb1dfcda1d8443ec8dd53ddbdb">com.fs.starfarer.api.impl.campaign.BaseCampaignObjectivePlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d1/ddc/CommRelayEntityPlugin_8java_source.html#l00071">71</a> of file <a class="el" href="../../d1/ddc/CommRelayEntityPlugin_8java_source.html">CommRelayEntityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   71</span>                                                             {</div>
-<div class="line"><span class="lineno">   72</span><span class="comment">//      int bonus = Math.abs(Math.round(</span></div>
-<div class="line"><span class="lineno">   73</span><span class="comment">//                  CommRelayCondition.NO_RELAY_PENALTY - CommRelayCondition.COMM_RELAY_BONUS));</span></div>
-<div class="line"><span class="lineno">   74</span><span class="comment">//      if (isMakeshift()) {</span></div>
-<div class="line"><span class="lineno">   75</span><span class="comment">//          bonus = Math.abs(Math.round(</span></div>
-<div class="line"><span class="lineno">   76</span><span class="comment">//                  CommRelayCondition.NO_RELAY_PENALTY - CommRelayCondition.MAKESHIFT_COMM_RELAY_BONUS));</span></div>
-<div class="line"><span class="lineno">   77</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">   78</span>        <span class="keywordtype">int</span> bonus = Math.abs(Math.round(</div>
-<div class="line"><span class="lineno">   79</span>                CommRelayCondition.COMM_RELAY_BONUS));</div>
-<div class="line"><span class="lineno">   80</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../da/d29/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CommRelayEntityPlugin.html#ae0267e549a458587403360686fd0dfaa">isMakeshift</a>()) {</div>
-<div class="line"><span class="lineno">   81</span>            bonus = Math.abs(Math.round(</div>
-<div class="line"><span class="lineno">   82</span>                    CommRelayCondition.MAKESHIFT_COMM_RELAY_BONUS));</div>
-<div class="line"><span class="lineno">   83</span>        }</div>
-<div class="line"><span class="lineno">   84</span>        text.addPara(BaseIntelPlugin.INDENT + <span class="stringliteral">&quot;%s stability for same-faction colonies in system&quot;</span>,</div>
-<div class="line"><span class="lineno">   85</span>                pad, Misc.getHighlightColor(), <span class="stringliteral">&quot;+&quot;</span> + bonus);</div>
-<div class="line"><span class="lineno">   86</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ad323689ed36827b5496a98bc4f7e36dd" name="ad323689ed36827b5496a98bc4f7e36dd"></a>
@@ -472,15 +399,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d84/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCampaignObjectivePlugin.html#abf3266167aa6855628ae389a7b583b5e">com.fs.starfarer.api.impl.campaign.BaseCampaignObjectivePlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d1/ddc/CommRelayEntityPlugin_8java_source.html#l00061">61</a> of file <a class="el" href="../../d1/ddc/CommRelayEntityPlugin_8java_source.html">CommRelayEntityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   61</span>                                                                        {</div>
-<div class="line"><span class="lineno">   62</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d5/d0a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html#a4de611a62107d116dd5d3e8bc980fa6a">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#adcd558c1d95f9755066ddaf9a77311c1">getMemoryWithoutUpdate</a>().<a class="code hl_function" href="../../d0/de7/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html#adb833cc81359cc239a89eae309480fc9">getBoolean</a>(MemFlags.OBJECTIVE_NON_FUNCTIONAL)) {</div>
-<div class="line"><span class="lineno">   63</span>            text.addPara(<span class="stringliteral">&quot;This one, however, is not connected to the Sector-wide network and is not emitting the hyperwave radiation typically indicative of relay operation. The cause of its lack of function is unknown.&quot;</span>);</div>
-<div class="line"><span class="lineno">   64</span>        }</div>
-<div class="line"><span class="lineno">   65</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d6/d84/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCampaignObjectivePlugin.html#a1dc303c6ef637622447c870cdf665224">isHacked</a>()) {</div>
-<div class="line"><span class="lineno">   66</span>            text.addPara(<span class="stringliteral">&quot;You have a comm sniffer running on this relay.&quot;</span>);</div>
-<div class="line"><span class="lineno">   67</span>        }</div>
-<div class="line"><span class="lineno">   68</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a6e4cd94af7da3184f6386015a6dbc978" name="a6e4cd94af7da3184f6386015a6dbc978"></a>
@@ -502,23 +421,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d84/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCampaignObjectivePlugin.html#a0aba63140c7e7b72332c56300a4c3deb">com.fs.starfarer.api.impl.campaign.BaseCampaignObjectivePlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d1/ddc/CommRelayEntityPlugin_8java_source.html#l00114">114</a> of file <a class="el" href="../../d1/ddc/CommRelayEntityPlugin_8java_source.html">CommRelayEntityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  114</span>                                          {</div>
-<div class="line"><span class="lineno">  115</span>        <span class="keywordflow">if</span> (hacked) {</div>
-<div class="line"><span class="lineno">  116</span>            <a class="code hl_function" href="../../da/d29/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CommRelayEntityPlugin.html#a6e4cd94af7da3184f6386015a6dbc978">setHacked</a>(hacked, -1f);</div>
-<div class="line"><span class="lineno">  117</span>            <span class="keywordtype">boolean</span> found = CommSnifferIntel.getExistingSnifferIntelForRelay(<a class="code hl_variable" href="../../d5/d0a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html#a4de611a62107d116dd5d3e8bc980fa6a">entity</a>) != <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  118</span>            <span class="keywordflow">if</span> (!found) {</div>
-<div class="line"><span class="lineno">  119</span>                CommSnifferIntel intel = <span class="keyword">new</span> CommSnifferIntel(<a class="code hl_variable" href="../../d5/d0a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html#a4de611a62107d116dd5d3e8bc980fa6a">entity</a>);</div>
-<div class="line"><span class="lineno">  120</span>                InteractionDialogAPI dialog = Global.getSector().getCampaignUI().getCurrentInteractionDialog();</div>
-<div class="line"><span class="lineno">  121</span>                <span class="keywordflow">if</span> (dialog != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  122</span>                    Global.getSector().getIntelManager().addIntelToTextPanel(intel, dialog.getTextPanel());</div>
-<div class="line"><span class="lineno">  123</span>                }</div>
-<div class="line"><span class="lineno">  124</span>            }</div>
-<div class="line"><span class="lineno">  125</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  126</span>            <a class="code hl_function" href="../../da/d29/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CommRelayEntityPlugin.html#a6e4cd94af7da3184f6386015a6dbc978">setHacked</a>(hacked, -1f);</div>
-<div class="line"><span class="lineno">  127</span>        }</div>
-<div class="line"><span class="lineno">  128</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CommRelayEntityPlugin_html_a6e4cd94af7da3184f6386015a6dbc978"><div class="ttname"><a href="../../da/d29/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CommRelayEntityPlugin.html#a6e4cd94af7da3184f6386015a6dbc978">com.fs.starfarer.api.impl.campaign.CommRelayEntityPlugin.setHacked</a></div><div class="ttdeci">void setHacked(boolean hacked)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/ddc/CommRelayEntityPlugin_8java_source.html#l00114">CommRelayEntityPlugin.java:114</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

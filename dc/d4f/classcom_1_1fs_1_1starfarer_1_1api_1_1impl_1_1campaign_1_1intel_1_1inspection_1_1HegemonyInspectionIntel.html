@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -747,76 +748,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d1d/HegemonyInspectionIntel_8java_source.html#l00080">80</a> of file <a class="el" href="../../d7/d1d/HegemonyInspectionIntel_8java_source.html">HegemonyInspectionIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   80</span>                                                                                         {</div>
-<div class="line"><span class="lineno">   81</span>        super(<a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#ac7fafc4f73e07184185b14befaed7601">target</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#acbebadb448c05e29d28a6b32112e74b4">getStarSystem</a>(), <a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#afcfff67097f289cedd6d628164c02b10">from</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a97645caff4adca5efcf3a462fb13ca0f">getFaction</a>(), <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   82</span>        this.delegate = <span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">   83</span>        this.from = <a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#afcfff67097f289cedd6d628164c02b10">from</a>;</div>
-<div class="line"><span class="lineno">   84</span>        this.target = <a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#ac7fafc4f73e07184185b14befaed7601">target</a>;</div>
-<div class="line"><span class="lineno">   85</span>        <a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#aad9e3952d1102670da10ce905abf6be5">targetFaction</a> = <a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#ac7fafc4f73e07184185b14befaed7601">target</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a97645caff4adca5efcf3a462fb13ca0f">getFaction</a>();</div>
-<div class="line"><span class="lineno">   86</span>        </div>
-<div class="line"><span class="lineno">   87</span>        <span class="keywordflow">for</span> (Industry curr : <a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#ac7fafc4f73e07184185b14befaed7601">target</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#ac5acce3843ed0b9764a1f79e69491970">getIndustries</a>()) {</div>
-<div class="line"><span class="lineno">   88</span>            String <span class="keywordtype">id</span> = curr.getAICoreId();</div>
-<div class="line"><span class="lineno">   89</span>            <span class="keywordflow">if</span> (<span class="keywordtype">id</span> != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   90</span>                <a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#afd7358e816ec683121ed1b8fff7ed5e9">expectedCores</a>.add(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">   91</span>            }</div>
-<div class="line"><span class="lineno">   92</span>        }</div>
-<div class="line"><span class="lineno">   93</span>        PersonAPI admin = <a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#ac7fafc4f73e07184185b14befaed7601">target</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#ac50006877429fed7a41fff0c260ae38a">getAdmin</a>();</div>
-<div class="line"><span class="lineno">   94</span>        <span class="keywordflow">if</span> (admin.isAICore()) {</div>
-<div class="line"><span class="lineno">   95</span>            <a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#afd7358e816ec683121ed1b8fff7ed5e9">expectedCores</a>.add(admin.getAICoreId());</div>
-<div class="line"><span class="lineno">   96</span>        }</div>
-<div class="line"><span class="lineno">   97</span>        </div>
-<div class="line"><span class="lineno">   98</span>        <span class="keywordtype">float</span> orgDur = 20f + 10f * (float) Math.random();</div>
-<div class="line"><span class="lineno">   99</span>        <span class="keywordflow">if</span> (DebugFlags.HEGEMONY_INSPECTION_DEBUG || DebugFlags.FAST_RAIDS) orgDur = 0.5f;</div>
-<div class="line"><span class="lineno">  100</span>        <a class="code hl_function" href="../../d2/d12/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#a43e2a66fd4acec284313e56e1e30a955">addStage</a>(<span class="keyword">new</span> HIOrganizeStage(<span class="keyword">this</span>, <a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#afcfff67097f289cedd6d628164c02b10">from</a>, orgDur));</div>
-<div class="line"><span class="lineno">  101</span>        </div>
-<div class="line"><span class="lineno">  102</span>        SectorEntityToken gather = <a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#afcfff67097f289cedd6d628164c02b10">from</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af1677b531fa1a657e17b732868c7b953">getPrimaryEntity</a>();</div>
-<div class="line"><span class="lineno">  103</span>        SectorEntityToken raidJump = RouteLocationCalculator.findJumpPointToUse(<a class="code hl_function" href="../../d2/d12/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#a940452ec4a9b85ec8b7c74917395db55">getFactionForUIColors</a>(), <a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#ac7fafc4f73e07184185b14befaed7601">target</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af1677b531fa1a657e17b732868c7b953">getPrimaryEntity</a>());</div>
-<div class="line"><span class="lineno">  104</span>        </div>
-<div class="line"><span class="lineno">  105</span>        <span class="keywordflow">if</span> (gather == <span class="keyword">null</span> || raidJump == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  106</span>            <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#aded37538fc19c3bce23708407fcb0d29">endImmediately</a>();</div>
-<div class="line"><span class="lineno">  107</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  108</span>        }</div>
-<div class="line"><span class="lineno">  109</span>        </div>
-<div class="line"><span class="lineno">  110</span>        <span class="keywordtype">float</span> successMult = 0.5f;</div>
-<div class="line"><span class="lineno">  111</span>        </div>
-<div class="line"><span class="lineno">  112</span>        HIAssembleStage assemble = <span class="keyword">new</span> HIAssembleStage(<span class="keyword">this</span>, gather);</div>
-<div class="line"><span class="lineno">  113</span>        assemble.addSource(<a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#afcfff67097f289cedd6d628164c02b10">from</a>);</div>
-<div class="line"><span class="lineno">  114</span>        assemble.setSpawnFP(inspectionFP);</div>
-<div class="line"><span class="lineno">  115</span>        assemble.setAbortFP(inspectionFP * successMult);</div>
-<div class="line"><span class="lineno">  116</span>        <a class="code hl_function" href="../../d2/d12/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#a43e2a66fd4acec284313e56e1e30a955">addStage</a>(assemble);</div>
-<div class="line"><span class="lineno">  117</span>        </div>
-<div class="line"><span class="lineno">  118</span>        </div>
-<div class="line"><span class="lineno">  119</span>        </div>
-<div class="line"><span class="lineno">  120</span>        HITravelStage travel = <span class="keyword">new</span> HITravelStage(<span class="keyword">this</span>, gather, raidJump, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  121</span>        travel.setAbortFP(inspectionFP * successMult);</div>
-<div class="line"><span class="lineno">  122</span>        <a class="code hl_function" href="../../d2/d12/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#a43e2a66fd4acec284313e56e1e30a955">addStage</a>(travel);</div>
-<div class="line"><span class="lineno">  123</span>        </div>
-<div class="line"><span class="lineno">  124</span>        <a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#a58fb1f15cbd12804e007501238903836">action</a> = <span class="keyword">new</span> HIActionStage(<span class="keyword">this</span>, <a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#ac7fafc4f73e07184185b14befaed7601">target</a>);</div>
-<div class="line"><span class="lineno">  125</span>        <a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#a58fb1f15cbd12804e007501238903836">action</a>.<a class="code hl_function" href="../../d7/d82/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html#aa179e274c805bd4530a0e24541107022">setAbortFP</a>(inspectionFP * successMult);</div>
-<div class="line"><span class="lineno">  126</span>        <a class="code hl_function" href="../../d2/d12/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#a43e2a66fd4acec284313e56e1e30a955">addStage</a>(<a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#a58fb1f15cbd12804e007501238903836">action</a>);</div>
-<div class="line"><span class="lineno">  127</span>        </div>
-<div class="line"><span class="lineno">  128</span>        <a class="code hl_function" href="../../d2/d12/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#a43e2a66fd4acec284313e56e1e30a955">addStage</a>(<span class="keyword">new</span> HIReturnStage(<span class="keyword">this</span>));</div>
-<div class="line"><span class="lineno">  129</span>        </div>
-<div class="line"><span class="lineno">  130</span>        <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#ac177d902e3daf52501b6b9961937a1fb">setImportant</a>(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  131</span>        </div>
-<div class="line"><span class="lineno">  132</span>        Global.getSector().getIntelManager().addIntel(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  133</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_ac177d902e3daf52501b6b9961937a1fb"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#ac177d902e3daf52501b6b9961937a1fb">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.setImportant</a></div><div class="ttdeci">void setImportant(Boolean important)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00312">BaseIntelPlugin.java:312</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_aded37538fc19c3bce23708407fcb0d29"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#aded37538fc19c3bce23708407fcb0d29">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.endImmediately</a></div><div class="ttdeci">void endImmediately()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00095">BaseIntelPlugin.java:95</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel_html_a58fb1f15cbd12804e007501238903836"><div class="ttname"><a href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#a58fb1f15cbd12804e007501238903836">com.fs.starfarer.api.impl.campaign.intel.inspection.HegemonyInspectionIntel.action</a></div><div class="ttdeci">HIActionStage action</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d1d/HegemonyInspectionIntel_8java_source.html#l00067">HegemonyInspectionIntel.java:67</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel_html_aad9e3952d1102670da10ce905abf6be5"><div class="ttname"><a href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#aad9e3952d1102670da10ce905abf6be5">com.fs.starfarer.api.impl.campaign.intel.inspection.HegemonyInspectionIntel.targetFaction</a></div><div class="ttdeci">FactionAPI targetFaction</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d1d/HegemonyInspectionIntel_8java_source.html#l00072">HegemonyInspectionIntel.java:72</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel_html_ac7fafc4f73e07184185b14befaed7601"><div class="ttname"><a href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#ac7fafc4f73e07184185b14befaed7601">com.fs.starfarer.api.impl.campaign.intel.inspection.HegemonyInspectionIntel.target</a></div><div class="ttdeci">MarketAPI target</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d1d/HegemonyInspectionIntel_8java_source.html#l00071">HegemonyInspectionIntel.java:71</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel_html_afcfff67097f289cedd6d628164c02b10"><div class="ttname"><a href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#afcfff67097f289cedd6d628164c02b10">com.fs.starfarer.api.impl.campaign.intel.inspection.HegemonyInspectionIntel.from</a></div><div class="ttdeci">MarketAPI from</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d1d/HegemonyInspectionIntel_8java_source.html#l00073">HegemonyInspectionIntel.java:73</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel_html_afd7358e816ec683121ed1b8fff7ed5e9"><div class="ttname"><a href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#afd7358e816ec683121ed1b8fff7ed5e9">com.fs.starfarer.api.impl.campaign.intel.inspection.HegemonyInspectionIntel.expectedCores</a></div><div class="ttdeci">List&lt; String &gt; expectedCores</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d1d/HegemonyInspectionIntel_8java_source.html#l00075">HegemonyInspectionIntel.java:75</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage_html_aa179e274c805bd4530a0e24541107022"><div class="ttname"><a href="../../d7/d82/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html#aa179e274c805bd4530a0e24541107022">com.fs.starfarer.api.impl.campaign.intel.raid.BaseRaidStage.setAbortFP</a></div><div class="ttdeci">void setAbortFP(float abortFP)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dec/BaseRaidStage_8java_source.html#l00041">BaseRaidStage.java:41</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel_html_a43e2a66fd4acec284313e56e1e30a955"><div class="ttname"><a href="../../d2/d12/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#a43e2a66fd4acec284313e56e1e30a955">com.fs.starfarer.api.impl.campaign.intel.raid.RaidIntel.addStage</a></div><div class="ttdeci">void addStage(RaidStage stage)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d48/RaidIntel_8java_source.html#l00149">RaidIntel.java:149</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel_html_a940452ec4a9b85ec8b7c74917395db55"><div class="ttname"><a href="../../d2/d12/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#a940452ec4a9b85ec8b7c74917395db55">com.fs.starfarer.api.impl.campaign.intel.raid.RaidIntel.getFactionForUIColors</a></div><div class="ttdeci">FactionAPI getFactionForUIColors()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d48/RaidIntel_8java_source.html#l00554">RaidIntel.java:554</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a97645caff4adca5efcf3a462fb13ca0f"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a97645caff4adca5efcf3a462fb13ca0f">com.fs.starfarer.api.campaign.econ.MarketAPI.getFaction</a></div><div class="ttdeci">FactionAPI getFaction()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_ac50006877429fed7a41fff0c260ae38a"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#ac50006877429fed7a41fff0c260ae38a">com.fs.starfarer.api.campaign.econ.MarketAPI.getAdmin</a></div><div class="ttdeci">PersonAPI getAdmin()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_ac5acce3843ed0b9764a1f79e69491970"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#ac5acce3843ed0b9764a1f79e69491970">com.fs.starfarer.api.campaign.econ.MarketAPI.getIndustries</a></div><div class="ttdeci">List&lt; Industry &gt; getIndustries()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_acbebadb448c05e29d28a6b32112e74b4"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#acbebadb448c05e29d28a6b32112e74b4">com.fs.starfarer.api.campaign.econ.MarketAPI.getStarSystem</a></div><div class="ttdeci">StarSystemAPI getStarSystem()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_af1677b531fa1a657e17b732868c7b953"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af1677b531fa1a657e17b732868c7b953">com.fs.starfarer.api.campaign.econ.MarketAPI.getPrimaryEntity</a></div><div class="ttdeci">SectorEntityToken getPrimaryEntity()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -857,146 +789,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d12/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#aaab4c0cb169cf7800d002888cbc8d780">com.fs.starfarer.api.impl.campaign.intel.raid.RaidIntel</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d1d/HegemonyInspectionIntel_8java_source.html#l00242">242</a> of file <a class="el" href="../../d7/d1d/HegemonyInspectionIntel_8java_source.html">HegemonyInspectionIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  242</span>                                                                            {</div>
-<div class="line"><span class="lineno">  243</span>        <span class="comment">//super.addBulletPoints(info, mode);</span></div>
-<div class="line"><span class="lineno">  244</span>        </div>
-<div class="line"><span class="lineno">  245</span>        Color h = Misc.getHighlightColor();</div>
-<div class="line"><span class="lineno">  246</span>        Color g = Misc.getGrayColor();</div>
-<div class="line"><span class="lineno">  247</span>        <span class="keywordtype">float</span> pad = 3f;</div>
-<div class="line"><span class="lineno">  248</span>        <span class="keywordtype">float</span> opad = 10f;</div>
-<div class="line"><span class="lineno">  249</span>        </div>
-<div class="line"><span class="lineno">  250</span>        <span class="keywordtype">float</span> initPad = pad;</div>
-<div class="line"><span class="lineno">  251</span>        <span class="keywordflow">if</span> (mode == ListInfoMode.IN_DESC) initPad = opad;</div>
-<div class="line"><span class="lineno">  252</span>        </div>
-<div class="line"><span class="lineno">  253</span>        Color tc = <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a9e443024a6224a5c170e5d1476514954">getBulletColorForMode</a>(mode);</div>
-<div class="line"><span class="lineno">  254</span>        </div>
-<div class="line"><span class="lineno">  255</span>        <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#adfa808a345b432134c9fb11227edc7df">bullet</a>(info);</div>
-<div class="line"><span class="lineno">  256</span>        <span class="keywordtype">boolean</span> isUpdate = <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a9ba572be19912ec6b816dc7b69352660">getListInfoParam</a>() != <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  257</span>        </div>
-<div class="line"><span class="lineno">  258</span>        <span class="keywordtype">boolean</span> hostile = <a class="code hl_function" href="../../d2/d12/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#ada09952c8221ff5613a52d34d66b254f">getFaction</a>().<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#accc67a07a27de570f239d753fa7efc5d">isHostileTo</a>(Factions.PLAYER);</div>
-<div class="line"><span class="lineno">  259</span>        <span class="keywordflow">if</span> (hostile) {</div>
-<div class="line"><span class="lineno">  260</span>            <a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#ad0c943ff38555857f615c21b236df94b">orders</a> = AntiInspectionOrders.RESIST;</div>
-<div class="line"><span class="lineno">  261</span>        }</div>
-<div class="line"><span class="lineno">  262</span>        </div>
-<div class="line"><span class="lineno">  263</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a9ba572be19912ec6b816dc7b69352660">getListInfoParam</a>() == <a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#a12497a116f7b6961cc9617bf91ddd5c1">MADE_HOSTILE_UPDATE</a>) {</div>
-<div class="line"><span class="lineno">  264</span>            FactionAPI other = <a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#ac7fafc4f73e07184185b14befaed7601">target</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a97645caff4adca5efcf3a462fb13ca0f">getFaction</a>();</div>
-<div class="line"><span class="lineno">  265</span>            info.addPara(<span class="stringliteral">&quot;Target: %s&quot;</span>, initPad, tc,</div>
-<div class="line"><span class="lineno">  266</span>                         other.getBaseUIColor(), <a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#ac7fafc4f73e07184185b14befaed7601">target</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a7e5b6e8035c61f63cd8b331df994233b">getName</a>());</div>
-<div class="line"><span class="lineno">  267</span>            initPad = 0f;</div>
-<div class="line"><span class="lineno">  268</span>            info.addPara(<span class="stringliteral">&quot;&quot;</span> + <a class="code hl_variable" href="../../d2/d12/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#a82f91ffc1e25c6fd25858e134d03f0a9">faction</a>.<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a152197efac6967a0a459e4579b8ab1ef">getDisplayName</a>() + <span class="stringliteral">&quot; forces arrive in-system and encounter resistance&quot;</span>, initPad, tc,</div>
-<div class="line"><span class="lineno">  269</span>                     <a class="code hl_variable" href="../../d2/d12/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#a82f91ffc1e25c6fd25858e134d03f0a9">faction</a>.<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a0213b272fbf9c2669316aa25c775ad60">getBaseUIColor</a>(), <a class="code hl_variable" href="../../d2/d12/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#a82f91ffc1e25c6fd25858e134d03f0a9">faction</a>.<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a152197efac6967a0a459e4579b8ab1ef">getDisplayName</a>());</div>
-<div class="line"><span class="lineno">  270</span>            initPad = 0f;</div>
-<div class="line"><span class="lineno">  271</span>            CoreReputationPlugin.addAdjustmentMessage(<a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#a79f9ace726db89976343053ea8288f0f">repResult</a>.delta, <a class="code hl_variable" href="../../d2/d12/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#a82f91ffc1e25c6fd25858e134d03f0a9">faction</a>, <span class="keyword">null</span>, </div>
-<div class="line"><span class="lineno">  272</span>                                    <span class="keyword">null</span>, <span class="keyword">null</span>, info, tc, isUpdate, initPad);</div>
-<div class="line"><span class="lineno">  273</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  274</span>        }</div>
-<div class="line"><span class="lineno">  275</span>        </div>
-<div class="line"><span class="lineno">  276</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a9ba572be19912ec6b816dc7b69352660">getListInfoParam</a>() == <a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#a7702c1654ea910faf0d594f638b7f3c6">ENTERED_SYSTEM_UPDATE</a>) {</div>
-<div class="line"><span class="lineno">  277</span>            FactionAPI other = <a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#ac7fafc4f73e07184185b14befaed7601">target</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a97645caff4adca5efcf3a462fb13ca0f">getFaction</a>();</div>
-<div class="line"><span class="lineno">  278</span>            info.addPara(<span class="stringliteral">&quot;Target: %s&quot;</span>, initPad, tc,</div>
-<div class="line"><span class="lineno">  279</span>                         other.getBaseUIColor(), <a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#ac7fafc4f73e07184185b14befaed7601">target</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a7e5b6e8035c61f63cd8b331df994233b">getName</a>());</div>
-<div class="line"><span class="lineno">  280</span>            initPad = 0f;</div>
-<div class="line"><span class="lineno">  281</span>            info.addPara(<span class="stringliteral">&quot;Arrived in-system&quot;</span>, tc, initPad);</div>
-<div class="line"><span class="lineno">  282</span><span class="comment">//          info.addPara(&quot;&quot; + faction.getDisplayName() + &quot; inspection arrives in-system&quot;, initPad, tc,</span></div>
-<div class="line"><span class="lineno">  283</span><span class="comment">//                  faction.getBaseUIColor(), faction.getDisplayName());</span></div>
-<div class="line"><span class="lineno">  284</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  285</span>        }</div>
-<div class="line"><span class="lineno">  286</span>        </div>
-<div class="line"><span class="lineno">  287</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a9ba572be19912ec6b816dc7b69352660">getListInfoParam</a>() == <a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#a227b62aaea78c70b78116fba340ba3dd">OUTCOME_UPDATE</a>) {</div>
-<div class="line"><span class="lineno">  288</span>            <span class="keywordtype">int</span> num = <a class="code hl_function" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#a4c053a2e31df1e7eea069853ab94ea40">getActionStage</a>().<a class="code hl_function" href="../../dd/db4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HIActionStage.html#abd014648c8c23d65bd779ac6185cc728">getCoresRemoved</a>().size();</div>
-<div class="line"><span class="lineno">  289</span>            <span class="keywordflow">if</span> (num &gt; 0) {</div>
-<div class="line"><span class="lineno">  290</span>                String cores = <span class="stringliteral">&quot;cores&quot;</span>;</div>
-<div class="line"><span class="lineno">  291</span>                <span class="keywordflow">if</span> (num == 1) cores = <span class="stringliteral">&quot;core&quot;</span>;</div>
-<div class="line"><span class="lineno">  292</span>                info.addPara(<span class="stringliteral">&quot;%s AI &quot;</span> + cores + <span class="stringliteral">&quot; confiscated&quot;</span>, initPad, tc, h, <span class="stringliteral">&quot;&quot;</span> + num);</div>
-<div class="line"><span class="lineno">  293</span>                initPad = 0f;</div>
-<div class="line"><span class="lineno">  294</span>            }</div>
-<div class="line"><span class="lineno">  295</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#a0d08abdd552ef09f56671592a6184318">outcome</a> == HegemonyInspectionOutcome.BRIBED) {</div>
-<div class="line"><span class="lineno">  296</span>                info.addPara(<span class="stringliteral">&quot;No AI cores found&quot;</span>, initPad, tc, h, <span class="stringliteral">&quot;&quot;</span> + num);</div>
-<div class="line"><span class="lineno">  297</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#a0d08abdd552ef09f56671592a6184318">outcome</a> == HegemonyInspectionOutcome.FOUND_EVIDENCE_NO_CORES) {</div>
-<div class="line"><span class="lineno">  298</span>                FactionAPI other = <a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#ac7fafc4f73e07184185b14befaed7601">target</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a97645caff4adca5efcf3a462fb13ca0f">getFaction</a>();</div>
-<div class="line"><span class="lineno">  299</span>                info.addPara(<span class="stringliteral">&quot;Operations at %s disrupted&quot;</span>, initPad, tc,</div>
-<div class="line"><span class="lineno">  300</span>                             other.getBaseUIColor(), <a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#ac7fafc4f73e07184185b14befaed7601">target</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a7e5b6e8035c61f63cd8b331df994233b">getName</a>());</div>
-<div class="line"><span class="lineno">  301</span>                <span class="comment">//info.addPara(&quot;Operations disrupted by inspection&quot;, initPad, h, &quot;&quot; + num);</span></div>
-<div class="line"><span class="lineno">  302</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#a0d08abdd552ef09f56671592a6184318">outcome</a> == HegemonyInspectionOutcome.CONFISCATE_CORES) {</div>
-<div class="line"><span class="lineno">  303</span>            }</div>
-<div class="line"><span class="lineno">  304</span>            initPad = 0f;</div>
-<div class="line"><span class="lineno">  305</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#a79f9ace726db89976343053ea8288f0f">repResult</a> != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  306</span>                CoreReputationPlugin.addAdjustmentMessage(<a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#a79f9ace726db89976343053ea8288f0f">repResult</a>.delta, <a class="code hl_variable" href="../../d2/d12/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#a82f91ffc1e25c6fd25858e134d03f0a9">faction</a>, <span class="keyword">null</span>, </div>
-<div class="line"><span class="lineno">  307</span>                        <span class="keyword">null</span>, <span class="keyword">null</span>, info, tc, isUpdate, initPad);</div>
-<div class="line"><span class="lineno">  308</span>            }</div>
-<div class="line"><span class="lineno">  309</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  310</span>        }</div>
-<div class="line"><span class="lineno">  311</span> </div>
-<div class="line"><span class="lineno">  312</span><span class="comment">//      if (getListInfoParam() == UPDATE_FAILED) {</span></div>
-<div class="line"><span class="lineno">  313</span><span class="comment">//          FactionAPI other = target.getFaction();</span></div>
-<div class="line"><span class="lineno">  314</span><span class="comment">//          info.addPara(&quot;Target: %s&quot;, initPad, tc,</span></div>
-<div class="line"><span class="lineno">  315</span><span class="comment">//                       other.getBaseUIColor(), target.getName());</span></div>
-<div class="line"><span class="lineno">  316</span><span class="comment">//          initPad = 0f;</span></div>
-<div class="line"><span class="lineno">  317</span><span class="comment">//          info.addPara(&quot;Inspection failed&quot;, tc, initPad);</span></div>
-<div class="line"><span class="lineno">  318</span><span class="comment">//          return;</span></div>
-<div class="line"><span class="lineno">  319</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  320</span>        </div>
-<div class="line"><span class="lineno">  321</span>        <span class="keywordtype">float</span> eta = <a class="code hl_function" href="../../d2/d12/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#ac052d1fa8a65abc1323fdef841753e64">getETA</a>();</div>
-<div class="line"><span class="lineno">  322</span>        </div>
-<div class="line"><span class="lineno">  323</span>        FactionAPI other = <a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#ac7fafc4f73e07184185b14befaed7601">target</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a97645caff4adca5efcf3a462fb13ca0f">getFaction</a>();</div>
-<div class="line"><span class="lineno">  324</span>        info.addPara(<span class="stringliteral">&quot;Target: %s&quot;</span>, initPad, tc,</div>
-<div class="line"><span class="lineno">  325</span>                     other.getBaseUIColor(), <a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#ac7fafc4f73e07184185b14befaed7601">target</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a7e5b6e8035c61f63cd8b331df994233b">getName</a>());</div>
-<div class="line"><span class="lineno">  326</span>        initPad = 0f;</div>
-<div class="line"><span class="lineno">  327</span>        </div>
-<div class="line"><span class="lineno">  328</span>        <span class="keywordflow">if</span> (eta &gt; 1 &amp;&amp; <a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#a0d08abdd552ef09f56671592a6184318">outcome</a> == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  329</span>            String days = <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#adbde084b12ba8da771222211c5a439d9">getDaysString</a>(eta);</div>
-<div class="line"><span class="lineno">  330</span>            info.addPara(<span class="stringliteral">&quot;Estimated %s &quot;</span> + days + <span class="stringliteral">&quot; until arrival&quot;</span>, </div>
-<div class="line"><span class="lineno">  331</span>                    initPad, tc, h, <span class="stringliteral">&quot;&quot;</span> + (<span class="keywordtype">int</span>)Math.round(eta));</div>
-<div class="line"><span class="lineno">  332</span>            initPad = 0f;</div>
-<div class="line"><span class="lineno">  333</span>            </div>
-<div class="line"><span class="lineno">  334</span>            <span class="keywordflow">if</span> (hostile || <a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#ad0c943ff38555857f615c21b236df94b">orders</a> == AntiInspectionOrders.RESIST) {</div>
-<div class="line"><span class="lineno">  335</span>                info.addPara(<span class="stringliteral">&quot;Defenders will resist&quot;</span>, tc, initPad);</div>
-<div class="line"><span class="lineno">  336</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#ad0c943ff38555857f615c21b236df94b">orders</a> == AntiInspectionOrders.COMPLY) {</div>
-<div class="line"><span class="lineno">  337</span>                info.addPara(<span class="stringliteral">&quot;Defenders will comply&quot;</span>, tc, initPad);</div>
-<div class="line"><span class="lineno">  338</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#ad0c943ff38555857f615c21b236df94b">orders</a> == AntiInspectionOrders.BRIBE) {</div>
-<div class="line"><span class="lineno">  339</span>                info.addPara(<span class="stringliteral">&quot;Funds allocated for bribe&quot;</span>, tc, initPad);</div>
-<div class="line"><span class="lineno">  340</span>            }</div>
-<div class="line"><span class="lineno">  341</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#a0d08abdd552ef09f56671592a6184318">outcome</a> == <span class="keyword">null</span> &amp;&amp; <a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#a58fb1f15cbd12804e007501238903836">action</a>.<a class="code hl_function" href="../../d7/d82/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html#a47f0577ac24c135300cb5dce59de3719">getElapsed</a>() &gt; 0) {</div>
-<div class="line"><span class="lineno">  342</span>            info.addPara(<span class="stringliteral">&quot;Inspection under way&quot;</span>, tc, initPad);</div>
-<div class="line"><span class="lineno">  343</span>            initPad = 0f;</div>
-<div class="line"><span class="lineno">  344</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#a0d08abdd552ef09f56671592a6184318">outcome</a> != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  345</span>            <span class="keywordtype">int</span> num = <a class="code hl_function" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#a4c053a2e31df1e7eea069853ab94ea40">getActionStage</a>().<a class="code hl_function" href="../../dd/db4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HIActionStage.html#abd014648c8c23d65bd779ac6185cc728">getCoresRemoved</a>().size();</div>
-<div class="line"><span class="lineno">  346</span>            <span class="keywordflow">if</span> (num &gt; 0) {</div>
-<div class="line"><span class="lineno">  347</span>                String cores = <span class="stringliteral">&quot;cores&quot;</span>;</div>
-<div class="line"><span class="lineno">  348</span>                <span class="keywordflow">if</span> (num == 1) cores = <span class="stringliteral">&quot;core&quot;</span>;</div>
-<div class="line"><span class="lineno">  349</span>                info.addPara(<span class="stringliteral">&quot;%s AI &quot;</span> + cores + <span class="stringliteral">&quot; confiscated&quot;</span>, initPad, tc, h, <span class="stringliteral">&quot;&quot;</span> + num);</div>
-<div class="line"><span class="lineno">  350</span>                initPad = 0f;</div>
-<div class="line"><span class="lineno">  351</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#a0d08abdd552ef09f56671592a6184318">outcome</a> == HegemonyInspectionOutcome.TASK_FORCE_DESTROYED) {</div>
-<div class="line"><span class="lineno">  352</span>                <span class="comment">//info.addPara(&quot;Inspection failed&quot;, tc, initPad);</span></div>
-<div class="line"><span class="lineno">  353</span>            }</div>
-<div class="line"><span class="lineno">  354</span><span class="comment">//          info.addPara(&quot;Inspection under way&quot;, tc, initPad);</span></div>
-<div class="line"><span class="lineno">  355</span><span class="comment">//          initPad = 0f;</span></div>
-<div class="line"><span class="lineno">  356</span>        }</div>
-<div class="line"><span class="lineno">  357</span>        </div>
-<div class="line"><span class="lineno">  358</span>        <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a3e2fa48accd40a868889ad2f877bc578">unindent</a>(info);</div>
-<div class="line"><span class="lineno">  359</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_a3e2fa48accd40a868889ad2f877bc578"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a3e2fa48accd40a868889ad2f877bc578">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.unindent</a></div><div class="ttdeci">void unindent(TooltipMakerAPI info)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00570">BaseIntelPlugin.java:570</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_a9ba572be19912ec6b816dc7b69352660"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a9ba572be19912ec6b816dc7b69352660">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.getListInfoParam</a></div><div class="ttdeci">Object getListInfoParam()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00140">BaseIntelPlugin.java:140</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_a9e443024a6224a5c170e5d1476514954"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a9e443024a6224a5c170e5d1476514954">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.getBulletColorForMode</a></div><div class="ttdeci">Color getBulletColorForMode(ListInfoMode mode)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00633">BaseIntelPlugin.java:633</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_adbde084b12ba8da771222211c5a439d9"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#adbde084b12ba8da771222211c5a439d9">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.getDaysString</a></div><div class="ttdeci">static String getDaysString(float days)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00601">BaseIntelPlugin.java:601</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_adfa808a345b432134c9fb11227edc7df"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#adfa808a345b432134c9fb11227edc7df">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.bullet</a></div><div class="ttdeci">void bullet(TooltipMakerAPI info)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00554">BaseIntelPlugin.java:554</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HIActionStage_html_abd014648c8c23d65bd779ac6185cc728"><div class="ttname"><a href="../../dd/db4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HIActionStage.html#abd014648c8c23d65bd779ac6185cc728">com.fs.starfarer.api.impl.campaign.intel.inspection.HIActionStage.getCoresRemoved</a></div><div class="ttdeci">List&lt; String &gt; getCoresRemoved()</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d78/HIActionStage_8java_source.html#l00230">HIActionStage.java:230</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel_html_a0d08abdd552ef09f56671592a6184318"><div class="ttname"><a href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#a0d08abdd552ef09f56671592a6184318">com.fs.starfarer.api.impl.campaign.intel.inspection.HegemonyInspectionIntel.outcome</a></div><div class="ttdeci">HegemonyInspectionOutcome outcome</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d1d/HegemonyInspectionIntel_8java_source.html#l00077">HegemonyInspectionIntel.java:77</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel_html_a12497a116f7b6961cc9617bf91ddd5c1"><div class="ttname"><a href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#a12497a116f7b6961cc9617bf91ddd5c1">com.fs.starfarer.api.impl.campaign.intel.inspection.HegemonyInspectionIntel.MADE_HOSTILE_UPDATE</a></div><div class="ttdeci">static final Object MADE_HOSTILE_UPDATE</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d1d/HegemonyInspectionIntel_8java_source.html#l00062">HegemonyInspectionIntel.java:62</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel_html_a227b62aaea78c70b78116fba340ba3dd"><div class="ttname"><a href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#a227b62aaea78c70b78116fba340ba3dd">com.fs.starfarer.api.impl.campaign.intel.inspection.HegemonyInspectionIntel.OUTCOME_UPDATE</a></div><div class="ttdeci">static final Object OUTCOME_UPDATE</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d1d/HegemonyInspectionIntel_8java_source.html#l00064">HegemonyInspectionIntel.java:64</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel_html_a4c053a2e31df1e7eea069853ab94ea40"><div class="ttname"><a href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#a4c053a2e31df1e7eea069853ab94ea40">com.fs.starfarer.api.impl.campaign.intel.inspection.HegemonyInspectionIntel.getActionStage</a></div><div class="ttdeci">HIActionStage getActionStage()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d1d/HegemonyInspectionIntel_8java_source.html#l00361">HegemonyInspectionIntel.java:361</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel_html_a7702c1654ea910faf0d594f638b7f3c6"><div class="ttname"><a href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#a7702c1654ea910faf0d594f638b7f3c6">com.fs.starfarer.api.impl.campaign.intel.inspection.HegemonyInspectionIntel.ENTERED_SYSTEM_UPDATE</a></div><div class="ttdeci">static final Object ENTERED_SYSTEM_UPDATE</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d1d/HegemonyInspectionIntel_8java_source.html#l00063">HegemonyInspectionIntel.java:63</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel_html_a79f9ace726db89976343053ea8288f0f"><div class="ttname"><a href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#a79f9ace726db89976343053ea8288f0f">com.fs.starfarer.api.impl.campaign.intel.inspection.HegemonyInspectionIntel.repResult</a></div><div class="ttdeci">transient ReputationAdjustmentResult repResult</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d1d/HegemonyInspectionIntel_8java_source.html#l00202">HegemonyInspectionIntel.java:202</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel_html_ad0c943ff38555857f615c21b236df94b"><div class="ttname"><a href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#ad0c943ff38555857f615c21b236df94b">com.fs.starfarer.api.impl.campaign.intel.inspection.HegemonyInspectionIntel.orders</a></div><div class="ttdeci">AntiInspectionOrders orders</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d1d/HegemonyInspectionIntel_8java_source.html#l00069">HegemonyInspectionIntel.java:69</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage_html_a47f0577ac24c135300cb5dce59de3719"><div class="ttname"><a href="../../d7/d82/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html#a47f0577ac24c135300cb5dce59de3719">com.fs.starfarer.api.impl.campaign.intel.raid.BaseRaidStage.getElapsed</a></div><div class="ttdeci">float getElapsed()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dec/BaseRaidStage_8java_source.html#l00224">BaseRaidStage.java:224</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel_html_a82f91ffc1e25c6fd25858e134d03f0a9"><div class="ttname"><a href="../../d2/d12/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#a82f91ffc1e25c6fd25858e134d03f0a9">com.fs.starfarer.api.impl.campaign.intel.raid.RaidIntel.faction</a></div><div class="ttdeci">FactionAPI faction</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d48/RaidIntel_8java_source.html#l00075">RaidIntel.java:75</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel_html_ac052d1fa8a65abc1323fdef841753e64"><div class="ttname"><a href="../../d2/d12/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#ac052d1fa8a65abc1323fdef841753e64">com.fs.starfarer.api.impl.campaign.intel.raid.RaidIntel.getETA</a></div><div class="ttdeci">float getETA()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d48/RaidIntel_8java_source.html#l00275">RaidIntel.java:275</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel_html_ada09952c8221ff5613a52d34d66b254f"><div class="ttname"><a href="../../d2/d12/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#ada09952c8221ff5613a52d34d66b254f">com.fs.starfarer.api.impl.campaign.intel.raid.RaidIntel.getFaction</a></div><div class="ttdeci">FactionAPI getFaction()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d48/RaidIntel_8java_source.html#l00558">RaidIntel.java:558</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI_html_a0213b272fbf9c2669316aa25c775ad60"><div class="ttname"><a href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a0213b272fbf9c2669316aa25c775ad60">com.fs.starfarer.api.campaign.FactionAPI.getBaseUIColor</a></div><div class="ttdeci">Color getBaseUIColor()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI_html_a152197efac6967a0a459e4579b8ab1ef"><div class="ttname"><a href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a152197efac6967a0a459e4579b8ab1ef">com.fs.starfarer.api.campaign.FactionAPI.getDisplayName</a></div><div class="ttdeci">String getDisplayName()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI_html_accc67a07a27de570f239d753fa7efc5d"><div class="ttname"><a href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#accc67a07a27de570f239d753fa7efc5d">com.fs.starfarer.api.campaign.FactionAPI.isHostileTo</a></div><div class="ttdeci">boolean isHostileTo(FactionAPI other)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a7e5b6e8035c61f63cd8b331df994233b"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a7e5b6e8035c61f63cd8b331df994233b">com.fs.starfarer.api.campaign.econ.MarketAPI.getName</a></div><div class="ttdeci">String getName()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="afdf1745976b97c8d1b0596d93b184488" name="afdf1745976b97c8d1b0596d93b184488"></a>
@@ -1026,18 +819,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d12/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#aebee76a41e60343f9b30883d8f3b8ed6">com.fs.starfarer.api.impl.campaign.intel.raid.RaidIntel</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d1d/HegemonyInspectionIntel_8java_source.html#l00191">191</a> of file <a class="el" href="../../d7/d1d/HegemonyInspectionIntel_8java_source.html">HegemonyInspectionIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  191</span>                                             {</div>
-<div class="line"><span class="lineno">  192</span>        super.advanceImpl(amount);</div>
-<div class="line"><span class="lineno">  193</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#ac7fafc4f73e07184185b14befaed7601">target</a> != <span class="keyword">null</span> &amp;&amp; <a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#a8bc0af8b0b050d0d7781a5fdbb4d2385">targetOwner</a> == <span class="keyword">null</span>) <a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#a8bc0af8b0b050d0d7781a5fdbb4d2385">targetOwner</a> = <a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#ac7fafc4f73e07184185b14befaed7601">target</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#aa132dbebb3e9e38ad71a576a4ea5ac9b">getFactionId</a>();</div>
-<div class="line"><span class="lineno">  194</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d2/d12/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#a9276e86955934aa172f485649ed00dae">failStage</a> &lt; 0 &amp;&amp; <a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#a8bc0af8b0b050d0d7781a5fdbb4d2385">targetOwner</a> != <span class="keyword">null</span> &amp;&amp; <a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#ac7fafc4f73e07184185b14befaed7601">target</a> != <span class="keyword">null</span> &amp;&amp; !<a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#a8bc0af8b0b050d0d7781a5fdbb4d2385">targetOwner</a>.equals(<a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#ac7fafc4f73e07184185b14befaed7601">target</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#aa132dbebb3e9e38ad71a576a4ea5ac9b">getFactionId</a>())) {</div>
-<div class="line"><span class="lineno">  195</span>            <a class="code hl_function" href="../../d2/d12/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#a8a92d1c792652b41c2f141b577a75e7a">forceFail</a>(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  196</span>        }</div>
-<div class="line"><span class="lineno">  197</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel_html_a8bc0af8b0b050d0d7781a5fdbb4d2385"><div class="ttname"><a href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#a8bc0af8b0b050d0d7781a5fdbb4d2385">com.fs.starfarer.api.impl.campaign.intel.inspection.HegemonyInspectionIntel.targetOwner</a></div><div class="ttdeci">transient String targetOwner</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d1d/HegemonyInspectionIntel_8java_source.html#l00189">HegemonyInspectionIntel.java:189</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel_html_a8a92d1c792652b41c2f141b577a75e7a"><div class="ttname"><a href="../../d2/d12/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#a8a92d1c792652b41c2f141b577a75e7a">com.fs.starfarer.api.impl.campaign.intel.raid.RaidIntel.forceFail</a></div><div class="ttdeci">void forceFail(boolean withUpdate)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d48/RaidIntel_8java_source.html#l00239">RaidIntel.java:239</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel_html_a9276e86955934aa172f485649ed00dae"><div class="ttname"><a href="../../d2/d12/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#a9276e86955934aa172f485649ed00dae">com.fs.starfarer.api.impl.campaign.intel.raid.RaidIntel.failStage</a></div><div class="ttdeci">int failStage</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d48/RaidIntel_8java_source.html#l00067">RaidIntel.java:67</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_aa132dbebb3e9e38ad71a576a4ea5ac9b"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#aa132dbebb3e9e38ad71a576a4ea5ac9b">com.fs.starfarer.api.campaign.econ.MarketAPI.getFactionId</a></div><div class="ttdeci">String getFactionId()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a0f7670ea883842330dd130515d7dab71" name="a0f7670ea883842330dd130515d7dab71"></a>
@@ -1057,15 +839,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d1d/HegemonyInspectionIntel_8java_source.html#l00218">218</a> of file <a class="el" href="../../d7/d1d/HegemonyInspectionIntel_8java_source.html">HegemonyInspectionIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  218</span>                                             {</div>
-<div class="line"><span class="lineno">  219</span>        CustomRepImpact impact = <span class="keyword">new</span> CustomRepImpact();</div>
-<div class="line"><span class="lineno">  220</span>        impact.delta = delta;</div>
-<div class="line"><span class="lineno">  221</span>        <a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#a79f9ace726db89976343053ea8288f0f">repResult</a> = Global.getSector().adjustPlayerReputation(</div>
-<div class="line"><span class="lineno">  222</span>                <span class="keyword">new</span> RepActionEnvelope(RepActions.CUSTOM, </div>
-<div class="line"><span class="lineno">  223</span>                        impact, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">false</span>, <span class="keyword">false</span>),</div>
-<div class="line"><span class="lineno">  224</span>                        <a class="code hl_function" href="../../d2/d12/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#ada09952c8221ff5613a52d34d66b254f">getFaction</a>().getId());</div>
-<div class="line"><span class="lineno">  225</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2a5e0da087b4412ed9b296c19bdcd485" name="a2a5e0da087b4412ed9b296c19bdcd485"></a>
@@ -1097,13 +871,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a888f7df0a6ac6e1539e730b22c54c903">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d1d/HegemonyInspectionIntel_8java_source.html#l00510">510</a> of file <a class="el" href="../../d7/d1d/HegemonyInspectionIntel_8java_source.html">HegemonyInspectionIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  510</span>                                                                     {</div>
-<div class="line"><span class="lineno">  511</span>        <span class="keywordflow">if</span> (buttonId == <a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#a8cb2e968397d165ea488f853d23c28e8">BUTTON_CHANGE_ORDERS</a>) {</div>
-<div class="line"><span class="lineno">  512</span>            ui.showDialog(<span class="keyword">null</span>, <span class="keyword">new</span> HIOrdersInteractionDialogPluginImpl(<span class="keyword">this</span>, ui));</div>
-<div class="line"><span class="lineno">  513</span>        }</div>
-<div class="line"><span class="lineno">  514</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel_html_a8cb2e968397d165ea488f853d23c28e8"><div class="ttname"><a href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#a8cb2e968397d165ea488f853d23c28e8">com.fs.starfarer.api.impl.campaign.intel.inspection.HegemonyInspectionIntel.BUTTON_CHANGE_ORDERS</a></div><div class="ttdeci">static final String BUTTON_CHANGE_ORDERS</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d1d/HegemonyInspectionIntel_8java_source.html#l00060">HegemonyInspectionIntel.java:60</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a0163a830ce13b97bbbe2a16461295bec" name="a0163a830ce13b97bbbe2a16461295bec"></a>
@@ -1135,12 +903,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d12/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#acaac1dfa58f9e4106806a7e73c3d22b7">com.fs.starfarer.api.impl.campaign.intel.raid.RaidIntel</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d1d/HegemonyInspectionIntel_8java_source.html#l00147">147</a> of file <a class="el" href="../../d7/d1d/HegemonyInspectionIntel_8java_source.html">HegemonyInspectionIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  147</span>                                                                                              {</div>
-<div class="line"><span class="lineno">  148</span>        RaidAssignmentAI raidAI = <span class="keyword">new</span> RaidAssignmentAI(fleet, route, <a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#a58fb1f15cbd12804e007501238903836">action</a>);</div>
-<div class="line"><span class="lineno">  149</span>        <span class="comment">//raidAI.setDelegate(action);</span></div>
-<div class="line"><span class="lineno">  150</span>        <span class="keywordflow">return</span> raidAI;</div>
-<div class="line"><span class="lineno">  151</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5d9110643f6f87c23c85bd092b95a91d" name="a5d9110643f6f87c23c85bd092b95a91d"></a>
@@ -1172,10 +935,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d12/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#abac639c5e29b0b391efddaedbb24d9c1">com.fs.starfarer.api.impl.campaign.intel.raid.RaidIntel</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d1d/HegemonyInspectionIntel_8java_source.html#l00372">372</a> of file <a class="el" href="../../d7/d1d/HegemonyInspectionIntel_8java_source.html">HegemonyInspectionIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  372</span>                                                                         {</div>
-<div class="line"><span class="lineno">  373</span>        super.createIntelInfo(info, mode);</div>
-<div class="line"><span class="lineno">  374</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a1f426746cfbfe615d4ba4443bc4cb01c" name="a1f426746cfbfe615d4ba4443bc4cb01c"></a>
@@ -1213,113 +973,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d12/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#a1e113d1d03a6a9c77657cbd434151eae">com.fs.starfarer.api.impl.campaign.intel.raid.RaidIntel</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d1d/HegemonyInspectionIntel_8java_source.html#l00377">377</a> of file <a class="el" href="../../d7/d1d/HegemonyInspectionIntel_8java_source.html">HegemonyInspectionIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  377</span>                                                                                        {</div>
-<div class="line"><span class="lineno">  378</span>        <span class="comment">//super.createSmallDescription(info, width, height);</span></div>
-<div class="line"><span class="lineno">  379</span>        </div>
-<div class="line"><span class="lineno">  380</span>        Color h = Misc.getHighlightColor();</div>
-<div class="line"><span class="lineno">  381</span>        Color g = Misc.getGrayColor();</div>
-<div class="line"><span class="lineno">  382</span>        Color tc = Misc.getTextColor();</div>
-<div class="line"><span class="lineno">  383</span>        <span class="keywordtype">float</span> pad = 3f;</div>
-<div class="line"><span class="lineno">  384</span>        <span class="keywordtype">float</span> opad = 10f;</div>
-<div class="line"><span class="lineno">  385</span>        </div>
-<div class="line"><span class="lineno">  386</span>        info.addImage(<a class="code hl_function" href="../../d2/d12/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#a940452ec4a9b85ec8b7c74917395db55">getFactionForUIColors</a>().getLogo(), width, 128, opad);</div>
-<div class="line"><span class="lineno">  387</span>        </div>
-<div class="line"><span class="lineno">  388</span>        FactionAPI <a class="code hl_variable" href="../../d2/d12/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#a82f91ffc1e25c6fd25858e134d03f0a9">faction</a> = <a class="code hl_function" href="../../d2/d12/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#ada09952c8221ff5613a52d34d66b254f">getFaction</a>();</div>
-<div class="line"><span class="lineno">  389</span>        String has = <a class="code hl_variable" href="../../d2/d12/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#a82f91ffc1e25c6fd25858e134d03f0a9">faction</a>.<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a0e0c390b680abf24f5268c0d168a8959">getDisplayNameHasOrHave</a>();</div>
-<div class="line"><span class="lineno">  390</span>        String is = <a class="code hl_variable" href="../../d2/d12/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#a82f91ffc1e25c6fd25858e134d03f0a9">faction</a>.<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#ad86103131f789a387de2afa152026ca3">getDisplayNameIsOrAre</a>();</div>
-<div class="line"><span class="lineno">  391</span>        </div>
-<div class="line"><span class="lineno">  392</span>        <span class="comment">//AssembleStage as = getAssembleStage();</span></div>
-<div class="line"><span class="lineno">  393</span>        <span class="comment">//MarketAPI source = as.getSources().get(0);</span></div>
-<div class="line"><span class="lineno">  394</span>        </div>
-<div class="line"><span class="lineno">  395</span>        String strDesc = <a class="code hl_function" href="../../d2/d12/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#ab8c856219193f1cee58134365633ed87">getRaidStrDesc</a>();</div>
-<div class="line"><span class="lineno">  396</span>        <span class="keywordtype">int</span> numFleets = (int) <a class="code hl_function" href="../../d2/d12/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#aeb9c82499c7341ccd35bb436b1449b82">getOrigNumFleets</a>();</div>
-<div class="line"><span class="lineno">  397</span>        String fleets = <span class="stringliteral">&quot;fleets&quot;</span>;</div>
-<div class="line"><span class="lineno">  398</span>        <span class="keywordflow">if</span> (numFleets == 1) fleets = <span class="stringliteral">&quot;fleet&quot;</span>;</div>
-<div class="line"><span class="lineno">  399</span>        </div>
-<div class="line"><span class="lineno">  400</span>        LabelAPI label = info.addPara(Misc.ucFirst(<a class="code hl_variable" href="../../d2/d12/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#a82f91ffc1e25c6fd25858e134d03f0a9">faction</a>.<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a69b86d194392c5eadd148b6e1e6cd5f0">getDisplayNameWithArticle</a>()) + <span class="stringliteral">&quot; &quot;</span> + is + </div>
-<div class="line"><span class="lineno">  401</span>                <span class="stringliteral">&quot; targeting %s for an inspection due to the suspected use of AI cores there.&quot;</span> +</div>
-<div class="line"><span class="lineno">  402</span>                <span class="stringliteral">&quot; The task force is projected to be &quot;</span> + strDesc + <span class="stringliteral">&quot; and is likely comprised of &quot;</span> +</div>
-<div class="line"><span class="lineno">  403</span>                <span class="stringliteral">&quot;&quot;</span> + numFleets + <span class="stringliteral">&quot; &quot;</span> + fleets + <span class="stringliteral">&quot;.&quot;</span>,</div>
-<div class="line"><span class="lineno">  404</span>                opad, <a class="code hl_variable" href="../../d2/d12/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#a82f91ffc1e25c6fd25858e134d03f0a9">faction</a>.<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a0213b272fbf9c2669316aa25c775ad60">getBaseUIColor</a>(), <a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#ac7fafc4f73e07184185b14befaed7601">target</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a7e5b6e8035c61f63cd8b331df994233b">getName</a>());</div>
-<div class="line"><span class="lineno">  405</span>        label.setHighlight(<a class="code hl_variable" href="../../d2/d12/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#a82f91ffc1e25c6fd25858e134d03f0a9">faction</a>.<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a2a8d2fabe32e0167bba0ab5aad861c3c">getDisplayNameWithArticleWithoutArticle</a>(), <a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#ac7fafc4f73e07184185b14befaed7601">target</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a7e5b6e8035c61f63cd8b331df994233b">getName</a>(), strDesc, <span class="stringliteral">&quot;&quot;</span> + numFleets);</div>
-<div class="line"><span class="lineno">  406</span>        label.setHighlightColors(<a class="code hl_variable" href="../../d2/d12/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#a82f91ffc1e25c6fd25858e134d03f0a9">faction</a>.<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a0213b272fbf9c2669316aa25c775ad60">getBaseUIColor</a>(), <a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#ac7fafc4f73e07184185b14befaed7601">target</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a97645caff4adca5efcf3a462fb13ca0f">getFaction</a>().<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a0213b272fbf9c2669316aa25c775ad60">getBaseUIColor</a>(), h, h);</div>
-<div class="line"><span class="lineno">  407</span>        </div>
-<div class="line"><span class="lineno">  408</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#a0d08abdd552ef09f56671592a6184318">outcome</a> == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  409</span>            <a class="code hl_function" href="../../d2/d12/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#a7d926b3f9d32d36780f2a5e5d809d581">addStandardStrengthComparisons</a>(info, <a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#ac7fafc4f73e07184185b14befaed7601">target</a>, <a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#aad9e3952d1102670da10ce905abf6be5">targetFaction</a>, <span class="keyword">true</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;inspection&quot;</span>, <span class="stringliteral">&quot;inspection&#39;s&quot;</span>);</div>
-<div class="line"><span class="lineno">  410</span>        }</div>
-<div class="line"><span class="lineno">  411</span>        </div>
-<div class="line"><span class="lineno">  412</span>        info.addSectionHeading(<span class="stringliteral">&quot;Status&quot;</span>, </div>
-<div class="line"><span class="lineno">  413</span>                   <a class="code hl_variable" href="../../d2/d12/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#a82f91ffc1e25c6fd25858e134d03f0a9">faction</a>.<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a0213b272fbf9c2669316aa25c775ad60">getBaseUIColor</a>(), <a class="code hl_variable" href="../../d2/d12/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#a82f91ffc1e25c6fd25858e134d03f0a9">faction</a>.<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a579e737df0b7d656e6d9599d80aaa0f2">getDarkUIColor</a>(), Alignment.MID, opad);</div>
-<div class="line"><span class="lineno">  414</span>        </div>
-<div class="line"><span class="lineno">  415</span>        <span class="keywordflow">for</span> (RaidStage stage : <a class="code hl_variable" href="../../d2/d12/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#aecd14961de8d8eae103a4248a3b1f50b">stages</a>) {</div>
-<div class="line"><span class="lineno">  416</span>            stage.showStageInfo(info);</div>
-<div class="line"><span class="lineno">  417</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d2/d12/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#ab4a45bc02d5128a2e485e301e174c635">getStageIndex</a>(stage) == <a class="code hl_variable" href="../../d2/d12/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#a9276e86955934aa172f485649ed00dae">failStage</a>) <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  418</span>        }</div>
-<div class="line"><span class="lineno">  419</span>        </div>
-<div class="line"><span class="lineno">  420</span>        </div>
-<div class="line"><span class="lineno">  421</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#a0d08abdd552ef09f56671592a6184318">outcome</a> == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  422</span>            FactionAPI pf = Global.getSector().getPlayerFaction();</div>
-<div class="line"><span class="lineno">  423</span>            info.addSectionHeading(<span class="stringliteral">&quot;Your orders&quot;</span>, </div>
-<div class="line"><span class="lineno">  424</span>                       pf.getBaseUIColor(), pf.getDarkUIColor(), Alignment.MID, opad);</div>
-<div class="line"><span class="lineno">  425</span>            </div>
-<div class="line"><span class="lineno">  426</span>            <span class="keywordtype">boolean</span> hostile = <a class="code hl_function" href="../../d2/d12/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#ada09952c8221ff5613a52d34d66b254f">getFaction</a>().<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#accc67a07a27de570f239d753fa7efc5d">isHostileTo</a>(Factions.PLAYER);</div>
-<div class="line"><span class="lineno">  427</span>            <span class="keywordflow">if</span> (hostile) {</div>
-<div class="line"><span class="lineno">  428</span>                label = info.addPara(Misc.ucFirst(<a class="code hl_variable" href="../../d2/d12/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#a82f91ffc1e25c6fd25858e134d03f0a9">faction</a>.<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a69b86d194392c5eadd148b6e1e6cd5f0">getDisplayNameWithArticle</a>()) + <span class="stringliteral">&quot; &quot;</span> + is + </div>
-<div class="line"><span class="lineno">  429</span>                        <span class="stringliteral">&quot; hostile towards &quot;</span> + pf.getDisplayNameWithArticle() + <span class="stringliteral">&quot;. Your forces will attempt to resist the inspection.&quot;</span>,</div>
-<div class="line"><span class="lineno">  430</span>                        opad);</div>
-<div class="line"><span class="lineno">  431</span>                label.setHighlight(<a class="code hl_variable" href="../../d2/d12/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#a82f91ffc1e25c6fd25858e134d03f0a9">faction</a>.<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a2a8d2fabe32e0167bba0ab5aad861c3c">getDisplayNameWithArticleWithoutArticle</a>(), </div>
-<div class="line"><span class="lineno">  432</span>                                   pf.getDisplayNameWithArticleWithoutArticle());</div>
-<div class="line"><span class="lineno">  433</span>                label.setHighlightColors(<a class="code hl_variable" href="../../d2/d12/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#a82f91ffc1e25c6fd25858e134d03f0a9">faction</a>.<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a0213b272fbf9c2669316aa25c775ad60">getBaseUIColor</a>(), pf.getBaseUIColor());</div>
-<div class="line"><span class="lineno">  434</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  435</span>                <span class="keywordflow">switch</span> (<a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#ad0c943ff38555857f615c21b236df94b">orders</a>) {</div>
-<div class="line"><span class="lineno">  436</span>                <span class="keywordflow">case</span> COMPLY:</div>
-<div class="line"><span class="lineno">  437</span>                    info.addPara(<span class="stringliteral">&quot;The authorities at &quot;</span> + <a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#ac7fafc4f73e07184185b14befaed7601">target</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a7e5b6e8035c61f63cd8b331df994233b">getName</a>() + <span class="stringliteral">&quot; will comply with the inspection. &quot;</span> +</div>
-<div class="line"><span class="lineno">  438</span>                            <span class="stringliteral">&quot;It is certain to find any AI cores currently in use.&quot;</span>, opad);</div>
-<div class="line"><span class="lineno">  439</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  440</span>                <span class="keywordflow">case</span> BRIBE:</div>
-<div class="line"><span class="lineno">  441</span>                    info.addPara(<span class="stringliteral">&quot;You&#39;ve allocated enough funds to ensure the inspection &quot;</span> +</div>
-<div class="line"><span class="lineno">  442</span>                                 <span class="stringliteral">&quot;will produce a satisfactory outcome all around.&quot;</span>, opad);</div>
-<div class="line"><span class="lineno">  443</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  444</span>    <span class="comment">//          case HIDE:</span></div>
-<div class="line"><span class="lineno">  445</span>    <span class="comment">//              info.addPara(&quot;You&#39;ve allocated funds to improve AI core concealment measures. It is certain that the inspection &quot; +</span></div>
-<div class="line"><span class="lineno">  446</span>    <span class="comment">//                      &quot;can be defeated, but some amount of suspicion will remain.&quot;, opad);</span></div>
-<div class="line"><span class="lineno">  447</span>    <span class="comment">//              break;</span></div>
-<div class="line"><span class="lineno">  448</span>                <span class="keywordflow">case</span> RESIST:</div>
-<div class="line"><span class="lineno">  449</span>                    info.addPara(<span class="stringliteral">&quot;Your space and ground forces will attempt to resist the inspection.&quot;</span>, opad);</div>
-<div class="line"><span class="lineno">  450</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  451</span>                }</div>
-<div class="line"><span class="lineno">  452</span>                </div>
-<div class="line"><span class="lineno">  453</span>                <span class="keywordflow">if</span> (!<a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#a12a06654324ae8777e93f8adf4961a66">enteredSystem</a>) {</div>
-<div class="line"><span class="lineno">  454</span>                    ButtonAPI button = info.addButton(<span class="stringliteral">&quot;Change orders&quot;</span>, <a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#a8cb2e968397d165ea488f853d23c28e8">BUTTON_CHANGE_ORDERS</a>, </div>
-<div class="line"><span class="lineno">  455</span>                            pf.getBaseUIColor(), pf.getDarkUIColor(),</div>
-<div class="line"><span class="lineno">  456</span>                          (<span class="keywordtype">int</span>)(width), 20f, opad * 2f);</div>
-<div class="line"><span class="lineno">  457</span>                    button.setShortcut(Keyboard.KEY_T, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  458</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  459</span>                    info.addPara(<span class="stringliteral">&quot;The inspection task force is in-system and there&#39;s no time to implement new orders.&quot;</span>, opad);</div>
-<div class="line"><span class="lineno">  460</span>                }</div>
-<div class="line"><span class="lineno">  461</span>            }</div>
-<div class="line"><span class="lineno">  462</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  463</span>            <span class="comment">//addBulletPoints(info, ListInfoMode.IN_DESC);</span></div>
-<div class="line"><span class="lineno">  464</span>            <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#adfa808a345b432134c9fb11227edc7df">bullet</a>(info);</div>
-<div class="line"><span class="lineno">  465</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#a79f9ace726db89976343053ea8288f0f">repResult</a> != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  466</span>                CoreReputationPlugin.addAdjustmentMessage(<a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#a79f9ace726db89976343053ea8288f0f">repResult</a>.delta, <a class="code hl_variable" href="../../d2/d12/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#a82f91ffc1e25c6fd25858e134d03f0a9">faction</a>, <span class="keyword">null</span>, </div>
-<div class="line"><span class="lineno">  467</span>                        <span class="keyword">null</span>, <span class="keyword">null</span>, info, tc, <span class="keyword">false</span>, opad);</div>
-<div class="line"><span class="lineno">  468</span>            }</div>
-<div class="line"><span class="lineno">  469</span>            <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a3e2fa48accd40a868889ad2f877bc578">unindent</a>(info);</div>
-<div class="line"><span class="lineno">  470</span>        }</div>
-<div class="line"><span class="lineno">  471</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel_html_a12a06654324ae8777e93f8adf4961a66"><div class="ttname"><a href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#a12a06654324ae8777e93f8adf4961a66">com.fs.starfarer.api.impl.campaign.intel.inspection.HegemonyInspectionIntel.enteredSystem</a></div><div class="ttdeci">boolean enteredSystem</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d1d/HegemonyInspectionIntel_8java_source.html#l00076">HegemonyInspectionIntel.java:76</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel_html_a7d926b3f9d32d36780f2a5e5d809d581"><div class="ttname"><a href="../../d2/d12/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#a7d926b3f9d32d36780f2a5e5d809d581">com.fs.starfarer.api.impl.campaign.intel.raid.RaidIntel.addStandardStrengthComparisons</a></div><div class="ttdeci">void addStandardStrengthComparisons(TooltipMakerAPI info, MarketAPI target, FactionAPI targetFaction, boolean withGround, boolean withBombard, String raid, String raids)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d48/RaidIntel_8java_source.html#l00758">RaidIntel.java:758</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel_html_ab4a45bc02d5128a2e485e301e174c635"><div class="ttname"><a href="../../d2/d12/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#ab4a45bc02d5128a2e485e301e174c635">com.fs.starfarer.api.impl.campaign.intel.raid.RaidIntel.getStageIndex</a></div><div class="ttdeci">int getStageIndex(RaidStage stage)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d48/RaidIntel_8java_source.html#l00113">RaidIntel.java:113</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel_html_ab8c856219193f1cee58134365633ed87"><div class="ttname"><a href="../../d2/d12/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#ab8c856219193f1cee58134365633ed87">com.fs.starfarer.api.impl.campaign.intel.raid.RaidIntel.getRaidStrDesc</a></div><div class="ttdeci">String getRaidStrDesc()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d48/RaidIntel_8java_source.html#l00754">RaidIntel.java:754</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel_html_aeb9c82499c7341ccd35bb436b1449b82"><div class="ttname"><a href="../../d2/d12/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#aeb9c82499c7341ccd35bb436b1449b82">com.fs.starfarer.api.impl.campaign.intel.raid.RaidIntel.getOrigNumFleets</a></div><div class="ttdeci">float getOrigNumFleets()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d48/RaidIntel_8java_source.html#l00736">RaidIntel.java:736</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel_html_aecd14961de8d8eae103a4248a3b1f50b"><div class="ttname"><a href="../../d2/d12/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#aecd14961de8d8eae103a4248a3b1f50b">com.fs.starfarer.api.impl.campaign.intel.raid.RaidIntel.stages</a></div><div class="ttdeci">List&lt; RaidStage &gt; stages</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d48/RaidIntel_8java_source.html#l00068">RaidIntel.java:68</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI_html_a0e0c390b680abf24f5268c0d168a8959"><div class="ttname"><a href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a0e0c390b680abf24f5268c0d168a8959">com.fs.starfarer.api.campaign.FactionAPI.getDisplayNameHasOrHave</a></div><div class="ttdeci">String getDisplayNameHasOrHave()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI_html_a2a8d2fabe32e0167bba0ab5aad861c3c"><div class="ttname"><a href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a2a8d2fabe32e0167bba0ab5aad861c3c">com.fs.starfarer.api.campaign.FactionAPI.getDisplayNameWithArticleWithoutArticle</a></div><div class="ttdeci">String getDisplayNameWithArticleWithoutArticle()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI_html_a579e737df0b7d656e6d9599d80aaa0f2"><div class="ttname"><a href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a579e737df0b7d656e6d9599d80aaa0f2">com.fs.starfarer.api.campaign.FactionAPI.getDarkUIColor</a></div><div class="ttdeci">Color getDarkUIColor()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI_html_a69b86d194392c5eadd148b6e1e6cd5f0"><div class="ttname"><a href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a69b86d194392c5eadd148b6e1e6cd5f0">com.fs.starfarer.api.campaign.FactionAPI.getDisplayNameWithArticle</a></div><div class="ttdeci">String getDisplayNameWithArticle()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI_html_ad86103131f789a387de2afa152026ca3"><div class="ttname"><a href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#ad86103131f789a387de2afa152026ca3">com.fs.starfarer.api.campaign.FactionAPI.getDisplayNameIsOrAre</a></div><div class="ttdeci">String getDisplayNameIsOrAre()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a4c053a2e31df1e7eea069853ab94ea40" name="a4c053a2e31df1e7eea069853ab94ea40"></a>
@@ -1340,16 +994,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d12/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#a86d5fdbd4e34b6783aee6d9a1abc1ae9">com.fs.starfarer.api.impl.campaign.intel.raid.RaidIntel</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d1d/HegemonyInspectionIntel_8java_source.html#l00361">361</a> of file <a class="el" href="../../d7/d1d/HegemonyInspectionIntel_8java_source.html">HegemonyInspectionIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  361</span>                                          {</div>
-<div class="line"><span class="lineno">  362</span>        <span class="keywordflow">for</span> (RaidStage stage : <a class="code hl_variable" href="../../d2/d12/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#aecd14961de8d8eae103a4248a3b1f50b">stages</a>) {</div>
-<div class="line"><span class="lineno">  363</span>            <span class="keywordflow">if</span> (stage instanceof HIActionStage) {</div>
-<div class="line"><span class="lineno">  364</span>                <span class="keywordflow">return</span> (HIActionStage) stage;</div>
-<div class="line"><span class="lineno">  365</span>            }</div>
-<div class="line"><span class="lineno">  366</span>        }</div>
-<div class="line"><span class="lineno">  367</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  368</span><span class="comment">//      return (HIActionStage) stages.get(2);</span></div>
-<div class="line"><span class="lineno">  369</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aac402be565ae257c38f906c1da38cab3" name="aac402be565ae257c38f906c1da38cab3"></a>
@@ -1368,10 +1013,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d1d/HegemonyInspectionIntel_8java_source.html#l00161">161</a> of file <a class="el" href="../../d7/d1d/HegemonyInspectionIntel_8java_source.html">HegemonyInspectionIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  161</span>                                           {</div>
-<div class="line"><span class="lineno">  162</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#afd7358e816ec683121ed1b8fff7ed5e9">expectedCores</a>;</div>
-<div class="line"><span class="lineno">  163</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a1913b4b508739708821b2eb4839118e7" name="a1913b4b508739708821b2eb4839118e7"></a>
@@ -1390,10 +1032,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d1d/HegemonyInspectionIntel_8java_source.html#l00143">143</a> of file <a class="el" href="../../d7/d1d/HegemonyInspectionIntel_8java_source.html">HegemonyInspectionIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  143</span>                               {</div>
-<div class="line"><span class="lineno">  144</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#afcfff67097f289cedd6d628164c02b10">from</a>;</div>
-<div class="line"><span class="lineno">  145</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab03fee780f056026adc2592358370fc2" name="ab03fee780f056026adc2592358370fc2"></a>
@@ -1415,10 +1054,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d12/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#a83c2860144a6b9178e37d9132af6e846">com.fs.starfarer.api.impl.campaign.intel.raid.RaidIntel</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d1d/HegemonyInspectionIntel_8java_source.html#l00518">518</a> of file <a class="el" href="../../d7/d1d/HegemonyInspectionIntel_8java_source.html">HegemonyInspectionIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  518</span>                            {</div>
-<div class="line"><span class="lineno">  519</span>        <span class="keywordflow">return</span> Global.getSettings().getSpriteName(<span class="stringliteral">&quot;intel&quot;</span>, <span class="stringliteral">&quot;hegemony_inspection&quot;</span>);</div>
-<div class="line"><span class="lineno">  520</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9be793f559386ff46f5d37933951bc1a" name="a9be793f559386ff46f5d37933951bc1a"></a>
@@ -1447,16 +1083,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d12/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#a7adee4351993f2ec58e25d306393346c">com.fs.starfarer.api.impl.campaign.intel.raid.RaidIntel</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d1d/HegemonyInspectionIntel_8java_source.html#l00487">487</a> of file <a class="el" href="../../d7/d1d/HegemonyInspectionIntel_8java_source.html">HegemonyInspectionIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  487</span>                                                      {</div>
-<div class="line"><span class="lineno">  488</span>        <span class="comment">//return super.getIntelTags(map);</span></div>
-<div class="line"><span class="lineno">  489</span>        </div>
-<div class="line"><span class="lineno">  490</span>        Set&lt;String&gt; tags = super.getIntelTags(map);</div>
-<div class="line"><span class="lineno">  491</span>        tags.add(Tags.INTEL_MILITARY);</div>
-<div class="line"><span class="lineno">  492</span>        tags.add(Tags.INTEL_COLONIES);</div>
-<div class="line"><span class="lineno">  493</span>        tags.add(<a class="code hl_function" href="../../d2/d12/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#ada09952c8221ff5613a52d34d66b254f">getFaction</a>().getId());</div>
-<div class="line"><span class="lineno">  494</span>        <span class="keywordflow">return</span> tags;</div>
-<div class="line"><span class="lineno">  495</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a583231abf52feabdaf085bca790c6035" name="a583231abf52feabdaf085bca790c6035"></a>
@@ -1475,11 +1102,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d1d/HegemonyInspectionIntel_8java_source.html#l00165">165</a> of file <a class="el" href="../../d7/d1d/HegemonyInspectionIntel_8java_source.html">HegemonyInspectionIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  165</span>                                    {</div>
-<div class="line"><span class="lineno">  166</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#aaeab0f0b9aad440270323ecdc89dc065">investedCredits</a>;</div>
-<div class="line"><span class="lineno">  167</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel_html_aaeab0f0b9aad440270323ecdc89dc065"><div class="ttname"><a href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#aaeab0f0b9aad440270323ecdc89dc065">com.fs.starfarer.api.impl.campaign.intel.inspection.HegemonyInspectionIntel.investedCredits</a></div><div class="ttdeci">int investedCredits</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d1d/HegemonyInspectionIntel_8java_source.html#l00070">HegemonyInspectionIntel.java:70</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a73d811397b836c67ca56f0831bcef74e" name="a73d811397b836c67ca56f0831bcef74e"></a>
@@ -1501,14 +1124,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d12/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#a38906965d1353afa50d1df1f353e5949">com.fs.starfarer.api.impl.campaign.intel.raid.RaidIntel</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d1d/HegemonyInspectionIntel_8java_source.html#l00523">523</a> of file <a class="el" href="../../d7/d1d/HegemonyInspectionIntel_8java_source.html">HegemonyInspectionIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  523</span>                                                              {</div>
-<div class="line"><span class="lineno">  524</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#ac7fafc4f73e07184185b14befaed7601">target</a> != <span class="keyword">null</span> &amp;&amp; <a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#ac7fafc4f73e07184185b14befaed7601">target</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#aa90dca68abeb54f7f1da7a063111b281">isInEconomy</a>() &amp;&amp; <a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#ac7fafc4f73e07184185b14befaed7601">target</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af1677b531fa1a657e17b732868c7b953">getPrimaryEntity</a>() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  525</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#ac7fafc4f73e07184185b14befaed7601">target</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af1677b531fa1a657e17b732868c7b953">getPrimaryEntity</a>();</div>
-<div class="line"><span class="lineno">  526</span>        }</div>
-<div class="line"><span class="lineno">  527</span>        <span class="keywordflow">return</span> super.getMapLocation(map);</div>
-<div class="line"><span class="lineno">  528</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_aa90dca68abeb54f7f1da7a063111b281"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#aa90dca68abeb54f7f1da7a063111b281">com.fs.starfarer.api.campaign.econ.MarketAPI.isInEconomy</a></div><div class="ttdeci">boolean isInEconomy()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a53546ee2bb8cf404e97def81203531a0" name="a53546ee2bb8cf404e97def81203531a0"></a>
@@ -1529,14 +1145,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d12/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#ade2404577440fe110cc37ad697c7a699">com.fs.starfarer.api.impl.campaign.intel.raid.RaidIntel</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d1d/HegemonyInspectionIntel_8java_source.html#l00232">232</a> of file <a class="el" href="../../d7/d1d/HegemonyInspectionIntel_8java_source.html">HegemonyInspectionIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  232</span>                            {</div>
-<div class="line"><span class="lineno">  233</span>        String base = <span class="stringliteral">&quot;Hegemony AI Inspection&quot;</span>;</div>
-<div class="line"><span class="lineno">  234</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#a0d08abdd552ef09f56671592a6184318">outcome</a> == HegemonyInspectionOutcome.TASK_FORCE_DESTROYED ||</div>
-<div class="line"><span class="lineno">  235</span>                <a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#a0d08abdd552ef09f56671592a6184318">outcome</a> == HegemonyInspectionOutcome.COLONY_NO_LONGER_EXISTS) <span class="keywordflow">return</span> base + <span class="stringliteral">&quot; - Failed&quot;</span>;</div>
-<div class="line"><span class="lineno">  236</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#a0d08abdd552ef09f56671592a6184318">outcome</a> != <span class="keyword">null</span>) <span class="keywordflow">return</span> base + <span class="stringliteral">&quot; - Completed&quot;</span>;</div>
-<div class="line"><span class="lineno">  237</span>        <span class="keywordflow">return</span> base;</div>
-<div class="line"><span class="lineno">  238</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a34a3c1ef3859797fd8649945df36979a" name="a34a3c1ef3859797fd8649945df36979a"></a>
@@ -1555,10 +1164,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d1d/HegemonyInspectionIntel_8java_source.html#l00153">153</a> of file <a class="el" href="../../d7/d1d/HegemonyInspectionIntel_8java_source.html">HegemonyInspectionIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  153</span>                                            {</div>
-<div class="line"><span class="lineno">  154</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#ad0c943ff38555857f615c21b236df94b">orders</a>;</div>
-<div class="line"><span class="lineno">  155</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a581786f8975587beb6f1a4cdd1c56f57" name="a581786f8975587beb6f1a4cdd1c56f57"></a>
@@ -1577,10 +1183,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d1d/HegemonyInspectionIntel_8java_source.html#l00181">181</a> of file <a class="el" href="../../d7/d1d/HegemonyInspectionIntel_8java_source.html">HegemonyInspectionIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  181</span>                                                  {</div>
-<div class="line"><span class="lineno">  182</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#a0d08abdd552ef09f56671592a6184318">outcome</a>;</div>
-<div class="line"><span class="lineno">  183</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5f7943119cbd6cad96025654eec386c5" name="a5f7943119cbd6cad96025654eec386c5"></a>
@@ -1599,11 +1202,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d1d/HegemonyInspectionIntel_8java_source.html#l00135">135</a> of file <a class="el" href="../../d7/d1d/HegemonyInspectionIntel_8java_source.html">HegemonyInspectionIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  135</span>                              {</div>
-<div class="line"><span class="lineno">  136</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#a4642eadd9241bbc8d79af2b98a7a5928">random</a>;</div>
-<div class="line"><span class="lineno">  137</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel_html_a4642eadd9241bbc8d79af2b98a7a5928"><div class="ttname"><a href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#a4642eadd9241bbc8d79af2b98a7a5928">com.fs.starfarer.api.impl.campaign.intel.inspection.HegemonyInspectionIntel.random</a></div><div class="ttdeci">Random random</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d1d/HegemonyInspectionIntel_8java_source.html#l00078">HegemonyInspectionIntel.java:78</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a0dc620f77a8f8620d2d143d15fdabe18" name="a0dc620f77a8f8620d2d143d15fdabe18"></a>
@@ -1622,10 +1221,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d1d/HegemonyInspectionIntel_8java_source.html#l00139">139</a> of file <a class="el" href="../../d7/d1d/HegemonyInspectionIntel_8java_source.html">HegemonyInspectionIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  139</span>                                 {</div>
-<div class="line"><span class="lineno">  140</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#ac7fafc4f73e07184185b14befaed7601">target</a>;</div>
-<div class="line"><span class="lineno">  141</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2851854f18f59010e28aaa5dc04fb3b6" name="a2851854f18f59010e28aaa5dc04fb3b6"></a>
@@ -1644,10 +1240,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d1d/HegemonyInspectionIntel_8java_source.html#l00173">173</a> of file <a class="el" href="../../d7/d1d/HegemonyInspectionIntel_8java_source.html">HegemonyInspectionIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  173</span>                                     {</div>
-<div class="line"><span class="lineno">  174</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#a12a06654324ae8777e93f8adf4961a66">enteredSystem</a>;</div>
-<div class="line"><span class="lineno">  175</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a67c2108ca46ccb9d63f2c0170ac19fc6" name="a67c2108ca46ccb9d63f2c0170ac19fc6"></a>
@@ -1666,18 +1259,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d1d/HegemonyInspectionIntel_8java_source.html#l00203">203</a> of file <a class="el" href="../../d7/d1d/HegemonyInspectionIntel_8java_source.html">HegemonyInspectionIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  203</span>                                           {</div>
-<div class="line"><span class="lineno">  204</span>        <span class="keywordtype">boolean</span> hostile = <a class="code hl_function" href="../../d2/d12/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#ada09952c8221ff5613a52d34d66b254f">getFaction</a>().<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#accc67a07a27de570f239d753fa7efc5d">isHostileTo</a>(Factions.PLAYER);</div>
-<div class="line"><span class="lineno">  205</span>        <span class="keywordflow">if</span> (!hostile) {</div>
-<div class="line"><span class="lineno">  206</span>            <a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#a79f9ace726db89976343053ea8288f0f">repResult</a> = Global.getSector().adjustPlayerReputation(</div>
-<div class="line"><span class="lineno">  207</span>                    <span class="keyword">new</span> RepActionEnvelope(RepActions.MAKE_HOSTILE_AT_BEST, </div>
-<div class="line"><span class="lineno">  208</span>                    <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">false</span>, <span class="keyword">false</span>), </div>
-<div class="line"><span class="lineno">  209</span>                    Factions.HEGEMONY);</div>
-<div class="line"><span class="lineno">  210</span>            <a class="code hl_function" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#a06aff1993a626e0706c4133698a6126b">sendUpdateIfPlayerHasIntel</a>(<a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#a12497a116f7b6961cc9617bf91ddd5c1">MADE_HOSTILE_UPDATE</a>, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  211</span>        }</div>
-<div class="line"><span class="lineno">  212</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel_html_a06aff1993a626e0706c4133698a6126b"><div class="ttname"><a href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#a06aff1993a626e0706c4133698a6126b">com.fs.starfarer.api.impl.campaign.intel.inspection.HegemonyInspectionIntel.sendUpdateIfPlayerHasIntel</a></div><div class="ttdeci">void sendUpdateIfPlayerHasIntel(Object listInfoParam, boolean onlyIfImportant, boolean sendIfHidden)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d1d/HegemonyInspectionIntel_8java_source.html#l00476">HegemonyInspectionIntel.java:476</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2717f090fc5e5567439b7dd9b8d6416a" name="a2717f090fc5e5567439b7dd9b8d6416a"></a>
@@ -1707,18 +1289,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d1d/HegemonyInspectionIntel_8java_source.html#l00498">498</a> of file <a class="el" href="../../d7/d1d/HegemonyInspectionIntel_8java_source.html">HegemonyInspectionIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  498</span>                                                                        {</div>
-<div class="line"><span class="lineno">  499</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#a0d08abdd552ef09f56671592a6184318">outcome</a> == <span class="keyword">null</span> &amp;&amp; <a class="code hl_variable" href="../../d2/d12/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#a9276e86955934aa172f485649ed00dae">failStage</a> &gt;= 0) {</div>
-<div class="line"><span class="lineno">  500</span>            <span class="keywordflow">if</span> (!<a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#ac7fafc4f73e07184185b14befaed7601">target</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#aa90dca68abeb54f7f1da7a063111b281">isInEconomy</a>() || !<a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#ac7fafc4f73e07184185b14befaed7601">target</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a64c3437824f8a05ba3e6dc8a8ab61e62">isPlayerOwned</a>()) {</div>
-<div class="line"><span class="lineno">  501</span>                <a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#a0d08abdd552ef09f56671592a6184318">outcome</a> = HegemonyInspectionOutcome.COLONY_NO_LONGER_EXISTS;</div>
-<div class="line"><span class="lineno">  502</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  503</span>                <a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#a0d08abdd552ef09f56671592a6184318">outcome</a> = HegemonyInspectionOutcome.TASK_FORCE_DESTROYED;</div>
-<div class="line"><span class="lineno">  504</span>            }</div>
-<div class="line"><span class="lineno">  505</span>            <span class="comment">//sendOutcomeUpdate(); // don&#39;t do this - base raid sends an UPDATE_FAILED so we&#39;re good already</span></div>
-<div class="line"><span class="lineno">  506</span>        }</div>
-<div class="line"><span class="lineno">  507</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a64c3437824f8a05ba3e6dc8a8ab61e62"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a64c3437824f8a05ba3e6dc8a8ab61e62">com.fs.starfarer.api.campaign.econ.MarketAPI.isPlayerOwned</a></div><div class="ttdeci">boolean isPlayerOwned()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ad0cfc41d4ca95478e02f074d7a6bac62" name="ad0cfc41d4ca95478e02f074d7a6bac62"></a>
@@ -1737,10 +1308,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d1d/HegemonyInspectionIntel_8java_source.html#l00214">214</a> of file <a class="el" href="../../d7/d1d/HegemonyInspectionIntel_8java_source.html">HegemonyInspectionIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  214</span>                                     {</div>
-<div class="line"><span class="lineno">  215</span>        <a class="code hl_function" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#a06aff1993a626e0706c4133698a6126b">sendUpdateIfPlayerHasIntel</a>(<a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#a7702c1654ea910faf0d594f638b7f3c6">ENTERED_SYSTEM_UPDATE</a>, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  216</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae09111c823fdc4a2deea30b6d4720bfb" name="ae09111c823fdc4a2deea30b6d4720bfb"></a>
@@ -1759,10 +1327,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d1d/HegemonyInspectionIntel_8java_source.html#l00227">227</a> of file <a class="el" href="../../d7/d1d/HegemonyInspectionIntel_8java_source.html">HegemonyInspectionIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  227</span>                                    {</div>
-<div class="line"><span class="lineno">  228</span>        <a class="code hl_function" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#a06aff1993a626e0706c4133698a6126b">sendUpdateIfPlayerHasIntel</a>(<a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#a227b62aaea78c70b78116fba340ba3dd">OUTCOME_UPDATE</a>, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  229</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a06aff1993a626e0706c4133698a6126b" name="a06aff1993a626e0706c4133698a6126b"></a>
@@ -1800,18 +1365,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#ab7e276ad24b134d66cb0dd936a3c2471">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d1d/HegemonyInspectionIntel_8java_source.html#l00476">476</a> of file <a class="el" href="../../d7/d1d/HegemonyInspectionIntel_8java_source.html">HegemonyInspectionIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  476</span>                                                                                                                {</div>
-<div class="line"><span class="lineno">  477</span>        </div>
-<div class="line"><span class="lineno">  478</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a7462fa1f56416a45fb375797baf7f04f">listInfoParam</a> == <a class="code hl_variable" href="../../d2/d12/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#a363e0757549986f29b3bcda1fe7a8f95">UPDATE_RETURNING</a>) {</div>
-<div class="line"><span class="lineno">  479</span>            <span class="comment">// we&#39;re using sendOutcomeUpdate() to send an end-of-event update instead</span></div>
-<div class="line"><span class="lineno">  480</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  481</span>        }</div>
-<div class="line"><span class="lineno">  482</span>        </div>
-<div class="line"><span class="lineno">  483</span>        super.sendUpdateIfPlayerHasIntel(<a class="code hl_variable" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a7462fa1f56416a45fb375797baf7f04f">listInfoParam</a>, onlyIfImportant, sendIfHidden);</div>
-<div class="line"><span class="lineno">  484</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_a7462fa1f56416a45fb375797baf7f04f"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a7462fa1f56416a45fb375797baf7f04f">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.listInfoParam</a></div><div class="ttdeci">transient Object listInfoParam</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00053">BaseIntelPlugin.java:53</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel_html_a363e0757549986f29b3bcda1fe7a8f95"><div class="ttname"><a href="../../d2/d12/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#a363e0757549986f29b3bcda1fe7a8f95">com.fs.starfarer.api.impl.campaign.intel.raid.RaidIntel.UPDATE_RETURNING</a></div><div class="ttdeci">static Object UPDATE_RETURNING</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d48/RaidIntel_8java_source.html#l00043">RaidIntel.java:43</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a3e3a00db74c1aacbdee8505a80e3a716" name="a3e3a00db74c1aacbdee8505a80e3a716"></a>
@@ -1831,10 +1385,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d1d/HegemonyInspectionIntel_8java_source.html#l00177">177</a> of file <a class="el" href="../../d7/d1d/HegemonyInspectionIntel_8java_source.html">HegemonyInspectionIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  177</span>                                                        {</div>
-<div class="line"><span class="lineno">  178</span>        this.enteredSystem = <a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#a12a06654324ae8777e93f8adf4961a66">enteredSystem</a>;</div>
-<div class="line"><span class="lineno">  179</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac7518b1fe6f9e1c5a6aaeaa4d1f66411" name="ac7518b1fe6f9e1c5a6aaeaa4d1f66411"></a>
@@ -1854,10 +1405,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d1d/HegemonyInspectionIntel_8java_source.html#l00169">169</a> of file <a class="el" href="../../d7/d1d/HegemonyInspectionIntel_8java_source.html">HegemonyInspectionIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  169</span>                                                        {</div>
-<div class="line"><span class="lineno">  170</span>        this.investedCredits = <a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#aaeab0f0b9aad440270323ecdc89dc065">investedCredits</a>;</div>
-<div class="line"><span class="lineno">  171</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a3ec8870e508a77e8df200b98b9e7ba98" name="a3ec8870e508a77e8df200b98b9e7ba98"></a>
@@ -1877,10 +1425,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d1d/HegemonyInspectionIntel_8java_source.html#l00157">157</a> of file <a class="el" href="../../d7/d1d/HegemonyInspectionIntel_8java_source.html">HegemonyInspectionIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  157</span>                                                       {</div>
-<div class="line"><span class="lineno">  158</span>        this.orders = <a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#ad0c943ff38555857f615c21b236df94b">orders</a>;</div>
-<div class="line"><span class="lineno">  159</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5c851f802dcc20c157311c498c7b541a" name="a5c851f802dcc20c157311c498c7b541a"></a>
@@ -1900,10 +1445,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d1d/HegemonyInspectionIntel_8java_source.html#l00185">185</a> of file <a class="el" href="../../d7/d1d/HegemonyInspectionIntel_8java_source.html">HegemonyInspectionIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  185</span>                                                              {</div>
-<div class="line"><span class="lineno">  186</span>        this.outcome = <a class="code hl_variable" href="../../dc/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#a0d08abdd552ef09f56671592a6184318">outcome</a>;</div>
-<div class="line"><span class="lineno">  187</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

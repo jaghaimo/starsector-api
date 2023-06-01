@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -174,48 +175,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d60/StarGenDataSpec_8java_source.html#l00031">31</a> of file <a class="el" href="../../dc/d60/StarGenDataSpec_8java_source.html">StarGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   31</span>                                                                {</div>
-<div class="line"><span class="lineno">   32</span>        <span class="keywordtype">id</span> = row.getString(<span class="stringliteral">&quot;id&quot;</span>);</div>
-<div class="line"><span class="lineno">   33</span>        minRadius = (float) row.getDouble(<span class="stringliteral">&quot;minRadius&quot;</span>);</div>
-<div class="line"><span class="lineno">   34</span>        maxRadius = (float) row.getDouble(<span class="stringliteral">&quot;maxRadius&quot;</span>);</div>
-<div class="line"><span class="lineno">   35</span>        </div>
-<div class="line"><span class="lineno">   36</span>        coronaMin = (float) row.getDouble(<span class="stringliteral">&quot;coronaMin&quot;</span>);</div>
-<div class="line"><span class="lineno">   37</span>        coronaMult = (float) row.getDouble(<span class="stringliteral">&quot;coronaMult&quot;</span>);</div>
-<div class="line"><span class="lineno">   38</span>        coronaVar = (float) row.getDouble(<span class="stringliteral">&quot;coronaVar&quot;</span>);</div>
-<div class="line"><span class="lineno">   39</span>        </div>
-<div class="line"><span class="lineno">   40</span>        solarWind = (float) row.getDouble(<span class="stringliteral">&quot;solarWind&quot;</span>);</div>
-<div class="line"><span class="lineno">   41</span>        minFlare = (float) row.getDouble(<span class="stringliteral">&quot;minFlare&quot;</span>);</div>
-<div class="line"><span class="lineno">   42</span>        maxFlare = (float) row.getDouble(<span class="stringliteral">&quot;maxFlare&quot;</span>);</div>
-<div class="line"><span class="lineno">   43</span>        crLossMult = (float) row.getDouble(<span class="stringliteral">&quot;crLossMult&quot;</span>);</div>
-<div class="line"><span class="lineno">   44</span>        </div>
-<div class="line"><span class="lineno">   45</span>        freqYOUNG = (float) row.getDouble(<span class="stringliteral">&quot;freqYOUNG&quot;</span>);</div>
-<div class="line"><span class="lineno">   46</span>        freqAVERAGE = (float) row.getDouble(<span class="stringliteral">&quot;freqAVERAGE&quot;</span>);</div>
-<div class="line"><span class="lineno">   47</span>        freqOLD = (float) row.getDouble(<span class="stringliteral">&quot;freqOLD&quot;</span>);</div>
-<div class="line"><span class="lineno">   48</span>        </div>
-<div class="line"><span class="lineno">   49</span>        probOrbits = (float) row.optDouble(<span class="stringliteral">&quot;probOrbits&quot;</span>, 0);</div>
-<div class="line"><span class="lineno">   50</span>        minOrbits = (float) row.optDouble(<span class="stringliteral">&quot;minOrbits&quot;</span>, 0);</div>
-<div class="line"><span class="lineno">   51</span>        maxOrbits = (float) row.optDouble(<span class="stringliteral">&quot;maxOrbits&quot;</span>, 0);</div>
-<div class="line"><span class="lineno">   52</span>        </div>
-<div class="line"><span class="lineno">   53</span>        habZoneStart = (float) row.optDouble(<span class="stringliteral">&quot;habZoneStart&quot;</span>, 2);</div>
-<div class="line"><span class="lineno">   54</span>        </div>
-<div class="line"><span class="lineno">   55</span>        age = Misc.mapToEnum(row, <span class="stringliteral">&quot;age&quot;</span>, StarAge.class, StarAge.ANY);</div>
-<div class="line"><span class="lineno">   56</span>        </div>
-<div class="line"><span class="lineno">   57</span>        lightColorMin = <a class="code hl_function" href="../../d1/d71/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarGenDataSpec.html#a5548ef611e02fb18eae435df97b6b681">parseColor</a>(row.optString(<span class="stringliteral">&quot;lightColorMin&quot;</span>, <span class="keyword">null</span>) + <span class="stringliteral">&quot; 255&quot;</span>, <span class="stringliteral">&quot; &quot;</span>);</div>
-<div class="line"><span class="lineno">   58</span>        lightColorMax = <a class="code hl_function" href="../../d1/d71/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarGenDataSpec.html#a5548ef611e02fb18eae435df97b6b681">parseColor</a>(row.optString(<span class="stringliteral">&quot;lightColorMax&quot;</span>, <span class="keyword">null</span>) + <span class="stringliteral">&quot; 255&quot;</span>, <span class="stringliteral">&quot; &quot;</span>);</div>
-<div class="line"><span class="lineno">   59</span>        </div>
-<div class="line"><span class="lineno">   60</span>        String tags = row.optString(<span class="stringliteral">&quot;tags&quot;</span>, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   61</span>        <span class="keywordflow">if</span> (tags != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   62</span>            String [] split = tags.split(<span class="stringliteral">&quot;,&quot;</span>);</div>
-<div class="line"><span class="lineno">   63</span>            <span class="keywordflow">for</span> (String tag : split) {</div>
-<div class="line"><span class="lineno">   64</span>                tag = tag.trim();</div>
-<div class="line"><span class="lineno">   65</span>                <span class="keywordflow">if</span> (tag.isEmpty()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   66</span>                <a class="code hl_function" href="../../d1/d71/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarGenDataSpec.html#adfdadb228fa49fd912ee2d6035508bce">addTag</a>(tag);</div>
-<div class="line"><span class="lineno">   67</span>            }</div>
-<div class="line"><span class="lineno">   68</span>        }</div>
-<div class="line"><span class="lineno">   69</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarGenDataSpec_html_a5548ef611e02fb18eae435df97b6b681"><div class="ttname"><a href="../../d1/d71/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarGenDataSpec.html#a5548ef611e02fb18eae435df97b6b681">com.fs.starfarer.api.impl.campaign.procgen.StarGenDataSpec.parseColor</a></div><div class="ttdeci">static Color parseColor(String str, String sep)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d60/StarGenDataSpec_8java_source.html#l00071">StarGenDataSpec.java:71</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarGenDataSpec_html_adfdadb228fa49fd912ee2d6035508bce"><div class="ttname"><a href="../../d1/d71/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarGenDataSpec.html#adfdadb228fa49fd912ee2d6035508bce">com.fs.starfarer.api.impl.campaign.procgen.StarGenDataSpec.addTag</a></div><div class="ttdeci">void addTag(String tag)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d60/StarGenDataSpec_8java_source.html#l00178">StarGenDataSpec.java:178</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -236,10 +196,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d60/StarGenDataSpec_8java_source.html#l00178">178</a> of file <a class="el" href="../../dc/d60/StarGenDataSpec_8java_source.html">StarGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  178</span>                                   {</div>
-<div class="line"><span class="lineno">  179</span>        tags.add(tag);</div>
-<div class="line"><span class="lineno">  180</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aaf9d329a930a1575c7461b9e4192c8c1" name="aaf9d329a930a1575c7461b9e4192c8c1"></a>
@@ -258,10 +215,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d60/StarGenDataSpec_8java_source.html#l00154">154</a> of file <a class="el" href="../../dc/d60/StarGenDataSpec_8java_source.html">StarGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  154</span>                            {</div>
-<div class="line"><span class="lineno">  155</span>        <span class="keywordflow">return</span> age;</div>
-<div class="line"><span class="lineno">  156</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a23d673e1a187d03e2be61015ef39f113" name="a23d673e1a187d03e2be61015ef39f113"></a>
@@ -280,10 +234,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d60/StarGenDataSpec_8java_source.html#l00098">98</a> of file <a class="el" href="../../dc/d60/StarGenDataSpec_8java_source.html">StarGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   98</span>                                {</div>
-<div class="line"><span class="lineno">   99</span>        <span class="keywordflow">return</span> coronaMin;</div>
-<div class="line"><span class="lineno">  100</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9007204e358977e062d1f698985f9243" name="a9007204e358977e062d1f698985f9243"></a>
@@ -302,10 +253,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d60/StarGenDataSpec_8java_source.html#l00103">103</a> of file <a class="el" href="../../dc/d60/StarGenDataSpec_8java_source.html">StarGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  103</span>                                 {</div>
-<div class="line"><span class="lineno">  104</span>        <span class="keywordflow">return</span> coronaMult;</div>
-<div class="line"><span class="lineno">  105</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a3c5a4e19b2043695fcf2f56a476328aa" name="a3c5a4e19b2043695fcf2f56a476328aa"></a>
@@ -324,10 +272,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d60/StarGenDataSpec_8java_source.html#l00108">108</a> of file <a class="el" href="../../dc/d60/StarGenDataSpec_8java_source.html">StarGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  108</span>                                {</div>
-<div class="line"><span class="lineno">  109</span>        <span class="keywordflow">return</span> coronaVar;</div>
-<div class="line"><span class="lineno">  110</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a11927b58ca9d73f0f356cd3e77a37371" name="a11927b58ca9d73f0f356cd3e77a37371"></a>
@@ -346,10 +291,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d60/StarGenDataSpec_8java_source.html#l00128">128</a> of file <a class="el" href="../../dc/d60/StarGenDataSpec_8java_source.html">StarGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  128</span>                                 {</div>
-<div class="line"><span class="lineno">  129</span>        <span class="keywordflow">return</span> crLossMult;</div>
-<div class="line"><span class="lineno">  130</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a51a96c0fbc2986d00475f851214fda9e" name="a51a96c0fbc2986d00475f851214fda9e"></a>
@@ -368,10 +310,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d60/StarGenDataSpec_8java_source.html#l00146">146</a> of file <a class="el" href="../../dc/d60/StarGenDataSpec_8java_source.html">StarGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  146</span>                                  {</div>
-<div class="line"><span class="lineno">  147</span>        <span class="keywordflow">return</span> freqAVERAGE;</div>
-<div class="line"><span class="lineno">  148</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="acb4e835fcef14ff61fea6b5167460670" name="acb4e835fcef14ff61fea6b5167460670"></a>
@@ -390,10 +329,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d60/StarGenDataSpec_8java_source.html#l00150">150</a> of file <a class="el" href="../../dc/d60/StarGenDataSpec_8java_source.html">StarGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  150</span>                              {</div>
-<div class="line"><span class="lineno">  151</span>        <span class="keywordflow">return</span> freqOLD;</div>
-<div class="line"><span class="lineno">  152</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa9948d1f10528a24232a90d12a1c0f42" name="aa9948d1f10528a24232a90d12a1c0f42"></a>
@@ -412,10 +348,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d60/StarGenDataSpec_8java_source.html#l00142">142</a> of file <a class="el" href="../../dc/d60/StarGenDataSpec_8java_source.html">StarGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  142</span>                                {</div>
-<div class="line"><span class="lineno">  143</span>        <span class="keywordflow">return</span> freqYOUNG;</div>
-<div class="line"><span class="lineno">  144</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac1020e22601eecaea65734ec42b81b81" name="ac1020e22601eecaea65734ec42b81b81"></a>
@@ -434,10 +367,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d60/StarGenDataSpec_8java_source.html#l00170">170</a> of file <a class="el" href="../../dc/d60/StarGenDataSpec_8java_source.html">StarGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  170</span>                                   {</div>
-<div class="line"><span class="lineno">  171</span>        <span class="keywordflow">return</span> habZoneStart;</div>
-<div class="line"><span class="lineno">  172</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a6bb458fef0ad1b7630c8d4543603e677" name="a6bb458fef0ad1b7630c8d4543603e677"></a>
@@ -456,10 +386,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d60/StarGenDataSpec_8java_source.html#l00083">83</a> of file <a class="el" href="../../dc/d60/StarGenDataSpec_8java_source.html">StarGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   83</span>                          {</div>
-<div class="line"><span class="lineno">   84</span>        <span class="keywordflow">return</span> id;</div>
-<div class="line"><span class="lineno">   85</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a7659326f550bdf262486a2387afbac2d" name="a7659326f550bdf262486a2387afbac2d"></a>
@@ -478,10 +405,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d60/StarGenDataSpec_8java_source.html#l00138">138</a> of file <a class="el" href="../../dc/d60/StarGenDataSpec_8java_source.html">StarGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  138</span>                                    {</div>
-<div class="line"><span class="lineno">  139</span>        <span class="keywordflow">return</span> lightColorMax;</div>
-<div class="line"><span class="lineno">  140</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2dbe5ad859f0d43fc27c59a39c64c416" name="a2dbe5ad859f0d43fc27c59a39c64c416"></a>
@@ -500,10 +424,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d60/StarGenDataSpec_8java_source.html#l00133">133</a> of file <a class="el" href="../../dc/d60/StarGenDataSpec_8java_source.html">StarGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  133</span>                                    {</div>
-<div class="line"><span class="lineno">  134</span>        <span class="keywordflow">return</span> lightColorMin;</div>
-<div class="line"><span class="lineno">  135</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a193abb8b72949febfab6b7b7018aceb2" name="a193abb8b72949febfab6b7b7018aceb2"></a>
@@ -522,10 +443,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d60/StarGenDataSpec_8java_source.html#l00123">123</a> of file <a class="el" href="../../dc/d60/StarGenDataSpec_8java_source.html">StarGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  123</span>                               {</div>
-<div class="line"><span class="lineno">  124</span>        <span class="keywordflow">return</span> maxFlare;</div>
-<div class="line"><span class="lineno">  125</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a6bfebdb902cbedf713fa7ac81ea9fea8" name="a6bfebdb902cbedf713fa7ac81ea9fea8"></a>
@@ -544,10 +462,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d60/StarGenDataSpec_8java_source.html#l00166">166</a> of file <a class="el" href="../../dc/d60/StarGenDataSpec_8java_source.html">StarGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  166</span>                                {</div>
-<div class="line"><span class="lineno">  167</span>        <span class="keywordflow">return</span> maxOrbits;</div>
-<div class="line"><span class="lineno">  168</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa420c24b06368b71ba456f50700a1dde" name="aa420c24b06368b71ba456f50700a1dde"></a>
@@ -566,10 +481,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d60/StarGenDataSpec_8java_source.html#l00093">93</a> of file <a class="el" href="../../dc/d60/StarGenDataSpec_8java_source.html">StarGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   93</span>                                {</div>
-<div class="line"><span class="lineno">   94</span>        <span class="keywordflow">return</span> maxRadius;</div>
-<div class="line"><span class="lineno">   95</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a39999e7490adbfe80234074abde07274" name="a39999e7490adbfe80234074abde07274"></a>
@@ -588,10 +500,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d60/StarGenDataSpec_8java_source.html#l00118">118</a> of file <a class="el" href="../../dc/d60/StarGenDataSpec_8java_source.html">StarGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  118</span>                               {</div>
-<div class="line"><span class="lineno">  119</span>        <span class="keywordflow">return</span> minFlare;</div>
-<div class="line"><span class="lineno">  120</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9d92acb445fcd2c059d979dbaf8413cf" name="a9d92acb445fcd2c059d979dbaf8413cf"></a>
@@ -610,10 +519,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d60/StarGenDataSpec_8java_source.html#l00162">162</a> of file <a class="el" href="../../dc/d60/StarGenDataSpec_8java_source.html">StarGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  162</span>                                {</div>
-<div class="line"><span class="lineno">  163</span>        <span class="keywordflow">return</span> minOrbits;</div>
-<div class="line"><span class="lineno">  164</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af606c314ed47f537d464cbbe4d8ecd6d" name="af606c314ed47f537d464cbbe4d8ecd6d"></a>
@@ -632,10 +538,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d60/StarGenDataSpec_8java_source.html#l00088">88</a> of file <a class="el" href="../../dc/d60/StarGenDataSpec_8java_source.html">StarGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   88</span>                                {</div>
-<div class="line"><span class="lineno">   89</span>        <span class="keywordflow">return</span> minRadius;</div>
-<div class="line"><span class="lineno">   90</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8865b9e85a8f486c10c831a5b96bb250" name="a8865b9e85a8f486c10c831a5b96bb250"></a>
@@ -654,10 +557,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d60/StarGenDataSpec_8java_source.html#l00158">158</a> of file <a class="el" href="../../dc/d60/StarGenDataSpec_8java_source.html">StarGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  158</span>                                 {</div>
-<div class="line"><span class="lineno">  159</span>        <span class="keywordflow">return</span> probOrbits;</div>
-<div class="line"><span class="lineno">  160</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a0e07e5825c8594fc75d02cfd31543941" name="a0e07e5825c8594fc75d02cfd31543941"></a>
@@ -676,10 +576,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d60/StarGenDataSpec_8java_source.html#l00113">113</a> of file <a class="el" href="../../dc/d60/StarGenDataSpec_8java_source.html">StarGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  113</span>                                {</div>
-<div class="line"><span class="lineno">  114</span>        <span class="keywordflow">return</span> solarWind;</div>
-<div class="line"><span class="lineno">  115</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aefc3f968b99b2fe2e44db239b52ecd3e" name="aefc3f968b99b2fe2e44db239b52ecd3e"></a>
@@ -698,10 +595,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d60/StarGenDataSpec_8java_source.html#l00174">174</a> of file <a class="el" href="../../dc/d60/StarGenDataSpec_8java_source.html">StarGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  174</span>                                 {</div>
-<div class="line"><span class="lineno">  175</span>        <span class="keywordflow">return</span> tags;</div>
-<div class="line"><span class="lineno">  176</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a0dd1f34967955ae9b35740778e808403" name="a0dd1f34967955ae9b35740778e808403"></a>
@@ -721,10 +615,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d60/StarGenDataSpec_8java_source.html#l00182">182</a> of file <a class="el" href="../../dc/d60/StarGenDataSpec_8java_source.html">StarGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  182</span>                                      {</div>
-<div class="line"><span class="lineno">  183</span>        <span class="keywordflow">return</span> tags.contains(tag);</div>
-<div class="line"><span class="lineno">  184</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5548ef611e02fb18eae435df97b6b681" name="a5548ef611e02fb18eae435df97b6b681"></a>
@@ -762,18 +653,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d60/StarGenDataSpec_8java_source.html#l00071">71</a> of file <a class="el" href="../../dc/d60/StarGenDataSpec_8java_source.html">StarGenDataSpec.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   71</span>                                                           {</div>
-<div class="line"><span class="lineno">   72</span>        <span class="keywordflow">if</span> (str == <span class="keyword">null</span>) <span class="keywordflow">return</span> Color.white;</div>
-<div class="line"><span class="lineno">   73</span>        </div>
-<div class="line"><span class="lineno">   74</span>        String [] parts = str.split(sep);</div>
-<div class="line"><span class="lineno">   75</span>        <span class="keywordflow">if</span> (parts.length != 4) <span class="keywordflow">return</span> Color.white;</div>
-<div class="line"><span class="lineno">   76</span>        </div>
-<div class="line"><span class="lineno">   77</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> Color(Integer.parseInt(parts[0].trim()),</div>
-<div class="line"><span class="lineno">   78</span>                         Integer.parseInt(parts[1].trim()),</div>
-<div class="line"><span class="lineno">   79</span>                         Integer.parseInt(parts[2].trim()),</div>
-<div class="line"><span class="lineno">   80</span>                         Integer.parseInt(parts[3].trim()));</div>
-<div class="line"><span class="lineno">   81</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

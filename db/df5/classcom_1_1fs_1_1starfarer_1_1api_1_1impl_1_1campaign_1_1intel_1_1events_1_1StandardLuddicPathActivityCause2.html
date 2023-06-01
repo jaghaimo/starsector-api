@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -203,11 +204,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d39/StandardLuddicPathActivityCause2_8java_source.html#l00022">22</a> of file <a class="el" href="../../d3/d39/StandardLuddicPathActivityCause2_8java_source.html">StandardLuddicPathActivityCause2.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   22</span>                                                                             {</div>
-<div class="line"><span class="lineno">   23</span>        super(<a class="code hl_variable" href="../../d0/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseHostileActivityCause2.html#ac1541b2257561828bd30f3dae6777634">intel</a>);</div>
-<div class="line"><span class="lineno">   24</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseHostileActivityCause2_html_ac1541b2257561828bd30f3dae6777634"><div class="ttname"><a href="../../d0/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseHostileActivityCause2.html#ac1541b2257561828bd30f3dae6777634">com.fs.starfarer.api.impl.campaign.intel.events.BaseHostileActivityCause2.intel</a></div><div class="ttdeci">HostileActivityEventIntel intel</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/de2/BaseHostileActivityCause2_8java_source.html#l00012">BaseHostileActivityCause2.java:12</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -229,10 +226,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d0/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseHostileActivityCause2.html#a9948d136d6e7196dc2adab9ae3012bfe">com.fs.starfarer.api.impl.campaign.intel.events.BaseHostileActivityCause2</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d39/StandardLuddicPathActivityCause2_8java_source.html#l00118">118</a> of file <a class="el" href="../../d3/d39/StandardLuddicPathActivityCause2_8java_source.html">StandardLuddicPathActivityCause2.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  118</span>                            {</div>
-<div class="line"><span class="lineno">  119</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Technology and AI core use&quot;</span>;</div>
-<div class="line"><span class="lineno">  120</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a86dbb08e9bc69a0d9848c092165c32b3" name="a86dbb08e9bc69a0d9848c092165c32b3"></a>
@@ -254,46 +248,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d0/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseHostileActivityCause2.html#ae39a1de4327503b44dcd1bf93d8cb009">com.fs.starfarer.api.impl.campaign.intel.events.BaseHostileActivityCause2</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d39/StandardLuddicPathActivityCause2_8java_source.html#l00162">162</a> of file <a class="el" href="../../d3/d39/StandardLuddicPathActivityCause2_8java_source.html">StandardLuddicPathActivityCause2.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  162</span>                                                                {</div>
-<div class="line"><span class="lineno">  163</span>        <span class="keywordflow">if</span> (HA_CMD.playerHasPatherAgreement()) <span class="keywordflow">return</span> 0f;</div>
-<div class="line"><span class="lineno">  164</span>        </div>
-<div class="line"><span class="lineno">  165</span>        List&lt;MarketAPI&gt; markets = Misc.getMarketsInLocation(system, Factions.PLAYER);</div>
-<div class="line"><span class="lineno">  166</span>        </div>
-<div class="line"><span class="lineno">  167</span><span class="comment">//      float noCells = Global.getSettings().getFloat(&quot;luddicPathNoCellsInterestMult&quot;);</span></div>
-<div class="line"><span class="lineno">  168</span><span class="comment">//      float sleeperCells = Global.getSettings().getFloat(&quot;luddicPathSleeperInterestMult&quot;);</span></div>
-<div class="line"><span class="lineno">  169</span><span class="comment">//      float activeCells = Global.getSettings().getFloat(&quot;luddicPathActiveInterestMult&quot;);</span></div>
-<div class="line"><span class="lineno">  170</span>        </div>
-<div class="line"><span class="lineno">  171</span>        <span class="keywordtype">float</span> perSleeperBase = Global.getSettings().getFloat(<span class="stringliteral">&quot;luddicPathSleeperCellsBase&quot;</span>);</div>
-<div class="line"><span class="lineno">  172</span>        <span class="keywordtype">float</span> perSleeperSize = Global.getSettings().getFloat(<span class="stringliteral">&quot;luddicPathSleeperCellsPerSize&quot;</span>);</div>
-<div class="line"><span class="lineno">  173</span>        <span class="keywordtype">float</span> perActiveBase = Global.getSettings().getFloat(<span class="stringliteral">&quot;luddicPathActiveCellsBase&quot;</span>);</div>
-<div class="line"><span class="lineno">  174</span>        <span class="keywordtype">float</span> perActiveSize = Global.getSettings().getFloat(<span class="stringliteral">&quot;luddicPathActiveCellsPerSize&quot;</span>);</div>
-<div class="line"><span class="lineno">  175</span>        <span class="keywordtype">float</span> perPointOfInterest = Global.getSettings().getFloat(<span class="stringliteral">&quot;luddicPathPerPointOfInterest&quot;</span>);</div>
-<div class="line"><span class="lineno">  176</span> </div>
-<div class="line"><span class="lineno">  177</span>        <span class="keywordtype">float</span> max = 0f;</div>
-<div class="line"><span class="lineno">  178</span>        <span class="keywordflow">for</span> (MarketAPI market : markets) {</div>
-<div class="line"><span class="lineno">  179</span>            LuddicPathCellsIntel <a class="code hl_variable" href="../../d0/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseHostileActivityCause2.html#ac1541b2257561828bd30f3dae6777634">intel</a> = LuddicPathCellsIntel.getCellsForMarket(market);</div>
-<div class="line"><span class="lineno">  180</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d0/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseHostileActivityCause2.html#ac1541b2257561828bd30f3dae6777634">intel</a> == <span class="keyword">null</span>) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  181</span>            </div>
-<div class="line"><span class="lineno">  182</span>            <span class="keywordtype">float</span> curr = 0f;</div>
-<div class="line"><span class="lineno">  183</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d0/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseHostileActivityCause2.html#ac1541b2257561828bd30f3dae6777634">intel</a>.isSleeper()) {</div>
-<div class="line"><span class="lineno">  184</span>                curr += perSleeperBase + market.getSize() * perSleeperSize;</div>
-<div class="line"><span class="lineno">  185</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  186</span>                curr += perActiveBase + market.getSize() * perActiveSize;</div>
-<div class="line"><span class="lineno">  187</span>            }</div>
-<div class="line"><span class="lineno">  188</span> </div>
-<div class="line"><span class="lineno">  189</span>            <span class="keywordtype">float</span> interest = LuddicPathBaseManager.getLuddicPathMarketInterest(market);</div>
-<div class="line"><span class="lineno">  190</span>            curr += interest * perPointOfInterest;</div>
-<div class="line"><span class="lineno">  191</span>            </div>
-<div class="line"><span class="lineno">  192</span>            <span class="keywordflow">if</span> (curr &gt;= max) {</div>
-<div class="line"><span class="lineno">  193</span>                max = curr;</div>
-<div class="line"><span class="lineno">  194</span>            }</div>
-<div class="line"><span class="lineno">  195</span>        }</div>
-<div class="line"><span class="lineno">  196</span>        </div>
-<div class="line"><span class="lineno">  197</span>        max = Math.round(max * 100f) / 100f;</div>
-<div class="line"><span class="lineno">  198</span>        </div>
-<div class="line"><span class="lineno">  199</span>        <span class="keywordflow">return</span> max;</div>
-<div class="line"><span class="lineno">  200</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="afdd552a0d5aeb468128eaaa243aac411" name="afdd552a0d5aeb468128eaaa243aac411"></a>
@@ -343,11 +298,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d39/StandardLuddicPathActivityCause2_8java_source.html#l00137">137</a> of file <a class="el" href="../../d3/d39/StandardLuddicPathActivityCause2_8java_source.html">StandardLuddicPathActivityCause2.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  137</span>                                                                                                                              {</div>
-<div class="line"><span class="lineno">  138</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../db/df5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1StandardLuddicPathActivityCause2.html#afdd552a0d5aeb468128eaaa243aac411">getPatherInterest</a>(system, multIfNoCells, multIfSleeper, multIfActive, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  139</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1StandardLuddicPathActivityCause2_html_afdd552a0d5aeb468128eaaa243aac411"><div class="ttname"><a href="../../db/df5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1StandardLuddicPathActivityCause2.html#afdd552a0d5aeb468128eaaa243aac411">com.fs.starfarer.api.impl.campaign.intel.events.StandardLuddicPathActivityCause2.getPatherInterest</a></div><div class="ttdeci">static float getPatherInterest(StarSystemAPI system, float multIfNoCells, float multIfSleeper, float multIfActive)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d39/StandardLuddicPathActivityCause2_8java_source.html#l00137">StandardLuddicPathActivityCause2.java:137</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a352a659be4e083fce92b28f24e6f5e6a" name="a352a659be4e083fce92b28f24e6f5e6a"></a>
@@ -403,27 +354,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d39/StandardLuddicPathActivityCause2_8java_source.html#l00140">140</a> of file <a class="el" href="../../d3/d39/StandardLuddicPathActivityCause2_8java_source.html">StandardLuddicPathActivityCause2.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  140</span>                                                                                                                                                      {</div>
-<div class="line"><span class="lineno">  141</span>        <span class="keywordtype">float</span> total = 0f;</div>
-<div class="line"><span class="lineno">  142</span>        List&lt;MarketAPI&gt; markets = Misc.getMarketsInLocation(system, Factions.PLAYER);</div>
-<div class="line"><span class="lineno">  143</span>        <span class="keywordflow">for</span> (MarketAPI market : markets) {</div>
-<div class="line"><span class="lineno">  144</span>            <span class="keywordtype">float</span> mult = 1f;</div>
-<div class="line"><span class="lineno">  145</span>            LuddicPathCellsIntel <a class="code hl_variable" href="../../d0/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseHostileActivityCause2.html#ac1541b2257561828bd30f3dae6777634">intel</a> = LuddicPathCellsIntel.getCellsForMarket(market);</div>
-<div class="line"><span class="lineno">  146</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d0/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseHostileActivityCause2.html#ac1541b2257561828bd30f3dae6777634">intel</a> == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  147</span>                mult = multIfNoCells; </div>
-<div class="line"><span class="lineno">  148</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d0/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseHostileActivityCause2.html#ac1541b2257561828bd30f3dae6777634">intel</a>.isSleeper()) {</div>
-<div class="line"><span class="lineno">  149</span>                mult = multIfSleeper;</div>
-<div class="line"><span class="lineno">  150</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  151</span>                mult = multIfActive;</div>
-<div class="line"><span class="lineno">  152</span>            }</div>
-<div class="line"><span class="lineno">  153</span> </div>
-<div class="line"><span class="lineno">  154</span>            <span class="keywordtype">float</span> interest = LuddicPathBaseManager.getLuddicPathMarketInterest(market);</div>
-<div class="line"><span class="lineno">  155</span>            <span class="keywordflow">if</span> (countCellsOnly) interest = 1f;</div>
-<div class="line"><span class="lineno">  156</span>            total += (interest * mult);</div>
-<div class="line"><span class="lineno">  157</span>        }</div>
-<div class="line"><span class="lineno">  158</span>        <span class="keywordflow">return</span> total;</div>
-<div class="line"><span class="lineno">  159</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa3c2499bfa737fa5fefb3ad2769c12a1" name="aa3c2499bfa737fa5fefb3ad2769c12a1"></a>
@@ -445,35 +376,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d0/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseHostileActivityCause2.html#a1675075a6ddd88c47413558a7e7c8910">com.fs.starfarer.api.impl.campaign.intel.events.BaseHostileActivityCause2</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d39/StandardLuddicPathActivityCause2_8java_source.html#l00090">90</a> of file <a class="el" href="../../d3/d39/StandardLuddicPathActivityCause2_8java_source.html">StandardLuddicPathActivityCause2.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   90</span>                             {</div>
-<div class="line"><span class="lineno">   91</span>        <span class="keywordflow">if</span> (HA_CMD.playerHasPatherAgreement()) <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">   92</span>        </div>
-<div class="line"><span class="lineno">   93</span>        <span class="keywordtype">int</span> progress = (int) Math.round(<a class="code hl_function" href="../../db/df5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1StandardLuddicPathActivityCause2.html#a4f021e571915eb44bea3c943e69ca466">getTotalPatherInterest</a>());</div>
-<div class="line"><span class="lineno">   94</span>        </div>
-<div class="line"><span class="lineno">   95</span>        <span class="keywordtype">float</span> unit = Global.getSettings().getFloat(<span class="stringliteral">&quot;patherProgressUnit&quot;</span>);</div>
-<div class="line"><span class="lineno">   96</span>        <span class="keywordtype">float</span> mult = Global.getSettings().getFloat(<span class="stringliteral">&quot;patherProgressMult&quot;</span>);</div>
-<div class="line"><span class="lineno">   97</span>        <span class="comment">//progress = 200;</span></div>
-<div class="line"><span class="lineno">   98</span>        <span class="keywordtype">int</span> rem = progress;</div>
-<div class="line"><span class="lineno">   99</span>        <span class="keywordtype">float</span> adjusted = 0;</div>
-<div class="line"><span class="lineno">  100</span>        <span class="keywordflow">while</span> (rem &gt; unit) {</div>
-<div class="line"><span class="lineno">  101</span>            adjusted += unit;</div>
-<div class="line"><span class="lineno">  102</span>            rem -= unit;</div>
-<div class="line"><span class="lineno">  103</span>            rem *= mult;</div>
-<div class="line"><span class="lineno">  104</span>        }</div>
-<div class="line"><span class="lineno">  105</span>        adjusted += rem;</div>
-<div class="line"><span class="lineno">  106</span>        </div>
-<div class="line"><span class="lineno">  107</span>        <span class="keywordtype">int</span> reduced = Math.round(adjusted);</div>
-<div class="line"><span class="lineno">  108</span>        <span class="keywordflow">if</span> (progress &gt; 0 &amp;&amp; reduced &lt; 1) reduced = 1;</div>
-<div class="line"><span class="lineno">  109</span>        progress = reduced;</div>
-<div class="line"><span class="lineno">  110</span>        </div>
-<div class="line"><span class="lineno">  111</span><span class="comment">//      int reduced = (int) Math.round(Math.pow(progress, 0.8f));</span></div>
-<div class="line"><span class="lineno">  112</span><span class="comment">//      if (progress &gt; 0 &amp;&amp; reduced &lt;= 0) reduced = 1;</span></div>
-<div class="line"><span class="lineno">  113</span><span class="comment">//      progress = reduced;</span></div>
-<div class="line"><span class="lineno">  114</span>        </div>
-<div class="line"><span class="lineno">  115</span>        <span class="keywordflow">return</span> progress;</div>
-<div class="line"><span class="lineno">  116</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1StandardLuddicPathActivityCause2_html_a4f021e571915eb44bea3c943e69ca466"><div class="ttname"><a href="../../db/df5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1StandardLuddicPathActivityCause2.html#a4f021e571915eb44bea3c943e69ca466">com.fs.starfarer.api.impl.campaign.intel.events.StandardLuddicPathActivityCause2.getTotalPatherInterest</a></div><div class="ttdeci">float getTotalPatherInterest()</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d39/StandardLuddicPathActivityCause2_8java_source.html#l00122">StandardLuddicPathActivityCause2.java:122</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae6340cd68a08bcb546fb5ce5edcd8c68" name="ae6340cd68a08bcb546fb5ce5edcd8c68"></a>
@@ -495,11 +398,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d0/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseHostileActivityCause2.html#a603b28882e575f644e0a88350cfe35d8">com.fs.starfarer.api.impl.campaign.intel.events.BaseHostileActivityCause2</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d39/StandardLuddicPathActivityCause2_8java_source.html#l00085">85</a> of file <a class="el" href="../../d3/d39/StandardLuddicPathActivityCause2_8java_source.html">StandardLuddicPathActivityCause2.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   85</span>                                                        {</div>
-<div class="line"><span class="lineno">   86</span>        <span class="keywordflow">if</span> (HA_CMD.playerHasPatherAgreement()) <span class="keywordflow">return</span> Misc.getPositiveHighlightColor();</div>
-<div class="line"><span class="lineno">   87</span>        <span class="keywordflow">return</span> super.getProgressColor(<a class="code hl_variable" href="../../d0/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseHostileActivityCause2.html#ac1541b2257561828bd30f3dae6777634">intel</a>);</div>
-<div class="line"><span class="lineno">   88</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9301b0fd1b31d378c52149f1332e6c10" name="a9301b0fd1b31d378c52149f1332e6c10"></a>
@@ -520,11 +419,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d0/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseHostileActivityCause2.html#a7f0d2610f0efd25f268ddbb1fde17cfa">com.fs.starfarer.api.impl.campaign.intel.events.BaseHostileActivityCause2</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d39/StandardLuddicPathActivityCause2_8java_source.html#l00079">79</a> of file <a class="el" href="../../d3/d39/StandardLuddicPathActivityCause2_8java_source.html">StandardLuddicPathActivityCause2.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   79</span>                                   {</div>
-<div class="line"><span class="lineno">   80</span>        <span class="keywordflow">if</span> (HA_CMD.playerHasPatherAgreement()) <span class="keywordflow">return</span> EventFactor.NEGATED_FACTOR_PROGRESS;</div>
-<div class="line"><span class="lineno">   81</span>        <span class="keywordflow">return</span> super.getProgressStr();</div>
-<div class="line"><span class="lineno">   82</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a734d6a9dea71d0a2f42e6aad3f2a815a" name="a734d6a9dea71d0a2f42e6aad3f2a815a"></a>
@@ -545,52 +440,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d0/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseHostileActivityCause2.html#a6a821be4de5e407e119f9e3f615e99e1">com.fs.starfarer.api.impl.campaign.intel.events.BaseHostileActivityCause2</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d39/StandardLuddicPathActivityCause2_8java_source.html#l00027">27</a> of file <a class="el" href="../../d3/d39/StandardLuddicPathActivityCause2_8java_source.html">StandardLuddicPathActivityCause2.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   27</span>                                       {</div>
-<div class="line"><span class="lineno">   28</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> BaseFactorTooltip() {</div>
-<div class="line"><span class="lineno">   29</span>            <span class="keyword">public</span> <span class="keywordtype">void</span> createTooltip(TooltipMakerAPI tooltip, <span class="keywordtype">boolean</span> expanded, Object tooltipParam) {</div>
-<div class="line"><span class="lineno">   30</span>                <span class="keywordtype">float</span> opad = 10f;</div>
-<div class="line"><span class="lineno">   31</span>                tooltip.addPara(<span class="stringliteral">&quot;Use of advanced technology and AI cores attracts the attention of Pathers.&quot;</span>, 0f,</div>
-<div class="line"><span class="lineno">   32</span>                        Misc.getHighlightColor(), <span class="stringliteral">&quot;advanced technology&quot;</span>, <span class="stringliteral">&quot;AI cores&quot;</span>);</div>
-<div class="line"><span class="lineno">   33</span>                </div>
-<div class="line"><span class="lineno">   34</span>                Set&lt;LuddicPathBaseIntel&gt; seen = <span class="keyword">new</span> LinkedHashSet&lt;LuddicPathBaseIntel&gt;();</div>
-<div class="line"><span class="lineno">   35</span>                <span class="keywordflow">for</span> (MarketAPI market : Misc.getPlayerMarkets(<span class="keyword">false</span>)) {</div>
-<div class="line"><span class="lineno">   36</span>                    LuddicPathBaseIntel base = LuddicPathCellsIntel.getClosestBase(market);</div>
-<div class="line"><span class="lineno">   37</span>                    <span class="keywordflow">if</span> (base == <span class="keyword">null</span>) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   38</span>                    </div>
-<div class="line"><span class="lineno">   39</span>                    <span class="keywordflow">if</span> (seen.contains(base)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   40</span>                    </div>
-<div class="line"><span class="lineno">   41</span>                    LuddicPathCellsIntel cells = LuddicPathCellsIntel.getCellsForMarket(market);</div>
-<div class="line"><span class="lineno">   42</span>                    <span class="keywordflow">if</span> (cells == <span class="keyword">null</span> || cells.isSleeper()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   43</span>                    </div>
-<div class="line"><span class="lineno">   44</span>                    seen.add(base);</div>
-<div class="line"><span class="lineno">   45</span>                    </div>
-<div class="line"><span class="lineno">   46</span>                    Color h = Misc.getHighlightColor();</div>
-<div class="line"><span class="lineno">   47</span>                    String system = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">   48</span>                    <span class="keywordflow">if</span> (base.isPlayerVisible()) {</div>
-<div class="line"><span class="lineno">   49</span>                        system = <span class="stringliteral">&quot; located in the &quot;</span> + base.getSystem().getNameWithLowercaseTypeShort() + <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">   50</span>                    }</div>
-<div class="line"><span class="lineno">   51</span>                    tooltip.addPara(<span class="stringliteral">&quot;Active Pather cells on some of your colonies are being supported &quot;</span></div>
-<div class="line"><span class="lineno">   52</span>                            + <span class="stringliteral">&quot;by a Pather base&quot;</span> + system + <span class="stringliteral">&quot;. %s &quot;</span></div>
-<div class="line"><span class="lineno">   53</span>                            + <span class="stringliteral">&quot;will reduce the level of Pather fleet actvity.&quot;</span>, opad, h,</div>
-<div class="line"><span class="lineno">   54</span>                            <span class="stringliteral">&quot;Dealing with this base&quot;</span>);</div>
-<div class="line"><span class="lineno">   55</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   56</span>                }</div>
-<div class="line"><span class="lineno">   57</span>                </div>
-<div class="line"><span class="lineno">   58</span>                <span class="keywordflow">for</span> (MarketAPI market : Misc.getPlayerMarkets(<span class="keyword">false</span>)) {</div>
-<div class="line"><span class="lineno">   59</span>                    LuddicPathCellsIntel cells = LuddicPathCellsIntel.getCellsForMarket(market);</div>
-<div class="line"><span class="lineno">   60</span>                    <span class="keywordflow">if</span> (cells == <span class="keyword">null</span>) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   61</span>                    <span class="keywordflow">if</span> (cells.getSleeperTimeout() &gt; 0) {</div>
-<div class="line"><span class="lineno">   62</span>                        tooltip.addPara(<span class="stringliteral">&quot;Pather cells on some of your colonies have been disrupted, reducing &quot;</span></div>
-<div class="line"><span class="lineno">   63</span>                                + <span class="stringliteral">&quot;the Pather interest contribution from these colonies to event progress.&quot;</span>, opad, </div>
-<div class="line"><span class="lineno">   64</span>                                Misc.getPositiveHighlightColor(), <span class="stringliteral">&quot;disrupted&quot;</span>);</div>
-<div class="line"><span class="lineno">   65</span>                        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   66</span>                    }</div>
-<div class="line"><span class="lineno">   67</span>                    </div>
-<div class="line"><span class="lineno">   68</span>                }</div>
-<div class="line"><span class="lineno">   69</span>            }</div>
-<div class="line"><span class="lineno">   70</span>        };</div>
-<div class="line"><span class="lineno">   71</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a4f021e571915eb44bea3c943e69ca466" name="a4f021e571915eb44bea3c943e69ca466"></a>
@@ -609,21 +459,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d39/StandardLuddicPathActivityCause2_8java_source.html#l00122">122</a> of file <a class="el" href="../../d3/d39/StandardLuddicPathActivityCause2_8java_source.html">StandardLuddicPathActivityCause2.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  122</span>                                          {</div>
-<div class="line"><span class="lineno">  123</span>        <span class="keywordtype">float</span> total = 0f;</div>
-<div class="line"><span class="lineno">  124</span>        <span class="keywordflow">for</span> (StarSystemAPI system : Misc.getPlayerSystems(<span class="keyword">false</span>)) {</div>
-<div class="line"><span class="lineno">  125</span>            <span class="keywordtype">float</span> noCells = Global.getSettings().getFloat(<span class="stringliteral">&quot;patherProgressMultNoCells&quot;</span>);</div>
-<div class="line"><span class="lineno">  126</span>            <span class="keywordtype">float</span> sleeperCells = Global.getSettings().getFloat(<span class="stringliteral">&quot;patherProgressMultSleeperCells&quot;</span>);</div>
-<div class="line"><span class="lineno">  127</span>            <span class="keywordtype">float</span> activeCells = Global.getSettings().getFloat(<span class="stringliteral">&quot;patherProgressMultActiveCells&quot;</span>);</div>
-<div class="line"><span class="lineno">  128</span>            </div>
-<div class="line"><span class="lineno">  129</span><span class="comment">//          noCells = 0f;</span></div>
-<div class="line"><span class="lineno">  130</span><span class="comment">//          sleeperCells = 0.25f;</span></div>
-<div class="line"><span class="lineno">  131</span><span class="comment">//          activeCells = 1f;</span></div>
-<div class="line"><span class="lineno">  132</span>            total += <a class="code hl_function" href="../../db/df5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1StandardLuddicPathActivityCause2.html#afdd552a0d5aeb468128eaaa243aac411">getPatherInterest</a>(system, noCells, sleeperCells, activeCells);</div>
-<div class="line"><span class="lineno">  133</span>        }</div>
-<div class="line"><span class="lineno">  134</span>        <span class="keywordflow">return</span> total;</div>
-<div class="line"><span class="lineno">  135</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a6e7f389e1bd376782dc127fe85693912" name="a6e7f389e1bd376782dc127fe85693912"></a>
@@ -644,11 +480,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d0/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseHostileActivityCause2.html#ae7029ed26a4e690d42097e6066f24b8b">com.fs.starfarer.api.impl.campaign.intel.events.BaseHostileActivityCause2</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d39/StandardLuddicPathActivityCause2_8java_source.html#l00074">74</a> of file <a class="el" href="../../d3/d39/StandardLuddicPathActivityCause2_8java_source.html">StandardLuddicPathActivityCause2.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   74</span>                                {</div>
-<div class="line"><span class="lineno">   75</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../db/df5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1StandardLuddicPathActivityCause2.html#aa3c2499bfa737fa5fefb3ad2769c12a1">getProgress</a>() != 0 || HA_CMD.playerHasPatherAgreement();</div>
-<div class="line"><span class="lineno">   76</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1StandardLuddicPathActivityCause2_html_aa3c2499bfa737fa5fefb3ad2769c12a1"><div class="ttname"><a href="../../db/df5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1StandardLuddicPathActivityCause2.html#aa3c2499bfa737fa5fefb3ad2769c12a1">com.fs.starfarer.api.impl.campaign.intel.events.StandardLuddicPathActivityCause2.getProgress</a></div><div class="ttdeci">int getProgress()</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d39/StandardLuddicPathActivityCause2_8java_source.html#l00090">StandardLuddicPathActivityCause2.java:90</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

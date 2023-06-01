@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -339,35 +340,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a33c67bf29e82daaad9e6a6ffcf0ee0b2">com.fs.starfarer.api.combat.BaseHullMod</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/daa/HighScatterAmp_8java_source.html#l00183">183</a> of file <a class="el" href="../../dd/daa/HighScatterAmp_8java_source.html">HighScatterAmp.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  183</span>                                                                                                                                       {</div>
-<div class="line"><span class="lineno">  184</span>        <span class="keywordtype">float</span> pad = 3f;</div>
-<div class="line"><span class="lineno">  185</span>        <span class="keywordtype">float</span> opad = 10f;</div>
-<div class="line"><span class="lineno">  186</span>        Color h = Misc.getHighlightColor();</div>
-<div class="line"><span class="lineno">  187</span>        Color bad = Misc.getNegativeHighlightColor();</div>
-<div class="line"><span class="lineno">  188</span>        </div>
-<div class="line"><span class="lineno">  189</span>        tooltip.addPara(<span class="stringliteral">&quot;Beam weapons deal %s more damage and deal hard flux damage to shields.&quot;</span>, opad, h,</div>
-<div class="line"><span class="lineno">  190</span>                <span class="stringliteral">&quot;&quot;</span> + (<span class="keywordtype">int</span>)<a class="code hl_variable" href="../../d9/da0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1HighScatterAmp.html#a7c6ba0c44ff89730a8722cb176f94b8f">DAMAGE_BONUS_PERCENT</a> + <span class="stringliteral">&quot;%&quot;</span></div>
-<div class="line"><span class="lineno">  191</span>                );</div>
-<div class="line"><span class="lineno">  192</span>        </div>
-<div class="line"><span class="lineno">  193</span>        tooltip.addPara(<span class="stringliteral">&quot;Reduces the portion of the range of beam weapons that is above %s units by %s. The base range is affected.&quot;</span>, opad, h,</div>
-<div class="line"><span class="lineno">  194</span>                <span class="stringliteral">&quot;&quot;</span> + (<span class="keywordtype">int</span>)<a class="code hl_variable" href="../../d9/da0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1HighScatterAmp.html#a019bb94b9279cf03c8da65243daa1562">RANGE_THRESHOLD</a>,</div>
-<div class="line"><span class="lineno">  195</span>                <span class="stringliteral">&quot;&quot;</span> + (<span class="keywordtype">int</span>)Math.round((1f - <a class="code hl_variable" href="../../d9/da0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1HighScatterAmp.html#a2f75e59de394e54632d1e212556202d1">RANGE_MULT</a>) * 100f) + <span class="stringliteral">&quot;%&quot;</span></div>
-<div class="line"><span class="lineno">  196</span>                );</div>
-<div class="line"><span class="lineno">  197</span><span class="comment">//      tooltip.addPara(&quot;Reduces the base range of beam weapons to %s for frigates, %s for destroyers, &quot;</span></div>
-<div class="line"><span class="lineno">  198</span><span class="comment">//              + &quot;and %s for larger ships.&quot;, opad, h,</span></div>
-<div class="line"><span class="lineno">  199</span><span class="comment">//              &quot;&quot; + (int)RANGE_FRIGATE,</span></div>
-<div class="line"><span class="lineno">  200</span><span class="comment">//              &quot;&quot; + (int)RANGE_DESTROYER,</span></div>
-<div class="line"><span class="lineno">  201</span><span class="comment">//              &quot;&quot; + (int)RANGE_LARGE</span></div>
-<div class="line"><span class="lineno">  202</span><span class="comment">//              );</span></div>
-<div class="line"><span class="lineno">  203</span>        </div>
-<div class="line"><span class="lineno">  204</span>        tooltip.addSectionHeading(<span class="stringliteral">&quot;Interactions with other modifiers&quot;</span>, Alignment.MID, opad);</div>
-<div class="line"><span class="lineno">  205</span>        tooltip.addPara(<span class="stringliteral">&quot;The base range is reduced, thus percentage and multiplicative modifiers - such as from Integrated Targeting Unit, &quot;</span></div>
-<div class="line"><span class="lineno">  206</span>                + <span class="stringliteral">&quot;skills, or similar sources - apply to the reduced base value.&quot;</span>, opad);</div>
-<div class="line"><span class="lineno">  207</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1HighScatterAmp_html_a019bb94b9279cf03c8da65243daa1562"><div class="ttname"><a href="../../d9/da0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1HighScatterAmp.html#a019bb94b9279cf03c8da65243daa1562">com.fs.starfarer.api.impl.hullmods.HighScatterAmp.RANGE_THRESHOLD</a></div><div class="ttdeci">static float RANGE_THRESHOLD</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/daa/HighScatterAmp_8java_source.html#l00025">HighScatterAmp.java:25</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1HighScatterAmp_html_a2f75e59de394e54632d1e212556202d1"><div class="ttname"><a href="../../d9/da0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1HighScatterAmp.html#a2f75e59de394e54632d1e212556202d1">com.fs.starfarer.api.impl.hullmods.HighScatterAmp.RANGE_MULT</a></div><div class="ttdeci">static float RANGE_MULT</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/daa/HighScatterAmp_8java_source.html#l00026">HighScatterAmp.java:26</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1HighScatterAmp_html_a7c6ba0c44ff89730a8722cb176f94b8f"><div class="ttname"><a href="../../d9/da0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1HighScatterAmp.html#a7c6ba0c44ff89730a8722cb176f94b8f">com.fs.starfarer.api.impl.hullmods.HighScatterAmp.DAMAGE_BONUS_PERCENT</a></div><div class="ttdeci">static float DAMAGE_BONUS_PERCENT</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/daa/HighScatterAmp_8java_source.html#l00032">HighScatterAmp.java:32</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a1fa1610e233cfb40b618f0e5bdf1d860" name="a1fa1610e233cfb40b618f0e5bdf1d860"></a>
@@ -406,28 +379,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#aade4030b287b2c896f920683f0eead56">com.fs.starfarer.api.combat.BaseHullMod</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/daa/HighScatterAmp_8java_source.html#l00086">86</a> of file <a class="el" href="../../dd/daa/HighScatterAmp_8java_source.html">HighScatterAmp.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   86</span>                                                                       {</div>
-<div class="line"><span class="lineno">   87</span>        ship.addListener(<span class="keyword">new</span> HighScatterAmpDamageDealtMod(ship));</div>
-<div class="line"><span class="lineno">   88</span>        ship.addListener(<span class="keyword">new</span> HighScatterAmpRangeMod());</div>
-<div class="line"><span class="lineno">   89</span>        </div>
-<div class="line"><span class="lineno">   90</span>        <span class="comment">/* test code for WeaponRangeModifier</span></div>
-<div class="line"><span class="lineno">   91</span><span class="comment">        ship.addListener(new WeaponRangeModifier() {</span></div>
-<div class="line"><span class="lineno">   92</span><span class="comment">            public float getWeaponRangePercentMod(ShipAPI ship, WeaponAPI weapon) {</span></div>
-<div class="line"><span class="lineno">   93</span><span class="comment">                return 0;</span></div>
-<div class="line"><span class="lineno">   94</span><span class="comment">            }</span></div>
-<div class="line"><span class="lineno">   95</span><span class="comment">            public float getWeaponRangeMultMod(ShipAPI ship, WeaponAPI weapon) {</span></div>
-<div class="line"><span class="lineno">   96</span><span class="comment">                return 1f;</span></div>
-<div class="line"><span class="lineno">   97</span><span class="comment">            }</span></div>
-<div class="line"><span class="lineno">   98</span><span class="comment">            public float getWeaponRangeFlatMod(ShipAPI ship, WeaponAPI weapon) {</span></div>
-<div class="line"><span class="lineno">   99</span><span class="comment">                if (weapon.getId().equals(&quot;amblaster&quot;)) {</span></div>
-<div class="line"><span class="lineno">  100</span><span class="comment">                    return 500;</span></div>
-<div class="line"><span class="lineno">  101</span><span class="comment">                }</span></div>
-<div class="line"><span class="lineno">  102</span><span class="comment">                return 0f;</span></div>
-<div class="line"><span class="lineno">  103</span><span class="comment">            }</span></div>
-<div class="line"><span class="lineno">  104</span><span class="comment">        });</span></div>
-<div class="line"><span class="lineno">  105</span><span class="comment">        */</span></div>
-<div class="line"><span class="lineno">  106</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aad64ce7c6087e66ded9a3093cdaf717c" name="aad64ce7c6087e66ded9a3093cdaf717c"></a>
@@ -465,33 +417,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a3859215f6c3408946bf590a2ce5c0e74">com.fs.starfarer.api.combat.BaseHullMod</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/daa/HighScatterAmp_8java_source.html#l00049">49</a> of file <a class="el" href="../../dd/daa/HighScatterAmp_8java_source.html">HighScatterAmp.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   49</span>                                                                                                        {</div>
-<div class="line"><span class="lineno">   50</span>        <span class="keywordtype">boolean</span> sMod = <a class="code hl_function" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a17449d5c7699039330e0d40d7f51dcd3">isSMod</a>(stats);</div>
-<div class="line"><span class="lineno">   51</span>        </div>
-<div class="line"><span class="lineno">   52</span>        <span class="comment">//stats.getBeamWeaponRangeBonus().modifyMult(id, 1f - RANGE_PENALTY_PERCENT * 0.01f);</span></div>
-<div class="line"><span class="lineno">   53</span>        stats.getBeamWeaponDamageMult().modifyPercent(<span class="keywordtype">id</span>, <a class="code hl_variable" href="../../d9/da0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1HighScatterAmp.html#a7c6ba0c44ff89730a8722cb176f94b8f">DAMAGE_BONUS_PERCENT</a> + (sMod ? <a class="code hl_variable" href="../../d9/da0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1HighScatterAmp.html#ade56a2309ee07ae3f81dab09e9202261">SMOD_MODIFIER</a> : 0));</div>
-<div class="line"><span class="lineno">   54</span>        </div>
-<div class="line"><span class="lineno">   55</span>        <span class="comment">// test code for WeaponOPCostModifier, FighterOPCostModifier</span></div>
-<div class="line"><span class="lineno">   56</span><span class="comment">//      stats.addListener(new WeaponOPCostModifier() {</span></div>
-<div class="line"><span class="lineno">   57</span><span class="comment">//          public int getWeaponOPCost(MutableShipStatsAPI stats, WeaponSpecAPI weapon, int currCost) {</span></div>
-<div class="line"><span class="lineno">   58</span><span class="comment">//              if (weapon.getWeaponId().equals(&quot;amblaster&quot;)) {</span></div>
-<div class="line"><span class="lineno">   59</span><span class="comment">//                  return 1;</span></div>
-<div class="line"><span class="lineno">   60</span><span class="comment">//              }</span></div>
-<div class="line"><span class="lineno">   61</span><span class="comment">//              return currCost;</span></div>
-<div class="line"><span class="lineno">   62</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">   63</span><span class="comment">//      });</span></div>
-<div class="line"><span class="lineno">   64</span><span class="comment">//      stats.addListener(new FighterOPCostModifier() {</span></div>
-<div class="line"><span class="lineno">   65</span><span class="comment">//          public int getFighterOPCost(MutableShipStatsAPI stats, FighterWingSpecAPI fighter, int currCost) {</span></div>
-<div class="line"><span class="lineno">   66</span><span class="comment">//              if (fighter.getId().equals(&quot;talon_wing&quot;)) {</span></div>
-<div class="line"><span class="lineno">   67</span><span class="comment">//                  return 20;</span></div>
-<div class="line"><span class="lineno">   68</span><span class="comment">//              }</span></div>
-<div class="line"><span class="lineno">   69</span><span class="comment">//              return currCost;</span></div>
-<div class="line"><span class="lineno">   70</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">   71</span><span class="comment">//      });</span></div>
-<div class="line"><span class="lineno">   72</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod_html_a17449d5c7699039330e0d40d7f51dcd3"><div class="ttname"><a href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a17449d5c7699039330e0d40d7f51dcd3">com.fs.starfarer.api.combat.BaseHullMod.isSMod</a></div><div class="ttdeci">boolean isSMod(MutableShipStatsAPI stats)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/da7/BaseHullMod_8java_source.html#l00029">BaseHullMod.java:29</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1HighScatterAmp_html_ade56a2309ee07ae3f81dab09e9202261"><div class="ttname"><a href="../../d9/da0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1HighScatterAmp.html#ade56a2309ee07ae3f81dab09e9202261">com.fs.starfarer.api.impl.hullmods.HighScatterAmp.SMOD_MODIFIER</a></div><div class="ttdeci">static float SMOD_MODIFIER</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/daa/HighScatterAmp_8java_source.html#l00033">HighScatterAmp.java:33</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af96b8ef57f6770a12c2210602a0510dc" name="af96b8ef57f6770a12c2210602a0510dc"></a>
@@ -523,11 +449,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a5f6ac9583ca5b1606fda3e53f15c3d14">com.fs.starfarer.api.combat.BaseHullMod</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/daa/HighScatterAmp_8java_source.html#l00172">172</a> of file <a class="el" href="../../dd/daa/HighScatterAmp_8java_source.html">HighScatterAmp.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  172</span>                                                                    {</div>
-<div class="line"><span class="lineno">  173</span>        <span class="comment">//if (index == 0) return &quot;&quot; + (int)RANGE_PENALTY_PERCENT + &quot;%&quot;;</span></div>
-<div class="line"><span class="lineno">  174</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  175</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9d978af502102e71b90f71b3cdae3e38" name="a9d978af502102e71b90f71b3cdae3e38"></a>
@@ -565,11 +487,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#aa8f3ff90c8a5a6d287ee8fc09529a0a4">com.fs.starfarer.api.combat.BaseHullMod</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/daa/HighScatterAmp_8java_source.html#l00079">79</a> of file <a class="el" href="../../dd/daa/HighScatterAmp_8java_source.html">HighScatterAmp.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   79</span>                                                                                      {</div>
-<div class="line"><span class="lineno">   80</span>        <span class="keywordflow">if</span> (index == 0) <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span> + (int) Math.round(<a class="code hl_variable" href="../../d9/da0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1HighScatterAmp.html#ade56a2309ee07ae3f81dab09e9202261">SMOD_MODIFIER</a>) + <span class="stringliteral">&quot;%&quot;</span>;</div>
-<div class="line"><span class="lineno">   81</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   82</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aff0df640f3d6c89226f2fc82cfdd1b0a" name="aff0df640f3d6c89226f2fc82cfdd1b0a"></a>
@@ -591,13 +509,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a1e372e808b9fc3e1aa3da1002c5bf9c8">com.fs.starfarer.api.combat.BaseHullMod</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/daa/HighScatterAmp_8java_source.html#l00041">41</a> of file <a class="el" href="../../dd/daa/HighScatterAmp_8java_source.html">HighScatterAmp.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   41</span>                                                      {</div>
-<div class="line"><span class="lineno">   42</span>        <span class="keywordflow">if</span> (ship.getVariant().getHullMods().contains(HullMods.ADVANCEDOPTICS)) {</div>
-<div class="line"><span class="lineno">   43</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;Incompatible with Advanced Optics&quot;</span>;</div>
-<div class="line"><span class="lineno">   44</span>        }</div>
-<div class="line"><span class="lineno">   45</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   46</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a14050530d722ac696a5c2be8b1923642" name="a14050530d722ac696a5c2be8b1923642"></a>
@@ -619,10 +531,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#aba110c18a85c975b063efdf40ac482a7">com.fs.starfarer.api.combat.BaseHullMod</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/daa/HighScatterAmp_8java_source.html#l00037">37</a> of file <a class="el" href="../../dd/daa/HighScatterAmp_8java_source.html">HighScatterAmp.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   37</span>                                                    {</div>
-<div class="line"><span class="lineno">   38</span>        <span class="keywordflow">return</span> !ship.getVariant().getHullMods().contains(HullMods.ADVANCEDOPTICS);</div>
-<div class="line"><span class="lineno">   39</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa74615142f2cddc35460b754c31865b4" name="aa74615142f2cddc35460b754c31865b4"></a>
@@ -669,10 +578,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a3ea50f57642925029054d03f5362630b">com.fs.starfarer.api.combat.BaseHullMod</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/daa/HighScatterAmp_8java_source.html#l00178">178</a> of file <a class="el" href="../../dd/daa/HighScatterAmp_8java_source.html">HighScatterAmp.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  178</span>                                                                                                        {</div>
-<div class="line"><span class="lineno">  179</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  180</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -148,12 +149,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d39/TOffAlarm_8java_source.html#l00018">18</a> of file <a class="el" href="../../d6/d39/TOffAlarm_8java_source.html">TOffAlarm.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   18</span>                                             {</div>
-<div class="line"><span class="lineno">   19</span>        this.fleet = fleet;</div>
-<div class="line"><span class="lineno">   20</span>        <a class="code hl_function" href="../../d0/d30/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1TOffAlarm.html#a8b5f48a42d0ba2c01c8d6b88d631dd4f">notifyNearby</a>();</div>
-<div class="line"><span class="lineno">   21</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1TOffAlarm_html_a8b5f48a42d0ba2c01c8d6b88d631dd4f"><div class="ttname"><a href="../../d0/d30/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1TOffAlarm.html#a8b5f48a42d0ba2c01c8d6b88d631dd4f">com.fs.starfarer.api.impl.campaign.TOffAlarm.notifyNearby</a></div><div class="ttdeci">void notifyNearby()</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d39/TOffAlarm_8java_source.html#l00034">TOffAlarm.java:34</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -182,17 +178,7 @@ Public Member Functions</h2></td></tr>
 <p>Implements <a class="el" href="../../d7/d63/interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html#a3a97090ca8cfdc230e9ad7e633407af6">com.fs.starfarer.api.EveryFrameScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d39/TOffAlarm_8java_source.html#l00023">23</a> of file <a class="el" href="../../d6/d39/TOffAlarm_8java_source.html">TOffAlarm.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   23</span>                                      {</div>
-<div class="line"><span class="lineno">   24</span>        <span class="keywordtype">float</span> days = Global.getSector().getClock().convertToDays(amount);</div>
-<div class="line"><span class="lineno">   25</span>        tracker.<a class="code hl_function" href="../../da/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html#a61881d44415cda2c50c3354c3f0a4d8a">advance</a>(days);</div>
-<div class="line"><span class="lineno">   26</span>        </div>
-<div class="line"><span class="lineno">   27</span>        </div>
-<div class="line"><span class="lineno">   28</span>        <span class="keywordflow">if</span> (tracker.intervalElapsed()) {</div>
-<div class="line"><span class="lineno">   29</span>            <a class="code hl_function" href="../../d0/d30/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1TOffAlarm.html#a8b5f48a42d0ba2c01c8d6b88d631dd4f">notifyNearby</a>();</div>
-<div class="line"><span class="lineno">   30</span>        }</div>
-<div class="line"><span class="lineno">   31</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil_html_a61881d44415cda2c50c3354c3f0a4d8a"><div class="ttname"><a href="../../da/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html#a61881d44415cda2c50c3354c3f0a4d8a">com.fs.starfarer.api.util.IntervalUtil.advance</a></div><div class="ttdeci">void advance(float amount)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de3/IntervalUtil_8java_source.html#l00039">IntervalUtil.java:39</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a3a2104d25059ae844ab2126494bcc8f0" name="a3a2104d25059ae844ab2126494bcc8f0"></a>
@@ -214,14 +200,7 @@ Public Member Functions</h2></td></tr>
 <p>Implements <a class="el" href="../../d7/d63/interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html#a2b9a206acf99d1cdc1511885d14bb58c">com.fs.starfarer.api.EveryFrameScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d39/TOffAlarm_8java_source.html#l00060">60</a> of file <a class="el" href="../../d6/d39/TOffAlarm_8java_source.html">TOffAlarm.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   60</span>                            {</div>
-<div class="line"><span class="lineno">   61</span>        MemoryAPI mem = fleet.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#adcd558c1d95f9755066ddaf9a77311c1">getMemoryWithoutUpdate</a>();</div>
-<div class="line"><span class="lineno">   62</span>        <span class="keywordflow">if</span> (mem.getBoolean(MemFlags.MEMORY_KEY_LOW_REP_IMPACT)) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   63</span>        <span class="keywordflow">return</span> !(mem.is(MemFlags.MEMORY_KEY_SAW_PLAYER_WITH_TRANSPONDER_OFF, <span class="keyword">true</span>) &amp;&amp;</div>
-<div class="line"><span class="lineno">   64</span>               mem.is(MemFlags.MEMORY_KEY_MAKE_HOSTILE_WHILE_TOFF, <span class="keyword">true</span>));</div>
-<div class="line"><span class="lineno">   65</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_adcd558c1d95f9755066ddaf9a77311c1"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#adcd558c1d95f9755066ddaf9a77311c1">com.fs.starfarer.api.campaign.SectorEntityToken.getMemoryWithoutUpdate</a></div><div class="ttdeci">MemoryAPI getMemoryWithoutUpdate()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8b5f48a42d0ba2c01c8d6b88d631dd4f" name="a8b5f48a42d0ba2c01c8d6b88d631dd4f"></a>
@@ -240,36 +219,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d39/TOffAlarm_8java_source.html#l00034">34</a> of file <a class="el" href="../../d6/d39/TOffAlarm_8java_source.html">TOffAlarm.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   34</span>                               {</div>
-<div class="line"><span class="lineno">   35</span>        CampaignFleetAPI playerFleet = Global.getSector().getPlayerFleet();</div>
-<div class="line"><span class="lineno">   36</span>        <span class="keywordflow">if</span> (playerFleet == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   37</span>        </div>
-<div class="line"><span class="lineno">   38</span>        <span class="comment">//VisibilityLevel playerVis = playerFleet.getVisibilityLevelTo(fleet);</span></div>
-<div class="line"><span class="lineno">   39</span>        <span class="comment">//if (playerVis == VisibilityLevel.NONE) return;</span></div>
-<div class="line"><span class="lineno">   40</span>        <span class="keywordflow">if</span> (fleet.<a class="code hl_function" href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a07c10e046f23b4bb24b32eeadbeab5f9">getContainingLocation</a>() == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   41</span>        </div>
-<div class="line"><span class="lineno">   42</span>        <span class="comment">// don&#39;t spread &quot;hostile&quot; status if this fleet was the aggressor or if attacking it has a low</span></div>
-<div class="line"><span class="lineno">   43</span>        <span class="comment">// reputation impact for some other reason</span></div>
-<div class="line"><span class="lineno">   44</span>        <span class="keywordflow">if</span> (fleet.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#adcd558c1d95f9755066ddaf9a77311c1">getMemoryWithoutUpdate</a>().<a class="code hl_function" href="../../d0/de7/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html#adb833cc81359cc239a89eae309480fc9">getBoolean</a>(MemFlags.MEMORY_KEY_LOW_REP_IMPACT)) {</div>
-<div class="line"><span class="lineno">   45</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   46</span>        }</div>
-<div class="line"><span class="lineno">   47</span>        </div>
-<div class="line"><span class="lineno">   48</span>        List&lt;CampaignFleetAPI&gt; fleets = fleet.<a class="code hl_function" href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a07c10e046f23b4bb24b32eeadbeab5f9">getContainingLocation</a>().<a class="code hl_function" href="../../d2/d2c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI.html#af3a8e070e561639b6e96be1f5ba6813a">getFleets</a>();</div>
-<div class="line"><span class="lineno">   49</span>        <span class="keywordflow">for</span> (CampaignFleetAPI other : fleets) {</div>
-<div class="line"><span class="lineno">   50</span>            VisibilityLevel level = other.getVisibilityLevelTo(fleet);</div>
-<div class="line"><span class="lineno">   51</span>            <span class="keywordflow">if</span> (level == VisibilityLevel.NONE) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   52</span>            </div>
-<div class="line"><span class="lineno">   53</span>            <span class="keywordflow">if</span> (level == VisibilityLevel.COMPOSITION_AND_FACTION_DETAILS &amp;&amp; other.getFaction() == fleet.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#afb72bc74f75ccbbf240564b26b94e17b">getFaction</a>()) {</div>
-<div class="line"><span class="lineno">   54</span>                MemoryAPI mem = other.getMemoryWithoutUpdate();</div>
-<div class="line"><span class="lineno">   55</span>                Misc.setFlagWithReason(mem, MemFlags.MEMORY_KEY_MAKE_HOSTILE_WHILE_TOFF, <span class="stringliteral">&quot;tOffAlarm&quot;</span>, <span class="keyword">true</span>, 1f);</div>
-<div class="line"><span class="lineno">   56</span>            }</div>
-<div class="line"><span class="lineno">   57</span>        }</div>
-<div class="line"><span class="lineno">   58</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI_html_a07c10e046f23b4bb24b32eeadbeab5f9"><div class="ttname"><a href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a07c10e046f23b4bb24b32eeadbeab5f9">com.fs.starfarer.api.campaign.CampaignFleetAPI.getContainingLocation</a></div><div class="ttdeci">LocationAPI getContainingLocation()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI_html_af3a8e070e561639b6e96be1f5ba6813a"><div class="ttname"><a href="../../d2/d2c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI.html#af3a8e070e561639b6e96be1f5ba6813a">com.fs.starfarer.api.campaign.LocationAPI.getFleets</a></div><div class="ttdeci">List&lt; CampaignFleetAPI &gt; getFleets()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_afb72bc74f75ccbbf240564b26b94e17b"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#afb72bc74f75ccbbf240564b26b94e17b">com.fs.starfarer.api.campaign.SectorEntityToken.getFaction</a></div><div class="ttdeci">FactionAPI getFaction()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI_html_adb833cc81359cc239a89eae309480fc9"><div class="ttname"><a href="../../d0/de7/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html#adb833cc81359cc239a89eae309480fc9">com.fs.starfarer.api.campaign.rules.MemoryAPI.getBoolean</a></div><div class="ttdeci">boolean getBoolean(String key)</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9ab7fd22cdfa5ef5b22dd7a01f358cd9" name="a9ab7fd22cdfa5ef5b22dd7a01f358cd9"></a>
@@ -291,10 +241,7 @@ Public Member Functions</h2></td></tr>
 <p>Implements <a class="el" href="../../d7/d63/interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html#a6397d6c1c19a4dd0b58099219c0e0173">com.fs.starfarer.api.EveryFrameScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d39/TOffAlarm_8java_source.html#l00067">67</a> of file <a class="el" href="../../d6/d39/TOffAlarm_8java_source.html">TOffAlarm.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   67</span>                                    {</div>
-<div class="line"><span class="lineno">   68</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   69</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

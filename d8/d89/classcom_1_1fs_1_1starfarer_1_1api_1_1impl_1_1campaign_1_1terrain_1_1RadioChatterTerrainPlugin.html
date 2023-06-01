@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -411,14 +412,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a820be4dfb8c152daef470bf6a2c933b5">com.fs.starfarer.api.impl.campaign.terrain.BaseTerrain</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d42/RadioChatterTerrainPlugin_8java_source.html#l00056">56</a> of file <a class="el" href="../../dc/d42/RadioChatterTerrainPlugin_8java_source.html">RadioChatterTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   56</span>                                      {</div>
-<div class="line"><span class="lineno">   57</span>        super.advance(amount);</div>
-<div class="line"><span class="lineno">   58</span>        </div>
-<div class="line"><span class="lineno">   59</span>        <span class="keywordtype">float</span> period = (float)Math.PI * 2f;</div>
-<div class="line"><span class="lineno">   60</span>        <a class="code hl_variable" href="../../d8/d89/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RadioChatterTerrainPlugin.html#a7fb814d6ec06330d0fe15c158cf7b088">phase</a> += period/10f * amount;</div>
-<div class="line"><span class="lineno">   61</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RadioChatterTerrainPlugin_html_a7fb814d6ec06330d0fe15c158cf7b088"><div class="ttname"><a href="../../d8/d89/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RadioChatterTerrainPlugin.html#a7fb814d6ec06330d0fe15c158cf7b088">com.fs.starfarer.api.impl.campaign.terrain.RadioChatterTerrainPlugin.phase</a></div><div class="ttdeci">transient float phase</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d42/RadioChatterTerrainPlugin_8java_source.html#l00055">RadioChatterTerrainPlugin.java:55</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ad022b3d7836d8af4a06426c555d9d7b8" name="ad022b3d7836d8af4a06426c555d9d7b8"></a>
@@ -450,76 +444,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a2e05e8288a8a1fad8cdcda3caaa03342">com.fs.starfarer.api.impl.campaign.terrain.BaseTerrain</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d42/RadioChatterTerrainPlugin_8java_source.html#l00063">63</a> of file <a class="el" href="../../dc/d42/RadioChatterTerrainPlugin_8java_source.html">RadioChatterTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   63</span>                                                                  {</div>
-<div class="line"><span class="lineno">   64</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a98ba084e2722ae038b3961e580dbc821">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a297539315e815b0edc7a70c09c4d4652">isPlayerFleet</a>()) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   65</span>        </div>
-<div class="line"><span class="lineno">   66</span>        <span class="keywordtype">float</span> prox = <a class="code hl_function" href="../../d8/d89/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RadioChatterTerrainPlugin.html#add425185549c4cd77912b7845e39bcca">getProximitySoundFactor</a>();</div>
-<div class="line"><span class="lineno">   67</span>        <span class="keywordtype">float</span> volumeMult = prox;</div>
-<div class="line"><span class="lineno">   68</span>        <span class="keywordtype">float</span> suppressionMult = prox;</div>
-<div class="line"><span class="lineno">   69</span>        <span class="keywordflow">if</span> (volumeMult &lt;= 0) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   70</span>        volumeMult = (float) Math.sqrt(volumeMult);</div>
-<div class="line"><span class="lineno">   71</span>        <span class="comment">//volumeMult = 1f;</span></div>
-<div class="line"><span class="lineno">   72</span>        </div>
-<div class="line"><span class="lineno">   73</span>        Global.getSector().getCampaignUI().suppressMusic(<a class="code hl_function" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a21375a5b8af1f037d3a541c70addc321">getSpec</a>().<a class="code hl_function" href="../../d4/d32/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1TerrainSpecAPI.html#a6e145c0e7032846b62baf6140aa920d9">getMusicSuppression</a>() * suppressionMult);</div>
-<div class="line"><span class="lineno">   74</span>        </div>
-<div class="line"><span class="lineno">   75</span>        <span class="keywordtype">float</span> dirToEntity = Misc.getAngleInDegrees(<a class="code hl_variable" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a98ba084e2722ae038b3961e580dbc821">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#aedf9cd58593dcb6afd4d488bb017eafc">getLocation</a>(), this.<a class="code hl_variable" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a98ba084e2722ae038b3961e580dbc821">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#aedf9cd58593dcb6afd4d488bb017eafc">getLocation</a>());</div>
-<div class="line"><span class="lineno">   76</span>        Vector2f playbackLoc = Misc.getUnitVectorAtDegreeAngle(dirToEntity);</div>
-<div class="line"><span class="lineno">   77</span>        playbackLoc.scale(500f);</div>
-<div class="line"><span class="lineno">   78</span>        Vector2f.add(<a class="code hl_variable" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a98ba084e2722ae038b3961e580dbc821">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#aedf9cd58593dcb6afd4d488bb017eafc">getLocation</a>(), playbackLoc, playbackLoc);</div>
-<div class="line"><span class="lineno">   79</span>        </div>
-<div class="line"><span class="lineno">   80</span>        <span class="keywordflow">try</span> {</div>
-<div class="line"><span class="lineno">   81</span>            JSONArray sounds = <a class="code hl_function" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a21375a5b8af1f037d3a541c70addc321">getSpec</a>().<a class="code hl_function" href="../../d4/d32/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1TerrainSpecAPI.html#a87826c3689c51dcd585bee62a04a8111">getCustom</a>().getJSONArray(<span class="stringliteral">&quot;chatter&quot;</span>);</div>
-<div class="line"><span class="lineno">   82</span>            <span class="keywordtype">float</span> num = sounds.length();</div>
-<div class="line"><span class="lineno">   83</span>            <span class="keywordtype">float</span> period = (float)Math.PI * 2f;</div>
-<div class="line"><span class="lineno">   84</span>            </div>
-<div class="line"><span class="lineno">   85</span><span class="comment">//          float marketSize = 10f;</span></div>
-<div class="line"><span class="lineno">   86</span><span class="comment">//          if (params.relatedEntity != null &amp;&amp; params.relatedEntity.getMarket() != null) {</span></div>
-<div class="line"><span class="lineno">   87</span><span class="comment">//              marketSize = params.relatedEntity.getMarket().getSize();</span></div>
-<div class="line"><span class="lineno">   88</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">   89</span>            </div>
-<div class="line"><span class="lineno">   90</span>            <span class="comment">//{&quot;sound&quot;:&quot;terrain_radio_chatter_1&quot;, &quot;phaseMult&quot;:1, &quot;threshold&quot;:-1},</span></div>
-<div class="line"><span class="lineno">   91</span>            for (<span class="keywordtype">int</span> i = 0; i &lt; sounds.length(); i++) {</div>
-<div class="line"><span class="lineno">   92</span>                JSONObject sound = sounds.getJSONObject(i);</div>
-<div class="line"><span class="lineno">   93</span>                <span class="keywordtype">float</span> threshold = (float) sound.getDouble(<span class="stringliteral">&quot;threshold&quot;</span>);</div>
-<div class="line"><span class="lineno">   94</span>                <span class="keywordtype">float</span> phaseMult = (float) sound.getDouble(<span class="stringliteral">&quot;phaseMult&quot;</span>);</div>
-<div class="line"><span class="lineno">   95</span>                String soundId = sound.getString(<span class="stringliteral">&quot;sound&quot;</span>);</div>
-<div class="line"><span class="lineno">   96</span>                </div>
-<div class="line"><span class="lineno">   97</span><span class="comment">//              float thresholdRange = 1f - threshold;</span></div>
-<div class="line"><span class="lineno">   98</span><span class="comment">//              float sizePenalty = Math.max(6f - marketSize, 0) / 6f * thresholdRange;</span></div>
-<div class="line"><span class="lineno">   99</span><span class="comment">//              threshold += sizePenalty;</span></div>
-<div class="line"><span class="lineno">  100</span>                </div>
-<div class="line"><span class="lineno">  101</span>                <span class="comment">//phaseMult = 1f;</span></div>
-<div class="line"><span class="lineno">  102</span>                <span class="keywordtype">float</span> offset = period / num * (float) i;</div>
-<div class="line"><span class="lineno">  103</span>                <span class="comment">//float cos = (float) Math.cos((phase + offset) * ((float) i * 0.5f + 1f));</span></div>
-<div class="line"><span class="lineno">  104</span>                <span class="keywordtype">float</span> cos = (float) Math.cos(<a class="code hl_variable" href="../../d8/d89/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RadioChatterTerrainPlugin.html#a7fb814d6ec06330d0fe15c158cf7b088">phase</a> * phaseMult + offset);</div>
-<div class="line"><span class="lineno">  105</span>                </div>
-<div class="line"><span class="lineno">  106</span>                <span class="keywordtype">float</span> volume = 0f;</div>
-<div class="line"><span class="lineno">  107</span>                <span class="keywordflow">if</span> (cos &gt; threshold) {</div>
-<div class="line"><span class="lineno">  108</span>                    volume = (cos - threshold) / (1f - threshold);</div>
-<div class="line"><span class="lineno">  109</span>                    <span class="keywordflow">if</span> (volume &lt; 0) volume = 0;</div>
-<div class="line"><span class="lineno">  110</span>                    <span class="keywordflow">if</span> (volume &gt; 1) volume = 1;</div>
-<div class="line"><span class="lineno">  111</span>                }</div>
-<div class="line"><span class="lineno">  112</span>                </div>
-<div class="line"><span class="lineno">  113</span>                </div>
-<div class="line"><span class="lineno">  114</span>                Global.getSoundPlayer().playLoop(soundId, <a class="code hl_variable" href="../../d8/d89/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RadioChatterTerrainPlugin.html#ae170756987d2bb725425f7b15cb58a3d">params</a>.relatedEntity, </div>
-<div class="line"><span class="lineno">  115</span>                        <span class="comment">//volume * 0.25f + 0.75f, volume * volumeMult,</span></div>
-<div class="line"><span class="lineno">  116</span>                        1f, volume * volumeMult,</div>
-<div class="line"><span class="lineno">  117</span>                        playbackLoc, Misc.ZERO);</div>
-<div class="line"><span class="lineno">  118</span>            }</div>
-<div class="line"><span class="lineno">  119</span>            </div>
-<div class="line"><span class="lineno">  120</span>            </div>
-<div class="line"><span class="lineno">  121</span>        } <span class="keywordflow">catch</span> (JSONException e) {</div>
-<div class="line"><span class="lineno">  122</span>        }</div>
-<div class="line"><span class="lineno">  123</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain_html_a21375a5b8af1f037d3a541c70addc321"><div class="ttname"><a href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a21375a5b8af1f037d3a541c70addc321">com.fs.starfarer.api.impl.campaign.terrain.BaseTerrain.getSpec</a></div><div class="ttdeci">TerrainSpecAPI getSpec()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/daa/BaseTerrain_8java_source.html#l00334">BaseTerrain.java:334</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain_html_a98ba084e2722ae038b3961e580dbc821"><div class="ttname"><a href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a98ba084e2722ae038b3961e580dbc821">com.fs.starfarer.api.impl.campaign.terrain.BaseTerrain.entity</a></div><div class="ttdeci">SectorEntityToken entity</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/daa/BaseTerrain_8java_source.html#l00025">BaseTerrain.java:25</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RadioChatterTerrainPlugin_html_add425185549c4cd77912b7845e39bcca"><div class="ttname"><a href="../../d8/d89/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RadioChatterTerrainPlugin.html#add425185549c4cd77912b7845e39bcca">com.fs.starfarer.api.impl.campaign.terrain.RadioChatterTerrainPlugin.getProximitySoundFactor</a></div><div class="ttdeci">float getProximitySoundFactor()</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d42/RadioChatterTerrainPlugin_8java_source.html#l00127">RadioChatterTerrainPlugin.java:127</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RadioChatterTerrainPlugin_html_ae170756987d2bb725425f7b15cb58a3d"><div class="ttname"><a href="../../d8/d89/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RadioChatterTerrainPlugin.html#ae170756987d2bb725425f7b15cb58a3d">com.fs.starfarer.api.impl.campaign.terrain.RadioChatterTerrainPlugin.params</a></div><div class="ttdeci">RadioChatterParams params</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d42/RadioChatterTerrainPlugin_8java_source.html#l00025">RadioChatterTerrainPlugin.java:25</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_a297539315e815b0edc7a70c09c4d4652"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a297539315e815b0edc7a70c09c4d4652">com.fs.starfarer.api.campaign.SectorEntityToken.isPlayerFleet</a></div><div class="ttdeci">boolean isPlayerFleet()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_aedf9cd58593dcb6afd4d488bb017eafc"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#aedf9cd58593dcb6afd4d488bb017eafc">com.fs.starfarer.api.campaign.SectorEntityToken.getLocation</a></div><div class="ttdeci">Vector2f getLocation()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1TerrainSpecAPI_html_a6e145c0e7032846b62baf6140aa920d9"><div class="ttname"><a href="../../d4/d32/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1TerrainSpecAPI.html#a6e145c0e7032846b62baf6140aa920d9">com.fs.starfarer.api.loading.TerrainSpecAPI.getMusicSuppression</a></div><div class="ttdeci">float getMusicSuppression()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1TerrainSpecAPI_html_a87826c3689c51dcd585bee62a04a8111"><div class="ttname"><a href="../../d4/d32/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1TerrainSpecAPI.html#a87826c3689c51dcd585bee62a04a8111">com.fs.starfarer.api.loading.TerrainSpecAPI.getCustom</a></div><div class="ttdeci">JSONObject getCustom()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a4742c92b409b7da29f331a3eebce38d5" name="a4742c92b409b7da29f331a3eebce38d5"></a>
@@ -540,10 +465,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a7dfa0640f8921435e4f43eec2508c07e">com.fs.starfarer.api.impl.campaign.terrain.BaseTerrain</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d42/RadioChatterTerrainPlugin_8java_source.html#l00168">168</a> of file <a class="el" href="../../dc/d42/RadioChatterTerrainPlugin_8java_source.html">RadioChatterTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  168</span>                                            {</div>
-<div class="line"><span class="lineno">  169</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  170</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9009f3043ff72d006591692a08096e1a" name="a9009f3043ff72d006591692a08096e1a"></a>
@@ -575,10 +497,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/de6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseRingTerrain.html#a9408314b06b72738858cd5a019ef16cc">com.fs.starfarer.api.impl.campaign.terrain.BaseRingTerrain</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d42/RadioChatterTerrainPlugin_8java_source.html#l00147">147</a> of file <a class="el" href="../../dc/d42/RadioChatterTerrainPlugin_8java_source.html">RadioChatterTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  147</span>                                                               {</div>
-<div class="line"><span class="lineno">  148</span>        <span class="keywordflow">return</span> super.containsPoint(point, radius);</div>
-<div class="line"><span class="lineno">  149</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a894e88e419cae9994d66e29447ec00cb" name="a894e88e419cae9994d66e29447ec00cb"></a>
@@ -600,10 +519,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/de6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseRingTerrain.html#adf4a8dc32c4257f6e714c8368cf849a2">com.fs.starfarer.api.impl.campaign.terrain.BaseRingTerrain</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d42/RadioChatterTerrainPlugin_8java_source.html#l00045">45</a> of file <a class="el" href="../../dc/d42/RadioChatterTerrainPlugin_8java_source.html">RadioChatterTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   45</span>                                                           {</div>
-<div class="line"><span class="lineno">   46</span>        <span class="keywordflow">return</span> layers;</div>
-<div class="line"><span class="lineno">   47</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aff6ab4cbccaa9062fbead1a3c5742a45" name="aff6ab4cbccaa9062fbead1a3c5742a45"></a>
@@ -624,10 +540,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a7bafc952258dfb4adc5c4e5a8d59206f">com.fs.starfarer.api.impl.campaign.terrain.BaseTerrain</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d42/RadioChatterTerrainPlugin_8java_source.html#l00164">164</a> of file <a class="el" href="../../dc/d42/RadioChatterTerrainPlugin_8java_source.html">RadioChatterTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  164</span>                                      {</div>
-<div class="line"><span class="lineno">  165</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;radio_chatter&quot;</span>;</div>
-<div class="line"><span class="lineno">  166</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a91e4e4d73203d1d40ac8a562591cd589" name="a91e4e4d73203d1d40ac8a562591cd589"></a>
@@ -656,10 +569,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a3ef9880c68438a125dc4bed9ec968302">com.fs.starfarer.api.impl.campaign.terrain.BaseTerrain</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d42/RadioChatterTerrainPlugin_8java_source.html#l00142">142</a> of file <a class="el" href="../../dc/d42/RadioChatterTerrainPlugin_8java_source.html">RadioChatterTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  142</span>                                          {</div>
-<div class="line"><span class="lineno">  143</span>        <span class="keywordflow">return</span> 0f;</div>
-<div class="line"><span class="lineno">  144</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab79810abe66a533a8e8fea13d8024055" name="ab79810abe66a533a8e8fea13d8024055"></a>
@@ -680,10 +590,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a02089efe190ff0330d552e38ee04b8f1">com.fs.starfarer.api.impl.campaign.terrain.BaseTerrain</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d42/RadioChatterTerrainPlugin_8java_source.html#l00160">160</a> of file <a class="el" href="../../dc/d42/RadioChatterTerrainPlugin_8java_source.html">RadioChatterTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  160</span>                                      {</div>
-<div class="line"><span class="lineno">  161</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  162</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="add425185549c4cd77912b7845e39bcca" name="add425185549c4cd77912b7845e39bcca"></a>
@@ -704,20 +611,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/de6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseRingTerrain.html#a49ced0c1f88300938c98578c0e21afa4">com.fs.starfarer.api.impl.campaign.terrain.BaseRingTerrain</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d42/RadioChatterTerrainPlugin_8java_source.html#l00127">127</a> of file <a class="el" href="../../dc/d42/RadioChatterTerrainPlugin_8java_source.html">RadioChatterTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  127</span>                                           {</div>
-<div class="line"><span class="lineno">  128</span>        CampaignFleetAPI player = Global.getSector().getPlayerFleet();</div>
-<div class="line"><span class="lineno">  129</span>        <span class="keywordtype">float</span> dist = Misc.getDistance(player.getLocation(), <a class="code hl_variable" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a98ba084e2722ae038b3961e580dbc821">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#aedf9cd58593dcb6afd4d488bb017eafc">getLocation</a>());</div>
-<div class="line"><span class="lineno">  130</span>        <span class="keywordtype">float</span> radSum = <a class="code hl_variable" href="../../d8/d89/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RadioChatterTerrainPlugin.html#ae170756987d2bb725425f7b15cb58a3d">params</a>.relatedEntity.getRadius() + player.getRadius();</div>
-<div class="line"><span class="lineno">  131</span>        </div>
-<div class="line"><span class="lineno">  132</span>        <span class="comment">//if (dist &lt; radSum) return 1f;</span></div>
-<div class="line"><span class="lineno">  133</span>        dist -= radSum;</div>
-<div class="line"><span class="lineno">  134</span>        </div>
-<div class="line"><span class="lineno">  135</span>        <span class="keywordtype">float</span> f = 1f - dist / Math.max(1, (<a class="code hl_variable" href="../../d8/d89/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RadioChatterTerrainPlugin.html#ae170756987d2bb725425f7b15cb58a3d">params</a>.bandWidthInEngine - <a class="code hl_variable" href="../../d8/d89/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RadioChatterTerrainPlugin.html#ae170756987d2bb725425f7b15cb58a3d">params</a>.relatedEntity.getRadius()));</div>
-<div class="line"><span class="lineno">  136</span>        <span class="keywordflow">if</span> (f &lt; 0) f = 0;</div>
-<div class="line"><span class="lineno">  137</span>        <span class="keywordflow">if</span> (f &gt; 1) f = 1;</div>
-<div class="line"><span class="lineno">  138</span>        <span class="keywordflow">return</span> f;</div>
-<div class="line"><span class="lineno">  139</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2c7bb4d2bed625d647e0c434ba8622e7" name="a2c7bb4d2bed625d647e0c434ba8622e7"></a>
@@ -738,10 +632,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#ab849b7f53f512cab317440f32af61695">com.fs.starfarer.api.impl.campaign.terrain.BaseTerrain</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d42/RadioChatterTerrainPlugin_8java_source.html#l00156">156</a> of file <a class="el" href="../../dc/d42/RadioChatterTerrainPlugin_8java_source.html">RadioChatterTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  156</span>                                   {</div>
-<div class="line"><span class="lineno">  157</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  158</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="abfaa8761cbd51d1ce74653c8f647d286" name="abfaa8761cbd51d1ce74653c8f647d286"></a>
@@ -762,10 +653,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a27e7fc8cc4b3d1882800b49c03d3abb3">com.fs.starfarer.api.impl.campaign.terrain.BaseTerrain</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d42/RadioChatterTerrainPlugin_8java_source.html#l00151">151</a> of file <a class="el" href="../../dc/d42/RadioChatterTerrainPlugin_8java_source.html">RadioChatterTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  151</span>                                {</div>
-<div class="line"><span class="lineno">  152</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  153</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8255ceff516b6e7cbde0843428f894b0" name="a8255ceff516b6e7cbde0843428f894b0"></a>
@@ -803,12 +691,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/de6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseRingTerrain.html#afc23414f87015330c30b625edcd48e73">com.fs.starfarer.api.impl.campaign.terrain.BaseRingTerrain</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d42/RadioChatterTerrainPlugin_8java_source.html#l00028">28</a> of file <a class="el" href="../../dc/d42/RadioChatterTerrainPlugin_8java_source.html">RadioChatterTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   28</span>                                                                               {</div>
-<div class="line"><span class="lineno">   29</span>        super.init(<a class="code hl_variable" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a075ff680d11a0f394d9f399d13129c2d">terrainId</a>, <a class="code hl_variable" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a98ba084e2722ae038b3961e580dbc821">entity</a>, param);</div>
-<div class="line"><span class="lineno">   30</span>        this.params = (RadioChatterParams) param;</div>
-<div class="line"><span class="lineno">   31</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain_html_a075ff680d11a0f394d9f399d13129c2d"><div class="ttname"><a href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a075ff680d11a0f394d9f399d13129c2d">com.fs.starfarer.api.impl.campaign.terrain.BaseTerrain.terrainId</a></div><div class="ttdeci">String terrainId</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/daa/BaseTerrain_8java_source.html#l00026">BaseTerrain.java:26</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5bea08c478e476208a2ec853ab9e722a" name="a5bea08c478e476208a2ec853ab9e722a"></a>
@@ -837,12 +720,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/de6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseRingTerrain.html#a133cceef7358314a57c3b47de80cc18c">com.fs.starfarer.api.impl.campaign.terrain.BaseRingTerrain</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d42/RadioChatterTerrainPlugin_8java_source.html#l00034">34</a> of file <a class="el" href="../../dc/d42/RadioChatterTerrainPlugin_8java_source.html">RadioChatterTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   34</span>                                   {</div>
-<div class="line"><span class="lineno">   35</span>        super.readResolve();</div>
-<div class="line"><span class="lineno">   36</span>        layers = EnumSet.noneOf(CampaignEngineLayers.class);</div>
-<div class="line"><span class="lineno">   37</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">   38</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a83acc7f948377e0679871c75ad36ecac" name="a83acc7f948377e0679871c75ad36ecac"></a>
@@ -874,10 +752,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/de6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseRingTerrain.html#af80f6c6d528fa671c595d0aedf90a048">com.fs.starfarer.api.impl.campaign.terrain.BaseRingTerrain</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d42/RadioChatterTerrainPlugin_8java_source.html#l00051">51</a> of file <a class="el" href="../../dc/d42/RadioChatterTerrainPlugin_8java_source.html">RadioChatterTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   51</span>                                                                         {</div>
-<div class="line"><span class="lineno">   52</span>        </div>
-<div class="line"><span class="lineno">   53</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

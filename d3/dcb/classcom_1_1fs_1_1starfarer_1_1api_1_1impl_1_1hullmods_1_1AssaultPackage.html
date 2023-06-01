@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -299,19 +300,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a3859215f6c3408946bf590a2ce5c0e74">com.fs.starfarer.api.combat.BaseHullMod</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d75/AssaultPackage_8java_source.html#l00019">19</a> of file <a class="el" href="../../d0/d75/AssaultPackage_8java_source.html">AssaultPackage.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   19</span>                                                                                                        {</div>
-<div class="line"><span class="lineno">   20</span>        </div>
-<div class="line"><span class="lineno">   21</span>        <span class="keywordtype">float</span> mult = MilitarizedSubsystems.getEffectMult(stats);</div>
-<div class="line"><span class="lineno">   22</span>        stats.getHullBonus().modifyPercent(<span class="keywordtype">id</span>, <a class="code hl_variable" href="../../d3/dcb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1AssaultPackage.html#acba61ca84f8c48f083d5449080651b5f">HULL_PERCENT</a> * mult);</div>
-<div class="line"><span class="lineno">   23</span>        stats.getArmorBonus().modifyPercent(<span class="keywordtype">id</span>, <a class="code hl_variable" href="../../d3/dcb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1AssaultPackage.html#a3c49167f202ea39f4377ce1b8dbac948">ARMOR_PERCENT</a> * mult);</div>
-<div class="line"><span class="lineno">   24</span>        stats.getFluxCapacity().modifyPercent(<span class="keywordtype">id</span>, <a class="code hl_variable" href="../../d3/dcb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1AssaultPackage.html#a7e9eb2c8efde40415d057c7fd6ddc93f">FLUX_CAPACITY_PERCENT</a> * mult);</div>
-<div class="line"><span class="lineno">   25</span>        </div>
-<div class="line"><span class="lineno">   26</span>        stats.getDynamic().getMod(Stats.ACT_AS_COMBAT_SHIP).modifyFlat(<span class="keywordtype">id</span>, 1f);</div>
-<div class="line"><span class="lineno">   27</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1AssaultPackage_html_a3c49167f202ea39f4377ce1b8dbac948"><div class="ttname"><a href="../../d3/dcb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1AssaultPackage.html#a3c49167f202ea39f4377ce1b8dbac948">com.fs.starfarer.api.impl.hullmods.AssaultPackage.ARMOR_PERCENT</a></div><div class="ttdeci">static float ARMOR_PERCENT</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d75/AssaultPackage_8java_source.html#l00017">AssaultPackage.java:17</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1AssaultPackage_html_a7e9eb2c8efde40415d057c7fd6ddc93f"><div class="ttname"><a href="../../d3/dcb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1AssaultPackage.html#a7e9eb2c8efde40415d057c7fd6ddc93f">com.fs.starfarer.api.impl.hullmods.AssaultPackage.FLUX_CAPACITY_PERCENT</a></div><div class="ttdeci">static float FLUX_CAPACITY_PERCENT</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d75/AssaultPackage_8java_source.html#l00015">AssaultPackage.java:15</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1AssaultPackage_html_acba61ca84f8c48f083d5449080651b5f"><div class="ttname"><a href="../../d3/dcb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1AssaultPackage.html#acba61ca84f8c48f083d5449080651b5f">com.fs.starfarer.api.impl.hullmods.AssaultPackage.HULL_PERCENT</a></div><div class="ttdeci">static float HULL_PERCENT</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d75/AssaultPackage_8java_source.html#l00016">AssaultPackage.java:16</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a080c9c17e2a47c409b87447959831d20" name="a080c9c17e2a47c409b87447959831d20"></a>
@@ -343,14 +332,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a5f6ac9583ca5b1606fda3e53f15c3d14">com.fs.starfarer.api.combat.BaseHullMod</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d75/AssaultPackage_8java_source.html#l00031">31</a> of file <a class="el" href="../../d0/d75/AssaultPackage_8java_source.html">AssaultPackage.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   31</span>                                                                    {</div>
-<div class="line"><span class="lineno">   32</span>        <span class="keywordtype">float</span> mult = MilitarizedSubsystems.getEffectMult(<span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   33</span>        <span class="keywordflow">if</span> (index == 0) <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span> + (int) Math.round(<a class="code hl_variable" href="../../d3/dcb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1AssaultPackage.html#acba61ca84f8c48f083d5449080651b5f">HULL_PERCENT</a> * mult) + <span class="stringliteral">&quot;%&quot;</span>;</div>
-<div class="line"><span class="lineno">   34</span>        <span class="keywordflow">if</span> (index == 1) <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span> + (int) Math.round(<a class="code hl_variable" href="../../d3/dcb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1AssaultPackage.html#a3c49167f202ea39f4377ce1b8dbac948">ARMOR_PERCENT</a> * mult) + <span class="stringliteral">&quot;%&quot;</span>;</div>
-<div class="line"><span class="lineno">   35</span>        <span class="keywordflow">if</span> (index == 2) <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span> + (int)Math.round(<a class="code hl_variable" href="../../d3/dcb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1AssaultPackage.html#a7e9eb2c8efde40415d057c7fd6ddc93f">FLUX_CAPACITY_PERCENT</a> * mult) + <span class="stringliteral">&quot;%&quot;</span>;</div>
-<div class="line"><span class="lineno">   36</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   37</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5f9afacf9ad26d056b482c30998a8372" name="a5f9afacf9ad26d056b482c30998a8372"></a>
@@ -372,19 +354,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a1e372e808b9fc3e1aa3da1002c5bf9c8">com.fs.starfarer.api.combat.BaseHullMod</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d75/AssaultPackage_8java_source.html#l00045">45</a> of file <a class="el" href="../../d0/d75/AssaultPackage_8java_source.html">AssaultPackage.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   45</span>                                                      {</div>
-<div class="line"><span class="lineno">   46</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a39c14f424839ae19f55ee0d5f859e52f">shipHasOtherModInCategory</a>(ship, <a class="code hl_variable" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#ac9399ad6c42e88aad34841da9e87d5cc">spec</a>.<a class="code hl_function" href="../../d5/da9/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1HullModSpecAPI.html#a65294d509421231b6de516ebc5952745">getId</a>(), HullMods.TAG_CIV_PACKAGE)) {</div>
-<div class="line"><span class="lineno">   47</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;Can only install one combat package on a civilian-grade hull&quot;</span>;</div>
-<div class="line"><span class="lineno">   48</span>        }</div>
-<div class="line"><span class="lineno">   49</span>        <span class="keywordflow">if</span> (!ship.getVariant().hasHullMod(HullMods.MILITARIZED_SUBSYSTEMS)) {</div>
-<div class="line"><span class="lineno">   50</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;Can only be installed on civilian-grade hulls with Militarized Subsystems&quot;</span>;</div>
-<div class="line"><span class="lineno">   51</span>        }</div>
-<div class="line"><span class="lineno">   52</span>        <span class="keywordflow">return</span> super.getUnapplicableReason(ship);</div>
-<div class="line"><span class="lineno">   53</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod_html_a39c14f424839ae19f55ee0d5f859e52f"><div class="ttname"><a href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a39c14f424839ae19f55ee0d5f859e52f">com.fs.starfarer.api.combat.BaseHullMod.shipHasOtherModInCategory</a></div><div class="ttdeci">boolean shipHasOtherModInCategory(ShipAPI ship, String currMod, String category)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/da7/BaseHullMod_8java_source.html#l00257">BaseHullMod.java:257</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod_html_ac9399ad6c42e88aad34841da9e87d5cc"><div class="ttname"><a href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#ac9399ad6c42e88aad34841da9e87d5cc">com.fs.starfarer.api.combat.BaseHullMod.spec</a></div><div class="ttdeci">HullModSpecAPI spec</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/da7/BaseHullMod_8java_source.html#l00022">BaseHullMod.java:22</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1HullModSpecAPI_html_a65294d509421231b6de516ebc5952745"><div class="ttname"><a href="../../d5/da9/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1HullModSpecAPI.html#a65294d509421231b6de516ebc5952745">com.fs.starfarer.api.loading.HullModSpecAPI.getId</a></div><div class="ttdeci">String getId()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="abf8789390d542796ac80e8425285c325" name="abf8789390d542796ac80e8425285c325"></a>
@@ -406,11 +376,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#aba110c18a85c975b063efdf40ac482a7">com.fs.starfarer.api.combat.BaseHullMod</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d75/AssaultPackage_8java_source.html#l00039">39</a> of file <a class="el" href="../../d0/d75/AssaultPackage_8java_source.html">AssaultPackage.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   39</span>                                                    {</div>
-<div class="line"><span class="lineno">   40</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a39c14f424839ae19f55ee0d5f859e52f">shipHasOtherModInCategory</a>(ship, <a class="code hl_variable" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#ac9399ad6c42e88aad34841da9e87d5cc">spec</a>.<a class="code hl_function" href="../../d5/da9/interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1HullModSpecAPI.html#a65294d509421231b6de516ebc5952745">getId</a>(), HullMods.TAG_CIV_PACKAGE)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   41</span>        <span class="keywordflow">return</span> ship.getVariant().hasHullMod(HullMods.MILITARIZED_SUBSYSTEMS);</div>
-<div class="line"><span class="lineno">   42</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

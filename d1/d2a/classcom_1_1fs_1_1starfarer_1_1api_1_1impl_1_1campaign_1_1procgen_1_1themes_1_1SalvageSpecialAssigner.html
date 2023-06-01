@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -214,22 +215,7 @@ Static Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d94/SalvageSpecialAssigner_8java_source.html#l00080">80</a> of file <a class="el" href="../../d0/d94/SalvageSpecialAssigner_8java_source.html">SalvageSpecialAssigner.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   80</span>                                                                             {</div>
-<div class="line"><span class="lineno">   81</span>        Random random = StarSystemGenerator.random;</div>
-<div class="line"><span class="lineno">   82</span>        WeightedRandomPicker&lt;SpecialCreator&gt; picker = <span class="keyword">new</span> WeightedRandomPicker&lt;SpecialCreator&gt;(random);</div>
-<div class="line"><span class="lineno">   83</span>        </div>
-<div class="line"><span class="lineno">   84</span>        picker.add(<span class="keyword">new</span> NothingSpecialCreator(), 10f);</div>
-<div class="line"><span class="lineno">   85</span>        picker.add(<span class="keyword">new</span> ShipRecoverySpecialCreator(random, 0, 0, <span class="keyword">false</span>, <span class="keyword">null</span>, <span class="keyword">null</span>), 10f);</div>
-<div class="line"><span class="lineno">   86</span>        SpecialCreator pick = picker.pick();</div>
-<div class="line"><span class="lineno">   87</span>        </div>
-<div class="line"><span class="lineno">   88</span>        SpecialCreationContext context = <span class="keyword">new</span> SpecialCreationContext();</div>
-<div class="line"><span class="lineno">   89</span>        </div>
-<div class="line"><span class="lineno">   90</span>        Object specialData = pick.createSpecial(entity, context);</div>
-<div class="line"><span class="lineno">   91</span>        <span class="keywordflow">if</span> (specialData != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   92</span>            Misc.setSalvageSpecial(entity, specialData);</div>
-<div class="line"><span class="lineno">   93</span>        }</div>
-<div class="line"><span class="lineno">   94</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a706478e985cc13548f45d673ec31e4ae" name="a706478e985cc13548f45d673ec31e4ae"></a>
@@ -257,41 +243,7 @@ Static Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d94/SalvageSpecialAssigner_8java_source.html#l00138">138</a> of file <a class="el" href="../../d0/d94/SalvageSpecialAssigner_8java_source.html">SalvageSpecialAssigner.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  138</span>                                                                             {</div>
-<div class="line"><span class="lineno">  139</span>        Random random = StarSystemGenerator.random;</div>
-<div class="line"><span class="lineno">  140</span>        WeightedRandomPicker&lt;SpecialCreator&gt; picker = <span class="keyword">new</span> WeightedRandomPicker&lt;SpecialCreator&gt;(random);</div>
-<div class="line"><span class="lineno">  141</span>        </div>
-<div class="line"><span class="lineno">  142</span>        WeightedRandomPicker&lt;String&gt; recoverableShipFactions = <a class="code hl_function" href="../../d1/d2a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssigner.html#a381dd1248a441ab220131342331b405c">getNearbyFactions</a>(random, entity);</div>
-<div class="line"><span class="lineno">  143</span>        WeightedRandomPicker&lt;String&gt; trapFactions = Misc.createStringPicker(random, Factions.PIRATES, 10f);</div>
-<div class="line"><span class="lineno">  144</span>        WeightedRandomPicker&lt;String&gt; valuableCargo = <a class="code hl_function" href="../../d1/d2a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssigner.html#a1a7700c09a5b4f18242b40d4e42fda73">getValuableCargo</a>(random);</div>
-<div class="line"><span class="lineno">  145</span>        </div>
-<div class="line"><span class="lineno">  146</span>        picker.add(<span class="keyword">new</span> NothingSpecialCreator(), 60f);</div>
-<div class="line"><span class="lineno">  147</span>        picker.add(<span class="keyword">new</span> ShipRecoverySpecialCreator(random, 1, 3, <span class="keyword">true</span>, <span class="keyword">null</span>, recoverableShipFactions), 10f);</div>
-<div class="line"><span class="lineno">  148</span>        picker.add(<span class="keyword">new</span> SleeperPodsSpecialCreator(random, SleeperSpecialType.MARINES, 10, 20, <span class="keyword">null</span>), 2f);</div>
-<div class="line"><span class="lineno">  149</span>        picker.add(<span class="keyword">new</span> SleeperPodsSpecialCreator(random, SleeperSpecialType.CREW, 20, 40, <span class="keyword">null</span>), 6f);</div>
-<div class="line"><span class="lineno">  150</span>        picker.add(<span class="keyword">new</span> SleeperPodsSpecialCreator(random, SleeperSpecialType.ORGANS, 1, 5, <span class="keyword">null</span>), 3f);</div>
-<div class="line"><span class="lineno">  151</span>        picker.add(<span class="keyword">new</span> SleeperPodsSpecialCreator(random, SleeperSpecialType.OFFICER, <a class="code hl_variable" href="../../d1/d2a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssigner.html#a48c9bf428f3c258f378b2dc8591b3bea">STANDARD_PODS_OFFICER_LEVEL</a>, <a class="code hl_variable" href="../../d1/d2a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssigner.html#a2e2ad6e5d2f15a89d3a57e707ed153dc">EXCEPTIONAL_PODS_OFFICER_LEVEL</a>, recoverableShipFactions), 1f);</div>
-<div class="line"><span class="lineno">  152</span>        picker.add(<span class="keyword">new</span> SleeperPodsSpecialCreator(random, SleeperSpecialType.ADMIN, 1, 1, recoverableShipFactions), 0.2f);</div>
-<div class="line"><span class="lineno">  153</span>        picker.add(<span class="keyword">new</span> CargoManifestSpecialCreator(random, valuableCargo, 10, 50), 10f);</div>
-<div class="line"><span class="lineno">  154</span>        picker.add(<span class="keyword">new</span> SurveyDataSpecialCreator(random, SurveyDataSpecialType.AUTO_PICK_NOT_SYSTEM), 10f);</div>
-<div class="line"><span class="lineno">  155</span>        picker.add(<span class="keyword">new</span> BreadcrumbSpecialCreator(random, <span class="keyword">null</span>), 10f);</div>
-<div class="line"><span class="lineno">  156</span>        picker.add(<span class="keyword">new</span> TransmitterTrapSpecialCreator(random, 0.5f, FleetTypes.PATROL_SMALL, trapFactions, 4, 25), 10f);</div>
-<div class="line"><span class="lineno">  157</span>        picker.add(<span class="keyword">new</span> TopographicDataSpecialCreator(random, HTPoints.LOW_MIN, HTPoints.LOW_MAX), 5f);</div>
-<div class="line"><span class="lineno">  158</span>        </div>
-<div class="line"><span class="lineno">  159</span>        SpecialCreator pick = picker.pick();</div>
-<div class="line"><span class="lineno">  160</span>        </div>
-<div class="line"><span class="lineno">  161</span>        SpecialCreationContext context = <span class="keyword">new</span> SpecialCreationContext();</div>
-<div class="line"><span class="lineno">  162</span>        </div>
-<div class="line"><span class="lineno">  163</span>        Object specialData = pick.createSpecial(entity, context);</div>
-<div class="line"><span class="lineno">  164</span>        <span class="keywordflow">if</span> (specialData != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  165</span>            Misc.setSalvageSpecial(entity, specialData);</div>
-<div class="line"><span class="lineno">  166</span>        }</div>
-<div class="line"><span class="lineno">  167</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssigner_html_a1a7700c09a5b4f18242b40d4e42fda73"><div class="ttname"><a href="../../d1/d2a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssigner.html#a1a7700c09a5b4f18242b40d4e42fda73">com.fs.starfarer.api.impl.campaign.procgen.themes.SalvageSpecialAssigner.getValuableCargo</a></div><div class="ttdeci">static WeightedRandomPicker&lt; String &gt; getValuableCargo(Random random)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d94/SalvageSpecialAssigner_8java_source.html#l00169">SalvageSpecialAssigner.java:169</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssigner_html_a2e2ad6e5d2f15a89d3a57e707ed153dc"><div class="ttname"><a href="../../d1/d2a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssigner.html#a2e2ad6e5d2f15a89d3a57e707ed153dc">com.fs.starfarer.api.impl.campaign.procgen.themes.SalvageSpecialAssigner.EXCEPTIONAL_PODS_OFFICER_LEVEL</a></div><div class="ttdeci">static int EXCEPTIONAL_PODS_OFFICER_LEVEL</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d94/SalvageSpecialAssigner_8java_source.html#l00060">SalvageSpecialAssigner.java:60</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssigner_html_a381dd1248a441ab220131342331b405c"><div class="ttname"><a href="../../d1/d2a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssigner.html#a381dd1248a441ab220131342331b405c">com.fs.starfarer.api.impl.campaign.procgen.themes.SalvageSpecialAssigner.getNearbyFactions</a></div><div class="ttdeci">static WeightedRandomPicker&lt; String &gt; getNearbyFactions(Random random, SectorEntityToken entity)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d94/SalvageSpecialAssigner_8java_source.html#l00192">SalvageSpecialAssigner.java:192</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssigner_html_a48c9bf428f3c258f378b2dc8591b3bea"><div class="ttname"><a href="../../d1/d2a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssigner.html#a48c9bf428f3c258f378b2dc8591b3bea">com.fs.starfarer.api.impl.campaign.procgen.themes.SalvageSpecialAssigner.STANDARD_PODS_OFFICER_LEVEL</a></div><div class="ttdeci">static int STANDARD_PODS_OFFICER_LEVEL</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d94/SalvageSpecialAssigner_8java_source.html#l00059">SalvageSpecialAssigner.java:59</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a3f7290d0f558a21bc468c9836ae38af4" name="a3f7290d0f558a21bc468c9836ae38af4"></a>
@@ -319,48 +271,7 @@ Static Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d94/SalvageSpecialAssigner_8java_source.html#l00096">96</a> of file <a class="el" href="../../d0/d94/SalvageSpecialAssigner_8java_source.html">SalvageSpecialAssigner.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   96</span>                                                                                  {</div>
-<div class="line"><span class="lineno">   97</span>        Random random = <span class="keyword">new</span> Random();</div>
-<div class="line"><span class="lineno">   98</span>        </div>
-<div class="line"><span class="lineno">   99</span>        WeightedRandomPicker&lt;SpecialCreator&gt; picker = <span class="keyword">new</span> WeightedRandomPicker&lt;SpecialCreator&gt;(random);</div>
-<div class="line"><span class="lineno">  100</span>        </div>
-<div class="line"><span class="lineno">  101</span>        DerelictShipEntityPlugin plugin = (DerelictShipEntityPlugin) entity.getCustomPlugin();</div>
-<div class="line"><span class="lineno">  102</span>        PerShipData shipData = plugin.getData().ship;</div>
-<div class="line"><span class="lineno">  103</span>        ShipVariantAPI variant = shipData.variant;</div>
-<div class="line"><span class="lineno">  104</span>        <span class="keywordflow">if</span> (variant == <span class="keyword">null</span> &amp;&amp; shipData.variantId != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  105</span>            variant = Global.getSettings().getVariant(shipData.variantId);</div>
-<div class="line"><span class="lineno">  106</span>        }</div>
-<div class="line"><span class="lineno">  107</span>        <span class="keywordtype">float</span> p = variant.getHullSpec().getMaxCrew();</div>
-<div class="line"><span class="lineno">  108</span>        <span class="keywordtype">float</span> c = variant.getHullSpec().getCargo();</div>
-<div class="line"><span class="lineno">  109</span>        </div>
-<div class="line"><span class="lineno">  110</span>        WeightedRandomPicker&lt;String&gt; recoverableShipFactions = <a class="code hl_function" href="../../d1/d2a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssigner.html#a381dd1248a441ab220131342331b405c">getNearbyFactions</a>(random, entity);</div>
-<div class="line"><span class="lineno">  111</span>        <span class="keywordflow">if</span> (entity.getContainingLocation().hasTag(Tags.THEME_REMNANT)) {</div>
-<div class="line"><span class="lineno">  112</span>            recoverableShipFactions = Misc.createStringPicker(random,</div>
-<div class="line"><span class="lineno">  113</span>                    Factions.TRITACHYON, 10f, Factions.HEGEMONY, 7f, Factions.INDEPENDENT, 3f);</div>
-<div class="line"><span class="lineno">  114</span>        }</div>
-<div class="line"><span class="lineno">  115</span>        WeightedRandomPicker&lt;String&gt; officerFactions = recoverableShipFactions;</div>
-<div class="line"><span class="lineno">  116</span>        WeightedRandomPicker&lt;String&gt; valuableCargo = <a class="code hl_function" href="../../d1/d2a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssigner.html#a1a7700c09a5b4f18242b40d4e42fda73">getValuableCargo</a>(random);</div>
-<div class="line"><span class="lineno">  117</span>        </div>
-<div class="line"><span class="lineno">  118</span>        picker.add(<span class="keyword">new</span> NothingSpecialCreator(), 10f);</div>
-<div class="line"><span class="lineno">  119</span>        picker.add(<span class="keyword">new</span> ShipRecoverySpecialCreator(random, 0, 0, <span class="keyword">false</span>, <span class="keyword">null</span>, <span class="keyword">null</span>), 30f);</div>
-<div class="line"><span class="lineno">  120</span>        picker.add(<span class="keyword">new</span> SleeperPodsSpecialCreator(random, SleeperSpecialType.MARINES, p * 0.125f, p * 0.25f, <span class="keyword">null</span>), 2f);</div>
-<div class="line"><span class="lineno">  121</span>        picker.add(<span class="keyword">new</span> SleeperPodsSpecialCreator(random, SleeperSpecialType.CREW, p * 0.25f, p * 0.5f, <span class="keyword">null</span>), 20f);</div>
-<div class="line"><span class="lineno">  122</span>        picker.add(<span class="keyword">new</span> SleeperPodsSpecialCreator(random, SleeperSpecialType.OFFICER, <a class="code hl_variable" href="../../d1/d2a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssigner.html#a48c9bf428f3c258f378b2dc8591b3bea">STANDARD_PODS_OFFICER_LEVEL</a>, <a class="code hl_variable" href="../../d1/d2a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssigner.html#a2e2ad6e5d2f15a89d3a57e707ed153dc">EXCEPTIONAL_PODS_OFFICER_LEVEL</a>, officerFactions), 15f);</div>
-<div class="line"><span class="lineno">  123</span>        picker.add(<span class="keyword">new</span> SleeperPodsSpecialCreator(random, SleeperSpecialType.ADMIN, 1, 1, officerFactions), 2f);</div>
-<div class="line"><span class="lineno">  124</span>        picker.add(<span class="keyword">new</span> CargoManifestSpecialCreator(random, valuableCargo, c * 0.25f, c * 0.5f), 10f);</div>
-<div class="line"><span class="lineno">  125</span>        picker.add(<span class="keyword">new</span> SurveyDataSpecialCreator(random, SurveyDataSpecialType.AUTO_PICK_NOT_SYSTEM), 5f);</div>
-<div class="line"><span class="lineno">  126</span>        picker.add(<span class="keyword">new</span> BlueprintSpecialCreator(random), 1f);</div>
-<div class="line"><span class="lineno">  127</span>        picker.add(<span class="keyword">new</span> TopographicDataSpecialCreator(random, HTPoints.LOW_MIN, HTPoints.LOW_MAX), 1f);</div>
-<div class="line"><span class="lineno">  128</span>        </div>
-<div class="line"><span class="lineno">  129</span>        SpecialCreator pick = picker.pick();</div>
-<div class="line"><span class="lineno">  130</span>        SpecialCreationContext context = <span class="keyword">new</span> SpecialCreationContext();</div>
-<div class="line"><span class="lineno">  131</span>        </div>
-<div class="line"><span class="lineno">  132</span>        Object specialData = pick.createSpecial(entity, context);</div>
-<div class="line"><span class="lineno">  133</span>        <span class="keywordflow">if</span> (specialData != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  134</span>            Misc.setSalvageSpecial(entity, specialData);</div>
-<div class="line"><span class="lineno">  135</span>        }</div>
-<div class="line"><span class="lineno">  136</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a440db9707f503a938d842cb0fad9953f" name="a440db9707f503a938d842cb0fad9953f"></a>
@@ -398,51 +309,7 @@ Static Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d94/SalvageSpecialAssigner_8java_source.html#l00506">506</a> of file <a class="el" href="../../d0/d94/SalvageSpecialAssigner_8java_source.html">SalvageSpecialAssigner.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  506</span>                                                                                                       {</div>
-<div class="line"><span class="lineno">  507</span>        </div>
-<div class="line"><span class="lineno">  508</span>        context.all.clear();</div>
-<div class="line"><span class="lineno">  509</span>        <span class="keywordflow">for</span> (StarSystemData data : systemData) {</div>
-<div class="line"><span class="lineno">  510</span>            <span class="keywordflow">for</span> (AddedEntity added : data.generated) {</div>
-<div class="line"><span class="lineno">  511</span>                context.all.add(added.entity);</div>
-<div class="line"><span class="lineno">  512</span>            }</div>
-<div class="line"><span class="lineno">  513</span>            <span class="keywordflow">for</span> (PlanetAPI planet : data.system.getPlanets()) {</div>
-<div class="line"><span class="lineno">  514</span>                <span class="keywordflow">if</span> (planet.getMarket() != <span class="keyword">null</span> &amp;&amp; </div>
-<div class="line"><span class="lineno">  515</span>                        planet.getMarket().isPlanetConditionMarketOnly() &amp;&amp; </div>
-<div class="line"><span class="lineno">  516</span>                        Misc.hasRuins(planet.getMarket())) {</div>
-<div class="line"><span class="lineno">  517</span>                    context.all.add(planet);</div>
-<div class="line"><span class="lineno">  518</span>                }</div>
-<div class="line"><span class="lineno">  519</span>            }</div>
-<div class="line"><span class="lineno">  520</span>        }</div>
-<div class="line"><span class="lineno">  521</span>        </div>
-<div class="line"><span class="lineno">  522</span>        <span class="keywordflow">if</span> (DerelictThemeGenerator.DEBUG) {</div>
-<div class="line"><span class="lineno">  523</span>            System.out.println(<span class="stringliteral">&quot;\n\n\nAssigning salvage specials&quot;</span>);</div>
-<div class="line"><span class="lineno">  524</span>        }</div>
-<div class="line"><span class="lineno">  525</span>        </div>
-<div class="line"><span class="lineno">  526</span>        <span class="keywordflow">for</span> (SectorEntityToken entity : context.all) {</div>
-<div class="line"><span class="lineno">  527</span>            SpecialCreator creator = <a class="code hl_function" href="../../d1/d2a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssigner.html#a9db887da924263014c297812cc6da135">pickSpecialFor</a>(entity, context);</div>
-<div class="line"><span class="lineno">  528</span>            <span class="keywordflow">if</span> (creator == <span class="keyword">null</span>) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  529</span>            </div>
-<div class="line"><span class="lineno">  530</span>            Object specialData = creator.createSpecial(entity, context);</div>
-<div class="line"><span class="lineno">  531</span>            <span class="keywordflow">if</span> (specialData != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  532</span>                Misc.setSalvageSpecial(entity, specialData);</div>
-<div class="line"><span class="lineno">  533</span>                </div>
-<div class="line"><span class="lineno">  534</span>                <span class="keywordflow">if</span> (DerelictThemeGenerator.DEBUG) {</div>
-<div class="line"><span class="lineno">  535</span>                    String <span class="keywordtype">id</span> = entity.getCustomEntityType();</div>
-<div class="line"><span class="lineno">  536</span>                    <span class="keywordflow">if</span> (<span class="keywordtype">id</span> == <span class="keyword">null</span>) <span class="keywordtype">id</span> = entity.getClass().getSimpleName();</div>
-<div class="line"><span class="lineno">  537</span>                    System.out.println(<span class="stringliteral">&quot;Assigned &quot;</span> + specialData.getClass().getSimpleName() + <span class="stringliteral">&quot; to &quot;</span> + <span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  538</span>                }</div>
-<div class="line"><span class="lineno">  539</span>            }</div>
-<div class="line"><span class="lineno">  540</span>            </div>
-<div class="line"><span class="lineno">  541</span>            <span class="comment">//System.out.println(&quot;&quot; + StarSystemGenerator.random.nextLong());</span></div>
-<div class="line"><span class="lineno">  542</span>        }</div>
-<div class="line"><span class="lineno">  543</span>        </div>
-<div class="line"><span class="lineno">  544</span>        <span class="keywordflow">if</span> (DerelictThemeGenerator.DEBUG) {</div>
-<div class="line"><span class="lineno">  545</span>            System.out.println(<span class="stringliteral">&quot;Finished assigning salvage specials\n\n\n\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  546</span>        }</div>
-<div class="line"><span class="lineno">  547</span>        </div>
-<div class="line"><span class="lineno">  548</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssigner_html_a9db887da924263014c297812cc6da135"><div class="ttname"><a href="../../d1/d2a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssigner.html#a9db887da924263014c297812cc6da135">com.fs.starfarer.api.impl.campaign.procgen.themes.SalvageSpecialAssigner.pickSpecialFor</a></div><div class="ttdeci">static SpecialCreator pickSpecialFor(SectorEntityToken entity, SpecialCreationContext context)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d94/SalvageSpecialAssigner_8java_source.html#l00222">SalvageSpecialAssigner.java:222</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a06b343d4d640bddb8415280c54257710" name="a06b343d4d640bddb8415280c54257710"></a>
@@ -470,11 +337,7 @@ Static Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d94/SalvageSpecialAssigner_8java_source.html#l00476">476</a> of file <a class="el" href="../../d0/d94/SalvageSpecialAssigner_8java_source.html">SalvageSpecialAssigner.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  476</span>                                                                {</div>
-<div class="line"><span class="lineno">  477</span>        <a class="code hl_function" href="../../d1/d2a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssigner.html#a06b343d4d640bddb8415280c54257710">assignSpecials</a>(entity, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  478</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssigner_html_a06b343d4d640bddb8415280c54257710"><div class="ttname"><a href="../../d1/d2a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssigner.html#a06b343d4d640bddb8415280c54257710">com.fs.starfarer.api.impl.campaign.procgen.themes.SalvageSpecialAssigner.assignSpecials</a></div><div class="ttdeci">static void assignSpecials(SectorEntityToken entity)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d94/SalvageSpecialAssigner_8java_source.html#l00476">SalvageSpecialAssigner.java:476</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a7d7dc907e24c91e02e353f1b78e96ffb" name="a7d7dc907e24c91e02e353f1b78e96ffb"></a>
@@ -512,25 +375,7 @@ Static Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d94/SalvageSpecialAssigner_8java_source.html#l00486">486</a> of file <a class="el" href="../../d0/d94/SalvageSpecialAssigner_8java_source.html">SalvageSpecialAssigner.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  486</span>                                                                                   {</div>
-<div class="line"><span class="lineno">  487</span>        SpecialCreationContext context = <span class="keyword">new</span> SpecialCreationContext();</div>
-<div class="line"><span class="lineno">  488</span>        context.onNewGame = onNewGame;</div>
-<div class="line"><span class="lineno">  489</span>        </div>
-<div class="line"><span class="lineno">  490</span>        SpecialCreator creator = <a class="code hl_function" href="../../d1/d2a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssigner.html#a9db887da924263014c297812cc6da135">pickSpecialFor</a>(entity, context);</div>
-<div class="line"><span class="lineno">  491</span>        <span class="keywordflow">if</span> (creator == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  492</span>        </div>
-<div class="line"><span class="lineno">  493</span>        Object specialData = creator.createSpecial(entity, context);</div>
-<div class="line"><span class="lineno">  494</span>        <span class="keywordflow">if</span> (specialData != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  495</span>            Misc.setSalvageSpecial(entity, specialData);</div>
-<div class="line"><span class="lineno">  496</span>            </div>
-<div class="line"><span class="lineno">  497</span>            <span class="keywordflow">if</span> (DerelictThemeGenerator.DEBUG) {</div>
-<div class="line"><span class="lineno">  498</span>                String <span class="keywordtype">id</span> = entity.getCustomEntityType();</div>
-<div class="line"><span class="lineno">  499</span>                <span class="keywordflow">if</span> (<span class="keywordtype">id</span> == <span class="keyword">null</span>) <span class="keywordtype">id</span> = entity.getClass().getSimpleName();</div>
-<div class="line"><span class="lineno">  500</span>                System.out.println(<span class="stringliteral">&quot;Assigned &quot;</span> + specialData.getClass().getSimpleName() + <span class="stringliteral">&quot; to &quot;</span> + <span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  501</span>            }</div>
-<div class="line"><span class="lineno">  502</span>        }</div>
-<div class="line"><span class="lineno">  503</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab8d78c7da0174a75e209e95c1cee3cc2" name="ab8d78c7da0174a75e209e95c1cee3cc2"></a>
@@ -574,13 +419,7 @@ Static Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d94/SalvageSpecialAssigner_8java_source.html#l00481">481</a> of file <a class="el" href="../../d0/d94/SalvageSpecialAssigner_8java_source.html">SalvageSpecialAssigner.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  481</span>                                                                                                  {</div>
-<div class="line"><span class="lineno">  482</span>        <a class="code hl_variable" href="../../d1/d2a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssigner.html#a47a3a19fde02e82b334f1f7426f6e992">randomOverride</a> = random;</div>
-<div class="line"><span class="lineno">  483</span>        <a class="code hl_function" href="../../d1/d2a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssigner.html#a06b343d4d640bddb8415280c54257710">assignSpecials</a>(entity, onNewGame);</div>
-<div class="line"><span class="lineno">  484</span>        <a class="code hl_variable" href="../../d1/d2a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssigner.html#a47a3a19fde02e82b334f1f7426f6e992">randomOverride</a> = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  485</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssigner_html_a47a3a19fde02e82b334f1f7426f6e992"><div class="ttname"><a href="../../d1/d2a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssigner.html#a47a3a19fde02e82b334f1f7426f6e992">com.fs.starfarer.api.impl.campaign.procgen.themes.SalvageSpecialAssigner.randomOverride</a></div><div class="ttdeci">static Random randomOverride</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d94/SalvageSpecialAssigner_8java_source.html#l00480">SalvageSpecialAssigner.java:480</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac498d10cf4303ddb0574e47d97156025" name="ac498d10cf4303ddb0574e47d97156025"></a>
@@ -608,13 +447,7 @@ Static Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d94/SalvageSpecialAssigner_8java_source.html#l00185">185</a> of file <a class="el" href="../../d0/d94/SalvageSpecialAssigner_8java_source.html">SalvageSpecialAssigner.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  185</span>                                                                          {</div>
-<div class="line"><span class="lineno">  186</span>        WeightedRandomPicker&lt;String&gt; habCargo = Misc.createStringPicker(random,</div>
-<div class="line"><span class="lineno">  187</span>                Commodities.HAND_WEAPONS, 10f, Commodities.ORGANS, 10f, Commodities.DRUGS, 10f,</div>
-<div class="line"><span class="lineno">  188</span>                Commodities.LUXURY_GOODS, 10f, Commodities.LOBSTER, 10f);</div>
-<div class="line"><span class="lineno">  189</span>        <span class="keywordflow">return</span> habCargo;</div>
-<div class="line"><span class="lineno">  190</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a42bd132384df1b9f1ef2dd584bff1f23" name="a42bd132384df1b9f1ef2dd584bff1f23"></a>
@@ -642,13 +475,7 @@ Static Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d94/SalvageSpecialAssigner_8java_source.html#l00178">178</a> of file <a class="el" href="../../d0/d94/SalvageSpecialAssigner_8java_source.html">SalvageSpecialAssigner.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  178</span>                                                                               {</div>
-<div class="line"><span class="lineno">  179</span>        WeightedRandomPicker&lt;String&gt; industryCargo = Misc.createStringPicker(random,</div>
-<div class="line"><span class="lineno">  180</span>                Commodities.VOLATILES, 10f, Commodities.RARE_METALS, 10f, Commodities.RARE_ORE, 10f,</div>
-<div class="line"><span class="lineno">  181</span>                Commodities.HEAVY_MACHINERY, 10f, Commodities.ORE, 10f);</div>
-<div class="line"><span class="lineno">  182</span>        <span class="keywordflow">return</span> industryCargo;</div>
-<div class="line"><span class="lineno">  183</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a381dd1248a441ab220131342331b405c" name="a381dd1248a441ab220131342331b405c"></a>
@@ -686,14 +513,7 @@ Static Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d94/SalvageSpecialAssigner_8java_source.html#l00192">192</a> of file <a class="el" href="../../d0/d94/SalvageSpecialAssigner_8java_source.html">SalvageSpecialAssigner.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  192</span>                                                                                                          {</div>
-<div class="line"><span class="lineno">  193</span>        WeightedRandomPicker&lt;String&gt; picker = Misc.createStringPicker(random, Factions.INDEPENDENT, 10f);</div>
-<div class="line"><span class="lineno">  194</span>        <span class="keywordflow">for</span> (MarketAPI market : Misc.getNearbyMarkets(entity.getLocationInHyperspace(), 10f)) {</div>
-<div class="line"><span class="lineno">  195</span>            picker.add(market.getFactionId(), market.getSize());</div>
-<div class="line"><span class="lineno">  196</span>        }</div>
-<div class="line"><span class="lineno">  197</span>        <span class="keywordflow">return</span> picker;</div>
-<div class="line"><span class="lineno">  198</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a4362de315af158aee6fe445233680c64" name="a4362de315af158aee6fe445233680c64"></a>
@@ -749,11 +569,7 @@ Static Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d94/SalvageSpecialAssigner_8java_source.html#l00200">200</a> of file <a class="el" href="../../d0/d94/SalvageSpecialAssigner_8java_source.html">SalvageSpecialAssigner.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  202</span>                                                                                                     {</div>
-<div class="line"><span class="lineno">  203</span>        <span class="keywordflow">if</span> (random == <span class="keyword">null</span>) random = <span class="keyword">new</span> Random();</div>
-<div class="line"><span class="lineno">  204</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../d1/d2a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssigner.html#a381dd1248a441ab220131342331b405c">getNearbyFactions</a>(random, entity.getLocationInHyperspace(), rangeLY, indWeight, pirateWeight);</div>
-<div class="line"><span class="lineno">  205</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af137567a856954f845bc5bff688f5ccc" name="af137567a856954f845bc5bff688f5ccc"></a>
@@ -809,20 +625,7 @@ Static Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d94/SalvageSpecialAssigner_8java_source.html#l00206">206</a> of file <a class="el" href="../../d0/d94/SalvageSpecialAssigner_8java_source.html">SalvageSpecialAssigner.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  208</span>                                                                                             {</div>
-<div class="line"><span class="lineno">  209</span>        <span class="keywordflow">if</span> (random == <span class="keyword">null</span>) random = <span class="keyword">new</span> Random();</div>
-<div class="line"><span class="lineno">  210</span>        WeightedRandomPicker&lt;String&gt; picker = <span class="keyword">new</span> WeightedRandomPicker&lt;String&gt;(random);</div>
-<div class="line"><span class="lineno">  211</span>        <span class="keywordflow">if</span> (indWeight &gt; 0) {</div>
-<div class="line"><span class="lineno">  212</span>            picker.add(Factions.INDEPENDENT, indWeight);</div>
-<div class="line"><span class="lineno">  213</span>            picker.add(Factions.MERCENARY, indWeight * 0.1f);</div>
-<div class="line"><span class="lineno">  214</span>        }</div>
-<div class="line"><span class="lineno">  215</span>        <span class="keywordflow">if</span> (pirateWeight &gt; 0) picker.add(Factions.PIRATES, pirateWeight);</div>
-<div class="line"><span class="lineno">  216</span>        <span class="keywordflow">for</span> (MarketAPI market : Misc.getNearbyMarkets(locationInHyper, rangeLY)) {</div>
-<div class="line"><span class="lineno">  217</span>            picker.add(market.getFactionId(), market.getSize());</div>
-<div class="line"><span class="lineno">  218</span>        }</div>
-<div class="line"><span class="lineno">  219</span>        <span class="keywordflow">return</span> picker;</div>
-<div class="line"><span class="lineno">  220</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a1a7700c09a5b4f18242b40d4e42fda73" name="a1a7700c09a5b4f18242b40d4e42fda73"></a>
@@ -850,15 +653,7 @@ Static Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d94/SalvageSpecialAssigner_8java_source.html#l00169">169</a> of file <a class="el" href="../../d0/d94/SalvageSpecialAssigner_8java_source.html">SalvageSpecialAssigner.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  169</span>                                                                               {</div>
-<div class="line"><span class="lineno">  170</span>        WeightedRandomPicker&lt;String&gt; valuableCargo = Misc.createStringPicker(random,</div>
-<div class="line"><span class="lineno">  171</span>                Commodities.VOLATILES, 10f, Commodities.RARE_METALS, 10f, Commodities.RARE_ORE, 10f,</div>
-<div class="line"><span class="lineno">  172</span>                Commodities.HEAVY_MACHINERY, 10f,</div>
-<div class="line"><span class="lineno">  173</span>                Commodities.HAND_WEAPONS, 10f, Commodities.ORGANS, 10f, Commodities.DRUGS, 10f,</div>
-<div class="line"><span class="lineno">  174</span>                Commodities.LUXURY_GOODS, 10f, Commodities.LOBSTER, 10f);</div>
-<div class="line"><span class="lineno">  175</span>        <span class="keywordflow">return</span> valuableCargo;</div>
-<div class="line"><span class="lineno">  176</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9db887da924263014c297812cc6da135" name="a9db887da924263014c297812cc6da135"></a>
@@ -896,261 +691,7 @@ Static Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d94/SalvageSpecialAssigner_8java_source.html#l00222">222</a> of file <a class="el" href="../../d0/d94/SalvageSpecialAssigner_8java_source.html">SalvageSpecialAssigner.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  222</span>                                                                                                          {</div>
-<div class="line"><span class="lineno">  223</span>        </div>
-<div class="line"><span class="lineno">  224</span>        Random random = StarSystemGenerator.random;</div>
-<div class="line"><span class="lineno">  225</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d1/d2a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssigner.html#a47a3a19fde02e82b334f1f7426f6e992">randomOverride</a> != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  226</span>            random = <a class="code hl_variable" href="../../d1/d2a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssigner.html#a47a3a19fde02e82b334f1f7426f6e992">randomOverride</a>;</div>
-<div class="line"><span class="lineno">  227</span>        }</div>
-<div class="line"><span class="lineno">  228</span>        </div>
-<div class="line"><span class="lineno">  229</span>        WeightedRandomPicker&lt;SpecialCreator&gt; picker = <span class="keyword">new</span> WeightedRandomPicker&lt;SpecialCreator&gt;(random);</div>
-<div class="line"><span class="lineno">  230</span>        </div>
-<div class="line"><span class="lineno">  231</span>        <span class="comment">//System.out.println(&quot;Random: &quot; + random.nextLong());</span></div>
-<div class="line"><span class="lineno">  232</span> </div>
-<div class="line"><span class="lineno">  233</span>        String type = entity.getCustomEntityType();</div>
-<div class="line"><span class="lineno">  234</span>        </div>
-<div class="line"><span class="lineno">  235</span>        WeightedRandomPicker&lt;String&gt; recoverableShipFactions = <a class="code hl_function" href="../../d1/d2a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssigner.html#a381dd1248a441ab220131342331b405c">getNearbyFactions</a>(random, entity);</div>
-<div class="line"><span class="lineno">  236</span>        </div>
-<div class="line"><span class="lineno">  237</span>        <span class="keywordflow">if</span> (entity.getContainingLocation().hasTag(Tags.THEME_REMNANT)) {</div>
-<div class="line"><span class="lineno">  238</span>            recoverableShipFactions = Misc.createStringPicker(random,</div>
-<div class="line"><span class="lineno">  239</span>                    Factions.TRITACHYON, 10f, Factions.HEGEMONY, 7f, Factions.INDEPENDENT, 3f);</div>
-<div class="line"><span class="lineno">  240</span>        }</div>
-<div class="line"><span class="lineno">  241</span>        </div>
-<div class="line"><span class="lineno">  242</span>        <span class="keywordtype">int</span> maxPodsOfficerLevel = <a class="code hl_variable" href="../../d1/d2a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssigner.html#a2e2ad6e5d2f15a89d3a57e707ed153dc">EXCEPTIONAL_PODS_OFFICER_LEVEL</a>;</div>
-<div class="line"><span class="lineno">  243</span>        <span class="comment">// limited to MAX_EXCEPTIONAL_PODS_OFFICERS anyway, so it&#39;s fine to generate after new game sectorgen if possible</span></div>
-<div class="line"><span class="lineno">  244</span><span class="comment">//      if (context != null &amp;&amp; !context.onNewGame) {</span></div>
-<div class="line"><span class="lineno">  245</span><span class="comment">//          maxPodsOfficerLevel = MAX_NORMAL_OFFICER_LEVEL;</span></div>
-<div class="line"><span class="lineno">  246</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  247</span>        </div>
-<div class="line"><span class="lineno">  248</span>        WeightedRandomPicker&lt;String&gt; remnantsFaction = Misc.createStringPicker(random, Factions.REMNANTS, 10f);</div>
-<div class="line"><span class="lineno">  249</span>        WeightedRandomPicker&lt;String&gt; piratesFaction = Misc.createStringPicker(random, Factions.PIRATES, 10f);</div>
-<div class="line"><span class="lineno">  250</span>        </div>
-<div class="line"><span class="lineno">  251</span>        </div>
-<div class="line"><span class="lineno">  252</span>        WeightedRandomPicker&lt;String&gt; trapFactions = piratesFaction;</div>
-<div class="line"><span class="lineno">  253</span>        <span class="keywordflow">if</span> (entity.getContainingLocation().hasTag(Tags.THEME_REMNANT_SUPPRESSED) ||</div>
-<div class="line"><span class="lineno">  254</span>                entity.getContainingLocation().hasTag(Tags.THEME_REMNANT_RESURGENT)) {</div>
-<div class="line"><span class="lineno">  255</span>            trapFactions = remnantsFaction;</div>
-<div class="line"><span class="lineno">  256</span>        }</div>
-<div class="line"><span class="lineno">  257</span>        </div>
-<div class="line"><span class="lineno">  258</span>        </div>
-<div class="line"><span class="lineno">  259</span><span class="comment">//      WeightedRandomPicker&lt;String&gt; officerFactions = Misc.createStringPicker(random,</span></div>
-<div class="line"><span class="lineno">  260</span><span class="comment">//                  Factions.PIRATES, 10f, Factions.HEGEMONY, 5f, Factions.INDEPENDENT, 10f,</span></div>
-<div class="line"><span class="lineno">  261</span><span class="comment">//                  Factions.TRITACHYON, 5f, Factions.LUDDIC_CHURCH, 5f, Factions.PERSEAN, 10f,</span></div>
-<div class="line"><span class="lineno">  262</span><span class="comment">//                  Factions.DIKTAT, 5f);</span></div>
-<div class="line"><span class="lineno">  263</span><span class="comment">//      </span></div>
-<div class="line"><span class="lineno">  264</span><span class="comment">//      if (entity.getContainingLocation().hasTag(Tags.THEME_REMNANT)) {</span></div>
-<div class="line"><span class="lineno">  265</span><span class="comment">//          officerFactions.add(Factions.TRITACHYON, 10f);</span></div>
-<div class="line"><span class="lineno">  266</span><span class="comment">//          officerFactions.add(Factions.HEGEMONY, 5f);</span></div>
-<div class="line"><span class="lineno">  267</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  268</span>        </div>
-<div class="line"><span class="lineno">  269</span>        WeightedRandomPicker&lt;String&gt; officerFactions = recoverableShipFactions;</div>
-<div class="line"><span class="lineno">  270</span>        </div>
-<div class="line"><span class="lineno">  271</span>        </div>
-<div class="line"><span class="lineno">  272</span>        </div>
-<div class="line"><span class="lineno">  273</span>        WeightedRandomPicker&lt;String&gt; valuableCargo = <a class="code hl_function" href="../../d1/d2a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssigner.html#a1a7700c09a5b4f18242b40d4e42fda73">getValuableCargo</a>(random);</div>
-<div class="line"><span class="lineno">  274</span>        WeightedRandomPicker&lt;String&gt; industryCargo = <a class="code hl_function" href="../../d1/d2a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssigner.html#a42bd132384df1b9f1ef2dd584bff1f23">getIndustryCargo</a>(random);</div>
-<div class="line"><span class="lineno">  275</span>        </div>
-<div class="line"><span class="lineno">  276</span>        WeightedRandomPicker&lt;String&gt; habCargo = <a class="code hl_function" href="../../d1/d2a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssigner.html#ac498d10cf4303ddb0574e47d97156025">getHabCargo</a>(random);</div>
-<div class="line"><span class="lineno">  277</span>        </div>
-<div class="line"><span class="lineno">  278</span>        </div>
-<div class="line"><span class="lineno">  279</span>        <span class="comment">// ruins on a planet</span></div>
-<div class="line"><span class="lineno">  280</span>        <span class="keywordflow">if</span> (entity instanceof PlanetAPI) {</div>
-<div class="line"><span class="lineno">  281</span>            </div>
-<div class="line"><span class="lineno">  282</span>            <span class="keywordtype">float</span> sizeMult = TechMining.getTechMiningRuinSizeModifier(entity.getMarket());</div>
-<div class="line"><span class="lineno">  283</span>            </div>
-<div class="line"><span class="lineno">  284</span>            picker.add(<span class="keyword">new</span> NothingSpecialCreator(), 30f);</div>
-<div class="line"><span class="lineno">  285</span>            picker.add(<span class="keyword">new</span> ShipRecoverySpecialCreator(random, 1, 2, <span class="keyword">false</span>, DerelictType.CIVILIAN, recoverableShipFactions), 5f);</div>
-<div class="line"><span class="lineno">  286</span>            picker.add(<span class="keyword">new</span> ShipRecoverySpecialCreator(random, 1, 3, <span class="keyword">false</span>, DerelictType.SMALL, recoverableShipFactions), 10f);</div>
-<div class="line"><span class="lineno">  287</span>            picker.add(<span class="keyword">new</span> ShipRecoverySpecialCreator(random, 1, 1, <span class="keyword">false</span>, DerelictType.MEDIUM, recoverableShipFactions), 3f);</div>
-<div class="line"><span class="lineno">  288</span>            picker.add(<span class="keyword">new</span> ShipRecoverySpecialCreator(random, 1, 1, <span class="keyword">false</span>, DerelictType.LARGE, recoverableShipFactions), 1f);</div>
-<div class="line"><span class="lineno">  289</span>            <span class="keywordflow">if</span> (sizeMult &gt; 0) {</div>
-<div class="line"><span class="lineno">  290</span>                picker.add(<span class="keyword">new</span> SleeperPodsSpecialCreator(random, SleeperSpecialType.MARINES, 100 * sizeMult, 200 * sizeMult, <span class="keyword">null</span>), 2f);</div>
-<div class="line"><span class="lineno">  291</span>                picker.add(<span class="keyword">new</span> SleeperPodsSpecialCreator(random, SleeperSpecialType.CREW, 500 * sizeMult, 1000 * sizeMult, <span class="keyword">null</span>), 6f);</div>
-<div class="line"><span class="lineno">  292</span>                picker.add(<span class="keyword">new</span> SleeperPodsSpecialCreator(random, SleeperSpecialType.ORGANS, 50 * sizeMult, 500 * sizeMult, <span class="keyword">null</span>), 3f);</div>
-<div class="line"><span class="lineno">  293</span>            }</div>
-<div class="line"><span class="lineno">  294</span>            picker.add(<span class="keyword">new</span> SleeperPodsSpecialCreator(random, SleeperSpecialType.OFFICER, <a class="code hl_variable" href="../../d1/d2a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssigner.html#a48c9bf428f3c258f378b2dc8591b3bea">STANDARD_PODS_OFFICER_LEVEL</a>, maxPodsOfficerLevel, officerFactions), 1f);</div>
-<div class="line"><span class="lineno">  295</span>            <span class="comment">// min/max doesn&#39;t matter for ADMIN</span></div>
-<div class="line"><span class="lineno">  296</span>            picker.add(<span class="keyword">new</span> SleeperPodsSpecialCreator(random, SleeperSpecialType.ADMIN, 1, 1, officerFactions), 5f);</div>
-<div class="line"><span class="lineno">  297</span>            </div>
-<div class="line"><span class="lineno">  298</span>            picker.add(<span class="keyword">new</span> CargoManifestSpecialCreator(random, industryCargo, 500 * sizeMult, 2500 * sizeMult), 15f);</div>
-<div class="line"><span class="lineno">  299</span>            picker.add(<span class="keyword">new</span> CargoManifestSpecialCreator(random, valuableCargo, 500 * sizeMult, 2500 * sizeMult), 15f);</div>
-<div class="line"><span class="lineno">  300</span>            </div>
-<div class="line"><span class="lineno">  301</span>            picker.add(<span class="keyword">new</span> TransmitterTrapSpecialCreator(random, 0.5f, FleetTypes.PATROL_LARGE, trapFactions, </div>
-<div class="line"><span class="lineno">  302</span>                    (<span class="keywordtype">int</span>)(10 + 30 * sizeMult), (<span class="keywordtype">int</span>)(10 + 30 * sizeMult)), 10f);</div>
-<div class="line"><span class="lineno">  303</span>            picker.add(<span class="keyword">new</span> TopographicDataSpecialCreator(random, HTPoints.LOW_MIN, HTPoints.HIGH_MAX), 3f);</div>
-<div class="line"><span class="lineno">  304</span>            </div>
-<div class="line"><span class="lineno">  305</span>            <span class="comment">// text for these is not set up to handle the &quot;planet&quot; case</span></div>
-<div class="line"><span class="lineno">  306</span>            <span class="comment">//picker.add(new SurveyDataSpecialCreator(random, SurveyDataSpecialType.AUTO_PICK), 20f);</span></div>
-<div class="line"><span class="lineno">  307</span>            <span class="comment">//picker.add(new BreadcrumbSpecialCreator(random, context.all), 10f);</span></div>
-<div class="line"><span class="lineno">  308</span>        }</div>
-<div class="line"><span class="lineno">  309</span>        </div>
-<div class="line"><span class="lineno">  310</span>        </div>
-<div class="line"><span class="lineno">  311</span>        <span class="comment">// derelict ship</span></div>
-<div class="line"><span class="lineno">  312</span>        <span class="keywordflow">if</span> (entity.getCustomPlugin() instanceof DerelictShipEntityPlugin || Entities.WRECK.equals(type)) {</div>
-<div class="line"><span class="lineno">  313</span>            DerelictShipEntityPlugin plugin = (DerelictShipEntityPlugin) entity.getCustomPlugin();</div>
-<div class="line"><span class="lineno">  314</span>            </div>
-<div class="line"><span class="lineno">  315</span>            PerShipData shipData = plugin.getData().ship;</div>
-<div class="line"><span class="lineno">  316</span>            ShipVariantAPI variant = shipData.variant;</div>
-<div class="line"><span class="lineno">  317</span>            <span class="keywordflow">if</span> (variant == <span class="keyword">null</span> &amp;&amp; shipData.variantId != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  318</span>                variant = Global.getSettings().getVariant(shipData.variantId);</div>
-<div class="line"><span class="lineno">  319</span>            }</div>
-<div class="line"><span class="lineno">  320</span>            <span class="keywordtype">float</span> p = variant.getHullSpec().getMaxCrew();</div>
-<div class="line"><span class="lineno">  321</span>            <span class="keywordtype">float</span> c = variant.getHullSpec().getCargo();</div>
-<div class="line"><span class="lineno">  322</span>            </div>
-<div class="line"><span class="lineno">  323</span>            picker.add(<span class="keyword">new</span> NothingSpecialCreator(), 40f);</div>
-<div class="line"><span class="lineno">  324</span>            picker.add(<span class="keyword">new</span> ShipRecoverySpecialCreator(random, 0, 0, <span class="keyword">false</span>, <span class="keyword">null</span>, <span class="keyword">null</span>), 30f);</div>
-<div class="line"><span class="lineno">  325</span>            picker.add(<span class="keyword">new</span> SleeperPodsSpecialCreator(random, SleeperSpecialType.MARINES, p * 0.125f, p * 0.25f, <span class="keyword">null</span>), 2f);</div>
-<div class="line"><span class="lineno">  326</span>            picker.add(<span class="keyword">new</span> SleeperPodsSpecialCreator(random, SleeperSpecialType.CREW, p * 0.25f, p * 0.5f, <span class="keyword">null</span>), 7f);</div>
-<div class="line"><span class="lineno">  327</span>            picker.add(<span class="keyword">new</span> SleeperPodsSpecialCreator(random, SleeperSpecialType.ORGANS, p * 0.1f, p * 0.2f, <span class="keyword">null</span>), 3f);</div>
-<div class="line"><span class="lineno">  328</span>            picker.add(<span class="keyword">new</span> SleeperPodsSpecialCreator(random, SleeperSpecialType.OFFICER, <a class="code hl_variable" href="../../d1/d2a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssigner.html#a48c9bf428f3c258f378b2dc8591b3bea">STANDARD_PODS_OFFICER_LEVEL</a>, maxPodsOfficerLevel, officerFactions), 10f);</div>
-<div class="line"><span class="lineno">  329</span>            picker.add(<span class="keyword">new</span> SleeperPodsSpecialCreator(random, SleeperSpecialType.ADMIN, 1, 1, officerFactions), 0.2f);</div>
-<div class="line"><span class="lineno">  330</span>            picker.add(<span class="keyword">new</span> CargoManifestSpecialCreator(random, valuableCargo, c * 0.25f, c * 0.5f), 10f);</div>
-<div class="line"><span class="lineno">  331</span>            picker.add(<span class="keyword">new</span> SurveyDataSpecialCreator(random, SurveyDataSpecialType.AUTO_PICK_NOT_SYSTEM), 10f);</div>
-<div class="line"><span class="lineno">  332</span>            picker.add(<span class="keyword">new</span> BreadcrumbSpecialCreator(random, context.all), 10f);</div>
-<div class="line"><span class="lineno">  333</span>            picker.add(<span class="keyword">new</span> TopographicDataSpecialCreator(random, HTPoints.LOW_MIN, HTPoints.LOW_MAX), 5f);</div>
-<div class="line"><span class="lineno">  334</span>            </div>
-<div class="line"><span class="lineno">  335</span>            <span class="keywordflow">if</span> (entity.getOrbit() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  336</span>                picker.add(<span class="keyword">new</span> TransmitterTrapSpecialCreator(random, 0.5f, FleetTypes.PATROL_SMALL, trapFactions, 4, 25), 10f);</div>
-<div class="line"><span class="lineno">  337</span>            }</div>
-<div class="line"><span class="lineno">  338</span>            </div>
-<div class="line"><span class="lineno">  339</span>            <span class="keywordflow">if</span> (!entity.hasTag(Tags.EXPIRES)) {</div>
-<div class="line"><span class="lineno">  340</span>                picker.add(<span class="keyword">new</span> BlueprintSpecialCreator(random), 1f);</div>
-<div class="line"><span class="lineno">  341</span>            }</div>
-<div class="line"><span class="lineno">  342</span>        }</div>
-<div class="line"><span class="lineno">  343</span>        </div>
-<div class="line"><span class="lineno">  344</span>        <span class="comment">// debris field</span></div>
-<div class="line"><span class="lineno">  345</span>        <span class="keywordtype">boolean</span> debris = entity instanceof CampaignTerrainAPI &amp;&amp;</div>
-<div class="line"><span class="lineno">  346</span>                        ((CampaignTerrainAPI)entity).getPlugin() instanceof DebrisFieldTerrainPlugin;</div>
-<div class="line"><span class="lineno">  347</span>        <span class="keywordflow">if</span> (debris) {</div>
-<div class="line"><span class="lineno">  348</span>            picker.add(<span class="keyword">new</span> NothingSpecialCreator(), 60f);</div>
-<div class="line"><span class="lineno">  349</span>            picker.add(<span class="keyword">new</span> ShipRecoverySpecialCreator(random, 1, 3, <span class="keyword">true</span>, <span class="keyword">null</span>, recoverableShipFactions), 10f);</div>
-<div class="line"><span class="lineno">  350</span>            picker.add(<span class="keyword">new</span> SleeperPodsSpecialCreator(random, SleeperSpecialType.MARINES, 10, 30, <span class="keyword">null</span>), 2f);</div>
-<div class="line"><span class="lineno">  351</span>            picker.add(<span class="keyword">new</span> SleeperPodsSpecialCreator(random, SleeperSpecialType.CREW, 10, 50, <span class="keyword">null</span>), 6f);</div>
-<div class="line"><span class="lineno">  352</span>            picker.add(<span class="keyword">new</span> SleeperPodsSpecialCreator(random, SleeperSpecialType.ORGANS, 1, 5, <span class="keyword">null</span>), 3f);</div>
-<div class="line"><span class="lineno">  353</span>            picker.add(<span class="keyword">new</span> SleeperPodsSpecialCreator(random, SleeperSpecialType.OFFICER, <a class="code hl_variable" href="../../d1/d2a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssigner.html#a48c9bf428f3c258f378b2dc8591b3bea">STANDARD_PODS_OFFICER_LEVEL</a>, maxPodsOfficerLevel, officerFactions), 1f);</div>
-<div class="line"><span class="lineno">  354</span>            picker.add(<span class="keyword">new</span> SleeperPodsSpecialCreator(random, SleeperSpecialType.ADMIN, 1, 5, officerFactions), 0.2f);</div>
-<div class="line"><span class="lineno">  355</span>            picker.add(<span class="keyword">new</span> CargoManifestSpecialCreator(random, valuableCargo, 10, 50), 10f);</div>
-<div class="line"><span class="lineno">  356</span>            picker.add(<span class="keyword">new</span> SurveyDataSpecialCreator(random, SurveyDataSpecialType.AUTO_PICK_NOT_SYSTEM), 10f);</div>
-<div class="line"><span class="lineno">  357</span>            picker.add(<span class="keyword">new</span> BreadcrumbSpecialCreator(random, context.all), 10f);</div>
-<div class="line"><span class="lineno">  358</span>            picker.add(<span class="keyword">new</span> TransmitterTrapSpecialCreator(random, 0.5f, FleetTypes.PATROL_SMALL, trapFactions, 4, 25), 10f);</div>
-<div class="line"><span class="lineno">  359</span>            picker.add(<span class="keyword">new</span> TopographicDataSpecialCreator(random, HTPoints.LOW_MIN, HTPoints.LOW_MAX), 1f);</div>
-<div class="line"><span class="lineno">  360</span>        }</div>
-<div class="line"><span class="lineno">  361</span>        </div>
-<div class="line"><span class="lineno">  362</span>        <span class="keywordflow">if</span> (Entities.STATION_MINING_REMNANT.equals(type) || Entities.STATION_MINING.equals(type)) {</div>
-<div class="line"><span class="lineno">  363</span>            picker.add(<span class="keyword">new</span> NothingSpecialCreator(), 30f);</div>
-<div class="line"><span class="lineno">  364</span>            picker.add(<span class="keyword">new</span> ShipRecoverySpecialCreator(random, 1, 3, <span class="keyword">false</span>, DerelictType.CIVILIAN, recoverableShipFactions), 10f);</div>
-<div class="line"><span class="lineno">  365</span>            picker.add(<span class="keyword">new</span> SleeperPodsSpecialCreator(random, SleeperSpecialType.MARINES, 10, 20, <span class="keyword">null</span>), 1f);</div>
-<div class="line"><span class="lineno">  366</span>            picker.add(<span class="keyword">new</span> SleeperPodsSpecialCreator(random, SleeperSpecialType.CREW, 100, 200, <span class="keyword">null</span>), 6f);</div>
-<div class="line"><span class="lineno">  367</span>            picker.add(<span class="keyword">new</span> SleeperPodsSpecialCreator(random, SleeperSpecialType.ORGANS, 5, 50, <span class="keyword">null</span>), 3f);</div>
-<div class="line"><span class="lineno">  368</span>            picker.add(<span class="keyword">new</span> SleeperPodsSpecialCreator(random, SleeperSpecialType.OFFICER, <a class="code hl_variable" href="../../d1/d2a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssigner.html#a48c9bf428f3c258f378b2dc8591b3bea">STANDARD_PODS_OFFICER_LEVEL</a>, maxPodsOfficerLevel, officerFactions), 1f);</div>
-<div class="line"><span class="lineno">  369</span>            picker.add(<span class="keyword">new</span> SleeperPodsSpecialCreator(random, SleeperSpecialType.ADMIN, 1, 5, officerFactions), 3f);</div>
-<div class="line"><span class="lineno">  370</span>            picker.add(<span class="keyword">new</span> CargoManifestSpecialCreator(random, industryCargo, 50, 250), 30f);</div>
-<div class="line"><span class="lineno">  371</span>            picker.add(<span class="keyword">new</span> SurveyDataSpecialCreator(random, SurveyDataSpecialType.AUTO_PICK), 20f);</div>
-<div class="line"><span class="lineno">  372</span>            picker.add(<span class="keyword">new</span> BreadcrumbSpecialCreator(random, context.all), 10f);</div>
-<div class="line"><span class="lineno">  373</span>            picker.add(<span class="keyword">new</span> TransmitterTrapSpecialCreator(random, 0.5f, FleetTypes.PATROL_MEDIUM, trapFactions, 10, 16), 10f);</div>
-<div class="line"><span class="lineno">  374</span>            picker.add(<span class="keyword">new</span> TopographicDataSpecialCreator(random, HTPoints.MEDIUM_MIN, HTPoints.MEDIUM_MAX), 1f);</div>
-<div class="line"><span class="lineno">  375</span>        }</div>
-<div class="line"><span class="lineno">  376</span>        </div>
-<div class="line"><span class="lineno">  377</span>        <span class="keywordflow">if</span> (Entities.STATION_RESEARCH_REMNANT.equals(type) || Entities.STATION_RESEARCH.equals(type)) {</div>
-<div class="line"><span class="lineno">  378</span>            picker.add(<span class="keyword">new</span> NothingSpecialCreator(), 30f);</div>
-<div class="line"><span class="lineno">  379</span>            picker.add(<span class="keyword">new</span> ShipRecoverySpecialCreator(random, 1, 3, <span class="keyword">false</span>, DerelictType.CIVILIAN, recoverableShipFactions), 10f);</div>
-<div class="line"><span class="lineno">  380</span>            picker.add(<span class="keyword">new</span> SleeperPodsSpecialCreator(random, SleeperSpecialType.MARINES, 50, 100, <span class="keyword">null</span>), 2f);</div>
-<div class="line"><span class="lineno">  381</span>            picker.add(<span class="keyword">new</span> SleeperPodsSpecialCreator(random, SleeperSpecialType.CREW, 100, 200, <span class="keyword">null</span>), 6f);</div>
-<div class="line"><span class="lineno">  382</span>            picker.add(<span class="keyword">new</span> SleeperPodsSpecialCreator(random, SleeperSpecialType.ORGANS, 5, 50, <span class="keyword">null</span>), 3f);</div>
-<div class="line"><span class="lineno">  383</span>            picker.add(<span class="keyword">new</span> SleeperPodsSpecialCreator(random, SleeperSpecialType.OFFICER, <a class="code hl_variable" href="../../d1/d2a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssigner.html#a48c9bf428f3c258f378b2dc8591b3bea">STANDARD_PODS_OFFICER_LEVEL</a>, maxPodsOfficerLevel, officerFactions), 1f);</div>
-<div class="line"><span class="lineno">  384</span>            picker.add(<span class="keyword">new</span> SleeperPodsSpecialCreator(random, SleeperSpecialType.ADMIN, 1, 5, officerFactions), 3f);</div>
-<div class="line"><span class="lineno">  385</span>            picker.add(<span class="keyword">new</span> CargoManifestSpecialCreator(random, valuableCargo, 10, 30), 10f);</div>
-<div class="line"><span class="lineno">  386</span>            picker.add(<span class="keyword">new</span> SurveyDataSpecialCreator(random, SurveyDataSpecialType.AUTO_PICK), 10f);</div>
-<div class="line"><span class="lineno">  387</span>            picker.add(<span class="keyword">new</span> BreadcrumbSpecialCreator(random, context.all), 10f);</div>
-<div class="line"><span class="lineno">  388</span>            picker.add(<span class="keyword">new</span> TransmitterTrapSpecialCreator(random, 0.5f, FleetTypes.PATROL_MEDIUM, trapFactions, 10, 16), 20f);</div>
-<div class="line"><span class="lineno">  389</span>            picker.add(<span class="keyword">new</span> TopographicDataSpecialCreator(random, HTPoints.HIGH_MIN, HTPoints.HIGH_MAX), 10f);</div>
-<div class="line"><span class="lineno">  390</span>        }</div>
-<div class="line"><span class="lineno">  391</span>        </div>
-<div class="line"><span class="lineno">  392</span>        <span class="keywordflow">if</span> (Entities.ORBITAL_HABITAT_REMNANT.equals(type) || Entities.ORBITAL_HABITAT.equals(type)) {</div>
-<div class="line"><span class="lineno">  393</span>            picker.add(<span class="keyword">new</span> NothingSpecialCreator(), 40f);</div>
-<div class="line"><span class="lineno">  394</span>            picker.add(<span class="keyword">new</span> ShipRecoverySpecialCreator(random, 1, 3, <span class="keyword">false</span>, DerelictType.CIVILIAN, recoverableShipFactions), 20f);</div>
-<div class="line"><span class="lineno">  395</span>            picker.add(<span class="keyword">new</span> SleeperPodsSpecialCreator(random, SleeperSpecialType.MARINES, 50, 100, <span class="keyword">null</span>), 6f);</div>
-<div class="line"><span class="lineno">  396</span>            picker.add(<span class="keyword">new</span> SleeperPodsSpecialCreator(random, SleeperSpecialType.CREW, 100, 200, <span class="keyword">null</span>), 20f);</div>
-<div class="line"><span class="lineno">  397</span>            picker.add(<span class="keyword">new</span> SleeperPodsSpecialCreator(random, SleeperSpecialType.ORGANS, 5, 50, <span class="keyword">null</span>), 5f);</div>
-<div class="line"><span class="lineno">  398</span>            picker.add(<span class="keyword">new</span> SleeperPodsSpecialCreator(random, SleeperSpecialType.OFFICER, <a class="code hl_variable" href="../../d1/d2a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssigner.html#a48c9bf428f3c258f378b2dc8591b3bea">STANDARD_PODS_OFFICER_LEVEL</a>, maxPodsOfficerLevel, officerFactions), 10f);</div>
-<div class="line"><span class="lineno">  399</span>            picker.add(<span class="keyword">new</span> SleeperPodsSpecialCreator(random, SleeperSpecialType.ADMIN, 1, 5, officerFactions), 5f);</div>
-<div class="line"><span class="lineno">  400</span>            picker.add(<span class="keyword">new</span> CargoManifestSpecialCreator(random, habCargo, 10, 30), 10f);</div>
-<div class="line"><span class="lineno">  401</span>            picker.add(<span class="keyword">new</span> SurveyDataSpecialCreator(random, SurveyDataSpecialType.AUTO_PICK), 5f);</div>
-<div class="line"><span class="lineno">  402</span>            picker.add(<span class="keyword">new</span> BreadcrumbSpecialCreator(random, context.all), 10f);</div>
-<div class="line"><span class="lineno">  403</span>            picker.add(<span class="keyword">new</span> TransmitterTrapSpecialCreator(random, 0.5f, FleetTypes.PATROL_MEDIUM, trapFactions, 10, 16), 10f);</div>
-<div class="line"><span class="lineno">  404</span>            picker.add(<span class="keyword">new</span> TopographicDataSpecialCreator(random, HTPoints.MEDIUM_MIN, HTPoints.MEDIUM_MAX), 2f);</div>
-<div class="line"><span class="lineno">  405</span>        }</div>
-<div class="line"><span class="lineno">  406</span>        </div>
-<div class="line"><span class="lineno">  407</span>        </div>
-<div class="line"><span class="lineno">  408</span>        List&lt;String&gt; weapons = Arrays.asList(Entities.WEAPONS_CACHE, Entities.WEAPONS_CACHE_HIGH, Entities.WEAPONS_CACHE_LOW, Entities.WEAPONS_CACHE_REMNANT);</div>
-<div class="line"><span class="lineno">  409</span>        <span class="keywordflow">if</span> (weapons.contains(type)) {</div>
-<div class="line"><span class="lineno">  410</span>            picker.add(<span class="keyword">new</span> NothingSpecialCreator(), 30f);</div>
-<div class="line"><span class="lineno">  411</span>            picker.add(<span class="keyword">new</span> ShipRecoverySpecialCreator(random, 1, 1, <span class="keyword">false</span>, DerelictType.SMALL, recoverableShipFactions), 10f);</div>
-<div class="line"><span class="lineno">  412</span>            picker.add(<span class="keyword">new</span> SleeperPodsSpecialCreator(random, SleeperSpecialType.MARINES, 50, 100, <span class="keyword">null</span>), 1f);</div>
-<div class="line"><span class="lineno">  413</span>            picker.add(<span class="keyword">new</span> SleeperPodsSpecialCreator(random, SleeperSpecialType.OFFICER, <a class="code hl_variable" href="../../d1/d2a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssigner.html#a48c9bf428f3c258f378b2dc8591b3bea">STANDARD_PODS_OFFICER_LEVEL</a>, maxPodsOfficerLevel, officerFactions), 2f);</div>
-<div class="line"><span class="lineno">  414</span>            picker.add(<span class="keyword">new</span> CargoManifestSpecialCreator(random, valuableCargo, 10, 30), 10f);</div>
-<div class="line"><span class="lineno">  415</span>            picker.add(<span class="keyword">new</span> TransmitterTrapSpecialCreator(random, 0.5f, FleetTypes.PATROL_SMALL, trapFactions, 4, 8), 10f);</div>
-<div class="line"><span class="lineno">  416</span>        }</div>
-<div class="line"><span class="lineno">  417</span>        </div>
-<div class="line"><span class="lineno">  418</span>        List&lt;String&gt; weaponsSmall = Arrays.asList(Entities.WEAPONS_CACHE_SMALL, Entities.WEAPONS_CACHE_SMALL_HIGH,</div>
-<div class="line"><span class="lineno">  419</span>                                Entities.WEAPONS_CACHE_SMALL_LOW, Entities.WEAPONS_CACHE_SMALL_REMNANT);</div>
-<div class="line"><span class="lineno">  420</span>        <span class="keywordflow">if</span> (weaponsSmall.contains(type)) {</div>
-<div class="line"><span class="lineno">  421</span>            picker.add(<span class="keyword">new</span> NothingSpecialCreator(), 30f);</div>
-<div class="line"><span class="lineno">  422</span>            picker.add(<span class="keyword">new</span> ShipRecoverySpecialCreator(random, 1, 1, <span class="keyword">false</span>, DerelictType.SMALL, recoverableShipFactions), 10f);</div>
-<div class="line"><span class="lineno">  423</span>            picker.add(<span class="keyword">new</span> SleeperPodsSpecialCreator(random, SleeperSpecialType.OFFICER, <a class="code hl_variable" href="../../d1/d2a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssigner.html#a48c9bf428f3c258f378b2dc8591b3bea">STANDARD_PODS_OFFICER_LEVEL</a>, maxPodsOfficerLevel, officerFactions), 1f);</div>
-<div class="line"><span class="lineno">  424</span>            picker.add(<span class="keyword">new</span> CargoManifestSpecialCreator(random, valuableCargo, 10, 30), 10f);</div>
-<div class="line"><span class="lineno">  425</span>            picker.add(<span class="keyword">new</span> TransmitterTrapSpecialCreator(random, 0.5f, FleetTypes.PATROL_SMALL, trapFactions, 4, 8), 10f);</div>
-<div class="line"><span class="lineno">  426</span>        }       </div>
-<div class="line"><span class="lineno">  427</span>        </div>
-<div class="line"><span class="lineno">  428</span>        </div>
-<div class="line"><span class="lineno">  429</span>        List&lt;String&gt; supplies = Arrays.asList(Entities.SUPPLY_CACHE);</div>
-<div class="line"><span class="lineno">  430</span>        <span class="keywordflow">if</span> (supplies.contains(type)) {</div>
-<div class="line"><span class="lineno">  431</span>            picker.add(<span class="keyword">new</span> NothingSpecialCreator(), 30f);</div>
-<div class="line"><span class="lineno">  432</span>            picker.add(<span class="keyword">new</span> ShipRecoverySpecialCreator(random, 1, 1, <span class="keyword">false</span>, DerelictType.SMALL, recoverableShipFactions), 10f);</div>
-<div class="line"><span class="lineno">  433</span>            picker.add(<span class="keyword">new</span> SleeperPodsSpecialCreator(random, SleeperSpecialType.OFFICER, <a class="code hl_variable" href="../../d1/d2a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssigner.html#a48c9bf428f3c258f378b2dc8591b3bea">STANDARD_PODS_OFFICER_LEVEL</a>, maxPodsOfficerLevel, officerFactions), 1f);</div>
-<div class="line"><span class="lineno">  434</span>            picker.add(<span class="keyword">new</span> SleeperPodsSpecialCreator(random, SleeperSpecialType.ADMIN, 1, 5, officerFactions), 0.2f);</div>
-<div class="line"><span class="lineno">  435</span>            picker.add(<span class="keyword">new</span> CargoManifestSpecialCreator(random, valuableCargo, 10, 30), 10f);</div>
-<div class="line"><span class="lineno">  436</span>            picker.add(<span class="keyword">new</span> TransmitterTrapSpecialCreator(random, 0.5f, FleetTypes.PATROL_SMALL, trapFactions, 4, 8), 10f);</div>
-<div class="line"><span class="lineno">  437</span>        }</div>
-<div class="line"><span class="lineno">  438</span>        </div>
-<div class="line"><span class="lineno">  439</span>        List&lt;String&gt; suppliesSmall = Arrays.asList(Entities.SUPPLY_CACHE_SMALL);</div>
-<div class="line"><span class="lineno">  440</span>        <span class="keywordflow">if</span> (suppliesSmall.contains(type)) {</div>
-<div class="line"><span class="lineno">  441</span>            picker.add(<span class="keyword">new</span> NothingSpecialCreator(), 30f);</div>
-<div class="line"><span class="lineno">  442</span>            picker.add(<span class="keyword">new</span> ShipRecoverySpecialCreator(random, 1, 1, <span class="keyword">false</span>, DerelictType.SMALL, recoverableShipFactions), 10f);</div>
-<div class="line"><span class="lineno">  443</span>            picker.add(<span class="keyword">new</span> SleeperPodsSpecialCreator(random, SleeperSpecialType.OFFICER, <a class="code hl_variable" href="../../d1/d2a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssigner.html#a48c9bf428f3c258f378b2dc8591b3bea">STANDARD_PODS_OFFICER_LEVEL</a>, maxPodsOfficerLevel, officerFactions), 1f);</div>
-<div class="line"><span class="lineno">  444</span>            picker.add(<span class="keyword">new</span> SleeperPodsSpecialCreator(random, SleeperSpecialType.ADMIN, 1, 5, officerFactions), 0.2f);</div>
-<div class="line"><span class="lineno">  445</span>            picker.add(<span class="keyword">new</span> CargoManifestSpecialCreator(random, valuableCargo, 10, 30), 10f);</div>
-<div class="line"><span class="lineno">  446</span>            picker.add(<span class="keyword">new</span> TransmitterTrapSpecialCreator(random, 0.5f, FleetTypes.PATROL_SMALL, trapFactions, 4, 8), 10f);</div>
-<div class="line"><span class="lineno">  447</span>        }</div>
-<div class="line"><span class="lineno">  448</span>        </div>
-<div class="line"><span class="lineno">  449</span>        </div>
-<div class="line"><span class="lineno">  450</span>        List&lt;String&gt; equipment = Arrays.asList(Entities.EQUIPMENT_CACHE);</div>
-<div class="line"><span class="lineno">  451</span>        <span class="keywordflow">if</span> (equipment.contains(type)) {</div>
-<div class="line"><span class="lineno">  452</span>            picker.add(<span class="keyword">new</span> NothingSpecialCreator(), 30f);</div>
-<div class="line"><span class="lineno">  453</span>            picker.add(<span class="keyword">new</span> ShipRecoverySpecialCreator(random, 1, 1, <span class="keyword">false</span>, DerelictType.SMALL, recoverableShipFactions), 10f);</div>
-<div class="line"><span class="lineno">  454</span>            picker.add(<span class="keyword">new</span> SleeperPodsSpecialCreator(random, SleeperSpecialType.OFFICER, <a class="code hl_variable" href="../../d1/d2a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssigner.html#a48c9bf428f3c258f378b2dc8591b3bea">STANDARD_PODS_OFFICER_LEVEL</a>, maxPodsOfficerLevel, officerFactions), 1f);</div>
-<div class="line"><span class="lineno">  455</span>            picker.add(<span class="keyword">new</span> SleeperPodsSpecialCreator(random, SleeperSpecialType.ADMIN, 1, 5, officerFactions), 0.2f);</div>
-<div class="line"><span class="lineno">  456</span>            picker.add(<span class="keyword">new</span> CargoManifestSpecialCreator(random, industryCargo, 10, 30), 10f);</div>
-<div class="line"><span class="lineno">  457</span>            picker.add(<span class="keyword">new</span> TransmitterTrapSpecialCreator(random, 0.5f, FleetTypes.PATROL_SMALL, trapFactions, 4, 8), 10f);</div>
-<div class="line"><span class="lineno">  458</span>            picker.add(<span class="keyword">new</span> TopographicDataSpecialCreator(random, HTPoints.LOW_MIN, HTPoints.LOW_MAX), 1f);</div>
-<div class="line"><span class="lineno">  459</span>        }</div>
-<div class="line"><span class="lineno">  460</span>        </div>
-<div class="line"><span class="lineno">  461</span>        List&lt;String&gt; equipmentSmall = Arrays.asList(Entities.EQUIPMENT_CACHE_SMALL);</div>
-<div class="line"><span class="lineno">  462</span>        <span class="keywordflow">if</span> (equipmentSmall.contains(type)) {</div>
-<div class="line"><span class="lineno">  463</span>            picker.add(<span class="keyword">new</span> NothingSpecialCreator(), 30f);</div>
-<div class="line"><span class="lineno">  464</span>            picker.add(<span class="keyword">new</span> ShipRecoverySpecialCreator(random, 1, 1, <span class="keyword">false</span>, DerelictType.SMALL, recoverableShipFactions), 10f);</div>
-<div class="line"><span class="lineno">  465</span>            picker.add(<span class="keyword">new</span> SleeperPodsSpecialCreator(random, SleeperSpecialType.OFFICER, <a class="code hl_variable" href="../../d1/d2a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssigner.html#a48c9bf428f3c258f378b2dc8591b3bea">STANDARD_PODS_OFFICER_LEVEL</a>, maxPodsOfficerLevel, officerFactions), 1f);</div>
-<div class="line"><span class="lineno">  466</span>            picker.add(<span class="keyword">new</span> SleeperPodsSpecialCreator(random, SleeperSpecialType.ADMIN, 1, 5, officerFactions), 0.2f);</div>
-<div class="line"><span class="lineno">  467</span>            picker.add(<span class="keyword">new</span> CargoManifestSpecialCreator(random, industryCargo, 10, 30), 10f);</div>
-<div class="line"><span class="lineno">  468</span>            picker.add(<span class="keyword">new</span> TransmitterTrapSpecialCreator(random, 0.5f, FleetTypes.PATROL_SMALL, trapFactions, 4, 8), 10f);</div>
-<div class="line"><span class="lineno">  469</span>        }</div>
-<div class="line"><span class="lineno">  470</span>        </div>
-<div class="line"><span class="lineno">  471</span>        </div>
-<div class="line"><span class="lineno">  472</span>        <span class="keywordflow">return</span> picker.pick();</div>
-<div class="line"><span class="lineno">  473</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssigner_html_a42bd132384df1b9f1ef2dd584bff1f23"><div class="ttname"><a href="../../d1/d2a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssigner.html#a42bd132384df1b9f1ef2dd584bff1f23">com.fs.starfarer.api.impl.campaign.procgen.themes.SalvageSpecialAssigner.getIndustryCargo</a></div><div class="ttdeci">static WeightedRandomPicker&lt; String &gt; getIndustryCargo(Random random)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d94/SalvageSpecialAssigner_8java_source.html#l00178">SalvageSpecialAssigner.java:178</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssigner_html_ac498d10cf4303ddb0574e47d97156025"><div class="ttname"><a href="../../d1/d2a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssigner.html#ac498d10cf4303ddb0574e47d97156025">com.fs.starfarer.api.impl.campaign.procgen.themes.SalvageSpecialAssigner.getHabCargo</a></div><div class="ttdeci">static WeightedRandomPicker&lt; String &gt; getHabCargo(Random random)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d94/SalvageSpecialAssigner_8java_source.html#l00185">SalvageSpecialAssigner.java:185</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -186,33 +187,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d82/ShoveFleetScript_8java_source.html#l00022">22</a> of file <a class="el" href="../../d0/d82/ShoveFleetScript_8java_source.html">ShoveFleetScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   22</span>                                                                                      {</div>
-<div class="line"><span class="lineno">   23</span>        this.fleet = <a class="code hl_variable" href="../../d4/d7f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1ShoveFleetScript.html#a859c5bac3d8d24a2be219104f87acb9a">fleet</a>;</div>
-<div class="line"><span class="lineno">   24</span>        this.intensity = <a class="code hl_variable" href="../../d4/d7f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1ShoveFleetScript.html#a2fca7b301461a1c9a537ba71c4540c94">intensity</a>;</div>
-<div class="line"><span class="lineno">   25</span>        this.angle = direction;</div>
-<div class="line"><span class="lineno">   26</span>        </div>
-<div class="line"><span class="lineno">   27</span>        <span class="comment">//DURATION_SECONDS = 0.1f;</span></div>
-<div class="line"><span class="lineno">   28</span>        </div>
-<div class="line"><span class="lineno">   29</span>        <a class="code hl_variable" href="../../d4/d7f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1ShoveFleetScript.html#a67346ebe690336facc6242e5e9ca9985">dV</a> = Misc.getUnitVectorAtDegreeAngle(<a class="code hl_variable" href="../../d4/d7f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1ShoveFleetScript.html#a333091a741d273fed4cd061fb2a80e5c">angle</a>);</div>
-<div class="line"><span class="lineno">   30</span>        </div>
-<div class="line"><span class="lineno">   31</span>        <span class="keywordtype">float</span> fleetWeightFactor = (float) <a class="code hl_variable" href="../../d4/d7f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1ShoveFleetScript.html#a859c5bac3d8d24a2be219104f87acb9a">fleet</a>.<a class="code hl_function" href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a2f64517a0c1bd9f51740fee49142d806">getFleetPoints</a>() / 200f;</div>
-<div class="line"><span class="lineno">   32</span>        <span class="keywordflow">if</span> (fleetWeightFactor &gt; 1f) fleetWeightFactor = 1f;</div>
-<div class="line"><span class="lineno">   33</span>        fleetWeightFactor = 0.5f + 1f * (1f - fleetWeightFactor);</div>
-<div class="line"><span class="lineno">   34</span>        </div>
-<div class="line"><span class="lineno">   35</span>        <span class="keywordtype">float</span> speed = <a class="code hl_variable" href="../../d4/d7f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1ShoveFleetScript.html#a1db239d5260d146302aa22cfe773350e">IMPACT_SPEED_DELTA</a> * 40f * <a class="code hl_variable" href="../../d4/d7f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1ShoveFleetScript.html#a2fca7b301461a1c9a537ba71c4540c94">intensity</a>;</div>
-<div class="line"><span class="lineno">   36</span>        <span class="keywordtype">float</span> <a class="code hl_variable" href="../../d4/d7f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1ShoveFleetScript.html#a939e9c7c980a334bf7093d52cf4ffc5c">impact</a> = speed * 1f * fleetWeightFactor; </div>
-<div class="line"><span class="lineno">   37</span>        <a class="code hl_variable" href="../../d4/d7f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1ShoveFleetScript.html#a67346ebe690336facc6242e5e9ca9985">dV</a>.scale(<a class="code hl_variable" href="../../d4/d7f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1ShoveFleetScript.html#a939e9c7c980a334bf7093d52cf4ffc5c">impact</a>);</div>
-<div class="line"><span class="lineno">   38</span>        <a class="code hl_variable" href="../../d4/d7f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1ShoveFleetScript.html#a67346ebe690336facc6242e5e9ca9985">dV</a>.scale(1f / <a class="code hl_variable" href="../../d4/d7f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1ShoveFleetScript.html#a9c3e7991eee7c80d3513e37ab5a69b53">DURATION_SECONDS</a>);</div>
-<div class="line"><span class="lineno">   39</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1ShoveFleetScript_html_a1db239d5260d146302aa22cfe773350e"><div class="ttname"><a href="../../d4/d7f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1ShoveFleetScript.html#a1db239d5260d146302aa22cfe773350e">com.fs.starfarer.api.impl.campaign.terrain.ShoveFleetScript.IMPACT_SPEED_DELTA</a></div><div class="ttdeci">static float IMPACT_SPEED_DELTA</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d82/ShoveFleetScript_8java_source.html#l00012">ShoveFleetScript.java:12</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1ShoveFleetScript_html_a2fca7b301461a1c9a537ba71c4540c94"><div class="ttname"><a href="../../d4/d7f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1ShoveFleetScript.html#a2fca7b301461a1c9a537ba71c4540c94">com.fs.starfarer.api.impl.campaign.terrain.ShoveFleetScript.intensity</a></div><div class="ttdeci">float intensity</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d82/ShoveFleetScript_8java_source.html#l00018">ShoveFleetScript.java:18</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1ShoveFleetScript_html_a333091a741d273fed4cd061fb2a80e5c"><div class="ttname"><a href="../../d4/d7f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1ShoveFleetScript.html#a333091a741d273fed4cd061fb2a80e5c">com.fs.starfarer.api.impl.campaign.terrain.ShoveFleetScript.angle</a></div><div class="ttdeci">float angle</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d82/ShoveFleetScript_8java_source.html#l00017">ShoveFleetScript.java:17</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1ShoveFleetScript_html_a67346ebe690336facc6242e5e9ca9985"><div class="ttname"><a href="../../d4/d7f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1ShoveFleetScript.html#a67346ebe690336facc6242e5e9ca9985">com.fs.starfarer.api.impl.campaign.terrain.ShoveFleetScript.dV</a></div><div class="ttdeci">Vector2f dV</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d82/ShoveFleetScript_8java_source.html#l00020">ShoveFleetScript.java:20</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1ShoveFleetScript_html_a859c5bac3d8d24a2be219104f87acb9a"><div class="ttname"><a href="../../d4/d7f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1ShoveFleetScript.html#a859c5bac3d8d24a2be219104f87acb9a">com.fs.starfarer.api.impl.campaign.terrain.ShoveFleetScript.fleet</a></div><div class="ttdeci">CampaignFleetAPI fleet</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d82/ShoveFleetScript_8java_source.html#l00015">ShoveFleetScript.java:15</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1ShoveFleetScript_html_a939e9c7c980a334bf7093d52cf4ffc5c"><div class="ttname"><a href="../../d4/d7f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1ShoveFleetScript.html#a939e9c7c980a334bf7093d52cf4ffc5c">com.fs.starfarer.api.impl.campaign.terrain.ShoveFleetScript.impact</a></div><div class="ttdeci">float impact</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d82/ShoveFleetScript_8java_source.html#l00019">ShoveFleetScript.java:19</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1ShoveFleetScript_html_a9c3e7991eee7c80d3513e37ab5a69b53"><div class="ttname"><a href="../../d4/d7f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1ShoveFleetScript.html#a9c3e7991eee7c80d3513e37ab5a69b53">com.fs.starfarer.api.impl.campaign.terrain.ShoveFleetScript.DURATION_SECONDS</a></div><div class="ttdeci">static float DURATION_SECONDS</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d82/ShoveFleetScript_8java_source.html#l00013">ShoveFleetScript.java:13</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI_html_a2f64517a0c1bd9f51740fee49142d806"><div class="ttname"><a href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a2f64517a0c1bd9f51740fee49142d806">com.fs.starfarer.api.campaign.CampaignFleetAPI.getFleetPoints</a></div><div class="ttdeci">int getFleetPoints()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -241,33 +216,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d7/d63/interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html#a3a97090ca8cfdc230e9ad7e633407af6">com.fs.starfarer.api.EveryFrameScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d82/ShoveFleetScript_8java_source.html#l00041">41</a> of file <a class="el" href="../../d0/d82/ShoveFleetScript_8java_source.html">ShoveFleetScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   41</span>                                      {</div>
-<div class="line"><span class="lineno">   42</span>        </div>
-<div class="line"><span class="lineno">   43</span>        <a class="code hl_variable" href="../../d4/d7f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1ShoveFleetScript.html#a859c5bac3d8d24a2be219104f87acb9a">fleet</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a935dcc6387bfda0c16fc38d31b2cb545">setOrbit</a>(<span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   44</span>        </div>
-<div class="line"><span class="lineno">   45</span>        Vector2f v = <a class="code hl_variable" href="../../d4/d7f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1ShoveFleetScript.html#a859c5bac3d8d24a2be219104f87acb9a">fleet</a>.<a class="code hl_function" href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a9f05de8765f2fecb8382d0b8070b8f4f">getVelocity</a>();</div>
-<div class="line"><span class="lineno">   46</span>        <a class="code hl_variable" href="../../d4/d7f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1ShoveFleetScript.html#a859c5bac3d8d24a2be219104f87acb9a">fleet</a>.<a class="code hl_function" href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a57d63ab8bfe7af322ad52200c145b772">setVelocity</a>(v.x + <a class="code hl_variable" href="../../d4/d7f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1ShoveFleetScript.html#a67346ebe690336facc6242e5e9ca9985">dV</a>.x * amount, v.y + <a class="code hl_variable" href="../../d4/d7f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1ShoveFleetScript.html#a67346ebe690336facc6242e5e9ca9985">dV</a>.y * amount);</div>
-<div class="line"><span class="lineno">   47</span>        </div>
-<div class="line"><span class="lineno">   48</span><span class="comment">//      Vector2f dir = Misc.getUnitVectorAtDegreeAngle(angle);</span></div>
-<div class="line"><span class="lineno">   49</span><span class="comment">//      </span></div>
-<div class="line"><span class="lineno">   50</span><span class="comment">//      float fleetWeightFactor = (float) fleet.getFleetPoints() / 200f;</span></div>
-<div class="line"><span class="lineno">   51</span><span class="comment">//      if (fleetWeightFactor &gt; 1f) fleetWeightFactor = 1f;</span></div>
-<div class="line"><span class="lineno">   52</span><span class="comment">//      fleetWeightFactor = 0.5f + 1f * (1f - fleetWeightFactor);</span></div>
-<div class="line"><span class="lineno">   53</span><span class="comment">//      </span></div>
-<div class="line"><span class="lineno">   54</span><span class="comment">//      dir.scale(IMPACT_SPEED_DELTA * intensity * fleetWeightFactor* amount * </span></div>
-<div class="line"><span class="lineno">   55</span><span class="comment">//          (Math.min(20f, Math.max(10f, fleet.getCurrBurnLevel())) * 50f) * (0.5f + (float) Math.random() * 0.5f));</span></div>
-<div class="line"><span class="lineno">   56</span><span class="comment">//      </span></div>
-<div class="line"><span class="lineno">   57</span><span class="comment">//      Vector2f v = fleet.getVelocity();</span></div>
-<div class="line"><span class="lineno">   58</span><span class="comment">//      fleet.setVelocity(v.x + dir.x, v.y + dir.y);</span></div>
-<div class="line"><span class="lineno">   59</span>        </div>
-<div class="line"><span class="lineno">   60</span>        <a class="code hl_variable" href="../../d4/d7f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1ShoveFleetScript.html#acbc3f7f0772c042d190df21d66014d22">elapsed</a> += amount;</div>
-<div class="line"><span class="lineno">   61</span>        </div>
-<div class="line"><span class="lineno">   62</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1ShoveFleetScript_html_acbc3f7f0772c042d190df21d66014d22"><div class="ttname"><a href="../../d4/d7f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1ShoveFleetScript.html#acbc3f7f0772c042d190df21d66014d22">com.fs.starfarer.api.impl.campaign.terrain.ShoveFleetScript.elapsed</a></div><div class="ttdeci">float elapsed</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d82/ShoveFleetScript_8java_source.html#l00016">ShoveFleetScript.java:16</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI_html_a57d63ab8bfe7af322ad52200c145b772"><div class="ttname"><a href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a57d63ab8bfe7af322ad52200c145b772">com.fs.starfarer.api.campaign.CampaignFleetAPI.setVelocity</a></div><div class="ttdeci">void setVelocity(float x, float y)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI_html_a9f05de8765f2fecb8382d0b8070b8f4f"><div class="ttname"><a href="../../db/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a9f05de8765f2fecb8382d0b8070b8f4f">com.fs.starfarer.api.campaign.CampaignFleetAPI.getVelocity</a></div><div class="ttdeci">Vector2f getVelocity()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_a935dcc6387bfda0c16fc38d31b2cb545"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a935dcc6387bfda0c16fc38d31b2cb545">com.fs.starfarer.api.campaign.SectorEntityToken.setOrbit</a></div><div class="ttdeci">void setOrbit(OrbitAPI orbit)</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8508079dea0b4cfabc2fe2ebc6d3f966" name="a8508079dea0b4cfabc2fe2ebc6d3f966"></a>
@@ -289,10 +238,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d7/d63/interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html#a2b9a206acf99d1cdc1511885d14bb58c">com.fs.starfarer.api.EveryFrameScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d82/ShoveFleetScript_8java_source.html#l00064">64</a> of file <a class="el" href="../../d0/d82/ShoveFleetScript_8java_source.html">ShoveFleetScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   64</span>                            {</div>
-<div class="line"><span class="lineno">   65</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d4/d7f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1ShoveFleetScript.html#acbc3f7f0772c042d190df21d66014d22">elapsed</a> &gt;= <a class="code hl_variable" href="../../d4/d7f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1ShoveFleetScript.html#a9c3e7991eee7c80d3513e37ab5a69b53">DURATION_SECONDS</a>;</div>
-<div class="line"><span class="lineno">   66</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a891a332d63f1e3364426c0d3253eac9c" name="a891a332d63f1e3364426c0d3253eac9c"></a>
@@ -314,10 +260,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d7/d63/interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html#a6397d6c1c19a4dd0b58099219c0e0173">com.fs.starfarer.api.EveryFrameScript</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d82/ShoveFleetScript_8java_source.html#l00068">68</a> of file <a class="el" href="../../d0/d82/ShoveFleetScript_8java_source.html">ShoveFleetScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   68</span>                                    {</div>
-<div class="line"><span class="lineno">   69</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   70</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

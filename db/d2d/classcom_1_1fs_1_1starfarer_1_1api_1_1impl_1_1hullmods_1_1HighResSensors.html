@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -356,68 +357,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a33c67bf29e82daaad9e6a6ffcf0ee0b2">com.fs.starfarer.api.combat.BaseHullMod</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/d2d/HighResSensors_8java_source.html#l00105">105</a> of file <a class="el" href="../../df/d2d/HighResSensors_8java_source.html">HighResSensors.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  105</span>                                                                                                                                       {</div>
-<div class="line"><span class="lineno">  106</span>        <span class="keywordtype">float</span> pad = 3f;</div>
-<div class="line"><span class="lineno">  107</span>        <span class="keywordtype">float</span> opad = 10f;</div>
-<div class="line"><span class="lineno">  108</span>        Color h = Misc.getHighlightColor();</div>
-<div class="line"><span class="lineno">  109</span>        Color bad = Misc.getNegativeHighlightColor();</div>
-<div class="line"><span class="lineno">  110</span>        </div>
-<div class="line"><span class="lineno">  111</span>        tooltip.addPara(<span class="stringliteral">&quot;A ship with high resolution sensors increases the fleet&#39;s sensor range by %s/%s/%s/%s,&quot;</span> +</div>
-<div class="line"><span class="lineno">  112</span>                <span class="stringliteral">&quot; depending on hull size. &quot;</span> +</div>
-<div class="line"><span class="lineno">  113</span>                <span class="stringliteral">&quot;Each additional ship with high resolution sensors provides diminishing returns. &quot;</span> +</div>
-<div class="line"><span class="lineno">  114</span>                <span class="stringliteral">&quot;The higher the highest sensor range increase from a single ship in the fleet, the later diminishing returns kick in.&quot;</span>, </div>
-<div class="line"><span class="lineno">  115</span>                opad, h,</div>
-<div class="line"><span class="lineno">  116</span>                <span class="stringliteral">&quot;&quot;</span> + ((Float) mag.get(HullSize.FRIGATE)).intValue(),</div>
-<div class="line"><span class="lineno">  117</span>                <span class="stringliteral">&quot;&quot;</span> + ((Float) mag.get(HullSize.DESTROYER)).intValue(),</div>
-<div class="line"><span class="lineno">  118</span>                <span class="stringliteral">&quot;&quot;</span> + ((Float) mag.get(HullSize.CRUISER)).intValue(),</div>
-<div class="line"><span class="lineno">  119</span>                <span class="stringliteral">&quot;&quot;</span> + ((Float) mag.get(HullSize.CAPITAL_SHIP)).intValue()</div>
-<div class="line"><span class="lineno">  120</span>                );</div>
-<div class="line"><span class="lineno">  121</span>        </div>
-<div class="line"><span class="lineno">  122</span>        <span class="keywordflow">if</span> (isForModSpec || ship == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  123</span>        <span class="keywordflow">if</span> (Global.getSettings().getCurrentState() == GameState.TITLE) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  124</span>        </div>
-<div class="line"><span class="lineno">  125</span>        CampaignFleetAPI fleet = Global.getSector().getPlayerFleet();</div>
-<div class="line"><span class="lineno">  126</span>        <span class="keywordtype">float</span> fleetMod = <a class="code hl_function" href="../../db/d2d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1HighResSensors.html#a95fa52f6ab20f91e58fb1037acdca51a">getAdjustedHRSModifier</a>(fleet, <span class="keyword">null</span>, 0f);</div>
-<div class="line"><span class="lineno">  127</span>        <span class="keywordtype">float</span> currShipMod = (Float) mag.get(hullSize);</div>
-<div class="line"><span class="lineno">  128</span>        </div>
-<div class="line"><span class="lineno">  129</span>        <span class="keywordtype">float</span> fleetModWithOneMore = <a class="code hl_function" href="../../db/d2d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1HighResSensors.html#a95fa52f6ab20f91e58fb1037acdca51a">getAdjustedHRSModifier</a>(fleet, <span class="keyword">null</span>, currShipMod);</div>
-<div class="line"><span class="lineno">  130</span>        <span class="keywordtype">float</span> fleetModWithoutThisShip = <a class="code hl_function" href="../../db/d2d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1HighResSensors.html#a95fa52f6ab20f91e58fb1037acdca51a">getAdjustedHRSModifier</a>(fleet, ship.getFleetMemberId(), 0f);</div>
-<div class="line"><span class="lineno">  131</span>        </div>
-<div class="line"><span class="lineno">  132</span>        tooltip.addPara(<span class="stringliteral">&quot;The total sensor strength increase for your fleet is %s.&quot;</span>, opad, h,</div>
-<div class="line"><span class="lineno">  133</span>                <span class="stringliteral">&quot;&quot;</span> + (<span class="keywordtype">int</span>)Math.round(fleetMod));</div>
-<div class="line"><span class="lineno">  134</span>        </div>
-<div class="line"><span class="lineno">  135</span>        <span class="keywordtype">float</span> cr = ship.getCurrentCR();</div>
-<div class="line"><span class="lineno">  136</span>        <span class="keywordflow">for</span> (FleetMemberAPI member : Global.getSector().getPlayerFleet().getFleetData().getMembersListCopy()) {</div>
-<div class="line"><span class="lineno">  137</span>            <span class="keywordflow">if</span> (member.getId().equals(ship.getFleetMemberId())) {</div>
-<div class="line"><span class="lineno">  138</span>                cr = member.getRepairTracker().getCR();</div>
-<div class="line"><span class="lineno">  139</span>            }</div>
-<div class="line"><span class="lineno">  140</span>        }</div>
-<div class="line"><span class="lineno">  141</span>        </div>
-<div class="line"><span class="lineno">  142</span>        <span class="keywordflow">if</span> (cr &lt; <a class="code hl_variable" href="../../db/d2d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1HighResSensors.html#ae57352397e6af7de520e46a176a1acda">MIN_CR</a>) {</div>
-<div class="line"><span class="lineno">  143</span>            LabelAPI label = tooltip.addPara(<span class="stringliteral">&quot;This ship&#39;s combat readiness is below %s &quot;</span> +</div>
-<div class="line"><span class="lineno">  144</span>                    <span class="stringliteral">&quot;and its high resolution sensors can not be utilized. Bringing this ship into readiness &quot;</span> +</div>
-<div class="line"><span class="lineno">  145</span>                    <span class="stringliteral">&quot;would increase the fleetwide bonus to %s.&quot;</span>,</div>
-<div class="line"><span class="lineno">  146</span>                    opad, h,</div>
-<div class="line"><span class="lineno">  147</span>                    <span class="stringliteral">&quot;&quot;</span> + (<span class="keywordtype">int</span>) Math.round(<a class="code hl_variable" href="../../db/d2d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1HighResSensors.html#ae57352397e6af7de520e46a176a1acda">MIN_CR</a> * 100f) + <span class="stringliteral">&quot;%&quot;</span>,</div>
-<div class="line"><span class="lineno">  148</span>                    <span class="stringliteral">&quot;&quot;</span> + (<span class="keywordtype">int</span>)Math.round(fleetModWithOneMore));</div>
-<div class="line"><span class="lineno">  149</span>            label.setHighlightColors(bad, h);</div>
-<div class="line"><span class="lineno">  150</span>            label.setHighlight(<span class="stringliteral">&quot;&quot;</span> + (<span class="keywordtype">int</span>) Math.round(<a class="code hl_variable" href="../../db/d2d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1HighResSensors.html#ae57352397e6af7de520e46a176a1acda">MIN_CR</a> * 100f) + <span class="stringliteral">&quot;%&quot;</span>, <span class="stringliteral">&quot;&quot;</span> + (<span class="keywordtype">int</span>)Math.round(fleetModWithOneMore));</div>
-<div class="line"><span class="lineno">  151</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  152</span>            <span class="keywordflow">if</span> (fleetMod &gt; currShipMod) {</div>
-<div class="line"><span class="lineno">  153</span>                tooltip.addPara(<span class="stringliteral">&quot;Removing this ship would decrease it to %s. Adding another ship of the same type &quot;</span> +</div>
-<div class="line"><span class="lineno">  154</span>                        <span class="stringliteral">&quot;would increase it to %s.&quot;</span>, opad, h,</div>
-<div class="line"><span class="lineno">  155</span>                        <span class="stringliteral">&quot;&quot;</span> + (<span class="keywordtype">int</span>)Math.round(fleetModWithoutThisShip),</div>
-<div class="line"><span class="lineno">  156</span>                        <span class="stringliteral">&quot;&quot;</span> + (<span class="keywordtype">int</span>)Math.round(fleetModWithOneMore));</div>
-<div class="line"><span class="lineno">  157</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  158</span>                tooltip.addPara(<span class="stringliteral">&quot;Adding another ship of the same type &quot;</span> +</div>
-<div class="line"><span class="lineno">  159</span>                        <span class="stringliteral">&quot;would increase it to %s.&quot;</span>, opad, h,</div>
-<div class="line"><span class="lineno">  160</span>                        <span class="stringliteral">&quot;&quot;</span> + (<span class="keywordtype">int</span>)Math.round(fleetModWithOneMore));</div>
-<div class="line"><span class="lineno">  161</span>            }</div>
-<div class="line"><span class="lineno">  162</span>        }</div>
-<div class="line"><span class="lineno">  163</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1HighResSensors_html_a95fa52f6ab20f91e58fb1037acdca51a"><div class="ttname"><a href="../../db/d2d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1HighResSensors.html#a95fa52f6ab20f91e58fb1037acdca51a">com.fs.starfarer.api.impl.hullmods.HighResSensors.getAdjustedHRSModifier</a></div><div class="ttdeci">static float getAdjustedHRSModifier(CampaignFleetAPI fleet, String skipId, float add)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d2d/HighResSensors_8java_source.html#l00165">HighResSensors.java:165</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1HighResSensors_html_ae57352397e6af7de520e46a176a1acda"><div class="ttname"><a href="../../db/d2d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1HighResSensors.html#ae57352397e6af7de520e46a176a1acda">com.fs.starfarer.api.impl.hullmods.HighResSensors.MIN_CR</a></div><div class="ttdeci">static float MIN_CR</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d2d/HighResSensors_8java_source.html#l00026">HighResSensors.java:26</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="afd123d1014179c94f446e110fb252fff" name="afd123d1014179c94f446e110fb252fff"></a>
@@ -447,9 +387,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="../../dc/d34/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1HullModFleetEffect.html#ae4f88e61c31b68b677a3dd892c4ca2a6">com.fs.starfarer.api.combat.HullModFleetEffect</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/d2d/HighResSensors_8java_source.html#l00081">81</a> of file <a class="el" href="../../df/d2d/HighResSensors_8java_source.html">HighResSensors.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   81</span>                                                          {</div>
-<div class="line"><span class="lineno">   82</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5fc006507f462f6d32afd51f11382601" name="a5fc006507f462f6d32afd51f11382601"></a>
@@ -487,22 +425,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a3859215f6c3408946bf590a2ce5c0e74">com.fs.starfarer.api.combat.BaseHullMod</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/d2d/HighResSensors_8java_source.html#l00049">49</a> of file <a class="el" href="../../df/d2d/HighResSensors_8java_source.html">HighResSensors.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   49</span>                                                                                                        {</div>
-<div class="line"><span class="lineno">   50</span>        <span class="comment">//stats.getSensorStrength().modifyPercent(id, ((Float) mag.get(hullSize)).intValue());</span></div>
-<div class="line"><span class="lineno">   51</span><span class="comment">//      float bonus = BONUS;</span></div>
-<div class="line"><span class="lineno">   52</span><span class="comment">//      if (hullSize == HullSize.CAPITAL_SHIP) bonus = CAPITAL_BONUS;</span></div>
-<div class="line"><span class="lineno">   53</span><span class="comment">//      stats.getSensorStrength().modifyFlat(id, bonus);</span></div>
-<div class="line"><span class="lineno">   54</span>        </div>
-<div class="line"><span class="lineno">   55</span>        stats.getDynamic().getMod(Stats.HRS_SENSOR_RANGE_MOD).modifyFlat(<span class="keywordtype">id</span>, (Float) mag.get(hullSize));</div>
-<div class="line"><span class="lineno">   56</span>        </div>
-<div class="line"><span class="lineno">   57</span>        <span class="keywordtype">boolean</span> sMod = <a class="code hl_function" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a17449d5c7699039330e0d40d7f51dcd3">isSMod</a>(stats);</div>
-<div class="line"><span class="lineno">   58</span>        <span class="keywordflow">if</span> (sMod) {</div>
-<div class="line"><span class="lineno">   59</span>            <span class="keywordtype">float</span> mag = ((Float) combatMag.get(hullSize)).intValue();</div>
-<div class="line"><span class="lineno">   60</span>            stats.getSightRadiusMod().modifyFlat(<span class="keywordtype">id</span>, mag);</div>
-<div class="line"><span class="lineno">   61</span>        }</div>
-<div class="line"><span class="lineno">   62</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod_html_a17449d5c7699039330e0d40d7f51dcd3"><div class="ttname"><a href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a17449d5c7699039330e0d40d7f51dcd3">com.fs.starfarer.api.combat.BaseHullMod.isSMod</a></div><div class="ttdeci">boolean isSMod(MutableShipStatsAPI stats)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/da7/BaseHullMod_8java_source.html#l00029">BaseHullMod.java:29</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a95fa52f6ab20f91e58fb1037acdca51a" name="a95fa52f6ab20f91e58fb1037acdca51a"></a>
@@ -546,39 +469,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/d2d/HighResSensors_8java_source.html#l00165">165</a> of file <a class="el" href="../../df/d2d/HighResSensors_8java_source.html">HighResSensors.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  165</span>                                                                                                 {</div>
-<div class="line"><span class="lineno">  166</span>        <span class="keywordtype">float</span> max = 0f;</div>
-<div class="line"><span class="lineno">  167</span>        <span class="keywordtype">float</span> total = 0f;</div>
-<div class="line"><span class="lineno">  168</span>        <span class="keywordflow">for</span> (FleetMemberAPI member : fleet.getFleetData().getMembersListCopy()) {</div>
-<div class="line"><span class="lineno">  169</span>            <span class="keywordflow">if</span> (member.isMothballed()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  170</span>            <span class="keywordflow">if</span> (member.getRepairTracker().getCR() &lt; <a class="code hl_variable" href="../../db/d2d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1HighResSensors.html#ae57352397e6af7de520e46a176a1acda">MIN_CR</a>) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  171</span>            </div>
-<div class="line"><span class="lineno">  172</span>            <span class="keywordflow">if</span> (member.getId().equals(skipId)) { </div>
-<div class="line"><span class="lineno">  173</span>                <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  174</span>            }</div>
-<div class="line"><span class="lineno">  175</span>            <span class="keywordtype">float</span> v = member.getStats().getDynamic().getMod(Stats.HRS_SENSOR_RANGE_MOD).computeEffective(0f);</div>
-<div class="line"><span class="lineno">  176</span>            <span class="keywordflow">if</span> (v &lt;= 0) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  177</span>            </div>
-<div class="line"><span class="lineno">  178</span>            <span class="keywordflow">if</span> (v &gt; max) max = v;</div>
-<div class="line"><span class="lineno">  179</span>            total += v;</div>
-<div class="line"><span class="lineno">  180</span>        }</div>
-<div class="line"><span class="lineno">  181</span>        <span class="keywordflow">if</span> (add &gt; max) max = add;</div>
-<div class="line"><span class="lineno">  182</span>        total += add;</div>
-<div class="line"><span class="lineno">  183</span>        </div>
-<div class="line"><span class="lineno">  184</span>        <span class="keywordflow">if</span> (max &lt;= 0) <span class="keywordflow">return</span> 0f;</div>
-<div class="line"><span class="lineno">  185</span>        <span class="keywordtype">float</span> units = total / max;</div>
-<div class="line"><span class="lineno">  186</span>        <span class="keywordflow">if</span> (units &lt;= 1) <span class="keywordflow">return</span> max;</div>
-<div class="line"><span class="lineno">  187</span>        <span class="keywordtype">float</span> mult = Misc.logOfBase(2.5f, units) + 1f;</div>
-<div class="line"><span class="lineno">  188</span>        <span class="keywordtype">float</span> result = total * mult / units;</div>
-<div class="line"><span class="lineno">  189</span>        <span class="keywordflow">if</span> (result &lt;= 0) {</div>
-<div class="line"><span class="lineno">  190</span>            result = 0;</div>
-<div class="line"><span class="lineno">  191</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  192</span>            result = Math.round(result * 100f) / 100f;</div>
-<div class="line"><span class="lineno">  193</span>            result = Math.max(result, 1f);</div>
-<div class="line"><span class="lineno">  194</span>        }</div>
-<div class="line"><span class="lineno">  195</span>        <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">  196</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a78ea29c9db14ddbd4fcd92a89de88d3d" name="a78ea29c9db14ddbd4fcd92a89de88d3d"></a>
@@ -610,16 +501,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a5f6ac9583ca5b1606fda3e53f15c3d14">com.fs.starfarer.api.combat.BaseHullMod</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/d2d/HighResSensors_8java_source.html#l00071">71</a> of file <a class="el" href="../../df/d2d/HighResSensors_8java_source.html">HighResSensors.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   71</span>                                                                    {</div>
-<div class="line"><span class="lineno">   72</span><span class="comment">//      if (index == 0) return &quot;&quot; + (int) BONUS;</span></div>
-<div class="line"><span class="lineno">   73</span><span class="comment">//      if (index == 1) return &quot;&quot; + (int) CAPITAL_BONUS;</span></div>
-<div class="line"><span class="lineno">   74</span><span class="comment">//      if (index == 0) return &quot;&quot; + ((Float) mag.get(HullSize.FRIGATE)).intValue();</span></div>
-<div class="line"><span class="lineno">   75</span><span class="comment">//      if (index == 1) return &quot;&quot; + ((Float) mag.get(HullSize.DESTROYER)).intValue();</span></div>
-<div class="line"><span class="lineno">   76</span><span class="comment">//      if (index == 2) return &quot;&quot; + ((Float) mag.get(HullSize.CRUISER)).intValue();</span></div>
-<div class="line"><span class="lineno">   77</span>        <span class="comment">//if (index == 3) return &quot;&quot; + ((Float) mag.get(HullSize.CAPITAL_SHIP)).intValue();</span></div>
-<div class="line"><span class="lineno">   78</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   79</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ad9a23f3a95be8ad4b514bf1301c3850b" name="ad9a23f3a95be8ad4b514bf1301c3850b"></a>
@@ -651,14 +533,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a88cbea3ac1298bcd2f5c1ed913ad1157">com.fs.starfarer.api.combat.BaseHullMod</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/d2d/HighResSensors_8java_source.html#l00064">64</a> of file <a class="el" href="../../df/d2d/HighResSensors_8java_source.html">HighResSensors.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   64</span>                                                                        {</div>
-<div class="line"><span class="lineno">   65</span>        <span class="keywordflow">if</span> (index == 0) <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span> + ((Float) combatMag.get(HullSize.FRIGATE)).intValue();</div>
-<div class="line"><span class="lineno">   66</span>        <span class="keywordflow">if</span> (index == 1) <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span> + ((Float) combatMag.get(HullSize.DESTROYER)).intValue();</div>
-<div class="line"><span class="lineno">   67</span>        <span class="keywordflow">if</span> (index == 2) <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span> + ((Float) combatMag.get(HullSize.CRUISER)).intValue();</div>
-<div class="line"><span class="lineno">   68</span>        <span class="keywordflow">if</span> (index == 3) <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span> + ((Float) combatMag.get(HullSize.CAPITAL_SHIP)).intValue();</div>
-<div class="line"><span class="lineno">   69</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   70</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a6b52491d6e075e21ba13636c2e8c89fd" name="a6b52491d6e075e21ba13636c2e8c89fd"></a>
@@ -686,16 +561,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="../../dc/d34/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1HullModFleetEffect.html#aa6a0c15187a062780bd4306539491729">com.fs.starfarer.api.combat.HullModFleetEffect</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/d2d/HighResSensors_8java_source.html#l00090">90</a> of file <a class="el" href="../../df/d2d/HighResSensors_8java_source.html">HighResSensors.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   90</span>                                                    {</div>
-<div class="line"><span class="lineno">   91</span>        <span class="keywordtype">float</span> modifier = <a class="code hl_function" href="../../db/d2d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1HighResSensors.html#a95fa52f6ab20f91e58fb1037acdca51a">getAdjustedHRSModifier</a>(fleet, <span class="keyword">null</span>, 0f);</div>
-<div class="line"><span class="lineno">   92</span>        <span class="keywordflow">if</span> (modifier &lt;= 0) {</div>
-<div class="line"><span class="lineno">   93</span>            fleet.getSensorRangeMod().unmodifyFlat(<a class="code hl_variable" href="../../db/d2d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1HighResSensors.html#a9de21adb954237235a3d19942fe166ff">MOD_KEY</a>);</div>
-<div class="line"><span class="lineno">   94</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   95</span>            fleet.getSensorRangeMod().modifyFlat(<a class="code hl_variable" href="../../db/d2d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1HighResSensors.html#a9de21adb954237235a3d19942fe166ff">MOD_KEY</a>, modifier, <span class="stringliteral">&quot;Ships with high resolution sensors&quot;</span>);</div>
-<div class="line"><span class="lineno">   96</span>        }</div>
-<div class="line"><span class="lineno">   97</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1HighResSensors_html_a9de21adb954237235a3d19942fe166ff"><div class="ttname"><a href="../../db/d2d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1HighResSensors.html#a9de21adb954237235a3d19942fe166ff">com.fs.starfarer.api.impl.hullmods.HighResSensors.MOD_KEY</a></div><div class="ttdeci">static String MOD_KEY</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d2d/HighResSensors_8java_source.html#l00027">HighResSensors.java:27</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="afaafc2d88ccb2ac01b3ee325ee664366" name="afaafc2d88ccb2ac01b3ee325ee664366"></a>
@@ -742,10 +608,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a3ea50f57642925029054d03f5362630b">com.fs.starfarer.api.combat.BaseHullMod</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/d2d/HighResSensors_8java_source.html#l00100">100</a> of file <a class="el" href="../../df/d2d/HighResSensors_8java_source.html">HighResSensors.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  100</span>                                                                                                        {</div>
-<div class="line"><span class="lineno">  101</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>; <span class="comment">// no description from the csv</span></div>
-<div class="line"><span class="lineno">  102</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="acc92a164a88efd7b34fe5c9551aa725c" name="acc92a164a88efd7b34fe5c9551aa725c"></a>
@@ -767,10 +630,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="../../dc/d34/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1HullModFleetEffect.html#a5adb6bfb54b862425c5ae4fdf03d4551">com.fs.starfarer.api.combat.HullModFleetEffect</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/d2d/HighResSensors_8java_source.html#l00083">83</a> of file <a class="el" href="../../df/d2d/HighResSensors_8java_source.html">HighResSensors.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   83</span>                                           {</div>
-<div class="line"><span class="lineno">   84</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   85</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="adb05b869df0029d2e3eeffb335845a4e" name="adb05b869df0029d2e3eeffb335845a4e"></a>
@@ -792,10 +652,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="../../dc/d34/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1HullModFleetEffect.html#a3f2f9f51912a3d0fc31352789a3637dc">com.fs.starfarer.api.combat.HullModFleetEffect</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/d2d/HighResSensors_8java_source.html#l00086">86</a> of file <a class="el" href="../../df/d2d/HighResSensors_8java_source.html">HighResSensors.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   86</span>                                     {</div>
-<div class="line"><span class="lineno">   87</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   88</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

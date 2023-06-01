@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -561,34 +562,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d8b/PlanetaryShieldIntel_8java_source.html#l00044">44</a> of file <a class="el" href="../../d0/d8b/PlanetaryShieldIntel_8java_source.html">PlanetaryShieldIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   44</span>                                                                                 {</div>
-<div class="line"><span class="lineno">   45</span>        this.planet = <a class="code hl_variable" href="../../d6/dbd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PlanetaryShieldIntel.html#a310334745765e39bbbc81709b95d2869">planet</a>;</div>
-<div class="line"><span class="lineno">   46</span>        this.event = <a class="code hl_variable" href="../../d6/dbd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PlanetaryShieldIntel.html#a20998fba05f793da294bc854d45a79ba">event</a>;</div>
-<div class="line"><span class="lineno">   47</span>        </div>
-<div class="line"><span class="lineno">   48</span>        PersonAPI pilot = <span class="keyword">event</span>.<a class="code hl_function" href="../../dd/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PlanetaryShieldBarEvent.html#a46d87a53be014e42e4565c024032ee5d">getPilot</a>();</div>
-<div class="line"><span class="lineno">   49</span>        Misc.makeImportant(pilot, <span class="stringliteral">&quot;psi&quot;</span>);</div>
-<div class="line"><span class="lineno">   50</span>        MarketAPI market = <span class="keyword">event</span>.getPilotMarket();</div>
-<div class="line"><span class="lineno">   51</span>        market.addPerson(pilot);</div>
-<div class="line"><span class="lineno">   52</span>        market.getCommDirectory().addPerson(pilot);</div>
-<div class="line"><span class="lineno">   53</span>        </div>
-<div class="line"><span class="lineno">   54</span>        <a class="code hl_variable" href="../../d6/dbd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PlanetaryShieldIntel.html#ac90c9eed460c7da2abdbbfa96f6694bf">pilotCredits</a> = 10000 + 1000 * Misc.random.nextInt(10);</div>
-<div class="line"><span class="lineno">   55</span>        </div>
-<div class="line"><span class="lineno">   56</span>        pilot.getMemoryWithoutUpdate().set(<span class="stringliteral">&quot;$psi_isPilot&quot;</span>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   57</span>        pilot.getMemoryWithoutUpdate().set(<span class="stringliteral">&quot;$psi_eventRef&quot;</span>, <span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">   58</span>        pilot.getMemoryWithoutUpdate().set(<span class="stringliteral">&quot;$psi_credits&quot;</span>, Misc.getDGSCredits(<a class="code hl_variable" href="../../d6/dbd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PlanetaryShieldIntel.html#ac90c9eed460c7da2abdbbfa96f6694bf">pilotCredits</a>));</div>
-<div class="line"><span class="lineno">   59</span>        </div>
-<div class="line"><span class="lineno">   60</span>        <span class="comment">//Misc.makeImportant(planet, &quot;saci&quot;);</span></div>
-<div class="line"><span class="lineno">   61</span>        <span class="comment">//cache.getMemoryWithoutUpdate().set(&quot;$saic_eventRef&quot;, this);</span></div>
-<div class="line"><span class="lineno">   62</span>        <span class="comment">//Global.getSector().addScript(this);</span></div>
-<div class="line"><span class="lineno">   63</span>        </div>
-<div class="line"><span class="lineno">   64</span>        <a class="code hl_variable" href="../../d6/dbd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PlanetaryShieldIntel.html#a1009f5365dfc1f38551c44a3f1d15b7d">stage</a> = PSIStage.TALK_TO_PILOT;</div>
-<div class="line"><span class="lineno">   65</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PlanetaryShieldBarEvent_html_a46d87a53be014e42e4565c024032ee5d"><div class="ttname"><a href="../../dd/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PlanetaryShieldBarEvent.html#a46d87a53be014e42e4565c024032ee5d">com.fs.starfarer.api.impl.campaign.intel.bar.events.PlanetaryShieldBarEvent.getPilot</a></div><div class="ttdeci">PersonAPI getPilot()</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d92/PlanetaryShieldBarEvent_8java_source.html#l00278">PlanetaryShieldBarEvent.java:278</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PlanetaryShieldIntel_html_a1009f5365dfc1f38551c44a3f1d15b7d"><div class="ttname"><a href="../../d6/dbd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PlanetaryShieldIntel.html#a1009f5365dfc1f38551c44a3f1d15b7d">com.fs.starfarer.api.impl.campaign.intel.bar.events.PlanetaryShieldIntel.stage</a></div><div class="ttdeci">PSIStage stage</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d8b/PlanetaryShieldIntel_8java_source.html#l00041">PlanetaryShieldIntel.java:41</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PlanetaryShieldIntel_html_a20998fba05f793da294bc854d45a79ba"><div class="ttname"><a href="../../d6/dbd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PlanetaryShieldIntel.html#a20998fba05f793da294bc854d45a79ba">com.fs.starfarer.api.impl.campaign.intel.bar.events.PlanetaryShieldIntel.event</a></div><div class="ttdeci">PlanetaryShieldBarEvent event</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d8b/PlanetaryShieldIntel_8java_source.html#l00039">PlanetaryShieldIntel.java:39</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PlanetaryShieldIntel_html_a310334745765e39bbbc81709b95d2869"><div class="ttname"><a href="../../d6/dbd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PlanetaryShieldIntel.html#a310334745765e39bbbc81709b95d2869">com.fs.starfarer.api.impl.campaign.intel.bar.events.PlanetaryShieldIntel.planet</a></div><div class="ttdeci">PlanetAPI planet</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d8b/PlanetaryShieldIntel_8java_source.html#l00038">PlanetaryShieldIntel.java:38</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PlanetaryShieldIntel_html_ac90c9eed460c7da2abdbbfa96f6694bf"><div class="ttname"><a href="../../d6/dbd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PlanetaryShieldIntel.html#ac90c9eed460c7da2abdbbfa96f6694bf">com.fs.starfarer.api.impl.campaign.intel.bar.events.PlanetaryShieldIntel.pilotCredits</a></div><div class="ttdeci">int pilotCredits</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d8b/PlanetaryShieldIntel_8java_source.html#l00042">PlanetaryShieldIntel.java:42</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -629,38 +603,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a78b9181ed44f28dac2b1167e1ce4395c">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d8b/PlanetaryShieldIntel_8java_source.html#l00127">127</a> of file <a class="el" href="../../d0/d8b/PlanetaryShieldIntel_8java_source.html">PlanetaryShieldIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  127</span>                                                                            {</div>
-<div class="line"><span class="lineno">  128</span>        </div>
-<div class="line"><span class="lineno">  129</span>        Color h = Misc.getHighlightColor();</div>
-<div class="line"><span class="lineno">  130</span>        Color g = Misc.getGrayColor();</div>
-<div class="line"><span class="lineno">  131</span>        <span class="keywordtype">float</span> pad = 3f;</div>
-<div class="line"><span class="lineno">  132</span>        <span class="keywordtype">float</span> opad = 10f;</div>
-<div class="line"><span class="lineno">  133</span>        </div>
-<div class="line"><span class="lineno">  134</span>        <span class="keywordtype">float</span> initPad = pad;</div>
-<div class="line"><span class="lineno">  135</span>        <span class="keywordflow">if</span> (mode == ListInfoMode.IN_DESC) initPad = opad;</div>
-<div class="line"><span class="lineno">  136</span>        </div>
-<div class="line"><span class="lineno">  137</span>        Color tc = <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a9e443024a6224a5c170e5d1476514954">getBulletColorForMode</a>(mode);</div>
-<div class="line"><span class="lineno">  138</span>        </div>
-<div class="line"><span class="lineno">  139</span>        <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#adfa808a345b432134c9fb11227edc7df">bullet</a>(info);</div>
-<div class="line"><span class="lineno">  140</span>        <span class="keywordtype">boolean</span> isUpdate = <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a9ba572be19912ec6b816dc7b69352660">getListInfoParam</a>() != <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  141</span>        </div>
-<div class="line"><span class="lineno">  142</span>        MarketAPI market = <span class="keyword">event</span>.getPilotMarket();</div>
-<div class="line"><span class="lineno">  143</span>        </div>
-<div class="line"><span class="lineno">  144</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d6/dbd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PlanetaryShieldIntel.html#a1009f5365dfc1f38551c44a3f1d15b7d">stage</a> == PSIStage.TALK_TO_PILOT) {</div>
-<div class="line"><span class="lineno">  145</span>            info.addPara(<span class="stringliteral">&quot;Talk to the pilot at %s&quot;</span>, initPad, tc, market.getFaction().getBaseUIColor(), market.getName());</div>
-<div class="line"><span class="lineno">  146</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d6/dbd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PlanetaryShieldIntel.html#a1009f5365dfc1f38551c44a3f1d15b7d">stage</a> == PSIStage.GO_TO_PLANET) {</div>
-<div class="line"><span class="lineno">  147</span>            info.addPara(<span class="stringliteral">&quot;Explore the planet&quot;</span>, tc, initPad);</div>
-<div class="line"><span class="lineno">  148</span>        }</div>
-<div class="line"><span class="lineno">  149</span>        </div>
-<div class="line"><span class="lineno">  150</span>        initPad = 0f;</div>
-<div class="line"><span class="lineno">  151</span>        </div>
-<div class="line"><span class="lineno">  152</span>        <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a3e2fa48accd40a868889ad2f877bc578">unindent</a>(info);</div>
-<div class="line"><span class="lineno">  153</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_a3e2fa48accd40a868889ad2f877bc578"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a3e2fa48accd40a868889ad2f877bc578">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.unindent</a></div><div class="ttdeci">void unindent(TooltipMakerAPI info)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00570">BaseIntelPlugin.java:570</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_a9ba572be19912ec6b816dc7b69352660"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a9ba572be19912ec6b816dc7b69352660">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.getListInfoParam</a></div><div class="ttdeci">Object getListInfoParam()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00140">BaseIntelPlugin.java:140</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_a9e443024a6224a5c170e5d1476514954"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a9e443024a6224a5c170e5d1476514954">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.getBulletColorForMode</a></div><div class="ttdeci">Color getBulletColorForMode(ListInfoMode mode)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00633">BaseIntelPlugin.java:633</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_adfa808a345b432134c9fb11227edc7df"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#adfa808a345b432134c9fb11227edc7df">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.bullet</a></div><div class="ttdeci">void bullet(TooltipMakerAPI info)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00554">BaseIntelPlugin.java:554</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a30a5072d985ce159bf6b513ef7809797" name="a30a5072d985ce159bf6b513ef7809797"></a>
@@ -704,39 +647,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a5c4379771ab3c85cbd644e9ffc294e97">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d8b/PlanetaryShieldIntel_8java_source.html#l00082">82</a> of file <a class="el" href="../../d0/d8b/PlanetaryShieldIntel_8java_source.html">PlanetaryShieldIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   83</span>                                                                                   {</div>
-<div class="line"><span class="lineno">   84</span>        String action = params.get(0).getString(memoryMap);</div>
-<div class="line"><span class="lineno">   85</span>        </div>
-<div class="line"><span class="lineno">   86</span>        CampaignFleetAPI playerFleet = Global.getSector().getPlayerFleet();</div>
-<div class="line"><span class="lineno">   87</span>        CargoAPI cargo = playerFleet.getCargo();</div>
-<div class="line"><span class="lineno">   88</span>        <span class="comment">//MemoryAPI memory = planet.getMemoryWithoutUpdate();</span></div>
-<div class="line"><span class="lineno">   89</span>        </div>
-<div class="line"><span class="lineno">   90</span>        PersonAPI pilot = <span class="keyword">event</span>.getPilot();</div>
-<div class="line"><span class="lineno">   91</span>        MarketAPI market = <span class="keyword">event</span>.getPilotMarket();</div>
-<div class="line"><span class="lineno">   92</span>        </div>
-<div class="line"><span class="lineno">   93</span>        <span class="keywordflow">if</span> (action.equals(<span class="stringliteral">&quot;prepare&quot;</span>)) {</div>
-<div class="line"><span class="lineno">   94</span>            pilot.getMemoryWithoutUpdate().set(<span class="stringliteral">&quot;$psi_credits&quot;</span>, Misc.getDGSCredits(<a class="code hl_variable" href="../../d6/dbd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PlanetaryShieldIntel.html#ac90c9eed460c7da2abdbbfa96f6694bf">pilotCredits</a>), 0);</div>
-<div class="line"><span class="lineno">   95</span>            pilot.getMemoryWithoutUpdate().set(<span class="stringliteral">&quot;$psi_playerCredits&quot;</span>, Misc.getDGSCredits(cargo.getCredits().get()), 0);</div>
-<div class="line"><span class="lineno">   96</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (action.equals(<span class="stringliteral">&quot;canPay&quot;</span>)) {</div>
-<div class="line"><span class="lineno">   97</span>            <span class="keywordflow">return</span> cargo.getCredits().get() &gt;= <a class="code hl_variable" href="../../d6/dbd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PlanetaryShieldIntel.html#ac90c9eed460c7da2abdbbfa96f6694bf">pilotCredits</a>;</div>
-<div class="line"><span class="lineno">   98</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (action.equals(<span class="stringliteral">&quot;payPilot&quot;</span>)) {</div>
-<div class="line"><span class="lineno">   99</span>            market.removePerson(pilot);</div>
-<div class="line"><span class="lineno">  100</span>            market.getCommDirectory().removePerson(pilot);</div>
-<div class="line"><span class="lineno">  101</span>            </div>
-<div class="line"><span class="lineno">  102</span>            cargo.getCredits().subtract(<a class="code hl_variable" href="../../d6/dbd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PlanetaryShieldIntel.html#ac90c9eed460c7da2abdbbfa96f6694bf">pilotCredits</a>);</div>
-<div class="line"><span class="lineno">  103</span>            AddRemoveCommodity.addCreditsLossText(<a class="code hl_variable" href="../../d6/dbd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PlanetaryShieldIntel.html#ac90c9eed460c7da2abdbbfa96f6694bf">pilotCredits</a>, dialog.getTextPanel());</div>
-<div class="line"><span class="lineno">  104</span>            Global.getSector().getPlayerPerson().getStats().addXP(<a class="code hl_variable" href="../../d6/dbd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PlanetaryShieldIntel.html#a45697ee3025a0a755787be295c96e193">PAY_PILOT_XP</a>, dialog.getTextPanel());</div>
-<div class="line"><span class="lineno">  105</span> </div>
-<div class="line"><span class="lineno">  106</span>            Misc.makeImportant(<a class="code hl_variable" href="../../d6/dbd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PlanetaryShieldIntel.html#a310334745765e39bbbc81709b95d2869">planet</a>, <span class="stringliteral">&quot;psi&quot;</span>);</div>
-<div class="line"><span class="lineno">  107</span>            <a class="code hl_variable" href="../../d6/dbd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PlanetaryShieldIntel.html#a1009f5365dfc1f38551c44a3f1d15b7d">stage</a> = PSIStage.GO_TO_PLANET;</div>
-<div class="line"><span class="lineno">  108</span>            <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a2d458cbf42d613158c8138b65e566bb0">sendUpdate</a>(PSIStage.GO_TO_PLANET, dialog.getTextPanel());</div>
-<div class="line"><span class="lineno">  109</span>        }</div>
-<div class="line"><span class="lineno">  110</span>        </div>
-<div class="line"><span class="lineno">  111</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  112</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_a2d458cbf42d613158c8138b65e566bb0"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a2d458cbf42d613158c8138b65e566bb0">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.sendUpdate</a></div><div class="ttdeci">void sendUpdate(Object listInfoParam, TextPanelAPI textPanel)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00153">BaseIntelPlugin.java:153</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PlanetaryShieldIntel_html_a45697ee3025a0a755787be295c96e193"><div class="ttname"><a href="../../d6/dbd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PlanetaryShieldIntel.html#a45697ee3025a0a755787be295c96e193">com.fs.starfarer.api.impl.campaign.intel.bar.events.PlanetaryShieldIntel.PAY_PILOT_XP</a></div><div class="ttdeci">static int PAY_PILOT_XP</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d8b/PlanetaryShieldIntel_8java_source.html#l00036">PlanetaryShieldIntel.java:36</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2229b644c58f2b37697c5315c03acf53" name="a2229b644c58f2b37697c5315c03acf53"></a>
@@ -768,18 +679,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#afa8bb8f2afc14a90ef02a999a66535e9">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d8b/PlanetaryShieldIntel_8java_source.html#l00157">157</a> of file <a class="el" href="../../d0/d8b/PlanetaryShieldIntel_8java_source.html">PlanetaryShieldIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  157</span>                                                                         {</div>
-<div class="line"><span class="lineno">  158</span>        Color c = <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#af44e4a0a7c61b8efbc4ef210c7061723">getTitleColor</a>(mode);</div>
-<div class="line"><span class="lineno">  159</span>        info.setParaSmallInsignia();</div>
-<div class="line"><span class="lineno">  160</span>        info.addPara(<a class="code hl_function" href="../../d6/dbd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PlanetaryShieldIntel.html#ae49d363e2dda0f050b88372887d5e45c">getName</a>(), c, 0f);</div>
-<div class="line"><span class="lineno">  161</span>        info.setParaFontDefault();</div>
-<div class="line"><span class="lineno">  162</span>        <a class="code hl_function" href="../../d6/dbd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PlanetaryShieldIntel.html#aee028dd98375683aa44305c3a94ffa17">addBulletPoints</a>(info, mode);</div>
-<div class="line"><span class="lineno">  163</span>        </div>
-<div class="line"><span class="lineno">  164</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_af44e4a0a7c61b8efbc4ef210c7061723"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#af44e4a0a7c61b8efbc4ef210c7061723">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.getTitleColor</a></div><div class="ttdeci">Color getTitleColor(ListInfoMode mode)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00615">BaseIntelPlugin.java:615</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PlanetaryShieldIntel_html_ae49d363e2dda0f050b88372887d5e45c"><div class="ttname"><a href="../../d6/dbd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PlanetaryShieldIntel.html#ae49d363e2dda0f050b88372887d5e45c">com.fs.starfarer.api.impl.campaign.intel.bar.events.PlanetaryShieldIntel.getName</a></div><div class="ttdeci">String getName()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d8b/PlanetaryShieldIntel_8java_source.html#l00212">PlanetaryShieldIntel.java:212</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PlanetaryShieldIntel_html_aee028dd98375683aa44305c3a94ffa17"><div class="ttname"><a href="../../d6/dbd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PlanetaryShieldIntel.html#aee028dd98375683aa44305c3a94ffa17">com.fs.starfarer.api.impl.campaign.intel.bar.events.PlanetaryShieldIntel.addBulletPoints</a></div><div class="ttdeci">void addBulletPoints(TooltipMakerAPI info, ListInfoMode mode)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d8b/PlanetaryShieldIntel_8java_source.html#l00127">PlanetaryShieldIntel.java:127</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a98682823c63139c80ba4d0e4d19b4d60" name="a98682823c63139c80ba4d0e4d19b4d60"></a>
@@ -817,27 +717,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a8cccf49669fce7f61c75af3c8afc4bb9">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d8b/PlanetaryShieldIntel_8java_source.html#l00167">167</a> of file <a class="el" href="../../d0/d8b/PlanetaryShieldIntel_8java_source.html">PlanetaryShieldIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  167</span>                                                                                        {</div>
-<div class="line"><span class="lineno">  168</span>        Color h = Misc.getHighlightColor();</div>
-<div class="line"><span class="lineno">  169</span>        Color g = Misc.getGrayColor();</div>
-<div class="line"><span class="lineno">  170</span>        Color tc = Misc.getTextColor();</div>
-<div class="line"><span class="lineno">  171</span>        <span class="keywordtype">float</span> pad = 3f;</div>
-<div class="line"><span class="lineno">  172</span>        <span class="keywordtype">float</span> opad = 10f;</div>
-<div class="line"><span class="lineno">  173</span> </div>
-<div class="line"><span class="lineno">  174</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d6/dbd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PlanetaryShieldIntel.html#a1009f5365dfc1f38551c44a3f1d15b7d">stage</a> == PSIStage.TALK_TO_PILOT) {</div>
-<div class="line"><span class="lineno">  175</span>            info.addPara(<span class="stringliteral">&quot;An old spacer told you a tale about a mysterious red planet. &quot;</span> +</div>
-<div class="line"><span class="lineno">  176</span>                         <span class="stringliteral">&quot;The pilot - the only other survivor of the salvage expedition - may know the planet&#39;s location.&quot;</span>, opad);</div>
-<div class="line"><span class="lineno">  177</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d6/dbd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PlanetaryShieldIntel.html#a1009f5365dfc1f38551c44a3f1d15b7d">stage</a> == PSIStage.GO_TO_PLANET) {</div>
-<div class="line"><span class="lineno">  178</span>            info.addPara(<span class="stringliteral">&quot;You&#39;ve talked to the old spacer&#39;s pilot comrade and convinced &quot;</span> +</div>
-<div class="line"><span class="lineno">  179</span>                         <span class="stringliteral">&quot;them to divulge the location of the planet.&quot;</span>, opad);</div>
-<div class="line"><span class="lineno">  180</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  181</span>            info.addPara(<span class="stringliteral">&quot;You&#39;ve found the planet and uncovered its secret.&quot;</span>, opad);</div>
-<div class="line"><span class="lineno">  182</span>        }</div>
-<div class="line"><span class="lineno">  183</span> </div>
-<div class="line"><span class="lineno">  184</span>        <a class="code hl_function" href="../../d6/dbd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PlanetaryShieldIntel.html#aee028dd98375683aa44305c3a94ffa17">addBulletPoints</a>(info, ListInfoMode.IN_DESC);</div>
-<div class="line"><span class="lineno">  185</span>        </div>
-<div class="line"><span class="lineno">  186</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a66c5dfa2be3ee35e85e927b4c05e616f" name="a66c5dfa2be3ee35e85e927b4c05e616f"></a>
@@ -858,12 +738,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#aa9964eb74c87437bc9870cef6c4f5d00">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d8b/PlanetaryShieldIntel_8java_source.html#l00115">115</a> of file <a class="el" href="../../d0/d8b/PlanetaryShieldIntel_8java_source.html">PlanetaryShieldIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  115</span>                                {</div>
-<div class="line"><span class="lineno">  116</span>        <a class="code hl_variable" href="../../d6/dbd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PlanetaryShieldIntel.html#a1009f5365dfc1f38551c44a3f1d15b7d">stage</a> = PSIStage.DONE;</div>
-<div class="line"><span class="lineno">  117</span>        Misc.makeUnimportant(<a class="code hl_variable" href="../../d6/dbd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PlanetaryShieldIntel.html#a310334745765e39bbbc81709b95d2869">planet</a>, <span class="stringliteral">&quot;psi&quot;</span>);</div>
-<div class="line"><span class="lineno">  118</span>        super.endAfterDelay();</div>
-<div class="line"><span class="lineno">  119</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a202326122368bf0be2ab0fa6d7b39244" name="a202326122368bf0be2ab0fa6d7b39244"></a>
@@ -884,11 +759,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#ae93559a4be65baa333b36619a2a82850">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d8b/PlanetaryShieldIntel_8java_source.html#l00242">242</a> of file <a class="el" href="../../d0/d8b/PlanetaryShieldIntel_8java_source.html">PlanetaryShieldIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  242</span>                                        {</div>
-<div class="line"><span class="lineno">  243</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#aee7e02531809f52bfe50bed3b778ec03">getSoundMajorPosting</a>();</div>
-<div class="line"><span class="lineno">  244</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_aee7e02531809f52bfe50bed3b778ec03"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#aee7e02531809f52bfe50bed3b778ec03">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.getSoundMajorPosting</a></div><div class="ttdeci">static String getSoundMajorPosting()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00662">BaseIntelPlugin.java:662</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9d7aa8be95af4824ac597330355ab202" name="a9d7aa8be95af4824ac597330355ab202"></a>
@@ -909,10 +780,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#aef7175eff8878a18ebb3099d3a7ab59f">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d8b/PlanetaryShieldIntel_8java_source.html#l00220">220</a> of file <a class="el" href="../../d0/d8b/PlanetaryShieldIntel_8java_source.html">PlanetaryShieldIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  220</span>                                              {</div>
-<div class="line"><span class="lineno">  221</span>        <span class="keywordflow">return</span> super.getFactionForUIColors();</div>
-<div class="line"><span class="lineno">  222</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a7b095c3f8178859ff5053495a90d23ab" name="a7b095c3f8178859ff5053495a90d23ab"></a>
@@ -934,10 +802,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a6499624a08c9565334e2395989f542c9">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d8b/PlanetaryShieldIntel_8java_source.html#l00189">189</a> of file <a class="el" href="../../d0/d8b/PlanetaryShieldIntel_8java_source.html">PlanetaryShieldIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  189</span>                            {</div>
-<div class="line"><span class="lineno">  190</span>        <span class="keywordflow">return</span> Global.getSettings().getSpriteName(<span class="stringliteral">&quot;intel&quot;</span>, <span class="stringliteral">&quot;red_planet&quot;</span>);</div>
-<div class="line"><span class="lineno">  191</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ace37ecd208f3730ea82e47268a1d767e" name="ace37ecd208f3730ea82e47268a1d767e"></a>
@@ -966,15 +831,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a4ef0af8cb71b4127afce850bc6a04514">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d8b/PlanetaryShieldIntel_8java_source.html#l00194">194</a> of file <a class="el" href="../../d0/d8b/PlanetaryShieldIntel_8java_source.html">PlanetaryShieldIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  194</span>                                                      {</div>
-<div class="line"><span class="lineno">  195</span>        Set&lt;String&gt; tags = super.getIntelTags(map);</div>
-<div class="line"><span class="lineno">  196</span>        tags.add(Tags.INTEL_STORY);</div>
-<div class="line"><span class="lineno">  197</span>        tags.add(Tags.INTEL_EXPLORATION);</div>
-<div class="line"><span class="lineno">  198</span>        tags.add(Tags.INTEL_ACCEPTED);</div>
-<div class="line"><span class="lineno">  199</span>        tags.add(Tags.INTEL_MISSIONS);</div>
-<div class="line"><span class="lineno">  200</span>        <span class="keywordflow">return</span> tags;</div>
-<div class="line"><span class="lineno">  201</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a7615c3110e8611d7c5dd45179343c0bf" name="a7615c3110e8611d7c5dd45179343c0bf"></a>
@@ -996,13 +853,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a01f212769febb46bae89256b643c23eb">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d8b/PlanetaryShieldIntel_8java_source.html#l00229">229</a> of file <a class="el" href="../../d0/d8b/PlanetaryShieldIntel_8java_source.html">PlanetaryShieldIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  229</span>                                                              {</div>
-<div class="line"><span class="lineno">  230</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d6/dbd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PlanetaryShieldIntel.html#a1009f5365dfc1f38551c44a3f1d15b7d">stage</a> == PSIStage.TALK_TO_PILOT) {</div>
-<div class="line"><span class="lineno">  231</span>            <span class="keywordflow">return</span> <span class="keyword">event</span>.getPilotMarket().getPrimaryEntity();</div>
-<div class="line"><span class="lineno">  232</span>        }</div>
-<div class="line"><span class="lineno">  233</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d6/dbd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PlanetaryShieldIntel.html#a310334745765e39bbbc81709b95d2869">planet</a>;</div>
-<div class="line"><span class="lineno">  234</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae49d363e2dda0f050b88372887d5e45c" name="ae49d363e2dda0f050b88372887d5e45c"></a>
@@ -1023,15 +874,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a582fe7cb29e8f2f65670d4dd74418235">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d8b/PlanetaryShieldIntel_8java_source.html#l00212">212</a> of file <a class="el" href="../../d0/d8b/PlanetaryShieldIntel_8java_source.html">PlanetaryShieldIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  212</span>                            {</div>
-<div class="line"><span class="lineno">  213</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a76be49f1d836a62e192edd4ba597a6cc">isEnded</a>() || <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#ac265e304e3d245a6ae16be73e0b918b0">isEnding</a>()) {</div>
-<div class="line"><span class="lineno">  214</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;Red Planet - Completed&quot;</span>;</div>
-<div class="line"><span class="lineno">  215</span>        }</div>
-<div class="line"><span class="lineno">  216</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Red Planet&quot;</span>;</div>
-<div class="line"><span class="lineno">  217</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_a76be49f1d836a62e192edd4ba597a6cc"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a76be49f1d836a62e192edd4ba597a6cc">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.isEnded</a></div><div class="ttdeci">boolean isEnded()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00130">BaseIntelPlugin.java:130</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_ac265e304e3d245a6ae16be73e0b918b0"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#ac265e304e3d245a6ae16be73e0b918b0">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.isEnding</a></div><div class="ttdeci">boolean isEnding()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00126">BaseIntelPlugin.java:126</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a4a3abf1fa72965e0536ccdd265e89a03" name="a4a3abf1fa72965e0536ccdd265e89a03"></a>
@@ -1052,10 +895,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a8fe6bfa41873bed91428d73fa6bac1b6">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d8b/PlanetaryShieldIntel_8java_source.html#l00224">224</a> of file <a class="el" href="../../d0/d8b/PlanetaryShieldIntel_8java_source.html">PlanetaryShieldIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  224</span>                                             {</div>
-<div class="line"><span class="lineno">  225</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../d6/dbd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PlanetaryShieldIntel.html#ae49d363e2dda0f050b88372887d5e45c">getName</a>();</div>
-<div class="line"><span class="lineno">  226</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a807c8e9d2a0eaa956bc359e64815c5b2" name="a807c8e9d2a0eaa956bc359e64815c5b2"></a>
@@ -1076,10 +916,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a6160e4bb36c43732e98a87a2f1e63b58">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d8b/PlanetaryShieldIntel_8java_source.html#l00208">208</a> of file <a class="el" href="../../d0/d8b/PlanetaryShieldIntel_8java_source.html">PlanetaryShieldIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  208</span>                                  {</div>
-<div class="line"><span class="lineno">  209</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Red Planet&quot;</span>;</div>
-<div class="line"><span class="lineno">  210</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a07cf9492340e81aa9e71d3cb1e66547c" name="a07cf9492340e81aa9e71d3cb1e66547c"></a>
@@ -1100,10 +937,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a17d2e9484483debccdebd1798e39df69">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d8b/PlanetaryShieldIntel_8java_source.html#l00204">204</a> of file <a class="el" href="../../d0/d8b/PlanetaryShieldIntel_8java_source.html">PlanetaryShieldIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  204</span>                                       {</div>
-<div class="line"><span class="lineno">  205</span>        <span class="keywordflow">return</span> IntelSortTier.TIER_2;</div>
-<div class="line"><span class="lineno">  206</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ad0c1d31664ed9bf7b26b4d754d760a45" name="ad0c1d31664ed9bf7b26b4d754d760a45"></a>
@@ -1132,17 +966,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#aa97466aeeeda8efaa762a17d5dbb37b9">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d8b/PlanetaryShieldIntel_8java_source.html#l00068">68</a> of file <a class="el" href="../../d0/d8b/PlanetaryShieldIntel_8java_source.html">PlanetaryShieldIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   68</span>                                 {</div>
-<div class="line"><span class="lineno">   69</span>        super.notifyEnded();</div>
-<div class="line"><span class="lineno">   70</span>        Global.getSector().removeScript(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">   71</span>        </div>
-<div class="line"><span class="lineno">   72</span>        PersonAPI pilot = <span class="keyword">event</span>.getPilot();</div>
-<div class="line"><span class="lineno">   73</span>        MarketAPI market = <span class="keyword">event</span>.getPilotMarket();</div>
-<div class="line"><span class="lineno">   74</span>        market.removePerson(pilot);</div>
-<div class="line"><span class="lineno">   75</span>        market.getCommDirectory().removePerson(pilot);</div>
-<div class="line"><span class="lineno">   76</span>        Misc.makeUnimportant(<a class="code hl_variable" href="../../d6/dbd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PlanetaryShieldIntel.html#a310334745765e39bbbc81709b95d2869">planet</a>, <span class="stringliteral">&quot;psi&quot;</span>);</div>
-<div class="line"><span class="lineno">   77</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aeeb59d49e60e942709ab8e7a3e752327" name="aeeb59d49e60e942709ab8e7a3e752327"></a>
@@ -1171,10 +995,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a7cb55f93ada9a3020919de0342c3199a">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d8b/PlanetaryShieldIntel_8java_source.html#l00122">122</a> of file <a class="el" href="../../d0/d8b/PlanetaryShieldIntel_8java_source.html">PlanetaryShieldIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  122</span>                                  {</div>
-<div class="line"><span class="lineno">  123</span>        super.notifyEnding();</div>
-<div class="line"><span class="lineno">  124</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a7e1bb9927ffede1c562c34c851383f3e" name="a7e1bb9927ffede1c562c34c851383f3e"></a>
@@ -1195,10 +1016,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#aede56a965d7570e8ea06cdf31d70e4de">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d8b/PlanetaryShieldIntel_8java_source.html#l00237">237</a> of file <a class="el" href="../../d0/d8b/PlanetaryShieldIntel_8java_source.html">PlanetaryShieldIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  237</span>                                       {</div>
-<div class="line"><span class="lineno">  238</span>        <span class="keywordflow">return</span> super.shouldRemoveIntel();</div>
-<div class="line"><span class="lineno">  239</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

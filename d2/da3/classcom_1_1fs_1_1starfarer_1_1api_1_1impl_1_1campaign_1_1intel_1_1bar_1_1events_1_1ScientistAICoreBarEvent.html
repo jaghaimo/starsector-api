@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -372,10 +373,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/deb/ScientistAICoreBarEvent_8java_source.html#l00022">22</a> of file <a class="el" href="../../da/deb/ScientistAICoreBarEvent_8java_source.html">ScientistAICoreBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   22</span>                                     {</div>
-<div class="line"><span class="lineno">   23</span>        super();</div>
-<div class="line"><span class="lineno">   24</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -405,70 +403,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a40ec3edec18147014e39aae89c62094b">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseGetCommodityBarEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/deb/ScientistAICoreBarEvent_8java_source.html#l00049">49</a> of file <a class="el" href="../../da/deb/ScientistAICoreBarEvent_8java_source.html">ScientistAICoreBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   49</span>                                                   {</div>
-<div class="line"><span class="lineno">   50</span>        <span class="comment">// spawn entity with AI core etc here</span></div>
-<div class="line"><span class="lineno">   51</span>        </div>
-<div class="line"><span class="lineno">   52</span>        CargoAPI cargo = Global.getSector().getPlayerFleet().getCargo();</div>
-<div class="line"><span class="lineno">   53</span>        TextPanelAPI <a class="code hl_variable" href="../../dc/da0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEvent.html#a2268511fc8daa52ae8728e974c1eeefa">text</a> = <a class="code hl_variable" href="../../dc/da0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEvent.html#ac773a96bd84afb2ed3d04418a207f252">dialog</a>.<a class="code hl_function" href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#a52d00add8a9c52795f652f493ac37244">getTextPanel</a>();</div>
-<div class="line"><span class="lineno">   54</span>        </div>
-<div class="line"><span class="lineno">   55</span>        WeightedRandomPicker&lt;StarSystemAPI&gt; picker = <span class="keyword">new</span> WeightedRandomPicker&lt;StarSystemAPI&gt;(<a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a0870c60e641dfaff36c968eb2e4d1503">random</a>);</div>
-<div class="line"><span class="lineno">   56</span>        <span class="keywordflow">for</span> (StarSystemAPI system : Global.getSector().getStarSystems()) {</div>
-<div class="line"><span class="lineno">   57</span>            <span class="keywordflow">if</span> (system.hasTag(Tags.THEME_CORE_POPULATED)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   58</span>            <span class="keywordflow">if</span> (system.hasTag(Tags.THEME_REMNANT_MAIN)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   59</span>            <span class="keywordflow">if</span> (system.hasTag(Tags.THEME_REMNANT_RESURGENT)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   60</span>            <span class="keywordflow">if</span> (system.hasTag(Tags.THEME_HIDDEN)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   61</span>            </div>
-<div class="line"><span class="lineno">   62</span><span class="comment">//          if (system.getStar() != null &amp;&amp; system.getStar().getSpec().isBlackHole()) continue;</span></div>
-<div class="line"><span class="lineno">   63</span><span class="comment">//          if (system.getSecondary() != null &amp;&amp; system.getSecondary().getSpec().isBlackHole()) continue;</span></div>
-<div class="line"><span class="lineno">   64</span><span class="comment">//          if (system.getTertiary() != null &amp;&amp; system.getTertiary().getSpec().isBlackHole()) continue;</span></div>
-<div class="line"><span class="lineno">   65</span>            </div>
-<div class="line"><span class="lineno">   66</span>            <span class="keywordtype">float</span> sinceVisit = Global.getSector().getClock().getElapsedDaysSince(system.getLastPlayerVisitTimestamp());</div>
-<div class="line"><span class="lineno">   67</span>            <span class="keywordflow">if</span> (sinceVisit &lt; 60) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   68</span>            </div>
-<div class="line"><span class="lineno">   69</span>            <span class="comment">//if (!Misc.getMarketsInLocation(system).isEmpty()) continue;</span></div>
-<div class="line"><span class="lineno">   70</span>            </div>
-<div class="line"><span class="lineno">   71</span>            picker.add(system);</div>
-<div class="line"><span class="lineno">   72</span>        }</div>
-<div class="line"><span class="lineno">   73</span>        </div>
-<div class="line"><span class="lineno">   74</span>        StarSystemAPI system = picker.pick();</div>
-<div class="line"><span class="lineno">   75</span>        <span class="keywordflow">if</span> (system == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   76</span>            <a class="code hl_function" href="../../d2/da3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1ScientistAICoreBarEvent.html#a773a6d43c9d3944338d2648f80ee576d">doDataFail</a>();</div>
-<div class="line"><span class="lineno">   77</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   78</span>        }</div>
-<div class="line"><span class="lineno">   79</span> </div>
-<div class="line"><span class="lineno">   80</span>        <span class="comment">//EntityLocation loc = BaseThemeGenerator.pickHiddenLocation(random, system, 100f, null);</span></div>
-<div class="line"><span class="lineno">   81</span>        EntityLocation loc = BaseThemeGenerator.pickHiddenLocationNotNearStar(<a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a0870c60e641dfaff36c968eb2e4d1503">random</a>, system, 100f, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   82</span>        <span class="keywordflow">if</span> (loc == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   83</span>            <a class="code hl_function" href="../../d2/da3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1ScientistAICoreBarEvent.html#a773a6d43c9d3944338d2648f80ee576d">doDataFail</a>();</div>
-<div class="line"><span class="lineno">   84</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   85</span>        }</div>
-<div class="line"><span class="lineno">   86</span>        </div>
-<div class="line"><span class="lineno">   87</span>        <span class="comment">//AddedEntity added = BaseThemeGenerator.addNonSalvageEntity(system, loc, Entities.STABLE_LOCATION, Factions.NEUTRAL);</span></div>
-<div class="line"><span class="lineno">   88</span>        AddedEntity added = BaseThemeGenerator.addEntity(<a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a0870c60e641dfaff36c968eb2e4d1503">random</a>, system, loc, Entities.TECHNOLOGY_CACHE, Factions.NEUTRAL);</div>
-<div class="line"><span class="lineno">   89</span>        </div>
-<div class="line"><span class="lineno">   90</span>        <span class="keywordflow">if</span> (added == <span class="keyword">null</span> || added.entity == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   91</span>            <a class="code hl_function" href="../../d2/da3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1ScientistAICoreBarEvent.html#a773a6d43c9d3944338d2648f80ee576d">doDataFail</a>();</div>
-<div class="line"><span class="lineno">   92</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   93</span>        }</div>
-<div class="line"><span class="lineno">   94</span>        <span class="comment">//added.entity.setName(&quot;Technology Cache&quot;);</span></div>
-<div class="line"><span class="lineno">   95</span>        </div>
-<div class="line"><span class="lineno">   96</span>        <span class="comment">//added.entity.removeTag(Tags.SALVAGEABLE);</span></div>
-<div class="line"><span class="lineno">   97</span>        added.entity.setDiscoverable(<span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   98</span>        added.entity.setDiscoveryXP(<span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   99</span>        added.entity.setSensorProfile(<span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  100</span>        </div>
-<div class="line"><span class="lineno">  101</span>        added.entity.addTag(Tags.EXPIRES); <span class="comment">// so it doesn&#39;t get targeted by &quot;analyze entity&quot; missions</span></div>
-<div class="line"><span class="lineno">  102</span>        </div>
-<div class="line"><span class="lineno">  103</span>        ScientistAICoreIntel intel = <span class="keyword">new</span> ScientistAICoreIntel(added.entity, <span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  104</span>        <span class="comment">//intel.setImportant(true);</span></div>
-<div class="line"><span class="lineno">  105</span>        Global.getSector().getIntelManager().addIntel(intel, <span class="keyword">false</span>, <a class="code hl_variable" href="../../dc/da0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEvent.html#a2268511fc8daa52ae8728e974c1eeefa">text</a>);</div>
-<div class="line"><span class="lineno">  106</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEvent_html_a2268511fc8daa52ae8728e974c1eeefa"><div class="ttname"><a href="../../dc/da0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEvent.html#a2268511fc8daa52ae8728e974c1eeefa">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseBarEvent.text</a></div><div class="ttdeci">transient TextPanelAPI text</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d7d/BaseBarEvent_8java_source.html#l00015">BaseBarEvent.java:15</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEvent_html_ac773a96bd84afb2ed3d04418a207f252"><div class="ttname"><a href="../../dc/da0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEvent.html#ac773a96bd84afb2ed3d04418a207f252">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseBarEvent.dialog</a></div><div class="ttdeci">transient InteractionDialogAPI dialog</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d7d/BaseBarEvent_8java_source.html#l00014">BaseBarEvent.java:14</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent_html_a0870c60e641dfaff36c968eb2e4d1503"><div class="ttname"><a href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a0870c60e641dfaff36c968eb2e4d1503">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseGetCommodityBarEvent.random</a></div><div class="ttdeci">transient Random random</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d22/BaseGetCommodityBarEvent_8java_source.html#l00040">BaseGetCommodityBarEvent.java:40</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1ScientistAICoreBarEvent_html_a773a6d43c9d3944338d2648f80ee576d"><div class="ttname"><a href="../../d2/da3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1ScientistAICoreBarEvent.html#a773a6d43c9d3944338d2648f80ee576d">com.fs.starfarer.api.impl.campaign.intel.bar.events.ScientistAICoreBarEvent.doDataFail</a></div><div class="ttdeci">void doDataFail()</div><div class="ttdef"><b>Definition:</b> <a href="../../da/deb/ScientistAICoreBarEvent_8java_source.html#l00109">ScientistAICoreBarEvent.java:109</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI_html_a52d00add8a9c52795f652f493ac37244"><div class="ttname"><a href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#a52d00add8a9c52795f652f493ac37244">com.fs.starfarer.api.campaign.InteractionDialogAPI.getTextPanel</a></div><div class="ttdeci">TextPanelAPI getTextPanel()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a773a6d43c9d3944338d2648f80ee576d" name="a773a6d43c9d3944338d2648f80ee576d"></a>
@@ -495,11 +430,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/deb/ScientistAICoreBarEvent_8java_source.html#l00109">109</a> of file <a class="el" href="../../da/deb/ScientistAICoreBarEvent_8java_source.html">ScientistAICoreBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  109</span>                                {</div>
-<div class="line"><span class="lineno">  110</span>        <a class="code hl_variable" href="../../d2/da3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1ScientistAICoreBarEvent.html#a7721f058842d357a5a7839764e0acc9e">failed</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  111</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1ScientistAICoreBarEvent_html_a7721f058842d357a5a7839764e0acc9e"><div class="ttname"><a href="../../d2/da3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1ScientistAICoreBarEvent.html#a7721f058842d357a5a7839764e0acc9e">com.fs.starfarer.api.impl.campaign.intel.bar.events.ScientistAICoreBarEvent.failed</a></div><div class="ttdeci">transient boolean failed</div><div class="ttdef"><b>Definition:</b> <a href="../../da/deb/ScientistAICoreBarEvent_8java_source.html#l00108">ScientistAICoreBarEvent.java:108</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a40f5be17b32dec0914ecf222cc6d0ef0" name="a40f5be17b32dec0914ecf222cc6d0ef0"></a>
@@ -528,10 +459,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a5eb66733dda8f8142f4229b5af55b1c3">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseGetCommodityBarEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/deb/ScientistAICoreBarEvent_8java_source.html#l00044">44</a> of file <a class="el" href="../../da/deb/ScientistAICoreBarEvent_8java_source.html">ScientistAICoreBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   44</span>                                              {</div>
-<div class="line"><span class="lineno">   45</span>        <span class="comment">// we want to do nothing here, real work in doConfirmActionsPreAcceptText()</span></div>
-<div class="line"><span class="lineno">   46</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae9b0f370a68947ed32ba76f447d2bec1" name="ae9b0f370a68947ed32ba76f447d2bec1"></a>
@@ -560,16 +488,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a3fb323b7a0a7c012fc8b95547e0d09ad">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseGetCommodityBarEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/deb/ScientistAICoreBarEvent_8java_source.html#l00180">180</a> of file <a class="el" href="../../da/deb/ScientistAICoreBarEvent_8java_source.html">ScientistAICoreBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  180</span>                                     {</div>
-<div class="line"><span class="lineno">  181</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d2/da3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1ScientistAICoreBarEvent.html#a7721f058842d357a5a7839764e0acc9e">failed</a>) {</div>
-<div class="line"><span class="lineno">  182</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;Unfortunately, a closer analysis of the data brings to light several glaring inconsistencies. &quot;</span> +</div>
-<div class="line"><span class="lineno">  183</span>                    <span class="stringliteral">&quot;Looks like &quot;</span> + <a class="code hl_function" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#aebc0411fce93c8540f5378f281f2273a">getHeOrShe</a>() + <span class="stringliteral">&quot; was a bit unhinged, after all - &quot;</span> +</div>
-<div class="line"><span class="lineno">  184</span>                    <span class="stringliteral">&quot;there&#39;s nothing here worth investigating.&quot;</span>;</div>
-<div class="line"><span class="lineno">  185</span>        }</div>
-<div class="line"><span class="lineno">  186</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  187</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent_html_aebc0411fce93c8540f5378f281f2273a"><div class="ttname"><a href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#aebc0411fce93c8540f5378f281f2273a">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseGetCommodityBarEvent.getHeOrShe</a></div><div class="ttdeci">String getHeOrShe()</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d22/BaseGetCommodityBarEvent_8java_source.html#l00110">BaseGetCommodityBarEvent.java:110</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2b6350dbed904cb7bde99a1d41201c6f" name="a2b6350dbed904cb7bde99a1d41201c6f"></a>
@@ -598,11 +517,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a562f379738dd6aa74f871b2148a4078e">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseGetCommodityBarEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/deb/ScientistAICoreBarEvent_8java_source.html#l00175">175</a> of file <a class="el" href="../../da/deb/ScientistAICoreBarEvent_8java_source.html">ScientistAICoreBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  175</span>                                     {</div>
-<div class="line"><span class="lineno">  176</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Decline &quot;</span> + <a class="code hl_function" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#ad4552273729202b2f296d563940c9c91">getHisOrHer</a>() + <span class="stringliteral">&quot; proposal and walk away&quot;</span>;</div>
-<div class="line"><span class="lineno">  177</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent_html_ad4552273729202b2f296d563940c9c91"><div class="ttname"><a href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#ad4552273729202b2f296d563940c9c91">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseGetCommodityBarEvent.getHisOrHer</a></div><div class="ttdeci">String getHisOrHer()</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d22/BaseGetCommodityBarEvent_8java_source.html#l00134">BaseGetCommodityBarEvent.java:134</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a705ae7443151fc1ce9e0f091de946dcb" name="a705ae7443151fc1ce9e0f091de946dcb"></a>
@@ -631,10 +546,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#aa33549abaefdedabb7549582ffb4890b">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseGetCommodityBarEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/deb/ScientistAICoreBarEvent_8java_source.html#l00170">170</a> of file <a class="el" href="../../da/deb/ScientistAICoreBarEvent_8java_source.html">ScientistAICoreBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  170</span>                                      {</div>
-<div class="line"><span class="lineno">  171</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Accept and promise to ship the AI core to the given address in a specially shielded crate&quot;</span>;</div>
-<div class="line"><span class="lineno">  172</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a127c02888207bcdb57e49db3a6d91f2b" name="a127c02888207bcdb57e49db3a6d91f2b"></a>
@@ -663,12 +575,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#ad971b216ad27227ef9bfc3969b3fa031">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseGetCommodityBarEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/deb/ScientistAICoreBarEvent_8java_source.html#l00190">190</a> of file <a class="el" href="../../da/deb/ScientistAICoreBarEvent_8java_source.html">ScientistAICoreBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  190</span>                                      {</div>
-<div class="line"><span class="lineno">  191</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;You hear the scientist&#39;s offended, quavering voice at your back, \&quot;The truth is out there! &quot;</span> +</div>
-<div class="line"><span class="lineno">  192</span>                <span class="stringliteral">&quot;I won&#39;t be held back by small-minds like all of you!\&quot; Most of the other patrons pretend extreme &quot;</span> +</div>
-<div class="line"><span class="lineno">  193</span>                <span class="stringliteral">&quot;interest in their drinks, though at least one looses a mocking laugh.&quot;</span>;</div>
-<div class="line"><span class="lineno">  194</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a68481747c3064f19d9466d3f87abe2b3" name="a68481747c3064f19d9466d3f87abe2b3"></a>
@@ -697,21 +604,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#aeebb726b2188302e9cfad0b3ab5be636">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseGetCommodityBarEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/deb/ScientistAICoreBarEvent_8java_source.html#l00145">145</a> of file <a class="el" href="../../da/deb/ScientistAICoreBarEvent_8java_source.html">ScientistAICoreBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  145</span>                                   {</div>
-<div class="line"><span class="lineno">  146</span>        <span class="keywordflow">return</span> Misc.ucFirst(<a class="code hl_function" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#aebc0411fce93c8540f5378f281f2273a">getHeOrShe</a>()) + <span class="stringliteral">&quot; turns out to be a scientist, maybe a \&quot;scientist\&quot;, &quot;</span> +</div>
-<div class="line"><span class="lineno">  147</span>            <span class="stringliteral">&quot;and is delighted to have someone finally listen to &quot;</span> + <a class="code hl_function" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#ad4552273729202b2f296d563940c9c91">getHisOrHer</a>() + <span class="stringliteral">&quot; story. &quot;</span> +</div>
-<div class="line"><span class="lineno">  148</span>            <span class="stringliteral">&quot;You set your face to a practiced stern-but-receptive look as &quot;</span> +</div>
-<div class="line"><span class="lineno">  149</span>            <span class="stringliteral">&quot;you hear &quot;</span> + <a class="code hl_function" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#ad4552273729202b2f296d563940c9c91">getHisOrHer</a>() + <span class="stringliteral">&quot; pitch through to the end.\n\n&quot;</span> +</div>
-<div class="line"><span class="lineno">  150</span> </div>
-<div class="line"><span class="lineno">  151</span>            <span class="stringliteral">&quot;\&quot;The data doesn’t lie!\&quot; &quot;</span> + <a class="code hl_function" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#aebc0411fce93c8540f5378f281f2273a">getHeOrShe</a>() + <span class="stringliteral">&quot; cries again and again, &quot;</span> +</div>
-<div class="line"><span class="lineno">  152</span>            <span class="stringliteral">&quot;though you can’t make sense of the arcane tables scrolling &quot;</span> +</div>
-<div class="line"><span class="lineno">  153</span>            <span class="stringliteral">&quot;on &quot;</span> + <a class="code hl_function" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#ad4552273729202b2f296d563940c9c91">getHisOrHer</a>() + <span class="stringliteral">&quot; greasy TriPad. \&quot;There’s an enormous stock of &quot;</span> +</div>
-<div class="line"><span class="lineno">  154</span>            <span class="stringliteral">&quot;unrecovered Domain-era technology in this system. No one else can see it! &quot;</span> +</div>
-<div class="line"><span class="lineno">  155</span>            <span class="stringliteral">&quot;All I ask is,\&quot; &quot;</span> + <a class="code hl_function" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#ad4552273729202b2f296d563940c9c91">getHisOrHer</a>() + <span class="stringliteral">&quot; voice drops to a whisper, &quot;</span> +</div>
-<div class="line"><span class="lineno">  156</span>            <span class="stringliteral">&quot;\&quot;you retrieve for me the AI core hidden in the midst of the trove. &quot;</span> +</div>
-<div class="line"><span class="lineno">  157</span>            <span class="stringliteral">&quot;That, I get to keep. I’ll tell you exactly where to look if you agree to my terms.\&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">  158</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a067bf2e8564d890d34ece0b219f548ce" name="a067bf2e8564d890d34ece0b219f548ce"></a>
@@ -740,10 +633,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a374a47f3ea0725251656d197ec7c4fd1">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseGetCommodityBarEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/deb/ScientistAICoreBarEvent_8java_source.html#l00165">165</a> of file <a class="el" href="../../da/deb/ScientistAICoreBarEvent_8java_source.html">ScientistAICoreBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  165</span>                                           {</div>
-<div class="line"><span class="lineno">  166</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> Color [] {};</div>
-<div class="line"><span class="lineno">  167</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5059c6a51e1dade9629425b7262d81b7" name="a5059c6a51e1dade9629425b7262d81b7"></a>
@@ -772,10 +662,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a3af7f66834daeb240e1244f0cba04659">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseGetCommodityBarEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/deb/ScientistAICoreBarEvent_8java_source.html#l00161">161</a> of file <a class="el" href="../../da/deb/ScientistAICoreBarEvent_8java_source.html">ScientistAICoreBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  161</span>                                            {</div>
-<div class="line"><span class="lineno">  162</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> String [] {};</div>
-<div class="line"><span class="lineno">  163</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8e77ce1354562ff24adbee49610d92a4" name="a8e77ce1354562ff24adbee49610d92a4"></a>
@@ -804,10 +691,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#aba9383b02bc350088938e7b9c4b80750">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseGetCommodityBarEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/deb/ScientistAICoreBarEvent_8java_source.html#l00140">140</a> of file <a class="el" href="../../da/deb/ScientistAICoreBarEvent_8java_source.html">ScientistAICoreBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  140</span>                                     {</div>
-<div class="line"><span class="lineno">  141</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Flag down the academic with the TriPad&quot;</span>;</div>
-<div class="line"><span class="lineno">  142</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af8a05c822ab366800ec33397b2a24e34" name="af8a05c822ab366800ec33397b2a24e34"></a>
@@ -836,10 +720,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#ae726529454dd2b2a8c9ef0032ea7021e">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseGetCommodityBarEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/deb/ScientistAICoreBarEvent_8java_source.html#l00114">114</a> of file <a class="el" href="../../da/deb/ScientistAICoreBarEvent_8java_source.html">ScientistAICoreBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  114</span>                                        {</div>
-<div class="line"><span class="lineno">  115</span>        <span class="keywordflow">return</span> Factions.INDEPENDENT;</div>
-<div class="line"><span class="lineno">  116</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ace6df1e72714038696ad77bee46524e7" name="ace6df1e72714038696ad77bee46524e7"></a>
@@ -868,10 +749,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#ab993d9a154982f7d6fb72f1c98053ef2">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseGetCommodityBarEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/deb/ScientistAICoreBarEvent_8java_source.html#l00124">124</a> of file <a class="el" href="../../da/deb/ScientistAICoreBarEvent_8java_source.html">ScientistAICoreBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  124</span>                                     {</div>
-<div class="line"><span class="lineno">  125</span>        <span class="keywordflow">return</span> Ranks.CITIZEN;</div>
-<div class="line"><span class="lineno">  126</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="afe9c3f161aaab86ac9faa5b461b16b4b" name="afe9c3f161aaab86ac9faa5b461b16b4b"></a>
@@ -900,10 +778,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a355bebaa0bd37820cf884e0e6a90d7c4">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseGetCommodityBarEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/deb/ScientistAICoreBarEvent_8java_source.html#l00119">119</a> of file <a class="el" href="../../da/deb/ScientistAICoreBarEvent_8java_source.html">ScientistAICoreBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  119</span>                                     {</div>
-<div class="line"><span class="lineno">  120</span>        <span class="keywordflow">return</span> Ranks.CITIZEN;</div>
-<div class="line"><span class="lineno">  121</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a3c1ca180da45d5dba58147cc7eed64ab" name="a3c1ca180da45d5dba58147cc7eed64ab"></a>
@@ -932,10 +807,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#ab3bbe647f513ed5cefb98f810f222acc">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseGetCommodityBarEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/deb/ScientistAICoreBarEvent_8java_source.html#l00129">129</a> of file <a class="el" href="../../da/deb/ScientistAICoreBarEvent_8java_source.html">ScientistAICoreBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  129</span>                                   {</div>
-<div class="line"><span class="lineno">  130</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  131</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8ea354d104171ebdfa1518fd00e69e9d" name="a8ea354d104171ebdfa1518fd00e69e9d"></a>
@@ -964,12 +836,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a4e73133be2e4f896ca266dfdbb86406f">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseGetCommodityBarEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/deb/ScientistAICoreBarEvent_8java_source.html#l00134">134</a> of file <a class="el" href="../../da/deb/ScientistAICoreBarEvent_8java_source.html">ScientistAICoreBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  134</span>                                 {</div>
-<div class="line"><span class="lineno">  135</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;A disheveled &quot;</span> + <a class="code hl_function" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#ace14622f2539d9cd0f4c927b48f29e38">getManOrWoman</a>() + <span class="stringliteral">&quot; in academic uniform is bothering some of the &quot;</span> +</div>
-<div class="line"><span class="lineno">  136</span>                <span class="stringliteral">&quot;better-dressed spacers with &quot;</span> + <a class="code hl_function" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#ad4552273729202b2f296d563940c9c91">getHisOrHer</a>() + <span class="stringliteral">&quot; glowing TriPad.&quot;</span>;</div>
-<div class="line"><span class="lineno">  137</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent_html_ace14622f2539d9cd0f4c927b48f29e38"><div class="ttname"><a href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#ace14622f2539d9cd0f4c927b48f29e38">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseGetCommodityBarEvent.getManOrWoman</a></div><div class="ttdeci">String getManOrWoman()</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d22/BaseGetCommodityBarEvent_8java_source.html#l00104">BaseGetCommodityBarEvent.java:104</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aaf2c41185bdd5f5e47b6fa650803c18d" name="aaf2c41185bdd5f5e47b6fa650803c18d"></a>
@@ -999,12 +866,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#aa4deb343618d64551bc09595436472aa">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseGetCommodityBarEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/deb/ScientistAICoreBarEvent_8java_source.html#l00038">38</a> of file <a class="el" href="../../da/deb/ScientistAICoreBarEvent_8java_source.html">ScientistAICoreBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   38</span>                                           {</div>
-<div class="line"><span class="lineno">   39</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a1931eabc2023e6ba13d6104f2302798a">market</a> == <a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a1931eabc2023e6ba13d6104f2302798a">market</a>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   40</span>        super.regen(<a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a1931eabc2023e6ba13d6104f2302798a">market</a>);</div>
-<div class="line"><span class="lineno">   41</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent_html_a1931eabc2023e6ba13d6104f2302798a"><div class="ttname"><a href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a1931eabc2023e6ba13d6104f2302798a">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseGetCommodityBarEvent.market</a></div><div class="ttdeci">MarketAPI market</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d22/BaseGetCommodityBarEvent_8java_source.html#l00042">BaseGetCommodityBarEvent.java:42</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="adc28af826fc3cd0eb47f3939b12408ec" name="adc28af826fc3cd0eb47f3939b12408ec"></a>
@@ -1026,18 +888,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../dc/da0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEvent.html#ac0a489e3d97adb2a637b3d01beadab9f">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseBarEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/deb/ScientistAICoreBarEvent_8java_source.html#l00026">26</a> of file <a class="el" href="../../da/deb/ScientistAICoreBarEvent_8java_source.html">ScientistAICoreBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   26</span>                                                        {</div>
-<div class="line"><span class="lineno">   27</span>        <span class="keywordflow">if</span> (!super.shouldShowAtMarket(<a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a1931eabc2023e6ba13d6104f2302798a">market</a>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   28</span>        </div>
-<div class="line"><span class="lineno">   29</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a1931eabc2023e6ba13d6104f2302798a">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#aa132dbebb3e9e38ad71a576a4ea5ac9b">getFactionId</a>().equals(Factions.LUDDIC_CHURCH) ||</div>
-<div class="line"><span class="lineno">   30</span>                <a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a1931eabc2023e6ba13d6104f2302798a">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#aa132dbebb3e9e38ad71a576a4ea5ac9b">getFactionId</a>().equals(Factions.LUDDIC_PATH)) {</div>
-<div class="line"><span class="lineno">   31</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   32</span>        }</div>
-<div class="line"><span class="lineno">   33</span>        </div>
-<div class="line"><span class="lineno">   34</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   35</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_aa132dbebb3e9e38ad71a576a4ea5ac9b"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#aa132dbebb3e9e38ad71a576a4ea5ac9b">com.fs.starfarer.api.campaign.econ.MarketAPI.getFactionId</a></div><div class="ttdeci">String getFactionId()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5f1cb4ad3a6a3f4152cc55dae56fa7de" name="a5f1cb4ad3a6a3f4152cc55dae56fa7de"></a>
@@ -1066,10 +917,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#aaf80028ebc5cc22a17c352fa1b4a12e6">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseGetCommodityBarEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/deb/ScientistAICoreBarEvent_8java_source.html#l00196">196</a> of file <a class="el" href="../../da/deb/ScientistAICoreBarEvent_8java_source.html">ScientistAICoreBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  196</span>                                     {</div>
-<div class="line"><span class="lineno">  197</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  198</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a7381b5caaef125d69d3c0eef1ab322b7" name="a7381b5caaef125d69d3c0eef1ab322b7"></a>
@@ -1098,21 +946,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a901f3d095c7b28b7ec652a1afce54006">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseGetCommodityBarEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/deb/ScientistAICoreBarEvent_8java_source.html#l00201">201</a> of file <a class="el" href="../../da/deb/ScientistAICoreBarEvent_8java_source.html">ScientistAICoreBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  201</span>                                         {</div>
-<div class="line"><span class="lineno">  202</span>        super.showTotalAndOptions();</div>
-<div class="line"><span class="lineno">  203</span>        </div>
-<div class="line"><span class="lineno">  204</span>        <span class="comment">// can&#39;t actually show the location of the cache pre-accept because it&#39;s only</span></div>
-<div class="line"><span class="lineno">  205</span>        <span class="comment">// generated once the mission is accepted</span></div>
-<div class="line"><span class="lineno">  206</span><span class="comment">//      String icon = Global.getSettings().getCommoditySpec(Commodities.ALPHA_CORE).getIconName();</span></div>
-<div class="line"><span class="lineno">  207</span><span class="comment">//      String text = null;</span></div>
-<div class="line"><span class="lineno">  208</span><span class="comment">//      Set&lt;String&gt; tags = new LinkedHashSet&lt;String&gt;();</span></div>
-<div class="line"><span class="lineno">  209</span><span class="comment">//      tags.add(Tags.INTEL_MISSIONS);</span></div>
-<div class="line"><span class="lineno">  210</span><span class="comment">//      </span></div>
-<div class="line"><span class="lineno">  211</span><span class="comment">//      dialog.getVisualPanel().showMapMarker(getDestination().getPrimaryEntity(), </span></div>
-<div class="line"><span class="lineno">  212</span><span class="comment">//                  &quot;Destination: &quot; + getDestination().getName(), getDestination().getFaction().getId(), </span></div>
-<div class="line"><span class="lineno">  213</span><span class="comment">//                  true, icon, text, tags);</span></div>
-<div class="line"><span class="lineno">  214</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -188,20 +189,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d5/dd3/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1listeners_1_1DamageDealtModifier.html#a015c22179c915d5d3dd1405fcb79f502">com.fs.starfarer.api.combat.listeners.DamageDealtModifier</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d5c/SquallOnFireEffect_8java_source.html#l00029">29</a> of file <a class="el" href="../../d9/d5c/SquallOnFireEffect_8java_source.html">SquallOnFireEffect.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   29</span>                                                                                                                               {</div>
-<div class="line"><span class="lineno">   30</span>        <span class="keywordflow">if</span> (shieldHit &amp;&amp; param instanceof MissileAPI) {</div>
-<div class="line"><span class="lineno">   31</span>            MissileAPI m = (MissileAPI) param;</div>
-<div class="line"><span class="lineno">   32</span>            <span class="keywordflow">if</span> (m.getWeaponSpec() != <span class="keyword">null</span> &amp;&amp; m.getWeaponSpec().getWeaponId().equals(<a class="code hl_variable" href="../../d3/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1SquallOnFireEffect.html#a424d489c026713c21963e33b24fa7e63">weaponId</a>)) {</div>
-<div class="line"><span class="lineno">   33</span>                <span class="keywordtype">float</span> base = damage.getBaseDamage();</div>
-<div class="line"><span class="lineno">   34</span>                damage.setDamage(base + <a class="code hl_variable" href="../../d3/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1SquallOnFireEffect.html#a8cb54abd9d77988779c923b22ec64b6e">DAMAGE</a>);</div>
-<div class="line"><span class="lineno">   35</span>                <span class="keywordflow">return</span> <span class="stringliteral">&quot;squall&quot;</span>;</div>
-<div class="line"><span class="lineno">   36</span>            }</div>
-<div class="line"><span class="lineno">   37</span>        }</div>
-<div class="line"><span class="lineno">   38</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   39</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1SquallOnFireEffect_html_a424d489c026713c21963e33b24fa7e63"><div class="ttname"><a href="../../d3/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1SquallOnFireEffect.html#a424d489c026713c21963e33b24fa7e63">com.fs.starfarer.api.impl.combat.SquallOnFireEffect.weaponId</a></div><div class="ttdeci">String weaponId</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d5c/SquallOnFireEffect_8java_source.html#l00019">SquallOnFireEffect.java:19</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1SquallOnFireEffect_html_a8cb54abd9d77988779c923b22ec64b6e"><div class="ttname"><a href="../../d3/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1SquallOnFireEffect.html#a8cb54abd9d77988779c923b22ec64b6e">com.fs.starfarer.api.impl.combat.SquallOnFireEffect.DAMAGE</a></div><div class="ttdeci">static float DAMAGE</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d5c/SquallOnFireEffect_8java_source.html#l00017">SquallOnFireEffect.java:17</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5d91d141f04fdff21550bcffab894b60" name="a5d91d141f04fdff21550bcffab894b60"></a>
@@ -239,14 +227,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../df/d88/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1OnFireEffectPlugin.html#a311cdd64c43363b408cb61e077f6e629">com.fs.starfarer.api.combat.OnFireEffectPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d5c/SquallOnFireEffect_8java_source.html#l00021">21</a> of file <a class="el" href="../../d9/d5c/SquallOnFireEffect_8java_source.html">SquallOnFireEffect.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   21</span>                                                                                                   {</div>
-<div class="line"><span class="lineno">   22</span>        ShipAPI ship = weapon.getShip();</div>
-<div class="line"><span class="lineno">   23</span>        <span class="keywordflow">if</span> (!ship.hasListenerOfClass(SquallOnFireEffect.class)) {</div>
-<div class="line"><span class="lineno">   24</span>            ship.addListener(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">   25</span>            <a class="code hl_variable" href="../../d3/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1SquallOnFireEffect.html#a424d489c026713c21963e33b24fa7e63">weaponId</a> = weapon.getId();</div>
-<div class="line"><span class="lineno">   26</span>        }</div>
-<div class="line"><span class="lineno">   27</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

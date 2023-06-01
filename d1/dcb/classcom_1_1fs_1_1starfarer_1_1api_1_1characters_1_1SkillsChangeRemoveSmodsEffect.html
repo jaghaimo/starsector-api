@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -207,32 +208,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/db6/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1BaseSkillsChangeEffect.html#ac263fc216e6112b6c473475e04c185d2">com.fs.starfarer.api.characters.BaseSkillsChangeEffect</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d1/d8e/SkillsChangeRemoveSmodsEffect_8java_source.html#l00212">212</a> of file <a class="el" href="../../d1/d8e/SkillsChangeRemoveSmodsEffect_8java_source.html">SkillsChangeRemoveSmodsEffect.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  212</span>                                                                                                                      {</div>
-<div class="line"><span class="lineno">  213</span>        SmodDataMap map = <a class="code hl_function" href="../../d1/dcb/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeRemoveSmodsEffect.html#a6735a90b70a7d5de6c66216fa203d703">getMap</a>(dataMap);</div>
-<div class="line"><span class="lineno">  214</span>        </div>
-<div class="line"><span class="lineno">  215</span>        <span class="keywordflow">for</span> (SmodRemovalEffectData data : map.map.values()) {</div>
-<div class="line"><span class="lineno">  216</span>            ShipVariantAPI variant = data.member.getVariant();</div>
-<div class="line"><span class="lineno">  217</span>            variant = variant.clone();</div>
-<div class="line"><span class="lineno">  218</span>            variant.setSource(VariantSource.REFIT);</div>
-<div class="line"><span class="lineno">  219</span>            </div>
-<div class="line"><span class="lineno">  220</span>            <span class="keywordflow">if</span> (data.offerChoice) {</div>
-<div class="line"><span class="lineno">  221</span>                <span class="keywordtype">int</span> index = 0;</div>
-<div class="line"><span class="lineno">  222</span>                <span class="keywordflow">for</span> (ButtonAPI b : data.buttons) {</div>
-<div class="line"><span class="lineno">  223</span>                    <span class="keywordflow">if</span> (b.isChecked()) {</div>
-<div class="line"><span class="lineno">  224</span>                        SModRecord record = data.records.get(index);</div>
-<div class="line"><span class="lineno">  225</span>                        data.removeList.add(record.getSMods().get(0));</div>
-<div class="line"><span class="lineno">  226</span>                    }</div>
-<div class="line"><span class="lineno">  227</span>                    index++;</div>
-<div class="line"><span class="lineno">  228</span>                }</div>
-<div class="line"><span class="lineno">  229</span>            }</div>
-<div class="line"><span class="lineno">  230</span>            <span class="keywordflow">for</span> (String modId : data.removeList) {</div>
-<div class="line"><span class="lineno">  231</span>                variant.removePermaMod(modId);</div>
-<div class="line"><span class="lineno">  232</span>            }</div>
-<div class="line"><span class="lineno">  233</span>            data.member.setVariant(variant, <span class="keyword">false</span>, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  234</span>        }</div>
-<div class="line"><span class="lineno">  235</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeRemoveSmodsEffect_html_a6735a90b70a7d5de6c66216fa203d703"><div class="ttname"><a href="../../d1/dcb/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeRemoveSmodsEffect.html#a6735a90b70a7d5de6c66216fa203d703">com.fs.starfarer.api.characters.SkillsChangeRemoveSmodsEffect.getMap</a></div><div class="ttdeci">SmodDataMap getMap(Map&lt; String, Object &gt; dataMap)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d8e/SkillsChangeRemoveSmodsEffect_8java_source.html#l00044">SkillsChangeRemoveSmodsEffect.java:44</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a3efc5d7c0779666da7b73d4a540d6e31" name="a3efc5d7c0779666da7b73d4a540d6e31"></a>
@@ -262,64 +238,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/d8e/SkillsChangeRemoveSmodsEffect_8java_source.html#l00054">54</a> of file <a class="el" href="../../d1/d8e/SkillsChangeRemoveSmodsEffect_8java_source.html">SkillsChangeRemoveSmodsEffect.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   54</span>                                                                                              {</div>
-<div class="line"><span class="lineno">   55</span>        SmodDataMap result = <span class="keyword">new</span> SmodDataMap();</div>
-<div class="line"><span class="lineno">   56</span>        </div>
-<div class="line"><span class="lineno">   57</span>        </div>
-<div class="line"><span class="lineno">   58</span>        <span class="keywordflow">for</span> (SModRecord record : PlaythroughLog.getInstance().getSModsInstalled()) {</div>
-<div class="line"><span class="lineno">   59</span>            FleetMemberAPI member = record.getMember();</div>
-<div class="line"><span class="lineno">   60</span>            <span class="keywordflow">if</span> (member == <span class="keyword">null</span>) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   61</span>            <span class="keywordflow">if</span> (record.getSMods().isEmpty()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   62</span>            String modId = record.getSMods().get(0);</div>
-<div class="line"><span class="lineno">   63</span>            <span class="keywordflow">if</span> (!member.getVariant().getSMods().contains(modId)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   64</span>            <span class="keywordflow">if</span> (!member.getVariant().getHullMods().contains(modId)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   65</span>            </div>
-<div class="line"><span class="lineno">   66</span>            SmodRemovalEffectData data = result.map.get(member);</div>
-<div class="line"><span class="lineno">   67</span>            <span class="keywordflow">if</span> (data == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   68</span>                data = <span class="keyword">new</span> SmodRemovalEffectData();</div>
-<div class="line"><span class="lineno">   69</span>                data.member = member;</div>
-<div class="line"><span class="lineno">   70</span>                data.numSmods = member.getVariant().getSMods().size();</div>
-<div class="line"><span class="lineno">   71</span>                data.maxBefore = Misc.getMaxPermanentMods(member, from);</div>
-<div class="line"><span class="lineno">   72</span>                data.maxAfter = Misc.getMaxPermanentMods(member, to);</div>
-<div class="line"><span class="lineno">   73</span>                result.map.put(member, data);</div>
-<div class="line"><span class="lineno">   74</span>            }</div>
-<div class="line"><span class="lineno">   75</span>            data.records.add(record);</div>
-<div class="line"><span class="lineno">   76</span>        }</div>
-<div class="line"><span class="lineno">   77</span>        </div>
-<div class="line"><span class="lineno">   78</span>        <span class="keywordflow">for</span> (FleetMemberAPI member : <span class="keyword">new</span> ArrayList&lt;FleetMemberAPI&gt;(result.map.keySet())) {</div>
-<div class="line"><span class="lineno">   79</span>            SmodRemovalEffectData data = result.map.get(member);</div>
-<div class="line"><span class="lineno">   80</span>            <span class="keywordflow">if</span> (data.maxBefore &lt;= data.maxAfter || data.records.isEmpty() ||</div>
-<div class="line"><span class="lineno">   81</span>                    data.numSmods &lt;= data.maxAfter) {</div>
-<div class="line"><span class="lineno">   82</span>                result.map.remove(member);</div>
-<div class="line"><span class="lineno">   83</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   84</span>                data.remove = Math.min(data.numSmods - data.maxAfter, data.records.size());</div>
-<div class="line"><span class="lineno">   85</span>                data.offerChoice = data.remove &lt;= 1 &amp;&amp; </div>
-<div class="line"><span class="lineno">   86</span>                        Global.getSector().getPlayerFleet().getFleetData().getMembersListCopy().contains(data.member);</div>
-<div class="line"><span class="lineno">   87</span>                <span class="keywordflow">if</span> (!data.offerChoice) {</div>
-<div class="line"><span class="lineno">   88</span>                    List&lt;SModRecord&gt; copy = <span class="keyword">new</span> ArrayList&lt;SModRecord&gt;(data.records);</div>
-<div class="line"><span class="lineno">   89</span>                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; data.remove; i++) {</div>
-<div class="line"><span class="lineno">   90</span>                        <span class="keywordtype">int</span> minCost = 10000;</div>
-<div class="line"><span class="lineno">   91</span>                        SModRecord minCostMod = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   92</span>                        <span class="keywordflow">for</span> (SModRecord record : data.records) {</div>
-<div class="line"><span class="lineno">   93</span>                            HullModSpecAPI mod = Global.getSettings().getHullModSpec(record.getSMods().get(0));</div>
-<div class="line"><span class="lineno">   94</span>                            <span class="keywordtype">int</span> cost = mod.getCostFor(member.getHullSpec().getHullSize());</div>
-<div class="line"><span class="lineno">   95</span>                            <span class="keywordflow">if</span> (cost &lt; minCost) {</div>
-<div class="line"><span class="lineno">   96</span>                                minCostMod = record;</div>
-<div class="line"><span class="lineno">   97</span>                                minCost = cost;</div>
-<div class="line"><span class="lineno">   98</span>                            }</div>
-<div class="line"><span class="lineno">   99</span>                        }</div>
-<div class="line"><span class="lineno">  100</span>                        <span class="keywordflow">if</span> (minCostMod != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  101</span>                            data.removeList.add(minCostMod.getSMods().get(0));</div>
-<div class="line"><span class="lineno">  102</span>                            copy.remove(minCostMod);</div>
-<div class="line"><span class="lineno">  103</span>                        }</div>
-<div class="line"><span class="lineno">  104</span>                    }</div>
-<div class="line"><span class="lineno">  105</span>                }</div>
-<div class="line"><span class="lineno">  106</span>            }</div>
-<div class="line"><span class="lineno">  107</span>        }</div>
-<div class="line"><span class="lineno">  108</span>        </div>
-<div class="line"><span class="lineno">  109</span>        <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">  110</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a6735a90b70a7d5de6c66216fa203d703" name="a6735a90b70a7d5de6c66216fa203d703"></a>
@@ -339,16 +258,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/d8e/SkillsChangeRemoveSmodsEffect_8java_source.html#l00044">44</a> of file <a class="el" href="../../d1/d8e/SkillsChangeRemoveSmodsEffect_8java_source.html">SkillsChangeRemoveSmodsEffect.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   44</span>                                                           {</div>
-<div class="line"><span class="lineno">   45</span>        String key = getClass().getSimpleName();</div>
-<div class="line"><span class="lineno">   46</span>        SmodDataMap map = (SmodDataMap)dataMap.get(key);</div>
-<div class="line"><span class="lineno">   47</span>        <span class="keywordflow">if</span> (map == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   48</span>            map = <span class="keyword">new</span> SmodDataMap();</div>
-<div class="line"><span class="lineno">   49</span>            dataMap.put(key, map);</div>
-<div class="line"><span class="lineno">   50</span>        }</div>
-<div class="line"><span class="lineno">   51</span>        <span class="keywordflow">return</span> map;</div>
-<div class="line"><span class="lineno">   52</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a52d11b31b1e32c71ff2d8698afbccdf3" name="a52d11b31b1e32c71ff2d8698afbccdf3"></a>
@@ -380,11 +290,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/db6/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1BaseSkillsChangeEffect.html#a79eebc243149f67034d141f82b82c875">com.fs.starfarer.api.characters.BaseSkillsChangeEffect</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d1/d8e/SkillsChangeRemoveSmodsEffect_8java_source.html#l00114">114</a> of file <a class="el" href="../../d1/d8e/SkillsChangeRemoveSmodsEffect_8java_source.html">SkillsChangeRemoveSmodsEffect.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  114</span>                                                                                          {</div>
-<div class="line"><span class="lineno">  115</span>        <span class="keywordflow">return</span> !<a class="code hl_function" href="../../d1/dcb/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeRemoveSmodsEffect.html#a3efc5d7c0779666da7b73d4a540d6e31">getEffects</a>(from, to).map.isEmpty();</div>
-<div class="line"><span class="lineno">  116</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeRemoveSmodsEffect_html_a3efc5d7c0779666da7b73d4a540d6e31"><div class="ttname"><a href="../../d1/dcb/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeRemoveSmodsEffect.html#a3efc5d7c0779666da7b73d4a540d6e31">com.fs.starfarer.api.characters.SkillsChangeRemoveSmodsEffect.getEffects</a></div><div class="ttdeci">SmodDataMap getEffects(MutableCharacterStatsAPI from, MutableCharacterStatsAPI to)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d8e/SkillsChangeRemoveSmodsEffect_8java_source.html#l00054">SkillsChangeRemoveSmodsEffect.java:54</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a3c58dde48bbb304665715a14e7755069" name="a3c58dde48bbb304665715a14e7755069"></a>
@@ -422,30 +328,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/db6/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1BaseSkillsChangeEffect.html#a015d204fd3a5b8eba2b91e1ac3e8c741">com.fs.starfarer.api.characters.BaseSkillsChangeEffect</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d1/d8e/SkillsChangeRemoveSmodsEffect_8java_source.html#l00187">187</a> of file <a class="el" href="../../d1/d8e/SkillsChangeRemoveSmodsEffect_8java_source.html">SkillsChangeRemoveSmodsEffect.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  187</span>                                                                                               {</div>
-<div class="line"><span class="lineno">  188</span>        SmodDataMap map = <a class="code hl_function" href="../../d1/dcb/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeRemoveSmodsEffect.html#a6735a90b70a7d5de6c66216fa203d703">getMap</a>(dataMap);</div>
-<div class="line"><span class="lineno">  189</span>        </div>
-<div class="line"><span class="lineno">  190</span>        <span class="keywordflow">for</span> (SmodRemovalEffectData data : map.map.values()) {</div>
-<div class="line"><span class="lineno">  191</span>            <span class="keywordtype">boolean</span> found = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  192</span>            <span class="keywordflow">for</span> (ButtonAPI b : data.buttons) {</div>
-<div class="line"><span class="lineno">  193</span>                <span class="keywordflow">if</span> (b == button) {</div>
-<div class="line"><span class="lineno">  194</span>                    found = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  195</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  196</span>                }</div>
-<div class="line"><span class="lineno">  197</span>            }</div>
-<div class="line"><span class="lineno">  198</span>            <span class="keywordflow">if</span> (found) {</div>
-<div class="line"><span class="lineno">  199</span>                <span class="keywordflow">for</span> (ButtonAPI b : data.buttons) {</div>
-<div class="line"><span class="lineno">  200</span>                    <span class="keywordflow">if</span> (b == button) {</div>
-<div class="line"><span class="lineno">  201</span>                        b.setChecked(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  202</span>                    } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  203</span>                        b.setChecked(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  204</span>                    }</div>
-<div class="line"><span class="lineno">  205</span>                }</div>
-<div class="line"><span class="lineno">  206</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  207</span>            }</div>
-<div class="line"><span class="lineno">  208</span>        }</div>
-<div class="line"><span class="lineno">  209</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab796a64d153615c89e6116bad7b59f86" name="ab796a64d153615c89e6116bad7b59f86"></a>
@@ -489,77 +372,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/db6/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1BaseSkillsChangeEffect.html#a650c7aa391bb181d6c37ca6c43aac4eb">com.fs.starfarer.api.characters.BaseSkillsChangeEffect</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d1/d8e/SkillsChangeRemoveSmodsEffect_8java_source.html#l00119">119</a> of file <a class="el" href="../../d1/d8e/SkillsChangeRemoveSmodsEffect_8java_source.html">SkillsChangeRemoveSmodsEffect.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  119</span>                                                                                                                                            {</div>
-<div class="line"><span class="lineno">  120</span>        super.prepare();</div>
-<div class="line"><span class="lineno">  121</span>        </div>
-<div class="line"><span class="lineno">  122</span>        SmodDataMap map = <a class="code hl_function" href="../../d1/dcb/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeRemoveSmodsEffect.html#a3efc5d7c0779666da7b73d4a540d6e31">getEffects</a>(from, to);</div>
-<div class="line"><span class="lineno">  123</span>        <a class="code hl_function" href="../../d1/dcb/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeRemoveSmodsEffect.html#aceacb17d93e481183c0c14a2a45a523c">setMap</a>(map, dataMap);</div>
-<div class="line"><span class="lineno">  124</span>        </div>
-<div class="line"><span class="lineno">  125</span>        <span class="keywordtype">float</span> pad = 3f;</div>
-<div class="line"><span class="lineno">  126</span>        <span class="keywordtype">float</span> opad = 10f;</div>
-<div class="line"><span class="lineno">  127</span>        Color h = Misc.getHighlightColor();</div>
-<div class="line"><span class="lineno">  128</span>        </div>
-<div class="line"><span class="lineno">  129</span>        <span class="keywordtype">float</span> initPad = 15f;</div>
-<div class="line"><span class="lineno">  130</span>        info.addSectionHeading(<span class="stringliteral">&quot;S-mods&quot;</span>, <a class="code hl_variable" href="../../da/db6/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1BaseSkillsChangeEffect.html#acb1c89c7c91884b6d0283fc58b24d173">base</a>, <a class="code hl_variable" href="../../da/db6/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1BaseSkillsChangeEffect.html#a3116342fe0a58237deb2a277ad9e17ad">dark</a>, Alignment.MID, initPad);</div>
-<div class="line"><span class="lineno">  131</span>        initPad = opad;</div>
-<div class="line"><span class="lineno">  132</span><span class="comment">//      for (SmodRemovalEffectData data : map.map.values()) {</span></div>
-<div class="line"><span class="lineno">  133</span><span class="comment">//          if (!data.offerChoice) {</span></div>
-<div class="line"><span class="lineno">  134</span>                info.addPara(<span class="stringliteral">&quot;Ships that you&#39;ve built s-mods into that now have more than their maximum&quot;</span></div>
-<div class="line"><span class="lineno">  135</span>                        + <span class="stringliteral">&quot; number of s-mods will have the cheapest s-mods removed.&quot;</span>, initPad, </div>
-<div class="line"><span class="lineno">  136</span>                        Misc.getNegativeHighlightColor(),</div>
-<div class="line"><span class="lineno">  137</span>                        <span class="stringliteral">&quot;cheapest s-mods removed&quot;</span>);</div>
-<div class="line"><span class="lineno">  138</span>                initPad = 15f;</div>
-<div class="line"><span class="lineno">  139</span>                info.addPara(<span class="stringliteral">&quot;If only one s-mod is being removed, and the ship is currently in your fleet, &quot;</span></div>
-<div class="line"><span class="lineno">  140</span>                        + <span class="stringliteral">&quot;you can select which s-mod to remove. S-mods you did not build into a ship will not be removed, even if the ship is over the limit.&quot;</span>, opad);</div>
-<div class="line"><span class="lineno">  141</span><span class="comment">//              break;</span></div>
-<div class="line"><span class="lineno">  142</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">  143</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  144</span>        </div>
-<div class="line"><span class="lineno">  145</span>        <span class="keywordflow">for</span> (SmodRemovalEffectData data : map.map.values()) {</div>
-<div class="line"><span class="lineno">  146</span>            <span class="keyword">final</span> FleetMemberAPI member = data.member;</div>
-<div class="line"><span class="lineno">  147</span>            </div>
-<div class="line"><span class="lineno">  148</span>            <span class="keywordflow">if</span> (data.offerChoice) {</div>
-<div class="line"><span class="lineno">  149</span>                String str = <span class="stringliteral">&quot;The &quot;</span> + member.getShipName() +</div>
-<div class="line"><span class="lineno">  150</span>                <span class="stringliteral">&quot; (&quot;</span> + member.getHullSpec().getHullNameWithDashClass() + <span class="stringliteral">&quot;), will lose its built-in...&quot;</span>;</div>
-<div class="line"><span class="lineno">  151</span>                info.addPara(str, initPad);</div>
-<div class="line"><span class="lineno">  152</span>                </div>
-<div class="line"><span class="lineno">  153</span>                <span class="keywordtype">float</span> bw = 470;</div>
-<div class="line"><span class="lineno">  154</span>                <span class="keywordtype">float</span> bh = 25;</div>
-<div class="line"><span class="lineno">  155</span>                <span class="keywordtype">float</span> indent = 40f;</div>
-<div class="line"><span class="lineno">  156</span>                UIComponentAPI prev = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  157</span>                <span class="keywordtype">int</span> minCost = 10000;</div>
-<div class="line"><span class="lineno">  158</span>                ButtonAPI minCostButton = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  159</span>                <span class="keywordflow">for</span> (SModRecord record : data.records) {</div>
-<div class="line"><span class="lineno">  160</span>                    HullModSpecAPI mod = Global.getSettings().getHullModSpec(record.getSMods().get(0));</div>
-<div class="line"><span class="lineno">  161</span>                    <span class="keywordtype">float</span> p = opad;</div>
-<div class="line"><span class="lineno">  162</span>                    <span class="keywordflow">if</span> (prev != <span class="keyword">null</span>) p = pad;</div>
-<div class="line"><span class="lineno">  163</span>                    <span class="keywordtype">int</span> cost = mod.getCostFor(member.getHullSpec().getHullSize());</div>
-<div class="line"><span class="lineno">  164</span>                    ButtonAPI b = info.addAreaCheckbox(</div>
-<div class="line"><span class="lineno">  165</span>                            mod.getDisplayName() + <span class="stringliteral">&quot; (&quot;</span> + cost + <span class="stringliteral">&quot; OP)&quot;</span>, <span class="keyword">new</span> Object(), <a class="code hl_variable" href="../../da/db6/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1BaseSkillsChangeEffect.html#acb1c89c7c91884b6d0283fc58b24d173">base</a>, <a class="code hl_variable" href="../../da/db6/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1BaseSkillsChangeEffect.html#a3116342fe0a58237deb2a277ad9e17ad">dark</a>, <a class="code hl_variable" href="../../da/db6/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1BaseSkillsChangeEffect.html#aa47d808c8d59021b45b3045451fadf61">bright</a>, bw, bh, p, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  166</span>                    data.buttons.add(b);</div>
-<div class="line"><span class="lineno">  167</span> </div>
-<div class="line"><span class="lineno">  168</span>                    <span class="keywordflow">if</span> (prev == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  169</span>                        b.getPosition().setXAlignOffset(indent);</div>
-<div class="line"><span class="lineno">  170</span>                    }</div>
-<div class="line"><span class="lineno">  171</span>                    prev = b;</div>
-<div class="line"><span class="lineno">  172</span>                    <span class="keywordflow">if</span> (cost &lt; minCost) {</div>
-<div class="line"><span class="lineno">  173</span>                        minCostButton = b;</div>
-<div class="line"><span class="lineno">  174</span>                        minCost = cost;</div>
-<div class="line"><span class="lineno">  175</span>                    }</div>
-<div class="line"><span class="lineno">  176</span>                }</div>
-<div class="line"><span class="lineno">  177</span>                <span class="keywordflow">if</span> (minCostButton != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  178</span>                    minCostButton.setChecked(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  179</span>                }</div>
-<div class="line"><span class="lineno">  180</span>                </div>
-<div class="line"><span class="lineno">  181</span>                info.addSpacer(0).getPosition().setXAlignOffset(-indent);</div>
-<div class="line"><span class="lineno">  182</span>            }</div>
-<div class="line"><span class="lineno">  183</span>        }</div>
-<div class="line"><span class="lineno">  184</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1BaseSkillsChangeEffect_html_a3116342fe0a58237deb2a277ad9e17ad"><div class="ttname"><a href="../../da/db6/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1BaseSkillsChangeEffect.html#a3116342fe0a58237deb2a277ad9e17ad">com.fs.starfarer.api.characters.BaseSkillsChangeEffect.dark</a></div><div class="ttdeci">Color dark</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dd0/BaseSkillsChangeEffect_8java_source.html#l00014">BaseSkillsChangeEffect.java:14</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1BaseSkillsChangeEffect_html_aa47d808c8d59021b45b3045451fadf61"><div class="ttname"><a href="../../da/db6/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1BaseSkillsChangeEffect.html#aa47d808c8d59021b45b3045451fadf61">com.fs.starfarer.api.characters.BaseSkillsChangeEffect.bright</a></div><div class="ttdeci">Color bright</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dd0/BaseSkillsChangeEffect_8java_source.html#l00015">BaseSkillsChangeEffect.java:15</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1BaseSkillsChangeEffect_html_acb1c89c7c91884b6d0283fc58b24d173"><div class="ttname"><a href="../../da/db6/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1BaseSkillsChangeEffect.html#acb1c89c7c91884b6d0283fc58b24d173">com.fs.starfarer.api.characters.BaseSkillsChangeEffect.base</a></div><div class="ttdeci">Color base</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dd0/BaseSkillsChangeEffect_8java_source.html#l00013">BaseSkillsChangeEffect.java:13</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeRemoveSmodsEffect_html_aceacb17d93e481183c0c14a2a45a523c"><div class="ttname"><a href="../../d1/dcb/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeRemoveSmodsEffect.html#aceacb17d93e481183c0c14a2a45a523c">com.fs.starfarer.api.characters.SkillsChangeRemoveSmodsEffect.setMap</a></div><div class="ttdeci">void setMap(SmodDataMap map, Map&lt; String, Object &gt; dataMap)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d8e/SkillsChangeRemoveSmodsEffect_8java_source.html#l00040">SkillsChangeRemoveSmodsEffect.java:40</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aceacb17d93e481183c0c14a2a45a523c" name="aceacb17d93e481183c0c14a2a45a523c"></a>
@@ -589,11 +402,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/d8e/SkillsChangeRemoveSmodsEffect_8java_source.html#l00040">40</a> of file <a class="el" href="../../d1/d8e/SkillsChangeRemoveSmodsEffect_8java_source.html">SkillsChangeRemoveSmodsEffect.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   40</span>                                                                     {</div>
-<div class="line"><span class="lineno">   41</span>        String key = getClass().getSimpleName();</div>
-<div class="line"><span class="lineno">   42</span>        dataMap.put(key, map);</div>
-<div class="line"><span class="lineno">   43</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

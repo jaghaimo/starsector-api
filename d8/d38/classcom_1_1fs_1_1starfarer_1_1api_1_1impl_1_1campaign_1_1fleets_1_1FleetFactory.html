@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -188,46 +189,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d93/FleetFactory_8java_source.html#l00434">434</a> of file <a class="el" href="../../d3/d93/FleetFactory_8java_source.html">FleetFactory.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  434</span>                                                                                                                        {</div>
-<div class="line"><span class="lineno">  435</span>        <span class="keywordtype">float</span> qualityFactor = market.getShipQualityFactor();</div>
-<div class="line"><span class="lineno">  436</span>        </div>
-<div class="line"><span class="lineno">  437</span>        WeightedRandomPicker&lt;String&gt; main = <span class="keyword">new</span> WeightedRandomPicker&lt;String&gt;();</div>
-<div class="line"><span class="lineno">  438</span>        </div>
-<div class="line"><span class="lineno">  439</span>        main.add(ShipRoles.COMBAT_SMALL, 5);</div>
-<div class="line"><span class="lineno">  440</span>        main.add(ShipRoles.COMBAT_SMALL, 5);</div>
-<div class="line"><span class="lineno">  441</span>        </div>
-<div class="line"><span class="lineno">  442</span>        main.add(ShipRoles.ESCORT_SMALL, 6);</div>
-<div class="line"><span class="lineno">  443</span>        main.add(ShipRoles.COMBAT_SMALL, 20);</div>
-<div class="line"><span class="lineno">  444</span>        main.add(ShipRoles.FAST_ATTACK, 10);</div>
-<div class="line"><span class="lineno">  445</span> </div>
-<div class="line"><span class="lineno">  446</span>        <span class="keywordflow">if</span> (extraFP &gt;= 20) {</div>
-<div class="line"><span class="lineno">  447</span>            main.add(ShipRoles.COMBAT_MEDIUM, 10);</div>
-<div class="line"><span class="lineno">  448</span>            main.add(ShipRoles.ESCORT_MEDIUM, 10);</div>
-<div class="line"><span class="lineno">  449</span>        }</div>
-<div class="line"><span class="lineno">  450</span>        <span class="keywordflow">if</span> (extraFP &gt;= 40) {</div>
-<div class="line"><span class="lineno">  451</span>            main.add(ShipRoles.COMBAT_LARGE, 5);</div>
-<div class="line"><span class="lineno">  452</span>            main.add(ShipRoles.COMBAT_SMALL, 5);</div>
-<div class="line"><span class="lineno">  453</span>        }</div>
-<div class="line"><span class="lineno">  454</span>        <span class="keywordflow">if</span> (extraFP &gt;= 60) {</div>
-<div class="line"><span class="lineno">  455</span>            main.add(ShipRoles.COMBAT_LARGE, 5);</div>
-<div class="line"><span class="lineno">  456</span>            main.add(ShipRoles.COMBAT_CAPITAL, 3);</div>
-<div class="line"><span class="lineno">  457</span>        }</div>
-<div class="line"><span class="lineno">  458</span>        </div>
-<div class="line"><span class="lineno">  459</span>        <span class="comment">// add ships and/or fighters, leave some headroom for carriers</span></div>
-<div class="line"><span class="lineno">  460</span>        <span class="keywordtype">int</span> failCount = 0;</div>
-<div class="line"><span class="lineno">  461</span>        <span class="keywordtype">int</span> starting = fleet.getFleetPoints();</div>
-<div class="line"><span class="lineno">  462</span>        <span class="keywordflow">while</span> (fleet.getFleetPoints() &lt; starting + extraFP) {</div>
-<div class="line"><span class="lineno">  463</span>            String role = main.pick();</div>
-<div class="line"><span class="lineno">  464</span>            <span class="keywordtype">boolean</span> added = faction.pickShipAndAddToFleet(role, ShipPickParams.all(), fleet) &gt; 0;</div>
-<div class="line"><span class="lineno">  465</span>            <span class="keywordflow">if</span> (added) {</div>
-<div class="line"><span class="lineno">  466</span>                failCount = 0;</div>
-<div class="line"><span class="lineno">  467</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  468</span>                failCount++;</div>
-<div class="line"><span class="lineno">  469</span>                <span class="keywordflow">if</span> (failCount &gt;= 10) <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  470</span>            }</div>
-<div class="line"><span class="lineno">  471</span>        }</div>
-<div class="line"><span class="lineno">  472</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af234d33c96df50a945d8949dddc02bdd" name="af234d33c96df50a945d8949dddc02bdd"></a>
@@ -271,36 +233,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d93/FleetFactory_8java_source.html#l00276">276</a> of file <a class="el" href="../../d3/d93/FleetFactory_8java_source.html">FleetFactory.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  276</span>                                                                                                          {</div>
-<div class="line"><span class="lineno">  277</span>        FactionAPI faction = Global.getSector().getFaction(factionId);</div>
-<div class="line"><span class="lineno">  278</span>        String fleetName = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  279</span>        <span class="keywordflow">if</span> (fleetType != <span class="keyword">null</span>) fleetName = faction.getFleetTypeName(fleetType);</div>
-<div class="line"><span class="lineno">  280</span>        CampaignFleetAPI fleet = Global.getFactory().createEmptyFleet(factionId, fleetName, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  281</span>        <span class="keywordflow">if</span> (fleetType != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  282</span>            fleet.getMemoryWithoutUpdate().set(MemFlags.MEMORY_KEY_FLEET_TYPE, fleetType);</div>
-<div class="line"><span class="lineno">  283</span>        }</div>
-<div class="line"><span class="lineno">  284</span>        </div>
-<div class="line"><span class="lineno">  285</span>        <span class="keywordflow">if</span> (market != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  286</span>            fleet.getMemoryWithoutUpdate().set(MemFlags.MEMORY_KEY_SOURCE_MARKET, market.getId());</div>
-<div class="line"><span class="lineno">  287</span>        }</div>
-<div class="line"><span class="lineno">  288</span>        </div>
-<div class="line"><span class="lineno">  289</span>        <span class="keywordflow">if</span> (startingAbilities == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  290</span>            startingAbilities = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
-<div class="line"><span class="lineno">  291</span>            <span class="keywordflow">for</span> (String <span class="keywordtype">id</span> : Global.getSettings().getSortedAbilityIds()) {</div>
-<div class="line"><span class="lineno">  292</span>                AbilitySpecAPI spec = Global.getSettings().getAbilitySpec(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  293</span>                <span class="keywordflow">if</span> (spec.isAIDefault()) {</div>
-<div class="line"><span class="lineno">  294</span>                    startingAbilities.add(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  295</span>                }</div>
-<div class="line"><span class="lineno">  296</span>            }</div>
-<div class="line"><span class="lineno">  297</span>        }</div>
-<div class="line"><span class="lineno">  298</span>        </div>
-<div class="line"><span class="lineno">  299</span>        <span class="keywordflow">for</span> (String <span class="keywordtype">id</span> : startingAbilities) {</div>
-<div class="line"><span class="lineno">  300</span>            fleet.addAbility(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  301</span>        }</div>
-<div class="line"><span class="lineno">  302</span>        </div>
-<div class="line"><span class="lineno">  303</span>        <span class="keywordflow">return</span> fleet;</div>
-<div class="line"><span class="lineno">  304</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa1435d3290489723c8f650dea39f5c41" name="aa1435d3290489723c8f650dea39f5c41"></a>
@@ -350,109 +283,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d93/FleetFactory_8java_source.html#l00331">331</a> of file <a class="el" href="../../d3/d93/FleetFactory_8java_source.html">FleetFactory.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  331</span>                                                                                                                     {</div>
-<div class="line"><span class="lineno">  332</span>        FactionAPI faction = Global.getSector().getFaction(factionId);</div>
-<div class="line"><span class="lineno">  333</span>        CampaignFleetAPI fleet = Global.getFactory().createEmptyFleet(factionId, name, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  334</span>        </div>
-<div class="line"><span class="lineno">  335</span>        WeightedRandomPicker&lt;String&gt; main = <span class="keyword">new</span> WeightedRandomPicker&lt;String&gt;();</div>
-<div class="line"><span class="lineno">  336</span>        </div>
-<div class="line"><span class="lineno">  337</span>        main.add(ShipRoles.COMBAT_SMALL, 5);</div>
-<div class="line"><span class="lineno">  338</span>        main.add(ShipRoles.COMBAT_SMALL, 5);</div>
-<div class="line"><span class="lineno">  339</span>        </div>
-<div class="line"><span class="lineno">  340</span>        main.add(ShipRoles.ESCORT_SMALL, 6);</div>
-<div class="line"><span class="lineno">  341</span>        main.add(ShipRoles.COMBAT_SMALL, 20);</div>
-<div class="line"><span class="lineno">  342</span>        main.add(ShipRoles.FAST_ATTACK, 10);</div>
-<div class="line"><span class="lineno">  343</span> </div>
-<div class="line"><span class="lineno">  344</span>        <span class="keywordflow">if</span> (maxFP &gt;= 20) {</div>
-<div class="line"><span class="lineno">  345</span>            main.add(ShipRoles.COMBAT_MEDIUM, 10);</div>
-<div class="line"><span class="lineno">  346</span>            main.add(ShipRoles.ESCORT_MEDIUM, 10);</div>
-<div class="line"><span class="lineno">  347</span>        }</div>
-<div class="line"><span class="lineno">  348</span>        <span class="keywordflow">if</span> (maxFP &gt;= 40) {</div>
-<div class="line"><span class="lineno">  349</span>            main.add(ShipRoles.COMBAT_LARGE, 5);</div>
-<div class="line"><span class="lineno">  350</span>            main.add(ShipRoles.COMBAT_SMALL, 5);</div>
-<div class="line"><span class="lineno">  351</span>        }</div>
-<div class="line"><span class="lineno">  352</span>        <span class="keywordflow">if</span> (maxFP &gt;= 60) {</div>
-<div class="line"><span class="lineno">  353</span>            main.add(ShipRoles.COMBAT_LARGE, 5);</div>
-<div class="line"><span class="lineno">  354</span>            main.add(ShipRoles.COMBAT_CAPITAL, 3);</div>
-<div class="line"><span class="lineno">  355</span>        }</div>
-<div class="line"><span class="lineno">  356</span>        </div>
-<div class="line"><span class="lineno">  357</span>        <span class="comment">// add ships and/or fighters, leave some headroom for carriers</span></div>
-<div class="line"><span class="lineno">  358</span>        <span class="keywordtype">int</span> failCount = 0;</div>
-<div class="line"><span class="lineno">  359</span>        <span class="keywordflow">while</span> (fleet.getFleetPoints() &lt; maxFP * 0.75f) {</div>
-<div class="line"><span class="lineno">  360</span>            String role = main.pick();</div>
-<div class="line"><span class="lineno">  361</span>            <span class="keywordtype">boolean</span> added = faction.pickShipAndAddToFleet(role, ShipPickParams.all(), fleet) &gt; 0;</div>
-<div class="line"><span class="lineno">  362</span>            <span class="keywordflow">if</span> (added) {</div>
-<div class="line"><span class="lineno">  363</span>                failCount = 0;</div>
-<div class="line"><span class="lineno">  364</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  365</span>                failCount++;</div>
-<div class="line"><span class="lineno">  366</span>                <span class="keywordflow">if</span> (failCount &gt;= 10) <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  367</span>            }</div>
-<div class="line"><span class="lineno">  368</span>        }</div>
-<div class="line"><span class="lineno">  369</span>        </div>
-<div class="line"><span class="lineno">  370</span>        <span class="comment">// add a flagship if all we&#39;d added before this were fighters</span></div>
-<div class="line"><span class="lineno">  371</span>        <span class="keywordflow">if</span> (fleet.getFlagship() == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  372</span>            faction.pickShipAndAddToFleet(ShipRoles.COMBAT_SMALL, ShipPickParams.all(), fleet);</div>
-<div class="line"><span class="lineno">  373</span>            <span class="keywordflow">if</span> (fleet.getFlagship() == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  374</span>                FactoryAPI f = Global.getFactory();</div>
-<div class="line"><span class="lineno">  375</span>                FleetMemberAPI flagship = f.createFleetMember(FleetMemberType.SHIP, <span class="stringliteral">&quot;tempest_Attack&quot;</span>);</div>
-<div class="line"><span class="lineno">  376</span>                fleet.getFleetData().addFleetMember(flagship);</div>
-<div class="line"><span class="lineno">  377</span>            }</div>
-<div class="line"><span class="lineno">  378</span>        }</div>
-<div class="line"><span class="lineno">  379</span>        </div>
-<div class="line"><span class="lineno">  380</span>        <span class="keywordtype">int</span> fighterFP = 0;</div>
-<div class="line"><span class="lineno">  381</span>        <span class="keywordflow">for</span> (FleetMemberAPI member : fleet.getFleetData().getMembersListCopy()) {</div>
-<div class="line"><span class="lineno">  382</span>            <span class="keywordflow">if</span> (member.isFighterWing()) {</div>
-<div class="line"><span class="lineno">  383</span>                fighterFP += member.getFleetPointCost();</div>
-<div class="line"><span class="lineno">  384</span>            }</div>
-<div class="line"><span class="lineno">  385</span>        }</div>
-<div class="line"><span class="lineno">  386</span>        </div>
-<div class="line"><span class="lineno">  387</span>        <span class="keywordtype">float</span> pointsLeft = maxFP - fleet.getFleetPoints();</div>
-<div class="line"><span class="lineno">  388</span>        <span class="keywordtype">float</span> carrierPoints = Math.min(pointsLeft, fighterFP * 0.33f);</div>
-<div class="line"><span class="lineno">  389</span>        </div>
-<div class="line"><span class="lineno">  390</span>        WeightedRandomPicker&lt;String&gt; carriers = <span class="keyword">new</span> WeightedRandomPicker&lt;String&gt;();</div>
-<div class="line"><span class="lineno">  391</span>        <span class="keywordflow">if</span> (fighterFP &gt;= 10) {</div>
-<div class="line"><span class="lineno">  392</span>            carriers.add(ShipRoles.CARRIER_SMALL, 5);</div>
-<div class="line"><span class="lineno">  393</span>        } </div>
-<div class="line"><span class="lineno">  394</span>        <span class="keywordflow">if</span> (fighterFP &gt;= 30) {</div>
-<div class="line"><span class="lineno">  395</span>            carriers.add(ShipRoles.CARRIER_MEDIUM, 5);</div>
-<div class="line"><span class="lineno">  396</span>        } </div>
-<div class="line"><span class="lineno">  397</span>        <span class="keywordflow">if</span> (fighterFP &gt;= 50) {</div>
-<div class="line"><span class="lineno">  398</span>            carriers.add(ShipRoles.CARRIER_LARGE, 5);</div>
-<div class="line"><span class="lineno">  399</span>        }</div>
-<div class="line"><span class="lineno">  400</span>        </div>
-<div class="line"><span class="lineno">  401</span>        <span class="comment">// add carriers, if needed</span></div>
-<div class="line"><span class="lineno">  402</span>        failCount = 0;</div>
-<div class="line"><span class="lineno">  403</span>        <span class="keywordtype">int</span> startingFP = fleet.getFleetPoints();</div>
-<div class="line"><span class="lineno">  404</span>        <span class="keywordflow">while</span> (fleet.getFleetPoints() &lt; startingFP + carrierPoints) {</div>
-<div class="line"><span class="lineno">  405</span>            String role = carriers.pick();</div>
-<div class="line"><span class="lineno">  406</span>            <span class="keywordtype">boolean</span> added = faction.pickShipAndAddToFleet(role, ShipPickParams.all(), fleet) &gt; 0;</div>
-<div class="line"><span class="lineno">  407</span>            <span class="keywordflow">if</span> (added) {</div>
-<div class="line"><span class="lineno">  408</span>                failCount = 0;</div>
-<div class="line"><span class="lineno">  409</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  410</span>                failCount++;</div>
-<div class="line"><span class="lineno">  411</span>                <span class="keywordflow">if</span> (failCount &gt;= 10) <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  412</span>            }</div>
-<div class="line"><span class="lineno">  413</span>        }</div>
-<div class="line"><span class="lineno">  414</span>        </div>
-<div class="line"><span class="lineno">  415</span>        <span class="comment">// finish out by adding more ships with any leftover points</span></div>
-<div class="line"><span class="lineno">  416</span>        failCount = 0;</div>
-<div class="line"><span class="lineno">  417</span>        <span class="keywordflow">while</span> (fleet.getFleetPoints() &lt; maxFP) {</div>
-<div class="line"><span class="lineno">  418</span>            String role = main.pick();</div>
-<div class="line"><span class="lineno">  419</span>            <span class="keywordtype">boolean</span> added = faction.pickShipAndAddToFleet(role, ShipPickParams.all(), fleet) &gt; 0;</div>
-<div class="line"><span class="lineno">  420</span>            <span class="keywordflow">if</span> (added) {</div>
-<div class="line"><span class="lineno">  421</span>                failCount = 0;</div>
-<div class="line"><span class="lineno">  422</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  423</span>                failCount++;</div>
-<div class="line"><span class="lineno">  424</span>                <span class="keywordflow">if</span> (failCount &gt;= 10) <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  425</span>            }</div>
-<div class="line"><span class="lineno">  426</span>        }</div>
-<div class="line"><span class="lineno">  427</span>        </div>
-<div class="line"><span class="lineno">  428</span>        <a class="code hl_function" href="../../d8/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetFactory.html#a7764a1bdf19dd328e50a3c3037250654">finishAndSync</a>(fleet);</div>
-<div class="line"><span class="lineno">  429</span>        </div>
-<div class="line"><span class="lineno">  430</span>        <span class="keywordflow">return</span> fleet;</div>
-<div class="line"><span class="lineno">  431</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetFactory_html_a7764a1bdf19dd328e50a3c3037250654"><div class="ttname"><a href="../../d8/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetFactory.html#a7764a1bdf19dd328e50a3c3037250654">com.fs.starfarer.api.impl.campaign.fleets.FleetFactory.finishAndSync</a></div><div class="ttdeci">static void finishAndSync(CampaignFleetAPI fleet)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d93/FleetFactory_8java_source.html#l00311">FleetFactory.java:311</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a7bee618b0907f46346f4605bb402a4fc" name="a7bee618b0907f46346f4605bb402a4fc"></a>
@@ -502,130 +333,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d93/FleetFactory_8java_source.html#l00152">152</a> of file <a class="el" href="../../d3/d93/FleetFactory_8java_source.html">FleetFactory.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  152</span>                                                                                                                         {</div>
-<div class="line"><span class="lineno">  153</span>        <span class="keywordtype">float</span> stability = market.getStabilityValue();</div>
-<div class="line"><span class="lineno">  154</span>        </div>
-<div class="line"><span class="lineno">  155</span>        String factionId = Factions.INDEPENDENT;</div>
-<div class="line"><span class="lineno">  156</span>        FactionAPI faction = Global.getSector().getFaction(factionIdForShipPicking);</div>
-<div class="line"><span class="lineno">  157</span><span class="comment">//      FactionAPI factionForInitialName = Global.getSector().getFaction(factionId);</span></div>
-<div class="line"><span class="lineno">  158</span><span class="comment">//      //float qf = market.getShipQualityFactor();</span></div>
-<div class="line"><span class="lineno">  159</span><span class="comment">//      String fleetName = factionForInitialName.getFleetTypeName(type.fleetType); </span></div>
-<div class="line"><span class="lineno">  160</span><span class="comment">//      CampaignFleetAPI fleet = Global.getFactory().createEmptyFleet(factionId, fleetName, true);</span></div>
-<div class="line"><span class="lineno">  161</span>        <span class="comment">//CampaignFleetAPI fleet = createEmptyFleet(factionId, type.fleetType);</span></div>
-<div class="line"><span class="lineno">  162</span>        CampaignFleetAPI fleet = <a class="code hl_function" href="../../d8/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetFactory.html#af234d33c96df50a945d8949dddc02bdd">createEmptyFleet</a>(factionIdForShipPicking, type.fleetType, market);</div>
-<div class="line"><span class="lineno">  163</span>        <span class="keywordflow">switch</span> (type) {</div>
-<div class="line"><span class="lineno">  164</span>        <span class="keywordflow">case</span> SCOUT:</div>
-<div class="line"><span class="lineno">  165</span>            faction.pickShipAndAddToFleet(ShipRoles.FAST_ATTACK, ShipPickParams.all(), fleet);</div>
-<div class="line"><span class="lineno">  166</span>            <span class="keywordflow">if</span> ((<span class="keywordtype">float</span>) Math.random() &gt; 0.5f) {</div>
-<div class="line"><span class="lineno">  167</span>                faction.pickShipAndAddToFleet(ShipRoles.FAST_ATTACK, ShipPickParams.all(), fleet);</div>
-<div class="line"><span class="lineno">  168</span>            }</div>
-<div class="line"><span class="lineno">  169</span>            <span class="keywordflow">if</span> (stability &lt; (<span class="keywordtype">float</span>) Math.random() * 20f) {</div>
-<div class="line"><span class="lineno">  170</span>                faction.pickShipAndAddToFleet(ShipRoles.FAST_ATTACK, ShipPickParams.all(), fleet);</div>
-<div class="line"><span class="lineno">  171</span>            }</div>
-<div class="line"><span class="lineno">  172</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  173</span>        <span class="keywordflow">case</span> PRIVATEER:</div>
-<div class="line"><span class="lineno">  174</span>            faction.pickShipAndAddToFleet(ShipRoles.COMBAT_SMALL, ShipPickParams.all(), fleet);</div>
-<div class="line"><span class="lineno">  175</span>            faction.pickShipAndAddToFleet(ShipRoles.COMBAT_MEDIUM, ShipPickParams.all(), fleet);</div>
-<div class="line"><span class="lineno">  176</span>            <span class="keywordflow">if</span> (stability &lt; (<span class="keywordtype">float</span>) Math.random() * 20f) {</div>
-<div class="line"><span class="lineno">  177</span>                faction.pickShipAndAddToFleet(ShipRoles.FAST_ATTACK, ShipPickParams.all(), fleet);</div>
-<div class="line"><span class="lineno">  178</span>            }</div>
-<div class="line"><span class="lineno">  179</span>            <span class="keywordflow">if</span> (stability &lt; (<span class="keywordtype">float</span>) Math.random() * 20f) {</div>
-<div class="line"><span class="lineno">  180</span>                faction.pickShipAndAddToFleet(ShipRoles.COMBAT_MEDIUM, ShipPickParams.all(), fleet);</div>
-<div class="line"><span class="lineno">  181</span>            }</div>
-<div class="line"><span class="lineno">  182</span>            <span class="keywordflow">if</span> (stability &lt; (<span class="keywordtype">float</span>) Math.random() * 20f) {</div>
-<div class="line"><span class="lineno">  183</span>                <span class="keywordflow">if</span> ((<span class="keywordtype">float</span>) Math.random() &gt; 0.5f) {</div>
-<div class="line"><span class="lineno">  184</span>                    faction.pickShipAndAddToFleet(ShipRoles.COMBAT_FREIGHTER_MEDIUM, ShipPickParams.all(), fleet);</div>
-<div class="line"><span class="lineno">  185</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  186</span>                    faction.pickShipAndAddToFleet(ShipRoles.FREIGHTER_MEDIUM, ShipPickParams.all(), fleet);</div>
-<div class="line"><span class="lineno">  187</span>                }</div>
-<div class="line"><span class="lineno">  188</span>            }</div>
-<div class="line"><span class="lineno">  189</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  190</span>        <span class="keywordflow">case</span> BOUNTY_HUNTER:</div>
-<div class="line"><span class="lineno">  191</span>            faction.pickShipAndAddToFleet(ShipRoles.FAST_ATTACK, ShipPickParams.all(), fleet);</div>
-<div class="line"><span class="lineno">  192</span>            faction.pickShipAndAddToFleet(ShipRoles.FAST_ATTACK, ShipPickParams.all(), fleet);</div>
-<div class="line"><span class="lineno">  193</span>            <span class="keywordflow">if</span> ((<span class="keywordtype">float</span>) Math.random() &gt; 0.5f) {</div>
-<div class="line"><span class="lineno">  194</span>                faction.pickShipAndAddToFleet(ShipRoles.COMBAT_SMALL, ShipPickParams.all(), fleet);</div>
-<div class="line"><span class="lineno">  195</span>            }</div>
-<div class="line"><span class="lineno">  196</span>            <span class="keywordflow">if</span> (stability &lt; (<span class="keywordtype">float</span>) Math.random() * 20f) {</div>
-<div class="line"><span class="lineno">  197</span>                faction.pickShipAndAddToFleet(ShipRoles.FAST_ATTACK, ShipPickParams.all(), fleet);</div>
-<div class="line"><span class="lineno">  198</span>            }</div>
-<div class="line"><span class="lineno">  199</span>            <span class="keywordflow">if</span> (stability &lt; (<span class="keywordtype">float</span>) Math.random() * 20f) {</div>
-<div class="line"><span class="lineno">  200</span>                faction.pickShipAndAddToFleet(ShipRoles.FAST_ATTACK, ShipPickParams.all(), fleet);</div>
-<div class="line"><span class="lineno">  201</span>            }</div>
-<div class="line"><span class="lineno">  202</span>            <span class="keywordflow">if</span> (stability &lt; (<span class="keywordtype">float</span>) Math.random() * 20f) {</div>
-<div class="line"><span class="lineno">  203</span>                faction.pickShipAndAddToFleet(ShipRoles.TANKER_SMALL, ShipPickParams.all(), fleet);</div>
-<div class="line"><span class="lineno">  204</span>            }</div>
-<div class="line"><span class="lineno">  205</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  206</span>        <span class="keywordflow">case</span> PATROL:</div>
-<div class="line"><span class="lineno">  207</span>            <span class="keywordflow">if</span> ((<span class="keywordtype">float</span>) Math.random() &gt; 0.33f) {</div>
-<div class="line"><span class="lineno">  208</span>                faction.pickShipAndAddToFleet(ShipRoles.COMBAT_SMALL, ShipPickParams.all(), fleet);</div>
-<div class="line"><span class="lineno">  209</span>                faction.pickShipAndAddToFleet(ShipRoles.ESCORT_SMALL, ShipPickParams.all(), fleet);</div>
-<div class="line"><span class="lineno">  210</span>                faction.pickShipAndAddToFleet(ShipRoles.COMBAT_MEDIUM, ShipPickParams.all(), fleet);</div>
-<div class="line"><span class="lineno">  211</span>                faction.pickShipAndAddToFleet(ShipRoles.COMBAT_MEDIUM, ShipPickParams.all(), fleet);</div>
-<div class="line"><span class="lineno">  212</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  213</span>                faction.pickShipAndAddToFleet(ShipRoles.CARRIER_SMALL, ShipPickParams.all(), fleet);</div>
-<div class="line"><span class="lineno">  214</span>                <span class="keywordflow">if</span> (stability &lt; (<span class="keywordtype">float</span>) Math.random() * 20f) {</div>
-<div class="line"><span class="lineno">  215</span>                    faction.pickShipAndAddToFleet(ShipRoles.CARRIER_SMALL, ShipPickParams.all(), fleet);</div>
-<div class="line"><span class="lineno">  216</span>                }</div>
-<div class="line"><span class="lineno">  217</span>            }</div>
-<div class="line"><span class="lineno">  218</span>            <span class="keywordflow">if</span> (stability &lt; (<span class="keywordtype">float</span>) Math.random() * 20f) {</div>
-<div class="line"><span class="lineno">  219</span>                faction.pickShipAndAddToFleet(ShipRoles.ESCORT_SMALL, ShipPickParams.all(), fleet);</div>
-<div class="line"><span class="lineno">  220</span>            }</div>
-<div class="line"><span class="lineno">  221</span>            <span class="keywordflow">if</span> (stability &lt; (<span class="keywordtype">float</span>) Math.random() * 20f) {</div>
-<div class="line"><span class="lineno">  222</span>                faction.pickShipAndAddToFleet(ShipRoles.COMBAT_MEDIUM, ShipPickParams.all(), fleet);</div>
-<div class="line"><span class="lineno">  223</span>            }</div>
-<div class="line"><span class="lineno">  224</span>            <span class="keywordflow">if</span> (stability &lt; (<span class="keywordtype">float</span>) Math.random() * 20f) {</div>
-<div class="line"><span class="lineno">  225</span>                faction.pickShipAndAddToFleet(ShipRoles.ESCORT_SMALL, ShipPickParams.all(), fleet);</div>
-<div class="line"><span class="lineno">  226</span>            }</div>
-<div class="line"><span class="lineno">  227</span>            <span class="keywordflow">if</span> (stability &lt; (<span class="keywordtype">float</span>) Math.random() * 20f) {</div>
-<div class="line"><span class="lineno">  228</span>                faction.pickShipAndAddToFleet(ShipRoles.COMBAT_MEDIUM, ShipPickParams.all(), fleet);</div>
-<div class="line"><span class="lineno">  229</span>            }</div>
-<div class="line"><span class="lineno">  230</span>            <span class="keywordflow">if</span> (stability &lt; (<span class="keywordtype">float</span>) Math.random() * 20f) {</div>
-<div class="line"><span class="lineno">  231</span>                faction.pickShipAndAddToFleet(ShipRoles.FREIGHTER_MEDIUM, ShipPickParams.all(), fleet);</div>
-<div class="line"><span class="lineno">  232</span>            }</div>
-<div class="line"><span class="lineno">  233</span>            <span class="keywordflow">if</span> (stability &lt; (<span class="keywordtype">float</span>) Math.random() * 20f) {</div>
-<div class="line"><span class="lineno">  234</span>                faction.pickShipAndAddToFleet(ShipRoles.TANKER_SMALL, ShipPickParams.all(), fleet);</div>
-<div class="line"><span class="lineno">  235</span>            }</div>
-<div class="line"><span class="lineno">  236</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  237</span>        <span class="keywordflow">case</span> ARMADA:</div>
-<div class="line"><span class="lineno">  238</span>            <span class="keywordflow">if</span> ((<span class="keywordtype">float</span>) Math.random() &gt; 0.33f) {</div>
-<div class="line"><span class="lineno">  239</span>                faction.pickShipAndAddToFleet(ShipRoles.COMBAT_SMALL, ShipPickParams.all(), fleet);</div>
-<div class="line"><span class="lineno">  240</span>                faction.pickShipAndAddToFleet(ShipRoles.ESCORT_SMALL, ShipPickParams.all(), fleet);</div>
-<div class="line"><span class="lineno">  241</span>                faction.pickShipAndAddToFleet(ShipRoles.COMBAT_MEDIUM, ShipPickParams.all(), fleet);</div>
-<div class="line"><span class="lineno">  242</span>                faction.pickShipAndAddToFleet(ShipRoles.ESCORT_MEDIUM, ShipPickParams.all(), fleet);</div>
-<div class="line"><span class="lineno">  243</span>                faction.pickShipAndAddToFleet(ShipRoles.COMBAT_LARGE, ShipPickParams.all(), fleet);</div>
-<div class="line"><span class="lineno">  244</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  245</span>                faction.pickShipAndAddToFleet(ShipRoles.CARRIER_MEDIUM, ShipPickParams.all(), fleet);</div>
-<div class="line"><span class="lineno">  246</span>                <span class="keywordflow">if</span> (stability &lt; (<span class="keywordtype">float</span>) Math.random() * 20f) {</div>
-<div class="line"><span class="lineno">  247</span>                    faction.pickShipAndAddToFleet(ShipRoles.CARRIER_SMALL, ShipPickParams.all(), fleet);</div>
-<div class="line"><span class="lineno">  248</span>                }</div>
-<div class="line"><span class="lineno">  249</span>            }</div>
-<div class="line"><span class="lineno">  250</span>            <span class="keywordflow">if</span> (stability &lt; (<span class="keywordtype">float</span>) Math.random() * 20f) {</div>
-<div class="line"><span class="lineno">  251</span>                faction.pickShipAndAddToFleet(ShipRoles.ESCORT_MEDIUM, ShipPickParams.all(), fleet);</div>
-<div class="line"><span class="lineno">  252</span>            }</div>
-<div class="line"><span class="lineno">  253</span>            <span class="keywordflow">if</span> (stability &lt; (<span class="keywordtype">float</span>) Math.random() * 20f) {</div>
-<div class="line"><span class="lineno">  254</span>                faction.pickShipAndAddToFleet(ShipRoles.COMBAT_LARGE, ShipPickParams.all(), fleet);</div>
-<div class="line"><span class="lineno">  255</span>            }</div>
-<div class="line"><span class="lineno">  256</span>            <span class="keywordflow">if</span> (stability &lt; (<span class="keywordtype">float</span>) Math.random() * 20f) {</div>
-<div class="line"><span class="lineno">  257</span>                faction.pickShipAndAddToFleet(ShipRoles.ESCORT_SMALL, ShipPickParams.all(), fleet);</div>
-<div class="line"><span class="lineno">  258</span>            }</div>
-<div class="line"><span class="lineno">  259</span>            <span class="keywordflow">if</span> (stability &lt; (<span class="keywordtype">float</span>) Math.random() * 20f) {</div>
-<div class="line"><span class="lineno">  260</span>                faction.pickShipAndAddToFleet(ShipRoles.COMBAT_MEDIUM, ShipPickParams.all(), fleet);</div>
-<div class="line"><span class="lineno">  261</span>            }</div>
-<div class="line"><span class="lineno">  262</span>            <span class="keywordflow">if</span> (stability &lt; (<span class="keywordtype">float</span>) Math.random() * 20f) {</div>
-<div class="line"><span class="lineno">  263</span>                faction.pickShipAndAddToFleet(ShipRoles.FREIGHTER_MEDIUM, ShipPickParams.all(), fleet);</div>
-<div class="line"><span class="lineno">  264</span>            }</div>
-<div class="line"><span class="lineno">  265</span>            <span class="keywordflow">if</span> (stability &lt; (<span class="keywordtype">float</span>) Math.random() * 20f) {</div>
-<div class="line"><span class="lineno">  266</span>                faction.pickShipAndAddToFleet(ShipRoles.TANKER_MEDIUM, ShipPickParams.all(), fleet);</div>
-<div class="line"><span class="lineno">  267</span>            }</div>
-<div class="line"><span class="lineno">  268</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  269</span>        }</div>
-<div class="line"><span class="lineno">  270</span>    </div>
-<div class="line"><span class="lineno">  271</span>        setAIMode(fleet, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  272</span>        <span class="keywordflow">return</span> fleet;</div>
-<div class="line"><span class="lineno">  273</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetFactory_html_af234d33c96df50a945d8949dddc02bdd"><div class="ttname"><a href="../../d8/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetFactory.html#af234d33c96df50a945d8949dddc02bdd">com.fs.starfarer.api.impl.campaign.fleets.FleetFactory.createEmptyFleet</a></div><div class="ttdeci">static CampaignFleetAPI createEmptyFleet(String factionId, String fleetType, MarketAPI market)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d93/FleetFactory_8java_source.html#l00276">FleetFactory.java:276</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2f18ec3b07ceb52e2dc975dddaa89ffb" name="a2f18ec3b07ceb52e2dc975dddaa89ffb"></a>
@@ -663,16 +371,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d93/FleetFactory_8java_source.html#l00041">41</a> of file <a class="el" href="../../d3/d93/FleetFactory_8java_source.html">FleetFactory.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   41</span>                                                                                   {</div>
-<div class="line"><span class="lineno">   42</span>        <span class="keywordtype">float</span> stability = market.getStabilityValue();</div>
-<div class="line"><span class="lineno">   43</span>        String factionId = market.getFactionId();</div>
-<div class="line"><span class="lineno">   44</span>        FactionAPI faction = Global.getSector().getFaction(factionId);</div>
-<div class="line"><span class="lineno">   45</span>        <span class="keywordtype">float</span> qf = market.getShipQualityFactor();</div>
-<div class="line"><span class="lineno">   46</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../d8/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetFactory.html#a2f18ec3b07ceb52e2dc975dddaa89ffb">createPatrol</a>(type, faction, stability, qf, market); </div>
-<div class="line"><span class="lineno">   47</span>        </div>
-<div class="line"><span class="lineno">   48</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetFactory_html_a2f18ec3b07ceb52e2dc975dddaa89ffb"><div class="ttname"><a href="../../d8/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetFactory.html#a2f18ec3b07ceb52e2dc975dddaa89ffb">com.fs.starfarer.api.impl.campaign.fleets.FleetFactory.createPatrol</a></div><div class="ttdeci">static CampaignFleetAPI createPatrol(MarketAPI market, PatrolType type)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d93/FleetFactory_8java_source.html#l00041">FleetFactory.java:41</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac1b0d1033541e61b3e9eb9f975e48f55" name="ac1b0d1033541e61b3e9eb9f975e48f55"></a>
@@ -728,91 +427,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d93/FleetFactory_8java_source.html#l00050">50</a> of file <a class="el" href="../../d3/d93/FleetFactory_8java_source.html">FleetFactory.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   50</span>                                                                                                                                  {</div>
-<div class="line"><span class="lineno">   51</span>        String fleetType = FleetTypes.PATROL_SMALL;</div>
-<div class="line"><span class="lineno">   52</span>        <span class="keywordflow">switch</span> (type) {</div>
-<div class="line"><span class="lineno">   53</span>        <span class="keywordflow">case</span> FAST:</div>
-<div class="line"><span class="lineno">   54</span>            fleetType = FleetTypes.PATROL_SMALL;</div>
-<div class="line"><span class="lineno">   55</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   56</span>        <span class="keywordflow">case</span> COMBAT:</div>
-<div class="line"><span class="lineno">   57</span>            fleetType = FleetTypes.PATROL_MEDIUM;</div>
-<div class="line"><span class="lineno">   58</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   59</span>        <span class="keywordflow">case</span> HEAVY:</div>
-<div class="line"><span class="lineno">   60</span>            fleetType = FleetTypes.PATROL_LARGE;</div>
-<div class="line"><span class="lineno">   61</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   62</span>        }</div>
-<div class="line"><span class="lineno">   63</span>        CampaignFleetAPI fleet = <a class="code hl_function" href="../../d8/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetFactory.html#af234d33c96df50a945d8949dddc02bdd">createEmptyFleet</a>(faction.getId(), fleetType, market);</div>
-<div class="line"><span class="lineno">   64</span> </div>
-<div class="line"><span class="lineno">   65</span>        <span class="keywordflow">switch</span> (type) {</div>
-<div class="line"><span class="lineno">   66</span>        <span class="keywordflow">case</span> FAST:</div>
-<div class="line"><span class="lineno">   67</span>            faction.pickShipAndAddToFleet(ShipRoles.COMBAT_SMALL, ShipPickParams.all(), fleet);</div>
-<div class="line"><span class="lineno">   68</span>            faction.pickShipAndAddToFleet(ShipRoles.FAST_ATTACK, ShipPickParams.all(), fleet);</div>
-<div class="line"><span class="lineno">   69</span>            faction.pickShipAndAddToFleet(ShipRoles.FAST_ATTACK, ShipPickParams.all(), fleet);</div>
-<div class="line"><span class="lineno">   70</span>            <span class="keywordflow">if</span> (stability &gt; (<span class="keywordtype">float</span>) Math.random() * 20f) {</div>
-<div class="line"><span class="lineno">   71</span>                faction.pickShipAndAddToFleet(ShipRoles.COMBAT_SMALL, ShipPickParams.all(), fleet);</div>
-<div class="line"><span class="lineno">   72</span>            }</div>
-<div class="line"><span class="lineno">   73</span>            <span class="keywordflow">if</span> (stability &gt; (<span class="keywordtype">float</span>) Math.random() * 20f) {</div>
-<div class="line"><span class="lineno">   74</span>                faction.pickShipAndAddToFleet(ShipRoles.FAST_ATTACK, ShipPickParams.all(), fleet);</div>
-<div class="line"><span class="lineno">   75</span>            }</div>
-<div class="line"><span class="lineno">   76</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   77</span>        <span class="keywordflow">case</span> COMBAT:</div>
-<div class="line"><span class="lineno">   78</span>            faction.pickShipAndAddToFleet(ShipRoles.COMBAT_SMALL, ShipPickParams.all(), fleet);</div>
-<div class="line"><span class="lineno">   79</span>            faction.pickShipAndAddToFleet(ShipRoles.FAST_ATTACK, ShipPickParams.all(), fleet);</div>
-<div class="line"><span class="lineno">   80</span>            </div>
-<div class="line"><span class="lineno">   81</span>            faction.pickShipAndAddToFleet(ShipRoles.COMBAT_SMALL, ShipPickParams.all(), fleet);</div>
-<div class="line"><span class="lineno">   82</span>            faction.pickShipAndAddToFleet(ShipRoles.COMBAT_MEDIUM, ShipPickParams.all(), fleet);</div>
-<div class="line"><span class="lineno">   83</span>            faction.pickShipAndAddToFleet(ShipRoles.COMBAT_MEDIUM, ShipPickParams.all(), fleet);</div>
-<div class="line"><span class="lineno">   84</span>            </div>
-<div class="line"><span class="lineno">   85</span>            <span class="keywordflow">if</span> (stability &gt; (<span class="keywordtype">float</span>) Math.random() * 20f) {</div>
-<div class="line"><span class="lineno">   86</span>                faction.pickShipAndAddToFleet(ShipRoles.FREIGHTER_SMALL, ShipPickParams.all(), fleet);</div>
-<div class="line"><span class="lineno">   87</span>            }</div>
-<div class="line"><span class="lineno">   88</span>            <span class="keywordflow">if</span> (stability &gt; (<span class="keywordtype">float</span>) Math.random() * 20f) {</div>
-<div class="line"><span class="lineno">   89</span>                faction.pickShipAndAddToFleet(ShipRoles.TANKER_SMALL, ShipPickParams.all(), fleet);</div>
-<div class="line"><span class="lineno">   90</span>            }</div>
-<div class="line"><span class="lineno">   91</span>            <span class="keywordflow">if</span> (stability &gt; (<span class="keywordtype">float</span>) Math.random() * 20f) {</div>
-<div class="line"><span class="lineno">   92</span>                faction.pickShipAndAddToFleet(ShipRoles.COMBAT_SMALL, ShipPickParams.all(), fleet);</div>
-<div class="line"><span class="lineno">   93</span>            }</div>
-<div class="line"><span class="lineno">   94</span>            <span class="keywordflow">if</span> (stability &gt; (<span class="keywordtype">float</span>) Math.random() * 20f) {</div>
-<div class="line"><span class="lineno">   95</span>                faction.pickShipAndAddToFleet(ShipRoles.COMBAT_SMALL, ShipPickParams.all(), fleet);</div>
-<div class="line"><span class="lineno">   96</span>            }</div>
-<div class="line"><span class="lineno">   97</span>            <span class="keywordflow">if</span> (stability &gt; (<span class="keywordtype">float</span>) Math.random() * 20f) {</div>
-<div class="line"><span class="lineno">   98</span>                faction.pickShipAndAddToFleet(ShipRoles.COMBAT_MEDIUM, ShipPickParams.all(), fleet);</div>
-<div class="line"><span class="lineno">   99</span>            }</div>
-<div class="line"><span class="lineno">  100</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  101</span>        <span class="keywordflow">case</span> HEAVY:</div>
-<div class="line"><span class="lineno">  102</span>            faction.pickShipAndAddToFleet(ShipRoles.FAST_ATTACK, ShipPickParams.all(), fleet);</div>
-<div class="line"><span class="lineno">  103</span>            </div>
-<div class="line"><span class="lineno">  104</span>            <span class="keywordflow">if</span> ((<span class="keywordtype">float</span>) Math.random() &gt; 0.5f) {</div>
-<div class="line"><span class="lineno">  105</span>                faction.pickShipAndAddToFleet(ShipRoles.CARRIER_MEDIUM, ShipPickParams.all(), fleet);</div>
-<div class="line"><span class="lineno">  106</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  107</span>                faction.pickShipAndAddToFleet(ShipRoles.COMBAT_SMALL, ShipPickParams.all(), fleet);</div>
-<div class="line"><span class="lineno">  108</span>                faction.pickShipAndAddToFleet(ShipRoles.COMBAT_LARGE, ShipPickParams.all(), fleet);</div>
-<div class="line"><span class="lineno">  109</span>            }</div>
-<div class="line"><span class="lineno">  110</span>            </div>
-<div class="line"><span class="lineno">  111</span>            faction.pickShipAndAddToFleet(ShipRoles.COMBAT_SMALL, ShipPickParams.all(), fleet);</div>
-<div class="line"><span class="lineno">  112</span>            faction.pickShipAndAddToFleet(ShipRoles.COMBAT_MEDIUM, ShipPickParams.all(), fleet);</div>
-<div class="line"><span class="lineno">  113</span>            faction.pickShipAndAddToFleet(ShipRoles.COMBAT_LARGE, ShipPickParams.all(), fleet);</div>
-<div class="line"><span class="lineno">  114</span> </div>
-<div class="line"><span class="lineno">  115</span>            faction.pickShipAndAddToFleet(ShipRoles.FREIGHTER_MEDIUM, ShipPickParams.all(), fleet);</div>
-<div class="line"><span class="lineno">  116</span>            faction.pickShipAndAddToFleet(ShipRoles.TANKER_MEDIUM, ShipPickParams.all(), fleet);</div>
-<div class="line"><span class="lineno">  117</span>            </div>
-<div class="line"><span class="lineno">  118</span>            <span class="keywordflow">if</span> (stability &gt; (<span class="keywordtype">float</span>) Math.random() * 20f) {</div>
-<div class="line"><span class="lineno">  119</span>                faction.pickShipAndAddToFleet(ShipRoles.COMBAT_SMALL, ShipPickParams.all(), fleet);</div>
-<div class="line"><span class="lineno">  120</span>            }</div>
-<div class="line"><span class="lineno">  121</span>            <span class="keywordflow">if</span> (stability &gt; (<span class="keywordtype">float</span>) Math.random() * 20f) {</div>
-<div class="line"><span class="lineno">  122</span>                faction.pickShipAndAddToFleet(ShipRoles.COMBAT_MEDIUM, ShipPickParams.all(), fleet);</div>
-<div class="line"><span class="lineno">  123</span>            }</div>
-<div class="line"><span class="lineno">  124</span>            <span class="keywordflow">if</span> (stability &gt; (<span class="keywordtype">float</span>) Math.random() * 20f) {</div>
-<div class="line"><span class="lineno">  125</span>                faction.pickShipAndAddToFleet(ShipRoles.COMBAT_LARGE, ShipPickParams.all(), fleet);</div>
-<div class="line"><span class="lineno">  126</span>            }</div>
-<div class="line"><span class="lineno">  127</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  128</span>        }</div>
-<div class="line"><span class="lineno">  129</span>    </div>
-<div class="line"><span class="lineno">  130</span>        setAIMode(fleet, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  131</span>        </div>
-<div class="line"><span class="lineno">  132</span>        <span class="keywordflow">return</span> fleet;</div>
-<div class="line"><span class="lineno">  133</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a7764a1bdf19dd328e50a3c3037250654" name="a7764a1bdf19dd328e50a3c3037250654"></a>
@@ -840,10 +455,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d93/FleetFactory_8java_source.html#l00311">311</a> of file <a class="el" href="../../d3/d93/FleetFactory_8java_source.html">FleetFactory.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  311</span>                                                             {</div>
-<div class="line"><span class="lineno">  312</span>        setAIMode(fleet, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  313</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

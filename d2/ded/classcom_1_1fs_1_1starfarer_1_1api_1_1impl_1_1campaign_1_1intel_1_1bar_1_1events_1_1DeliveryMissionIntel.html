@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -671,65 +672,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dc7/DeliveryMissionIntel_8java_source.html#l00049">49</a> of file <a class="el" href="../../d4/dc7/DeliveryMissionIntel_8java_source.html">DeliveryMissionIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   49</span>                                                                                     {</div>
-<div class="line"><span class="lineno">   50</span>        this.event = <a class="code hl_variable" href="../../d2/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a61a047d5ba0be20bb85be1d2d67b956e">event</a>;</div>
-<div class="line"><span class="lineno">   51</span>        </div>
-<div class="line"><span class="lineno">   52</span>        <a class="code hl_function" href="../../d9/deb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel.html#ae928f8ae0c89925ede6271d1a26614d2">setDuration</a>(<a class="code hl_variable" href="../../d2/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a61a047d5ba0be20bb85be1d2d67b956e">event</a>.<a class="code hl_function" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a749e9717a4bddfa53840ad687ae9a930">getDuration</a>());</div>
-<div class="line"><span class="lineno">   53</span>        </div>
-<div class="line"><span class="lineno">   54</span>        Global.getSector().getIntelManager().addIntel(<span class="keyword">this</span>, <span class="keyword">false</span>, dialog == <span class="keyword">null</span> ? <span class="keyword">null</span> : dialog.getTextPanel());</div>
-<div class="line"><span class="lineno">   55</span>        </div>
-<div class="line"><span class="lineno">   56</span>        <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#ac177d902e3daf52501b6b9961937a1fb">setImportant</a>(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   57</span>        <a class="code hl_function" href="../../d9/deb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel.html#aa3c80e0c7f1177d1e0cd8b7c9414ccf9">setMissionState</a>(MissionState.ACCEPTED);</div>
-<div class="line"><span class="lineno">   58</span>        <a class="code hl_function" href="../../d2/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#aac1bbac597198846ae977cde6ef1e1ca">missionAccepted</a>();</div>
-<div class="line"><span class="lineno">   59</span>        Global.getSector().addScript(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">   60</span> </div>
-<div class="line"><span class="lineno">   61</span>        <span class="comment">// doesn&#39;t quite connect up as far as easily making the mission fail etc</span></div>
-<div class="line"><span class="lineno">   62</span><span class="comment">//      if ((float) Math.random() &lt; PROB_PIRATE_ENCOUNTER) {</span></div>
-<div class="line"><span class="lineno">   63</span><span class="comment">//          Random random = new Random();</span></div>
-<div class="line"><span class="lineno">   64</span><span class="comment">//          String id = &quot;dmi_&quot; + Misc.genUID();</span></div>
-<div class="line"><span class="lineno">   65</span><span class="comment">//          </span></div>
-<div class="line"><span class="lineno">   66</span><span class="comment">//          float reward = event.getReward();</span></div>
-<div class="line"><span class="lineno">   67</span><span class="comment">//          FleetSize size = FleetSize.LARGE;</span></div>
-<div class="line"><span class="lineno">   68</span><span class="comment">//          String type = FleetTypes.PATROL_LARGE;</span></div>
-<div class="line"><span class="lineno">   69</span><span class="comment">//          String repLoss = DelayedFleetEncounter.TRIGGER_REP_LOSS_HIGH;</span></div>
-<div class="line"><span class="lineno">   70</span><span class="comment">//          if (reward &lt;= 20000) {</span></div>
-<div class="line"><span class="lineno">   71</span><span class="comment">//              size = FleetSize.SMALL;</span></div>
-<div class="line"><span class="lineno">   72</span><span class="comment">//              type = FleetTypes.PATROL_SMALL;</span></div>
-<div class="line"><span class="lineno">   73</span><span class="comment">//              repLoss = DelayedFleetEncounter.TRIGGER_REP_LOSS_MINOR;</span></div>
-<div class="line"><span class="lineno">   74</span><span class="comment">//          } else if (reward &lt;= 50000) {</span></div>
-<div class="line"><span class="lineno">   75</span><span class="comment">//              size = FleetSize.MEDIUM;</span></div>
-<div class="line"><span class="lineno">   76</span><span class="comment">//              type = FleetTypes.PATROL_MEDIUM;</span></div>
-<div class="line"><span class="lineno">   77</span><span class="comment">//              repLoss = DelayedFleetEncounter.TRIGGER_REP_LOSS_MEDIUM;</span></div>
-<div class="line"><span class="lineno">   78</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">   79</span><span class="comment">//          </span></div>
-<div class="line"><span class="lineno">   80</span><span class="comment">//          </span></div>
-<div class="line"><span class="lineno">   81</span><span class="comment">//          String comName = getCommodity().getCommodity().getLowerCaseName();</span></div>
-<div class="line"><span class="lineno">   82</span><span class="comment">//          </span></div>
-<div class="line"><span class="lineno">   83</span><span class="comment">//          DelayedFleetEncounter e = new DelayedFleetEncounter(random, id);</span></div>
-<div class="line"><span class="lineno">   84</span><span class="comment">//          e.setDelayNone();</span></div>
-<div class="line"><span class="lineno">   85</span><span class="comment">//          e.setLocationInnerSector(false, null);</span></div>
-<div class="line"><span class="lineno">   86</span><span class="comment">//          e.beginCreate();</span></div>
-<div class="line"><span class="lineno">   87</span><span class="comment">//          e.triggerCreateFleet(size, FleetQuality.DEFAULT, Factions.PIRATES, type, new Vector2f());</span></div>
-<div class="line"><span class="lineno">   88</span><span class="comment">//          e.setFleetWantsThing(Factions.PIRATES, </span></div>
-<div class="line"><span class="lineno">   89</span><span class="comment">//                  &quot;the &quot; + comName + &quot; shipment&quot;, &quot;it&quot;,</span></div>
-<div class="line"><span class="lineno">   90</span><span class="comment">//                  &quot;the &quot; + comName + &quot; shipment you&#39;re running for &quot; + event.getPerson().getNameString(),</span></div>
-<div class="line"><span class="lineno">   91</span><span class="comment">//                  0,</span></div>
-<div class="line"><span class="lineno">   92</span><span class="comment">//                  true, ComplicationRepImpact.FULL,</span></div>
-<div class="line"><span class="lineno">   93</span><span class="comment">//                  repLoss, event.getPerson());</span></div>
-<div class="line"><span class="lineno">   94</span><span class="comment">//          e.triggerSetFleetMemoryValue(&quot;$dmi_commodity&quot;, event.getCommodityId());</span></div>
-<div class="line"><span class="lineno">   95</span><span class="comment">//          e.triggerSetFleetMemoryValue(&quot;$dmi_quantity&quot;, event.getQuantity());</span></div>
-<div class="line"><span class="lineno">   96</span><span class="comment">//          e.triggerSetStandardAggroInterceptFlags();</span></div>
-<div class="line"><span class="lineno">   97</span><span class="comment">//          e.triggerMakeLowRepImpact();</span></div>
-<div class="line"><span class="lineno">   98</span><span class="comment">//          e.endCreate();</span></div>
-<div class="line"><span class="lineno">   99</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  100</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_ac177d902e3daf52501b6b9961937a1fb"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#ac177d902e3daf52501b6b9961937a1fb">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.setImportant</a></div><div class="ttdeci">void setImportant(Boolean important)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00312">BaseIntelPlugin.java:312</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel_html_aa3c80e0c7f1177d1e0cd8b7c9414ccf9"><div class="ttname"><a href="../../d9/deb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel.html#aa3c80e0c7f1177d1e0cd8b7c9414ccf9">com.fs.starfarer.api.impl.campaign.intel.BaseMissionIntel.setMissionState</a></div><div class="ttdeci">void setMissionState(MissionState missionState)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dc4/BaseMissionIntel_8java_source.html#l00330">BaseMissionIntel.java:330</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel_html_ae928f8ae0c89925ede6271d1a26614d2"><div class="ttname"><a href="../../d9/deb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel.html#ae928f8ae0c89925ede6271d1a26614d2">com.fs.starfarer.api.impl.campaign.intel.BaseMissionIntel.setDuration</a></div><div class="ttdeci">void setDuration(Float duration)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dc4/BaseMissionIntel_8java_source.html#l00338">BaseMissionIntel.java:338</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent_html_a749e9717a4bddfa53840ad687ae9a930"><div class="ttname"><a href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a749e9717a4bddfa53840ad687ae9a930">com.fs.starfarer.api.impl.campaign.intel.bar.events.DeliveryBarEvent.getDuration</a></div><div class="ttdeci">float getDuration()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcd/DeliveryBarEvent_8java_source.html#l00615">DeliveryBarEvent.java:615</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel_html_a61a047d5ba0be20bb85be1d2d67b956e"><div class="ttname"><a href="../../d2/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a61a047d5ba0be20bb85be1d2d67b956e">com.fs.starfarer.api.impl.campaign.intel.bar.events.DeliveryMissionIntel.event</a></div><div class="ttdeci">DeliveryBarEvent event</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dc7/DeliveryMissionIntel_8java_source.html#l00047">DeliveryMissionIntel.java:47</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel_html_aac1bbac597198846ae977cde6ef1e1ca"><div class="ttname"><a href="../../d2/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#aac1bbac597198846ae977cde6ef1e1ca">com.fs.starfarer.api.impl.campaign.intel.bar.events.DeliveryMissionIntel.missionAccepted</a></div><div class="ttdeci">void missionAccepted()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dc7/DeliveryMissionIntel_8java_source.html#l00102">DeliveryMissionIntel.java:102</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -770,91 +713,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a78b9181ed44f28dac2b1167e1ce4395c">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dc7/DeliveryMissionIntel_8java_source.html#l00221">221</a> of file <a class="el" href="../../d4/dc7/DeliveryMissionIntel_8java_source.html">DeliveryMissionIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  221</span>                                                                            {</div>
-<div class="line"><span class="lineno">  222</span>        </div>
-<div class="line"><span class="lineno">  223</span>        Color h = Misc.getHighlightColor();</div>
-<div class="line"><span class="lineno">  224</span>        Color g = Misc.getGrayColor();</div>
-<div class="line"><span class="lineno">  225</span>        <span class="keywordtype">float</span> pad = 3f;</div>
-<div class="line"><span class="lineno">  226</span>        <span class="keywordtype">float</span> opad = 10f;</div>
-<div class="line"><span class="lineno">  227</span>        </div>
-<div class="line"><span class="lineno">  228</span>        <span class="keywordtype">float</span> initPad = pad;</div>
-<div class="line"><span class="lineno">  229</span>        <span class="keywordflow">if</span> (mode == ListInfoMode.IN_DESC) initPad = opad;</div>
-<div class="line"><span class="lineno">  230</span>        </div>
-<div class="line"><span class="lineno">  231</span>        Color tc = <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a9e443024a6224a5c170e5d1476514954">getBulletColorForMode</a>(mode);</div>
-<div class="line"><span class="lineno">  232</span>        </div>
-<div class="line"><span class="lineno">  233</span>        <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#adfa808a345b432134c9fb11227edc7df">bullet</a>(info);</div>
-<div class="line"><span class="lineno">  234</span>        <span class="keywordtype">boolean</span> isUpdate = <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a9ba572be19912ec6b816dc7b69352660">getListInfoParam</a>() != <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  235</span>        </div>
-<div class="line"><span class="lineno">  236</span>        FactionAPI faction = <a class="code hl_function" href="../../d2/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a031bab69b2ae8638cda47487bb020ff4">getFactionForUIColors</a>();</div>
-<div class="line"><span class="lineno">  237</span>        <span class="keywordflow">if</span> (isUpdate) {</div>
-<div class="line"><span class="lineno">  238</span>            <span class="comment">// 3 possible updates: de-posted/expired, failed, completed</span></div>
-<div class="line"><span class="lineno">  239</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d9/deb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel.html#ad7f869ce39f20aabdeab2f16b8d2aab8">isFailed</a>() || <a class="code hl_function" href="../../d9/deb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel.html#ad1bf6dd2471ebf229bf28e5ee9dea121">isCancelled</a>()) {</div>
-<div class="line"><span class="lineno">  240</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  241</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d9/deb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel.html#abe30ca225b4ed38779119648bc0e8eea">isCompleted</a>() &amp;&amp; <a class="code hl_variable" href="../../d9/deb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel.html#ac0fd326124c4942e03874eab01cdc589">missionResult</a> != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  242</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d9/deb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel.html#ac0fd326124c4942e03874eab01cdc589">missionResult</a>.payment &gt; 0) {</div>
-<div class="line"><span class="lineno">  243</span>                    info.addPara(<span class="stringliteral">&quot;%s received&quot;</span>, initPad, tc, h, Misc.getDGSCredits(<a class="code hl_variable" href="../../d9/deb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel.html#ac0fd326124c4942e03874eab01cdc589">missionResult</a>.payment));</div>
-<div class="line"><span class="lineno">  244</span>                }</div>
-<div class="line"><span class="lineno">  245</span>                </div>
-<div class="line"><span class="lineno">  246</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d9/deb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel.html#ac0fd326124c4942e03874eab01cdc589">missionResult</a>.rep1 != <span class="keyword">null</span> &amp;&amp; <a class="code hl_variable" href="../../d9/deb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel.html#ac0fd326124c4942e03874eab01cdc589">missionResult</a>.rep1.delta != 0) {</div>
-<div class="line"><span class="lineno">  247</span>                    CoreReputationPlugin.addAdjustmentMessage(<a class="code hl_variable" href="../../d9/deb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel.html#ac0fd326124c4942e03874eab01cdc589">missionResult</a>.rep1.delta, faction, <span class="keyword">null</span>, </div>
-<div class="line"><span class="lineno">  248</span>                                                          <span class="keyword">null</span>, <span class="keyword">null</span>, info, tc, isUpdate, 0f);</div>
-<div class="line"><span class="lineno">  249</span>                }</div>
-<div class="line"><span class="lineno">  250</span>            }</div>
-<div class="line"><span class="lineno">  251</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  252</span>            <span class="comment">// either in small description, or in tooltip/intel list</span></div>
-<div class="line"><span class="lineno">  253</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d9/deb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel.html#ac0fd326124c4942e03874eab01cdc589">missionResult</a> != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  254</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d9/deb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel.html#ac0fd326124c4942e03874eab01cdc589">missionResult</a>.payment &gt; 0) {</div>
-<div class="line"><span class="lineno">  255</span>                    info.addPara(<span class="stringliteral">&quot;%s received&quot;</span>, initPad, tc, h, Misc.getDGSCredits(<a class="code hl_variable" href="../../d9/deb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel.html#ac0fd326124c4942e03874eab01cdc589">missionResult</a>.payment));</div>
-<div class="line"><span class="lineno">  256</span>                    initPad = 0f;</div>
-<div class="line"><span class="lineno">  257</span>                }</div>
-<div class="line"><span class="lineno">  258</span>                </div>
-<div class="line"><span class="lineno">  259</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d9/deb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel.html#ac0fd326124c4942e03874eab01cdc589">missionResult</a>.rep1 != <span class="keyword">null</span> &amp;&amp; <a class="code hl_variable" href="../../d9/deb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel.html#ac0fd326124c4942e03874eab01cdc589">missionResult</a>.rep1.delta != 0) {</div>
-<div class="line"><span class="lineno">  260</span>                    CoreReputationPlugin.addAdjustmentMessage(<a class="code hl_variable" href="../../d9/deb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel.html#ac0fd326124c4942e03874eab01cdc589">missionResult</a>.rep1.delta, faction, <span class="keyword">null</span>, </div>
-<div class="line"><span class="lineno">  261</span>                                                      <span class="keyword">null</span>, <span class="keyword">null</span>, info, tc, isUpdate, initPad);</div>
-<div class="line"><span class="lineno">  262</span>                    initPad = 0f;</div>
-<div class="line"><span class="lineno">  263</span>                }</div>
-<div class="line"><span class="lineno">  264</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  265</span>                <span class="keywordflow">if</span> (mode != ListInfoMode.IN_DESC) {</div>
-<div class="line"><span class="lineno">  266</span>                    info.addPara(<span class="stringliteral">&quot;Faction: &quot;</span> + faction.getDisplayName(), initPad, tc,</div>
-<div class="line"><span class="lineno">  267</span>                                                 faction.getBaseUIColor(),</div>
-<div class="line"><span class="lineno">  268</span>                                                 faction.getDisplayName());</div>
-<div class="line"><span class="lineno">  269</span>                    initPad = 0f;</div>
-<div class="line"><span class="lineno">  270</span>                }</div>
-<div class="line"><span class="lineno">  271</span>                </div>
-<div class="line"><span class="lineno">  272</span>                LabelAPI label = info.addPara(<span class="stringliteral">&quot;%s units to &quot;</span> + <a class="code hl_variable" href="../../d2/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a61a047d5ba0be20bb85be1d2d67b956e">event</a>.<a class="code hl_function" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a8f7b49563d9b7b31d08676d08101e868">getDestination</a>().<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a7e5b6e8035c61f63cd8b331df994233b">getName</a>(), </div>
-<div class="line"><span class="lineno">  273</span>                             initPad, tc, h, <span class="stringliteral">&quot;&quot;</span> + (<span class="keywordtype">int</span>) <a class="code hl_variable" href="../../d2/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a61a047d5ba0be20bb85be1d2d67b956e">event</a>.<a class="code hl_function" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a36fba1f1a84570fa03cd10daa0f57e14">getQuantity</a>());</div>
-<div class="line"><span class="lineno">  274</span>                label.setHighlight(<span class="stringliteral">&quot;&quot;</span> + <a class="code hl_variable" href="../../d2/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a61a047d5ba0be20bb85be1d2d67b956e">event</a>.<a class="code hl_function" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a36fba1f1a84570fa03cd10daa0f57e14">getQuantity</a>(), <a class="code hl_variable" href="../../d2/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a61a047d5ba0be20bb85be1d2d67b956e">event</a>.<a class="code hl_function" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a8f7b49563d9b7b31d08676d08101e868">getDestination</a>().<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a7e5b6e8035c61f63cd8b331df994233b">getName</a>());</div>
-<div class="line"><span class="lineno">  275</span>                label.setHighlightColors(h, <a class="code hl_variable" href="../../d2/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a61a047d5ba0be20bb85be1d2d67b956e">event</a>.<a class="code hl_function" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a8f7b49563d9b7b31d08676d08101e868">getDestination</a>().<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a97645caff4adca5efcf3a462fb13ca0f">getFaction</a>().<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a0213b272fbf9c2669316aa25c775ad60">getBaseUIColor</a>());</div>
-<div class="line"><span class="lineno">  276</span>                info.addPara(<span class="stringliteral">&quot;%s reward&quot;</span>, 0f, tc, h, Misc.getDGSCredits(<a class="code hl_variable" href="../../d2/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a61a047d5ba0be20bb85be1d2d67b956e">event</a>.<a class="code hl_function" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a8583f200919a05ebd2988ba596176d2d">getReward</a>()));</div>
-<div class="line"><span class="lineno">  277</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d2/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a61a047d5ba0be20bb85be1d2d67b956e">event</a>.<a class="code hl_function" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a898f0626bb585625f5c9400efb1d9314">getEscrow</a>() &gt; 0) {</div>
-<div class="line"><span class="lineno">  278</span>                    info.addPara(<span class="stringliteral">&quot;%s held in escrow&quot;</span>, 0f, tc, h, Misc.getDGSCredits(<a class="code hl_variable" href="../../d2/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a61a047d5ba0be20bb85be1d2d67b956e">event</a>.<a class="code hl_function" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a898f0626bb585625f5c9400efb1d9314">getEscrow</a>()));</div>
-<div class="line"><span class="lineno">  279</span>                }</div>
-<div class="line"><span class="lineno">  280</span>                <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a486e4916ac50c75ffddb3f823958eb36">addDays</a>(info, <span class="stringliteral">&quot;to complete&quot;</span>, <a class="code hl_variable" href="../../d9/deb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel.html#a03d53e5ab3cd1dc758bbcb92c1e7d94c">duration</a> - <a class="code hl_variable" href="../../d9/deb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel.html#a9f7699408996e4dd363a30a936a1b800">elapsedDays</a>, tc, 0f);</div>
-<div class="line"><span class="lineno">  281</span>            }</div>
-<div class="line"><span class="lineno">  282</span>        }</div>
-<div class="line"><span class="lineno">  283</span>        </div>
-<div class="line"><span class="lineno">  284</span>        <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a3e2fa48accd40a868889ad2f877bc578">unindent</a>(info);</div>
-<div class="line"><span class="lineno">  285</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_a3e2fa48accd40a868889ad2f877bc578"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a3e2fa48accd40a868889ad2f877bc578">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.unindent</a></div><div class="ttdeci">void unindent(TooltipMakerAPI info)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00570">BaseIntelPlugin.java:570</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_a486e4916ac50c75ffddb3f823958eb36"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a486e4916ac50c75ffddb3f823958eb36">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.addDays</a></div><div class="ttdeci">void addDays(TooltipMakerAPI info, String after, float days)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00575">BaseIntelPlugin.java:575</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_a9ba572be19912ec6b816dc7b69352660"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a9ba572be19912ec6b816dc7b69352660">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.getListInfoParam</a></div><div class="ttdeci">Object getListInfoParam()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00140">BaseIntelPlugin.java:140</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_a9e443024a6224a5c170e5d1476514954"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a9e443024a6224a5c170e5d1476514954">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.getBulletColorForMode</a></div><div class="ttdeci">Color getBulletColorForMode(ListInfoMode mode)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00633">BaseIntelPlugin.java:633</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_adfa808a345b432134c9fb11227edc7df"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#adfa808a345b432134c9fb11227edc7df">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.bullet</a></div><div class="ttdeci">void bullet(TooltipMakerAPI info)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00554">BaseIntelPlugin.java:554</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel_html_a03d53e5ab3cd1dc758bbcb92c1e7d94c"><div class="ttname"><a href="../../d9/deb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel.html#a03d53e5ab3cd1dc758bbcb92c1e7d94c">com.fs.starfarer.api.impl.campaign.intel.BaseMissionIntel.duration</a></div><div class="ttdeci">Float duration</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dc4/BaseMissionIntel_8java_source.html#l00061">BaseMissionIntel.java:61</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel_html_a9f7699408996e4dd363a30a936a1b800"><div class="ttname"><a href="../../d9/deb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel.html#a9f7699408996e4dd363a30a936a1b800">com.fs.starfarer.api.impl.campaign.intel.BaseMissionIntel.elapsedDays</a></div><div class="ttdeci">float elapsedDays</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dc4/BaseMissionIntel_8java_source.html#l00062">BaseMissionIntel.java:62</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel_html_abe30ca225b4ed38779119648bc0e8eea"><div class="ttname"><a href="../../d9/deb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel.html#abe30ca225b4ed38779119648bc0e8eea">com.fs.starfarer.api.impl.campaign.intel.BaseMissionIntel.isCompleted</a></div><div class="ttdeci">boolean isCompleted()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dc4/BaseMissionIntel_8java_source.html#l00126">BaseMissionIntel.java:126</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel_html_ac0fd326124c4942e03874eab01cdc589"><div class="ttname"><a href="../../d9/deb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel.html#ac0fd326124c4942e03874eab01cdc589">com.fs.starfarer.api.impl.campaign.intel.BaseMissionIntel.missionResult</a></div><div class="ttdeci">MissionResult missionResult</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dc4/BaseMissionIntel_8java_source.html#l00058">BaseMissionIntel.java:58</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel_html_ad1bf6dd2471ebf229bf28e5ee9dea121"><div class="ttname"><a href="../../d9/deb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel.html#ad1bf6dd2471ebf229bf28e5ee9dea121">com.fs.starfarer.api.impl.campaign.intel.BaseMissionIntel.isCancelled</a></div><div class="ttdeci">boolean isCancelled()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dc4/BaseMissionIntel_8java_source.html#l00118">BaseMissionIntel.java:118</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel_html_ad7f869ce39f20aabdeab2f16b8d2aab8"><div class="ttname"><a href="../../d9/deb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel.html#ad7f869ce39f20aabdeab2f16b8d2aab8">com.fs.starfarer.api.impl.campaign.intel.BaseMissionIntel.isFailed</a></div><div class="ttdeci">boolean isFailed()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dc4/BaseMissionIntel_8java_source.html#l00122">BaseMissionIntel.java:122</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent_html_a36fba1f1a84570fa03cd10daa0f57e14"><div class="ttname"><a href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a36fba1f1a84570fa03cd10daa0f57e14">com.fs.starfarer.api.impl.campaign.intel.bar.events.DeliveryBarEvent.getQuantity</a></div><div class="ttdeci">int getQuantity()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcd/DeliveryBarEvent_8java_source.html#l00627">DeliveryBarEvent.java:627</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent_html_a8583f200919a05ebd2988ba596176d2d"><div class="ttname"><a href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a8583f200919a05ebd2988ba596176d2d">com.fs.starfarer.api.impl.campaign.intel.bar.events.DeliveryBarEvent.getReward</a></div><div class="ttdeci">int getReward()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcd/DeliveryBarEvent_8java_source.html#l00611">DeliveryBarEvent.java:611</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent_html_a898f0626bb585625f5c9400efb1d9314"><div class="ttname"><a href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a898f0626bb585625f5c9400efb1d9314">com.fs.starfarer.api.impl.campaign.intel.bar.events.DeliveryBarEvent.getEscrow</a></div><div class="ttdeci">int getEscrow()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcd/DeliveryBarEvent_8java_source.html#l00631">DeliveryBarEvent.java:631</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent_html_a8f7b49563d9b7b31d08676d08101e868"><div class="ttname"><a href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a8f7b49563d9b7b31d08676d08101e868">com.fs.starfarer.api.impl.campaign.intel.bar.events.DeliveryBarEvent.getDestination</a></div><div class="ttdeci">MarketAPI getDestination()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcd/DeliveryBarEvent_8java_source.html#l00607">DeliveryBarEvent.java:607</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel_html_a031bab69b2ae8638cda47487bb020ff4"><div class="ttname"><a href="../../d2/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a031bab69b2ae8638cda47487bb020ff4">com.fs.starfarer.api.impl.campaign.intel.bar.events.DeliveryMissionIntel.getFactionForUIColors</a></div><div class="ttdeci">FactionAPI getFactionForUIColors()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dc7/DeliveryMissionIntel_8java_source.html#l00313">DeliveryMissionIntel.java:313</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI_html_a0213b272fbf9c2669316aa25c775ad60"><div class="ttname"><a href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a0213b272fbf9c2669316aa25c775ad60">com.fs.starfarer.api.campaign.FactionAPI.getBaseUIColor</a></div><div class="ttdeci">Color getBaseUIColor()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a7e5b6e8035c61f63cd8b331df994233b"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a7e5b6e8035c61f63cd8b331df994233b">com.fs.starfarer.api.campaign.econ.MarketAPI.getName</a></div><div class="ttdeci">String getName()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a97645caff4adca5efcf3a462fb13ca0f"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a97645caff4adca5efcf3a462fb13ca0f">com.fs.starfarer.api.campaign.econ.MarketAPI.getFaction</a></div><div class="ttdeci">FactionAPI getFaction()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a455ca309af9ae2405ea5ac068d3701f6" name="a455ca309af9ae2405ea5ac068d3701f6"></a>
@@ -876,17 +735,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/deb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel.html#a5d2643ec81022fdfbc26765c31c73ba1">com.fs.starfarer.api.impl.campaign.intel.BaseMissionIntel</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dc7/DeliveryMissionIntel_8java_source.html#l00111">111</a> of file <a class="el" href="../../d4/dc7/DeliveryMissionIntel_8java_source.html">DeliveryMissionIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  111</span>                                             {</div>
-<div class="line"><span class="lineno">  112</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="../../d2/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a61a047d5ba0be20bb85be1d2d67b956e">event</a>.<a class="code hl_function" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a8f7b49563d9b7b31d08676d08101e868">getDestination</a>().<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#aa90dca68abeb54f7f1da7a063111b281">isInEconomy</a>()) {</div>
-<div class="line"><span class="lineno">  113</span>            <a class="code hl_function" href="../../d9/deb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel.html#afef476e462e498736caa49f12c468a52">setMissionResult</a>(<span class="keyword">new</span> MissionResult(0, <span class="keyword">null</span>, <span class="keyword">null</span>));</div>
-<div class="line"><span class="lineno">  114</span>            <a class="code hl_function" href="../../d9/deb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel.html#aa3c80e0c7f1177d1e0cd8b7c9414ccf9">setMissionState</a>(MissionState.FAILED);</div>
-<div class="line"><span class="lineno">  115</span>            <a class="code hl_function" href="../../d2/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#aad22cee8de1acedf8a1fc041cd43914d">endMission</a>();</div>
-<div class="line"><span class="lineno">  116</span>        }</div>
-<div class="line"><span class="lineno">  117</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel_html_afef476e462e498736caa49f12c468a52"><div class="ttname"><a href="../../d9/deb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel.html#afef476e462e498736caa49f12c468a52">com.fs.starfarer.api.impl.campaign.intel.BaseMissionIntel.setMissionResult</a></div><div class="ttdeci">void setMissionResult(MissionResult missionResult)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dc4/BaseMissionIntel_8java_source.html#l00322">BaseMissionIntel.java:322</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel_html_aad22cee8de1acedf8a1fc041cd43914d"><div class="ttname"><a href="../../d2/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#aad22cee8de1acedf8a1fc041cd43914d">com.fs.starfarer.api.impl.campaign.intel.bar.events.DeliveryMissionIntel.endMission</a></div><div class="ttdeci">void endMission()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dc7/DeliveryMissionIntel_8java_source.html#l00191">DeliveryMissionIntel.java:191</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_aa90dca68abeb54f7f1da7a063111b281"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#aa90dca68abeb54f7f1da7a063111b281">com.fs.starfarer.api.campaign.econ.MarketAPI.isInEconomy</a></div><div class="ttdeci">boolean isInEconomy()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a1f8def840f243fabecd247bfec7316e1" name="a1f8def840f243fabecd247bfec7316e1"></a>
@@ -914,38 +763,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dc7/DeliveryMissionIntel_8java_source.html#l00160">160</a> of file <a class="el" href="../../d4/dc7/DeliveryMissionIntel_8java_source.html">DeliveryMissionIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  160</span>                                                            {</div>
-<div class="line"><span class="lineno">  161</span>        FactionAPI faction = <a class="code hl_function" href="../../d2/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a031bab69b2ae8638cda47487bb020ff4">getFactionForUIColors</a>();</div>
-<div class="line"><span class="lineno">  162</span>        MarketAPI market = <span class="keyword">event</span>.getDestination();</div>
-<div class="line"><span class="lineno">  163</span>        </div>
-<div class="line"><span class="lineno">  164</span>        <span class="keywordtype">boolean</span> illegal = market.isIllegal(<a class="code hl_variable" href="../../d2/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a61a047d5ba0be20bb85be1d2d67b956e">event</a>.<a class="code hl_function" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#ab0fc30ef7e8091f901b7d9194b510c80">getCommodityId</a>());</div>
-<div class="line"><span class="lineno">  165</span>        </div>
-<div class="line"><span class="lineno">  166</span>        SubmarketAPI submarket = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  167</span>        <span class="keywordflow">for</span> (SubmarketAPI curr : market.getSubmarketsCopy()) {</div>
-<div class="line"><span class="lineno">  168</span>            <span class="keywordflow">if</span> (!curr.getPlugin().isParticipatesInEconomy()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  169</span>            </div>
-<div class="line"><span class="lineno">  170</span>            <span class="keywordflow">if</span> (illegal &amp;&amp; curr.getPlugin().isBlackMarket()) {</div>
-<div class="line"><span class="lineno">  171</span>                submarket = curr;</div>
-<div class="line"><span class="lineno">  172</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  173</span>            }</div>
-<div class="line"><span class="lineno">  174</span>            <span class="keywordflow">if</span> (!illegal &amp;&amp; curr.getPlugin().isOpenMarket()) {</div>
-<div class="line"><span class="lineno">  175</span>                submarket = curr;</div>
-<div class="line"><span class="lineno">  176</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  177</span>            }</div>
-<div class="line"><span class="lineno">  178</span>        }</div>
-<div class="line"><span class="lineno">  179</span>        </div>
-<div class="line"><span class="lineno">  180</span>        <span class="keywordflow">if</span> (submarket == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  181</span>        </div>
-<div class="line"><span class="lineno">  182</span>        PlayerTradeDataForSubmarket tradeData = SharedData.getData().getPlayerActivityTracker().getPlayerTradeData(submarket);</div>
-<div class="line"><span class="lineno">  183</span>        CargoStackAPI stack = Global.getFactory().createCargoStack(CargoItemType.RESOURCES, <a class="code hl_variable" href="../../d2/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a61a047d5ba0be20bb85be1d2d67b956e">event</a>.<a class="code hl_function" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#ab0fc30ef7e8091f901b7d9194b510c80">getCommodityId</a>(), <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  184</span>        stack.setSize(<a class="code hl_variable" href="../../d2/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a61a047d5ba0be20bb85be1d2d67b956e">event</a>.<a class="code hl_function" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a36fba1f1a84570fa03cd10daa0f57e14">getQuantity</a>());</div>
-<div class="line"><span class="lineno">  185</span>        tradeData.addToTrackedPlayerSold(stack, totalReward);</div>
-<div class="line"><span class="lineno">  186</span>        </div>
-<div class="line"><span class="lineno">  187</span>        Misc.affectAvailabilityWithinReason(<a class="code hl_function" href="../../d2/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a15a25a0e9dcf5c1cea23206179677cce">getCommodity</a>(), <a class="code hl_variable" href="../../d2/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a61a047d5ba0be20bb85be1d2d67b956e">event</a>.<a class="code hl_function" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a36fba1f1a84570fa03cd10daa0f57e14">getQuantity</a>());</div>
-<div class="line"><span class="lineno">  188</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent_html_ab0fc30ef7e8091f901b7d9194b510c80"><div class="ttname"><a href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#ab0fc30ef7e8091f901b7d9194b510c80">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseGetCommodityBarEvent.getCommodityId</a></div><div class="ttdeci">String getCommodityId()</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d22/BaseGetCommodityBarEvent_8java_source.html#l00080">BaseGetCommodityBarEvent.java:80</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel_html_a15a25a0e9dcf5c1cea23206179677cce"><div class="ttname"><a href="../../d2/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a15a25a0e9dcf5c1cea23206179677cce">com.fs.starfarer.api.impl.campaign.intel.bar.events.DeliveryMissionIntel.getCommodity</a></div><div class="ttdeci">CommodityOnMarketAPI getCommodity()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dc7/DeliveryMissionIntel_8java_source.html#l00321">DeliveryMissionIntel.java:321</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a337cf4091244bb8751ae205c2892e0e4" name="a337cf4091244bb8751ae205c2892e0e4"></a>
@@ -966,10 +784,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/deb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel.html#a5b2aa939be28db96679f6248521fd4f4">com.fs.starfarer.api.impl.campaign.intel.BaseMissionIntel</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dc7/DeliveryMissionIntel_8java_source.html#l00444">444</a> of file <a class="el" href="../../d4/dc7/DeliveryMissionIntel_8java_source.html">DeliveryMissionIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  444</span>                                              {</div>
-<div class="line"><span class="lineno">  445</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  446</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a03e8065b55692fab4b4414a63263d87a" name="a03e8065b55692fab4b4414a63263d87a"></a>
@@ -999,24 +814,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/deb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel.html#a3a1eb4ec560547d9f0a055a45efb0be2">com.fs.starfarer.api.impl.campaign.intel.BaseMissionIntel</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dc7/DeliveryMissionIntel_8java_source.html#l00425">425</a> of file <a class="el" href="../../d4/dc7/DeliveryMissionIntel_8java_source.html">DeliveryMissionIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  425</span>                                                                       {</div>
-<div class="line"><span class="lineno">  426</span>        <span class="keywordflow">if</span> (withPenalty) {</div>
-<div class="line"><span class="lineno">  427</span>            <span class="keywordtype">float</span> repAmount = 0.01f * <span class="keyword">event</span>.getReward() / 10000f;</div>
-<div class="line"><span class="lineno">  428</span>            <span class="keywordflow">if</span> (repAmount &lt; 0.01f) repAmount = 0.01f;</div>
-<div class="line"><span class="lineno">  429</span>            <span class="keywordflow">if</span> (repAmount &gt; 0.05f) repAmount = 0.05f;</div>
-<div class="line"><span class="lineno">  430</span>            </div>
-<div class="line"><span class="lineno">  431</span>            MissionCompletionRep completionRep = <span class="keyword">new</span> MissionCompletionRep(repAmount, RepLevel.WELCOMING, -repAmount, RepLevel.INHOSPITABLE);</div>
-<div class="line"><span class="lineno">  432</span>            </div>
-<div class="line"><span class="lineno">  433</span>            ReputationAdjustmentResult rep = Global.getSector().adjustPlayerReputation(</div>
-<div class="line"><span class="lineno">  434</span>                    <span class="keyword">new</span> RepActionEnvelope(RepActions.MISSION_FAILURE, completionRep,</div>
-<div class="line"><span class="lineno">  435</span>                                          <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">true</span>, <span class="keyword">false</span>),</div>
-<div class="line"><span class="lineno">  436</span>                                          <a class="code hl_function" href="../../d2/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a031bab69b2ae8638cda47487bb020ff4">getFactionForUIColors</a>().getId());</div>
-<div class="line"><span class="lineno">  437</span>            </div>
-<div class="line"><span class="lineno">  438</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> MissionResult(0, rep, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  439</span>        }</div>
-<div class="line"><span class="lineno">  440</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> MissionResult();</div>
-<div class="line"><span class="lineno">  441</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a716a83c38585db36f01fd8cfd4f932ee" name="a716a83c38585db36f01fd8cfd4f932ee"></a>
@@ -1048,21 +846,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#afa8bb8f2afc14a90ef02a999a66535e9">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dc7/DeliveryMissionIntel_8java_source.html#l00288">288</a> of file <a class="el" href="../../d4/dc7/DeliveryMissionIntel_8java_source.html">DeliveryMissionIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  288</span>                                                                         {</div>
-<div class="line"><span class="lineno">  289</span>        Color h = Misc.getHighlightColor();</div>
-<div class="line"><span class="lineno">  290</span>        Color g = Misc.getGrayColor();</div>
-<div class="line"><span class="lineno">  291</span>        Color c = <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#af44e4a0a7c61b8efbc4ef210c7061723">getTitleColor</a>(mode);</div>
-<div class="line"><span class="lineno">  292</span>        <span class="keywordtype">float</span> pad = 3f;</div>
-<div class="line"><span class="lineno">  293</span>        <span class="keywordtype">float</span> opad = 10f;</div>
-<div class="line"><span class="lineno">  294</span>        </div>
-<div class="line"><span class="lineno">  295</span>        info.addPara(<a class="code hl_function" href="../../d2/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a62145396816aa4c11064c6faabef76fb">getName</a>(), c, 0f);</div>
-<div class="line"><span class="lineno">  296</span>        </div>
-<div class="line"><span class="lineno">  297</span>        <a class="code hl_function" href="../../d2/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#ae70bc0ec31f9cb8c6c7085d84e724109">addBulletPoints</a>(info, mode);</div>
-<div class="line"><span class="lineno">  298</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_af44e4a0a7c61b8efbc4ef210c7061723"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#af44e4a0a7c61b8efbc4ef210c7061723">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.getTitleColor</a></div><div class="ttdeci">Color getTitleColor(ListInfoMode mode)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00615">BaseIntelPlugin.java:615</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel_html_a62145396816aa4c11064c6faabef76fb"><div class="ttname"><a href="../../d2/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a62145396816aa4c11064c6faabef76fb">com.fs.starfarer.api.impl.campaign.intel.bar.events.DeliveryMissionIntel.getName</a></div><div class="ttdeci">String getName()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dc7/DeliveryMissionIntel_8java_source.html#l00304">DeliveryMissionIntel.java:304</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel_html_ae70bc0ec31f9cb8c6c7085d84e724109"><div class="ttname"><a href="../../d2/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#ae70bc0ec31f9cb8c6c7085d84e724109">com.fs.starfarer.api.impl.campaign.intel.bar.events.DeliveryMissionIntel.addBulletPoints</a></div><div class="ttdeci">void addBulletPoints(TooltipMakerAPI info, ListInfoMode mode)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dc7/DeliveryMissionIntel_8java_source.html#l00221">DeliveryMissionIntel.java:221</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a4bdc7c481533122441739f7afb534795" name="a4bdc7c481533122441739f7afb534795"></a>
@@ -1100,83 +884,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a8cccf49669fce7f61c75af3c8afc4bb9">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dc7/DeliveryMissionIntel_8java_source.html#l00327">327</a> of file <a class="el" href="../../d4/dc7/DeliveryMissionIntel_8java_source.html">DeliveryMissionIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  327</span>                                                                                        {</div>
-<div class="line"><span class="lineno">  328</span>        Color h = Misc.getHighlightColor();</div>
-<div class="line"><span class="lineno">  329</span>        Color g = Misc.getGrayColor();</div>
-<div class="line"><span class="lineno">  330</span>        Color tc = Misc.getTextColor();</div>
-<div class="line"><span class="lineno">  331</span>        <span class="keywordtype">float</span> pad = 3f;</div>
-<div class="line"><span class="lineno">  332</span>        <span class="keywordtype">float</span> opad = 10f;</div>
-<div class="line"><span class="lineno">  333</span> </div>
-<div class="line"><span class="lineno">  334</span>        FactionAPI faction = <a class="code hl_function" href="../../d2/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a031bab69b2ae8638cda47487bb020ff4">getFactionForUIColors</a>();</div>
-<div class="line"><span class="lineno">  335</span>        </div>
-<div class="line"><span class="lineno">  336</span>        <span class="keywordtype">boolean</span> illegal = <span class="keyword">event</span>.getDestination().isIllegal(<a class="code hl_variable" href="../../d2/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a61a047d5ba0be20bb85be1d2d67b956e">event</a>.<a class="code hl_function" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#ab0fc30ef7e8091f901b7d9194b510c80">getCommodityId</a>());</div>
-<div class="line"><span class="lineno">  337</span>        </div>
-<div class="line"><span class="lineno">  338</span>        <span class="comment">//info.addImage(commodity.getCommodity().getIconName(), width, 80, opad);</span></div>
-<div class="line"><span class="lineno">  339</span>        </div>
-<div class="line"><span class="lineno">  340</span>        CommodityOnMarketAPI com = <a class="code hl_function" href="../../d2/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a15a25a0e9dcf5c1cea23206179677cce">getCommodity</a>();</div>
-<div class="line"><span class="lineno">  341</span>        MarketAPI market = <span class="keyword">event</span>.getDestination();</div>
-<div class="line"><span class="lineno">  342</span>        </div>
-<div class="line"><span class="lineno">  343</span>        info.addImages(width, 80, opad, opad * 2f,</div>
-<div class="line"><span class="lineno">  344</span>                       com.getCommodity().getIconName(),</div>
-<div class="line"><span class="lineno">  345</span>                       faction.getCrest(),</div>
-<div class="line"><span class="lineno">  346</span>                       market.getFaction().getCrest());</div>
-<div class="line"><span class="lineno">  347</span> </div>
-<div class="line"><span class="lineno">  348</span>        </div>
-<div class="line"><span class="lineno">  349</span>        String post = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">  350</span>        <span class="keywordflow">if</span> (Factions.PIRATES.equals(faction.getId())) {</div>
-<div class="line"><span class="lineno">  351</span>            post = <span class="stringliteral">&quot;-affiliated&quot;</span>;</div>
-<div class="line"><span class="lineno">  352</span>        }</div>
-<div class="line"><span class="lineno">  353</span>        </div>
-<div class="line"><span class="lineno">  354</span>        <span class="comment">//String desc = event.getPersonDesc();</span></div>
-<div class="line"><span class="lineno">  355</span>        String start = <span class="stringliteral">&quot;You&#39;ve&quot;</span>;</div>
-<div class="line"><span class="lineno">  356</span>        <span class="keywordflow">if</span> (!<a class="code hl_function" href="../../d9/deb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel.html#aba902bcaff0bf5201b3464ee5e3eef89">isPosted</a>() &amp;&amp; !<a class="code hl_function" href="../../d9/deb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel.html#a901584a18befe96f6b0543481ca94a26">isAccepted</a>()) start = <span class="stringliteral">&quot;You had&quot;</span>;</div>
-<div class="line"><span class="lineno">  357</span>        </div>
-<div class="line"><span class="lineno">  358</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d2/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a61a047d5ba0be20bb85be1d2d67b956e">event</a>.<a class="code hl_function" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#aa8f2f88c2af400761df21c81416e01a7">getMarket</a>() == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  359</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  360</span>        }</div>
-<div class="line"><span class="lineno">  361</span>        LabelAPI label = info.addPara(start + <span class="stringliteral">&quot; accepted &quot;</span> + faction.getPersonNamePrefixAOrAn() + <span class="stringliteral">&quot; &quot;</span> + </div>
-<div class="line"><span class="lineno">  362</span>                faction.getPersonNamePrefix() + post + <span class="stringliteral">&quot; contract to deliver a quantity of &quot;</span> +</div>
-<div class="line"><span class="lineno">  363</span>                com.getCommodity().getLowerCaseName() + </div>
-<div class="line"><span class="lineno">  364</span>                <span class="stringliteral">&quot; from &quot;</span> + <a class="code hl_variable" href="../../d2/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a61a047d5ba0be20bb85be1d2d67b956e">event</a>.<a class="code hl_function" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#aa8f2f88c2af400761df21c81416e01a7">getMarket</a>().<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a7e5b6e8035c61f63cd8b331df994233b">getName</a>() + <span class="stringliteral">&quot; to &quot;</span> + market.getName() + <span class="stringliteral">&quot;, &quot;</span> +</div>
-<div class="line"><span class="lineno">  365</span>                        <span class="stringliteral">&quot;which is under &quot;</span> + market.getFaction().getPersonNamePrefix() + <span class="stringliteral">&quot; control.&quot;</span>, opad,</div>
-<div class="line"><span class="lineno">  366</span>                faction.getBaseUIColor(), faction.getPersonNamePrefix() + post);</div>
-<div class="line"><span class="lineno">  367</span>        </div>
-<div class="line"><span class="lineno">  368</span>        label.setHighlight(faction.getPersonNamePrefix() + post, market.getFaction().getPersonNamePrefix());</div>
-<div class="line"><span class="lineno">  369</span>        label.setHighlightColors(faction.getBaseUIColor(), market.getFaction().getBaseUIColor());</div>
-<div class="line"><span class="lineno">  370</span>        </div>
-<div class="line"><span class="lineno">  371</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d9/deb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel.html#aba902bcaff0bf5201b3464ee5e3eef89">isPosted</a>() || <a class="code hl_function" href="../../d9/deb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel.html#a901584a18befe96f6b0543481ca94a26">isAccepted</a>()) {</div>
-<div class="line"><span class="lineno">  372</span>            <a class="code hl_function" href="../../d2/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#ae70bc0ec31f9cb8c6c7085d84e724109">addBulletPoints</a>(info, ListInfoMode.IN_DESC);</div>
-<div class="line"><span class="lineno">  373</span>            </div>
-<div class="line"><span class="lineno">  374</span>            info.addPara(<span class="stringliteral">&quot;To make the delivery, either dock at &quot;</span> + market.getName() + <span class="stringliteral">&quot; openly or approach it without &quot;</span> +</div>
-<div class="line"><span class="lineno">  375</span>                         <span class="stringliteral">&quot;attracting the attention of nearby patrols.&quot;</span>, opad);</div>
-<div class="line"><span class="lineno">  376</span>            </div>
-<div class="line"><span class="lineno">  377</span><span class="comment">//          if (illegal) {</span></div>
-<div class="line"><span class="lineno">  378</span><span class="comment">//              info.addPara(&quot;The legality of the delivery is at best questionable and &quot; +</span></div>
-<div class="line"><span class="lineno">  379</span><span class="comment">//                      &quot;it must be made with the transponder turned off.&quot;, opad);</span></div>
-<div class="line"><span class="lineno">  380</span><span class="comment">//          } else {</span></div>
-<div class="line"><span class="lineno">  381</span><span class="comment">//              info.addPara(&quot;The contract is above-board and the delivery may be made openly.&quot;, opad);</span></div>
-<div class="line"><span class="lineno">  382</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">  383</span>            </div>
-<div class="line"><span class="lineno">  384</span>            <span class="comment">//addGenericMissionState(info);</span></div>
-<div class="line"><span class="lineno">  385</span>            <a class="code hl_function" href="../../d9/deb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel.html#a1f202ae2c2e68f40a6d597f3434da8b4">addAcceptOrAbandonButton</a>(info, width);</div>
-<div class="line"><span class="lineno">  386</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  387</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d9/deb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel.html#ad7f869ce39f20aabdeab2f16b8d2aab8">isFailed</a>() &amp;&amp; !market.isInEconomy()) {</div>
-<div class="line"><span class="lineno">  388</span>                info.addPara(<span class="stringliteral">&quot;You have failed this contract because &quot;</span> + market.getName() + </div>
-<div class="line"><span class="lineno">  389</span>                             <span class="stringliteral">&quot; no longer exists as a functional polity.&quot;</span>, opad);    </div>
-<div class="line"><span class="lineno">  390</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  391</span>                <a class="code hl_function" href="../../d9/deb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel.html#aeb33b8e06308188fc5cd1fca0028e5ce">addGenericMissionState</a>(info);</div>
-<div class="line"><span class="lineno">  392</span>            }</div>
-<div class="line"><span class="lineno">  393</span>            </div>
-<div class="line"><span class="lineno">  394</span>            <a class="code hl_function" href="../../d2/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#ae70bc0ec31f9cb8c6c7085d84e724109">addBulletPoints</a>(info, ListInfoMode.IN_DESC);</div>
-<div class="line"><span class="lineno">  395</span>        }</div>
-<div class="line"><span class="lineno">  396</span> </div>
-<div class="line"><span class="lineno">  397</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel_html_a1f202ae2c2e68f40a6d597f3434da8b4"><div class="ttname"><a href="../../d9/deb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel.html#a1f202ae2c2e68f40a6d597f3434da8b4">com.fs.starfarer.api.impl.campaign.intel.BaseMissionIntel.addAcceptOrAbandonButton</a></div><div class="ttdeci">void addAcceptOrAbandonButton(TooltipMakerAPI info, float width)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dc4/BaseMissionIntel_8java_source.html#l00285">BaseMissionIntel.java:285</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel_html_a901584a18befe96f6b0543481ca94a26"><div class="ttname"><a href="../../d9/deb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel.html#a901584a18befe96f6b0543481ca94a26">com.fs.starfarer.api.impl.campaign.intel.BaseMissionIntel.isAccepted</a></div><div class="ttdeci">boolean isAccepted()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dc4/BaseMissionIntel_8java_source.html#l00130">BaseMissionIntel.java:130</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel_html_aba902bcaff0bf5201b3464ee5e3eef89"><div class="ttname"><a href="../../d9/deb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel.html#aba902bcaff0bf5201b3464ee5e3eef89">com.fs.starfarer.api.impl.campaign.intel.BaseMissionIntel.isPosted</a></div><div class="ttdeci">boolean isPosted()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dc4/BaseMissionIntel_8java_source.html#l00115">BaseMissionIntel.java:115</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel_html_aeb33b8e06308188fc5cd1fca0028e5ce"><div class="ttname"><a href="../../d9/deb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel.html#aeb33b8e06308188fc5cd1fca0028e5ce">com.fs.starfarer.api.impl.campaign.intel.BaseMissionIntel.addGenericMissionState</a></div><div class="ttdeci">void addGenericMissionState(TooltipMakerAPI info)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dc4/BaseMissionIntel_8java_source.html#l00232">BaseMissionIntel.java:232</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent_html_aa8f2f88c2af400761df21c81416e01a7"><div class="ttname"><a href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#aa8f2f88c2af400761df21c81416e01a7">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseGetCommodityBarEvent.getMarket</a></div><div class="ttdeci">MarketAPI getMarket()</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d22/BaseGetCommodityBarEvent_8java_source.html#l00373">BaseGetCommodityBarEvent.java:373</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a3a27b016b0e76009b08ffd0fc5f16eb6" name="a3a27b016b0e76009b08ffd0fc5f16eb6"></a>
@@ -1205,11 +913,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/deb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel.html#a1ffe5b7f8d39f5271a8bc8125a8a8b14">com.fs.starfarer.api.impl.campaign.intel.BaseMissionIntel</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dc7/DeliveryMissionIntel_8java_source.html#l00449">449</a> of file <a class="el" href="../../d4/dc7/DeliveryMissionIntel_8java_source.html">DeliveryMissionIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  449</span>                                                           {</div>
-<div class="line"><span class="lineno">  450</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../d2/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a03e8065b55692fab4b4414a63263d87a">createAbandonedResult</a>(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  451</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel_html_a03e8065b55692fab4b4414a63263d87a"><div class="ttname"><a href="../../d2/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a03e8065b55692fab4b4414a63263d87a">com.fs.starfarer.api.impl.campaign.intel.bar.events.DeliveryMissionIntel.createAbandonedResult</a></div><div class="ttdeci">MissionResult createAbandonedResult(boolean withPenalty)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dc7/DeliveryMissionIntel_8java_source.html#l00425">DeliveryMissionIntel.java:425</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aad22cee8de1acedf8a1fc041cd43914d" name="aad22cee8de1acedf8a1fc041cd43914d"></a>
@@ -1230,38 +934,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/deb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel.html#a100b5e4d5c76e1857709394e11b6bbcb">com.fs.starfarer.api.impl.campaign.intel.BaseMissionIntel</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dc7/DeliveryMissionIntel_8java_source.html#l00191">191</a> of file <a class="el" href="../../d4/dc7/DeliveryMissionIntel_8java_source.html">DeliveryMissionIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  191</span>                             {</div>
-<div class="line"><span class="lineno">  192</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d2/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a61a047d5ba0be20bb85be1d2d67b956e">event</a>.<a class="code hl_function" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#aa8f2f88c2af400761df21c81416e01a7">getMarket</a>() == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  193</span>            <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#aa9964eb74c87437bc9870cef6c4f5d00">endAfterDelay</a>();</div>
-<div class="line"><span class="lineno">  194</span>            <span class="keywordflow">return</span>; <span class="comment">// to fix crash for saves that are already in a bad state</span></div>
-<div class="line"><span class="lineno">  195</span>        }</div>
-<div class="line"><span class="lineno">  196</span>        </div>
-<div class="line"><span class="lineno">  197</span>        Misc.makeUnimportant(<a class="code hl_variable" href="../../d2/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a61a047d5ba0be20bb85be1d2d67b956e">event</a>.<a class="code hl_function" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a8f7b49563d9b7b31d08676d08101e868">getDestination</a>().<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af1677b531fa1a657e17b732868c7b953">getPrimaryEntity</a>(), <span class="stringliteral">&quot;deliveryEvent&quot;</span>);</div>
-<div class="line"><span class="lineno">  198</span>        </div>
-<div class="line"><span class="lineno">  199</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="../../d2/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a61a047d5ba0be20bb85be1d2d67b956e">event</a>.<a class="code hl_function" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#aa8f2f88c2af400761df21c81416e01a7">getMarket</a>().<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a64c3437824f8a05ba3e6dc8a8ab61e62">isPlayerOwned</a>()) {</div>
-<div class="line"><span class="lineno">  200</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d9/deb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel.html#ad7f869ce39f20aabdeab2f16b8d2aab8">isFailed</a>() || <a class="code hl_function" href="../../d9/deb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel.html#aa0c130c1c15dda1b7fe0ede0a7a91e55">isAbandoned</a>()) {</div>
-<div class="line"><span class="lineno">  201</span>                Global.getSector().getMemoryWithoutUpdate().set(</div>
-<div class="line"><span class="lineno">  202</span>                        DeliveryBarEvent.KEY_FAILED_RECENTLY, <span class="keyword">true</span>, </div>
-<div class="line"><span class="lineno">  203</span>                        DeliveryBarEvent.FAILED_RECENTLY_DURATION * (0.75f + (<span class="keywordtype">float</span>) Math.random() * 0.5f));</div>
-<div class="line"><span class="lineno">  204</span>                </div>
-<div class="line"><span class="lineno">  205</span>                <span class="keywordtype">float</span> p = <a class="code hl_variable" href="../../d2/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a3a3e1819597616cb0d9d089dd916e424">PROB_CONSEQUENCES</a>;</div>
-<div class="line"><span class="lineno">  206</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d2/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a61a047d5ba0be20bb85be1d2d67b956e">event</a>.<a class="code hl_function" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a898f0626bb585625f5c9400efb1d9314">getEscrow</a>() &gt; 0) {</div>
-<div class="line"><span class="lineno">  207</span>                    p = <a class="code hl_variable" href="../../d2/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a44d9f149f00ed38a0a6cceaf1cb0492c">PROB_CONSEQUENCES_ESCROW</a>;</div>
-<div class="line"><span class="lineno">  208</span>                }</div>
-<div class="line"><span class="lineno">  209</span>                <span class="keywordflow">if</span> ((<span class="keywordtype">float</span>) Math.random() &lt; p || DebugFlags.BAR_DEBUG) {</div>
-<div class="line"><span class="lineno">  210</span>                    Global.getSector().addScript(<span class="keyword">new</span> DeliveryFailureConsequences(<span class="keyword">this</span>));</div>
-<div class="line"><span class="lineno">  211</span>                }</div>
-<div class="line"><span class="lineno">  212</span>            }</div>
-<div class="line"><span class="lineno">  213</span>        }</div>
-<div class="line"><span class="lineno">  214</span>        <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#aa9964eb74c87437bc9870cef6c4f5d00">endAfterDelay</a>();</div>
-<div class="line"><span class="lineno">  215</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_aa9964eb74c87437bc9870cef6c4f5d00"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#aa9964eb74c87437bc9870cef6c4f5d00">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.endAfterDelay</a></div><div class="ttdeci">void endAfterDelay()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00098">BaseIntelPlugin.java:98</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel_html_aa0c130c1c15dda1b7fe0ede0a7a91e55"><div class="ttname"><a href="../../d9/deb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel.html#aa0c130c1c15dda1b7fe0ede0a7a91e55">com.fs.starfarer.api.impl.campaign.intel.BaseMissionIntel.isAbandoned</a></div><div class="ttdeci">boolean isAbandoned()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dc4/BaseMissionIntel_8java_source.html#l00134">BaseMissionIntel.java:134</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel_html_a3a3e1819597616cb0d9d089dd916e424"><div class="ttname"><a href="../../d2/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a3a3e1819597616cb0d9d089dd916e424">com.fs.starfarer.api.impl.campaign.intel.bar.events.DeliveryMissionIntel.PROB_CONSEQUENCES</a></div><div class="ttdeci">static float PROB_CONSEQUENCES</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dc7/DeliveryMissionIntel_8java_source.html#l00042">DeliveryMissionIntel.java:42</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel_html_a44d9f149f00ed38a0a6cceaf1cb0492c"><div class="ttname"><a href="../../d2/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a44d9f149f00ed38a0a6cceaf1cb0492c">com.fs.starfarer.api.impl.campaign.intel.bar.events.DeliveryMissionIntel.PROB_CONSEQUENCES_ESCROW</a></div><div class="ttdeci">static float PROB_CONSEQUENCES_ESCROW</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dc7/DeliveryMissionIntel_8java_source.html#l00043">DeliveryMissionIntel.java:43</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a64c3437824f8a05ba3e6dc8a8ab61e62"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a64c3437824f8a05ba3e6dc8a8ab61e62">com.fs.starfarer.api.campaign.econ.MarketAPI.isPlayerOwned</a></div><div class="ttdeci">boolean isPlayerOwned()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_af1677b531fa1a657e17b732868c7b953"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af1677b531fa1a657e17b732868c7b953">com.fs.starfarer.api.campaign.econ.MarketAPI.getPrimaryEntity</a></div><div class="ttdeci">SectorEntityToken getPrimaryEntity()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a15a25a0e9dcf5c1cea23206179677cce" name="a15a25a0e9dcf5c1cea23206179677cce"></a>
@@ -1288,10 +961,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dc7/DeliveryMissionIntel_8java_source.html#l00321">321</a> of file <a class="el" href="../../d4/dc7/DeliveryMissionIntel_8java_source.html">DeliveryMissionIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  321</span>                                                  {</div>
-<div class="line"><span class="lineno">  322</span>        <span class="keywordflow">return</span> <span class="keyword">event</span>.getDestination().getCommodityData(<a class="code hl_variable" href="../../d2/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a61a047d5ba0be20bb85be1d2d67b956e">event</a>.<a class="code hl_function" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#ab0fc30ef7e8091f901b7d9194b510c80">getCommodityId</a>());</div>
-<div class="line"><span class="lineno">  323</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8a6a59948f72abb0613ad75577cb7ad3" name="a8a6a59948f72abb0613ad75577cb7ad3"></a>
@@ -1310,10 +980,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dc7/DeliveryMissionIntel_8java_source.html#l00453">453</a> of file <a class="el" href="../../d4/dc7/DeliveryMissionIntel_8java_source.html">DeliveryMissionIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  453</span>                                      {</div>
-<div class="line"><span class="lineno">  454</span>        <span class="keywordflow">return</span> <span class="keyword">event</span>.getDestination();</div>
-<div class="line"><span class="lineno">  455</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a598022a45520808c6447ac1b047e69f4" name="a598022a45520808c6447ac1b047e69f4"></a>
@@ -1332,10 +999,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dc7/DeliveryMissionIntel_8java_source.html#l00106">106</a> of file <a class="el" href="../../d4/dc7/DeliveryMissionIntel_8java_source.html">DeliveryMissionIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  106</span>                                       {</div>
-<div class="line"><span class="lineno">  107</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d2/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a61a047d5ba0be20bb85be1d2d67b956e">event</a>;</div>
-<div class="line"><span class="lineno">  108</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a031bab69b2ae8638cda47487bb020ff4" name="a031bab69b2ae8638cda47487bb020ff4"></a>
@@ -1356,10 +1020,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#aef7175eff8878a18ebb3099d3a7ab59f">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dc7/DeliveryMissionIntel_8java_source.html#l00313">313</a> of file <a class="el" href="../../d4/dc7/DeliveryMissionIntel_8java_source.html">DeliveryMissionIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  313</span>                                              {</div>
-<div class="line"><span class="lineno">  314</span>        <span class="keywordflow">return</span> <span class="keyword">event</span>.getFaction();</div>
-<div class="line"><span class="lineno">  315</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a92aa8e711cf38b3af65ec05356bb6d30" name="a92aa8e711cf38b3af65ec05356bb6d30"></a>
@@ -1381,12 +1042,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a6499624a08c9565334e2395989f542c9">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dc7/DeliveryMissionIntel_8java_source.html#l00399">399</a> of file <a class="el" href="../../d4/dc7/DeliveryMissionIntel_8java_source.html">DeliveryMissionIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  399</span>                            {</div>
-<div class="line"><span class="lineno">  400</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../d2/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a15a25a0e9dcf5c1cea23206179677cce">getCommodity</a>().<a class="code hl_function" href="../../d3/dd7/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommodityOnMarketAPI.html#a7909022a1b07ab5c9afd60006859c598">getCommodity</a>().<a class="code hl_function" href="../../db/d8a/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommoditySpecAPI.html#adfff3d7db97da05b80516ad6851764e7">getIconName</a>();</div>
-<div class="line"><span class="lineno">  401</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommodityOnMarketAPI_html_a7909022a1b07ab5c9afd60006859c598"><div class="ttname"><a href="../../d3/dd7/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommodityOnMarketAPI.html#a7909022a1b07ab5c9afd60006859c598">com.fs.starfarer.api.campaign.econ.CommodityOnMarketAPI.getCommodity</a></div><div class="ttdeci">CommoditySpecAPI getCommodity()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommoditySpecAPI_html_adfff3d7db97da05b80516ad6851764e7"><div class="ttname"><a href="../../db/d8a/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommoditySpecAPI.html#adfff3d7db97da05b80516ad6851764e7">com.fs.starfarer.api.campaign.econ.CommoditySpecAPI.getIconName</a></div><div class="ttdeci">String getIconName()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a04e355dd4b75ab6dbefd552f05540e9a" name="a04e355dd4b75ab6dbefd552f05540e9a"></a>
@@ -1415,13 +1071,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/deb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel.html#ae8e2b3d8294414db65e1ef77e791c51b">com.fs.starfarer.api.impl.campaign.intel.BaseMissionIntel</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dc7/DeliveryMissionIntel_8java_source.html#l00403">403</a> of file <a class="el" href="../../d4/dc7/DeliveryMissionIntel_8java_source.html">DeliveryMissionIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  403</span>                                                      {</div>
-<div class="line"><span class="lineno">  404</span>        Set&lt;String&gt; tags = super.getIntelTags(map);</div>
-<div class="line"><span class="lineno">  405</span>        tags.add(Tags.INTEL_TRADE);</div>
-<div class="line"><span class="lineno">  406</span>        tags.add(<a class="code hl_function" href="../../d2/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a031bab69b2ae8638cda47487bb020ff4">getFactionForUIColors</a>().getId());</div>
-<div class="line"><span class="lineno">  407</span>        <span class="keywordflow">return</span> tags;</div>
-<div class="line"><span class="lineno">  408</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a0d53353413bc24d3a3a4c682f8c5e649" name="a0d53353413bc24d3a3a4c682f8c5e649"></a>
@@ -1443,10 +1093,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a01f212769febb46bae89256b643c23eb">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dc7/DeliveryMissionIntel_8java_source.html#l00412">412</a> of file <a class="el" href="../../d4/dc7/DeliveryMissionIntel_8java_source.html">DeliveryMissionIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  412</span>                                                              {</div>
-<div class="line"><span class="lineno">  413</span>        <span class="keywordflow">return</span> <span class="keyword">event</span>.getDestination().getPrimaryEntity();</div>
-<div class="line"><span class="lineno">  414</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ad23f353fc62663d64d4e87295427c05d" name="ad23f353fc62663d64d4e87295427c05d"></a>
@@ -1475,10 +1122,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/deb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel.html#a3f6fc9b1bd78262265e2dd0f5610d1fd">com.fs.starfarer.api.impl.campaign.intel.BaseMissionIntel</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dc7/DeliveryMissionIntel_8java_source.html#l00419">419</a> of file <a class="el" href="../../d4/dc7/DeliveryMissionIntel_8java_source.html">DeliveryMissionIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  419</span>                                          {</div>
-<div class="line"><span class="lineno">  420</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;contract&quot;</span>;</div>
-<div class="line"><span class="lineno">  421</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a62145396816aa4c11064c6faabef76fb" name="a62145396816aa4c11064c6faabef76fb"></a>
@@ -1499,16 +1143,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a582fe7cb29e8f2f65670d4dd74418235">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dc7/DeliveryMissionIntel_8java_source.html#l00304">304</a> of file <a class="el" href="../../d4/dc7/DeliveryMissionIntel_8java_source.html">DeliveryMissionIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  304</span>                            {</div>
-<div class="line"><span class="lineno">  305</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d9/deb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel.html#a901584a18befe96f6b0543481ca94a26">isAccepted</a>() || <a class="code hl_function" href="../../d9/deb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel.html#aba902bcaff0bf5201b3464ee5e3eef89">isPosted</a>()) {</div>
-<div class="line"><span class="lineno">  306</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;Delivery - &quot;</span> + <a class="code hl_function" href="../../d2/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a15a25a0e9dcf5c1cea23206179677cce">getCommodity</a>().<a class="code hl_function" href="../../d3/dd7/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommodityOnMarketAPI.html#a7909022a1b07ab5c9afd60006859c598">getCommodity</a>().<a class="code hl_function" href="../../db/d8a/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommoditySpecAPI.html#ae098d2a57484c4130aa4a5df3477212c">getName</a>();</div>
-<div class="line"><span class="lineno">  307</span>        }</div>
-<div class="line"><span class="lineno">  308</span>        </div>
-<div class="line"><span class="lineno">  309</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Delivery &quot;</span> + <a class="code hl_function" href="../../d9/deb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel.html#a2cf8f2d9802d8c6855c7cd6fa1ebc307">getPostfixForState</a>();</div>
-<div class="line"><span class="lineno">  310</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel_html_a2cf8f2d9802d8c6855c7cd6fa1ebc307"><div class="ttname"><a href="../../d9/deb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel.html#a2cf8f2d9802d8c6855c7cd6fa1ebc307">com.fs.starfarer.api.impl.campaign.intel.BaseMissionIntel.getPostfixForState</a></div><div class="ttdeci">String getPostfixForState()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dc4/BaseMissionIntel_8java_source.html#l00252">BaseMissionIntel.java:252</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommoditySpecAPI_html_ae098d2a57484c4130aa4a5df3477212c"><div class="ttname"><a href="../../db/d8a/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommoditySpecAPI.html#ae098d2a57484c4130aa4a5df3477212c">com.fs.starfarer.api.campaign.econ.CommoditySpecAPI.getName</a></div><div class="ttdeci">String getName()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a0b68f7f257d80eee4ef1c149c2de93bc" name="a0b68f7f257d80eee4ef1c149c2de93bc"></a>
@@ -1529,10 +1164,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a8fe6bfa41873bed91428d73fa6bac1b6">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dc7/DeliveryMissionIntel_8java_source.html#l00317">317</a> of file <a class="el" href="../../d4/dc7/DeliveryMissionIntel_8java_source.html">DeliveryMissionIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  317</span>                                             {</div>
-<div class="line"><span class="lineno">  318</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../d2/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a62145396816aa4c11064c6faabef76fb">getName</a>();</div>
-<div class="line"><span class="lineno">  319</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a63aaf38a92ee75c848e0cdb6824fbbd5" name="a63aaf38a92ee75c848e0cdb6824fbbd5"></a>
@@ -1553,10 +1185,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a6160e4bb36c43732e98a87a2f1e63b58">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dc7/DeliveryMissionIntel_8java_source.html#l00300">300</a> of file <a class="el" href="../../d4/dc7/DeliveryMissionIntel_8java_source.html">DeliveryMissionIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  300</span>                                  {</div>
-<div class="line"><span class="lineno">  301</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Delivery&quot;</span>;</div>
-<div class="line"><span class="lineno">  302</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a7ed5a634456cdc8396d429b57cf29046" name="a7ed5a634456cdc8396d429b57cf29046"></a>
@@ -1575,13 +1204,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dc7/DeliveryMissionIntel_8java_source.html#l00152">152</a> of file <a class="el" href="../../d4/dc7/DeliveryMissionIntel_8java_source.html">DeliveryMissionIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  152</span>                               {</div>
-<div class="line"><span class="lineno">  153</span>        CampaignFleetAPI playerFleet = Global.getSector().getPlayerFleet();</div>
-<div class="line"><span class="lineno">  154</span>        CargoAPI cargo = playerFleet.getCargo();</div>
-<div class="line"><span class="lineno">  155</span>        </div>
-<div class="line"><span class="lineno">  156</span>        <span class="keywordflow">return</span> cargo.getCommodityQuantity(<a class="code hl_variable" href="../../d2/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a61a047d5ba0be20bb85be1d2d67b956e">event</a>.<a class="code hl_function" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#ab0fc30ef7e8091f901b7d9194b510c80">getCommodityId</a>()) &gt;= <span class="keyword">event</span>.getQuantity();</div>
-<div class="line"><span class="lineno">  157</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aac1bbac597198846ae977cde6ef1e1ca" name="aac1bbac597198846ae977cde6ef1e1ca"></a>
@@ -1602,10 +1225,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/deb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel.html#aec72c4a03643df2ac4967e9b0648815b">com.fs.starfarer.api.impl.campaign.intel.BaseMissionIntel</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dc7/DeliveryMissionIntel_8java_source.html#l00102">102</a> of file <a class="el" href="../../d4/dc7/DeliveryMissionIntel_8java_source.html">DeliveryMissionIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  102</span>                                  {</div>
-<div class="line"><span class="lineno">  103</span>        Misc.makeImportant(<a class="code hl_variable" href="../../d2/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a61a047d5ba0be20bb85be1d2d67b956e">event</a>.<a class="code hl_function" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a8f7b49563d9b7b31d08676d08101e868">getDestination</a>().<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af1677b531fa1a657e17b732868c7b953">getPrimaryEntity</a>(), <span class="stringliteral">&quot;deliveryEvent&quot;</span>);</div>
-<div class="line"><span class="lineno">  104</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aff53cd70438c58db811cf2022132164c" name="aff53cd70438c58db811cf2022132164c"></a>
@@ -1625,40 +1245,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dc7/DeliveryMissionIntel_8java_source.html#l00120">120</a> of file <a class="el" href="../../d4/dc7/DeliveryMissionIntel_8java_source.html">DeliveryMissionIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  120</span>                                                             {</div>
-<div class="line"><span class="lineno">  121</span>        CampaignFleetAPI playerFleet = Global.getSector().getPlayerFleet();</div>
-<div class="line"><span class="lineno">  122</span>        CargoAPI cargo = playerFleet.getCargo();</div>
-<div class="line"><span class="lineno">  123</span>        </div>
-<div class="line"><span class="lineno">  124</span>        cargo.removeItems(CargoItemType.RESOURCES, <a class="code hl_variable" href="../../d2/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a61a047d5ba0be20bb85be1d2d67b956e">event</a>.<a class="code hl_function" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#ab0fc30ef7e8091f901b7d9194b510c80">getCommodityId</a>(), <a class="code hl_variable" href="../../d2/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a61a047d5ba0be20bb85be1d2d67b956e">event</a>.<a class="code hl_function" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a36fba1f1a84570fa03cd10daa0f57e14">getQuantity</a>());</div>
-<div class="line"><span class="lineno">  125</span>        cargo.getCredits().add(<a class="code hl_variable" href="../../d2/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a61a047d5ba0be20bb85be1d2d67b956e">event</a>.<a class="code hl_function" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a8583f200919a05ebd2988ba596176d2d">getReward</a>() + <a class="code hl_variable" href="../../d2/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a61a047d5ba0be20bb85be1d2d67b956e">event</a>.<a class="code hl_function" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a898f0626bb585625f5c9400efb1d9314">getEscrow</a>());</div>
-<div class="line"><span class="lineno">  126</span>        <a class="code hl_function" href="../../d2/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a1f8def840f243fabecd247bfec7316e1">applyTradeValueImpact</a>(<a class="code hl_variable" href="../../d2/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a61a047d5ba0be20bb85be1d2d67b956e">event</a>.<a class="code hl_function" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a8583f200919a05ebd2988ba596176d2d">getReward</a>());</div>
-<div class="line"><span class="lineno">  127</span>        AddRemoveCommodity.addCommodityLossText(<a class="code hl_variable" href="../../d2/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a61a047d5ba0be20bb85be1d2d67b956e">event</a>.<a class="code hl_function" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#ab0fc30ef7e8091f901b7d9194b510c80">getCommodityId</a>(), <a class="code hl_variable" href="../../d2/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a61a047d5ba0be20bb85be1d2d67b956e">event</a>.<a class="code hl_function" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a36fba1f1a84570fa03cd10daa0f57e14">getQuantity</a>(), dialog.getTextPanel());</div>
-<div class="line"><span class="lineno">  128</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d2/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a61a047d5ba0be20bb85be1d2d67b956e">event</a>.<a class="code hl_function" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a898f0626bb585625f5c9400efb1d9314">getEscrow</a>() &gt; 0) {</div>
-<div class="line"><span class="lineno">  129</span>            AddRemoveCommodity.addCreditsGainText(<a class="code hl_variable" href="../../d2/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a61a047d5ba0be20bb85be1d2d67b956e">event</a>.<a class="code hl_function" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a898f0626bb585625f5c9400efb1d9314">getEscrow</a>(), dialog.getTextPanel());</div>
-<div class="line"><span class="lineno">  130</span>        }</div>
-<div class="line"><span class="lineno">  131</span>        AddRemoveCommodity.addCreditsGainText(<a class="code hl_variable" href="../../d2/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a61a047d5ba0be20bb85be1d2d67b956e">event</a>.<a class="code hl_function" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a8583f200919a05ebd2988ba596176d2d">getReward</a>(), dialog.getTextPanel());</div>
-<div class="line"><span class="lineno">  132</span>        </div>
-<div class="line"><span class="lineno">  133</span>        <span class="keywordtype">float</span> repAmount = 0.01f * <span class="keyword">event</span>.getReward() / 10000f;</div>
-<div class="line"><span class="lineno">  134</span>        <span class="keywordflow">if</span> (repAmount &lt; 0.01f) repAmount = 0.01f;</div>
-<div class="line"><span class="lineno">  135</span>        <span class="keywordflow">if</span> (repAmount &gt; 0.05f) repAmount = 0.05f;</div>
-<div class="line"><span class="lineno">  136</span>        </div>
-<div class="line"><span class="lineno">  137</span>        MissionCompletionRep completionRep = <span class="keyword">new</span> MissionCompletionRep(repAmount, RepLevel.COOPERATIVE, -repAmount, RepLevel.INHOSPITABLE);</div>
-<div class="line"><span class="lineno">  138</span>        </div>
-<div class="line"><span class="lineno">  139</span>        ReputationAdjustmentResult rep = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  140</span>        rep = Global.getSector().adjustPlayerReputation(</div>
-<div class="line"><span class="lineno">  141</span>                <span class="keyword">new</span> RepActionEnvelope(RepActions.MISSION_SUCCESS, completionRep,</div>
-<div class="line"><span class="lineno">  142</span>                        <span class="keyword">null</span>, dialog.getTextPanel(), <span class="keyword">true</span>, <span class="keyword">true</span>), </div>
-<div class="line"><span class="lineno">  143</span>                        <a class="code hl_function" href="../../d2/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a031bab69b2ae8638cda47487bb020ff4">getFactionForUIColors</a>().getId());</div>
-<div class="line"><span class="lineno">  144</span>        </div>
-<div class="line"><span class="lineno">  145</span>        <a class="code hl_function" href="../../d9/deb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel.html#afef476e462e498736caa49f12c468a52">setMissionResult</a>(<span class="keyword">new</span> MissionResult(<a class="code hl_variable" href="../../d2/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a61a047d5ba0be20bb85be1d2d67b956e">event</a>.<a class="code hl_function" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a8583f200919a05ebd2988ba596176d2d">getReward</a>() + <a class="code hl_variable" href="../../d2/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a61a047d5ba0be20bb85be1d2d67b956e">event</a>.<a class="code hl_function" href="../../d8/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a898f0626bb585625f5c9400efb1d9314">getEscrow</a>(), rep, <span class="keyword">null</span>));</div>
-<div class="line"><span class="lineno">  146</span>        <a class="code hl_function" href="../../d9/deb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel.html#aa3c80e0c7f1177d1e0cd8b7c9414ccf9">setMissionState</a>(MissionState.COMPLETED);</div>
-<div class="line"><span class="lineno">  147</span>        <a class="code hl_function" href="../../d2/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#aad22cee8de1acedf8a1fc041cd43914d">endMission</a>();</div>
-<div class="line"><span class="lineno">  148</span>        </div>
-<div class="line"><span class="lineno">  149</span>        ContactIntel.addPotentialContact(<a class="code hl_variable" href="../../d2/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a61a047d5ba0be20bb85be1d2d67b956e">event</a>.<a class="code hl_function" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#aa27389212f9517813bc7d91f26a3551c">getPerson</a>(), <a class="code hl_variable" href="../../d2/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a61a047d5ba0be20bb85be1d2d67b956e">event</a>.<a class="code hl_function" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#aa8f2f88c2af400761df21c81416e01a7">getMarket</a>(), dialog.getTextPanel());</div>
-<div class="line"><span class="lineno">  150</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent_html_aa27389212f9517813bc7d91f26a3551c"><div class="ttname"><a href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#aa27389212f9517813bc7d91f26a3551c">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseGetCommodityBarEvent.getPerson</a></div><div class="ttdeci">PersonAPI getPerson()</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d22/BaseGetCommodityBarEvent_8java_source.html#l00369">BaseGetCommodityBarEvent.java:369</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel_html_a1f8def840f243fabecd247bfec7316e1"><div class="ttname"><a href="../../d2/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a1f8def840f243fabecd247bfec7316e1">com.fs.starfarer.api.impl.campaign.intel.bar.events.DeliveryMissionIntel.applyTradeValueImpact</a></div><div class="ttdeci">void applyTradeValueImpact(float totalReward)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dc7/DeliveryMissionIntel_8java_source.html#l00160">DeliveryMissionIntel.java:160</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aaf58b23912a84e967643bc42e7d503a7" name="aaf58b23912a84e967643bc42e7d503a7"></a>
@@ -1680,10 +1267,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a34188a6337dce5486072ff9ff9dac0e2">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dc7/DeliveryMissionIntel_8java_source.html#l00217">217</a> of file <a class="el" href="../../d4/dc7/DeliveryMissionIntel_8java_source.html">DeliveryMissionIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  217</span>                                    {</div>
-<div class="line"><span class="lineno">  218</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  219</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

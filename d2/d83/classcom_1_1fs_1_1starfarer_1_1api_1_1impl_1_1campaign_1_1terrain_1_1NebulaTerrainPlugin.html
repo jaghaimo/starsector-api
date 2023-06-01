@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -463,10 +464,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d5/dfd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTiledTerrain.html#a29a096ed56fb34ed69fe88309f1667d1">com.fs.starfarer.api.impl.campaign.terrain.BaseTiledTerrain</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d6a/NebulaTerrainPlugin_8java_source.html#l00066">66</a> of file <a class="el" href="../../d9/d6a/NebulaTerrainPlugin_8java_source.html">NebulaTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   66</span>                                      {</div>
-<div class="line"><span class="lineno">   67</span>        super.advance(amount);</div>
-<div class="line"><span class="lineno">   68</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="acd8ed77edf4100ca8a5592d68b317935" name="acd8ed77edf4100ca8a5592d68b317935"></a>
@@ -498,45 +496,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a2e05e8288a8a1fad8cdcda3caaa03342">com.fs.starfarer.api.impl.campaign.terrain.BaseTerrain</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d6a/NebulaTerrainPlugin_8java_source.html#l00248">248</a> of file <a class="el" href="../../d9/d6a/NebulaTerrainPlugin_8java_source.html">NebulaTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  248</span>                                                                  {</div>
-<div class="line"><span class="lineno">  249</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a98ba084e2722ae038b3961e580dbc821">entity</a> instanceof CampaignFleetAPI) {</div>
-<div class="line"><span class="lineno">  250</span>            CampaignFleetAPI fleet = (CampaignFleetAPI) <a class="code hl_variable" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a98ba084e2722ae038b3961e580dbc821">entity</a>;</div>
-<div class="line"><span class="lineno">  251</span>            fleet.getStats().addTemporaryModMult(0.1f, <a class="code hl_function" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#ad9dda3f05df5e1af8babd85bd4685df4">getModId</a>() + <span class="stringliteral">&quot;_1&quot;</span>,</div>
-<div class="line"><span class="lineno">  252</span>                                <span class="stringliteral">&quot;Inside nebula&quot;</span>, <a class="code hl_variable" href="../../d2/d83/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1NebulaTerrainPlugin.html#a817bbc9724159246fd8f47c1bcbe2e9e">VISIBLITY_MULT</a>, </div>
-<div class="line"><span class="lineno">  253</span>                                fleet.getStats().getDetectedRangeMod());</div>
-<div class="line"><span class="lineno">  254</span>            </div>
-<div class="line"><span class="lineno">  255</span>            <span class="keywordtype">float</span> penalty = Misc.getBurnMultForTerrain(fleet);</div>
-<div class="line"><span class="lineno">  256</span>            <span class="comment">//float penalty = getBurnPenalty(fleet);</span></div>
-<div class="line"><span class="lineno">  257</span>            fleet.getStats().addTemporaryModMult(0.1f, <a class="code hl_function" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#ad9dda3f05df5e1af8babd85bd4685df4">getModId</a>() + <span class="stringliteral">&quot;_2&quot;</span>,</div>
-<div class="line"><span class="lineno">  258</span>                                <span class="stringliteral">&quot;Inside nebula&quot;</span>, penalty, </div>
-<div class="line"><span class="lineno">  259</span>                                fleet.getStats().getFleetwideMaxBurnMod());</div>
-<div class="line"><span class="lineno">  260</span><span class="comment">//          fleet.getStats().addTemporaryModPercent(0.1f, getModId() + &quot;_2&quot;,</span></div>
-<div class="line"><span class="lineno">  261</span><span class="comment">//                              &quot;Inside nebula&quot;, -100f * penalty, </span></div>
-<div class="line"><span class="lineno">  262</span><span class="comment">//                              fleet.getStats().getFleetwideMaxBurnMod());</span></div>
-<div class="line"><span class="lineno">  263</span> </div>
-<div class="line"><span class="lineno">  264</span>            </div>
-<div class="line"><span class="lineno">  265</span><span class="comment">//          if (fleet.isPlayerFleet()) {</span></div>
-<div class="line"><span class="lineno">  266</span><span class="comment">//              System.out.println(&quot;23gfgwefwef&quot;);</span></div>
-<div class="line"><span class="lineno">  267</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">  268</span><span class="comment">//          String buffId = getModId();</span></div>
-<div class="line"><span class="lineno">  269</span><span class="comment">//          float buffDur = 0.1f;</span></div>
-<div class="line"><span class="lineno">  270</span><span class="comment">//          for (FleetMemberAPI member : fleet.getFleetData().getMembersListCopy()) {</span></div>
-<div class="line"><span class="lineno">  271</span><span class="comment">//              float penalty = burnPenalty.get(member.getHullSpec().getHullSize());</span></div>
-<div class="line"><span class="lineno">  272</span><span class="comment">//              </span></div>
-<div class="line"><span class="lineno">  273</span><span class="comment">//              Buff test = member.getBuffManager().getBuff(buffId);</span></div>
-<div class="line"><span class="lineno">  274</span><span class="comment">//              if (test instanceof MaxBurnBuff) {</span></div>
-<div class="line"><span class="lineno">  275</span><span class="comment">//                  MaxBurnBuff buff = (MaxBurnBuff) test;</span></div>
-<div class="line"><span class="lineno">  276</span><span class="comment">//                  buff.setDur(buffDur);</span></div>
-<div class="line"><span class="lineno">  277</span><span class="comment">//              } else {</span></div>
-<div class="line"><span class="lineno">  278</span><span class="comment">//                  member.getBuffManager().addBuff(new MaxBurnBuff(buffId, -penalty, buffDur));</span></div>
-<div class="line"><span class="lineno">  279</span><span class="comment">//              }</span></div>
-<div class="line"><span class="lineno">  280</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">  281</span>        }</div>
-<div class="line"><span class="lineno">  282</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain_html_a98ba084e2722ae038b3961e580dbc821"><div class="ttname"><a href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a98ba084e2722ae038b3961e580dbc821">com.fs.starfarer.api.impl.campaign.terrain.BaseTerrain.entity</a></div><div class="ttdeci">SectorEntityToken entity</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/daa/BaseTerrain_8java_source.html#l00025">BaseTerrain.java:25</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain_html_ad9dda3f05df5e1af8babd85bd4685df4"><div class="ttname"><a href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#ad9dda3f05df5e1af8babd85bd4685df4">com.fs.starfarer.api.impl.campaign.terrain.BaseTerrain.getModId</a></div><div class="ttdeci">String getModId()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/daa/BaseTerrain_8java_source.html#l00174">BaseTerrain.java:174</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1NebulaTerrainPlugin_html_a817bbc9724159246fd8f47c1bcbe2e9e"><div class="ttname"><a href="../../d2/d83/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1NebulaTerrainPlugin.html#a817bbc9724159246fd8f47c1bcbe2e9e">com.fs.starfarer.api.impl.campaign.terrain.NebulaTerrainPlugin.VISIBLITY_MULT</a></div><div class="ttdeci">static final float VISIBLITY_MULT</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d6a/NebulaTerrainPlugin_8java_source.html#l00026">NebulaTerrainPlugin.java:26</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="abced3ddb5d493a08c24bf9a73b0859e2" name="abced3ddb5d493a08c24bf9a73b0859e2"></a>
@@ -568,72 +528,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a88ad23e734055396eac133fe98844b7e">com.fs.starfarer.api.impl.campaign.terrain.BaseTerrain</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d6a/NebulaTerrainPlugin_8java_source.html#l00304">304</a> of file <a class="el" href="../../d9/d6a/NebulaTerrainPlugin_8java_source.html">NebulaTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  304</span>                                                                         {</div>
-<div class="line"><span class="lineno">  305</span>        <span class="keywordtype">float</span> pad = 10f;</div>
-<div class="line"><span class="lineno">  306</span>        <span class="keywordtype">float</span> small = 5f;</div>
-<div class="line"><span class="lineno">  307</span>        Color gray = Misc.getGrayColor();</div>
-<div class="line"><span class="lineno">  308</span>        Color highlight = Misc.getHighlightColor();</div>
-<div class="line"><span class="lineno">  309</span>        Color fuel = Global.getSettings().getColor(<span class="stringliteral">&quot;progressBarFuelColor&quot;</span>);</div>
-<div class="line"><span class="lineno">  310</span>        Color bad = Misc.getNegativeHighlightColor();</div>
-<div class="line"><span class="lineno">  311</span>        Color text = Misc.getTextColor();</div>
-<div class="line"><span class="lineno">  312</span>        </div>
-<div class="line"><span class="lineno">  313</span>        tooltip.addTitle(<span class="stringliteral">&quot;Nebula&quot;</span>);</div>
-<div class="line"><span class="lineno">  314</span>        tooltip.addPara(Global.getSettings().getDescription(<a class="code hl_function" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a64e74dbdabe21aabe78bd51158487eaa">getTerrainId</a>(), Type.TERRAIN).getText1(), pad);</div>
-<div class="line"><span class="lineno">  315</span>        <span class="keywordtype">float</span> nextPad = pad;</div>
-<div class="line"><span class="lineno">  316</span>        <span class="keywordflow">if</span> (expanded) {</div>
-<div class="line"><span class="lineno">  317</span>            tooltip.addSectionHeading(<span class="stringliteral">&quot;Travel&quot;</span>, Alignment.MID, pad);</div>
-<div class="line"><span class="lineno">  318</span>            nextPad = small;</div>
-<div class="line"><span class="lineno">  319</span>        }</div>
-<div class="line"><span class="lineno">  320</span>        tooltip.addPara(<span class="stringliteral">&quot;Reduces the range at which fleets inside can be detected by %s.&quot;</span>, nextPad,</div>
-<div class="line"><span class="lineno">  321</span>                highlight, </div>
-<div class="line"><span class="lineno">  322</span>                <span class="stringliteral">&quot;&quot;</span> + (<span class="keywordtype">int</span>) ((1f - <a class="code hl_variable" href="../../d2/d83/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1NebulaTerrainPlugin.html#a817bbc9724159246fd8f47c1bcbe2e9e">VISIBLITY_MULT</a>) * 100) + <span class="stringliteral">&quot;%&quot;</span></div>
-<div class="line"><span class="lineno">  323</span>        );</div>
-<div class="line"><span class="lineno">  324</span>        </div>
-<div class="line"><span class="lineno">  325</span>        tooltip.addPara(<span class="stringliteral">&quot;Reduces the travel speed of fleets inside by up to %s. Larger fleets are slowed down more.&quot;</span>,</div>
-<div class="line"><span class="lineno">  326</span>                pad,</div>
-<div class="line"><span class="lineno">  327</span>                highlight,</div>
-<div class="line"><span class="lineno">  328</span>                <span class="stringliteral">&quot;&quot;</span> + (<span class="keywordtype">int</span>) ((Misc.BURN_PENALTY_MULT) * 100f) + <span class="stringliteral">&quot;%&quot;</span></div>
-<div class="line"><span class="lineno">  329</span>        );</div>
-<div class="line"><span class="lineno">  330</span>        </div>
-<div class="line"><span class="lineno">  331</span>        <span class="keywordtype">float</span> penalty = Misc.getBurnMultForTerrain(Global.getSector().getPlayerFleet());</div>
-<div class="line"><span class="lineno">  332</span>        String penaltyStr = Misc.getRoundedValue(1f - penalty);</div>
-<div class="line"><span class="lineno">  333</span>        tooltip.addPara(<span class="stringliteral">&quot;Your fleet&#39;s speed is reduced by %s.&quot;</span>, pad,</div>
-<div class="line"><span class="lineno">  334</span>                highlight,</div>
-<div class="line"><span class="lineno">  335</span>                <span class="stringliteral">&quot;&quot;</span> + (<span class="keywordtype">int</span>) Math.round((1f - penalty) * 100) + <span class="stringliteral">&quot;%&quot;</span></div>
-<div class="line"><span class="lineno">  336</span>                <span class="comment">//Strings.X + penaltyStr</span></div>
-<div class="line"><span class="lineno">  337</span>        );</div>
-<div class="line"><span class="lineno">  338</span>        </div>
-<div class="line"><span class="lineno">  339</span><span class="comment">//      tooltip.addPara(&quot;Reduces the maximum burn level of ships depending on size. Larger ship classes are able to exploit a higher mass to cross section ratio and suffer a smaller penalty.&quot;, pad);</span></div>
-<div class="line"><span class="lineno">  340</span><span class="comment">//      tooltip.beginGrid(150, 1);</span></div>
-<div class="line"><span class="lineno">  341</span><span class="comment">//      tooltip.addToGrid(0, 0, &quot;  Frigates&quot;, &quot;&quot; + -burnPenalty.get(HullSize.FRIGATE).intValue());</span></div>
-<div class="line"><span class="lineno">  342</span><span class="comment">//      tooltip.addToGrid(0, 1, &quot;  Destroyers&quot;, &quot;&quot; + -burnPenalty.get(HullSize.DESTROYER).intValue());</span></div>
-<div class="line"><span class="lineno">  343</span><span class="comment">//      tooltip.addToGrid(0, 2, &quot;  Cruisers&quot;, &quot;&quot; + -burnPenalty.get(HullSize.CRUISER).intValue());</span></div>
-<div class="line"><span class="lineno">  344</span><span class="comment">//      tooltip.addToGrid(0, 3, &quot;  Capital ships&quot;, &quot;&quot; + -burnPenalty.get(HullSize.CAPITAL_SHIP).intValue());</span></div>
-<div class="line"><span class="lineno">  345</span><span class="comment">//      tooltip.addGrid(small);</span></div>
-<div class="line"><span class="lineno">  346</span>        </div>
-<div class="line"><span class="lineno">  347</span>        <span class="keywordflow">if</span> (expanded) { </div>
-<div class="line"><span class="lineno">  348</span>            tooltip.addSectionHeading(<span class="stringliteral">&quot;Combat&quot;</span>, Alignment.MID, pad);</div>
-<div class="line"><span class="lineno">  349</span>            tooltip.addPara(<span class="stringliteral">&quot;Numerous patches of nebula present on the battlefield, but the medium is not dense enough to affect ships moving at combat speeds.&quot;</span>, small);</div>
-<div class="line"><span class="lineno">  350</span><span class="comment">//          tooltip.addPara(&quot;Numerous patches of nebula present on the battlefield, slowing ships down to a percentage of their top speed.&quot;, small);</span></div>
-<div class="line"><span class="lineno">  351</span><span class="comment">//          tooltip.beginGrid(150, 1);</span></div>
-<div class="line"><span class="lineno">  352</span><span class="comment">//  //      nebulaSpeedFighter&quot;:1,</span></div>
-<div class="line"><span class="lineno">  353</span><span class="comment">//  //      &quot;nebulaSpeedFrigate&quot;:0.7,</span></div>
-<div class="line"><span class="lineno">  354</span><span class="comment">//  //      &quot;nebulaSpeedDestroyer&quot;:0.8,</span></div>
-<div class="line"><span class="lineno">  355</span><span class="comment">//  //      &quot;nebulaSpeedCruiser&quot;:0.9,</span></div>
-<div class="line"><span class="lineno">  356</span><span class="comment">//  //      &quot;nebulaSpeedCapital&quot;:1,</span></div>
-<div class="line"><span class="lineno">  357</span><span class="comment">//          tooltip.addToGrid(0, 0, &quot;  Frigates&quot;, &quot;&quot; + (int)(Global.getSettings().getFloat(&quot;nebulaSpeedFrigate&quot;) * 100f) + &quot;%&quot;);</span></div>
-<div class="line"><span class="lineno">  358</span><span class="comment">//          tooltip.addToGrid(0, 1, &quot;  Destroyers&quot;, &quot;&quot; + (int)(Global.getSettings().getFloat(&quot;nebulaSpeedDestroyer&quot;) * 100f) + &quot;%&quot;);</span></div>
-<div class="line"><span class="lineno">  359</span><span class="comment">//          tooltip.addToGrid(0, 2, &quot;  Cruisers&quot;, &quot;&quot; + (int)(Global.getSettings().getFloat(&quot;nebulaSpeedCruiser&quot;) * 100f) + &quot;%&quot;);</span></div>
-<div class="line"><span class="lineno">  360</span><span class="comment">//          //tooltip.addToGrid(0, 3, &quot;  Capital ships&quot;, &quot;&quot; + (int)(Global.getSettings().getFloat(&quot;nebulaSpeedCapital&quot;) * 100f) + &quot;%&quot;);</span></div>
-<div class="line"><span class="lineno">  361</span><span class="comment">//          tooltip.addGrid(small);</span></div>
-<div class="line"><span class="lineno">  362</span><span class="comment">//          </span></div>
-<div class="line"><span class="lineno">  363</span><span class="comment">//          tooltip.addPara(&quot;Capital ships and fighters are not affected.&quot;, pad);</span></div>
-<div class="line"><span class="lineno">  364</span>        }</div>
-<div class="line"><span class="lineno">  365</span>        </div>
-<div class="line"><span class="lineno">  366</span>        <span class="comment">//tooltip.addPara(&quot;Does not stack with other similar terrain effects.&quot;, pad);</span></div>
-<div class="line"><span class="lineno">  367</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain_html_a64e74dbdabe21aabe78bd51158487eaa"><div class="ttname"><a href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a64e74dbdabe21aabe78bd51158487eaa">com.fs.starfarer.api.impl.campaign.terrain.BaseTerrain.getTerrainId</a></div><div class="ttdeci">String getTerrainId()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/daa/BaseTerrain_8java_source.html#l00046">BaseTerrain.java:46</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a644ad2fe20698e97a3ebebd567254cba" name="a644ad2fe20698e97a3ebebd567254cba"></a>
@@ -655,10 +550,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a5022e6189fb7032a4be3ee4e3a7bd769">com.fs.starfarer.api.impl.campaign.terrain.BaseTerrain</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d6a/NebulaTerrainPlugin_8java_source.html#l00053">53</a> of file <a class="el" href="../../d9/d6a/NebulaTerrainPlugin_8java_source.html">NebulaTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   53</span>                                                           {</div>
-<div class="line"><span class="lineno">   54</span>        <span class="keywordflow">return</span> layers;</div>
-<div class="line"><span class="lineno">   55</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a80142fce267bc0ddd9f2b09bd1d50a5f" name="a80142fce267bc0ddd9f2b09bd1d50a5f"></a>
@@ -679,10 +571,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a7bafc952258dfb4adc5c4e5a8d59206f">com.fs.starfarer.api.impl.campaign.terrain.BaseTerrain</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d6a/NebulaTerrainPlugin_8java_source.html#l00377">377</a> of file <a class="el" href="../../d9/d6a/NebulaTerrainPlugin_8java_source.html">NebulaTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  377</span>                                      {</div>
-<div class="line"><span class="lineno">  378</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;nebula-like&quot;</span>;</div>
-<div class="line"><span class="lineno">  379</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2d7ad2928cb42f70907283121519a4f9" name="a2d7ad2928cb42f70907283121519a4f9"></a>
@@ -703,10 +592,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a02089efe190ff0330d552e38ee04b8f1">com.fs.starfarer.api.impl.campaign.terrain.BaseTerrain</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d6a/NebulaTerrainPlugin_8java_source.html#l00043">43</a> of file <a class="el" href="../../d9/d6a/NebulaTerrainPlugin_8java_source.html">NebulaTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   43</span>                                      {</div>
-<div class="line"><span class="lineno">   44</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Nebula&quot;</span>;</div>
-<div class="line"><span class="lineno">   45</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9ffb8c9901c535a02ec54de00dc6babf" name="a9ffb8c9901c535a02ec54de00dc6babf"></a>
@@ -727,11 +613,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="../../d2/df4/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BattleCreationPluginImpl_1_1NebulaTextureProvider.html#a8318b41071e578028d7c2c698ba35e5e">com.fs.starfarer.api.impl.combat.BattleCreationPluginImpl.NebulaTextureProvider</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d6a/NebulaTerrainPlugin_8java_source.html#l00058">58</a> of file <a class="el" href="../../d9/d6a/NebulaTerrainPlugin_8java_source.html">NebulaTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   58</span>                                    {</div>
-<div class="line"><span class="lineno">   59</span>        <span class="keywordflow">return</span> Global.getSettings().getSpriteName(<a class="code hl_variable" href="../../d5/dfd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTiledTerrain.html#ac9f1cfa83c01af4ec462962b256638a6">params</a>.cat, <a class="code hl_variable" href="../../d5/dfd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTiledTerrain.html#ac9f1cfa83c01af4ec462962b256638a6">params</a>.key + <span class="stringliteral">&quot;_map&quot;</span>);</div>
-<div class="line"><span class="lineno">   60</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTiledTerrain_html_ac9f1cfa83c01af4ec462962b256638a6"><div class="ttname"><a href="../../d5/dfd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTiledTerrain.html#ac9f1cfa83c01af4ec462962b256638a6">com.fs.starfarer.api.impl.campaign.terrain.BaseTiledTerrain.params</a></div><div class="ttdeci">TileParams params</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d99/BaseTiledTerrain_8java_source.html#l00055">BaseTiledTerrain.java:55</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae589d7a21766c192401a7733b3708ba4" name="ae589d7a21766c192401a7733b3708ba4"></a>
@@ -752,10 +634,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="../../d2/df4/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BattleCreationPluginImpl_1_1NebulaTextureProvider.html#afa28c7b31e9f4d5a87c014637cf2e721">com.fs.starfarer.api.impl.combat.BattleCreationPluginImpl.NebulaTextureProvider</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d6a/NebulaTerrainPlugin_8java_source.html#l00062">62</a> of file <a class="el" href="../../d9/d6a/NebulaTerrainPlugin_8java_source.html">NebulaTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   62</span>                                 {</div>
-<div class="line"><span class="lineno">   63</span>        <span class="keywordflow">return</span> Global.getSettings().getSpriteName(<a class="code hl_variable" href="../../d5/dfd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTiledTerrain.html#ac9f1cfa83c01af4ec462962b256638a6">params</a>.cat, <a class="code hl_variable" href="../../d5/dfd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTiledTerrain.html#ac9f1cfa83c01af4ec462962b256638a6">params</a>.key);</div>
-<div class="line"><span class="lineno">   64</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5f633df02dd7f6b2d7e6c13a2e5e32c8" name="a5f633df02dd7f6b2d7e6c13a2e5e32c8"></a>
@@ -776,13 +655,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d5/dfd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTiledTerrain.html#a4bf04a27276cc0caf9bb7b580e04d456">com.fs.starfarer.api.impl.campaign.terrain.BaseTiledTerrain</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d6a/NebulaTerrainPlugin_8java_source.html#l00240">240</a> of file <a class="el" href="../../d9/d6a/NebulaTerrainPlugin_8java_source.html">NebulaTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  240</span>                                  {</div>
-<div class="line"><span class="lineno">  241</span>        <span class="keywordflow">return</span> Color.white;</div>
-<div class="line"><span class="lineno">  242</span>        <span class="comment">//return Color.black;</span></div>
-<div class="line"><span class="lineno">  243</span>        <span class="comment">//return Misc.interpolateColor(Color.black, Color.white, 0.1f);</span></div>
-<div class="line"><span class="lineno">  244</span>        <span class="comment">//return new Color(255,255,255,150);</span></div>
-<div class="line"><span class="lineno">  245</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a89ab729b2a3e99c4f883c996a2a5b657" name="a89ab729b2a3e99c4f883c996a2a5b657"></a>
@@ -803,12 +676,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d5/dfd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTiledTerrain.html#aed3a99a448ef27cb3cc1e07f184994f7">com.fs.starfarer.api.impl.campaign.terrain.BaseTiledTerrain</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d6a/NebulaTerrainPlugin_8java_source.html#l00116">116</a> of file <a class="el" href="../../d9/d6a/NebulaTerrainPlugin_8java_source.html">NebulaTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  116</span>                                       {</div>
-<div class="line"><span class="lineno">  117</span>        <span class="comment">//return TILE_SIZE + 200f;</span></div>
-<div class="line"><span class="lineno">  118</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d2/d83/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1NebulaTerrainPlugin.html#a5a7919005f5b273a3669b81acd8991a0">TILE_SIZE</a> * 1.5f;</div>
-<div class="line"><span class="lineno">  119</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1NebulaTerrainPlugin_html_a5a7919005f5b273a3669b81acd8991a0"><div class="ttname"><a href="../../d2/d83/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1NebulaTerrainPlugin.html#a5a7919005f5b273a3669b81acd8991a0">com.fs.starfarer.api.impl.campaign.terrain.NebulaTerrainPlugin.TILE_SIZE</a></div><div class="ttdeci">static final float TILE_SIZE</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d6a/NebulaTerrainPlugin_8java_source.html#l00025">NebulaTerrainPlugin.java:25</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa60cf8ce297688d01fe7e4895e4143fc" name="aa60cf8ce297688d01fe7e4895e4143fc"></a>
@@ -829,12 +697,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d5/dfd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTiledTerrain.html#a8a23f3ba75fcd172c8f51f2cc2046859">com.fs.starfarer.api.impl.campaign.terrain.BaseTiledTerrain</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d6a/NebulaTerrainPlugin_8java_source.html#l00109">109</a> of file <a class="el" href="../../d9/d6a/NebulaTerrainPlugin_8java_source.html">NebulaTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  109</span>                                     {</div>
-<div class="line"><span class="lineno">  110</span>        <span class="comment">//return TILE_SIZE + 300f;</span></div>
-<div class="line"><span class="lineno">  111</span>        <span class="comment">//return TILE_SIZE + 600f;</span></div>
-<div class="line"><span class="lineno">  112</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d2/d83/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1NebulaTerrainPlugin.html#a5a7919005f5b273a3669b81acd8991a0">TILE_SIZE</a> * 2.5f;</div>
-<div class="line"><span class="lineno">  113</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a6042cebd9989b3dc0bb8e275be499ab5" name="a6042cebd9989b3dc0bb8e275be499ab5"></a>
@@ -855,10 +718,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d5/dfd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTiledTerrain.html#a004dcf60e34a37904dcb7a3faaf0732f">com.fs.starfarer.api.impl.campaign.terrain.BaseTiledTerrain</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d6a/NebulaTerrainPlugin_8java_source.html#l00122">122</a> of file <a class="el" href="../../d9/d6a/NebulaTerrainPlugin_8java_source.html">NebulaTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  122</span>                               {</div>
-<div class="line"><span class="lineno">  123</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d2/d83/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1NebulaTerrainPlugin.html#a5a7919005f5b273a3669b81acd8991a0">TILE_SIZE</a>;</div>
-<div class="line"><span class="lineno">  124</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa96c8c7296ca59b787aa68b1cbea5956" name="aa96c8c7296ca59b787aa68b1cbea5956"></a>
@@ -879,10 +739,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a9d84199f96d4f75a9807113cea23dd61">com.fs.starfarer.api.impl.campaign.terrain.BaseTerrain</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d6a/NebulaTerrainPlugin_8java_source.html#l00373">373</a> of file <a class="el" href="../../d9/d6a/NebulaTerrainPlugin_8java_source.html">NebulaTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  373</span>                                   {</div>
-<div class="line"><span class="lineno">  374</span>        <span class="keywordflow">return</span> 350f;</div>
-<div class="line"><span class="lineno">  375</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a152e81b8b92ed132a22f8a750853b02c" name="a152e81b8b92ed132a22f8a750853b02c"></a>
@@ -904,13 +761,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a6d0778d2c9caf511d17338cee3ffbd5c">com.fs.starfarer.api.impl.campaign.terrain.BaseTerrain</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d6a/NebulaTerrainPlugin_8java_source.html#l00381">381</a> of file <a class="el" href="../../d9/d6a/NebulaTerrainPlugin_8java_source.html">NebulaTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  381</span>                                          {</div>
-<div class="line"><span class="lineno">  382</span>        <span class="keywordflow">return</span> flag == TerrainAIFlags.REDUCES_DETECTABILITY || </div>
-<div class="line"><span class="lineno">  383</span>                flag == TerrainAIFlags.REDUCES_SPEED_LARGE||</div>
-<div class="line"><span class="lineno">  384</span>                flag == TerrainAIFlags.TILE_BASED</div>
-<div class="line"><span class="lineno">  385</span>                ;</div>
-<div class="line"><span class="lineno">  386</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8e75e69cd42dadc4c33844cc7908e2e7" name="a8e75e69cd42dadc4c33844cc7908e2e7"></a>
@@ -931,10 +782,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a27e7fc8cc4b3d1882800b49c03d3abb3">com.fs.starfarer.api.impl.campaign.terrain.BaseTerrain</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d6a/NebulaTerrainPlugin_8java_source.html#l00300">300</a> of file <a class="el" href="../../d9/d6a/NebulaTerrainPlugin_8java_source.html">NebulaTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  300</span>                                {</div>
-<div class="line"><span class="lineno">  301</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  302</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2782b769cd5f9fbaee2f67edcbf0f936" name="a2782b769cd5f9fbaee2f67edcbf0f936"></a>
@@ -972,13 +820,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d5/dfd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTiledTerrain.html#a70df0fd40ad55085c72ca3a3e408b0f2">com.fs.starfarer.api.impl.campaign.terrain.BaseTiledTerrain</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d6a/NebulaTerrainPlugin_8java_source.html#l00038">38</a> of file <a class="el" href="../../d9/d6a/NebulaTerrainPlugin_8java_source.html">NebulaTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   38</span>                                                                               {</div>
-<div class="line"><span class="lineno">   39</span>        super.init(<a class="code hl_variable" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a075ff680d11a0f394d9f399d13129c2d">terrainId</a>, <a class="code hl_variable" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a98ba084e2722ae038b3961e580dbc821">entity</a>, param);</div>
-<div class="line"><span class="lineno">   40</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a6e7b52077a0f438b0dc442ef0084a222">name</a> == <span class="keyword">null</span> || <a class="code hl_variable" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a6e7b52077a0f438b0dc442ef0084a222">name</a>.equals(<span class="stringliteral">&quot;Unknown&quot;</span>)) <a class="code hl_variable" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a6e7b52077a0f438b0dc442ef0084a222">name</a> = <span class="stringliteral">&quot;Nebula&quot;</span>;</div>
-<div class="line"><span class="lineno">   41</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain_html_a075ff680d11a0f394d9f399d13129c2d"><div class="ttname"><a href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a075ff680d11a0f394d9f399d13129c2d">com.fs.starfarer.api.impl.campaign.terrain.BaseTerrain.terrainId</a></div><div class="ttdeci">String terrainId</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/daa/BaseTerrain_8java_source.html#l00026">BaseTerrain.java:26</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain_html_a6e7b52077a0f438b0dc442ef0084a222"><div class="ttname"><a href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a6e7b52077a0f438b0dc442ef0084a222">com.fs.starfarer.api.impl.campaign.terrain.BaseTerrain.name</a></div><div class="ttdeci">String name</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/daa/BaseTerrain_8java_source.html#l00027">BaseTerrain.java:27</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5ec1729a63c664ad777967910f7c44bf" name="a5ec1729a63c664ad777967910f7c44bf"></a>
@@ -999,10 +841,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a299a5fba052249b61751a713596209d8">com.fs.starfarer.api.impl.campaign.terrain.BaseTerrain</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d6a/NebulaTerrainPlugin_8java_source.html#l00369">369</a> of file <a class="el" href="../../d9/d6a/NebulaTerrainPlugin_8java_source.html">NebulaTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  369</span>                                         {</div>
-<div class="line"><span class="lineno">  370</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  371</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8a2a40a8a23ab6f9086f0d4f3b237624" name="a8a2a40a8a23ab6f9086f0d4f3b237624"></a>
@@ -1024,21 +863,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d5/dfd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTiledTerrain.html#a09a17e769167f965344fa4719697dc54">com.fs.starfarer.api.impl.campaign.terrain.BaseTiledTerrain</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d6a/NebulaTerrainPlugin_8java_source.html#l00225">225</a> of file <a class="el" href="../../d9/d6a/NebulaTerrainPlugin_8java_source.html">NebulaTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  225</span>                                              {</div>
-<div class="line"><span class="lineno">  226</span>        GL11.glEnable(GL11.GL_BLEND);</div>
-<div class="line"><span class="lineno">  227</span>        GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA);</div>
-<div class="line"><span class="lineno">  228</span>        <span class="comment">//GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE);</span></div>
-<div class="line"><span class="lineno">  229</span>        </div>
-<div class="line"><span class="lineno">  230</span>        <span class="comment">//Color color = new Color(125,125,200,255);</span></div>
-<div class="line"><span class="lineno">  231</span>        <span class="comment">//Color color = new Color(100,100,150,255);</span></div>
-<div class="line"><span class="lineno">  232</span>        Color color = <a class="code hl_function" href="../../d2/d83/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1NebulaTerrainPlugin.html#a5f633df02dd7f6b2d7e6c13a2e5e32c8">getRenderColor</a>();</div>
-<div class="line"><span class="lineno">  233</span>        GL11.glColor4ub((<span class="keywordtype">byte</span>)color.getRed(),</div>
-<div class="line"><span class="lineno">  234</span>                (<span class="keywordtype">byte</span>)color.getGreen(),</div>
-<div class="line"><span class="lineno">  235</span>                (<span class="keywordtype">byte</span>)color.getBlue(),</div>
-<div class="line"><span class="lineno">  236</span>                (<span class="keywordtype">byte</span>)((<span class="keywordtype">float</span>)color.getAlpha() * alphaMult));</div>
-<div class="line"><span class="lineno">  237</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1NebulaTerrainPlugin_html_a5f633df02dd7f6b2d7e6c13a2e5e32c8"><div class="ttname"><a href="../../d2/d83/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1NebulaTerrainPlugin.html#a5f633df02dd7f6b2d7e6c13a2e5e32c8">com.fs.starfarer.api.impl.campaign.terrain.NebulaTerrainPlugin.getRenderColor</a></div><div class="ttdeci">Color getRenderColor()</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d6a/NebulaTerrainPlugin_8java_source.html#l00240">NebulaTerrainPlugin.java:240</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a185131370ca97542044bfd08624ce4a5" name="a185131370ca97542044bfd08624ce4a5"></a>
@@ -1070,33 +895,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d5/dfd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTiledTerrain.html#a80cebae56215c9b1e115bfe5420f11fa">com.fs.starfarer.api.impl.campaign.terrain.BaseTiledTerrain</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d6a/NebulaTerrainPlugin_8java_source.html#l00198">198</a> of file <a class="el" href="../../d9/d6a/NebulaTerrainPlugin_8java_source.html">NebulaTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  198</span>                                                                       {</div>
-<div class="line"><span class="lineno">  199</span>        GL11.glEnable(GL11.GL_BLEND);</div>
-<div class="line"><span class="lineno">  200</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a98ba084e2722ae038b3961e580dbc821">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#aca208794671c1be979d665d374deaa94">isInHyperspace</a>()) {</div>
-<div class="line"><span class="lineno">  201</span><span class="comment">//          if (layer == CampaignEngineLayers.TERRAIN_8) {</span></div>
-<div class="line"><span class="lineno">  202</span><span class="comment">//              GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE);</span></div>
-<div class="line"><span class="lineno">  203</span><span class="comment">//          } else {</span></div>
-<div class="line"><span class="lineno">  204</span><span class="comment">//              GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA);</span></div>
-<div class="line"><span class="lineno">  205</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">  206</span>            GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA);</div>
-<div class="line"><span class="lineno">  207</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  208</span>            GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA);</div>
-<div class="line"><span class="lineno">  209</span>        }</div>
-<div class="line"><span class="lineno">  210</span>        <span class="comment">//GL11.glDisable(GL11.GL_BLEND);</span></div>
-<div class="line"><span class="lineno">  211</span>        </div>
-<div class="line"><span class="lineno">  212</span>        <span class="keywordflow">if</span> (layer == CampaignEngineLayers.TERRAIN_8) {</div>
-<div class="line"><span class="lineno">  213</span>            alphaMult *= 0.20f;</div>
-<div class="line"><span class="lineno">  214</span>            <span class="comment">//alphaMult *= 0.50f;</span></div>
-<div class="line"><span class="lineno">  215</span>        }</div>
-<div class="line"><span class="lineno">  216</span>        </div>
-<div class="line"><span class="lineno">  217</span>        Color color = <a class="code hl_function" href="../../d2/d83/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1NebulaTerrainPlugin.html#a5f633df02dd7f6b2d7e6c13a2e5e32c8">getRenderColor</a>();</div>
-<div class="line"><span class="lineno">  218</span>        GL11.glColor4ub((<span class="keywordtype">byte</span>)color.getRed(),</div>
-<div class="line"><span class="lineno">  219</span>                (<span class="keywordtype">byte</span>)color.getGreen(),</div>
-<div class="line"><span class="lineno">  220</span>                (<span class="keywordtype">byte</span>)color.getBlue(),</div>
-<div class="line"><span class="lineno">  221</span>                (<span class="keywordtype">byte</span>)((<span class="keywordtype">float</span>)color.getAlpha() * alphaMult));</div>
-<div class="line"><span class="lineno">  222</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_aca208794671c1be979d665d374deaa94"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#aca208794671c1be979d665d374deaa94">com.fs.starfarer.api.campaign.SectorEntityToken.isInHyperspace</a></div><div class="ttdeci">boolean isInHyperspace()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae9369a129f7768e89c6c32fb9f808f8d" name="ae9369a129f7768e89c6c32fb9f808f8d"></a>
@@ -1125,12 +924,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d5/dfd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTiledTerrain.html">com.fs.starfarer.api.impl.campaign.terrain.BaseTiledTerrain</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d6a/NebulaTerrainPlugin_8java_source.html#l00047">47</a> of file <a class="el" href="../../d9/d6a/NebulaTerrainPlugin_8java_source.html">NebulaTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   47</span>                                   {</div>
-<div class="line"><span class="lineno">   48</span>        super.readResolve();</div>
-<div class="line"><span class="lineno">   49</span>        layers = EnumSet.of(CampaignEngineLayers.TERRAIN_2, CampaignEngineLayers.TERRAIN_8);</div>
-<div class="line"><span class="lineno">   50</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">   51</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a58723b7dd68114c1ba056d5167310dd6" name="a58723b7dd68114c1ba056d5167310dd6"></a>
@@ -1162,42 +956,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d5/dfd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTiledTerrain.html#aaf474a150148318ef24885111e429d05">com.fs.starfarer.api.impl.campaign.terrain.BaseTiledTerrain</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d6a/NebulaTerrainPlugin_8java_source.html#l00072">72</a> of file <a class="el" href="../../d9/d6a/NebulaTerrainPlugin_8java_source.html">NebulaTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   72</span>                                                                         {</div>
-<div class="line"><span class="lineno">   73</span>        currLayer = layer;</div>
-<div class="line"><span class="lineno">   74</span>        super.render(layer, viewport);</div>
-<div class="line"><span class="lineno">   75</span> </div>
-<div class="line"><span class="lineno">   76</span>        </div>
-<div class="line"><span class="lineno">   77</span><span class="comment">//      float x = entity.getLocation().x;</span></div>
-<div class="line"><span class="lineno">   78</span><span class="comment">//      float y = entity.getLocation().y;</span></div>
-<div class="line"><span class="lineno">   79</span><span class="comment">//      float size = getTileSize();</span></div>
-<div class="line"><span class="lineno">   80</span><span class="comment">//      float renderSize = getTileRenderSize();</span></div>
-<div class="line"><span class="lineno">   81</span><span class="comment">//      </span></div>
-<div class="line"><span class="lineno">   82</span><span class="comment">//      float w = tiles.length * size;</span></div>
-<div class="line"><span class="lineno">   83</span><span class="comment">//      float h = tiles[0].length * size;</span></div>
-<div class="line"><span class="lineno">   84</span><span class="comment">//      </span></div>
-<div class="line"><span class="lineno">   85</span><span class="comment">//      x -= w / 2f;</span></div>
-<div class="line"><span class="lineno">   86</span><span class="comment">//      y -= h / 2f;</span></div>
-<div class="line"><span class="lineno">   87</span><span class="comment">//      </span></div>
-<div class="line"><span class="lineno">   88</span><span class="comment">//      GL11.glDisable(GL11.GL_TEXTURE_2D);</span></div>
-<div class="line"><span class="lineno">   89</span><span class="comment">//      GL11.glEnable(GL11.GL_BLEND);</span></div>
-<div class="line"><span class="lineno">   90</span><span class="comment">//      GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA);</span></div>
-<div class="line"><span class="lineno">   91</span><span class="comment">//</span></div>
-<div class="line"><span class="lineno">   92</span><span class="comment">//      Color color = Color.white;</span></div>
-<div class="line"><span class="lineno">   93</span><span class="comment">//      GL11.glColor4ub((byte)color.getRed(),</span></div>
-<div class="line"><span class="lineno">   94</span><span class="comment">//                      (byte)color.getGreen(),</span></div>
-<div class="line"><span class="lineno">   95</span><span class="comment">//                      (byte)color.getBlue(),</span></div>
-<div class="line"><span class="lineno">   96</span><span class="comment">//                      (byte)((float)color.getAlpha() * 0.25f));</span></div>
-<div class="line"><span class="lineno">   97</span><span class="comment">//      </span></div>
-<div class="line"><span class="lineno">   98</span><span class="comment">//      GL11.glBegin(GL11.GL_QUADS);</span></div>
-<div class="line"><span class="lineno">   99</span><span class="comment">//      {</span></div>
-<div class="line"><span class="lineno">  100</span><span class="comment">//          GL11.glVertex2f(x, y);</span></div>
-<div class="line"><span class="lineno">  101</span><span class="comment">//          GL11.glVertex2f(x, y + h);</span></div>
-<div class="line"><span class="lineno">  102</span><span class="comment">//          GL11.glVertex2f(x + w, y + h);</span></div>
-<div class="line"><span class="lineno">  103</span><span class="comment">//          GL11.glVertex2f(x + w, y);</span></div>
-<div class="line"><span class="lineno">  104</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  105</span><span class="comment">//      GL11.glEnd();</span></div>
-<div class="line"><span class="lineno">  106</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae249b789131e1194066d6c976d9dc9d3" name="ae249b789131e1194066d6c976d9dc9d3"></a>
@@ -1267,74 +1026,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d5/dfd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTiledTerrain.html#ad514fa33f0275de932a605582178cafb">com.fs.starfarer.api.impl.campaign.terrain.BaseTiledTerrain</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d6a/NebulaTerrainPlugin_8java_source.html#l00127">127</a> of file <a class="el" href="../../d9/d6a/NebulaTerrainPlugin_8java_source.html">NebulaTerrainPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  129</span>                             {</div>
-<div class="line"><span class="lineno">  130</span>        </div>
-<div class="line"><span class="lineno">  131</span><span class="comment">//      if (currLayer != CampaignEngineLayers.TERRAIN_8) {</span></div>
-<div class="line"><span class="lineno">  132</span><span class="comment">//          float size = getTileSize();</span></div>
-<div class="line"><span class="lineno">  133</span><span class="comment">//          float renderSize = getTileRenderSize();</span></div>
-<div class="line"><span class="lineno">  134</span><span class="comment">//          float x = entity.getLocation().x - renderSize / 2f;</span></div>
-<div class="line"><span class="lineno">  135</span><span class="comment">//          float y = entity.getLocation().y - renderSize / 2f;</span></div>
-<div class="line"><span class="lineno">  136</span><span class="comment">//          </span></div>
-<div class="line"><span class="lineno">  137</span><span class="comment">//          float w = tiles.length * size + renderSize;</span></div>
-<div class="line"><span class="lineno">  138</span><span class="comment">//          float h = tiles[0].length * size + renderSize;</span></div>
-<div class="line"><span class="lineno">  139</span><span class="comment">//          </span></div>
-<div class="line"><span class="lineno">  140</span><span class="comment">//</span></div>
-<div class="line"><span class="lineno">  141</span><span class="comment">//          GL11.glColorMask(false, false, false, true);</span></div>
-<div class="line"><span class="lineno">  142</span><span class="comment">//          GL11.glBlendFunc(GL11.GL_ONE, GL11.GL_ZERO);</span></div>
-<div class="line"><span class="lineno">  143</span><span class="comment">//          GL11.glColor4ub((byte)0,</span></div>
-<div class="line"><span class="lineno">  144</span><span class="comment">//                  (byte)0,</span></div>
-<div class="line"><span class="lineno">  145</span><span class="comment">//                  (byte)0,</span></div>
-<div class="line"><span class="lineno">  146</span><span class="comment">//                  (byte)255);</span></div>
-<div class="line"><span class="lineno">  147</span><span class="comment">//          GL11.glBegin(GL11.GL_QUADS);</span></div>
-<div class="line"><span class="lineno">  148</span><span class="comment">//          {</span></div>
-<div class="line"><span class="lineno">  149</span><span class="comment">//              GL11.glVertex2f(x, y);</span></div>
-<div class="line"><span class="lineno">  150</span><span class="comment">//              GL11.glVertex2f(x, y + h);</span></div>
-<div class="line"><span class="lineno">  151</span><span class="comment">//              GL11.glVertex2f(x + w, y + h);</span></div>
-<div class="line"><span class="lineno">  152</span><span class="comment">//              GL11.glVertex2f(x + w, y);</span></div>
-<div class="line"><span class="lineno">  153</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">  154</span><span class="comment">//          GL11.glEnd();</span></div>
-<div class="line"><span class="lineno">  155</span><span class="comment">//          </span></div>
-<div class="line"><span class="lineno">  156</span><span class="comment">//          GL11.glColorMask(true, true, true, false);</span></div>
-<div class="line"><span class="lineno">  157</span><span class="comment">//          GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_DST_ALPHA);</span></div>
-<div class="line"><span class="lineno">  158</span><span class="comment">//          Color color = getRenderColor();</span></div>
-<div class="line"><span class="lineno">  159</span><span class="comment">//          GL11.glColor4ub((byte)color.getRed(),</span></div>
-<div class="line"><span class="lineno">  160</span><span class="comment">//                  (byte)color.getGreen(),</span></div>
-<div class="line"><span class="lineno">  161</span><span class="comment">//                  (byte)color.getBlue(),</span></div>
-<div class="line"><span class="lineno">  162</span><span class="comment">//                  (byte)((float)color.getAlpha() * alphaMult));</span></div>
-<div class="line"><span class="lineno">  163</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  164</span>        </div>
-<div class="line"><span class="lineno">  165</span>        super.renderSubArea(startColumn, endColumn, startRow, endRow, factor, samples, alphaMult);</div>
-<div class="line"><span class="lineno">  166</span>        </div>
-<div class="line"><span class="lineno">  167</span>        </div>
-<div class="line"><span class="lineno">  168</span><span class="comment">//      if (currLayer != CampaignEngineLayers.TERRAIN_8) {</span></div>
-<div class="line"><span class="lineno">  169</span><span class="comment">//          float size = getTileSize();</span></div>
-<div class="line"><span class="lineno">  170</span><span class="comment">//          float renderSize = getTileRenderSize();</span></div>
-<div class="line"><span class="lineno">  171</span><span class="comment">//          float x = entity.getLocation().x - renderSize / 2f;</span></div>
-<div class="line"><span class="lineno">  172</span><span class="comment">//          float y = entity.getLocation().y - renderSize / 2f;</span></div>
-<div class="line"><span class="lineno">  173</span><span class="comment">//          float w = tiles.length * size + renderSize;</span></div>
-<div class="line"><span class="lineno">  174</span><span class="comment">//          float h = tiles[0].length * size + renderSize;</span></div>
-<div class="line"><span class="lineno">  175</span><span class="comment">//          </span></div>
-<div class="line"><span class="lineno">  176</span><span class="comment">//          x -= w/2f;</span></div>
-<div class="line"><span class="lineno">  177</span><span class="comment">//          y -= h/2f;</span></div>
-<div class="line"><span class="lineno">  178</span><span class="comment">//          </span></div>
-<div class="line"><span class="lineno">  179</span><span class="comment">//          </span></div>
-<div class="line"><span class="lineno">  180</span><span class="comment">//          GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_DST_COLOR);</span></div>
-<div class="line"><span class="lineno">  181</span><span class="comment">//          GL11.glColor4ub((byte)0,</span></div>
-<div class="line"><span class="lineno">  182</span><span class="comment">//                  (byte)0,</span></div>
-<div class="line"><span class="lineno">  183</span><span class="comment">//                  (byte)0,</span></div>
-<div class="line"><span class="lineno">  184</span><span class="comment">//                  (byte)255);</span></div>
-<div class="line"><span class="lineno">  185</span><span class="comment">//          GL11.glBegin(GL11.GL_QUADS);</span></div>
-<div class="line"><span class="lineno">  186</span><span class="comment">//          {</span></div>
-<div class="line"><span class="lineno">  187</span><span class="comment">//              GL11.glVertex2f(x, y);</span></div>
-<div class="line"><span class="lineno">  188</span><span class="comment">//              GL11.glVertex2f(x, y + h);</span></div>
-<div class="line"><span class="lineno">  189</span><span class="comment">//              GL11.glVertex2f(x + w, y + h);</span></div>
-<div class="line"><span class="lineno">  190</span><span class="comment">//              GL11.glVertex2f(x + w, y);</span></div>
-<div class="line"><span class="lineno">  191</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">  192</span><span class="comment">//          GL11.glEnd();</span></div>
-<div class="line"><span class="lineno">  193</span><span class="comment">//          </span></div>
-<div class="line"><span class="lineno">  194</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  195</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

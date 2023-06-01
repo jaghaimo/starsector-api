@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -176,65 +177,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="../../d0/d5c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1CommandPlugin.html#a72a44c5127e60136b87d3b37613fd0e0">com.fs.starfarer.api.campaign.rules.CommandPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d2d/RemoveCommodity_8java_source.html#l00017">17</a> of file <a class="el" href="../../d3/d2d/RemoveCommodity_8java_source.html">RemoveCommodity.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   17</span>                                                                                                                             {</div>
-<div class="line"><span class="lineno">   18</span>        <span class="keywordflow">if</span> (dialog == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   19</span>        </div>
-<div class="line"><span class="lineno">   20</span>        String commodityId = params.get(0).getString(memoryMap);</div>
-<div class="line"><span class="lineno">   21</span>        <span class="keywordtype">float</span> quantity = 0;</div>
-<div class="line"><span class="lineno">   22</span>        <span class="keywordtype">int</span> next = 2;</div>
-<div class="line"><span class="lineno">   23</span>        <span class="keywordflow">if</span> (params.get(1).isOperator()) {</div>
-<div class="line"><span class="lineno">   24</span>            quantity = -1 * params.get(2).getFloat(memoryMap);</div>
-<div class="line"><span class="lineno">   25</span>            next = 3;</div>
-<div class="line"><span class="lineno">   26</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   27</span>            quantity = params.get(1).getFloat(memoryMap);</div>
-<div class="line"><span class="lineno">   28</span>        }</div>
-<div class="line"><span class="lineno">   29</span>        </div>
-<div class="line"><span class="lineno">   30</span>        quantity = -quantity;</div>
-<div class="line"><span class="lineno">   31</span>        </div>
-<div class="line"><span class="lineno">   32</span>        <span class="keywordtype">boolean</span> withText = Math.abs(quantity) &gt;= 1;</div>
-<div class="line"><span class="lineno">   33</span>        <span class="keywordflow">if</span> (dialog != <span class="keyword">null</span> &amp;&amp; params.size() &gt;= next + 1) {</div>
-<div class="line"><span class="lineno">   34</span>            withText = params.get(next).getBoolean(memoryMap) &amp;&amp; withText;</div>
-<div class="line"><span class="lineno">   35</span>        }</div>
-<div class="line"><span class="lineno">   36</span>        </div>
-<div class="line"><span class="lineno">   37</span>        <span class="keywordflow">if</span> (commodityId.equals(<span class="stringliteral">&quot;credits&quot;</span>)) {</div>
-<div class="line"><span class="lineno">   38</span>            MutableValue credits = Global.getSector().getPlayerFleet().getCargo().getCredits();</div>
-<div class="line"><span class="lineno">   39</span>            <span class="keywordflow">if</span> (quantity &gt; 0) {</div>
-<div class="line"><span class="lineno">   40</span>                credits.add(quantity);</div>
-<div class="line"><span class="lineno">   41</span>                <span class="keywordflow">if</span> (withText) {</div>
-<div class="line"><span class="lineno">   42</span>                    AddRemoveCommodity.addCreditsGainText((<span class="keywordtype">int</span>) quantity, dialog.getTextPanel());</div>
-<div class="line"><span class="lineno">   43</span>                }</div>
-<div class="line"><span class="lineno">   44</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   45</span>                credits.subtract(Math.abs(quantity));</div>
-<div class="line"><span class="lineno">   46</span>                <span class="keywordflow">if</span> (credits.get() &lt; 0) credits.set(0);</div>
-<div class="line"><span class="lineno">   47</span>                <span class="keywordflow">if</span> (withText) {</div>
-<div class="line"><span class="lineno">   48</span>                    AddRemoveCommodity.addCreditsLossText((<span class="keywordtype">int</span>) Math.abs(quantity), dialog.getTextPanel());</div>
-<div class="line"><span class="lineno">   49</span>                }</div>
-<div class="line"><span class="lineno">   50</span>            }</div>
-<div class="line"><span class="lineno">   51</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   52</span><span class="comment">//          if (quantity &lt; 0) {</span></div>
-<div class="line"><span class="lineno">   53</span><span class="comment">//              quantity = -1f * Math.max(Math.abs(quantity), Global.getSector().getPlayerFleet().getCargo().getCommodityQuantity(commodityId));</span></div>
-<div class="line"><span class="lineno">   54</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">   55</span>            <span class="keywordflow">if</span> (quantity &gt; 0) {</div>
-<div class="line"><span class="lineno">   56</span>                Global.getSector().getPlayerFleet().getCargo().addCommodity(commodityId, quantity);</div>
-<div class="line"><span class="lineno">   57</span>                <span class="keywordflow">if</span> (withText) {</div>
-<div class="line"><span class="lineno">   58</span>                    AddRemoveCommodity.addCommodityGainText(commodityId, (<span class="keywordtype">int</span>) quantity, dialog.getTextPanel());</div>
-<div class="line"><span class="lineno">   59</span>                }</div>
-<div class="line"><span class="lineno">   60</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   61</span>                Global.getSector().getPlayerFleet().getCargo().removeCommodity(commodityId, Math.abs(quantity));</div>
-<div class="line"><span class="lineno">   62</span>                <span class="keywordflow">if</span> (withText) {</div>
-<div class="line"><span class="lineno">   63</span>                    AddRemoveCommodity.addCommodityLossText(commodityId, (<span class="keywordtype">int</span>) Math.abs(quantity), dialog.getTextPanel());</div>
-<div class="line"><span class="lineno">   64</span>                }</div>
-<div class="line"><span class="lineno">   65</span>            }</div>
-<div class="line"><span class="lineno">   66</span>        }</div>
-<div class="line"><span class="lineno">   67</span>        </div>
-<div class="line"><span class="lineno">   68</span>        <span class="keywordflow">if</span> (!<span class="stringliteral">&quot;credits&quot;</span>.equals(commodityId)) {</div>
-<div class="line"><span class="lineno">   69</span>            <span class="comment">// update $supplies, $fuel, etc if relevant</span></div>
-<div class="line"><span class="lineno">   70</span>            AddRemoveCommodity.updatePlayerMemoryQuantity(commodityId);</div>
-<div class="line"><span class="lineno">   71</span>        }</div>
-<div class="line"><span class="lineno">   72</span>        </div>
-<div class="line"><span class="lineno">   73</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   74</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -156,26 +157,7 @@ Public Member Functions</h2></td></tr>
 <p>Implements <a class="el" href="../../da/d9c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BeamEffectPlugin.html#a6114bdaffeb81bc1af1d66ecaf09f938">com.fs.starfarer.api.combat.BeamEffectPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d7d/PaladinEffect_8java_source.html#l00021">21</a> of file <a class="el" href="../../d9/d7d/PaladinEffect_8java_source.html">PaladinEffect.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   21</span>                                                                            {</div>
-<div class="line"><span class="lineno">   22</span>        <span class="keywordflow">if</span> (done) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   23</span>        </div>
-<div class="line"><span class="lineno">   24</span>        CombatEntityAPI target = beam.getDamageTarget();</div>
-<div class="line"><span class="lineno">   25</span>        <span class="keywordtype">boolean</span> first = beam.getWeapon().getBeams().indexOf(beam) == 0;</div>
-<div class="line"><span class="lineno">   26</span>        <span class="keywordflow">if</span> (target != <span class="keyword">null</span> &amp;&amp; beam.getBrightness() &gt;= 1f &amp;&amp; first) {</div>
-<div class="line"><span class="lineno">   27</span>            Vector2f point = beam.getTo();</div>
-<div class="line"><span class="lineno">   28</span>            <span class="keywordtype">float</span> maxDist = 0f;</div>
-<div class="line"><span class="lineno">   29</span>            <span class="keywordflow">for</span> (BeamAPI curr : beam.getWeapon().getBeams()) {</div>
-<div class="line"><span class="lineno">   30</span>                maxDist = Math.max(maxDist, Misc.getDistance(point, curr.getTo()));</div>
-<div class="line"><span class="lineno">   31</span>            }</div>
-<div class="line"><span class="lineno">   32</span>            <span class="keywordflow">if</span> (maxDist &lt; 15f) {</div>
-<div class="line"><span class="lineno">   33</span>                DamagingProjectileAPI e = engine.spawnDamagingExplosion(<a class="code hl_function" href="../../d1/de1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1PaladinEffect.html#adc7b67414b168ae5bfaea57c42763d01">createExplosionSpec</a>(), beam.getSource(), point);</div>
-<div class="line"><span class="lineno">   34</span>                e.addDamagedAlready(target);</div>
-<div class="line"><span class="lineno">   35</span>                done = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   36</span>            }</div>
-<div class="line"><span class="lineno">   37</span>        }</div>
-<div class="line"><span class="lineno">   38</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1PaladinEffect_html_adc7b67414b168ae5bfaea57c42763d01"><div class="ttname"><a href="../../d1/de1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1PaladinEffect.html#adc7b67414b168ae5bfaea57c42763d01">com.fs.starfarer.api.impl.combat.PaladinEffect.createExplosionSpec</a></div><div class="ttdeci">DamagingExplosionSpec createExplosionSpec()</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d7d/PaladinEffect_8java_source.html#l00040">PaladinEffect.java:40</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="adc7b67414b168ae5bfaea57c42763d01" name="adc7b67414b168ae5bfaea57c42763d01"></a>
@@ -194,30 +176,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d7d/PaladinEffect_8java_source.html#l00040">40</a> of file <a class="el" href="../../d9/d7d/PaladinEffect_8java_source.html">PaladinEffect.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   40</span>                                                       {</div>
-<div class="line"><span class="lineno">   41</span>        <span class="keywordtype">float</span> damage = 100f;</div>
-<div class="line"><span class="lineno">   42</span>        DamagingExplosionSpec spec = <span class="keyword">new</span> DamagingExplosionSpec(</div>
-<div class="line"><span class="lineno">   43</span>                0.1f, <span class="comment">// duration</span></div>
-<div class="line"><span class="lineno">   44</span>                75f, <span class="comment">// radius</span></div>
-<div class="line"><span class="lineno">   45</span>                50f, <span class="comment">// coreRadius</span></div>
-<div class="line"><span class="lineno">   46</span>                damage, <span class="comment">// maxDamage</span></div>
-<div class="line"><span class="lineno">   47</span>                damage / 2f, <span class="comment">// minDamage</span></div>
-<div class="line"><span class="lineno">   48</span>                CollisionClass.PROJECTILE_FF, <span class="comment">// collisionClass</span></div>
-<div class="line"><span class="lineno">   49</span>                CollisionClass.PROJECTILE_FIGHTER, <span class="comment">// collisionClassByFighter</span></div>
-<div class="line"><span class="lineno">   50</span>                3f, <span class="comment">// particleSizeMin</span></div>
-<div class="line"><span class="lineno">   51</span>                3f, <span class="comment">// particleSizeRange</span></div>
-<div class="line"><span class="lineno">   52</span>                0.5f, <span class="comment">// particleDuration</span></div>
-<div class="line"><span class="lineno">   53</span>                150, <span class="comment">// particleCount</span></div>
-<div class="line"><span class="lineno">   54</span>                <span class="keyword">new</span> Color(255,255,255,255), <span class="comment">// particleColor</span></div>
-<div class="line"><span class="lineno">   55</span>                <span class="keyword">new</span> Color(255,100,100,175)  <span class="comment">// explosionColor</span></div>
-<div class="line"><span class="lineno">   56</span>        );</div>
-<div class="line"><span class="lineno">   57</span> </div>
-<div class="line"><span class="lineno">   58</span>        spec.setDamageType(DamageType.FRAGMENTATION);</div>
-<div class="line"><span class="lineno">   59</span>        spec.setUseDetailedExplosion(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   60</span>        spec.setSoundSetId(<span class="stringliteral">&quot;explosion_guardian&quot;</span>);</div>
-<div class="line"><span class="lineno">   61</span>        <span class="keywordflow">return</span> spec;        </div>
-<div class="line"><span class="lineno">   62</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

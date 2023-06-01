@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -165,33 +166,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../db/d02/IsSoughtByPatrols_8java_source.html#l00021">21</a> of file <a class="el" href="../../db/d02/IsSoughtByPatrols_8java_source.html">IsSoughtByPatrols.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   21</span>                                                                           {</div>
-<div class="line"><span class="lineno">   22</span>        CampaignFleetAPI playerFleet = Global.getSector().getPlayerFleet();</div>
-<div class="line"><span class="lineno">   23</span> </div>
-<div class="line"><span class="lineno">   24</span>        <span class="keywordflow">for</span> (CampaignFleetAPI fleet : playerFleet.getContainingLocation().getFleets()) {</div>
-<div class="line"><span class="lineno">   25</span>            <span class="keywordflow">if</span> (!fleet.getFaction().getId().equals(factionId)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   26</span>            <span class="keywordflow">if</span> (!<a class="code hl_function" href="../../d8/df5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1IsSoughtByPatrols.html#aaafd1e884b43a130ebe558627e187df9">isPatrol</a>(fleet)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   27</span>            <span class="keywordflow">if</span> (fleet.getFaction().isPlayerFaction()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   28</span>            <span class="keywordflow">if</span> (fleet.getBattle() != <span class="keyword">null</span>) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   29</span>            </div>
-<div class="line"><span class="lineno">   30</span>            MemoryAPI mem = fleet.getMemoryWithoutUpdate();</div>
-<div class="line"><span class="lineno">   31</span>            </div>
-<div class="line"><span class="lineno">   32</span>            <span class="keywordtype">boolean</span> caresAboutTransponder = Misc.caresAboutPlayerTransponder(fleet);</div>
-<div class="line"><span class="lineno">   33</span>            </div>
-<div class="line"><span class="lineno">   34</span>            <span class="keywordtype">float</span> dist = Misc.getDistance(fleet.getLocation(), playerFleet.getLocation());</div>
-<div class="line"><span class="lineno">   35</span>            <span class="keywordflow">if</span> (dist &gt; 1000f) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   36</span>            </div>
-<div class="line"><span class="lineno">   37</span>            <span class="keywordflow">if</span> ((mem.contains(MemFlags.MEMORY_KEY_SAW_PLAYER_WITH_TRANSPONDER_OFF) &amp;&amp; caresAboutTransponder) || </div>
-<div class="line"><span class="lineno">   38</span>                    mem.contains(MemFlags.MEMORY_KEY_PURSUE_PLAYER)) {</div>
-<div class="line"><span class="lineno">   39</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   40</span>            }</div>
-<div class="line"><span class="lineno">   41</span>            </div>
-<div class="line"><span class="lineno">   42</span>        }</div>
-<div class="line"><span class="lineno">   43</span> </div>
-<div class="line"><span class="lineno">   44</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   45</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1IsSoughtByPatrols_html_aaafd1e884b43a130ebe558627e187df9"><div class="ttname"><a href="../../d8/df5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1IsSoughtByPatrols.html#aaafd1e884b43a130ebe558627e187df9">com.fs.starfarer.api.impl.campaign.rulecmd.IsSoughtByPatrols.isPatrol</a></div><div class="ttdeci">static boolean isPatrol(CampaignFleetAPI fleet)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d02/IsSoughtByPatrols_8java_source.html#l00088">IsSoughtByPatrols.java:88</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a11e0e504507827e39d7cedcb89bcc6a8" name="a11e0e504507827e39d7cedcb89bcc6a8"></a>
@@ -235,40 +210,7 @@ Static Public Member Functions</h2></td></tr>
 <p>Implements <a class="el" href="../../d0/d5c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1CommandPlugin.html#a72a44c5127e60136b87d3b37613fd0e0">com.fs.starfarer.api.campaign.rules.CommandPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../db/d02/IsSoughtByPatrols_8java_source.html#l00047">47</a> of file <a class="el" href="../../db/d02/IsSoughtByPatrols_8java_source.html">IsSoughtByPatrols.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   47</span>                                                                                                                             {</div>
-<div class="line"><span class="lineno">   48</span>        </div>
-<div class="line"><span class="lineno">   49</span>        String factionId = params.get(0).getString(memoryMap);</div>
-<div class="line"><span class="lineno">   50</span>        </div>
-<div class="line"><span class="lineno">   51</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../d8/df5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1IsSoughtByPatrols.html#aa1e39faf05f3e961d34ee8e9f7953467">areFactionPatrolsSeekingPlayer</a>(factionId);</div>
-<div class="line"><span class="lineno">   52</span><span class="comment">//</span></div>
-<div class="line"><span class="lineno">   53</span><span class="comment">//      CampaignFleetAPI playerFleet = Global.getSector().getPlayerFleet();</span></div>
-<div class="line"><span class="lineno">   54</span><span class="comment">//</span></div>
-<div class="line"><span class="lineno">   55</span><span class="comment">//      for (CampaignFleetAPI fleet : playerFleet.getContainingLocation().getFleets()) {</span></div>
-<div class="line"><span class="lineno">   56</span><span class="comment">//          if (!fleet.getFaction().getId().equals(factionId)) continue;</span></div>
-<div class="line"><span class="lineno">   57</span><span class="comment">//          if (!isPatrol(fleet)) continue;</span></div>
-<div class="line"><span class="lineno">   58</span><span class="comment">//          if (fleet.getFaction().isPlayerFaction()) continue;</span></div>
-<div class="line"><span class="lineno">   59</span><span class="comment">//          if (fleet.getBattle() != null) continue;</span></div>
-<div class="line"><span class="lineno">   60</span><span class="comment">//          </span></div>
-<div class="line"><span class="lineno">   61</span><span class="comment">//          MemoryAPI mem = fleet.getMemoryWithoutUpdate();</span></div>
-<div class="line"><span class="lineno">   62</span><span class="comment">//          </span></div>
-<div class="line"><span class="lineno">   71</span><span class="comment"></span><span class="comment">//          boolean caresAboutTransponder = Misc.caresAboutPlayerTransponder(fleet);</span></div>
-<div class="line"><span class="lineno">   72</span><span class="comment">//          </span></div>
-<div class="line"><span class="lineno">   73</span><span class="comment">//          //VisibilityLevel level = playerFleet.getVisibilityLevelTo(fleet);</span></div>
-<div class="line"><span class="lineno">   74</span><span class="comment">//          </span></div>
-<div class="line"><span class="lineno">   75</span><span class="comment">//          float dist = Misc.getDistance(fleet.getLocation(), playerFleet.getLocation());</span></div>
-<div class="line"><span class="lineno">   76</span><span class="comment">//          if (dist &gt; 1000f) continue;</span></div>
-<div class="line"><span class="lineno">   77</span><span class="comment">//          </span></div>
-<div class="line"><span class="lineno">   78</span><span class="comment">//          if ((mem.contains(MemFlags.MEMORY_KEY_SAW_PLAYER_WITH_TRANSPONDER_OFF) &amp;&amp; caresAboutTransponder) || </span></div>
-<div class="line"><span class="lineno">   79</span><span class="comment">//                  mem.contains(MemFlags.MEMORY_KEY_PURSUE_PLAYER)) {</span></div>
-<div class="line"><span class="lineno">   80</span><span class="comment">//              return true;</span></div>
-<div class="line"><span class="lineno">   81</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">   82</span><span class="comment">//          </span></div>
-<div class="line"><span class="lineno">   83</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">   84</span><span class="comment">//</span></div>
-<div class="line"><span class="lineno">   85</span><span class="comment">//      return false;</span></div>
-<div class="line"><span class="lineno">   86</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1IsSoughtByPatrols_html_aa1e39faf05f3e961d34ee8e9f7953467"><div class="ttname"><a href="../../d8/df5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1IsSoughtByPatrols.html#aa1e39faf05f3e961d34ee8e9f7953467">com.fs.starfarer.api.impl.campaign.rulecmd.IsSoughtByPatrols.areFactionPatrolsSeekingPlayer</a></div><div class="ttdeci">static boolean areFactionPatrolsSeekingPlayer(String factionId)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d02/IsSoughtByPatrols_8java_source.html#l00021">IsSoughtByPatrols.java:21</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aaafd1e884b43a130ebe558627e187df9" name="aaafd1e884b43a130ebe558627e187df9"></a>
@@ -296,18 +238,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../db/d02/IsSoughtByPatrols_8java_source.html#l00088">88</a> of file <a class="el" href="../../db/d02/IsSoughtByPatrols_8java_source.html">IsSoughtByPatrols.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   88</span>                                                           {</div>
-<div class="line"><span class="lineno">   89</span>        <span class="keywordflow">if</span> (!fleet.getMemoryWithoutUpdate().contains(MemFlags.MEMORY_KEY_PATROL_FLEET)) {</div>
-<div class="line"><span class="lineno">   90</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   91</span>        }</div>
-<div class="line"><span class="lineno">   92</span>        </div>
-<div class="line"><span class="lineno">   93</span>        <span class="keywordflow">for</span> (FleetMemberAPI member : fleet.getFleetData().getMembersListCopy()) {</div>
-<div class="line"><span class="lineno">   94</span>            <span class="keywordflow">if</span> (!member.isCivilian()) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   95</span>        }</div>
-<div class="line"><span class="lineno">   96</span>        </div>
-<div class="line"><span class="lineno">   97</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   98</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

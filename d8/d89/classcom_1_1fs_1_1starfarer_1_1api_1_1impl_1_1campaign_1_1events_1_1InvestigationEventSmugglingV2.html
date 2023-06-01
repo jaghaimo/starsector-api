@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -429,38 +430,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a892d9c8e77f8c51654d4399169a80540">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d04/InvestigationEventSmugglingV2_8java_source.html#l00126">126</a> of file <a class="el" href="../../d2/d04/InvestigationEventSmugglingV2_8java_source.html">InvestigationEventSmugglingV2.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  126</span>                                      {</div>
-<div class="line"><span class="lineno">  127</span>        <span class="keywordflow">if</span> (!<a class="code hl_function" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#ac5c47dbb1c74444a7517c8d031192459">isEventStarted</a>()) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  128</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d8/d89/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventSmugglingV2.html#a653d4cb5e28406a1f7aa680c3764626e">isDone</a>()) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  129</span>        </div>
-<div class="line"><span class="lineno">  130</span>        <span class="keywordtype">float</span> days = Global.getSector().getClock().convertToDays(amount);</div>
-<div class="line"><span class="lineno">  131</span>        elapsedDays += days;</div>
-<div class="line"><span class="lineno">  132</span>        </div>
-<div class="line"><span class="lineno">  133</span>        <span class="keywordflow">if</span> (elapsedDays &gt;= duration) {</div>
-<div class="line"><span class="lineno">  134</span>            <span class="keywordflow">if</span> (!bribed &amp;&amp; (<span class="keywordtype">float</span>) Math.random() &lt; params.guiltChance) {</div>
-<div class="line"><span class="lineno">  135</span>                Global.getSector().reportEventStage(<span class="keyword">this</span>, <span class="stringliteral">&quot;player_guilty_smuggling&quot;</span>, <span class="keyword">null</span>, MessagePriority.ENSURE_DELIVERY,  <span class="keyword">new</span> BaseOnMessageDeliveryScript() {</div>
-<div class="line"><span class="lineno">  136</span>                    <span class="keyword">public</span> <span class="keywordtype">void</span> beforeDelivery(CommMessageAPI message) {</div>
-<div class="line"><span class="lineno">  137</span>                        Global.getSector().adjustPlayerReputation(</div>
-<div class="line"><span class="lineno">  138</span>                                <span class="keyword">new</span> RepActionEnvelope(RepActions.SMUGGLING_INVESTIGATION_GUILTY, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">true</span>), </div>
-<div class="line"><span class="lineno">  139</span>                                <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#aa132dbebb3e9e38ad71a576a4ea5ac9b">getFactionId</a>());</div>
-<div class="line"><span class="lineno">  140</span>                    }</div>
-<div class="line"><span class="lineno">  141</span>                });</div>
-<div class="line"><span class="lineno">  142</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  143</span>                <span class="keywordflow">if</span> (bribed) {</div>
-<div class="line"><span class="lineno">  144</span>                    Global.getSector().reportEventStage(<span class="keyword">this</span>, <span class="stringliteral">&quot;clear_smuggling_bribe&quot;</span>, <span class="keyword">null</span>, MessagePriority.ENSURE_DELIVERY, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  145</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  146</span>                    Global.getSector().reportEventStage(<span class="keyword">this</span>, <span class="stringliteral">&quot;clear_smuggling&quot;</span>, <span class="keyword">null</span>, MessagePriority.ENSURE_DELIVERY, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  147</span>                }</div>
-<div class="line"><span class="lineno">  148</span>            }</div>
-<div class="line"><span class="lineno">  149</span>            <a class="code hl_function" href="../../d8/d89/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventSmugglingV2.html#a5c4eb7e67297264bf0117341baa32ada">endEvent</a>();</div>
-<div class="line"><span class="lineno">  150</span>        }</div>
-<div class="line"><span class="lineno">  151</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin_html_a82135608621e80f71b991a0c839669e2"><div class="ttname"><a href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin.market</a></div><div class="ttdeci">MarketAPI market</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00043">BaseEventPlugin.java:43</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin_html_ac5c47dbb1c74444a7517c8d031192459"><div class="ttname"><a href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#ac5c47dbb1c74444a7517c8d031192459">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin.isEventStarted</a></div><div class="ttdeci">boolean isEventStarted()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00106">BaseEventPlugin.java:106</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventSmugglingV2_html_a5c4eb7e67297264bf0117341baa32ada"><div class="ttname"><a href="../../d8/d89/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventSmugglingV2.html#a5c4eb7e67297264bf0117341baa32ada">com.fs.starfarer.api.impl.campaign.events.InvestigationEventSmugglingV2.endEvent</a></div><div class="ttdeci">void endEvent()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d04/InvestigationEventSmugglingV2_8java_source.html#l00205">InvestigationEventSmugglingV2.java:205</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventSmugglingV2_html_a653d4cb5e28406a1f7aa680c3764626e"><div class="ttname"><a href="../../d8/d89/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventSmugglingV2.html#a653d4cb5e28406a1f7aa680c3764626e">com.fs.starfarer.api.impl.campaign.events.InvestigationEventSmugglingV2.isDone</a></div><div class="ttdeci">boolean isDone()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d04/InvestigationEventSmugglingV2_8java_source.html#l00225">InvestigationEventSmugglingV2.java:225</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_aa132dbebb3e9e38ad71a576a4ea5ac9b"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#aa132dbebb3e9e38ad71a576a4ea5ac9b">com.fs.starfarer.api.campaign.econ.MarketAPI.getFactionId</a></div><div class="ttdeci">String getFactionId()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a519e5f30449c4ac507880dd0c96d78cf" name="a519e5f30449c4ac507880dd0c96d78cf"></a>
@@ -511,21 +481,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a8d07c52ad6fa20fdd5dbf61b0bac5738">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d04/InvestigationEventSmugglingV2_8java_source.html#l00164">164</a> of file <a class="el" href="../../d2/d04/InvestigationEventSmugglingV2_8java_source.html">InvestigationEventSmugglingV2.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  165</span>                                                                                  {</div>
-<div class="line"><span class="lineno">  166</span>        String action = params.get(0).getString(memoryMap);</div>
-<div class="line"><span class="lineno">  167</span>        </div>
-<div class="line"><span class="lineno">  168</span>        CampaignFleetAPI playerFleet = Global.getSector().getPlayerFleet();</div>
-<div class="line"><span class="lineno">  169</span>        CargoAPI cargo = playerFleet.getCargo();</div>
-<div class="line"><span class="lineno">  170</span>        </div>
-<div class="line"><span class="lineno">  171</span>        <span class="keywordflow">if</span> (action.equals(<span class="stringliteral">&quot;paidBribe&quot;</span>)) {</div>
-<div class="line"><span class="lineno">  172</span>            <span class="keywordflow">return</span> bribed;</div>
-<div class="line"><span class="lineno">  173</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (action.equals(<span class="stringliteral">&quot;setBribePaid&quot;</span>)) {</div>
-<div class="line"><span class="lineno">  174</span>            bribed = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  175</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  176</span>        }</div>
-<div class="line"><span class="lineno">  177</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  178</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5c4eb7e67297264bf0117341baa32ada" name="a5c4eb7e67297264bf0117341baa32ada"></a>
@@ -552,31 +508,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d04/InvestigationEventSmugglingV2_8java_source.html#l00205">205</a> of file <a class="el" href="../../d2/d04/InvestigationEventSmugglingV2_8java_source.html">InvestigationEventSmugglingV2.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  205</span>                              {</div>
-<div class="line"><span class="lineno">  206</span>        <span class="keywordflow">if</span> (investigator != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  207</span>            investigator.<a class="code hl_function" href="../../d9/df0/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#abccf50492b3fcc15fe7be6afdff04eea">getMemoryWithoutUpdate</a>().<a class="code hl_function" href="../../d0/de7/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html#a1187125b9f4fe3913d1ef3fb7c9fb211">unset</a>(<span class="stringliteral">&quot;$ise_eventRef&quot;</span>);</div>
-<div class="line"><span class="lineno">  208</span>            investigator.<a class="code hl_function" href="../../d9/df0/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#abccf50492b3fcc15fe7be6afdff04eea">getMemoryWithoutUpdate</a>().<a class="code hl_function" href="../../d0/de7/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html#a1187125b9f4fe3913d1ef3fb7c9fb211">unset</a>(<span class="stringliteral">&quot;$ise_investigator&quot;</span>);</div>
-<div class="line"><span class="lineno">  209</span>            investigator.<a class="code hl_function" href="../../d9/df0/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#abccf50492b3fcc15fe7be6afdff04eea">getMemoryWithoutUpdate</a>().<a class="code hl_function" href="../../d0/de7/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html#a1187125b9f4fe3913d1ef3fb7c9fb211">unset</a>(<span class="stringliteral">&quot;$ise_bribeAmount&quot;</span>);</div>
-<div class="line"><span class="lineno">  210</span>            investigator.<a class="code hl_function" href="../../d9/df0/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#abccf50492b3fcc15fe7be6afdff04eea">getMemoryWithoutUpdate</a>().<a class="code hl_function" href="../../d0/de7/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html#a1187125b9f4fe3913d1ef3fb7c9fb211">unset</a>(<span class="stringliteral">&quot;$ise_bribeAmountDGS&quot;</span>);</div>
-<div class="line"><span class="lineno">  211</span>            Misc.setFlagWithReason(investigator.<a class="code hl_function" href="../../d9/df0/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#abccf50492b3fcc15fe7be6afdff04eea">getMemoryWithoutUpdate</a>(), </div>
-<div class="line"><span class="lineno">  212</span>                    MemFlags.MEMORY_KEY_REQUIRES_DISCRETION, <span class="stringliteral">&quot;ies&quot;</span>,</div>
-<div class="line"><span class="lineno">  213</span>                    <span class="keyword">false</span>, 0f);</div>
-<div class="line"><span class="lineno">  214</span>            </div>
-<div class="line"><span class="lineno">  215</span>            Global.getSector().getImportantPeople().returnPerson(investigator, <a class="code hl_variable" href="../../d8/d89/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventSmugglingV2.html#ab157df26ce0df821e31311ab562ba0fd">PERSON_CHECKOUT_REASON</a>);</div>
-<div class="line"><span class="lineno">  216</span>            <span class="keywordflow">if</span> (!Global.getSector().getImportantPeople().isCheckedOutForAnything(investigator)) {</div>
-<div class="line"><span class="lineno">  217</span>                <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a8f4c14537afd6179ee155371f1d3009a">getCommDirectory</a>().<a class="code hl_function" href="../../d9/d9d/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CommDirectoryAPI.html#a0475976b7f3d2b2bca8fa7a894942e0a">removePerson</a>(investigator);</div>
-<div class="line"><span class="lineno">  218</span>            }</div>
-<div class="line"><span class="lineno">  219</span>        }</div>
-<div class="line"><span class="lineno">  220</span>        </div>
-<div class="line"><span class="lineno">  221</span>        ended = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  222</span>        </div>
-<div class="line"><span class="lineno">  223</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventSmugglingV2_html_ab157df26ce0df821e31311ab562ba0fd"><div class="ttname"><a href="../../d8/d89/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventSmugglingV2.html#ab157df26ce0df821e31311ab562ba0fd">com.fs.starfarer.api.impl.campaign.events.InvestigationEventSmugglingV2.PERSON_CHECKOUT_REASON</a></div><div class="ttdeci">static final String PERSON_CHECKOUT_REASON</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d04/InvestigationEventSmugglingV2_8java_source.html#l00036">InvestigationEventSmugglingV2.java:36</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CommDirectoryAPI_html_a0475976b7f3d2b2bca8fa7a894942e0a"><div class="ttname"><a href="../../d9/d9d/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CommDirectoryAPI.html#a0475976b7f3d2b2bca8fa7a894942e0a">com.fs.starfarer.api.campaign.CommDirectoryAPI.removePerson</a></div><div class="ttdeci">void removePerson(PersonAPI person)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a8f4c14537afd6179ee155371f1d3009a"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a8f4c14537afd6179ee155371f1d3009a">com.fs.starfarer.api.campaign.econ.MarketAPI.getCommDirectory</a></div><div class="ttdeci">CommDirectoryAPI getCommDirectory()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI_html_a1187125b9f4fe3913d1ef3fb7c9fb211"><div class="ttname"><a href="../../d0/de7/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html#a1187125b9f4fe3913d1ef3fb7c9fb211">com.fs.starfarer.api.campaign.rules.MemoryAPI.unset</a></div><div class="ttdeci">void unset(String key)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI_html_abccf50492b3fcc15fe7be6afdff04eea"><div class="ttname"><a href="../../d9/df0/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#abccf50492b3fcc15fe7be6afdff04eea">com.fs.starfarer.api.characters.PersonAPI.getMemoryWithoutUpdate</a></div><div class="ttdeci">MemoryAPI getMemoryWithoutUpdate()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a0eb536a702edf221b21c7defa8a6ccde" name="a0eb536a702edf221b21c7defa8a6ccde"></a>
@@ -597,14 +529,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#aef42b16a88a66024a330092d6f08eb9b">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d04/InvestigationEventSmugglingV2_8java_source.html#l00154">154</a> of file <a class="el" href="../../d2/d04/InvestigationEventSmugglingV2_8java_source.html">InvestigationEventSmugglingV2.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  154</span>                                 {</div>
-<div class="line"><span class="lineno">  155</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d8/d89/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventSmugglingV2.html#a653d4cb5e28406a1f7aa680c3764626e">isDone</a>()) {</div>
-<div class="line"><span class="lineno">  156</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;Smuggling investigation - &quot;</span> + <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a7e5b6e8035c61f63cd8b331df994233b">getName</a>() + <span class="stringliteral">&quot; (over)&quot;</span>;</div>
-<div class="line"><span class="lineno">  157</span>        }</div>
-<div class="line"><span class="lineno">  158</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Smuggling investigation - &quot;</span> + <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a7e5b6e8035c61f63cd8b331df994233b">getName</a>();</div>
-<div class="line"><span class="lineno">  159</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a7e5b6e8035c61f63cd8b331df994233b"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a7e5b6e8035c61f63cd8b331df994233b">com.fs.starfarer.api.campaign.econ.MarketAPI.getName</a></div><div class="ttdeci">String getName()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a701b9cc68f521ee8ac1fecf2f5e495bc" name="a701b9cc68f521ee8ac1fecf2f5e495bc"></a>
@@ -633,13 +558,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a00dc5b856ba666734d16d72b420e763d">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d04/InvestigationEventSmugglingV2_8java_source.html#l00198">198</a> of file <a class="el" href="../../d2/d04/InvestigationEventSmugglingV2_8java_source.html">InvestigationEventSmugglingV2.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  198</span>                                                  {</div>
-<div class="line"><span class="lineno">  199</span>        List&lt;String&gt; result = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
-<div class="line"><span class="lineno">  200</span>        <a class="code hl_function" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a975fca0b61107178b5d2918dc55458a7">addTokensToList</a>(result, <span class="stringliteral">&quot;$duration&quot;</span>);</div>
-<div class="line"><span class="lineno">  201</span>        <span class="keywordflow">return</span> result.toArray(<span class="keyword">new</span> String[0]);</div>
-<div class="line"><span class="lineno">  202</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin_html_a975fca0b61107178b5d2918dc55458a7"><div class="ttname"><a href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a975fca0b61107178b5d2918dc55458a7">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin.addTokensToList</a></div><div class="ttdeci">void addTokensToList(List&lt; String &gt; list, String ... keys)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00393">BaseEventPlugin.java:393</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aee2a6c0d2173392ede380f04fa385110" name="aee2a6c0d2173392ede380f04fa385110"></a>
@@ -661,27 +580,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#aa67b1f6c564a4765a764cfb90a60f4c9">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d04/InvestigationEventSmugglingV2_8java_source.html#l00181">181</a> of file <a class="el" href="../../d2/d04/InvestigationEventSmugglingV2_8java_source.html">InvestigationEventSmugglingV2.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  181</span>                                                      {</div>
-<div class="line"><span class="lineno">  182</span>        Map&lt;String, String&gt; map = super.getTokenReplacements();</div>
-<div class="line"><span class="lineno">  183</span>        </div>
-<div class="line"><span class="lineno">  184</span>        map.put(<span class="stringliteral">&quot;$InvestigatorPost&quot;</span>, Misc.ucFirst(investigator.<a class="code hl_function" href="../../d9/df0/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#aad8f7fd7197f77548dbe06deb33ae6e6">getPost</a>()));</div>
-<div class="line"><span class="lineno">  185</span>        map.put(<span class="stringliteral">&quot;$investigatorName&quot;</span>, investigator.<a class="code hl_function" href="../../d9/df0/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#a3a50881b48827dddddedbda93e498867">getName</a>().<a class="code hl_function" href="../../d2/d61/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1FullName.html#a4346a35a99ad51150034093f5651133a">getFullName</a>());</div>
-<div class="line"><span class="lineno">  186</span>        <span class="keywordflow">if</span> (investigator.<a class="code hl_function" href="../../d9/df0/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#a44911bf5908cae348e701e21b50e59d2">isMale</a>()) {</div>
-<div class="line"><span class="lineno">  187</span>            map.put(<span class="stringliteral">&quot;$invHimOrHer&quot;</span>, <span class="stringliteral">&quot;him&quot;</span>);</div>
-<div class="line"><span class="lineno">  188</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  189</span>            map.put(<span class="stringliteral">&quot;$invHimOrHer&quot;</span>, <span class="stringliteral">&quot;her&quot;</span>);</div>
-<div class="line"><span class="lineno">  190</span>        }</div>
-<div class="line"><span class="lineno">  191</span>        </div>
-<div class="line"><span class="lineno">  192</span>        map.put(<span class="stringliteral">&quot;$sender&quot;</span>, <span class="stringliteral">&quot;Unknown&quot;</span>);</div>
-<div class="line"><span class="lineno">  193</span>        map.put(<span class="stringliteral">&quot;$duration&quot;</span>, Misc.getAtLeastStringForDays((<span class="keywordtype">int</span>)duration));</div>
-<div class="line"><span class="lineno">  194</span>        </div>
-<div class="line"><span class="lineno">  195</span>        <span class="keywordflow">return</span> map;</div>
-<div class="line"><span class="lineno">  196</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1FullName_html_a4346a35a99ad51150034093f5651133a"><div class="ttname"><a href="../../d2/d61/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1FullName.html#a4346a35a99ad51150034093f5651133a">com.fs.starfarer.api.characters.FullName.getFullName</a></div><div class="ttdeci">String getFullName()</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d3a/FullName_8java_source.html#l00037">FullName.java:37</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI_html_a3a50881b48827dddddedbda93e498867"><div class="ttname"><a href="../../d9/df0/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#a3a50881b48827dddddedbda93e498867">com.fs.starfarer.api.characters.PersonAPI.getName</a></div><div class="ttdeci">FullName getName()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI_html_a44911bf5908cae348e701e21b50e59d2"><div class="ttname"><a href="../../d9/df0/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#a44911bf5908cae348e701e21b50e59d2">com.fs.starfarer.api.characters.PersonAPI.isMale</a></div><div class="ttdeci">boolean isMale()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI_html_aad8f7fd7197f77548dbe06deb33ae6e6"><div class="ttname"><a href="../../d9/df0/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#aad8f7fd7197f77548dbe06deb33ae6e6">com.fs.starfarer.api.characters.PersonAPI.getPost</a></div><div class="ttdeci">String getPost()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae5f2251df16f1d4a02d7d9a7404816f8" name="ae5f2251df16f1d4a02d7d9a7404816f8"></a>
@@ -720,12 +619,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a85df425421b0ba2ec216cb3058f88297">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d04/InvestigationEventSmugglingV2_8java_source.html#l00055">55</a> of file <a class="el" href="../../d2/d04/InvestigationEventSmugglingV2_8java_source.html">InvestigationEventSmugglingV2.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   55</span>                                                                   {</div>
-<div class="line"><span class="lineno">   56</span>        super.init(type, <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#abe1c16c1836db2f6bacef1b8b0814872">eventTarget</a>);</div>
-<div class="line"><span class="lineno">   57</span>        params = <span class="keyword">new</span> InvSmugglingParams();</div>
-<div class="line"><span class="lineno">   58</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin_html_abe1c16c1836db2f6bacef1b8b0814872"><div class="ttname"><a href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#abe1c16c1836db2f6bacef1b8b0814872">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin.eventTarget</a></div><div class="ttdeci">CampaignEventTarget eventTarget</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00042">BaseEventPlugin.java:42</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a653d4cb5e28406a1f7aa680c3764626e" name="a653d4cb5e28406a1f7aa680c3764626e"></a>
@@ -746,10 +640,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#ab897ab2cfdb15c8183902a077567171b">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d04/InvestigationEventSmugglingV2_8java_source.html#l00225">225</a> of file <a class="el" href="../../d2/d04/InvestigationEventSmugglingV2_8java_source.html">InvestigationEventSmugglingV2.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  225</span>                            {</div>
-<div class="line"><span class="lineno">  226</span>        <span class="keywordflow">return</span> ended;</div>
-<div class="line"><span class="lineno">  227</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9812b687b61746be55e1a8b61e38df6c" name="a9812b687b61746be55e1a8b61e38df6c"></a>
@@ -771,79 +662,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#aa016b5c97932063aa9184483bd01c5ee">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d04/InvestigationEventSmugglingV2_8java_source.html#l00060">60</a> of file <a class="el" href="../../d2/d04/InvestigationEventSmugglingV2_8java_source.html">InvestigationEventSmugglingV2.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   60</span>                             {</div>
-<div class="line"><span class="lineno">   61</span>        super.startEvent();</div>
-<div class="line"><span class="lineno">   62</span>        </div>
-<div class="line"><span class="lineno">   63</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a> == <span class="keyword">null</span> || <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#adb4f096698b123e50d2d3e82eafad6b1">hasCondition</a>(Conditions.DECIVILIZED)) {</div>
-<div class="line"><span class="lineno">   64</span>            <a class="code hl_function" href="../../d8/d89/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventSmugglingV2.html#a5c4eb7e67297264bf0117341baa32ada">endEvent</a>();</div>
-<div class="line"><span class="lineno">   65</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   66</span>        }</div>
-<div class="line"><span class="lineno">   67</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a97645caff4adca5efcf3a462fb13ca0f">getFaction</a>().<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#abbba73728cc347ef2fe8e02d89e79b37">isAtBest</a>(Factions.PLAYER, RepLevel.HOSTILE)) {</div>
-<div class="line"><span class="lineno">   68</span>            <a class="code hl_function" href="../../d8/d89/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventSmugglingV2.html#a5c4eb7e67297264bf0117341baa32ada">endEvent</a>();</div>
-<div class="line"><span class="lineno">   69</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   70</span>        }</div>
-<div class="line"><span class="lineno">   71</span><span class="comment">//      float recentBMTrade = 0;</span></div>
-<div class="line"><span class="lineno">   72</span><span class="comment">//      float recentOpenTrade = 0;</span></div>
-<div class="line"><span class="lineno">   73</span><span class="comment">// </span></div>
-<div class="line"><span class="lineno">   74</span><span class="comment">//      for (SubmarketAPI sub : market.getSubmarketsCopy()) {</span></div>
-<div class="line"><span class="lineno">   75</span><span class="comment">//          if (!sub.getPlugin().isParticipatesInEconomy()) continue;</span></div>
-<div class="line"><span class="lineno">   76</span><span class="comment">//          </span></div>
-<div class="line"><span class="lineno">   77</span><span class="comment">//          PlayerTradeDataForSubmarket tradeData =  SharedData.getData().getPlayerActivityTracker().getPlayerTradeData(sub);</span></div>
-<div class="line"><span class="lineno">   78</span><span class="comment">//          </span></div>
-<div class="line"><span class="lineno">   79</span><span class="comment">//          if (sub.getPlugin().isBlackMarket()) {</span></div>
-<div class="line"><span class="lineno">   80</span><span class="comment">//              recentBMTrade += tradeData.getRecentBaseTradeValueImpact();</span></div>
-<div class="line"><span class="lineno">   81</span><span class="comment">//          } else {</span></div>
-<div class="line"><span class="lineno">   82</span><span class="comment">//              recentOpenTrade += tradeData.getRecentBaseTradeValueImpact();</span></div>
-<div class="line"><span class="lineno">   83</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">   84</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">   85</span><span class="comment">//      </span></div>
-<div class="line"><span class="lineno">   86</span><span class="comment">//      // 10000 credits of &quot;impact&quot; is 1000 credit of actual trade</span></div>
-<div class="line"><span class="lineno">   87</span><span class="comment">//      if (recentBMTrade &gt; recentOpenTrade * 0.5f &amp;&amp; recentBMTrade &gt; 10000f) {</span></div>
-<div class="line"><span class="lineno">   88</span><span class="comment">//          params.guiltChance = recentBMTrade / Math.min(recentBMTrade * 10f, market.getTradeVolume());</span></div>
-<div class="line"><span class="lineno">   89</span><span class="comment">//          params.bribeAmount = (int) (params.guiltChance * 100000f);</span></div>
-<div class="line"><span class="lineno">   90</span><span class="comment">//      } else {</span></div>
-<div class="line"><span class="lineno">   91</span><span class="comment">//          endEvent();</span></div>
-<div class="line"><span class="lineno">   92</span><span class="comment">//          return;</span></div>
-<div class="line"><span class="lineno">   93</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">   94</span>        </div>
-<div class="line"><span class="lineno">   95</span>        params.guiltChance = Math.max(0.1f, Math.min(<a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#ae348a1ecaf94f6c47f91233a197da67f">startProbability</a>, 0.9f));</div>
-<div class="line"><span class="lineno">   96</span>        params.bribeAmount = (int) ((10000f + params.guiltChance * 90000f) / 1000f) * 1000;</div>
-<div class="line"><span class="lineno">   97</span> </div>
-<div class="line"><span class="lineno">   98</span><span class="comment">//      // don&#39;t bother with trifling investigations</span></div>
-<div class="line"><span class="lineno">   99</span><span class="comment">//      if (params.guiltChance &lt; .01f) {</span></div>
-<div class="line"><span class="lineno">  100</span><span class="comment">//          endEvent();</span></div>
-<div class="line"><span class="lineno">  101</span><span class="comment">//          return;</span></div>
-<div class="line"><span class="lineno">  102</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  103</span>        </div>
-<div class="line"><span class="lineno">  104</span>        </div>
-<div class="line"><span class="lineno">  105</span>        </div>
-<div class="line"><span class="lineno">  106</span>        duration = 90f + 30f * (float) Math.random();</div>
-<div class="line"><span class="lineno">  107</span>        <span class="comment">//duration = 5f;</span></div>
-<div class="line"><span class="lineno">  108</span>        </div>
-<div class="line"><span class="lineno">  109</span>        <a class="code hl_variable" href="../../d8/d89/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventSmugglingV2.html#a8d3905c00a62865443235d894dcff8f8">log</a>.info(String.format(<span class="stringliteral">&quot;Starting smuggling investigation at %s&quot;</span>, <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a7e5b6e8035c61f63cd8b331df994233b">getName</a>()));</div>
-<div class="line"><span class="lineno">  110</span>        </div>
-<div class="line"><span class="lineno">  111</span>        investigator = Global.getSector().getImportantPeople().getPerson(<a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a97645caff4adca5efcf3a462fb13ca0f">getFaction</a>(), <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a>,</div>
-<div class="line"><span class="lineno">  112</span>                            <a class="code hl_variable" href="../../d8/d89/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventSmugglingV2.html#ab157df26ce0df821e31311ab562ba0fd">PERSON_CHECKOUT_REASON</a>, Ranks.CITIZEN, Ranks.POST_INVESTIGATOR).getPerson();</div>
-<div class="line"><span class="lineno">  113</span>        <a class="code hl_variable" href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a8f4c14537afd6179ee155371f1d3009a">getCommDirectory</a>().<a class="code hl_function" href="../../d9/d9d/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CommDirectoryAPI.html#a95333872a7e060561f560587b5abc51a">addPerson</a>(investigator);</div>
-<div class="line"><span class="lineno">  114</span> </div>
-<div class="line"><span class="lineno">  115</span>        investigator.<a class="code hl_function" href="../../d9/df0/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#abccf50492b3fcc15fe7be6afdff04eea">getMemoryWithoutUpdate</a>().<a class="code hl_function" href="../../d0/de7/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html#aacefa8e06571ecfc9a37897cbb61d2cf">set</a>(<span class="stringliteral">&quot;$ise_eventRef&quot;</span>, <span class="keyword">this</span>, duration);</div>
-<div class="line"><span class="lineno">  116</span>        investigator.<a class="code hl_function" href="../../d9/df0/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#abccf50492b3fcc15fe7be6afdff04eea">getMemoryWithoutUpdate</a>().<a class="code hl_function" href="../../d0/de7/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html#aacefa8e06571ecfc9a37897cbb61d2cf">set</a>(<span class="stringliteral">&quot;$ise_investigator&quot;</span>, <span class="keyword">true</span>, duration);</div>
-<div class="line"><span class="lineno">  117</span>        investigator.<a class="code hl_function" href="../../d9/df0/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#abccf50492b3fcc15fe7be6afdff04eea">getMemoryWithoutUpdate</a>().<a class="code hl_function" href="../../d0/de7/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html#aacefa8e06571ecfc9a37897cbb61d2cf">set</a>(<span class="stringliteral">&quot;$ise_bribeAmount&quot;</span>, <span class="stringliteral">&quot;&quot;</span> + params.bribeAmount, duration);</div>
-<div class="line"><span class="lineno">  118</span>        investigator.<a class="code hl_function" href="../../d9/df0/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#abccf50492b3fcc15fe7be6afdff04eea">getMemoryWithoutUpdate</a>().<a class="code hl_function" href="../../d0/de7/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html#aacefa8e06571ecfc9a37897cbb61d2cf">set</a>(<span class="stringliteral">&quot;$ise_bribeAmountDGS&quot;</span>, Misc.getWithDGS(params.bribeAmount), duration);</div>
-<div class="line"><span class="lineno">  119</span>        Misc.setFlagWithReason(investigator.<a class="code hl_function" href="../../d9/df0/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#abccf50492b3fcc15fe7be6afdff04eea">getMemoryWithoutUpdate</a>(), </div>
-<div class="line"><span class="lineno">  120</span>                MemFlags.MEMORY_KEY_REQUIRES_DISCRETION, <span class="stringliteral">&quot;ies&quot;</span>,</div>
-<div class="line"><span class="lineno">  121</span>                <span class="keyword">true</span>, duration);</div>
-<div class="line"><span class="lineno">  122</span>        </div>
-<div class="line"><span class="lineno">  123</span>        Global.getSector().reportEventStage(<span class="keyword">this</span>, <span class="stringliteral">&quot;start_smuggling&quot;</span>, <span class="keyword">null</span>, MessagePriority.ENSURE_DELIVERY, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  124</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin_html_ae348a1ecaf94f6c47f91233a197da67f"><div class="ttname"><a href="../../da/d38/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#ae348a1ecaf94f6c47f91233a197da67f">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin.startProbability</a></div><div class="ttdeci">float startProbability</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d1a/BaseEventPlugin_8java_source.html#l00051">BaseEventPlugin.java:51</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventSmugglingV2_html_a8d3905c00a62865443235d894dcff8f8"><div class="ttname"><a href="../../d8/d89/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventSmugglingV2.html#a8d3905c00a62865443235d894dcff8f8">com.fs.starfarer.api.impl.campaign.events.InvestigationEventSmugglingV2.log</a></div><div class="ttdeci">static Logger log</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d04/InvestigationEventSmugglingV2_8java_source.html#l00046">InvestigationEventSmugglingV2.java:46</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CommDirectoryAPI_html_a95333872a7e060561f560587b5abc51a"><div class="ttname"><a href="../../d9/d9d/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CommDirectoryAPI.html#a95333872a7e060561f560587b5abc51a">com.fs.starfarer.api.campaign.CommDirectoryAPI.addPerson</a></div><div class="ttdeci">String addPerson(PersonAPI person)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI_html_abbba73728cc347ef2fe8e02d89e79b37"><div class="ttname"><a href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#abbba73728cc347ef2fe8e02d89e79b37">com.fs.starfarer.api.campaign.FactionAPI.isAtBest</a></div><div class="ttdeci">boolean isAtBest(String id, RepLevel level)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a97645caff4adca5efcf3a462fb13ca0f"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a97645caff4adca5efcf3a462fb13ca0f">com.fs.starfarer.api.campaign.econ.MarketAPI.getFaction</a></div><div class="ttdeci">FactionAPI getFaction()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_adb4f096698b123e50d2d3e82eafad6b1"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#adb4f096698b123e50d2d3e82eafad6b1">com.fs.starfarer.api.campaign.econ.MarketAPI.hasCondition</a></div><div class="ttdeci">boolean hasCondition(String id)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI_html_aacefa8e06571ecfc9a37897cbb61d2cf"><div class="ttname"><a href="../../d0/de7/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html#aacefa8e06571ecfc9a37897cbb61d2cf">com.fs.starfarer.api.campaign.rules.MemoryAPI.set</a></div><div class="ttdeci">void set(String key, Object value)</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

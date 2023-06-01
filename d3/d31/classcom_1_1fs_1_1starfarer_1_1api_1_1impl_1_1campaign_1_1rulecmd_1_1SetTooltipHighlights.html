@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -176,32 +177,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="../../d0/d5c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1CommandPlugin.html#a72a44c5127e60136b87d3b37613fd0e0">com.fs.starfarer.api.campaign.rules.CommandPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d9b/SetTooltipHighlights_8java_source.html#l00016">16</a> of file <a class="el" href="../../dc/d9b/SetTooltipHighlights_8java_source.html">SetTooltipHighlights.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   16</span>                                                                                                                             {</div>
-<div class="line"><span class="lineno">   17</span>        <span class="keywordflow">if</span> (dialog == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   18</span>        </div>
-<div class="line"><span class="lineno">   19</span>        String option = params.get(0).string;       </div>
-<div class="line"><span class="lineno">   20</span>        List&lt;String&gt; strings = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
-<div class="line"><span class="lineno">   21</span>        <span class="comment">//Map&lt;String, String&gt; tokens = Global.getSector().getRules().getTokenReplacements(ruleId, dialog.getInteractionTarget(), memoryMap);</span></div>
-<div class="line"><span class="lineno">   22</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt; params.size(); i++) {</div>
-<div class="line"><span class="lineno">   23</span>            String <span class="keywordtype">string</span> = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   24</span>            </div>
-<div class="line"><span class="lineno">   25</span>            <span class="keywordtype">string</span> = params.get(i).getStringWithTokenReplacement(ruleId, dialog, memoryMap);</div>
-<div class="line"><span class="lineno">   26</span><span class="comment">//          if (params.get(i).isVariable()) {</span></div>
-<div class="line"><span class="lineno">   27</span><span class="comment">//              string = tokens.get(params.get(i).string);</span></div>
-<div class="line"><span class="lineno">   28</span><span class="comment">//              if (string == null) {</span></div>
-<div class="line"><span class="lineno">   29</span><span class="comment">//                  VarAndMemory var = params.get(i).getVarNameAndMemory(memoryMap);</span></div>
-<div class="line"><span class="lineno">   30</span><span class="comment">//                  string = var.memory.getString(var.name);</span></div>
-<div class="line"><span class="lineno">   31</span><span class="comment">//              }</span></div>
-<div class="line"><span class="lineno">   32</span><span class="comment">//          } else {</span></div>
-<div class="line"><span class="lineno">   33</span><span class="comment">//              string = params.get(i).string;</span></div>
-<div class="line"><span class="lineno">   34</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">   35</span>            <span class="keywordflow">if</span> (<span class="keywordtype">string</span> != <span class="keyword">null</span>) strings.add(<span class="keywordtype">string</span>);</div>
-<div class="line"><span class="lineno">   36</span>        }</div>
-<div class="line"><span class="lineno">   37</span>    </div>
-<div class="line"><span class="lineno">   38</span>        dialog.getOptionPanel().setTooltipHighlights(option, strings.toArray(<span class="keyword">new</span> String[0]));</div>
-<div class="line"><span class="lineno">   39</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   40</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

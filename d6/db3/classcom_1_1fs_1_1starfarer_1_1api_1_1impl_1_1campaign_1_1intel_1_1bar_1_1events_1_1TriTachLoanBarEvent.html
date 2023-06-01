@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -395,10 +396,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d46/TriTachLoanBarEvent_8java_source.html#l00028">28</a> of file <a class="el" href="../../d0/d46/TriTachLoanBarEvent_8java_source.html">TriTachLoanBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   28</span>                                 {</div>
-<div class="line"><span class="lineno">   29</span>        super();</div>
-<div class="line"><span class="lineno">   30</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -428,69 +426,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a9a7551dacae2af6ffa524617f89aa48a">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseGetCommodityBarEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d46/TriTachLoanBarEvent_8java_source.html#l00080">80</a> of file <a class="el" href="../../d0/d46/TriTachLoanBarEvent_8java_source.html">TriTachLoanBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   80</span>                                    {</div>
-<div class="line"><span class="lineno">   81</span>        String <span class="keywordtype">id</span> = <span class="stringliteral">&quot;negotiate_id&quot;</span>;</div>
-<div class="line"><span class="lineno">   82</span>        <a class="code hl_variable" href="../../dc/da0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEvent.html#a7319e305e3b103fa49bec1b9998ca244">options</a>.<a class="code hl_function" href="../../da/d65/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OptionPanelAPI.html#a57f02433899c784a146848ca9955130a">addOption</a>(<span class="stringliteral">&quot;Negotiate a lower rate on the loan&quot;</span>, <span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">   83</span>        </div>
-<div class="line"><span class="lineno">   84</span>        StoryOptionParams params = <span class="keyword">new</span> StoryOptionParams(<span class="keywordtype">id</span>, 1, <span class="stringliteral">&quot;negotiateLoanRate&quot;</span>, Sounds.STORY_POINT_SPEND_TECHNOLOGY,</div>
-<div class="line"><span class="lineno">   85</span>                <span class="stringliteral">&quot;Negotiated lower rate on &quot;</span> + Misc.getDGSCredits(<a class="code hl_variable" href="../../d6/db3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEvent.html#a4e71b1ee77a985c7e5db164eb0bcfdf4">loanAmount</a>) + <span class="stringliteral">&quot; loan from Tri-Tachyon investor&quot;</span>);</div>
-<div class="line"><span class="lineno">   86</span>        </div>
-<div class="line"><span class="lineno">   87</span>        SetStoryOption.set(<a class="code hl_variable" href="../../dc/da0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEvent.html#ac773a96bd84afb2ed3d04418a207f252">dialog</a>, params, </div>
-<div class="line"><span class="lineno">   88</span>            <span class="keyword">new</span> BaseOptionStoryPointActionDelegate(<a class="code hl_variable" href="../../dc/da0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEvent.html#ac773a96bd84afb2ed3d04418a207f252">dialog</a>, params) {</div>
-<div class="line"><span class="lineno">   89</span> </div>
-<div class="line"><span class="lineno">   90</span>                @Override</div>
-<div class="line"><span class="lineno">   91</span>                <span class="keyword">public</span> <span class="keywordtype">void</span> confirm() {</div>
-<div class="line"><span class="lineno">   92</span>                    super.confirm();</div>
-<div class="line"><span class="lineno">   93</span>                    <a class="code hl_variable" href="../../d6/db3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEvent.html#a08cf5f6b3c27f1a1e7c0226a03594a10">repaymentAmount</a> = <a class="code hl_function" href="../../d6/db3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEvent.html#a9bdb6ae6dde34b73fc8ba5566cd31e26">getNegotiatedAmount</a>();</div>
-<div class="line"><span class="lineno">   94</span>                    <span class="comment">//negotiated = true;</span></div>
-<div class="line"><span class="lineno">   95</span>                    <a class="code hl_variable" href="../../dc/da0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEvent.html#ac773a96bd84afb2ed3d04418a207f252">dialog</a>.<a class="code hl_function" href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#a52d00add8a9c52795f652f493ac37244">getTextPanel</a>().<a class="code hl_function" href="../../d4/ddc/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1TextPanelAPI.html#a0ef96007fc183cddf8dce605e19a98bf">addPara</a>(<a class="code hl_function" href="../../d6/db3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEvent.html#af4b32a5604f217d454b885a1360c7d5e">getNegotiatedText</a>());</div>
-<div class="line"><span class="lineno">   96</span>                    OptionPanelAPI <a class="code hl_variable" href="../../dc/da0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEvent.html#a7319e305e3b103fa49bec1b9998ca244">options</a> = <a class="code hl_variable" href="../../dc/da0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEvent.html#ac773a96bd84afb2ed3d04418a207f252">dialog</a>.<a class="code hl_function" href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#af4f0b5fdb66110b1d0565b433abaf65c">getOptionPanel</a>();</div>
-<div class="line"><span class="lineno">   97</span>                    <a class="code hl_variable" href="../../dc/da0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEvent.html#a7319e305e3b103fa49bec1b9998ca244">options</a>.<a class="code hl_function" href="../../da/d65/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OptionPanelAPI.html#a72ccab6cc04270d28959f8175d0821cb">clearOptions</a>();</div>
-<div class="line"><span class="lineno">   98</span>                    <a class="code hl_variable" href="../../dc/da0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEvent.html#a7319e305e3b103fa49bec1b9998ca244">options</a>.<a class="code hl_function" href="../../da/d65/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OptionPanelAPI.html#a57f02433899c784a146848ca9955130a">addOption</a>(<span class="stringliteral">&quot;Continue&quot;</span>, <a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a920ba64ee5b83ca791b0152fe5a75155">OPTION_CONFIRM</a>);</div>
-<div class="line"><span class="lineno">   99</span>                    <span class="comment">//optionSelected(null, OPTION_CONFIRM);</span></div>
-<div class="line"><span class="lineno">  100</span>                }</div>
-<div class="line"><span class="lineno">  101</span>                </div>
-<div class="line"><span class="lineno">  102</span>                @Override</div>
-<div class="line"><span class="lineno">  103</span>                <span class="keyword">public</span> String getTitle() {</div>
-<div class="line"><span class="lineno">  104</span>                    <span class="comment">//return &quot;Negotiating loan repayment&quot;;</span></div>
-<div class="line"><span class="lineno">  105</span>                    <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  106</span>                }</div>
-<div class="line"><span class="lineno">  107</span> </div>
-<div class="line"><span class="lineno">  108</span>                @Override</div>
-<div class="line"><span class="lineno">  109</span>                <span class="keyword">public</span> <span class="keywordtype">void</span> createDescription(TooltipMakerAPI info) {</div>
-<div class="line"><span class="lineno">  110</span>                    <span class="keywordtype">float</span> opad = 10f;</div>
-<div class="line"><span class="lineno">  111</span>                    info.setParaInsigniaLarge();</div>
-<div class="line"><span class="lineno">  112</span>                    </div>
-<div class="line"><span class="lineno">  113</span>                    info.addSpacer(-opad * 1f);</div>
-<div class="line"><span class="lineno">  114</span>                    </div>
-<div class="line"><span class="lineno">  115</span>                    info.addPara(<span class="stringliteral">&quot;The loan amount is %s.&quot;</span>,</div>
-<div class="line"><span class="lineno">  116</span>                            0f, Misc.getHighlightColor(),</div>
-<div class="line"><span class="lineno">  117</span>                            Misc.getDGSCredits(<a class="code hl_variable" href="../../d6/db3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEvent.html#a4e71b1ee77a985c7e5db164eb0bcfdf4">loanAmount</a>));</div>
-<div class="line"><span class="lineno">  118</span>                    </div>
-<div class="line"><span class="lineno">  119</span>                    info.addPara(<span class="stringliteral">&quot;You&#39;re able to negotiate the repayment amount from %s down to &quot;</span> +</div>
-<div class="line"><span class="lineno">  120</span>                            <span class="stringliteral">&quot;%s.&quot;</span>, opad, Misc.getHighlightColor(),</div>
-<div class="line"><span class="lineno">  121</span>                            Misc.getDGSCredits(<a class="code hl_variable" href="../../d6/db3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEvent.html#a08cf5f6b3c27f1a1e7c0226a03594a10">repaymentAmount</a>),</div>
-<div class="line"><span class="lineno">  122</span>                            Misc.getDGSCredits(<a class="code hl_function" href="../../d6/db3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEvent.html#a9bdb6ae6dde34b73fc8ba5566cd31e26">getNegotiatedAmount</a>()));</div>
-<div class="line"><span class="lineno">  123</span>                    </div>
-<div class="line"><span class="lineno">  124</span>                    info.addSpacer(opad * 2f);</div>
-<div class="line"><span class="lineno">  125</span>                    addActionCostSection(info);</div>
-<div class="line"><span class="lineno">  126</span>                }</div>
-<div class="line"><span class="lineno">  127</span>            </div>
-<div class="line"><span class="lineno">  128</span>        });</div>
-<div class="line"><span class="lineno">  129</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEvent_html_a7319e305e3b103fa49bec1b9998ca244"><div class="ttname"><a href="../../dc/da0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEvent.html#a7319e305e3b103fa49bec1b9998ca244">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseBarEvent.options</a></div><div class="ttdeci">transient OptionPanelAPI options</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d7d/BaseBarEvent_8java_source.html#l00016">BaseBarEvent.java:16</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEvent_html_ac773a96bd84afb2ed3d04418a207f252"><div class="ttname"><a href="../../dc/da0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEvent.html#ac773a96bd84afb2ed3d04418a207f252">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseBarEvent.dialog</a></div><div class="ttdeci">transient InteractionDialogAPI dialog</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d7d/BaseBarEvent_8java_source.html#l00014">BaseBarEvent.java:14</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent_html_a920ba64ee5b83ca791b0152fe5a75155"><div class="ttname"><a href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a920ba64ee5b83ca791b0152fe5a75155">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseGetCommodityBarEvent.OPTION_CONFIRM</a></div><div class="ttdeci">static final String OPTION_CONFIRM</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d22/BaseGetCommodityBarEvent_8java_source.html#l00026">BaseGetCommodityBarEvent.java:26</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEvent_html_a08cf5f6b3c27f1a1e7c0226a03594a10"><div class="ttname"><a href="../../d6/db3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEvent.html#a08cf5f6b3c27f1a1e7c0226a03594a10">com.fs.starfarer.api.impl.campaign.intel.bar.events.TriTachLoanBarEvent.repaymentAmount</a></div><div class="ttdeci">int repaymentAmount</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d46/TriTachLoanBarEvent_8java_source.html#l00049">TriTachLoanBarEvent.java:49</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEvent_html_a4e71b1ee77a985c7e5db164eb0bcfdf4"><div class="ttname"><a href="../../d6/db3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEvent.html#a4e71b1ee77a985c7e5db164eb0bcfdf4">com.fs.starfarer.api.impl.campaign.intel.bar.events.TriTachLoanBarEvent.loanAmount</a></div><div class="ttdeci">int loanAmount</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d46/TriTachLoanBarEvent_8java_source.html#l00048">TriTachLoanBarEvent.java:48</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEvent_html_a9bdb6ae6dde34b73fc8ba5566cd31e26"><div class="ttname"><a href="../../d6/db3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEvent.html#a9bdb6ae6dde34b73fc8ba5566cd31e26">com.fs.starfarer.api.impl.campaign.intel.bar.events.TriTachLoanBarEvent.getNegotiatedAmount</a></div><div class="ttdeci">int getNegotiatedAmount()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d46/TriTachLoanBarEvent_8java_source.html#l00076">TriTachLoanBarEvent.java:76</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEvent_html_af4b32a5604f217d454b885a1360c7d5e"><div class="ttname"><a href="../../d6/db3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEvent.html#af4b32a5604f217d454b885a1360c7d5e">com.fs.starfarer.api.impl.campaign.intel.bar.events.TriTachLoanBarEvent.getNegotiatedText</a></div><div class="ttdeci">String getNegotiatedText()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d46/TriTachLoanBarEvent_8java_source.html#l00214">TriTachLoanBarEvent.java:214</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI_html_a52d00add8a9c52795f652f493ac37244"><div class="ttname"><a href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#a52d00add8a9c52795f652f493ac37244">com.fs.starfarer.api.campaign.InteractionDialogAPI.getTextPanel</a></div><div class="ttdeci">TextPanelAPI getTextPanel()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI_html_af4f0b5fdb66110b1d0565b433abaf65c"><div class="ttname"><a href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#af4f0b5fdb66110b1d0565b433abaf65c">com.fs.starfarer.api.campaign.InteractionDialogAPI.getOptionPanel</a></div><div class="ttdeci">OptionPanelAPI getOptionPanel()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OptionPanelAPI_html_a57f02433899c784a146848ca9955130a"><div class="ttname"><a href="../../da/d65/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OptionPanelAPI.html#a57f02433899c784a146848ca9955130a">com.fs.starfarer.api.campaign.OptionPanelAPI.addOption</a></div><div class="ttdeci">void addOption(String text, Object data)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OptionPanelAPI_html_a72ccab6cc04270d28959f8175d0821cb"><div class="ttname"><a href="../../da/d65/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OptionPanelAPI.html#a72ccab6cc04270d28959f8175d0821cb">com.fs.starfarer.api.campaign.OptionPanelAPI.clearOptions</a></div><div class="ttdeci">void clearOptions()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1TextPanelAPI_html_a0ef96007fc183cddf8dce605e19a98bf"><div class="ttname"><a href="../../d4/ddc/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1TextPanelAPI.html#a0ef96007fc183cddf8dce605e19a98bf">com.fs.starfarer.api.campaign.TextPanelAPI.addPara</a></div><div class="ttdeci">LabelAPI addPara(String text)</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aedfbcf0c3ee0d01691eca76897c03c13" name="aedfbcf0c3ee0d01691eca76897c03c13"></a>
@@ -522,16 +458,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../dd/d17/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachMajorLoanBarEvent.html#a55ab97d0d51d8df33f4e25b977c19985">com.fs.starfarer.api.impl.campaign.intel.bar.events.TriTachMajorLoanBarEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d46/TriTachLoanBarEvent_8java_source.html#l00158">158</a> of file <a class="el" href="../../d0/d46/TriTachLoanBarEvent_8java_source.html">TriTachLoanBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  158</span>                                                  {</div>
-<div class="line"><span class="lineno">  159</span>        super.adjustPerson(<a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#ad6ddfca6f68679730252f1bc41779553">person</a>);</div>
-<div class="line"><span class="lineno">  160</span>        <a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#ad6ddfca6f68679730252f1bc41779553">person</a>.<a class="code hl_function" href="../../d9/df0/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#a997d1fcb5b1c926e5b30387b3e9f6d38">setImportanceAndVoice</a>(PersonImportance.MEDIUM, <a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a0870c60e641dfaff36c968eb2e4d1503">random</a>);</div>
-<div class="line"><span class="lineno">  161</span>        <a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#ad6ddfca6f68679730252f1bc41779553">person</a>.<a class="code hl_function" href="../../d9/df0/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#a6562cf3ba97840b60bed1eb2e38c5a45">addTag</a>(Tags.CONTACT_TRADE);</div>
-<div class="line"><span class="lineno">  162</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent_html_a0870c60e641dfaff36c968eb2e4d1503"><div class="ttname"><a href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a0870c60e641dfaff36c968eb2e4d1503">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseGetCommodityBarEvent.random</a></div><div class="ttdeci">transient Random random</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d22/BaseGetCommodityBarEvent_8java_source.html#l00040">BaseGetCommodityBarEvent.java:40</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent_html_ad6ddfca6f68679730252f1bc41779553"><div class="ttname"><a href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#ad6ddfca6f68679730252f1bc41779553">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseGetCommodityBarEvent.person</a></div><div class="ttdeci">PersonAPI person</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d22/BaseGetCommodityBarEvent_8java_source.html#l00031">BaseGetCommodityBarEvent.java:31</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI_html_a6562cf3ba97840b60bed1eb2e38c5a45"><div class="ttname"><a href="../../d9/df0/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#a6562cf3ba97840b60bed1eb2e38c5a45">com.fs.starfarer.api.characters.PersonAPI.addTag</a></div><div class="ttdeci">void addTag(String tag)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI_html_a997d1fcb5b1c926e5b30387b3e9f6d38"><div class="ttname"><a href="../../d9/df0/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#a997d1fcb5b1c926e5b30387b3e9f6d38">com.fs.starfarer.api.characters.PersonAPI.setImportanceAndVoice</a></div><div class="ttdeci">void setImportanceAndVoice(PersonImportance importance, Random random)</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab9271faf614f083d4fa26a98204c9ff4" name="ab9271faf614f083d4fa26a98204c9ff4"></a>
@@ -560,12 +487,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../dd/d17/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachMajorLoanBarEvent.html#a4e6f7d6464a6d5c20f54ba33c2a8db36">com.fs.starfarer.api.impl.campaign.intel.bar.events.TriTachMajorLoanBarEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d46/TriTachLoanBarEvent_8java_source.html#l00136">136</a> of file <a class="el" href="../../d0/d46/TriTachLoanBarEvent_8java_source.html">TriTachLoanBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  136</span>                                 {</div>
-<div class="line"><span class="lineno">  137</span>        TriTachLoanIntel intel = <span class="keyword">new</span> TriTachLoanIntel(<span class="keyword">this</span>, <a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a1931eabc2023e6ba13d6104f2302798a">market</a>);</div>
-<div class="line"><span class="lineno">  138</span>        Global.getSector().getIntelManager().addIntel(intel, <span class="keyword">false</span>, <a class="code hl_variable" href="../../dc/da0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEvent.html#ac773a96bd84afb2ed3d04418a207f252">dialog</a>.<a class="code hl_function" href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#a52d00add8a9c52795f652f493ac37244">getTextPanel</a>());</div>
-<div class="line"><span class="lineno">  139</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent_html_a1931eabc2023e6ba13d6104f2302798a"><div class="ttname"><a href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a1931eabc2023e6ba13d6104f2302798a">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseGetCommodityBarEvent.market</a></div><div class="ttdeci">MarketAPI market</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d22/BaseGetCommodityBarEvent_8java_source.html#l00042">BaseGetCommodityBarEvent.java:42</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a90db28f0057296693d720288d6d4fa11" name="a90db28f0057296693d720288d6d4fa11"></a>
@@ -594,18 +516,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a5eb66733dda8f8142f4229b5af55b1c3">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseGetCommodityBarEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d46/TriTachLoanBarEvent_8java_source.html#l00066">66</a> of file <a class="el" href="../../d0/d46/TriTachLoanBarEvent_8java_source.html">TriTachLoanBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   66</span>                                              {</div>
-<div class="line"><span class="lineno">   67</span>        CargoAPI cargo = Global.getSector().getPlayerFleet().getCargo();</div>
-<div class="line"><span class="lineno">   68</span>        cargo.getCredits().add(<a class="code hl_variable" href="../../d6/db3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEvent.html#a4e71b1ee77a985c7e5db164eb0bcfdf4">loanAmount</a>);</div>
-<div class="line"><span class="lineno">   69</span>        </div>
-<div class="line"><span class="lineno">   70</span>        TextPanelAPI <a class="code hl_variable" href="../../dc/da0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEvent.html#a2268511fc8daa52ae8728e974c1eeefa">text</a> = <a class="code hl_variable" href="../../dc/da0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEvent.html#ac773a96bd84afb2ed3d04418a207f252">dialog</a>.<a class="code hl_function" href="../../da/d82/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#a52d00add8a9c52795f652f493ac37244">getTextPanel</a>();</div>
-<div class="line"><span class="lineno">   71</span>        AddRemoveCommodity.addCreditsGainText(<a class="code hl_variable" href="../../d6/db3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEvent.html#a4e71b1ee77a985c7e5db164eb0bcfdf4">loanAmount</a>, <a class="code hl_variable" href="../../dc/da0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEvent.html#a2268511fc8daa52ae8728e974c1eeefa">text</a>);</div>
-<div class="line"><span class="lineno">   72</span>        </div>
-<div class="line"><span class="lineno">   73</span>        <a class="code hl_function" href="../../d6/db3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEvent.html#ab9271faf614f083d4fa26a98204c9ff4">createIntel</a>();</div>
-<div class="line"><span class="lineno">   74</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEvent_html_a2268511fc8daa52ae8728e974c1eeefa"><div class="ttname"><a href="../../dc/da0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEvent.html#a2268511fc8daa52ae8728e974c1eeefa">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseBarEvent.text</a></div><div class="ttdeci">transient TextPanelAPI text</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d7d/BaseBarEvent_8java_source.html#l00015">BaseBarEvent.java:15</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEvent_html_ab9271faf614f083d4fa26a98204c9ff4"><div class="ttname"><a href="../../d6/db3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEvent.html#ab9271faf614f083d4fa26a98204c9ff4">com.fs.starfarer.api.impl.campaign.intel.bar.events.TriTachLoanBarEvent.createIntel</a></div><div class="ttdeci">void createIntel()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d46/TriTachLoanBarEvent_8java_source.html#l00136">TriTachLoanBarEvent.java:136</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a80038feff2fd6460d7fc76a55dc355eb" name="a80038feff2fd6460d7fc76a55dc355eb"></a>
@@ -636,12 +547,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../dd/d17/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachMajorLoanBarEvent.html#a6c212a4498d27fbcd61766019593e839">com.fs.starfarer.api.impl.campaign.intel.bar.events.TriTachMajorLoanBarEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d46/TriTachLoanBarEvent_8java_source.html#l00224">224</a> of file <a class="el" href="../../d0/d46/TriTachLoanBarEvent_8java_source.html">TriTachLoanBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  224</span>                                     {</div>
-<div class="line"><span class="lineno">  225</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;You leave the lounge rich in credits, having exchanged secure comm keys with the &quot;</span> +</div>
-<div class="line"><span class="lineno">  226</span>                <span class="stringliteral">&quot;Tri-Tachyon shark and receiving the transfer immediately. Your head spins with plans &quot;</span> +</div>
-<div class="line"><span class="lineno">  227</span>                <span class="stringliteral">&quot;for how to leverage your new assets - and a bit from the drink, you admit to yourself.&quot;</span>;</div>
-<div class="line"><span class="lineno">  228</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a4299309273ee9d77f071267c2c7936d4" name="a4299309273ee9d77f071267c2c7936d4"></a>
@@ -672,10 +578,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../dd/d17/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachMajorLoanBarEvent.html#aad5b5892da251604b155ae06469be21e">com.fs.starfarer.api.impl.campaign.intel.bar.events.TriTachMajorLoanBarEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d46/TriTachLoanBarEvent_8java_source.html#l00210">210</a> of file <a class="el" href="../../d0/d46/TriTachLoanBarEvent_8java_source.html">TriTachLoanBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  210</span>                                     {</div>
-<div class="line"><span class="lineno">  211</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Decline the deal, explaining that you&#39;re \&quot;just here to network\&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">  212</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a13537748b18e0da81f065967b2dda7e5" name="a13537748b18e0da81f065967b2dda7e5"></a>
@@ -706,10 +609,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../dd/d17/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachMajorLoanBarEvent.html#a5cb1bf7932650a69c8362d9c3ee415e6">com.fs.starfarer.api.impl.campaign.intel.bar.events.TriTachMajorLoanBarEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d46/TriTachLoanBarEvent_8java_source.html#l00205">205</a> of file <a class="el" href="../../d0/d46/TriTachLoanBarEvent_8java_source.html">TriTachLoanBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  205</span>                                      {</div>
-<div class="line"><span class="lineno">  206</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Accept the deal and order another round to celebrate&quot;</span>;</div>
-<div class="line"><span class="lineno">  207</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a79844e493cf599e6596739512eb863a9" name="a79844e493cf599e6596739512eb863a9"></a>
@@ -728,10 +628,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d46/TriTachLoanBarEvent_8java_source.html#l00232">232</a> of file <a class="el" href="../../d0/d46/TriTachLoanBarEvent_8java_source.html">TriTachLoanBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  232</span>                               {</div>
-<div class="line"><span class="lineno">  233</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d6/db3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEvent.html#a4e71b1ee77a985c7e5db164eb0bcfdf4">loanAmount</a>;</div>
-<div class="line"><span class="lineno">  234</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a40e1d76668a029dcb7080627450fbd87" name="a40e1d76668a029dcb7080627450fbd87"></a>
@@ -762,16 +659,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../dd/d17/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachMajorLoanBarEvent.html#af4462a65b88c178b7e8180aaffbdba43">com.fs.starfarer.api.impl.campaign.intel.bar.events.TriTachMajorLoanBarEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d46/TriTachLoanBarEvent_8java_source.html#l00185">185</a> of file <a class="el" href="../../d0/d46/TriTachLoanBarEvent_8java_source.html">TriTachLoanBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  185</span>                                   {</div>
-<div class="line"><span class="lineno">  186</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;A young Tri-Tachyon factioneer in a perfect suit sips from some insubstantial drink &quot;</span> +</div>
-<div class="line"><span class="lineno">  187</span>                <span class="stringliteral">&quot;as sophisticated as it is expensive. After introductions &quot;</span> + <a class="code hl_function" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#aebc0411fce93c8540f5378f281f2273a">getHeOrShe</a>() + </div>
-<div class="line"><span class="lineno">  188</span>                <span class="stringliteral">&quot; quickly cuts to the point, and says \&quot;I&#39;m simply in the business of statistics, and &quot;</span> +</div>
-<div class="line"><span class="lineno">  189</span>                <span class="stringliteral">&quot;I like your growth potential. I think that you can take my %s now and pay &quot;</span> +</div>
-<div class="line"><span class="lineno">  190</span>                <span class="stringliteral">&quot;%s back to me in, oh, %s days. If not, \&quot;&quot;</span> + <a class="code hl_function" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#aebc0411fce93c8540f5378f281f2273a">getHeOrShe</a>() + </div>
-<div class="line"><span class="lineno">  191</span>                <span class="stringliteral">&quot; mimics a stricken look, \&quot;I&#39;ll ruin your reputation across Tri-Tachyon space. What do you say?\&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">  192</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent_html_aebc0411fce93c8540f5378f281f2273a"><div class="ttname"><a href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#aebc0411fce93c8540f5378f281f2273a">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseGetCommodityBarEvent.getHeOrShe</a></div><div class="ttdeci">String getHeOrShe()</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d22/BaseGetCommodityBarEvent_8java_source.html#l00110">BaseGetCommodityBarEvent.java:110</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a4562416f9c901131f8583cfadafb83c9" name="a4562416f9c901131f8583cfadafb83c9"></a>
@@ -800,10 +688,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a374a47f3ea0725251656d197ec7c4fd1">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseGetCommodityBarEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d46/TriTachLoanBarEvent_8java_source.html#l00200">200</a> of file <a class="el" href="../../d0/d46/TriTachLoanBarEvent_8java_source.html">TriTachLoanBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  200</span>                                           {</div>
-<div class="line"><span class="lineno">  201</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> Color [] { Misc.getHighlightColor(), Misc.getHighlightColor(), Misc.getHighlightColor() };</div>
-<div class="line"><span class="lineno">  202</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="afec7f9c41ebe3b6ee228cbadcb3e6aa9" name="afec7f9c41ebe3b6ee228cbadcb3e6aa9"></a>
@@ -832,12 +717,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a3af7f66834daeb240e1244f0cba04659">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseGetCommodityBarEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d46/TriTachLoanBarEvent_8java_source.html#l00195">195</a> of file <a class="el" href="../../d0/d46/TriTachLoanBarEvent_8java_source.html">TriTachLoanBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  195</span>                                            {</div>
-<div class="line"><span class="lineno">  196</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> String [] { Misc.getDGSCredits(<a class="code hl_variable" href="../../d6/db3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEvent.html#a4e71b1ee77a985c7e5db164eb0bcfdf4">loanAmount</a>), Misc.getDGSCredits(<a class="code hl_variable" href="../../d6/db3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEvent.html#a08cf5f6b3c27f1a1e7c0226a03594a10">repaymentAmount</a>), </div>
-<div class="line"><span class="lineno">  197</span>                               <span class="stringliteral">&quot;&quot;</span> + (int)<a class="code hl_variable" href="../../d6/db3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEvent.html#ace343bf27ddffc7b988bb4eb48fdb5b6">repaymentDays</a> };</div>
-<div class="line"><span class="lineno">  198</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEvent_html_ace343bf27ddffc7b988bb4eb48fdb5b6"><div class="ttname"><a href="../../d6/db3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEvent.html#ace343bf27ddffc7b988bb4eb48fdb5b6">com.fs.starfarer.api.impl.campaign.intel.bar.events.TriTachLoanBarEvent.repaymentDays</a></div><div class="ttdeci">int repaymentDays</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d46/TriTachLoanBarEvent_8java_source.html#l00050">TriTachLoanBarEvent.java:50</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9bdb6ae6dde34b73fc8ba5566cd31e26" name="a9bdb6ae6dde34b73fc8ba5566cd31e26"></a>
@@ -864,10 +744,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d46/TriTachLoanBarEvent_8java_source.html#l00076">76</a> of file <a class="el" href="../../d0/d46/TriTachLoanBarEvent_8java_source.html">TriTachLoanBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   76</span>                                        {</div>
-<div class="line"><span class="lineno">   77</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d6/db3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEvent.html#a08cf5f6b3c27f1a1e7c0226a03594a10">repaymentAmount</a> - (int) ((<a class="code hl_variable" href="../../d6/db3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEvent.html#a08cf5f6b3c27f1a1e7c0226a03594a10">repaymentAmount</a> - <a class="code hl_variable" href="../../d6/db3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEvent.html#a4e71b1ee77a985c7e5db164eb0bcfdf4">loanAmount</a>) * 0.5f);</div>
-<div class="line"><span class="lineno">   78</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af4b32a5604f217d454b885a1360c7d5e" name="af4b32a5604f217d454b885a1360c7d5e"></a>
@@ -896,17 +773,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../dd/d17/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachMajorLoanBarEvent.html#a6cc2c7695d22382fe7b08b2672bd331c">com.fs.starfarer.api.impl.campaign.intel.bar.events.TriTachMajorLoanBarEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d46/TriTachLoanBarEvent_8java_source.html#l00214">214</a> of file <a class="el" href="../../d0/d46/TriTachLoanBarEvent_8java_source.html">TriTachLoanBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  214</span>                                         {</div>
-<div class="line"><span class="lineno">  215</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;The Tri-Tachyon &quot;</span> + <a class="code hl_function" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#ace14622f2539d9cd0f4c927b48f29e38">getManOrWoman</a>() + <span class="stringliteral">&quot;&#39;s smile freezes in place as you launch into a sophisticated &quot;</span> + </div>
-<div class="line"><span class="lineno">  216</span>        <span class="stringliteral">&quot; pitch to modify the proposed terms. You notice &quot;</span> + <a class="code hl_function" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#ad4552273729202b2f296d563940c9c91">getHisOrHer</a>() + </div>
-<div class="line"><span class="lineno">  217</span>        <span class="stringliteral">&quot; eyes tracking rapidly, navigating some ocular data interface as you speak; &quot;</span> + <a class="code hl_function" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#aebc0411fce93c8540f5378f281f2273a">getHeOrShe</a>() + </div>
-<div class="line"><span class="lineno">  218</span>        <span class="stringliteral">&quot; seems thrown off-balance by your savvy, and never quite recovers that signature megacorp implacability.&quot;</span> +</div>
-<div class="line"><span class="lineno">  219</span>        <span class="stringliteral">&quot; By the time it is agreed that a substantially lower repayment figure will benefit all parties, the dazed &quot;</span> + </div>
-<div class="line"><span class="lineno">  220</span>        <span class="stringliteral">&quot;investor finds &quot;</span> + <a class="code hl_function" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#ad4552273729202b2f296d563940c9c91">getHisOrHer</a>() + <span class="stringliteral">&quot; drink has gone flat. &quot;</span> + <a class="code hl_function" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#aebc0411fce93c8540f5378f281f2273a">getHeOrShe</a>() + <span class="stringliteral">&quot; brusquely orders a replacement.&quot;</span>;</div>
-<div class="line"><span class="lineno">  221</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent_html_ace14622f2539d9cd0f4c927b48f29e38"><div class="ttname"><a href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#ace14622f2539d9cd0f4c927b48f29e38">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseGetCommodityBarEvent.getManOrWoman</a></div><div class="ttdeci">String getManOrWoman()</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d22/BaseGetCommodityBarEvent_8java_source.html#l00104">BaseGetCommodityBarEvent.java:104</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent_html_ad4552273729202b2f296d563940c9c91"><div class="ttname"><a href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#ad4552273729202b2f296d563940c9c91">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseGetCommodityBarEvent.getHisOrHer</a></div><div class="ttdeci">String getHisOrHer()</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d22/BaseGetCommodityBarEvent_8java_source.html#l00134">BaseGetCommodityBarEvent.java:134</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="abba488bbfabb2a88ba813d28f7ada99a" name="abba488bbfabb2a88ba813d28f7ada99a"></a>
@@ -937,10 +804,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../dd/d17/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachMajorLoanBarEvent.html#a427e89374aebf359c4a9ba1b867d92d9">com.fs.starfarer.api.impl.campaign.intel.bar.events.TriTachMajorLoanBarEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d46/TriTachLoanBarEvent_8java_source.html#l00180">180</a> of file <a class="el" href="../../d0/d46/TriTachLoanBarEvent_8java_source.html">TriTachLoanBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  180</span>                                     {</div>
-<div class="line"><span class="lineno">  181</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Introduce yourself to the Tri-Tachyon &quot;</span> + <a class="code hl_function" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#ace14622f2539d9cd0f4c927b48f29e38">getManOrWoman</a>() + <span class="stringliteral">&quot; and try to land some investment credits&quot;</span>;</div>
-<div class="line"><span class="lineno">  182</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a3aced9aea2128dd5696fd40584737bc3" name="a3aced9aea2128dd5696fd40584737bc3"></a>
@@ -969,10 +833,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#ae726529454dd2b2a8c9ef0032ea7021e">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseGetCommodityBarEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d46/TriTachLoanBarEvent_8java_source.html#l00142">142</a> of file <a class="el" href="../../d0/d46/TriTachLoanBarEvent_8java_source.html">TriTachLoanBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  142</span>                                        {</div>
-<div class="line"><span class="lineno">  143</span>        <span class="keywordflow">return</span> Factions.TRITACHYON;</div>
-<div class="line"><span class="lineno">  144</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9522d36550e1abd573de8efea7f7fb5d" name="a9522d36550e1abd573de8efea7f7fb5d"></a>
@@ -1003,10 +864,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../dd/d17/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachMajorLoanBarEvent.html#a3d3ef390b3aff2770db60516843bda95">com.fs.starfarer.api.impl.campaign.intel.bar.events.TriTachMajorLoanBarEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d46/TriTachLoanBarEvent_8java_source.html#l00165">165</a> of file <a class="el" href="../../d0/d46/TriTachLoanBarEvent_8java_source.html">TriTachLoanBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  165</span>                                     {</div>
-<div class="line"><span class="lineno">  166</span>        <span class="keywordflow">return</span> Ranks.POST_EXECUTIVE;</div>
-<div class="line"><span class="lineno">  167</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="adc132a7719aae60085b11e1bcdd349a3" name="adc132a7719aae60085b11e1bcdd349a3"></a>
@@ -1035,10 +893,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a355bebaa0bd37820cf884e0e6a90d7c4">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseGetCommodityBarEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d46/TriTachLoanBarEvent_8java_source.html#l00147">147</a> of file <a class="el" href="../../d0/d46/TriTachLoanBarEvent_8java_source.html">TriTachLoanBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  147</span>                                     {</div>
-<div class="line"><span class="lineno">  148</span>        <span class="keywordflow">return</span> Ranks.CITIZEN;</div>
-<div class="line"><span class="lineno">  149</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a0ac6cffe14f73391a21432b59b1baa06" name="a0ac6cffe14f73391a21432b59b1baa06"></a>
@@ -1067,10 +922,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#ab3bbe647f513ed5cefb98f810f222acc">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseGetCommodityBarEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d46/TriTachLoanBarEvent_8java_source.html#l00170">170</a> of file <a class="el" href="../../d0/d46/TriTachLoanBarEvent_8java_source.html">TriTachLoanBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  170</span>                                   {</div>
-<div class="line"><span class="lineno">  171</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  172</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2bf77f49690b17e8caf29848e960d2da" name="a2bf77f49690b17e8caf29848e960d2da"></a>
@@ -1101,10 +953,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../dd/d17/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachMajorLoanBarEvent.html#a4c1f765878695e5db9d60dc19f6358b3">com.fs.starfarer.api.impl.campaign.intel.bar.events.TriTachMajorLoanBarEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d46/TriTachLoanBarEvent_8java_source.html#l00175">175</a> of file <a class="el" href="../../d0/d46/TriTachLoanBarEvent_8java_source.html">TriTachLoanBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  175</span>                                 {</div>
-<div class="line"><span class="lineno">  176</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;A Tri-Tachyon careerist sits at a spotless table, sipping something expensive-looking.&quot;</span>;</div>
-<div class="line"><span class="lineno">  177</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ad97e4cd1f7eba0b1067a7d1a64a45b49" name="ad97e4cd1f7eba0b1067a7d1a64a45b49"></a>
@@ -1123,10 +972,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d46/TriTachLoanBarEvent_8java_source.html#l00240">240</a> of file <a class="el" href="../../d0/d46/TriTachLoanBarEvent_8java_source.html">TriTachLoanBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  240</span>                                    {</div>
-<div class="line"><span class="lineno">  241</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d6/db3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEvent.html#a08cf5f6b3c27f1a1e7c0226a03594a10">repaymentAmount</a>;</div>
-<div class="line"><span class="lineno">  242</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a39b7a5410c18db81f66cb29e48d1e046" name="a39b7a5410c18db81f66cb29e48d1e046"></a>
@@ -1145,10 +991,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d46/TriTachLoanBarEvent_8java_source.html#l00248">248</a> of file <a class="el" href="../../d0/d46/TriTachLoanBarEvent_8java_source.html">TriTachLoanBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  248</span>                                  {</div>
-<div class="line"><span class="lineno">  249</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d6/db3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEvent.html#ace343bf27ddffc7b988bb4eb48fdb5b6">repaymentDays</a>;</div>
-<div class="line"><span class="lineno">  250</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8d07389e286a1db06040ccdaf66dfdd8" name="a8d07389e286a1db06040ccdaf66dfdd8"></a>
@@ -1180,10 +1023,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a26a31b2ab09a612062d3ad89e28aed75">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseGetCommodityBarEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d46/TriTachLoanBarEvent_8java_source.html#l00132">132</a> of file <a class="el" href="../../d0/d46/TriTachLoanBarEvent_8java_source.html">TriTachLoanBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  132</span>                                                                     {</div>
-<div class="line"><span class="lineno">  133</span>        super.optionSelected(optionText, optionData);</div>
-<div class="line"><span class="lineno">  134</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="affb2063c6c6c0ebd420b6542e852a93e" name="affb2063c6c6c0ebd420b6542e852a93e"></a>
@@ -1215,18 +1055,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../dd/d17/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachMajorLoanBarEvent.html#a32ec4c0566aba84deffbe5d8d58249a2">com.fs.starfarer.api.impl.campaign.intel.bar.events.TriTachMajorLoanBarEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d46/TriTachLoanBarEvent_8java_source.html#l00054">54</a> of file <a class="el" href="../../d0/d46/TriTachLoanBarEvent_8java_source.html">TriTachLoanBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   54</span>                                           {</div>
-<div class="line"><span class="lineno">   55</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a1931eabc2023e6ba13d6104f2302798a">market</a> == <a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a1931eabc2023e6ba13d6104f2302798a">market</a>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   56</span>        </div>
-<div class="line"><span class="lineno">   57</span>        super.regen(<a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a1931eabc2023e6ba13d6104f2302798a">market</a>);</div>
-<div class="line"><span class="lineno">   58</span>        </div>
-<div class="line"><span class="lineno">   59</span>        <a class="code hl_variable" href="../../d6/db3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEvent.html#a4e71b1ee77a985c7e5db164eb0bcfdf4">loanAmount</a> = 200000 + <a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a0870c60e641dfaff36c968eb2e4d1503">random</a>.nextInt(6) * 10000;</div>
-<div class="line"><span class="lineno">   60</span>        <a class="code hl_variable" href="../../d6/db3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEvent.html#a08cf5f6b3c27f1a1e7c0226a03594a10">repaymentAmount</a> = (int) (<a class="code hl_variable" href="../../d6/db3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEvent.html#a4e71b1ee77a985c7e5db164eb0bcfdf4">loanAmount</a> * 1.5f);</div>
-<div class="line"><span class="lineno">   61</span>        <span class="comment">//repaymentDays = 365;</span></div>
-<div class="line"><span class="lineno">   62</span>        <a class="code hl_variable" href="../../d6/db3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEvent.html#ace343bf27ddffc7b988bb4eb48fdb5b6">repaymentDays</a> = <a class="code hl_variable" href="../../d6/db3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEvent.html#ac5d70ece09b11a08b1a7511b00955df0">REPAYMENT_DAYS</a>;</div>
-<div class="line"><span class="lineno">   63</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEvent_html_ac5d70ece09b11a08b1a7511b00955df0"><div class="ttname"><a href="../../d6/db3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEvent.html#ac5d70ece09b11a08b1a7511b00955df0">com.fs.starfarer.api.impl.campaign.intel.bar.events.TriTachLoanBarEvent.REPAYMENT_DAYS</a></div><div class="ttdeci">static int REPAYMENT_DAYS</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d46/TriTachLoanBarEvent_8java_source.html#l00026">TriTachLoanBarEvent.java:26</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a104adebedaff6662326429019e4a0b77" name="a104adebedaff6662326429019e4a0b77"></a>
@@ -1246,10 +1075,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d46/TriTachLoanBarEvent_8java_source.html#l00236">236</a> of file <a class="el" href="../../d0/d46/TriTachLoanBarEvent_8java_source.html">TriTachLoanBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  236</span>                                              {</div>
-<div class="line"><span class="lineno">  237</span>        this.loanAmount = <a class="code hl_variable" href="../../d6/db3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEvent.html#a4e71b1ee77a985c7e5db164eb0bcfdf4">loanAmount</a>;</div>
-<div class="line"><span class="lineno">  238</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a57565a62cff4956f37fd2336f466891f" name="a57565a62cff4956f37fd2336f466891f"></a>
@@ -1269,10 +1095,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d46/TriTachLoanBarEvent_8java_source.html#l00244">244</a> of file <a class="el" href="../../d0/d46/TriTachLoanBarEvent_8java_source.html">TriTachLoanBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  244</span>                                                        {</div>
-<div class="line"><span class="lineno">  245</span>        this.repaymentAmount = <a class="code hl_variable" href="../../d6/db3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEvent.html#a08cf5f6b3c27f1a1e7c0226a03594a10">repaymentAmount</a>;</div>
-<div class="line"><span class="lineno">  246</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a91a55bb1de8aafddc0204d0733bc09e4" name="a91a55bb1de8aafddc0204d0733bc09e4"></a>
@@ -1292,10 +1115,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d46/TriTachLoanBarEvent_8java_source.html#l00252">252</a> of file <a class="el" href="../../d0/d46/TriTachLoanBarEvent_8java_source.html">TriTachLoanBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  252</span>                                                    {</div>
-<div class="line"><span class="lineno">  253</span>        this.repaymentDays = <a class="code hl_variable" href="../../d6/db3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEvent.html#ace343bf27ddffc7b988bb4eb48fdb5b6">repaymentDays</a>;</div>
-<div class="line"><span class="lineno">  254</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5c8929f711184c805565b40b09bc3186" name="a5c8929f711184c805565b40b09bc3186"></a>
@@ -1317,24 +1137,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../dc/da0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEvent.html#ac0a489e3d97adb2a637b3d01beadab9f">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseBarEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d46/TriTachLoanBarEvent_8java_source.html#l00032">32</a> of file <a class="el" href="../../d0/d46/TriTachLoanBarEvent_8java_source.html">TriTachLoanBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   32</span>                                                        {</div>
-<div class="line"><span class="lineno">   33</span>        <span class="keywordflow">if</span> (!super.shouldShowAtMarket(<a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a1931eabc2023e6ba13d6104f2302798a">market</a>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   34</span>        </div>
-<div class="line"><span class="lineno">   35</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a1931eabc2023e6ba13d6104f2302798a">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#aa132dbebb3e9e38ad71a576a4ea5ac9b">getFactionId</a>().equals(Factions.TRITACHYON)) {</div>
-<div class="line"><span class="lineno">   36</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   37</span>        }</div>
-<div class="line"><span class="lineno">   38</span>        </div>
-<div class="line"><span class="lineno">   39</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a1931eabc2023e6ba13d6104f2302798a">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a2632307f40c3a4bc2dba30e35eca2284">getStabilityValue</a>() &lt; 4) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   40</span>        </div>
-<div class="line"><span class="lineno">   41</span>        <span class="keywordflow">if</span> (Global.getSector().getFaction(Factions.TRITACHYON).getRelToPlayer().isAtBest(RepLevel.HOSTILE)) {</div>
-<div class="line"><span class="lineno">   42</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   43</span>        }</div>
-<div class="line"><span class="lineno">   44</span>        </div>
-<div class="line"><span class="lineno">   45</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   46</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a2632307f40c3a4bc2dba30e35eca2284"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a2632307f40c3a4bc2dba30e35eca2284">com.fs.starfarer.api.campaign.econ.MarketAPI.getStabilityValue</a></div><div class="ttdeci">float getStabilityValue()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_aa132dbebb3e9e38ad71a576a4ea5ac9b"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#aa132dbebb3e9e38ad71a576a4ea5ac9b">com.fs.starfarer.api.campaign.econ.MarketAPI.getFactionId</a></div><div class="ttdeci">String getFactionId()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a7ddcfe44bdb8a4f3656f8bab940a1d07" name="a7ddcfe44bdb8a4f3656f8bab940a1d07"></a>
@@ -1363,10 +1166,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#aaf80028ebc5cc22a17c352fa1b4a12e6">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseGetCommodityBarEvent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d46/TriTachLoanBarEvent_8java_source.html#l00256">256</a> of file <a class="el" href="../../d0/d46/TriTachLoanBarEvent_8java_source.html">TriTachLoanBarEvent.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  256</span>                                     {</div>
-<div class="line"><span class="lineno">  257</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  258</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

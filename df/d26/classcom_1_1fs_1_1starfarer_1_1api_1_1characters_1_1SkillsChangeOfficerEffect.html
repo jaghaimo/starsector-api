@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -213,36 +214,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/db6/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1BaseSkillsChangeEffect.html#ac263fc216e6112b6c473475e04c185d2">com.fs.starfarer.api.characters.BaseSkillsChangeEffect</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/dd4/SkillsChangeOfficerEffect_8java_source.html#l00346">346</a> of file <a class="el" href="../../dd/dd4/SkillsChangeOfficerEffect_8java_source.html">SkillsChangeOfficerEffect.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  346</span>                                                                                                                      {</div>
-<div class="line"><span class="lineno">  347</span>        OfficerDataMap map = <a class="code hl_function" href="../../df/d26/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeOfficerEffect.html#a39a7a6f48c697560a54d5b143cf9d295">getMap</a>(dataMap);</div>
-<div class="line"><span class="lineno">  348</span>        </div>
-<div class="line"><span class="lineno">  349</span>        <span class="keywordflow">for</span> (OfficerEffectData data : map.map.values()) {</div>
-<div class="line"><span class="lineno">  350</span>            <span class="keywordflow">if</span> (data.makeMercenary) {</div>
-<div class="line"><span class="lineno">  351</span>                Misc.setMercenary(data.data.getPerson(), <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  352</span>                Misc.setMercHiredNow(data.data.getPerson());</div>
-<div class="line"><span class="lineno">  353</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  354</span>                <span class="keywordflow">if</span> (data.unusable &amp;&amp; data.member != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  355</span>                    data.member.setCaptain(Global.getFactory().createPerson());</div>
-<div class="line"><span class="lineno">  356</span>                }</div>
-<div class="line"><span class="lineno">  357</span>                MutableCharacterStatsAPI stats = data.data.getPerson().getStats();</div>
-<div class="line"><span class="lineno">  358</span>                <span class="keywordflow">for</span> (String <span class="keywordtype">id</span> : data.removeElite) {</div>
-<div class="line"><span class="lineno">  359</span>                    stats.setSkillLevel(<span class="keywordtype">id</span>, 1);</div>
-<div class="line"><span class="lineno">  360</span>                    PlaythroughLog.getInstance().removeOfficerSkillRecord(data.data.getPerson().getId(), <span class="keywordtype">id</span>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  361</span>                }</div>
-<div class="line"><span class="lineno">  362</span>                <span class="keywordflow">for</span> (String <span class="keywordtype">id</span> : data.removeSkills) {</div>
-<div class="line"><span class="lineno">  363</span>                    stats.setSkillLevel(<span class="keywordtype">id</span>, 0);</div>
-<div class="line"><span class="lineno">  364</span>                    PlaythroughLog.getInstance().removeOfficerSkillRecord(data.data.getPerson().getId(), <span class="keywordtype">id</span>, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  365</span>                    PlaythroughLog.getInstance().removeOfficerSkillRecord(data.data.getPerson().getId(), <span class="keywordtype">id</span>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  366</span>                }</div>
-<div class="line"><span class="lineno">  367</span>                <span class="keywordflow">if</span> (data.newLevel != stats.getLevel()) {</div>
-<div class="line"><span class="lineno">  368</span>                    stats.setLevel(data.newLevel);</div>
-<div class="line"><span class="lineno">  369</span>                }</div>
-<div class="line"><span class="lineno">  370</span>            }</div>
-<div class="line"><span class="lineno">  371</span>            </div>
-<div class="line"><span class="lineno">  372</span>        }</div>
-<div class="line"><span class="lineno">  373</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeOfficerEffect_html_a39a7a6f48c697560a54d5b143cf9d295"><div class="ttname"><a href="../../df/d26/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeOfficerEffect.html#a39a7a6f48c697560a54d5b143cf9d295">com.fs.starfarer.api.characters.SkillsChangeOfficerEffect.getMap</a></div><div class="ttdeci">OfficerDataMap getMap(Map&lt; String, Object &gt; dataMap)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dd4/SkillsChangeOfficerEffect_8java_source.html#l00052">SkillsChangeOfficerEffect.java:52</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2456c1fdd234a8e105f2a1f9cceeb8d8" name="a2456c1fdd234a8e105f2a1f9cceeb8d8"></a>
@@ -272,116 +244,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/dd4/SkillsChangeOfficerEffect_8java_source.html#l00083">83</a> of file <a class="el" href="../../dd/dd4/SkillsChangeOfficerEffect_8java_source.html">SkillsChangeOfficerEffect.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   83</span>                                                                                                 {</div>
-<div class="line"><span class="lineno">   84</span>        OfficerDataMap result = <span class="keyword">new</span> OfficerDataMap();</div>
-<div class="line"><span class="lineno">   85</span>        </div>
-<div class="line"><span class="lineno">   86</span>        </div>
-<div class="line"><span class="lineno">   87</span>        <span class="keywordtype">int</span> maxOfficersPre = (int) from.getOfficerNumber().getModifiedValue();</div>
-<div class="line"><span class="lineno">   88</span>        <span class="keywordtype">int</span> maxOfficersPost = (int) to.getOfficerNumber().getModifiedValue();</div>
-<div class="line"><span class="lineno">   89</span> </div>
-<div class="line"><span class="lineno">   90</span>        Map&lt;OfficerDataAPI, FleetMemberAPI&gt; members = <span class="keyword">new</span> LinkedHashMap&lt;OfficerDataAPI, FleetMemberAPI&gt;();</div>
-<div class="line"><span class="lineno">   91</span>        Set&lt;OfficerDataAPI&gt; unusable = <span class="keyword">new</span> LinkedHashSet&lt;OfficerDataAPI&gt;();</div>
-<div class="line"><span class="lineno">   92</span>        <span class="keywordflow">if</span> (maxOfficersPre &gt; maxOfficersPost) {</div>
-<div class="line"><span class="lineno">   93</span>            <span class="keywordtype">int</span> count = 0;</div>
-<div class="line"><span class="lineno">   94</span>            <span class="keywordflow">for</span> (OfficerDataAPI officer : Global.getSector().getPlayerFleet().getFleetData().getOfficersCopy()) {</div>
-<div class="line"><span class="lineno">   95</span>                <span class="keywordtype">boolean</span> merc = Misc.isMercenary(officer.getPerson());</div>
-<div class="line"><span class="lineno">   96</span>                <span class="keywordflow">if</span> (!merc) {</div>
-<div class="line"><span class="lineno">   97</span>                    count++;</div>
-<div class="line"><span class="lineno">   98</span>                }</div>
-<div class="line"><span class="lineno">   99</span>                <span class="keywordflow">if</span> (count &gt; maxOfficersPost &amp;&amp; !merc) {</div>
-<div class="line"><span class="lineno">  100</span>                    unusable.add(officer);</div>
-<div class="line"><span class="lineno">  101</span>                }</div>
-<div class="line"><span class="lineno">  102</span>            }</div>
-<div class="line"><span class="lineno">  103</span>        }</div>
-<div class="line"><span class="lineno">  104</span>        </div>
-<div class="line"><span class="lineno">  105</span>        <span class="keywordflow">for</span> (OfficerDataAPI officer : Global.getSector().getPlayerFleet().getFleetData().getOfficersCopy()) {</div>
-<div class="line"><span class="lineno">  106</span>            <span class="keywordflow">for</span> (FleetMemberAPI member : Global.getSector().getPlayerFleet().getFleetData().getMembersListCopy()) {</div>
-<div class="line"><span class="lineno">  107</span>                <span class="keywordflow">if</span> (member.getCaptain() == officer.getPerson()) {</div>
-<div class="line"><span class="lineno">  108</span>                    members.put(officer, member);</div>
-<div class="line"><span class="lineno">  109</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  110</span>                }</div>
-<div class="line"><span class="lineno">  111</span>            }</div>
-<div class="line"><span class="lineno">  112</span>        }</div>
-<div class="line"><span class="lineno">  113</span>        </div>
-<div class="line"><span class="lineno">  114</span>        <span class="keywordtype">int</span> maxLevelPre = <a class="code hl_function" href="../../df/d26/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeOfficerEffect.html#adfffdda09a58c8e80269e299ce7d76c2">getMaxLevel</a>(from);</div>
-<div class="line"><span class="lineno">  115</span>        <span class="keywordtype">int</span> maxLevelPost = <a class="code hl_function" href="../../df/d26/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeOfficerEffect.html#adfffdda09a58c8e80269e299ce7d76c2">getMaxLevel</a>(to);</div>
-<div class="line"><span class="lineno">  116</span>        </div>
-<div class="line"><span class="lineno">  117</span>        <span class="keywordtype">int</span> maxElitePre = <a class="code hl_function" href="../../df/d26/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeOfficerEffect.html#a90cfa0d9e400d88397302f7c80652083">getMaxEliteSkills</a>(from);</div>
-<div class="line"><span class="lineno">  118</span>        <span class="keywordtype">int</span> maxElitePost = <a class="code hl_function" href="../../df/d26/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeOfficerEffect.html#a90cfa0d9e400d88397302f7c80652083">getMaxEliteSkills</a>(to);</div>
-<div class="line"><span class="lineno">  119</span>        </div>
-<div class="line"><span class="lineno">  120</span>        <span class="keywordflow">for</span> (OfficerDataAPI data : Global.getSector().getPlayerFleet().getFleetData().getOfficersCopy()) {</div>
-<div class="line"><span class="lineno">  121</span>            PersonAPI person = data.getPerson();</div>
-<div class="line"><span class="lineno">  122</span>            MutableCharacterStatsAPI stats = person.getStats();</div>
-<div class="line"><span class="lineno">  123</span>            </div>
-<div class="line"><span class="lineno">  124</span>            <span class="keywordflow">if</span> (Misc.isMercenary(person)) {</div>
-<div class="line"><span class="lineno">  125</span>                <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  126</span>            }</div>
-<div class="line"><span class="lineno">  127</span>            </div>
-<div class="line"><span class="lineno">  128</span>            <span class="keywordtype">boolean</span> pods = person.getMemoryWithoutUpdate().getBoolean(MemFlags.EXCEPTIONAL_SLEEPER_POD_OFFICER);</div>
-<div class="line"><span class="lineno">  129</span>            <span class="keywordflow">if</span> (pods) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  130</span>            </div>
-<div class="line"><span class="lineno">  131</span>            OfficerEffectData effect = <span class="keyword">new</span> OfficerEffectData();</div>
-<div class="line"><span class="lineno">  132</span>            effect.data = data;</div>
-<div class="line"><span class="lineno">  133</span>            effect.newLevel = stats.getLevel();</div>
-<div class="line"><span class="lineno">  134</span>            </div>
-<div class="line"><span class="lineno">  135</span>            <span class="keywordflow">if</span> (members.containsKey(data)) {</div>
-<div class="line"><span class="lineno">  136</span>                effect.member = members.get(data);</div>
-<div class="line"><span class="lineno">  137</span>            }</div>
-<div class="line"><span class="lineno">  138</span>            <span class="keywordflow">if</span> (unusable.contains(data)) {</div>
-<div class="line"><span class="lineno">  139</span>                effect.unusable = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  140</span>            }</div>
-<div class="line"><span class="lineno">  141</span>            </div>
-<div class="line"><span class="lineno">  142</span>            <span class="keywordflow">if</span> (stats.getLevel() &gt; maxLevelPost &amp;&amp; maxLevelPost &lt; maxLevelPre) {</div>
-<div class="line"><span class="lineno">  143</span>                <span class="keyword">final</span> List&lt;String&gt; skillsInOrderOfGain = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
-<div class="line"><span class="lineno">  144</span>                <span class="keywordflow">for</span> (OfficerSkillGainRecord rec : PlaythroughLog.getInstance().getOfficerSkillsLearned()) {</div>
-<div class="line"><span class="lineno">  145</span>                    <span class="keywordflow">if</span> (rec.getPersonId().equals(person.getId()) &amp;&amp; !rec.isElite() &amp;&amp;</div>
-<div class="line"><span class="lineno">  146</span>                            stats.getSkillLevel(rec.getSkillId()) &gt; 0) {</div>
-<div class="line"><span class="lineno">  147</span>                        skillsInOrderOfGain.add(rec.getSkillId());</div>
-<div class="line"><span class="lineno">  148</span>                    }</div>
-<div class="line"><span class="lineno">  149</span>                }</div>
-<div class="line"><span class="lineno">  150</span>                Collections.reverse(skillsInOrderOfGain);</div>
-<div class="line"><span class="lineno">  151</span>                </div>
-<div class="line"><span class="lineno">  152</span>                <span class="comment">// if the skill records aren&#39;t present, assume it&#39;s a cryopods officer</span></div>
-<div class="line"><span class="lineno">  153</span>                <span class="comment">// it can also be an officer from 0.95a before officer skill gain was tracked</span></div>
-<div class="line"><span class="lineno">  154</span>                <span class="comment">// so, erring on the side of not nuking skills needlessly</span></div>
-<div class="line"><span class="lineno">  155</span>                <span class="keywordtype">int</span> skillsToRemove = stats.getLevel() - maxLevelPost;</div>
-<div class="line"><span class="lineno">  156</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; skillsToRemove &amp;&amp; !skillsInOrderOfGain.isEmpty(); i++) {</div>
-<div class="line"><span class="lineno">  157</span>                    effect.removeSkills.add(skillsInOrderOfGain.remove(0));</div>
-<div class="line"><span class="lineno">  158</span>                }</div>
-<div class="line"><span class="lineno">  159</span>                <span class="keywordflow">if</span> (!effect.removeSkills.isEmpty()) {</div>
-<div class="line"><span class="lineno">  160</span>                    effect.newLevel = maxLevelPost;</div>
-<div class="line"><span class="lineno">  161</span>                }</div>
-<div class="line"><span class="lineno">  162</span>            }</div>
-<div class="line"><span class="lineno">  163</span>            </div>
-<div class="line"><span class="lineno">  164</span>            <span class="keywordtype">int</span> numElite = <a class="code hl_function" href="../../df/d26/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeOfficerEffect.html#a00f67d59a22f5283d92b356f07b23f06">getNumEliteSkills</a>(person);</div>
-<div class="line"><span class="lineno">  165</span>            <span class="keywordflow">if</span> (numElite &gt; maxElitePost &amp;&amp; maxElitePost &lt; maxElitePre) {</div>
-<div class="line"><span class="lineno">  166</span>                <span class="keyword">final</span> List&lt;String&gt; eliteInOrderOfGain = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
-<div class="line"><span class="lineno">  167</span>                <span class="keywordflow">for</span> (OfficerSkillGainRecord rec : PlaythroughLog.getInstance().getOfficerSkillsLearned()) {</div>
-<div class="line"><span class="lineno">  168</span>                    <span class="keywordflow">if</span> (rec.getPersonId().equals(person.getId()) &amp;&amp; rec.isElite() &amp;&amp;</div>
-<div class="line"><span class="lineno">  169</span>                            stats.getSkillLevel(rec.getSkillId()) &gt;= 2 &amp;&amp;</div>
-<div class="line"><span class="lineno">  170</span>                            !effect.removeSkills.contains(rec.getSkillId())) {</div>
-<div class="line"><span class="lineno">  171</span>                        eliteInOrderOfGain.add(rec.getSkillId());</div>
-<div class="line"><span class="lineno">  172</span>                    }</div>
-<div class="line"><span class="lineno">  173</span>                }</div>
-<div class="line"><span class="lineno">  174</span>                Collections.reverse(eliteInOrderOfGain);</div>
-<div class="line"><span class="lineno">  175</span>                </div>
-<div class="line"><span class="lineno">  176</span>                <span class="keywordtype">int</span> eliteToRemove = numElite - maxElitePost;</div>
-<div class="line"><span class="lineno">  177</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; eliteToRemove &amp;&amp; !eliteInOrderOfGain.isEmpty(); i++) {</div>
-<div class="line"><span class="lineno">  178</span>                    effect.removeElite.add(eliteInOrderOfGain.remove(0));</div>
-<div class="line"><span class="lineno">  179</span>                }</div>
-<div class="line"><span class="lineno">  180</span>            }</div>
-<div class="line"><span class="lineno">  181</span>            </div>
-<div class="line"><span class="lineno">  182</span>            </div>
-<div class="line"><span class="lineno">  183</span>            <span class="keywordflow">if</span> (effect.hasChanges()) {</div>
-<div class="line"><span class="lineno">  184</span>                result.map.put(person, effect);</div>
-<div class="line"><span class="lineno">  185</span>            }</div>
-<div class="line"><span class="lineno">  186</span>        }</div>
-<div class="line"><span class="lineno">  187</span>        <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">  188</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeOfficerEffect_html_a00f67d59a22f5283d92b356f07b23f06"><div class="ttname"><a href="../../df/d26/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeOfficerEffect.html#a00f67d59a22f5283d92b356f07b23f06">com.fs.starfarer.api.characters.SkillsChangeOfficerEffect.getNumEliteSkills</a></div><div class="ttdeci">int getNumEliteSkills(PersonAPI person)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dd4/SkillsChangeOfficerEffect_8java_source.html#l00073">SkillsChangeOfficerEffect.java:73</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeOfficerEffect_html_a90cfa0d9e400d88397302f7c80652083"><div class="ttname"><a href="../../df/d26/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeOfficerEffect.html#a90cfa0d9e400d88397302f7c80652083">com.fs.starfarer.api.characters.SkillsChangeOfficerEffect.getMaxEliteSkills</a></div><div class="ttdeci">int getMaxEliteSkills(MutableCharacterStatsAPI stats)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dd4/SkillsChangeOfficerEffect_8java_source.html#l00068">SkillsChangeOfficerEffect.java:68</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeOfficerEffect_html_adfffdda09a58c8e80269e299ce7d76c2"><div class="ttname"><a href="../../df/d26/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeOfficerEffect.html#adfffdda09a58c8e80269e299ce7d76c2">com.fs.starfarer.api.characters.SkillsChangeOfficerEffect.getMaxLevel</a></div><div class="ttdeci">int getMaxLevel(MutableCharacterStatsAPI stats)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dd4/SkillsChangeOfficerEffect_8java_source.html#l00063">SkillsChangeOfficerEffect.java:63</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a39a7a6f48c697560a54d5b143cf9d295" name="a39a7a6f48c697560a54d5b143cf9d295"></a>
@@ -401,16 +264,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/dd4/SkillsChangeOfficerEffect_8java_source.html#l00052">52</a> of file <a class="el" href="../../dd/dd4/SkillsChangeOfficerEffect_8java_source.html">SkillsChangeOfficerEffect.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   52</span>                                                              {</div>
-<div class="line"><span class="lineno">   53</span>        String key = getClass().getSimpleName();</div>
-<div class="line"><span class="lineno">   54</span>        OfficerDataMap map = (OfficerDataMap)dataMap.get(key);</div>
-<div class="line"><span class="lineno">   55</span>        <span class="keywordflow">if</span> (map == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   56</span>            map = <span class="keyword">new</span> OfficerDataMap();</div>
-<div class="line"><span class="lineno">   57</span>            dataMap.put(key, map);</div>
-<div class="line"><span class="lineno">   58</span>        }</div>
-<div class="line"><span class="lineno">   59</span>        <span class="keywordflow">return</span> map;</div>
-<div class="line"><span class="lineno">   60</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a90cfa0d9e400d88397302f7c80652083" name="a90cfa0d9e400d88397302f7c80652083"></a>
@@ -430,11 +284,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/dd4/SkillsChangeOfficerEffect_8java_source.html#l00068">68</a> of file <a class="el" href="../../dd/dd4/SkillsChangeOfficerEffect_8java_source.html">SkillsChangeOfficerEffect.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   68</span>                                                                 {</div>
-<div class="line"><span class="lineno">   69</span>        <span class="keywordtype">int</span> bonus = (int) stats.getDynamic().getMod(Stats.OFFICER_MAX_ELITE_SKILLS_MOD).computeEffective(0);</div>
-<div class="line"><span class="lineno">   70</span>        <span class="keywordflow">return</span> (<span class="keywordtype">int</span>) Global.getSettings().getFloat(<span class="stringliteral">&quot;officerMaxEliteSkills&quot;</span>) + bonus;</div>
-<div class="line"><span class="lineno">   71</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="adfffdda09a58c8e80269e299ce7d76c2" name="adfffdda09a58c8e80269e299ce7d76c2"></a>
@@ -454,11 +304,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/dd4/SkillsChangeOfficerEffect_8java_source.html#l00063">63</a> of file <a class="el" href="../../dd/dd4/SkillsChangeOfficerEffect_8java_source.html">SkillsChangeOfficerEffect.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   63</span>                                                           {</div>
-<div class="line"><span class="lineno">   64</span>        <span class="keywordtype">int</span> bonus = (int) stats.getDynamic().getMod(Stats.OFFICER_MAX_LEVEL_MOD).computeEffective(0);</div>
-<div class="line"><span class="lineno">   65</span>        <span class="keywordflow">return</span> (<span class="keywordtype">int</span>) Global.getSettings().getFloat(<span class="stringliteral">&quot;officerMaxLevel&quot;</span>) + bonus;</div>
-<div class="line"><span class="lineno">   66</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a00f67d59a22f5283d92b356f07b23f06" name="a00f67d59a22f5283d92b356f07b23f06"></a>
@@ -478,16 +324,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/dd4/SkillsChangeOfficerEffect_8java_source.html#l00073">73</a> of file <a class="el" href="../../dd/dd4/SkillsChangeOfficerEffect_8java_source.html">SkillsChangeOfficerEffect.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   73</span>                                                   {</div>
-<div class="line"><span class="lineno">   74</span>        <span class="keywordtype">int</span> num = 0;</div>
-<div class="line"><span class="lineno">   75</span>        <span class="keywordflow">for</span> (SkillLevelAPI sl : person.getStats().getSkillsCopy()) {</div>
-<div class="line"><span class="lineno">   76</span>            <span class="keywordflow">if</span> (sl.getLevel() &gt;= 2f) {</div>
-<div class="line"><span class="lineno">   77</span>                num++;</div>
-<div class="line"><span class="lineno">   78</span>            }</div>
-<div class="line"><span class="lineno">   79</span>        }</div>
-<div class="line"><span class="lineno">   80</span>        <span class="keywordflow">return</span> num;</div>
-<div class="line"><span class="lineno">   81</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a3935cc647f154a96623e52d876a385ae" name="a3935cc647f154a96623e52d876a385ae"></a>
@@ -519,11 +356,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/db6/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1BaseSkillsChangeEffect.html#a79eebc243149f67034d141f82b82c875">com.fs.starfarer.api.characters.BaseSkillsChangeEffect</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/dd4/SkillsChangeOfficerEffect_8java_source.html#l00192">192</a> of file <a class="el" href="../../dd/dd4/SkillsChangeOfficerEffect_8java_source.html">SkillsChangeOfficerEffect.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  192</span>                                                                                          {</div>
-<div class="line"><span class="lineno">  193</span>        <span class="keywordflow">return</span> !<a class="code hl_function" href="../../df/d26/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeOfficerEffect.html#a2456c1fdd234a8e105f2a1f9cceeb8d8">getEffects</a>(from, to).map.isEmpty();</div>
-<div class="line"><span class="lineno">  194</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeOfficerEffect_html_a2456c1fdd234a8e105f2a1f9cceeb8d8"><div class="ttname"><a href="../../df/d26/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeOfficerEffect.html#a2456c1fdd234a8e105f2a1f9cceeb8d8">com.fs.starfarer.api.characters.SkillsChangeOfficerEffect.getEffects</a></div><div class="ttdeci">OfficerDataMap getEffects(MutableCharacterStatsAPI from, MutableCharacterStatsAPI to)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dd4/SkillsChangeOfficerEffect_8java_source.html#l00083">SkillsChangeOfficerEffect.java:83</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a1323b0901b452298e667df8d7a1b2e9a" name="a1323b0901b452298e667df8d7a1b2e9a"></a>
@@ -561,24 +394,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/db6/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1BaseSkillsChangeEffect.html#a015d204fd3a5b8eba2b91e1ac3e8c741">com.fs.starfarer.api.characters.BaseSkillsChangeEffect</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/dd4/SkillsChangeOfficerEffect_8java_source.html#l00327">327</a> of file <a class="el" href="../../dd/dd4/SkillsChangeOfficerEffect_8java_source.html">SkillsChangeOfficerEffect.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  327</span>                                                                                               {</div>
-<div class="line"><span class="lineno">  328</span>        OfficerDataMap map = <a class="code hl_function" href="../../df/d26/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeOfficerEffect.html#a39a7a6f48c697560a54d5b143cf9d295">getMap</a>(dataMap);</div>
-<div class="line"><span class="lineno">  329</span>        </div>
-<div class="line"><span class="lineno">  330</span>        <span class="keywordflow">for</span> (OfficerEffectData data : map.map.values()) {</div>
-<div class="line"><span class="lineno">  331</span>            <span class="keywordflow">if</span> (data.buttonMerc == button) {</div>
-<div class="line"><span class="lineno">  332</span>                data.makeMercenary = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  333</span>                data.buttonMerc.setChecked(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  334</span>                data.buttonOther.setChecked(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  335</span>                <span class="comment">//System.out.println(&quot;Merc button, &quot; + data.data.getPerson().getNameString());</span></div>
-<div class="line"><span class="lineno">  336</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (data.buttonOther == button) {</div>
-<div class="line"><span class="lineno">  337</span>                data.makeMercenary = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  338</span>                data.buttonMerc.setChecked(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  339</span>                data.buttonOther.setChecked(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  340</span>                <span class="comment">//System.out.println(&quot;Other button, &quot; + data.data.getPerson().getNameString());</span></div>
-<div class="line"><span class="lineno">  341</span>            }</div>
-<div class="line"><span class="lineno">  342</span>        }</div>
-<div class="line"><span class="lineno">  343</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a3f03dd2342f82c17225ddfd332704c32" name="a3f03dd2342f82c17225ddfd332704c32"></a>
@@ -622,142 +438,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/db6/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1BaseSkillsChangeEffect.html#a650c7aa391bb181d6c37ca6c43aac4eb">com.fs.starfarer.api.characters.BaseSkillsChangeEffect</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/dd4/SkillsChangeOfficerEffect_8java_source.html#l00197">197</a> of file <a class="el" href="../../dd/dd4/SkillsChangeOfficerEffect_8java_source.html">SkillsChangeOfficerEffect.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  197</span>                                                                                                                                            {</div>
-<div class="line"><span class="lineno">  198</span>        super.prepare();</div>
-<div class="line"><span class="lineno">  199</span>        </div>
-<div class="line"><span class="lineno">  200</span>        OfficerDataMap map = <a class="code hl_function" href="../../df/d26/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeOfficerEffect.html#a2456c1fdd234a8e105f2a1f9cceeb8d8">getEffects</a>(from, to);</div>
-<div class="line"><span class="lineno">  201</span>        <a class="code hl_function" href="../../df/d26/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeOfficerEffect.html#a19373a0e299d18eae45192f31103b3eb">setMap</a>(map, dataMap);</div>
-<div class="line"><span class="lineno">  202</span>        </div>
-<div class="line"><span class="lineno">  203</span>        <span class="keywordtype">float</span> bw = 470;</div>
-<div class="line"><span class="lineno">  204</span>        <span class="keywordtype">float</span> bh = 25;</div>
-<div class="line"><span class="lineno">  205</span>        <span class="keywordtype">float</span> pad = 3f;</div>
-<div class="line"><span class="lineno">  206</span>        <span class="keywordtype">float</span> opad = 10f;</div>
-<div class="line"><span class="lineno">  207</span>        </div>
-<div class="line"><span class="lineno">  208</span>        </div>
-<div class="line"><span class="lineno">  209</span>        info.addSectionHeading(<span class="stringliteral">&quot;Officers&quot;</span>, <a class="code hl_variable" href="../../da/db6/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1BaseSkillsChangeEffect.html#acb1c89c7c91884b6d0283fc58b24d173">base</a>, <a class="code hl_variable" href="../../da/db6/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1BaseSkillsChangeEffect.html#a3116342fe0a58237deb2a277ad9e17ad">dark</a>, Alignment.MID, 15f);</div>
-<div class="line"><span class="lineno">  210</span>        </div>
-<div class="line"><span class="lineno">  211</span>        info.addPara(<span class="stringliteral">&quot;Officers whose skills that exceed the new limits will have their excess skills removed, or become mercenaries on a temporary contract. &quot;</span></div>
-<div class="line"><span class="lineno">  212</span>                + <span class="stringliteral">&quot;Officers that already had those kinds of skills when acquired will not be affected.&quot;</span>, opad,</div>
-<div class="line"><span class="lineno">  213</span>                Misc.getNegativeHighlightColor(),</div>
-<div class="line"><span class="lineno">  214</span>                <span class="stringliteral">&quot;excess skills removed&quot;</span>);</div>
-<div class="line"><span class="lineno">  215</span>        <span class="keywordtype">float</span> initPad = opad;</div>
-<div class="line"><span class="lineno">  216</span>        <span class="keywordflow">for</span> (<span class="keyword">final</span> OfficerEffectData data : map.map.values()) {</div>
-<div class="line"><span class="lineno">  217</span>            <span class="keyword">final</span> PersonAPI person = data.data.getPerson();</div>
-<div class="line"><span class="lineno">  218</span>            String str = person.getRank() + <span class="stringliteral">&quot; &quot;</span> + person.getNameString();</div>
-<div class="line"><span class="lineno">  219</span>            <span class="keywordflow">if</span> (data.member == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  220</span>                str += <span class="stringliteral">&quot;, unassigned, will...&quot;</span>;</div>
-<div class="line"><span class="lineno">  221</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  222</span>                str += <span class="stringliteral">&quot;, commanding the &quot;</span> + data.member.getShipName() +</div>
-<div class="line"><span class="lineno">  223</span>                        <span class="stringliteral">&quot; (&quot;</span> + data.member.getHullSpec().getHullNameWithDashClass() + <span class="stringliteral">&quot;), will...&quot;</span>;</div>
-<div class="line"><span class="lineno">  224</span>            }</div>
-<div class="line"><span class="lineno">  225</span> </div>
-<div class="line"><span class="lineno">  226</span>            String mercText = <span class="stringliteral">&quot;Become a mercenary, drawing higher pay on a new contract&quot;</span>;</div>
-<div class="line"><span class="lineno">  227</span>            String otherText = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">  228</span>            </div>
-<div class="line"><span class="lineno">  229</span>            <span class="keywordflow">if</span> (data.unusable &amp;&amp; data.removeElite.isEmpty() &amp;&amp; data.removeSkills.isEmpty()) {</div>
-<div class="line"><span class="lineno">  230</span>                <span class="keywordflow">if</span> (data.member == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  231</span>                    otherText = <span class="stringliteral">&quot;Become unable to be assigned command of a ship&quot;</span>;</div>
-<div class="line"><span class="lineno">  232</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  233</span>                    otherText = <span class="stringliteral">&quot;Be relieved of command, and unable to be assigned command of a ship&quot;</span>;</div>
-<div class="line"><span class="lineno">  234</span>                }</div>
-<div class="line"><span class="lineno">  235</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  236</span>                String part1 = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">  237</span>                <span class="keywordflow">if</span> (data.unusable) {</div>
-<div class="line"><span class="lineno">  238</span>                    part1 = <span class="stringliteral">&quot;Be relieved of command, and&quot;</span>;</div>
-<div class="line"><span class="lineno">  239</span>                }</div>
-<div class="line"><span class="lineno">  240</span>                String part2 = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">  241</span>                <span class="keywordflow">if</span> (!data.removeElite.isEmpty() &amp;&amp; data.removeSkills.isEmpty()) {</div>
-<div class="line"><span class="lineno">  242</span>                    part2 = <span class="stringliteral">&quot; lose excess elite skill effects&quot;</span>;</div>
-<div class="line"><span class="lineno">  243</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (data.removeElite.isEmpty() &amp;&amp; !data.removeSkills.isEmpty()) {</div>
-<div class="line"><span class="lineno">  244</span>                    part2 = <span class="stringliteral">&quot; lose excess skills&quot;</span>;</div>
-<div class="line"><span class="lineno">  245</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  246</span>                    part2 = <span class="stringliteral">&quot; lose excess skills and elite skill effects&quot;</span>;</div>
-<div class="line"><span class="lineno">  247</span>                }</div>
-<div class="line"><span class="lineno">  248</span>                <span class="keywordflow">if</span> (part1.isEmpty()) {</div>
-<div class="line"><span class="lineno">  249</span>                    part2 = part2.trim();</div>
-<div class="line"><span class="lineno">  250</span>                    otherText = Misc.ucFirst(part2);</div>
-<div class="line"><span class="lineno">  251</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  252</span>                    otherText = part1 + part2;</div>
-<div class="line"><span class="lineno">  253</span>                }</div>
-<div class="line"><span class="lineno">  254</span>            }</div>
-<div class="line"><span class="lineno">  255</span>            </div>
-<div class="line"><span class="lineno">  256</span>            info.addPara(str, opad + 5f);</div>
-<div class="line"><span class="lineno">  257</span>        </div>
-<div class="line"><span class="lineno">  258</span>            <span class="keywordtype">float</span> indent = 40f;</div>
-<div class="line"><span class="lineno">  259</span>            data.buttonOther = info.addAreaCheckbox(otherText, <span class="keyword">new</span> Object(), <a class="code hl_variable" href="../../da/db6/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1BaseSkillsChangeEffect.html#acb1c89c7c91884b6d0283fc58b24d173">base</a>, <a class="code hl_variable" href="../../da/db6/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1BaseSkillsChangeEffect.html#a3116342fe0a58237deb2a277ad9e17ad">dark</a>, <a class="code hl_variable" href="../../da/db6/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1BaseSkillsChangeEffect.html#aa47d808c8d59021b45b3045451fadf61">bright</a>, bw, bh, opad, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  260</span>            data.buttonOther.getPosition().setXAlignOffset(indent);</div>
-<div class="line"><span class="lineno">  261</span>            </div>
-<div class="line"><span class="lineno">  262</span>            info.addTooltipToPrevious(<span class="keyword">new</span> TooltipCreator() {</div>
-<div class="line"><span class="lineno">  263</span>                <span class="keyword">public</span> <span class="keywordtype">boolean</span> isTooltipExpandable(Object tooltipParam) {</div>
-<div class="line"><span class="lineno">  264</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  265</span>                }</div>
-<div class="line"><span class="lineno">  266</span>                <span class="keyword">public</span> <span class="keywordtype">float</span> getTooltipWidth(Object tooltipParam) {</div>
-<div class="line"><span class="lineno">  267</span>                    <span class="keywordflow">return</span> 450;</div>
-<div class="line"><span class="lineno">  268</span>                }</div>
-<div class="line"><span class="lineno">  269</span>                <span class="keyword">public</span> <span class="keywordtype">void</span> createTooltip(TooltipMakerAPI tooltip, <span class="keywordtype">boolean</span> expanded, Object tooltipParam) {</div>
-<div class="line"><span class="lineno">  270</span>                    <span class="keywordtype">float</span> opad = 10f;</div>
-<div class="line"><span class="lineno">  271</span>                    <span class="keywordtype">float</span> pad = 3f;</div>
-<div class="line"><span class="lineno">  272</span>                    tooltip.addPara(<span class="stringliteral">&quot;This officer has the following skills:&quot;</span>, 0f);</div>
-<div class="line"><span class="lineno">  273</span>                    tooltip.addSkillPanel(person, pad);</div>
-<div class="line"><span class="lineno">  274</span>                    </div>
-<div class="line"><span class="lineno">  275</span>                    <span class="keywordflow">if</span> (!data.removeSkills.isEmpty()) {</div>
-<div class="line"><span class="lineno">  276</span>                        tooltip.addPara(<span class="stringliteral">&quot;They will lose the following skills:&quot;</span>, opad);</div>
-<div class="line"><span class="lineno">  277</span>                        PersonAPI fake = Global.getFactory().createPerson();</div>
-<div class="line"><span class="lineno">  278</span>                        <span class="keywordflow">for</span> (String skillId : data.removeSkills) {</div>
-<div class="line"><span class="lineno">  279</span>                            fake.getStats().setSkillLevel(skillId, person.getStats().getSkillLevel(skillId));</div>
-<div class="line"><span class="lineno">  280</span>                        }</div>
-<div class="line"><span class="lineno">  281</span>                        tooltip.addSkillPanel(fake, pad);</div>
-<div class="line"><span class="lineno">  282</span>                    }</div>
-<div class="line"><span class="lineno">  283</span>                    <span class="keywordflow">if</span> (!data.removeElite.isEmpty()) {</div>
-<div class="line"><span class="lineno">  284</span>                        tooltip.addPara(<span class="stringliteral">&quot;They will lose the elite effects of the following skills:&quot;</span>, opad);</div>
-<div class="line"><span class="lineno">  285</span>                        PersonAPI fake = Global.getFactory().createPerson();</div>
-<div class="line"><span class="lineno">  286</span>                        <span class="keywordflow">for</span> (String skillId : data.removeElite) {</div>
-<div class="line"><span class="lineno">  287</span>                            fake.getStats().setSkillLevel(skillId, person.getStats().getSkillLevel(skillId));</div>
-<div class="line"><span class="lineno">  288</span>                        }</div>
-<div class="line"><span class="lineno">  289</span>                        tooltip.addSkillPanel(fake, pad);</div>
-<div class="line"><span class="lineno">  290</span>                    }</div>
-<div class="line"><span class="lineno">  291</span>                }</div>
-<div class="line"><span class="lineno">  292</span>            }, TooltipLocation.RIGHT);</div>
-<div class="line"><span class="lineno">  293</span>            </div>
-<div class="line"><span class="lineno">  294</span>            <span class="comment">//data.buttonMerc = info.addAreaCheckbox(mercText, new Object(), base, dark, bright, bw, bh, pad, true);</span></div>
-<div class="line"><span class="lineno">  295</span>            data.buttonMerc = info.addAreaCheckbox(mercText, <span class="keyword">new</span> Object(), <a class="code hl_variable" href="../../da/db6/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1BaseSkillsChangeEffect.html#a24196dbca4b096bd9c9c53526e48b121">sBase</a>, <a class="code hl_variable" href="../../da/db6/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1BaseSkillsChangeEffect.html#adab3defffc8c5c51a240750527191829">sDark</a>, <a class="code hl_variable" href="../../da/db6/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1BaseSkillsChangeEffect.html#a8e06684de57c9d0749389643e9925348">sBright</a>, bw, bh, pad, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  296</span>            data.buttonOther.setChecked(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  297</span>            data.buttonMerc.setChecked(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  298</span>            </div>
-<div class="line"><span class="lineno">  299</span>            info.addTooltipToPrevious(<span class="keyword">new</span> TooltipCreator() {</div>
-<div class="line"><span class="lineno">  300</span>                <span class="keyword">public</span> <span class="keywordtype">boolean</span> isTooltipExpandable(Object tooltipParam) {</div>
-<div class="line"><span class="lineno">  301</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  302</span>                }</div>
-<div class="line"><span class="lineno">  303</span>                <span class="keyword">public</span> <span class="keywordtype">float</span> getTooltipWidth(Object tooltipParam) {</div>
-<div class="line"><span class="lineno">  304</span>                    <span class="keywordflow">return</span> 450;</div>
-<div class="line"><span class="lineno">  305</span>                }</div>
-<div class="line"><span class="lineno">  306</span>                <span class="keyword">public</span> <span class="keywordtype">void</span> createTooltip(TooltipMakerAPI tooltip, <span class="keywordtype">boolean</span> expanded, Object tooltipParam) {</div>
-<div class="line"><span class="lineno">  307</span>                    <span class="keywordtype">int</span> payPre = (int) Misc.getOfficerSalary(person, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  308</span>                    <span class="keywordtype">int</span> payPost = (int) Misc.getOfficerSalary(person, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  309</span>                    <span class="keywordtype">int</span> contractDur = (int) Global.getSettings().getFloat(<span class="stringliteral">&quot;officerMercContractDur&quot;</span>);</div>
-<div class="line"><span class="lineno">  310</span>                    tooltip.addPara(<span class="stringliteral">&quot;This officer&#39;s pay will be increased from %s to %s per month,&quot;</span></div>
-<div class="line"><span class="lineno">  311</span>                            + <span class="stringliteral">&quot; and they will want to leave after %s days, when their contract expires.&quot;</span>, 0f,</div>
-<div class="line"><span class="lineno">  312</span>                            Misc.getHighlightColor(), </div>
-<div class="line"><span class="lineno">  313</span>                            Misc.getDGSCredits(payPre),</div>
-<div class="line"><span class="lineno">  314</span>                            Misc.getDGSCredits(payPost),</div>
-<div class="line"><span class="lineno">  315</span>                            <span class="stringliteral">&quot;&quot;</span> + contractDur</div>
-<div class="line"><span class="lineno">  316</span>                            );</div>
-<div class="line"><span class="lineno">  317</span>                    tooltip.addPara(<span class="stringliteral">&quot;Extending the contract beyond that will require a %s.&quot;</span>, 10f,</div>
-<div class="line"><span class="lineno">  318</span>                            Misc.getStoryOptionColor(), Misc.STORY + <span class="stringliteral">&quot; point&quot;</span>);</div>
-<div class="line"><span class="lineno">  319</span>                }</div>
-<div class="line"><span class="lineno">  320</span>            }, TooltipLocation.RIGHT);</div>
-<div class="line"><span class="lineno">  321</span>            </div>
-<div class="line"><span class="lineno">  322</span>            info.addSpacer(0).getPosition().setXAlignOffset(-indent);</div>
-<div class="line"><span class="lineno">  323</span>        }</div>
-<div class="line"><span class="lineno">  324</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1BaseSkillsChangeEffect_html_a24196dbca4b096bd9c9c53526e48b121"><div class="ttname"><a href="../../da/db6/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1BaseSkillsChangeEffect.html#a24196dbca4b096bd9c9c53526e48b121">com.fs.starfarer.api.characters.BaseSkillsChangeEffect.sBase</a></div><div class="ttdeci">Color sBase</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dd0/BaseSkillsChangeEffect_8java_source.html#l00016">BaseSkillsChangeEffect.java:16</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1BaseSkillsChangeEffect_html_a3116342fe0a58237deb2a277ad9e17ad"><div class="ttname"><a href="../../da/db6/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1BaseSkillsChangeEffect.html#a3116342fe0a58237deb2a277ad9e17ad">com.fs.starfarer.api.characters.BaseSkillsChangeEffect.dark</a></div><div class="ttdeci">Color dark</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dd0/BaseSkillsChangeEffect_8java_source.html#l00014">BaseSkillsChangeEffect.java:14</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1BaseSkillsChangeEffect_html_a8e06684de57c9d0749389643e9925348"><div class="ttname"><a href="../../da/db6/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1BaseSkillsChangeEffect.html#a8e06684de57c9d0749389643e9925348">com.fs.starfarer.api.characters.BaseSkillsChangeEffect.sBright</a></div><div class="ttdeci">Color sBright</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dd0/BaseSkillsChangeEffect_8java_source.html#l00018">BaseSkillsChangeEffect.java:18</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1BaseSkillsChangeEffect_html_aa47d808c8d59021b45b3045451fadf61"><div class="ttname"><a href="../../da/db6/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1BaseSkillsChangeEffect.html#aa47d808c8d59021b45b3045451fadf61">com.fs.starfarer.api.characters.BaseSkillsChangeEffect.bright</a></div><div class="ttdeci">Color bright</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dd0/BaseSkillsChangeEffect_8java_source.html#l00015">BaseSkillsChangeEffect.java:15</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1BaseSkillsChangeEffect_html_acb1c89c7c91884b6d0283fc58b24d173"><div class="ttname"><a href="../../da/db6/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1BaseSkillsChangeEffect.html#acb1c89c7c91884b6d0283fc58b24d173">com.fs.starfarer.api.characters.BaseSkillsChangeEffect.base</a></div><div class="ttdeci">Color base</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dd0/BaseSkillsChangeEffect_8java_source.html#l00013">BaseSkillsChangeEffect.java:13</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1BaseSkillsChangeEffect_html_adab3defffc8c5c51a240750527191829"><div class="ttname"><a href="../../da/db6/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1BaseSkillsChangeEffect.html#adab3defffc8c5c51a240750527191829">com.fs.starfarer.api.characters.BaseSkillsChangeEffect.sDark</a></div><div class="ttdeci">Color sDark</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dd0/BaseSkillsChangeEffect_8java_source.html#l00017">BaseSkillsChangeEffect.java:17</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeOfficerEffect_html_a19373a0e299d18eae45192f31103b3eb"><div class="ttname"><a href="../../df/d26/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeOfficerEffect.html#a19373a0e299d18eae45192f31103b3eb">com.fs.starfarer.api.characters.SkillsChangeOfficerEffect.setMap</a></div><div class="ttdeci">void setMap(OfficerDataMap map, Map&lt; String, Object &gt; dataMap)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dd4/SkillsChangeOfficerEffect_8java_source.html#l00048">SkillsChangeOfficerEffect.java:48</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a19373a0e299d18eae45192f31103b3eb" name="a19373a0e299d18eae45192f31103b3eb"></a>
@@ -787,11 +468,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/dd4/SkillsChangeOfficerEffect_8java_source.html#l00048">48</a> of file <a class="el" href="../../dd/dd4/SkillsChangeOfficerEffect_8java_source.html">SkillsChangeOfficerEffect.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   48</span>                                                                        {</div>
-<div class="line"><span class="lineno">   49</span>        String key = getClass().getSimpleName();</div>
-<div class="line"><span class="lineno">   50</span>        dataMap.put(key, map);</div>
-<div class="line"><span class="lineno">   51</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -162,12 +163,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d54/MarkerData_8java_source.html#l00017">17</a> of file <a class="el" href="../../dc/d54/MarkerData_8java_source.html">MarkerData.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   17</span>                                                                  {</div>
-<div class="line"><span class="lineno">   18</span>        <span class="keyword">this</span>(<a class="code hl_variable" href="../../d8/dd6/classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MarkerData.html#a0f0ad527e67c18f2485e7f1fabc0a7ff">coordinates</a>, <a class="code hl_variable" href="../../d8/dd6/classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MarkerData.html#a78e32c32685e7224233d9259c4627895">location</a>, Global.getSector().getPlayerFaction().getBaseUIColor());</div>
-<div class="line"><span class="lineno">   19</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MarkerData_html_a0f0ad527e67c18f2485e7f1fabc0a7ff"><div class="ttname"><a href="../../d8/dd6/classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MarkerData.html#a0f0ad527e67c18f2485e7f1fabc0a7ff">com.fs.starfarer.api.ui.MarkerData.coordinates</a></div><div class="ttdeci">Vector2f coordinates</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d54/MarkerData_8java_source.html#l00013">MarkerData.java:13</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MarkerData_html_a78e32c32685e7224233d9259c4627895"><div class="ttname"><a href="../../d8/dd6/classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MarkerData.html#a78e32c32685e7224233d9259c4627895">com.fs.starfarer.api.ui.MarkerData.location</a></div><div class="ttdeci">LocationAPI location</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d54/MarkerData_8java_source.html#l00014">MarkerData.java:14</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ad09dda1c6462adf0633e35af7dc1e303" name="ad09dda1c6462adf0633e35af7dc1e303"></a>
@@ -203,17 +199,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d54/MarkerData_8java_source.html#l00020">20</a> of file <a class="el" href="../../dc/d54/MarkerData_8java_source.html">MarkerData.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   20</span>                                                                               {</div>
-<div class="line"><span class="lineno">   21</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d8/dd6/classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MarkerData.html#a471cfbaa8f0c1324fb15e11e77c2ff56">color</a> == <span class="keyword">null</span>) <a class="code hl_variable" href="../../d8/dd6/classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MarkerData.html#a471cfbaa8f0c1324fb15e11e77c2ff56">color</a> = Global.getSector().getPlayerFaction().getBaseUIColor();</div>
-<div class="line"><span class="lineno">   22</span>        this.coordinates = <a class="code hl_variable" href="../../d8/dd6/classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MarkerData.html#a0f0ad527e67c18f2485e7f1fabc0a7ff">coordinates</a>;</div>
-<div class="line"><span class="lineno">   23</span>        this.location = <a class="code hl_variable" href="../../d8/dd6/classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MarkerData.html#a78e32c32685e7224233d9259c4627895">location</a>;</div>
-<div class="line"><span class="lineno">   24</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="../../d8/dd6/classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MarkerData.html#a78e32c32685e7224233d9259c4627895">location</a> == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   25</span>            this.location = Global.getSector().getHyperspace();</div>
-<div class="line"><span class="lineno">   26</span>        }</div>
-<div class="line"><span class="lineno">   27</span>        this.color = Misc.scaleColorOnly(<a class="code hl_variable" href="../../d8/dd6/classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MarkerData.html#a471cfbaa8f0c1324fb15e11e77c2ff56">color</a>, 0.67f);</div>
-<div class="line"><span class="lineno">   28</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MarkerData_html_a471cfbaa8f0c1324fb15e11e77c2ff56"><div class="ttname"><a href="../../d8/dd6/classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MarkerData.html#a471cfbaa8f0c1324fb15e11e77c2ff56">com.fs.starfarer.api.ui.MarkerData.color</a></div><div class="ttdeci">Color color</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d54/MarkerData_8java_source.html#l00015">MarkerData.java:15</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a456859aa1a061dbc444bb3facd84b7ba" name="a456859aa1a061dbc444bb3facd84b7ba"></a>
@@ -255,17 +241,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d54/MarkerData_8java_source.html#l00029">29</a> of file <a class="el" href="../../dc/d54/MarkerData_8java_source.html">MarkerData.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   29</span>                                                                                            {</div>
-<div class="line"><span class="lineno">   30</span>        this.coordinates = <a class="code hl_variable" href="../../d8/dd6/classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MarkerData.html#a0f0ad527e67c18f2485e7f1fabc0a7ff">coordinates</a>;</div>
-<div class="line"><span class="lineno">   31</span>        this.location = <a class="code hl_variable" href="../../d8/dd6/classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MarkerData.html#a78e32c32685e7224233d9259c4627895">location</a>;</div>
-<div class="line"><span class="lineno">   32</span>        this.color = Misc.scaleColorOnly(<a class="code hl_variable" href="../../d8/dd6/classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MarkerData.html#a471cfbaa8f0c1324fb15e11e77c2ff56">color</a>, 0.67f);</div>
-<div class="line"><span class="lineno">   33</span>        this.scale = <a class="code hl_variable" href="../../d8/dd6/classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MarkerData.html#a6be6a43734c1155661617a2ea7ff7953">scale</a>;</div>
-<div class="line"><span class="lineno">   34</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="../../d8/dd6/classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MarkerData.html#a78e32c32685e7224233d9259c4627895">location</a> == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   35</span>            this.location = Global.getSector().getHyperspace();</div>
-<div class="line"><span class="lineno">   36</span>        }</div>
-<div class="line"><span class="lineno">   37</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MarkerData_html_a6be6a43734c1155661617a2ea7ff7953"><div class="ttname"><a href="../../d8/dd6/classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MarkerData.html#a6be6a43734c1155661617a2ea7ff7953">com.fs.starfarer.api.ui.MarkerData.scale</a></div><div class="ttdeci">float scale</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d54/MarkerData_8java_source.html#l00016">MarkerData.java:16</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5bb5be1aea083062bef509a607012a8f" name="a5bb5be1aea083062bef509a607012a8f"></a>
@@ -301,17 +277,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d54/MarkerData_8java_source.html#l00038">38</a> of file <a class="el" href="../../dc/d54/MarkerData_8java_source.html">MarkerData.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   38</span>                                                                               {</div>
-<div class="line"><span class="lineno">   39</span>        this.coordinates = <a class="code hl_variable" href="../../d8/dd6/classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MarkerData.html#a0f0ad527e67c18f2485e7f1fabc0a7ff">coordinates</a>;</div>
-<div class="line"><span class="lineno">   40</span>        this.location = <a class="code hl_variable" href="../../d8/dd6/classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MarkerData.html#a78e32c32685e7224233d9259c4627895">location</a>;</div>
-<div class="line"><span class="lineno">   41</span>        this.scale = <a class="code hl_variable" href="../../d8/dd6/classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MarkerData.html#a6be6a43734c1155661617a2ea7ff7953">scale</a>;</div>
-<div class="line"><span class="lineno">   42</span>        <a class="code hl_variable" href="../../d8/dd6/classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MarkerData.html#a471cfbaa8f0c1324fb15e11e77c2ff56">color</a> = Global.getSector().getPlayerFaction().getBaseUIColor();</div>
-<div class="line"><span class="lineno">   43</span>        this.color = Misc.scaleColorOnly(<a class="code hl_variable" href="../../d8/dd6/classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MarkerData.html#a471cfbaa8f0c1324fb15e11e77c2ff56">color</a>, 0.67f);</div>
-<div class="line"><span class="lineno">   44</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="../../d8/dd6/classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MarkerData.html#a78e32c32685e7224233d9259c4627895">location</a> == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   45</span>            this.location = Global.getSector().getHyperspace();</div>
-<div class="line"><span class="lineno">   46</span>        }</div>
-<div class="line"><span class="lineno">   47</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -340,14 +306,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d54/MarkerData_8java_source.html#l00048">48</a> of file <a class="el" href="../../dc/d54/MarkerData_8java_source.html">MarkerData.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   48</span>                                                            {</div>
-<div class="line"><span class="lineno">   49</span>        <span class="keywordtype">float</span> size = market.getSize();</div>
-<div class="line"><span class="lineno">   50</span>        <span class="keywordtype">float</span> <a class="code hl_variable" href="../../d8/dd6/classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MarkerData.html#a6be6a43734c1155661617a2ea7ff7953">scale</a> = size / 8f;</div>
-<div class="line"><span class="lineno">   51</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d8/dd6/classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MarkerData.html#a6be6a43734c1155661617a2ea7ff7953">scale</a> &lt; 0.33f) <a class="code hl_variable" href="../../d8/dd6/classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MarkerData.html#a6be6a43734c1155661617a2ea7ff7953">scale</a> = 0.33f;</div>
-<div class="line"><span class="lineno">   52</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d8/dd6/classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MarkerData.html#a6be6a43734c1155661617a2ea7ff7953">scale</a> &gt; 1f) <a class="code hl_variable" href="../../d8/dd6/classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MarkerData.html#a6be6a43734c1155661617a2ea7ff7953">scale</a> = 1f;</div>
-<div class="line"><span class="lineno">   53</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d8/dd6/classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MarkerData.html#a6be6a43734c1155661617a2ea7ff7953">scale</a>;</div>
-<div class="line"><span class="lineno">   54</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

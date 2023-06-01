@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -233,30 +234,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d2f/MiscAcademyFleetCreator_8java_source.html#l00100">100</a> of file <a class="el" href="../../d7/d2f/MiscAcademyFleetCreator_8java_source.html">MiscAcademyFleetCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  100</span>                                                                          {</div>
-<div class="line"><span class="lineno">  101</span>        MiscRouteData data = <span class="keyword">new</span> MiscRouteData(<a class="code hl_function" href="../../dc/d53/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1BaseMiscFleetCreatorPlugin.html#a1d7af6c35d6b024d5994df006d36c6c0">getId</a>());</div>
-<div class="line"><span class="lineno">  102</span>        data.from = from;</div>
-<div class="line"><span class="lineno">  103</span>        data.to = to;</div>
-<div class="line"><span class="lineno">  104</span>        </div>
-<div class="line"><span class="lineno">  105</span>        <span class="keywordflow">if</span> (from.getFaction().isHostileTo(Factions.INDEPENDENT)) {</div>
-<div class="line"><span class="lineno">  106</span>            data.factionId = from.getFactionId();</div>
-<div class="line"><span class="lineno">  107</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  108</span>            data.factionId = Factions.INDEPENDENT;</div>
-<div class="line"><span class="lineno">  109</span>        }</div>
-<div class="line"><span class="lineno">  110</span>        </div>
-<div class="line"><span class="lineno">  111</span>        <span class="comment">// in case the source colony is hostile to the Hegemony (which has Ancyra in the system)</span></div>
-<div class="line"><span class="lineno">  112</span>        data.smuggling = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  113</span>        </div>
-<div class="line"><span class="lineno">  114</span>        <span class="keywordtype">float</span> sizeBasis = from.getSize() / 8f;</div>
-<div class="line"><span class="lineno">  115</span>        sizeBasis *= 0.25f;</div>
-<div class="line"><span class="lineno">  116</span>        <span class="keywordflow">if</span> (sizeBasis &lt; 0.05f) sizeBasis = 0.05f;</div>
-<div class="line"><span class="lineno">  117</span>        <span class="keywordflow">if</span> (sizeBasis &gt; 0.25f) sizeBasis = 0.25f;</div>
-<div class="line"><span class="lineno">  118</span>        data.size = sizeBasis;</div>
-<div class="line"><span class="lineno">  119</span>        </div>
-<div class="line"><span class="lineno">  120</span>        <span class="keywordflow">return</span> data;</div>
-<div class="line"><span class="lineno">  121</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1BaseMiscFleetCreatorPlugin_html_a1d7af6c35d6b024d5994df006d36c6c0"><div class="ttname"><a href="../../dc/d53/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1BaseMiscFleetCreatorPlugin.html#a1d7af6c35d6b024d5994df006d36c6c0">com.fs.starfarer.api.impl.campaign.fleets.misc.BaseMiscFleetCreatorPlugin.getId</a></div><div class="ttdeci">String getId()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/ded/BaseMiscFleetCreatorPlugin_8java_source.html#l00014">BaseMiscFleetCreatorPlugin.java:14</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a25cb85ec9a9c2d22d548af652157f746" name="a25cb85ec9a9c2d22d548af652157f746"></a>
@@ -294,38 +272,7 @@ Static Public Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../dc/d53/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1BaseMiscFleetCreatorPlugin.html#a7113d55679c1bfca75dbefceef85aee6">com.fs.starfarer.api.impl.campaign.fleets.misc.BaseMiscFleetCreatorPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d2f/MiscAcademyFleetCreator_8java_source.html#l00068">68</a> of file <a class="el" href="../../d7/d2f/MiscAcademyFleetCreator_8java_source.html">MiscAcademyFleetCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   68</span>                                                                                                       {</div>
-<div class="line"><span class="lineno">   69</span>        MiscRouteData data = (MiscRouteData) route.getCustom();</div>
-<div class="line"><span class="lineno">   70</span> </div>
-<div class="line"><span class="lineno">   71</span>        FleetCreatorMission m = <span class="keyword">new</span> FleetCreatorMission(random);</div>
-<div class="line"><span class="lineno">   72</span>        m.beginFleet();</div>
-<div class="line"><span class="lineno">   73</span>        </div>
-<div class="line"><span class="lineno">   74</span>        </div>
-<div class="line"><span class="lineno">   75</span>        m.triggerCreateFleet(FleetSize.MEDIUM, FleetQuality.LOWER, data.factionId, </div>
-<div class="line"><span class="lineno">   76</span>                             FleetTypes.ACADEMY_FLEET, data.from.getLocationInHyperspace());</div>
-<div class="line"><span class="lineno">   77</span>        m.triggerSetFleetOfficers(OfficerNum.FC_ONLY, OfficerQuality.LOWER);</div>
-<div class="line"><span class="lineno">   78</span>        m.triggerSetFleetSizeFraction(data.size * 0.5f * (0.5f + random.nextFloat() * 0.5f));</div>
-<div class="line"><span class="lineno">   79</span>        m.triggerFleetSetNoFactionInName();</div>
-<div class="line"><span class="lineno">   80</span>        m.triggerSetTraderFleet();</div>
-<div class="line"><span class="lineno">   81</span>        m.triggerSetFleetComposition(0f, 0f, 0f, 1f, 0f);</div>
-<div class="line"><span class="lineno">   82</span>        m.triggerSetFleetMemoryValue(MemFlags.MEMORY_KEY_SOURCE_MARKET, data.from);</div>
-<div class="line"><span class="lineno">   83</span>        <span class="comment">//m.triggerSetFleetMemoryValue(&quot;$destShrine&quot;, data.to.getId());</span></div>
-<div class="line"><span class="lineno">   84</span>        m.triggerSetFleetMemoryValue(MemFlags.ACADEMY_FLEET, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   85</span> </div>
-<div class="line"><span class="lineno">   86</span>        WeightedRandomPicker&lt;String&gt; types = <span class="keyword">new</span> WeightedRandomPicker&lt;String&gt;(random);</div>
-<div class="line"><span class="lineno">   87</span>        types.add(<span class="stringliteral">&quot;supplies&quot;</span>);</div>
-<div class="line"><span class="lineno">   88</span>        types.add(<span class="stringliteral">&quot;students&quot;</span>);</div>
-<div class="line"><span class="lineno">   89</span>        types.add(<span class="stringliteral">&quot;visitors&quot;</span>);</div>
-<div class="line"><span class="lineno">   90</span>        m.triggerSetFleetMemoryValue(<a class="code hl_variable" href="../../df/d0d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscAcademyFleetCreator.html#a37df7685a8353d014d073e127e8ec20d">ACADEMY_FLEET_TYPE</a>, types.pick());</div>
-<div class="line"><span class="lineno">   91</span>        </div>
-<div class="line"><span class="lineno">   92</span>        </div>
-<div class="line"><span class="lineno">   93</span>        CampaignFleetAPI fleet = m.createFleet();</div>
-<div class="line"><span class="lineno">   94</span>        fleet.removeScriptsOfClass(MissionFleetAutoDespawn.class);</div>
-<div class="line"><span class="lineno">   95</span>        </div>
-<div class="line"><span class="lineno">   96</span>        <span class="keywordflow">return</span> fleet;</div>
-<div class="line"><span class="lineno">   97</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscAcademyFleetCreator_html_a37df7685a8353d014d073e127e8ec20d"><div class="ttname"><a href="../../df/d0d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscAcademyFleetCreator.html#a37df7685a8353d014d073e127e8ec20d">com.fs.starfarer.api.impl.campaign.fleets.misc.MiscAcademyFleetCreator.ACADEMY_FLEET_TYPE</a></div><div class="ttdeci">static String ACADEMY_FLEET_TYPE</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d2f/MiscAcademyFleetCreator_8java_source.html#l00031">MiscAcademyFleetCreator.java:31</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8a19928ef0379d6b1d4e3daf44339845" name="a8a19928ef0379d6b1d4e3daf44339845"></a>
@@ -357,25 +304,7 @@ Static Public Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../dc/d53/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1BaseMiscFleetCreatorPlugin.html#a383f845713b907f9bd33d4692792e419">com.fs.starfarer.api.impl.campaign.fleets.misc.BaseMiscFleetCreatorPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d2f/MiscAcademyFleetCreator_8java_source.html#l00050">50</a> of file <a class="el" href="../../d7/d2f/MiscAcademyFleetCreator_8java_source.html">MiscAcademyFleetCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   50</span>                                                                                         {</div>
-<div class="line"><span class="lineno">   51</span>        MarketAPI from = <a class="code hl_function" href="../../df/d0d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscAcademyFleetCreator.html#a77d665ce559d7c42c9be5cd6e13ca001">pickSourceMarket</a>(manager);</div>
-<div class="line"><span class="lineno">   52</span>        SectorEntityToken to = <a class="code hl_function" href="../../df/d0d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscAcademyFleetCreator.html#aafea2806faad84ed7d791b5db4b8e0b0">getAcademy</a>();</div>
-<div class="line"><span class="lineno">   53</span>        </div>
-<div class="line"><span class="lineno">   54</span>        <span class="keywordflow">if</span> (to == <span class="keyword">null</span> || to.getContainingLocation().hasTag(Tags.SYSTEM_CUT_OFF_FROM_HYPER)) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   55</span>        </div>
-<div class="line"><span class="lineno">   56</span>        </div>
-<div class="line"><span class="lineno">   57</span><span class="comment">//      from = Global.getSector().getEconomy().getMarket(&quot;chalcedon&quot;);</span></div>
-<div class="line"><span class="lineno">   58</span><span class="comment">//      to = Global.getSector().getEconomy().getMarket(&quot;eochu_bres&quot;).getPrimaryEntity();</span></div>
-<div class="line"><span class="lineno">   59</span><span class="comment">//      to = Global.getSector().getEntityById(&quot;beholder_station&quot;);</span></div>
-<div class="line"><span class="lineno">   60</span>        </div>
-<div class="line"><span class="lineno">   61</span>        MiscRouteData result = <a class="code hl_function" href="../../df/d0d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscAcademyFleetCreator.html#a358b703e72c314b46205567e6eacc921">createData</a>(from, to);</div>
-<div class="line"><span class="lineno">   62</span>        </div>
-<div class="line"><span class="lineno">   63</span>        <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">   64</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscAcademyFleetCreator_html_a358b703e72c314b46205567e6eacc921"><div class="ttname"><a href="../../df/d0d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscAcademyFleetCreator.html#a358b703e72c314b46205567e6eacc921">com.fs.starfarer.api.impl.campaign.fleets.misc.MiscAcademyFleetCreator.createData</a></div><div class="ttdeci">MiscRouteData createData(MarketAPI from, SectorEntityToken to)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d2f/MiscAcademyFleetCreator_8java_source.html#l00100">MiscAcademyFleetCreator.java:100</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscAcademyFleetCreator_html_a77d665ce559d7c42c9be5cd6e13ca001"><div class="ttname"><a href="../../df/d0d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscAcademyFleetCreator.html#a77d665ce559d7c42c9be5cd6e13ca001">com.fs.starfarer.api.impl.campaign.fleets.misc.MiscAcademyFleetCreator.pickSourceMarket</a></div><div class="ttdeci">MarketAPI pickSourceMarket(MiscFleetRouteManager manager)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d2f/MiscAcademyFleetCreator_8java_source.html#l00123">MiscAcademyFleetCreator.java:123</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscAcademyFleetCreator_html_aafea2806faad84ed7d791b5db4b8e0b0"><div class="ttname"><a href="../../df/d0d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscAcademyFleetCreator.html#aafea2806faad84ed7d791b5db4b8e0b0">com.fs.starfarer.api.impl.campaign.fleets.misc.MiscAcademyFleetCreator.getAcademy</a></div><div class="ttdeci">static SectorEntityToken getAcademy()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d2f/MiscAcademyFleetCreator_8java_source.html#l00043">MiscAcademyFleetCreator.java:43</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aafea2806faad84ed7d791b5db4b8e0b0" name="aafea2806faad84ed7d791b5db4b8e0b0"></a>
@@ -402,11 +331,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d2f/MiscAcademyFleetCreator_8java_source.html#l00043">43</a> of file <a class="el" href="../../d7/d2f/MiscAcademyFleetCreator_8java_source.html">MiscAcademyFleetCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   43</span>                                                 {</div>
-<div class="line"><span class="lineno">   44</span>        StarSystemAPI system = Global.getSector().getStarSystem(<span class="stringliteral">&quot;Galatia&quot;</span>);</div>
-<div class="line"><span class="lineno">   45</span>        <span class="keywordflow">return</span> system.getEntityById(<span class="stringliteral">&quot;station_galatia_academy&quot;</span>);</div>
-<div class="line"><span class="lineno">   46</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a30037288c35fff2daffca855ed888842" name="a30037288c35fff2daffca855ed888842"></a>
@@ -444,10 +369,7 @@ Static Public Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../dc/d53/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1BaseMiscFleetCreatorPlugin.html#a384dc5ced9f6e23e65ec676551edff2b">com.fs.starfarer.api.impl.campaign.fleets.misc.BaseMiscFleetCreatorPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d2f/MiscAcademyFleetCreator_8java_source.html#l00186">186</a> of file <a class="el" href="../../d7/d2f/MiscAcademyFleetCreator_8java_source.html">MiscAcademyFleetCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  186</span>                                                                                                            {</div>
-<div class="line"><span class="lineno">  187</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;orbiting Galatia Academy&quot;</span>;</div>
-<div class="line"><span class="lineno">  188</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aaa7fece8b3132946b3b4750897c76a87" name="aaa7fece8b3132946b3b4750897c76a87"></a>
@@ -485,10 +407,7 @@ Static Public Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../dc/d53/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1BaseMiscFleetCreatorPlugin.html#a930cb17eb2d3c6fa5bac7c71942c9e1e">com.fs.starfarer.api.impl.campaign.fleets.misc.BaseMiscFleetCreatorPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d2f/MiscAcademyFleetCreator_8java_source.html#l00182">182</a> of file <a class="el" href="../../d7/d2f/MiscAcademyFleetCreator_8java_source.html">MiscAcademyFleetCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  182</span>                                                                                                              {</div>
-<div class="line"><span class="lineno">  183</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;orbiting Galatia Academy&quot;</span>;</div>
-<div class="line"><span class="lineno">  184</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a31186e8088a788b68f4db12b25cc7bab" name="a31186e8088a788b68f4db12b25cc7bab"></a>
@@ -526,11 +445,7 @@ Static Public Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../dc/d53/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1BaseMiscFleetCreatorPlugin.html#a82f70b9747531a04dad9cb7fa9d1fff9">com.fs.starfarer.api.impl.campaign.fleets.misc.BaseMiscFleetCreatorPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d2f/MiscAcademyFleetCreator_8java_source.html#l00169">169</a> of file <a class="el" href="../../d7/d2f/MiscAcademyFleetCreator_8java_source.html">MiscAcademyFleetCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  169</span>                                                                                                        {</div>
-<div class="line"><span class="lineno">  170</span>        <span class="comment">//return &quot;orbiting &quot; + data.from.getName();</span></div>
-<div class="line"><span class="lineno">  171</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;returned from voyage to Galatia Academy&quot;</span>;</div>
-<div class="line"><span class="lineno">  172</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac4c3515e4685d8c32ce1d36ce3d9f9ec" name="ac4c3515e4685d8c32ce1d36ce3d9f9ec"></a>
@@ -551,10 +466,7 @@ Static Public Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../dc/d53/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1BaseMiscFleetCreatorPlugin.html#aac233004a382f14d925104e70a8b0690">com.fs.starfarer.api.impl.campaign.fleets.misc.BaseMiscFleetCreatorPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d2f/MiscAcademyFleetCreator_8java_source.html#l00034">34</a> of file <a class="el" href="../../d7/d2f/MiscAcademyFleetCreator_8java_source.html">MiscAcademyFleetCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   34</span>                                {</div>
-<div class="line"><span class="lineno">   35</span>        <span class="keywordflow">return</span> Global.getSettings().getFloat(<span class="stringliteral">&quot;miscFleetAcademyFrequency&quot;</span>);</div>
-<div class="line"><span class="lineno">   36</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aeb391c17b8a3131f52d9831512da2ad6" name="aeb391c17b8a3131f52d9831512da2ad6"></a>
@@ -575,10 +487,7 @@ Static Public Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../dc/d53/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1BaseMiscFleetCreatorPlugin.html#af211fe4ee6c7cfc52bf67ffa84781cd2">com.fs.starfarer.api.impl.campaign.fleets.misc.BaseMiscFleetCreatorPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d2f/MiscAcademyFleetCreator_8java_source.html#l00039">39</a> of file <a class="el" href="../../d7/d2f/MiscAcademyFleetCreator_8java_source.html">MiscAcademyFleetCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   39</span>                                            {</div>
-<div class="line"><span class="lineno">   40</span>        <span class="keywordflow">return</span> Global.getSettings().getInt(<span class="stringliteral">&quot;miscFleetAcademyMaxFleets&quot;</span>);</div>
-<div class="line"><span class="lineno">   41</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9f66982e0263754d7eac4387ff931b6f" name="a9f66982e0263754d7eac4387ff931b6f"></a>
@@ -616,11 +525,7 @@ Static Public Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../dc/d53/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1BaseMiscFleetCreatorPlugin.html#adfea3a420d8b83d622d8723dbbc7ffd4">com.fs.starfarer.api.impl.campaign.fleets.misc.BaseMiscFleetCreatorPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d2f/MiscAcademyFleetCreator_8java_source.html#l00164">164</a> of file <a class="el" href="../../d7/d2f/MiscAcademyFleetCreator_8java_source.html">MiscAcademyFleetCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  164</span>                                                                                                          {</div>
-<div class="line"><span class="lineno">  165</span>        String type = fleet.getMemoryWithoutUpdate().getString(<a class="code hl_variable" href="../../df/d0d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscAcademyFleetCreator.html#a37df7685a8353d014d073e127e8ec20d">ACADEMY_FLEET_TYPE</a>);</div>
-<div class="line"><span class="lineno">  166</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;preparing for voyage to Galatia Academy&quot;</span>;</div>
-<div class="line"><span class="lineno">  167</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a7859214496538a6507183cd3d5170a98" name="a7859214496538a6507183cd3d5170a98"></a>
@@ -658,10 +563,7 @@ Static Public Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../dc/d53/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1BaseMiscFleetCreatorPlugin.html#a2bce6a57d982239a845083deae1c6ddb">com.fs.starfarer.api.impl.campaign.fleets.misc.BaseMiscFleetCreatorPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d2f/MiscAcademyFleetCreator_8java_source.html#l00178">178</a> of file <a class="el" href="../../d7/d2f/MiscAcademyFleetCreator_8java_source.html">MiscAcademyFleetCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  178</span>                                                                                                              {</div>
-<div class="line"><span class="lineno">  179</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;traveling to &quot;</span> + data.from.getName();</div>
-<div class="line"><span class="lineno">  180</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8a83a86f2178da254d67ee7ebf088a8e" name="a8a83a86f2178da254d67ee7ebf088a8e"></a>
@@ -699,10 +601,7 @@ Static Public Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../dc/d53/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1BaseMiscFleetCreatorPlugin.html#ab957a2c5dfa568764e26c43ecc72f87f">com.fs.starfarer.api.impl.campaign.fleets.misc.BaseMiscFleetCreatorPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d2f/MiscAcademyFleetCreator_8java_source.html#l00174">174</a> of file <a class="el" href="../../d7/d2f/MiscAcademyFleetCreator_8java_source.html">MiscAcademyFleetCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  174</span>                                                                                                              {</div>
-<div class="line"><span class="lineno">  175</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;traveling to Galatia Academy&quot;</span>;</div>
-<div class="line"><span class="lineno">  176</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a77d665ce559d7c42c9be5cd6e13ca001" name="a77d665ce559d7c42c9be5cd6e13ca001"></a>
@@ -722,30 +621,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d2f/MiscAcademyFleetCreator_8java_source.html#l00123">123</a> of file <a class="el" href="../../d7/d2f/MiscAcademyFleetCreator_8java_source.html">MiscAcademyFleetCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  123</span>                                                                     {</div>
-<div class="line"><span class="lineno">  124</span>        WeightedRandomPicker&lt;MarketAPI&gt; markets = <span class="keyword">new</span> WeightedRandomPicker&lt;MarketAPI&gt;(manager.getRandom());</div>
-<div class="line"><span class="lineno">  125</span>        <span class="keywordflow">for</span> (MarketAPI market : Global.getSector().getEconomy().getMarketsCopy()) {</div>
-<div class="line"><span class="lineno">  126</span>            <span class="keywordflow">if</span> (market.isHidden()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  127</span>            <span class="keywordflow">if</span> (!market.hasSpaceport()) <span class="keywordflow">continue</span>; <span class="comment">// markets w/o spaceports don&#39;t launch fleets</span></div>
-<div class="line"><span class="lineno">  128</span>            <span class="keywordflow">if</span> (market.getContainingLocation().hasTag(Tags.SYSTEM_CUT_OFF_FROM_HYPER)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  129</span>            </div>
-<div class="line"><span class="lineno">  130</span>            <span class="keywordflow">if</span> (manager.getTimeout(<a class="code hl_function" href="../../dc/d53/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1BaseMiscFleetCreatorPlugin.html#a1d7af6c35d6b024d5994df006d36c6c0">getId</a>()).contains(market.getId())) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  131</span>            </div>
-<div class="line"><span class="lineno">  132</span>            <span class="comment">// use this for academy fleets also</span></div>
-<div class="line"><span class="lineno">  133</span>            <span class="keywordflow">if</span> (SharedData.getData().getMarketsWithoutTradeFleetSpawn().contains(market.getId())) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  134</span>            </div>
-<div class="line"><span class="lineno">  135</span>            <span class="keywordtype">float</span> distLY = Misc.getDistanceToPlayerLY(market.getPrimaryEntity());</div>
-<div class="line"><span class="lineno">  136</span>            <span class="keywordtype">float</span> mult = 1f - Math.min(0.99f, distLY / 10f);</div>
-<div class="line"><span class="lineno">  137</span>            </div>
-<div class="line"><span class="lineno">  138</span>            <span class="keywordflow">if</span> (market.getFaction().isHostileTo(Factions.INDEPENDENT)) {</div>
-<div class="line"><span class="lineno">  139</span>                mult *= 0.2f;</div>
-<div class="line"><span class="lineno">  140</span>            }</div>
-<div class="line"><span class="lineno">  141</span>            </div>
-<div class="line"><span class="lineno">  142</span>            markets.add(market, market.getSize() * mult);</div>
-<div class="line"><span class="lineno">  143</span>        }</div>
-<div class="line"><span class="lineno">  144</span>        <span class="keywordflow">return</span> markets.pick();</div>
-<div class="line"><span class="lineno">  145</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af75eb444da269152be9c8bddf7198b04" name="af75eb444da269152be9c8bddf7198b04"></a>
@@ -789,21 +665,7 @@ Static Public Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../dc/d53/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1BaseMiscFleetCreatorPlugin.html#aeefcfb210aef772260bf0110ace62274">com.fs.starfarer.api.impl.campaign.fleets.misc.BaseMiscFleetCreatorPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d2f/MiscAcademyFleetCreator_8java_source.html#l00148">148</a> of file <a class="el" href="../../d7/d2f/MiscAcademyFleetCreator_8java_source.html">MiscAcademyFleetCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  148</span>                                                                                                                                              {</div>
-<div class="line"><span class="lineno">  149</span>        RouteData route = RouteManager.getInstance().getRoute(manager.getRouteSourceId(), fleet);</div>
-<div class="line"><span class="lineno">  150</span>        <span class="keywordflow">if</span> (route == <span class="keyword">null</span> || !(route.getCustom() instanceof MiscRouteData)) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  151</span>        </div>
-<div class="line"><span class="lineno">  152</span>        <span class="keywordflow">if</span> (route.isExpired()) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  153</span>        <span class="keywordflow">if</span> (!battle.isPlayerInvolved()) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  154</span> </div>
-<div class="line"><span class="lineno">  155</span>        <span class="comment">// player was involved, no the opposite side of the pilgrim fleet</span></div>
-<div class="line"><span class="lineno">  156</span>        <span class="keywordflow">if</span> (battle.getNonPlayerSideSnapshot().contains(fleet)) {</div>
-<div class="line"><span class="lineno">  157</span>            MiscRouteData data = (MiscRouteData) route.getCustom();</div>
-<div class="line"><span class="lineno">  158</span>            </div>
-<div class="line"><span class="lineno">  159</span>            <span class="comment">// possible TODO: some kind of response, depending?</span></div>
-<div class="line"><span class="lineno">  160</span>        }</div>
-<div class="line"><span class="lineno">  161</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

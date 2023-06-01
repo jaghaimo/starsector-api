@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -182,16 +183,7 @@ Static Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d59/CombatListenerUtil_8java_source.html#l00170">170</a> of file <a class="el" href="../../dc/d59/CombatListenerUtil_8java_source.html">CombatListenerUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  170</span>                                                                                                            {</div>
-<div class="line"><span class="lineno">  171</span>        <span class="keywordtype">int</span> cost = currCost;</div>
-<div class="line"><span class="lineno">  172</span>        <span class="keywordflow">if</span> (stats != <span class="keyword">null</span> &amp;&amp; stats.getListenerManager() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  173</span>            <span class="keywordflow">for</span> (FighterOPCostModifier x : <span class="keyword">new</span> ArrayList&lt;FighterOPCostModifier&gt;(stats.getListeners(FighterOPCostModifier.class))) {</div>
-<div class="line"><span class="lineno">  174</span>                cost = x.getFighterOPCost(stats, fighter, cost);</div>
-<div class="line"><span class="lineno">  175</span>            }</div>
-<div class="line"><span class="lineno">  176</span>        }</div>
-<div class="line"><span class="lineno">  177</span>        <span class="keywordflow">return</span> cost;</div>
-<div class="line"><span class="lineno">  178</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9618ebfe0f277225b5505387f6149f46" name="a9618ebfe0f277225b5505387f6149f46"></a>
@@ -229,16 +221,7 @@ Static Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d59/CombatListenerUtil_8java_source.html#l00150">150</a> of file <a class="el" href="../../dc/d59/CombatListenerUtil_8java_source.html">CombatListenerUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  150</span>                                                                                  {</div>
-<div class="line"><span class="lineno">  151</span>        <span class="keywordtype">float</span> mod = 0f;</div>
-<div class="line"><span class="lineno">  152</span>        <span class="keywordflow">if</span> (ship != <span class="keyword">null</span> &amp;&amp; ship.getListenerManager() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  153</span>            <span class="keywordflow">for</span> (WeaponBaseRangeModifier x : <span class="keyword">new</span> ArrayList&lt;WeaponBaseRangeModifier&gt;(ship.getListeners(WeaponBaseRangeModifier.class))) {</div>
-<div class="line"><span class="lineno">  154</span>                mod += x.getWeaponBaseRangeFlatMod(ship, weapon);</div>
-<div class="line"><span class="lineno">  155</span>            }</div>
-<div class="line"><span class="lineno">  156</span>        }</div>
-<div class="line"><span class="lineno">  157</span>        <span class="keywordflow">return</span> mod;</div>
-<div class="line"><span class="lineno">  158</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9374f7b31ceee6c4685bec7b97afec04" name="a9374f7b31ceee6c4685bec7b97afec04"></a>
@@ -276,16 +259,7 @@ Static Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d59/CombatListenerUtil_8java_source.html#l00140">140</a> of file <a class="el" href="../../dc/d59/CombatListenerUtil_8java_source.html">CombatListenerUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  140</span>                                                                                  {</div>
-<div class="line"><span class="lineno">  141</span>        <span class="keywordtype">float</span> mod = 1f;</div>
-<div class="line"><span class="lineno">  142</span>        <span class="keywordflow">if</span> (ship != <span class="keyword">null</span> &amp;&amp; ship.getListenerManager() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  143</span>            <span class="keywordflow">for</span> (WeaponBaseRangeModifier x : <span class="keyword">new</span> ArrayList&lt;WeaponBaseRangeModifier&gt;(ship.getListeners(WeaponBaseRangeModifier.class))) {</div>
-<div class="line"><span class="lineno">  144</span>                mod *= x.getWeaponBaseRangeMultMod(ship, weapon);</div>
-<div class="line"><span class="lineno">  145</span>            }</div>
-<div class="line"><span class="lineno">  146</span>        }</div>
-<div class="line"><span class="lineno">  147</span>        <span class="keywordflow">return</span> mod;</div>
-<div class="line"><span class="lineno">  148</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ad1fe9653653d5166852f86ec57b4d87d" name="ad1fe9653653d5166852f86ec57b4d87d"></a>
@@ -323,16 +297,7 @@ Static Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d59/CombatListenerUtil_8java_source.html#l00130">130</a> of file <a class="el" href="../../dc/d59/CombatListenerUtil_8java_source.html">CombatListenerUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  130</span>                                                                                     {</div>
-<div class="line"><span class="lineno">  131</span>        <span class="keywordtype">float</span> mod = 0f;</div>
-<div class="line"><span class="lineno">  132</span>        <span class="keywordflow">if</span> (ship != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  133</span>            <span class="keywordflow">for</span> (WeaponBaseRangeModifier x : <span class="keyword">new</span> ArrayList&lt;WeaponBaseRangeModifier&gt;(ship.getListeners(WeaponBaseRangeModifier.class))) {</div>
-<div class="line"><span class="lineno">  134</span>                mod += x.getWeaponBaseRangePercentMod(ship, weapon);</div>
-<div class="line"><span class="lineno">  135</span>            }</div>
-<div class="line"><span class="lineno">  136</span>        }</div>
-<div class="line"><span class="lineno">  137</span>        <span class="keywordflow">return</span> mod;</div>
-<div class="line"><span class="lineno">  138</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9eb04877e9e6a1090e34cec409da0e0f" name="a9eb04877e9e6a1090e34cec409da0e0f"></a>
@@ -376,16 +341,7 @@ Static Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d59/CombatListenerUtil_8java_source.html#l00160">160</a> of file <a class="el" href="../../dc/d59/CombatListenerUtil_8java_source.html">CombatListenerUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  160</span>                                                                                                     {</div>
-<div class="line"><span class="lineno">  161</span>        <span class="keywordtype">int</span> cost = currCost;</div>
-<div class="line"><span class="lineno">  162</span>        <span class="keywordflow">if</span> (stats != <span class="keyword">null</span> &amp;&amp; stats.getListenerManager() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  163</span>            <span class="keywordflow">for</span> (WeaponOPCostModifier x : <span class="keyword">new</span> ArrayList&lt;WeaponOPCostModifier&gt;(stats.getListeners(WeaponOPCostModifier.class))) {</div>
-<div class="line"><span class="lineno">  164</span>                cost = x.getWeaponOPCost(stats, weapon, cost);</div>
-<div class="line"><span class="lineno">  165</span>            }</div>
-<div class="line"><span class="lineno">  166</span>        }</div>
-<div class="line"><span class="lineno">  167</span>        <span class="keywordflow">return</span> cost;</div>
-<div class="line"><span class="lineno">  168</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9689273f0a680c50fe8094cd5c106388" name="a9689273f0a680c50fe8094cd5c106388"></a>
@@ -423,16 +379,7 @@ Static Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d59/CombatListenerUtil_8java_source.html#l00119">119</a> of file <a class="el" href="../../dc/d59/CombatListenerUtil_8java_source.html">CombatListenerUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  119</span>                                                                              {</div>
-<div class="line"><span class="lineno">  120</span>        <span class="keywordtype">float</span> mod = 0f;</div>
-<div class="line"><span class="lineno">  121</span>        <span class="keywordflow">if</span> (ship != <span class="keyword">null</span> &amp;&amp; ship.getListenerManager() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  122</span>            <span class="keywordflow">for</span> (WeaponRangeModifier x : <span class="keyword">new</span> ArrayList&lt;WeaponRangeModifier&gt;(ship.getListeners(WeaponRangeModifier.class))) {</div>
-<div class="line"><span class="lineno">  123</span>                mod += x.getWeaponRangeFlatMod(ship, weapon);</div>
-<div class="line"><span class="lineno">  124</span>            }</div>
-<div class="line"><span class="lineno">  125</span>        }</div>
-<div class="line"><span class="lineno">  126</span>        <span class="keywordflow">return</span> mod;</div>
-<div class="line"><span class="lineno">  127</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9e2646f859b7c5dd37f7bff70c39d96e" name="a9e2646f859b7c5dd37f7bff70c39d96e"></a>
@@ -470,16 +417,7 @@ Static Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d59/CombatListenerUtil_8java_source.html#l00109">109</a> of file <a class="el" href="../../dc/d59/CombatListenerUtil_8java_source.html">CombatListenerUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  109</span>                                                                              {</div>
-<div class="line"><span class="lineno">  110</span>        <span class="keywordtype">float</span> mod = 1f;</div>
-<div class="line"><span class="lineno">  111</span>        <span class="keywordflow">if</span> (ship != <span class="keyword">null</span> &amp;&amp; ship.getListenerManager() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  112</span>            <span class="keywordflow">for</span> (WeaponRangeModifier x : <span class="keyword">new</span> ArrayList&lt;WeaponRangeModifier&gt;(ship.getListeners(WeaponRangeModifier.class))) {</div>
-<div class="line"><span class="lineno">  113</span>                mod *= x.getWeaponRangeMultMod(ship, weapon);</div>
-<div class="line"><span class="lineno">  114</span>            }</div>
-<div class="line"><span class="lineno">  115</span>        }</div>
-<div class="line"><span class="lineno">  116</span>        <span class="keywordflow">return</span> mod;</div>
-<div class="line"><span class="lineno">  117</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac383867c404f33d1d53451d19d7509bf" name="ac383867c404f33d1d53451d19d7509bf"></a>
@@ -517,16 +455,7 @@ Static Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d59/CombatListenerUtil_8java_source.html#l00099">99</a> of file <a class="el" href="../../dc/d59/CombatListenerUtil_8java_source.html">CombatListenerUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   99</span>                                                                                 {</div>
-<div class="line"><span class="lineno">  100</span>        <span class="keywordtype">float</span> mod = 0f;</div>
-<div class="line"><span class="lineno">  101</span>        <span class="keywordflow">if</span> (ship != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  102</span>            <span class="keywordflow">for</span> (WeaponRangeModifier x : <span class="keyword">new</span> ArrayList&lt;WeaponRangeModifier&gt;(ship.getListeners(WeaponRangeModifier.class))) {</div>
-<div class="line"><span class="lineno">  103</span>                mod += x.getWeaponRangePercentMod(ship, weapon);</div>
-<div class="line"><span class="lineno">  104</span>            }</div>
-<div class="line"><span class="lineno">  105</span>        }</div>
-<div class="line"><span class="lineno">  106</span>        <span class="keywordflow">return</span> mod;</div>
-<div class="line"><span class="lineno">  107</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a0e32ec1a82ffad8ae08e760318f22903" name="a0e32ec1a82ffad8ae08e760318f22903"></a>
@@ -588,19 +517,7 @@ Static Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d59/CombatListenerUtil_8java_source.html#l00033">33</a> of file <a class="el" href="../../dc/d59/CombatListenerUtil_8java_source.html">CombatListenerUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   34</span>                                                                                                      {</div>
-<div class="line"><span class="lineno">   35</span>        List&lt;String&gt; ids = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   36</span>        mods = <span class="keyword">new</span> ArrayList&lt;DamageDealtModifier&gt;(mods);</div>
-<div class="line"><span class="lineno">   37</span>        <span class="keywordflow">for</span> (DamageDealtModifier x : mods) {</div>
-<div class="line"><span class="lineno">   38</span>            String <span class="keywordtype">id</span> = x.modifyDamageDealt(param, target, damage, point, shieldHit);</div>
-<div class="line"><span class="lineno">   39</span>            <span class="keywordflow">if</span> (<span class="keywordtype">id</span> != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   40</span>                <span class="keywordflow">if</span> (ids == <span class="keyword">null</span>) ids = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
-<div class="line"><span class="lineno">   41</span>                ids.add(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">   42</span>            }</div>
-<div class="line"><span class="lineno">   43</span>        }</div>
-<div class="line"><span class="lineno">   44</span>        <span class="keywordflow">return</span> ids;</div>
-<div class="line"><span class="lineno">   45</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a213569d7e69a3ef6359819231ad1cd1c" name="a213569d7e69a3ef6359819231ad1cd1c"></a>
@@ -656,12 +573,7 @@ Static Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d59/CombatListenerUtil_8java_source.html#l00021">21</a> of file <a class="el" href="../../dc/d59/CombatListenerUtil_8java_source.html">CombatListenerUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   22</span>                                                                                                      {</div>
-<div class="line"><span class="lineno">   23</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../df/d02/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1listeners_1_1CombatListenerUtil.html#a213569d7e69a3ef6359819231ad1cd1c">modifyDamageDealt</a>(Global.getCombatEngine().getListenerManager().getListeners(DamageDealtModifier.class),</div>
-<div class="line"><span class="lineno">   24</span>                                 param, target, damage, point, shieldHit);</div>
-<div class="line"><span class="lineno">   25</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1listeners_1_1CombatListenerUtil_html_a213569d7e69a3ef6359819231ad1cd1c"><div class="ttname"><a href="../../df/d02/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1listeners_1_1CombatListenerUtil.html#a213569d7e69a3ef6359819231ad1cd1c">com.fs.starfarer.api.combat.listeners.CombatListenerUtil.modifyDamageDealt</a></div><div class="ttdeci">static List&lt; String &gt; modifyDamageDealt(Object param, CombatEntityAPI target, DamageAPI damage, Vector2f point, boolean shieldHit)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d59/CombatListenerUtil_8java_source.html#l00021">CombatListenerUtil.java:21</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a352a000986ff8bfb5a905ba6d1b9fdf8" name="a352a000986ff8bfb5a905ba6d1b9fdf8"></a>
@@ -723,11 +635,7 @@ Static Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d59/CombatListenerUtil_8java_source.html#l00027">27</a> of file <a class="el" href="../../dc/d59/CombatListenerUtil_8java_source.html">CombatListenerUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   28</span>                                                                                                      {</div>
-<div class="line"><span class="lineno">   29</span>        <span class="keywordflow">if</span> (attacker == <span class="keyword">null</span> || attacker.getListenerManager() == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   30</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../df/d02/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1listeners_1_1CombatListenerUtil.html#a213569d7e69a3ef6359819231ad1cd1c">modifyDamageDealt</a>(attacker.getListeners(DamageDealtModifier.class), param, target, damage, point, shieldHit);</div>
-<div class="line"><span class="lineno">   31</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8a6a5bf43fc80c57c8138196ad539fbe" name="a8a6a5bf43fc80c57c8138196ad539fbe"></a>
@@ -789,19 +697,7 @@ Static Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d59/CombatListenerUtil_8java_source.html#l00063">63</a> of file <a class="el" href="../../dc/d59/CombatListenerUtil_8java_source.html">CombatListenerUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   64</span>                                                                                                         {</div>
-<div class="line"><span class="lineno">   65</span>        List&lt;String&gt; ids = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   66</span>        mods = <span class="keyword">new</span> ArrayList&lt;DamageTakenModifier&gt;(mods);</div>
-<div class="line"><span class="lineno">   67</span>        <span class="keywordflow">for</span> (DamageTakenModifier x : mods) {</div>
-<div class="line"><span class="lineno">   68</span>            String <span class="keywordtype">id</span> = x.modifyDamageTaken(param, target, damage, point, shieldHit);</div>
-<div class="line"><span class="lineno">   69</span>            <span class="keywordflow">if</span> (<span class="keywordtype">id</span> != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   70</span>                <span class="keywordflow">if</span> (ids == <span class="keyword">null</span>) ids = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
-<div class="line"><span class="lineno">   71</span>                ids.add(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">   72</span>            }</div>
-<div class="line"><span class="lineno">   73</span>        }</div>
-<div class="line"><span class="lineno">   74</span>        <span class="keywordflow">return</span> ids;</div>
-<div class="line"><span class="lineno">   75</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a737da2bf4ed1439d73df721d320d4413" name="a737da2bf4ed1439d73df721d320d4413"></a>
@@ -857,12 +753,7 @@ Static Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d59/CombatListenerUtil_8java_source.html#l00050">50</a> of file <a class="el" href="../../dc/d59/CombatListenerUtil_8java_source.html">CombatListenerUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   51</span>                                                                                                      {</div>
-<div class="line"><span class="lineno">   52</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../df/d02/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1listeners_1_1CombatListenerUtil.html#a737da2bf4ed1439d73df721d320d4413">modifyDamageTaken</a>(Global.getCombatEngine().getListenerManager().getListeners(DamageTakenModifier.class),</div>
-<div class="line"><span class="lineno">   53</span>                                param, target, damage, point, shieldHit);</div>
-<div class="line"><span class="lineno">   54</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1listeners_1_1CombatListenerUtil_html_a737da2bf4ed1439d73df721d320d4413"><div class="ttname"><a href="../../df/d02/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1listeners_1_1CombatListenerUtil.html#a737da2bf4ed1439d73df721d320d4413">com.fs.starfarer.api.combat.listeners.CombatListenerUtil.modifyDamageTaken</a></div><div class="ttdeci">static List&lt; String &gt; modifyDamageTaken(Object param, CombatEntityAPI target, DamageAPI damage, Vector2f point, boolean shieldHit)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d59/CombatListenerUtil_8java_source.html#l00050">CombatListenerUtil.java:50</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a7cd2e988ad12adba638fe86d123f30fb" name="a7cd2e988ad12adba638fe86d123f30fb"></a>
@@ -924,12 +815,7 @@ Static Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d59/CombatListenerUtil_8java_source.html#l00056">56</a> of file <a class="el" href="../../dc/d59/CombatListenerUtil_8java_source.html">CombatListenerUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   57</span>                                                                                                      {</div>
-<div class="line"><span class="lineno">   58</span>        <span class="comment">// ship == target, yes</span></div>
-<div class="line"><span class="lineno">   59</span>        <span class="keywordflow">if</span> (ship == <span class="keyword">null</span> || ship.getListenerManager() == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   60</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../df/d02/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1listeners_1_1CombatListenerUtil.html#a737da2bf4ed1439d73df721d320d4413">modifyDamageTaken</a>(ship.getListeners(DamageTakenModifier.class), param, target, damage, point, shieldHit);</div>
-<div class="line"><span class="lineno">   61</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ad4927466cc3f877abf32607e332823c3" name="ad4927466cc3f877abf32607e332823c3"></a>
@@ -979,17 +865,7 @@ Static Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d59/CombatListenerUtil_8java_source.html#l00088">88</a> of file <a class="el" href="../../dc/d59/CombatListenerUtil_8java_source.html">CombatListenerUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   88</span>                                                                                                                       {</div>
-<div class="line"><span class="lineno">   89</span>        <span class="keywordtype">boolean</span> result = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   90</span>        <span class="keywordflow">for</span> (HullDamageAboutToBeTakenListener x : <span class="keyword">new</span> ArrayList&lt;HullDamageAboutToBeTakenListener&gt;(Global.getCombatEngine().getListenerManager().getListeners(HullDamageAboutToBeTakenListener.class))) {</div>
-<div class="line"><span class="lineno">   91</span>            result |= x.notifyAboutToTakeHullDamage(source, ship, point, damageAmount);</div>
-<div class="line"><span class="lineno">   92</span>        }</div>
-<div class="line"><span class="lineno">   93</span>        <span class="keywordflow">for</span> (HullDamageAboutToBeTakenListener x : <span class="keyword">new</span> ArrayList&lt;HullDamageAboutToBeTakenListener&gt;(ship.getListeners(HullDamageAboutToBeTakenListener.class))) {</div>
-<div class="line"><span class="lineno">   94</span>            result |= x.notifyAboutToTakeHullDamage(source, ship, point, damageAmount);</div>
-<div class="line"><span class="lineno">   95</span>        }</div>
-<div class="line"><span class="lineno">   96</span>        <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">   97</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ad796fd1d57447cec071db7b1fe6a214d" name="ad796fd1d57447cec071db7b1fe6a214d"></a>
@@ -1039,17 +915,7 @@ Static Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d59/CombatListenerUtil_8java_source.html#l00077">77</a> of file <a class="el" href="../../dc/d59/CombatListenerUtil_8java_source.html">CombatListenerUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   77</span>                                                                                                                             {</div>
-<div class="line"><span class="lineno">   78</span>        <span class="keywordflow">for</span> (DamageListener x : <span class="keyword">new</span> ArrayList&lt;DamageListener&gt;(Global.getCombatEngine().getListenerManager().getListeners(DamageListener.class))) {</div>
-<div class="line"><span class="lineno">   79</span>            x.reportDamageApplied(source, target, result);</div>
-<div class="line"><span class="lineno">   80</span>        }</div>
-<div class="line"><span class="lineno">   81</span>        <span class="keywordflow">if</span> (ship != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   82</span>            <span class="keywordflow">for</span> (DamageListener x : <span class="keyword">new</span> ArrayList&lt;DamageListener&gt;(ship.getListeners(DamageListener.class))) {</div>
-<div class="line"><span class="lineno">   83</span>                x.reportDamageApplied(source, target, result);</div>
-<div class="line"><span class="lineno">   84</span>            }</div>
-<div class="line"><span class="lineno">   85</span>        }</div>
-<div class="line"><span class="lineno">   86</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a458935256bcd397313bdfbd998e94a4c" name="a458935256bcd397313bdfbd998e94a4c"></a>
@@ -1077,17 +943,7 @@ Static Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d59/CombatListenerUtil_8java_source.html#l00182">182</a> of file <a class="el" href="../../dc/d59/CombatListenerUtil_8java_source.html">CombatListenerUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  182</span>                                                                                {</div>
-<div class="line"><span class="lineno">  183</span>        <span class="keywordflow">for</span> (FleetMemberDeploymentListener x : Global.getCombatEngine().getListenerManager().getListeners(FleetMemberDeploymentListener.class)) {</div>
-<div class="line"><span class="lineno">  184</span>            x.reportFleetMemberDeployed(member);</div>
-<div class="line"><span class="lineno">  185</span>        }</div>
-<div class="line"><span class="lineno">  186</span><span class="comment">//      if (member.getShip() != null) {</span></div>
-<div class="line"><span class="lineno">  187</span><span class="comment">//          for (FleetMemberDeploymentListener x : member.getShip().getListeners(FleetMemberDeploymentListener.class)) {</span></div>
-<div class="line"><span class="lineno">  188</span><span class="comment">//              x.reportFleetMemberDeployed(member);</span></div>
-<div class="line"><span class="lineno">  189</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">  190</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  191</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

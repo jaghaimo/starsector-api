@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -806,40 +807,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html#l00113">113</a> of file <a class="el" href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html">HyperspaceTopographyEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  113</span>                                                                                            {</div>
-<div class="line"><span class="lineno">  114</span>        super();</div>
-<div class="line"><span class="lineno">  115</span>        </div>
-<div class="line"><span class="lineno">  116</span>        Global.getSector().getMemoryWithoutUpdate().set(<a class="code hl_variable" href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#a6f9b942b52561941f2b82420e2c99c82">KEY</a>, <span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  117</span>        </div>
-<div class="line"><span class="lineno">  118</span>        <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#aabb5537513d54b1dda9c4ae42c4a9b3c">setMaxProgress</a>(<a class="code hl_variable" href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#af8a1cd038af0c92e8f9357da1d1571c8">PROGRESS_MAX</a>);</div>
-<div class="line"><span class="lineno">  119</span>        </div>
-<div class="line"><span class="lineno">  120</span>        <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a8a54ea51a20325d20ab698a3a3849a1a">addStage</a>(Stage.START, 0);</div>
-<div class="line"><span class="lineno">  121</span>        <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a8a54ea51a20325d20ab698a3a3849a1a">addStage</a>(Stage.SLIPSTREAM_NAVIGATION, <a class="code hl_variable" href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#acaf843490a2b614c7ce24681a27f594c">PROGRESS_1</a>, StageIconSize.MEDIUM);</div>
-<div class="line"><span class="lineno">  122</span>        <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a8a54ea51a20325d20ab698a3a3849a1a">addStage</a>(Stage.SLIPSTREAM_DETECTION, <a class="code hl_variable" href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#ab37576623e560d3c7dd00c8c61ca8d25">PROGRESS_2</a>, StageIconSize.MEDIUM);</div>
-<div class="line"><span class="lineno">  123</span>        <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a8a54ea51a20325d20ab698a3a3849a1a">addStage</a>(Stage.HYPERFIELD_OPTIMIZATION, <a class="code hl_variable" href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#a03bb48e96184116df6de79d6871b875b">PROGRESS_3</a>, <span class="keyword">false</span>, StageIconSize.LARGE);</div>
-<div class="line"><span class="lineno">  124</span>        <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a8a54ea51a20325d20ab698a3a3849a1a">addStage</a>(Stage.TOPOGRAPHIC_DATA, <a class="code hl_variable" href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#af8a1cd038af0c92e8f9357da1d1571c8">PROGRESS_MAX</a>, <span class="keyword">true</span>, StageIconSize.SMALL);</div>
-<div class="line"><span class="lineno">  125</span>        </div>
-<div class="line"><span class="lineno">  126</span>        <span class="comment">//setRandomized(Stage.TOPOGRAPHIC_DATA, RandomizedStageType.BAD, 400, 450, false);</span></div>
-<div class="line"><span class="lineno">  127</span>        <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#aaea47402cf58486cd60052a0e9297933">getDataFor</a>(Stage.SLIPSTREAM_NAVIGATION).keepIconBrightWhenLaterStageReached = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  128</span>        <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#aaea47402cf58486cd60052a0e9297933">getDataFor</a>(Stage.SLIPSTREAM_DETECTION).keepIconBrightWhenLaterStageReached = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  129</span>        <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#aaea47402cf58486cd60052a0e9297933">getDataFor</a>(Stage.HYPERFIELD_OPTIMIZATION).keepIconBrightWhenLaterStageReached = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  130</span> </div>
-<div class="line"><span class="lineno">  131</span>        </div>
-<div class="line"><span class="lineno">  132</span><span class="comment">//      addFactor(new HADefensiveMeasuresFactor());</span></div>
-<div class="line"><span class="lineno">  133</span><span class="comment">//      addFactor(new HAShipsDestroyedFactorHint());</span></div>
-<div class="line"><span class="lineno">  134</span>        </div>
-<div class="line"><span class="lineno">  135</span>        <span class="comment">// now that the event is fully constructed, add it and send notification</span></div>
-<div class="line"><span class="lineno">  136</span>        Global.getSector().getIntelManager().addIntel(<span class="keyword">this</span>, !withIntelNotification, text);</div>
-<div class="line"><span class="lineno">  137</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_html_a8a54ea51a20325d20ab698a3a3849a1a"><div class="ttname"><a href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a8a54ea51a20325d20ab698a3a3849a1a">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.addStage</a></div><div class="ttdeci">void addStage(Object id, int progress)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d56/BaseEventIntel_8java_source.html#l00651">BaseEventIntel.java:651</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_html_aabb5537513d54b1dda9c4ae42c4a9b3c"><div class="ttname"><a href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#aabb5537513d54b1dda9c4ae42c4a9b3c">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.setMaxProgress</a></div><div class="ttdeci">void setMaxProgress(int maxProgress)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d56/BaseEventIntel_8java_source.html#l00614">BaseEventIntel.java:614</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_html_aaea47402cf58486cd60052a0e9297933"><div class="ttname"><a href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#aaea47402cf58486cd60052a0e9297933">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.getDataFor</a></div><div class="ttdeci">EventStageData getDataFor(Object stageId)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d56/BaseEventIntel_8java_source.html#l00685">BaseEventIntel.java:685</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel_html_a03bb48e96184116df6de79d6871b875b"><div class="ttname"><a href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#a03bb48e96184116df6de79d6871b875b">com.fs.starfarer.api.impl.campaign.intel.events.ht.HyperspaceTopographyEventIntel.PROGRESS_3</a></div><div class="ttdeci">static int PROGRESS_3</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html#l00056">HyperspaceTopographyEventIntel.java:56</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel_html_a6f9b942b52561941f2b82420e2c99c82"><div class="ttname"><a href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#a6f9b942b52561941f2b82420e2c99c82">com.fs.starfarer.api.impl.campaign.intel.events.ht.HyperspaceTopographyEventIntel.KEY</a></div><div class="ttdeci">static String KEY</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html#l00069">HyperspaceTopographyEventIntel.java:69</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel_html_ab37576623e560d3c7dd00c8c61ca8d25"><div class="ttname"><a href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#ab37576623e560d3c7dd00c8c61ca8d25">com.fs.starfarer.api.impl.campaign.intel.events.ht.HyperspaceTopographyEventIntel.PROGRESS_2</a></div><div class="ttdeci">static int PROGRESS_2</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html#l00055">HyperspaceTopographyEventIntel.java:55</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel_html_acaf843490a2b614c7ce24681a27f594c"><div class="ttname"><a href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#acaf843490a2b614c7ce24681a27f594c">com.fs.starfarer.api.impl.campaign.intel.events.ht.HyperspaceTopographyEventIntel.PROGRESS_1</a></div><div class="ttdeci">static int PROGRESS_1</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html#l00054">HyperspaceTopographyEventIntel.java:54</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel_html_af8a1cd038af0c92e8f9357da1d1571c8"><div class="ttname"><a href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#af8a1cd038af0c92e8f9357da1d1571c8">com.fs.starfarer.api.impl.campaign.intel.events.ht.HyperspaceTopographyEventIntel.PROGRESS_MAX</a></div><div class="ttdeci">static int PROGRESS_MAX</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html#l00053">HyperspaceTopographyEventIntel.java:53</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -898,44 +866,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a0e96a2214e041593cef5055b1ca1209d">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html#l00151">151</a> of file <a class="el" href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html">HyperspaceTopographyEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  152</span>                                                             {</div>
-<div class="line"><span class="lineno">  153</span>        </div>
-<div class="line"><span class="lineno">  154</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ac3614e4bfe72000518328b2dd394ce90">addEventFactorBulletPoints</a>(info, mode, isUpdate, tc, initPad)) {</div>
-<div class="line"><span class="lineno">  155</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  156</span>        }</div>
-<div class="line"><span class="lineno">  157</span>        </div>
-<div class="line"><span class="lineno">  158</span>        Color h = Misc.getHighlightColor();</div>
-<div class="line"><span class="lineno">  159</span>        <span class="keywordflow">if</span> (isUpdate &amp;&amp; <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a9ba572be19912ec6b816dc7b69352660">getListInfoParam</a>() instanceof EventStageData) {</div>
-<div class="line"><span class="lineno">  160</span>            EventStageData esd = (EventStageData) <a class="code hl_function" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a9ba572be19912ec6b816dc7b69352660">getListInfoParam</a>();</div>
-<div class="line"><span class="lineno">  161</span>            <span class="keywordflow">if</span> (esd.id == Stage.SLIPSTREAM_DETECTION) {</div>
-<div class="line"><span class="lineno">  162</span>                info.addPara(<span class="stringliteral">&quot;Able to detect slipstreams near your spaceports&quot;</span>, tc, initPad);</div>
-<div class="line"><span class="lineno">  163</span>            }</div>
-<div class="line"><span class="lineno">  164</span>            <span class="keywordflow">if</span> (esd.id == Stage.SLIPSTREAM_NAVIGATION) {</div>
-<div class="line"><span class="lineno">  165</span><span class="comment">//              info.addPara(&quot;Fuel use while traversing slipstreams multiplied by %s&quot;, initPad, tc,</span></div>
-<div class="line"><span class="lineno">  166</span><span class="comment">//                      h, &quot;&quot; + SLIPSTREAM_FUEL_MULT + Strings.X);</span></div>
-<div class="line"><span class="lineno">  167</span>                info.addPara(<span class="stringliteral">&quot;Fuel use while traversing slipstreams reduced by %s&quot;</span>, initPad, tc,</div>
-<div class="line"><span class="lineno">  168</span>                        h, <span class="stringliteral">&quot;&quot;</span> + (<span class="keywordtype">int</span>)Math.round((1f - <a class="code hl_variable" href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#a44c092edc9864dc27ffeddf7adbc22ba">SLIPSTREAM_FUEL_MULT</a>) * 100f) + <span class="stringliteral">&quot;%&quot;</span>);</div>
-<div class="line"><span class="lineno">  169</span>            }</div>
-<div class="line"><span class="lineno">  170</span>            <span class="keywordflow">if</span> (esd.id == Stage.HYPERFIELD_OPTIMIZATION) {</div>
-<div class="line"><span class="lineno">  171</span>                info.addPara(<span class="stringliteral">&quot;Maximum burn increased by %s while in hyperspace&quot;</span>, initPad, tc, </div>
-<div class="line"><span class="lineno">  172</span>                        h, <span class="stringliteral">&quot;&quot;</span> + (<span class="keywordtype">int</span>) <a class="code hl_variable" href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#a64a491a54d21f773acdca9b87467eb80">HYPER_BURN_BONUS</a>);</div>
-<div class="line"><span class="lineno">  173</span>            }</div>
-<div class="line"><span class="lineno">  174</span>            <span class="keywordflow">if</span> (esd.id == Stage.TOPOGRAPHIC_DATA) {</div>
-<div class="line"><span class="lineno">  175</span>                info.addPara(<span class="stringliteral">&quot;Topographic data gained&quot;</span>, tc, initPad);</div>
-<div class="line"><span class="lineno">  176</span>            }</div>
-<div class="line"><span class="lineno">  177</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  178</span>        }</div>
-<div class="line"><span class="lineno">  179</span>        </div>
-<div class="line"><span class="lineno">  180</span><span class="comment">//      EventStageData esd = getLastActiveStage(false);</span></div>
-<div class="line"><span class="lineno">  181</span><span class="comment">//      if (esd != null &amp;&amp; EnumSet.of(Stage.START, Stage.HA_1, Stage.HA_2, Stage.HA_3, Stage.HA_4).contains(esd.id)) {</span></div>
-<div class="line"><span class="lineno">  182</span><span class="comment">//          </span></div>
-<div class="line"><span class="lineno">  183</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  184</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin_html_a9ba572be19912ec6b816dc7b69352660"><div class="ttname"><a href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a9ba572be19912ec6b816dc7b69352660">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin.getListInfoParam</a></div><div class="ttdeci">Object getListInfoParam()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d3b/BaseIntelPlugin_8java_source.html#l00140">BaseIntelPlugin.java:140</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_html_ac3614e4bfe72000518328b2dd394ce90"><div class="ttname"><a href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ac3614e4bfe72000518328b2dd394ce90">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.addEventFactorBulletPoints</a></div><div class="ttdeci">boolean addEventFactorBulletPoints(TooltipMakerAPI info, ListInfoMode mode, boolean isUpdate, Color tc, float initPad)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d56/BaseEventIntel_8java_source.html#l00180">BaseEventIntel.java:180</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel_html_a44c092edc9864dc27ffeddf7adbc22ba"><div class="ttname"><a href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#a44c092edc9864dc27ffeddf7adbc22ba">com.fs.starfarer.api.impl.campaign.intel.events.ht.HyperspaceTopographyEventIntel.SLIPSTREAM_FUEL_MULT</a></div><div class="ttdeci">static float SLIPSTREAM_FUEL_MULT</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html#l00066">HyperspaceTopographyEventIntel.java:66</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel_html_a64a491a54d21f773acdca9b87467eb80"><div class="ttname"><a href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#a64a491a54d21f773acdca9b87467eb80">com.fs.starfarer.api.impl.campaign.intel.events.ht.HyperspaceTopographyEventIntel.HYPER_BURN_BONUS</a></div><div class="ttdeci">static float HYPER_BURN_BONUS</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html#l00067">HyperspaceTopographyEventIntel.java:67</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a743b2f5cc82f0d363acd1b685602a004" name="a743b2f5cc82f0d363acd1b685602a004"></a>
@@ -973,20 +904,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html#l00090">90</a> of file <a class="el" href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html">HyperspaceTopographyEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   90</span>                                                                                                   {</div>
-<div class="line"><span class="lineno">   91</span>        <span class="keywordflow">if</span> (<span class="keyword">get</span>() == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   92</span>            <span class="comment">//TextPanelAPI text = dialog == null ? null : dialog.getTextPanel();</span></div>
-<div class="line"><span class="lineno">   93</span>            <span class="comment">//new HyperspaceTopographyEventIntel(text);</span></div>
-<div class="line"><span class="lineno">   94</span>            <span class="comment">// adding a factor anyway, so it&#39;ll show a message - don&#39;t need to double up</span></div>
-<div class="line"><span class="lineno">   95</span>            <span class="keyword">new</span> <a class="code hl_function" href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#acf4053d0b613a9e5f079afd7e3365c55">HyperspaceTopographyEventIntel</a>(<span class="keyword">null</span>, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   96</span>        }</div>
-<div class="line"><span class="lineno">   97</span>        <span class="keywordflow">if</span> (<span class="keyword">get</span>() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   98</span>            <span class="keyword">get</span>().<a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a477a5ee57e58b47c4206e74800868b5e">addFactor</a>(factor, dialog);</div>
-<div class="line"><span class="lineno">   99</span>        }</div>
-<div class="line"><span class="lineno">  100</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_html_a477a5ee57e58b47c4206e74800868b5e"><div class="ttname"><a href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a477a5ee57e58b47c4206e74800868b5e">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.addFactor</a></div><div class="ttdeci">void addFactor(EventFactor factor)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d56/BaseEventIntel_8java_source.html#l00733">BaseEventIntel.java:733</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel_html_acf4053d0b613a9e5f079afd7e3365c55"><div class="ttname"><a href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#acf4053d0b613a9e5f079afd7e3365c55">com.fs.starfarer.api.impl.campaign.intel.events.ht.HyperspaceTopographyEventIntel.HyperspaceTopographyEventIntel</a></div><div class="ttdeci">HyperspaceTopographyEventIntel(TextPanelAPI text, boolean withIntelNotification)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html#l00113">HyperspaceTopographyEventIntel.java:113</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa41b6704e08c8e06b87cd8e5558a28ed" name="aa41b6704e08c8e06b87cd8e5558a28ed"></a>
@@ -1006,13 +924,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html#l00504">504</a> of file <a class="el" href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html">HyperspaceTopographyEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  504</span>                                                {</div>
-<div class="line"><span class="lineno">  505</span>        <a class="code hl_variable" href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#abea8abd6d3153bead994f8e35451abb6">recent</a>.<a class="code hl_function" href="../../dd/df5/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTracker.html#aa63bae77983b72131b0522c039d5d11a">add</a>(<span class="keyword">new</span> RecentTopographyReadings(loc), <a class="code hl_variable" href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#a5308e17bbd55fadb079ed8e0148f9ea7">RECENT_READINGS_TIMEOUT</a>);</div>
-<div class="line"><span class="lineno">  506</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel_html_a5308e17bbd55fadb079ed8e0148f9ea7"><div class="ttname"><a href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#a5308e17bbd55fadb079ed8e0148f9ea7">com.fs.starfarer.api.impl.campaign.intel.events.ht.HyperspaceTopographyEventIntel.RECENT_READINGS_TIMEOUT</a></div><div class="ttdeci">static float RECENT_READINGS_TIMEOUT</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html#l00080">HyperspaceTopographyEventIntel.java:80</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel_html_abea8abd6d3153bead994f8e35451abb6"><div class="ttname"><a href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#abea8abd6d3153bead994f8e35451abb6">com.fs.starfarer.api.impl.campaign.intel.events.ht.HyperspaceTopographyEventIntel.recent</a></div><div class="ttdeci">TimeoutTracker&lt; RecentTopographyReadings &gt; recent</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html#l00107">HyperspaceTopographyEventIntel.java:107</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTracker_html_aa63bae77983b72131b0522c039d5d11a"><div class="ttname"><a href="../../dd/df5/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTracker.html#aa63bae77983b72131b0522c039d5d11a">com.fs.starfarer.api.util.TimeoutTracker.add</a></div><div class="ttdeci">void add(T item, float time)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dcf/TimeoutTracker_8java_source.html#l00030">TimeoutTracker.java:30</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a149d7c59321133ac2de3251fcb3cb859" name="a149d7c59321133ac2de3251fcb3cb859"></a>
@@ -1054,51 +966,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html#l00215">215</a> of file <a class="el" href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html">HyperspaceTopographyEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  215</span>                                                                                                      {</div>
-<div class="line"><span class="lineno">  216</span>        <span class="keywordtype">float</span> opad = 10f;</div>
-<div class="line"><span class="lineno">  217</span>        Color h = Misc.getHighlightColor();</div>
-<div class="line"><span class="lineno">  218</span>        <span class="keywordflow">if</span> (stageId == Stage.START) {</div>
-<div class="line"><span class="lineno">  219</span>            info.addPara(<span class="stringliteral">&quot;Detailed sensor readings greatly aid hyperspace navigation. &quot;</span></div>
-<div class="line"><span class="lineno">  220</span>                    + <span class="stringliteral">&quot;There are many ways of acquiring this data, including using in-system sensor arrays,&quot;</span></div>
-<div class="line"><span class="lineno">  221</span>                    + <span class="stringliteral">&quot; using an Active Sensor Burst near interesting phenomena, &quot;</span></div>
-<div class="line"><span class="lineno">  222</span>                    + <span class="stringliteral">&quot;traveling through hyperspace at a very high burn level, or simply buying the data from scavengers.&quot;</span>,</div>
-<div class="line"><span class="lineno">  223</span>                    initPad);</div>
-<div class="line"><span class="lineno">  224</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (stageId == Stage.SLIPSTREAM_DETECTION) {</div>
-<div class="line"><span class="lineno">  225</span>            info.addPara(<span class="stringliteral">&quot;The facilities and staff at a Spaceport are able to interpret data from various sources &quot;</span></div>
-<div class="line"><span class="lineno">  226</span>                    + <span class="stringliteral">&quot;to discover the presence of nearby slipstreams. The detection range is increased &quot;</span></div>
-<div class="line"><span class="lineno">  227</span>                    + <span class="stringliteral">&quot;for larger colonies. Claimed sensor arrays within %s light-years provide an additional &quot;</span></div>
-<div class="line"><span class="lineno">  228</span>                    + <span class="stringliteral">&quot;bonus - %s ly for Domain-era arrays, and %s ly for makeshift ones. &quot;</span></div>
-<div class="line"><span class="lineno">  229</span>                    + <span class="stringliteral">&quot;Up to %s sensor arrays can be of use.&quot;</span>, initPad, </div>
-<div class="line"><span class="lineno">  230</span>                    Misc.getHighlightColor(),</div>
-<div class="line"><span class="lineno">  231</span>                    <span class="stringliteral">&quot;&quot;</span> + (<span class="keywordtype">int</span>) <a class="code hl_variable" href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#ae2f333ce11160814bc2be33064b0f1f6">RANGE_WITHIN_WHICH_SENSOR_ARRAYS_HELP_LY</a>,</div>
-<div class="line"><span class="lineno">  232</span>                    <span class="stringliteral">&quot;+&quot;</span> + (<span class="keywordtype">int</span>) <a class="code hl_variable" href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#ae3ca7ed11539429aff9188f87a311789">RANGE_PER_DOMAIN_SENSOR_ARRAY</a>,</div>
-<div class="line"><span class="lineno">  233</span>                    <span class="stringliteral">&quot;+&quot;</span> + (<span class="keywordtype">int</span>) <a class="code hl_variable" href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#a0a003420e344076038f004aa6a08963b">RANGE_PER_MAKESHIFT_SENSOR_ARRAY</a>,</div>
-<div class="line"><span class="lineno">  234</span>                    <span class="stringliteral">&quot;&quot;</span> + (<span class="keywordtype">int</span>) <a class="code hl_variable" href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#aa8c24c7c593623d30abb4a943675f328">MAX_SENSOR_ARRAYS</a></div>
-<div class="line"><span class="lineno">  235</span>                    );</div>
-<div class="line"><span class="lineno">  236</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (stageId == Stage.SLIPSTREAM_NAVIGATION) {</div>
-<div class="line"><span class="lineno">  237</span>            info.addPara(<span class="stringliteral">&quot;Fuel use while traveling inside slipstreams reduced by %s. This reduction is multiplicative &quot;</span> +</div>
-<div class="line"><span class="lineno">  238</span>                         <span class="stringliteral">&quot;with the baseline fuel use reduction for traveling inside a slipstream.&quot;</span>,</div>
-<div class="line"><span class="lineno">  239</span>                    initPad, h,</div>
-<div class="line"><span class="lineno">  240</span>                    <span class="stringliteral">&quot;&quot;</span> + (<span class="keywordtype">int</span>)Math.round((1f - <a class="code hl_variable" href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#a44c092edc9864dc27ffeddf7adbc22ba">SLIPSTREAM_FUEL_MULT</a>) * 100f) + <span class="stringliteral">&quot;%&quot;</span>);</div>
-<div class="line"><span class="lineno">  241</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (stageId == Stage.HYPERFIELD_OPTIMIZATION) {</div>
-<div class="line"><span class="lineno">  242</span>            info.addPara(<span class="stringliteral">&quot;Maximum burn increased by %s while in hyperspace.&quot;</span>, initPad, h,</div>
-<div class="line"><span class="lineno">  243</span>                    <span class="stringliteral">&quot;&quot;</span> + (<span class="keywordtype">int</span>) <a class="code hl_variable" href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#a64a491a54d21f773acdca9b87467eb80">HYPER_BURN_BONUS</a>);</div>
-<div class="line"><span class="lineno">  244</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (stageId == Stage.TOPOGRAPHIC_DATA) {</div>
-<div class="line"><span class="lineno">  245</span>            <span class="keywordtype">int</span> min = <a class="code hl_function" href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#a901c3fcd70b257751814f54b189a10f2">getTopoResetMin</a>();</div>
-<div class="line"><span class="lineno">  246</span>            <span class="keywordtype">int</span> max = <a class="code hl_function" href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#a3d251fbd6dcd9362191ed3558f157a7e">getTopoResetMax</a>();</div>
-<div class="line"><span class="lineno">  247</span>            info.addPara(<span class="stringliteral">&quot;A batch of topographic data that can be sold for a&quot;</span></div>
-<div class="line"><span class="lineno">  248</span>                    + <span class="stringliteral">&quot; considerable number of credits.&quot;</span>, initPad);</div>
-<div class="line"><span class="lineno">  249</span>            info.addPara(<span class="stringliteral">&quot;Event progress will be reset to between %s and %s points when this outcome is reached.&quot;</span>,</div>
-<div class="line"><span class="lineno">  250</span>                    opad, h, <span class="stringliteral">&quot;&quot;</span> + min, <span class="stringliteral">&quot;&quot;</span> + max);</div>
-<div class="line"><span class="lineno">  251</span>        }</div>
-<div class="line"><span class="lineno">  252</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel_html_a0a003420e344076038f004aa6a08963b"><div class="ttname"><a href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#a0a003420e344076038f004aa6a08963b">com.fs.starfarer.api.impl.campaign.intel.events.ht.HyperspaceTopographyEventIntel.RANGE_PER_MAKESHIFT_SENSOR_ARRAY</a></div><div class="ttdeci">static float RANGE_PER_MAKESHIFT_SENSOR_ARRAY</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html#l00061">HyperspaceTopographyEventIntel.java:61</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel_html_a3d251fbd6dcd9362191ed3558f157a7e"><div class="ttname"><a href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#a3d251fbd6dcd9362191ed3558f157a7e">com.fs.starfarer.api.impl.campaign.intel.events.ht.HyperspaceTopographyEventIntel.getTopoResetMax</a></div><div class="ttdeci">int getTopoResetMax()</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html#l00348">HyperspaceTopographyEventIntel.java:348</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel_html_a901c3fcd70b257751814f54b189a10f2"><div class="ttname"><a href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#a901c3fcd70b257751814f54b189a10f2">com.fs.starfarer.api.impl.campaign.intel.events.ht.HyperspaceTopographyEventIntel.getTopoResetMin</a></div><div class="ttdeci">int getTopoResetMin()</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html#l00344">HyperspaceTopographyEventIntel.java:344</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel_html_aa8c24c7c593623d30abb4a943675f328"><div class="ttname"><a href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#aa8c24c7c593623d30abb4a943675f328">com.fs.starfarer.api.impl.campaign.intel.events.ht.HyperspaceTopographyEventIntel.MAX_SENSOR_ARRAYS</a></div><div class="ttdeci">static int MAX_SENSOR_ARRAYS</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html#l00062">HyperspaceTopographyEventIntel.java:62</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel_html_ae2f333ce11160814bc2be33064b0f1f6"><div class="ttname"><a href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#ae2f333ce11160814bc2be33064b0f1f6">com.fs.starfarer.api.impl.campaign.intel.events.ht.HyperspaceTopographyEventIntel.RANGE_WITHIN_WHICH_SENSOR_ARRAYS_HELP_LY</a></div><div class="ttdeci">static float RANGE_WITHIN_WHICH_SENSOR_ARRAYS_HELP_LY</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html#l00059">HyperspaceTopographyEventIntel.java:59</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel_html_ae3ca7ed11539429aff9188f87a311789"><div class="ttname"><a href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#ae3ca7ed11539429aff9188f87a311789">com.fs.starfarer.api.impl.campaign.intel.events.ht.HyperspaceTopographyEventIntel.RANGE_PER_DOMAIN_SENSOR_ARRAY</a></div><div class="ttdeci">static float RANGE_PER_DOMAIN_SENSOR_ARRAY</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html#l00060">HyperspaceTopographyEventIntel.java:60</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a163fa31eaafb3893390c44ef0b7d0cc7" name="a163fa31eaafb3893390c44ef0b7d0cc7"></a>
@@ -1136,35 +1004,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a044f95e28bad28ac90cddfab894295ac">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html#l00187">187</a> of file <a class="el" href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html">HyperspaceTopographyEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  187</span>                                                                                           {</div>
-<div class="line"><span class="lineno">  188</span>        <span class="keywordtype">float</span> opad = 10f;</div>
-<div class="line"><span class="lineno">  189</span>        <span class="keywordtype">float</span> small = 0f;</div>
-<div class="line"><span class="lineno">  190</span>        Color h = Misc.getHighlightColor();</div>
-<div class="line"><span class="lineno">  191</span>        </div>
-<div class="line"><span class="lineno">  192</span>        <span class="comment">//setProgress(0);</span></div>
-<div class="line"><span class="lineno">  193</span>        <span class="comment">//setProgress(199);</span></div>
-<div class="line"><span class="lineno">  194</span>        <span class="comment">//setProgress(600);</span></div>
-<div class="line"><span class="lineno">  195</span>        <span class="comment">//setProgress(899);</span></div>
-<div class="line"><span class="lineno">  196</span>        <span class="comment">//setProgress(1000);</span></div>
-<div class="line"><span class="lineno">  197</span>        <span class="comment">//setProgress(499);</span></div>
-<div class="line"><span class="lineno">  198</span>        <span class="comment">//setProgress(600);</span></div>
-<div class="line"><span class="lineno">  199</span>        </div>
-<div class="line"><span class="lineno">  200</span>        EventStageData stage = <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#aaea47402cf58486cd60052a0e9297933">getDataFor</a>(stageId);</div>
-<div class="line"><span class="lineno">  201</span>        <span class="keywordflow">if</span> (stage == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  202</span>        </div>
-<div class="line"><span class="lineno">  203</span><span class="comment">//      if (isStageActiveAndLast(stageId) &amp;&amp;  stageId == Stage.START) {</span></div>
-<div class="line"><span class="lineno">  204</span><span class="comment">//          addStageDesc(info, stageId, small, false);</span></div>
-<div class="line"><span class="lineno">  205</span><span class="comment">//      } else if (isStageActive(stageId) &amp;&amp; stageId != Stage.START) {</span></div>
-<div class="line"><span class="lineno">  206</span><span class="comment">//          addStageDesc(info, stageId, small, false);</span></div>
-<div class="line"><span class="lineno">  207</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  208</span>        </div>
-<div class="line"><span class="lineno">  209</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a9d9f00c751dc6e4c4b8a852a90e70bb2">isStageActive</a>(stageId)) {</div>
-<div class="line"><span class="lineno">  210</span>            <a class="code hl_function" href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#a149d7c59321133ac2de3251fcb3cb859">addStageDesc</a>(info, stageId, small, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  211</span>        }</div>
-<div class="line"><span class="lineno">  212</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_html_a9d9f00c751dc6e4c4b8a852a90e70bb2"><div class="ttname"><a href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a9d9f00c751dc6e4c4b8a852a90e70bb2">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.isStageActive</a></div><div class="ttdeci">boolean isStageActive(Object stageId)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d56/BaseEventIntel_8java_source.html#l00664">BaseEventIntel.java:664</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel_html_a149d7c59321133ac2de3251fcb3cb859"><div class="ttname"><a href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#a149d7c59321133ac2de3251fcb3cb859">com.fs.starfarer.api.impl.campaign.intel.events.ht.HyperspaceTopographyEventIntel.addStageDesc</a></div><div class="ttdeci">void addStageDesc(TooltipMakerAPI info, Object stageId, float initPad, boolean forTooltip)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html#l00215">HyperspaceTopographyEventIntel.java:215</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac883ecaec12f552c007aeb6b78db0a8d" name="ac883ecaec12f552c007aeb6b78db0a8d"></a>
@@ -1194,18 +1034,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a735360399cc204b9856f04af9794303c">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html#l00366">366</a> of file <a class="el" href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html">HyperspaceTopographyEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  366</span>                                             {</div>
-<div class="line"><span class="lineno">  367</span>        super.advanceImpl(amount);</div>
-<div class="line"><span class="lineno">  368</span>        <a class="code hl_function" href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#a9bfc8f34c934e9021ec95dfd3d1e9b0a">applyFleetEffects</a>();</div>
-<div class="line"><span class="lineno">  369</span>        </div>
-<div class="line"><span class="lineno">  370</span>        <span class="keywordtype">float</span> days = Global.getSector().getClock().convertToDays(amount);</div>
-<div class="line"><span class="lineno">  371</span>        <a class="code hl_variable" href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#abea8abd6d3153bead994f8e35451abb6">recent</a>.<a class="code hl_function" href="../../dd/df5/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTracker.html#a841c73d428617df86cca633e7640f439">advance</a>(days);</div>
-<div class="line"><span class="lineno">  372</span>        </div>
-<div class="line"><span class="lineno">  373</span>        <span class="comment">//setProgress(getProgress() + 10);</span></div>
-<div class="line"><span class="lineno">  374</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel_html_a9bfc8f34c934e9021ec95dfd3d1e9b0a"><div class="ttname"><a href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#a9bfc8f34c934e9021ec95dfd3d1e9b0a">com.fs.starfarer.api.impl.campaign.intel.events.ht.HyperspaceTopographyEventIntel.applyFleetEffects</a></div><div class="ttdeci">void applyFleetEffects()</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html#l00403">HyperspaceTopographyEventIntel.java:403</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTracker_html_a841c73d428617df86cca633e7640f439"><div class="ttname"><a href="../../dd/df5/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTracker.html#a841c73d428617df86cca633e7640f439">com.fs.starfarer.api.util.TimeoutTracker.advance</a></div><div class="ttdeci">void advance(float amount)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dcf/TimeoutTracker_8java_source.html#l00093">TimeoutTracker.java:93</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9bfc8f34c934e9021ec95dfd3d1e9b0a" name="a9bfc8f34c934e9021ec95dfd3d1e9b0a"></a>
@@ -1224,35 +1053,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html#l00403">403</a> of file <a class="el" href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html">HyperspaceTopographyEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  403</span>                                    {</div>
-<div class="line"><span class="lineno">  404</span>        String id1 = <span class="stringliteral">&quot;hypertopology1&quot;</span>;</div>
-<div class="line"><span class="lineno">  405</span>        </div>
-<div class="line"><span class="lineno">  406</span>        CampaignFleetAPI pf = Global.getSector().getPlayerFleet();</div>
-<div class="line"><span class="lineno">  407</span>        pf.getStats().getFleetwideMaxBurnMod().unmodifyFlat(id1);</div>
-<div class="line"><span class="lineno">  408</span>        </div>
-<div class="line"><span class="lineno">  409</span>        MutableStat stat = pf.getStats().getDynamic().getStat(Stats.FUEL_USE_NOT_SHOWN_ON_MAP_MULT);</div>
-<div class="line"><span class="lineno">  410</span>        stat.unmodifyMult(id1);</div>
-<div class="line"><span class="lineno">  411</span>        </div>
-<div class="line"><span class="lineno">  412</span>        <span class="comment">//if (pf.isInHyperspace()) { // doesn&#39;t work; after reportCurrentLocationChanged()</span></div>
-<div class="line"><span class="lineno">  413</span>        <span class="comment">// the current location is right but the player fleet hasn&#39;t been added to it yet</span></div>
-<div class="line"><span class="lineno">  414</span>        <span class="keywordflow">if</span> (Global.getSector().getCurrentLocation().isHyperspace()) {</div>
-<div class="line"><span class="lineno">  415</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a9d9f00c751dc6e4c4b8a852a90e70bb2">isStageActive</a>(Stage.SLIPSTREAM_NAVIGATION)) {</div>
-<div class="line"><span class="lineno">  416</span>                <span class="keywordflow">for</span> (StatMod mod : stat.getMultMods().values()) {</div>
-<div class="line"><span class="lineno">  417</span>                    <span class="keywordflow">if</span> (SlipstreamTerrainPlugin2.FUEL_USE_MODIFIER_DESC.equals(mod.desc)) {</div>
-<div class="line"><span class="lineno">  418</span>                        stat.modifyMult(id1, <a class="code hl_variable" href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#a44c092edc9864dc27ffeddf7adbc22ba">SLIPSTREAM_FUEL_MULT</a>, </div>
-<div class="line"><span class="lineno">  419</span>                                SlipstreamTerrainPlugin2.FUEL_USE_MODIFIER_DESC + <span class="stringliteral">&quot; (hyperspace topography)&quot;</span>);</div>
-<div class="line"><span class="lineno">  420</span>                        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  421</span>                    }</div>
-<div class="line"><span class="lineno">  422</span>                }</div>
-<div class="line"><span class="lineno">  423</span>            }</div>
-<div class="line"><span class="lineno">  424</span>            </div>
-<div class="line"><span class="lineno">  425</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a9d9f00c751dc6e4c4b8a852a90e70bb2">isStageActive</a>(Stage.HYPERFIELD_OPTIMIZATION)) {</div>
-<div class="line"><span class="lineno">  426</span>                pf.getStats().getFleetwideMaxBurnMod().modifyFlat(id1, <a class="code hl_variable" href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#a64a491a54d21f773acdca9b87467eb80">HYPER_BURN_BONUS</a>, <span class="stringliteral">&quot;Hyperspace topography&quot;</span>);</div>
-<div class="line"><span class="lineno">  427</span>            }</div>
-<div class="line"><span class="lineno">  428</span>            </div>
-<div class="line"><span class="lineno">  429</span>        }</div>
-<div class="line"><span class="lineno">  430</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a64e1c51ef47e8e110f0aa435593cafec" name="a64e1c51ef47e8e110f0aa435593cafec"></a>
@@ -1282,34 +1083,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html#l00471">471</a> of file <a class="el" href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html">HyperspaceTopographyEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  471</span>                                                                       {</div>
-<div class="line"><span class="lineno">  472</span>        <span class="keywordtype">int</span> countDomain = 0;</div>
-<div class="line"><span class="lineno">  473</span>        <span class="keywordtype">int</span> countMakeshift= 0;</div>
-<div class="line"><span class="lineno">  474</span>        Vector2f locInHyper = market.getLocationInHyperspace();</div>
-<div class="line"><span class="lineno">  475</span>        <span class="keywordflow">for</span> (StarSystemAPI system : Global.getSector().getStarSystems()) {</div>
-<div class="line"><span class="lineno">  476</span>            <span class="keywordtype">float</span> dist = Misc.getDistanceLY(locInHyper, system.getLocation());</div>
-<div class="line"><span class="lineno">  477</span>            <span class="keywordflow">if</span> (dist &gt; range &amp;&amp; Math.round(dist * 10f) &lt;= range * 10f) {</div>
-<div class="line"><span class="lineno">  478</span>                dist = range;</div>
-<div class="line"><span class="lineno">  479</span>            }</div>
-<div class="line"><span class="lineno">  480</span>            <span class="keywordflow">if</span> (dist &lt;= range) {</div>
-<div class="line"><span class="lineno">  481</span>                <span class="keywordflow">for</span> (SectorEntityToken entity : system.getEntitiesWithTag(Tags.SENSOR_ARRAY)) {</div>
-<div class="line"><span class="lineno">  482</span>                    <span class="keywordflow">if</span> (entity.getFaction() != <span class="keyword">null</span> &amp;&amp; entity.getFaction().isPlayerFaction()) {</div>
-<div class="line"><span class="lineno">  483</span>                        <span class="keywordflow">if</span> (entity.hasTag(Tags.MAKESHIFT)) {</div>
-<div class="line"><span class="lineno">  484</span>                            countMakeshift++;</div>
-<div class="line"><span class="lineno">  485</span>                        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  486</span>                            countDomain++;</div>
-<div class="line"><span class="lineno">  487</span>                        }</div>
-<div class="line"><span class="lineno">  488</span>                    }</div>
-<div class="line"><span class="lineno">  489</span>                }</div>
-<div class="line"><span class="lineno">  490</span>            }</div>
-<div class="line"><span class="lineno">  491</span>        }</div>
-<div class="line"><span class="lineno">  492</span>        </div>
-<div class="line"><span class="lineno">  493</span>        <span class="keywordtype">float</span> bonus = Math.min(countDomain, <a class="code hl_variable" href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#aa8c24c7c593623d30abb4a943675f328">MAX_SENSOR_ARRAYS</a>) * <a class="code hl_variable" href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#ae3ca7ed11539429aff9188f87a311789">RANGE_PER_DOMAIN_SENSOR_ARRAY</a>;</div>
-<div class="line"><span class="lineno">  494</span>        bonus += Math.min(Math.max(0, countMakeshift - countDomain), <a class="code hl_variable" href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#aa8c24c7c593623d30abb4a943675f328">MAX_SENSOR_ARRAYS</a>) * <a class="code hl_variable" href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#a0a003420e344076038f004aa6a08963b">RANGE_PER_MAKESHIFT_SENSOR_ARRAY</a>;</div>
-<div class="line"><span class="lineno">  495</span> </div>
-<div class="line"><span class="lineno">  496</span>        <span class="keywordflow">return</span> bonus;</div>
-<div class="line"><span class="lineno">  497</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab56062ec27a1f4a8ecc2f984fdaf7e8a" name="ab56062ec27a1f4a8ecc2f984fdaf7e8a"></a>
@@ -1336,10 +1110,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html#l00102">102</a> of file <a class="el" href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html">HyperspaceTopographyEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  102</span>                                                       {</div>
-<div class="line"><span class="lineno">  103</span>        <span class="keywordflow">return</span> (HyperspaceTopographyEventIntel) Global.getSector().getMemoryWithoutUpdate().get(<a class="code hl_variable" href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#a6f9b942b52561941f2b82420e2c99c82">KEY</a>);</div>
-<div class="line"><span class="lineno">  104</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9cedfe0409ea20d3a4da549916ae7537" name="a9cedfe0409ea20d3a4da549916ae7537"></a>
@@ -1360,14 +1131,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a7b64cd609d54e4e7db47a5c2fe236e20">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html#l00306">306</a> of file <a class="el" href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html">HyperspaceTopographyEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  306</span>                               {</div>
-<div class="line"><span class="lineno">  307</span>        Color color = <a class="code hl_variable" href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#a3aa5123e0f5af28285cc8bb93c9f4016">BAR_COLOR</a>;</div>
-<div class="line"><span class="lineno">  308</span>        <span class="comment">//color = Misc.getBasePlayerColor();</span></div>
-<div class="line"><span class="lineno">  309</span>        color = Misc.interpolateColor(color, Color.black, 0.25f);</div>
-<div class="line"><span class="lineno">  310</span>        <span class="keywordflow">return</span> color;</div>
-<div class="line"><span class="lineno">  311</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel_html_a3aa5123e0f5af28285cc8bb93c9f4016"><div class="ttname"><a href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#a3aa5123e0f5af28285cc8bb93c9f4016">com.fs.starfarer.api.impl.campaign.intel.events.ht.HyperspaceTopographyEventIntel.BAR_COLOR</a></div><div class="ttdeci">static Color BAR_COLOR</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html#l00046">HyperspaceTopographyEventIntel.java:46</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ad1e28df47b23e702434a2e89273324d9" name="ad1e28df47b23e702434a2e89273324d9"></a>
@@ -1388,10 +1152,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a0f0ca2b35a1c33db0d6b5d8c9a85f583">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html#l00314">314</a> of file <a class="el" href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html">HyperspaceTopographyEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  314</span>                                                {</div>
-<div class="line"><span class="lineno">  315</span>        <span class="keywordflow">return</span> super.getBarProgressIndicatorColor();</div>
-<div class="line"><span class="lineno">  316</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ad3daa0698c2d6a16d942b180d84b8b2b" name="ad3daa0698c2d6a16d942b180d84b8b2b"></a>
@@ -1413,10 +1174,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a6499624a08c9565334e2395989f542c9">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html#l00287">287</a> of file <a class="el" href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html">HyperspaceTopographyEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  287</span>                            {</div>
-<div class="line"><span class="lineno">  288</span>        <span class="keywordflow">return</span> Global.getSettings().getSpriteName(<span class="stringliteral">&quot;events&quot;</span>, <span class="stringliteral">&quot;hyperspace_topography&quot;</span>);</div>
-<div class="line"><span class="lineno">  289</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5e5395e22d0be3c27ffa27a3e3ee5c60" name="a5e5395e22d0be3c27ffa27a3e3ee5c60"></a>
@@ -1445,13 +1203,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a766d58aa3cc1f11bf282350948f9501e">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html#l00358">358</a> of file <a class="el" href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html">HyperspaceTopographyEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  358</span>                                                      {</div>
-<div class="line"><span class="lineno">  359</span>        Set&lt;String&gt; tags = super.getIntelTags(map);</div>
-<div class="line"><span class="lineno">  360</span>        tags.add(Tags.INTEL_EXPLORATION);</div>
-<div class="line"><span class="lineno">  361</span>        <span class="comment">//tags.remove(Tags.INTEL_MAJOR_EVENT);</span></div>
-<div class="line"><span class="lineno">  362</span>        <span class="keywordflow">return</span> tags;</div>
-<div class="line"><span class="lineno">  363</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a128cdd7650a88616fafa4f4df528cc00" name="a128cdd7650a88616fafa4f4df528cc00"></a>
@@ -1480,10 +1232,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a582fe7cb29e8f2f65670d4dd74418235">com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html#l00325">325</a> of file <a class="el" href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html">HyperspaceTopographyEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  325</span>                               {</div>
-<div class="line"><span class="lineno">  326</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Hyperspace Topography&quot;</span>;</div>
-<div class="line"><span class="lineno">  327</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9f4af805822555dc71e16f93ba2862a9" name="a9f4af805822555dc71e16f93ba2862a9"></a>
@@ -1513,19 +1262,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#abdabd006be834a1d8b3db6a3a446257d">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html#l00291">291</a> of file <a class="el" href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html">HyperspaceTopographyEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  291</span>                                                      {</div>
-<div class="line"><span class="lineno">  292</span>        EventStageData esd = <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#aaea47402cf58486cd60052a0e9297933">getDataFor</a>(stageId);</div>
-<div class="line"><span class="lineno">  293</span>        <span class="keywordflow">if</span> (esd == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  294</span>        </div>
-<div class="line"><span class="lineno">  295</span>    </div>
-<div class="line"><span class="lineno">  296</span>        <span class="keywordflow">if</span> (EnumSet.of(Stage.SLIPSTREAM_DETECTION, Stage.SLIPSTREAM_NAVIGATION, Stage.HYPERFIELD_OPTIMIZATION, </div>
-<div class="line"><span class="lineno">  297</span>                Stage.TOPOGRAPHIC_DATA, Stage.START).contains(esd.id)) {</div>
-<div class="line"><span class="lineno">  298</span>            <span class="keywordflow">return</span> Global.getSettings().getSpriteName(<span class="stringliteral">&quot;events&quot;</span>, <span class="stringliteral">&quot;hyperspace_topography_&quot;</span> + ((Stage)esd.id).name());</div>
-<div class="line"><span class="lineno">  299</span>        }</div>
-<div class="line"><span class="lineno">  300</span>        <span class="comment">// should not happen - the above cases should handle all possibilities - but just in case</span></div>
-<div class="line"><span class="lineno">  301</span>        <span class="keywordflow">return</span> Global.getSettings().getSpriteName(<span class="stringliteral">&quot;events&quot;</span>, <span class="stringliteral">&quot;hyperspace_topography&quot;</span>);</div>
-<div class="line"><span class="lineno">  302</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8c73590c6f2fcf82f47b13fdce1dde88" name="a8c73590c6f2fcf82f47b13fdce1dde88"></a>
@@ -1555,10 +1292,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#aa6b97feefb5a4f931194eaf3b8846f77">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html#l00319">319</a> of file <a class="el" href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html">HyperspaceTopographyEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  319</span>                                                     {</div>
-<div class="line"><span class="lineno">  320</span>        <span class="keywordflow">return</span> super.getStageImportance(stageId);</div>
-<div class="line"><span class="lineno">  321</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a3c66e4f6454622b3f65eff54b24c179e" name="a3c66e4f6454622b3f65eff54b24c179e"></a>
@@ -1580,36 +1314,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ad124619eb847be5b7e089bf2860cdf6a">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html#l00254">254</a> of file <a class="el" href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html">HyperspaceTopographyEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  254</span>                                                              {</div>
-<div class="line"><span class="lineno">  255</span>        <span class="keyword">final</span> EventStageData esd = <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#aaea47402cf58486cd60052a0e9297933">getDataFor</a>(stageId);</div>
-<div class="line"><span class="lineno">  256</span>        </div>
-<div class="line"><span class="lineno">  257</span>        <span class="keywordflow">if</span> (esd != <span class="keyword">null</span> &amp;&amp; EnumSet.of(Stage.SLIPSTREAM_DETECTION, Stage.SLIPSTREAM_NAVIGATION,</div>
-<div class="line"><span class="lineno">  258</span>                Stage.HYPERFIELD_OPTIMIZATION, Stage.TOPOGRAPHIC_DATA).contains(esd.id)) {</div>
-<div class="line"><span class="lineno">  259</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> BaseFactorTooltip() {</div>
-<div class="line"><span class="lineno">  260</span>                @Override</div>
-<div class="line"><span class="lineno">  261</span>                <span class="keyword">public</span> <span class="keywordtype">void</span> createTooltip(TooltipMakerAPI tooltip, <span class="keywordtype">boolean</span> expanded, Object tooltipParam) {</div>
-<div class="line"><span class="lineno">  262</span>                    <span class="keywordtype">float</span> opad = 10f;</div>
-<div class="line"><span class="lineno">  263</span>                    </div>
-<div class="line"><span class="lineno">  264</span>                    <span class="keywordflow">if</span> (esd.id == Stage.SLIPSTREAM_DETECTION) {</div>
-<div class="line"><span class="lineno">  265</span>                        tooltip.addTitle(<span class="stringliteral">&quot;Slipstream detection&quot;</span>);</div>
-<div class="line"><span class="lineno">  266</span>                    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (esd.id == Stage.SLIPSTREAM_NAVIGATION) {</div>
-<div class="line"><span class="lineno">  267</span>                        tooltip.addTitle(<span class="stringliteral">&quot;Slipstream navigation&quot;</span>);</div>
-<div class="line"><span class="lineno">  268</span>                    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (esd.id == Stage.HYPERFIELD_OPTIMIZATION) {</div>
-<div class="line"><span class="lineno">  269</span>                        tooltip.addTitle(<span class="stringliteral">&quot;Hyperfield optimization&quot;</span>);</div>
-<div class="line"><span class="lineno">  270</span>                    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (esd.id == Stage.TOPOGRAPHIC_DATA) {</div>
-<div class="line"><span class="lineno">  271</span>                        tooltip.addTitle(<span class="stringliteral">&quot;Topographic data&quot;</span>);</div>
-<div class="line"><span class="lineno">  272</span>                    }</div>
-<div class="line"><span class="lineno">  273</span> </div>
-<div class="line"><span class="lineno">  274</span>                    <a class="code hl_function" href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#a149d7c59321133ac2de3251fcb3cb859">addStageDesc</a>(tooltip, esd.id, opad, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  275</span>                    </div>
-<div class="line"><span class="lineno">  276</span>                    esd.addProgressReq(tooltip, opad);</div>
-<div class="line"><span class="lineno">  277</span>                }</div>
-<div class="line"><span class="lineno">  278</span>            };</div>
-<div class="line"><span class="lineno">  279</span>        }</div>
-<div class="line"><span class="lineno">  280</span>        </div>
-<div class="line"><span class="lineno">  281</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  282</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a3d251fbd6dcd9362191ed3558f157a7e" name="a3d251fbd6dcd9362191ed3558f157a7e"></a>
@@ -1628,10 +1333,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html#l00348">348</a> of file <a class="el" href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html">HyperspaceTopographyEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  348</span>                                 {</div>
-<div class="line"><span class="lineno">  349</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#a901c3fcd70b257751814f54b189a10f2">getTopoResetMin</a>() + 50;</div>
-<div class="line"><span class="lineno">  350</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a901c3fcd70b257751814f54b189a10f2" name="a901c3fcd70b257751814f54b189a10f2"></a>
@@ -1650,11 +1352,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html#l00344">344</a> of file <a class="el" href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html">HyperspaceTopographyEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  344</span>                                 {</div>
-<div class="line"><span class="lineno">  345</span>        EventStageData stage = <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#aaea47402cf58486cd60052a0e9297933">getDataFor</a>(Stage.HYPERFIELD_OPTIMIZATION);</div>
-<div class="line"><span class="lineno">  346</span>        <span class="keywordflow">return</span> stage.progress;</div>
-<div class="line"><span class="lineno">  347</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac0600078c72df2c728df0e85ac3a3842" name="ac0600078c72df2c728df0e85ac3a3842"></a>
@@ -1674,18 +1372,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html#l00512">512</a> of file <a class="el" href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html">HyperspaceTopographyEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  512</span>                                                       {</div>
-<div class="line"><span class="lineno">  513</span>        <span class="keywordflow">for</span> (RecentTopographyReadings curr : <a class="code hl_variable" href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#abea8abd6d3153bead994f8e35451abb6">recent</a>.<a class="code hl_function" href="../../dd/df5/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTracker.html#a51a9aa262283049d00a50a16aa0fcb3b">getItems</a>()) {</div>
-<div class="line"><span class="lineno">  514</span>            <span class="keywordtype">float</span> distLY = Misc.getDistanceLY(loc, curr.loc);</div>
-<div class="line"><span class="lineno">  515</span>            <span class="keywordflow">if</span> (distLY &lt;= <a class="code hl_variable" href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#a5b7400bf26ff7add586b93c6b7248cc0">RECENT_READINGS_RANGE_LY</a>) {</div>
-<div class="line"><span class="lineno">  516</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  517</span>            }</div>
-<div class="line"><span class="lineno">  518</span>        }</div>
-<div class="line"><span class="lineno">  519</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  520</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel_html_a5b7400bf26ff7add586b93c6b7248cc0"><div class="ttname"><a href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#a5b7400bf26ff7add586b93c6b7248cc0">com.fs.starfarer.api.impl.campaign.intel.events.ht.HyperspaceTopographyEventIntel.RECENT_READINGS_RANGE_LY</a></div><div class="ttdeci">static float RECENT_READINGS_RANGE_LY</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html#l00081">HyperspaceTopographyEventIntel.java:81</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTracker_html_a51a9aa262283049d00a50a16aa0fcb3b"><div class="ttname"><a href="../../dd/df5/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTracker.html#a51a9aa262283049d00a50a16aa0fcb3b">com.fs.starfarer.api.util.TimeoutTracker.getItems</a></div><div class="ttdeci">List&lt; T &gt; getItems()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dcf/TimeoutTracker_8java_source.html#l00064">TimeoutTracker.java:64</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a08d061d03bc5a44063804993a860c270" name="a08d061d03bc5a44063804993a860c270"></a>
@@ -1712,10 +1399,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html#l00508">508</a> of file <a class="el" href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html">HyperspaceTopographyEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  508</span>                                                        {</div>
-<div class="line"><span class="lineno">  509</span>        <span class="keywordflow">return</span> <span class="keyword">get</span>() != <span class="keyword">null</span> &amp;&amp; <span class="keyword">get</span>().hasRecentReadingsNear(Global.getSector().getPlayerFleet().getLocationInHyperspace());</div>
-<div class="line"><span class="lineno">  510</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a3c316868c3b8b65d8d78b6a953f620da" name="a3c316868c3b8b65d8d78b6a953f620da"></a>
@@ -1744,11 +1428,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a48d9f60d637e9a68fc33e36df7809cde">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html#l00146">146</a> of file <a class="el" href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html">HyperspaceTopographyEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  146</span>                                 {</div>
-<div class="line"><span class="lineno">  147</span>        super.notifyEnded();</div>
-<div class="line"><span class="lineno">  148</span>        Global.getSector().getMemoryWithoutUpdate().unset(<a class="code hl_variable" href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#a6f9b942b52561941f2b82420e2c99c82">KEY</a>);</div>
-<div class="line"><span class="lineno">  149</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aae834d180bf5eac47cfcec85a7a2976c" name="aae834d180bf5eac47cfcec85a7a2976c"></a>
@@ -1777,10 +1457,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a129e179baf5d397ba346dd99cf43fb1c">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html#l00141">141</a> of file <a class="el" href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html">HyperspaceTopographyEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  141</span>                                  {</div>
-<div class="line"><span class="lineno">  142</span>        super.notifyEnding();</div>
-<div class="line"><span class="lineno">  143</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a35ba6d35b78f40148d21f29a306b0088" name="a35ba6d35b78f40148d21f29a306b0088"></a>
@@ -1810,19 +1487,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#af1f5f12f5473a8118b460c337c8a9af4">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html#l00377">377</a> of file <a class="el" href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html">HyperspaceTopographyEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  377</span>                                                            {</div>
-<div class="line"><span class="lineno">  378</span>        <span class="comment">//applyFleetEffects();</span></div>
-<div class="line"><span class="lineno">  379</span>        </div>
-<div class="line"><span class="lineno">  380</span>        <span class="keywordflow">if</span> (stage.id == Stage.TOPOGRAPHIC_DATA) {</div>
-<div class="line"><span class="lineno">  381</span>            <a class="code hl_function" href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#a0447cf7533b766555b9a3216c127455b">resetTopographicData</a>();</div>
-<div class="line"><span class="lineno">  382</span>            </div>
-<div class="line"><span class="lineno">  383</span>            CargoAPI cargo = Global.getSector().getPlayerFleet().getCargo();</div>
-<div class="line"><span class="lineno">  384</span>            cargo.addSpecial(<span class="keyword">new</span> SpecialItemData(Items.TOPOGRAPHIC_DATA, <span class="keyword">null</span>), 1);</div>
-<div class="line"><span class="lineno">  385</span>            <span class="comment">//sendUpdateIfPlayerHasIntel(stage, getTextPanelForStageChange());</span></div>
-<div class="line"><span class="lineno">  386</span>        }</div>
-<div class="line"><span class="lineno">  387</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel_html_a0447cf7533b766555b9a3216c127455b"><div class="ttname"><a href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#a0447cf7533b766555b9a3216c127455b">com.fs.starfarer.api.impl.campaign.intel.events.ht.HyperspaceTopographyEventIntel.resetTopographicData</a></div><div class="ttdeci">void resetTopographicData()</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html#l00352">HyperspaceTopographyEventIntel.java:352</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aced0e00daa6b502afb9961146a1f7bfd" name="aced0e00daa6b502afb9961146a1f7bfd"></a>
@@ -1843,10 +1508,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d4/d57/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1CharacterStatsRefreshListener.html#aababace12d438de3c436a69d7dec9b60">com.fs.starfarer.api.campaign.listeners.CharacterStatsRefreshListener</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html#l00393">393</a> of file <a class="el" href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html">HyperspaceTopographyEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  393</span>                                                           {</div>
-<div class="line"><span class="lineno">  394</span>        </div>
-<div class="line"><span class="lineno">  395</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="adb5cb318cdd53ba0c55bedd1609f5a3f" name="adb5cb318cdd53ba0c55bedd1609f5a3f"></a>
@@ -1892,16 +1554,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d5/d7b/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1FleetEventListener.html#a6dff203922d9929930959967dfddb927">com.fs.starfarer.api.campaign.listeners.FleetEventListener</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html#l00333">333</a> of file <a class="el" href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html">HyperspaceTopographyEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  333</span>                                                                                                               {</div>
-<div class="line"><span class="lineno">  334</span><span class="comment">//      if (isEnded() || isEnding()) return;</span></div>
-<div class="line"><span class="lineno">  335</span><span class="comment">//      </span></div>
-<div class="line"><span class="lineno">  336</span><span class="comment">//      if (!battle.isPlayerInvolved()) return;</span></div>
-<div class="line"><span class="lineno">  337</span>        </div>
-<div class="line"><span class="lineno">  338</span><span class="comment">//      HAShipsDestroyedFactor factor = new HAShipsDestroyedFactor(-1 * points);</span></div>
-<div class="line"><span class="lineno">  339</span><span class="comment">//      sendUpdateIfPlayerHasIntel(factor, false);</span></div>
-<div class="line"><span class="lineno">  340</span><span class="comment">//      addFactor(factor);</span></div>
-<div class="line"><span class="lineno">  341</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a62d7a14b5989d482bc837e6f519d1688" name="a62d7a14b5989d482bc837e6f519d1688"></a>
@@ -1933,10 +1586,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../dd/d4b/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1CurrentLocationChangedListener.html#af51314046318e5f91c742696cc8eff91">com.fs.starfarer.api.campaign.listeners.CurrentLocationChangedListener</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html#l00389">389</a> of file <a class="el" href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html">HyperspaceTopographyEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  389</span>                                                                                 {</div>
-<div class="line"><span class="lineno">  390</span>        <span class="comment">//applyFleetEffects();</span></div>
-<div class="line"><span class="lineno">  391</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac52c22ba232b4033a1f599ff8c3d0e1a" name="ac52c22ba232b4033a1f599ff8c3d0e1a"></a>
@@ -1974,10 +1624,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d5/d7b/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1FleetEventListener.html#a80bf021b96aa1c0f11ee40000e5d3666">com.fs.starfarer.api.campaign.listeners.FleetEventListener</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html#l00330">330</a> of file <a class="el" href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html">HyperspaceTopographyEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  330</span>                                                                                                                {</div>
-<div class="line"><span class="lineno">  331</span>        </div>
-<div class="line"><span class="lineno">  332</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a79b60c927fbc3e9bbd2d1771f7c1e547" name="a79b60c927fbc3e9bbd2d1771f7c1e547"></a>
@@ -1998,13 +1645,7 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d4/d57/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1CharacterStatsRefreshListener.html#a04220f15c4f848d40ff555bca71bf8fd">com.fs.starfarer.api.campaign.listeners.CharacterStatsRefreshListener</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html#l00397">397</a> of file <a class="el" href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html">HyperspaceTopographyEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  397</span>                                                      {</div>
-<div class="line"><span class="lineno">  398</span>        <span class="comment">// called when opening colony screen, so the Spaceport tooltip gets the right values</span></div>
-<div class="line"><span class="lineno">  399</span>        <a class="code hl_function" href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#a4b6f9e402d2d9c2e3abad6e397a07e0e">updateMarketDetectionRanges</a>();</div>
-<div class="line"><span class="lineno">  400</span>        <a class="code hl_function" href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#a9bfc8f34c934e9021ec95dfd3d1e9b0a">applyFleetEffects</a>();</div>
-<div class="line"><span class="lineno">  401</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel_html_a4b6f9e402d2d9c2e3abad6e397a07e0e"><div class="ttname"><a href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#a4b6f9e402d2d9c2e3abad6e397a07e0e">com.fs.starfarer.api.impl.campaign.intel.events.ht.HyperspaceTopographyEventIntel.updateMarketDetectionRanges</a></div><div class="ttdeci">void updateMarketDetectionRanges()</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html#l00432">HyperspaceTopographyEventIntel.java:432</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a0447cf7533b766555b9a3216c127455b" name="a0447cf7533b766555b9a3216c127455b"></a>
@@ -2023,13 +1664,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html#l00352">352</a> of file <a class="el" href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html">HyperspaceTopographyEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  352</span>                                       {</div>
-<div class="line"><span class="lineno">  353</span>        <span class="keywordtype">int</span> resetProgress = <a class="code hl_function" href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#a901c3fcd70b257751814f54b189a10f2">getTopoResetMin</a>() + <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a4f64210f6e66721bbe6730c6b14a3d23">getRandom</a>().nextInt(<a class="code hl_function" href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#a3d251fbd6dcd9362191ed3558f157a7e">getTopoResetMax</a>() - <a class="code hl_function" href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#a901c3fcd70b257751814f54b189a10f2">getTopoResetMin</a>() + 1);</div>
-<div class="line"><span class="lineno">  354</span>        <a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ab5b560e81b4ed5ef19262a77b5ca34f6">setProgress</a>(resetProgress);</div>
-<div class="line"><span class="lineno">  355</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_html_a4f64210f6e66721bbe6730c6b14a3d23"><div class="ttname"><a href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a4f64210f6e66721bbe6730c6b14a3d23">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.getRandom</a></div><div class="ttdeci">Random getRandom()</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d56/BaseEventIntel_8java_source.html#l00922">BaseEventIntel.java:922</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_html_ab5b560e81b4ed5ef19262a77b5ca34f6"><div class="ttname"><a href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ab5b560e81b4ed5ef19262a77b5ca34f6">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.setProgress</a></div><div class="ttdeci">void setProgress(int progress)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d56/BaseEventIntel_8java_source.html#l00814">BaseEventIntel.java:814</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a4b6f9e402d2d9c2e3abad6e397a07e0e" name="a4b6f9e402d2d9c2e3abad6e397a07e0e"></a>
@@ -2048,47 +1683,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html#l00432">432</a> of file <a class="el" href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html">HyperspaceTopographyEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  432</span>                                              {</div>
-<div class="line"><span class="lineno">  433</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a9d9f00c751dc6e4c4b8a852a90e70bb2">isStageActive</a>(Stage.SLIPSTREAM_DETECTION)) {</div>
-<div class="line"><span class="lineno">  434</span>            String id1 = <span class="stringliteral">&quot;hypertopology1&quot;</span>;</div>
-<div class="line"><span class="lineno">  435</span>            String id2 = <span class="stringliteral">&quot;hypertopology2&quot;</span>;</div>
-<div class="line"><span class="lineno">  436</span>            String id3 = <span class="stringliteral">&quot;hypertopology3&quot;</span>;</div>
-<div class="line"><span class="lineno">  437</span>            String id4 = <span class="stringliteral">&quot;hypertopology4&quot;</span>;</div>
-<div class="line"><span class="lineno">  438</span>            <span class="keywordflow">for</span> (MarketAPI market : Global.getSector().getEconomy().getMarketsCopy()) {</div>
-<div class="line"><span class="lineno">  439</span>                <span class="keywordflow">if</span> (market.isHidden()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  440</span> </div>
-<div class="line"><span class="lineno">  441</span>                <span class="keywordtype">boolean</span> unapplicable = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  442</span>                Industry spaceport = market.getIndustry(Industries.SPACEPORT);</div>
-<div class="line"><span class="lineno">  443</span>                <span class="keywordflow">if</span> (spaceport == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  444</span>                    spaceport = market.getIndustry(Industries.MEGAPORT);</div>
-<div class="line"><span class="lineno">  445</span>                }</div>
-<div class="line"><span class="lineno">  446</span>                <span class="keywordflow">if</span> (spaceport == <span class="keyword">null</span> || !spaceport.isFunctional()) {</div>
-<div class="line"><span class="lineno">  447</span>                    unapplicable = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  448</span>                }</div>
-<div class="line"><span class="lineno">  449</span>                </div>
-<div class="line"><span class="lineno">  450</span>                StatBonus mod = market.getStats().getDynamic().getMod(Stats.SLIPSTREAM_REVEAL_RANGE_LY_MOD);</div>
-<div class="line"><span class="lineno">  451</span>                <span class="keywordflow">if</span> (!market.isPlayerOwned() || unapplicable) {</div>
-<div class="line"><span class="lineno">  452</span>                    mod.unmodify(id1);</div>
-<div class="line"><span class="lineno">  453</span>                    mod.unmodify(id2);</div>
-<div class="line"><span class="lineno">  454</span>                    mod.unmodify(id3);</div>
-<div class="line"><span class="lineno">  455</span>                    mod.unmodify(id4);</div>
-<div class="line"><span class="lineno">  456</span>                    <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  457</span>                }</div>
-<div class="line"><span class="lineno">  458</span>                </div>
-<div class="line"><span class="lineno">  459</span>                mod.modifyFlat(id1, <a class="code hl_variable" href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#a5ededb994d4445bb8280f05a7ae15c44">BASE_DETECTION_RANGE_LY</a>, <span class="stringliteral">&quot;Base detection range&quot;</span>);</div>
-<div class="line"><span class="lineno">  460</span>                mod.modifyFlat(id2, market.getSize(), <span class="stringliteral">&quot;Colony size&quot;</span>);</div>
-<div class="line"><span class="lineno">  461</span>                </div>
-<div class="line"><span class="lineno">  462</span>                <span class="keywordtype">float</span> arraysBonus = <a class="code hl_function" href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#a64e1c51ef47e8e110f0aa435593cafec">gerSensorArrayBonusFor</a>(market, <a class="code hl_variable" href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#ae2f333ce11160814bc2be33064b0f1f6">RANGE_WITHIN_WHICH_SENSOR_ARRAYS_HELP_LY</a>);</div>
-<div class="line"><span class="lineno">  463</span>                </div>
-<div class="line"><span class="lineno">  464</span>                mod.modifyFlatAlways(id3, arraysBonus, </div>
-<div class="line"><span class="lineno">  465</span>                        <span class="stringliteral">&quot;Claimed sensor arrays within &quot;</span> + (<span class="keywordtype">int</span>) <a class="code hl_variable" href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#ae2f333ce11160814bc2be33064b0f1f6">RANGE_WITHIN_WHICH_SENSOR_ARRAYS_HELP_LY</a> + </div>
-<div class="line"><span class="lineno">  466</span>                        <span class="stringliteral">&quot; ly (max: &quot;</span> + (<span class="keywordtype">int</span>) <a class="code hl_variable" href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#aa8c24c7c593623d30abb4a943675f328">MAX_SENSOR_ARRAYS</a> + <span class="stringliteral">&quot; arrays)&quot;</span>);</div>
-<div class="line"><span class="lineno">  467</span>            }</div>
-<div class="line"><span class="lineno">  468</span>        }</div>
-<div class="line"><span class="lineno">  469</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel_html_a5ededb994d4445bb8280f05a7ae15c44"><div class="ttname"><a href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#a5ededb994d4445bb8280f05a7ae15c44">com.fs.starfarer.api.impl.campaign.intel.events.ht.HyperspaceTopographyEventIntel.BASE_DETECTION_RANGE_LY</a></div><div class="ttdeci">static float BASE_DETECTION_RANGE_LY</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html#l00058">HyperspaceTopographyEventIntel.java:58</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel_html_a64e1c51ef47e8e110f0aa435593cafec"><div class="ttname"><a href="../../d9/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html#a64e1c51ef47e8e110f0aa435593cafec">com.fs.starfarer.api.impl.campaign.intel.events.ht.HyperspaceTopographyEventIntel.gerSensorArrayBonusFor</a></div><div class="ttdeci">float gerSensorArrayBonusFor(MarketAPI market, float range)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html#l00471">HyperspaceTopographyEventIntel.java:471</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a07be27cb19fdbfd949faa066559cc0ce" name="a07be27cb19fdbfd949faa066559cc0ce"></a>
@@ -2109,10 +1704,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../db/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a5feb1ad12705b3d8017339813512f559">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html#l00499">499</a> of file <a class="el" href="../../d5/da9/HyperspaceTopographyEventIntel_8java_source.html">HyperspaceTopographyEventIntel.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  499</span>                                        {</div>
-<div class="line"><span class="lineno">  500</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  501</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

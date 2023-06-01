@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -177,10 +178,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d1f/ShipQuality_8java_source.html#l00051">51</a> of file <a class="el" href="../../d9/d1f/ShipQuality_8java_source.html">ShipQuality.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   51</span>                         {</div>
-<div class="line"><span class="lineno">   52</span>        Global.getSector().getEconomy().addUpdateListener(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">   53</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -201,10 +199,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d1f/ShipQuality_8java_source.html#l00121">121</a> of file <a class="el" href="../../d9/d1f/ShipQuality_8java_source.html">ShipQuality.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  121</span>                                                     {</div>
-<div class="line"><span class="lineno">  122</span>        </div>
-<div class="line"><span class="lineno">  123</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aed4064573787beb05fc88e4ec3f81fad" name="aed4064573787beb05fc88e4ec3f81fad"></a>
@@ -223,49 +218,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d1f/ShipQuality_8java_source.html#l00059">59</a> of file <a class="el" href="../../d9/d1f/ShipQuality_8java_source.html">ShipQuality.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   59</span>                                 {</div>
-<div class="line"><span class="lineno">   60</span>        <span class="comment">// use highest in-faction export, tie-break with quality</span></div>
-<div class="line"><span class="lineno">   61</span>        <span class="comment">// need to consider different econ groups separately CommodityMarketDataAPI</span></div>
-<div class="line"><span class="lineno">   62</span>        <span class="comment">// even a ship production of 1 unit in-faction is enough </span></div>
-<div class="line"><span class="lineno">   63</span>        <span class="comment">// to get in-faction rather than imported hulls and quality</span></div>
-<div class="line"><span class="lineno">   64</span>        </div>
-<div class="line"><span class="lineno">   65</span>        <a class="code hl_variable" href="../../d9/d05/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1ShipQuality.html#adaf36af5d92a2e9f6b574723f7c253a0">data</a>.clear();</div>
-<div class="line"><span class="lineno">   66</span>        </div>
-<div class="line"><span class="lineno">   67</span>        <span class="keywordflow">for</span> (MarketAPI market : Global.getSector().getEconomy().getMarketsCopy()) {</div>
-<div class="line"><span class="lineno">   68</span><span class="comment">//          if (market.getName().equals(&quot;Stral&quot;)) {</span></div>
-<div class="line"><span class="lineno">   69</span><span class="comment">//              System.out.println(&quot;wefwef&quot;);</span></div>
-<div class="line"><span class="lineno">   70</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">   71</span>            </div>
-<div class="line"><span class="lineno">   72</span>            QualityData d = <a class="code hl_function" href="../../d9/d05/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1ShipQuality.html#a9794673ab91dae68174bcbd7f92372b2">getQualityData</a>(market);</div>
-<div class="line"><span class="lineno">   73</span>            </div>
-<div class="line"><span class="lineno">   74</span>            CommodityOnMarketAPI com = market.getCommodityData(Commodities.SHIPS);</div>
-<div class="line"><span class="lineno">   75</span>            <span class="keywordtype">int</span> prod = Math.min(com.getAvailable(), com.getMaxSupply());</div>
-<div class="line"><span class="lineno">   76</span><span class="comment">//          if (com.getCommodityMarketData() == null) {</span></div>
-<div class="line"><span class="lineno">   77</span><span class="comment">//              System.out.println(&quot;wfwefew&quot;);</span></div>
-<div class="line"><span class="lineno">   78</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">   79</span><span class="comment">//          if (market.isPlayerOwned()) {</span></div>
-<div class="line"><span class="lineno">   80</span><span class="comment">//              System.out.println(&quot;wefwefwe&quot;);</span></div>
-<div class="line"><span class="lineno">   81</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">   82</span><span class="comment">//          if (market.getName().contains(&quot;Kapteyn&quot;)) {</span></div>
-<div class="line"><span class="lineno">   83</span><span class="comment">//              System.out.println(&quot;wefwefwe&quot;);</span></div>
-<div class="line"><span class="lineno">   84</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">   85</span>            <span class="keywordtype">int</span> inFactionShipping = com.getCommodityMarketData().getMaxShipping(market, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   86</span>            prod = Math.min(prod, inFactionShipping);</div>
-<div class="line"><span class="lineno">   87</span>            prod = Math.max(Math.min(com.getAvailable(), com.getMaxSupply()), prod);</div>
-<div class="line"><span class="lineno">   88</span>            <span class="keywordflow">if</span> (prod &gt;= d.prod &amp;&amp; prod &gt; 0) {</div>
-<div class="line"><span class="lineno">   89</span>                <span class="keywordtype">float</span> q = market.getStats().getDynamic().getMod(Stats.PRODUCTION_QUALITY_MOD).computeEffective(0f);</div>
-<div class="line"><span class="lineno">   90</span>                <span class="keywordflow">if</span> (q &gt;= d.qMod || prod &gt; d.prod) {</div>
-<div class="line"><span class="lineno">   91</span>                    d.prod = prod;</div>
-<div class="line"><span class="lineno">   92</span>                    d.qMod = q;</div>
-<div class="line"><span class="lineno">   93</span>                    d.market = market;</div>
-<div class="line"><span class="lineno">   94</span>                    d.quality = market.getStats().getDynamic().getMod(Stats.PRODUCTION_QUALITY_MOD);</div>
-<div class="line"><span class="lineno">   95</span>                }</div>
-<div class="line"><span class="lineno">   96</span>            }</div>
-<div class="line"><span class="lineno">   97</span>        }</div>
-<div class="line"><span class="lineno">   98</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1ShipQuality_html_a9794673ab91dae68174bcbd7f92372b2"><div class="ttname"><a href="../../d9/d05/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1ShipQuality.html#a9794673ab91dae68174bcbd7f92372b2">com.fs.starfarer.api.impl.campaign.econ.impl.ShipQuality.getQualityData</a></div><div class="ttdeci">QualityData getQualityData(MarketAPI market)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d1f/ShipQuality_8java_source.html#l00102">ShipQuality.java:102</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1ShipQuality_html_adaf36af5d92a2e9f6b574723f7c253a0"><div class="ttname"><a href="../../d9/d05/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1ShipQuality.html#adaf36af5d92a2e9f6b574723f7c253a0">com.fs.starfarer.api.impl.campaign.econ.impl.ShipQuality.data</a></div><div class="ttdeci">transient Map&lt; String, QualityData &gt; data</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d1f/ShipQuality_8java_source.html#l00044">ShipQuality.java:44</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8c4e62b69b943d385f0a1b602b10e26f" name="a8c4e62b69b943d385f0a1b602b10e26f"></a>
@@ -292,17 +245,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d1f/ShipQuality_8java_source.html#l00019">19</a> of file <a class="el" href="../../d9/d1f/ShipQuality_8java_source.html">ShipQuality.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   19</span>                                            {</div>
-<div class="line"><span class="lineno">   20</span>        Object test = Global.getSector().getMemoryWithoutUpdate().get(<a class="code hl_variable" href="../../d9/d05/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1ShipQuality.html#adde61e8be95b25e01410dfea35ee7633">KEY</a>);</div>
-<div class="line"><span class="lineno">   21</span>        <span class="keywordflow">if</span> (test == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   22</span>            test = <span class="keyword">new</span> <a class="code hl_function" href="../../d9/d05/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1ShipQuality.html#a40d014559b6dda453b040f959dfbbb8e">ShipQuality</a>();</div>
-<div class="line"><span class="lineno">   23</span>            Global.getSector().getMemoryWithoutUpdate().set(<a class="code hl_variable" href="../../d9/d05/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1ShipQuality.html#adde61e8be95b25e01410dfea35ee7633">KEY</a>, test);</div>
-<div class="line"><span class="lineno">   24</span>        }</div>
-<div class="line"><span class="lineno">   25</span>        <span class="keywordflow">return</span> (<a class="code hl_function" href="../../d9/d05/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1ShipQuality.html#a40d014559b6dda453b040f959dfbbb8e">ShipQuality</a>) test; </div>
-<div class="line"><span class="lineno">   26</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1ShipQuality_html_a40d014559b6dda453b040f959dfbbb8e"><div class="ttname"><a href="../../d9/d05/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1ShipQuality.html#a40d014559b6dda453b040f959dfbbb8e">com.fs.starfarer.api.impl.campaign.econ.impl.ShipQuality.ShipQuality</a></div><div class="ttdeci">ShipQuality()</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d1f/ShipQuality_8java_source.html#l00051">ShipQuality.java:51</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1ShipQuality_html_adde61e8be95b25e01410dfea35ee7633"><div class="ttname"><a href="../../d9/d05/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1ShipQuality.html#adde61e8be95b25e01410dfea35ee7633">com.fs.starfarer.api.impl.campaign.econ.impl.ShipQuality.KEY</a></div><div class="ttdeci">static final String KEY</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d1f/ShipQuality_8java_source.html#l00017">ShipQuality.java:17</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa6e3a990b10d88c441c6dcd80dfad84f" name="aa6e3a990b10d88c441c6dcd80dfad84f"></a>
@@ -322,10 +265,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d1f/ShipQuality_8java_source.html#l00055">55</a> of file <a class="el" href="../../d9/d1f/ShipQuality_8java_source.html">ShipQuality.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   55</span>                                           {</div>
-<div class="line"><span class="lineno">   56</span>        <span class="keywordflow">return</span> market.getFactionId() + <span class="stringliteral">&quot;_&quot;</span> + market.getEconGroup();</div>
-<div class="line"><span class="lineno">   57</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9794673ab91dae68174bcbd7f92372b2" name="a9794673ab91dae68174bcbd7f92372b2"></a>
@@ -345,27 +285,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d1f/ShipQuality_8java_source.html#l00102">102</a> of file <a class="el" href="../../d9/d1f/ShipQuality_8java_source.html">ShipQuality.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  102</span>                                                        {</div>
-<div class="line"><span class="lineno">  103</span>        String key = <a class="code hl_function" href="../../d9/d05/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1ShipQuality.html#aa6e3a990b10d88c441c6dcd80dfad84f">getKey</a>(market);</div>
-<div class="line"><span class="lineno">  104</span>        QualityData d = <a class="code hl_variable" href="../../d9/d05/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1ShipQuality.html#adaf36af5d92a2e9f6b574723f7c253a0">data</a>.get(key);</div>
-<div class="line"><span class="lineno">  105</span>        <span class="keywordflow">if</span> (d == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  106</span><span class="comment">//          if (market.getName().equals(&quot;Rosas&quot;)) {</span></div>
-<div class="line"><span class="lineno">  107</span><span class="comment">//              System.out.println(&quot;wefwef&quot;);</span></div>
-<div class="line"><span class="lineno">  108</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">  109</span>            d = <span class="keyword">new</span> QualityData(market.getEconGroup(), market.getFaction());</div>
-<div class="line"><span class="lineno">  110</span>            <span class="keywordflow">if</span> (!market.isHidden()) {</div>
-<div class="line"><span class="lineno">  111</span>                d.quality.modifyFlat(<span class="stringliteral">&quot;no_prod_penalty&quot;</span>, <a class="code hl_variable" href="../../d9/d05/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1ShipQuality.html#ae1aac3754f2d64eb3de401b7bcb473c1">IMPORT_PENALTY</a>, <span class="stringliteral">&quot;Cross-faction imports&quot;</span>);</div>
-<div class="line"><span class="lineno">  112</span>            }</div>
-<div class="line"><span class="lineno">  113</span>            <span class="comment">//d.market = market; // doesn&#39;t matter which market, just needs to have a market to show up in tooltip</span></div>
-<div class="line"><span class="lineno">  114</span>            d.prod = -1;</div>
-<div class="line"><span class="lineno">  115</span>            d.qMod = -1;</div>
-<div class="line"><span class="lineno">  116</span>            <a class="code hl_variable" href="../../d9/d05/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1ShipQuality.html#adaf36af5d92a2e9f6b574723f7c253a0">data</a>.put(key, d);</div>
-<div class="line"><span class="lineno">  117</span>        }</div>
-<div class="line"><span class="lineno">  118</span>        <span class="keywordflow">return</span> d;</div>
-<div class="line"><span class="lineno">  119</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1ShipQuality_html_aa6e3a990b10d88c441c6dcd80dfad84f"><div class="ttname"><a href="../../d9/d05/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1ShipQuality.html#aa6e3a990b10d88c441c6dcd80dfad84f">com.fs.starfarer.api.impl.campaign.econ.impl.ShipQuality.getKey</a></div><div class="ttdeci">String getKey(MarketAPI market)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d1f/ShipQuality_8java_source.html#l00055">ShipQuality.java:55</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1ShipQuality_html_ae1aac3754f2d64eb3de401b7bcb473c1"><div class="ttname"><a href="../../d9/d05/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1ShipQuality.html#ae1aac3754f2d64eb3de401b7bcb473c1">com.fs.starfarer.api.impl.campaign.econ.impl.ShipQuality.IMPORT_PENALTY</a></div><div class="ttdeci">static float IMPORT_PENALTY</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d1f/ShipQuality_8java_source.html#l00100">ShipQuality.java:100</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ad478df63ebb06d0a8561cc2e06af571f" name="ad478df63ebb06d0a8561cc2e06af571f"></a>
@@ -403,26 +323,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d1f/ShipQuality_8java_source.html#l00130">130</a> of file <a class="el" href="../../d9/d1f/ShipQuality_8java_source.html">ShipQuality.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  130</span>                                                                           {</div>
-<div class="line"><span class="lineno">  131</span>        <span class="keywordtype">float</span> quality = 0f;</div>
-<div class="line"><span class="lineno">  132</span>        </div>
-<div class="line"><span class="lineno">  133</span>        <span class="keywordflow">if</span> (market != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  134</span>            QualityData d = <a class="code hl_function" href="../../d9/d05/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1ShipQuality.html#a8c4e62b69b943d385f0a1b602b10e26f">getInstance</a>().<a class="code hl_function" href="../../d9/d05/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1ShipQuality.html#a9794673ab91dae68174bcbd7f92372b2">getQualityData</a>(market);</div>
-<div class="line"><span class="lineno">  135</span>            quality = d.quality.computeEffective(0f);</div>
-<div class="line"><span class="lineno">  136</span>            quality += market.getStats().getDynamic().getMod(Stats.FLEET_QUALITY_MOD).computeEffective(0f);</div>
-<div class="line"><span class="lineno">  137</span>        }</div>
-<div class="line"><span class="lineno">  138</span>        </div>
-<div class="line"><span class="lineno">  139</span>        <span class="keywordflow">if</span> (factionId != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  140</span>            <span class="keywordflow">if</span> (market != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  141</span>                quality -= market.getFaction().getDoctrine().getShipQualityContribution();</div>
-<div class="line"><span class="lineno">  142</span>            }</div>
-<div class="line"><span class="lineno">  143</span>            quality += Global.getSector().getFaction(factionId).getDoctrine().getShipQualityContribution();</div>
-<div class="line"><span class="lineno">  144</span>        }</div>
-<div class="line"><span class="lineno">  145</span>        </div>
-<div class="line"><span class="lineno">  146</span>        <span class="keywordflow">return</span> quality;</div>
-<div class="line"><span class="lineno">  147</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1ShipQuality_html_a8c4e62b69b943d385f0a1b602b10e26f"><div class="ttname"><a href="../../d9/d05/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1ShipQuality.html#a8c4e62b69b943d385f0a1b602b10e26f">com.fs.starfarer.api.impl.campaign.econ.impl.ShipQuality.getInstance</a></div><div class="ttdeci">static ShipQuality getInstance()</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d1f/ShipQuality_8java_source.html#l00019">ShipQuality.java:19</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a450d38de005807bbbeff22bc3d006f0b" name="a450d38de005807bbbeff22bc3d006f0b"></a>
@@ -441,10 +342,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d1f/ShipQuality_8java_source.html#l00125">125</a> of file <a class="el" href="../../d9/d1f/ShipQuality_8java_source.html">ShipQuality.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  125</span>                                              {</div>
-<div class="line"><span class="lineno">  126</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  127</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a48a642815e5dcc80aab1ea6faa57efe4" name="a48a642815e5dcc80aab1ea6faa57efe4"></a>
@@ -471,11 +369,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d1f/ShipQuality_8java_source.html#l00046">46</a> of file <a class="el" href="../../d9/d1f/ShipQuality_8java_source.html">ShipQuality.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   46</span>                                   {</div>
-<div class="line"><span class="lineno">   47</span>        <a class="code hl_variable" href="../../d9/d05/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1ShipQuality.html#adaf36af5d92a2e9f6b574723f7c253a0">data</a> = <span class="keyword">new</span> HashMap&lt;String, QualityData&gt;();</div>
-<div class="line"><span class="lineno">   48</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">   49</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

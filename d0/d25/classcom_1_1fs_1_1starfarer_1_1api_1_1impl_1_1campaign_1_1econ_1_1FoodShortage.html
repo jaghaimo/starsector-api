@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -252,9 +253,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d9d/FoodShortage_8java_source.html#l00018">18</a> of file <a class="el" href="../../d2/d9d/FoodShortage_8java_source.html">FoodShortage.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   18</span>                          {</div>
-<div class="line"><span class="lineno">   19</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -277,21 +276,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../db/d90/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1BaseMarketConditionPlugin.html#a06536345c4ccb9cf0adf76ca9724dd65">com.fs.starfarer.api.impl.campaign.econ.BaseMarketConditionPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d9d/FoodShortage_8java_source.html#l00021">21</a> of file <a class="el" href="../../d2/d9d/FoodShortage_8java_source.html">FoodShortage.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   21</span>                                 {</div>
-<div class="line"><span class="lineno">   22</span>        <a class="code hl_variable" href="../../db/d90/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1BaseMarketConditionPlugin.html#a1f1756ede82e9c512073a404efaeca55">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a85471d119446dec6c1d5e53f3fe13cf1">getStability</a>().<a class="code hl_function" href="../../d4/d1a/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableStat.html#a3af420f08b9b78a54ab0e4c8fdc9184b">modifyFlat</a>(<span class="keywordtype">id</span>, -1f * event.<a class="code hl_function" href="../../da/d04/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent.html#a3f335e14d392e9ff6909d03a2fabf016">getStabilityImpact</a>(), <span class="stringliteral">&quot;Food shortage&quot;</span>);</div>
-<div class="line"><span class="lineno">   23</span>        </div>
-<div class="line"><span class="lineno">   24</span>        String sellId = Stats.getPlayerSellRepImpactMultId(Commodities.FOOD);</div>
-<div class="line"><span class="lineno">   25</span>        <a class="code hl_variable" href="../../db/d90/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1BaseMarketConditionPlugin.html#a1f1756ede82e9c512073a404efaeca55">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a70323dd35f954c1be49bf2e8c43c9284">getStats</a>().<a class="code hl_function" href="../../d0/d6d/interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1MutableMarketStatsAPI.html#a07a35dc173333e48b78a68c47950280d">getDynamic</a>().<a class="code hl_function" href="../../db/dcf/interfacecom_1_1fs_1_1starfarer_1_1api_1_1util_1_1DynamicStatsAPI.html#a249fe23994c89b62e04869b26f539843">getStat</a>(sellId).<a class="code hl_function" href="../../d4/d1a/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableStat.html#a93ff3388d9afcdd06bf088fdb2463431">modifyMult</a>(<span class="keywordtype">id</span>, 4f);</div>
-<div class="line"><span class="lineno">   26</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableStat_html_a3af420f08b9b78a54ab0e4c8fdc9184b"><div class="ttname"><a href="../../d4/d1a/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableStat.html#a3af420f08b9b78a54ab0e4c8fdc9184b">com.fs.starfarer.api.combat.MutableStat.modifyFlat</a></div><div class="ttdeci">void modifyFlat(String source, float value)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d27/MutableStat_8java_source.html#l00176">MutableStat.java:176</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableStat_html_a93ff3388d9afcdd06bf088fdb2463431"><div class="ttname"><a href="../../d4/d1a/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableStat.html#a93ff3388d9afcdd06bf088fdb2463431">com.fs.starfarer.api.combat.MutableStat.modifyMult</a></div><div class="ttdeci">void modifyMult(String source, float value)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d27/MutableStat_8java_source.html#l00216">MutableStat.java:216</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1BaseMarketConditionPlugin_html_a1f1756ede82e9c512073a404efaeca55"><div class="ttname"><a href="../../db/d90/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1BaseMarketConditionPlugin.html#a1f1756ede82e9c512073a404efaeca55">com.fs.starfarer.api.impl.campaign.econ.BaseMarketConditionPlugin.market</a></div><div class="ttdeci">MarketAPI market</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d56/BaseMarketConditionPlugin_8java_source.html#l00022">BaseMarketConditionPlugin.java:22</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent_html_a3f335e14d392e9ff6909d03a2fabf016"><div class="ttname"><a href="../../da/d04/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent.html#a3f335e14d392e9ff6909d03a2fabf016">com.fs.starfarer.api.impl.campaign.events.FoodShortageEvent.getStabilityImpact</a></div><div class="ttdeci">float getStabilityImpact()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dca/FoodShortageEvent_8java_source.html#l00217">FoodShortageEvent.java:217</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a70323dd35f954c1be49bf2e8c43c9284"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a70323dd35f954c1be49bf2e8c43c9284">com.fs.starfarer.api.campaign.econ.MarketAPI.getStats</a></div><div class="ttdeci">MutableMarketStatsAPI getStats()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a85471d119446dec6c1d5e53f3fe13cf1"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a85471d119446dec6c1d5e53f3fe13cf1">com.fs.starfarer.api.campaign.econ.MarketAPI.getStability</a></div><div class="ttdeci">MutableStatWithTempMods getStability()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1MutableMarketStatsAPI_html_a07a35dc173333e48b78a68c47950280d"><div class="ttname"><a href="../../d0/d6d/interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1MutableMarketStatsAPI.html#a07a35dc173333e48b78a68c47950280d">com.fs.starfarer.api.fleet.MutableMarketStatsAPI.getDynamic</a></div><div class="ttdeci">DynamicStatsAPI getDynamic()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1util_1_1DynamicStatsAPI_html_a249fe23994c89b62e04869b26f539843"><div class="ttname"><a href="../../db/dcf/interfacecom_1_1fs_1_1starfarer_1_1api_1_1util_1_1DynamicStatsAPI.html#a249fe23994c89b62e04869b26f539843">com.fs.starfarer.api.util.DynamicStatsAPI.getStat</a></div><div class="ttdeci">MutableStat getStat(String id)</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a866f1fb132ab92d5cbe521517cd43d4b" name="a866f1fb132ab92d5cbe521517cd43d4b"></a>
@@ -312,10 +297,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../db/d90/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1BaseMarketConditionPlugin.html#a4e1345bf8629740e95ef470b77d0843e">com.fs.starfarer.api.impl.campaign.econ.BaseMarketConditionPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d9d/FoodShortage_8java_source.html#l00075">75</a> of file <a class="el" href="../../d2/d9d/FoodShortage_8java_source.html">FoodShortage.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   75</span>                                        {</div>
-<div class="line"><span class="lineno">   76</span>        <span class="keywordflow">return</span> super.getHighlightColors();</div>
-<div class="line"><span class="lineno">   77</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac79a8d8bf6d258162017433e24662310" name="ac79a8d8bf6d258162017433e24662310"></a>
@@ -337,15 +319,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../db/d90/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1BaseMarketConditionPlugin.html#ab1cc1162e1650a249ea6c0bdf1df1481">com.fs.starfarer.api.impl.campaign.econ.BaseMarketConditionPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d9d/FoodShortage_8java_source.html#l00066">66</a> of file <a class="el" href="../../d2/d9d/FoodShortage_8java_source.html">FoodShortage.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   66</span>                                    {</div>
-<div class="line"><span class="lineno">   67</span>        List&lt;String&gt; highlights = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
-<div class="line"><span class="lineno">   68</span>        <span class="comment">//addTokensToList(highlights, &quot;$stabilityPenalty&quot;, &quot;$foodPriceIncrease&quot;, &quot;$neededFood&quot;);</span></div>
-<div class="line"><span class="lineno">   69</span>        <a class="code hl_function" href="../../db/d90/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1BaseMarketConditionPlugin.html#ae33ceba7bcb432e539190d43cce383e3">addTokensToList</a>(highlights, <span class="stringliteral">&quot;$stabilityPenalty&quot;</span>, <span class="stringliteral">&quot;$neededFood&quot;</span>);</div>
-<div class="line"><span class="lineno">   70</span>        <span class="keywordflow">return</span> highlights.toArray(<span class="keyword">new</span> String [0]);</div>
-<div class="line"><span class="lineno">   71</span>        <span class="comment">//return new String[] {&quot;&quot; + (int) event.getStabilityImpact() };</span></div>
-<div class="line"><span class="lineno">   72</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1BaseMarketConditionPlugin_html_ae33ceba7bcb432e539190d43cce383e3"><div class="ttname"><a href="../../db/d90/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1BaseMarketConditionPlugin.html#ae33ceba7bcb432e539190d43cce383e3">com.fs.starfarer.api.impl.campaign.econ.BaseMarketConditionPlugin.addTokensToList</a></div><div class="ttdeci">void addTokensToList(List&lt; String &gt; list, String ... keys)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d56/BaseMarketConditionPlugin_8java_source.html#l00216">BaseMarketConditionPlugin.java:216</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a309ffd09012837f238ba9fb4f95c8ec7" name="a309ffd09012837f238ba9fb4f95c8ec7"></a>
@@ -367,10 +341,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../db/d90/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1BaseMarketConditionPlugin.html#ac6c3a9f47dd4e7714fd4cbb4c153692e">com.fs.starfarer.api.impl.campaign.econ.BaseMarketConditionPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d9d/FoodShortage_8java_source.html#l00037">37</a> of file <a class="el" href="../../d2/d9d/FoodShortage_8java_source.html">FoodShortage.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   37</span>                                                {</div>
-<div class="line"><span class="lineno">   38</span>        <span class="keywordflow">return</span> <span class="keyword">event</span>.getRelatedCommodities();</div>
-<div class="line"><span class="lineno">   39</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af2aee6cd16b308f95a80b7474cec69d9" name="af2aee6cd16b308f95a80b7474cec69d9"></a>
@@ -392,25 +363,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../db/d90/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1BaseMarketConditionPlugin.html#a84f1c00ee04ad02f2d941d600970d5cc">com.fs.starfarer.api.impl.campaign.econ.BaseMarketConditionPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d9d/FoodShortage_8java_source.html#l00047">47</a> of file <a class="el" href="../../d2/d9d/FoodShortage_8java_source.html">FoodShortage.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   47</span>                                                      {</div>
-<div class="line"><span class="lineno">   48</span>        <span class="comment">// LinkedHashMap because order matters in getHighlights()</span></div>
-<div class="line"><span class="lineno">   49</span>        <span class="comment">//Map&lt;String, String&gt; tokens = new LinkedHashMap&lt;String, String&gt;();</span></div>
-<div class="line"><span class="lineno">   50</span>        Map&lt;String, String&gt; tokens = super.getTokenReplacements();</div>
-<div class="line"><span class="lineno">   51</span>        </div>
-<div class="line"><span class="lineno">   52</span>        <span class="keywordtype">int</span> penalty = (int) event.<a class="code hl_function" href="../../da/d04/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent.html#a3f335e14d392e9ff6909d03a2fabf016">getStabilityImpact</a>();</div>
-<div class="line"><span class="lineno">   53</span>        tokens.put(<span class="stringliteral">&quot;$stabilityPenalty&quot;</span>, <span class="stringliteral">&quot;&quot;</span> + penalty);</div>
-<div class="line"><span class="lineno">   54</span>        </div>
-<div class="line"><span class="lineno">   55</span>        <span class="comment">//int increase = (int) ((event.getFoodPriceFlat() - 1f) * 100f); </span></div>
-<div class="line"><span class="lineno">   56</span>        <span class="comment">//tokens.put(&quot;$foodPriceIncrease&quot;, &quot;&quot; + increase + &quot;%&quot;);</span></div>
-<div class="line"><span class="lineno">   57</span>        <span class="comment">//tokens.put(&quot;$foodPriceIncrease&quot;, &quot;~&quot; + (int) Misc.getRounded(event.getFoodPriceFlat()) + Strings.C);</span></div>
-<div class="line"><span class="lineno">   58</span>        </div>
-<div class="line"><span class="lineno">   59</span>        <span class="keywordtype">int</span> remaining = (int) Misc.getRounded(event.<a class="code hl_function" href="../../da/d04/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent.html#a306da90cebf2197c2737345c85f17bcc">getRemainingFoodToMeetShortage</a>());</div>
-<div class="line"><span class="lineno">   60</span>        tokens.put(<span class="stringliteral">&quot;$neededFood&quot;</span>, <span class="stringliteral">&quot;&quot;</span> + remaining);</div>
-<div class="line"><span class="lineno">   61</span>        </div>
-<div class="line"><span class="lineno">   62</span>        <span class="keywordflow">return</span> tokens;</div>
-<div class="line"><span class="lineno">   63</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent_html_a306da90cebf2197c2737345c85f17bcc"><div class="ttname"><a href="../../da/d04/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent.html#a306da90cebf2197c2737345c85f17bcc">com.fs.starfarer.api.impl.campaign.events.FoodShortageEvent.getRemainingFoodToMeetShortage</a></div><div class="ttdeci">float getRemainingFoodToMeetShortage()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dca/FoodShortageEvent_8java_source.html#l00615">FoodShortageEvent.java:615</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aee467c0c654a85dae2cd0290e205e7cf" name="aee467c0c654a85dae2cd0290e205e7cf"></a>
@@ -432,10 +385,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../db/d90/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1BaseMarketConditionPlugin.html#a052748b2937217f493b994ed255b50c7">com.fs.starfarer.api.impl.campaign.econ.BaseMarketConditionPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d9d/FoodShortage_8java_source.html#l00080">80</a> of file <a class="el" href="../../d2/d9d/FoodShortage_8java_source.html">FoodShortage.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   80</span>                                 {</div>
-<div class="line"><span class="lineno">   81</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   82</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aab31c68338ec83b5720769841f56f576" name="aab31c68338ec83b5720769841f56f576"></a>
@@ -457,10 +407,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../db/d90/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1BaseMarketConditionPlugin.html#abd127a6f81f7f598e97775f23cc8906f">com.fs.starfarer.api.impl.campaign.econ.BaseMarketConditionPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d9d/FoodShortage_8java_source.html#l00042">42</a> of file <a class="el" href="../../d2/d9d/FoodShortage_8java_source.html">FoodShortage.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   42</span>                                       {</div>
-<div class="line"><span class="lineno">   43</span>        <span class="keyword">event</span> = (FoodShortageEvent) param;</div>
-<div class="line"><span class="lineno">   44</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac11fd34d8eacb941b8932bc84effe012" name="ac11fd34d8eacb941b8932bc84effe012"></a>
@@ -482,18 +429,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../db/d90/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1BaseMarketConditionPlugin.html#a9711ad59f3f75e47ae15f5b3ff2be101">com.fs.starfarer.api.impl.campaign.econ.BaseMarketConditionPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d9d/FoodShortage_8java_source.html#l00028">28</a> of file <a class="el" href="../../d2/d9d/FoodShortage_8java_source.html">FoodShortage.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   28</span>                                   {</div>
-<div class="line"><span class="lineno">   29</span>        <a class="code hl_variable" href="../../db/d90/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1BaseMarketConditionPlugin.html#a1f1756ede82e9c512073a404efaeca55">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a6186b555a108bee51ba3ee878d07032d">getCommodityData</a>(Commodities.FOOD).<a class="code hl_function" href="../../d3/dd7/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommodityOnMarketAPI.html#a013272e96611cfcb002f27d8446923a7">getPlayerSupplyPriceMod</a>().<a class="code hl_function" href="../../dc/d19/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus.html#a842b1c12ad63fe608e449acb687a27cb">unmodify</a>(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">   30</span>        <a class="code hl_variable" href="../../db/d90/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1BaseMarketConditionPlugin.html#a1f1756ede82e9c512073a404efaeca55">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a85471d119446dec6c1d5e53f3fe13cf1">getStability</a>().<a class="code hl_function" href="../../d4/d1a/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableStat.html#a5d33c34a2d1323adc638f9bf9560a4b4">unmodify</a>(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">   31</span>        </div>
-<div class="line"><span class="lineno">   32</span>        String sellId = Stats.getPlayerSellRepImpactMultId(Commodities.FOOD);</div>
-<div class="line"><span class="lineno">   33</span>        <a class="code hl_variable" href="../../db/d90/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1BaseMarketConditionPlugin.html#a1f1756ede82e9c512073a404efaeca55">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a70323dd35f954c1be49bf2e8c43c9284">getStats</a>().<a class="code hl_function" href="../../d0/d6d/interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1MutableMarketStatsAPI.html#a07a35dc173333e48b78a68c47950280d">getDynamic</a>().<a class="code hl_function" href="../../db/dcf/interfacecom_1_1fs_1_1starfarer_1_1api_1_1util_1_1DynamicStatsAPI.html#a249fe23994c89b62e04869b26f539843">getStat</a>(sellId).<a class="code hl_function" href="../../d4/d1a/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableStat.html#a5d33c34a2d1323adc638f9bf9560a4b4">unmodify</a>(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">   34</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableStat_html_a5d33c34a2d1323adc638f9bf9560a4b4"><div class="ttname"><a href="../../d4/d1a/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableStat.html#a5d33c34a2d1323adc638f9bf9560a4b4">com.fs.starfarer.api.combat.MutableStat.unmodify</a></div><div class="ttdeci">void unmodify()</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d27/MutableStat_8java_source.html#l00245">MutableStat.java:245</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus_html_a842b1c12ad63fe608e449acb687a27cb"><div class="ttname"><a href="../../dc/d19/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus.html#a842b1c12ad63fe608e449acb687a27cb">com.fs.starfarer.api.combat.StatBonus.unmodify</a></div><div class="ttdeci">void unmodify()</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d6c/StatBonus_8java_source.html#l00179">StatBonus.java:179</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommodityOnMarketAPI_html_a013272e96611cfcb002f27d8446923a7"><div class="ttname"><a href="../../d3/dd7/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommodityOnMarketAPI.html#a013272e96611cfcb002f27d8446923a7">com.fs.starfarer.api.campaign.econ.CommodityOnMarketAPI.getPlayerSupplyPriceMod</a></div><div class="ttdeci">StatBonus getPlayerSupplyPriceMod()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a6186b555a108bee51ba3ee878d07032d"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a6186b555a108bee51ba3ee878d07032d">com.fs.starfarer.api.campaign.econ.MarketAPI.getCommodityData</a></div><div class="ttdeci">CommodityOnMarketAPI getCommodityData(String commodityId)</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

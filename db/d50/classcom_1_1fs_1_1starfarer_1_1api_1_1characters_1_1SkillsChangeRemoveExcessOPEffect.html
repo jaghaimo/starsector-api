@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -215,16 +216,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/db6/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1BaseSkillsChangeEffect.html#ac263fc216e6112b6c473475e04c185d2">com.fs.starfarer.api.characters.BaseSkillsChangeEffect</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d8c/SkillsChangeRemoveExcessOPEffect_8java_source.html#l00095">95</a> of file <a class="el" href="../../d3/d8c/SkillsChangeRemoveExcessOPEffect_8java_source.html">SkillsChangeRemoveExcessOPEffect.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   95</span>                                                                                                                      {</div>
-<div class="line"><span class="lineno">   96</span>        OPDataMap map = <a class="code hl_function" href="../../db/d50/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeRemoveExcessOPEffect.html#aa9308dec214d6d06311fe466024922ee">getMap</a>(dataMap);</div>
-<div class="line"><span class="lineno">   97</span>        </div>
-<div class="line"><span class="lineno">   98</span>        <span class="keywordflow">for</span> (OPEffectData data : map.map.values()) {</div>
-<div class="line"><span class="lineno">   99</span>            <a class="code hl_function" href="../../db/d50/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeRemoveExcessOPEffect.html#a29f645db39805df66e52abb7a31daf2a">clampOP</a>(data.member, to);</div>
-<div class="line"><span class="lineno">  100</span>        }</div>
-<div class="line"><span class="lineno">  101</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeRemoveExcessOPEffect_html_a29f645db39805df66e52abb7a31daf2a"><div class="ttname"><a href="../../db/d50/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeRemoveExcessOPEffect.html#a29f645db39805df66e52abb7a31daf2a">com.fs.starfarer.api.characters.SkillsChangeRemoveExcessOPEffect.clampOP</a></div><div class="ttdeci">static void clampOP(FleetMemberAPI member, MutableCharacterStatsAPI stats)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d8c/SkillsChangeRemoveExcessOPEffect_8java_source.html#l00103">SkillsChangeRemoveExcessOPEffect.java:103</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeRemoveExcessOPEffect_html_aa9308dec214d6d06311fe466024922ee"><div class="ttname"><a href="../../db/d50/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeRemoveExcessOPEffect.html#aa9308dec214d6d06311fe466024922ee">com.fs.starfarer.api.characters.SkillsChangeRemoveExcessOPEffect.getMap</a></div><div class="ttdeci">OPDataMap getMap(Map&lt; String, Object &gt; dataMap)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d8c/SkillsChangeRemoveExcessOPEffect_8java_source.html#l00032">SkillsChangeRemoveExcessOPEffect.java:32</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a29f645db39805df66e52abb7a31daf2a" name="a29f645db39805df66e52abb7a31daf2a"></a>
@@ -262,60 +254,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d8c/SkillsChangeRemoveExcessOPEffect_8java_source.html#l00103">103</a> of file <a class="el" href="../../d3/d8c/SkillsChangeRemoveExcessOPEffect_8java_source.html">SkillsChangeRemoveExcessOPEffect.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  103</span>                                                                                      {</div>
-<div class="line"><span class="lineno">  104</span>        <span class="keywordtype">int</span> maxOP = <a class="code hl_function" href="../../db/d50/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeRemoveExcessOPEffect.html#a095e97a65695303dcf07c778307e1a24">getMaxOP</a>(member.getHullSpec(), stats);</div>
-<div class="line"><span class="lineno">  105</span>        <span class="keywordtype">int</span> op = member.getVariant().computeOPCost(stats);</div>
-<div class="line"><span class="lineno">  106</span>        <span class="keywordtype">int</span> <span class="keyword">remove</span> = op - maxOP;</div>
-<div class="line"><span class="lineno">  107</span>        <span class="keywordflow">if</span> (<span class="keyword">remove</span> &gt; 0) {</div>
-<div class="line"><span class="lineno">  108</span>            ShipVariantAPI variant = member.getVariant();</div>
-<div class="line"><span class="lineno">  109</span>            variant = variant.clone();</div>
-<div class="line"><span class="lineno">  110</span>            variant.setSource(VariantSource.REFIT);</div>
-<div class="line"><span class="lineno">  111</span>            </div>
-<div class="line"><span class="lineno">  112</span>            <span class="keywordtype">int</span> caps = variant.getNumFluxCapacitors();</div>
-<div class="line"><span class="lineno">  113</span>            <span class="keywordtype">int</span> curr = Math.min(caps, <span class="keyword">remove</span>);</div>
-<div class="line"><span class="lineno">  114</span>            variant.setNumFluxCapacitors(caps - curr);</div>
-<div class="line"><span class="lineno">  115</span>            <span class="keyword">remove</span> -= curr;</div>
-<div class="line"><span class="lineno">  116</span>            <span class="keywordflow">if</span> (<span class="keyword">remove</span> &gt; 0) {</div>
-<div class="line"><span class="lineno">  117</span>                <span class="keywordtype">int</span> vents = variant.getNumFluxVents();</div>
-<div class="line"><span class="lineno">  118</span>                curr = Math.min(vents, <span class="keyword">remove</span>);</div>
-<div class="line"><span class="lineno">  119</span>                variant.setNumFluxVents(vents - curr);</div>
-<div class="line"><span class="lineno">  120</span>                <span class="keyword">remove</span> -= curr;</div>
-<div class="line"><span class="lineno">  121</span>            }</div>
-<div class="line"><span class="lineno">  122</span>            <span class="keywordflow">if</span> (<span class="keyword">remove</span> &gt; 0) {</div>
-<div class="line"><span class="lineno">  123</span>                <span class="keywordflow">for</span> (String modId : variant.getNonBuiltInHullmods()) {</div>
-<div class="line"><span class="lineno">  124</span>                    HullModSpecAPI mod = Global.getSettings().getHullModSpec(modId);</div>
-<div class="line"><span class="lineno">  125</span>                    curr = mod.getCostFor(member.getHullSpec().getHullSize());</div>
-<div class="line"><span class="lineno">  126</span>                    variant.removeMod(modId);</div>
-<div class="line"><span class="lineno">  127</span>                    <span class="keyword">remove</span> -= curr;</div>
-<div class="line"><span class="lineno">  128</span>                    <span class="keywordflow">if</span> (<span class="keyword">remove</span> &lt;= 0) <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  129</span>                }</div>
-<div class="line"><span class="lineno">  130</span>            }</div>
-<div class="line"><span class="lineno">  131</span>            <span class="comment">// would need to add these to player cargo; gets potentially messy - don&#39;t do it</span></div>
-<div class="line"><span class="lineno">  132</span><span class="comment">//          if (remove &gt; 0) {</span></div>
-<div class="line"><span class="lineno">  133</span><span class="comment">//              for (String slotId : variant.getNonBuiltInWeaponSlots()) {</span></div>
-<div class="line"><span class="lineno">  134</span><span class="comment">//                  WeaponSpecAPI spec = variant.getWeaponSpec(slotId);</span></div>
-<div class="line"><span class="lineno">  135</span><span class="comment">//                  curr = (int)Math.round(spec.getOrdnancePointCost(stats, member.getStats()));</span></div>
-<div class="line"><span class="lineno">  136</span><span class="comment">//                  variant.clearSlot(slotId);</span></div>
-<div class="line"><span class="lineno">  137</span><span class="comment">//                  remove -= curr;</span></div>
-<div class="line"><span class="lineno">  138</span><span class="comment">//                  if (remove &lt;= 0) break;</span></div>
-<div class="line"><span class="lineno">  139</span><span class="comment">//              }</span></div>
-<div class="line"><span class="lineno">  140</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">  141</span><span class="comment">//          if (remove &gt; 0) {</span></div>
-<div class="line"><span class="lineno">  142</span><span class="comment">//              for (int i = 0; i &lt; variant.getWings().size(); i++) {</span></div>
-<div class="line"><span class="lineno">  143</span><span class="comment">//                  if (i &lt; variant.getHullSpec().getBuiltInWings().size()) continue;</span></div>
-<div class="line"><span class="lineno">  144</span><span class="comment">//                  FighterWingSpecAPI spec = variant.getWing(i);</span></div>
-<div class="line"><span class="lineno">  145</span><span class="comment">//                  curr = (int)Math.round(spec.getOpCost(member.getStats()));</span></div>
-<div class="line"><span class="lineno">  146</span><span class="comment">//                  variant.setWingId(i, &quot;&quot;);</span></div>
-<div class="line"><span class="lineno">  147</span><span class="comment">//                  remove -= curr;</span></div>
-<div class="line"><span class="lineno">  148</span><span class="comment">//                  if (remove &lt;= 0) break;</span></div>
-<div class="line"><span class="lineno">  149</span><span class="comment">//              }</span></div>
-<div class="line"><span class="lineno">  150</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">  151</span>            </div>
-<div class="line"><span class="lineno">  152</span>            member.setVariant(variant, <span class="keyword">false</span>, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  153</span>        }</div>
-<div class="line"><span class="lineno">  154</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeRemoveExcessOPEffect_html_a095e97a65695303dcf07c778307e1a24"><div class="ttname"><a href="../../db/d50/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeRemoveExcessOPEffect.html#a095e97a65695303dcf07c778307e1a24">com.fs.starfarer.api.characters.SkillsChangeRemoveExcessOPEffect.getMaxOP</a></div><div class="ttdeci">static int getMaxOP(ShipHullSpecAPI hull, MutableCharacterStatsAPI stats)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d8c/SkillsChangeRemoveExcessOPEffect_8java_source.html#l00042">SkillsChangeRemoveExcessOPEffect.java:42</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a16701f6714a49696656154af9ad20697" name="a16701f6714a49696656154af9ad20697"></a>
@@ -345,27 +284,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d8c/SkillsChangeRemoveExcessOPEffect_8java_source.html#l00047">47</a> of file <a class="el" href="../../d3/d8c/SkillsChangeRemoveExcessOPEffect_8java_source.html">SkillsChangeRemoveExcessOPEffect.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   47</span>                                                                                            {</div>
-<div class="line"><span class="lineno">   48</span>        OPDataMap result = <span class="keyword">new</span> OPDataMap();</div>
-<div class="line"><span class="lineno">   49</span>        </div>
-<div class="line"><span class="lineno">   50</span>        <span class="keywordflow">for</span> (FleetMemberAPI member : Global.getSector().getPlayerFleet().getFleetData().getMembersListCopy()) {</div>
-<div class="line"><span class="lineno">   51</span>            OPEffectData data = <span class="keyword">new</span> OPEffectData();</div>
-<div class="line"><span class="lineno">   52</span>            <span class="keywordtype">int</span> maxOPPre = <a class="code hl_function" href="../../db/d50/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeRemoveExcessOPEffect.html#a095e97a65695303dcf07c778307e1a24">getMaxOP</a>(member.getHullSpec(), from);</div>
-<div class="line"><span class="lineno">   53</span>            <span class="keywordtype">int</span> maxOPPost = <a class="code hl_function" href="../../db/d50/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeRemoveExcessOPEffect.html#a095e97a65695303dcf07c778307e1a24">getMaxOP</a>(member.getHullSpec(), to);</div>
-<div class="line"><span class="lineno">   54</span>            </div>
-<div class="line"><span class="lineno">   55</span>            <span class="keywordtype">int</span> op = member.getVariant().computeOPCost(to);</div>
-<div class="line"><span class="lineno">   56</span>            </div>
-<div class="line"><span class="lineno">   57</span>            data.member = member;</div>
-<div class="line"><span class="lineno">   58</span>            data.maxOP = maxOPPost;</div>
-<div class="line"><span class="lineno">   59</span>            data.currOP = op;</div>
-<div class="line"><span class="lineno">   60</span>            </div>
-<div class="line"><span class="lineno">   61</span>            <span class="keywordflow">if</span> (maxOPPost &lt; maxOPPre &amp;&amp; op &gt; maxOPPost) {</div>
-<div class="line"><span class="lineno">   62</span>                result.map.put(member, data);</div>
-<div class="line"><span class="lineno">   63</span>            }</div>
-<div class="line"><span class="lineno">   64</span>        }</div>
-<div class="line"><span class="lineno">   65</span>        <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">   66</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa9308dec214d6d06311fe466024922ee" name="aa9308dec214d6d06311fe466024922ee"></a>
@@ -385,16 +304,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d8c/SkillsChangeRemoveExcessOPEffect_8java_source.html#l00032">32</a> of file <a class="el" href="../../d3/d8c/SkillsChangeRemoveExcessOPEffect_8java_source.html">SkillsChangeRemoveExcessOPEffect.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   32</span>                                                         {</div>
-<div class="line"><span class="lineno">   33</span>        String key = getClass().getSimpleName();</div>
-<div class="line"><span class="lineno">   34</span>        OPDataMap map = (OPDataMap)dataMap.get(key);</div>
-<div class="line"><span class="lineno">   35</span>        <span class="keywordflow">if</span> (map == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   36</span>            map = <span class="keyword">new</span> OPDataMap();</div>
-<div class="line"><span class="lineno">   37</span>            dataMap.put(key, map);</div>
-<div class="line"><span class="lineno">   38</span>        }</div>
-<div class="line"><span class="lineno">   39</span>        <span class="keywordflow">return</span> map;</div>
-<div class="line"><span class="lineno">   40</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a095e97a65695303dcf07c778307e1a24" name="a095e97a65695303dcf07c778307e1a24"></a>
@@ -432,10 +342,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d8c/SkillsChangeRemoveExcessOPEffect_8java_source.html#l00042">42</a> of file <a class="el" href="../../d3/d8c/SkillsChangeRemoveExcessOPEffect_8java_source.html">SkillsChangeRemoveExcessOPEffect.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   42</span>                                                                                     {</div>
-<div class="line"><span class="lineno">   43</span>        <span class="keywordflow">return</span> hull.getOrdnancePoints(stats);</div>
-<div class="line"><span class="lineno">   44</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aeae1bad22dfce79b2eceba8802ef912a" name="aeae1bad22dfce79b2eceba8802ef912a"></a>
@@ -467,11 +374,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/db6/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1BaseSkillsChangeEffect.html#a79eebc243149f67034d141f82b82c875">com.fs.starfarer.api.characters.BaseSkillsChangeEffect</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d8c/SkillsChangeRemoveExcessOPEffect_8java_source.html#l00070">70</a> of file <a class="el" href="../../d3/d8c/SkillsChangeRemoveExcessOPEffect_8java_source.html">SkillsChangeRemoveExcessOPEffect.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   70</span>                                                                                          {</div>
-<div class="line"><span class="lineno">   71</span>        <span class="keywordflow">return</span> !<a class="code hl_function" href="../../db/d50/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeRemoveExcessOPEffect.html#a16701f6714a49696656154af9ad20697">getEffects</a>(from, to).map.isEmpty();</div>
-<div class="line"><span class="lineno">   72</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeRemoveExcessOPEffect_html_a16701f6714a49696656154af9ad20697"><div class="ttname"><a href="../../db/d50/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeRemoveExcessOPEffect.html#a16701f6714a49696656154af9ad20697">com.fs.starfarer.api.characters.SkillsChangeRemoveExcessOPEffect.getEffects</a></div><div class="ttdeci">OPDataMap getEffects(MutableCharacterStatsAPI from, MutableCharacterStatsAPI to)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d8c/SkillsChangeRemoveExcessOPEffect_8java_source.html#l00047">SkillsChangeRemoveExcessOPEffect.java:47</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a99e70b894c9542a606f8815292831e52" name="a99e70b894c9542a606f8815292831e52"></a>
@@ -509,9 +412,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/db6/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1BaseSkillsChangeEffect.html#a015d204fd3a5b8eba2b91e1ac3e8c741">com.fs.starfarer.api.characters.BaseSkillsChangeEffect</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d8c/SkillsChangeRemoveExcessOPEffect_8java_source.html#l00091">91</a> of file <a class="el" href="../../d3/d8c/SkillsChangeRemoveExcessOPEffect_8java_source.html">SkillsChangeRemoveExcessOPEffect.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   91</span>                                                                                               {</div>
-<div class="line"><span class="lineno">   92</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a832da236169238b5fec001bd450989e9" name="a832da236169238b5fec001bd450989e9"></a>
@@ -555,24 +456,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/db6/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1BaseSkillsChangeEffect.html#a650c7aa391bb181d6c37ca6c43aac4eb">com.fs.starfarer.api.characters.BaseSkillsChangeEffect</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d8c/SkillsChangeRemoveExcessOPEffect_8java_source.html#l00075">75</a> of file <a class="el" href="../../d3/d8c/SkillsChangeRemoveExcessOPEffect_8java_source.html">SkillsChangeRemoveExcessOPEffect.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   75</span>                                                                                                                                            {</div>
-<div class="line"><span class="lineno">   76</span>        super.prepare();</div>
-<div class="line"><span class="lineno">   77</span>        </div>
-<div class="line"><span class="lineno">   78</span>        OPDataMap map = <a class="code hl_function" href="../../db/d50/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeRemoveExcessOPEffect.html#a16701f6714a49696656154af9ad20697">getEffects</a>(from, to);</div>
-<div class="line"><span class="lineno">   79</span>        <a class="code hl_function" href="../../db/d50/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeRemoveExcessOPEffect.html#a17f25fcca3f95462022a53a548a9956b">setMap</a>(map, dataMap);</div>
-<div class="line"><span class="lineno">   80</span>        </div>
-<div class="line"><span class="lineno">   81</span>        info.addSectionHeading(<span class="stringliteral">&quot;Excess ordnance points&quot;</span>, <a class="code hl_variable" href="../../da/db6/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1BaseSkillsChangeEffect.html#acb1c89c7c91884b6d0283fc58b24d173">base</a>, <a class="code hl_variable" href="../../da/db6/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1BaseSkillsChangeEffect.html#a3116342fe0a58237deb2a277ad9e17ad">dark</a>, Alignment.MID, 15f);</div>
-<div class="line"><span class="lineno">   82</span>        </div>
-<div class="line"><span class="lineno">   83</span>        info.addPara(<span class="stringliteral">&quot;Ships using more than their maximum ordnance points will have &quot;</span></div>
-<div class="line"><span class="lineno">   84</span>                + <span class="stringliteral">&quot;vents, capacitors, hullmods, and other equipment removed to bring them under the limit.&quot;</span>, 10f,</div>
-<div class="line"><span class="lineno">   85</span>                Misc.getNegativeHighlightColor(),</div>
-<div class="line"><span class="lineno">   86</span>                <span class="stringliteral">&quot;vents, capacitors, hullmods, and other equipment removed&quot;</span></div>
-<div class="line"><span class="lineno">   87</span>                );</div>
-<div class="line"><span class="lineno">   88</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1BaseSkillsChangeEffect_html_a3116342fe0a58237deb2a277ad9e17ad"><div class="ttname"><a href="../../da/db6/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1BaseSkillsChangeEffect.html#a3116342fe0a58237deb2a277ad9e17ad">com.fs.starfarer.api.characters.BaseSkillsChangeEffect.dark</a></div><div class="ttdeci">Color dark</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dd0/BaseSkillsChangeEffect_8java_source.html#l00014">BaseSkillsChangeEffect.java:14</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1BaseSkillsChangeEffect_html_acb1c89c7c91884b6d0283fc58b24d173"><div class="ttname"><a href="../../da/db6/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1BaseSkillsChangeEffect.html#acb1c89c7c91884b6d0283fc58b24d173">com.fs.starfarer.api.characters.BaseSkillsChangeEffect.base</a></div><div class="ttdeci">Color base</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dd0/BaseSkillsChangeEffect_8java_source.html#l00013">BaseSkillsChangeEffect.java:13</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeRemoveExcessOPEffect_html_a17f25fcca3f95462022a53a548a9956b"><div class="ttname"><a href="../../db/d50/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeRemoveExcessOPEffect.html#a17f25fcca3f95462022a53a548a9956b">com.fs.starfarer.api.characters.SkillsChangeRemoveExcessOPEffect.setMap</a></div><div class="ttdeci">void setMap(OPDataMap map, Map&lt; String, Object &gt; dataMap)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d8c/SkillsChangeRemoveExcessOPEffect_8java_source.html#l00028">SkillsChangeRemoveExcessOPEffect.java:28</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a17f25fcca3f95462022a53a548a9956b" name="a17f25fcca3f95462022a53a548a9956b"></a>
@@ -602,11 +486,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d8c/SkillsChangeRemoveExcessOPEffect_8java_source.html#l00028">28</a> of file <a class="el" href="../../d3/d8c/SkillsChangeRemoveExcessOPEffect_8java_source.html">SkillsChangeRemoveExcessOPEffect.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   28</span>                                                                   {</div>
-<div class="line"><span class="lineno">   29</span>        String key = getClass().getSimpleName();</div>
-<div class="line"><span class="lineno">   30</span>        dataMap.put(key, map);</div>
-<div class="line"><span class="lineno">   31</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

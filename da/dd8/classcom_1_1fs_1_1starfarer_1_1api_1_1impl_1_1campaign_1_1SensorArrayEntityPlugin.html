@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -265,23 +266,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d84/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCampaignObjectivePlugin.html#a136d7c8a7cb5a3bddc26aecb9efe97b1">com.fs.starfarer.api.impl.campaign.BaseCampaignObjectivePlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/dc6/SensorArrayEntityPlugin_8java_source.html#l00113">113</a> of file <a class="el" href="../../dd/dc6/SensorArrayEntityPlugin_8java_source.html">SensorArrayEntityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  113</span>                                                                        {</div>
-<div class="line"><span class="lineno">  114</span>        <span class="keywordtype">int</span> bonus = (int) <a class="code hl_variable" href="../../da/dd8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1SensorArrayEntityPlugin.html#a69a14c141470e1b8ff9969cea7f71a31">SENSOR_BONUS</a>;</div>
-<div class="line"><span class="lineno">  115</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../da/dd8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1SensorArrayEntityPlugin.html#aab779ef57164cf07d13245268325364f">isMakeshift</a>()) {</div>
-<div class="line"><span class="lineno">  116</span>            bonus = (int) <a class="code hl_variable" href="../../da/dd8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1SensorArrayEntityPlugin.html#ab53ae9c1a73b619f87ecec6b6491b736">SENSOR_BONUS_MAKESHIFT</a>;</div>
-<div class="line"><span class="lineno">  117</span>        }</div>
-<div class="line"><span class="lineno">  118</span>        text.addPara(<span class="stringliteral">&quot;%s sensor range for in-system fleets&quot;</span>,</div>
-<div class="line"><span class="lineno">  119</span>                pad, Misc.getHighlightColor(), <span class="stringliteral">&quot;+&quot;</span> + bonus);</div>
-<div class="line"><span class="lineno">  120</span>        </div>
-<div class="line"><span class="lineno">  121</span><span class="comment">//      text.addPara(&quot;%s%% sensor range when hacked&quot;,</span></div>
-<div class="line"><span class="lineno">  122</span><span class="comment">//              pad, Misc.getHighlightColor(), &quot;-&quot; + (int) Math.round((1f - SENSOR_PENALTY_MULT_FROM_HACK) * 100f));</span></div>
-<div class="line"><span class="lineno">  123</span>        </div>
-<div class="line"><span class="lineno">  124</span>        super.addHackStatusToTooltip(text, pad);</div>
-<div class="line"><span class="lineno">  125</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1SensorArrayEntityPlugin_html_a69a14c141470e1b8ff9969cea7f71a31"><div class="ttname"><a href="../../da/dd8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1SensorArrayEntityPlugin.html#a69a14c141470e1b8ff9969cea7f71a31">com.fs.starfarer.api.impl.campaign.SensorArrayEntityPlugin.SENSOR_BONUS</a></div><div class="ttdeci">static float SENSOR_BONUS</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dc6/SensorArrayEntityPlugin_8java_source.html#l00024">SensorArrayEntityPlugin.java:24</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1SensorArrayEntityPlugin_html_aab779ef57164cf07d13245268325364f"><div class="ttname"><a href="../../da/dd8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1SensorArrayEntityPlugin.html#aab779ef57164cf07d13245268325364f">com.fs.starfarer.api.impl.campaign.SensorArrayEntityPlugin.isMakeshift</a></div><div class="ttdeci">boolean isMakeshift()</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dc6/SensorArrayEntityPlugin_8java_source.html#l00077">SensorArrayEntityPlugin.java:77</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1SensorArrayEntityPlugin_html_ab53ae9c1a73b619f87ecec6b6491b736"><div class="ttname"><a href="../../da/dd8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1SensorArrayEntityPlugin.html#ab53ae9c1a73b619f87ecec6b6491b736">com.fs.starfarer.api.impl.campaign.SensorArrayEntityPlugin.SENSOR_BONUS_MAKESHIFT</a></div><div class="ttdeci">static float SENSOR_BONUS_MAKESHIFT</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dc6/SensorArrayEntityPlugin_8java_source.html#l00025">SensorArrayEntityPlugin.java:25</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a64f13bcc7ea180e9297d5450e4dc758d" name="a64f13bcc7ea180e9297d5450e4dc758d"></a>
@@ -309,56 +294,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d5/d0a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html#a925b3cae820facd4cbb446add6bd48af">com.fs.starfarer.api.impl.campaign.BaseCustomEntityPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/dc6/SensorArrayEntityPlugin_8java_source.html#l00037">37</a> of file <a class="el" href="../../dd/dc6/SensorArrayEntityPlugin_8java_source.html">SensorArrayEntityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   37</span>                                      {</div>
-<div class="line"><span class="lineno">   38</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d5/d0a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html#a4de611a62107d116dd5d3e8bc980fa6a">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a06362480c6a17326650354460c6d7442">getContainingLocation</a>() == <span class="keyword">null</span> || <a class="code hl_variable" href="../../d5/d0a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html#a4de611a62107d116dd5d3e8bc980fa6a">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#aca208794671c1be979d665d374deaa94">isInHyperspace</a>()) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   39</span>        <span class="comment">//if (isReset()) return;</span></div>
-<div class="line"><span class="lineno">   40</span>        <span class="keywordtype">boolean</span> reset = <a class="code hl_function" href="../../d6/d84/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCampaignObjectivePlugin.html#adb5d1abfd2339de35622250897b7d99d">isReset</a>();</div>
-<div class="line"><span class="lineno">   41</span>        </div>
-<div class="line"><span class="lineno">   42</span>        String <span class="keywordtype">id</span> = <a class="code hl_function" href="../../da/dd8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1SensorArrayEntityPlugin.html#a68d963b4bcc5f25098a9c6ae65358a5c">getModId</a>();</div>
-<div class="line"><span class="lineno">   43</span>        <span class="keywordflow">for</span> (CampaignFleetAPI fleet : <a class="code hl_variable" href="../../d5/d0a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html#a4de611a62107d116dd5d3e8bc980fa6a">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a06362480c6a17326650354460c6d7442">getContainingLocation</a>().<a class="code hl_function" href="../../d2/d2c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI.html#af3a8e070e561639b6e96be1f5ba6813a">getFleets</a>()) {</div>
-<div class="line"><span class="lineno">   44</span>            <span class="keywordflow">if</span> (fleet.isInHyperspaceTransition()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   45</span>            </div>
-<div class="line"><span class="lineno">   46</span>            <span class="keywordflow">if</span> (fleet.getFaction() == <a class="code hl_variable" href="../../d5/d0a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html#a4de611a62107d116dd5d3e8bc980fa6a">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#afb72bc74f75ccbbf240564b26b94e17b">getFaction</a>() || (<a class="code hl_function" href="../../d6/d84/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCampaignObjectivePlugin.html#a1dc303c6ef637622447c870cdf665224">isHacked</a>() &amp;&amp; fleet.getFaction().isPlayerFaction())) {</div>
-<div class="line"><span class="lineno">   47</span>                <span class="keywordflow">if</span> (reset &amp;&amp; !fleet.getFaction().isPlayerFaction()) {</div>
-<div class="line"><span class="lineno">   48</span>                    <a class="code hl_function" href="../../da/dd8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1SensorArrayEntityPlugin.html#a2d21a0c5c64c64ee6fa17f5cf0729041">respondToFalseSensorReadings</a>(fleet);</div>
-<div class="line"><span class="lineno">   49</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (reset &amp;&amp; fleet.isPlayerFleet()) {</div>
-<div class="line"><span class="lineno">   50</span>                    <a class="code hl_function" href="../../da/dd8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1SensorArrayEntityPlugin.html#a5659bf40020e61aeb335ddb7017a67a5">spawnPlayerSensorReading</a>(fleet);</div>
-<div class="line"><span class="lineno">   51</span>                }</div>
-<div class="line"><span class="lineno">   52</span>                </div>
-<div class="line"><span class="lineno">   53</span>                String desc = <span class="stringliteral">&quot;Sensor array&quot;</span>;</div>
-<div class="line"><span class="lineno">   54</span>                <span class="keywordtype">float</span> bonus = <a class="code hl_variable" href="../../da/dd8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1SensorArrayEntityPlugin.html#a69a14c141470e1b8ff9969cea7f71a31">SENSOR_BONUS</a>;</div>
-<div class="line"><span class="lineno">   55</span>                <span class="keywordflow">if</span> (<a class="code hl_function" href="../../da/dd8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1SensorArrayEntityPlugin.html#aab779ef57164cf07d13245268325364f">isMakeshift</a>()) {</div>
-<div class="line"><span class="lineno">   56</span>                    desc = <span class="stringliteral">&quot;Makeshift sensor array&quot;</span>;</div>
-<div class="line"><span class="lineno">   57</span>                    bonus = <a class="code hl_variable" href="../../da/dd8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1SensorArrayEntityPlugin.html#ab53ae9c1a73b619f87ecec6b6491b736">SENSOR_BONUS_MAKESHIFT</a>;</div>
-<div class="line"><span class="lineno">   58</span>                }</div>
-<div class="line"><span class="lineno">   59</span>                </div>
-<div class="line"><span class="lineno">   60</span><span class="comment">//              if (fleet.getFaction() == entity.getFaction() &amp;&amp; isHacked() &amp;&amp; !entity.getFaction().isPlayerFaction()) {</span></div>
-<div class="line"><span class="lineno">   61</span><span class="comment">//                  fleet.getStats().addTemporaryModMult(0.1f, id,</span></div>
-<div class="line"><span class="lineno">   62</span><span class="comment">//                          desc, SENSOR_PENALTY_MULT_FROM_HACK, </span></div>
-<div class="line"><span class="lineno">   63</span><span class="comment">//                          fleet.getStats().getSensorRangeMod());</span></div>
-<div class="line"><span class="lineno">   64</span><span class="comment">//              }</span></div>
-<div class="line"><span class="lineno">   65</span>                </div>
-<div class="line"><span class="lineno">   66</span>                StatMod curr = fleet.getStats().getSensorRangeMod().getFlatBonus(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">   67</span>                <span class="keywordflow">if</span> (curr == <span class="keyword">null</span> || curr.value &lt;= bonus) {</div>
-<div class="line"><span class="lineno">   68</span>                    fleet.getStats().addTemporaryModFlat(0.1f, <span class="keywordtype">id</span>,</div>
-<div class="line"><span class="lineno">   69</span>                            desc, bonus, </div>
-<div class="line"><span class="lineno">   70</span>                            fleet.getStats().getSensorRangeMod());</div>
-<div class="line"><span class="lineno">   71</span>                }</div>
-<div class="line"><span class="lineno">   72</span>            }</div>
-<div class="line"><span class="lineno">   73</span>        }</div>
-<div class="line"><span class="lineno">   74</span>        </div>
-<div class="line"><span class="lineno">   75</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCampaignObjectivePlugin_html_a1dc303c6ef637622447c870cdf665224"><div class="ttname"><a href="../../d6/d84/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCampaignObjectivePlugin.html#a1dc303c6ef637622447c870cdf665224">com.fs.starfarer.api.impl.campaign.BaseCampaignObjectivePlugin.isHacked</a></div><div class="ttdeci">Boolean isHacked()</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d3a/BaseCampaignObjectivePlugin_8java_source.html#l00033">BaseCampaignObjectivePlugin.java:33</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCampaignObjectivePlugin_html_adb5d1abfd2339de35622250897b7d99d"><div class="ttname"><a href="../../d6/d84/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCampaignObjectivePlugin.html#adb5d1abfd2339de35622250897b7d99d">com.fs.starfarer.api.impl.campaign.BaseCampaignObjectivePlugin.isReset</a></div><div class="ttdeci">Boolean isReset()</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d3a/BaseCampaignObjectivePlugin_8java_source.html#l00049">BaseCampaignObjectivePlugin.java:49</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin_html_a4de611a62107d116dd5d3e8bc980fa6a"><div class="ttname"><a href="../../d5/d0a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html#a4de611a62107d116dd5d3e8bc980fa6a">com.fs.starfarer.api.impl.campaign.BaseCustomEntityPlugin.entity</a></div><div class="ttdeci">SectorEntityToken entity</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d0e/BaseCustomEntityPlugin_8java_source.html#l00012">BaseCustomEntityPlugin.java:12</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1SensorArrayEntityPlugin_html_a2d21a0c5c64c64ee6fa17f5cf0729041"><div class="ttname"><a href="../../da/dd8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1SensorArrayEntityPlugin.html#a2d21a0c5c64c64ee6fa17f5cf0729041">com.fs.starfarer.api.impl.campaign.SensorArrayEntityPlugin.respondToFalseSensorReadings</a></div><div class="ttdeci">void respondToFalseSensorReadings(CampaignFleetAPI fleet)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dc6/SensorArrayEntityPlugin_8java_source.html#l00192">SensorArrayEntityPlugin.java:192</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1SensorArrayEntityPlugin_html_a5659bf40020e61aeb335ddb7017a67a5"><div class="ttname"><a href="../../da/dd8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1SensorArrayEntityPlugin.html#a5659bf40020e61aeb335ddb7017a67a5">com.fs.starfarer.api.impl.campaign.SensorArrayEntityPlugin.spawnPlayerSensorReading</a></div><div class="ttdeci">void spawnPlayerSensorReading(CampaignFleetAPI fleet)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dc6/SensorArrayEntityPlugin_8java_source.html#l00134">SensorArrayEntityPlugin.java:134</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1SensorArrayEntityPlugin_html_a68d963b4bcc5f25098a9c6ae65358a5c"><div class="ttname"><a href="../../da/dd8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1SensorArrayEntityPlugin.html#a68d963b4bcc5f25098a9c6ae65358a5c">com.fs.starfarer.api.impl.campaign.SensorArrayEntityPlugin.getModId</a></div><div class="ttdeci">String getModId()</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dc6/SensorArrayEntityPlugin_8java_source.html#l00127">SensorArrayEntityPlugin.java:127</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI_html_af3a8e070e561639b6e96be1f5ba6813a"><div class="ttname"><a href="../../d2/d2c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI.html#af3a8e070e561639b6e96be1f5ba6813a">com.fs.starfarer.api.campaign.LocationAPI.getFleets</a></div><div class="ttdeci">List&lt; CampaignFleetAPI &gt; getFleets()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_a06362480c6a17326650354460c6d7442"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a06362480c6a17326650354460c6d7442">com.fs.starfarer.api.campaign.SectorEntityToken.getContainingLocation</a></div><div class="ttdeci">LocationAPI getContainingLocation()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_aca208794671c1be979d665d374deaa94"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#aca208794671c1be979d665d374deaa94">com.fs.starfarer.api.campaign.SectorEntityToken.isInHyperspace</a></div><div class="ttdeci">boolean isInHyperspace()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_afb72bc74f75ccbbf240564b26b94e17b"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#afb72bc74f75ccbbf240564b26b94e17b">com.fs.starfarer.api.campaign.SectorEntityToken.getFaction</a></div><div class="ttdeci">FactionAPI getFaction()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a68d963b4bcc5f25098a9c6ae65358a5c" name="a68d963b4bcc5f25098a9c6ae65358a5c"></a>
@@ -385,10 +321,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/dc6/SensorArrayEntityPlugin_8java_source.html#l00127">127</a> of file <a class="el" href="../../dd/dc6/SensorArrayEntityPlugin_8java_source.html">SensorArrayEntityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  127</span>                                {</div>
-<div class="line"><span class="lineno">  128</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;sensor_array&quot;</span>;</div>
-<div class="line"><span class="lineno">  129</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a32cee23a3e678a90baf939ba343d8075" name="a32cee23a3e678a90baf939ba343d8075"></a>
@@ -420,11 +353,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d5/d0a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html#aaca3cf8779de8f9fdbde9d5f29e4273a">com.fs.starfarer.api.impl.campaign.BaseCustomEntityPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/dc6/SensorArrayEntityPlugin_8java_source.html#l00028">28</a> of file <a class="el" href="../../dd/dc6/SensorArrayEntityPlugin_8java_source.html">SensorArrayEntityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   28</span>                                                                    {</div>
-<div class="line"><span class="lineno">   29</span>        super.init(<a class="code hl_variable" href="../../d5/d0a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html#a4de611a62107d116dd5d3e8bc980fa6a">entity</a>, pluginParams);</div>
-<div class="line"><span class="lineno">   30</span>        readResolve();</div>
-<div class="line"><span class="lineno">   31</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aab779ef57164cf07d13245268325364f" name="aab779ef57164cf07d13245268325364f"></a>
@@ -451,11 +380,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/dc6/SensorArrayEntityPlugin_8java_source.html#l00077">77</a> of file <a class="el" href="../../dd/dc6/SensorArrayEntityPlugin_8java_source.html">SensorArrayEntityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   77</span>                                    {</div>
-<div class="line"><span class="lineno">   78</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d5/d0a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html#a4de611a62107d116dd5d3e8bc980fa6a">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#abed0787f3c057816961d1a07f2c55662">hasTag</a>(Tags.MAKESHIFT);</div>
-<div class="line"><span class="lineno">   79</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_abed0787f3c057816961d1a07f2c55662"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#abed0787f3c057816961d1a07f2c55662">com.fs.starfarer.api.campaign.SectorEntityToken.hasTag</a></div><div class="ttdeci">boolean hasTag(String tag)</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a080ed3a6e2decedcff26434112a1a0fd" name="a080ed3a6e2decedcff26434112a1a0fd"></a>
@@ -487,23 +412,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d84/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCampaignObjectivePlugin.html#a609dc1fb1dfcda1d8443ec8dd53ddbdb">com.fs.starfarer.api.impl.campaign.BaseCampaignObjectivePlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/dc6/SensorArrayEntityPlugin_8java_source.html#l00081">81</a> of file <a class="el" href="../../dd/dc6/SensorArrayEntityPlugin_8java_source.html">SensorArrayEntityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   81</span>                                                             {</div>
-<div class="line"><span class="lineno">   82</span>        <span class="keywordtype">int</span> bonus = (int) <a class="code hl_variable" href="../../da/dd8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1SensorArrayEntityPlugin.html#a69a14c141470e1b8ff9969cea7f71a31">SENSOR_BONUS</a>;</div>
-<div class="line"><span class="lineno">   83</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../da/dd8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1SensorArrayEntityPlugin.html#aab779ef57164cf07d13245268325364f">isMakeshift</a>()) {</div>
-<div class="line"><span class="lineno">   84</span>            bonus = (int) <a class="code hl_variable" href="../../da/dd8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1SensorArrayEntityPlugin.html#ab53ae9c1a73b619f87ecec6b6491b736">SENSOR_BONUS_MAKESHIFT</a>;</div>
-<div class="line"><span class="lineno">   85</span>        }</div>
-<div class="line"><span class="lineno">   86</span>        </div>
-<div class="line"><span class="lineno">   87</span>        text.addPara(BaseIntelPlugin.INDENT + <span class="stringliteral">&quot;%s sensor range for all same-faction fleets in system&quot;</span>,</div>
-<div class="line"><span class="lineno">   88</span>                pad, Misc.getHighlightColor(), <span class="stringliteral">&quot;+&quot;</span> + bonus);</div>
-<div class="line"><span class="lineno">   89</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d6/d84/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCampaignObjectivePlugin.html#adb5d1abfd2339de35622250897b7d99d">isReset</a>()) {</div>
-<div class="line"><span class="lineno">   90</span>            <span class="comment">//text.addPara(BaseIntelPlugin.INDENT + &quot;Auto-calibrating after factory reset; non-functional&quot;, 3f);</span></div>
-<div class="line"><span class="lineno">   91</span>            text.addPara(BaseIntelPlugin.INDENT + <span class="stringliteral">&quot;Generating false readings&quot;</span>, 3f);</div>
-<div class="line"><span class="lineno">   92</span>        }</div>
-<div class="line"><span class="lineno">   93</span>        </div>
-<div class="line"><span class="lineno">   94</span><span class="comment">//      text.addPara(BaseIntelPlugin.INDENT + &quot;%s sensor range to same-faction fleets when hacked&quot;,</span></div>
-<div class="line"><span class="lineno">   95</span><span class="comment">//              0f, Misc.getHighlightColor(), &quot;-&quot; + (int) Math.round((1f - SENSOR_PENALTY_MULT_FROM_HACK) * 100f) + &quot;%&quot;);</span></div>
-<div class="line"><span class="lineno">   96</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a255d76e30f3f5aec02f4fa4aa8ba10ee" name="a255d76e30f3f5aec02f4fa4aa8ba10ee"></a>
@@ -525,20 +434,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d84/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCampaignObjectivePlugin.html#abf3266167aa6855628ae389a7b583b5e">com.fs.starfarer.api.impl.campaign.BaseCampaignObjectivePlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/dc6/SensorArrayEntityPlugin_8java_source.html#l00098">98</a> of file <a class="el" href="../../dd/dc6/SensorArrayEntityPlugin_8java_source.html">SensorArrayEntityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   98</span>                                                                        {</div>
-<div class="line"><span class="lineno">   99</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d5/d0a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html#a4de611a62107d116dd5d3e8bc980fa6a">entity</a>.<a class="code hl_function" href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#adcd558c1d95f9755066ddaf9a77311c1">getMemoryWithoutUpdate</a>().<a class="code hl_function" href="../../d0/de7/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html#adb833cc81359cc239a89eae309480fc9">getBoolean</a>(MemFlags.OBJECTIVE_NON_FUNCTIONAL)) {</div>
-<div class="line"><span class="lineno">  100</span>            text.addPara(<span class="stringliteral">&quot;This one, however, does not appear to be transmitting a sensor telemetry broadcast. The cause of its lack of function is unknown.&quot;</span>);</div>
-<div class="line"><span class="lineno">  101</span>        }</div>
-<div class="line"><span class="lineno">  102</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d6/d84/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCampaignObjectivePlugin.html#a1dc303c6ef637622447c870cdf665224">isHacked</a>()) {</div>
-<div class="line"><span class="lineno">  103</span>            text.addPara(<span class="stringliteral">&quot;You have a hack running on this sensor array.&quot;</span>);</div>
-<div class="line"><span class="lineno">  104</span>        }</div>
-<div class="line"><span class="lineno">  105</span><span class="comment">//      if (isReset()) {</span></div>
-<div class="line"><span class="lineno">  106</span><span class="comment">//          text.addPara(&quot;This sensor array is auto-calibrating after a factory reset and is effectively non-functional.&quot;);</span></div>
-<div class="line"><span class="lineno">  107</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  108</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_html_adcd558c1d95f9755066ddaf9a77311c1"><div class="ttname"><a href="../../d6/de1/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#adcd558c1d95f9755066ddaf9a77311c1">com.fs.starfarer.api.campaign.SectorEntityToken.getMemoryWithoutUpdate</a></div><div class="ttdeci">MemoryAPI getMemoryWithoutUpdate()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI_html_adb833cc81359cc239a89eae309480fc9"><div class="ttname"><a href="../../d0/de7/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html#adb833cc81359cc239a89eae309480fc9">com.fs.starfarer.api.campaign.rules.MemoryAPI.getBoolean</a></div><div class="ttdeci">boolean getBoolean(String key)</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2d21a0c5c64c64ee6fa17f5cf0729041" name="a2d21a0c5c64c64ee6fa17f5cf0729041"></a>
@@ -566,86 +462,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/dc6/SensorArrayEntityPlugin_8java_source.html#l00192">192</a> of file <a class="el" href="../../dd/dc6/SensorArrayEntityPlugin_8java_source.html">SensorArrayEntityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  192</span>                                                                        {</div>
-<div class="line"><span class="lineno">  193</span>        <span class="keywordflow">if</span> (fleet.isStationMode()) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  194</span>        <span class="keywordflow">if</span> (fleet.getAI() == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  195</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  196</span>        }</div>
-<div class="line"><span class="lineno">  197</span>        <span class="keywordflow">if</span> (fleet.getAI().getAssignmentsCopy() == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  198</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  199</span>        }</div>
-<div class="line"><span class="lineno">  200</span>        </div>
-<div class="line"><span class="lineno">  201</span>        MemoryAPI mem = fleet.getMemoryWithoutUpdate();</div>
-<div class="line"><span class="lineno">  202</span>        <span class="keywordflow">if</span> (mem.getBoolean(MemFlags.FLEET_NOT_CHASING_GHOST)) {</div>
-<div class="line"><span class="lineno">  203</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  204</span>        }</div>
-<div class="line"><span class="lineno">  205</span>        <span class="keywordflow">if</span> (mem.getBoolean(MemFlags.FLEET_CHASING_GHOST)) {</div>
-<div class="line"><span class="lineno">  206</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  207</span>        }</div>
-<div class="line"><span class="lineno">  208</span>        <span class="keywordflow">if</span> (mem.getBoolean(MemFlags.FLEET_BUSY)) {</div>
-<div class="line"><span class="lineno">  209</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  210</span>        }</div>
-<div class="line"><span class="lineno">  211</span>        <span class="keywordtype">boolean</span> patrol = mem.getBoolean(MemFlags.MEMORY_KEY_PATROL_FLEET);</div>
-<div class="line"><span class="lineno">  212</span>        <span class="keywordtype">boolean</span> warFleet = mem.getBoolean(MemFlags.MEMORY_KEY_WAR_FLEET);</div>
-<div class="line"><span class="lineno">  213</span>        <span class="keywordtype">boolean</span> pirate = mem.getBoolean(MemFlags.MEMORY_KEY_PIRATE);</div>
-<div class="line"><span class="lineno">  214</span>        <span class="keywordflow">if</span> (!patrol &amp;&amp; !warFleet &amp;&amp; !pirate) {</div>
-<div class="line"><span class="lineno">  215</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  216</span>        }</div>
-<div class="line"><span class="lineno">  217</span>        </div>
-<div class="line"><span class="lineno">  218</span>        Random random = (Random) mem.get(MemFlags.FLEET_CHASING_GHOST_RANDOM);</div>
-<div class="line"><span class="lineno">  219</span>        <span class="keywordflow">if</span> (random == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  220</span>            random = Misc.getRandom(Misc.getSalvageSeed(fleet), 7);</div>
-<div class="line"><span class="lineno">  221</span>            mem.set(MemFlags.FLEET_CHASING_GHOST_RANDOM, random, 30f);</div>
-<div class="line"><span class="lineno">  222</span>        }</div>
-<div class="line"><span class="lineno">  223</span>        </div>
-<div class="line"><span class="lineno">  224</span>        <span class="keywordtype">boolean</span> willRespond = random.nextFloat() &lt; 0.5f;</div>
-<div class="line"><span class="lineno">  225</span>        <span class="comment">//willRespond = true;</span></div>
-<div class="line"><span class="lineno">  226</span>        <span class="keywordflow">if</span> (!willRespond) {</div>
-<div class="line"><span class="lineno">  227</span>            mem.set(MemFlags.FLEET_NOT_CHASING_GHOST, <span class="keyword">true</span>, 2f + 2f * random.nextFloat());</div>
-<div class="line"><span class="lineno">  228</span>            Misc.setFlagWithReason(fleet.getMemoryWithoutUpdate(), </div>
-<div class="line"><span class="lineno">  229</span>                       MemFlags.FLEET_CHASING_GHOST, <a class="code hl_variable" href="../../da/dd8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1SensorArrayEntityPlugin.html#a77e22cce3319631f48031de82682dfed">GHOST_RESPONSE</a>, <span class="keyword">false</span>, 0f);</div>
-<div class="line"><span class="lineno">  230</span>            <span class="keywordflow">for</span> (FleetAssignmentDataAPI curr : fleet.getAI().getAssignmentsCopy()) {</div>
-<div class="line"><span class="lineno">  231</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/dd8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1SensorArrayEntityPlugin.html#a77e22cce3319631f48031de82682dfed">GHOST_RESPONSE</a>.equals(curr.getCustom())) {</div>
-<div class="line"><span class="lineno">  232</span>                    fleet.getAI().removeAssignment(curr);</div>
-<div class="line"><span class="lineno">  233</span>                }</div>
-<div class="line"><span class="lineno">  234</span>            }</div>
-<div class="line"><span class="lineno">  235</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  236</span>        }</div>
-<div class="line"><span class="lineno">  237</span>        </div>
-<div class="line"><span class="lineno">  238</span>        <span class="keywordtype">float</span> chaseDur = (1.5f + (float) Math.random()) * 1f;</div>
-<div class="line"><span class="lineno">  239</span>        Misc.setFlagWithReason(fleet.getMemoryWithoutUpdate(), </div>
-<div class="line"><span class="lineno">  240</span>                MemFlags.FLEET_CHASING_GHOST, <a class="code hl_variable" href="../../da/dd8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1SensorArrayEntityPlugin.html#a77e22cce3319631f48031de82682dfed">GHOST_RESPONSE</a>, <span class="keyword">true</span>, chaseDur);</div>
-<div class="line"><span class="lineno">  241</span>        mem.set(MemFlags.FLEET_BUSY, <span class="keyword">true</span>, chaseDur);</div>
-<div class="line"><span class="lineno">  242</span>        mem.set(MemFlags.FLEET_NOT_CHASING_GHOST, <span class="keyword">true</span>, chaseDur + 8f + 4f * random.nextFloat());</div>
-<div class="line"><span class="lineno">  243</span>        </div>
-<div class="line"><span class="lineno">  244</span>        <span class="keywordtype">float</span> angle = Misc.getAngleInDegrees(fleet.getLocation()); <span class="comment">// away from center of system;</span></div>
-<div class="line"><span class="lineno">  245</span>        <span class="keywordtype">float</span> arc = 270f;</div>
-<div class="line"><span class="lineno">  246</span>        angle += arc/2f - arc * random.nextFloat();</div>
-<div class="line"><span class="lineno">  247</span>        <span class="keywordtype">float</span> dist = 2000f + 2000f * random.nextFloat();</div>
-<div class="line"><span class="lineno">  248</span>        Vector2f loc = Misc.getUnitVectorAtDegreeAngle(angle);</div>
-<div class="line"><span class="lineno">  249</span>        loc.scale(dist);</div>
-<div class="line"><span class="lineno">  250</span>        Vector2f.add(loc, fleet.getLocation(), loc);</div>
-<div class="line"><span class="lineno">  251</span>        </div>
-<div class="line"><span class="lineno">  252</span> </div>
-<div class="line"><span class="lineno">  253</span>        String actionText = <span class="stringliteral">&quot;investigating anomalous sensor reading&quot;</span>;</div>
-<div class="line"><span class="lineno">  254</span>        </div>
-<div class="line"><span class="lineno">  255</span>        SectorEntityToken target = fleet.getContainingLocation().createToken(loc);</div>
-<div class="line"><span class="lineno">  256</span>        fleet.addAssignmentAtStart(FleetAssignment.PATROL_SYSTEM, target, 3f, actionText, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  257</span>        FleetAssignmentDataAPI curr = fleet.getCurrentAssignment();</div>
-<div class="line"><span class="lineno">  258</span>        <span class="keywordflow">if</span> (curr != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  259</span>            curr.setCustom(<a class="code hl_variable" href="../../da/dd8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1SensorArrayEntityPlugin.html#a77e22cce3319631f48031de82682dfed">GHOST_RESPONSE</a>);</div>
-<div class="line"><span class="lineno">  260</span>        }</div>
-<div class="line"><span class="lineno">  261</span>        </div>
-<div class="line"><span class="lineno">  262</span>        <span class="keywordflow">if</span> (dist &gt; 2000f) {</div>
-<div class="line"><span class="lineno">  263</span>            fleet.addAssignmentAtStart(FleetAssignment.GO_TO_LOCATION, target, 3f, actionText, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  264</span>            curr = fleet.getCurrentAssignment();</div>
-<div class="line"><span class="lineno">  265</span>            <span class="keywordflow">if</span> (curr != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  266</span>                curr.setCustom(<a class="code hl_variable" href="../../da/dd8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1SensorArrayEntityPlugin.html#a77e22cce3319631f48031de82682dfed">GHOST_RESPONSE</a>);</div>
-<div class="line"><span class="lineno">  267</span>            }</div>
-<div class="line"><span class="lineno">  268</span>        }</div>
-<div class="line"><span class="lineno">  269</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1SensorArrayEntityPlugin_html_a77e22cce3319631f48031de82682dfed"><div class="ttname"><a href="../../da/dd8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1SensorArrayEntityPlugin.html#a77e22cce3319631f48031de82682dfed">com.fs.starfarer.api.impl.campaign.SensorArrayEntityPlugin.GHOST_RESPONSE</a></div><div class="ttdeci">static String GHOST_RESPONSE</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dc6/SensorArrayEntityPlugin_8java_source.html#l00132">SensorArrayEntityPlugin.java:132</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5659bf40020e61aeb335ddb7017a67a5" name="a5659bf40020e61aeb335ddb7017a67a5"></a>
@@ -673,64 +490,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/dc6/SensorArrayEntityPlugin_8java_source.html#l00134">134</a> of file <a class="el" href="../../dd/dc6/SensorArrayEntityPlugin_8java_source.html">SensorArrayEntityPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  134</span>                                                                    {</div>
-<div class="line"><span class="lineno">  135</span>        Random random = Misc.random;</div>
-<div class="line"><span class="lineno">  136</span>        </div>
-<div class="line"><span class="lineno">  137</span>        MemoryAPI mem = fleet.getMemoryWithoutUpdate();</div>
-<div class="line"><span class="lineno">  138</span>        <span class="keywordflow">if</span> (mem.getBoolean(MemFlags.FLEET_NOT_CHASING_GHOST)) {</div>
-<div class="line"><span class="lineno">  139</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  140</span>        }</div>
-<div class="line"><span class="lineno">  141</span>        <span class="keywordflow">if</span> (mem.getBoolean(MemFlags.FLEET_CHASING_GHOST)) {</div>
-<div class="line"><span class="lineno">  142</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  143</span>        }</div>
-<div class="line"><span class="lineno">  144</span>        <span class="keywordtype">boolean</span> spawnReading = random.nextFloat() &lt; 0.5f;</div>
-<div class="line"><span class="lineno">  145</span>        <span class="comment">//spawnReading = true;</span></div>
-<div class="line"><span class="lineno">  146</span>        <span class="keywordflow">if</span> (!spawnReading) {</div>
-<div class="line"><span class="lineno">  147</span>            mem.set(MemFlags.FLEET_NOT_CHASING_GHOST, <span class="keyword">true</span>, 1f + 2f * random.nextFloat());</div>
-<div class="line"><span class="lineno">  148</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  149</span>        }</div>
-<div class="line"><span class="lineno">  150</span>        </div>
-<div class="line"><span class="lineno">  151</span>        <span class="keywordtype">float</span> dur = 3f + 3f + random.nextFloat();</div>
-<div class="line"><span class="lineno">  152</span>        mem.set(MemFlags.FLEET_NOT_CHASING_GHOST, <span class="keyword">true</span>, dur * 0.5f);</div>
-<div class="line"><span class="lineno">  153</span>        </div>
-<div class="line"><span class="lineno">  154</span>        BaseSensorGhost g = <span class="keyword">new</span> BaseSensorGhost(<span class="keyword">null</span>, 0);</div>
-<div class="line"><span class="lineno">  155</span>        </div>
-<div class="line"><span class="lineno">  156</span>        <span class="keywordtype">float</span> r = random.nextFloat();</div>
-<div class="line"><span class="lineno">  157</span>        <span class="keywordtype">int</span> maxBurn;</div>
-<div class="line"><span class="lineno">  158</span>        <span class="keywordflow">if</span> (r &lt; 0.25f) {</div>
-<div class="line"><span class="lineno">  159</span>            g.initEntity(g.genMediumSensorProfile(), g.genSmallRadius(), 0, fleet.getContainingLocation());</div>
-<div class="line"><span class="lineno">  160</span>            maxBurn = 9 + random.nextInt(3);</div>
-<div class="line"><span class="lineno">  161</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (r &lt; 0.6f) {</div>
-<div class="line"><span class="lineno">  162</span>            g.initEntity(g.genLargeSensorProfile(), g.genMediumRadius(), 0, fleet.getContainingLocation());</div>
-<div class="line"><span class="lineno">  163</span>            maxBurn = 8 + random.nextInt(3);</div>
-<div class="line"><span class="lineno">  164</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  165</span>            g.initEntity(g.genLargeSensorProfile(), g.genLargeRadius(), 0, fleet.getContainingLocation());</div>
-<div class="line"><span class="lineno">  166</span>            maxBurn = 7 + random.nextInt(3);</div>
-<div class="line"><span class="lineno">  167</span>        }</div>
-<div class="line"><span class="lineno">  168</span>        </div>
-<div class="line"><span class="lineno">  169</span>        </div>
-<div class="line"><span class="lineno">  170</span>        <span class="keywordflow">if</span> (!g.placeNearPlayer()) {</div>
-<div class="line"><span class="lineno">  171</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  172</span>        }</div>
-<div class="line"><span class="lineno">  173</span>        <span class="comment">//g.setDespawnRange(200f);</span></div>
-<div class="line"><span class="lineno">  174</span>        </div>
-<div class="line"><span class="lineno">  175</span>        </div>
-<div class="line"><span class="lineno">  176</span>        <span class="keywordtype">float</span> speed = Misc.getSpeedForBurnLevel(maxBurn);</div>
-<div class="line"><span class="lineno">  177</span>        <span class="keywordtype">float</span> accelMult = speed / Misc.getSpeedForBurnLevel(20f);</div>
-<div class="line"><span class="lineno">  178</span>        <span class="keywordflow">if</span> (accelMult &lt; 0.1f) accelMult = 0.1f;</div>
-<div class="line"><span class="lineno">  179</span>        g.setAccelMult(1f/ accelMult);</div>
-<div class="line"><span class="lineno">  180</span>        </div>
-<div class="line"><span class="lineno">  181</span>        <span class="keywordtype">float</span> dir = Misc.getAngleInDegrees(g.getEntity().getLocation(), fleet.getLocation());</div>
-<div class="line"><span class="lineno">  182</span>        <span class="keywordtype">float</span> sign = Math.signum(random.nextFloat() - 0.5f);</div>
-<div class="line"><span class="lineno">  183</span>        dir += sign * (30f + random.nextFloat() * 60f);</div>
-<div class="line"><span class="lineno">  184</span>        </div>
-<div class="line"><span class="lineno">  185</span>        </div>
-<div class="line"><span class="lineno">  186</span>        g.addBehavior(<span class="keyword">new</span> GBGoInDirection(dur, dir, maxBurn));</div>
-<div class="line"><span class="lineno">  187</span>        </div>
-<div class="line"><span class="lineno">  188</span>        fleet.getContainingLocation().addScript(g);</div>
-<div class="line"><span class="lineno">  189</span>        </div>
-<div class="line"><span class="lineno">  190</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

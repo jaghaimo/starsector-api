@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -162,45 +163,7 @@ Public Member Functions</h2></td></tr>
 <p>Implements <a class="el" href="../../d1/d17/interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI_1_1TooltipCreator.html#af1b215b3d7e5d693c869e6831eb9c583">com.fs.starfarer.api.ui.TooltipMakerAPI.TooltipCreator</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d7c/OverheadTooltipCreator_8java_source.html#l00008">8</a> of file <a class="el" href="../../d2/d7c/OverheadTooltipCreator_8java_source.html">OverheadTooltipCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    8</span>                                                                                              {</div>
-<div class="line"><span class="lineno">    9</span><span class="comment">//      FDNode node = (FDNode) tooltipParam;</span></div>
-<div class="line"><span class="lineno">   10</span><span class="comment">//</span></div>
-<div class="line"><span class="lineno">   11</span><span class="comment">//      float pad = 3f;</span></div>
-<div class="line"><span class="lineno">   12</span><span class="comment">//      float opad = 10f;</span></div>
-<div class="line"><span class="lineno">   13</span><span class="comment">//      Color h = Misc.getHighlightColor();</span></div>
-<div class="line"><span class="lineno">   14</span><span class="comment">//      Color g = Misc.getGrayColor();</span></div>
-<div class="line"><span class="lineno">   15</span><span class="comment">//  </span></div>
-<div class="line"><span class="lineno">   16</span><span class="comment">//      MarketAPI market = (MarketAPI) node.custom;</span></div>
-<div class="line"><span class="lineno">   17</span><span class="comment">//      </span></div>
-<div class="line"><span class="lineno">   18</span><span class="comment">//      OverheadData overhead = CoreScript.computeOverhead(market);</span></div>
-<div class="line"><span class="lineno">   19</span><span class="comment">//      </span></div>
-<div class="line"><span class="lineno">   20</span><span class="comment">//      tooltip.addPara(&quot;Overhead due to scaling up operations to meet demand from multiple sources.&quot;, opad);</span></div>
-<div class="line"><span class="lineno">   21</span><span class="comment">//      </span></div>
-<div class="line"><span class="lineno">   22</span><span class="comment">//      if (overhead.max != null) { // shouldn&#39;t be possible, but just in case</span></div>
-<div class="line"><span class="lineno">   23</span><span class="comment">//          SupplierData sd = overhead.max;</span></div>
-<div class="line"><span class="lineno">   24</span><span class="comment">//          CommodityOnMarketAPI com = sd.getCommodity();</span></div>
-<div class="line"><span class="lineno">   25</span><span class="comment">//          String units = &quot;units&quot;;</span></div>
-<div class="line"><span class="lineno">   26</span><span class="comment">//          if (sd.getQuantity() == 1) units = &quot;unit&quot;;</span></div>
-<div class="line"><span class="lineno">   27</span><span class="comment">//          tooltip.addPara(&quot;The highest-value export from &quot; + market.getName() + &quot; is %s &quot; + units + </span></div>
-<div class="line"><span class="lineno">   28</span><span class="comment">//                  &quot; of &quot; + com.getCommodity().getName() + &quot; sold to &quot; + sd.getMarket().getName() + </span></div>
-<div class="line"><span class="lineno">   29</span><span class="comment">//                  &quot; for %s per month.&quot;,</span></div>
-<div class="line"><span class="lineno">   30</span><span class="comment">//                  opad,</span></div>
-<div class="line"><span class="lineno">   31</span><span class="comment">//                  h,</span></div>
-<div class="line"><span class="lineno">   32</span><span class="comment">//                  &quot;&quot; + sd.getQuantity(), Misc.getDGSCredits(sd.getExportValue(market)));</span></div>
-<div class="line"><span class="lineno">   33</span><span class="comment">//          </span></div>
-<div class="line"><span class="lineno">   34</span><span class="comment">//          tooltip.addPara(&quot;The total value of exports from &quot; + market.getName() + &quot; is %s, &quot; +</span></div>
-<div class="line"><span class="lineno">   35</span><span class="comment">//                  &quot;resulting in approximately %s overhead.&quot;,</span></div>
-<div class="line"><span class="lineno">   36</span><span class="comment">//                  opad, h,</span></div>
-<div class="line"><span class="lineno">   37</span><span class="comment">//                  Misc.getDGSCredits(market.getExportIncome(false)),</span></div>
-<div class="line"><span class="lineno">   38</span><span class="comment">//                  &quot;&quot; + (int)Math.round(overhead.fraction * 100f) + &quot;%&quot;);</span></div>
-<div class="line"><span class="lineno">   39</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">   40</span><span class="comment">//      </span></div>
-<div class="line"><span class="lineno">   41</span><span class="comment">//      tooltip.addPara(&quot;More exports always result in more income, but the gains decrease &quot; +</span></div>
-<div class="line"><span class="lineno">   42</span><span class="comment">//              &quot;exponentially with more export destinations being shipped to.&quot;, g, opad);</span></div>
-<div class="line"><span class="lineno">   43</span><span class="comment">//      tooltip.addPara(&quot;The overhead amount is based on the highest single export; the higher it is, the lower &quot; +</span></div>
-<div class="line"><span class="lineno">   44</span><span class="comment">//              &quot;the overall amount of overhead.&quot;, g, opad);</span></div>
-<div class="line"><span class="lineno">   45</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aab7d157db19048ddc3edf7ba139afc73" name="aab7d157db19048ddc3edf7ba139afc73"></a>
@@ -222,10 +185,7 @@ Public Member Functions</h2></td></tr>
 <p>Implements <a class="el" href="../../d1/d17/interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI_1_1TooltipCreator.html#aae9ba687c28be93c07f6768d5efa8fc2">com.fs.starfarer.api.ui.TooltipMakerAPI.TooltipCreator</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d7c/OverheadTooltipCreator_8java_source.html#l00049">49</a> of file <a class="el" href="../../d2/d7c/OverheadTooltipCreator_8java_source.html">OverheadTooltipCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   49</span>                                                      {</div>
-<div class="line"><span class="lineno">   50</span>        <span class="keywordflow">return</span> 450;</div>
-<div class="line"><span class="lineno">   51</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab40b7899a3bd65a261336eec69b8825a" name="ab40b7899a3bd65a261336eec69b8825a"></a>
@@ -247,10 +207,7 @@ Public Member Functions</h2></td></tr>
 <p>Implements <a class="el" href="../../d1/d17/interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI_1_1TooltipCreator.html#aa53d968b4631d095c472b40239b16e4e">com.fs.starfarer.api.ui.TooltipMakerAPI.TooltipCreator</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d7c/OverheadTooltipCreator_8java_source.html#l00053">53</a> of file <a class="el" href="../../d2/d7c/OverheadTooltipCreator_8java_source.html">OverheadTooltipCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   53</span>                                                            {</div>
-<div class="line"><span class="lineno">   54</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   55</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

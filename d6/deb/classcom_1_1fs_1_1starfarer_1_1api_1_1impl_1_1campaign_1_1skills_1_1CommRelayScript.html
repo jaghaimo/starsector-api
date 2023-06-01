@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -191,30 +192,7 @@ Protected Member Functions</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d8/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseEveryFrameCombatPlugin.html#a2369838995a799560103a0f44690f80b">com.fs.starfarer.api.combat.BaseEveryFrameCombatPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../de/dc4/CommRelayScript_8java_source.html#l00034">34</a> of file <a class="el" href="../../de/dc4/CommRelayScript_8java_source.html">CommRelayScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   34</span>                                                                  {</div>
-<div class="line"><span class="lineno">   35</span>        <span class="keywordflow">if</span> (engine == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   36</span>        <span class="keywordflow">if</span> (engine.<a class="code hl_function" href="../../df/d5a/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#ac2d9d76c6da9658515697f7af682e5d2">isPaused</a>()) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   37</span>        </div>
-<div class="line"><span class="lineno">   38</span>        <span class="comment">// if the player changed flagships:</span></div>
-<div class="line"><span class="lineno">   39</span>        <span class="comment">// skip a few frames to make sure the status ends up on top of the status list</span></div>
-<div class="line"><span class="lineno">   40</span>        ShipAPI playerShip = engine.<a class="code hl_function" href="../../df/d5a/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#ac44c1eaeb8c6f933209aca551237ae76">getPlayerShip</a>();</div>
-<div class="line"><span class="lineno">   41</span>        <span class="keywordflow">if</span> (playerShip != prevPlayerShip) {</div>
-<div class="line"><span class="lineno">   42</span>            prevPlayerShip = playerShip;</div>
-<div class="line"><span class="lineno">   43</span>            skipFrames = 20;</div>
-<div class="line"><span class="lineno">   44</span>        }</div>
-<div class="line"><span class="lineno">   45</span>        </div>
-<div class="line"><span class="lineno">   46</span>        <span class="keywordflow">if</span> (skipFrames &gt; 0) {</div>
-<div class="line"><span class="lineno">   47</span>            skipFrames--;</div>
-<div class="line"><span class="lineno">   48</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   49</span>        }</div>
-<div class="line"><span class="lineno">   50</span>        </div>
-<div class="line"><span class="lineno">   51</span>        updateForSide(engine.<a class="code hl_function" href="../../df/d5a/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a20fa8fe733b006fc5625a98e0e0bd554">getFleetManager</a>(0));</div>
-<div class="line"><span class="lineno">   52</span>        updateForSide(engine.<a class="code hl_function" href="../../df/d5a/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a20fa8fe733b006fc5625a98e0e0bd554">getFleetManager</a>(1));</div>
-<div class="line"><span class="lineno">   53</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI_html_a20fa8fe733b006fc5625a98e0e0bd554"><div class="ttname"><a href="../../df/d5a/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a20fa8fe733b006fc5625a98e0e0bd554">com.fs.starfarer.api.combat.CombatEngineAPI.getFleetManager</a></div><div class="ttdeci">CombatFleetManagerAPI getFleetManager(FleetSide side)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI_html_ac2d9d76c6da9658515697f7af682e5d2"><div class="ttname"><a href="../../df/d5a/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#ac2d9d76c6da9658515697f7af682e5d2">com.fs.starfarer.api.combat.CombatEngineAPI.isPaused</a></div><div class="ttdeci">boolean isPaused()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI_html_ac44c1eaeb8c6f933209aca551237ae76"><div class="ttname"><a href="../../df/d5a/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#ac44c1eaeb8c6f933209aca551237ae76">com.fs.starfarer.api.combat.CombatEngineAPI.getPlayerShip</a></div><div class="ttdeci">ShipAPI getPlayerShip()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="addd652c98e29cb0a21c06d1e2bd4f67e" name="addd652c98e29cb0a21c06d1e2bd4f67e"></a>
@@ -242,19 +220,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/dc4/CommRelayScript_8java_source.html#l00125">125</a> of file <a class="el" href="../../de/dc4/CommRelayScript_8java_source.html">CommRelayScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  125</span>                                                                  {</div>
-<div class="line"><span class="lineno">  126</span>        <span class="keywordflow">if</span> (needsCleanup.contains(manager)) {</div>
-<div class="line"><span class="lineno">  127</span>            needsCleanup.remove(manager);</div>
-<div class="line"><span class="lineno">  128</span>            List&lt;DeployedFleetMemberAPI&gt; deployed = manager.getDeployedCopyDFM();</div>
-<div class="line"><span class="lineno">  129</span>            <span class="keywordflow">for</span> (DeployedFleetMemberAPI member : deployed) {</div>
-<div class="line"><span class="lineno">  130</span>                <span class="keywordflow">if</span> (member.isFighterWing()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  131</span>                <span class="keywordflow">if</span> (member.getShip() == <span class="keyword">null</span>) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  132</span>                member.getShip().getMutableStats().getMaxSpeed().unmodify(<a class="code hl_variable" href="../../d6/deb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1CommRelayScript.html#af20668989e40fa207b2a8b9ecb16de20">BONUS_ID</a>);</div>
-<div class="line"><span class="lineno">  133</span>            }</div>
-<div class="line"><span class="lineno">  134</span>        }</div>
-<div class="line"><span class="lineno">  135</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1CommRelayScript_html_af20668989e40fa207b2a8b9ecb16de20"><div class="ttname"><a href="../../d6/deb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1CommRelayScript.html#af20668989e40fa207b2a8b9ecb16de20">com.fs.starfarer.api.impl.campaign.skills.CommRelayScript.BONUS_ID</a></div><div class="ttdeci">static final String BONUS_ID</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dc4/CommRelayScript_8java_source.html#l00023">CommRelayScript.java:23</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a59e527adf9b010047b70f2ac6ccd9e89" name="a59e527adf9b010047b70f2ac6ccd9e89"></a>
@@ -273,11 +239,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/dc4/CommRelayScript_8java_source.html#l00147">147</a> of file <a class="el" href="../../de/dc4/CommRelayScript_8java_source.html">CommRelayScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  147</span>                                      {</div>
-<div class="line"><span class="lineno">  148</span>        <span class="comment">// TODO Auto-generated method stub</span></div>
-<div class="line"><span class="lineno">  149</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  150</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a3d307a12af10aa06ecc82737f65115ed" name="a3d307a12af10aa06ecc82737f65115ed"></a>
@@ -305,10 +267,7 @@ Protected Member Functions</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d8/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseEveryFrameCombatPlugin.html#addec3dedcaa837bfdb0712c36d17e060">com.fs.starfarer.api.combat.BaseEveryFrameCombatPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../de/dc4/CommRelayScript_8java_source.html#l00027">27</a> of file <a class="el" href="../../de/dc4/CommRelayScript_8java_source.html">CommRelayScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   27</span>                                             {</div>
-<div class="line"><span class="lineno">   28</span>        this.engine = engine;</div>
-<div class="line"><span class="lineno">   29</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a3d29c684ec14057496b6bbb927ba503d" name="a3d29c684ec14057496b6bbb927ba503d"></a>
@@ -330,9 +289,7 @@ Protected Member Functions</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d8/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseEveryFrameCombatPlugin.html#ab2aac6e7bab87c667cf25abce92354d0">com.fs.starfarer.api.combat.BaseEveryFrameCombatPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../de/dc4/CommRelayScript_8java_source.html#l00140">140</a> of file <a class="el" href="../../de/dc4/CommRelayScript_8java_source.html">CommRelayScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  140</span>                                                       {</div>
-<div class="line"><span class="lineno">  141</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aafbf2240dff547c84147b043260a818b" name="aafbf2240dff547c84147b043260a818b"></a>
@@ -354,9 +311,7 @@ Protected Member Functions</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d8/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseEveryFrameCombatPlugin.html#a22681e3dd8c6e239af03a1875617933b">com.fs.starfarer.api.combat.BaseEveryFrameCombatPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../de/dc4/CommRelayScript_8java_source.html#l00143">143</a> of file <a class="el" href="../../de/dc4/CommRelayScript_8java_source.html">CommRelayScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  143</span>                                                          {</div>
-<div class="line"><span class="lineno">  144</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

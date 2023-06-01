@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -174,108 +175,7 @@ Protected Member Functions</h2></td></tr>
 <p>Implements <a class="el" href="../../de/d64/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1TerrainGenPlugin.html#aca9a5ae2809f5b40f3ed01e5a4fc6242">com.fs.starfarer.api.impl.campaign.procgen.TerrainGenPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d63/RingGenPlugin_8java_source.html#l00069">69</a> of file <a class="el" href="../../d0/d63/RingGenPlugin_8java_source.html">RingGenPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   69</span>                                                                                  {</div>
-<div class="line"><span class="lineno">   70</span>        StarSystemAPI system = context.system;</div>
-<div class="line"><span class="lineno">   71</span>        SectorEntityToken parent = context.center;</div>
-<div class="line"><span class="lineno">   72</span>        <span class="keywordflow">if</span> (context.parent != <span class="keyword">null</span>) parent = context.parent;</div>
-<div class="line"><span class="lineno">   73</span>        </div>
-<div class="line"><span class="lineno">   74</span>        <span class="keywordtype">float</span> orbitRadius = context.currentRadius;</div>
-<div class="line"><span class="lineno">   75</span>        </div>
-<div class="line"><span class="lineno">   76</span><span class="comment">//      if (context.parent != null) {</span></div>
-<div class="line"><span class="lineno">   77</span><span class="comment">//          System.out.println(&quot;RING RADIUS &quot; + orbitRadius + &quot; INDEX &quot; + context.orbitIndex);</span></div>
-<div class="line"><span class="lineno">   78</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">   79</span>        </div>
-<div class="line"><span class="lineno">   80</span>        <span class="keywordtype">float</span> bandWidth = 256f;</div>
-<div class="line"><span class="lineno">   81</span> </div>
-<div class="line"><span class="lineno">   82</span>        RingGenData data = <a class="code hl_function" href="../../d9/d56/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1RingGenPlugin.html#a6498cec0d87680f70e3d8e49f547badd">getData</a>(context);</div>
-<div class="line"><span class="lineno">   83</span>        TexAndIndex tex;</div>
-<div class="line"><span class="lineno">   84</span>        </div>
-<div class="line"><span class="lineno">   85</span>        Color color = StarSystemGenerator.getColor(terrainData.getMinColor(), terrainData.getMaxColor());</div>
-<div class="line"><span class="lineno">   86</span>        </div>
-<div class="line"><span class="lineno">   87</span>        List&lt;SectorEntityToken&gt; rings = <span class="keyword">new</span> ArrayList&lt;SectorEntityToken&gt;();</div>
-<div class="line"><span class="lineno">   88</span>        <span class="keywordtype">float</span> totalWidth = 0f;</div>
-<div class="line"><span class="lineno">   89</span>        <span class="keywordflow">if</span> (StarSystemGenerator.random.nextFloat() &lt; 0.25f) {</div>
-<div class="line"><span class="lineno">   90</span>            <span class="comment">// two singles, set apart a bit</span></div>
-<div class="line"><span class="lineno">   91</span>            <span class="keywordtype">float</span> spacing = 175f;</div>
-<div class="line"><span class="lineno">   92</span>            totalWidth = bandWidth * 2f + spacing;</div>
-<div class="line"><span class="lineno">   93</span>            </div>
-<div class="line"><span class="lineno">   94</span>            <span class="keywordtype">float</span> orbitDays = (orbitRadius + totalWidth / 2f) / (15f + 5f * StarSystemGenerator.random.nextFloat());</div>
-<div class="line"><span class="lineno">   95</span>            tex = <a class="code hl_function" href="../../d9/d56/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1RingGenPlugin.html#a0a14b0ac805a05c7e3ec5ddb2c69e068">getTexAndIndex</a>(terrainData);</div>
-<div class="line"><span class="lineno">   96</span>            rings.add(system.addRingBand(parent, <span class="stringliteral">&quot;misc&quot;</span>, tex.tex, 256f, tex.index, color, bandWidth,</div>
-<div class="line"><span class="lineno">   97</span>                               orbitRadius + bandWidth / 2f, orbitDays, Terrain.RING, <span class="keyword">null</span>));</div>
-<div class="line"><span class="lineno">   98</span>            </div>
-<div class="line"><span class="lineno">   99</span>            orbitDays = (orbitRadius + bandWidth / 2f + spacing + bandWidth / 2f) / (15f + 5f * StarSystemGenerator.random.nextFloat());</div>
-<div class="line"><span class="lineno">  100</span>            tex = <a class="code hl_function" href="../../d9/d56/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1RingGenPlugin.html#a0a14b0ac805a05c7e3ec5ddb2c69e068">getTexAndIndex</a>(terrainData);</div>
-<div class="line"><span class="lineno">  101</span>            rings.add(system.addRingBand(parent, <span class="stringliteral">&quot;misc&quot;</span>, tex.tex, 256f, tex.index, color, bandWidth,</div>
-<div class="line"><span class="lineno">  102</span>                               orbitRadius + bandWidth / 2f + spacing + bandWidth / 2f, orbitDays * 1.2f, Terrain.RING, <span class="keyword">null</span>));</div>
-<div class="line"><span class="lineno">  103</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  104</span>            <span class="keywordtype">float</span> numBands = 1;</div>
-<div class="line"><span class="lineno">  105</span>            <span class="comment">//float pExtraBand = 0.5f;</span></div>
-<div class="line"><span class="lineno">  106</span>            <span class="keywordflow">if</span> (orbitRadius &gt; 2000f &amp;&amp; StarSystemGenerator.random.nextFloat() &gt; 0.5f) numBands++;</div>
-<div class="line"><span class="lineno">  107</span>            <span class="keywordflow">if</span> (orbitRadius &gt; 4000f &amp;&amp; StarSystemGenerator.random.nextFloat() &gt; 0.5f) numBands++;</div>
-<div class="line"><span class="lineno">  108</span>            <span class="keywordflow">if</span> (orbitRadius &gt; 6000f &amp;&amp; StarSystemGenerator.random.nextFloat() &gt; 0.5f) numBands++;</div>
-<div class="line"><span class="lineno">  109</span>            </div>
-<div class="line"><span class="lineno">  110</span>            <span class="comment">//numBands = 3;</span></div>
-<div class="line"><span class="lineno">  111</span>            </div>
-<div class="line"><span class="lineno">  112</span>            <span class="keywordtype">float</span> startingRadius = orbitRadius + bandWidth/2f;</div>
-<div class="line"><span class="lineno">  113</span>            <span class="keywordtype">float</span> spacing = bandWidth * 0.5f;</div>
-<div class="line"><span class="lineno">  114</span>            <span class="keywordflow">for</span> (<span class="keywordtype">float</span> i = 0; i &lt; numBands; i++) {</div>
-<div class="line"><span class="lineno">  115</span>                <span class="keywordtype">float</span> currentRadius = startingRadius + i * spacing;</div>
-<div class="line"><span class="lineno">  116</span>                <span class="keywordtype">float</span> orbitDays = (currentRadius) / (15f + 5f * StarSystemGenerator.random.nextFloat());</div>
-<div class="line"><span class="lineno">  117</span>                tex = <a class="code hl_function" href="../../d9/d56/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1RingGenPlugin.html#a0a14b0ac805a05c7e3ec5ddb2c69e068">getTexAndIndex</a>(terrainData);</div>
-<div class="line"><span class="lineno">  118</span>                <span class="keywordflow">if</span> (StarSystemGenerator.random.nextFloat() &gt; 0.5f) {</div>
-<div class="line"><span class="lineno">  119</span>                    <span class="keywordflow">if</span> (StarSystemGenerator.random.nextFloat() &gt; 0.5f) {</div>
-<div class="line"><span class="lineno">  120</span>                        tex = <a class="code hl_function" href="../../d9/d56/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1RingGenPlugin.html#a0a14b0ac805a05c7e3ec5ddb2c69e068">getTexAndIndex</a>(terrainData);</div>
-<div class="line"><span class="lineno">  121</span>                    }</div>
-<div class="line"><span class="lineno">  122</span>                    rings.add(system.addRingBand(parent, <span class="stringliteral">&quot;misc&quot;</span>, tex.tex, 256f, tex.index, color, bandWidth,</div>
-<div class="line"><span class="lineno">  123</span>                            currentRadius, orbitDays * 1.2f, Terrain.RING, <span class="keyword">null</span>));</div>
-<div class="line"><span class="lineno">  124</span>                    </div>
-<div class="line"><span class="lineno">  125</span>                    <span class="keywordflow">if</span> (StarSystemGenerator.random.nextFloat() &gt; 0.5f) {</div>
-<div class="line"><span class="lineno">  126</span>                        <span class="keywordflow">if</span> (StarSystemGenerator.random.nextFloat() &gt; 0.5f) {</div>
-<div class="line"><span class="lineno">  127</span>                            tex = <a class="code hl_function" href="../../d9/d56/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1RingGenPlugin.html#a0a14b0ac805a05c7e3ec5ddb2c69e068">getTexAndIndex</a>(terrainData);</div>
-<div class="line"><span class="lineno">  128</span>                        }</div>
-<div class="line"><span class="lineno">  129</span>                        rings.add(system.addRingBand(parent, <span class="stringliteral">&quot;misc&quot;</span>, tex.tex, 256f, tex.index, color, bandWidth,</div>
-<div class="line"><span class="lineno">  130</span>                                currentRadius, orbitDays * 1.4f, Terrain.RING, <span class="keyword">null</span>));</div>
-<div class="line"><span class="lineno">  131</span>                    }                   </div>
-<div class="line"><span class="lineno">  132</span>                }</div>
-<div class="line"><span class="lineno">  133</span>            }</div>
-<div class="line"><span class="lineno">  134</span>            totalWidth = (numBands - 1f) * spacing + bandWidth;</div>
-<div class="line"><span class="lineno">  135</span>        }</div>
-<div class="line"><span class="lineno">  136</span>        </div>
-<div class="line"><span class="lineno">  137</span>        </div>
-<div class="line"><span class="lineno">  138</span>        <span class="keywordflow">if</span> (context.orbitIndex &gt; 0 &amp;&amp; data.lastOrbitAddedAt == context.orbitIndex - 1) {</div>
-<div class="line"><span class="lineno">  139</span>            <span class="keywordtype">float</span> spacing = bandWidth * 0.5f;</div>
-<div class="line"><span class="lineno">  140</span>            <span class="keywordflow">for</span> (<span class="keywordtype">float</span> currRadius = data.endOfLastRingRadius; currRadius &lt;= orbitRadius; currRadius += spacing) {</div>
-<div class="line"><span class="lineno">  141</span>                <span class="keywordtype">float</span> orbitDays = currRadius / (15f + 5f * StarSystemGenerator.random.nextFloat());</div>
-<div class="line"><span class="lineno">  142</span>                tex = <a class="code hl_function" href="../../d9/d56/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1RingGenPlugin.html#a0a14b0ac805a05c7e3ec5ddb2c69e068">getTexAndIndex</a>(terrainData);</div>
-<div class="line"><span class="lineno">  143</span>                rings.add(system.addRingBand(parent, <span class="stringliteral">&quot;misc&quot;</span>, tex.tex, 256f, tex.index, color, bandWidth,</div>
-<div class="line"><span class="lineno">  144</span>                                   currRadius, orbitDays, Terrain.RING, <span class="keyword">null</span>));</div>
-<div class="line"><span class="lineno">  145</span>            }</div>
-<div class="line"><span class="lineno">  146</span>            </div>
-<div class="line"><span class="lineno">  147</span>            <span class="keywordflow">if</span> (data.lastBatch != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  148</span>                rings.addAll(data.lastBatch);</div>
-<div class="line"><span class="lineno">  149</span>                <span class="comment">// will be re-added after this method returns, pointing to the full set of rings</span></div>
-<div class="line"><span class="lineno">  150</span>                <span class="comment">// as being part of one nameable entity</span></div>
-<div class="line"><span class="lineno">  151</span>                <span class="keywordflow">for</span> (SectorEntityToken ring : rings) {</div>
-<div class="line"><span class="lineno">  152</span>                    context.gen.getAllEntitiesAdded().remove(ring);</div>
-<div class="line"><span class="lineno">  153</span>                }</div>
-<div class="line"><span class="lineno">  154</span>            }</div>
-<div class="line"><span class="lineno">  155</span>        }</div>
-<div class="line"><span class="lineno">  156</span>        </div>
-<div class="line"><span class="lineno">  157</span>        data.lastOrbitAddedAt = context.orbitIndex;</div>
-<div class="line"><span class="lineno">  158</span>        data.endOfLastRingRadius = orbitRadius + bandWidth;</div>
-<div class="line"><span class="lineno">  159</span>        data.lastBatch = <span class="keyword">new</span> ArrayList&lt;SectorEntityToken&gt;(rings);</div>
-<div class="line"><span class="lineno">  160</span>        </div>
-<div class="line"><span class="lineno">  161</span>        </div>
-<div class="line"><span class="lineno">  162</span>        GenResult result = <span class="keyword">new</span> GenResult();</div>
-<div class="line"><span class="lineno">  163</span>        result.onlyIncrementByWidth = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  164</span>        result.orbitalWidth = totalWidth;</div>
-<div class="line"><span class="lineno">  165</span>        result.entities.addAll(rings); </div>
-<div class="line"><span class="lineno">  166</span>        <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">  167</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1RingGenPlugin_html_a0a14b0ac805a05c7e3ec5ddb2c69e068"><div class="ttname"><a href="../../d9/d56/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1RingGenPlugin.html#a0a14b0ac805a05c7e3ec5ddb2c69e068">com.fs.starfarer.api.impl.campaign.procgen.RingGenPlugin.getTexAndIndex</a></div><div class="ttdeci">TexAndIndex getTexAndIndex(TerrainGenDataSpec data)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d63/RingGenPlugin_8java_source.html#l00030">RingGenPlugin.java:30</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1RingGenPlugin_html_a6498cec0d87680f70e3d8e49f547badd"><div class="ttname"><a href="../../d9/d56/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1RingGenPlugin.html#a6498cec0d87680f70e3d8e49f547badd">com.fs.starfarer.api.impl.campaign.procgen.RingGenPlugin.getData</a></div><div class="ttdeci">RingGenData getData(GenContext context)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d63/RingGenPlugin_8java_source.html#l00056">RingGenPlugin.java:56</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a6498cec0d87680f70e3d8e49f547badd" name="a6498cec0d87680f70e3d8e49f547badd"></a>
@@ -295,19 +195,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d63/RingGenPlugin_8java_source.html#l00056">56</a> of file <a class="el" href="../../d0/d63/RingGenPlugin_8java_source.html">RingGenPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   56</span>                                                   {</div>
-<div class="line"><span class="lineno">   57</span>        RingGenData data = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   58</span>        <span class="keywordflow">if</span> (context.customData.get(<a class="code hl_variable" href="../../d9/d56/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1RingGenPlugin.html#a2bd16db524fa76ffa3f73275545c8ee8">RING_GEN_DATA_KEY</a>) instanceof RingGenData) {</div>
-<div class="line"><span class="lineno">   59</span>            data = (RingGenData) context.customData.get(<a class="code hl_variable" href="../../d9/d56/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1RingGenPlugin.html#a2bd16db524fa76ffa3f73275545c8ee8">RING_GEN_DATA_KEY</a>);</div>
-<div class="line"><span class="lineno">   60</span>        }</div>
-<div class="line"><span class="lineno">   61</span>        <span class="keywordflow">if</span> (data == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   62</span>            data = <span class="keyword">new</span> RingGenData();</div>
-<div class="line"><span class="lineno">   63</span>            context.customData.put(<a class="code hl_variable" href="../../d9/d56/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1RingGenPlugin.html#a2bd16db524fa76ffa3f73275545c8ee8">RING_GEN_DATA_KEY</a>, data);</div>
-<div class="line"><span class="lineno">   64</span>        }</div>
-<div class="line"><span class="lineno">   65</span>        <span class="keywordflow">return</span> data;</div>
-<div class="line"><span class="lineno">   66</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1RingGenPlugin_html_a2bd16db524fa76ffa3f73275545c8ee8"><div class="ttname"><a href="../../d9/d56/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1RingGenPlugin.html#a2bd16db524fa76ffa3f73275545c8ee8">com.fs.starfarer.api.impl.campaign.procgen.RingGenPlugin.RING_GEN_DATA_KEY</a></div><div class="ttdeci">static final String RING_GEN_DATA_KEY</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d63/RingGenPlugin_8java_source.html#l00021">RingGenPlugin.java:21</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a0a14b0ac805a05c7e3ec5ddb2c69e068" name="a0a14b0ac805a05c7e3ec5ddb2c69e068"></a>
@@ -335,32 +223,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d63/RingGenPlugin_8java_source.html#l00030">30</a> of file <a class="el" href="../../d0/d63/RingGenPlugin_8java_source.html">RingGenPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   30</span>                                                                  {</div>
-<div class="line"><span class="lineno">   31</span>        TexAndIndex result = <span class="keyword">new</span> TexAndIndex();</div>
-<div class="line"><span class="lineno">   32</span>        WeightedRandomPicker&lt;Integer&gt; indexPicker = <span class="keyword">new</span> WeightedRandomPicker&lt;Integer&gt;(StarSystemGenerator.random);</div>
-<div class="line"><span class="lineno">   33</span>        </div>
-<div class="line"><span class="lineno">   34</span>        <span class="keywordflow">if</span> (data.getId().equals(<span class="stringliteral">&quot;ring_ice&quot;</span>)) {</div>
-<div class="line"><span class="lineno">   35</span>            result.tex = <span class="stringliteral">&quot;rings_ice0&quot;</span>;</div>
-<div class="line"><span class="lineno">   36</span>            indexPicker.add(0);</div>
-<div class="line"><span class="lineno">   37</span>            indexPicker.add(1);</div>
-<div class="line"><span class="lineno">   38</span>            indexPicker.add(2);</div>
-<div class="line"><span class="lineno">   39</span>            indexPicker.add(3);</div>
-<div class="line"><span class="lineno">   40</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (data.getId().equals(<span class="stringliteral">&quot;ring_dust&quot;</span>)) {</div>
-<div class="line"><span class="lineno">   41</span>            result.tex = <span class="stringliteral">&quot;rings_dust0&quot;</span>;</div>
-<div class="line"><span class="lineno">   42</span>            indexPicker.add(0);</div>
-<div class="line"><span class="lineno">   43</span>            indexPicker.add(1);</div>
-<div class="line"><span class="lineno">   44</span>            indexPicker.add(2);</div>
-<div class="line"><span class="lineno">   45</span>            indexPicker.add(3);</div>
-<div class="line"><span class="lineno">   46</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (data.getId().equals(<span class="stringliteral">&quot;ring_special&quot;</span>)) {</div>
-<div class="line"><span class="lineno">   47</span>            result.tex = <span class="stringliteral">&quot;rings_special0&quot;</span>;</div>
-<div class="line"><span class="lineno">   48</span>            indexPicker.add(1);</div>
-<div class="line"><span class="lineno">   49</span>        }</div>
-<div class="line"><span class="lineno">   50</span>        </div>
-<div class="line"><span class="lineno">   51</span>        result.index = indexPicker.pick();</div>
-<div class="line"><span class="lineno">   52</span>        </div>
-<div class="line"><span class="lineno">   53</span>        <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">   54</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a24460f06442457b2031186a7225543fc" name="a24460f06442457b2031186a7225543fc"></a>
@@ -392,13 +255,7 @@ Protected Member Functions</h2></td></tr>
 <p>Implements <a class="el" href="../../de/d64/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1TerrainGenPlugin.html#a25af793d3d41b4dac5d49cf983293188">com.fs.starfarer.api.impl.campaign.procgen.TerrainGenPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d63/RingGenPlugin_8java_source.html#l00169">169</a> of file <a class="el" href="../../d0/d63/RingGenPlugin_8java_source.html">RingGenPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  169</span>                                                                                     {</div>
-<div class="line"><span class="lineno">  170</span>        <span class="keywordflow">return</span> terrainData != <span class="keyword">null</span> &amp;&amp; </div>
-<div class="line"><span class="lineno">  171</span>            (terrainData.getId().equals(<span class="stringliteral">&quot;ring_ice&quot;</span>) ||</div>
-<div class="line"><span class="lineno">  172</span>             terrainData.getId().equals(<span class="stringliteral">&quot;ring_dust&quot;</span>) ||</div>
-<div class="line"><span class="lineno">  173</span>             terrainData.getId().equals(<span class="stringliteral">&quot;ring_special&quot;</span>));</div>
-<div class="line"><span class="lineno">  174</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -188,15 +189,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/d2e/SectorProcGen_8java_source.html#l00221">221</a> of file <a class="el" href="../../de/d2e/SectorProcGen_8java_source.html">SectorProcGen.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  221</span>                                                                        {</div>
-<div class="line"><span class="lineno">  222</span>        <span class="comment">//int c = CONSTELLATION_CELLS;</span></div>
-<div class="line"><span class="lineno">  223</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = Math.max(0, x - c / 2); i &lt;= x + c / 2 &amp;&amp; i &lt; cells.length; i++) {</div>
-<div class="line"><span class="lineno">  224</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = Math.max(0, y - c / 2); j &lt;= y + c / 2 &amp;&amp; j &lt; cells[0].length; j++) {</div>
-<div class="line"><span class="lineno">  225</span>                cells[i][j] = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  226</span>            }</div>
-<div class="line"><span class="lineno">  227</span>        }</div>
-<div class="line"><span class="lineno">  228</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5a4dbec4daf105e43cab4e47c28d8693" name="a5a4dbec4daf105e43cab4e47c28d8693"></a>
@@ -228,177 +221,7 @@ Static Public Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d9/da3/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorProcGenPlugin.html#a2051ef07869d707aae049782fcdb2a1d">com.fs.starfarer.api.campaign.SectorProcGenPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../de/d2e/SectorProcGen_8java_source.html#l00051">51</a> of file <a class="el" href="../../de/d2e/SectorProcGen_8java_source.html">SectorProcGen.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   51</span>                                                                                 {</div>
-<div class="line"><span class="lineno">   52</span>        <span class="keywordtype">float</span> w = Global.getSettings().getFloat(<span class="stringliteral">&quot;sectorWidth&quot;</span>);</div>
-<div class="line"><span class="lineno">   53</span>        <span class="keywordtype">float</span> h = Global.getSettings().getFloat(<span class="stringliteral">&quot;sectorHeight&quot;</span>); </div>
-<div class="line"><span class="lineno">   54</span> </div>
-<div class="line"><span class="lineno">   55</span>        </div>
-<div class="line"><span class="lineno">   56</span>        <span class="keywordtype">boolean</span> small = <span class="stringliteral">&quot;small&quot;</span>.equals(data.getSectorSize());</div>
-<div class="line"><span class="lineno">   57</span>        StarAge sectorAge = data.getSectorAge();</div>
-<div class="line"><span class="lineno">   58</span>        <span class="keywordflow">if</span> (sectorAge == <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   59</span>            sectorAge = StarAge.ANY;</div>
-<div class="line"><span class="lineno">   60</span>        }</div>
-<div class="line"><span class="lineno">   61</span>        </div>
-<div class="line"><span class="lineno">   62</span>        <span class="keywordtype">int</span> cellsWide = (int) (w / <a class="code hl_variable" href="../../d1/d75/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1SectorProcGen.html#a1a07b68ebd3d743e2b110a1c12b13de8">CELL_SIZE</a>);</div>
-<div class="line"><span class="lineno">   63</span>        <span class="keywordtype">int</span> cellsHigh = (int) (h / <a class="code hl_variable" href="../../d1/d75/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1SectorProcGen.html#a1a07b68ebd3d743e2b110a1c12b13de8">CELL_SIZE</a>);</div>
-<div class="line"><span class="lineno">   64</span>        </div>
-<div class="line"><span class="lineno">   65</span>        </div>
-<div class="line"><span class="lineno">   66</span>        <span class="keywordtype">boolean</span> [][] cells = <span class="keyword">new</span> <span class="keywordtype">boolean</span> [cellsWide][cellsHigh];</div>
-<div class="line"><span class="lineno">   67</span>        <span class="keywordtype">int</span> count = 100; </div>
-<div class="line"><span class="lineno">   68</span> </div>
-<div class="line"><span class="lineno">   69</span>        <span class="keywordtype">int</span> vPad = <a class="code hl_variable" href="../../d1/d75/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1SectorProcGen.html#a3ed224ab3fd232ae79ebe9b10fe9cf52">CONSTELLATION_CELLS</a> / 2;</div>
-<div class="line"><span class="lineno">   70</span>        <span class="keywordtype">int</span> hPad = <a class="code hl_variable" href="../../d1/d75/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1SectorProcGen.html#a3ed224ab3fd232ae79ebe9b10fe9cf52">CONSTELLATION_CELLS</a> / 2;</div>
-<div class="line"><span class="lineno">   71</span>        <span class="keywordflow">if</span> (small) {</div>
-<div class="line"><span class="lineno">   72</span>            hPad = (int) (31000 / <a class="code hl_variable" href="../../d1/d75/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1SectorProcGen.html#a1a07b68ebd3d743e2b110a1c12b13de8">CELL_SIZE</a>); </div>
-<div class="line"><span class="lineno">   73</span>            vPad = (int) (19000 / <a class="code hl_variable" href="../../d1/d75/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1SectorProcGen.html#a1a07b68ebd3d743e2b110a1c12b13de8">CELL_SIZE</a>); </div>
-<div class="line"><span class="lineno">   74</span>        }</div>
-<div class="line"><span class="lineno">   75</span>        </div>
-<div class="line"><span class="lineno">   76</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; cells.length; i++) {</div>
-<div class="line"><span class="lineno">   77</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; cells[0].length; j++) {</div>
-<div class="line"><span class="lineno">   78</span>                <span class="keywordflow">if</span> (i &lt;= hPad || j &lt;= vPad || i &gt;= cellsWide - hPad || j &gt;= cellsHigh - vPad) {</div>
-<div class="line"><span class="lineno">   79</span>                    cells[i][j] = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   80</span>                }</div>
-<div class="line"><span class="lineno">   81</span>            }</div>
-<div class="line"><span class="lineno">   82</span>        }</div>
-<div class="line"><span class="lineno">   83</span>        </div>
-<div class="line"><span class="lineno">   84</span>        <span class="comment">//System.out.println(&quot;EXISTING SYSTEMS: &quot;);</span></div>
-<div class="line"><span class="lineno">   85</span>        <span class="keywordflow">for</span> (StarSystemAPI system : Global.getSector().getStarSystems()) {</div>
-<div class="line"><span class="lineno">   86</span>            <span class="keywordtype">int</span> [] index = <a class="code hl_function" href="../../d1/d75/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1SectorProcGen.html#a937000b116e3d8b9f91ec7df083803c3">getIndex</a>(system.getLocation());</div>
-<div class="line"><span class="lineno">   87</span>            <span class="keywordtype">int</span> x = index[0];</div>
-<div class="line"><span class="lineno">   88</span>            <span class="keywordtype">int</span> y = index[1];</div>
-<div class="line"><span class="lineno">   89</span>            <span class="keywordflow">if</span> (x &lt; 0) x = 0;</div>
-<div class="line"><span class="lineno">   90</span>            <span class="keywordflow">if</span> (y &lt; 0) y = 0;</div>
-<div class="line"><span class="lineno">   91</span>            <span class="keywordflow">if</span> (x &gt; cellsWide - 1) x = cellsWide - 1;</div>
-<div class="line"><span class="lineno">   92</span>            <span class="keywordflow">if</span> (y &gt; cellsHigh - 1) y = cellsHigh - 1;</div>
-<div class="line"><span class="lineno">   93</span>            </div>
-<div class="line"><span class="lineno">   94</span><span class="comment">//          if (system.getName().toLowerCase().startsWith(&quot;groom&quot;)) {</span></div>
-<div class="line"><span class="lineno">   95</span><span class="comment">//              System.out.println(&quot;ewfwefwe&quot;);</span></div>
-<div class="line"><span class="lineno">   96</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">   97</span>            <span class="comment">//System.out.println(system.getName());</span></div>
-<div class="line"><span class="lineno">   98</span>            </div>
-<div class="line"><span class="lineno">   99</span>            <a class="code hl_function" href="../../d1/d75/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1SectorProcGen.html#ad8ff534381d426bfdd9d0747a3ecfe3b">blotOut</a>(cells, x, y, 8);</div>
-<div class="line"><span class="lineno">  100</span>        }</div>
-<div class="line"><span class="lineno">  101</span>        </div>
-<div class="line"><span class="lineno">  102</span>        <span class="comment">// for the Orion-Perseus Abyss label</span></div>
-<div class="line"><span class="lineno">  103</span>        <a class="code hl_function" href="../../d1/d75/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1SectorProcGen.html#ad8ff534381d426bfdd9d0747a3ecfe3b">blotOut</a>(cells, 0, 0, 12);</div>
-<div class="line"><span class="lineno">  104</span>        <a class="code hl_function" href="../../d1/d75/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1SectorProcGen.html#ad8ff534381d426bfdd9d0747a3ecfe3b">blotOut</a>(cells, 6, 0, 12);</div>
-<div class="line"><span class="lineno">  105</span>        <a class="code hl_function" href="../../d1/d75/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1SectorProcGen.html#ad8ff534381d426bfdd9d0747a3ecfe3b">blotOut</a>(cells, 12, 0, 12);</div>
-<div class="line"><span class="lineno">  106</span>        </div>
-<div class="line"><span class="lineno">  107</span>        progress.render(<span class="stringliteral">&quot;Generating sector...&quot;</span>, 0.1f);</div>
-<div class="line"><span class="lineno">  108</span>        </div>
-<div class="line"><span class="lineno">  109</span>        List&lt;CustomConstellationParams&gt; custom = <a class="code hl_function" href="../../d1/d75/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1SectorProcGen.html#af1e552882b6ed66f26d334697a49a5f0">getCustomConstellations</a>();</div>
-<div class="line"><span class="lineno">  110</span>        </div>
-<div class="line"><span class="lineno">  111</span>        List&lt;Constellation&gt; constellations = <span class="keyword">new</span> ArrayList&lt;Constellation&gt;();</div>
-<div class="line"><span class="lineno">  112</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 0; k &lt; count; k++) {</div>
-<div class="line"><span class="lineno">  113</span>            WeightedRandomPicker&lt;Pair&lt;Integer, Integer&gt;&gt; picker = <span class="keyword">new</span> WeightedRandomPicker&lt;Pair&lt;Integer,Integer&gt;&gt;(StarSystemGenerator.random);</div>
-<div class="line"><span class="lineno">  114</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; cells.length; i++) {</div>
-<div class="line"><span class="lineno">  115</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; cells[0].length; j++) {</div>
-<div class="line"><span class="lineno">  116</span>                    <span class="keywordflow">if</span> (cells[i][j]) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  117</span>                    </div>
-<div class="line"><span class="lineno">  118</span>                    Pair&lt;Integer, Integer&gt; p = <span class="keyword">new</span> Pair&lt;Integer, Integer&gt;(i, j);</div>
-<div class="line"><span class="lineno">  119</span>                    picker.add(p);</div>
-<div class="line"><span class="lineno">  120</span>                }</div>
-<div class="line"><span class="lineno">  121</span>            }</div>
-<div class="line"><span class="lineno">  122</span>            </div>
-<div class="line"><span class="lineno">  123</span>            Pair&lt;Integer, Integer&gt; pick = picker.pick();</div>
-<div class="line"><span class="lineno">  124</span>            <span class="keywordflow">if</span> (pick == <span class="keyword">null</span>) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  125</span>            </div>
-<div class="line"><span class="lineno">  126</span>            <a class="code hl_function" href="../../d1/d75/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1SectorProcGen.html#ad8ff534381d426bfdd9d0747a3ecfe3b">blotOut</a>(cells, pick.one, pick.two, <a class="code hl_variable" href="../../d1/d75/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1SectorProcGen.html#a3ed224ab3fd232ae79ebe9b10fe9cf52">CONSTELLATION_CELLS</a>);</div>
-<div class="line"><span class="lineno">  127</span>            </div>
-<div class="line"><span class="lineno">  128</span>            <span class="keywordtype">float</span> x = pick.one * <a class="code hl_variable" href="../../d1/d75/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1SectorProcGen.html#a1a07b68ebd3d743e2b110a1c12b13de8">CELL_SIZE</a> - w / 2f;</div>
-<div class="line"><span class="lineno">  129</span>            <span class="keywordtype">float</span> y = pick.two * <a class="code hl_variable" href="../../d1/d75/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1SectorProcGen.html#a1a07b68ebd3d743e2b110a1c12b13de8">CELL_SIZE</a> - h / 2f;</div>
-<div class="line"><span class="lineno">  130</span>            </div>
-<div class="line"><span class="lineno">  131</span>            CustomConstellationParams params = <span class="keyword">new</span> CustomConstellationParams(StarAge.ANY);</div>
-<div class="line"><span class="lineno">  132</span>            <span class="keywordflow">if</span> (!custom.isEmpty()) params = custom.remove(0);</div>
-<div class="line"><span class="lineno">  133</span>            </div>
-<div class="line"><span class="lineno">  134</span>            StarAge age = sectorAge;</div>
-<div class="line"><span class="lineno">  135</span>            <span class="keywordflow">if</span> (age == StarAge.ANY) {</div>
-<div class="line"><span class="lineno">  136</span><span class="comment">//              if (x &lt; -w/6f) {</span></div>
-<div class="line"><span class="lineno">  137</span><span class="comment">//                  age = StarAge.YOUNG;</span></div>
-<div class="line"><span class="lineno">  138</span><span class="comment">//              } else if (x &gt; w/6f) {</span></div>
-<div class="line"><span class="lineno">  139</span><span class="comment">//                  age = StarAge.OLD;</span></div>
-<div class="line"><span class="lineno">  140</span><span class="comment">//              } else {</span></div>
-<div class="line"><span class="lineno">  141</span><span class="comment">//                  age = StarAge.AVERAGE;</span></div>
-<div class="line"><span class="lineno">  142</span><span class="comment">//              }</span></div>
-<div class="line"><span class="lineno">  143</span>                WeightedRandomPicker&lt;StarAge&gt; agePicker = <span class="keyword">new</span> WeightedRandomPicker&lt;StarAge&gt;(StarSystemGenerator.random);</div>
-<div class="line"><span class="lineno">  144</span>                agePicker.add(StarAge.YOUNG);</div>
-<div class="line"><span class="lineno">  145</span>                agePicker.add(StarAge.AVERAGE);</div>
-<div class="line"><span class="lineno">  146</span>                agePicker.add(StarAge.OLD);</div>
-<div class="line"><span class="lineno">  147</span>                age = agePicker.pick();</div>
-<div class="line"><span class="lineno">  148</span>            }</div>
-<div class="line"><span class="lineno">  149</span>            </div>
-<div class="line"><span class="lineno">  150</span>            params.age = age;</div>
-<div class="line"><span class="lineno">  151</span>            </div>
-<div class="line"><span class="lineno">  152</span>            params.location = <span class="keyword">new</span> Vector2f(x, y);</div>
-<div class="line"><span class="lineno">  153</span>            Constellation c = <span class="keyword">new</span> StarSystemGenerator(params).generate();</div>
-<div class="line"><span class="lineno">  154</span>            constellations.add(c);</div>
-<div class="line"><span class="lineno">  155</span>            </div>
-<div class="line"><span class="lineno">  156</span>            progress.render(<span class="stringliteral">&quot;Generating constellations...&quot;</span>, 0.1f + 0.8f * (<span class="keywordtype">float</span>)k / (<span class="keywordtype">float</span>) count);</div>
-<div class="line"><span class="lineno">  157</span>        }</div>
-<div class="line"><span class="lineno">  158</span>        </div>
-<div class="line"><span class="lineno">  159</span>        </div>
-<div class="line"><span class="lineno">  160</span> </div>
-<div class="line"><span class="lineno">  161</span>        HyperspaceTerrainPlugin hyper = (HyperspaceTerrainPlugin) Misc.getHyperspaceTerrain().getPlugin();</div>
-<div class="line"><span class="lineno">  162</span>        NebulaEditor editor = <span class="keyword">new</span> NebulaEditor(hyper);</div>
-<div class="line"><span class="lineno">  163</span>        editor.regenNoise();</div>
-<div class="line"><span class="lineno">  164</span>        editor.noisePrune(0.8f);</div>
-<div class="line"><span class="lineno">  165</span>        editor.regenNoise();</div>
-<div class="line"><span class="lineno">  166</span>        </div>
-<div class="line"><span class="lineno">  167</span>        </div>
-<div class="line"><span class="lineno">  168</span>        Random random = StarSystemGenerator.random;</div>
-<div class="line"><span class="lineno">  169</span>        </div>
-<div class="line"><span class="lineno">  170</span>        <span class="comment">// add a spiral going from the outside towards the center</span></div>
-<div class="line"><span class="lineno">  171</span>        <span class="keywordtype">float</span> angleOffset = random.nextFloat() * 360f;</div>
-<div class="line"><span class="lineno">  172</span>        editor.clearArc(0f, 0f, w / 2f, w / 2f + 3000, </div>
-<div class="line"><span class="lineno">  173</span>                        angleOffset + 0f, angleOffset + 360f * (2f + random.nextFloat() * 2f), 0.01f, 0.33f);</div>
-<div class="line"><span class="lineno">  174</span>        </div>
-<div class="line"><span class="lineno">  175</span>        <span class="comment">// do some random arcs</span></div>
-<div class="line"><span class="lineno">  176</span>        <span class="keywordtype">int</span> numArcs = (int) (20f + 8f * random.nextFloat());</div>
-<div class="line"><span class="lineno">  177</span>        </div>
-<div class="line"><span class="lineno">  178</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; numArcs; i++) {</div>
-<div class="line"><span class="lineno">  179</span>            <span class="keywordtype">float</span> dist = w/2f + w/2f * random.nextFloat();</div>
-<div class="line"><span class="lineno">  180</span>            <span class="keywordtype">float</span> angle = random.nextFloat() * 360f;</div>
-<div class="line"><span class="lineno">  181</span>            </div>
-<div class="line"><span class="lineno">  182</span>            Vector2f dir = Misc.getUnitVectorAtDegreeAngle(angle);</div>
-<div class="line"><span class="lineno">  183</span>            dir.scale(dist - (w/12f + w/3f * random.nextFloat()));</div>
-<div class="line"><span class="lineno">  184</span>            </div>
-<div class="line"><span class="lineno">  185</span>            <span class="comment">//float tileSize = nebulaPlugin.getTileSize();</span></div>
-<div class="line"><span class="lineno">  186</span>            <span class="comment">//float width = tileSize * (2f + 4f * random.nextFloat());</span></div>
-<div class="line"><span class="lineno">  187</span>            <span class="keywordtype">float</span> width = 800f * (1f + 2f * random.nextFloat());</div>
-<div class="line"><span class="lineno">  188</span>            </div>
-<div class="line"><span class="lineno">  189</span>            <span class="keywordtype">float</span> clearThreshold = 0f + 0.5f * random.nextFloat();</div>
-<div class="line"><span class="lineno">  190</span>            <span class="comment">//clearThreshold = 0f;</span></div>
-<div class="line"><span class="lineno">  191</span>            </div>
-<div class="line"><span class="lineno">  192</span>            editor.clearArc(dir.x, dir.y, dist - width/2f, dist + width/2f, 0, 360f, clearThreshold);</div>
-<div class="line"><span class="lineno">  193</span>        }</div>
-<div class="line"><span class="lineno">  194</span>        </div>
-<div class="line"><span class="lineno">  195</span>        progress.render(<span class="stringliteral">&quot;Generating objects...&quot;</span>, 0.9f);</div>
-<div class="line"><span class="lineno">  196</span>        </div>
-<div class="line"><span class="lineno">  197</span>        </div>
-<div class="line"><span class="lineno">  198</span>        ThemeGenContext context = <span class="keyword">new</span> ThemeGenContext();</div>
-<div class="line"><span class="lineno">  199</span>        context.constellations = constellations;</div>
-<div class="line"><span class="lineno">  200</span>        SectorThemeGenerator.generate(context);</div>
-<div class="line"><span class="lineno">  201</span>        </div>
-<div class="line"><span class="lineno">  202</span>        </div>
-<div class="line"><span class="lineno">  203</span>        progress.render(<span class="stringliteral">&quot;Finishing generation...&quot;</span>, 1f);</div>
-<div class="line"><span class="lineno">  204</span>        </div>
-<div class="line"><span class="lineno">  205</span>        <span class="comment">//MarkovNames.clear();</span></div>
-<div class="line"><span class="lineno">  206</span>        </div>
-<div class="line"><span class="lineno">  207</span>        <span class="comment">//System.out.println(&quot;Generated &quot; + constellations.size() + &quot; constellations&quot;);</span></div>
-<div class="line"><span class="lineno">  208</span>        </div>
-<div class="line"><span class="lineno">  209</span>        </div>
-<div class="line"><span class="lineno">  210</span><span class="comment">//      List constellations = Global.getSettings().getConstellations();</span></div>
-<div class="line"><span class="lineno">  211</span><span class="comment">//      for (int i = 0; i &lt; constellations.size(); i++) {</span></div>
-<div class="line"><span class="lineno">  212</span><span class="comment">//          CustomConstellationParams params = (CustomConstellationParams) constellations.get(i);</span></div>
-<div class="line"><span class="lineno">  213</span><span class="comment">//          new StarSystemGenerator(params).generate();</span></div>
-<div class="line"><span class="lineno">  214</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  215</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1SectorProcGen_html_a1a07b68ebd3d743e2b110a1c12b13de8"><div class="ttname"><a href="../../d1/d75/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1SectorProcGen.html#a1a07b68ebd3d743e2b110a1c12b13de8">com.fs.starfarer.api.impl.campaign.procgen.SectorProcGen.CELL_SIZE</a></div><div class="ttdeci">static final float CELL_SIZE</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d2e/SectorProcGen_8java_source.html#l00027">SectorProcGen.java:27</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1SectorProcGen_html_a3ed224ab3fd232ae79ebe9b10fe9cf52"><div class="ttname"><a href="../../d1/d75/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1SectorProcGen.html#a3ed224ab3fd232ae79ebe9b10fe9cf52">com.fs.starfarer.api.impl.campaign.procgen.SectorProcGen.CONSTELLATION_CELLS</a></div><div class="ttdeci">static final int CONSTELLATION_CELLS</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d2e/SectorProcGen_8java_source.html#l00028">SectorProcGen.java:28</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1SectorProcGen_html_a937000b116e3d8b9f91ec7df083803c3"><div class="ttname"><a href="../../d1/d75/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1SectorProcGen.html#a937000b116e3d8b9f91ec7df083803c3">com.fs.starfarer.api.impl.campaign.procgen.SectorProcGen.getIndex</a></div><div class="ttdeci">static int[] getIndex(Vector2f loc)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d2e/SectorProcGen_8java_source.html#l00230">SectorProcGen.java:230</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1SectorProcGen_html_ad8ff534381d426bfdd9d0747a3ecfe3b"><div class="ttname"><a href="../../d1/d75/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1SectorProcGen.html#ad8ff534381d426bfdd9d0747a3ecfe3b">com.fs.starfarer.api.impl.campaign.procgen.SectorProcGen.blotOut</a></div><div class="ttdeci">static void blotOut(boolean[][] cells, int x, int y, int c)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d2e/SectorProcGen_8java_source.html#l00221">SectorProcGen.java:221</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1SectorProcGen_html_af1e552882b6ed66f26d334697a49a5f0"><div class="ttname"><a href="../../d1/d75/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1SectorProcGen.html#af1e552882b6ed66f26d334697a49a5f0">com.fs.starfarer.api.impl.campaign.procgen.SectorProcGen.getCustomConstellations</a></div><div class="ttdeci">static List&lt; CustomConstellationParams &gt; getCustomConstellations()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d2e/SectorProcGen_8java_source.html#l00241">SectorProcGen.java:241</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af1e552882b6ed66f26d334697a49a5f0" name="af1e552882b6ed66f26d334697a49a5f0"></a>
@@ -425,27 +248,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/d2e/SectorProcGen_8java_source.html#l00241">241</a> of file <a class="el" href="../../de/d2e/SectorProcGen_8java_source.html">SectorProcGen.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  241</span>                                                                            {</div>
-<div class="line"><span class="lineno">  242</span>        List&lt;CustomConstellationParams&gt; result = <span class="keyword">new</span> ArrayList&lt;CustomConstellationParams&gt;();</div>
-<div class="line"><span class="lineno">  243</span> </div>
-<div class="line"><span class="lineno">  244</span>        <span class="keywordflow">for</span> (StarSystemType type : EnumSet.allOf(StarSystemType.class)) {</div>
-<div class="line"><span class="lineno">  245</span>            CustomConstellationParams params = <span class="keyword">new</span> CustomConstellationParams(StarAge.ANY);</div>
-<div class="line"><span class="lineno">  246</span>            params.systemTypes.add(type);</div>
-<div class="line"><span class="lineno">  247</span>            <span class="keywordflow">if</span> (type == StarSystemType.NEBULA) params.forceNebula = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  248</span>            result.add(params);</div>
-<div class="line"><span class="lineno">  249</span>        }</div>
-<div class="line"><span class="lineno">  250</span>        </div>
-<div class="line"><span class="lineno">  251</span>        CustomConstellationParams params = <span class="keyword">new</span> CustomConstellationParams(StarAge.ANY);</div>
-<div class="line"><span class="lineno">  252</span>        params.starTypes.add(StarTypes.BLACK_HOLE);</div>
-<div class="line"><span class="lineno">  253</span>        result.add(params);</div>
-<div class="line"><span class="lineno">  254</span>        </div>
-<div class="line"><span class="lineno">  255</span>        params = <span class="keyword">new</span> CustomConstellationParams(StarAge.ANY);</div>
-<div class="line"><span class="lineno">  256</span>        params.starTypes.add(StarTypes.NEUTRON_STAR);</div>
-<div class="line"><span class="lineno">  257</span>        result.add(params);</div>
-<div class="line"><span class="lineno">  258</span>        </div>
-<div class="line"><span class="lineno">  259</span>        <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">  260</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a937000b116e3d8b9f91ec7df083803c3" name="a937000b116e3d8b9f91ec7df083803c3"></a>
@@ -473,16 +276,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/d2e/SectorProcGen_8java_source.html#l00230">230</a> of file <a class="el" href="../../de/d2e/SectorProcGen_8java_source.html">SectorProcGen.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  230</span>                                                {</div>
-<div class="line"><span class="lineno">  231</span>        <span class="keywordtype">float</span> w = Global.getSettings().getFloat(<span class="stringliteral">&quot;sectorWidth&quot;</span>);</div>
-<div class="line"><span class="lineno">  232</span>        <span class="keywordtype">float</span> h = Global.getSettings().getFloat(<span class="stringliteral">&quot;sectorHeight&quot;</span>);</div>
-<div class="line"><span class="lineno">  233</span>        </div>
-<div class="line"><span class="lineno">  234</span>        <span class="keywordtype">int</span> x = (int) ((loc.x + w / 2f) / <a class="code hl_variable" href="../../d1/d75/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1SectorProcGen.html#a1a07b68ebd3d743e2b110a1c12b13de8">CELL_SIZE</a>);</div>
-<div class="line"><span class="lineno">  235</span>        <span class="keywordtype">int</span> y = (int) ((loc.y + h / 2f) / <a class="code hl_variable" href="../../d1/d75/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1SectorProcGen.html#a1a07b68ebd3d743e2b110a1c12b13de8">CELL_SIZE</a>);</div>
-<div class="line"><span class="lineno">  236</span>        </div>
-<div class="line"><span class="lineno">  237</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <span class="keywordtype">int</span> []{x, y};</div>
-<div class="line"><span class="lineno">  238</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a1060c73c748436ee82e4a48f67165b3d" name="a1060c73c748436ee82e4a48f67165b3d"></a>
@@ -504,26 +298,7 @@ Static Public Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../d9/da3/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorProcGenPlugin.html#af5822f0719adae79351934557137c770">com.fs.starfarer.api.campaign.SectorProcGenPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../de/d2e/SectorProcGen_8java_source.html#l00030">30</a> of file <a class="el" href="../../de/d2e/SectorProcGen_8java_source.html">SectorProcGen.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   30</span>                                                    {</div>
-<div class="line"><span class="lineno">   31</span>        <span class="comment">// do this here so that hand-crafted systems using</span></div>
-<div class="line"><span class="lineno">   32</span>        <span class="comment">// procgen use the proper seed</span></div>
-<div class="line"><span class="lineno">   33</span>        <span class="keywordflow">if</span> (data.getSeed() &gt; 0) {</div>
-<div class="line"><span class="lineno">   34</span>            StarSystemGenerator.random.setSeed(data.getSeed());</div>
-<div class="line"><span class="lineno">   35</span>        }</div>
-<div class="line"><span class="lineno">   36</span>        StarSystemGenerator.updateBackgroundPickers();</div>
-<div class="line"><span class="lineno">   37</span>        </div>
-<div class="line"><span class="lineno">   38</span><span class="comment">//      List&lt;String&gt; names = new ArrayList&lt;String&gt;();</span></div>
-<div class="line"><span class="lineno">   39</span><span class="comment">//      </span></div>
-<div class="line"><span class="lineno">   40</span><span class="comment">//      Collection&lt;Object&gt; specs = Global.getSettings().getAllSpecs(NameGenData.class);</span></div>
-<div class="line"><span class="lineno">   41</span><span class="comment">//      for (Object curr : specs) {</span></div>
-<div class="line"><span class="lineno">   42</span><span class="comment">//          NameGenData spec = (NameGenData) curr;</span></div>
-<div class="line"><span class="lineno">   43</span><span class="comment">//          names.add(spec.getName());</span></div>
-<div class="line"><span class="lineno">   44</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">   45</span><span class="comment">//      MarkovNames.load(names, 3);</span></div>
-<div class="line"><span class="lineno">   46</span>        </div>
-<div class="line"><span class="lineno">   47</span>        MarkovNames.loadIfNeeded();</div>
-<div class="line"><span class="lineno">   48</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

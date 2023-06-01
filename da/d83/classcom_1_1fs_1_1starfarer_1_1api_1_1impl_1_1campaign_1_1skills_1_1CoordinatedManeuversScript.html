@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -201,39 +202,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d8/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseEveryFrameCombatPlugin.html#a2369838995a799560103a0f44690f80b">com.fs.starfarer.api.combat.BaseEveryFrameCombatPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d7a/CoordinatedManeuversScript_8java_source.html#l00037">37</a> of file <a class="el" href="../../d6/d7a/CoordinatedManeuversScript_8java_source.html">CoordinatedManeuversScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   37</span>                                                                  {</div>
-<div class="line"><span class="lineno">   38</span>        <span class="keywordflow">if</span> (engine == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   39</span>        <span class="keywordflow">if</span> (engine.<a class="code hl_function" href="../../df/d5a/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#ac2d9d76c6da9658515697f7af682e5d2">isPaused</a>()) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   40</span>        </div>
-<div class="line"><span class="lineno">   41</span>        </div>
-<div class="line"><span class="lineno">   42</span>        <span class="comment">// if the player changed flagships:</span></div>
-<div class="line"><span class="lineno">   43</span>        <span class="comment">// skip a few frames to make sure the status ends up on top of the status list</span></div>
-<div class="line"><span class="lineno">   44</span>        ShipAPI playerShip = engine.<a class="code hl_function" href="../../df/d5a/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#ac44c1eaeb8c6f933209aca551237ae76">getPlayerShip</a>();</div>
-<div class="line"><span class="lineno">   45</span>        <span class="keywordflow">if</span> (playerShip != prevPlayerShip) {</div>
-<div class="line"><span class="lineno">   46</span>            prevPlayerShip = playerShip;</div>
-<div class="line"><span class="lineno">   47</span>            skipFrames = 20;</div>
-<div class="line"><span class="lineno">   48</span>        }</div>
-<div class="line"><span class="lineno">   49</span>        </div>
-<div class="line"><span class="lineno">   50</span>        <span class="keywordflow">if</span> (skipFrames &gt; 0) {</div>
-<div class="line"><span class="lineno">   51</span>            skipFrames--;</div>
-<div class="line"><span class="lineno">   52</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   53</span>        }</div>
-<div class="line"><span class="lineno">   54</span>        </div>
-<div class="line"><span class="lineno">   55</span>        updateForSide(engine.<a class="code hl_function" href="../../df/d5a/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a20fa8fe733b006fc5625a98e0e0bd554">getFleetManager</a>(0));</div>
-<div class="line"><span class="lineno">   56</span>        updateForSide(engine.<a class="code hl_function" href="../../df/d5a/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a20fa8fe733b006fc5625a98e0e0bd554">getFleetManager</a>(1));</div>
-<div class="line"><span class="lineno">   57</span>        </div>
-<div class="line"><span class="lineno">   58</span>        <span class="comment">// nothing to do with Coordinated Maneuvers, just a convenient place to add this</span></div>
-<div class="line"><span class="lineno">   59</span>        <a class="code hl_function" href="../../da/d83/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1CoordinatedManeuversScript.html#ab5973eeb12413bb6bdf3dc4c87536f93">updateForceConcentration</a>(engine.<a class="code hl_function" href="../../df/d5a/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a20fa8fe733b006fc5625a98e0e0bd554">getFleetManager</a>(0));</div>
-<div class="line"><span class="lineno">   60</span>        <a class="code hl_function" href="../../da/d83/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1CoordinatedManeuversScript.html#ab5973eeb12413bb6bdf3dc4c87536f93">updateForceConcentration</a>(engine.<a class="code hl_function" href="../../df/d5a/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a20fa8fe733b006fc5625a98e0e0bd554">getFleetManager</a>(1));</div>
-<div class="line"><span class="lineno">   61</span>        </div>
-<div class="line"><span class="lineno">   62</span>        <a class="code hl_function" href="../../da/d83/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1CoordinatedManeuversScript.html#a8c3c6a6cef68b60e27e05229bd257bec">updateDPFromSupportDoctrine</a>();</div>
-<div class="line"><span class="lineno">   63</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1CoordinatedManeuversScript_html_a8c3c6a6cef68b60e27e05229bd257bec"><div class="ttname"><a href="../../da/d83/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1CoordinatedManeuversScript.html#a8c3c6a6cef68b60e27e05229bd257bec">com.fs.starfarer.api.impl.campaign.skills.CoordinatedManeuversScript.updateDPFromSupportDoctrine</a></div><div class="ttdeci">void updateDPFromSupportDoctrine()</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d7a/CoordinatedManeuversScript_8java_source.html#l00066">CoordinatedManeuversScript.java:66</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1CoordinatedManeuversScript_html_ab5973eeb12413bb6bdf3dc4c87536f93"><div class="ttname"><a href="../../da/d83/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1CoordinatedManeuversScript.html#ab5973eeb12413bb6bdf3dc4c87536f93">com.fs.starfarer.api.impl.campaign.skills.CoordinatedManeuversScript.updateForceConcentration</a></div><div class="ttdeci">void updateForceConcentration(CombatFleetManagerAPI manager)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d7a/CoordinatedManeuversScript_8java_source.html#l00195">CoordinatedManeuversScript.java:195</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI_html_a20fa8fe733b006fc5625a98e0e0bd554"><div class="ttname"><a href="../../df/d5a/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a20fa8fe733b006fc5625a98e0e0bd554">com.fs.starfarer.api.combat.CombatEngineAPI.getFleetManager</a></div><div class="ttdeci">CombatFleetManagerAPI getFleetManager(FleetSide side)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI_html_ac2d9d76c6da9658515697f7af682e5d2"><div class="ttname"><a href="../../df/d5a/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#ac2d9d76c6da9658515697f7af682e5d2">com.fs.starfarer.api.combat.CombatEngineAPI.isPaused</a></div><div class="ttdeci">boolean isPaused()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI_html_ac44c1eaeb8c6f933209aca551237ae76"><div class="ttname"><a href="../../df/d5a/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#ac44c1eaeb8c6f933209aca551237ae76">com.fs.starfarer.api.combat.CombatEngineAPI.getPlayerShip</a></div><div class="ttdeci">ShipAPI getPlayerShip()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a4e9cdad93d7e01814bab26e357891530" name="a4e9cdad93d7e01814bab26e357891530"></a>
@@ -261,19 +230,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d7a/CoordinatedManeuversScript_8java_source.html#l00182">182</a> of file <a class="el" href="../../d6/d7a/CoordinatedManeuversScript_8java_source.html">CoordinatedManeuversScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  182</span>                                                                  {</div>
-<div class="line"><span class="lineno">  183</span>        <span class="keywordflow">if</span> (needsCleanup.contains(manager)) {</div>
-<div class="line"><span class="lineno">  184</span>            needsCleanup.remove(manager);</div>
-<div class="line"><span class="lineno">  185</span>            List&lt;DeployedFleetMemberAPI&gt; deployed = manager.getDeployedCopyDFM();</div>
-<div class="line"><span class="lineno">  186</span>            <span class="keywordflow">for</span> (DeployedFleetMemberAPI member : deployed) {</div>
-<div class="line"><span class="lineno">  187</span>                <span class="keywordflow">if</span> (member.isFighterWing()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  188</span>                <span class="keywordflow">if</span> (member.getShip() == <span class="keyword">null</span>) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  189</span>                member.getShip().getMutableStats().getMaxSpeed().unmodify(<a class="code hl_variable" href="../../da/d83/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1CoordinatedManeuversScript.html#ae5a167baab2062454954a1dcf109909b">BONUS_ID</a>);</div>
-<div class="line"><span class="lineno">  190</span>            }</div>
-<div class="line"><span class="lineno">  191</span>        }</div>
-<div class="line"><span class="lineno">  192</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1CoordinatedManeuversScript_html_ae5a167baab2062454954a1dcf109909b"><div class="ttname"><a href="../../da/d83/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1CoordinatedManeuversScript.html#ae5a167baab2062454954a1dcf109909b">com.fs.starfarer.api.impl.campaign.skills.CoordinatedManeuversScript.BONUS_ID</a></div><div class="ttdeci">static final String BONUS_ID</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d7a/CoordinatedManeuversScript_8java_source.html#l00027">CoordinatedManeuversScript.java:27</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aef4992b892cc29ecfa6f2bb86507618f" name="aef4992b892cc29ecfa6f2bb86507618f"></a>
@@ -301,10 +258,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d8/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseEveryFrameCombatPlugin.html#addec3dedcaa837bfdb0712c36d17e060">com.fs.starfarer.api.combat.BaseEveryFrameCombatPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d7a/CoordinatedManeuversScript_8java_source.html#l00030">30</a> of file <a class="el" href="../../d6/d7a/CoordinatedManeuversScript_8java_source.html">CoordinatedManeuversScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   30</span>                                             {</div>
-<div class="line"><span class="lineno">   31</span>        this.engine = engine;</div>
-<div class="line"><span class="lineno">   32</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="afb8b89b8bc24d07ef9d00bf6e7e3a4fa" name="afb8b89b8bc24d07ef9d00bf6e7e3a4fa"></a>
@@ -326,9 +280,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d8/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseEveryFrameCombatPlugin.html#ab2aac6e7bab87c667cf25abce92354d0">com.fs.starfarer.api.combat.BaseEveryFrameCombatPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d7a/CoordinatedManeuversScript_8java_source.html#l00261">261</a> of file <a class="el" href="../../d6/d7a/CoordinatedManeuversScript_8java_source.html">CoordinatedManeuversScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  261</span>                                                       {</div>
-<div class="line"><span class="lineno">  262</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a34da191eecf254a2f0658b0fa084742e" name="a34da191eecf254a2f0658b0fa084742e"></a>
@@ -350,9 +302,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d8/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseEveryFrameCombatPlugin.html#a22681e3dd8c6e239af03a1875617933b">com.fs.starfarer.api.combat.BaseEveryFrameCombatPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d7a/CoordinatedManeuversScript_8java_source.html#l00264">264</a> of file <a class="el" href="../../d6/d7a/CoordinatedManeuversScript_8java_source.html">CoordinatedManeuversScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  264</span>                                                          {</div>
-<div class="line"><span class="lineno">  265</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8c3c6a6cef68b60e27e05229bd257bec" name="a8c3c6a6cef68b60e27e05229bd257bec"></a>
@@ -379,41 +329,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d7a/CoordinatedManeuversScript_8java_source.html#l00066">66</a> of file <a class="el" href="../../d6/d7a/CoordinatedManeuversScript_8java_source.html">CoordinatedManeuversScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   66</span>                                                 {</div>
-<div class="line"><span class="lineno">   67</span>        <span class="comment">// making sure that while transferring command away from something, the previous player ship</span></div>
-<div class="line"><span class="lineno">   68</span>        <span class="comment">// does NOT receive the DP reduction until transferring command is finished</span></div>
-<div class="line"><span class="lineno">   69</span>        </div>
-<div class="line"><span class="lineno">   70</span>        ShipAPI from = engine.<a class="code hl_function" href="../../df/d5a/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a757e418d20ebc001bab228ea7ec935be">getShipPlayerIsTransferringCommandFrom</a>();</div>
-<div class="line"><span class="lineno">   71</span>        String <span class="keywordtype">id</span> = SupportDoctrine.SUPPORT_DOCTRINE_DP_REDUCTION_ID + <span class="stringliteral">&quot;_reverse&quot;</span>;</div>
-<div class="line"><span class="lineno">   72</span>        <span class="keywordflow">if</span> (from != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   73</span>            StatMod bonus = from.<a class="code hl_function" href="../../d4/de6/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI.html#a3f675969b425cb1bdcb000eada3977de">getMutableStats</a>().<a class="code hl_function" href="../../d6/d3d/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html#a4acb36c1ef7dc94f1202cceb1c36ac65">getDynamic</a>().<a class="code hl_function" href="../../db/dcf/interfacecom_1_1fs_1_1starfarer_1_1api_1_1util_1_1DynamicStatsAPI.html#a873b747b8989616c2da542355d167c79">getMod</a>(Stats.DEPLOYMENT_POINTS_MOD).<a class="code hl_function" href="../../dc/d19/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus.html#a68121208684503a2f7997afdb79e71d5">getFlatBonus</a>(SupportDoctrine.SUPPORT_DOCTRINE_DP_REDUCTION_ID);</div>
-<div class="line"><span class="lineno">   74</span>            <span class="keywordflow">if</span> (bonus != <span class="keyword">null</span> &amp;&amp; bonus.value != 0) {</div>
-<div class="line"><span class="lineno">   75</span>                <a class="code hl_variable" href="../../da/d83/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1CoordinatedManeuversScript.html#a7dbf159e8def557848247a67376b2976">undoDPMod</a> = from;</div>
-<div class="line"><span class="lineno">   76</span>                from.<a class="code hl_function" href="../../d4/de6/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI.html#a3f675969b425cb1bdcb000eada3977de">getMutableStats</a>().<a class="code hl_function" href="../../d6/d3d/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html#a4acb36c1ef7dc94f1202cceb1c36ac65">getDynamic</a>().<a class="code hl_function" href="../../db/dcf/interfacecom_1_1fs_1_1starfarer_1_1api_1_1util_1_1DynamicStatsAPI.html#a873b747b8989616c2da542355d167c79">getMod</a>(Stats.DEPLOYMENT_POINTS_MOD).<a class="code hl_function" href="../../dc/d19/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus.html#ad08aa246116d46809d4f55279eeb38e4">modifyFlat</a>(<span class="keywordtype">id</span>, -bonus.value);</div>
-<div class="line"><span class="lineno">   77</span>                <span class="keywordflow">if</span> (from.getFleetMember() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   78</span>                    from.getFleetMember().getStats().getDynamic().getMod(Stats.DEPLOYMENT_POINTS_MOD).modifyFlat(<span class="keywordtype">id</span>, -bonus.value);</div>
-<div class="line"><span class="lineno">   79</span>                }</div>
-<div class="line"><span class="lineno">   80</span>            }</div>
-<div class="line"><span class="lineno">   81</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/d83/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1CoordinatedManeuversScript.html#a7dbf159e8def557848247a67376b2976">undoDPMod</a> != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   82</span>            <a class="code hl_variable" href="../../da/d83/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1CoordinatedManeuversScript.html#a7dbf159e8def557848247a67376b2976">undoDPMod</a>.<a class="code hl_function" href="../../d4/de6/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI.html#a3f675969b425cb1bdcb000eada3977de">getMutableStats</a>().<a class="code hl_function" href="../../d6/d3d/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html#a4acb36c1ef7dc94f1202cceb1c36ac65">getDynamic</a>().<a class="code hl_function" href="../../db/dcf/interfacecom_1_1fs_1_1starfarer_1_1api_1_1util_1_1DynamicStatsAPI.html#a873b747b8989616c2da542355d167c79">getMod</a>(Stats.DEPLOYMENT_POINTS_MOD).<a class="code hl_function" href="../../dc/d19/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus.html#afb8cbd56006de48758f0081fc6b95bea">unmodifyFlat</a>(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">   83</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/d83/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1CoordinatedManeuversScript.html#a7dbf159e8def557848247a67376b2976">undoDPMod</a>.<a class="code hl_function" href="../../d4/de6/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI.html#a61ffcbfc4bea0e337cb75cde5ae8c066">getFleetMember</a>() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">   84</span>                <a class="code hl_variable" href="../../da/d83/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1CoordinatedManeuversScript.html#a7dbf159e8def557848247a67376b2976">undoDPMod</a>.<a class="code hl_function" href="../../d4/de6/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI.html#a61ffcbfc4bea0e337cb75cde5ae8c066">getFleetMember</a>().<a class="code hl_function" href="../../d0/da6/interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html#afd9dd6acbc98d9e404a3254ebeec29d7">getStats</a>().<a class="code hl_function" href="../../d6/d3d/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html#a4acb36c1ef7dc94f1202cceb1c36ac65">getDynamic</a>().<a class="code hl_function" href="../../db/dcf/interfacecom_1_1fs_1_1starfarer_1_1api_1_1util_1_1DynamicStatsAPI.html#a873b747b8989616c2da542355d167c79">getMod</a>(Stats.DEPLOYMENT_POINTS_MOD).<a class="code hl_function" href="../../dc/d19/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus.html#afb8cbd56006de48758f0081fc6b95bea">unmodifyFlat</a>(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">   85</span>            }</div>
-<div class="line"><span class="lineno">   86</span>            <a class="code hl_variable" href="../../da/d83/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1CoordinatedManeuversScript.html#a7dbf159e8def557848247a67376b2976">undoDPMod</a> = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   87</span>        }</div>
-<div class="line"><span class="lineno">   88</span>        </div>
-<div class="line"><span class="lineno">   89</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus_html_a68121208684503a2f7997afdb79e71d5"><div class="ttname"><a href="../../dc/d19/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus.html#a68121208684503a2f7997afdb79e71d5">com.fs.starfarer.api.combat.StatBonus.getFlatBonus</a></div><div class="ttdeci">StatMod getFlatBonus(String source)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d6c/StatBonus_8java_source.html#l00109">StatBonus.java:109</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus_html_ad08aa246116d46809d4f55279eeb38e4"><div class="ttname"><a href="../../dc/d19/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus.html#ad08aa246116d46809d4f55279eeb38e4">com.fs.starfarer.api.combat.StatBonus.modifyFlat</a></div><div class="ttdeci">void modifyFlat(String source, float value)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d6c/StatBonus_8java_source.html#l00121">StatBonus.java:121</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus_html_afb8cbd56006de48758f0081fc6b95bea"><div class="ttname"><a href="../../dc/d19/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus.html#afb8cbd56006de48758f0081fc6b95bea">com.fs.starfarer.api.combat.StatBonus.unmodifyFlat</a></div><div class="ttdeci">void unmodifyFlat(String source)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d6c/StatBonus_8java_source.html#l00202">StatBonus.java:202</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1CoordinatedManeuversScript_html_a7dbf159e8def557848247a67376b2976"><div class="ttname"><a href="../../da/d83/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1CoordinatedManeuversScript.html#a7dbf159e8def557848247a67376b2976">com.fs.starfarer.api.impl.campaign.skills.CoordinatedManeuversScript.undoDPMod</a></div><div class="ttdeci">ShipAPI undoDPMod</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d7a/CoordinatedManeuversScript_8java_source.html#l00065">CoordinatedManeuversScript.java:65</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI_html_a757e418d20ebc001bab228ea7ec935be"><div class="ttname"><a href="../../df/d5a/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a757e418d20ebc001bab228ea7ec935be">com.fs.starfarer.api.combat.CombatEngineAPI.getShipPlayerIsTransferringCommandFrom</a></div><div class="ttdeci">ShipAPI getShipPlayerIsTransferringCommandFrom()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI_html_a4acb36c1ef7dc94f1202cceb1c36ac65"><div class="ttname"><a href="../../d6/d3d/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html#a4acb36c1ef7dc94f1202cceb1c36ac65">com.fs.starfarer.api.combat.MutableShipStatsAPI.getDynamic</a></div><div class="ttdeci">DynamicStatsAPI getDynamic()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI_html_a3f675969b425cb1bdcb000eada3977de"><div class="ttname"><a href="../../d4/de6/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI.html#a3f675969b425cb1bdcb000eada3977de">com.fs.starfarer.api.combat.ShipAPI.getMutableStats</a></div><div class="ttdeci">MutableShipStatsAPI getMutableStats()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI_html_a61ffcbfc4bea0e337cb75cde5ae8c066"><div class="ttname"><a href="../../d4/de6/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI.html#a61ffcbfc4bea0e337cb75cde5ae8c066">com.fs.starfarer.api.combat.ShipAPI.getFleetMember</a></div><div class="ttdeci">FleetMemberAPI getFleetMember()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI_html_afd9dd6acbc98d9e404a3254ebeec29d7"><div class="ttname"><a href="../../d0/da6/interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html#afd9dd6acbc98d9e404a3254ebeec29d7">com.fs.starfarer.api.fleet.FleetMemberAPI.getStats</a></div><div class="ttdeci">MutableShipStatsAPI getStats()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1util_1_1DynamicStatsAPI_html_a873b747b8989616c2da542355d167c79"><div class="ttname"><a href="../../db/dcf/interfacecom_1_1fs_1_1starfarer_1_1api_1_1util_1_1DynamicStatsAPI.html#a873b747b8989616c2da542355d167c79">com.fs.starfarer.api.util.DynamicStatsAPI.getMod</a></div><div class="ttdeci">StatBonus getMod(String id)</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab5973eeb12413bb6bdf3dc4c87536f93" name="ab5973eeb12413bb6bdf3dc4c87536f93"></a>
@@ -441,50 +357,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d7a/CoordinatedManeuversScript_8java_source.html#l00195">195</a> of file <a class="el" href="../../d6/d7a/CoordinatedManeuversScript_8java_source.html">CoordinatedManeuversScript.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  195</span>                                                                           {</div>
-<div class="line"><span class="lineno">  196</span>        <span class="keywordflow">if</span> (<span class="keyword">true</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  197</span>        List&lt;DeployedFleetMemberAPI&gt; deployed = manager.getDeployedCopyDFM();</div>
-<div class="line"><span class="lineno">  198</span>        <span class="keywordflow">for</span> (DeployedFleetMemberAPI member : deployed) {</div>
-<div class="line"><span class="lineno">  199</span>            <span class="keywordflow">if</span> (member.isFighterWing()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  200</span>            <span class="keywordflow">if</span> (member.isStationModule()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  201</span>            <span class="keywordflow">if</span> (member.getMember() == <span class="keyword">null</span>) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  202</span>            </div>
-<div class="line"><span class="lineno">  203</span>            </div>
-<div class="line"><span class="lineno">  204</span>            PersonAPI fc = member.getMember().getFleetCommander();</div>
-<div class="line"><span class="lineno">  205</span>            <span class="keywordflow">if</span> (fc == <span class="keyword">null</span>) fc = member.getMember().getFleetCommanderForStats();</div>
-<div class="line"><span class="lineno">  206</span>            ShipAPI ship = member.getShip();</div>
-<div class="line"><span class="lineno">  207</span>            </div>
-<div class="line"><span class="lineno">  208</span>            <span class="keywordflow">if</span> (ship == <span class="keyword">null</span>) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  209</span>            <span class="keywordflow">if</span> (fc == <span class="keyword">null</span>) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  210</span>            </div>
-<div class="line"><span class="lineno">  211</span>            <span class="comment">//boolean hasFC = fc.getStats().getDynamic().getMod(Stats.HAS_FORCE_CONCENTRATION_BONUS_MOD).computeEffective(0f) &gt; 0f;</span></div>
-<div class="line"><span class="lineno">  212</span>            <span class="keywordtype">boolean</span> hasFC = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  213</span>            </div>
-<div class="line"><span class="lineno">  214</span>            String <span class="keywordtype">id</span> = <span class="stringliteral">&quot;fc_zf_bonus&quot;</span>;</div>
-<div class="line"><span class="lineno">  215</span>            <span class="keywordflow">if</span> (hasFC) {</div>
-<div class="line"><span class="lineno">  216</span>                <span class="keywordtype">boolean</span> hasZF = ship.isEngineBoostActive();</div>
-<div class="line"><span class="lineno">  217</span>                <span class="keywordflow">if</span> (ship.areAnyEnemiesInRange()) {</div>
-<div class="line"><span class="lineno">  218</span>                    ship.getMutableStats().getZeroFluxSpeedBoost().modifyFlat(<span class="keywordtype">id</span>, ForceConcentration.ZERO_FLUX_SPEED_BONUS_SMALL);</div>
-<div class="line"><span class="lineno">  219</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  220</span>                    ship.getMutableStats().getZeroFluxSpeedBoost().modifyFlat(<span class="keywordtype">id</span>, ForceConcentration.ZERO_FLUX_SPEED_BONUS);</div>
-<div class="line"><span class="lineno">  221</span>                }</div>
-<div class="line"><span class="lineno">  222</span>                </div>
-<div class="line"><span class="lineno">  223</span>                <span class="keywordtype">boolean</span> applyAccelAndTurnModifiers = !ship.areAnyEnemiesInRange() &amp;&amp; hasZF;</div>
-<div class="line"><span class="lineno">  224</span>                <span class="keywordflow">if</span> (applyAccelAndTurnModifiers) {</div>
-<div class="line"><span class="lineno">  225</span>                    ship.getMutableStats().getAcceleration().modifyFlat(<span class="keywordtype">id</span>, ForceConcentration.ZERO_FLUX_ACCEL_BONUS);</div>
-<div class="line"><span class="lineno">  226</span>                    ship.getMutableStats().getDeceleration().modifyFlat(<span class="keywordtype">id</span>, ForceConcentration.ZERO_FLUX_ACCEL_BONUS);</div>
-<div class="line"><span class="lineno">  227</span>                    ship.getMutableStats().getMaxTurnRate().modifyFlat(<span class="keywordtype">id</span>, ForceConcentration.ZERO_FLUX_TURN_BONUS);</div>
-<div class="line"><span class="lineno">  228</span>                    ship.getMutableStats().getTurnAcceleration().modifyFlat(<span class="keywordtype">id</span>, ForceConcentration.ZERO_FLUX_TURN_ACCEL_BONUS);</div>
-<div class="line"><span class="lineno">  229</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  230</span>                    ship.getMutableStats().getAcceleration().unmodifyFlat(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  231</span>                    ship.getMutableStats().getDeceleration().unmodifyFlat(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  232</span>                    ship.getMutableStats().getMaxTurnRate().unmodifyFlat(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  233</span>                    ship.getMutableStats().getTurnAcceleration().unmodifyFlat(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  234</span>                }</div>
-<div class="line"><span class="lineno">  235</span>            }</div>
-<div class="line"><span class="lineno">  236</span>        }</div>
-<div class="line"><span class="lineno">  237</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -465,12 +466,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d5f/BlackMarketPlugin_8java_source.html#l00195">195</a> of file <a class="el" href="../../dc/d5f/BlackMarketPlugin_8java_source.html">BlackMarketPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  195</span>                                                                                                                                      {</div>
-<div class="line"><span class="lineno">  196</span>        <a class="code hl_function" href="../../dd/d53/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BlackMarketPlugin.html#a050bf25a6f4b98b686a64d739de4cb6e">delayedLearnBlueprintsFromTransaction</a>(faction, <a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a04d3fbb4c7d7c2e49971d4888a67fdbe">cargo</a>, transaction, 60f + 60 * (<span class="keywordtype">float</span>) Math.random());</div>
-<div class="line"><span class="lineno">  197</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin_html_a04d3fbb4c7d7c2e49971d4888a67fdbe"><div class="ttname"><a href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a04d3fbb4c7d7c2e49971d4888a67fdbe">com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin.cargo</a></div><div class="ttdeci">CargoAPI cargo</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dc2/BaseSubmarketPlugin_8java_source.html#l00076">BaseSubmarketPlugin.java:76</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BlackMarketPlugin_html_a050bf25a6f4b98b686a64d739de4cb6e"><div class="ttname"><a href="../../dd/d53/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BlackMarketPlugin.html#a050bf25a6f4b98b686a64d739de4cb6e">com.fs.starfarer.api.impl.campaign.submarkets.BlackMarketPlugin.delayedLearnBlueprintsFromTransaction</a></div><div class="ttdeci">static void delayedLearnBlueprintsFromTransaction(FactionAPI faction, CargoAPI cargo, PlayerMarketTransaction transaction)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d5f/BlackMarketPlugin_8java_source.html#l00195">BlackMarketPlugin.java:195</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a12d425b27e70d0a3dbcf8f3d9998e6fc" name="a12d425b27e70d0a3dbcf8f3d9998e6fc"></a>
@@ -520,58 +516,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d5f/BlackMarketPlugin_8java_source.html#l00198">198</a> of file <a class="el" href="../../dc/d5f/BlackMarketPlugin_8java_source.html">BlackMarketPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  198</span>                                                                                                                                                       { </div>
-<div class="line"><span class="lineno">  199</span>        DelayedBlueprintLearnScript script = <span class="keyword">new</span> DelayedBlueprintLearnScript(faction.getId(), daysDelay);</div>
-<div class="line"><span class="lineno">  200</span>        <span class="keywordflow">for</span> (CargoStackAPI stack : transaction.getSold().getStacksCopy()) {</div>
-<div class="line"><span class="lineno">  201</span>            SpecialItemPlugin plugin = stack.getPlugin();</div>
-<div class="line"><span class="lineno">  202</span>            <span class="keywordflow">if</span> (plugin instanceof BlueprintProviderItem) {</div>
-<div class="line"><span class="lineno">  203</span>                BlueprintProviderItem bpi = (BlueprintProviderItem) plugin;</div>
-<div class="line"><span class="lineno">  204</span>                </div>
-<div class="line"><span class="lineno">  205</span>                <span class="keywordtype">boolean</span> learnedSomething = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  206</span>                <span class="keywordflow">if</span> (bpi.getProvidedFighters() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  207</span>                    <span class="keywordflow">for</span> (String <span class="keywordtype">id</span> : bpi.getProvidedFighters()) {</div>
-<div class="line"><span class="lineno">  208</span>                        <span class="keywordflow">if</span> (faction.knowsFighter(<span class="keywordtype">id</span>)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  209</span>                        script.getFighters().add(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  210</span>                        learnedSomething = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  211</span>                    }</div>
-<div class="line"><span class="lineno">  212</span>                }</div>
-<div class="line"><span class="lineno">  213</span>                <span class="keywordflow">if</span> (bpi.getProvidedWeapons() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  214</span>                    <span class="keywordflow">for</span> (String <span class="keywordtype">id</span> : bpi.getProvidedWeapons()) {</div>
-<div class="line"><span class="lineno">  215</span>                        <span class="keywordflow">if</span> (faction.knowsWeapon(<span class="keywordtype">id</span>)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  216</span>                        script.getWeapons().add(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  217</span>                        learnedSomething = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  218</span>                    }</div>
-<div class="line"><span class="lineno">  219</span>                }</div>
-<div class="line"><span class="lineno">  220</span>                <span class="keywordflow">if</span> (bpi.getProvidedShips() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  221</span>                    <span class="keywordflow">for</span> (String <span class="keywordtype">id</span> : bpi.getProvidedShips()) {</div>
-<div class="line"><span class="lineno">  222</span>                        <span class="keywordflow">if</span> (faction.knowsShip(<span class="keywordtype">id</span>)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  223</span>                        script.getShips().add(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  224</span>                        learnedSomething = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  225</span>                    }</div>
-<div class="line"><span class="lineno">  226</span>                }</div>
-<div class="line"><span class="lineno">  227</span>                <span class="keywordflow">if</span> (bpi.getProvidedIndustries() != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  228</span>                    <span class="keywordflow">for</span> (String <span class="keywordtype">id</span> : bpi.getProvidedIndustries()) {</div>
-<div class="line"><span class="lineno">  229</span>                        <span class="keywordflow">if</span> (faction.knowsIndustry(<span class="keywordtype">id</span>)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  230</span>                        script.getIndustries().add(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  231</span>                        learnedSomething = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  232</span>                    }</div>
-<div class="line"><span class="lineno">  233</span>                }</div>
-<div class="line"><span class="lineno">  234</span>                </div>
-<div class="line"><span class="lineno">  235</span>                <span class="keywordflow">if</span> (learnedSomething) {</div>
-<div class="line"><span class="lineno">  236</span>                    <a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a04d3fbb4c7d7c2e49971d4888a67fdbe">cargo</a>.<a class="code hl_function" href="../../dc/d7b/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a58b502616e01d21d1c1e105baa5df8eb">removeItems</a>(stack.getType(), stack.getData(), 1);</div>
-<div class="line"><span class="lineno">  237</span>                }</div>
-<div class="line"><span class="lineno">  238</span>            }</div>
-<div class="line"><span class="lineno">  239</span>        }</div>
-<div class="line"><span class="lineno">  240</span>        </div>
-<div class="line"><span class="lineno">  241</span>        <span class="keywordflow">if</span> (!script.getFighters().isEmpty() || !script.getWeapons().isEmpty() ||</div>
-<div class="line"><span class="lineno">  242</span>                !script.getShips().isEmpty() || !script.getIndustries().isEmpty()) {</div>
-<div class="line"><span class="lineno">  243</span>            Global.getSector().addScript(script);</div>
-<div class="line"><span class="lineno">  244</span>            <a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a04d3fbb4c7d7c2e49971d4888a67fdbe">cargo</a>.<a class="code hl_function" href="../../dc/d7b/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a794c304a1bd710f6fd3ee16e39aecd6b">sort</a>();</div>
-<div class="line"><span class="lineno">  245</span>        }</div>
-<div class="line"><span class="lineno">  246</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI_html_a58b502616e01d21d1c1e105baa5df8eb"><div class="ttname"><a href="../../dc/d7b/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a58b502616e01d21d1c1e105baa5df8eb">com.fs.starfarer.api.campaign.CargoAPI.removeItems</a></div><div class="ttdeci">boolean removeItems(CargoAPI.CargoItemType itemType, Object data, float quantity)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI_html_a794c304a1bd710f6fd3ee16e39aecd6b"><div class="ttname"><a href="../../dc/d7b/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a794c304a1bd710f6fd3ee16e39aecd6b">com.fs.starfarer.api.campaign.CargoAPI.sort</a></div><div class="ttdeci">void sort()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab2b0e31373e60b5be5be12d04a844892" name="ab2b0e31373e60b5be5be12d04a844892"></a>
@@ -591,17 +536,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d5f/BlackMarketPlugin_8java_source.html#l00178">178</a> of file <a class="el" href="../../dc/d5f/BlackMarketPlugin_8java_source.html">BlackMarketPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  178</span>                                                                       {</div>
-<div class="line"><span class="lineno">  179</span>        <span class="keywordtype">boolean</span> illegal = <a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a539f0c8b6b8eacec192f3fb246c860c3">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a7bfbfe5dca481e733b81096553e8fa34">isIllegal</a>(com.getId());</div>
-<div class="line"><span class="lineno">  180</span>        <span class="keywordflow">if</span> (illegal) <span class="keywordflow">return</span> com.getStockpile();</div>
-<div class="line"><span class="lineno">  181</span>        </div>
-<div class="line"><span class="lineno">  182</span>        <span class="keywordtype">float</span> blackMarketLegalFraction = 1f - 0.09f * <a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a539f0c8b6b8eacec192f3fb246c860c3">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a2632307f40c3a4bc2dba30e35eca2284">getStabilityValue</a>();</div>
-<div class="line"><span class="lineno">  183</span>        <span class="keywordflow">return</span> com.getStockpile() * blackMarketLegalFraction;</div>
-<div class="line"><span class="lineno">  184</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin_html_a539f0c8b6b8eacec192f3fb246c860c3"><div class="ttname"><a href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a539f0c8b6b8eacec192f3fb246c860c3">com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin.market</a></div><div class="ttdeci">MarketAPI market</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dc2/BaseSubmarketPlugin_8java_source.html#l00073">BaseSubmarketPlugin.java:73</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a2632307f40c3a4bc2dba30e35eca2284"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a2632307f40c3a4bc2dba30e35eca2284">com.fs.starfarer.api.campaign.econ.MarketAPI.getStabilityValue</a></div><div class="ttdeci">float getStabilityValue()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a7bfbfe5dca481e733b81096553e8fa34"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a7bfbfe5dca481e733b81096553e8fa34">com.fs.starfarer.api.campaign.econ.MarketAPI.isIllegal</a></div><div class="ttdeci">boolean isIllegal(String commodityId)</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a4ae0f300f1722c821b3ee4adc513a1b3" name="a4ae0f300f1722c821b3ee4adc513a1b3"></a>
@@ -622,12 +557,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#ad20dd613e4cac4f068d9b2db823ef3fc">com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d5f/BlackMarketPlugin_8java_source.html#l00171">171</a> of file <a class="el" href="../../dc/d5f/BlackMarketPlugin_8java_source.html">BlackMarketPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  171</span>                                                                {</div>
-<div class="line"><span class="lineno">  172</span>        <span class="comment">//return PlayerEconomyImpactMode.PLAYER_BUY_ONLY;</span></div>
-<div class="line"><span class="lineno">  173</span>        <span class="comment">// if the player buying stuff can cause a shortage, it can result in profitable buy/sell cycles, so: don&#39;t do that</span></div>
-<div class="line"><span class="lineno">  174</span>        <span class="keywordflow">return</span> PlayerEconomyImpactMode.NONE;</div>
-<div class="line"><span class="lineno">  175</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae19529ed78e79e45edda1774f0228f75" name="ae19529ed78e79e45edda1774f0228f75"></a>
@@ -649,32 +579,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a1eeac991599f51bd081b345d3914e4d2">com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d5f/BlackMarketPlugin_8java_source.html#l00147">147</a> of file <a class="el" href="../../dc/d5f/BlackMarketPlugin_8java_source.html">BlackMarketPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  147</span>                                                           {</div>
-<div class="line"><span class="lineno">  148</span><span class="comment">//      int demand = com.getMaxDemand();</span></div>
-<div class="line"><span class="lineno">  149</span><span class="comment">//      int available = com.getAvailable();</span></div>
-<div class="line"><span class="lineno">  150</span><span class="comment">//      </span></div>
-<div class="line"><span class="lineno">  151</span><span class="comment">//      //float limit = BaseIndustry.getSizeMult(available) - BaseIndustry.getSizeMult(Math.max(0, demand - 2));</span></div>
-<div class="line"><span class="lineno">  152</span><span class="comment">//      float limit = BaseIndustry.getSizeMult(available);</span></div>
-<div class="line"><span class="lineno">  153</span><span class="comment">//      limit *= com.getCommodity().getEconUnit();</span></div>
-<div class="line"><span class="lineno">  154</span>        </div>
-<div class="line"><span class="lineno">  155</span>        <span class="comment">//limit *= com.getMarket().getStockpileMult().getModifiedValue();</span></div>
-<div class="line"><span class="lineno">  156</span>        </div>
-<div class="line"><span class="lineno">  157</span>        <span class="keywordtype">float</span> limit = OpenMarketPlugin.getBaseStockpileLimit(com);</div>
-<div class="line"><span class="lineno">  158</span>        </div>
-<div class="line"><span class="lineno">  159</span>        Random random = <span class="keyword">new</span> Random(<a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a539f0c8b6b8eacec192f3fb246c860c3">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a1c2b30198b83f80a06c4943c81c203d5">getId</a>().hashCode() + <a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a7cfc4316a62889640e1f1dc1cc157ad6">submarket</a>.<a class="code hl_function" href="../../d4/d17/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1SubmarketAPI.html#aaa2336969f5c5ab9ea184907911634a5">getSpecId</a>().hashCode() + Global.getSector().getClock().getMonth() * 170000);</div>
-<div class="line"><span class="lineno">  160</span>        limit *= 0.9f + 0.2f * random.nextFloat();</div>
-<div class="line"><span class="lineno">  161</span>        </div>
-<div class="line"><span class="lineno">  162</span>        <span class="keywordtype">float</span> sm = 1f - <a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a539f0c8b6b8eacec192f3fb246c860c3">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a2632307f40c3a4bc2dba30e35eca2284">getStabilityValue</a>() / 10f;</div>
-<div class="line"><span class="lineno">  163</span>        limit *= (0.25f + 0.75f * sm);</div>
-<div class="line"><span class="lineno">  164</span>        </div>
-<div class="line"><span class="lineno">  165</span>        <span class="keywordflow">if</span> (limit &lt; 0) limit = 0;</div>
-<div class="line"><span class="lineno">  166</span>        </div>
-<div class="line"><span class="lineno">  167</span>        <span class="keywordflow">return</span> (<span class="keywordtype">int</span>) limit;</div>
-<div class="line"><span class="lineno">  168</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin_html_a7cfc4316a62889640e1f1dc1cc157ad6"><div class="ttname"><a href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a7cfc4316a62889640e1f1dc1cc157ad6">com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin.submarket</a></div><div class="ttdeci">SubmarketAPI submarket</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dc2/BaseSubmarketPlugin_8java_source.html#l00074">BaseSubmarketPlugin.java:74</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a1c2b30198b83f80a06c4943c81c203d5"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a1c2b30198b83f80a06c4943c81c203d5">com.fs.starfarer.api.campaign.econ.MarketAPI.getId</a></div><div class="ttdeci">String getId()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1SubmarketAPI_html_aaa2336969f5c5ab9ea184907911634a5"><div class="ttname"><a href="../../d4/d17/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1SubmarketAPI.html#aaa2336969f5c5ab9ea184907911634a5">com.fs.starfarer.api.campaign.econ.SubmarketAPI.getSpecId</a></div><div class="ttdeci">String getSpecId()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a7af83487321497234bb88e5ee1dc5454" name="a7af83487321497234bb88e5ee1dc5454"></a>
@@ -696,10 +601,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a395979e1eb5243883e4247722865c387">com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d5f/BlackMarketPlugin_8java_source.html#l00259">259</a> of file <a class="el" href="../../dc/d5f/BlackMarketPlugin_8java_source.html">BlackMarketPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  259</span>                             {</div>
-<div class="line"><span class="lineno">  260</span>        <span class="keywordflow">return</span> 0f;</div>
-<div class="line"><span class="lineno">  261</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a16978bccef0cd29bedcb5c758ef5e48c" name="a16978bccef0cd29bedcb5c758ef5e48c"></a>
@@ -721,34 +623,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a3d95c856632b640e517702224fcb6bda">com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d5f/BlackMarketPlugin_8java_source.html#l00270">270</a> of file <a class="el" href="../../dc/d5f/BlackMarketPlugin_8java_source.html">BlackMarketPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  270</span>                                                   {</div>
-<div class="line"><span class="lineno">  271</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#af5f0cd641af3443a4c14474c9f572671">isEnabled</a>(ui)) {</div>
-<div class="line"><span class="lineno">  272</span><span class="comment">//          CampaignEventManagerAPI manager = Global.getSector().getEventManager();</span></div>
-<div class="line"><span class="lineno">  273</span><span class="comment">//          EventProbabilityAPI ep = manager.getProbability(Events.INVESTIGATION_SMUGGLING, market);</span></div>
-<div class="line"><span class="lineno">  274</span><span class="comment">//          float p = ep.getProbability();</span></div>
-<div class="line"><span class="lineno">  275</span>            </div>
-<div class="line"><span class="lineno">  276</span>            <span class="keywordtype">float</span> p = CoreCampaignPluginImpl.computeSmugglingSuspicionLevel(<a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a539f0c8b6b8eacec192f3fb246c860c3">market</a>);</div>
-<div class="line"><span class="lineno">  277</span>            <span class="keywordflow">if</span> (p &lt; 0.05f) <span class="keywordflow">return</span> <span class="stringliteral">&quot;Suspicion level: none&quot;</span>;</div>
-<div class="line"><span class="lineno">  278</span>            </div>
-<div class="line"><span class="lineno">  279</span>            <span class="keywordflow">if</span> (p &lt; 0.1f) {</div>
-<div class="line"><span class="lineno">  280</span>                <span class="keywordflow">return</span> <span class="stringliteral">&quot;Suspicion level: minimal&quot;</span>;</div>
-<div class="line"><span class="lineno">  281</span>            }</div>
-<div class="line"><span class="lineno">  282</span>            <span class="keywordflow">if</span> (p &lt; 0.2f) {</div>
-<div class="line"><span class="lineno">  283</span>                <span class="keywordflow">return</span> <span class="stringliteral">&quot;Suspicion level: medium&quot;</span>;</div>
-<div class="line"><span class="lineno">  284</span>            }</div>
-<div class="line"><span class="lineno">  285</span>            <span class="keywordflow">if</span> (p &lt; 0.3f) {</div>
-<div class="line"><span class="lineno">  286</span>                <span class="keywordflow">return</span> <span class="stringliteral">&quot;Suspicion level: high&quot;</span>;</div>
-<div class="line"><span class="lineno">  287</span>            }</div>
-<div class="line"><span class="lineno">  288</span>            <span class="keywordflow">if</span> (p &lt; 0.5f) {</div>
-<div class="line"><span class="lineno">  289</span>                <span class="keywordflow">return</span> <span class="stringliteral">&quot;Suspicion level: very high&quot;</span>;</div>
-<div class="line"><span class="lineno">  290</span>            }</div>
-<div class="line"><span class="lineno">  291</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;Suspicion level: extreme&quot;</span>;</div>
-<div class="line"><span class="lineno">  292</span>        }</div>
-<div class="line"><span class="lineno">  293</span> </div>
-<div class="line"><span class="lineno">  294</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  295</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin_html_af5f0cd641af3443a4c14474c9f572671"><div class="ttname"><a href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#af5f0cd641af3443a4c14474c9f572671">com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin.isEnabled</a></div><div class="ttdeci">boolean isEnabled(CoreUIAPI ui)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dc2/BaseSubmarketPlugin_8java_source.html#l00152">BaseSubmarketPlugin.java:152</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae8c008dee89250f5022efb8665b406c3" name="ae8c008dee89250f5022efb8665b406c3"></a>
@@ -770,17 +645,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a6dd824d351467055cef347d6bc71ebf3">com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d5f/BlackMarketPlugin_8java_source.html#l00297">297</a> of file <a class="el" href="../../dc/d5f/BlackMarketPlugin_8java_source.html">BlackMarketPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  297</span>                                                                 {</div>
-<div class="line"><span class="lineno">  298</span>        String appendix = <a class="code hl_function" href="../../dd/d53/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BlackMarketPlugin.html#a16978bccef0cd29bedcb5c758ef5e48c">getTooltipAppendix</a>(ui);</div>
-<div class="line"><span class="lineno">  299</span>        <span class="keywordflow">if</span> (appendix == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  300</span>        </div>
-<div class="line"><span class="lineno">  301</span>        Highlights h = <span class="keyword">new</span> Highlights();</div>
-<div class="line"><span class="lineno">  302</span>        h.setText(appendix);</div>
-<div class="line"><span class="lineno">  303</span>        h.setColors(Misc.getNegativeHighlightColor());</div>
-<div class="line"><span class="lineno">  304</span>        <span class="keywordflow">return</span> h;</div>
-<div class="line"><span class="lineno">  305</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BlackMarketPlugin_html_a16978bccef0cd29bedcb5c758ef5e48c"><div class="ttname"><a href="../../dd/d53/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BlackMarketPlugin.html#a16978bccef0cd29bedcb5c758ef5e48c">com.fs.starfarer.api.impl.campaign.submarkets.BlackMarketPlugin.getTooltipAppendix</a></div><div class="ttdeci">String getTooltipAppendix(CoreUIAPI ui)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d5f/BlackMarketPlugin_8java_source.html#l00270">BlackMarketPlugin.java:270</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8f8050fcea3366609c26d29acb7ae890" name="a8f8050fcea3366609c26d29acb7ae890"></a>
@@ -802,10 +667,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#abc473c819dc620ea4378aac39e7b5112">com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d5f/BlackMarketPlugin_8java_source.html#l00029">29</a> of file <a class="el" href="../../dc/d5f/BlackMarketPlugin_8java_source.html">BlackMarketPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   29</span>                                             {</div>
-<div class="line"><span class="lineno">   30</span>        super.init(<a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a7cfc4316a62889640e1f1dc1cc157ad6">submarket</a>);</div>
-<div class="line"><span class="lineno">   31</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aee50ad8643bca68a7018a90e15bcac28" name="aee50ad8643bca68a7018a90e15bcac28"></a>
@@ -826,10 +688,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a8987ed3c3e82c9daa135a0d3e48d9ec8">com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d5f/BlackMarketPlugin_8java_source.html#l00265">265</a> of file <a class="el" href="../../dc/d5f/BlackMarketPlugin_8java_source.html">BlackMarketPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  265</span>                                   {</div>
-<div class="line"><span class="lineno">  266</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  267</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a812b2268a032c925336be3c9d085d63f" name="a812b2268a032c925336be3c9d085d63f"></a>
@@ -861,10 +720,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a2ac99df1be9e2ec8d20aeea128741775">com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d5f/BlackMarketPlugin_8java_source.html#l00250">250</a> of file <a class="el" href="../../dc/d5f/BlackMarketPlugin_8java_source.html">BlackMarketPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  250</span>                                                                                    {</div>
-<div class="line"><span class="lineno">  251</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  252</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae2a79e2123b89efd63924f4b6ec784cf" name="ae2a79e2123b89efd63924f4b6ec784cf"></a>
@@ -896,10 +752,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#ad6f29bbf3f8898906cfdbdb3013b70ab">com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d5f/BlackMarketPlugin_8java_source.html#l00255">255</a> of file <a class="el" href="../../dc/d5f/BlackMarketPlugin_8java_source.html">BlackMarketPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  255</span>                                                                                   {</div>
-<div class="line"><span class="lineno">  256</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  257</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac5e92433d418acf4b6dbcd3b26d63b93" name="ac5e92433d418acf4b6dbcd3b26d63b93"></a>
@@ -921,15 +774,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a821e94cd488150f972b28b508e5b2bfe">com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d5f/BlackMarketPlugin_8java_source.html#l00188">188</a> of file <a class="el" href="../../dc/d5f/BlackMarketPlugin_8java_source.html">BlackMarketPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  188</span>                                                                                   {</div>
-<div class="line"><span class="lineno">  189</span>        super.reportPlayerMarketTransaction(transaction);</div>
-<div class="line"><span class="lineno">  190</span>        </div>
-<div class="line"><span class="lineno">  191</span>        FactionAPI faction = <a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a7cfc4316a62889640e1f1dc1cc157ad6">submarket</a>.<a class="code hl_function" href="../../d4/d17/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1SubmarketAPI.html#afdeedbda4953a92e3c6780377148fecb">getFaction</a>();</div>
-<div class="line"><span class="lineno">  192</span>        <a class="code hl_function" href="../../dd/d53/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BlackMarketPlugin.html#a050bf25a6f4b98b686a64d739de4cb6e">delayedLearnBlueprintsFromTransaction</a>(faction, <a class="code hl_function" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a256022db9e47751a5097e95323e018cc">getCargo</a>(), transaction, 60f + 60 * (<span class="keywordtype">float</span>) Math.random());</div>
-<div class="line"><span class="lineno">  193</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin_html_a256022db9e47751a5097e95323e018cc"><div class="ttname"><a href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a256022db9e47751a5097e95323e018cc">com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin.getCargo</a></div><div class="ttdeci">CargoAPI getCargo()</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dc2/BaseSubmarketPlugin_8java_source.html#l00097">BaseSubmarketPlugin.java:97</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1SubmarketAPI_html_afdeedbda4953a92e3c6780377148fecb"><div class="ttname"><a href="../../d4/d17/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1SubmarketAPI.html#afdeedbda4953a92e3c6780377148fecb">com.fs.starfarer.api.campaign.econ.SubmarketAPI.getFaction</a></div><div class="ttdeci">FactionAPI getFaction()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a88928c777449089da57e68ac16e51ed2" name="a88928c777449089da57e68ac16e51ed2"></a>
@@ -950,129 +795,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#adf58d118cfe9fab16b766936c3cad70a">com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d5f/BlackMarketPlugin_8java_source.html#l00034">34</a> of file <a class="el" href="../../dc/d5f/BlackMarketPlugin_8java_source.html">BlackMarketPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   34</span>                                                  {</div>
-<div class="line"><span class="lineno">   35</span>        <span class="keywordtype">float</span> seconds = Global.getSector().getClock().convertToSeconds(<a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a302e3ac05c2128f0f543f94eadef2720">sinceLastCargoUpdate</a>);</div>
-<div class="line"><span class="lineno">   36</span>        <a class="code hl_function" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#adbc0480363e547e267b089a2f34158e5">addAndRemoveStockpiledResources</a>(seconds, <span class="keyword">false</span>, <span class="keyword">true</span>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   37</span>        <a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a302e3ac05c2128f0f543f94eadef2720">sinceLastCargoUpdate</a> = 0f;</div>
-<div class="line"><span class="lineno">   38</span> </div>
-<div class="line"><span class="lineno">   39</span>        </div>
-<div class="line"><span class="lineno">   40</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a0cc1dc260a685440be10aaf34083b991">okToUpdateShipsAndWeapons</a>()) {</div>
-<div class="line"><span class="lineno">   41</span>            <a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a0a96ee0c82aac2af866bae6f7083a750">sinceSWUpdate</a> = 0f;</div>
-<div class="line"><span class="lineno">   42</span>            <span class="keywordtype">float</span> stability = <a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a539f0c8b6b8eacec192f3fb246c860c3">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a2632307f40c3a4bc2dba30e35eca2284">getStabilityValue</a>();</div>
-<div class="line"><span class="lineno">   43</span>            </div>
-<div class="line"><span class="lineno">   44</span>            <a class="code hl_function" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a0acf1aac4b7b20cd40fb12796023bc23">pruneWeapons</a>(0f);</div>
-<div class="line"><span class="lineno">   45</span>            </div>
-<div class="line"><span class="lineno">   46</span>            <span class="keywordtype">boolean</span> military = Misc.isMilitary(<a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a539f0c8b6b8eacec192f3fb246c860c3">market</a>);</div>
-<div class="line"><span class="lineno">   47</span><span class="comment">//          boolean hiddenBase = market.getMemoryWithoutUpdate().getBoolean(MemFlags.HIDDEN_BASE_MEM_FLAG);</span></div>
-<div class="line"><span class="lineno">   48</span><span class="comment">//          </span></div>
-<div class="line"><span class="lineno">   49</span><span class="comment">//          float extraShips = 0f;</span></div>
-<div class="line"><span class="lineno">   50</span><span class="comment">//          int extraShipSize = 0;</span></div>
-<div class="line"><span class="lineno">   51</span><span class="comment">//          if (military &amp;&amp; hiddenBase &amp;&amp; !market.hasSubmarket(Submarkets.GENERIC_MILITARY)) {</span></div>
-<div class="line"><span class="lineno">   52</span><span class="comment">//              extraShips = 500f;</span></div>
-<div class="line"><span class="lineno">   53</span><span class="comment">//              extraShipSize = 1;</span></div>
-<div class="line"><span class="lineno">   54</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">   55</span>            </div>
-<div class="line"><span class="lineno">   56</span>            WeightedRandomPicker&lt;String&gt; factionPicker = <span class="keyword">new</span> WeightedRandomPicker&lt;String&gt;();</div>
-<div class="line"><span class="lineno">   57</span>            factionPicker.add(<a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a539f0c8b6b8eacec192f3fb246c860c3">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#aa132dbebb3e9e38ad71a576a4ea5ac9b">getFactionId</a>(), 15f - stability);</div>
-<div class="line"><span class="lineno">   58</span>            factionPicker.add(Factions.INDEPENDENT, 4f);</div>
-<div class="line"><span class="lineno">   59</span>            factionPicker.add(<a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a7cfc4316a62889640e1f1dc1cc157ad6">submarket</a>.<a class="code hl_function" href="../../d4/d17/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1SubmarketAPI.html#afdeedbda4953a92e3c6780377148fecb">getFaction</a>().<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a7edcdc203f5ab26478e89e5d31e3bf85">getId</a>(), 6f);</div>
-<div class="line"><span class="lineno">   60</span>            </div>
-<div class="line"><span class="lineno">   61</span>            <span class="keywordtype">int</span> weapons = 6 + Math.max(0, <a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a539f0c8b6b8eacec192f3fb246c860c3">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af6f714c59a16687b5cde142091a54150">getSize</a>() - 1) + (military ? 5 : 0);</div>
-<div class="line"><span class="lineno">   62</span>            <span class="keywordtype">int</span> fighters = 2 + Math.max(0, (<a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a539f0c8b6b8eacec192f3fb246c860c3">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af6f714c59a16687b5cde142091a54150">getSize</a>() - 3) / 2) + (military ? 2 : 0);</div>
-<div class="line"><span class="lineno">   63</span>            weapons = 6 + Math.max(0, <a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a539f0c8b6b8eacec192f3fb246c860c3">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af6f714c59a16687b5cde142091a54150">getSize</a>() - 1);</div>
-<div class="line"><span class="lineno">   64</span>            fighters = 2 + Math.max(0, (<a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a539f0c8b6b8eacec192f3fb246c860c3">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af6f714c59a16687b5cde142091a54150">getSize</a>() - 3) / 2);</div>
-<div class="line"><span class="lineno">   65</span>            </div>
-<div class="line"><span class="lineno">   66</span>            <a class="code hl_function" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#af9c63923da90dc802caef6bee5612c66">addWeapons</a>(weapons, weapons + 2, 3, factionPicker);</div>
-<div class="line"><span class="lineno">   67</span>            <a class="code hl_function" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a9d464609a0c0f155039620f4e4ea8293">addFighters</a>(fighters, fighters + 2, 3, factionPicker);</div>
-<div class="line"><span class="lineno">   68</span>            </div>
-<div class="line"><span class="lineno">   69</span>            <span class="keywordflow">if</span> (military) {</div>
-<div class="line"><span class="lineno">   70</span>                weapons = <a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a539f0c8b6b8eacec192f3fb246c860c3">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af6f714c59a16687b5cde142091a54150">getSize</a>();</div>
-<div class="line"><span class="lineno">   71</span>                fighters = Math.max(1, <a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a539f0c8b6b8eacec192f3fb246c860c3">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af6f714c59a16687b5cde142091a54150">getSize</a>() / 3);</div>
-<div class="line"><span class="lineno">   72</span>                <a class="code hl_function" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#af9c63923da90dc802caef6bee5612c66">addWeapons</a>(weapons, weapons + 2, 3, <a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a539f0c8b6b8eacec192f3fb246c860c3">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#aa132dbebb3e9e38ad71a576a4ea5ac9b">getFactionId</a>(), <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   73</span>                <a class="code hl_function" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a9d464609a0c0f155039620f4e4ea8293">addFighters</a>(fighters, fighters + 2, 3, <a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a539f0c8b6b8eacec192f3fb246c860c3">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#aa132dbebb3e9e38ad71a576a4ea5ac9b">getFactionId</a>());</div>
-<div class="line"><span class="lineno">   74</span>            }</div>
-<div class="line"><span class="lineno">   75</span>            </div>
-<div class="line"><span class="lineno">   76</span>            <span class="keywordtype">float</span> sMult = 0.5f + Math.max(0, (1f - stability / 10f)) * 0.5f;</div>
-<div class="line"><span class="lineno">   77</span>            <a class="code hl_function" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a256022db9e47751a5097e95323e018cc">getCargo</a>().<a class="code hl_function" href="../../dc/d7b/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#ae573d9d99761dc40ad6a9df2fe618f8c">getMothballedShips</a>().<a class="code hl_function" href="../../d2/dfb/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetDataAPI.html#ac6b3b8239b188e657e7551c039c0cc06">clear</a>();</div>
-<div class="line"><span class="lineno">   78</span>            <span class="keywordtype">float</span> pOther = 0.1f;</div>
-<div class="line"><span class="lineno">   79</span>            </div>
-<div class="line"><span class="lineno">   80</span>            FactionDoctrineAPI doctrine = <a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a539f0c8b6b8eacec192f3fb246c860c3">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a97645caff4adca5efcf3a462fb13ca0f">getFaction</a>().<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#adc4a714f64334e82790e6d2b93a1e132">getDoctrine</a>().<a class="code hl_function" href="../../da/d00/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionDoctrineAPI.html#ac4fda2046e7c9fc3ae9b811435b8d1b1">clone</a>();</div>
-<div class="line"><span class="lineno">   81</span><span class="comment">//          FactionDoctrineAPI doctrine = submarket.getFaction().getDoctrine().clone();</span></div>
-<div class="line"><span class="lineno">   82</span><span class="comment">//          doctrine.setWarships(3);</span></div>
-<div class="line"><span class="lineno">   83</span><span class="comment">//          doctrine.setCarriers(2);</span></div>
-<div class="line"><span class="lineno">   84</span><span class="comment">//          doctrine.setPhaseShips(2);</span></div>
-<div class="line"><span class="lineno">   85</span>            </div>
-<div class="line"><span class="lineno">   86</span>            <a class="code hl_function" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a18f835ec56ab37375fdbd57cc85229a3">addShips</a>(<a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a539f0c8b6b8eacec192f3fb246c860c3">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#aa132dbebb3e9e38ad71a576a4ea5ac9b">getFactionId</a>(),</div>
-<div class="line"><span class="lineno">   87</span>                    70f * sMult, <span class="comment">// combat</span></div>
-<div class="line"><span class="lineno">   88</span>                    <a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a643e5520e4bbfb2460a3ac78a9e83285">itemGenRandom</a>.nextFloat() &gt; pOther ? 0f : 10f, <span class="comment">// freighter </span></div>
-<div class="line"><span class="lineno">   89</span>                    <a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a643e5520e4bbfb2460a3ac78a9e83285">itemGenRandom</a>.nextFloat() &gt; pOther ? 0f : 10f, <span class="comment">// tanker</span></div>
-<div class="line"><span class="lineno">   90</span>                    <a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a643e5520e4bbfb2460a3ac78a9e83285">itemGenRandom</a>.nextFloat() &gt; pOther ? 0f : 10f, <span class="comment">// transport</span></div>
-<div class="line"><span class="lineno">   91</span>                    <a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a643e5520e4bbfb2460a3ac78a9e83285">itemGenRandom</a>.nextFloat() &gt; pOther ? 0f : 10f, <span class="comment">// liner</span></div>
-<div class="line"><span class="lineno">   92</span>                    <a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a643e5520e4bbfb2460a3ac78a9e83285">itemGenRandom</a>.nextFloat() &gt; pOther ? 0f : 10f, <span class="comment">// utilityPts</span></div>
-<div class="line"><span class="lineno">   93</span>                    <span class="keyword">null</span>,</div>
-<div class="line"><span class="lineno">   94</span>                    0f, <span class="comment">// qualityMod</span></div>
-<div class="line"><span class="lineno">   95</span>                    <span class="keyword">null</span>,</div>
-<div class="line"><span class="lineno">   96</span>                    doctrine);</div>
-<div class="line"><span class="lineno">   97</span>            FactionDoctrineAPI doctrineOverride = <a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a7cfc4316a62889640e1f1dc1cc157ad6">submarket</a>.<a class="code hl_function" href="../../d4/d17/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1SubmarketAPI.html#afdeedbda4953a92e3c6780377148fecb">getFaction</a>().<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#adc4a714f64334e82790e6d2b93a1e132">getDoctrine</a>().<a class="code hl_function" href="../../da/d00/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionDoctrineAPI.html#ac4fda2046e7c9fc3ae9b811435b8d1b1">clone</a>();</div>
-<div class="line"><span class="lineno">   98</span>            doctrineOverride.<a class="code hl_function" href="../../da/d00/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionDoctrineAPI.html#a44ebc9d1b3585cd25450e48e38c71eeb">setWarships</a>(3);</div>
-<div class="line"><span class="lineno">   99</span>            doctrineOverride.setPhaseShips(2);</div>
-<div class="line"><span class="lineno">  100</span>            doctrineOverride.setCarriers(2);</div>
-<div class="line"><span class="lineno">  101</span>            doctrineOverride.setCombatFreighterProbability(1f);</div>
-<div class="line"><span class="lineno">  102</span>            doctrineOverride.setShipSize(5);</div>
-<div class="line"><span class="lineno">  103</span>            <a class="code hl_function" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a18f835ec56ab37375fdbd57cc85229a3">addShips</a>(<a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a7cfc4316a62889640e1f1dc1cc157ad6">submarket</a>.<a class="code hl_function" href="../../d4/d17/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1SubmarketAPI.html#afdeedbda4953a92e3c6780377148fecb">getFaction</a>().<a class="code hl_function" href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a7edcdc203f5ab26478e89e5d31e3bf85">getId</a>(),</div>
-<div class="line"><span class="lineno">  104</span>                    70f, <span class="comment">// combat</span></div>
-<div class="line"><span class="lineno">  105</span>                    10f, <span class="comment">// freighter </span></div>
-<div class="line"><span class="lineno">  106</span>                    <a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a643e5520e4bbfb2460a3ac78a9e83285">itemGenRandom</a>.nextFloat() &gt; pOther ? 0f : 10f, <span class="comment">// tanker</span></div>
-<div class="line"><span class="lineno">  107</span>                    <a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a643e5520e4bbfb2460a3ac78a9e83285">itemGenRandom</a>.nextFloat() &gt; pOther ? 0f : 10f, <span class="comment">// transport</span></div>
-<div class="line"><span class="lineno">  108</span>                    <a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a643e5520e4bbfb2460a3ac78a9e83285">itemGenRandom</a>.nextFloat() &gt; pOther ? 0f : 10f, <span class="comment">// liner</span></div>
-<div class="line"><span class="lineno">  109</span>                    <a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a643e5520e4bbfb2460a3ac78a9e83285">itemGenRandom</a>.nextFloat() &gt; pOther ? 0f : 10f, <span class="comment">// utilityPts</span></div>
-<div class="line"><span class="lineno">  110</span>                    <span class="comment">//0.8f,</span></div>
-<div class="line"><span class="lineno">  111</span>                    Math.min(1f, Misc.getShipQuality(<a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a539f0c8b6b8eacec192f3fb246c860c3">market</a>, <a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a539f0c8b6b8eacec192f3fb246c860c3">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#aa132dbebb3e9e38ad71a576a4ea5ac9b">getFactionId</a>()) + 0.5f),</div>
-<div class="line"><span class="lineno">  112</span>                    0f, <span class="comment">// qualityMod</span></div>
-<div class="line"><span class="lineno">  113</span>                    <span class="keyword">null</span>,</div>
-<div class="line"><span class="lineno">  114</span>                    doctrineOverride,</div>
-<div class="line"><span class="lineno">  115</span>                    3 <span class="comment">// no capital ships, max size cruiser</span></div>
-<div class="line"><span class="lineno">  116</span>                    );</div>
-<div class="line"><span class="lineno">  117</span>            <a class="code hl_function" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a18f835ec56ab37375fdbd57cc85229a3">addShips</a>(Factions.INDEPENDENT,</div>
-<div class="line"><span class="lineno">  118</span>                    15f + 15f * sMult, <span class="comment">// combat</span></div>
-<div class="line"><span class="lineno">  119</span>                    <a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a643e5520e4bbfb2460a3ac78a9e83285">itemGenRandom</a>.nextFloat() &gt; pOther ? 0f : 10f, <span class="comment">// freighter </span></div>
-<div class="line"><span class="lineno">  120</span>                    <a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a643e5520e4bbfb2460a3ac78a9e83285">itemGenRandom</a>.nextFloat() &gt; pOther ? 0f : 10f, <span class="comment">// tanker</span></div>
-<div class="line"><span class="lineno">  121</span>                    <a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a643e5520e4bbfb2460a3ac78a9e83285">itemGenRandom</a>.nextFloat() &gt; pOther ? 0f : 10f, <span class="comment">// transport</span></div>
-<div class="line"><span class="lineno">  122</span>                    <a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a643e5520e4bbfb2460a3ac78a9e83285">itemGenRandom</a>.nextFloat() &gt; pOther ? 0f : 10f, <span class="comment">// liner</span></div>
-<div class="line"><span class="lineno">  123</span>                    <a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a643e5520e4bbfb2460a3ac78a9e83285">itemGenRandom</a>.nextFloat() &gt; pOther ? 0f : 10f, <span class="comment">// utilityPts</span></div>
-<div class="line"><span class="lineno">  124</span>                    <span class="comment">//0.8f,</span></div>
-<div class="line"><span class="lineno">  125</span>                    Math.min(1f, Misc.getShipQuality(<a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a539f0c8b6b8eacec192f3fb246c860c3">market</a>, <a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a539f0c8b6b8eacec192f3fb246c860c3">market</a>.<a class="code hl_function" href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#aa132dbebb3e9e38ad71a576a4ea5ac9b">getFactionId</a>()) + 0.5f),</div>
-<div class="line"><span class="lineno">  126</span>                    0f, <span class="comment">// qualityMod</span></div>
-<div class="line"><span class="lineno">  127</span>                    <span class="keyword">null</span>,</div>
-<div class="line"><span class="lineno">  128</span>                    <span class="keyword">null</span>,</div>
-<div class="line"><span class="lineno">  129</span>                    3 <span class="comment">// no capital ships, max size cruiser</span></div>
-<div class="line"><span class="lineno">  130</span>                    ); </div>
-<div class="line"><span class="lineno">  131</span>            </div>
-<div class="line"><span class="lineno">  132</span>            <a class="code hl_function" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a651d31ce54366b4082d2dc15b29e76be">addHullMods</a>(4, 1 + <a class="code hl_variable" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a643e5520e4bbfb2460a3ac78a9e83285">itemGenRandom</a>.nextInt(3));</div>
-<div class="line"><span class="lineno">  133</span>        }</div>
-<div class="line"><span class="lineno">  134</span>        </div>
-<div class="line"><span class="lineno">  135</span>        <a class="code hl_function" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a256022db9e47751a5097e95323e018cc">getCargo</a>().<a class="code hl_function" href="../../dc/d7b/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a794c304a1bd710f6fd3ee16e39aecd6b">sort</a>();</div>
-<div class="line"><span class="lineno">  136</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin_html_a0a96ee0c82aac2af866bae6f7083a750"><div class="ttname"><a href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a0a96ee0c82aac2af866bae6f7083a750">com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin.sinceSWUpdate</a></div><div class="ttdeci">float sinceSWUpdate</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dc2/BaseSubmarketPlugin_8java_source.html#l00078">BaseSubmarketPlugin.java:78</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin_html_a0acf1aac4b7b20cd40fb12796023bc23"><div class="ttname"><a href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a0acf1aac4b7b20cd40fb12796023bc23">com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin.pruneWeapons</a></div><div class="ttdeci">void pruneWeapons(float keepFraction)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dc2/BaseSubmarketPlugin_8java_source.html#l00454">BaseSubmarketPlugin.java:454</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin_html_a0cc1dc260a685440be10aaf34083b991"><div class="ttname"><a href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a0cc1dc260a685440be10aaf34083b991">com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin.okToUpdateShipsAndWeapons</a></div><div class="ttdeci">boolean okToUpdateShipsAndWeapons()</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dc2/BaseSubmarketPlugin_8java_source.html#l00123">BaseSubmarketPlugin.java:123</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin_html_a18f835ec56ab37375fdbd57cc85229a3"><div class="ttname"><a href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a18f835ec56ab37375fdbd57cc85229a3">com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin.addShips</a></div><div class="ttdeci">void addShips(String factionId, float combat, float freighter, float tanker, float transport, float liner, float utility, Float qualityOverride, float qualityMod, ShipPickMode modeOverride, FactionDoctrineAPI doctrineOverride)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dc2/BaseSubmarketPlugin_8java_source.html#l00470">BaseSubmarketPlugin.java:470</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin_html_a302e3ac05c2128f0f543f94eadef2720"><div class="ttname"><a href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a302e3ac05c2128f0f543f94eadef2720">com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin.sinceLastCargoUpdate</a></div><div class="ttdeci">float sinceLastCargoUpdate</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dc2/BaseSubmarketPlugin_8java_source.html#l00079">BaseSubmarketPlugin.java:79</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin_html_a643e5520e4bbfb2460a3ac78a9e83285"><div class="ttname"><a href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a643e5520e4bbfb2460a3ac78a9e83285">com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin.itemGenRandom</a></div><div class="ttdeci">Random itemGenRandom</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dc2/BaseSubmarketPlugin_8java_source.html#l00081">BaseSubmarketPlugin.java:81</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin_html_a651d31ce54366b4082d2dc15b29e76be"><div class="ttname"><a href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a651d31ce54366b4082d2dc15b29e76be">com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin.addHullMods</a></div><div class="ttdeci">void addHullMods(int maxTier, int num)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dc2/BaseSubmarketPlugin_8java_source.html#l00586">BaseSubmarketPlugin.java:586</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin_html_a9d464609a0c0f155039620f4e4ea8293"><div class="ttname"><a href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a9d464609a0c0f155039620f4e4ea8293">com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin.addFighters</a></div><div class="ttdeci">void addFighters(int min, int max, int maxTier, WeightedRandomPicker&lt; String &gt; factionPicker)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dc2/BaseSubmarketPlugin_8java_source.html#l00289">BaseSubmarketPlugin.java:289</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin_html_adbc0480363e547e267b089a2f34158e5"><div class="ttname"><a href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#adbc0480363e547e267b089a2f34158e5">com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin.addAndRemoveStockpiledResources</a></div><div class="ttdeci">void addAndRemoveStockpiledResources(float amount, boolean withShortageCountering, boolean withDecreaseToLimit, boolean withCargoUpdate)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dc2/BaseSubmarketPlugin_8java_source.html#l00771">BaseSubmarketPlugin.java:771</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin_html_af9c63923da90dc802caef6bee5612c66"><div class="ttname"><a href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#af9c63923da90dc802caef6bee5612c66">com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin.addWeapons</a></div><div class="ttdeci">void addWeapons(int min, int max, int maxTier, String factionId)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dc2/BaseSubmarketPlugin_8java_source.html#l00297">BaseSubmarketPlugin.java:297</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI_html_ae573d9d99761dc40ad6a9df2fe618f8c"><div class="ttname"><a href="../../dc/d7b/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#ae573d9d99761dc40ad6a9df2fe618f8c">com.fs.starfarer.api.campaign.CargoAPI.getMothballedShips</a></div><div class="ttdeci">FleetDataAPI getMothballedShips()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI_html_a7edcdc203f5ab26478e89e5d31e3bf85"><div class="ttname"><a href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a7edcdc203f5ab26478e89e5d31e3bf85">com.fs.starfarer.api.campaign.FactionAPI.getId</a></div><div class="ttdeci">String getId()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI_html_adc4a714f64334e82790e6d2b93a1e132"><div class="ttname"><a href="../../dd/d35/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#adc4a714f64334e82790e6d2b93a1e132">com.fs.starfarer.api.campaign.FactionAPI.getDoctrine</a></div><div class="ttdeci">FactionDoctrineAPI getDoctrine()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionDoctrineAPI_html_a44ebc9d1b3585cd25450e48e38c71eeb"><div class="ttname"><a href="../../da/d00/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionDoctrineAPI.html#a44ebc9d1b3585cd25450e48e38c71eeb">com.fs.starfarer.api.campaign.FactionDoctrineAPI.setWarships</a></div><div class="ttdeci">void setWarships(int warships)</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionDoctrineAPI_html_ac4fda2046e7c9fc3ae9b811435b8d1b1"><div class="ttname"><a href="../../da/d00/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionDoctrineAPI.html#ac4fda2046e7c9fc3ae9b811435b8d1b1">com.fs.starfarer.api.campaign.FactionDoctrineAPI.clone</a></div><div class="ttdeci">FactionDoctrineAPI clone()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetDataAPI_html_ac6b3b8239b188e657e7551c039c0cc06"><div class="ttname"><a href="../../d2/dfb/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetDataAPI.html#ac6b3b8239b188e657e7551c039c0cc06">com.fs.starfarer.api.campaign.FleetDataAPI.clear</a></div><div class="ttdeci">void clear()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_a97645caff4adca5efcf3a462fb13ca0f"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a97645caff4adca5efcf3a462fb13ca0f">com.fs.starfarer.api.campaign.econ.MarketAPI.getFaction</a></div><div class="ttdeci">FactionAPI getFaction()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_aa132dbebb3e9e38ad71a576a4ea5ac9b"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#aa132dbebb3e9e38ad71a576a4ea5ac9b">com.fs.starfarer.api.campaign.econ.MarketAPI.getFactionId</a></div><div class="ttdeci">String getFactionId()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_html_af6f714c59a16687b5cde142091a54150"><div class="ttname"><a href="../../de/d91/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#af6f714c59a16687b5cde142091a54150">com.fs.starfarer.api.campaign.econ.MarketAPI.getSize</a></div><div class="ttdeci">int getSize()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9c3ab5b317e560719047ed6a4faa7872" name="a9c3ab5b317e560719047ed6a4faa7872"></a>
@@ -1099,14 +822,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d5f/BlackMarketPlugin_8java_source.html#l00138">138</a> of file <a class="el" href="../../dc/d5f/BlackMarketPlugin_8java_source.html">BlackMarketPlugin.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  138</span>                                    {</div>
-<div class="line"><span class="lineno">  139</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a0cc1dc260a685440be10aaf34083b991">okToUpdateShipsAndWeapons</a>()) {</div>
-<div class="line"><span class="lineno">  140</span>            <a class="code hl_function" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a0acf1aac4b7b20cd40fb12796023bc23">pruneWeapons</a>(0f);</div>
-<div class="line"><span class="lineno">  141</span>            <a class="code hl_function" href="../../d3/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a256022db9e47751a5097e95323e018cc">getCargo</a>().<a class="code hl_function" href="../../dc/d7b/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#ae573d9d99761dc40ad6a9df2fe618f8c">getMothballedShips</a>().<a class="code hl_function" href="../../d2/dfb/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetDataAPI.html#ac6b3b8239b188e657e7551c039c0cc06">clear</a>();</div>
-<div class="line"><span class="lineno">  142</span>        }</div>
-<div class="line"><span class="lineno">  143</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">  144</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

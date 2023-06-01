@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -192,13 +193,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/dbc/FaderUtil_8java_source.html#l00015">15</a> of file <a class="el" href="../../d0/dbc/FaderUtil_8java_source.html">FaderUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   15</span>                                                           {</div>
-<div class="line"><span class="lineno">   16</span>        this.currBrightness = currBrightness;</div>
-<div class="line"><span class="lineno">   17</span>        this.durationIn = duration;</div>
-<div class="line"><span class="lineno">   18</span>        this.durationOut = duration;</div>
-<div class="line"><span class="lineno">   19</span>        state = State.IDLE;</div>
-<div class="line"><span class="lineno">   20</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a27d4747e14e9a7ea12d9f5d3dbe85536" name="a27d4747e14e9a7ea12d9f5d3dbe85536"></a>
@@ -234,13 +229,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/dbc/FaderUtil_8java_source.html#l00022">22</a> of file <a class="el" href="../../d0/dbc/FaderUtil_8java_source.html">FaderUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   22</span>                                                                                {</div>
-<div class="line"><span class="lineno">   23</span>        this.currBrightness = currBrightness;</div>
-<div class="line"><span class="lineno">   24</span>        this.durationIn = durationIn;</div>
-<div class="line"><span class="lineno">   25</span>        this.durationOut = durationOut;</div>
-<div class="line"><span class="lineno">   26</span>        state = State.IDLE;</div>
-<div class="line"><span class="lineno">   27</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aaaca394c6e5491615fb18c88f7c81642" name="aaaca394c6e5491615fb18c88f7c81642"></a>
@@ -288,12 +277,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/dbc/FaderUtil_8java_source.html#l00029">29</a> of file <a class="el" href="../../d0/dbc/FaderUtil_8java_source.html">FaderUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   29</span>                                                                                                                      {</div>
-<div class="line"><span class="lineno">   30</span>        <span class="keyword">this</span>(currBrightness, durationIn, durationOut);</div>
-<div class="line"><span class="lineno">   31</span>        <a class="code hl_function" href="../../d4/d3e/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1FaderUtil.html#afcfa8f23c97769aed784071b94a8b843">setBounce</a>(bounceUp, bounceDown);</div>
-<div class="line"><span class="lineno">   32</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1FaderUtil_html_afcfa8f23c97769aed784071b94a8b843"><div class="ttname"><a href="../../d4/d3e/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1FaderUtil.html#afcfa8f23c97769aed784071b94a8b843">com.fs.starfarer.api.util.FaderUtil.setBounce</a></div><div class="ttdeci">void setBounce(boolean up, boolean down)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dbc/FaderUtil_8java_source.html#l00050">FaderUtil.java:50</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -314,34 +298,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/dbc/FaderUtil_8java_source.html#l00103">103</a> of file <a class="el" href="../../d0/dbc/FaderUtil_8java_source.html">FaderUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  103</span>                                      {</div>
-<div class="line"><span class="lineno">  104</span>        <span class="keywordflow">if</span> (state == State.IDLE) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  105</span>        </div>
-<div class="line"><span class="lineno">  106</span>        <span class="keywordflow">if</span> (state == State.IN) {</div>
-<div class="line"><span class="lineno">  107</span>            <span class="keywordflow">if</span> (currBrightness == 1) { </div>
-<div class="line"><span class="lineno">  108</span>                <span class="keywordflow">if</span> (bounceDown) state = State.OUT;</div>
-<div class="line"><span class="lineno">  109</span>                <span class="keywordflow">else</span> state = State.IDLE;</div>
-<div class="line"><span class="lineno">  110</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  111</span>            }</div>
-<div class="line"><span class="lineno">  112</span>            <span class="keywordtype">float</span> delta = amount / durationIn;</div>
-<div class="line"><span class="lineno">  113</span>            currBrightness += delta;</div>
-<div class="line"><span class="lineno">  114</span>            <span class="keywordflow">if</span> (currBrightness &gt; 1) { </div>
-<div class="line"><span class="lineno">  115</span>                currBrightness = 1;</div>
-<div class="line"><span class="lineno">  116</span>            }</div>
-<div class="line"><span class="lineno">  117</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (state == State.OUT) {</div>
-<div class="line"><span class="lineno">  118</span>            <span class="keywordflow">if</span> (currBrightness == 0) {</div>
-<div class="line"><span class="lineno">  119</span>                <span class="keywordflow">if</span> (bounceUp) state = State.IN;</div>
-<div class="line"><span class="lineno">  120</span>                <span class="keywordflow">else</span> state = State.IDLE;</div>
-<div class="line"><span class="lineno">  121</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  122</span>            }</div>
-<div class="line"><span class="lineno">  123</span>            <span class="keywordtype">float</span> delta = amount / durationOut;</div>
-<div class="line"><span class="lineno">  124</span>            currBrightness -= delta;</div>
-<div class="line"><span class="lineno">  125</span>            <span class="keywordflow">if</span> (currBrightness &lt; 0) {</div>
-<div class="line"><span class="lineno">  126</span>                currBrightness = 0;</div>
-<div class="line"><span class="lineno">  127</span>            }</div>
-<div class="line"><span class="lineno">  128</span>        }</div>
-<div class="line"><span class="lineno">  129</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a942b8ad1e0da3f3b0dab0ad9698696a3" name="a942b8ad1e0da3f3b0dab0ad9698696a3"></a>
@@ -360,15 +317,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/dbc/FaderUtil_8java_source.html#l00067">67</a> of file <a class="el" href="../../d0/dbc/FaderUtil_8java_source.html">FaderUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   67</span>                         {</div>
-<div class="line"><span class="lineno">   68</span>        <span class="keywordflow">if</span> (durationIn &lt;= 0) {</div>
-<div class="line"><span class="lineno">   69</span>            <a class="code hl_function" href="../../d4/d3e/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1FaderUtil.html#add2c0dcbb20c4c30f46d9678998f0e7d">forceIn</a>();</div>
-<div class="line"><span class="lineno">   70</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   71</span>            state = State.IN;</div>
-<div class="line"><span class="lineno">   72</span>        }</div>
-<div class="line"><span class="lineno">   73</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1FaderUtil_html_add2c0dcbb20c4c30f46d9678998f0e7d"><div class="ttname"><a href="../../d4/d3e/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1FaderUtil.html#add2c0dcbb20c4c30f46d9678998f0e7d">com.fs.starfarer.api.util.FaderUtil.forceIn</a></div><div class="ttdeci">void forceIn()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dbc/FaderUtil_8java_source.html#l00055">FaderUtil.java:55</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a902a65416fa65b3f1f95130215714866" name="a902a65416fa65b3f1f95130215714866"></a>
@@ -387,15 +336,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/dbc/FaderUtil_8java_source.html#l00075">75</a> of file <a class="el" href="../../d0/dbc/FaderUtil_8java_source.html">FaderUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   75</span>                          {</div>
-<div class="line"><span class="lineno">   76</span>        <span class="keywordflow">if</span> (durationOut &lt;= 0) {</div>
-<div class="line"><span class="lineno">   77</span>            <a class="code hl_function" href="../../d4/d3e/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1FaderUtil.html#ad3543d43770cb921937eabffdfe98dee">forceOut</a>();</div>
-<div class="line"><span class="lineno">   78</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   79</span>            state = State.OUT;</div>
-<div class="line"><span class="lineno">   80</span>        }</div>
-<div class="line"><span class="lineno">   81</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1FaderUtil_html_ad3543d43770cb921937eabffdfe98dee"><div class="ttname"><a href="../../d4/d3e/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1FaderUtil.html#ad3543d43770cb921937eabffdfe98dee">com.fs.starfarer.api.util.FaderUtil.forceOut</a></div><div class="ttdeci">void forceOut()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dbc/FaderUtil_8java_source.html#l00061">FaderUtil.java:61</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="add2c0dcbb20c4c30f46d9678998f0e7d" name="add2c0dcbb20c4c30f46d9678998f0e7d"></a>
@@ -414,12 +355,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/dbc/FaderUtil_8java_source.html#l00055">55</a> of file <a class="el" href="../../d0/dbc/FaderUtil_8java_source.html">FaderUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   55</span>                          {</div>
-<div class="line"><span class="lineno">   56</span>        currBrightness = 1;</div>
-<div class="line"><span class="lineno">   57</span>        <span class="keywordflow">if</span> (bounceDown) state = State.OUT;</div>
-<div class="line"><span class="lineno">   58</span>        <span class="keywordflow">else</span> state = State.IDLE;</div>
-<div class="line"><span class="lineno">   59</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ad3543d43770cb921937eabffdfe98dee" name="ad3543d43770cb921937eabffdfe98dee"></a>
@@ -438,12 +374,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/dbc/FaderUtil_8java_source.html#l00061">61</a> of file <a class="el" href="../../d0/dbc/FaderUtil_8java_source.html">FaderUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   61</span>                           {</div>
-<div class="line"><span class="lineno">   62</span>        currBrightness = 0;</div>
-<div class="line"><span class="lineno">   63</span>        <span class="keywordflow">if</span> (bounceUp) state = State.IN;</div>
-<div class="line"><span class="lineno">   64</span>        <span class="keywordflow">else</span> state = State.IDLE;</div>
-<div class="line"><span class="lineno">   65</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ad4e3a03c9fe8a98f6dd532f577c36330" name="ad4e3a03c9fe8a98f6dd532f577c36330"></a>
@@ -462,10 +393,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/dbc/FaderUtil_8java_source.html#l00145">145</a> of file <a class="el" href="../../d0/dbc/FaderUtil_8java_source.html">FaderUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  145</span>                                 {</div>
-<div class="line"><span class="lineno">  146</span>        <span class="keywordflow">return</span> currBrightness;</div>
-<div class="line"><span class="lineno">  147</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a1958826e78ad2bb7f69d74077aabf7ff" name="a1958826e78ad2bb7f69d74077aabf7ff"></a>
@@ -484,10 +412,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/dbc/FaderUtil_8java_source.html#l00149">149</a> of file <a class="el" href="../../d0/dbc/FaderUtil_8java_source.html">FaderUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  149</span>                                 {</div>
-<div class="line"><span class="lineno">  150</span>        <span class="keywordflow">return</span> durationIn;</div>
-<div class="line"><span class="lineno">  151</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a98cf362719b1296875789acb339e511d" name="a98cf362719b1296875789acb339e511d"></a>
@@ -506,10 +431,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/dbc/FaderUtil_8java_source.html#l00153">153</a> of file <a class="el" href="../../d0/dbc/FaderUtil_8java_source.html">FaderUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  153</span>                                  {</div>
-<div class="line"><span class="lineno">  154</span>        <span class="keywordflow">return</span> durationOut;</div>
-<div class="line"><span class="lineno">  155</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a811aae83167aefb66099949e26bcc8e6" name="a811aae83167aefb66099949e26bcc8e6"></a>
@@ -528,10 +450,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/dbc/FaderUtil_8java_source.html#l00034">34</a> of file <a class="el" href="../../d0/dbc/FaderUtil_8java_source.html">FaderUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   34</span>                            {</div>
-<div class="line"><span class="lineno">   35</span>        <span class="keywordflow">return</span> state;</div>
-<div class="line"><span class="lineno">   36</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae746217030f5a8527b0afee7f5e63207" name="ae746217030f5a8527b0afee7f5e63207"></a>
@@ -550,10 +469,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/dbc/FaderUtil_8java_source.html#l00168">168</a> of file <a class="el" href="../../d0/dbc/FaderUtil_8java_source.html">FaderUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  168</span>                                  {</div>
-<div class="line"><span class="lineno">  169</span>        <span class="keywordflow">return</span> bounceDown;</div>
-<div class="line"><span class="lineno">  170</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aae521855ae1c234d08c78591b3326cd2" name="aae521855ae1c234d08c78591b3326cd2"></a>
@@ -572,10 +488,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/dbc/FaderUtil_8java_source.html#l00172">172</a> of file <a class="el" href="../../d0/dbc/FaderUtil_8java_source.html">FaderUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  172</span>                                {</div>
-<div class="line"><span class="lineno">  173</span>        <span class="keywordflow">return</span> bounceUp;</div>
-<div class="line"><span class="lineno">  174</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa2a0c0624bff684a9bd27be55c684424" name="aa2a0c0624bff684a9bd27be55c684424"></a>
@@ -594,12 +507,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/dbc/FaderUtil_8java_source.html#l00087">87</a> of file <a class="el" href="../../d0/dbc/FaderUtil_8java_source.html">FaderUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   87</span>                               {</div>
-<div class="line"><span class="lineno">   88</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../d4/d3e/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1FaderUtil.html#ad4e3a03c9fe8a98f6dd532f577c36330">getBrightness</a>() == 1 &amp;&amp; <a class="code hl_function" href="../../d4/d3e/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1FaderUtil.html#a988a6e121cb9f859c3788267b917726c">isIdle</a>();</div>
-<div class="line"><span class="lineno">   89</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1FaderUtil_html_a988a6e121cb9f859c3788267b917726c"><div class="ttname"><a href="../../d4/d3e/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1FaderUtil.html#a988a6e121cb9f859c3788267b917726c">com.fs.starfarer.api.util.FaderUtil.isIdle</a></div><div class="ttdeci">boolean isIdle()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dbc/FaderUtil_8java_source.html#l00099">FaderUtil.java:99</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1FaderUtil_html_ad4e3a03c9fe8a98f6dd532f577c36330"><div class="ttname"><a href="../../d4/d3e/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1FaderUtil.html#ad4e3a03c9fe8a98f6dd532f577c36330">com.fs.starfarer.api.util.FaderUtil.getBrightness</a></div><div class="ttdeci">float getBrightness()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dbc/FaderUtil_8java_source.html#l00145">FaderUtil.java:145</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a25f27c690b450a0ccaf9f65253729910" name="a25f27c690b450a0ccaf9f65253729910"></a>
@@ -618,11 +526,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/dbc/FaderUtil_8java_source.html#l00083">83</a> of file <a class="el" href="../../d0/dbc/FaderUtil_8java_source.html">FaderUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   83</span>                                {</div>
-<div class="line"><span class="lineno">   84</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../d4/d3e/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1FaderUtil.html#ad4e3a03c9fe8a98f6dd532f577c36330">getBrightness</a>() == 0 &amp;&amp; (<a class="code hl_function" href="../../d4/d3e/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1FaderUtil.html#a988a6e121cb9f859c3788267b917726c">isIdle</a>() || <a class="code hl_function" href="../../d4/d3e/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1FaderUtil.html#a685856e515eadc82b036f7f6a2700c59">isFadingOut</a>());</div>
-<div class="line"><span class="lineno">   85</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1FaderUtil_html_a685856e515eadc82b036f7f6a2700c59"><div class="ttname"><a href="../../d4/d3e/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1FaderUtil.html#a685856e515eadc82b036f7f6a2700c59">com.fs.starfarer.api.util.FaderUtil.isFadingOut</a></div><div class="ttdeci">boolean isFadingOut()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dbc/FaderUtil_8java_source.html#l00091">FaderUtil.java:91</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a7075bfc915f5d8a0e53125f38e47bfcc" name="a7075bfc915f5d8a0e53125f38e47bfcc"></a>
@@ -641,10 +545,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/dbc/FaderUtil_8java_source.html#l00095">95</a> of file <a class="el" href="../../d0/dbc/FaderUtil_8java_source.html">FaderUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   95</span>                                {</div>
-<div class="line"><span class="lineno">   96</span>        <span class="keywordflow">return</span> state == State.IN;</div>
-<div class="line"><span class="lineno">   97</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a685856e515eadc82b036f7f6a2700c59" name="a685856e515eadc82b036f7f6a2700c59"></a>
@@ -663,10 +564,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/dbc/FaderUtil_8java_source.html#l00091">91</a> of file <a class="el" href="../../d0/dbc/FaderUtil_8java_source.html">FaderUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   91</span>                                 {</div>
-<div class="line"><span class="lineno">   92</span>        <span class="keywordflow">return</span> state == State.OUT;</div>
-<div class="line"><span class="lineno">   93</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a988a6e121cb9f859c3788267b917726c" name="a988a6e121cb9f859c3788267b917726c"></a>
@@ -685,10 +583,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/dbc/FaderUtil_8java_source.html#l00099">99</a> of file <a class="el" href="../../d0/dbc/FaderUtil_8java_source.html">FaderUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   99</span>                            {</div>
-<div class="line"><span class="lineno">  100</span>        <span class="keywordflow">return</span> state == State.IDLE;</div>
-<div class="line"><span class="lineno">  101</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="afcfa8f23c97769aed784071b94a8b843" name="afcfa8f23c97769aed784071b94a8b843"></a>
@@ -718,11 +613,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/dbc/FaderUtil_8java_source.html#l00050">50</a> of file <a class="el" href="../../d0/dbc/FaderUtil_8java_source.html">FaderUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   50</span>                                                    {</div>
-<div class="line"><span class="lineno">   51</span>        this.bounceUp = up;</div>
-<div class="line"><span class="lineno">   52</span>        this.bounceDown = down;</div>
-<div class="line"><span class="lineno">   53</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a6f31c76c98dc7cb75a7ead321f82cb2a" name="a6f31c76c98dc7cb75a7ead321f82cb2a"></a>
@@ -742,10 +633,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/dbc/FaderUtil_8java_source.html#l00042">42</a> of file <a class="el" href="../../d0/dbc/FaderUtil_8java_source.html">FaderUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   42</span>                                                  {</div>
-<div class="line"><span class="lineno">   43</span>        this.bounceDown = bounceDown;</div>
-<div class="line"><span class="lineno">   44</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a34b7f4566aaf21141a66168c11c249fd" name="a34b7f4566aaf21141a66168c11c249fd"></a>
@@ -765,10 +653,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/dbc/FaderUtil_8java_source.html#l00046">46</a> of file <a class="el" href="../../d0/dbc/FaderUtil_8java_source.html">FaderUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   46</span>                                              {</div>
-<div class="line"><span class="lineno">   47</span>        this.bounceUp = bounceUp;</div>
-<div class="line"><span class="lineno">   48</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="abac607595c3e601d3694b6a48eebe88a" name="abac607595c3e601d3694b6a48eebe88a"></a>
@@ -788,10 +673,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/dbc/FaderUtil_8java_source.html#l00157">157</a> of file <a class="el" href="../../d0/dbc/FaderUtil_8java_source.html">FaderUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  157</span>                                                {</div>
-<div class="line"><span class="lineno">  158</span>        this.currBrightness = brightness;</div>
-<div class="line"><span class="lineno">  159</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a998d186b53216cee5f60c6857511c79e" name="a998d186b53216cee5f60c6857511c79e"></a>
@@ -821,12 +703,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/dbc/FaderUtil_8java_source.html#l00139">139</a> of file <a class="el" href="../../d0/dbc/FaderUtil_8java_source.html">FaderUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  139</span>                                                      {</div>
-<div class="line"><span class="lineno">  140</span>        this.durationIn = in;</div>
-<div class="line"><span class="lineno">  141</span>        this.durationOut = out;</div>
-<div class="line"><span class="lineno">  142</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">  143</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="adcd5a70ea1ee97ece6248c5b0a5c3032" name="adcd5a70ea1ee97ece6248c5b0a5c3032"></a>
@@ -846,10 +723,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/dbc/FaderUtil_8java_source.html#l00131">131</a> of file <a class="el" href="../../d0/dbc/FaderUtil_8java_source.html">FaderUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  131</span>                                                {</div>
-<div class="line"><span class="lineno">  132</span>        this.durationIn = durationIn;</div>
-<div class="line"><span class="lineno">  133</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="abe76628386afa0d5432e46ada2ad59c1" name="abe76628386afa0d5432e46ada2ad59c1"></a>
@@ -869,10 +743,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/dbc/FaderUtil_8java_source.html#l00135">135</a> of file <a class="el" href="../../d0/dbc/FaderUtil_8java_source.html">FaderUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  135</span>                                                  {</div>
-<div class="line"><span class="lineno">  136</span>        this.durationOut = durationOut;</div>
-<div class="line"><span class="lineno">  137</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a460cb47ced1d06aaa10ec130147d8fac" name="a460cb47ced1d06aaa10ec130147d8fac"></a>
@@ -892,10 +763,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/dbc/FaderUtil_8java_source.html#l00038">38</a> of file <a class="el" href="../../d0/dbc/FaderUtil_8java_source.html">FaderUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   38</span>                                      {</div>
-<div class="line"><span class="lineno">   39</span>        this.state = state;</div>
-<div class="line"><span class="lineno">   40</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aadb5ae782faeb7125e4d5f9b595f5050" name="aadb5ae782faeb7125e4d5f9b595f5050"></a>
@@ -914,12 +782,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/dbc/FaderUtil_8java_source.html#l00162">162</a> of file <a class="el" href="../../d0/dbc/FaderUtil_8java_source.html">FaderUtil.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  162</span>                             {</div>
-<div class="line"><span class="lineno">  163</span>        <span class="keywordflow">return</span> String.format(<span class="stringliteral">&quot;%s, curr: %f, in: %f, out: %f, up: %b, down: %b&quot;</span>, state.name(), </div>
-<div class="line"><span class="lineno">  164</span>                             currBrightness, durationIn, durationOut,</div>
-<div class="line"><span class="lineno">  165</span>                             bounceUp, bounceDown);</div>
-<div class="line"><span class="lineno">  166</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

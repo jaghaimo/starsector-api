@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -243,23 +244,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/d64/StarSystemActivityTracker_8java_source.html#l00028">28</a> of file <a class="el" href="../../de/d64/StarSystemActivityTracker_8java_source.html">StarSystemActivityTracker.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   28</span>                                                           {</div>
-<div class="line"><span class="lineno">   29</span>        super(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   30</span>        </div>
-<div class="line"><span class="lineno">   31</span>        this.system = system;</div>
-<div class="line"><span class="lineno">   32</span>        </div>
-<div class="line"><span class="lineno">   33</span>        points = <span class="keyword">new</span> RollingAverageTracker(econInterval - Math.min(econInterval * 0.5f, 2f),</div>
-<div class="line"><span class="lineno">   34</span>                                           econInterval +  - Math.min(econInterval * 0.5f, 2f),</div>
-<div class="line"><span class="lineno">   35</span>                                           <a class="code hl_variable" href="../../d1/df4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1StarSystemActivityTracker.html#aa4b428d78b6344a647defa1b64cb342f">ROLLING_AVG_FACTOR</a>);</div>
-<div class="line"><span class="lineno">   36</span>        fleets = <span class="keyword">new</span> RollingAverageTracker(econInterval - Math.min(econInterval * 0.5f, 2f),</div>
-<div class="line"><span class="lineno">   37</span>                                           econInterval +  - Math.min(econInterval * 0.5f, 2f),</div>
-<div class="line"><span class="lineno">   38</span>                                           <a class="code hl_variable" href="../../d1/df4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1StarSystemActivityTracker.html#aa4b428d78b6344a647defa1b64cb342f">ROLLING_AVG_FACTOR</a>);</div>
-<div class="line"><span class="lineno">   39</span>        ships = <span class="keyword">new</span> RollingAverageTracker(econInterval - Math.min(econInterval * 0.5f, 2f),</div>
-<div class="line"><span class="lineno">   40</span>                                           econInterval +  - Math.min(econInterval * 0.5f, 2f),</div>
-<div class="line"><span class="lineno">   41</span>                                           <a class="code hl_variable" href="../../d1/df4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1StarSystemActivityTracker.html#aa4b428d78b6344a647defa1b64cb342f">ROLLING_AVG_FACTOR</a>);</div>
-<div class="line"><span class="lineno">   42</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1StarSystemActivityTracker_html_aa4b428d78b6344a647defa1b64cb342f"><div class="ttname"><a href="../../d1/df4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1StarSystemActivityTracker.html#aa4b428d78b6344a647defa1b64cb342f">com.fs.starfarer.api.impl.campaign.shared.StarSystemActivityTracker.ROLLING_AVG_FACTOR</a></div><div class="ttdeci">static final float ROLLING_AVG_FACTOR</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d64/StarSystemActivityTracker_8java_source.html#l00018">StarSystemActivityTracker.java:18</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -280,47 +265,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/d64/StarSystemActivityTracker_8java_source.html#l00053">53</a> of file <a class="el" href="../../de/d64/StarSystemActivityTracker_8java_source.html">StarSystemActivityTracker.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   53</span>                                    {</div>
-<div class="line"><span class="lineno">   54</span>        seen.<a class="code hl_function" href="../../dd/df5/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTracker.html#a841c73d428617df86cca633e7640f439">advance</a>(days);</div>
-<div class="line"><span class="lineno">   55</span>        </div>
-<div class="line"><span class="lineno">   56</span>        timer.<a class="code hl_function" href="../../da/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html#a61881d44415cda2c50c3354c3f0a4d8a">advance</a>(days);</div>
-<div class="line"><span class="lineno">   57</span>        <span class="keywordflow">if</span> (timer.intervalElapsed()) {</div>
-<div class="line"><span class="lineno">   58</span>            <span class="keywordflow">for</span> (CampaignFleetAPI fleet : system.<a class="code hl_function" href="../../d2/d2c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI.html#af3a8e070e561639b6e96be1f5ba6813a">getFleets</a>()) {</div>
-<div class="line"><span class="lineno">   59</span>                <span class="keywordflow">if</span> (!seen.<a class="code hl_function" href="../../dd/df5/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTracker.html#ab246103a8a3f46bc7645f1647f32393b">contains</a>(fleet.getId())) {</div>
-<div class="line"><span class="lineno">   60</span>                    seen.set(fleet.getId(), econInterval);</div>
-<div class="line"><span class="lineno">   61</span>                    </div>
-<div class="line"><span class="lineno">   62</span>                    points.<a class="code hl_function" href="../../db/d9c/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1RollingAverageTracker.html#a829eb15e6e02da6bf2ab8888205cd942">add</a>(fleet.getFleetPoints());</div>
-<div class="line"><span class="lineno">   63</span>                    ships.<a class="code hl_function" href="../../db/d9c/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1RollingAverageTracker.html#a829eb15e6e02da6bf2ab8888205cd942">add</a>(fleet.getFleetData().getMembersListCopy().size());</div>
-<div class="line"><span class="lineno">   64</span>                    fleets.<a class="code hl_function" href="../../db/d9c/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1RollingAverageTracker.html#a829eb15e6e02da6bf2ab8888205cd942">add</a>(1);</div>
-<div class="line"><span class="lineno">   65</span>                }</div>
-<div class="line"><span class="lineno">   66</span>            }</div>
-<div class="line"><span class="lineno">   67</span>            </div>
-<div class="line"><span class="lineno">   68</span>            <span class="keywordflow">for</span> (CampaignFleetAPI fleet : Global.getSector().getHyperspace().getFleets()) {</div>
-<div class="line"><span class="lineno">   69</span>                <span class="keywordtype">float</span> dist = Misc.getDistance(fleet.getLocation(), system.<a class="code hl_function" href="../../db/d13/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1StarSystemAPI.html#a4cdf8b453574fe106175da4d5a0f90a7">getLocation</a>());</div>
-<div class="line"><span class="lineno">   70</span>                <span class="comment">//if (!seen.contains(fleet) &amp;&amp; dist &lt; 1000) {</span></div>
-<div class="line"><span class="lineno">   71</span>                <span class="keywordflow">if</span> (!seen.<a class="code hl_function" href="../../dd/df5/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTracker.html#ab246103a8a3f46bc7645f1647f32393b">contains</a>(fleet.getId()) &amp;&amp; dist &lt; Global.getSettings().getFloat(<span class="stringliteral">&quot;commRelayRangeAroundSystem&quot;</span>)) {</div>
-<div class="line"><span class="lineno">   72</span>                    seen.set(fleet.getId(), econInterval);</div>
-<div class="line"><span class="lineno">   73</span>                    </div>
-<div class="line"><span class="lineno">   74</span>                    points.<a class="code hl_function" href="../../db/d9c/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1RollingAverageTracker.html#a829eb15e6e02da6bf2ab8888205cd942">add</a>(fleet.getFleetPoints());</div>
-<div class="line"><span class="lineno">   75</span>                    ships.<a class="code hl_function" href="../../db/d9c/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1RollingAverageTracker.html#a829eb15e6e02da6bf2ab8888205cd942">add</a>(fleet.getFleetData().getMembersListCopy().size());</div>
-<div class="line"><span class="lineno">   76</span>                    fleets.<a class="code hl_function" href="../../db/d9c/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1RollingAverageTracker.html#a829eb15e6e02da6bf2ab8888205cd942">add</a>(1);</div>
-<div class="line"><span class="lineno">   77</span>                }</div>
-<div class="line"><span class="lineno">   78</span>            }</div>
-<div class="line"><span class="lineno">   79</span>        }</div>
-<div class="line"><span class="lineno">   80</span> </div>
-<div class="line"><span class="lineno">   81</span>        points.<a class="code hl_function" href="../../db/d9c/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1RollingAverageTracker.html#aca85705bef0c7b5e051d80f4fd841718">advance</a>(days);</div>
-<div class="line"><span class="lineno">   82</span>        fleets.<a class="code hl_function" href="../../db/d9c/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1RollingAverageTracker.html#aca85705bef0c7b5e051d80f4fd841718">advance</a>(days);</div>
-<div class="line"><span class="lineno">   83</span>        ships.<a class="code hl_function" href="../../db/d9c/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1RollingAverageTracker.html#aca85705bef0c7b5e051d80f4fd841718">advance</a>(days);</div>
-<div class="line"><span class="lineno">   84</span> </div>
-<div class="line"><span class="lineno">   85</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil_html_a61881d44415cda2c50c3354c3f0a4d8a"><div class="ttname"><a href="../../da/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html#a61881d44415cda2c50c3354c3f0a4d8a">com.fs.starfarer.api.util.IntervalUtil.advance</a></div><div class="ttdeci">void advance(float amount)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de3/IntervalUtil_8java_source.html#l00039">IntervalUtil.java:39</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1RollingAverageTracker_html_a829eb15e6e02da6bf2ab8888205cd942"><div class="ttname"><a href="../../db/d9c/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1RollingAverageTracker.html#a829eb15e6e02da6bf2ab8888205cd942">com.fs.starfarer.api.util.RollingAverageTracker.add</a></div><div class="ttdeci">void add(float val)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d1f/RollingAverageTracker_8java_source.html#l00045">RollingAverageTracker.java:45</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1RollingAverageTracker_html_aca85705bef0c7b5e051d80f4fd841718"><div class="ttname"><a href="../../db/d9c/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1RollingAverageTracker.html#aca85705bef0c7b5e051d80f4fd841718">com.fs.starfarer.api.util.RollingAverageTracker.advance</a></div><div class="ttdeci">void advance(float amount)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d1f/RollingAverageTracker_8java_source.html#l00016">RollingAverageTracker.java:16</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTracker_html_a841c73d428617df86cca633e7640f439"><div class="ttname"><a href="../../dd/df5/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTracker.html#a841c73d428617df86cca633e7640f439">com.fs.starfarer.api.util.TimeoutTracker.advance</a></div><div class="ttdeci">void advance(float amount)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dcf/TimeoutTracker_8java_source.html#l00093">TimeoutTracker.java:93</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTracker_html_ab246103a8a3f46bc7645f1647f32393b"><div class="ttname"><a href="../../dd/df5/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTracker.html#ab246103a8a3f46bc7645f1647f32393b">com.fs.starfarer.api.util.TimeoutTracker.contains</a></div><div class="ttdeci">boolean contains(T item)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dcf/TimeoutTracker_8java_source.html#l00108">TimeoutTracker.java:108</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI_html_af3a8e070e561639b6e96be1f5ba6813a"><div class="ttname"><a href="../../d2/d2c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI.html#af3a8e070e561639b6e96be1f5ba6813a">com.fs.starfarer.api.campaign.LocationAPI.getFleets</a></div><div class="ttdeci">List&lt; CampaignFleetAPI &gt; getFleets()</div></div>
-<div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1StarSystemAPI_html_a4cdf8b453574fe106175da4d5a0f90a7"><div class="ttname"><a href="../../db/d13/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1StarSystemAPI.html#a4cdf8b453574fe106175da4d5a0f90a7">com.fs.starfarer.api.campaign.StarSystemAPI.getLocation</a></div><div class="ttdeci">Vector2f getLocation()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af84a118f0d7835bd0dd5ae1466db4842" name="af84a118f0d7835bd0dd5ae1466db4842"></a>
@@ -339,11 +284,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/d64/StarSystemActivityTracker_8java_source.html#l00097">97</a> of file <a class="el" href="../../de/d64/StarSystemActivityTracker_8java_source.html">StarSystemActivityTracker.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   97</span>                                 {</div>
-<div class="line"><span class="lineno">   98</span>        <span class="keywordflow">return</span> fleets.<a class="code hl_function" href="../../db/d9c/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1RollingAverageTracker.html#adaba8f1aad59223979308c6db238fe3a">getAverage</a>();</div>
-<div class="line"><span class="lineno">   99</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1util_1_1RollingAverageTracker_html_adaba8f1aad59223979308c6db238fe3a"><div class="ttname"><a href="../../db/d9c/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1RollingAverageTracker.html#adaba8f1aad59223979308c6db238fe3a">com.fs.starfarer.api.util.RollingAverageTracker.getAverage</a></div><div class="ttdeci">float getAverage()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d1f/RollingAverageTracker_8java_source.html#l00036">RollingAverageTracker.java:36</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a50d70e3ad93a4d36c2e7cc8c734ab0ba" name="a50d70e3ad93a4d36c2e7cc8c734ab0ba"></a>
@@ -362,10 +303,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/d64/StarSystemActivityTracker_8java_source.html#l00093">93</a> of file <a class="el" href="../../de/d64/StarSystemActivityTracker_8java_source.html">StarSystemActivityTracker.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   93</span>                                 {</div>
-<div class="line"><span class="lineno">   94</span>        <span class="keywordflow">return</span> points.<a class="code hl_function" href="../../db/d9c/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1RollingAverageTracker.html#adaba8f1aad59223979308c6db238fe3a">getAverage</a>();</div>
-<div class="line"><span class="lineno">   95</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a082adbc97c720db135e609fbabc1f4ae" name="a082adbc97c720db135e609fbabc1f4ae"></a>
@@ -384,10 +322,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/d64/StarSystemActivityTracker_8java_source.html#l00101">101</a> of file <a class="el" href="../../de/d64/StarSystemActivityTracker_8java_source.html">StarSystemActivityTracker.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  101</span>                                {</div>
-<div class="line"><span class="lineno">  102</span>        <span class="keywordflow">return</span> ships.<a class="code hl_function" href="../../db/d9c/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1RollingAverageTracker.html#adaba8f1aad59223979308c6db238fe3a">getAverage</a>();</div>
-<div class="line"><span class="lineno">  103</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab801f7ef2ab2486520a4a2e3113325f7" name="ab801f7ef2ab2486520a4a2e3113325f7"></a>
@@ -406,10 +341,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/d64/StarSystemActivityTracker_8java_source.html#l00089">89</a> of file <a class="el" href="../../de/d64/StarSystemActivityTracker_8java_source.html">StarSystemActivityTracker.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   89</span>                                     {</div>
-<div class="line"><span class="lineno">   90</span>        <span class="keywordflow">return</span> system;</div>
-<div class="line"><span class="lineno">   91</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="abb72f64f9ae186d075cc3cd1ae07dab6" name="abb72f64f9ae186d075cc3cd1ae07dab6"></a>
@@ -448,30 +380,7 @@ Static Public Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/d6b/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BaseCampaignEventListener.html#a6c5ef40ec180f154d38d1e60f0d6df60">com.fs.starfarer.api.campaign.BaseCampaignEventListener</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../de/d64/StarSystemActivityTracker_8java_source.html#l00106">106</a> of file <a class="el" href="../../de/d64/StarSystemActivityTracker_8java_source.html">StarSystemActivityTracker.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  106</span>                                                                                       {</div>
-<div class="line"><span class="lineno">  107</span> </div>
-<div class="line"><span class="lineno">  108</span><span class="comment">//      if (!primaryWinner.isInOrNearSystem(system)) return;</span></div>
-<div class="line"><span class="lineno">  109</span><span class="comment">//      </span></div>
-<div class="line"><span class="lineno">  110</span><span class="comment">//      int minSize = 4;</span></div>
-<div class="line"><span class="lineno">  111</span><span class="comment">//      </span></div>
-<div class="line"><span class="lineno">  112</span><span class="comment">//      //for (MarketAPI market : Global.getSector().getEconomy().getMarketsCopy()) {</span></div>
-<div class="line"><span class="lineno">  113</span><span class="comment">//      for (MarketAPI market : Misc.getMarketsInLocation(system)) {</span></div>
-<div class="line"><span class="lineno">  114</span><span class="comment">//          if (market.getSize() &lt; minSize) continue;</span></div>
-<div class="line"><span class="lineno">  115</span><span class="comment">//          </span></div>
-<div class="line"><span class="lineno">  116</span><span class="comment">//          if (market.getFaction().getCustom().optBoolean(Factions.CUSTOM_POSTS_NO_BOUNTIES)) {</span></div>
-<div class="line"><span class="lineno">  117</span><span class="comment">//              continue;</span></div>
-<div class="line"><span class="lineno">  118</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">  119</span><span class="comment">//          </span></div>
-<div class="line"><span class="lineno">  120</span><span class="comment">//          for (CampaignFleetAPI winner : battle.getSnapshotSideFor(primaryWinner)) {</span></div>
-<div class="line"><span class="lineno">  121</span><span class="comment">//              increaseBountyProbability(winner, market);</span></div>
-<div class="line"><span class="lineno">  122</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">  123</span><span class="comment">//          </span></div>
-<div class="line"><span class="lineno">  124</span><span class="comment">//          for (CampaignFleetAPI loser : battle.getOtherSideSnapshotFor(primaryWinner)) {</span></div>
-<div class="line"><span class="lineno">  125</span><span class="comment">//              increaseBountyProbability(loser, market);</span></div>
-<div class="line"><span class="lineno">  126</span><span class="comment">//          }</span></div>
-<div class="line"><span class="lineno">  127</span><span class="comment">//      }</span></div>
-<div class="line"><span class="lineno">  128</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

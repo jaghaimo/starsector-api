@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -205,16 +206,7 @@ Static Public Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/d6f/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1BaseIndustryOptionProvider.html#a6d7aed5dcd8812e5f522374081846c02">com.fs.starfarer.api.campaign.listeners.BaseIndustryOptionProvider</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/dbe/TestIndustryOptionProvider_8java_source.html#l00162">162</a> of file <a class="el" href="../../d9/dbe/TestIndustryOptionProvider_8java_source.html">TestIndustryOptionProvider.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  162</span>                                                                                                                                     {</div>
-<div class="line"><span class="lineno">  163</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d7/d41/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1TestIndustryOptionProvider.html#ad1d21d3826a991b751798d2fb35df338">getIndustryOptions</a>(ind) == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  164</span>        </div>
-<div class="line"><span class="lineno">  165</span>        <span class="keywordtype">float</span> opad = 10f;</div>
-<div class="line"><span class="lineno">  166</span>        tooltip.addSectionHeading(<span class="stringliteral">&quot;TestIndustryOptionProvider&quot;</span>, Alignment.MID, opad);</div>
-<div class="line"><span class="lineno">  167</span>        tooltip.addPara(<span class="stringliteral">&quot;Information about changes made to the this industry by &quot;</span></div>
-<div class="line"><span class="lineno">  168</span>                + <span class="stringliteral">&quot;any of the custom options would go here.&quot;</span>, opad);</div>
-<div class="line"><span class="lineno">  169</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1TestIndustryOptionProvider_html_ad1d21d3826a991b751798d2fb35df338"><div class="ttname"><a href="../../d7/d41/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1TestIndustryOptionProvider.html#ad1d21d3826a991b751798d2fb35df338">com.fs.starfarer.api.campaign.listeners.TestIndustryOptionProvider.getIndustryOptions</a></div><div class="ttdeci">List&lt; IndustryOptionData &gt; getIndustryOptions(Industry ind)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dbe/TestIndustryOptionProvider_8java_source.html#l00035">TestIndustryOptionProvider.java:35</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aed64e4ad5e2c91d338766bf4f73edc62" name="aed64e4ad5e2c91d338766bf4f73edc62"></a>
@@ -252,33 +244,7 @@ Static Public Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/d6f/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1BaseIndustryOptionProvider.html#a557b6937977b1ff59d5100f00a627846">com.fs.starfarer.api.campaign.listeners.BaseIndustryOptionProvider</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/dbe/TestIndustryOptionProvider_8java_source.html#l00073">73</a> of file <a class="el" href="../../d9/dbe/TestIndustryOptionProvider_8java_source.html">TestIndustryOptionProvider.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   73</span>                                                                                            {</div>
-<div class="line"><span class="lineno">   74</span>        <span class="keywordflow">if</span> (opt.id == <a class="code hl_variable" href="../../d7/d41/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1TestIndustryOptionProvider.html#aae9c44136da1aa0bdae6049fc6ddf4b5">INTERACTION_PLUGIN</a>) {</div>
-<div class="line"><span class="lineno">   75</span>            tooltip.addPara(<span class="stringliteral">&quot;This option shows a standard interaction dialog with a custom plugin. &quot;</span></div>
-<div class="line"><span class="lineno">   76</span>                    + <span class="stringliteral">&quot;In this case, the dialog used is the PlanetInteractionDialogPluginImpl,&quot;</span></div>
-<div class="line"><span class="lineno">   77</span>                    + <span class="stringliteral">&quot; with Corvus - the star - as the target.&quot;</span>, 0f);</div>
-<div class="line"><span class="lineno">   78</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (opt.id == <a class="code hl_variable" href="../../d7/d41/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1TestIndustryOptionProvider.html#ae6f65122e67aaed1f1ecf090b509d100">INTERACTION_TRIGGER</a>) {</div>
-<div class="line"><span class="lineno">   79</span>            tooltip.addPara(<span class="stringliteral">&quot;This option shows a rule-driven interaction dialog. In this case, &quot;</span></div>
-<div class="line"><span class="lineno">   80</span>                    + <span class="stringliteral">&quot;the dialog targets the Asharu Terraforming Platform and fires the &quot;</span></div>
-<div class="line"><span class="lineno">   81</span>                    + <span class="stringliteral">&quot;OpenInteractionDialog trigger to start the interaction.&quot;</span>, 0f);</div>
-<div class="line"><span class="lineno">   82</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (opt.id == <a class="code hl_variable" href="../../d7/d41/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1TestIndustryOptionProvider.html#a31ed4bd8fc556e5928dea19a05987e41">CUSTOM_PLUGIN</a>) {</div>
-<div class="line"><span class="lineno">   83</span>            tooltip.addPara(<span class="stringliteral">&quot;This option shows a custom dialog driven by a CustomDialogDelegate implementation.&quot;</span>, 0f);</div>
-<div class="line"><span class="lineno">   84</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (opt.id == <a class="code hl_variable" href="../../d7/d41/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1TestIndustryOptionProvider.html#afdaab5105b83fd30a14f6cefd1c65926">STORY_ACTION</a>) {</div>
-<div class="line"><span class="lineno">   85</span>            tooltip.addPara(<span class="stringliteral">&quot;This option brings up a dialog where the player may spend some number &quot;</span></div>
-<div class="line"><span class="lineno">   86</span>                    + <span class="stringliteral">&quot;of story points to perform an action, and possibly receive bonus experience.&quot;</span>, 0f);</div>
-<div class="line"><span class="lineno">   87</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (opt.id == <a class="code hl_variable" href="../../d7/d41/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1TestIndustryOptionProvider.html#aa8d73a71644529e1c2e5fe0836b59f54">IMMEDIATE_ACTION</a>) {</div>
-<div class="line"><span class="lineno">   88</span>            tooltip.addPara(<span class="stringliteral">&quot;This option will not show a dialog but instead prints some text to standard out.&quot;</span>, 0f);</div>
-<div class="line"><span class="lineno">   89</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (opt.id == <a class="code hl_variable" href="../../d7/d41/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1TestIndustryOptionProvider.html#a5243391ac7a8a2b3608d5e8ab24531f3">DISABLED_OPTION</a>) {</div>
-<div class="line"><span class="lineno">   90</span>            tooltip.addPara(<span class="stringliteral">&quot;This option is disabled.&quot;</span>, 0f);</div>
-<div class="line"><span class="lineno">   91</span>        }</div>
-<div class="line"><span class="lineno">   92</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1TestIndustryOptionProvider_html_a31ed4bd8fc556e5928dea19a05987e41"><div class="ttname"><a href="../../d7/d41/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1TestIndustryOptionProvider.html#a31ed4bd8fc556e5928dea19a05987e41">com.fs.starfarer.api.campaign.listeners.TestIndustryOptionProvider.CUSTOM_PLUGIN</a></div><div class="ttdeci">static Object CUSTOM_PLUGIN</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dbe/TestIndustryOptionProvider_8java_source.html#l00029">TestIndustryOptionProvider.java:29</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1TestIndustryOptionProvider_html_a5243391ac7a8a2b3608d5e8ab24531f3"><div class="ttname"><a href="../../d7/d41/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1TestIndustryOptionProvider.html#a5243391ac7a8a2b3608d5e8ab24531f3">com.fs.starfarer.api.campaign.listeners.TestIndustryOptionProvider.DISABLED_OPTION</a></div><div class="ttdeci">static Object DISABLED_OPTION</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dbe/TestIndustryOptionProvider_8java_source.html#l00032">TestIndustryOptionProvider.java:32</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1TestIndustryOptionProvider_html_aa8d73a71644529e1c2e5fe0836b59f54"><div class="ttname"><a href="../../d7/d41/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1TestIndustryOptionProvider.html#aa8d73a71644529e1c2e5fe0836b59f54">com.fs.starfarer.api.campaign.listeners.TestIndustryOptionProvider.IMMEDIATE_ACTION</a></div><div class="ttdeci">static Object IMMEDIATE_ACTION</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dbe/TestIndustryOptionProvider_8java_source.html#l00031">TestIndustryOptionProvider.java:31</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1TestIndustryOptionProvider_html_aae9c44136da1aa0bdae6049fc6ddf4b5"><div class="ttname"><a href="../../d7/d41/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1TestIndustryOptionProvider.html#aae9c44136da1aa0bdae6049fc6ddf4b5">com.fs.starfarer.api.campaign.listeners.TestIndustryOptionProvider.INTERACTION_PLUGIN</a></div><div class="ttdeci">static Object INTERACTION_PLUGIN</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dbe/TestIndustryOptionProvider_8java_source.html#l00027">TestIndustryOptionProvider.java:27</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1TestIndustryOptionProvider_html_ae6f65122e67aaed1f1ecf090b509d100"><div class="ttname"><a href="../../d7/d41/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1TestIndustryOptionProvider.html#ae6f65122e67aaed1f1ecf090b509d100">com.fs.starfarer.api.campaign.listeners.TestIndustryOptionProvider.INTERACTION_TRIGGER</a></div><div class="ttdeci">static Object INTERACTION_TRIGGER</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dbe/TestIndustryOptionProvider_8java_source.html#l00028">TestIndustryOptionProvider.java:28</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1TestIndustryOptionProvider_html_afdaab5105b83fd30a14f6cefd1c65926"><div class="ttname"><a href="../../d7/d41/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1TestIndustryOptionProvider.html#afdaab5105b83fd30a14f6cefd1c65926">com.fs.starfarer.api.campaign.listeners.TestIndustryOptionProvider.STORY_ACTION</a></div><div class="ttdeci">static Object STORY_ACTION</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dbe/TestIndustryOptionProvider_8java_source.html#l00030">TestIndustryOptionProvider.java:30</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ad1d21d3826a991b751798d2fb35df338" name="ad1d21d3826a991b751798d2fb35df338"></a>
@@ -300,44 +266,7 @@ Static Public Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/d6f/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1BaseIndustryOptionProvider.html#a15e44ca1900c888d8000b04a259996b9">com.fs.starfarer.api.campaign.listeners.BaseIndustryOptionProvider</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/dbe/TestIndustryOptionProvider_8java_source.html#l00035">35</a> of file <a class="el" href="../../d9/dbe/TestIndustryOptionProvider_8java_source.html">TestIndustryOptionProvider.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   35</span>                                                                     {</div>
-<div class="line"><span class="lineno">   36</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d3/d6f/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1BaseIndustryOptionProvider.html#a082dc9f5c8aa72587f8db465177909e6">isUnsuitable</a>(ind, <span class="keyword">false</span>)) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   37</span>        </div>
-<div class="line"><span class="lineno">   38</span>        </div>
-<div class="line"><span class="lineno">   39</span>        <span class="keywordflow">if</span> (ind.getMarket().getId().equals(<span class="stringliteral">&quot;jangala&quot;</span>) &amp;&amp; ind.getId().equals(Industries.POPULATION)) {</div>
-<div class="line"><span class="lineno">   40</span>            </div>
-<div class="line"><span class="lineno">   41</span>            List&lt;IndustryOptionData&gt; result = <span class="keyword">new</span> ArrayList&lt;IndustryOptionData&gt;();</div>
-<div class="line"><span class="lineno">   42</span>            </div>
-<div class="line"><span class="lineno">   43</span>            IndustryOptionData opt = <span class="keyword">new</span> IndustryOptionData(<span class="stringliteral">&quot;Interaction dialog with plugin&quot;</span>, <a class="code hl_variable" href="../../d7/d41/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1TestIndustryOptionProvider.html#aae9c44136da1aa0bdae6049fc6ddf4b5">INTERACTION_PLUGIN</a>, ind, <span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">   44</span>            opt.color = Color.GREEN;</div>
-<div class="line"><span class="lineno">   45</span>            result.add(opt);</div>
-<div class="line"><span class="lineno">   46</span>            </div>
-<div class="line"><span class="lineno">   47</span>            opt = <span class="keyword">new</span> IndustryOptionData(<span class="stringliteral">&quot;Interaction dialog with rule trigger&quot;</span>, <a class="code hl_variable" href="../../d7/d41/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1TestIndustryOptionProvider.html#ae6f65122e67aaed1f1ecf090b509d100">INTERACTION_TRIGGER</a>, ind, <span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">   48</span>            opt.color = Color.MAGENTA;</div>
-<div class="line"><span class="lineno">   49</span>            result.add(opt);</div>
-<div class="line"><span class="lineno">   50</span>            </div>
-<div class="line"><span class="lineno">   51</span>            opt = <span class="keyword">new</span> IndustryOptionData(<span class="stringliteral">&quot;Custom dialog plugin&quot;</span>, <a class="code hl_variable" href="../../d7/d41/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1TestIndustryOptionProvider.html#a31ed4bd8fc556e5928dea19a05987e41">CUSTOM_PLUGIN</a>, ind, <span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">   52</span>            opt.color = Color.ORANGE;</div>
-<div class="line"><span class="lineno">   53</span>            result.add(opt);</div>
-<div class="line"><span class="lineno">   54</span>            </div>
-<div class="line"><span class="lineno">   55</span>            opt = <span class="keyword">new</span> IndustryOptionData(<span class="stringliteral">&quot;Story point action dialog&quot;</span>, <a class="code hl_variable" href="../../d7/d41/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1TestIndustryOptionProvider.html#afdaab5105b83fd30a14f6cefd1c65926">STORY_ACTION</a>, ind, <span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">   56</span>            opt.color = Misc.getStoryOptionColor();</div>
-<div class="line"><span class="lineno">   57</span>            result.add(opt);</div>
-<div class="line"><span class="lineno">   58</span>            </div>
-<div class="line"><span class="lineno">   59</span>            opt = <span class="keyword">new</span> IndustryOptionData(<span class="stringliteral">&quot;Take an immediate action&quot;</span>, <a class="code hl_variable" href="../../d7/d41/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1TestIndustryOptionProvider.html#aa8d73a71644529e1c2e5fe0836b59f54">IMMEDIATE_ACTION</a>, ind, <span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">   60</span>            opt.color = Color.RED;</div>
-<div class="line"><span class="lineno">   61</span>            result.add(opt);</div>
-<div class="line"><span class="lineno">   62</span>            </div>
-<div class="line"><span class="lineno">   63</span>            opt = <span class="keyword">new</span> IndustryOptionData(<span class="stringliteral">&quot;Disabled option&quot;</span>, <a class="code hl_variable" href="../../d7/d41/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1TestIndustryOptionProvider.html#a5243391ac7a8a2b3608d5e8ab24531f3">DISABLED_OPTION</a>, ind, <span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">   64</span>            opt.enabled = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   65</span>            result.add(opt);</div>
-<div class="line"><span class="lineno">   66</span>            </div>
-<div class="line"><span class="lineno">   67</span>            <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">   68</span>        }</div>
-<div class="line"><span class="lineno">   69</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   70</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1BaseIndustryOptionProvider_html_a082dc9f5c8aa72587f8db465177909e6"><div class="ttname"><a href="../../d3/d6f/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1BaseIndustryOptionProvider.html#a082dc9f5c8aa72587f8db465177909e6">com.fs.starfarer.api.campaign.listeners.BaseIndustryOptionProvider.isUnsuitable</a></div><div class="ttdeci">boolean isUnsuitable(Industry ind, boolean allowUnderConstruction)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d6f/BaseIndustryOptionProvider_8java_source.html#l00016">BaseIndustryOptionProvider.java:16</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2c1afb1f00d068033fa314bc03d1d10d" name="a2c1afb1f00d068033fa314bc03d1d10d"></a>
@@ -369,72 +298,7 @@ Static Public Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/d6f/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1BaseIndustryOptionProvider.html#ab9671a79ff30e0ea093856f6ba1e236c">com.fs.starfarer.api.campaign.listeners.BaseIndustryOptionProvider</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/dbe/TestIndustryOptionProvider_8java_source.html#l00095">95</a> of file <a class="el" href="../../d9/dbe/TestIndustryOptionProvider_8java_source.html">TestIndustryOptionProvider.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   95</span>                                                                           {</div>
-<div class="line"><span class="lineno">   96</span>        <span class="keywordflow">if</span> (opt.id == <a class="code hl_variable" href="../../d7/d41/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1TestIndustryOptionProvider.html#aae9c44136da1aa0bdae6049fc6ddf4b5">INTERACTION_PLUGIN</a>) {</div>
-<div class="line"><span class="lineno">   97</span>            PlanetAPI planet = Global.getSector().getStarSystem(<span class="stringliteral">&quot;corvus&quot;</span>).getStar();</div>
-<div class="line"><span class="lineno">   98</span>            PlanetInteractionDialogPluginImpl plugin = <span class="keyword">new</span> PlanetInteractionDialogPluginImpl();</div>
-<div class="line"><span class="lineno">   99</span>            <span class="comment">// unpausing when exiting this dialog makes the outer interaction dialog </span></div>
-<div class="line"><span class="lineno">  100</span>            <span class="comment">// (for the initial interaction with th market) unresponsive</span></div>
-<div class="line"><span class="lineno">  101</span>            <span class="comment">// since this is not a valid thing to do anyway - the game should not be unpaused </span></div>
-<div class="line"><span class="lineno">  102</span>            <span class="comment">// while the market dialog is open - the cause remains uninvestigated -am</span></div>
-<div class="line"><span class="lineno">  103</span>            plugin.setUnpauseOnExit(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  104</span>            ui.showDialog(planet, plugin);</div>
-<div class="line"><span class="lineno">  105</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (opt.id == <a class="code hl_variable" href="../../d7/d41/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1TestIndustryOptionProvider.html#ae6f65122e67aaed1f1ecf090b509d100">INTERACTION_TRIGGER</a>) {</div>
-<div class="line"><span class="lineno">  106</span>            SectorEntityToken station = Global.getSector().getEntityById(<span class="stringliteral">&quot;corvus_abandoned_station&quot;</span>);</div>
-<div class="line"><span class="lineno">  107</span>            ui.showDialog(station, <span class="stringliteral">&quot;OpenInteractionDialog&quot;</span>);</div>
-<div class="line"><span class="lineno">  108</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (opt.id == <a class="code hl_variable" href="../../d7/d41/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1TestIndustryOptionProvider.html#a31ed4bd8fc556e5928dea19a05987e41">CUSTOM_PLUGIN</a>) {</div>
-<div class="line"><span class="lineno">  109</span>            CustomDialogDelegate delegate = <span class="keyword">new</span> BaseCustomDialogDelegate() {</div>
-<div class="line"><span class="lineno">  110</span>                @Override</div>
-<div class="line"><span class="lineno">  111</span>                <span class="keyword">public</span> <span class="keywordtype">void</span> createCustomDialog(CustomPanelAPI panel, CustomDialogCallback callback) {</div>
-<div class="line"><span class="lineno">  112</span>                    TooltipMakerAPI info = panel.createUIElement(800f, 500f, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  113</span>                    info.addPara(<span class="stringliteral">&quot;Minimalistic custom dialog implementation.&quot;</span>, 0f);</div>
-<div class="line"><span class="lineno">  114</span>                    panel.addUIElement(info).inTL(0, 0);</div>
-<div class="line"><span class="lineno">  115</span>                }</div>
-<div class="line"><span class="lineno">  116</span>                </div>
-<div class="line"><span class="lineno">  117</span>                @Override</div>
-<div class="line"><span class="lineno">  118</span>                <span class="keyword">public</span> <span class="keywordtype">boolean</span> hasCancelButton() {</div>
-<div class="line"><span class="lineno">  119</span>                    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  120</span>                }</div>
-<div class="line"><span class="lineno">  121</span> </div>
-<div class="line"><span class="lineno">  122</span>                @Override</div>
-<div class="line"><span class="lineno">  123</span>                <span class="keyword">public</span> <span class="keywordtype">void</span> customDialogConfirm() {</div>
-<div class="line"><span class="lineno">  124</span>                    System.out.println(<span class="stringliteral">&quot;customDialogConfirm() called&quot;</span>);</div>
-<div class="line"><span class="lineno">  125</span>                }</div>
-<div class="line"><span class="lineno">  126</span> </div>
-<div class="line"><span class="lineno">  127</span>                @Override</div>
-<div class="line"><span class="lineno">  128</span>                <span class="keyword">public</span> <span class="keywordtype">void</span> customDialogCancel() {</div>
-<div class="line"><span class="lineno">  129</span>                    System.out.println(<span class="stringliteral">&quot;customDialogCancel() called&quot;</span>);</div>
-<div class="line"><span class="lineno">  130</span>                }</div>
-<div class="line"><span class="lineno">  131</span>            };</div>
-<div class="line"><span class="lineno">  132</span>            ui.showDialog(800f, 500f, delegate);</div>
-<div class="line"><span class="lineno">  133</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (opt.id == <a class="code hl_variable" href="../../d7/d41/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1TestIndustryOptionProvider.html#afdaab5105b83fd30a14f6cefd1c65926">STORY_ACTION</a>) {</div>
-<div class="line"><span class="lineno">  134</span>            StoryOptionParams params = <span class="keyword">new</span> StoryOptionParams(<span class="keyword">null</span>, 1, <span class="stringliteral">&quot;bonusXP_if_any_in_settings.json&quot;</span>, </div>
-<div class="line"><span class="lineno">  135</span>                    Sounds.STORY_POINT_SPEND, </div>
-<div class="line"><span class="lineno">  136</span>                    <span class="stringliteral">&quot;Performed a test action in TestIndustryOptionProvider&quot;</span>);</div>
-<div class="line"><span class="lineno">  137</span>            StoryPointActionDelegate delegate = <span class="keyword">new</span> BaseOptionStoryPointActionDelegate(<span class="keyword">null</span>, params) {</div>
-<div class="line"><span class="lineno">  138</span>                @Override</div>
-<div class="line"><span class="lineno">  139</span>                <span class="keyword">public</span> <span class="keywordtype">void</span> confirm() {</div>
-<div class="line"><span class="lineno">  140</span>                }</div>
-<div class="line"><span class="lineno">  141</span> </div>
-<div class="line"><span class="lineno">  142</span>                @Override</div>
-<div class="line"><span class="lineno">  143</span>                <span class="keyword">public</span> String getTitle() {</div>
-<div class="line"><span class="lineno">  144</span>                    <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  145</span>                }</div>
-<div class="line"><span class="lineno">  146</span>                @Override</div>
-<div class="line"><span class="lineno">  147</span>                <span class="keyword">public</span> <span class="keywordtype">void</span> createDescription(TooltipMakerAPI info) {</div>
-<div class="line"><span class="lineno">  148</span>                    info.setParaInsigniaLarge();</div>
-<div class="line"><span class="lineno">  149</span>                    info.addPara(<span class="stringliteral">&quot;Test action that costs one story point.&quot;</span>, -10f);</div>
-<div class="line"><span class="lineno">  150</span>                    info.addSpacer(20f);</div>
-<div class="line"><span class="lineno">  151</span>                    super.createDescription(info);</div>
-<div class="line"><span class="lineno">  152</span>                }</div>
-<div class="line"><span class="lineno">  153</span>            };</div>
-<div class="line"><span class="lineno">  154</span>            ui.showDialog(delegate);</div>
-<div class="line"><span class="lineno">  155</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (opt.id == <a class="code hl_variable" href="../../d7/d41/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1TestIndustryOptionProvider.html#aa8d73a71644529e1c2e5fe0836b59f54">IMMEDIATE_ACTION</a>) {</div>
-<div class="line"><span class="lineno">  156</span>            System.out.println(<span class="stringliteral">&quot;IMMEDIATE ACTION TAKEN&quot;</span>);</div>
-<div class="line"><span class="lineno">  157</span>        }</div>
-<div class="line"><span class="lineno">  158</span>        </div>
-<div class="line"><span class="lineno">  159</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -174,10 +175,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/d96/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1BaseSensorGhostCreator.html#a3367395827b69c6f4d50d05c45a50fc3">com.fs.starfarer.api.impl.campaign.ghosts.BaseSensorGhostCreator</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d3c/MinnowGhostCreator_8java_source.html#l00053">53</a> of file <a class="el" href="../../d8/d3c/MinnowGhostCreator_8java_source.html">MinnowGhostCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   53</span>                                                           {</div>
-<div class="line"><span class="lineno">   54</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   55</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a731be12de2b200ebccf1103c8f914ad5" name="a731be12de2b200ebccf1103c8f914ad5"></a>
@@ -199,33 +197,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/d96/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1BaseSensorGhostCreator.html#a672d510486f4336ac8ce1b5883b1b228">com.fs.starfarer.api.impl.campaign.ghosts.BaseSensorGhostCreator</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d3c/MinnowGhostCreator_8java_source.html#l00020">20</a> of file <a class="el" href="../../d8/d3c/MinnowGhostCreator_8java_source.html">MinnowGhostCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   20</span>                                                                     {</div>
-<div class="line"><span class="lineno">   21</span>        <span class="keywordflow">if</span> (!Global.getSector().getCurrentLocation().isHyperspace()) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   22</span>        CampaignFleetAPI pf = Global.getSector().getPlayerFleet();</div>
-<div class="line"><span class="lineno">   23</span>        </div>
-<div class="line"><span class="lineno">   24</span>        <span class="comment">// not inside slipstreams, but can be close enough so they occasionally dart in</span></div>
-<div class="line"><span class="lineno">   25</span>        Vector2f loc = <a class="code hl_function" href="../../d3/d96/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1BaseSensorGhostCreator.html#a93ba1c69473d6f5e377bf9e1d94a4d81">findHyperspaceArea</a>(pf.getLocation(), 1500f, 2000f, 1000f, manager.getRandom(), <span class="keyword">true</span>, 250f);</div>
-<div class="line"><span class="lineno">   26</span>        <span class="keywordflow">if</span> (loc == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   27</span>        </div>
-<div class="line"><span class="lineno">   28</span>        SectorEntityToken target = Global.getSector().getHyperspace().createToken(loc); </div>
-<div class="line"><span class="lineno">   29</span>        </div>
-<div class="line"><span class="lineno">   30</span>        <span class="keywordtype">int</span> numMinnows = 5 + manager.getRandom().nextInt(11);</div>
-<div class="line"><span class="lineno">   31</span>        </div>
-<div class="line"><span class="lineno">   32</span>        <span class="keywordtype">float</span> minRange = 100f;</div>
-<div class="line"><span class="lineno">   33</span>        <span class="keywordtype">float</span> maxRange = 500;</div>
-<div class="line"><span class="lineno">   34</span>        <span class="keywordtype">float</span> dur = 5f + manager.getRandom().nextFloat() * 5f;</div>
-<div class="line"><span class="lineno">   35</span>        </div>
-<div class="line"><span class="lineno">   36</span>        SharedTrigger trigger = <span class="keyword">new</span> SharedTrigger();</div>
-<div class="line"><span class="lineno">   37</span>        List&lt;SensorGhost&gt; result = <span class="keyword">new</span> ArrayList&lt;SensorGhost&gt;();</div>
-<div class="line"><span class="lineno">   38</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; numMinnows; i++) {</div>
-<div class="line"><span class="lineno">   39</span>            MinnowGhost m = <span class="keyword">new</span> MinnowGhost(manager, target, minRange, maxRange,</div>
-<div class="line"><span class="lineno">   40</span>                                    dur + manager.getRandom().nextFloat(), trigger);</div>
-<div class="line"><span class="lineno">   41</span>            result.add(m);</div>
-<div class="line"><span class="lineno">   42</span>        }</div>
-<div class="line"><span class="lineno">   43</span>        <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">   44</span>    }</div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1BaseSensorGhostCreator_html_a93ba1c69473d6f5e377bf9e1d94a4d81"><div class="ttname"><a href="../../d3/d96/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1BaseSensorGhostCreator.html#a93ba1c69473d6f5e377bf9e1d94a4d81">com.fs.starfarer.api.impl.campaign.ghosts.BaseSensorGhostCreator.findHyperspaceArea</a></div><div class="ttdeci">static Vector2f findHyperspaceArea(Vector2f from, float minRange, float maxRange, float radius, Random random, boolean clear, float noSlipstreamRange)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d61/BaseSensorGhostCreator_8java_source.html#l00042">BaseSensorGhostCreator.java:42</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aacd1794a894d083e9740a0d57df94e47" name="aacd1794a894d083e9740a0d57df94e47"></a>
@@ -247,11 +219,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/d96/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1BaseSensorGhostCreator.html#a0b8e9e91bdbc699998d02c1013aa936a">com.fs.starfarer.api.impl.campaign.ghosts.BaseSensorGhostCreator</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d3c/MinnowGhostCreator_8java_source.html#l00048">48</a> of file <a class="el" href="../../d8/d3c/MinnowGhostCreator_8java_source.html">MinnowGhostCreator.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   48</span>                                                          {</div>
-<div class="line"><span class="lineno">   49</span>        <span class="keywordflow">return</span> GhostFrequencies.getMinnowFrequency(manager);</div>
-<div class="line"><span class="lineno">   50</span>        <span class="comment">//return 10000f;</span></div>
-<div class="line"><span class="lineno">   51</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
