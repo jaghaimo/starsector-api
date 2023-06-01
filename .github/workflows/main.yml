@@ -23,7 +23,7 @@ jobs:
       with:
         submodules: true
 
-    - uses: mattnotmitt/doxygen-action@v1.9.5
+    - uses: mattnotmitt/doxygen-action@v1
       with:
         # Path to Doxyfile
         doxyfile-path: "./Doxyfile"
