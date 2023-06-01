@@ -1,5 +1,0 @@
-var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BlueprintSpecial =
-[
-    [ "BlueprintSpecialData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1Bluep4b7f02dfb0d0b5ca225476841ed8b0aa.html", null ],
-    [ "SurveyDataSpecialType", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1Bluepr25186ea622ad2a4b09fd22cd877fcc20.html", null ]
-];

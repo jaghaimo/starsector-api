@@ -1,4 +1,0 @@
-var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1EnergyWeaponMastery_1_1EWMDamageDealtMod =
-[
-    [ "modifyDamageDealt", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1EnergyWeaponMastery_1_1EWMDamageDealtMod.html#a3192f92af6ffab146a4976705391c28d", null ]
-];

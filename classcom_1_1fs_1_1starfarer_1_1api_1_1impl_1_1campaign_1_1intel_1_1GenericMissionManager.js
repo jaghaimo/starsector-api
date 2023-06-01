@@ -1,4 +1,0 @@
-var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1GenericMissionManager =
-[
-    [ "GenericMissionCreator", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1GenericMissionManager_1_1GenericMissionCreator.html", null ]
-];

@@ -1,5 +1,0 @@
-var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1SleeperPodsSpecial =
-[
-    [ "SleeperPodsSpecialData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1Sleepa38c8e7ab9fc0b7c6bae4bc719ca64fa.html", null ],
-    [ "SleeperSpecialType", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1Sleepeda3b230931a92445ccb96dc9c928387b.html", null ]
-];

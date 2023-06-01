@@ -1,0 +1,27 @@
+var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarGenDataSpec =
+[
+    [ "StarGenDataSpec", "d1/d71/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarGenDataSpec.html#acbf9e6fd886d5e3b4a4d154b439e7db7", null ],
+    [ "addTag", "d1/d71/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarGenDataSpec.html#adfdadb228fa49fd912ee2d6035508bce", null ],
+    [ "getAge", "d1/d71/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarGenDataSpec.html#aaf9d329a930a1575c7461b9e4192c8c1", null ],
+    [ "getCoronaMin", "d1/d71/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarGenDataSpec.html#a23d673e1a187d03e2be61015ef39f113", null ],
+    [ "getCoronaMult", "d1/d71/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarGenDataSpec.html#a9007204e358977e062d1f698985f9243", null ],
+    [ "getCoronaVar", "d1/d71/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarGenDataSpec.html#a3c5a4e19b2043695fcf2f56a476328aa", null ],
+    [ "getCrLossMult", "d1/d71/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarGenDataSpec.html#a11927b58ca9d73f0f356cd3e77a37371", null ],
+    [ "getFreqAVERAGE", "d1/d71/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarGenDataSpec.html#a51a96c0fbc2986d00475f851214fda9e", null ],
+    [ "getFreqOLD", "d1/d71/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarGenDataSpec.html#acb4e835fcef14ff61fea6b5167460670", null ],
+    [ "getFreqYOUNG", "d1/d71/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarGenDataSpec.html#aa9948d1f10528a24232a90d12a1c0f42", null ],
+    [ "getHabZoneStart", "d1/d71/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarGenDataSpec.html#ac1020e22601eecaea65734ec42b81b81", null ],
+    [ "getId", "d1/d71/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarGenDataSpec.html#a6bb458fef0ad1b7630c8d4543603e677", null ],
+    [ "getLightColorMax", "d1/d71/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarGenDataSpec.html#a7659326f550bdf262486a2387afbac2d", null ],
+    [ "getLightColorMin", "d1/d71/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarGenDataSpec.html#a2dbe5ad859f0d43fc27c59a39c64c416", null ],
+    [ "getMaxFlare", "d1/d71/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarGenDataSpec.html#a193abb8b72949febfab6b7b7018aceb2", null ],
+    [ "getMaxOrbits", "d1/d71/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarGenDataSpec.html#a6bfebdb902cbedf713fa7ac81ea9fea8", null ],
+    [ "getMaxRadius", "d1/d71/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarGenDataSpec.html#aa420c24b06368b71ba456f50700a1dde", null ],
+    [ "getMinFlare", "d1/d71/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarGenDataSpec.html#a39999e7490adbfe80234074abde07274", null ],
+    [ "getMinOrbits", "d1/d71/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarGenDataSpec.html#a9d92acb445fcd2c059d979dbaf8413cf", null ],
+    [ "getMinRadius", "d1/d71/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarGenDataSpec.html#af606c314ed47f537d464cbbe4d8ecd6d", null ],
+    [ "getProbOrbits", "d1/d71/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarGenDataSpec.html#a8865b9e85a8f486c10c831a5b96bb250", null ],
+    [ "getSolarWind", "d1/d71/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarGenDataSpec.html#a0e07e5825c8594fc75d02cfd31543941", null ],
+    [ "getTags", "d1/d71/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarGenDataSpec.html#aefc3f968b99b2fe2e44db239b52ecd3e", null ],
+    [ "hasTag", "d1/d71/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarGenDataSpec.html#a0dd1f34967955ae9b35740778e808403", null ]
+];

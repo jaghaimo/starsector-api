@@ -1,0 +1,20 @@
+var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1FleetLogIntel =
+[
+    [ "FleetLogIntel", "d3/d8c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1FleetLogIntel.html#af273f6e082432b8a009c3a148b7d5c3e", null ],
+    [ "FleetLogIntel", "d3/d8c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1FleetLogIntel.html#a24211dcd093a59a5e8ead3d1ea82bb97", null ],
+    [ "getCommMessageSound", "d3/d8c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1FleetLogIntel.html#a5cfbc543792e25f359268679d2c9d378", null ],
+    [ "getIcon", "d3/d8c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1FleetLogIntel.html#ab5776db3f55d18cefd857913c64b6912", null ],
+    [ "getIntelTags", "d3/d8c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1FleetLogIntel.html#a7c8acdabeda01b79146b4e4269d7b1a1", null ],
+    [ "getRemoveTrigger", "d3/d8c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1FleetLogIntel.html#accbffe9e38941977918764e293967005", null ],
+    [ "getSound", "d3/d8c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1FleetLogIntel.html#a15d7e19cdc7e031dce30fbd1229b4129", null ],
+    [ "setDefaultExpiration", "d3/d8c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1FleetLogIntel.html#af1a4c3918d4c7ed1d538a80b5c84939d", null ],
+    [ "setDuration", "d3/d8c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1FleetLogIntel.html#a80a403fe13532e609fc1dc757c00bf0e", null ],
+    [ "setIcon", "d3/d8c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1FleetLogIntel.html#ac36fed00afa0204a2c5a9d76cd92c573", null ],
+    [ "setRemoveTrigger", "d3/d8c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1FleetLogIntel.html#a8bcbe8569fa1178bc8657ad01762631d", null ],
+    [ "setSound", "d3/d8c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1FleetLogIntel.html#a448762c59b6d59de9c3784850d803c9e", null ],
+    [ "shouldRemoveIntel", "d3/d8c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1FleetLogIntel.html#aaa83e4688caeec2be55047396a307e50", null ],
+    [ "duration", "d3/d8c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1FleetLogIntel.html#a52231e4f8fcff4b8feaea4b3f3e804c5", null ],
+    [ "icon", "d3/d8c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1FleetLogIntel.html#aea252bdaa6b60730bc719759f2571b73", null ],
+    [ "removeTrigger", "d3/d8c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1FleetLogIntel.html#a21be086d5bf71c0eca40e09fc49c2779", null ],
+    [ "sound", "d3/d8c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1FleetLogIntel.html#a250bcbd3943f0d3a484f9a35d1567db2", null ]
+];

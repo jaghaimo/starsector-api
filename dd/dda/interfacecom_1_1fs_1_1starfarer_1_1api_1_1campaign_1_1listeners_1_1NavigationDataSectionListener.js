@@ -1,0 +1,5 @@
+var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1NavigationDataSectionListener =
+[
+    [ "reportNavigationDataSectionAboutToBeCreated", "dd/dda/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1NavigationDataSectionListener.html#a284bb1eac471cb962aab5b571a703c72", null ],
+    [ "reportNavigationDataSectionWasCreated", "dd/dda/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1NavigationDataSectionListener.html#a6b6e2fa63c2b45f37b133fd96a661779", null ]
+];

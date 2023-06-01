@@ -1,4 +1,0 @@
-var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1OmegaOfficerGeneratorPlugin =
-[
-    [ "getHandlingPriority", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1OmegaOfficerGeneratorPlugin.html#a800e9557896aec76880ad6fddbb03ae6", null ]
-];

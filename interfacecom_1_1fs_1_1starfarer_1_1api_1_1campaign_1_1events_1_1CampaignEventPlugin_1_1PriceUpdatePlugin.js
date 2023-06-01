@@ -1,4 +1,0 @@
-var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventPlugin_1_1PriceUpdatePlugin =
-[
-    [ "PriceType", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventPlugin_1_1PriceUpdatePlugin_1_1PriceType.html", null ]
-];

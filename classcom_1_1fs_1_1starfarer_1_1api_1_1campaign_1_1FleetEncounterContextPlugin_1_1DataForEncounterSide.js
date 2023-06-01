@@ -1,5 +1,0 @@
-var classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetEncounterContextPlugin_1_1DataForEncounterSide =
-[
-    [ "OfficerEngagementData", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetEncounterContextPlugin_1_1DataForEncounterSide_1_1OfficerEngagementData.html", null ],
-    [ "getMemberToDeployedMap", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetEncounterContextPlugin_1_1DataForEncounterSide.html#abbae22a3ee9598f78a0bd7c86bc65eb7", null ]
-];

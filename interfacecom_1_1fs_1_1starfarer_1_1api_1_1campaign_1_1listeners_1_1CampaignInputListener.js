@@ -1,4 +1,0 @@
-var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1CampaignInputListener =
-[
-    [ "getListenerInputPriority", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1CampaignInputListener.html#ad3ed73be089f187dcf4a56bbeec625a7", null ]
-];

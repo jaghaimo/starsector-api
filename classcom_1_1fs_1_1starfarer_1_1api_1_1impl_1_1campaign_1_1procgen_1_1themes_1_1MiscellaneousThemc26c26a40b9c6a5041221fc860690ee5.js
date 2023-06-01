@@ -1,6 +1,0 @@
-var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemc26c26a40b9c6a5041221fc860690ee5 =
-[
-    [ "advance", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemc26c26a40b9c6a5041221fc860690ee5.html#abfcfe73554ccd0a9ccbc0b3011ae71cc", null ],
-    [ "isDone", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemc26c26a40b9c6a5041221fc860690ee5.html#ae93db6b4ab7bef172e1d28f58f92aedc", null ],
-    [ "runWhilePaused", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemc26c26a40b9c6a5041221fc860690ee5.html#ace48d29d6a88d981127220e93765ef38", null ]
-];

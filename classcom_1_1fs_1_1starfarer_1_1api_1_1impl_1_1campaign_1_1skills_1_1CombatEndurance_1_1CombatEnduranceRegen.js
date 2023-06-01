@@ -1,4 +1,0 @@
-var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1CombatEndurance_1_1CombatEnduranceRegen =
-[
-    [ "modifyDamageTaken", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1CombatEndurance_1_1CombatEnduranceRegen.html#ac6e7aeb19eb2cfdb16da02f6b9be5054", null ]
-];

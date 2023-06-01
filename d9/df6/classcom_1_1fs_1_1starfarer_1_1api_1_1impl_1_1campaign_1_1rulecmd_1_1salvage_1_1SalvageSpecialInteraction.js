@@ -1,0 +1,4 @@
+var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageSpecialInteraction =
+[
+    [ "execute", "d9/df6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageSpecialInteraction.html#a685e520fdd01dcea6d8221d7970df6b4", null ]
+];

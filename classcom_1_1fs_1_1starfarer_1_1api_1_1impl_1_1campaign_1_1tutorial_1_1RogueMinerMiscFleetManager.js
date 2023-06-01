@@ -1,4 +1,0 @@
-var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1RogueMinerMiscFleetManager =
-[
-    [ "advance", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1RogueMinerMiscFleetManager.html#abd21c8653aea5245e955a483640bd4ab", null ]
-];

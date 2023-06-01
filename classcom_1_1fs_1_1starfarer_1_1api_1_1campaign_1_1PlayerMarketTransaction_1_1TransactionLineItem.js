@@ -1,4 +1,0 @@
-var classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PlayerMarketTransaction_1_1TransactionLineItem =
-[
-    [ "getDemandPrice", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PlayerMarketTransaction_1_1TransactionLineItem.html#a845d375c21c7bf124b11dd5f7e3eefe5", null ]
-];

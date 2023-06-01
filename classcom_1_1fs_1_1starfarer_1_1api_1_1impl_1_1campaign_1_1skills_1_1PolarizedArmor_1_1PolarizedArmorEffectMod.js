@@ -1,4 +1,0 @@
-var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1PolarizedArmor_1_1PolarizedArmorEffectMod =
-[
-    [ "modifyDamageTaken", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1PolarizedArmor_1_1PolarizedArmorEffectMod.html#aded3dac72a6b2016969fe94d122f63ce", null ]
-];

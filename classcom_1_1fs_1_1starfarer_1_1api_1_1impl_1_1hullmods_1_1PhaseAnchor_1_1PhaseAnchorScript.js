@@ -1,4 +1,0 @@
-var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1PhaseAnchor_1_1PhaseAnchorScript =
-[
-    [ "notifyAboutToTakeHullDamage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1PhaseAnchor_1_1PhaseAnchorScript.html#a408298f5c222cc06a634e850662d3ff2", null ]
-];

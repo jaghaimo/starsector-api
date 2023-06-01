@@ -1,19 +1,13 @@
 var searchData=
 [
-  ['uicheckboxsize_0',['UICheckboxSize',['../enumcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1ButtonAPI_1_1UICheckboxSize.html',1,'com::fs::starfarer::api::ui::ButtonAPI']]],
-  ['uicomponentapi_1',['UIComponentAPI',['../interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1UIComponentAPI.html',1,'com::fs::starfarer::api::ui']]],
-  ['uipanelapi_2',['UIPanelAPI',['../interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1UIPanelAPI.html',1,'com::fs::starfarer::api::ui']]],
-  ['underworldcustombounty_3',['UnderworldCustomBounty',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1UnderworldCustomBounty.html',1,'com::fs::starfarer::api::impl::campaign::missions::cb']]],
-  ['unhidecommlisting_4',['UnhideCommListing',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1UnhideCommListing.html',1,'com::fs::starfarer::api::impl::campaign::missions::hub::HubMissionWithTriggers']]],
-  ['unhidegacharacters_5',['UnhideGACharacters',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1academy_1_1UnhideGACharacters.html',1,'com::fs::starfarer::api::impl::campaign::rulecmd::academy']]],
-  ['unhideperson_6',['UnhidePerson',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1UnhidePerson.html',1,'com::fs::starfarer::api::impl::campaign::rulecmd']]],
-  ['uninstallcommsniffer_7',['UninstallCommSniffer',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1UninstallCommSniffer.html',1,'com::fs::starfarer::api::impl::campaign::rulecmd']]],
-  ['unset_8',['unset',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1unset.html',1,'com::fs::starfarer::api::impl::campaign::rulecmd']]],
-  ['unsetall_9',['unsetAll',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1unsetAll.html',1,'com::fs::starfarer::api::impl::campaign::rulecmd']]],
-  ['unsetentityflagsaction_10',['UnsetEntityFlagsAction',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1UnsetEntityFlagsAction.html',1,'com::fs::starfarer::api::impl::campaign::missions::hub::HubMissionWithTriggers']]],
-  ['unsetfleetflagsaction_11',['UnsetFleetFlagsAction',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1UnsetFleetFlagsAction.html',1,'com::fs::starfarer::api::impl::campaign::missions::hub::HubMissionWithTriggers']]],
-  ['unsetfleetflagswithreasonaction_12',['UnsetFleetFlagsWithReasonAction',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg1617441c0612fe285187dd1334fd888a.html',1,'com::fs::starfarer::api::impl::campaign::missions::hub::HubMissionWithTriggers']]],
-  ['updatememory_13',['UpdateMemory',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1UpdateMemory.html',1,'com::fs::starfarer::api::impl::campaign::rulecmd']]],
-  ['urbanizedpolity_14',['UrbanizedPolity',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1UrbanizedPolity.html',1,'com::fs::starfarer::api::impl::campaign::econ']]],
-  ['usecost_15',['UseCost',['../enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1EmergencyBurnAbilityAI_1_1UseCost.html',1,'com::fs::starfarer::api::impl::campaign::abilities::ai::EmergencyBurnAbilityAI']]]
+  ['uicomponentapi_0',['UIComponentAPI',['../d8/d48/interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1UIComponentAPI.html',1,'com::fs::starfarer::api::ui']]],
+  ['uipanelapi_1',['UIPanelAPI',['../d4/d3b/interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1UIPanelAPI.html',1,'com::fs::starfarer::api::ui']]],
+  ['underworldcustombounty_2',['UnderworldCustomBounty',['../d5/d49/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1UnderworldCustomBounty.html',1,'com::fs::starfarer::api::impl::campaign::missions::cb']]],
+  ['unhidegacharacters_3',['UnhideGACharacters',['../d5/d34/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1academy_1_1UnhideGACharacters.html',1,'com::fs::starfarer::api::impl::campaign::rulecmd::academy']]],
+  ['unhideperson_4',['UnhidePerson',['../dc/db7/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1UnhidePerson.html',1,'com::fs::starfarer::api::impl::campaign::rulecmd']]],
+  ['uninstallcommsniffer_5',['UninstallCommSniffer',['../d5/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1UninstallCommSniffer.html',1,'com::fs::starfarer::api::impl::campaign::rulecmd']]],
+  ['unset_6',['unset',['../d7/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1unset.html',1,'com::fs::starfarer::api::impl::campaign::rulecmd']]],
+  ['unsetall_7',['unsetAll',['../dc/d1d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1unsetAll.html',1,'com::fs::starfarer::api::impl::campaign::rulecmd']]],
+  ['updatememory_8',['UpdateMemory',['../de/d12/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1UpdateMemory.html',1,'com::fs::starfarer::api::impl::campaign::rulecmd']]],
+  ['urbanizedpolity_9',['UrbanizedPolity',['../dd/d58/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1UrbanizedPolity.html',1,'com::fs::starfarer::api::impl::campaign::econ']]]
 ];

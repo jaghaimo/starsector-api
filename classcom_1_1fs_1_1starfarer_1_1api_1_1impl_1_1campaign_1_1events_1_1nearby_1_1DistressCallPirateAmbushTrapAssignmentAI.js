@@ -1,4 +1,0 @@
-var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1nearby_1_1DistressCallPirateAmbushTrapAssignmentAI =
-[
-    [ "advance", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1nearby_1_1DistressCallPirateAmbushTrapAssignmentAI.html#a3983667c5d6bf6447b2219274cbe87fc", null ]
-];

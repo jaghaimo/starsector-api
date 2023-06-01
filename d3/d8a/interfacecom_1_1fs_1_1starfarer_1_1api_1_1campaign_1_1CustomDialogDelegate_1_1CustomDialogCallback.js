@@ -1,0 +1,4 @@
+var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CustomDialogDelegate_1_1CustomDialogCallback =
+[
+    [ "dismissCustomDialog", "d3/d8a/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CustomDialogDelegate_1_1CustomDialogCallback.html#a12a69247d252fce7b66fe93a497231c7", null ]
+];

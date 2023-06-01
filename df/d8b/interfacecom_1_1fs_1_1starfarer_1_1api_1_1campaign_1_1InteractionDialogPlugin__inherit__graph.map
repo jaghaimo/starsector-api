@@ -1,0 +1,28 @@
+<map id="com.fs.starfarer.api.campaign.InteractionDialogPlugin" name="com.fs.starfarer.api.campaign.InteractionDialogPlugin">
+<area shape="rect" id="node1" title=" " alt="" coords="5,741,200,781"/>
+<area shape="rect" id="node2" href="$d1/dee/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1FleetInteractionDialogPluginImpl.html" title=" " alt="" coords="307,5,528,45"/>
+<area shape="rect" id="node3" href="$d1/dbe/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1JumpPointInteractionDialogPluginImpl.html" title=" " alt="" coords="296,69,539,109"/>
+<area shape="rect" id="node4" href="$d8/d87/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1NewGameDialogPluginImpl.html" title=" " alt="" coords="307,133,528,173"/>
+<area shape="rect" id="node5" href="$d0/d2d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1OrbitalStationInteractionDialogPluginImpl.html" title=" " alt="" coords="288,197,547,237"/>
+<area shape="rect" id="node6" href="$d1/d52/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1PlanetInteractionDialogPluginImpl.html" title=" " alt="" coords="307,261,528,301"/>
+<area shape="rect" id="node7" href="$d6/d14/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1RuleBasedInteractionDialogPluginImpl.html" title=" " alt="" coords="296,325,539,365"/>
+<area shape="rect" id="node8" href="$dc/dbf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1StandardRespawnDialogPluginImpl.html" title=" " alt="" coords="305,389,530,429"/>
+<area shape="rect" id="node9" href="$d7/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1BarEventDialogPlugin.html" title=" " alt="" coords="283,453,552,493"/>
+<area shape="rect" id="node10" href="$d9/d88/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HIOrdersInteractionDialogPluginImpl.html" title=" " alt="" coords="262,517,573,557"/>
+<area shape="rect" id="node11" href="$d8/dc2/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PEAvertInteractionDialogPluginImpl.html" title=" " alt="" coords="269,581,565,621"/>
+<area shape="rect" id="node12" href="$dc/d09/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1EventTestPluginImpl.html" title=" " alt="" coords="282,645,553,685"/>
+<area shape="rect" id="node13" href="$d0/d7e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1PlayerFleetGenPluginImpl.html" title=" " alt="" coords="282,709,553,749"/>
+<area shape="rect" id="node14" href="$d9/dd5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ProcGenTestPluginImpl.html" title=" " alt="" coords="282,773,553,813"/>
+<area shape="rect" id="node15" href="$dc/d50/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1PaginatedOptions.html" title=" " alt="" coords="282,837,553,877"/>
+<area shape="rect" id="node17" href="$dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html" title=" " alt="" coords="255,901,580,941"/>
+<area shape="rect" id="node18" title=" " alt="" coords="248,965,587,1005"/>
+<area shape="rect" id="node19" href="$d7/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialGoSlowDialogPluginImpl.html" title=" " alt="" coords="286,1029,549,1069"/>
+<area shape="rect" id="node20" href="$db/d32/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialLayInCourseDialogPluginImpl.html" title=" " alt="" coords="286,1093,549,1133"/>
+<area shape="rect" id="node21" href="$d4/dbd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialLevelUpDialogPluginImpl.html" title=" " alt="" coords="286,1157,549,1197"/>
+<area shape="rect" id="node22" href="$d1/d1b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialPirateApproachesDialogPluginImpl.html" title=" " alt="" coords="285,1221,550,1261"/>
+<area shape="rect" id="node23" href="$d1/d4d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialRespawnDialogPluginImpl.html" title=" " alt="" coords="286,1285,549,1325"/>
+<area shape="rect" id="node24" href="$df/deb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialSustainedBurnDialogPluginImpl.html" title=" " alt="" coords="286,1349,549,1389"/>
+<area shape="rect" id="node25" href="$d7/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialTransponderDialogPluginImpl.html" title=" " alt="" coords="286,1413,549,1453"/>
+<area shape="rect" id="node26" href="$dc/df0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialWelcomeDialogPluginImpl.html" title=" " alt="" coords="286,1477,549,1517"/>
+<area shape="rect" id="node16" href="$d2/d98/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1PaginatedOptionsExample.html" title=" " alt="" coords="635,837,905,877"/>
+</map>

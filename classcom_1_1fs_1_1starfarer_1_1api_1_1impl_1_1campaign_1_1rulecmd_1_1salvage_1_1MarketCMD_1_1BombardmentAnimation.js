@@ -1,6 +1,0 @@
-var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1MarketCMD_1_1BombardmentAnimation =
-[
-    [ "advance", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1MarketCMD_1_1BombardmentAnimation.html#a789512d33db8e6c7cf9fb8bc0ccc9850", null ],
-    [ "isDone", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1MarketCMD_1_1BombardmentAnimation.html#a45e9d7ccb78a5e72dd1528d1a26f3f6b", null ],
-    [ "runWhilePaused", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1MarketCMD_1_1BombardmentAnimation.html#a6c239c07cf613b801a103433dc1fffb7", null ]
-];

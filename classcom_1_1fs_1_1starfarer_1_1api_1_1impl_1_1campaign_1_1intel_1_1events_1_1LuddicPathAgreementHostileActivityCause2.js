@@ -1,4 +1,0 @@
-var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1LuddicPathAgreementHostileActivityCause2 =
-[
-    [ "getProgress", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1LuddicPathAgreementHostileActivityCause2.html#ad76c71481550e796e27063fb983e3d4a", null ]
-];

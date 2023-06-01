@@ -1,4 +1,0 @@
-var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1PKDefenderPluginImpl =
-[
-    [ "getHandlingPriority", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1PKDefenderPluginImpl.html#ab52cc20a16b6d6913e64333439dc4f48", null ]
-];

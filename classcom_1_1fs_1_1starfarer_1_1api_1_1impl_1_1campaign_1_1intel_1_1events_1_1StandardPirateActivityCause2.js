@@ -1,4 +1,0 @@
-var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1StandardPirateActivityCause2 =
-[
-    [ "getProgress", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1StandardPirateActivityCause2.html#a2e5d72f7e70aea191477e9098ce35b4c", null ]
-];

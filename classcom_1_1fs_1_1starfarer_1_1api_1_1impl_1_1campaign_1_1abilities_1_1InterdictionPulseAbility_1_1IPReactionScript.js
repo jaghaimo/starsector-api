@@ -1,7 +1,0 @@
-var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1InterdictionPulseAbility_1_1IPReactionScript =
-[
-    [ "IPReactionScript", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1InterdictionPulseAbility_1_1IPReactionScript.html#ae2f652ad4ccea113766e840baf7d9418", null ],
-    [ "advance", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1InterdictionPulseAbility_1_1IPReactionScript.html#af1c8a3e2421369825c61f2ce3c5dbfc4", null ],
-    [ "isDone", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1InterdictionPulseAbility_1_1IPReactionScript.html#a970b9158d54bd33bf012c38eaba40d37", null ],
-    [ "runWhilePaused", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1InterdictionPulseAbility_1_1IPReactionScript.html#ad35ba36c0b36472975291ef6e71ebcef", null ]
-];

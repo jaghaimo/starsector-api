@@ -1,5 +1,0 @@
-var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1CustomsInspectionGenerateResult =
-[
-    [ "CargoInspectionResult", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1CustomsInspectionGenerateResult_1_1CargoInspectionResult.html", null ],
-    [ "CargoInspectionResultType", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1CustomsInspectionGenerateRes0f35c6ca8fc33e7fed7054abe6904ba4.html", null ]
-];

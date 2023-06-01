@@ -1,4 +1,0 @@
-var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1RuleTokenReplacementGeneratorPlugin =
-[
-    [ "getTokenReplacements", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1RuleTokenReplacementGeneratorPlugin.html#ad6eadf2b632b6bbb4a5d0fb112d6a032", null ]
-];

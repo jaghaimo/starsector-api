@@ -1,5 +1,0 @@
-var enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1OfficerQuality =
-[
-    [ "AI_GAMMA", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1OfficerQuality.html#a88f783ffc18856497ff86bac9b8525fa", null ],
-    [ "AI_MIXED", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1OfficerQuality.html#a8a65075f6ec7ac951fbe72abad10677c", null ]
-];

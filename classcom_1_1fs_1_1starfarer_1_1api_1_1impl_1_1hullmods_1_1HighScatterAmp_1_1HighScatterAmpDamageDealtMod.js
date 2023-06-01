@@ -1,4 +1,0 @@
-var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1HighScatterAmp_1_1HighScatterAmpDamageDealtMod =
-[
-    [ "modifyDamageDealt", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1HighScatterAmp_1_1HighScatterAmpDamageDealtMod.html#a04760f43f4b3e22616c1df8c462b1d6c", null ]
-];

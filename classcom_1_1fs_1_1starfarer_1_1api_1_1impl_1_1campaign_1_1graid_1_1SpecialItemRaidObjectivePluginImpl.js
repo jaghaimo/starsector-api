@@ -1,4 +1,0 @@
-var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1SpecialItemRaidObjectivePluginImpl =
-[
-    [ "performRaid", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1SpecialItemRaidObjectivePluginImpl.html#aaa972d20af5c6243e39e5d55b0fdb155", null ]
-];

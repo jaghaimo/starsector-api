@@ -1,7 +1,0 @@
-var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1AddRaidObjective_1_1CustomRaidObjectiveAdder =
-[
-    [ "advance", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1AddRaidObjective_1_1CustomRaidObjectiveAdder.html#aaead83168588a5119c7fb961a6bd9213", null ],
-    [ "isDone", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1AddRaidObjective_1_1CustomRaidObjectiveAdder.html#a10180625bdb6b3688148a571d9dd15ea", null ],
-    [ "modifyRaidObjectives", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1AddRaidObjective_1_1CustomRaidObjectiveAdder.html#aa772308be7e7abf426aa51206c86af27", null ],
-    [ "runWhilePaused", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1AddRaidObjective_1_1CustomRaidObjectiveAdder.html#a3084c8a61b39881d8b029bf6562da551", null ]
-];

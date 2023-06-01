@@ -1,0 +1,4 @@
+var interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1listeners_1_1FleetMemberDeploymentListener =
+[
+    [ "reportFleetMemberDeployed", "d8/d33/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1listeners_1_1FleetMemberDeploymentListener.html#a74912b165a2c872ebe9a13eb01c05456", null ]
+];
