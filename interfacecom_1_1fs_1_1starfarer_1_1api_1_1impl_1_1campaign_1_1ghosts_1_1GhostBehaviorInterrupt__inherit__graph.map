@@ -1,14 +1,25 @@
 <map id="com.fs.starfarer.api.impl.campaign.ghosts.GhostBehaviorInterrupt" name="com.fs.starfarer.api.impl.campaign.ghosts.GhostBehaviorInterrupt">
-<area shape="rect" id="node1" title=" " alt="" coords="5,293,268,333"/>
-<area shape="rect" id="node2" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1BaseGhostBehaviorInterrupt.html" title=" " alt="" coords="316,293,579,333"/>
-<area shape="rect" id="node3" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBIDespawn.html" title=" " alt="" coords="627,5,889,45"/>
-<area shape="rect" id="node4" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBIGenerateSlipstream.html" title=" " alt="" coords="627,69,889,109"/>
-<area shape="rect" id="node5" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBIPlaySound.html" title=" " alt="" coords="627,133,889,173"/>
-<area shape="rect" id="node6" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBIRemoraDrain.html" title=" " alt="" coords="627,197,889,237"/>
-<area shape="rect" id="node7" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBIRunEveryFrame.html" title=" " alt="" coords="627,261,889,301"/>
-<area shape="rect" id="node8" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBIRunScript.html" title=" " alt="" coords="627,325,889,365"/>
-<area shape="rect" id="node9" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBITooClose.html" title=" " alt="" coords="627,389,889,429"/>
-<area shape="rect" id="node10" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBITooCloseToOther.html" title=" " alt="" coords="627,453,889,493"/>
-<area shape="rect" id="node11" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBITowardsDirection.html" title=" " alt="" coords="627,517,889,557"/>
-<area shape="rect" id="node12" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBITowardsEntity.html" title=" " alt="" coords="627,581,889,621"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,300,268,341"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1BaseGhostBehaviorInterrupt.html" title=" " alt="" coords="316,300,578,341"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="283,318,315,318,315,323,283,323"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBIDespawn.html" title=" " alt="" coords="626,5,888,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="460,284,484,233,520,172,567,109,594,81,625,57,647,44,649,49,627,61,598,85,571,113,524,175,489,236,464,287"/>
+<area shape="rect" id="Node000004" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBIGenerateSlipstream.html" title=" " alt="" coords="626,71,888,111"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="467,285,494,247,531,203,575,159,625,122,650,109,653,114,627,127,578,163,535,207,499,250,471,289"/>
+<area shape="rect" id="Node000005" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBIPlaySound.html" title=" " alt="" coords="626,136,888,177"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="480,288,544,236,584,210,625,187,657,175,659,180,627,192,586,214,547,240,483,292"/>
+<area shape="rect" id="Node000006" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBIRemoraDrain.html" title=" " alt="" coords="626,201,888,242"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="514,291,625,252,669,240,670,245,627,258,516,296"/>
+<area shape="rect" id="Node000007" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBIRunEveryFrame.html" title=" " alt="" coords="626,267,888,307"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="593,302,625,298,626,304,594,307"/>
+<area shape="rect" id="Node000008" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBIRunScript.html" title=" " alt="" coords="626,332,888,373"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="594,333,626,336,625,341,593,338"/>
+<area shape="rect" id="Node000009" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBITooClose.html" title=" " alt="" coords="626,397,888,438"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="517,344,627,382,670,394,669,399,625,387,515,349"/>
+<area shape="rect" id="Node000010" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBITooCloseToOther.html" title=" " alt="" coords="626,463,888,503"/>
+<area shape="poly" id="edge9_Node000002_Node000010" title=" " alt="" coords="483,349,548,399,586,425,627,447,659,460,657,465,625,452,584,430,544,404,480,353"/>
+<area shape="rect" id="Node000011" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBITowardsDirection.html" title=" " alt="" coords="626,528,888,569"/>
+<area shape="poly" id="edge10_Node000002_Node000011" title=" " alt="" coords="471,352,499,390,535,433,578,476,627,513,653,525,650,530,625,517,575,480,531,437,494,393,467,355"/>
+<area shape="rect" id="Node000012" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBITowardsEntity.html" title=" " alt="" coords="626,593,888,634"/>
+<area shape="poly" id="edge11_Node000002_Node000012" title=" " alt="" coords="465,354,489,405,524,466,571,527,598,554,627,578,649,590,647,595,625,583,594,558,567,530,520,469,484,407,460,357"/>
 </map>

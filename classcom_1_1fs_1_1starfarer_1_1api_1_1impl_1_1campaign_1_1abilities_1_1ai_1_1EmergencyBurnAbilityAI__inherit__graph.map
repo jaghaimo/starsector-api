@@ -1,5 +1,7 @@
 <map id="com.fs.starfarer.api.impl.campaign.abilities.ai.EmergencyBurnAbilityAI" name="com.fs.starfarer.api.impl.campaign.abilities.ai.EmergencyBurnAbilityAI">
-<area shape="rect" id="node1" title=" " alt="" coords="5,181,287,221"/>
-<area shape="rect" id="node2" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1BaseAbilityAI.html" title=" " alt="" coords="5,93,287,133"/>
-<area shape="rect" id="node3" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1AbilityAIPlugin.html" title=" " alt="" coords="43,5,249,45"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,168,286,208"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1BaseAbilityAI.html" title=" " alt="" coords="5,79,286,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="148,135,148,167,143,167,143,135"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="93,5,198,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="148,46,148,79,143,79,143,46"/>
 </map>

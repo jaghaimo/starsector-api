@@ -1,6 +1,9 @@
 <map id="com.fs.starfarer.api.impl.campaign.fleets.PersonalFleetOxanaHyder" name="com.fs.starfarer.api.impl.campaign.fleets.PersonalFleetOxanaHyder">
-<area shape="rect" id="node1" title=" " alt="" coords="603,37,857,77"/>
-<area shape="rect" id="node2" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1PersonalFleetScript.html" title=" " alt="" coords="300,37,555,77"/>
-<area shape="rect" id="node3" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="45,5,212,45"/>
-<area shape="rect" id="node4" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1FleetEventListener.html" title=" " alt="" coords="5,69,252,109"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="47,183,301,223"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1PersonalFleetScript.html" title=" " alt="" coords="47,94,301,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="177,150,177,182,171,182,171,150"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="5,5,172,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="120,55,156,92,153,95,116,59"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="195,13,326,39"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="240,51,195,96,191,92,236,48"/>
 </map>

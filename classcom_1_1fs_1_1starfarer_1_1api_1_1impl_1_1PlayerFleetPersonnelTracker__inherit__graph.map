@@ -1,9 +1,13 @@
 <map id="com.fs.starfarer.api.impl.PlayerFleetPersonnelTracker" name="com.fs.starfarer.api.impl.PlayerFleetPersonnelTracker">
-<area shape="rect" id="node1" title=" " alt="" coords="607,133,796,173"/>
-<area shape="rect" id="node2" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1ColonyInteractionListener.html" title=" " alt="" coords="312,5,559,45"/>
-<area shape="rect" id="node3" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1GroundRaidObjectivesListener.html" title=" " alt="" coords="312,69,559,109"/>
-<area shape="rect" id="node4" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1CommodityTooltipModifier.html" title=" " alt="" coords="312,133,559,173"/>
-<area shape="rect" id="node5" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1CommodityIconProvider.html" title=" " alt="" coords="312,197,559,237"/>
-<area shape="rect" id="node6" title=" " alt="" coords="5,197,264,237"/>
-<area shape="rect" id="node7" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1CargoScreenListener.html" title=" " alt="" coords="312,261,559,301"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="252,97,440,137"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="20,5,189,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="185,33,205,40,262,66,312,94,310,98,260,71,203,45,184,38"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,55,204,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="186,81,252,95,251,100,185,87"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="19,104,190,130"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="205,114,251,114,251,120,205,120"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="25,153,184,179"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="185,147,251,134,252,139,186,152"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="33,203,176,228"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="184,195,203,189,260,163,310,135,312,140,262,168,205,194,185,201"/>
 </map>

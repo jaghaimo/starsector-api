@@ -1,13 +1,23 @@
 <map id="com.fs.starfarer.api.impl.campaign.intel.BaseMissionIntel" name="com.fs.starfarer.api.impl.campaign.intel.BaseMissionIntel">
-<area shape="rect" id="node1" title=" " alt="" coords="667,133,915,173"/>
-<area shape="rect" id="node7" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1AnalyzeEntityMissionIntel.html" title=" " alt="" coords="994,5,1242,45"/>
-<area shape="rect" id="node8" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionCommissionIntel.html" title=" " alt="" coords="994,69,1242,109"/>
-<area shape="rect" id="node9" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1ProcurementMissionIntel.html" title=" " alt="" coords="994,133,1242,173"/>
-<area shape="rect" id="node10" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SurveyPlanetMissionIntel.html" title=" " alt="" coords="994,197,1242,237"/>
-<area shape="rect" id="node11" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html" title=" " alt="" coords="963,261,1273,301"/>
-<area shape="rect" id="node2" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html" title=" " alt="" coords="371,133,619,173"/>
-<area shape="rect" id="node3" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelInfoPlugin.html" title=" " alt="" coords="47,37,281,77"/>
-<area shape="rect" id="node4" title=" " alt="" coords="29,101,299,141"/>
-<area shape="rect" id="node5" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="81,165,247,205"/>
-<area shape="rect" id="node6" title=" " alt="" coords="5,229,323,269"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="524,136,771,177"/>
+<area shape="rect" id="Node000007" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1AnalyzeEntityMissionIntel.html" title=" " alt="" coords="851,5,1098,46"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="690,125,749,89,818,57,857,44,859,49,820,61,752,94,693,129"/>
+<area shape="rect" id="Node000008" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionCommissionIntel.html" title=" " alt="" coords="851,71,1098,111"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="767,130,869,109,870,115,768,135"/>
+<area shape="rect" id="Node000009" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1ProcurementMissionIntel.html" title=" " alt="" coords="851,136,1098,177"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="787,154,850,154,850,159,787,159"/>
+<area shape="rect" id="Node000010" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SurveyPlanetMissionIntel.html" title=" " alt="" coords="851,201,1098,242"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="768,178,870,198,869,203,767,183"/>
+<area shape="rect" id="Node000011" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html" title=" " alt="" coords="819,267,1130,307"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="693,183,752,219,820,251,859,264,857,269,818,256,749,223,690,188"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html" title=" " alt="" coords="229,136,476,177"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="492,154,523,154,523,159,492,159"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="41,65,145,91"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="159,93,181,99,288,133,287,138,180,104,158,98"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="43,114,143,140"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="159,132,228,140,228,145,158,137"/>
+<area shape="rect" id="Node000005" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="10,164,176,205"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="191,171,228,167,228,172,192,176"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="5,229,181,255"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="156,221,180,214,293,175,295,180,181,219,157,226"/>
 </map>

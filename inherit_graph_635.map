@@ -1,0 +1,31 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,405,167,431"/>
+<area shape="rect" id="Node000001" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventCreator.html" title=" " alt="" coords="215,397,525,438"/>
+<area shape="poly" id="edge1210_Node000000_Node000001" title=" " alt="" coords="182,415,214,415,214,420,182,420"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1CorruptPLClerkSuppliesBarEventCreator.html" title=" " alt="" coords="599,5,909,46"/>
+<area shape="poly" id="edge1211_Node000001_Node000002" title=" " alt="" coords="378,382,400,312,439,223,465,177,495,132,531,92,571,57,597,42,600,47,575,61,535,95,500,135,469,179,444,225,405,313,383,383"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEventCreator.html" title=" " alt="" coords="599,71,909,111"/>
+<area shape="poly" id="edge1212_Node000001_Node000003" title=" " alt="" coords="382,382,409,324,449,253,503,181,536,149,572,122,597,109,600,113,574,127,539,153,507,185,454,256,413,326,387,384"/>
+<area shape="rect" id="Node000004" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DiktatLobsterBarEventCreator.html" title=" " alt="" coords="599,136,909,177"/>
+<area shape="poly" id="edge1213_Node000001_Node000004" title=" " alt="" coords="389,382,419,337,460,284,512,231,541,207,572,187,599,175,601,180,574,192,544,212,515,235,464,287,423,340,393,385"/>
+<area shape="rect" id="Node000005" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1LuddicCraftBarEventCreator.html" title=" " alt="" coords="599,201,909,242"/>
+<area shape="poly" id="edge1214_Node000001_Node000005" title=" " alt="" coords="399,384,473,316,520,281,572,253,605,240,607,245,574,257,523,286,476,320,402,388"/>
+<area shape="rect" id="Node000006" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1LuddicFarmerBarEventCreator.html" title=" " alt="" coords="599,267,909,307"/>
+<area shape="poly" id="edge1215_Node000001_Node000006" title=" " alt="" coords="419,387,490,351,572,318,617,305,619,311,574,323,492,356,422,392"/>
+<area shape="rect" id="Node000007" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1MercsOnTheRunBarEventCreator.html" title=" " alt="" coords="599,332,909,373"/>
+<area shape="poly" id="edge1216_Node000001_Node000007" title=" " alt="" coords="508,392,630,371,631,376,509,397"/>
+<area shape="rect" id="Node000008" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PlanetaryShieldBarEventCreator.html" title=" " alt="" coords="599,397,909,438"/>
+<area shape="poly" id="edge1217_Node000001_Node000008" title=" " alt="" coords="540,415,599,415,599,420,540,420"/>
+<area shape="rect" id="Node000009" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1QuartermasterCargoSwapBarEventCreator.html" title=" " alt="" coords="599,463,909,503"/>
+<area shape="poly" id="edge1218_Node000001_Node000009" title=" " alt="" coords="509,439,631,459,630,465,508,444"/>
+<area shape="rect" id="Node000010" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1ScientistAICoreBarEventCreator.html" title=" " alt="" coords="599,528,909,569"/>
+<area shape="poly" id="edge1219_Node000001_Node000010" title=" " alt="" coords="422,444,492,480,574,512,619,525,617,530,572,518,490,484,419,448"/>
+<area shape="rect" id="Node000011" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1SpecBarEventCreator.html" title=" " alt="" coords="599,593,909,634"/>
+<area shape="poly" id="edge1220_Node000001_Node000011" title=" " alt="" coords="402,447,476,515,523,549,574,578,607,590,605,595,572,583,520,554,473,519,399,451"/>
+<area shape="rect" id="Node000012" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEventCreator.html" title=" " alt="" coords="599,659,909,699"/>
+<area shape="poly" id="edge1221_Node000001_Node000012" title=" " alt="" coords="393,450,423,495,464,548,515,601,544,624,574,643,601,656,599,660,572,648,541,628,512,604,460,552,419,498,389,453"/>
+<area shape="rect" id="Node000013" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachMajorLoanBarEventCreator.html" title=" " alt="" coords="599,724,909,765"/>
+<area shape="poly" id="edge1222_Node000001_Node000013" title=" " alt="" coords="387,451,413,509,454,580,507,651,539,682,574,709,600,722,597,727,572,713,536,686,503,654,449,583,409,512,382,454"/>
+<area shape="rect" id="Node000014" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianBarEventCreator.html" title=" " alt="" coords="573,789,935,830"/>
+<area shape="poly" id="edge1223_Node000001_Node000014" title=" " alt="" coords="383,452,405,522,444,610,469,656,500,700,535,740,575,774,595,786,593,791,571,779,531,744,495,703,465,659,439,613,400,524,378,454"/>
+</map>

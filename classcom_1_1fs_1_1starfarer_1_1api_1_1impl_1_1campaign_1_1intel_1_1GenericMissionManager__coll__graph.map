@@ -1,11 +1,7 @@
 <map id="com.fs.starfarer.api.impl.campaign.intel.GenericMissionManager" name="com.fs.starfarer.api.impl.campaign.intel.GenericMissionManager">
-<area shape="rect" id="node1" title=" " alt="" coords="692,184,940,224"/>
-<area shape="rect" id="node2" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseEventManager.html" title=" " alt="" coords="299,101,547,141"/>
-<area shape="rect" id="node3" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="6,5,173,45"/>
-<area shape="rect" id="node4" title=" " alt="" coords="5,69,173,109"/>
-<area shape="rect" id="node5" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html" title=" " alt="" coords="12,133,167,173"/>
-<area shape="rect" id="node6" title=" " alt="" coords="54,198,125,223"/>
-<area shape="rect" id="node7" title=" " alt="" coords="323,166,522,191"/>
-<area shape="rect" id="node8" title=" " alt="" coords="325,215,521,241"/>
-<area shape="rect" id="node9" title=" " alt="" coords="311,265,534,319"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,183,253,223"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseEventManager.html" title=" " alt="" coords="5,94,253,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="132,150,132,182,126,182,126,150"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="46,5,212,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="132,62,132,94,126,94,126,62"/>
 </map>

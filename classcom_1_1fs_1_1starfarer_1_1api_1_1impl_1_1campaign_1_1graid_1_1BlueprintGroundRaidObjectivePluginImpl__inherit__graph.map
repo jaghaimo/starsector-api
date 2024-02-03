@@ -1,5 +1,7 @@
 <map id="com.fs.starfarer.api.impl.campaign.graid.BlueprintGroundRaidObjectivePluginImpl" name="com.fs.starfarer.api.impl.campaign.graid.BlueprintGroundRaidObjectivePluginImpl">
-<area shape="rect" id="node1" title=" " alt="" coords="5,181,263,221"/>
-<area shape="rect" id="node2" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1BaseGroundRaidObjectivePluginImpl.html" title=" " alt="" coords="8,93,260,133"/>
-<area shape="rect" id="node3" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1GroundRaidObjectivePlugin.html" title=" " alt="" coords="8,5,260,45"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,183,262,223"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1BaseGroundRaidObjectivePluginImpl.html" title=" " alt="" coords="8,94,259,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="136,150,136,182,131,182,131,150"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1GroundRaidObjectivePlugin.html" title=" " alt="" coords="8,5,259,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="136,62,136,94,131,94,131,62"/>
 </map>

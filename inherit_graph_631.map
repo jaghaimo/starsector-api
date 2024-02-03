@@ -1,0 +1,18 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" title=" " alt="" coords="8,46,169,72"/>
+<area shape="rect" id="Node000001" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1PatrolAssignmentAIV4.html" title=" " alt="" coords="235,5,490,46"/>
+<area shape="poly" id="edge1197_Node000000_Node000001" title=" " alt="" coords="183,45,234,39,235,44,184,50"/>
+<area shape="rect" id="Node000007" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidAssignmentAI.html" title=" " alt="" coords="227,71,498,111"/>
+<area shape="poly" id="edge1198_Node000000_Node000007" title=" " alt="" coords="184,67,226,72,226,78,184,73"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,176,172,201"/>
+<area shape="poly" id="edge1201_Node000002_Node000001" title=" " alt="" coords="106,161,153,108,184,80,218,57,246,44,248,49,221,61,187,84,157,111,110,165"/>
+<area shape="poly" id="edge1204_Node000002_Node000007" title=" " alt="" coords="125,165,169,143,219,122,259,109,261,114,221,127,172,148,128,170"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetAssignmentAI.html" title=" " alt="" coords="235,267,490,307"/>
+<area shape="poly" id="edge1199_Node000002_Node000003" title=" " alt="" coords="126,207,171,230,221,251,260,264,259,269,219,256,168,235,124,211"/>
+<area shape="rect" id="Node000004" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1MercAssignmentAIV2.html" title=" " alt="" coords="235,332,490,373"/>
+<area shape="poly" id="edge1200_Node000002_Node000004" title=" " alt="" coords="110,212,156,266,187,293,221,317,248,329,246,334,218,321,184,298,153,269,106,215"/>
+<area shape="rect" id="Node000005" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1PilgrimageFleetAssignmentAI.html" title=" " alt="" coords="235,136,490,177"/>
+<area shape="poly" id="edge1202_Node000002_Node000005" title=" " alt="" coords="187,174,235,169,235,174,188,179"/>
+<area shape="rect" id="Node000006" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscFleetAssignmentAI.html" title=" " alt="" coords="220,201,505,242"/>
+<area shape="poly" id="edge1203_Node000002_Node000006" title=" " alt="" coords="188,198,220,202,219,207,187,203"/>
+</map>

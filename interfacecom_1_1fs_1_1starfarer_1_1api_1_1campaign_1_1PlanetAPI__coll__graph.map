@@ -1,5 +1,7 @@
 <map id="com.fs.starfarer.api.campaign.PlanetAPI" name="com.fs.starfarer.api.campaign.PlanetAPI">
-<area shape="rect" id="node1" title=" " alt="" coords="21,181,215,221"/>
-<area shape="rect" id="node2" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html" title=" " alt="" coords="21,93,215,133"/>
-<area shape="rect" id="node3" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1HasMemory.html" title=" " alt="" coords="5,5,231,45"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,168,199,208"/>
+<area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html" title=" " alt="" coords="5,79,199,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="105,135,105,167,99,167,99,135"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="56,5,148,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="105,46,105,79,99,79,99,46"/>
 </map>

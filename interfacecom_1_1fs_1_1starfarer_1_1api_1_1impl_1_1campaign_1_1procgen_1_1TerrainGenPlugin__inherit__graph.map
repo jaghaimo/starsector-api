@@ -1,9 +1,15 @@
 <map id="com.fs.starfarer.api.impl.campaign.procgen.TerrainGenPlugin" name="com.fs.starfarer.api.impl.campaign.procgen.TerrainGenPlugin">
-<area shape="rect" id="node1" title=" " alt="" coords="5,165,276,205"/>
-<area shape="rect" id="node2" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1AccretionDiskGenPlugin.html" title=" " alt="" coords="324,5,595,45"/>
-<area shape="rect" id="node3" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1AsteroidBeltGenPlugin.html" title=" " alt="" coords="324,69,595,109"/>
-<area shape="rect" id="node4" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1AsteroidFieldGenPlugin.html" title=" " alt="" coords="324,133,595,173"/>
-<area shape="rect" id="node5" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1MagFieldGenPlugin.html" title=" " alt="" coords="324,197,595,237"/>
-<area shape="rect" id="node6" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1NebulaSmallGenPlugin.html" title=" " alt="" coords="324,261,595,301"/>
-<area shape="rect" id="node7" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1RingGenPlugin.html" title=" " alt="" coords="324,325,595,365"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,169,275,210"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1AccretionDiskGenPlugin.html" title=" " alt="" coords="323,5,592,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="174,157,240,105,280,79,322,57,354,44,356,49,324,61,282,84,243,110,177,161"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1AsteroidBeltGenPlugin.html" title=" " alt="" coords="323,71,592,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="208,161,322,122,366,109,367,115,323,127,210,166"/>
+<area shape="rect" id="Node000004" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1AsteroidFieldGenPlugin.html" title=" " alt="" coords="323,136,592,177"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="290,171,322,168,322,173,291,177"/>
+<area shape="rect" id="Node000005" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1MagFieldGenPlugin.html" title=" " alt="" coords="323,201,592,242"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="291,202,322,205,322,211,290,207"/>
+<area shape="rect" id="Node000006" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1NebulaSmallGenPlugin.html" title=" " alt="" coords="323,267,592,307"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="212,213,323,251,368,263,366,269,322,256,210,218"/>
+<area shape="rect" id="Node000007" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1RingGenPlugin.html" title=" " alt="" coords="323,332,592,373"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="177,218,243,269,282,294,324,317,356,329,354,334,322,321,280,299,240,273,174,222"/>
 </map>

@@ -1,8 +1,13 @@
 <map id="com.fs.starfarer.api.impl.campaign.abilities.DistressCallAbility" name="com.fs.starfarer.api.impl.campaign.abilities.DistressCallAbility">
-<area shape="rect" id="node1" title=" " alt="" coords="884,69,1152,109"/>
-<area shape="rect" id="node2" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html" title=" " alt="" coords="568,37,836,77"/>
-<area shape="rect" id="node3" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html" title=" " alt="" coords="252,37,520,77"/>
-<area shape="rect" id="node4" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1AbilityPlugin.html" title=" " alt="" coords="5,5,204,45"/>
-<area shape="rect" id="node5" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="21,69,188,109"/>
-<area shape="rect" id="node6" title=" " alt="" coords="575,101,829,141"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="850,57,1118,97"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html" title=" " alt="" coords="535,27,802,68"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="818,59,850,62,850,67,817,64"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html" title=" " alt="" coords="220,27,487,68"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="502,45,535,45,535,50,502,50"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="42,5,135,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="150,22,219,30,219,35,150,28"/>
+<area shape="rect" id="Node000005" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="5,55,172,96"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="187,62,219,59,219,64,187,68"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="601,92,736,118"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="752,95,850,86,850,91,752,100"/>
 </map>

@@ -1,5 +1,7 @@
 <map id="com.fs.starfarer.api.combat.AssignmentTargetAPI" name="com.fs.starfarer.api.combat.AssignmentTargetAPI">
-<area shape="rect" id="node1" title=" " alt="" coords="5,37,187,77"/>
-<area shape="rect" id="node2" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BattleObjectiveAPI.html" title=" " alt="" coords="235,5,416,45"/>
-<area shape="rect" id="node3" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DeployedFleetMemberAPI.html" title=" " alt="" coords="235,69,416,109"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,39,186,79"/>
+<area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BattleObjectiveAPI.html" title=" " alt="" coords="234,5,414,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="201,41,233,36,234,41,201,46"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DeployedFleetMemberAPI.html" title=" " alt="" coords="234,71,414,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="201,71,234,76,233,81,201,76"/>
 </map>

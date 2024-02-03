@@ -1,7 +1,9 @@
 <map id="com.fs.starfarer.api.impl.combat.CombatEntityPluginWithParticles" name="com.fs.starfarer.api.impl.combat.CombatEntityPluginWithParticles">
-<area shape="rect" id="node1" title=" " alt="" coords="545,37,757,77"/>
-<area shape="rect" id="node4" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RealityDisruptorChargeGlow.html" title=" " alt="" coords="816,5,1024,45"/>
-<area shape="rect" id="node5" title=" " alt="" coords="805,69,1035,109"/>
-<area shape="rect" id="node2" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseCombatLayeredRenderingPlugin.html" title=" " alt="" coords="260,37,497,77"/>
-<area shape="rect" id="node3" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatLayeredRenderingPlugin.html" title=" " alt="" coords="5,37,212,77"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="254,39,465,79"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RealityDisruptorChargeGlow.html" title=" " alt="" coords="524,5,731,46"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="480,41,523,36,523,41,481,47"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="513,71,741,111"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="481,71,513,75,512,80,480,76"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,39,206,79"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="221,56,253,56,253,62,221,62"/>
 </map>

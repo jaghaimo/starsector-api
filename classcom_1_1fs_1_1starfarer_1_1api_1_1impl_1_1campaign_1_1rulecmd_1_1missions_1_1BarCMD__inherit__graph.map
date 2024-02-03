@@ -1,6 +1,9 @@
 <map id="com.fs.starfarer.api.impl.campaign.rulecmd.missions.BarCMD" name="com.fs.starfarer.api.impl.campaign.rulecmd.missions.BarCMD">
-<area shape="rect" id="node1" title=" " alt="" coords="597,37,923,77"/>
-<area shape="rect" id="node2" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1BaseCommandPlugin.html" title=" " alt="" coords="279,5,549,45"/>
-<area shape="rect" id="node3" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1CommandPlugin.html" title=" " alt="" coords="5,5,231,45"/>
-<area shape="rect" id="node4" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogPlugin.html" title=" " alt="" coords="317,69,511,109"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="487,35,811,75"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1BaseCommandPlugin.html" title=" " alt="" coords="170,5,439,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="455,36,487,39,487,44,454,41"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,13,122,39"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="137,23,169,23,169,28,137,28"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="227,70,382,96"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="397,73,486,66,487,71,397,78"/>
 </map>

@@ -1,9 +1,9 @@
 <map id="com.fs.starfarer.api.impl.campaign.CargoPodsEntityPlugin" name="com.fs.starfarer.api.impl.campaign.CargoPodsEntityPlugin">
-<area shape="rect" id="node1" title=" " alt="" coords="941,63,1163,103"/>
-<area shape="rect" id="node2" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html" title=" " alt="" coords="619,31,840,71"/>
-<area shape="rect" id="node3" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CustomCampaignEntityPlugin.html" title=" " alt="" coords="310,5,505,45"/>
-<area shape="rect" id="node4" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html" title=" " alt="" coords="310,69,505,109"/>
-<area shape="rect" id="node6" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1GenericFieldItemManager.html" title=" " alt="" coords="619,95,840,135"/>
-<area shape="rect" id="node5" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1HasMemory.html" title=" " alt="" coords="5,69,231,109"/>
-<area shape="rect" id="node7" title=" " alt="" coords="280,133,535,173"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="568,53,789,94"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html" title=" " alt="" coords="247,5,467,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="483,42,568,55,568,60,482,47"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,13,198,39"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="213,23,247,23,247,28,213,28"/>
+<area shape="rect" id="Node000004" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1GenericFieldItemManager.html" title=" " alt="" coords="247,71,467,111"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="483,82,568,77,568,82,483,87"/>
 </map>

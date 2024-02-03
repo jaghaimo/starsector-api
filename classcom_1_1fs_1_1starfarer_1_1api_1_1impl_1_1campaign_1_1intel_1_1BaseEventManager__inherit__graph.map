@@ -1,10 +1,17 @@
 <map id="com.fs.starfarer.api.impl.campaign.intel.BaseEventManager" name="com.fs.starfarer.api.impl.campaign.intel.BaseEventManager">
-<area shape="rect" id="node1" title=" " alt="" coords="220,165,468,205"/>
-<area shape="rect" id="node3" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionHostilityManager.html" title=" " alt="" coords="535,5,783,45"/>
-<area shape="rect" id="node4" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1GenericMissionManager.html" title=" " alt="" coords="535,69,783,109"/>
-<area shape="rect" id="node5" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1PersonBountyManager.html" title=" " alt="" coords="535,133,783,173"/>
-<area shape="rect" id="node6" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SystemBountyManager.html" title=" " alt="" coords="535,197,783,237"/>
-<area shape="rect" id="node7" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathBaseManager.html" title=" " alt="" coords="516,261,803,301"/>
-<area shape="rect" id="node8" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateBaseManager.html" title=" " alt="" coords="516,325,803,365"/>
-<area shape="rect" id="node2" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="5,165,172,205"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="220,169,467,210"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionHostilityManager.html" title=" " alt="" coords="534,5,781,46"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="374,157,436,105,474,79,514,57,546,44,548,49,516,61,477,83,439,109,378,161"/>
+<area shape="rect" id="Node000004" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1GenericMissionManager.html" title=" " alt="" coords="534,71,781,111"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="407,161,514,122,559,109,560,115,516,127,409,166"/>
+<area shape="rect" id="Node000005" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1PersonBountyManager.html" title=" " alt="" coords="534,136,781,177"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="482,172,533,167,534,172,483,178"/>
+<area shape="rect" id="Node000006" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SystemBountyManager.html" title=" " alt="" coords="534,201,781,242"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="483,201,534,206,533,212,482,206"/>
+<area shape="rect" id="Node000007" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathBaseManager.html" title=" " alt="" coords="515,267,800,307"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="410,214,516,251,561,263,559,269,514,256,408,219"/>
+<area shape="rect" id="Node000008" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateBaseManager.html" title=" " alt="" coords="515,332,800,373"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="378,219,440,269,477,295,516,317,548,329,546,334,514,321,474,299,436,274,375,223"/>
+<area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="5,169,172,210"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="187,187,219,187,219,192,187,192"/>
 </map>

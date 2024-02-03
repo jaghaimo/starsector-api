@@ -1,10 +1,7 @@
 <map id="com.fs.starfarer.api.impl.campaign.procgen.Constellation" name="com.fs.starfarer.api.impl.campaign.procgen.Constellation">
-<area shape="rect" id="node1" title=" " alt="" coords="860,179,1131,219"/>
-<area shape="rect" id="node2" href="$enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarAge.html" title=" " alt="" coords="391,5,661,45"/>
-<area shape="rect" id="node3" title=" " alt="" coords="373,70,679,125"/>
-<area shape="rect" id="node4" title=" " alt="" coords="356,149,696,203"/>
-<area shape="rect" id="node5" title=" " alt="" coords="391,228,661,268"/>
-<area shape="rect" id="node6" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1NameGenData.html" title=" " alt="" coords="5,228,276,268"/>
-<area shape="rect" id="node7" title=" " alt="" coords="413,292,639,332"/>
-<area shape="rect" id="node8" title=" " alt="" coords="391,356,661,396"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="350,39,619,79"/>
+<area shape="rect" id="Node000002" href="$enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarAge.html" title=" " alt="" coords="5,5,275,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="290,38,350,43,349,49,290,43"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,71,275,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="290,74,349,69,350,74,290,80"/>
 </map>

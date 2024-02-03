@@ -1,9 +1,15 @@
 <map id="com.fs.starfarer.api.impl.campaign.BaseCampaignObjectivePlugin" name="com.fs.starfarer.api.impl.campaign.BaseCampaignObjectivePlugin">
-<area shape="rect" id="node1" title=" " alt="" coords="517,69,739,109"/>
-<area shape="rect" id="node5" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CommRelayEntityPlugin.html" title=" " alt="" coords="787,5,1008,45"/>
-<area shape="rect" id="node6" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1NavBuoyEntityPlugin.html" title=" " alt="" coords="787,69,1008,109"/>
-<area shape="rect" id="node7" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1SensorArrayEntityPlugin.html" title=" " alt="" coords="787,133,1008,173"/>
-<area shape="rect" id="node2" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html" title=" " alt="" coords="248,37,469,77"/>
-<area shape="rect" id="node3" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CustomCampaignEntityPlugin.html" title=" " alt="" coords="5,37,200,77"/>
-<area shape="rect" id="node4" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CampaignObjective.html" title=" " alt="" coords="248,101,469,141"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="514,71,734,111"/>
+<area shape="rect" id="Node000005" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CommRelayEntityPlugin.html" title=" " alt="" coords="782,5,1003,46"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="725,64,805,44,807,49,726,69"/>
+<area shape="rect" id="Node000006" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1NavBuoyEntityPlugin.html" title=" " alt="" coords="782,71,1003,111"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="750,88,782,88,782,94,750,94"/>
+<area shape="rect" id="Node000007" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1SensorArrayEntityPlugin.html" title=" " alt="" coords="782,136,1003,177"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="726,113,807,133,805,138,725,118"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html" title=" " alt="" coords="246,37,466,78"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="482,71,514,75,513,80,481,76"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,45,198,71"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="213,55,245,55,245,60,213,60"/>
+<area shape="rect" id="Node000004" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CampaignObjective.html" title=" " alt="" coords="246,103,466,143"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="481,105,513,102,514,107,482,111"/>
 </map>

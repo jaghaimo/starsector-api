@@ -1,9 +1,11 @@
 <map id="com.fs.starfarer.api.impl.campaign.NavBuoyEntityPlugin" name="com.fs.starfarer.api.impl.campaign.NavBuoyEntityPlugin">
-<area shape="rect" id="node1" title=" " alt="" coords="1099,77,1320,117"/>
-<area shape="rect" id="node2" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCampaignObjectivePlugin.html" title=" " alt="" coords="828,77,1049,117"/>
-<area shape="rect" id="node3" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html" title=" " alt="" coords="557,29,779,69"/>
-<area shape="rect" id="node4" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CustomCampaignEntityPlugin.html" title=" " alt="" coords="280,5,475,45"/>
-<area shape="rect" id="node5" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html" title=" " alt="" coords="280,69,475,109"/>
-<area shape="rect" id="node6" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1HasMemory.html" title=" " alt="" coords="5,69,231,109"/>
-<area shape="rect" id="node7" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CampaignObjective.html" title=" " alt="" coords="557,93,779,133"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="782,39,1003,79"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCampaignObjectivePlugin.html" title=" " alt="" coords="514,39,734,79"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="750,56,782,56,782,62,750,62"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html" title=" " alt="" coords="246,5,466,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="482,39,514,43,513,48,481,44"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,13,198,39"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="213,23,245,23,245,28,213,28"/>
+<area shape="rect" id="Node000005" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CampaignObjective.html" title=" " alt="" coords="246,71,466,111"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="481,73,513,70,514,75,482,79"/>
 </map>

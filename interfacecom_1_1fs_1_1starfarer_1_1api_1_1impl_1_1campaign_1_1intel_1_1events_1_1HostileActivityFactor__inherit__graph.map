@@ -1,6 +1,9 @@
 <map id="com.fs.starfarer.api.impl.campaign.intel.events.HostileActivityFactor" name="com.fs.starfarer.api.impl.campaign.intel.events.HostileActivityFactor">
-<area shape="rect" id="node1" title=" " alt="" coords="5,37,296,77"/>
-<area shape="rect" id="node2" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseHostileActivityFactor.html" title=" " alt="" coords="344,37,635,77"/>
-<area shape="rect" id="node3" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1LuddicPathHostileActivityFactor.html" title=" " alt="" coords="683,5,973,45"/>
-<area shape="rect" id="node4" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1PirateHostileActivityFactor.html" title=" " alt="" coords="683,69,973,109"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,39,295,79"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseHostileActivityFactor.html" title=" " alt="" coords="343,39,632,79"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="310,56,342,56,342,62,310,62"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1LuddicPathHostileActivityFactor.html" title=" " alt="" coords="680,5,969,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="647,41,679,37,680,43,648,46"/>
+<area shape="rect" id="Node000004" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1PirateHostileActivityFactor.html" title=" " alt="" coords="680,71,969,111"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="648,72,680,75,679,80,647,77"/>
 </map>

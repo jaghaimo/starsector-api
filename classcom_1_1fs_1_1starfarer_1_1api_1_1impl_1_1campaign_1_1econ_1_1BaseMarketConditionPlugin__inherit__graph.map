@@ -1,51 +1,99 @@
 <map id="com.fs.starfarer.api.impl.campaign.econ.BaseMarketConditionPlugin" name="com.fs.starfarer.api.impl.campaign.econ.BaseMarketConditionPlugin">
-<area shape="rect" id="node1" title=" " alt="" coords="279,1381,531,1421"/>
-<area shape="rect" id="node3" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1AbandonedStation.html" title=" " alt="" coords="598,165,850,205"/>
-<area shape="rect" id="node4" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1BaseHazardCondition.html" title=" " alt="" coords="598,229,850,269"/>
-<area shape="rect" id="node13" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1BaseMarketConditionPlugin2.html" title=" " alt="" coords="598,293,850,333"/>
-<area shape="rect" id="node14" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1ClosedImmigration.html" title=" " alt="" coords="598,357,850,397"/>
-<area shape="rect" id="node15" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1CommRelayCondition.html" title=" " alt="" coords="598,421,850,461"/>
-<area shape="rect" id="node16" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1CottageIndustry.html" title=" " alt="" coords="598,485,850,525"/>
-<area shape="rect" id="node17" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1Dissident.html" title=" " alt="" coords="598,549,850,589"/>
-<area shape="rect" id="node18" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1FoodShortage.html" title=" " alt="" coords="598,613,850,653"/>
-<area shape="rect" id="node19" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1FreeMarket.html" title=" " alt="" coords="598,677,850,717"/>
-<area shape="rect" id="node20" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1Frontier.html" title=" " alt="" coords="598,741,850,781"/>
-<area shape="rect" id="node21" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1Headquarters.html" title=" " alt="" coords="598,805,850,845"/>
-<area shape="rect" id="node22" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1Hydroponics.html" title=" " alt="" coords="598,869,850,909"/>
-<area shape="rect" id="node23" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1IndustrialPolity.html" title=" " alt="" coords="598,933,850,973"/>
-<area shape="rect" id="node24" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1LargeRefugeePopulation.html" title=" " alt="" coords="598,997,850,1037"/>
-<area shape="rect" id="node25" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1LuddicMajority.html" title=" " alt="" coords="598,1061,850,1101"/>
-<area shape="rect" id="node26" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1OrbitalBurns.html" title=" " alt="" coords="598,1125,850,1165"/>
-<area shape="rect" id="node27" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1OrganizedCrime.html" title=" " alt="" coords="598,1189,850,1229"/>
-<area shape="rect" id="node28" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1Outpost.html" title=" " alt="" coords="598,1253,850,1293"/>
-<area shape="rect" id="node29" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1Placeholder.html" title=" " alt="" coords="598,1317,850,1357"/>
-<area shape="rect" id="node30" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1Population.html" title=" " alt="" coords="598,1381,850,1421"/>
-<area shape="rect" id="node31" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1RecentUnrest.html" title=" " alt="" coords="598,1445,850,1485"/>
-<area shape="rect" id="node32" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1RegionalCapital.html" title=" " alt="" coords="598,1509,850,1549"/>
-<area shape="rect" id="node33" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1RogueAICore.html" title=" " alt="" coords="598,1573,850,1613"/>
-<area shape="rect" id="node34" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1RuralPolity.html" title=" " alt="" coords="598,1637,850,1677"/>
-<area shape="rect" id="node35" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1ShipbreakingCenter.html" title=" " alt="" coords="598,1701,850,1741"/>
-<area shape="rect" id="node36" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1ShippingDisruption.html" title=" " alt="" coords="598,1765,850,1805"/>
-<area shape="rect" id="node37" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1Smuggling.html" title=" " alt="" coords="598,1829,850,1869"/>
-<area shape="rect" id="node38" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1SolarArray.html" title=" " alt="" coords="598,1893,850,1933"/>
-<area shape="rect" id="node39" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1StealthMinefields.html" title=" " alt="" coords="598,1957,850,1997"/>
-<area shape="rect" id="node40" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1SystemBounty.html" title=" " alt="" coords="598,2021,850,2061"/>
-<area shape="rect" id="node41" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1TradeCenter.html" title=" " alt="" coords="598,2085,850,2125"/>
-<area shape="rect" id="node42" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1TradeDisruption.html" title=" " alt="" coords="598,2149,850,2189"/>
-<area shape="rect" id="node43" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1UrbanizedPolity.html" title=" " alt="" coords="598,2213,850,2253"/>
-<area shape="rect" id="node44" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1ViceDemand.html" title=" " alt="" coords="598,2277,850,2317"/>
-<area shape="rect" id="node45" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1WorldFarming.html" title=" " alt="" coords="598,2341,850,2381"/>
-<area shape="rect" id="node46" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1WorldUninhabitable.html" title=" " alt="" coords="598,2405,850,2445"/>
-<area shape="rect" id="node47" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCells.html" title=" " alt="" coords="581,2469,867,2509"/>
-<area shape="rect" id="node48" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateActivity.html" title=" " alt="" coords="581,2533,867,2573"/>
-<area shape="rect" id="node49" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivity.html" title=" " alt="" coords="579,2597,869,2637"/>
-<area shape="rect" id="node2" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketConditionPlugin.html" title=" " alt="" coords="5,1381,231,1421"/>
-<area shape="rect" id="node5" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1Decivilized.html" title=" " alt="" coords="917,5,1169,45"/>
-<area shape="rect" id="node6" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1DecivilizedSubpop.html" title=" " alt="" coords="917,69,1169,109"/>
-<area shape="rect" id="node7" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1HighGravity.html" title=" " alt="" coords="917,133,1169,173"/>
-<area shape="rect" id="node8" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1LCAttractorHigh.html" title=" " alt="" coords="917,197,1169,237"/>
-<area shape="rect" id="node9" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1LCAttractorLow.html" title=" " alt="" coords="917,261,1169,301"/>
-<area shape="rect" id="node10" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1LCAttractorMedium.html" title=" " alt="" coords="917,325,1169,365"/>
-<area shape="rect" id="node11" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1LowGravity.html" title=" " alt="" coords="917,389,1169,429"/>
-<area shape="rect" id="node12" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1Pollution.html" title=" " alt="" coords="917,453,1169,493"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="205,1377,456,1418"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1AbandonedStation.html" title=" " alt="" coords="504,233,755,274"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="329,1362,337,1144,346,989,361,821,383,653,413,499,431,431,452,372,476,323,502,285,517,272,520,276,506,289,480,326,457,374,436,433,418,500,388,654,367,821,352,989,342,1144,335,1362"/>
+<area shape="rect" id="Node000004" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1BaseHazardCondition.html" title=" " alt="" coords="504,299,755,339"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="330,1362,339,1155,350,1009,365,852,387,695,417,551,435,487,455,432,477,386,502,351,517,338,520,342,506,354,482,388,459,434,440,489,422,552,393,696,371,852,355,1010,344,1156,335,1362"/>
+<area shape="rect" id="Node000016" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1BaseMarketConditionPlugin2.html" title=" " alt="" coords="504,364,755,405"/>
+<area shape="poly" id="edge13_Node000001_Node000016" title=" " alt="" coords="330,1362,341,1167,353,1030,369,883,392,737,421,602,438,543,457,492,478,449,502,416,517,403,520,407,506,419,483,451,462,494,443,545,426,604,397,738,375,884,358,1031,347,1167,336,1362"/>
+<area shape="rect" id="Node000018" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1ClosedImmigration.html" title=" " alt="" coords="504,429,755,470"/>
+<area shape="poly" id="edge15_Node000001_Node000018" title=" " alt="" coords="331,1362,344,1178,356,1051,373,914,396,778,424,654,441,599,459,551,480,512,502,481,517,469,521,473,506,485,484,514,464,553,446,601,430,655,401,779,379,915,361,1052,349,1179,336,1362"/>
+<area shape="rect" id="Node000019" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1CommRelayCondition.html" title=" " alt="" coords="504,495,755,535"/>
+<area shape="poly" id="edge16_Node000001_Node000019" title=" " alt="" coords="331,1361,346,1190,377,945,400,820,428,705,462,611,481,574,502,546,518,534,521,538,506,550,486,577,467,613,433,707,405,821,383,946,352,1190,337,1362"/>
+<area shape="rect" id="Node000020" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1CottageIndustry.html" title=" " alt="" coords="504,560,755,601"/>
+<area shape="poly" id="edge17_Node000001_Node000020" title=" " alt="" coords="332,1361,349,1202,382,977,405,862,432,757,464,671,483,637,502,612,518,599,521,603,506,616,487,640,469,673,437,759,410,863,387,978,354,1202,337,1362"/>
+<area shape="rect" id="Node000021" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1Dissident.html" title=" " alt="" coords="504,625,755,666"/>
+<area shape="poly" id="edge18_Node000001_Node000021" title=" " alt="" coords="333,1361,352,1213,386,1008,409,904,436,809,467,731,484,700,502,677,518,664,521,669,506,681,488,703,472,733,441,810,414,905,391,1009,357,1214,338,1362"/>
+<area shape="rect" id="Node000022" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1FoodShortage.html" title=" " alt="" coords="504,691,755,731"/>
+<area shape="poly" id="edge19_Node000001_Node000022" title=" " alt="" coords="334,1361,354,1226,390,1040,413,946,440,860,469,790,485,763,502,742,518,730,521,734,506,746,490,766,474,793,445,862,419,947,396,1041,360,1226,339,1362"/>
+<area shape="rect" id="Node000023" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1FreeMarket.html" title=" " alt="" coords="504,756,755,797"/>
+<area shape="poly" id="edge20_Node000001_Node000023" title=" " alt="" coords="328,1362,333,1254,341,1183,355,1105,377,1025,407,946,449,872,474,839,502,808,519,795,522,799,506,812,478,842,453,875,412,948,382,1027,360,1106,346,1184,338,1254,334,1362"/>
+<area shape="rect" id="Node000024" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1Frontier.html" title=" " alt="" coords="504,821,755,862"/>
+<area shape="poly" id="edge21_Node000001_Node000024" title=" " alt="" coords="330,1362,338,1265,348,1202,363,1133,385,1063,415,994,453,929,502,873,519,860,522,865,506,877,458,933,420,996,390,1065,368,1135,353,1203,343,1265,335,1362"/>
+<area shape="rect" id="Node000025" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1Headquarters.html" title=" " alt="" coords="504,887,755,927"/>
+<area shape="poly" id="edge22_Node000001_Node000025" title=" " alt="" coords="332,1361,344,1275,356,1220,372,1161,394,1101,423,1042,458,986,502,938,520,926,523,930,506,942,463,990,427,1044,399,1103,377,1163,361,1222,349,1276,337,1362"/>
+<area shape="rect" id="Node000026" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1Hydroponics.html" title=" " alt="" coords="504,952,755,993"/>
+<area shape="poly" id="edge23_Node000001_Node000026" title=" " alt="" coords="334,1362,350,1287,381,1190,403,1139,430,1090,463,1044,502,1004,521,991,524,995,506,1008,467,1047,435,1093,408,1142,386,1192,355,1288,339,1363"/>
+<area shape="rect" id="Node000027" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1IndustrialPolity.html" title=" " alt="" coords="504,1017,755,1058"/>
+<area shape="poly" id="edge24_Node000001_Node000027" title=" " alt="" coords="338,1361,357,1298,390,1219,412,1178,438,1138,468,1101,502,1069,523,1056,525,1061,506,1073,472,1105,442,1141,417,1181,395,1221,362,1300,343,1363"/>
+<area shape="rect" id="Node000028" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1LargeRefugeePopulation.html" title=" " alt="" coords="504,1083,755,1123"/>
+<area shape="poly" id="edge25_Node000001_Node000028" title=" " alt="" coords="342,1362,366,1311,400,1249,446,1187,473,1159,502,1134,524,1122,527,1126,506,1139,476,1163,450,1190,405,1252,370,1313,347,1364"/>
+<area shape="rect" id="Node000029" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1LuddicMajority.html" title=" " alt="" coords="504,1148,755,1189"/>
+<area shape="poly" id="edge26_Node000001_Node000029" title=" " alt="" coords="350,1363,376,1325,411,1281,454,1237,503,1199,528,1187,530,1192,505,1204,457,1241,415,1284,380,1328,354,1366"/>
+<area shape="rect" id="Node000030" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1OrbitalBurns.html" title=" " alt="" coords="504,1213,755,1254"/>
+<area shape="poly" id="edge27_Node000001_Node000030" title=" " alt="" coords="363,1365,425,1313,463,1287,503,1265,534,1252,536,1257,505,1269,466,1292,428,1318,366,1369"/>
+<area shape="rect" id="Node000031" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1OrganizedCrime.html" title=" " alt="" coords="504,1279,755,1319"/>
+<area shape="poly" id="edge28_Node000001_Node000031" title=" " alt="" coords="396,1369,503,1330,545,1317,546,1323,505,1335,398,1374"/>
+<area shape="rect" id="Node000032" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1Outpost.html" title=" " alt="" coords="504,1344,755,1385"/>
+<area shape="poly" id="edge29_Node000001_Node000032" title=" " alt="" coords="471,1379,503,1376,504,1381,472,1385"/>
+<area shape="rect" id="Node000033" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1Placeholder.html" title=" " alt="" coords="504,1409,755,1450"/>
+<area shape="poly" id="edge30_Node000001_Node000033" title=" " alt="" coords="472,1410,504,1414,503,1419,471,1415"/>
+<area shape="rect" id="Node000034" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1Population.html" title=" " alt="" coords="504,1475,755,1515"/>
+<area shape="poly" id="edge31_Node000001_Node000034" title=" " alt="" coords="399,1421,505,1459,547,1471,545,1477,503,1464,397,1427"/>
+<area shape="rect" id="Node000035" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1RecentUnrest.html" title=" " alt="" coords="504,1540,755,1581"/>
+<area shape="poly" id="edge32_Node000001_Node000035" title=" " alt="" coords="366,1426,428,1477,466,1502,505,1525,536,1537,534,1542,503,1529,463,1507,425,1481,363,1430"/>
+<area shape="rect" id="Node000036" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1RegionalCapital.html" title=" " alt="" coords="504,1605,755,1646"/>
+<area shape="poly" id="edge33_Node000001_Node000036" title=" " alt="" coords="354,1429,380,1467,415,1510,458,1554,505,1590,530,1602,528,1607,503,1595,454,1558,411,1514,376,1470,350,1432"/>
+<area shape="rect" id="Node000037" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1RogueAICore.html" title=" " alt="" coords="504,1671,755,1711"/>
+<area shape="poly" id="edge34_Node000001_Node000037" title=" " alt="" coords="348,1432,371,1482,405,1543,450,1604,477,1632,506,1655,527,1668,524,1672,502,1660,473,1635,446,1607,401,1546,366,1484,343,1434"/>
+<area shape="rect" id="Node000038" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1RuralPolity.html" title=" " alt="" coords="504,1736,755,1777"/>
+<area shape="poly" id="edge35_Node000001_Node000038" title=" " alt="" coords="343,1432,363,1495,395,1573,417,1614,442,1653,472,1689,506,1721,525,1733,523,1738,502,1725,468,1693,438,1656,412,1617,390,1576,358,1497,338,1434"/>
+<area shape="rect" id="Node000039" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1ShipbreakingCenter.html" title=" " alt="" coords="504,1801,755,1842"/>
+<area shape="poly" id="edge36_Node000001_Node000039" title=" " alt="" coords="339,1432,355,1507,386,1603,408,1653,435,1702,467,1747,506,1786,524,1799,521,1803,502,1790,463,1750,430,1705,403,1655,381,1604,350,1508,334,1434"/>
+<area shape="rect" id="Node000040" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1ShippingDisruption.html" title=" " alt="" coords="504,1867,755,1907"/>
+<area shape="poly" id="edge37_Node000001_Node000040" title=" " alt="" coords="337,1433,349,1519,361,1573,377,1632,399,1692,427,1750,463,1804,506,1852,523,1864,520,1868,502,1856,458,1808,423,1753,394,1694,372,1633,356,1574,344,1520,332,1434"/>
+<area shape="rect" id="Node000041" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1Smuggling.html" title=" " alt="" coords="504,1932,755,1973"/>
+<area shape="poly" id="edge38_Node000001_Node000041" title=" " alt="" coords="335,1433,343,1530,353,1592,369,1660,390,1730,420,1798,458,1862,506,1917,522,1929,519,1934,502,1921,454,1865,415,1800,385,1732,363,1661,348,1593,338,1530,330,1434"/>
+<area shape="rect" id="Node000042" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1SolarArray.html" title=" " alt="" coords="504,1997,755,2038"/>
+<area shape="poly" id="edge39_Node000001_Node000042" title=" " alt="" coords="334,1433,338,1541,346,1611,360,1688,382,1768,412,1846,453,1919,478,1952,506,1982,522,1995,519,1999,502,1986,474,1955,449,1922,407,1848,377,1770,355,1690,341,1612,333,1541,328,1434"/>
+<area shape="rect" id="Node000043" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1StealthMinefields.html" title=" " alt="" coords="504,2063,755,2103"/>
+<area shape="poly" id="edge40_Node000001_Node000043" title=" " alt="" coords="339,1433,360,1569,396,1754,419,1847,445,1932,474,2001,490,2028,506,2048,521,2060,518,2064,502,2052,485,2031,469,2004,440,1934,414,1849,390,1755,355,1570,334,1434"/>
+<area shape="rect" id="Node000044" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1SystemBounty.html" title=" " alt="" coords="504,2128,755,2169"/>
+<area shape="poly" id="edge41_Node000001_Node000044" title=" " alt="" coords="338,1433,357,1581,391,1785,414,1889,441,1984,472,2061,488,2091,506,2113,521,2125,518,2130,502,2117,484,2094,467,2064,436,1986,409,1891,386,1786,352,1582,333,1434"/>
+<area shape="rect" id="Node000045" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1TradeCenter.html" title=" " alt="" coords="504,2193,755,2234"/>
+<area shape="poly" id="edge42_Node000001_Node000045" title=" " alt="" coords="337,1433,354,1593,387,1817,410,1931,437,2036,469,2121,487,2154,506,2178,521,2191,518,2195,502,2182,483,2157,464,2123,432,2037,405,1933,382,1818,349,1593,332,1434"/>
+<area shape="rect" id="Node000046" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1TradeDisruption.html" title=" " alt="" coords="504,2259,755,2299"/>
+<area shape="poly" id="edge43_Node000001_Node000046" title=" " alt="" coords="337,1433,352,1605,383,1849,406,1973,433,2087,467,2181,486,2217,506,2244,521,2256,518,2260,502,2248,481,2220,462,2183,428,2089,400,1975,378,1849,346,1605,331,1434"/>
+<area shape="rect" id="Node000047" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1UrbanizedPolity.html" title=" " alt="" coords="504,2324,755,2365"/>
+<area shape="poly" id="edge44_Node000001_Node000047" title=" " alt="" coords="336,1434,349,1617,362,1744,379,1880,401,2016,430,2139,464,2241,484,2280,506,2309,521,2321,517,2325,502,2313,480,2283,460,2243,425,2141,396,2017,374,1881,356,1744,344,1617,331,1434"/>
+<area shape="rect" id="Node000048" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1ViceDemand.html" title=" " alt="" coords="504,2389,755,2430"/>
+<area shape="poly" id="edge45_Node000001_Node000048" title=" " alt="" coords="336,1433,347,1628,358,1764,375,1911,397,2057,426,2191,443,2249,462,2300,483,2343,506,2375,520,2387,517,2391,502,2378,478,2345,457,2303,438,2251,421,2192,392,2058,369,1911,353,1764,341,1628,330,1434"/>
+<area shape="rect" id="Node000049" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1WorldFarming.html" title=" " alt="" coords="504,2455,755,2495"/>
+<area shape="poly" id="edge46_Node000001_Node000049" title=" " alt="" coords="335,1434,345,1639,355,1785,371,1942,393,2099,422,2242,440,2305,459,2360,482,2406,506,2440,520,2452,517,2456,502,2443,477,2408,455,2362,435,2307,417,2244,387,2100,365,1943,350,1785,339,1640,330,1434"/>
+<area shape="rect" id="Node000059" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1WorldUninhabitable.html" title=" " alt="" coords="504,2520,755,2561"/>
+<area shape="poly" id="edge48_Node000001_Node000059" title=" " alt="" coords="335,1434,342,1651,352,1806,367,1973,389,2140,418,2294,436,2361,457,2420,480,2469,506,2505,520,2518,517,2522,502,2509,476,2471,452,2422,431,2363,413,2295,383,2141,361,1974,346,1806,337,1651,329,1434"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,1385,157,1411"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="172,1395,204,1395,204,1400,172,1400"/>
+<area shape="rect" id="Node000005" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1Decivilized.html" title=" " alt="" coords="803,5,1055,46"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="750,287,753,284,772,256,780,229,780,201,777,173,773,144,773,115,781,86,801,57,817,44,821,48,805,61,786,88,779,116,778,144,782,172,786,201,785,230,777,259,757,287,754,291"/>
+<area shape="rect" id="Node000006" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1DecivilizedSubpop.html" title=" " alt="" coords="803,71,1055,111"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="749,288,753,284,768,265,775,245,777,205,778,164,786,143,801,122,818,110,821,114,805,126,790,145,783,165,782,205,781,246,773,267,757,287,753,292"/>
+<area shape="rect" id="Node000007" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1HighGravity.html" title=" " alt="" coords="803,136,1055,177"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="747,288,754,284,764,273,771,261,777,237,783,212,790,200,802,188,821,175,824,179,805,192,794,203,788,214,782,238,776,263,769,276,757,288,751,293"/>
+<area shape="rect" id="Node000008" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1LCAttractorHigh.html" title=" " alt="" coords="803,201,1055,242"/>
+<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="735,291,754,283,778,268,802,253,836,240,838,245,805,257,781,273,757,288,737,296"/>
+<area shape="rect" id="Node000010" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1LCAttractorLow.html" title=" " alt="" coords="803,267,1055,307"/>
+<area shape="poly" id="edge8_Node000004_Node000010" title=" " alt="" coords="771,301,803,298,803,303,771,307"/>
+<area shape="rect" id="Node000011" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1LCAttractorMedium.html" title=" " alt="" coords="803,332,1055,373"/>
+<area shape="poly" id="edge9_Node000004_Node000011" title=" " alt="" coords="771,332,803,336,803,341,771,337"/>
+<area shape="rect" id="Node000013" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1LowGravity.html" title=" " alt="" coords="803,397,1055,438"/>
+<area shape="poly" id="edge10_Node000004_Node000013" title=" " alt="" coords="738,342,757,350,781,366,805,382,837,394,835,399,802,387,778,371,754,355,736,347"/>
+<area shape="rect" id="Node000014" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1Pollution.html" title=" " alt="" coords="803,463,1055,503"/>
+<area shape="poly" id="edge11_Node000004_Node000014" title=" " alt="" coords="751,345,757,350,769,362,776,375,782,400,788,425,794,436,805,448,824,460,821,464,802,452,790,440,783,427,777,402,771,377,764,366,754,354,747,350"/>
+<area shape="rect" id="Node000015" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1ResourceDepositsCondition.html" title=" " alt="" coords="803,528,1055,569"/>
+<area shape="poly" id="edge12_Node000004_Node000015" title=" " alt="" coords="753,346,757,351,773,371,781,392,782,434,783,474,790,494,805,513,821,525,818,530,801,517,786,496,778,475,777,434,775,393,768,374,753,354,749,350"/>
+<area shape="rect" id="Node000017" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1AICoreAdmin.html" title=" " alt="" coords="803,593,1055,634"/>
+<area shape="poly" id="edge14_Node000016_Node000017" title=" " alt="" coords="753,412,757,416,773,436,781,457,782,499,783,540,790,559,805,578,821,591,818,595,801,582,786,562,778,541,777,499,775,458,768,439,753,419,749,416"/>
+<area shape="rect" id="Node000050" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1WorldArid.html" title=" " alt="" coords="803,2455,1055,2495"/>
+<area shape="poly" id="edge47_Node000049_Node000050" title=" " alt="" coords="771,2472,803,2472,803,2478,771,2478"/>
 </map>

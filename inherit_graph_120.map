@@ -1,3 +1,27 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PlanetSpecAPI.html" title=" " alt="" coords="5,5,200,45"/>
+<area shape="rect" id="Node000000" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BlueprintProviderItem.html" title=" " alt="" coords="247,136,502,177"/>
+<area shape="rect" id="Node000001" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1FighterBlueprintItemPlugin.html" title=" " alt="" coords="550,5,805,46"/>
+<area shape="poly" id="edge720_Node000000_Node000001" title=" " alt="" coords="419,125,479,90,549,57,585,44,587,49,551,61,482,95,421,130"/>
+<area shape="rect" id="Node000004" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1IndustryBlueprintItemPlugin.html" title=" " alt="" coords="550,71,805,111"/>
+<area shape="poly" id="edge721_Node000000_Node000004" title=" " alt="" coords="486,130,579,109,581,115,487,135"/>
+<area shape="rect" id="Node000007" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1MultiBlueprintItemPlugin.html" title=" " alt="" coords="550,136,805,177"/>
+<area shape="poly" id="edge722_Node000000_Node000007" title=" " alt="" coords="517,154,549,154,549,159,517,159"/>
+<area shape="rect" id="Node000008" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1ShipBlueprintItemPlugin.html" title=" " alt="" coords="550,201,805,242"/>
+<area shape="poly" id="edge723_Node000000_Node000008" title=" " alt="" coords="487,178,581,198,579,203,486,183"/>
+<area shape="rect" id="Node000009" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1WeaponBlueprintItemPlugin.html" title=" " alt="" coords="550,267,805,307"/>
+<area shape="poly" id="edge724_Node000000_Node000009" title=" " alt="" coords="434,182,503,219,527,236,551,251,584,264,582,269,549,256,524,241,501,224,431,186"/>
+<area shape="rect" id="Node000010" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SpecialItemPlugin.html" title=" " alt="" coords="5,233,199,274"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BaseSpecialItemPlugin.html" title=" " alt="" coords="247,233,502,274"/>
+<area shape="poly" id="edge725_Node000010_Node000002" title=" " alt="" coords="214,251,246,251,246,256,214,256"/>
+<area shape="poly" id="edge726_Node000002_Node000001" title=" " alt="" coords="449,224,477,207,500,187,512,170,518,154,522,122,527,89,534,73,548,57,566,44,569,49,552,61,539,76,532,91,527,122,523,155,516,173,504,190,480,212,452,229"/>
+<area shape="poly" id="edge728_Node000002_Node000004" title=" " alt="" coords="441,224,472,207,500,186,515,170,523,154,532,138,548,122,572,110,574,114,552,126,536,141,527,156,519,173,504,190,475,211,444,228"/>
+<area shape="poly" id="edge731_Node000002_Node000007" title=" " alt="" coords="442,225,549,187,592,175,593,180,551,192,444,230"/>
+<area shape="poly" id="edge732_Node000002_Node000008" title=" " alt="" coords="517,236,549,233,550,238,518,241"/>
+<area shape="poly" id="edge733_Node000002_Node000009" title=" " alt="" coords="518,267,550,270,549,276,517,272"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1GenericSpecialItemPlugin.html" title=" " alt="" coords="550,332,805,373"/>
+<area shape="poly" id="edge727_Node000002_Node000003" title=" " alt="" coords="442,278,551,316,593,329,591,334,549,322,440,283"/>
+<area shape="rect" id="Node000005" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1JanusDevicePlugin.html" title=" " alt="" coords="550,397,805,438"/>
+<area shape="poly" id="edge729_Node000002_Node000005" title=" " alt="" coords="410,283,473,334,511,360,551,382,582,394,580,399,549,387,508,364,470,338,407,287"/>
+<area shape="rect" id="Node000006" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1ModSpecItemPlugin.html" title=" " alt="" coords="550,463,805,503"/>
+<area shape="poly" id="edge730_Node000002_Node000006" title=" " alt="" coords="398,285,425,323,460,367,503,411,551,447,577,460,574,465,549,452,499,415,456,371,421,327,394,289"/>
 </map>

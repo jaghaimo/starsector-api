@@ -1,3 +1,11 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignUIAPI.html" title=" " alt="" coords="5,5,200,45"/>
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,78,149,104"/>
+<area shape="rect" id="Node000001" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseBattleObjectiveEffect.html" title=" " alt="" coords="197,71,404,111"/>
+<area shape="poly" id="edge682_Node000000_Node000001" title=" " alt="" coords="164,88,196,88,196,94,164,94"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CommRelayEffect.html" title=" " alt="" coords="452,5,659,46"/>
+<area shape="poly" id="edge683_Node000001_Node000002" title=" " alt="" coords="397,64,473,44,474,49,398,69"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1NavBuoyEffect.html" title=" " alt="" coords="452,71,659,111"/>
+<area shape="poly" id="edge684_Node000001_Node000003" title=" " alt="" coords="420,88,452,88,452,94,420,94"/>
+<area shape="rect" id="Node000004" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1SensorArrayEffect.html" title=" " alt="" coords="452,136,659,177"/>
+<area shape="poly" id="edge685_Node000001_Node000004" title=" " alt="" coords="398,113,474,133,473,138,397,118"/>
 </map>

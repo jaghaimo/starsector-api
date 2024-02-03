@@ -1,8 +1,13 @@
 <map id="com.fs.starfarer.api.impl.campaign.terrain.MagneticFieldTerrainPlugin" name="com.fs.starfarer.api.impl.campaign.terrain.MagneticFieldTerrainPlugin">
-<area shape="rect" id="node1" title=" " alt="" coords="864,69,1124,109"/>
-<area shape="rect" id="node2" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseRingTerrain.html" title=" " alt="" coords="556,5,816,45"/>
-<area shape="rect" id="node3" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html" title=" " alt="" coords="248,5,508,45"/>
-<area shape="rect" id="node4" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignTerrainPlugin.html" title=" " alt="" coords="5,5,200,45"/>
-<area shape="rect" id="node5" title=" " alt="" coords="556,69,816,109"/>
-<area shape="rect" id="node6" title=" " alt="" coords="556,133,816,173"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="823,63,1083,103"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseRingTerrain.html" title=" " alt="" coords="516,5,775,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="773,47,841,59,840,65,772,52"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html" title=" " alt="" coords="209,5,468,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="483,23,516,23,516,28,483,28"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,13,161,39"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="176,23,208,23,208,28,176,28"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="565,70,727,96"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="743,80,823,80,823,86,743,86"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="570,120,721,145"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="737,115,823,101,823,106,737,120"/>
 </map>

@@ -1,11 +1,13 @@
 <map id="com.fs.starfarer.api.impl.campaign.terrain.NebulaTerrainPlugin" name="com.fs.starfarer.api.impl.campaign.terrain.NebulaTerrainPlugin">
-<area shape="rect" id="node1" title=" " alt="" coords="1247,149,1507,189"/>
-<area shape="rect" id="node2" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTiledTerrain.html" title=" " alt="" coords="937,93,1197,133"/>
-<area shape="rect" id="node3" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html" title=" " alt="" coords="557,29,817,69"/>
-<area shape="rect" id="node4" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignTerrainPlugin.html" title=" " alt="" coords="280,5,475,45"/>
-<area shape="rect" id="node5" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html" title=" " alt="" coords="280,69,475,109"/>
-<area shape="rect" id="node6" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1HasMemory.html" title=" " alt="" coords="5,69,231,109"/>
-<area shape="rect" id="node7" title=" " alt="" coords="557,93,817,133"/>
-<area shape="rect" id="node8" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1graphics_1_1SpriteAPI.html" title=" " alt="" coords="594,157,781,197"/>
-<area shape="rect" id="node9" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BattleCreationPluginImpl_1_1NebulaTextureProvider.html" title=" " alt="" coords="941,158,1193,213"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="872,87,1131,127"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTiledTerrain.html" title=" " alt="" coords="563,45,823,86"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="839,82,872,87,871,92,838,88"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html" title=" " alt="" coords="210,5,469,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="485,39,563,48,563,54,484,45"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,13,161,39"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="176,23,210,23,210,28,176,28"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="210,71,469,111"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="485,78,563,72,563,78,485,83"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="616,110,770,136"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="785,116,871,111,872,116,785,121"/>
 </map>

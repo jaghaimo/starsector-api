@@ -1,5 +1,7 @@
 <map id="com.fs.starfarer.api.impl.campaign.rulecmd.salvage.AICores" name="com.fs.starfarer.api.impl.campaign.rulecmd.salvage.AICores">
-<area shape="rect" id="node1" title=" " alt="" coords="5,181,324,221"/>
-<area shape="rect" id="node2" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1BaseCommandPlugin.html" title=" " alt="" coords="29,93,300,133"/>
-<area shape="rect" id="node3" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1CommandPlugin.html" title=" " alt="" coords="52,5,277,45"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,168,323,208"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1BaseCommandPlugin.html" title=" " alt="" coords="29,79,299,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="167,135,167,167,161,167,161,135"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="106,5,222,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="167,46,167,79,161,79,161,46"/>
 </map>

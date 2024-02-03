@@ -1,8 +1,5 @@
 <map id="com.fs.starfarer.api.impl.campaign.intel.deciv.DecivTracker" name="com.fs.starfarer.api.impl.campaign.intel.deciv.DecivTracker">
-<area shape="rect" id="node1" title=" " alt="" coords="460,133,743,173"/>
-<area shape="rect" id="node2" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="87,5,254,45"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,69,336,109"/>
-<area shape="rect" id="node4" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html" title=" " alt="" coords="93,133,248,173"/>
-<area shape="rect" id="node5" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTracker.html" title=" " alt="" coords="86,197,255,237"/>
-<area shape="rect" id="node6" title=" " alt="" coords="135,262,206,287"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,94,287,135"/>
+<area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="63,5,229,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="149,62,149,94,143,94,143,62"/>
 </map>

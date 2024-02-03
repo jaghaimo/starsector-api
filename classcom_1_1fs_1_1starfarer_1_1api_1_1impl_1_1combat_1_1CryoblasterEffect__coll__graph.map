@@ -1,13 +1,9 @@
 <map id="com.fs.starfarer.api.impl.combat.CryoblasterEffect" name="com.fs.starfarer.api.impl.combat.CryoblasterEffect">
-<area shape="rect" id="node1" title=" " alt="" coords="641,280,849,320"/>
-<area shape="rect" id="node2" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseCombatLayeredRenderingPlugin.html" title=" " alt="" coords="299,76,536,116"/>
-<area shape="rect" id="node3" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatLayeredRenderingPlugin.html" title=" " alt="" coords="5,5,212,45"/>
-<area shape="rect" id="node4" href="$enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineLayers.html" title=" " alt="" coords="18,69,199,109"/>
-<area shape="rect" id="node5" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEntityAPI.html" title=" " alt="" coords="18,145,199,185"/>
-<area shape="rect" id="node9" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DamagingProjectileAPI.html" title=" " alt="" coords="327,152,508,192"/>
-<area shape="rect" id="node6" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1OnFireEffectPlugin.html" title=" " alt="" coords="327,216,508,256"/>
-<area shape="rect" id="node7" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1OnHitEffectPlugin.html" title=" " alt="" coords="327,280,508,320"/>
-<area shape="rect" id="node8" title=" " alt="" coords="349,345,486,370"/>
-<area shape="rect" id="node10" title=" " alt="" coords="382,394,453,419"/>
-<area shape="rect" id="node11" title=" " alt="" coords="295,444,540,484"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="191,94,399,135"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,206,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="163,50,253,91,251,96,161,55"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="230,13,360,39"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="298,54,298,94,292,94,292,54"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="383,13,508,39"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="413,49,330,96,328,91,410,44"/>
 </map>

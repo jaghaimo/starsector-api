@@ -1,11 +1,8 @@
 <map id="com.fs.starfarer.api.impl.campaign.eventide.CharAnim" name="com.fs.starfarer.api.impl.campaign.eventide.CharAnim">
-<area shape="rect" id="node1" title=" " alt="" coords="873,247,1147,287"/>
-<area shape="rect" id="node2" title=" " alt="" coords="119,5,198,31"/>
-<area shape="rect" id="node5" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1CharAnimFrame.html" title=" " alt="" coords="446,123,719,163"/>
-<area shape="rect" id="node3" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1graphics_1_1SpriteAPI.html" title=" " alt="" coords="489,281,676,321"/>
-<area shape="rect" id="node4" title=" " alt="" coords="429,345,736,385"/>
-<area shape="rect" id="node6" title=" " alt="" coords="123,200,194,225"/>
-<area shape="rect" id="node7" title=" " alt="" coords="5,73,312,113"/>
-<area shape="rect" id="node8" title=" " alt="" coords="109,137,209,163"/>
-<area shape="rect" id="node9" title=" " alt="" coords="533,409,632,435"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,184,278,225"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="97,5,175,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="140,46,144,184,138,184,134,47"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1CharAnimFrame.html" title=" " alt="" coords="157,80,430,121"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="175,36,256,78,254,82,172,41"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="253,132,172,186,169,181,250,128"/>
 </map>

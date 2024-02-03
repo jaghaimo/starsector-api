@@ -1,9 +1,15 @@
 <map id="com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin" name="com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin">
-<area shape="rect" id="node1" title=" " alt="" coords="248,133,540,173"/>
-<area shape="rect" id="node3" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BlackMarketPlugin.html" title=" " alt="" coords="588,5,880,45"/>
-<area shape="rect" id="node4" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1LocalResourcesSubmarketPlugin.html" title=" " alt="" coords="588,69,880,109"/>
-<area shape="rect" id="node5" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1MilitarySubmarketPlugin.html" title=" " alt="" coords="588,133,880,173"/>
-<area shape="rect" id="node6" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1OpenMarketPlugin.html" title=" " alt="" coords="588,197,880,237"/>
-<area shape="rect" id="node7" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1StoragePlugin.html" title=" " alt="" coords="588,261,880,301"/>
-<area shape="rect" id="node2" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SubmarketPlugin.html" title=" " alt="" coords="5,133,200,173"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="174,136,465,177"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BlackMarketPlugin.html" title=" " alt="" coords="513,5,804,46"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="368,125,435,90,512,56,552,44,554,49,514,62,437,95,370,130"/>
+<area shape="rect" id="Node000004" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1LocalResourcesSubmarketPlugin.html" title=" " alt="" coords="513,71,804,111"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="443,130,549,109,550,115,444,135"/>
+<area shape="rect" id="Node000005" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1MilitarySubmarketPlugin.html" title=" " alt="" coords="513,136,804,177"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="481,154,513,154,513,159,481,159"/>
+<area shape="rect" id="Node000006" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1OpenMarketPlugin.html" title=" " alt="" coords="513,201,804,242"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="444,178,550,198,549,203,443,183"/>
+<area shape="rect" id="Node000007" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1StoragePlugin.html" title=" " alt="" coords="513,267,804,307"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="370,182,437,218,514,251,554,263,552,269,512,256,435,223,368,187"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,144,126,169"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="141,154,173,154,173,159,141,159"/>
 </map>

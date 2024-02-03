@@ -1,13 +1,23 @@
 <map id="com.fs.starfarer.api.impl.campaign.abilities.BaseDurationAbility" name="com.fs.starfarer.api.impl.campaign.abilities.BaseDurationAbility">
-<area shape="rect" id="node1" title=" " alt="" coords="568,197,836,237"/>
-<area shape="rect" id="node5" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1DistressCallAbility.html" title=" " alt="" coords="884,5,1152,45"/>
-<area shape="rect" id="node6" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility.html" title=" " alt="" coords="884,69,1152,109"/>
-<area shape="rect" id="node7" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html" title=" " alt="" coords="884,133,1152,173"/>
-<area shape="rect" id="node8" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1InterdictionPulseAbility.html" title=" " alt="" coords="884,197,1152,237"/>
-<area shape="rect" id="node9" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1RemoteSurveyAbility.html" title=" " alt="" coords="884,261,1152,301"/>
-<area shape="rect" id="node10" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ScavengeAbility.html" title=" " alt="" coords="884,325,1152,365"/>
-<area shape="rect" id="node11" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1SensorBurstAbility.html" title=" " alt="" coords="884,389,1152,429"/>
-<area shape="rect" id="node2" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html" title=" " alt="" coords="252,197,520,237"/>
-<area shape="rect" id="node3" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1AbilityPlugin.html" title=" " alt="" coords="5,165,204,205"/>
-<area shape="rect" id="node4" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="21,229,188,269"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="535,201,802,242"/>
+<area shape="rect" id="Node000005" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1DistressCallAbility.html" title=" " alt="" coords="850,5,1118,46"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="695,188,760,121,803,86,849,57,878,44,880,49,852,61,806,90,764,125,699,191"/>
+<area shape="rect" id="Node000006" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility.html" title=" " alt="" coords="850,71,1118,111"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="714,191,777,155,849,122,887,109,888,114,851,127,780,160,717,195"/>
+<area shape="rect" id="Node000007" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html" title=" " alt="" coords="850,136,1118,177"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="785,195,882,175,883,180,786,200"/>
+<area shape="rect" id="Node000008" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1InterdictionPulseAbility.html" title=" " alt="" coords="850,201,1118,242"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="818,219,850,219,850,224,818,224"/>
+<area shape="rect" id="Node000009" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1RemoteSurveyAbility.html" title=" " alt="" coords="850,267,1118,307"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="786,243,883,263,882,269,785,248"/>
+<area shape="rect" id="Node000010" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ScavengeAbility.html" title=" " alt="" coords="850,332,1118,373"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="717,248,780,283,851,317,888,329,887,334,849,321,777,288,714,253"/>
+<area shape="rect" id="Node000011" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1SensorBurstAbility.html" title=" " alt="" coords="850,397,1118,438"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="699,252,764,318,806,353,852,382,880,394,878,399,849,387,803,357,760,322,695,256"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html" title=" " alt="" coords="220,201,487,242"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="502,219,535,219,535,224,502,224"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="42,180,135,205"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="150,196,219,204,219,209,150,202"/>
+<area shape="rect" id="Node000004" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="5,229,172,270"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="187,237,219,233,219,239,187,242"/>
 </map>

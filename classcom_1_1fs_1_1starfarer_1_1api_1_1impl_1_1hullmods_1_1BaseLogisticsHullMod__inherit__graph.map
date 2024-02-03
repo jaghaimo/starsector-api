@@ -1,13 +1,21 @@
 <map id="com.fs.starfarer.api.impl.hullmods.BaseLogisticsHullMod" name="com.fs.starfarer.api.impl.hullmods.BaseLogisticsHullMod">
-<area shape="rect" id="node1" title=" " alt="" coords="464,229,681,269"/>
-<area shape="rect" id="node4" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1AdditionalBerthing.html" title=" " alt="" coords="729,5,947,45"/>
-<area shape="rect" id="node5" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1AuxiliaryFuelTanks.html" title=" " alt="" coords="729,69,947,109"/>
-<area shape="rect" id="node6" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1EfficiencyOverhaul.html" title=" " alt="" coords="729,133,947,173"/>
-<area shape="rect" id="node7" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ExpandedCargoHolds.html" title=" " alt="" coords="729,197,947,237"/>
-<area shape="rect" id="node8" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1HighEfficiencyDriveField.html" title=" " alt="" coords="729,261,947,301"/>
-<area shape="rect" id="node9" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1HighResSensors.html" title=" " alt="" coords="729,325,947,365"/>
-<area shape="rect" id="node10" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1MilitarizedSubsystems.html" title=" " alt="" coords="729,389,947,429"/>
-<area shape="rect" id="node11" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1TerminatorCore.html" title=" " alt="" coords="729,453,947,493"/>
-<area shape="rect" id="node2" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html" title=" " alt="" coords="235,229,416,269"/>
-<area shape="rect" id="node3" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1HullModEffect.html" title=" " alt="" coords="5,229,187,269"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="153,235,369,275"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1AdditionalBerthing.html" title=" " alt="" coords="417,5,633,46"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="278,220,301,182,332,138,371,94,415,57,438,44,441,49,419,61,375,98,337,142,305,185,282,223"/>
+<area shape="rect" id="Node000004" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1AuxiliaryFuelTanks.html" title=" " alt="" coords="417,71,633,111"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="290,222,346,171,380,145,416,122,443,110,445,114,418,127,383,149,349,175,294,225"/>
+<area shape="rect" id="Node000005" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1EfficiencyOverhaul.html" title=" " alt="" coords="417,136,633,177"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="321,226,416,187,453,175,454,180,418,192,323,230"/>
+<area shape="rect" id="Node000006" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ExpandedCargoHolds.html" title=" " alt="" coords="417,201,633,242"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="384,237,416,233,417,238,385,242"/>
+<area shape="rect" id="Node000007" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1HighEfficiencyDriveField.html" title=" " alt="" coords="417,267,633,307"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="385,267,417,271,416,277,384,273"/>
+<area shape="rect" id="Node000008" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1HighResSensors.html" title=" " alt="" coords="417,332,633,373"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="324,279,418,316,454,329,453,334,416,322,322,284"/>
+<area shape="rect" id="Node000009" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1MilitarizedSubsystems.html" title=" " alt="" coords="417,397,633,438"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="294,285,349,335,383,360,418,382,445,394,443,399,416,387,380,364,346,339,291,289"/>
+<area shape="rect" id="Node000010" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1TerminatorCore.html" title=" " alt="" coords="417,463,633,503"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="282,287,306,324,337,368,375,411,419,447,441,460,439,465,415,452,371,414,332,371,301,327,278,290"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,242,105,268"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="120,252,152,252,152,258,120,258"/>
 </map>

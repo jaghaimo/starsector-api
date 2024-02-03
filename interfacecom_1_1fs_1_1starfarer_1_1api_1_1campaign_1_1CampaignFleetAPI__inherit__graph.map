@@ -1,6 +1,9 @@
 <map id="com.fs.starfarer.api.campaign.CampaignFleetAPI" name="com.fs.starfarer.api.campaign.CampaignFleetAPI">
-<area shape="rect" id="node1" title=" " alt="" coords="521,37,716,77"/>
-<area shape="rect" id="node2" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html" title=" " alt="" coords="279,5,473,45"/>
-<area shape="rect" id="node3" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1HasMemory.html" title=" " alt="" coords="5,5,231,45"/>
-<area shape="rect" id="node4" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetOrStubAPI.html" title=" " alt="" coords="279,69,473,109"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="386,39,579,79"/>
+<area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html" title=" " alt="" coords="145,5,338,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="354,38,386,43,385,48,353,44"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,13,97,39"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="113,23,144,23,144,28,113,28"/>
+<area shape="rect" id="Node000004" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetOrStubAPI.html" title=" " alt="" coords="145,71,338,111"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="353,74,385,69,386,74,354,79"/>
 </map>

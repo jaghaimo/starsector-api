@@ -1,12 +1,9 @@
 <map id="com.fs.starfarer.api.impl.combat.ShipExplosionFlareVisual" name="com.fs.starfarer.api.impl.combat.ShipExplosionFlareVisual">
-<area shape="rect" id="node1" title=" " alt="" coords="665,231,873,271"/>
-<area shape="rect" id="node2" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseCombatLayeredRenderingPlugin.html" title=" " alt="" coords="337,89,574,129"/>
-<area shape="rect" id="node3" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatLayeredRenderingPlugin.html" title=" " alt="" coords="5,5,212,45"/>
-<area shape="rect" id="node4" href="$enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineLayers.html" title=" " alt="" coords="18,69,199,109"/>
-<area shape="rect" id="node5" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEntityAPI.html" title=" " alt="" coords="18,140,199,180"/>
-<area shape="rect" id="node6" title=" " alt="" coords="329,174,581,229"/>
-<area shape="rect" id="node7" title=" " alt="" coords="69,211,148,237"/>
-<area shape="rect" id="node8" title=" " alt="" coords="83,261,135,286"/>
-<area shape="rect" id="node9" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1graphics_1_1SpriteAPI.html" title=" " alt="" coords="362,253,549,293"/>
-<area shape="rect" id="node10" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1FaderUtil.html" title=" " alt="" coords="378,317,533,357"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="442,41,650,82"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="159,5,359,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="374,37,442,46,442,51,373,43"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="133,70,384,126"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="399,77,442,72,442,77,400,83"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,85,84,111"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="99,95,132,95,132,100,99,100"/>
 </map>

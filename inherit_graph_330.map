@@ -1,3 +1,19 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianBackstory.html" title=" " alt="" coords="5,5,368,45"/>
+<area shape="rect" id="Node000000" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1EPEncounterCreator.html" title=" " alt="" coords="5,201,250,242"/>
+<area shape="rect" id="Node000001" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator.html" title=" " alt="" coords="298,201,542,242"/>
+<area shape="poly" id="edge787_Node000000_Node000001" title=" " alt="" coords="265,219,297,219,297,224,265,224"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1OutsideSystemNoEPEC.html" title=" " alt="" coords="590,5,834,46"/>
+<area shape="poly" id="edge788_Node000001_Node000002" title=" " alt="" coords="444,187,505,121,545,86,589,57,615,44,618,49,591,61,548,91,509,125,448,191"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1OutsideSystemRemnantEPEC.html" title=" " alt="" coords="590,71,834,111"/>
+<area shape="poly" id="edge789_Node000001_Node000003" title=" " alt="" coords="463,190,522,155,589,122,624,109,626,114,591,127,524,160,466,195"/>
+<area shape="rect" id="Node000004" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1SlipstreamLuddicPathEPEC.html" title=" " alt="" coords="590,136,834,177"/>
+<area shape="poly" id="edge790_Node000001_Node000004" title=" " alt="" coords="528,195,617,175,619,180,529,200"/>
+<area shape="rect" id="Node000005" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1SlipstreamMercenaryEPEC.html" title=" " alt="" coords="590,201,834,242"/>
+<area shape="poly" id="edge791_Node000001_Node000005" title=" " alt="" coords="557,219,590,219,590,224,557,224"/>
+<area shape="rect" id="Node000006" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1SlipstreamNoEPEC.html" title=" " alt="" coords="590,267,834,307"/>
+<area shape="poly" id="edge792_Node000001_Node000006" title=" " alt="" coords="529,243,619,263,617,269,528,249"/>
+<area shape="rect" id="Node000007" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1SlipstreamPirateEPEC.html" title=" " alt="" coords="590,332,834,373"/>
+<area shape="poly" id="edge793_Node000001_Node000007" title=" " alt="" coords="466,249,524,284,591,317,626,329,624,334,589,321,522,288,463,253"/>
+<area shape="rect" id="Node000008" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1SlipstreamScavengerEPEC.html" title=" " alt="" coords="590,397,834,438"/>
+<area shape="poly" id="edge794_Node000001_Node000008" title=" " alt="" coords="448,252,509,318,548,353,591,382,618,394,615,399,589,387,545,357,505,322,444,256"/>
 </map>

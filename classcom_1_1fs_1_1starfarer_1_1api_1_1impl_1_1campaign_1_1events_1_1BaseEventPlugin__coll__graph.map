@@ -1,12 +1,7 @@
 <map id="com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin" name="com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin">
-<area shape="rect" id="node1" title=" " alt="" coords="683,197,945,237"/>
-<area shape="rect" id="node2" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventPlugin.html" title=" " alt="" coords="325,5,561,45"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,5,276,45"/>
-<area shape="rect" id="node4" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignEventListener.html" title=" " alt="" coords="346,69,541,109"/>
-<area shape="rect" id="node5" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventTarget.html" title=" " alt="" coords="325,133,561,173"/>
-<area shape="rect" id="node6" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html" title=" " alt="" coords="331,197,556,237"/>
-<area shape="rect" id="node7" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1HasMemory.html" title=" " alt="" coords="28,261,253,301"/>
-<area shape="rect" id="node8" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html" title=" " alt="" coords="346,261,541,301"/>
-<area shape="rect" id="node9" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html" title=" " alt="" coords="346,325,541,365"/>
-<area shape="rect" id="node10" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html" title=" " alt="" coords="331,389,556,429"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="36,79,299,120"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,154,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="106,40,148,77,144,81,103,44"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="177,5,337,31"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="234,43,191,81,188,77,230,39"/>
 </map>

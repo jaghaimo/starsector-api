@@ -1,8 +1,13 @@
 <map id="com.fs.starfarer.api.impl.campaign.intel.bar.events.PlanetaryShieldIntel" name="com.fs.starfarer.api.impl.campaign.intel.bar.events.PlanetaryShieldIntel">
-<area shape="rect" id="node1" title=" " alt="" coords="667,101,977,141"/>
-<area shape="rect" id="node2" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html" title=" " alt="" coords="371,101,619,141"/>
-<area shape="rect" id="node3" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelInfoPlugin.html" title=" " alt="" coords="47,5,281,45"/>
-<area shape="rect" id="node4" title=" " alt="" coords="29,69,299,109"/>
-<area shape="rect" id="node5" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="81,133,247,173"/>
-<area shape="rect" id="node6" title=" " alt="" coords="5,197,323,237"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="524,77,834,117"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html" title=" " alt="" coords="229,77,476,117"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="492,94,523,94,523,100,492,100"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="41,5,145,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="159,33,181,40,288,73,287,78,180,45,158,38"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="43,55,143,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="159,72,228,80,228,85,158,77"/>
+<area shape="rect" id="Node000005" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="10,105,176,145"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="191,112,228,108,228,113,192,117"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="5,169,181,195"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="156,162,180,154,293,115,295,120,181,159,157,167"/>
 </map>

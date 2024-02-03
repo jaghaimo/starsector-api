@@ -1,14 +1,23 @@
 <map id="com.fs.starfarer.api.impl.campaign.graid.GroundRaidObjectivePlugin" name="com.fs.starfarer.api.impl.campaign.graid.GroundRaidObjectivePlugin">
-<area shape="rect" id="node1" title=" " alt="" coords="5,261,257,301"/>
-<area shape="rect" id="node2" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1BaseGroundRaidObjectivePluginImpl.html" title=" " alt="" coords="305,261,557,301"/>
-<area shape="rect" id="node3" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1AICoreGroundRaidObjectivePluginImpl.html" title=" " alt="" coords="639,5,891,45"/>
-<area shape="rect" id="node4" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1AbstractGoalGroundRaidObjectivePluginImpl.html" title=" " alt="" coords="623,69,906,109"/>
-<area shape="rect" id="node6" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1BlueprintGroundRaidObjectivePluginImpl.html" title=" " alt="" coords="636,133,893,173"/>
-<area shape="rect" id="node7" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CommodityGroundRaidObjectivePluginImpl.html" title=" " alt="" coords="629,197,900,237"/>
-<area shape="rect" id="node8" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGroundRaidObjectivePluginImpl.html" title=" " alt="" coords="639,261,891,301"/>
-<area shape="rect" id="node9" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1DisruptIndustryRaidObjectivePluginImpl.html" title=" " alt="" coords="639,325,891,365"/>
-<area shape="rect" id="node10" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1ShipWeaponsGroundRaidObjectivePluginImpl.html" title=" " alt="" coords="621,389,908,429"/>
-<area shape="rect" id="node11" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1SpecialItemRaidObjectivePluginImpl.html" title=" " alt="" coords="639,453,891,493"/>
-<area shape="rect" id="node12" title=" " alt="" coords="605,517,924,557"/>
-<area shape="rect" id="node5" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1SolarArrayGroundRaidObjectivePluginImpl.html" title=" " alt="" coords="972,69,1239,109"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,235,257,275"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1BaseGroundRaidObjectivePluginImpl.html" title=" " alt="" coords="305,235,556,275"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="272,252,304,252,304,258,272,258"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1AICoreGroundRaidObjectivePluginImpl.html" title=" " alt="" coords="621,5,872,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="449,220,476,182,511,137,554,93,603,57,628,44,631,49,605,61,557,97,515,141,480,185,454,223"/>
+<area shape="rect" id="Node000004" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1AbstractGoalGroundRaidObjectivePluginImpl.html" title=" " alt="" coords="606,71,887,111"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="462,222,524,170,562,144,603,122,635,110,637,114,605,127,565,149,527,175,465,226"/>
+<area shape="rect" id="Node000006" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1BlueprintGroundRaidObjectivePluginImpl.html" title=" " alt="" coords="619,136,875,177"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="495,226,603,187,648,175,650,180,605,192,497,231"/>
+<area shape="rect" id="Node000007" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CommodityGroundRaidObjectivePluginImpl.html" title=" " alt="" coords="612,201,882,242"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="572,237,611,233,611,239,572,243"/>
+<area shape="rect" id="Node000008" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGroundRaidObjectivePluginImpl.html" title=" " alt="" coords="621,267,872,307"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="572,267,621,272,620,277,571,272"/>
+<area shape="rect" id="Node000009" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1DisruptIndustryRaidObjectivePluginImpl.html" title=" " alt="" coords="621,332,872,373"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="498,279,605,316,650,329,649,334,603,322,496,284"/>
+<area shape="rect" id="Node000010" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1ShipWeaponsGroundRaidObjectivePluginImpl.html" title=" " alt="" coords="604,397,889,438"/>
+<area shape="poly" id="edge9_Node000002_Node000010" title=" " alt="" coords="466,284,528,335,566,360,605,382,637,394,635,399,603,387,563,365,525,339,463,288"/>
+<area shape="rect" id="Node000011" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1SpecialItemRaidObjectivePluginImpl.html" title=" " alt="" coords="621,463,872,503"/>
+<area shape="poly" id="edge10_Node000002_Node000011" title=" " alt="" coords="454,287,480,325,515,368,557,411,605,447,631,460,628,464,603,452,554,415,511,372,476,328,450,290"/>
+<area shape="rect" id="Node000005" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1SolarArrayGroundRaidObjectivePluginImpl.html" title=" " alt="" coords="937,71,1203,111"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="903,88,937,88,937,94,903,94"/>
 </map>

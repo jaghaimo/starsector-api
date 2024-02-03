@@ -1,10 +1,5 @@
 <map id="com.fs.starfarer.api.impl.combat.NeuralTransferVisual" name="com.fs.starfarer.api.impl.combat.NeuralTransferVisual">
-<area shape="rect" id="node1" title=" " alt="" coords="616,193,824,233"/>
-<area shape="rect" id="node2" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseCombatLayeredRenderingPlugin.html" title=" " alt="" coords="295,76,532,116"/>
-<area shape="rect" id="node3" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatLayeredRenderingPlugin.html" title=" " alt="" coords="5,5,212,45"/>
-<area shape="rect" id="node4" href="$enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineLayers.html" title=" " alt="" coords="18,69,199,109"/>
-<area shape="rect" id="node5" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEntityAPI.html" title=" " alt="" coords="18,145,199,185"/>
-<area shape="rect" id="node6" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI.html" title=" " alt="" coords="323,152,504,192"/>
-<area shape="rect" id="node7" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1FaderUtil.html" title=" " alt="" coords="336,216,491,256"/>
-<area shape="rect" id="node8" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1graphics_1_1SpriteAPI.html" title=" " alt="" coords="320,280,507,320"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,94,213,135"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="9,5,209,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="112,62,112,94,106,94,106,62"/>
 </map>

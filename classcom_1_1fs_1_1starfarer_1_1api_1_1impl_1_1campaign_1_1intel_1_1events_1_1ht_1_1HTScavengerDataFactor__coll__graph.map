@@ -1,6 +1,9 @@
 <map id="com.fs.starfarer.api.impl.campaign.intel.events.ht.HTScavengerDataFactor" name="com.fs.starfarer.api.impl.campaign.intel.events.ht.HTScavengerDataFactor">
-<area shape="rect" id="node1" title=" " alt="" coords="5,269,309,309"/>
-<area shape="rect" id="node2" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseOneTimeFactor.html" title=" " alt="" coords="12,181,303,221"/>
-<area shape="rect" id="node3" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventFactor.html" title=" " alt="" coords="12,93,303,133"/>
-<area shape="rect" id="node4" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1EventFactor.html" title=" " alt="" coords="12,5,303,45"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,271,309,312"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseOneTimeFactor.html" title=" " alt="" coords="12,183,302,223"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="160,239,160,271,154,271,154,239"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventFactor.html" title=" " alt="" coords="12,94,302,135"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="160,150,160,182,154,182,154,150"/>
+<area shape="rect" id="Node000004" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1EventFactor.html" title=" " alt="" coords="12,5,302,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="160,62,160,94,154,94,154,62"/>
 </map>

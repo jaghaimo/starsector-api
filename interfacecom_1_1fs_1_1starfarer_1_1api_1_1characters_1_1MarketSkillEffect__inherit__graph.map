@@ -1,15 +1,5 @@
 <map id="com.fs.starfarer.api.characters.MarketSkillEffect" name="com.fs.starfarer.api.characters.MarketSkillEffect">
-<area shape="rect" id="node1" title=" " alt="" coords="252,325,451,365"/>
-<area shape="rect" id="node3" title=" " alt="" coords="499,5,753,45"/>
-<area shape="rect" id="node4" title=" " alt="" coords="499,69,753,109"/>
-<area shape="rect" id="node5" title=" " alt="" coords="499,133,753,173"/>
-<area shape="rect" id="node6" title=" " alt="" coords="499,197,753,237"/>
-<area shape="rect" id="node7" title=" " alt="" coords="499,261,753,301"/>
-<area shape="rect" id="node8" title=" " alt="" coords="499,325,753,365"/>
-<area shape="rect" id="node9" title=" " alt="" coords="499,389,753,429"/>
-<area shape="rect" id="node10" title=" " alt="" coords="499,453,753,493"/>
-<area shape="rect" id="node11" title=" " alt="" coords="499,517,753,557"/>
-<area shape="rect" id="node12" title=" " alt="" coords="499,581,753,621"/>
-<area shape="rect" id="node13" title=" " alt="" coords="499,645,753,685"/>
-<area shape="rect" id="node2" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1LevelBasedEffect.html" title=" " alt="" coords="5,325,204,365"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,94,204,135"/>
+<area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1LevelBasedEffect.html" title=" " alt="" coords="5,5,204,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="107,62,107,94,102,94,102,62"/>
 </map>

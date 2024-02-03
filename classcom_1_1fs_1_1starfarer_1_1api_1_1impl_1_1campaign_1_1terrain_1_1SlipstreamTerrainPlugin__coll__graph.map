@@ -1,10 +1,7 @@
 <map id="com.fs.starfarer.api.impl.campaign.terrain.SlipstreamTerrainPlugin" name="com.fs.starfarer.api.impl.campaign.terrain.SlipstreamTerrainPlugin">
-<area shape="rect" id="node1" title=" " alt="" coords="991,125,1251,165"/>
-<area shape="rect" id="node2" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html" title=" " alt="" coords="575,29,835,69"/>
-<area shape="rect" id="node3" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignTerrainPlugin.html" title=" " alt="" coords="280,5,475,45"/>
-<area shape="rect" id="node4" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html" title=" " alt="" coords="280,69,475,109"/>
-<area shape="rect" id="node5" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1HasMemory.html" title=" " alt="" coords="5,69,231,109"/>
-<area shape="rect" id="node6" title=" " alt="" coords="590,93,821,133"/>
-<area shape="rect" id="node7" title=" " alt="" coords="590,157,821,197"/>
-<area shape="rect" id="node8" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTracker.html" title=" " alt="" coords="557,222,853,277"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,168,265,208"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html" title=" " alt="" coords="5,79,265,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="138,135,138,167,132,167,132,135"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="57,5,213,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="138,46,138,79,132,79,132,46"/>
 </map>

@@ -1,7 +1,7 @@
 <map id="com.fs.starfarer.api.impl.combat.dem.DEMScript" name="com.fs.starfarer.api.impl.combat.dem.DEMScript">
-<area shape="rect" id="node1" title=" " alt="" coords="715,37,951,77"/>
-<area shape="rect" id="node2" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseEveryFrameCombatPlugin.html" title=" " alt="" coords="464,5,667,45"/>
-<area shape="rect" id="node3" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1EveryFrameCombatPlugin.html" title=" " alt="" coords="235,5,416,45"/>
-<area shape="rect" id="node4" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEnginePlugin.html" title=" " alt="" coords="5,5,187,45"/>
-<area shape="rect" id="node5" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAIPlugin.html" title=" " alt="" coords="475,69,656,109"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="78,79,313,120"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,207,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="133,39,175,77,172,81,129,43"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="230,5,342,31"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="263,43,219,81,216,77,259,39"/>
 </map>

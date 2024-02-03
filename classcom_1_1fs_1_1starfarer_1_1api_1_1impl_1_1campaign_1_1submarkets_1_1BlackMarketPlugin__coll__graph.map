@@ -1,11 +1,7 @@
 <map id="com.fs.starfarer.api.impl.campaign.submarkets.BlackMarketPlugin" name="com.fs.starfarer.api.impl.campaign.submarkets.BlackMarketPlugin">
-<area shape="rect" id="node1" title=" " alt="" coords="1016,173,1308,213"/>
-<area shape="rect" id="node2" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html" title=" " alt="" coords="655,133,947,173"/>
-<area shape="rect" id="node3" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SubmarketPlugin.html" title=" " alt="" coords="295,5,490,45"/>
-<area shape="rect" id="node4" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html" title=" " alt="" coords="280,69,505,109"/>
-<area shape="rect" id="node5" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1HasMemory.html" title=" " alt="" coords="5,69,231,109"/>
-<area shape="rect" id="node6" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1SubmarketAPI.html" title=" " alt="" coords="280,133,505,173"/>
-<area shape="rect" id="node7" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html" title=" " alt="" coords="295,197,490,237"/>
-<area shape="rect" id="node8" title=" " alt="" coords="357,262,428,287"/>
-<area shape="rect" id="node9" title=" " alt="" coords="769,198,832,223"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,168,297,208"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html" title=" " alt="" coords="5,79,297,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="154,135,154,167,148,167,148,135"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="91,5,211,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="154,46,154,79,148,79,148,46"/>
 </map>

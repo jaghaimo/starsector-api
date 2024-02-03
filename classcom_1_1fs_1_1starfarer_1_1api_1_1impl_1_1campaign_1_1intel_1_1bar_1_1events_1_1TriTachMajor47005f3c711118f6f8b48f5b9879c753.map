@@ -1,5 +1,7 @@
 <map id="com.fs.starfarer.api.impl.campaign.intel.bar.events.TriTachMajorLoanBarEventCreator" name="com.fs.starfarer.api.impl.campaign.intel.bar.events.TriTachMajorLoanBarEventCreator">
-<area shape="rect" id="node1" title=" " alt="" coords="723,5,1033,45"/>
-<area shape="rect" id="node2" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventCreator.html" title=" " alt="" coords="364,5,675,45"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,5,316,45"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,168,316,208"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventCreator.html" title=" " alt="" coords="5,79,316,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="163,135,163,167,158,167,158,135"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="80,5,241,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="163,46,163,79,158,79,158,46"/>
 </map>

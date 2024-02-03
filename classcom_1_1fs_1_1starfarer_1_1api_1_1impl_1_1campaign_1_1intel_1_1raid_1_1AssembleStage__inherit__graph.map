@@ -1,9 +1,11 @@
 <map id="com.fs.starfarer.api.impl.campaign.intel.raid.AssembleStage" name="com.fs.starfarer.api.impl.campaign.intel.raid.AssembleStage">
-<area shape="rect" id="node1" title=" " alt="" coords="645,101,917,141"/>
-<area shape="rect" id="node4" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HIAssembleStage.html" title=" " alt="" coords="965,5,1276,45"/>
-<area shape="rect" id="node5" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PEAssembleStage.html" title=" " alt="" coords="973,69,1269,109"/>
-<area shape="rect" id="node6" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1PirateRaidAssembleStage.html" title=" " alt="" coords="985,133,1257,173"/>
-<area shape="rect" id="node7" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1PirateRaidAssembleStage2.html" title=" " alt="" coords="985,197,1257,237"/>
-<area shape="rect" id="node2" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html" title=" " alt="" coords="325,101,597,141"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,101,277,141"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="454,39,725,79"/>
+<area shape="rect" id="Node000004" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1PirateRaidAssembleStage.html" title=" " alt="" coords="773,5,1045,46"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="741,41,773,37,773,42,741,46"/>
+<area shape="rect" id="Node000005" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1PirateRaidAssembleStage2.html" title=" " alt="" coords="773,71,1045,111"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="741,71,773,75,773,80,741,77"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html" title=" " alt="" coords="135,39,406,79"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="422,56,454,56,454,62,422,62"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,46,87,72"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="102,56,134,56,134,62,102,62"/>
 </map>

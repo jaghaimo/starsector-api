@@ -1,3 +1,9 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignClockAPI.html" title=" " alt="" coords="5,5,200,45"/>
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,78,187,104"/>
+<area shape="rect" id="Node000001" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCells.html" title=" " alt="" coords="237,5,522,46"/>
+<area shape="poly" id="edge675_Node000000_Node000001" title=" " alt="" coords="169,71,234,56,287,44,288,49,235,62,171,77"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateActivity.html" title=" " alt="" coords="237,71,522,111"/>
+<area shape="poly" id="edge676_Node000000_Node000002" title=" " alt="" coords="202,88,236,88,236,94,202,94"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivity.html" title=" " alt="" coords="235,136,524,177"/>
+<area shape="poly" id="edge677_Node000000_Node000003" title=" " alt="" coords="171,105,235,120,288,133,287,138,234,126,169,111"/>
 </map>

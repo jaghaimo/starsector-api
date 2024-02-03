@@ -1,10 +1,7 @@
 <map id="com.fs.starfarer.api.campaign.BaseCampaignEventListener" name="com.fs.starfarer.api.campaign.BaseCampaignEventListener">
-<area shape="rect" id="node1" title=" " alt="" coords="248,165,443,205"/>
-<area shape="rect" id="node3" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BaseCampaignEventListenerAndScript.html" title=" " alt="" coords="499,5,745,45"/>
-<area shape="rect" id="node4" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CoreScript.html" title=" " alt="" coords="511,69,733,109"/>
-<area shape="rect" id="node5" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1CoreEventProbabilityManager.html" title=" " alt="" coords="491,133,753,173"/>
-<area shape="rect" id="node6" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1PatrolFleetManager.html" title=" " alt="" coords="495,197,749,237"/>
-<area shape="rect" id="node7" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1PatrolFleetManagerV2.html" title=" " alt="" coords="495,261,749,301"/>
-<area shape="rect" id="node8" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1StarSystemActivityTracker.html" title=" " alt="" coords="491,325,753,365"/>
-<area shape="rect" id="node2" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignEventListener.html" title=" " alt="" coords="5,165,200,205"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="32,94,225,135"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BaseCampaignEventListenerAndScript.html" title=" " alt="" coords="5,183,252,223"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="131,150,131,182,126,182,126,150"/>
+<area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignEventListener.html" title=" " alt="" coords="32,5,225,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="131,62,131,94,126,94,126,62"/>
 </map>

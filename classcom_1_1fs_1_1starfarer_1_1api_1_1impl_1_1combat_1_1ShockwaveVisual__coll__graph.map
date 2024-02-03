@@ -1,11 +1,9 @@
 <map id="com.fs.starfarer.api.impl.combat.ShockwaveVisual" name="com.fs.starfarer.api.impl.combat.ShockwaveVisual">
-<area shape="rect" id="node1" title=" " alt="" coords="596,173,804,213"/>
-<area shape="rect" id="node2" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseCombatLayeredRenderingPlugin.html" title=" " alt="" coords="297,120,535,160"/>
-<area shape="rect" id="node3" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatLayeredRenderingPlugin.html" title=" " alt="" coords="5,5,212,45"/>
-<area shape="rect" id="node4" href="$enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineLayers.html" title=" " alt="" coords="18,69,199,109"/>
-<area shape="rect" id="node5" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEntityAPI.html" title=" " alt="" coords="18,133,199,173"/>
-<area shape="rect" id="node6" title=" " alt="" coords="295,205,537,245"/>
-<area shape="rect" id="node7" title=" " alt="" coords="69,198,148,223"/>
-<area shape="rect" id="node8" title=" " alt="" coords="83,247,135,273"/>
-<area shape="rect" id="node9" title=" " alt="" coords="73,297,144,322"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="432,37,640,78"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="154,5,354,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="370,36,432,43,432,49,369,41"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="133,71,374,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="390,72,432,67,432,73,390,78"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,78,84,104"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="99,88,133,88,133,94,99,94"/>
 </map>

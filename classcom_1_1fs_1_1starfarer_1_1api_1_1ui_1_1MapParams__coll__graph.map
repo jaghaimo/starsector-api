@@ -1,13 +1,5 @@
 <map id="com.fs.starfarer.api.ui.MapParams" name="com.fs.starfarer.api.ui.MapParams">
-<area shape="rect" id="node1" title=" " alt="" coords="743,233,891,273"/>
-<area shape="rect" id="node2" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html" title=" " alt="" coords="333,5,528,45"/>
-<area shape="rect" id="node3" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1HasMemory.html" title=" " alt="" coords="5,5,231,45"/>
-<area shape="rect" id="node4" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MapFilterData.html" title=" " alt="" coords="357,69,505,109"/>
-<area shape="rect" id="node5" title=" " alt="" coords="367,134,494,159"/>
-<area shape="rect" id="node6" title=" " alt="" coords="405,183,457,209"/>
-<area shape="rect" id="node7" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI.html" title=" " alt="" coords="333,233,528,273"/>
-<area shape="rect" id="node8" title=" " alt="" coords="318,297,543,337"/>
-<area shape="rect" id="node9" title=" " alt="" coords="280,361,581,401"/>
-<area shape="rect" id="node10" title=" " alt="" coords="395,426,466,451"/>
-<area shape="rect" id="node11" title=" " alt="" coords="340,476,521,516"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,109,153,150"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MapFilterData.html" title=" " alt="" coords="5,5,153,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="82,62,82,109,76,109,76,62"/>
 </map>

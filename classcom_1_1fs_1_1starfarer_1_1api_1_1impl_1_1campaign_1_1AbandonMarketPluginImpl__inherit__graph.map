@@ -1,6 +1,9 @@
 <map id="com.fs.starfarer.api.impl.campaign.AbandonMarketPluginImpl" name="com.fs.starfarer.api.impl.campaign.AbandonMarketPluginImpl">
-<area shape="rect" id="node1" title=" " alt="" coords="585,37,807,77"/>
-<area shape="rect" id="node2" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseGenericPlugin.html" title=" " alt="" coords="314,5,535,45"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,37,264,77"/>
-<area shape="rect" id="node4" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1AbandonMarketPlugin.html" title=" " alt="" coords="312,69,537,109"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="109,168,330,208"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseGenericPlugin.html" title=" " alt="" coords="5,79,226,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="152,128,198,165,194,169,149,132"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="64,5,167,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="118,46,118,79,113,79,113,46"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="249,87,398,112"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="299,124,245,169,241,165,296,120"/>
 </map>

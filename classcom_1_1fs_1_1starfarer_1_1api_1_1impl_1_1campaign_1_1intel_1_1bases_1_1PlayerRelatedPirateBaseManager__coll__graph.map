@@ -1,7 +1,5 @@
 <map id="com.fs.starfarer.api.impl.campaign.intel.bases.PlayerRelatedPirateBaseManager" name="com.fs.starfarer.api.impl.campaign.intel.bases.PlayerRelatedPirateBaseManager">
-<area shape="rect" id="node1" title=" " alt="" coords="464,99,751,139"/>
-<area shape="rect" id="node2" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="81,5,248,45"/>
-<area shape="rect" id="node3" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html" title=" " alt="" coords="87,69,242,109"/>
-<area shape="rect" id="node4" title=" " alt="" coords="129,134,200,159"/>
-<area shape="rect" id="node5" title=" " alt="" coords="5,184,324,224"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,94,291,135"/>
+<area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="65,5,231,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="151,62,151,94,145,94,145,62"/>
 </map>

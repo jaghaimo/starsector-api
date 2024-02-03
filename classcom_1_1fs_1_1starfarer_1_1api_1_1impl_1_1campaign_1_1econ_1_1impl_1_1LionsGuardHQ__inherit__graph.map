@@ -1,8 +1,13 @@
 <map id="com.fs.starfarer.api.impl.campaign.econ.impl.LionsGuardHQ" name="com.fs.starfarer.api.impl.campaign.econ.impl.LionsGuardHQ">
-<area shape="rect" id="node1" title=" " alt="" coords="605,97,884,137"/>
-<area shape="rect" id="node2" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html" title=" " alt="" coords="279,33,557,73"/>
-<area shape="rect" id="node3" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1Industry.html" title=" " alt="" coords="5,5,231,45"/>
-<area shape="rect" id="node4" title=" " alt="" coords="79,70,157,95"/>
-<area shape="rect" id="node5" title=" " alt="" coords="291,97,545,137"/>
-<area shape="rect" id="node6" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1FleetEventListener.html" title=" " alt="" coords="295,161,541,201"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="458,79,736,120"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html" title=" " alt="" coords="132,22,410,63"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="406,63,478,76,477,81,405,68"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="11,5,78,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="94,21,132,25,131,30,93,26"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,55,84,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="99,59,131,55,131,60,100,64"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="203,87,339,112"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="354,97,458,97,458,102,354,102"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="206,136,336,162"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="351,134,458,118,459,123,352,139"/>
 </map>

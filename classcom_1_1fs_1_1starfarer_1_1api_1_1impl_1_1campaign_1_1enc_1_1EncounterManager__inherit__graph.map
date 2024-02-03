@@ -1,5 +1,7 @@
 <map id="com.fs.starfarer.api.impl.campaign.enc.EncounterManager" name="com.fs.starfarer.api.impl.campaign.enc.EncounterManager">
-<area shape="rect" id="node1" title=" " alt="" coords="299,37,544,77"/>
-<area shape="rect" id="node2" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="45,5,211,45"/>
-<area shape="rect" id="node3" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1EncounterPointProvider.html" title=" " alt="" coords="5,69,251,109"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="298,39,542,79"/>
+<area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="44,5,211,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="226,34,297,42,297,48,226,39"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1EncounterPointProvider.html" title=" " alt="" coords="5,71,250,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="265,73,297,70,298,75,265,79"/>
 </map>

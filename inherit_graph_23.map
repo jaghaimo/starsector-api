@@ -1,3 +1,15 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html" title=" " alt="" coords="5,5,200,45"/>
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,177,130,203"/>
+<area shape="rect" id="Node000001" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1GravitonBeamEffect.html" title=" " alt="" coords="178,5,385,46"/>
+<area shape="poly" id="edge686_Node000000_Node000001" title=" " alt="" coords="82,162,120,109,147,81,176,57,199,44,202,49,179,61,150,85,125,112,86,165"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1IonBeamEffect.html" title=" " alt="" coords="178,71,385,111"/>
+<area shape="poly" id="edge687_Node000000_Node000002" title=" " alt="" coords="100,165,177,122,208,109,210,114,179,127,102,170"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1PaladinEffect.html" title=" " alt="" coords="178,136,385,177"/>
+<area shape="poly" id="edge688_Node000000_Node000003" title=" " alt="" coords="145,175,177,170,178,175,145,180"/>
+<area shape="rect" id="Node000004" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RiftCascadeEffect.html" title=" " alt="" coords="178,201,385,242"/>
+<area shape="poly" id="edge689_Node000000_Node000004" title=" " alt="" coords="145,199,178,203,177,209,145,204"/>
+<area shape="rect" id="Node000005" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RiftLanceEffect.html" title=" " alt="" coords="178,267,385,307"/>
+<area shape="poly" id="edge690_Node000000_Node000005" title=" " alt="" coords="103,209,179,251,210,264,208,268,177,256,100,214"/>
+<area shape="rect" id="Node000006" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1TachyonLanceEffect.html" title=" " alt="" coords="178,332,385,373"/>
+<area shape="poly" id="edge691_Node000000_Node000006" title=" " alt="" coords="87,214,125,266,150,294,179,317,202,329,200,334,176,321,147,297,121,270,82,217"/>
 </map>

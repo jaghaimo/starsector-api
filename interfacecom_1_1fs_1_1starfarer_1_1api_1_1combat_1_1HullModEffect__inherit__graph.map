@@ -1,51 +1,5 @@
 <map id="com.fs.starfarer.api.combat.HullModEffect" name="com.fs.starfarer.api.combat.HullModEffect">
-<area shape="rect" id="node1" title=" " alt="" coords="5,1477,187,1517"/>
-<area shape="rect" id="node2" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html" title=" " alt="" coords="255,1445,436,1485"/>
-<area shape="rect" id="node49" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1TowCable.html" title=" " alt="" coords="235,1509,456,1549"/>
-<area shape="rect" id="node3" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1RepairGantry.html" title=" " alt="" coords="504,5,725,45"/>
-<area shape="rect" id="node4" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1AblativeArmor.html" title=" " alt="" coords="506,69,723,109"/>
-<area shape="rect" id="node5" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1AdaptivePhaseCoils.html" title=" " alt="" coords="506,133,723,173"/>
-<area shape="rect" id="node6" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1AdvancedGroundSupport.html" title=" " alt="" coords="506,197,723,237"/>
-<area shape="rect" id="node7" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1AndradaMods.html" title=" " alt="" coords="506,261,723,301"/>
-<area shape="rect" id="node8" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1AssaultPackage.html" title=" " alt="" coords="506,325,723,365"/>
-<area shape="rect" id="node9" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1Automated.html" title=" " alt="" coords="506,389,723,429"/>
-<area shape="rect" id="node10" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1BDeck.html" title=" " alt="" coords="506,453,723,493"/>
-<area shape="rect" id="node11" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1BallisticRangefinder.html" title=" " alt="" coords="506,517,723,557"/>
-<area shape="rect" id="node12" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1BaseLogisticsHullMod.html" title=" " alt="" coords="506,581,723,621"/>
-<area shape="rect" id="node13" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1CompromisedStorage.html" title=" " alt="" coords="506,645,723,685"/>
-<area shape="rect" id="node14" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1CompromisedStructure.html" title=" " alt="" coords="506,709,723,749"/>
-<area shape="rect" id="node15" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar.html" title=" " alt="" coords="506,773,723,813"/>
-<area shape="rect" id="node16" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1DamagedFlightDeck.html" title=" " alt="" coords="506,837,723,877"/>
-<area shape="rect" id="node17" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1DamagedWeaponMounts.html" title=" " alt="" coords="506,901,723,941"/>
-<area shape="rect" id="node18" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1DefectiveManufactory.html" title=" " alt="" coords="506,965,723,1005"/>
-<area shape="rect" id="node19" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1DefensiveTargetingArray.html" title=" " alt="" coords="506,1029,723,1069"/>
-<area shape="rect" id="node20" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1DegradedLifeSupport.html" title=" " alt="" coords="506,1093,723,1133"/>
-<area shape="rect" id="node21" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1DegradedShields.html" title=" " alt="" coords="506,1157,723,1197"/>
-<area shape="rect" id="node22" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1DistributedFireControl.html" title=" " alt="" coords="506,1221,723,1261"/>
-<area shape="rect" id="node23" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1DoNotBackOff.html" title=" " alt="" coords="506,1285,723,1325"/>
-<area shape="rect" id="node24" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1DriveFieldStabilizer.html" title=" " alt="" coords="506,1349,723,1389"/>
-<area shape="rect" id="node25" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ECMPackage.html" title=" " alt="" coords="506,1413,723,1453"/>
-<area shape="rect" id="node26" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1EnergyBoltCoherer.html" title=" " alt="" coords="506,1477,723,1517"/>
-<area shape="rect" id="node27" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ErraticInjector.html" title=" " alt="" coords="506,1541,723,1581"/>
-<area shape="rect" id="node28" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1EscortPackage.html" title=" " alt="" coords="506,1605,723,1645"/>
-<area shape="rect" id="node29" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ExpandedDeckCrew.html" title=" " alt="" coords="506,1669,723,1709"/>
-<area shape="rect" id="node30" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ExperimentalPhaseCoils.html" title=" " alt="" coords="506,1733,723,1773"/>
-<area shape="rect" id="node31" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1FaultyAutomatedSystems.html" title=" " alt="" coords="506,1797,723,1837"/>
-<area shape="rect" id="node32" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1FighterChassisStorage.html" title=" " alt="" coords="506,1861,723,1901"/>
-<area shape="rect" id="node33" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1FragileSubsystems.html" title=" " alt="" coords="506,1925,723,1965"/>
-<area shape="rect" id="node34" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1GlitchedSensorArray.html" title=" " alt="" coords="506,1989,723,2029"/>
-<area shape="rect" id="node35" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1GroundSupport.html" title=" " alt="" coords="506,2053,723,2093"/>
-<area shape="rect" id="node36" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1HeavyBallisticsIntegration.html" title=" " alt="" coords="506,2117,723,2157"/>
-<area shape="rect" id="node37" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1HighScatterAmp.html" title=" " alt="" coords="506,2181,723,2221"/>
-<area shape="rect" id="node38" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1IncreasedMaintenance.html" title=" " alt="" coords="506,2245,723,2285"/>
-<area shape="rect" id="node39" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1MalfunctioningComms.html" title=" " alt="" coords="506,2309,723,2349"/>
-<area shape="rect" id="node40" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1MissileAutoloader.html" title=" " alt="" coords="506,2373,723,2413"/>
-<area shape="rect" id="node41" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1NavRelay.html" title=" " alt="" coords="506,2437,723,2477"/>
-<area shape="rect" id="node42" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1NeuralInterface.html" title=" " alt="" coords="506,2501,723,2541"/>
-<area shape="rect" id="node43" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1OperationsCenter.html" title=" " alt="" coords="506,2565,723,2605"/>
-<area shape="rect" id="node44" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1PDIntegration.html" title=" " alt="" coords="506,2629,723,2669"/>
-<area shape="rect" id="node45" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1PeriodicMissileReload.html" title=" " alt="" coords="506,2693,723,2733"/>
-<area shape="rect" id="node46" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1PhaseAnchor.html" title=" " alt="" coords="506,2757,723,2797"/>
-<area shape="rect" id="node47" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1PhaseField.html" title=" " alt="" coords="506,2821,723,2861"/>
-<area shape="rect" id="node48" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1RecoveryShuttles.html" title=" " alt="" coords="506,2885,723,2925"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,186,46"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html" title=" " alt="" coords="5,94,186,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="98,62,98,94,93,94,93,62"/>
 </map>

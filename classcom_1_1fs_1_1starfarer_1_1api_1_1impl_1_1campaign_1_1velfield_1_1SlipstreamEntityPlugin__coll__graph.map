@@ -1,11 +1,9 @@
 <map id="com.fs.starfarer.api.impl.campaign.velfield.SlipstreamEntityPlugin" name="com.fs.starfarer.api.impl.campaign.velfield.SlipstreamEntityPlugin">
-<area shape="rect" id="node1" title=" " alt="" coords="957,164,1221,204"/>
-<area shape="rect" id="node2" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html" title=" " alt="" coords="613,60,835,100"/>
-<area shape="rect" id="node3" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CustomCampaignEntityPlugin.html" title=" " alt="" coords="280,5,475,45"/>
-<area shape="rect" id="node4" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html" title=" " alt="" coords="280,69,475,109"/>
-<area shape="rect" id="node5" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1HasMemory.html" title=" " alt="" coords="5,69,231,109"/>
-<area shape="rect" id="node6" title=" " alt="" coords="592,129,856,169"/>
-<area shape="rect" id="node7" title=" " alt="" coords="351,142,403,167"/>
-<area shape="rect" id="node8" title=" " alt="" coords="638,194,810,219"/>
-<area shape="rect" id="node9" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1FaderUtil.html" title=" " alt="" coords="647,244,801,284"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="604,53,868,94"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html" title=" " alt="" coords="269,5,489,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="505,40,604,53,604,59,504,45"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,13,198,39"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="213,23,268,23,268,28,213,28"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="247,71,510,111"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="526,81,604,77,604,83,526,87"/>
 </map>
