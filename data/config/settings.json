@@ -284,10 +284,14 @@
 	"economyNoDemandPriceMult":0.5,
 	"economyGreedFraction":0.25,
 	
-	"economyDeficitPriceIncrPerUnit":0.125,
-	"economyDeficitPriceMultMax":1.5,
-	"economyExcessPriceDecrPerUnit":0.11,
-	"economyExcessPriceMultMin":0.67,
+	#"economyDeficitPriceIncrPerUnit":0.125,
+	#"economyDeficitPriceMultMax":1.5,
+	#"economyExcessPriceDecrPerUnit":0.11,
+	#"economyExcessPriceMultMin":0.67,
+	"economyDeficitPriceIncrPerUnit":0.25,
+	"economyDeficitPriceMultMax":1.25,
+	"economyExcessPriceDecrPerUnit":0.15,
+	"economyExcessPriceMultMin":0.85,
 	
 	
 	"stockpileMultProduction":0.25,
@@ -1433,6 +1437,7 @@
 		"raidObjectives":{  # icons displayed at 26x26
 			"gaData":"graphics/icons/raid_objective.png",
 			"genericIcon":"graphics/icons/raid_objective.png",
+			"rdsm":"graphics/icons/raid_objective.png",
 			"smuggledPlunder":"graphics/icons/intel/smuggling.png",
 		},
 		"campaignMissions":{

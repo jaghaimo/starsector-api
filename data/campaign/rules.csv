@@ -19834,7 +19834,7 @@ LOCRMoffloadMiners,MarketPostDock,"$player.locr_minersOnBoard
 $marketSize > 3
 $player.crew > 136","Highlight ""offloading the miners you rescued""",You've arrived at a colony suitable for offloading the miners you rescued from the fringe survey site.,"locrm_offloadMiners2:Shuttle the rescued miners to $name
 locrm_offloadMiners2no:Not yet",
-,DialogOptionSelected,$option == locrm_offloadMiners2,"AddCommodity crew -105
+LOCRMoffloadMiners2,DialogOptionSelected,$option == locrm_offloadMiners2,"AddCommodity crew -105
 AddXP 5000
 AdjustRep independent FRIENDLY 1
 unset $player.locr_minersOnBoard
@@ -26262,7 +26262,7 @@ HA_CMD joinLeague"," ""As Prime Demarchon, I attest that $player.theFactionName 
 
 ""Let me be the first, then, to welcome you to the Persean League, $playerName. Together we will build a worthy future for the Persean Sector and, one day, the galaxy itself.""
 
-Reynard Hannan smiles widely, flashing perfect teeth - nearly; his canines are slightly more prominent than ideal. An affection of style, surely.",cutCommLinkPolite:End the conversation,
+Reynard Hannan smiles widely, flashing perfect teeth - nearly; his canines are slightly more prominent than ideal. An affectation of style, surely.",cutCommLinkPolite:End the conversation,
 PLSetGoodDealFlag,PLSetGoodDealFlag,$madeGoodDeal,"$player.hasGoodPLMembershipDeal = true
 unset $madeGoodDeal",,,
 ,,,,,,
@@ -27725,7 +27725,7 @@ cutCommLink:""No, I'm done with you."" (cut comms)",
 PKPatherComDontNegotiate,DialogOptionSelected,$option == pkPather_recoverMissionTerrorists,RemoveOption pkPather_recoverMissionTerrorists,"""Nor we with a defiler of Creation,"" $heOrShe says calmly. ""But you know that's not always true.""",,
 PKPathRecoverMission1,DialogOptionSelected,$option == pkPath_recoverMission1,,"A hint of a smile crosses $hisOrHer lips. ""We understand one another.""
 
-""These is little we want from you; not credits, not ships. However,"" $heOrShe pauses deliberately. ""There is something.""
+""There is little we want from you; not credits, not ships. However,"" $heOrShe pauses deliberately. ""There is something.""
 
 ""It would persuade me, and others of like mind in my organization, to set aside the purification of your industries... until Armageddon, of course, when our armies will meet yours in final battle. But until that glorious day you could enjoy your trinkets and idols.""","pkPath_recoverMission2:""What is it you want? Speak plainly.""",
 PKPathRecoverMission2,DialogOptionSelected,$option == pkPath_recoverMission2,,"$HeOrShe gives a nod, ""One planetkiller weapon.""","
@@ -29566,7 +29566,7 @@ HistorianBackstoryBlurb25,HistorianBackstoryBlurb,!WasHistorianBlurbShown histor
 ""Although,"" $heOrShe leans in, ""on a personal level, I cannot but wonder if something of the world itself has changed since the Collapse. Has hyperspace become more chaotic, mysterious; inhabited, almost, by alien phenomena? Or was it simply unobserved, or unreported before? Or were the reports suppressed? Or was there simply not enough intra-spacer contact to reinforce their observations - or shall we put it, for the skeptical -  these shared narrative projections?""
 
 ""I am a mere historian and, now,"" $heOrShe smiles sadly, ""I am bereft of the corrective presence of my colleagues in the Academy. I both fear and admit that my documentation efforts might appear to drift toward dilettantism.""",,
-HistorianBackstoryBlurb26,HistorianBackstoryBlurb,!WasHistorianBlurbShown historyBlurb26,SetHistorianBlurbShownAfterDelay historyBlurb26,"""The mind reels at the loss of the Collapse,"" $heOrShe says. ""Set aside even the Domain for a moment, with its population inconceivable to our barely-civilized human brains. Just the fringe world of the Persean Sector witnessed untold death as the thin thread of logistics from the Core, and the Domain itself, was cut. Food, life support, medicines, essentially machinery - bled out, spilled into space to become so much debris...""
+HistorianBackstoryBlurb26,HistorianBackstoryBlurb,!WasHistorianBlurbShown historyBlurb26,SetHistorianBlurbShownAfterDelay historyBlurb26,"""The mind reels at the loss of the Collapse,"" $heOrShe says. ""Set aside even the Domain for a moment, with its population inconceivable to our barely-civilized human brains. Just the fringe world of the Persean Sector witnessed untold death as the thin thread of logistics from the Core, and the Domain itself, was cut. Food, life support, medicines, essential machinery - bled out, spilled into space to become so much debris...""
 
 The historian stares off into a corner, $hisOrHer eyes darkened, $hisOrHer attention become lost in the imagined scene of past horror.",,
 HistorianBackstoryBlurb27,HistorianBackstoryBlurb,!WasHistorianBlurbShown historyBlurb27,SetHistorianBlurbShownAfterDelay historyBlurb27,"""Ah, the tragedy of Opis. The sheer scale of loss is incomprehensible to the mind. To this day there are those who fight and kill over the finer points of whose fault it was. I have my position, but that argument over-dominates the story of the Opisean polity itself. Why should those countless dead be defined by their murderer? I find that the beginning of a story is necessary to illuminate the end, don't you agree?""
@@ -29574,7 +29574,7 @@ HistorianBackstoryBlurb27,HistorianBackstoryBlurb,!WasHistorianBlurbShown histor
 $HeOrShe doesn't wait for an answer, but begins to lecture. ""Opis was a center of population, of art and commerce. Not heavy industry as-such, however - that they exported to Sindria; and agriculture, to Volturn. Out of sight, out of mind. The rulers of the Chartery of Opis grew to see little need in appeasing any but their local patronage networks. Wealth flowed to the center, where influence coagulated; the edges were forgotten.""
 
 ""Was it once again the sin of the Domain re-enacted on a smaller stage?"" $HeOrShe raises $hisOrHer eyebrows.",,
-HistorianBackstoryBlurb28,HistorianBackstoryBlurb,!WasHistorianBlurbShown historyBlurb28,SetHistorianBlurbShownAfterDelay historyBlurb28,"""This?"" $HeOrShe pats the paper book $heOrShe keeps close, and consults often. ""It is... something of an affection fitting with my self-image.""
+HistorianBackstoryBlurb28,HistorianBackstoryBlurb,!WasHistorianBlurbShown historyBlurb28,SetHistorianBlurbShownAfterDelay historyBlurb28,"""This?"" $HeOrShe pats the paper book $heOrShe keeps close, and consults often. ""It is... something of an affectation fitting with my self-image.""
 
 ""There are independent high-tech manufacturers of such objects which range far from traditional papermaking. The integrated digital interface paper-analogs are impressively functional, but my own notebooks? I purchase them from a Luddic craft guild on Tartessus. Indeed, it is mostly composed of dead cellulose.""
 
