@@ -7,7 +7,7 @@
 			"size":4,
 			"startingConditions":[
 				#"cottage_industry",
-				#"luddic_majority",
+				"luddic_majority",
 				"population_4",
 				"no_atmosphere",
 				"low_gravity",

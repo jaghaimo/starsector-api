@@ -47,7 +47,7 @@
         55,
         79
     ],
-    "collisionRadius": 120,
+    "collisionRadius": 122,
     "coversColor": "",
     "engineSlots": [
         {
@@ -168,7 +168,6 @@
             "angle": 0,
             "arc": 210,
             "id": "WS 001",
-            "renderOrderMod":10,
             "locations": [
                 31,
                 0

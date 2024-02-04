@@ -77,13 +77,17 @@
 		#"loopOne":"terrain_hyperspace_open",
 		# deep hyperspace
 		"loopTwo":"terrain_hyperspace_deep",
-		# pre-storm signal
-		#"loopThree":"terrain_hyperspace_storm_signal",
+		# Orion-Perseus Abyss
+		"loopThree":"terrain_hyperspace_abyss",
 		# storm in deep hyperspace
 		"loopFour":"terrain_hyperspace_storm",
 		"custom":{
 			# lightning strikes
 			"stormSound":"terrain_hyperspace_lightning",
+			
+			# for abyssal sound filter
+			"gain":0.75,
+			"gainHF":0.1,
 		},
 	},
 	

@@ -196,6 +196,9 @@ nothing,rare_tech,50%
 item_pristine_nanoforge,nanoforge_always,100
 item_corrupted_nanoforge,nanoforge_always,100
 ,,
+item_synchrotron,rare_tech_mothership,10
+item_pristine_nanoforge,rare_tech_mothership,10
+item_catalytic_core,rare_tech_mothership,10
 ,,
 item_synchrotron,rare_tech_low,10
 item_pristine_nanoforge,rare_tech_low,3

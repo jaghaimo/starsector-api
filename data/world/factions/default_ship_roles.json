@@ -462,6 +462,8 @@
 		"doom_Strike":4,
 		"doom_Support":3,
 		"doom_Attack":3,
+		"grendel_Assault":7,
+		"grendel_Support":3,
 		"fallback":{"phaseMedium":1},
 		"fallback2":{"phaseSmall":1},
 	},

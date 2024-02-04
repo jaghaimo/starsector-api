@@ -53,7 +53,7 @@
         56,
         85
     ],
-    "collisionRadius": 111,
+    "collisionRadius": 140,
     "coversColor": "",
     "engineSlots": [
         {
@@ -199,7 +199,7 @@
             "arc": 190,
             "id": "WS 006",
             "locations": [
-                11,
+                10,
                 18
             ],
             "mount": "TURRET",
@@ -215,7 +215,7 @@
             "arc": 190,
             "id": "WS 007",
             "locations": [
-                11,
+                10,
                 -18
             ],
             "mount": "TURRET",
@@ -231,7 +231,7 @@
             "arc": 270,
             "id": "WS 008",
             "locations": [
-                -50,
+                -51,
                 0
             ],
             "mount": "TURRET",

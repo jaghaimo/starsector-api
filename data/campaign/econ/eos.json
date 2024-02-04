@@ -7,7 +7,7 @@
 			"size":7,
 			"startingConditions":[
 				#"rural_polity",
-				#"luddic_majority",
+				"luddic_majority",
 				#"cottage_industry",
 				#"arid",
 				"population_7",
@@ -54,7 +54,7 @@
 			"size":5,
 			"startingConditions":[
 				#"cottage_industry",
-				#"luddic_majority",
+				"luddic_majority",
 				#"ore_complex",
 				#"organics_complex",
 				#"ice",

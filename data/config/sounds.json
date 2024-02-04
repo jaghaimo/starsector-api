@@ -34,6 +34,15 @@
 		"music_survey_and_scavenge":[
 			{"file":"scavenge_music_v1.ogg","source":"sounds/music/music.bin","volume":1} 
 		],
+		"music_encounter_mysterious":[
+			{"file":"campaign_mysterious_encounter_01.ogg","source":"sounds/music/music.bin","volume":0.7} 
+		],
+		"music_encounter_mysterious_non_aggressive":[
+			{"file":"campaign_mysterious_encounter_02.ogg","source":"sounds/music/music.bin","volume":0.5} 
+		],
+		"music_encounter_neutral":[
+			{"file":"campaign_neutral_encounter_01.ogg","source":"sounds/music/music.bin","volume":0.5} 
+		],
 
 		"music_default_market_neutral":[
 			{
@@ -2399,6 +2408,10 @@
 		],
 	},
 	
+	"ui_learned_ability":[
+		{"file":"sounds/sfx_cargo/cargo_hullmod_acquire.ogg","pitch":1,"volume":0.6},
+	],
+	
 	"ui_acquired_hullmod":[
 		{"file":"sounds/sfx_cargo/cargo_hullmod_acquire.ogg","pitch":1,"volume":0.6},
 	],
@@ -3443,6 +3456,76 @@
 		],
 	},
 	
+	"ui_reverse_polarity_loop":[ 
+        {"file":"sounds/sfx_abilities/ability-slipstream_polarity_loop.ogg","pitch":1.0,"volume":0.05},
+    ],
+    "ui_reverse_polarity_on":{
+        "sounds":[
+            {"file":"sounds/sfx_abilities/ability-slipstream_polarity_activate.ogg","pitch":1,"volume":0.3},
+        ],
+    },
+    "ui_reverse_polarity_off":{
+        "sounds":[
+            {"file":"sounds/sfx_abilities/ability-slipstream_polarity_deactivate.ogg","pitch":1,"volume":0.3},
+        ],
+    },
+	
+	# not important/needed since it's a player-only ability
+	"world_reverse_polarity_on":{
+		"sounds":[
+			{"file":"sounds/sfx_abilities/ability_world-sustained_burn_activate.ogg","pitch":1,"volume":0.4},
+		],
+	},
+	"world_reverse_polarity_off":{
+		"sounds":[
+			{"file":"sounds/sfx_abilities/ability_world-sustained_burn_deactivate.ogg","pitch":1,"volume":1.0},
+		],
+	},
+	
+	
+ 	"ui_slipsurge_on":{
+        "sounds":[
+            #{"file":"sounds/sfx_abilities/ability-slipstream_surge_activate.ogg","pitch":1,"volume":0.2},
+        ],
+    },
+    "ui_slipsurge_off":{
+        "sounds":[
+            {"file":"sounds/sfx_abilities/ability-slipstream_surge_deactivate.ogg","pitch":1,"volume":0.6},
+        ],
+    },
+    "ui_slipsurge_loop":{
+        "sounds":[
+            {"file":"sounds/sfx_abilities/ability-slipstream_surge_activate.ogg","pitch":1,"volume":0.3},
+        ],
+    },
+    "ui_slipsurge_travel_loop":[ 
+        {"file":"sounds/sfx_abilities/ability-slipstream_surge_flight_loop.ogg","pitch":1.0,"volume":0.2},
+    ],
+    
+    # not important/needed since it's a player-only ability
+    "world_slipsurge_on":{
+        "sounds":[
+           	#{"file":"sounds/sfx_abilities/ability-interdiction_pulse_detected.ogg","pitch":1,"volume":1.0},
+        ],
+    },
+    "world_slipsurge_off":{
+        "sounds":[
+            #{"file":"sounds/sfx_abilities/ability-world-interdiction_pulse_activate.ogg","pitch":1,"volume":1.0},
+        ],
+    },
+    "world_slipsurge_loop":{
+        "sounds":[
+            #{"file":"sounds/sfx_abilities/ability-world-interdiction_pulse_charge.ogg","pitch":1,"volume":1.0},
+        ],
+    },
+	
+	
+	"gate_hauler_engine_loop":[ 
+		#{"file":"sounds/sfx_abilities/ability_world-emergency_burn_02_loop.ogg","pitch":0.6,"volume":1.0},
+		{"file":"sounds/sfx_systems/maneuvering_jets_loop.ogg","pitch":0.7,"volume":1},
+		#{"file":"sounds/sfx_systems/burn_drive_loop.ogg","pitch":0.4,"volume":1},
+	],
+	
 	"ui_scavenge_on":{
 		"sounds":[
 			{"file":"sounds/sfx_abilities/ability_scavenge_01.ogg","pitch":1,"volume":0.5},
@@ -3501,6 +3584,27 @@
 	
 	
 #collapseclose
+
+	"abyssal_light_random_sound":[
+        {"file":"sounds/sfx_terrain/terrain_abyssal_light_01.ogg","pitch":1.0,"volume":0.5},
+        {"file":"sounds/sfx_terrain/terrain_abyssal_light_02.ogg","pitch":1.0,"volume":0.5},
+        {"file":"sounds/sfx_terrain/terrain_abyssal_light_03.ogg","pitch":1.0,"volume":0.5},
+        {"file":"sounds/sfx_terrain/terrain_abyssal_light_04.ogg","pitch":1.0,"volume":0.5},
+        {"file":"sounds/sfx_terrain/terrain_abyssal_light_05.ogg","pitch":1.0,"volume":0.5},
+        {"file":"sounds/sfx_terrain/terrain_abyssal_light_06.ogg","pitch":1.0,"volume":0.5},
+    ],
+    
+    # abyssal_light_despawn plays 1.4 seconds after this
+    "abyssal_light_expand_despawn_windup":[ 
+           	{"file":"sounds/sfx_terrain/terrain_abyssal_light_windup_01.ogg","pitch":1.0,"volume":1.0},
+    ],
+    "abyssal_light_despawn_disrupted":[ 
+           	{"file":"sounds/sfx_terrain/terrain_abyssal_light_despawn_01.ogg","pitch":1.0,"volume":1.0},
+    ],
+    "abyssal_light_despawn_expired":[ 
+           	{"file":"sounds/sfx_systems/mote_attractor_activation.ogg","pitch":0.5,"volume":0.5},
+    ],
+
 	
 #collapseopen TERRAIN
 
@@ -3553,6 +3657,10 @@
 			#{"file":"sounds/sfx_terrain/terrain_nebula_default.ogg","pitch":1,"volume":0.9},
 	],
 	
+	"terrain_hyperspace_abyss":[
+		{"file":"sounds/sfx_terrain/terrain_abyssal_hyperspace.ogg","pitch":1,"volume":0.5},
+	],
+	     
 	# 0.25, 0.4, 0.6 for lightning
 	"terrain_hyperspace_deep":[
 		{"file":"sounds/sfx_terrain/terrain_hyperspace_deep.ogg","pitch":1,"volume":0.25},
@@ -3708,6 +3816,10 @@
     "storyevent_diktat_execution":{"sounds":[
             {"file":"sounds/sfx_misc/storyevent_diktat_execution.ogg","pitch":1,"volume":0.5},
     ],},
+    
+    
+    "sound_none":[
+    ],
 }
 
 

@@ -37,12 +37,15 @@ seco,,,underworld,,,10,30,60,INHOSPITABLE,,,,,,graphics/icons/missions/security_
 hijack,,,underworld,,,10,30,60,INHOSPITABLE,,,,,,,com.fs.starfarer.api.impl.campaign.missions.HijackingMission
 jabr,,,underworld,,,10,30,60,INHOSPITABLE,,,,,,graphics/icons/missions/jailbreak.png,com.fs.starfarer.api.impl.campaign.missions.JailbreakMission
 ddro,,,underworld,,,10,30,60,INHOSPITABLE,,,,,,graphics/icons/missions/dead_drop.png,com.fs.starfarer.api.impl.campaign.missions.DeadDropMission
-sitm,,,underworld,,,10,30,60,FRIENDLY,,,,,,graphics/icons/missions/blueprint_location.png,com.fs.starfarer.api.impl.campaign.missions.BlueprintIntel
+sitm,,,underworld,,,10,30,60,FAVORABLE,,,,,,graphics/icons/missions/blueprint_location.png,com.fs.starfarer.api.impl.campaign.missions.BlueprintIntel
+rdsm,,,underworld,,non_repeatable,10,120,60,NEUTRAL,,,,,,graphics/icons/missions/data_retrieval_uw.png,com.fs.starfarer.api.impl.campaign.missions.RuinsDataSwapMission
+rsom,,,underworld,,non_repeatable,10,120,60,NEUTRAL,,,,,,graphics/icons/missions/raid_smuggler_base.png,com.fs.starfarer.api.impl.campaign.missions.RaidSecretOutpostMission
+locrlf,,luddic_church,trade,,non_repeatable,10,30,60,INHOSPITABLE,,,,,,graphics/icons/missions/lost_flock.png,com.fs.starfarer.api.impl.campaign.missions.luddic.LostOutpostCrewReturnLuddicFind
 soe,,,,,,,,,,,,,,,graphics/icons/missions/eventide.png,com.fs.starfarer.api.impl.campaign.missions.SwordOfEventide
 anh,,,,,,,,,,,,,,,graphics/icons/missions/anh.png,com.fs.starfarer.api.impl.campaign.missions.ANewHope
 affk,,,,,,,,,,,,,,,graphics/icons/missions/favor_for_kanta.png,com.fs.starfarer.api.impl.campaign.missions.AFavorForKanta
-lpp,,,,,,,,,,,,,,,graphics/icons/missions/pilgrims_path.png,com.fs.starfarer.api.impl.campaign.missions.luddic.LuddicPilgrimsPath
 pk,,,,,,,,,,,,,,,graphics/icons/missions/planetkiller.png,com.fs.starfarer.api.impl.campaign.missions.RecoverAPlanetkiller
 sdtu,,,,,,,,,,,,,,,graphics/icons/missions/the_usurpers.png,com.fs.starfarer.api.impl.campaign.missions.askonia.TheUsurpers
+lpp,,,,,,,,,,,,,,,graphics/icons/missions/pilgrims_path.png,com.fs.starfarer.api.impl.campaign.missions.luddic.LuddicPilgrimsPath
 lke,,,,,,,,,,,,,,,graphics/icons/missions/knight_errant.png,com.fs.starfarer.api.impl.campaign.missions.luddic.LuddicKnightErrant
 "# note: if person id, tagsAll, tagsAny, and tagsNotAny are all blank, the mission will not be offered by any contact without specific scripting to make it so (via BeginMission, etc). Otherwise, the mission may be offered by any contact that meets the conditions specified by these columns.",,,,,,,,,,,,,,,,

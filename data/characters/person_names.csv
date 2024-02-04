@@ -763,6 +763,7 @@ Vance,,l,"old english, modern"
 Rich,m,"f, l","old english, modern"
 Blackwell,,l,"old english, modern"
 York,,l,"old english, modern"
+John,m,"f, l","old english, modern"
 Johns,,l,"old english, modern"
 Blankenship,,l,"old english, modern"
 Trevino,,l,"old english, modern"
@@ -1182,7 +1183,6 @@ Zeya,,l,world
 Tremblay,,l,world
 Gagnon,,l,world
 Desjardins,,l,world
-Leblanc,,l,world
 Gauthier,,l,world
 Bergeron,,l,world
 Belanger,,l,world
@@ -1242,7 +1242,7 @@ Hathor,f,f,myth
 Wadjet,f,f,myth
 Kali,f,f,myth
 Enyo,f,f,myth
-Athena,f,f,myth
+Athena,f,f,"myth, modern"
 Minerva,f,f,myth
 Varda,f,f,myth
 Zorya,f,f,myth
@@ -1250,7 +1250,7 @@ Enki,m,f,myth
 Gilgamesh,m,f,myth
 Hercules,m,f,myth
 Hector,m,f,myth
-Helen,f,f,myth
+Helen,f,f,"myth, modern"
 Paris,m,f,myth
 Aeneas,m,f,myth
 Artemis,f,f,myth
@@ -1291,14 +1291,14 @@ Tau Ceti,,l,future
 Gliese,,l,future
 Pluto,m,f,future
 Eris,f,f,future
-Sedna,f,f,future
-Charon,m,f,future
-Ceres,f,f,future
-Mercury,m,f,future
-Mars,m,f,future
-Venus,f,f,future
-Ard,f,f,future
-Ares,m,f,future
+Sedna,f,f,"future, myth"
+Charon,m,f,"future, myth"
+Ceres,f,f,"future, myth"
+Mercury,m,f,"future, myth"
+Mars,m,f,"future, myth"
+Venus,f,f,"future, myth"
+Ard,f,f,"future, myth"
+Ares,m,f,"future, myth"
 Jupiter,m,f,"future, myth"
 Saturn,m,f,"future, myth"
 Uranus,m,f,"future, myth"
@@ -1315,13 +1315,13 @@ Olympus,,l,"future, myth"
 Deneb,,l,future
 Phobos,,l,"future, myth"
 Deimos,,l,"future, myth"
-Io,f,"f, l",future
+Io,f,"f, l","future, myth"
 Europa,f,"f, l","future, myth"
 Callisto,f,"f, l","future, myth"
 Ganymede,m,"f, l","future, myth"
 Titan,m,"f, l","future, myth"
 Titania,f,f,"future, myth"
-Triton,m,"f, l",future
+Triton,m,"f, l","future, myth"
 Mimas,m,"f, l",future
 Common,,l,future
 Datus,,l,future
@@ -1344,7 +1344,7 @@ Adrana,f,f,future
 Purslane,f,f,future
 Betony,f,f,"old english, modern"
 Galingale,m,f,future
-Hesperus,m,f,future
+Hesperus,m,f,"future, myth"
 Cadence,f,f,future
 Cascade,m,f,future
 Fescue,m,f,future
@@ -1396,7 +1396,6 @@ Tenthgen,,l,future
 Octagens,,l,future
 Interstellar,,l,future
 X,,l,future
-Z,,l,future
 Nil,,"f, l",future
 Zero,m,f,future
 Centauran,,l,future
@@ -1497,7 +1496,7 @@ Sen,,l,world
 Bose,,l,world
 Nayar,,l,world
 Pillai,,l,world
-Rao,,l,world
+#Rao,,l,world
 Singh,,l,world
 Yadav,,l,world
 Khan,,l,world
@@ -1627,8 +1626,6 @@ Nurul,f,f,world
 Ayu,f,f,world
 Amalia,f,f,world
 Rio,m,f,world
-Farel,m,f,world
-Dimas,m,f,world
 Fauzi,m,f,world
 Fajar,m,f,world
 Haliim,m,f,world
@@ -1650,6 +1647,178 @@ Yoan,m,f,world
 Sava,m,f,world
 Nevena,f,f,world
 Zhivko,m,f,world
+Anh,f,f,world
+Linh,f,f,world
+Thanh,m,f,world
+Tuan,m,f,world
+Nam,m,f,world
+Trang,f,f,world
+Nat,m,f,world
+Vantu,m,f,world
+Khuyet,m,f,world
+Sim,f,f,world
+Aisha,f,f,world
+Amina,f,f,world
+Moussa,m,f,world
+Abdou,m,f,world
+Halima,f,f,world
+Zaliya,f,f,world
+Rama,f,f,world
+Marya,f,f,world
+Addo,m,f,world
+Zada,m,f,world
+Sama,m,f,world
+Salha,m,f,world
+Talon,,l,world
+Jarry,,l,world
+Irene,f,f,world
+Farah,f,f,world
+Nadya,f,f,world
+Vania,f,f,world
+Nisa,f,f,world
+Kezia,f,f,world
+Farel,m,f,world
+Dimas,m,f,world
+Bayu,m,f,world
+Ansel,m,f,world
+Olivia,f,f,"world, modern"
+Emma,f,f,"old english, modern"
+Louise,f,f,modern
+Lina,f,f,modern
+Alice,f,f,"old english, modern"
+Sofia,f,f,modern
+Mia,f,f,modern
+Anna,f,f,"old english, modern"
+Juliette,f,f,modern
+Arthur,m,f,"old english, modern"
+Jules,m,f,modern
+Louis,m,f,modern
+Liam,m,f,modern
+Victor,m,f,modern
+Gabriela,f,f,modern
+Adam,m,f,"old english, modern"
+Belley,,l,"modern, world"
+Marois,,l,"modern, world"
+Champoux,,l,"modern, world"
+Juteau,,l,"modern, world"
+Valcourt,,l,"modern, world"
+Dugas,,l,"modern, world"
+Chiasson,,l,"modern, world"
+Drolet,,l,"modern, world"
+Troittier,,l,"modern, world"
+Lange,,l,"modern, world"
+Mangat,,l,"modern, world"
+Sung,,l,"modern, world"
+Locke,,l,"modern, world"
+Yau,,l,"modern, world"
+Ngo,,l,"modern, world"
+Richter,,l,"modern, world"
+Rankin,,l,"modern, world"
+Meier,,l,"modern, world"
+Hwang,,l,"modern, world"
+Arinna,f,f,world
+Estan,f,f,world
+Ishtanu,f,f,world
+Warad,,l,world
+Aram,,l,world
+Rusa,,l,world
+Ara,"m, f",f,world
+Ashur,,l,world
+Cinnabar,,l,future
+Metro,,l,future
+Mindaro,,l,future
+Pine,,l,luddic
+Cypress,,l,luddic
+Lebanon,,l,world
+Pepin,,l,world
+Drouin,,l,world
+Lauzon,,l,world
+Pilon,,l,world
+Sitkin,,l,world
+Akutan,,l,world
+Nuuk,,l,world
+Juniper,f,"f, l",luddic
+Poplar,,l,luddic
+Torrey,,l,world
+Cedars,,l,luddic
+Hemlock,,l,luddic
+Aneda,f,"f, l",luddic
+Zhuang,,l,"modern, world"
+Zuan,,l,"modern, world"
+Guo,,l,"modern, world"
+Huo,,l,"modern, world"
+Zhi,f,f,"modern, world"
+Lihua,f,f,"modern, world"
+Zhuo,m,f,"modern, world"
+Gao,m,f,"modern, world"
+Chao,m,f,"modern, world"
+Ao,m,f,"modern, world"
+Mot,,l,world
+Anath,f,"f, l",world
+Yarih,f,,world
+Chandra,f,"f, l",world
+Mittwoch,,l,future
+Malichus,m,f,luddic
+Allat,f,"f, l","future, world, myth"
+Petra,f,"f, l","world, luddic"
+Gula,f,"f, l",myth
+Nin,f,f,world
+Kele,,l,world
+Bada,,l,world
+Makeda,f,"f, l",world
+Ezana,m,"f, l",world
+Amon,m,f,"world, myth"
+Dakka,,l,"world, future"
+Daraw,,l,"world, future"
+Nawa,,l,"world, future"
+Kosso,,l,world
+Severine,,l,world
+Opportune,,l,world
+Lamana,,l,world
+Yerima,,l,world
+Rozi,,l,world
+Aziza,,l,world
+Ali,m,"f, l",world
+Brumaire,,l,future
+Nivose,,l,future
+Frimaire,,l,future
+Pluviose,,l,future
+Ventose,,l,future
+Floreal,,l,future
+Prairial,,l,future
+Messidor,,l,future
+Thermidor,,l,future
+Boudicca,f,f,"world, future"
+Cador,m,f,world
+Brigid,f,f,world
+Finnian,m,f,world
+Aidan,m,f,"world, modern"
+Eugenia,f,f,"old english, modern"
+Valeri,f,f,world
+Octavia,f,f,world
+Julia,f,f,modern
+Andronica,f,f,world
+Claudia,f,f,modern
+Titus,m,f,world
+Tiberius,m,f,world
+Otho,m,f,world
+Julian,m,f,world
+Gaius,m,f,world
+Chiron,m,"f, l","future, myth"
+Nessus,m,"f, l","future, myth"
+Zarine,f,f,myth
+Maud,f,f,"old english, modern"
+Olympia,f,f,world
+Vittoria,f,f,world
+Catalina,f,f,world
+Anastasia,f,f,"world, modern"
+Paolo,m,f,"modern, world"
+Cosimo,m,f,"modern, world"
+Amaru,m,"f, l",world
+Inti,,l,world
+Drogo,m,f,world
+Lothar,m,f,world
+Clovis,m,f,world
 Dawn,f,"f, l",luddic
 Faith-my-joy,f,f,luddic
 Arise,m,f,"luddic, future"
@@ -1808,6 +1977,8 @@ Supreme,,l,ai
 Wintermute,,l,ai
 Ghostwheel,,l,ai
 Xerxes,,l,ai
+Sharkey,"m, f",f,pirate
+Hex,,l,pirate
 Five Aces,,l,pirate
 Bones,"m, f",f,pirate
 Skull,m,f,pirate
@@ -1885,3 +2056,46 @@ Automatic,m,f,pirate
 Millions,,l,pirate
 Magnetic,f,f,"pirate, future"
 Antigrav,,l,pirate
+Screwfloss,,l,pirate
+Thisbe,f,"f, l","future, myth"
+Themis,f,"f, l","future, myth"
+Psyche,f,"f, l","future, myth"
+Eunomia,f,"f, l","future, myth"
+Dysnomia,f,"f, l","myth, pirate"
+Hygiea,f,"f, l","future, myth"
+Elektra,f,"f, l","future, myth"
+Hebe,f,"f, l","future, myth"
+Pyramus,m,"f, l","future, myth"
+Kleopatra,f,"f, l","future, myth"
+Urania,f,"f, l","future, myth"
+Hektor,m,"f, l","future, myth"
+Itokawa,,l,"future, world"
+Kyugu,,l,"future, myth"
+Eulalia,f,"f, l","future, myth"
+Polana,,l,"future, world"
+Mantaro,,l,"future, world"
+Tambo,,l,"future, world"
+Kherlen,,l,future
+Volga,f,"f, l",future
+Charm,f,"f, l",future
+Colors,,l,future
+Tungusta,,l,future
+Kolyma,,l,future
+Shire,,l,luddic
+Orinoco,,l,future
+Mekong,,l,future
+Neva,f,"f, l",future
+Athabasca,,l,future
+Ormston,,l,"world, future"
+Curran,,l,"world, future"
+Avonmore,,l,old english
+Zec,m,f,"fringe, future"
+Winisk,,l,world
+Matawak,,l,world
+Spruce,,l,luddic
+Knife,"m, f","f, l",pirate
+Hochelaga,,l,"world, future"
+Lorimier,,l,world
+Montcalm,,l,world
+Laval,,l,future
+Saguenay,,l,future

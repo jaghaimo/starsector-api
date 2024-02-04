@@ -19,7 +19,7 @@
 			"startingConditions":[
 				#"terran",
 				#"alien_life",
-				#"luddic_majority",
+				"luddic_majority",
 				"population_5",
 				"habitable",
 				"extreme_weather",

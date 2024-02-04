@@ -53,12 +53,11 @@ public class ECCMPackage extends BaseHullMod {
 		stats.getMissileTurnAccelerationBonus().modifyPercent(id, MISSILE_TURN_ACCEL_BONUS);
 		
 		
-//		if (sMod) {
-//			stats.getDynamic().getStat(Stats.ELECTRONIC_WARFARE_PENALTY_MULT).modifyMult(id, SMOD_EW);
-//		} else {
-			//stats.getDynamic().getStat(Stats.ELECTRONIC_WARFARE_PENALTY_MULT).modifyMult(id, EW_PENALTY_MULT);
+		if (sMod) {
+			stats.getDynamic().getMod(Stats.ELECTRONIC_WARFARE_PENALTY_MULT).modifyMult(id, SMOD_EW);
+		} else {
 			stats.getDynamic().getMod(Stats.ELECTRONIC_WARFARE_PENALTY_MOD).modifyMult(id, EW_PENALTY_MULT);
-//		}
+		}
 		//stats.getDynamic().getMod(Stats.ELECTRONIC_WARFARE_PENALTY_MOD).modifyFlat(id, -EW_PENALTY_REDUCTION);
 		
 		//stats.getDynamic().getMod(Stats.ELECTRONIC_WARFARE_PENALTY_MAX_FOR_SHIP_MOD).modifyFlat(id, -MAX_EW_PENALTY_MOD);
