@@ -1,0 +1,5 @@
+var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ttcr_1_1TTCRCommerceRaidersDestroyedFactorHint =
+[
+    [ "TTCRCommerceRaidersDestroyedFactorHint", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ttcr_1_1TTCRCommerceRaidersDestroyedFactorHint.html#a790c8c7aad178622e66f958badcf4224", null ],
+    [ "shouldShow", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ttcr_1_1TTCRCommerceRaidersDestroyedFactorHint.html#a29accdc049fa6ec4f87d4734b0c97909", null ]
+];

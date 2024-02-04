@@ -1,0 +1,25 @@
+var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1KnightsOfLuddTakeoverExpedition =
+[
+    [ "KnightsOfLuddTakeoverExpedition", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1KnightsOfLuddTakeoverExpedition.html#a5c67455e2f643e8c3e49685a0c68d1c3", null ],
+    [ "addAssessmentSection", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1KnightsOfLuddTakeoverExpedition.html#a784ba18d9094e1168371c0ff3cd53d72", null ],
+    [ "addBasicDescription", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1KnightsOfLuddTakeoverExpedition.html#afe1bb3a540d0df4949a1bcbd713ec6f2", null ],
+    [ "addPayloadActionStatus", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1KnightsOfLuddTakeoverExpedition.html#a6bbcdcf1c57f5e9c44c37fa78a7a3288", null ],
+    [ "addPostAssessmentSection", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1KnightsOfLuddTakeoverExpedition.html#a6847b5164275bd42a392bb3f0f8d694f", null ],
+    [ "addTargetingBulletPoint", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1KnightsOfLuddTakeoverExpedition.html#ab09fa46c2af48e9337728c922151689a", null ],
+    [ "addUpdateBulletPoints", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1KnightsOfLuddTakeoverExpedition.html#a86dd0f5b4693c417946961f727db7c7d", null ],
+    [ "advance", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1KnightsOfLuddTakeoverExpedition.html#adeba83711250bb563272b0db9fce2395", null ],
+    [ "applyBlockadeCondition", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1KnightsOfLuddTakeoverExpedition.html#a1f8acbbd5299429b24f8cbcdaf446bfd", null ],
+    [ "createFleet", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1KnightsOfLuddTakeoverExpedition.html#a6d4a7b7ecb8bd45f169cc3a762008c31", null ],
+    [ "createPayloadAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1KnightsOfLuddTakeoverExpedition.html#a86bfcdefff0c54bbba2997a6d1496590", null ],
+    [ "getCommMessageSound", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1KnightsOfLuddTakeoverExpedition.html#a4ad78386f26aad48e8d97db58c1c0036", null ],
+    [ "getOfString", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1KnightsOfLuddTakeoverExpedition.html#a0d705cf1d6a23bf05d266faef08de620", null ],
+    [ "getStabilityPenaltyPerMonth", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1KnightsOfLuddTakeoverExpedition.html#a8ca5da613aef92307dd31e96ad9472e5", null ],
+    [ "notifyEnded", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1KnightsOfLuddTakeoverExpedition.html#a74c3c883dda12d8d585ffc66d1c164f5", null ],
+    [ "notifyEnding", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1KnightsOfLuddTakeoverExpedition.html#ab0b68916c0c40f4b91f11262bf24cf93", null ],
+    [ "performTakeover", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1KnightsOfLuddTakeoverExpedition.html#a3507abb90a97d8b9b7a049c6f6b0148d", null ],
+    [ "periodicUpdate", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1KnightsOfLuddTakeoverExpedition.html#aad2dcac6209485a580bdaa3553fe6313", null ],
+    [ "reportEconomyMonthEnd", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1KnightsOfLuddTakeoverExpedition.html#a86388e618ba3e6c72d4d7296440c3381", null ],
+    [ "reportEconomyTick", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1KnightsOfLuddTakeoverExpedition.html#ad745ac4d898a50d060f1366c3bccee3d", null ],
+    [ "unapplyBlockadeCondition", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1KnightsOfLuddTakeoverExpedition.html#a069929048f2e48b0775cceb7e7fe6c23", null ],
+    [ "voluntary", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1KnightsOfLuddTakeoverExpedition.html#a6b22a53de3fa79eb74b77a91ab9bf678", null ]
+];

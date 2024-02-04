@@ -91,6 +91,7 @@ var dir_b91808a6e4c19a222947a9c92d2bc19e =
     [ "PlanetSpecAPI.java", "PlanetSpecAPI_8java.html", "PlanetSpecAPI_8java" ],
     [ "PlayerMarketTransaction.java", "PlayerMarketTransaction_8java.html", "PlayerMarketTransaction_8java" ],
     [ "PluginPickerAPI.java", "PluginPickerAPI_8java.html", "PluginPickerAPI_8java" ],
+    [ "RenderingAffectedByAbyssalDepth.java", "RenderingAffectedByAbyssalDepth_8java.html", "RenderingAffectedByAbyssalDepth_8java" ],
     [ "RepLevel.java", "RepLevel_8java.html", "RepLevel_8java" ],
     [ "ReputationActionResponsePlugin.java", "ReputationActionResponsePlugin_8java.html", "ReputationActionResponsePlugin_8java" ],
     [ "ResourceCostPanelAPI.java", "ResourceCostPanelAPI_8java.html", "ResourceCostPanelAPI_8java" ],

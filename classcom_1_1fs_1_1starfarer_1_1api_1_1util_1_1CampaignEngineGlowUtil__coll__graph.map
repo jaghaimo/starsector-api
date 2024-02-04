@@ -1,0 +1,13 @@
+<map id="com.fs.starfarer.api.util.CampaignEngineGlowUtil" name="com.fs.starfarer.api.util.CampaignEngineGlowUtil">
+<area shape="rect" id="Node000001" title=" " alt="" coords="508,138,677,179"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="217,5,355,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="371,10,429,16,458,23,486,34,517,56,545,83,582,136,578,139,540,87,514,60,483,39,456,28,428,21,371,15"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1ValueShifterUtil.html" title=" " alt="" coords="209,138,363,179"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="379,156,508,156,508,161,379,161"/>
+<area shape="rect" id="Node000004" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1util_1_1ValueShifterAPI.html" title=" " alt="" coords="5,138,160,179"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="175,156,208,156,208,161,175,161"/>
+<area shape="rect" id="Node000005" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1ColorShifterUtil.html" title=" " alt="" coords="209,214,363,255"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="379,226,431,218,484,206,520,193,553,177,555,181,522,197,485,211,432,223,379,231"/>
+<area shape="rect" id="Node000006" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1util_1_1ColorShifterAPI.html" title=" " alt="" coords="5,214,160,255"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="175,232,208,232,208,237,175,237"/>
+</map>

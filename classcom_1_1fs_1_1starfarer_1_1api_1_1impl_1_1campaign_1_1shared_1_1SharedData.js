@@ -13,6 +13,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1SharedDa
     [ "getPlayerPreLosingBattleFP", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1SharedData.html#aeba82d79e66c6e98b860598544b771c5", null ],
     [ "getPreviousReport", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1SharedData.html#a0636cb66185a9447660b7b6ba49e251b", null ],
     [ "getStarSystemCustomsTimeout", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1SharedData.html#a00fd7c7a6f66f292cb014857ed29f7c8", null ],
+    [ "getUniqueEncounterData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1SharedData.html#a8c6a3c0bcda7970ae6f3c40b6a4a51fb", null ],
     [ "readResolve", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1SharedData.html#ad674ac3b87d3fd09eb1b81871d8395ab", null ],
     [ "resetCustomsTimeouts", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1SharedData.html#ad7412581a916ddafad3cd7eb179e7832", null ],
     [ "rollOverReport", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1SharedData.html#a7147454e564846cc9c45aa02a0f11f79", null ],
@@ -30,5 +31,6 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1SharedDa
     [ "playerPreLosingBattleCrew", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1SharedData.html#abb9dbcd7a85e8eb3b57a364e32810de5", null ],
     [ "playerPreLosingBattleFP", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1SharedData.html#a6ef790a0924be0ebd12fbc2103beb675", null ],
     [ "previousReport", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1SharedData.html#a7643b2b5c124ed923f0ebc210db34019", null ],
-    [ "starSystemCustomsTimeout", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1SharedData.html#ae5e5b947bc572d65c606dcbc1b5dbeb6", null ]
+    [ "starSystemCustomsTimeout", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1SharedData.html#ae5e5b947bc572d65c606dcbc1b5dbeb6", null ],
+    [ "uniqueEncounterData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1SharedData.html#a76dc3d502fc7018bed65ff9824bc8553", null ]
 ];

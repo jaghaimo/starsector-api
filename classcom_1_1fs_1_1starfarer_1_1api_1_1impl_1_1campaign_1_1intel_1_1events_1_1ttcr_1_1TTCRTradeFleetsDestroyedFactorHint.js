@@ -1,0 +1,5 @@
+var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ttcr_1_1TTCRTradeFleetsDestroyedFactorHint =
+[
+    [ "TTCRTradeFleetsDestroyedFactorHint", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ttcr_1_1TTCRTradeFleetsDestroyedFactorHint.html#a8f600b7bbea0c2f4d41c1d10db39010e", null ],
+    [ "shouldShow", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ttcr_1_1TTCRTradeFleetsDestroyedFactorHint.html#a9e1757b24300021d701db778ef388f12", null ]
+];

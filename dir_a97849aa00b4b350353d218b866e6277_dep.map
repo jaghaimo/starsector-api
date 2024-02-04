@@ -1,27 +1,28 @@
 <map id="src/com/fs/starfarer/api/impl/campaign" name="src/com/fs/starfarer/api/impl/campaign">
-<area shape="rect" id="node2" href="dir_d5434224a326a4bb5c940eae5d8b61ff.html" title="abilities" alt="" coords="1879,63,1945,89"/>
-<area shape="rect" id="node3" href="dir_e7c6330502dbea070788bd494adcb188.html" title="command" alt="" coords="1777,63,1855,89"/>
-<area shape="rect" id="node4" href="dir_31278b3db873553737ded3e971e477d1.html" title="econ" alt="" coords="1703,63,1753,89"/>
-<area shape="rect" id="node5" href="dir_e20b055f7d864bb97c3a1051b27f9ff4.html" title="enc" alt="" coords="1638,63,1680,89"/>
-<area shape="rect" id="node6" href="dir_80303cce91b73fc56b6e92eeee8a50cc.html" title="eventide" alt="" coords="1544,63,1614,89"/>
-<area shape="rect" id="node7" href="dir_19559d5eff44aafd3935c151615ad72b.html" title="events" alt="" coords="1459,63,1520,89"/>
-<area shape="rect" id="node8" href="dir_29ef0f0043e038c57bfc4a148f9b65e1.html" title="fleets" alt="" coords="1383,63,1436,89"/>
-<area shape="rect" id="node9" href="dir_f04df0172a6a36cf53cde73d62256c32.html" title="ghosts" alt="" coords="1299,63,1360,89"/>
-<area shape="rect" id="node10" href="dir_98d7c115e30364e09ff4cae2a71d3657.html" title="graid" alt="" coords="1226,63,1275,89"/>
-<area shape="rect" id="node11" href="dir_34de85de80cdc252256f5aeed6fe2690.html" title="ids" alt="" coords="1163,63,1202,89"/>
-<area shape="rect" id="node12" href="dir_3dda3a0b3df297bb2b4729c59fd5b6a6.html" title="intel" alt="" coords="1095,63,1140,89"/>
-<area shape="rect" id="node13" href="dir_a987f72926f48ae04e4a0a7cd9476930.html" title="missions" alt="" coords="997,63,1070,89"/>
-<area shape="rect" id="node14" href="dir_47f9e7eab04533bdaa03b5542f9fe54c.html" title="plog" alt="" coords="927,63,972,89"/>
-<area shape="rect" id="node15" href="dir_b6ab2c9cedfe0fb78edb1c33fb47b5a4.html" title="population" alt="" coords="823,63,903,89"/>
-<area shape="rect" id="node16" href="dir_ee8cc458ef60d296087807947837ede8.html" title="procgen" alt="" coords="732,63,799,89"/>
-<area shape="rect" id="node17" href="dir_14bdac5f753bd3e6e655f213f9cbceb2.html" title="rulecmd" alt="" coords="640,63,707,89"/>
-<area shape="rect" id="node18" href="dir_e49ca445dadc8df392765d795c391473.html" title="shared" alt="" coords="555,63,616,89"/>
-<area shape="rect" id="node19" href="dir_fcfcf3535c90b56f3efcb9b6e4dd57da.html" title="skills" alt="" coords="480,63,531,89"/>
-<area shape="rect" id="node20" href="dir_f73ee0a77d09666e8c757afc46a49a56.html" title="submarkets" alt="" coords="366,63,455,89"/>
-<area shape="rect" id="node21" href="dir_dcebe147640cd34a611211efc2ffc8d2.html" title="terrain" alt="" coords="285,63,342,89"/>
-<area shape="rect" id="node22" href="dir_39bfe565e7c1b7fc14837bb739368c73.html" title="tutorial" alt="" coords="201,63,261,89"/>
-<area shape="rect" id="node23" href="dir_238a75eb09518ab3c5257cb83a7d3268.html" title="velfield" alt="" coords="115,63,176,89"/>
-<area shape="rect" id="node24" href="dir_4743952580e5d76840ea661ba61de9b1.html" title="world" alt="" coords="38,63,90,89"/>
-<area shape="rect" id="clust2" href="dir_a97849aa00b4b350353d218b866e6277.html" alt="" coords="27,52,2057,99"/>
-<area shape="rect" id="clust1" href="dir_c3e44a2cb6539bce566030a8124b24f6.html" title="impl" alt="" coords="16,16,2068,110"/>
+<area shape="rect" id="node2" href="dir_d5434224a326a4bb5c940eae5d8b61ff.html" title="abilities" alt="" coords="1967,63,2033,89"/>
+<area shape="rect" id="node3" href="dir_e7c6330502dbea070788bd494adcb188.html" title="command" alt="" coords="1865,63,1943,89"/>
+<area shape="rect" id="node4" href="dir_31278b3db873553737ded3e971e477d1.html" title="econ" alt="" coords="1791,63,1841,89"/>
+<area shape="rect" id="node5" href="dir_e20b055f7d864bb97c3a1051b27f9ff4.html" title="enc" alt="" coords="1726,63,1768,89"/>
+<area shape="rect" id="node6" href="dir_0f014d9ae4ce8428abd7590ec3342dc3.html" title="entities" alt="" coords="1638,63,1701,89"/>
+<area shape="rect" id="node7" href="dir_80303cce91b73fc56b6e92eeee8a50cc.html" title="eventide" alt="" coords="1544,63,1614,89"/>
+<area shape="rect" id="node8" href="dir_19559d5eff44aafd3935c151615ad72b.html" title="events" alt="" coords="1459,63,1520,89"/>
+<area shape="rect" id="node9" href="dir_29ef0f0043e038c57bfc4a148f9b65e1.html" title="fleets" alt="" coords="1383,63,1436,89"/>
+<area shape="rect" id="node10" href="dir_f04df0172a6a36cf53cde73d62256c32.html" title="ghosts" alt="" coords="1299,63,1360,89"/>
+<area shape="rect" id="node11" href="dir_98d7c115e30364e09ff4cae2a71d3657.html" title="graid" alt="" coords="1226,63,1275,89"/>
+<area shape="rect" id="node12" href="dir_34de85de80cdc252256f5aeed6fe2690.html" title="ids" alt="" coords="1163,63,1202,89"/>
+<area shape="rect" id="node13" href="dir_3dda3a0b3df297bb2b4729c59fd5b6a6.html" title="intel" alt="" coords="1095,63,1140,89"/>
+<area shape="rect" id="node14" href="dir_a987f72926f48ae04e4a0a7cd9476930.html" title="missions" alt="" coords="997,63,1070,89"/>
+<area shape="rect" id="node15" href="dir_47f9e7eab04533bdaa03b5542f9fe54c.html" title="plog" alt="" coords="927,63,972,89"/>
+<area shape="rect" id="node16" href="dir_b6ab2c9cedfe0fb78edb1c33fb47b5a4.html" title="population" alt="" coords="823,63,903,89"/>
+<area shape="rect" id="node17" href="dir_ee8cc458ef60d296087807947837ede8.html" title="procgen" alt="" coords="732,63,799,89"/>
+<area shape="rect" id="node18" href="dir_14bdac5f753bd3e6e655f213f9cbceb2.html" title="rulecmd" alt="" coords="640,63,707,89"/>
+<area shape="rect" id="node19" href="dir_e49ca445dadc8df392765d795c391473.html" title="shared" alt="" coords="555,63,616,89"/>
+<area shape="rect" id="node20" href="dir_fcfcf3535c90b56f3efcb9b6e4dd57da.html" title="skills" alt="" coords="480,63,531,89"/>
+<area shape="rect" id="node21" href="dir_f73ee0a77d09666e8c757afc46a49a56.html" title="submarkets" alt="" coords="366,63,455,89"/>
+<area shape="rect" id="node22" href="dir_dcebe147640cd34a611211efc2ffc8d2.html" title="terrain" alt="" coords="285,63,342,89"/>
+<area shape="rect" id="node23" href="dir_39bfe565e7c1b7fc14837bb739368c73.html" title="tutorial" alt="" coords="201,63,261,89"/>
+<area shape="rect" id="node24" href="dir_238a75eb09518ab3c5257cb83a7d3268.html" title="velfield" alt="" coords="115,63,176,89"/>
+<area shape="rect" id="node25" href="dir_4743952580e5d76840ea661ba61de9b1.html" title="world" alt="" coords="38,63,90,89"/>
+<area shape="rect" id="clust2" href="dir_a97849aa00b4b350353d218b866e6277.html" alt="" coords="27,52,2145,99"/>
+<area shape="rect" id="clust1" href="dir_c3e44a2cb6539bce566030a8124b24f6.html" title="impl" alt="" coords="16,16,2156,110"/>
 </map>

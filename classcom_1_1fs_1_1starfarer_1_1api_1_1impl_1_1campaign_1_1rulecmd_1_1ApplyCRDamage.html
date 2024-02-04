@@ -93,6 +93,7 @@ $(document).ready(function(){initNavTree('classcom_1_1fs_1_1starfarer_1_1api_1_1
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1ApplyCRDamage-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">com.fs.starfarer.api.impl.campaign.rulecmd.ApplyCRDamage Class Reference</div></div>
 </div><!--header-->
@@ -118,8 +119,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5e1c8624b65d26f63dbd53bf2e35016b inherit pub_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1BaseCommandPlugin" id="r_a5e1c8624b65d26f63dbd53bf2e35016b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1BaseCommandPlugin.html#a5e1c8624b65d26f63dbd53bf2e35016b">getOptionOrder</a> (List&lt; Token &gt; params, Map&lt; String, MemoryAPI &gt; memoryMap)</td></tr>
 <tr class="separator:a5e1c8624b65d26f63dbd53bf2e35016b inherit pub_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1BaseCommandPlugin"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a7568a23de10101a2807497300eca9596" id="r_a7568a23de10101a2807497300eca9596"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1ApplyCRDamage.html#a7568a23de10101a2807497300eca9596">applyCRDamage</a> (CampaignFleetAPI fleet, float damageFP, float crMult, String desc, TextPanelAPI text, Random random)</td></tr>
+<tr class="separator:a7568a23de10101a2807497300eca9596"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1BaseCommandPlugin"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1BaseCommandPlugin')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1BaseCommandPlugin.html">com.fs.starfarer.api.impl.campaign.rulecmd.BaseCommandPlugin</a></td></tr>
 <tr class="memitem:af355b9be7db57d00eaf6a6f0637f2edb inherit pub_static_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1BaseCommandPlugin" id="r_af355b9be7db57d00eaf6a6f0637f2edb"><td class="memItemLeft" align="right" valign="top">static MemoryAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1BaseCommandPlugin.html#af355b9be7db57d00eaf6a6f0637f2edb">getEntityMemory</a> (Map&lt; String, MemoryAPI &gt; memoryMap)</td></tr>
 <tr class="separator:af355b9be7db57d00eaf6a6f0637f2edb inherit pub_static_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1BaseCommandPlugin"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -133,6 +136,68 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ApplyCRDamage_8java_source.html#l00037">37</a> of file <a class="el" href="ApplyCRDamage_8java_source.html">ApplyCRDamage.java</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a7568a23de10101a2807497300eca9596" name="a7568a23de10101a2807497300eca9596"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7568a23de10101a2807497300eca9596">&#9670;&#160;</a></span>applyCRDamage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void com.fs.starfarer.api.impl.campaign.rulecmd.ApplyCRDamage.applyCRDamage </td>
+          <td>(</td>
+          <td class="paramtype">CampaignFleetAPI&#160;</td>
+          <td class="paramname"><em>fleet</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>damageFP</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>crMult</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>desc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TextPanelAPI&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Random&#160;</td>
+          <td class="paramname"><em>random</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ApplyCRDamage_8java_source.html#l00072">72</a> of file <a class="el" href="ApplyCRDamage_8java_source.html">ApplyCRDamage.java</a>.</p>
+
+</div>
+</div>
 <a id="a841f744671566e3cad99e94839451b07" name="a841f744671566e3cad99e94839451b07"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a841f744671566e3cad99e94839451b07">&#9670;&#160;</a></span>execute()</h2>
 

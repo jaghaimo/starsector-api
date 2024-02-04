@@ -6,8 +6,9 @@ var searchData=
   ['unhidegacharacters_2ejava_3',['UnhideGACharacters.java',['../UnhideGACharacters_8java.html',1,'']]],
   ['unhideperson_2ejava_4',['UnhidePerson.java',['../UnhidePerson_8java.html',1,'']]],
   ['uninstallcommsniffer_2ejava_5',['UninstallCommSniffer.java',['../UninstallCommSniffer_8java.html',1,'']]],
-  ['unset_2ejava_6',['unset.java',['../unset_8java.html',1,'']]],
-  ['unsetall_2ejava_7',['unsetAll.java',['../unsetAll_8java.html',1,'']]],
-  ['updatememory_2ejava_8',['UpdateMemory.java',['../UpdateMemory_8java.html',1,'']]],
-  ['urbanizedpolity_2ejava_9',['UrbanizedPolity.java',['../UrbanizedPolity_8java.html',1,'']]]
+  ['uniqueencounter_2ejava_6',['UniqueEncounter.java',['../UniqueEncounter_8java.html',1,'']]],
+  ['unset_2ejava_7',['unset.java',['../unset_8java.html',1,'']]],
+  ['unsetall_2ejava_8',['unsetAll.java',['../unsetAll_8java.html',1,'']]],
+  ['updatememory_2ejava_9',['UpdateMemory.java',['../UpdateMemory_8java.html',1,'']]],
+  ['urbanizedpolity_2ejava_10',['UrbanizedPolity.java',['../UrbanizedPolity_8java.html',1,'']]]
 ];

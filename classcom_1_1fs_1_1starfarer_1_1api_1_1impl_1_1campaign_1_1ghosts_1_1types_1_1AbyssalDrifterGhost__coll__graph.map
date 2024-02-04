@@ -1,0 +1,12 @@
+<map id="com.fs.starfarer.api.impl.campaign.ghosts.types.AbyssalDrifterGhost" name="com.fs.starfarer.api.impl.campaign.ghosts.types.AbyssalDrifterGhost">
+<area shape="rect" id="Node000001" title=" " alt="" coords="896,35,1192,75"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1BaseSensorGhost.html" title=" " alt="" coords="584,35,847,75"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="862,52,896,52,896,58,862,58"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1SensorGhost.html" title=" " alt="" coords="221,5,483,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="499,35,584,42,584,47,499,40"/>
+<area shape="rect" id="Node000004" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="5,39,172,79"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="187,44,220,40,221,45,188,49"/>
+<area shape="rect" id="Node000005" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1SensorGhostManager.html" title=" " alt="" coords="221,71,483,111"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="188,68,221,72,220,78,187,74"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="499,74,584,65,584,71,499,79"/>
+</map>

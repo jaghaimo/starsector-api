@@ -8,6 +8,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1event
     [ "getEffectMagnitude", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityFactor.html#abed961eb614bde164dc111c03720a820", null ],
     [ "getEventFrequency", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityFactor.html#acd420b2c562c322a1044299500a24985", null ],
     [ "getEventStageIcon", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityFactor.html#a4533e7ef9f0c7a61a3792a1620922312", null ],
+    [ "getEventStageSound", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityFactor.html#af8731df5a2711fe73bc6b7594c2b09f1", null ],
     [ "getId", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityFactor.html#ab5d54959538fc43934a9f7bf4625340c", null ],
     [ "getMaxNumFleets", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityFactor.html#a8b685b53d2ee788b1bfec748b193e9ea", null ],
     [ "getNameColorForThreatList", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityFactor.html#a2facdc6a78fa63f139a08609059c6886", null ],

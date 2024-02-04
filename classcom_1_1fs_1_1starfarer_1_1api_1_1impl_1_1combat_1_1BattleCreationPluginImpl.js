@@ -16,6 +16,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BattleCreationPlugin
     [ "pickAny", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BattleCreationPluginImpl.html#af350d4d96ce454e9ec5fcf804ed8ef14", null ],
     [ "pickCommRelays", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BattleCreationPluginImpl.html#aaf7cca91adc3bb075c985e229dbfbc48", null ],
     [ "setRandomBackground", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BattleCreationPluginImpl.html#afc58e2d3dd9643f9feb7475bda8f4def", null ],
+    [ "abyssalDepth", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BattleCreationPluginImpl.html#aee584f12a52d25e85b454eb040ed0cbe", null ],
     [ "context", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BattleCreationPluginImpl.html#af0bb09ac26bda8bb65138c5f13754495", null ],
     [ "corona", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BattleCreationPluginImpl.html#a92c004b54d43544c1be8aa9667a6b2c5", null ],
     [ "coronaIntensity", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BattleCreationPluginImpl.html#a2dae4fa9fa25e3ecc775860716780b17", null ],

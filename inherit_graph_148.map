@@ -1,3 +1,7 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1ListenerManagerAPI.html" title=" " alt="" coords="5,5,251,46"/>
+<area shape="rect" id="Node000000" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1IndustryOptionProvider.html" title=" " alt="" coords="5,5,251,46"/>
+<area shape="rect" id="Node000001" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1BaseIndustryOptionProvider.html" title=" " alt="" coords="299,5,544,46"/>
+<area shape="poly" id="edge823_Node000000_Node000001" title=" " alt="" coords="266,23,298,23,298,28,266,28"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1TestIndustryOptionProvider.html" title=" " alt="" coords="592,5,837,46"/>
+<area shape="poly" id="edge824_Node000001_Node000002" title=" " alt="" coords="559,23,592,23,592,28,559,28"/>
 </map>

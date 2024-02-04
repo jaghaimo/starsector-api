@@ -9,6 +9,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1Susta
     [ "fleetLeftBattle", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1SustainedBurnAbility.html#ad0ab6385331cef878085166c3fbdff44", null ],
     [ "getActivationText", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1SustainedBurnAbility.html#ae0f836ae1db1c8c66b80c2c3e1992802", null ],
     [ "hasTooltip", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1SustainedBurnAbility.html#ae3c08086a4795d5b3a8f9e1ecff85c3c", null ],
+    [ "isUsable", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1SustainedBurnAbility.html#a284a24648692fde0392c41734140945d", null ],
     [ "showActiveIndicator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1SustainedBurnAbility.html#a1cfbda7e86291f26da881774247e2834", null ],
     [ "showProgressIndicator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1SustainedBurnAbility.html#ad66c7bef084caa7d579066e4b4bc3530", null ]
 ];

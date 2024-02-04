@@ -1,21 +1,23 @@
 <map id="com.fs.starfarer.api.impl.campaign.intel.inspection.HegemonyInspectionManager" name="com.fs.starfarer.api.impl.campaign.intel.inspection.HegemonyInspectionManager">
-<area shape="rect" id="Node000001" title=" " alt="" coords="1025,71,1334,112"/>
-<area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="712,39,878,80"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="894,65,1024,76,1024,81,893,70"/>
-<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html" title=" " alt="" coords="640,105,950,145"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="965,107,1024,102,1024,108,965,113"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="1025,105,1334,145"/>
+<area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="712,73,878,113"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="894,98,1024,109,1024,115,893,104"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html" title=" " alt="" coords="640,138,950,179"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="965,141,1024,136,1024,141,965,146"/>
 <area shape="rect" id="Node000004" title=" " alt="" coords="330,5,402,31"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="418,18,477,26,540,40,580,56,618,77,641,89,683,101,681,106,639,94,615,82,578,61,539,45,476,31,417,24"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="418,17,477,24,540,40,583,59,618,88,630,107,634,115,642,123,664,135,662,140,639,127,630,118,625,110,614,92,580,63,538,45,477,29,418,22"/>
 <area shape="rect" id="Node000005" title=" " alt="" coords="317,55,415,80"/>
-<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="431,73,640,102,640,107,431,79"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="431,72,540,90,591,106,641,122,692,135,690,140,640,127,589,111,539,95,430,77"/>
 <area shape="rect" id="Node000006" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HIActionStage.html" title=" " alt="" coords="212,105,521,145"/>
-<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="536,122,640,122,640,128,536,128"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="537,135,640,143,639,149,536,141"/>
 <area shape="rect" id="Node000007" title=" " alt="" coords="28,88,121,114"/>
 <area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="136,103,211,109,211,115,135,108"/>
 <area shape="rect" id="Node000008" title=" " alt="" coords="5,137,144,163"/>
 <area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="159,140,211,136,212,141,160,145"/>
 <area shape="rect" id="Node000009" title=" " alt="" coords="212,170,521,211"/>
-<area shape="poly" id="edge8_Node000003_Node000009" title=" " alt="" coords="519,164,656,143,657,148,520,170"/>
+<area shape="poly" id="edge8_Node000003_Node000009" title=" " alt="" coords="536,181,616,176,640,174,640,179,617,181,536,186"/>
 <area shape="rect" id="Node000010" title=" " alt="" coords="193,235,539,276"/>
-<area shape="poly" id="edge9_Node000003_Node000010" title=" " alt="" coords="504,229,539,220,651,182,746,143,748,148,653,187,540,225,505,234"/>
+<area shape="poly" id="edge9_Node000003_Node000010" title=" " alt="" coords="495,229,539,220,715,176,716,182,540,225,496,234"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="209,301,523,341"/>
+<area shape="poly" id="edge10_Node000003_Node000011" title=" " alt="" coords="510,294,538,285,601,260,662,231,759,177,761,181,664,236,603,265,540,290,512,299"/>
 </map>

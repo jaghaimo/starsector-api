@@ -1,39 +1,43 @@
 <map id="com.fs.starfarer.api.impl.campaign.BaseCustomEntityPlugin" name="com.fs.starfarer.api.impl.campaign.BaseCustomEntityPlugin">
 <area shape="rect" id="Node000001" title=" " alt="" coords="246,496,466,537"/>
-<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCampaignObjectivePlugin.html" title=" " alt="" coords="536,71,756,111"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="358,480,371,405,398,308,418,258,443,208,474,162,512,122,534,108,536,112,516,126,479,166,448,211,422,260,403,310,376,406,363,481"/>
-<area shape="rect" id="Node000007" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CargoPodsEntityPlugin.html" title=" " alt="" coords="536,136,756,177"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="361,480,378,417,407,338,427,297,451,257,479,220,512,188,534,174,537,178,516,192,483,223,455,260,431,299,412,340,383,418,367,481"/>
-<area shape="rect" id="Node000008" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CryosleeperEntityPlugin.html" title=" " alt="" coords="536,201,756,242"/>
-<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="366,480,386,429,417,368,459,305,484,277,512,253,534,240,537,245,516,257,488,281,463,309,421,370,391,431,371,482"/>
-<area shape="rect" id="Node000009" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DerelictShipEntityPlugin.html" title=" " alt="" coords="536,267,756,307"/>
-<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="373,481,396,443,428,399,467,355,513,318,537,306,539,310,515,323,471,359,432,402,401,446,377,484"/>
-<area shape="rect" id="Node000010" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ExampleCustomEntityPlugin.html" title=" " alt="" coords="536,332,756,373"/>
-<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="384,483,441,432,476,406,513,383,542,371,544,376,515,388,479,410,444,436,388,487"/>
-<area shape="rect" id="Node000011" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ExplosionEntityPlugin.html" title=" " alt="" coords="536,397,756,438"/>
-<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="415,487,513,448,554,436,556,441,515,454,417,492"/>
-<area shape="rect" id="Node000012" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1FusionLampEntityPlugin.html" title=" " alt="" coords="536,463,756,503"/>
-<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="481,499,535,493,536,498,482,505"/>
-<area shape="rect" id="Node000013" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1GateEntityPlugin.html" title=" " alt="" coords="536,528,756,569"/>
-<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="482,528,536,534,535,539,481,533"/>
-<area shape="rect" id="Node000014" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1HiddenCacheEntityPlugin.html" title=" " alt="" coords="536,593,756,634"/>
-<area shape="poly" id="edge13_Node000001_Node000014" title=" " alt="" coords="419,541,515,578,556,590,555,595,513,583,417,546"/>
-<area shape="rect" id="Node000015" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1SupplyCacheEntityPlugin.html" title=" " alt="" coords="536,659,756,699"/>
-<area shape="poly" id="edge14_Node000001_Node000015" title=" " alt="" coords="389,546,445,596,479,622,515,643,545,656,543,661,513,648,476,626,441,600,385,550"/>
-<area shape="rect" id="Node000016" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1WarningBeaconEntityPlugin.html" title=" " alt="" coords="536,724,756,765"/>
-<area shape="poly" id="edge15_Node000001_Node000016" title=" " alt="" coords="377,549,401,586,432,630,471,673,515,709,539,721,537,726,513,713,467,677,428,633,396,589,373,551"/>
-<area shape="rect" id="Node000017" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamEntityPlugin.html" title=" " alt="" coords="514,789,777,830"/>
-<area shape="poly" id="edge16_Node000001_Node000017" title=" " alt="" coords="371,551,391,601,422,662,463,723,488,750,516,774,537,787,534,791,512,778,484,754,459,726,417,665,386,604,366,553"/>
-<area shape="rect" id="Node000018" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamEntityPlugin2.html" title=" " alt="" coords="514,855,777,895"/>
-<area shape="poly" id="edge17_Node000001_Node000018" title=" " alt="" coords="367,552,383,614,412,692,432,733,455,772,483,808,516,840,535,852,532,857,512,844,479,812,451,775,427,736,407,695,378,616,361,553"/>
-<area shape="rect" id="Node000019" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1TurbulenceEntityPlugin.html" title=" " alt="" coords="514,920,777,961"/>
-<area shape="poly" id="edge18_Node000001_Node000019" title=" " alt="" coords="363,552,376,626,403,722,423,772,448,821,479,866,516,905,533,917,530,922,512,909,474,869,443,823,418,774,398,724,371,627,358,553"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AbyssalLightEntityPlugin.html" title=" " alt="" coords="537,5,757,46"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="356,481,365,395,374,340,388,280,408,220,435,160,469,105,512,57,535,42,538,46,516,61,474,108,440,163,413,222,394,282,379,341,370,396,361,481"/>
+<area shape="rect" id="Node000004" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCampaignObjectivePlugin.html" title=" " alt="" coords="537,71,757,111"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="358,480,371,406,397,309,417,258,443,208,474,162,512,122,535,107,538,112,516,126,478,166,447,211,422,260,402,311,376,407,363,481"/>
+<area shape="rect" id="Node000008" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CargoPodsEntityPlugin.html" title=" " alt="" coords="537,136,757,177"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="361,480,378,417,407,338,427,296,451,257,479,220,512,188,535,173,538,178,516,192,483,223,455,260,431,299,412,340,383,418,366,481"/>
+<area shape="rect" id="Node000009" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CryosleeperEntityPlugin.html" title=" " alt="" coords="537,201,757,242"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="366,480,386,429,417,367,459,305,484,277,512,253,535,240,537,244,516,257,488,281,463,309,421,370,391,431,371,482"/>
+<area shape="rect" id="Node000010" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DerelictShipEntityPlugin.html" title=" " alt="" coords="537,267,757,307"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="373,481,396,443,428,399,467,355,513,318,537,306,539,310,515,323,471,359,432,402,401,446,377,484"/>
+<area shape="rect" id="Node000011" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ExampleCustomEntityPlugin.html" title=" " alt="" coords="537,332,757,373"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="384,483,441,432,476,406,513,383,543,371,545,376,515,388,479,410,444,436,388,487"/>
+<area shape="rect" id="Node000012" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ExplosionEntityPlugin.html" title=" " alt="" coords="537,397,757,438"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="415,487,513,448,555,436,556,441,515,454,417,492"/>
+<area shape="rect" id="Node000013" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1FusionLampEntityPlugin.html" title=" " alt="" coords="537,463,757,503"/>
+<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="481,499,536,493,536,498,482,505"/>
+<area shape="rect" id="Node000014" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1GateEntityPlugin.html" title=" " alt="" coords="537,528,757,569"/>
+<area shape="poly" id="edge13_Node000001_Node000014" title=" " alt="" coords="482,528,536,534,536,539,481,533"/>
+<area shape="rect" id="Node000015" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1HiddenCacheEntityPlugin.html" title=" " alt="" coords="537,593,757,634"/>
+<area shape="poly" id="edge14_Node000001_Node000015" title=" " alt="" coords="419,541,515,578,557,590,555,595,513,583,417,546"/>
+<area shape="rect" id="Node000016" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1SupplyCacheEntityPlugin.html" title=" " alt="" coords="537,659,757,699"/>
+<area shape="poly" id="edge15_Node000001_Node000016" title=" " alt="" coords="389,546,445,596,479,622,515,643,545,656,543,660,513,648,476,626,441,600,385,550"/>
+<area shape="rect" id="Node000017" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1WarningBeaconEntityPlugin.html" title=" " alt="" coords="537,724,757,765"/>
+<area shape="poly" id="edge16_Node000001_Node000017" title=" " alt="" coords="377,549,401,587,432,630,471,673,515,709,539,721,537,726,513,713,467,677,428,633,396,589,373,552"/>
+<area shape="rect" id="Node000018" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1entities_1_1GateHaulerEntityPlugin.html" title=" " alt="" coords="514,789,779,830"/>
+<area shape="poly" id="edge17_Node000001_Node000018" title=" " alt="" coords="371,551,391,601,422,662,463,723,488,750,516,774,536,786,533,791,512,778,484,754,459,726,417,665,386,604,366,553"/>
+<area shape="rect" id="Node000019" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamEntityPlugin.html" title=" " alt="" coords="515,855,778,895"/>
+<area shape="poly" id="edge18_Node000001_Node000019" title=" " alt="" coords="367,552,383,614,412,693,432,733,455,772,483,808,516,840,534,852,532,856,512,844,479,812,451,775,427,736,407,695,378,616,361,553"/>
+<area shape="rect" id="Node000020" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamEntityPlugin2.html" title=" " alt="" coords="515,920,778,961"/>
+<area shape="poly" id="edge19_Node000001_Node000020" title=" " alt="" coords="363,552,376,626,403,722,423,772,448,821,479,866,516,905,534,917,531,922,512,909,474,869,443,823,418,774,398,724,371,627,358,553"/>
+<area shape="rect" id="Node000021" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1TurbulenceEntityPlugin.html" title=" " alt="" coords="515,985,778,1026"/>
+<area shape="poly" id="edge20_Node000001_Node000021" title=" " alt="" coords="361,552,370,638,380,692,394,751,414,811,440,869,474,923,516,970,533,983,530,987,512,974,470,926,435,871,409,812,389,752,374,693,365,638,356,552"/>
 <area shape="rect" id="Node000002" title=" " alt="" coords="5,504,198,529"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="213,514,245,514,245,519,213,519"/>
-<area shape="rect" id="Node000004" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CommRelayEntityPlugin.html" title=" " alt="" coords="825,5,1046,46"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="753,64,842,44,843,49,755,69"/>
-<area shape="rect" id="Node000005" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1NavBuoyEntityPlugin.html" title=" " alt="" coords="825,71,1046,111"/>
-<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="771,88,825,88,825,94,771,94"/>
-<area shape="rect" id="Node000006" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1SensorArrayEntityPlugin.html" title=" " alt="" coords="825,136,1046,177"/>
-<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="755,113,843,133,842,138,753,118"/>
+<area shape="rect" id="Node000005" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CommRelayEntityPlugin.html" title=" " alt="" coords="827,5,1048,46"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="754,64,843,44,844,49,756,69"/>
+<area shape="rect" id="Node000006" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1NavBuoyEntityPlugin.html" title=" " alt="" coords="827,71,1048,111"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="772,88,827,88,827,94,772,94"/>
+<area shape="rect" id="Node000007" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1SensorArrayEntityPlugin.html" title=" " alt="" coords="827,136,1048,177"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="756,113,844,133,843,138,754,118"/>
 </map>

@@ -2,6 +2,7 @@ var dir_d48b5f679b0918c9a50e976f6a24181c =
 [
     [ "AbilitySpecAPI.java", "AbilitySpecAPI_8java.html", "AbilitySpecAPI_8java" ],
     [ "BarEventSpec.java", "BarEventSpec_8java.html", "BarEventSpec_8java" ],
+    [ "BeamWeaponSpecAPI.java", "BeamWeaponSpecAPI_8java.html", "BeamWeaponSpecAPI_8java" ],
     [ "CampaignPingSpec.java", "CampaignPingSpec_8java.html", "CampaignPingSpec_8java" ],
     [ "ContactTagSpec.java", "ContactTagSpec_8java.html", "ContactTagSpec_8java" ],
     [ "DamagingExplosionSpec.java", "DamagingExplosionSpec_8java.html", "DamagingExplosionSpec_8java" ],

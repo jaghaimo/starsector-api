@@ -26,6 +26,7 @@ var dir_daee354c68042104fe1be7809ba01a34 =
     [ "ModPlugin.java", "ModPlugin_8java.html", "ModPlugin_8java" ],
     [ "ModSpecAPI.java", "ModSpecAPI_8java.html", "ModSpecAPI_8java" ],
     [ "MusicPlayerPlugin.java", "MusicPlayerPlugin_8java.html", "MusicPlayerPlugin_8java" ],
+    [ "MusicPlayerPluginWithVolumeControl.java", "MusicPlayerPluginWithVolumeControl_8java.html", "MusicPlayerPluginWithVolumeControl_8java" ],
     [ "PluginPick.java", "PluginPick_8java.html", "PluginPick_8java" ],
     [ "Script.java", "Script_8java.html", "Script_8java" ],
     [ "SettingsAPI.java", "SettingsAPI_8java.html", "SettingsAPI_8java" ],

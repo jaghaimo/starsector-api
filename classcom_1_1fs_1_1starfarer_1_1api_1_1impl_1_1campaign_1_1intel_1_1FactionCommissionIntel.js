@@ -12,6 +12,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionCo
     [ "createTimeRanOutFailedResult", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionCommissionIntel.html#ac8055f165aa08355c8ad6d00f472bd53", null ],
     [ "endMission", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionCommissionIntel.html#adb93e8f7eb129ba58178b147f7d96633", null ],
     [ "endMission", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionCommissionIntel.html#a69746b9e2698289ddb43f254d95d7426", null ],
+    [ "getFaction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionCommissionIntel.html#ab1a2a51a8c2e945fd4406b2583be8960", null ],
     [ "getFactionForUIColors", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionCommissionIntel.html#a5816d90f80fccf453ca0f4d377414cd3", null ],
     [ "getHostileFactions", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionCommissionIntel.html#adeeef20bf97efcb415680bc4fc1139c0", null ],
     [ "getIcon", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionCommissionIntel.html#abb18f18f2c82a6565843aa247bc21a51", null ],

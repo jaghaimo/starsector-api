@@ -1,0 +1,13 @@
+<map id="com.fs.starfarer.api.impl.campaign.abilities.GenerateSlipsurgeAbility" name="com.fs.starfarer.api.impl.campaign.abilities.GenerateSlipsurgeAbility">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,360,273,401"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1DurationAbilityWithCost2.html" title=" " alt="" coords="5,271,273,312"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="142,328,142,360,136,360,136,328"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html" title=" " alt="" coords="5,183,273,223"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="142,239,142,271,136,271,136,239"/>
+<area shape="rect" id="Node000004" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html" title=" " alt="" coords="5,94,273,135"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="142,150,142,182,136,182,136,150"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="17,13,109,39"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="86,49,124,92,120,96,82,52"/>
+<area shape="rect" id="Node000006" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="133,5,300,46"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="191,60,158,95,154,92,187,56"/>
+</map>

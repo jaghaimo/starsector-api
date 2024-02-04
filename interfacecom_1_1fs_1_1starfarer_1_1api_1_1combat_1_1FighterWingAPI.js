@@ -17,6 +17,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FighterWingAPI =
     [ "isReturning", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FighterWingAPI.html#ae6bf56de411ce987d473a8ad2c5e939c", null ],
     [ "orderReturn", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FighterWingAPI.html#ac4f1da5ee22a8825cd3bf61d7e6c59c3", null ],
     [ "removeMember", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FighterWingAPI.html#ab4658cb44d52dfeabaedee45d5359b75", null ],
+    [ "setSourceBay", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FighterWingAPI.html#a335cd5a73df71e800802589d8b571412", null ],
     [ "setWingOwner", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FighterWingAPI.html#a440ddfc286cffea10a1c56490686732d", null ],
     [ "stopReturning", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FighterWingAPI.html#ac804aadabd629e530f445feef99d0d8f", null ]
 ];

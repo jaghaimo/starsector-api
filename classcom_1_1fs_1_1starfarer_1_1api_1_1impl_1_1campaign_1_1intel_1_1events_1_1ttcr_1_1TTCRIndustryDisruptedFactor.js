@@ -1,0 +1,7 @@
+var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ttcr_1_1TTCRIndustryDisruptedFactor =
+[
+    [ "TTCRIndustryDisruptedFactor", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ttcr_1_1TTCRIndustryDisruptedFactor.html#ae0dd103f61d4b8e63d313829cea2d8a8", null ],
+    [ "getDesc", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ttcr_1_1TTCRIndustryDisruptedFactor.html#a66f7b39acdb992e45fa3f7b697de669a", null ],
+    [ "getMainRowTooltip", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ttcr_1_1TTCRIndustryDisruptedFactor.html#a65fac5e068b7bca70c5748b92ff9b158", null ],
+    [ "desc", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ttcr_1_1TTCRIndustryDisruptedFactor.html#a92062c394d46354f8bb0e7ed1598cdbc", null ]
+];

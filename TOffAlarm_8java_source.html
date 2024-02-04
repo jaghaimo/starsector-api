@@ -148,48 +148,56 @@ $(document).ready(function(){initNavTree('TOffAlarm_8java_source.html',''); init
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        </div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="comment">// don&#39;t spread &quot;hostile&quot; status if this fleet was the aggressor or if attacking it has a low</span></div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="comment">// reputation impact for some other reason</span></div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="keywordflow">if</span> (fleet.getMemoryWithoutUpdate().getBoolean(MemFlags.MEMORY_KEY_LOW_REP_IMPACT)) {</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        }</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        List&lt;CampaignFleetAPI&gt; fleets = fleet.getContainingLocation().getFleets();</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <span class="keywordflow">for</span> (CampaignFleetAPI other : fleets) {</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            VisibilityLevel level = other.getVisibilityLevelTo(fleet);</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            <span class="keywordflow">if</span> (level == VisibilityLevel.NONE) <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            <span class="keywordflow">if</span> (level == VisibilityLevel.COMPOSITION_AND_FACTION_DETAILS &amp;&amp; other.getFaction() == fleet.getFaction()) {</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                MemoryAPI mem = other.getMemoryWithoutUpdate();</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                Misc.setFlagWithReason(mem, MemFlags.MEMORY_KEY_MAKE_HOSTILE_WHILE_TOFF, <span class="stringliteral">&quot;tOffAlarm&quot;</span>, <span class="keyword">true</span>, 1f);</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            }</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        }</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    }</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="keywordflow">if</span> (fleet.getMemoryWithoutUpdate().getBoolean(MemFlags.MEMORY_KEY_LOW_REP_IMPACT) &amp;&amp;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                !fleet.getMemoryWithoutUpdate().getBoolean(MemFlags.SPREAD_TOFF_HOSTILITY_IF_LOW_IMPACT)) {</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        }</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        List&lt;CampaignFleetAPI&gt; fleets = fleet.getContainingLocation().getFleets();</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keywordflow">for</span> (CampaignFleetAPI other : fleets) {</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            VisibilityLevel level = other.getVisibilityLevelTo(fleet);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            <span class="keywordflow">if</span> (level == VisibilityLevel.NONE) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            <span class="keywordflow">if</span> (level == VisibilityLevel.COMPOSITION_AND_FACTION_DETAILS &amp;&amp; other.getFaction() == fleet.getFaction()) {</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                MemoryAPI mem = other.getMemoryWithoutUpdate();</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                Misc.setFlagWithReason(mem, MemFlags.MEMORY_KEY_MAKE_HOSTILE_WHILE_TOFF, <span class="stringliteral">&quot;tOffAlarm&quot;</span>, <span class="keyword">true</span>, 3f + (<span class="keywordtype">float</span>) Math.random() * 3f);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            }</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="comment">//          if (!other.hasScriptOfClass(TOffAlarm.class)) {</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="comment">//              other.addScript(new TOffAlarm(otherFleet));</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="comment">//          }</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        }</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    }</div>
 </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
-<div class="foldopen" id="foldopen00060" data-start="{" data-end="}">
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1TOffAlarm.html#a3a2104d25059ae844ab2126494bcc8f0">   60</a></span>    <span class="keyword">public</span> <span class="keywordtype">boolean</span> <a class="code hl_function" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1TOffAlarm.html#a3a2104d25059ae844ab2126494bcc8f0">isDone</a>() {</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        MemoryAPI mem = fleet.getMemoryWithoutUpdate();</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="keywordflow">if</span> (mem.getBoolean(MemFlags.MEMORY_KEY_LOW_REP_IMPACT)) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <span class="keywordflow">return</span> !(mem.is(MemFlags.MEMORY_KEY_SAW_PLAYER_WITH_TRANSPONDER_OFF, <span class="keyword">true</span>) &amp;&amp;</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>               mem.is(MemFlags.MEMORY_KEY_MAKE_HOSTILE_WHILE_TOFF, <span class="keyword">true</span>));</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    }</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="foldopen" id="foldopen00065" data-start="{" data-end="}">
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1TOffAlarm.html#a3a2104d25059ae844ab2126494bcc8f0">   65</a></span>    <span class="keyword">public</span> <span class="keywordtype">boolean</span> <a class="code hl_function" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1TOffAlarm.html#a3a2104d25059ae844ab2126494bcc8f0">isDone</a>() {</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        MemoryAPI mem = fleet.getMemoryWithoutUpdate();</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <span class="keywordflow">if</span> (mem.getBoolean(MemFlags.MEMORY_KEY_LOW_REP_IMPACT) &amp;&amp;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                !fleet.getMemoryWithoutUpdate().getBoolean(MemFlags.SPREAD_TOFF_HOSTILITY_IF_LOW_IMPACT)) {</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        }</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <span class="keywordflow">return</span> !(mem.is(MemFlags.MEMORY_KEY_SAW_PLAYER_WITH_TRANSPONDER_OFF, <span class="keyword">true</span>) &amp;&amp;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>               mem.is(MemFlags.MEMORY_KEY_MAKE_HOSTILE_WHILE_TOFF, <span class="keyword">true</span>));</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    }</div>
 </div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-<div class="foldopen" id="foldopen00067" data-start="{" data-end="}">
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1TOffAlarm.html#a9ab7fd22cdfa5ef5b22dd7a01f358cd9">   67</a></span>    <span class="keyword">public</span> <span class="keywordtype">boolean</span> <a class="code hl_function" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1TOffAlarm.html#a9ab7fd22cdfa5ef5b22dd7a01f358cd9">runWhilePaused</a>() {</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    }</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="foldopen" id="foldopen00075" data-start="{" data-end="}">
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1TOffAlarm.html#a9ab7fd22cdfa5ef5b22dd7a01f358cd9">   75</a></span>    <span class="keyword">public</span> <span class="keywordtype">boolean</span> <a class="code hl_function" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1TOffAlarm.html#a9ab7fd22cdfa5ef5b22dd7a01f358cd9">runWhilePaused</a>() {</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    }</div>
 </div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>}</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>}</div>
 </div>
 <div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1Global_html"><div class="ttname"><a href="classcom_1_1fs_1_1starfarer_1_1api_1_1Global.html">com.fs.starfarer.api.Global</a></div><div class="ttdef"><b>Definition</b> <a href="Global_8java_source.html#l00013">Global.java:13</a></div></div>
 <div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1Global_html_afca8164b2446371c2d5415aa72a0a733"><div class="ttname"><a href="classcom_1_1fs_1_1starfarer_1_1api_1_1Global.html#afca8164b2446371c2d5415aa72a0a733">com.fs.starfarer.api.Global.getSector</a></div><div class="ttdeci">static SectorAPI getSector()</div><div class="ttdef"><b>Definition</b> <a href="Global_8java_source.html#l00059">Global.java:59</a></div></div>
 <div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1TOffAlarm_html"><div class="ttname"><a href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1TOffAlarm.html">com.fs.starfarer.api.impl.campaign.TOffAlarm</a></div><div class="ttdef"><b>Definition</b> <a href="TOffAlarm_8java_source.html#l00014">TOffAlarm.java:14</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1TOffAlarm_html_a3a2104d25059ae844ab2126494bcc8f0"><div class="ttname"><a href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1TOffAlarm.html#a3a2104d25059ae844ab2126494bcc8f0">com.fs.starfarer.api.impl.campaign.TOffAlarm.isDone</a></div><div class="ttdeci">boolean isDone()</div><div class="ttdef"><b>Definition</b> <a href="TOffAlarm_8java_source.html#l00060">TOffAlarm.java:60</a></div></div>
+<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1TOffAlarm_html_a3a2104d25059ae844ab2126494bcc8f0"><div class="ttname"><a href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1TOffAlarm.html#a3a2104d25059ae844ab2126494bcc8f0">com.fs.starfarer.api.impl.campaign.TOffAlarm.isDone</a></div><div class="ttdeci">boolean isDone()</div><div class="ttdef"><b>Definition</b> <a href="TOffAlarm_8java_source.html#l00065">TOffAlarm.java:65</a></div></div>
 <div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1TOffAlarm_html_a44d4abceda6424d1d550763c9228b732"><div class="ttname"><a href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1TOffAlarm.html#a44d4abceda6424d1d550763c9228b732">com.fs.starfarer.api.impl.campaign.TOffAlarm.advance</a></div><div class="ttdeci">void advance(float amount)</div><div class="ttdef"><b>Definition</b> <a href="TOffAlarm_8java_source.html#l00023">TOffAlarm.java:23</a></div></div>
 <div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1TOffAlarm_html_a710b004a18fc66f24585473e02885b76"><div class="ttname"><a href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1TOffAlarm.html#a710b004a18fc66f24585473e02885b76">com.fs.starfarer.api.impl.campaign.TOffAlarm.TOffAlarm</a></div><div class="ttdeci">TOffAlarm(CampaignFleetAPI fleet)</div><div class="ttdef"><b>Definition</b> <a href="TOffAlarm_8java_source.html#l00018">TOffAlarm.java:18</a></div></div>
 <div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1TOffAlarm_html_a8b5f48a42d0ba2c01c8d6b88d631dd4f"><div class="ttname"><a href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1TOffAlarm.html#a8b5f48a42d0ba2c01c8d6b88d631dd4f">com.fs.starfarer.api.impl.campaign.TOffAlarm.notifyNearby</a></div><div class="ttdeci">void notifyNearby()</div><div class="ttdef"><b>Definition</b> <a href="TOffAlarm_8java_source.html#l00034">TOffAlarm.java:34</a></div></div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1TOffAlarm_html_a9ab7fd22cdfa5ef5b22dd7a01f358cd9"><div class="ttname"><a href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1TOffAlarm.html#a9ab7fd22cdfa5ef5b22dd7a01f358cd9">com.fs.starfarer.api.impl.campaign.TOffAlarm.runWhilePaused</a></div><div class="ttdeci">boolean runWhilePaused()</div><div class="ttdef"><b>Definition</b> <a href="TOffAlarm_8java_source.html#l00067">TOffAlarm.java:67</a></div></div>
+<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1TOffAlarm_html_a9ab7fd22cdfa5ef5b22dd7a01f358cd9"><div class="ttname"><a href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1TOffAlarm.html#a9ab7fd22cdfa5ef5b22dd7a01f358cd9">com.fs.starfarer.api.impl.campaign.TOffAlarm.runWhilePaused</a></div><div class="ttdeci">boolean runWhilePaused()</div><div class="ttdef"><b>Definition</b> <a href="TOffAlarm_8java_source.html#l00075">TOffAlarm.java:75</a></div></div>
 <div class="ttc" id="ainterfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript_html"><div class="ttname"><a href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html">com.fs.starfarer.api.EveryFrameScript</a></div><div class="ttdef"><b>Definition</b> <a href="EveryFrameScript_8java_source.html#l00003">EveryFrameScript.java:3</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

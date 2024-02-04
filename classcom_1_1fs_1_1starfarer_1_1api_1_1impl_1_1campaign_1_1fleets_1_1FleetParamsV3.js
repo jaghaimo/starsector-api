@@ -9,6 +9,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetPar
     [ "init", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetParamsV3.html#a10d9f53c20fae804168b38f110ea2368", null ],
     [ "setSource", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetParamsV3.html#a5e36e0f07f21a0882561ec87dc5cee7b", null ],
     [ "updateQualityAndProducerFromSourceMarket", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetParamsV3.html#a2568495beedc6c30676ec7a668c70237", null ],
+    [ "addShips", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetParamsV3.html#a33fbe4b7b67e03179c9d9fd65e412af9", null ],
     [ "aiCores", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetParamsV3.html#a411842b8a8b730ec9911b14eeb0ec256", null ],
     [ "allWeapons", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetParamsV3.html#a960d322511039723838efad2853d5314", null ],
     [ "averageSMods", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetParamsV3.html#a110e21b0acfe8c87cd3916c36620c4be", null ],

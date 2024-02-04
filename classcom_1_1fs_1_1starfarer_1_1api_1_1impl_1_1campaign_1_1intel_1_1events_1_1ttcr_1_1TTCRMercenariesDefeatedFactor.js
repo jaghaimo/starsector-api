@@ -1,0 +1,6 @@
+var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ttcr_1_1TTCRMercenariesDefeatedFactor =
+[
+    [ "TTCRMercenariesDefeatedFactor", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ttcr_1_1TTCRMercenariesDefeatedFactor.html#a83c0b9f4ecb35b362e613f767b36fad2", null ],
+    [ "getDesc", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ttcr_1_1TTCRMercenariesDefeatedFactor.html#a88e071565e5f1dee59686ebb4043587f", null ],
+    [ "getMainRowTooltip", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ttcr_1_1TTCRMercenariesDefeatedFactor.html#a2357b8f8b4cca9ea591a77855e1d72bf", null ]
+];

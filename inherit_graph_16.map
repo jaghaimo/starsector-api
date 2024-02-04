@@ -1,132 +1,134 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" title=" " alt="" coords="21,1749,121,1774"/>
+<area shape="rect" id="Node000000" title=" " alt="" coords="21,1781,121,1806"/>
 <area shape="rect" id="Node000001" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1RepairGantry.html" title=" " alt="" coords="185,108,405,148"/>
-<area shape="poly" id="edge610_Node000000_Node000001" title=" " alt="" coords="70,1733,73,1420,88,919,102,661,122,432,134,336,148,257,164,197,183,160,196,147,200,151,187,163,169,199,153,258,139,337,127,433,107,662,93,919,79,1420,75,1733"/>
+<area shape="poly" id="edge695_Node000000_Node000001" title=" " alt="" coords="70,1765,73,1446,87,935,101,672,121,438,133,340,147,259,164,198,183,160,196,147,200,151,187,163,169,200,153,260,138,341,126,439,106,672,92,935,78,1446,75,1765"/>
 <area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1AblativeArmor.html" title=" " alt="" coords="187,173,403,214"/>
-<area shape="poly" id="edge611_Node000000_Node000002" title=" " alt="" coords="70,1733,74,1431,90,951,104,705,124,486,136,394,149,318,165,261,183,225,196,212,200,216,187,228,170,263,154,319,141,395,129,486,109,705,95,951,80,1431,75,1733"/>
+<area shape="poly" id="edge696_Node000000_Node000002" title=" " alt="" coords="70,1765,74,1457,89,967,103,715,123,491,135,398,149,320,165,262,183,225,196,212,200,216,187,228,169,263,154,321,140,398,128,492,108,716,94,968,79,1458,75,1765"/>
 <area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1AdaptivePhaseCoils.html" title=" " alt="" coords="187,238,403,279"/>
-<area shape="poly" id="edge612_Node000000_Node000003" title=" " alt="" coords="70,1733,75,1443,92,984,106,748,125,539,137,451,150,379,166,324,183,291,196,278,200,282,187,294,171,326,156,380,142,452,131,540,111,748,97,984,81,1443,75,1733"/>
+<area shape="poly" id="edge697_Node000000_Node000003" title=" " alt="" coords="70,1765,75,1469,91,1000,105,759,124,545,136,455,150,381,165,325,183,291,196,278,200,282,187,294,170,327,155,382,142,456,130,545,110,759,96,1000,80,1469,75,1765"/>
 <area shape="rect" id="Node000004" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1AdvancedGroundSupport.html" title=" " alt="" coords="187,304,403,344"/>
-<area shape="poly" id="edge613_Node000000_Node000004" title=" " alt="" coords="70,1733,76,1454,94,1016,108,792,127,592,152,440,166,388,183,356,196,343,200,347,187,359,171,390,157,441,133,593,113,792,99,1016,81,1454,75,1733"/>
+<area shape="poly" id="edge698_Node000000_Node000004" title=" " alt="" coords="70,1765,76,1481,93,1032,107,802,126,598,151,442,166,389,183,356,196,343,200,347,187,359,171,391,156,443,132,599,112,803,98,1032,81,1481,75,1765"/>
 <area shape="rect" id="Node000005" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1AndradaMods.html" title=" " alt="" coords="187,369,403,410"/>
-<area shape="poly" id="edge614_Node000000_Node000005" title=" " alt="" coords="70,1733,77,1465,95,1048,110,835,129,646,153,501,167,452,183,421,196,408,200,412,187,424,172,454,158,502,134,646,115,835,101,1048,82,1465,76,1733"/>
+<area shape="poly" id="edge699_Node000000_Node000005" title=" " alt="" coords="70,1765,77,1492,94,1065,109,846,128,652,152,503,167,453,183,421,196,408,200,412,187,424,172,455,158,505,133,653,114,846,100,1065,82,1493,75,1765"/>
 <area shape="rect" id="Node000006" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1AssaultPackage.html" title=" " alt="" coords="187,434,403,475"/>
-<area shape="poly" id="edge615_Node000000_Node000006" title=" " alt="" coords="70,1733,78,1476,97,1080,112,878,131,699,154,562,168,516,183,486,196,474,200,478,187,490,173,518,159,564,136,700,117,879,103,1081,83,1476,76,1733"/>
+<area shape="poly" id="edge700_Node000000_Node000006" title=" " alt="" coords="70,1765,78,1503,96,1097,111,889,130,705,154,564,167,516,183,486,196,474,200,478,187,490,172,518,159,566,135,706,116,890,102,1097,83,1504,76,1765"/>
 <area shape="rect" id="Node000007" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1Automated.html" title=" " alt="" coords="187,500,403,540"/>
-<area shape="poly" id="edge616_Node000000_Node000007" title=" " alt="" coords="70,1733,79,1489,99,1114,114,922,133,753,155,624,168,579,183,552,196,539,200,543,187,555,173,581,161,625,138,754,120,923,105,1114,84,1489,76,1733"/>
+<area shape="poly" id="edge701_Node000000_Node000007" title=" " alt="" coords="70,1765,79,1516,98,1130,113,933,132,759,155,626,168,580,183,552,196,539,200,543,187,555,173,582,160,627,137,760,118,934,104,1130,84,1516,76,1765"/>
 <area shape="rect" id="Node000008" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1BDeck.html" title=" " alt="" coords="187,565,403,606"/>
-<area shape="poly" id="edge617_Node000000_Node000008" title=" " alt="" coords="71,1733,80,1501,101,1146,116,966,135,806,157,685,169,643,183,617,196,604,200,608,187,620,174,645,162,686,140,807,122,966,106,1147,86,1501,76,1733"/>
+<area shape="poly" id="edge702_Node000000_Node000008" title=" " alt="" coords="71,1765,80,1527,100,1163,115,977,134,812,156,687,169,644,183,617,196,604,200,608,187,620,174,646,161,688,139,813,121,977,105,1163,85,1528,76,1765"/>
 <area shape="rect" id="Node000009" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1BallisticRangefinder.html" title=" " alt="" coords="187,630,403,671"/>
-<area shape="poly" id="edge618_Node000000_Node000009" title=" " alt="" coords="71,1733,81,1513,103,1179,118,1010,137,860,158,746,170,707,183,682,197,669,200,673,187,686,175,709,163,747,142,861,124,1010,108,1180,87,1513,76,1733"/>
+<area shape="poly" id="edge703_Node000000_Node000009" title=" " alt="" coords="71,1765,81,1539,102,1195,117,1021,136,866,157,748,169,708,183,682,197,669,200,673,187,686,174,710,162,749,141,867,123,1021,107,1196,86,1539,76,1765"/>
 <area shape="rect" id="Node000010" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1BaseLogisticsHullMod.html" title=" " alt="" coords="187,696,403,736"/>
-<area shape="poly" id="edge619_Node000000_Node000010" title=" " alt="" coords="71,1733,82,1524,105,1212,120,1053,138,914,159,807,170,771,183,748,197,735,200,739,187,751,175,773,164,808,144,914,126,1054,110,1212,88,1524,76,1733"/>
+<area shape="poly" id="edge704_Node000000_Node000010" title=" " alt="" coords="71,1765,82,1551,104,1228,119,1064,138,919,158,809,170,771,183,748,197,735,200,739,187,751,175,773,164,810,143,920,125,1065,109,1228,87,1551,76,1765"/>
 <area shape="rect" id="Node000021" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1CompromisedStorage.html" title=" " alt="" coords="187,892,403,932"/>
-<area shape="poly" id="edge628_Node000000_Node000021" title=" " alt="" coords="70,1733,73,1573,87,1336,101,1214,121,1101,147,1008,164,972,183,944,197,931,201,935,187,947,169,974,152,1010,126,1103,106,1215,92,1337,78,1573,75,1733"/>
+<area shape="poly" id="edge713_Node000000_Node000021" title=" " alt="" coords="69,1765,72,1599,85,1353,99,1225,119,1108,146,1011,163,973,183,944,197,931,201,935,187,947,168,975,151,1013,124,1109,104,1226,90,1353,77,1599,75,1765"/>
 <area shape="rect" id="Node000022" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1CompromisedStructure.html" title=" " alt="" coords="187,957,403,998"/>
-<area shape="poly" id="edge629_Node000000_Node000022" title=" " alt="" coords="70,1733,75,1584,91,1367,105,1255,124,1153,150,1068,165,1035,183,1009,197,996,201,1000,187,1013,170,1037,155,1070,130,1154,110,1256,96,1368,80,1584,75,1733"/>
+<area shape="poly" id="edge714_Node000000_Node000022" title=" " alt="" coords="70,1765,74,1610,89,1384,103,1267,123,1160,149,1071,165,1036,183,1009,197,996,201,1000,187,1013,169,1038,154,1072,128,1161,108,1268,94,1385,79,1611,75,1765"/>
 <area shape="rect" id="Node000023" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar.html" title=" " alt="" coords="187,1022,403,1063"/>
-<area shape="poly" id="edge630_Node000000_Node000023" title=" " alt="" coords="70,1733,77,1595,95,1398,109,1297,128,1204,152,1127,167,1097,183,1074,197,1062,201,1066,187,1078,171,1100,157,1129,133,1206,114,1298,100,1399,82,1596,76,1733"/>
+<area shape="poly" id="edge715_Node000000_Node000023" title=" " alt="" coords="70,1765,76,1622,93,1415,107,1309,126,1211,151,1130,166,1099,183,1074,197,1062,201,1066,187,1078,171,1101,156,1132,131,1212,112,1310,98,1416,81,1622,76,1765"/>
 <area shape="rect" id="Node000024" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1DamagedFlightDeck.html" title=" " alt="" coords="187,1088,403,1128"/>
-<area shape="poly" id="edge631_Node000000_Node000024" title=" " alt="" coords="71,1733,79,1607,99,1430,113,1339,132,1256,155,1187,168,1160,183,1140,198,1127,201,1131,187,1143,173,1163,160,1189,137,1257,119,1340,104,1430,85,1607,76,1733"/>
+<area shape="poly" id="edge716_Node000000_Node000024" title=" " alt="" coords="71,1765,78,1633,97,1446,111,1350,130,1262,154,1190,167,1161,183,1140,198,1127,201,1131,187,1143,172,1164,159,1192,135,1264,117,1351,102,1446,84,1633,76,1765"/>
 <area shape="rect" id="Node000025" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1DamagedWeaponMounts.html" title=" " alt="" coords="187,1153,403,1194"/>
-<area shape="poly" id="edge632_Node000000_Node000025" title=" " alt="" coords="72,1733,82,1618,103,1461,118,1380,136,1307,157,1247,183,1205,198,1192,201,1196,187,1209,162,1249,141,1309,123,1382,108,1462,87,1619,77,1733"/>
+<area shape="poly" id="edge717_Node000000_Node000025" title=" " alt="" coords="71,1765,81,1645,101,1478,115,1392,134,1314,156,1250,169,1224,183,1205,198,1192,201,1196,187,1209,173,1227,161,1252,139,1316,121,1393,106,1479,86,1646,77,1765"/>
 <area shape="rect" id="Node000026" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1DefectiveManufactory.html" title=" " alt="" coords="187,1218,403,1259"/>
-<area shape="poly" id="edge633_Node000000_Node000026" title=" " alt="" coords="72,1733,85,1631,107,1493,122,1423,139,1359,160,1307,183,1270,198,1258,201,1262,187,1274,164,1309,145,1361,127,1424,112,1494,90,1632,78,1734"/>
+<area shape="poly" id="edge718_Node000000_Node000026" title=" " alt="" coords="72,1765,83,1657,105,1509,120,1434,138,1366,158,1309,183,1270,198,1258,201,1262,187,1274,163,1312,143,1367,125,1435,110,1510,89,1658,77,1766"/>
 <area shape="rect" id="Node000027" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1DefensiveTargetingArray.html" title=" " alt="" coords="187,1284,403,1324"/>
-<area shape="poly" id="edge634_Node000000_Node000027" title=" " alt="" coords="74,1733,88,1643,111,1525,143,1411,162,1366,183,1336,199,1323,202,1327,187,1339,167,1369,148,1413,117,1526,93,1644,79,1734"/>
+<area shape="poly" id="edge719_Node000000_Node000027" title=" " alt="" coords="73,1765,86,1669,109,1541,124,1476,141,1418,161,1369,183,1336,199,1323,202,1327,187,1339,166,1372,146,1419,129,1478,114,1542,92,1670,78,1766"/>
 <area shape="rect" id="Node000028" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1DegradedLifeSupport.html" title=" " alt="" coords="187,1349,403,1390"/>
-<area shape="poly" id="edge635_Node000000_Node000028" title=" " alt="" coords="70,1733,75,1666,92,1577,106,1530,126,1483,151,1439,183,1401,200,1388,203,1392,187,1405,155,1442,130,1485,111,1531,97,1578,81,1667,75,1733"/>
+<area shape="poly" id="edge720_Node000000_Node000028" title=" " alt="" coords="69,1765,73,1693,88,1595,102,1543,122,1492,149,1443,183,1401,199,1388,202,1392,187,1405,153,1446,127,1494,107,1545,93,1596,78,1693,75,1765"/>
 <area shape="rect" id="Node000029" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1DegradedShields.html" title=" " alt="" coords="187,1414,403,1455"/>
-<area shape="poly" id="edge636_Node000000_Node000029" title=" " alt="" coords="72,1732,82,1677,101,1605,115,1567,133,1531,156,1496,183,1466,200,1453,204,1458,186,1470,160,1500,138,1533,120,1570,106,1607,87,1678,78,1733"/>
+<area shape="poly" id="edge721_Node000000_Node000029" title=" " alt="" coords="71,1764,78,1703,96,1623,111,1581,130,1539,153,1500,183,1466,200,1454,203,1458,186,1470,158,1504,134,1542,116,1583,101,1625,84,1704,76,1765"/>
 <area shape="rect" id="Node000030" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1DistributedFireControl.html" title=" " alt="" coords="187,1480,403,1520"/>
-<area shape="poly" id="edge637_Node000000_Node000030" title=" " alt="" coords="76,1733,89,1689,110,1635,141,1579,160,1554,183,1531,202,1519,205,1523,186,1535,164,1557,145,1582,115,1637,94,1691,81,1734"/>
+<area shape="poly" id="edge722_Node000000_Node000030" title=" " alt="" coords="74,1765,85,1715,105,1652,137,1588,158,1558,183,1531,201,1519,204,1523,186,1535,162,1561,142,1590,110,1654,90,1716,79,1766"/>
 <area shape="rect" id="Node000031" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1DoNotBackOff.html" title=" " alt="" coords="187,1545,403,1586"/>
-<area shape="poly" id="edge638_Node000000_Node000031" title=" " alt="" coords="82,1733,120,1665,149,1628,183,1597,205,1584,207,1589,186,1601,153,1632,124,1668,86,1736"/>
+<area shape="poly" id="edge723_Node000000_Node000031" title=" " alt="" coords="78,1765,93,1727,115,1682,145,1636,183,1597,203,1584,206,1589,186,1601,149,1639,119,1685,98,1730,83,1767"/>
 <area shape="rect" id="Node000032" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1DriveFieldStabilizer.html" title=" " alt="" coords="187,1610,403,1651"/>
-<area shape="poly" id="edge639_Node000000_Node000032" title=" " alt="" coords="93,1735,133,1698,183,1662,211,1649,213,1654,186,1666,136,1702,96,1739"/>
+<area shape="poly" id="edge724_Node000000_Node000032" title=" " alt="" coords="86,1766,126,1713,153,1686,183,1662,207,1649,209,1654,186,1666,156,1690,130,1717,90,1769"/>
 <area shape="rect" id="Node000033" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ECMPackage.html" title=" " alt="" coords="187,1676,403,1716"/>
-<area shape="poly" id="edge640_Node000000_Node000033" title=" " alt="" coords="131,1741,222,1714,223,1720,133,1746"/>
+<area shape="poly" id="edge725_Node000000_Node000033" title=" " alt="" coords="104,1770,184,1727,217,1714,219,1719,186,1732,107,1774"/>
 <area shape="rect" id="Node000034" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1EnergyBoltCoherer.html" title=" " alt="" coords="187,1741,403,1782"/>
-<area shape="poly" id="edge641_Node000000_Node000034" title=" " alt="" coords="136,1759,186,1759,186,1764,136,1764"/>
+<area shape="poly" id="edge726_Node000000_Node000034" title=" " alt="" coords="136,1782,186,1774,187,1780,136,1787"/>
 <area shape="rect" id="Node000035" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ErraticInjector.html" title=" " alt="" coords="187,1806,403,1847"/>
-<area shape="poly" id="edge642_Node000000_Node000035" title=" " alt="" coords="133,1777,223,1803,222,1808,131,1782"/>
+<area shape="poly" id="edge727_Node000000_Node000035" title=" " alt="" coords="136,1800,187,1808,186,1813,136,1806"/>
 <area shape="rect" id="Node000036" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1EscortPackage.html" title=" " alt="" coords="187,1872,403,1912"/>
-<area shape="poly" id="edge643_Node000000_Node000036" title=" " alt="" coords="96,1784,136,1821,186,1856,213,1869,211,1874,183,1861,133,1825,93,1788"/>
+<area shape="poly" id="edge728_Node000000_Node000036" title=" " alt="" coords="106,1812,143,1835,186,1856,218,1869,216,1874,184,1861,141,1840,103,1817"/>
 <area shape="rect" id="Node000037" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ExpandedDeckCrew.html" title=" " alt="" coords="187,1937,403,1978"/>
-<area shape="poly" id="edge644_Node000000_Node000037" title=" " alt="" coords="86,1787,124,1855,153,1891,186,1922,207,1934,205,1939,183,1926,149,1895,120,1858,82,1790"/>
+<area shape="poly" id="edge729_Node000000_Node000037" title=" " alt="" coords="90,1818,130,1871,156,1898,186,1922,209,1934,207,1939,183,1926,153,1902,126,1874,86,1821"/>
 <area shape="rect" id="Node000038" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ExperimentalPhaseCoils.html" title=" " alt="" coords="187,2002,403,2043"/>
-<area shape="poly" id="edge645_Node000000_Node000038" title=" " alt="" coords="81,1788,94,1832,115,1886,145,1941,164,1966,186,1987,205,2000,202,2004,183,1991,160,1969,141,1944,110,1888,89,1834,76,1790"/>
+<area shape="poly" id="edge730_Node000000_Node000038" title=" " alt="" coords="83,1820,98,1858,119,1903,149,1948,186,1987,206,2000,203,2004,183,1991,145,1952,115,1905,93,1860,78,1822"/>
 <area shape="rect" id="Node000039" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1FaultyAutomatedSystems.html" title=" " alt="" coords="187,2068,403,2108"/>
-<area shape="poly" id="edge646_Node000000_Node000039" title=" " alt="" coords="78,1790,87,1845,106,1916,120,1953,138,1989,160,2023,186,2053,204,2065,200,2069,183,2057,156,2026,133,1992,115,1955,101,1918,82,1846,72,1790"/>
+<area shape="poly" id="edge731_Node000000_Node000039" title=" " alt="" coords="79,1821,90,1871,110,1933,141,1998,162,2027,186,2053,204,2065,201,2070,183,2057,158,2030,137,2000,105,1935,85,1872,74,1822"/>
 <area shape="rect" id="Node000040" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1FighterChassisStorage.html" title=" " alt="" coords="187,2133,403,2174"/>
-<area shape="poly" id="edge647_Node000000_Node000040" title=" " alt="" coords="75,1790,81,1856,97,1945,111,1991,130,2037,155,2080,187,2118,203,2131,200,2135,183,2122,151,2083,126,2040,106,1993,92,1946,75,1857,70,1790"/>
-<area shape="rect" id="Node000041" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1FragileSubsystems.html" title=" " alt="" coords="187,2198,403,2239"/>
-<area shape="poly" id="edge648_Node000000_Node000041" title=" " alt="" coords="79,1789,93,1879,117,1997,148,2110,167,2154,187,2184,202,2196,199,2200,183,2187,162,2156,143,2112,111,1998,88,1880,74,1790"/>
-<area shape="rect" id="Node000042" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1GlitchedSensorArray.html" title=" " alt="" coords="187,2264,403,2304"/>
-<area shape="poly" id="edge649_Node000000_Node000042" title=" " alt="" coords="78,1789,90,1891,112,2029,127,2099,145,2162,164,2214,187,2249,201,2261,198,2265,183,2253,160,2216,139,2164,122,2100,107,2030,85,1892,72,1790"/>
-<area shape="rect" id="Node000043" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1GroundSupport.html" title=" " alt="" coords="187,2329,403,2370"/>
-<area shape="poly" id="edge650_Node000000_Node000043" title=" " alt="" coords="77,1790,87,1904,108,2061,123,2141,141,2214,162,2274,187,2314,201,2327,198,2331,183,2318,157,2276,136,2216,118,2142,103,2062,82,1904,72,1790"/>
-<area shape="rect" id="Node000044" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1HeavyBallisticsIntegration.html" title=" " alt="" coords="187,2394,403,2435"/>
-<area shape="poly" id="edge651_Node000000_Node000044" title=" " alt="" coords="76,1790,85,1916,104,2093,119,2183,137,2266,160,2334,173,2360,187,2380,201,2392,198,2396,183,2383,168,2363,155,2336,132,2267,113,2184,99,2093,79,1916,71,1790"/>
-<area shape="rect" id="Node000045" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1HighScatterAmp.html" title=" " alt="" coords="187,2460,403,2500"/>
-<area shape="poly" id="edge652_Node000000_Node000045" title=" " alt="" coords="76,1790,82,1927,100,2124,114,2225,133,2317,157,2393,171,2423,187,2445,201,2457,197,2461,183,2449,167,2425,152,2395,128,2319,109,2226,95,2124,77,1928,70,1790"/>
-<area shape="rect" id="Node000046" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1IncreasedMaintenance.html" title=" " alt="" coords="187,2525,403,2566"/>
-<area shape="poly" id="edge653_Node000000_Node000046" title=" " alt="" coords="75,1790,80,1939,96,2155,110,2267,130,2369,155,2453,170,2486,187,2510,201,2523,197,2527,183,2514,165,2488,150,2455,124,2370,105,2267,91,2155,75,1939,70,1790"/>
-<area shape="rect" id="Node000047" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1MalfunctioningComms.html" title=" " alt="" coords="187,2590,403,2631"/>
-<area shape="poly" id="edge654_Node000000_Node000047" title=" " alt="" coords="75,1790,78,1950,92,2186,106,2308,126,2420,152,2513,169,2549,187,2576,201,2588,197,2592,183,2579,164,2551,147,2515,121,2422,101,2309,87,2186,73,1950,70,1790"/>
-<area shape="rect" id="Node000048" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1MissileAutoloader.html" title=" " alt="" coords="187,2656,403,2696"/>
-<area shape="poly" id="edge655_Node000000_Node000048" title=" " alt="" coords="75,1790,76,1962,80,2085,88,2218,102,2350,122,2472,150,2573,167,2611,187,2641,200,2653,197,2657,183,2645,163,2614,145,2574,117,2473,97,2351,83,2218,75,2085,71,1962,69,1790"/>
-<area shape="rect" id="Node000049" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1NavRelay.html" title=" " alt="" coords="187,2721,403,2762"/>
-<area shape="poly" id="edge656_Node000000_Node000049" title=" " alt="" coords="77,1790,89,1986,112,2278,128,2425,146,2555,165,2653,176,2686,187,2706,200,2719,197,2723,183,2710,171,2689,160,2655,140,2556,123,2426,107,2278,84,1987,71,1790"/>
-<area shape="rect" id="Node000050" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1NeuralInterface.html" title=" " alt="" coords="187,2786,403,2827"/>
-<area shape="poly" id="edge657_Node000000_Node000050" title=" " alt="" coords="76,1790,88,1998,110,2311,126,2469,144,2608,164,2715,175,2750,187,2772,200,2784,197,2788,183,2775,170,2752,159,2716,138,2609,120,2469,105,2311,82,1999,71,1790"/>
-<area shape="rect" id="Node000052" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1OperationsCenter.html" title=" " alt="" coords="187,2852,403,2892"/>
-<area shape="poly" id="edge659_Node000000_Node000052" title=" " alt="" coords="76,1790,87,2010,108,2343,124,2512,142,2662,163,2776,175,2814,187,2837,200,2849,197,2853,183,2840,170,2816,158,2777,137,2663,118,2513,103,2344,81,2010,71,1790"/>
-<area shape="rect" id="Node000053" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1PDIntegration.html" title=" " alt="" coords="187,2917,403,2958"/>
-<area shape="poly" id="edge660_Node000000_Node000053" title=" " alt="" coords="76,1790,86,2022,106,2376,122,2556,140,2716,162,2837,174,2878,187,2902,200,2914,196,2918,183,2906,169,2880,157,2838,135,2716,116,2557,101,2377,80,2022,71,1790"/>
-<area shape="rect" id="Node000054" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1PeriodicMissileReload.html" title=" " alt="" coords="187,2982,403,3023"/>
-<area shape="poly" id="edge661_Node000000_Node000054" title=" " alt="" coords="76,1790,84,2034,105,2409,120,2600,138,2769,161,2898,173,2942,187,2968,200,2980,196,2984,183,2971,168,2943,155,2899,133,2770,114,2601,99,2409,79,2034,70,1790"/>
-<area shape="rect" id="Node000055" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1PhaseAnchor.html" title=" " alt="" coords="187,3048,403,3088"/>
-<area shape="poly" id="edge662_Node000000_Node000055" title=" " alt="" coords="76,1790,83,2046,103,2442,117,2644,136,2823,159,2959,173,3005,187,3033,200,3045,196,3049,183,3036,168,3007,154,2961,131,2824,112,2645,97,2443,78,2047,70,1790"/>
+<area shape="poly" id="edge732_Node000000_Node000040" title=" " alt="" coords="76,1821,84,1883,101,1963,115,2005,134,2046,158,2084,186,2118,203,2130,200,2135,183,2122,153,2088,129,2048,110,2007,96,1964,78,1884,71,1822"/>
+<area shape="rect" id="Node000041" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1FlightControl.html" title=" " alt="" coords="187,2198,403,2239"/>
+<area shape="poly" id="edge733_Node000000_Node000041" title=" " alt="" coords="74,1822,78,1894,93,1991,107,2043,127,2094,153,2142,187,2184,202,2196,199,2200,183,2187,148,2145,122,2096,102,2045,88,1992,73,1895,69,1822"/>
+<area shape="rect" id="Node000042" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1FragileSubsystems.html" title=" " alt="" coords="187,2264,403,2304"/>
+<area shape="poly" id="edge734_Node000000_Node000042" title=" " alt="" coords="78,1821,91,1917,114,2045,129,2110,146,2169,166,2217,187,2249,202,2261,199,2265,183,2253,161,2219,141,2170,124,2111,109,2046,86,1918,73,1822"/>
+<area shape="rect" id="Node000043" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1GlitchedSensorArray.html" title=" " alt="" coords="187,2329,403,2370"/>
+<area shape="poly" id="edge735_Node000000_Node000043" title=" " alt="" coords="77,1821,89,1929,110,2077,125,2152,143,2221,163,2276,187,2314,201,2326,198,2331,183,2318,158,2279,137,2222,120,2153,105,2078,83,1930,72,1822"/>
+<area shape="rect" id="Node000044" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1GroundSupport.html" title=" " alt="" coords="187,2394,403,2435"/>
+<area shape="poly" id="edge736_Node000000_Node000044" title=" " alt="" coords="77,1821,86,1942,106,2109,121,2194,139,2272,161,2336,173,2361,187,2380,201,2392,198,2396,183,2383,169,2364,156,2338,134,2274,115,2195,101,2110,81,1942,71,1822"/>
+<area shape="rect" id="Node000045" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1HeavyBallisticsIntegration.html" title=" " alt="" coords="187,2460,403,2500"/>
+<area shape="poly" id="edge737_Node000000_Node000045" title=" " alt="" coords="76,1821,84,1953,102,2140,116,2236,135,2324,158,2396,172,2424,187,2445,201,2457,198,2461,183,2449,167,2427,153,2398,130,2325,111,2237,97,2141,78,1953,71,1822"/>
+<area shape="rect" id="Node000046" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1HighScatterAmp.html" title=" " alt="" coords="187,2525,403,2566"/>
+<area shape="poly" id="edge738_Node000000_Node000046" title=" " alt="" coords="76,1821,81,1965,98,2172,112,2278,131,2376,156,2456,171,2487,187,2510,201,2522,197,2527,183,2514,166,2489,151,2458,126,2377,107,2279,93,2172,76,1965,70,1822"/>
+<area shape="rect" id="Node000047" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1IncreasedMaintenance.html" title=" " alt="" coords="187,2590,403,2631"/>
+<area shape="poly" id="edge739_Node000000_Node000047" title=" " alt="" coords="75,1822,79,1977,94,2203,108,2320,128,2427,154,2516,169,2550,187,2576,201,2588,197,2592,183,2579,165,2552,149,2517,122,2428,103,2321,89,2203,74,1977,70,1822"/>
+<area shape="rect" id="Node000048" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1MalfunctioningComms.html" title=" " alt="" coords="187,2656,403,2696"/>
+<area shape="poly" id="edge740_Node000000_Node000048" title=" " alt="" coords="75,1821,77,1988,90,2234,104,2361,124,2478,151,2575,168,2613,187,2641,201,2653,197,2657,183,2645,163,2615,146,2577,119,2480,99,2362,85,2234,72,1988,69,1822"/>
+<area shape="rect" id="Node000049" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1MissileAutoloader.html" title=" " alt="" coords="187,2721,403,2762"/>
+<area shape="poly" id="edge741_Node000000_Node000049" title=" " alt="" coords="74,1822,75,2000,79,2127,87,2265,100,2403,120,2530,133,2586,149,2635,167,2676,187,2706,200,2719,197,2723,183,2710,162,2678,144,2637,128,2587,115,2531,95,2404,81,2265,73,2127,70,2000,69,1822"/>
+<area shape="rect" id="Node000050" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1NavRelay.html" title=" " alt="" coords="187,2786,403,2827"/>
+<area shape="poly" id="edge742_Node000000_Node000050" title=" " alt="" coords="76,1822,88,2025,111,2327,127,2479,145,2614,165,2717,176,2751,187,2772,200,2784,197,2788,183,2775,171,2753,160,2718,139,2615,121,2480,106,2327,83,2025,71,1822"/>
+<area shape="rect" id="Node000051" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1NeuralInterface.html" title=" " alt="" coords="187,2852,403,2892"/>
+<area shape="poly" id="edge743_Node000000_Node000051" title=" " alt="" coords="76,1822,87,2036,109,2359,125,2523,143,2668,164,2778,175,2815,187,2837,200,2849,197,2853,183,2840,170,2817,158,2779,138,2669,119,2524,104,2360,82,2037,71,1822"/>
+<area shape="rect" id="Node000053" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1OperationsCenter.html" title=" " alt="" coords="187,2917,403,2958"/>
+<area shape="poly" id="edge745_Node000000_Node000053" title=" " alt="" coords="76,1821,86,2048,107,2392,123,2567,141,2721,162,2839,174,2879,187,2902,200,2915,197,2919,183,2906,169,2881,157,2840,136,2722,117,2567,102,2392,81,2048,71,1822"/>
+<area shape="rect" id="Node000054" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1PDIntegration.html" title=" " alt="" coords="187,2982,403,3023"/>
+<area shape="poly" id="edge746_Node000000_Node000054" title=" " alt="" coords="76,1821,85,2060,105,2425,120,2610,139,2775,161,2900,174,2942,187,2968,200,2980,196,2984,183,2971,169,2944,156,2901,134,2776,115,2611,100,2425,80,2060,71,1822"/>
+<area shape="rect" id="Node000055" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1PeriodicMissileReload.html" title=" " alt="" coords="187,3048,403,3088"/>
+<area shape="poly" id="edge747_Node000000_Node000055" title=" " alt="" coords="76,1821,84,2071,104,2457,118,2654,137,2828,160,2961,173,3006,187,3033,200,3045,196,3049,183,3036,168,3008,155,2962,132,2829,113,2655,98,2457,79,2071,70,1822"/>
+<area shape="rect" id="Node000056" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1PhaseAnchor.html" title=" " alt="" coords="187,3113,403,3154"/>
+<area shape="poly" id="edge748_Node000000_Node000056" title=" " alt="" coords="76,1822,83,2084,102,2490,116,2698,135,2882,159,3022,172,3070,187,3098,200,3111,196,3114,183,3102,167,3072,154,3024,130,2883,111,2699,96,2491,78,2084,70,1822"/>
 <area shape="rect" id="Node000018" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1PhaseField.html" title=" " alt="" coords="187,42,403,83"/>
-<area shape="poly" id="edge663_Node000000_Node000018" title=" " alt="" coords="70,1733,72,1409,86,887,100,618,120,379,132,279,147,196,163,133,183,95,196,82,200,86,187,98,168,135,152,197,138,279,125,379,105,618,92,887,78,1409,75,1733"/>
-<area shape="rect" id="Node000056" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1RecoveryShuttles.html" title=" " alt="" coords="187,3113,403,3154"/>
-<area shape="poly" id="edge664_Node000000_Node000056" title=" " alt="" coords="76,1790,82,2058,101,2474,115,2688,134,2876,158,3020,172,3069,187,3098,200,3111,196,3114,183,3102,167,3071,153,3022,129,2877,110,2688,95,2475,77,2058,70,1790"/>
-<area shape="rect" id="Node000057" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1RuggedConstruction.html" title=" " alt="" coords="187,3178,403,3219"/>
-<area shape="poly" id="edge665_Node000000_Node000057" title=" " alt="" coords="75,1790,81,2068,99,2506,113,2731,133,2930,157,3082,171,3133,187,3164,200,3176,196,3180,183,3167,166,3135,152,3083,127,2930,108,2731,94,2507,76,2069,70,1790"/>
-<area shape="rect" id="Node000058" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ShardSpawner.html" title=" " alt="" coords="187,3244,403,3284"/>
-<area shape="poly" id="edge666_Node000000_Node000058" title=" " alt="" coords="75,1790,81,2080,97,2539,111,2774,131,2983,142,3071,156,3143,171,3197,187,3229,200,3241,196,3245,183,3232,166,3198,150,3144,137,3071,125,2984,106,2775,92,2539,75,2080,70,1790"/>
-<area shape="rect" id="Node000059" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1SharedFluxSink.html" title=" " alt="" coords="187,3309,403,3350"/>
-<area shape="poly" id="edge667_Node000000_Node000059" title=" " alt="" coords="75,1790,80,2092,95,2571,109,2818,129,3037,141,3128,154,3204,170,3260,187,3295,200,3307,196,3310,183,3298,165,3262,149,3205,136,3129,124,3037,104,2818,90,2572,74,2092,70,1790"/>
-<area shape="rect" id="Node000060" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ShieldAlwaysOn.html" title=" " alt="" coords="187,3374,403,3415"/>
-<area shape="poly" id="edge668_Node000000_Node000060" title=" " alt="" coords="75,1790,79,2103,93,2604,107,2861,127,3090,139,3186,153,3265,169,3324,187,3360,200,3372,196,3376,183,3363,164,3326,148,3266,134,3187,122,3091,102,2862,88,2604,73,2103,70,1790"/>
-<area shape="rect" id="Node000061" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ShieldShunt.html" title=" " alt="" coords="187,3440,403,3480"/>
-<area shape="poly" id="edge669_Node000000_Node000061" title=" " alt="" coords="75,1789,78,2114,92,2636,105,2905,125,3144,138,3243,152,3326,168,3388,187,3425,200,3437,196,3441,183,3428,163,3390,147,3327,132,3244,120,3144,100,2905,86,2636,72,2114,70,1790"/>
-<area shape="rect" id="Node000062" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1StealthMinefield.html" title=" " alt="" coords="187,761,403,802"/>
-<area shape="poly" id="edge670_Node000000_Node000062" title=" " alt="" coords="71,1733,84,1536,107,1244,123,1097,140,967,160,868,171,834,183,813,197,800,200,804,187,816,176,836,165,870,146,968,128,1098,112,1245,89,1537,77,1733"/>
-<area shape="rect" id="Node000064" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1VastHangar.html" title=" " alt="" coords="187,826,403,867"/>
-<area shape="poly" id="edge672_Node000000_Node000064" title=" " alt="" coords="69,1733,71,1561,75,1438,83,1305,97,1172,117,1050,145,948,163,909,183,878,197,866,200,870,187,882,167,911,150,950,122,1051,102,1173,88,1305,80,1438,76,1561,75,1733"/>
+<area shape="poly" id="edge749_Node000000_Node000018" title=" " alt="" coords="70,1765,72,1434,85,902,99,628,119,384,132,282,146,198,163,134,183,95,196,82,200,86,187,98,168,136,151,199,137,283,124,385,104,628,91,902,77,1434,75,1765"/>
+<area shape="rect" id="Node000057" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1RecoveryShuttles.html" title=" " alt="" coords="187,3178,403,3219"/>
+<area shape="poly" id="edge750_Node000000_Node000057" title=" " alt="" coords="75,1821,82,2095,100,2522,114,2741,133,2935,158,3084,172,3134,187,3164,200,3176,196,3180,183,3167,167,3135,152,3085,128,2936,109,2742,94,2523,77,2095,70,1822"/>
+<area shape="rect" id="Node000058" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1RuggedConstruction.html" title=" " alt="" coords="187,3244,403,3284"/>
+<area shape="poly" id="edge751_Node000000_Node000058" title=" " alt="" coords="75,1822,81,2106,98,2555,112,2785,132,2989,156,3145,171,3197,187,3229,200,3241,196,3245,183,3232,166,3199,151,3146,126,2990,107,2785,93,2555,76,2107,70,1822"/>
+<area shape="rect" id="Node000059" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ShardSpawner.html" title=" " alt="" coords="187,3309,403,3350"/>
+<area shape="poly" id="edge752_Node000000_Node000059" title=" " alt="" coords="75,1822,80,2118,96,2588,110,2829,130,3043,142,3132,155,3206,170,3261,187,3295,200,3307,196,3310,183,3298,165,3263,150,3207,136,3133,124,3043,105,2829,91,2588,75,2118,70,1822"/>
+<area shape="rect" id="Node000060" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1SharedFluxSink.html" title=" " alt="" coords="187,3374,403,3415"/>
+<area shape="poly" id="edge753_Node000000_Node000060" title=" " alt="" coords="75,1822,79,2130,94,2620,108,2872,128,3096,140,3190,154,3267,169,3325,187,3360,200,3372,196,3376,183,3363,164,3327,149,3268,135,3190,123,3097,103,2872,89,2620,74,2130,70,1822"/>
+<area shape="rect" id="Node000061" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ShieldAlwaysOn.html" title=" " alt="" coords="187,3440,403,3480"/>
+<area shape="poly" id="edge754_Node000000_Node000061" title=" " alt="" coords="75,1822,78,2141,92,2652,106,2915,126,3149,138,3247,153,3328,169,3388,187,3425,200,3437,196,3441,183,3428,164,3390,147,3329,133,3248,121,3150,101,2916,87,2652,73,2141,70,1822"/>
+<area shape="rect" id="Node000062" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ShieldShunt.html" title=" " alt="" coords="187,3505,403,3546"/>
+<area shape="poly" id="edge755_Node000000_Node000062" title=" " alt="" coords="75,1822,77,2153,91,2685,104,2959,124,3203,137,3305,151,3389,168,3452,187,3491,200,3503,196,3507,183,3494,163,3454,146,3390,132,3306,119,3204,99,2960,85,2686,72,2153,70,1822"/>
+<area shape="rect" id="Node000063" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1StealthMinefield.html" title=" " alt="" coords="187,761,403,802"/>
+<area shape="poly" id="edge756_Node000000_Node000063" title=" " alt="" coords="71,1765,83,1562,106,1260,122,1108,139,973,160,870,171,835,183,813,197,800,200,804,187,816,176,837,165,872,145,974,127,1108,111,1261,88,1563,76,1765"/>
+<area shape="rect" id="Node000065" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1VastHangar.html" title=" " alt="" coords="187,826,403,867"/>
+<area shape="poly" id="edge758_Node000000_Node000065" title=" " alt="" coords="69,1765,70,1588,73,1460,81,1322,95,1184,115,1057,128,1001,144,951,162,910,183,878,197,866,200,870,187,882,167,913,149,953,134,1002,120,1058,100,1185,87,1323,79,1461,75,1588,74,1765"/>
 <area shape="rect" id="Node000011" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1AdditionalBerthing.html" title=" " alt="" coords="453,598,669,639"/>
-<area shape="poly" id="edge620_Node000010_Node000011" title=" " alt="" coords="387,687,404,680,428,665,452,650,483,637,485,642,454,654,430,670,406,685,389,692"/>
+<area shape="poly" id="edge705_Node000010_Node000011" title=" " alt="" coords="387,687,404,680,428,665,452,650,483,637,485,642,454,654,430,670,406,685,389,692"/>
 <area shape="rect" id="Node000012" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1AuxiliaryFuelTanks.html" title=" " alt="" coords="453,664,669,704"/>
-<area shape="poly" id="edge621_Node000010_Node000012" title=" " alt="" coords="418,699,452,694,453,700,419,704"/>
+<area shape="poly" id="edge706_Node000010_Node000012" title=" " alt="" coords="418,699,452,694,453,700,419,704"/>
 <area shape="rect" id="Node000013" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1EfficiencyOverhaul.html" title=" " alt="" coords="453,729,669,770"/>
-<area shape="poly" id="edge622_Node000010_Node000013" title=" " alt="" coords="419,729,453,733,452,739,418,734"/>
+<area shape="poly" id="edge707_Node000010_Node000013" title=" " alt="" coords="419,729,453,733,452,739,418,734"/>
 <area shape="rect" id="Node000014" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ExpandedCargoHolds.html" title=" " alt="" coords="453,794,669,835"/>
-<area shape="poly" id="edge623_Node000010_Node000014" title=" " alt="" coords="390,740,406,747,430,763,454,779,485,791,483,796,452,784,428,768,404,752,388,745"/>
+<area shape="poly" id="edge708_Node000010_Node000014" title=" " alt="" coords="390,740,406,747,430,763,454,779,485,791,483,796,452,784,428,768,404,752,388,745"/>
 <area shape="rect" id="Node000015" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1HighEfficiencyDriveField.html" title=" " alt="" coords="453,860,669,900"/>
-<area shape="poly" id="edge624_Node000010_Node000015" title=" " alt="" coords="401,743,407,747,418,760,425,772,432,797,438,822,444,833,455,845,473,857,470,861,451,849,440,836,433,824,426,799,420,774,414,763,403,751,397,747"/>
+<area shape="poly" id="edge709_Node000010_Node000015" title=" " alt="" coords="401,743,407,747,418,760,425,772,432,797,438,822,444,833,455,845,473,857,470,861,451,849,440,836,433,824,426,799,420,774,414,763,403,751,397,747"/>
 <area shape="rect" id="Node000016" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1HighResSensors.html" title=" " alt="" coords="453,178,669,219"/>
-<area shape="poly" id="edge625_Node000010_Node000016" title=" " alt="" coords="400,684,403,681,423,654,435,628,440,603,441,578,440,522,442,491,450,455,475,386,502,319,547,219,552,221,506,321,480,388,456,457,448,491,445,522,446,578,445,604,440,630,428,657,407,685,404,688"/>
+<area shape="poly" id="edge710_Node000010_Node000016" title=" " alt="" coords="400,684,403,681,423,654,435,628,440,603,441,578,440,522,442,491,450,455,475,386,502,319,547,219,552,221,506,321,480,388,456,457,448,491,445,522,446,578,445,604,440,630,428,657,407,685,404,688"/>
 <area shape="rect" id="Node000019" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1MilitarizedSubsystems.html" title=" " alt="" coords="453,468,669,508"/>
-<area shape="poly" id="edge626_Node000010_Node000019" title=" " alt="" coords="400,684,403,681,418,661,425,642,426,602,428,561,436,540,451,520,467,507,471,511,455,523,440,543,433,562,432,602,430,643,422,664,407,685,403,688"/>
+<area shape="poly" id="edge711_Node000010_Node000019" title=" " alt="" coords="400,684,403,681,418,661,425,642,426,602,428,561,436,540,451,520,467,507,471,511,455,523,440,543,433,562,432,602,430,643,422,664,407,685,403,688"/>
 <area shape="rect" id="Node000020" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1TerminatorCore.html" title=" " alt="" coords="453,533,669,574"/>
-<area shape="poly" id="edge627_Node000010_Node000020" title=" " alt="" coords="397,685,403,681,420,658,426,634,433,609,451,585,470,572,473,577,455,589,438,612,432,635,425,660,407,685,400,690"/>
-<area shape="rect" id="Node000051" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1NeuralIntegrator.html" title=" " alt="" coords="453,2786,669,2827"/>
-<area shape="poly" id="edge658_Node000050_Node000051" title=" " alt="" coords="418,2804,453,2804,453,2809,418,2809"/>
-<area shape="rect" id="Node000063" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1StealthMinefieldLT.html" title=" " alt="" coords="453,925,669,966"/>
-<area shape="poly" id="edge671_Node000062_Node000063" title=" " alt="" coords="401,808,407,813,418,825,425,838,432,863,438,887,444,899,455,910,473,922,470,927,451,914,440,902,433,889,426,864,420,840,414,828,403,817,397,812"/>
+<area shape="poly" id="edge712_Node000010_Node000020" title=" " alt="" coords="397,685,403,681,420,658,426,634,433,609,451,585,470,572,473,577,455,589,438,612,432,635,425,660,407,685,400,690"/>
+<area shape="rect" id="Node000052" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1NeuralIntegrator.html" title=" " alt="" coords="453,2852,669,2892"/>
+<area shape="poly" id="edge744_Node000051_Node000052" title=" " alt="" coords="418,2869,453,2869,453,2875,418,2875"/>
+<area shape="rect" id="Node000064" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1StealthMinefieldLT.html" title=" " alt="" coords="453,925,669,966"/>
+<area shape="poly" id="edge757_Node000063_Node000064" title=" " alt="" coords="401,808,407,813,418,825,425,838,432,863,438,887,444,899,455,910,473,922,470,927,451,914,440,902,433,889,426,864,420,840,414,828,403,817,397,812"/>
 <area shape="rect" id="Node000017" title=" " alt="" coords="5,22,137,48"/>
-<area shape="poly" id="edge673_Node000017_Node000016" title=" " alt="" coords="139,16,198,7,266,3,337,8,373,16,406,28,432,42,456,59,497,100,529,142,551,177,546,180,525,145,493,104,452,63,429,47,404,33,371,21,337,14,266,8,198,12,140,21"/>
-<area shape="poly" id="edge674_Node000017_Node000018" title=" " alt="" coords="152,42,187,47,186,52,152,47"/>
+<area shape="poly" id="edge759_Node000017_Node000016" title=" " alt="" coords="139,16,198,7,266,3,337,8,373,16,406,28,432,42,456,59,497,100,529,142,551,177,546,180,525,145,493,104,452,63,429,47,404,33,371,21,337,14,266,8,198,12,140,21"/>
+<area shape="poly" id="edge760_Node000017_Node000018" title=" " alt="" coords="152,42,187,47,186,52,152,47"/>
 </map>

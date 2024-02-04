@@ -9,5 +9,7 @@ var dir_ecd5ff6b7b38cd56a79e2ec64ebd6077 =
     [ "ModSpecItemPlugin.java", "ModSpecItemPlugin_8java.html", "ModSpecItemPlugin_8java" ],
     [ "MultiBlueprintItemPlugin.java", "MultiBlueprintItemPlugin_8java.html", "MultiBlueprintItemPlugin_8java" ],
     [ "ShipBlueprintItemPlugin.java", "ShipBlueprintItemPlugin_8java.html", "ShipBlueprintItemPlugin_8java" ],
-    [ "WeaponBlueprintItemPlugin.java", "WeaponBlueprintItemPlugin_8java.html", "WeaponBlueprintItemPlugin_8java" ]
+    [ "WeaponBlueprintItemPlugin.java", "WeaponBlueprintItemPlugin_8java.html", "WeaponBlueprintItemPlugin_8java" ],
+    [ "WormholeAnchorPlugin.java", "WormholeAnchorPlugin_8java.html", "WormholeAnchorPlugin_8java" ],
+    [ "WormholeScannerPlugin.java", "WormholeScannerPlugin_8java.html", "WormholeScannerPlugin_8java" ]
 ];

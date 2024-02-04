@@ -1,5 +1,6 @@
 var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetInflater =
 [
+    [ "getAverageNumSMods", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetInflater.html#a1f917fe9cc5ff003c84d6dc65bccda05", null ],
     [ "getParams", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetInflater.html#a008eabb8f598e25e878b5a25907e4763", null ],
     [ "getQuality", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetInflater.html#ab23b1c62adf9fcfc6562f1c45b6e251c", null ],
     [ "inflate", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetInflater.html#a9500463c370554acbfef25e034dbd474", null ],

@@ -24,6 +24,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1AbilitySpecAPI =
     [ "hasOppositeTag", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1AbilitySpecAPI.html#ab343b08d9ec4e29095a590cea3f2719c", null ],
     [ "hasTag", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1AbilitySpecAPI.html#a63679d4cb23ff3a16f3e24a590941011", null ],
     [ "isAIDefault", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1AbilitySpecAPI.html#a72eaba9942787c74f42cebe7e55f6e5d", null ],
+    [ "isNegativeTag", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1AbilitySpecAPI.html#aec6b6dbe4cb4c74193f5b8bb4806e40c", null ],
     [ "isPositiveTag", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1AbilitySpecAPI.html#a3adcefc3c7bd876fea1549cc16e4b488", null ],
     [ "isUnlockedAtStart", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1AbilitySpecAPI.html#af9b19614758c56664b08455527cf70ea", null ]
 ];

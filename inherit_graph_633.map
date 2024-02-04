@@ -1,5 +1,13 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" title=" " alt="" coords="5,13,175,39"/>
-<area shape="rect" id="Node000001" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1FleetStubConverterPluginImpl.html" title=" " alt="" coords="223,5,443,46"/>
-<area shape="poly" id="edge1206_Node000000_Node000001" title=" " alt="" coords="190,23,222,23,222,28,190,28"/>
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,144,138,169"/>
+<area shape="rect" id="Node000001" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ColdConditionGenerator.html" title=" " alt="" coords="186,5,455,46"/>
+<area shape="poly" id="edge1271_Node000000_Node000001" title=" " alt="" coords="93,130,133,92,184,57,214,44,216,49,187,61,136,96,96,134"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1GravityConditionGenerator.html" title=" " alt="" coords="186,71,455,111"/>
+<area shape="poly" id="edge1272_Node000000_Node000002" title=" " alt="" coords="133,136,185,122,233,109,234,115,186,127,134,141"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1HotConditionGenerator.html" title=" " alt="" coords="186,136,455,177"/>
+<area shape="poly" id="edge1273_Node000000_Node000003" title=" " alt="" coords="153,154,185,154,185,159,153,159"/>
+<area shape="rect" id="Node000004" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1LightConditionGenerator.html" title=" " alt="" coords="186,201,455,242"/>
+<area shape="poly" id="edge1274_Node000000_Node000004" title=" " alt="" coords="134,171,186,186,234,198,233,203,185,191,133,176"/>
+<area shape="rect" id="Node000005" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1RadiationConditionGenerator.html" title=" " alt="" coords="186,267,455,307"/>
+<area shape="poly" id="edge1275_Node000000_Node000005" title=" " alt="" coords="96,179,136,216,187,251,216,264,214,269,184,256,133,221,93,183"/>
 </map>

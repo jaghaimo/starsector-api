@@ -1,0 +1,25 @@
+var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AbyssalLightEntityPlugin =
+[
+    [ "advance", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AbyssalLightEntityPlugin.html#aa0725eb07b1e2290866cf5b37282e2bb", null ],
+    [ "despawn", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AbyssalLightEntityPlugin.html#a7a0ffa9b7b5f48ab3f1d37161077ea0d", null ],
+    [ "getDespawnProgress", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AbyssalLightEntityPlugin.html#afa100c50d052ce36a89a3944c4ddf49d", null ],
+    [ "getFlickerBasedMult", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AbyssalLightEntityPlugin.html#a85c79cdb3ce40ef82efb136c32f7d9d4", null ],
+    [ "getGlowAlpha", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AbyssalLightEntityPlugin.html#a3f6f3942691fca063d061f4dc1ae50d9", null ],
+    [ "getParams", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AbyssalLightEntityPlugin.html#a440b425ee4c881384024b172b178b3dc", null ],
+    [ "getRenderRange", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AbyssalLightEntityPlugin.html#a5dcb1a3f349e7abd2bcd33760a3c25db", null ],
+    [ "init", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AbyssalLightEntityPlugin.html#adc399e84b58e68a7b0b93fa3c5a31cfd", null ],
+    [ "isDespawning", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AbyssalLightEntityPlugin.html#a379eef1b1b9062fd6707aead49fa72c1", null ],
+    [ "render", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AbyssalLightEntityPlugin.html#ae73df4137b35e64bbc065800e61ebaec", null ],
+    [ "updateFrequency", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AbyssalLightEntityPlugin.html#ae2482f65548ce06508b931ff0cbe05cb", null ],
+    [ "updateSoundDelayAndPlaySound", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AbyssalLightEntityPlugin.html#a1c2c6f2aecc328654b688b8e3af9ed39", null ],
+    [ "despawnType", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AbyssalLightEntityPlugin.html#aa5ff07414772cc1bea0cc0d525d588da", null ],
+    [ "fader", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AbyssalLightEntityPlugin.html#a9a46db4d353a3cc97fc3f9f108000429", null ],
+    [ "flicker", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AbyssalLightEntityPlugin.html#ae6bff24977311141755e9e27dd6a3d08", null ],
+    [ "flickerDur", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AbyssalLightEntityPlugin.html#aefae5d38ce734c2d743bb1eb9d9ad274", null ],
+    [ "frequencyMult", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AbyssalLightEntityPlugin.html#a95ba1c588b03219fddce053650872db1", null ],
+    [ "params", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AbyssalLightEntityPlugin.html#a8059e11f41568f7bf7e2f2e7fe494534", null ],
+    [ "phase", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AbyssalLightEntityPlugin.html#a778534e01bd01cf0f8217871c4fb7fbd", null ],
+    [ "playedDespawnSound", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AbyssalLightEntityPlugin.html#aa3db0c298c60a5f3c860ec578d96bc2a", null ],
+    [ "untilFrequencyChange", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AbyssalLightEntityPlugin.html#afed250ef7f944d7c6640d1b41c8eb4e9", null ],
+    [ "untilSoundPlayed", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AbyssalLightEntityPlugin.html#a97b05172188f9bab0fb9bd438308c85b", null ]
+];

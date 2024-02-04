@@ -1,7 +1,11 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" title=" " alt="" coords="5,13,194,39"/>
-<area shape="rect" id="Node000001" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseInstallableIndustryItemPlugin.html" title=" " alt="" coords="242,5,520,46"/>
-<area shape="poly" id="edge1236_Node000000_Node000001" title=" " alt="" coords="209,23,241,23,241,28,209,28"/>
-<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1GenericInstallableItemPlugin.html" title=" " alt="" coords="568,5,846,46"/>
-<area shape="poly" id="edge1237_Node000001_Node000002" title=" " alt="" coords="535,23,568,23,568,28,535,28"/>
+<area shape="rect" id="Node000000" title=" " alt="" coords="364,17,521,43"/>
+<area shape="rect" id="Node000001" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RemnantStationFleb50e0f19d17c939fd288d2e6ebd345d6.html" title=" " alt="" coords="620,5,986,46"/>
+<area shape="poly" id="edge1308_Node000000_Node000001" title=" " alt="" coords="536,26,620,25,620,30,537,31"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1HyperspaceAbyssPluginImpl.html" title=" " alt="" coords="674,71,933,111"/>
+<area shape="poly" id="edge1309_Node000000_Node000002" title=" " alt="" coords="537,43,680,67,679,73,536,48"/>
+<area shape="rect" id="Node000004" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1HyperspaceAbyssPlugin.html" title=" " alt="" coords="5,71,265,111"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseHyperspaceAbyssPlugin.html" title=" " alt="" coords="313,71,572,111"/>
+<area shape="poly" id="edge1310_Node000004_Node000003" title=" " alt="" coords="280,88,312,88,312,94,280,94"/>
+<area shape="poly" id="edge1311_Node000003_Node000002" title=" " alt="" coords="588,88,673,88,673,94,588,94"/>
 </map>

@@ -26,6 +26,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage
     [ "doBombardment", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1MarketCMD.html#a280759f9a160a478fcf13b9c060224e3", null ],
     [ "doGenericRaid", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1MarketCMD.html#a3e3f511afa1a650d242c3123a65fd46c", null ],
     [ "doGenericRaid", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1MarketCMD.html#a939bdee3cb9fc344bf2b7642067fef3b", null ],
+    [ "doGenericRaid", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1MarketCMD.html#ad871dd64081c4dcd18af4d198ec1c0f8", null ],
     [ "doIndustryRaid", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1MarketCMD.html#a0dc7f85a86b7dea31dd46337bd864f79", null ],
     [ "engage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1MarketCMD.html#a4f717d9def174c4e428fad75f15698ad", null ],
     [ "execute", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1MarketCMD.html#ace3905165c799ae655dd9ad31492059e", null ],

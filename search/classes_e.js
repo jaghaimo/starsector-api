@@ -34,6 +34,5 @@ var searchData=
   ['outpost_31',['Outpost',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1Outpost.html',1,'com::fs::starfarer::api::impl::campaign::econ']]],
   ['outpoststats_32',['OutpostStats',['../classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1OutpostStats.html',1,'com::fs::starfarer::api::util']]],
   ['outsidesystemnoepec_33',['OutsideSystemNoEPEC',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1OutsideSystemNoEPEC.html',1,'com::fs::starfarer::api::impl::campaign::enc']]],
-  ['outsidesystemremnantepec_34',['OutsideSystemRemnantEPEC',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1OutsideSystemRemnantEPEC.html',1,'com::fs::starfarer::api::impl::campaign::enc']]],
-  ['overheadtooltipcreator_35',['OverheadTooltipCreator',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1OverheadTooltipCreator.html',1,'com::fs::starfarer::api::impl::campaign']]]
+  ['outsidesystemremnantepec_34',['OutsideSystemRemnantEPEC',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1OutsideSystemRemnantEPEC.html',1,'com::fs::starfarer::api::impl::campaign::enc']]]
 ];

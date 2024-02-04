@@ -17,6 +17,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1mission_1_1MissionDefinitionAPI =
     [ "getContext", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1mission_1_1MissionDefinitionAPI.html#aa6f6e2a86bcbdbf2aead7f6b50fbf228", null ],
     [ "getDefaultCommander", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1mission_1_1MissionDefinitionAPI.html#a8f000799cc16c5142f6459d4696a63fd", null ],
     [ "getFleetPointCost", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1mission_1_1MissionDefinitionAPI.html#a825c3ea32dfc41dc9e41afad1ccd8191", null ],
+    [ "hasNebula", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1mission_1_1MissionDefinitionAPI.html#ae58ac3876ac1bb10f1a5ff7794bdc7e7", null ],
     [ "initFleet", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1mission_1_1MissionDefinitionAPI.html#abb9d51a8b8aff28d53972940b0f84076", null ],
     [ "initFleet", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1mission_1_1MissionDefinitionAPI.html#a469cbb893036a92b6ef12c6910ca4faa", null ],
     [ "initFleet", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1mission_1_1MissionDefinitionAPI.html#a9fef337ac77484db275876bafe0fdc5d", null ],

@@ -1,0 +1,26 @@
+var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1LuddicChurchImmigrationDeal =
+[
+    [ "LuddicChurchImmigrationDeal", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1LuddicChurchImmigrationDeal.html#ac62d5afd8e2fb40878c5bbf51ace73d7", null ],
+    [ "addBulletPoints", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1LuddicChurchImmigrationDeal.html#a77164994fbdfdd12d5c77b2017755a91", null ],
+    [ "buttonPressConfirmed", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1LuddicChurchImmigrationDeal.html#a9ec2c08d32079fffd3076ea75abbee90", null ],
+    [ "createConfirmationPrompt", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1LuddicChurchImmigrationDeal.html#ae3788a7a8870ef7cf3e50474f4f93404", null ],
+    [ "createSmallDescription", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1LuddicChurchImmigrationDeal.html#af42ba29a535cb5ec5e93ee8d98cc493b", null ],
+    [ "doesButtonHaveConfirmDialog", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1LuddicChurchImmigrationDeal.html#a171f94427aa0c261e080ec7492b65084", null ],
+    [ "endAgreement", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1LuddicChurchImmigrationDeal.html#a25f6eded32908cfc38dd1d89f79df780", null ],
+    [ "getAcceptedPostfix", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1LuddicChurchImmigrationDeal.html#a4603e9df8e79bf901d5913fcd1933105", null ],
+    [ "getBaseName", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1LuddicChurchImmigrationDeal.html#a1d48d24ac1b1cd129dbb9379163a2e00", null ],
+    [ "getBrokenPostfix", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1LuddicChurchImmigrationDeal.html#afd48cad9c39cc908d1eb18072b9f9798", null ],
+    [ "getFaction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1LuddicChurchImmigrationDeal.html#a5572f9507a5af61cd2b146ec044f3f40", null ],
+    [ "getFactionForUIColors", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1LuddicChurchImmigrationDeal.html#a26180c9ef0be2aa558a858eb48ccb232", null ],
+    [ "getIcon", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1LuddicChurchImmigrationDeal.html#adad881c4e3c265b533a6bf4824d13fc3", null ],
+    [ "getImportantIcon", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1LuddicChurchImmigrationDeal.html#a1ca305ad291ba456e7d674af6dab26bf", null ],
+    [ "getIntelTags", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1LuddicChurchImmigrationDeal.html#a543b199fb725585f77031f4ceae1c60c", null ],
+    [ "getMapLocation", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1LuddicChurchImmigrationDeal.html#a93384c369be0643880a804acf0659e8b", null ],
+    [ "getName", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1LuddicChurchImmigrationDeal.html#a7240d197f33365552a1cc99b7d61476d", null ],
+    [ "getSmallDescriptionTitle", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1LuddicChurchImmigrationDeal.html#a0475de3d463f9631f8eb3fd3b750e527", null ],
+    [ "notifyEnded", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1LuddicChurchImmigrationDeal.html#a51834deb75da6254a2fff560e10c1e4d", null ],
+    [ "notifyEnding", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1LuddicChurchImmigrationDeal.html#af220c5e4fa9032ec32b0570cc831f4d3", null ],
+    [ "readResolve", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1LuddicChurchImmigrationDeal.html#a292ff72b9ed76f99a768c5043ae5301e", null ],
+    [ "endType", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1LuddicChurchImmigrationDeal.html#ac4533cee0743faa7a8f33dbbf83b862a", null ],
+    [ "faction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1LuddicChurchImmigrationDeal.html#aa38e3d7549e21274e2fead61e0822fd6", null ]
+];

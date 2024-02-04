@@ -10,16 +10,18 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_
     [ "getDescColor", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1LuddicPathHostileActivityFactor.html#a425151de290200b1002d63d32ad832b2", null ],
     [ "getEventFrequency", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1LuddicPathHostileActivityFactor.html#a40d35c73b3c0524e1b7726eb03f3af36", null ],
     [ "getEventStageIcon", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1LuddicPathHostileActivityFactor.html#abc8970cd2a409f933c2bf6cc9bbd7220", null ],
-    [ "getMainRowTooltip", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1LuddicPathHostileActivityFactor.html#aa66342fdef57012890c1cef81263aa2c", null ],
+    [ "getMainRowTooltip", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1LuddicPathHostileActivityFactor.html#a521e8bdde96e381963d34be818f7c703", null ],
     [ "getMaxNumFleets", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1LuddicPathHostileActivityFactor.html#aff90dffc2f0d0542cf60ce3622f0af1d", null ],
+    [ "getNameColorForThreatList", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1LuddicPathHostileActivityFactor.html#af586698dd7c6bc8635854d3db487376d", null ],
     [ "getNameForThreatList", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1LuddicPathHostileActivityFactor.html#a4fd2509924d24a68c4d90622a5526de6", null ],
-    [ "getPatherCellData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1LuddicPathHostileActivityFactor.html#aabc2483ab4ee58819804d099cdc96ecd", null ],
     [ "getProgressStr", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1LuddicPathHostileActivityFactor.html#a49a70a65e40ea53f6e151d184ced3611", null ],
     [ "getStageTooltipImpl", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1LuddicPathHostileActivityFactor.html#ab2eae1423477291a634915bbacb3cb4b", null ],
     [ "notifyEventEnding", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1LuddicPathHostileActivityFactor.html#ada02d31543ece3275ebeab49460fad01", null ],
+    [ "notifyFactorRemoved", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1LuddicPathHostileActivityFactor.html#aa9d7a38c831c276fb510856b462f4d72", null ],
     [ "pickTargetMarket", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1LuddicPathHostileActivityFactor.html#aeafbafa02a4e83e2ec5a96844c2ba21f", null ],
     [ "reportCellsDisrupted", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1LuddicPathHostileActivityFactor.html#a2acfd480b862a4c1cc98bec5f2ece25f", null ],
-    [ "resetEvent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1LuddicPathHostileActivityFactor.html#a6e5788df4a940550e1af28f05d371bd9", null ],
+    [ "reportFGIAborted", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1LuddicPathHostileActivityFactor.html#aba3489f89a97e54f6f5d565648e7b85e", null ],
     [ "rollEvent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1LuddicPathHostileActivityFactor.html#a99a4a8b60af86d473c12449becffdf1c", null ],
-    [ "shouldShow", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1LuddicPathHostileActivityFactor.html#a29621a6834e3ce9d03046cde4c4dbdec", null ]
+    [ "shouldShow", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1LuddicPathHostileActivityFactor.html#a29621a6834e3ce9d03046cde4c4dbdec", null ],
+    [ "startRaid", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1LuddicPathHostileActivityFactor.html#a66712fa5130ef8ecd62235ccbaa0c49f", null ]
 ];

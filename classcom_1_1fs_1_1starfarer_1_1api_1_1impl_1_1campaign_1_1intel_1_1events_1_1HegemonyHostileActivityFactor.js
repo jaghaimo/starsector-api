@@ -1,0 +1,28 @@
+var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HegemonyHostileActivityFactor =
+[
+    [ "HegemonyHostileActivityFactor", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HegemonyHostileActivityFactor.html#a46bcc1affdf0e4f9643e461940cb984d", null ],
+    [ "addBulletPointForEvent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HegemonyHostileActivityFactor.html#ade84875e73d6a07bf7ea514a7ffb1163", null ],
+    [ "addBulletPointForEventReset", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HegemonyHostileActivityFactor.html#a610077bc8c0b8549d880d00bf21b6957", null ],
+    [ "addStageDescriptionForEvent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HegemonyHostileActivityFactor.html#aeb5e07673288efb24a053bb03e563784", null ],
+    [ "advance", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HegemonyHostileActivityFactor.html#aa52175468a81454fda0ef56272a345d8", null ],
+    [ "createFleet", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HegemonyHostileActivityFactor.html#a6e2a412696dfe0b6e68c69f9b249e42b", null ],
+    [ "createInspection", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HegemonyHostileActivityFactor.html#a8f83eefd338e968dd3180802b461f9c9", null ],
+    [ "fireEvent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HegemonyHostileActivityFactor.html#a357a906595288419e466a999c2d31ec4", null ],
+    [ "getDesc", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HegemonyHostileActivityFactor.html#ae0cd87317d13946f59be39ab230fdcbe", null ],
+    [ "getDescColor", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HegemonyHostileActivityFactor.html#a32af71836dc64140267fe2e4a524124c", null ],
+    [ "getEventFrequency", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HegemonyHostileActivityFactor.html#aa9fae1752e29b075099521091695e0a1", null ],
+    [ "getEventStageIcon", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HegemonyHostileActivityFactor.html#aec4eba404af9638b98adf53139fd5b6c", null ],
+    [ "getMainRowTooltip", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HegemonyHostileActivityFactor.html#a3bc4037a5309df529c8b13ad87a1da9a", null ],
+    [ "getMaxNumFleets", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HegemonyHostileActivityFactor.html#ad5a2d81932cb72f6b7470128d45ff997", null ],
+    [ "getNameForThreatList", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HegemonyHostileActivityFactor.html#aa4e49edce9da6af2251af222eb694245", null ],
+    [ "getProgress", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HegemonyHostileActivityFactor.html#a581edc66a4b6034af1f83cde8529f2b4", null ],
+    [ "getProgressStr", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HegemonyHostileActivityFactor.html#add6a471ec60e3f5415266f39fee27e83", null ],
+    [ "getStageTooltipImpl", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HegemonyHostileActivityFactor.html#a2176dca669c515799d7baf1e485ab006", null ],
+    [ "notifyEventEnding", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HegemonyHostileActivityFactor.html#a033e7bf4be09afc12ab57b93e42c07ba", null ],
+    [ "notifyFactorRemoved", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HegemonyHostileActivityFactor.html#a32835872c12976d7216b721b9b4668a8", null ],
+    [ "notifyInspectionEnded", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HegemonyHostileActivityFactor.html#a2fc38ff939c6f50dd45a34332aac4d33", null ],
+    [ "pickSourceMarket", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HegemonyHostileActivityFactor.html#a32b1fb154592a61875515cbc808f5b65", null ],
+    [ "pickTargetMarket", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HegemonyHostileActivityFactor.html#a5f9fa8c4e154e49fd3e674af7ff07d3c", null ],
+    [ "rollEvent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HegemonyHostileActivityFactor.html#a05c8cbc27e1243833b544700f1bf58bf", null ],
+    [ "shouldShow", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HegemonyHostileActivityFactor.html#a0af1a06820401146d90f518bc3cce8f7", null ]
+];

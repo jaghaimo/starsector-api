@@ -11,6 +11,8 @@ var dir_aa5b229b12f216e373b1bf3f45c6da80 =
     [ "ColonyInteractionListener.java", "ColonyInteractionListener_8java.html", "ColonyInteractionListener_8java" ],
     [ "ColonyOtherFactorsListener.java", "ColonyOtherFactorsListener_8java.html", "ColonyOtherFactorsListener_8java" ],
     [ "ColonyPlayerHostileActListener.java", "ColonyPlayerHostileActListener_8java.html", "ColonyPlayerHostileActListener_8java" ],
+    [ "ColonySizeChangeListener.java", "ColonySizeChangeListener_8java.html", "ColonySizeChangeListener_8java" ],
+    [ "CommissionEndedListener.java", "CommissionEndedListener_8java.html", "CommissionEndedListener_8java" ],
     [ "CommodityDescriptionProvider.java", "CommodityDescriptionProvider_8java.html", "CommodityDescriptionProvider_8java" ],
     [ "CommodityIconProvider.java", "CommodityIconProvider_8java.html", "CommodityIconProvider_8java" ],
     [ "CommodityTooltipModifier.java", "CommodityTooltipModifier_8java.html", "CommodityTooltipModifier_8java" ],

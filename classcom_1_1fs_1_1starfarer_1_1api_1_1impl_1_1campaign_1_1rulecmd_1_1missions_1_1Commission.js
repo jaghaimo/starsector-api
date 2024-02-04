@@ -8,7 +8,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1mission
     [ "playerMeetsCriteria", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1Commission.html#a0a5e7573884e762320d2eb1d8fd463aa", null ],
     [ "printInfo", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1Commission.html#a284ca198e00ae3e93252e1cfd6d26d43", null ],
     [ "printRequirements", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1Commission.html#a044eb5f3dab21d6c79b5902a4e1af8a2", null ],
-    [ "resign", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1Commission.html#a22f9286cec402191030bd9f41c7b1970", null ],
+    [ "resign", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1Commission.html#a3c084a5f4233f21cd0219890775ac6da", null ],
     [ "dialog", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1Commission.html#a0f9089360d18f520e230dadbf38c82f0", null ],
     [ "entity", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1Commission.html#a6376e0bae50a03bb6978a8bd57bf69cd", null ],
     [ "entityFaction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1Commission.html#ae95cb4b16b798e744c22e253f32c5ddd", null ],

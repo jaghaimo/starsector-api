@@ -7,6 +7,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1VisualPanelAPI =
     [ "hideFirstPerson", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1VisualPanelAPI.html#a2692933625418197cb7dcc9c4dc423d9", null ],
     [ "hideSecondPerson", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1VisualPanelAPI.html#a4d4e9ba3a3053579c9a61cb8d5890002", null ],
     [ "hideThirdPerson", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1VisualPanelAPI.html#a0e60b9981c899ca5375a6f79506ca450", null ],
+    [ "isShowingPersonInfo", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1VisualPanelAPI.html#a6a043aabece169808a2f8456c9f5889e", null ],
     [ "removeMapMarkerFromPersonInfo", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1VisualPanelAPI.html#ad2949cca36bf4a6533eb7bb83313f8f3", null ],
     [ "restoreSavedVisual", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1VisualPanelAPI.html#ae14001234afba1d70d4a877d7e633c58", null ],
     [ "saveCurrentVisual", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1VisualPanelAPI.html#a971ca47da04bc7f43bb5a1cfbf7692f7", null ],

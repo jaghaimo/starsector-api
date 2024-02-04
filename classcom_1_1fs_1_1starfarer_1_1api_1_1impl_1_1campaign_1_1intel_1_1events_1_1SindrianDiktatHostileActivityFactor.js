@@ -1,0 +1,27 @@
+var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1SindrianDiktatHostileActivityFactor =
+[
+    [ "SindrianDiktatHostileActivityFactor", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1SindrianDiktatHostileActivityFactor.html#ab3c76574e7ccba11daa7947bf3380738", null ],
+    [ "addBulletPointForEvent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1SindrianDiktatHostileActivityFactor.html#a6de7c176b7d8bf5ab89c0d93595e6112", null ],
+    [ "addBulletPointForEventReset", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1SindrianDiktatHostileActivityFactor.html#a02b73ad274aa6ae2f65e8b79e388b221", null ],
+    [ "addStageDescriptionForEvent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1SindrianDiktatHostileActivityFactor.html#ae963ef909e1f66d8eb94915746848e2e", null ],
+    [ "advance", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1SindrianDiktatHostileActivityFactor.html#a4c7779ce272b87de189ff91bfa2f4134", null ],
+    [ "createFleet", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1SindrianDiktatHostileActivityFactor.html#a2582ce4160521e266555b93f58b4f2ae", null ],
+    [ "fireEvent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1SindrianDiktatHostileActivityFactor.html#a9240bd5d883a08a95c7e3d6b54f21488", null ],
+    [ "getDesc", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1SindrianDiktatHostileActivityFactor.html#a466bcb0ad2c8ff57260459ce42759470", null ],
+    [ "getDescColor", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1SindrianDiktatHostileActivityFactor.html#a18ecec666e844b1ab2f16356f9fffb75", null ],
+    [ "getEventFrequency", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1SindrianDiktatHostileActivityFactor.html#a91ae41068060cec1577fdbb8820c7b21", null ],
+    [ "getEventStageIcon", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1SindrianDiktatHostileActivityFactor.html#a2301084b61d684625e06e61382cc6528", null ],
+    [ "getMainRowTooltip", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1SindrianDiktatHostileActivityFactor.html#abfb895c4c3240dc45cabc381b92ffd1f", null ],
+    [ "getMaxNumFleets", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1SindrianDiktatHostileActivityFactor.html#a824b036b9dcb9fa9d64a51036106c4fc", null ],
+    [ "getNameColor", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1SindrianDiktatHostileActivityFactor.html#ad703973abf0a6fd4cdf75663f89567dd", null ],
+    [ "getNameForThreatList", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1SindrianDiktatHostileActivityFactor.html#a69620f27d41bdf9f57cc2b527fb2fbbd", null ],
+    [ "getProgress", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1SindrianDiktatHostileActivityFactor.html#aa661d1bea8d1b4e16a2e871e15043a1c", null ],
+    [ "getProgressStr", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1SindrianDiktatHostileActivityFactor.html#aaeafc73af1470a55781204b6ea1f05dd", null ],
+    [ "getStageTooltipImpl", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1SindrianDiktatHostileActivityFactor.html#accafaae46be44abd0d4c5158dfcdd9c3", null ],
+    [ "notifyEventEnding", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1SindrianDiktatHostileActivityFactor.html#a441909beeaa5187379b88feef0cb785f", null ],
+    [ "notifyFactorRemoved", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1SindrianDiktatHostileActivityFactor.html#a5a81f966520fc3f45d03a243d29cb805", null ],
+    [ "reportFGIAborted", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1SindrianDiktatHostileActivityFactor.html#a6eddc751f77f9dade9a7ad88e6baead3", null ],
+    [ "rollEvent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1SindrianDiktatHostileActivityFactor.html#ac74cfe77c18b8cacc17e5a65c848a6b4", null ],
+    [ "shouldShow", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1SindrianDiktatHostileActivityFactor.html#a784e04ed64926673c1885c4a50fdbfdc", null ],
+    [ "startAttack", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1SindrianDiktatHostileActivityFactor.html#aa6dc395c00b713a9c2b2f44313a1c8b4", null ]
+];

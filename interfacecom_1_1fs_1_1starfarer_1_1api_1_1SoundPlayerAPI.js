@@ -16,5 +16,6 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1SoundPlayerAPI =
     [ "restartCurrentMusic", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1SoundPlayerAPI.html#a46f36ad8846cdc7808b1cbb99fef1c3f", null ],
     [ "resumeCustomMusic", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1SoundPlayerAPI.html#af40584fb9784a8edf23b7c601ede8e23", null ],
     [ "setListenerPosOverrideOneFrame", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1SoundPlayerAPI.html#a9c6d7d200fbc33a074dbeac3fe3d80ed", null ],
+    [ "setNextLoopFadeInAndOut", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1SoundPlayerAPI.html#aaf950ae9f961ff0b76ccadcc8c6571f2", null ],
     [ "setSuspendDefaultMusicPlayback", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1SoundPlayerAPI.html#a35d0ea00eeb336e68af1a0b1308641a0", null ]
 ];

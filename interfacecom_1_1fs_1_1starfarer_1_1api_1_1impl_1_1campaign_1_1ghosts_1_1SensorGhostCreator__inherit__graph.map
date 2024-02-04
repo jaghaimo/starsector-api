@@ -1,37 +1,39 @@
 <map id="com.fs.starfarer.api.impl.campaign.ghosts.SensorGhostCreator" name="com.fs.starfarer.api.impl.campaign.ghosts.SensorGhostCreator">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,496,268,537"/>
-<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1BaseSensorGhostCreator.html" title=" " alt="" coords="316,496,578,537"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="283,514,315,514,315,519,283,519"/>
-<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1ChargerGhostCreator.html" title=" " alt="" coords="626,5,922,46"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="448,480,461,394,473,338,490,279,513,218,542,159,579,104,624,57,643,44,646,49,628,61,583,108,547,162,518,220,495,281,478,340,466,395,454,481"/>
-<area shape="rect" id="Node000004" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1EchoGhostCreator.html" title=" " alt="" coords="626,71,922,111"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="451,480,468,405,499,308,522,257,550,207,584,162,624,122,644,110,647,114,628,126,588,165,555,210,527,259,504,309,473,406,456,481"/>
-<area shape="rect" id="Node000005" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1EncounterTricksterGhostCreator.html" title=" " alt="" coords="626,136,922,177"/>
-<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="454,480,475,416,509,337,531,296,558,256,589,219,624,188,645,175,648,179,628,192,593,223,562,259,536,298,514,339,480,418,460,482"/>
-<area shape="rect" id="Node000006" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1GuideGhostCreator.html" title=" " alt="" coords="626,201,922,242"/>
-<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="459,480,483,429,519,367,566,305,594,277,625,253,647,240,650,245,627,257,598,281,570,308,524,370,488,431,464,482"/>
-<area shape="rect" id="Node000007" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1LeviathanCalfGhostCreator.html" title=" " alt="" coords="626,267,922,307"/>
-<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="466,482,494,443,530,399,574,355,625,318,651,305,653,310,627,323,578,359,534,402,498,447,471,485"/>
-<area shape="rect" id="Node000008" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1LeviathanGhostCreator.html" title=" " alt="" coords="626,332,922,373"/>
-<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="479,484,544,432,583,406,625,383,658,371,660,376,627,388,586,410,547,436,483,488"/>
-<area shape="rect" id="Node000009" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1MinnowGhostCreator.html" title=" " alt="" coords="626,397,922,438"/>
-<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="513,487,625,448,672,436,673,441,627,454,515,492"/>
-<area shape="rect" id="Node000010" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1NoGhostCreator.html" title=" " alt="" coords="626,463,922,503"/>
-<area shape="poly" id="edge9_Node000002_Node000010" title=" " alt="" coords="593,499,625,495,626,501,594,504"/>
-<area shape="rect" id="Node000011" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1RacerGhostCreator.html" title=" " alt="" coords="626,528,922,569"/>
-<area shape="poly" id="edge10_Node000002_Node000011" title=" " alt="" coords="594,528,626,531,625,536,593,533"/>
-<area shape="rect" id="Node000012" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1RemnantGhostCreator.html" title=" " alt="" coords="626,593,922,634"/>
-<area shape="poly" id="edge11_Node000002_Node000012" title=" " alt="" coords="516,540,627,578,674,590,672,595,625,583,514,545"/>
-<area shape="rect" id="Node000013" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1RemoraGhostCreator.html" title=" " alt="" coords="626,659,922,699"/>
-<area shape="poly" id="edge12_Node000002_Node000013" title=" " alt="" coords="483,545,547,596,586,622,627,643,660,656,658,661,625,648,583,626,544,600,480,549"/>
-<area shape="rect" id="Node000014" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1ShipGhostCreator.html" title=" " alt="" coords="626,724,922,765"/>
-<area shape="poly" id="edge13_Node000002_Node000014" title=" " alt="" coords="471,548,498,586,534,630,578,673,627,709,653,721,651,726,625,713,575,677,531,634,494,589,467,551"/>
-<area shape="rect" id="Node000015" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1StormTricksterGhostCreator.html" title=" " alt="" coords="626,789,922,830"/>
-<area shape="poly" id="edge14_Node000002_Node000015" title=" " alt="" coords="464,550,488,601,524,662,570,723,598,751,627,774,650,786,647,791,625,779,594,755,566,727,519,665,484,603,460,552"/>
-<area shape="rect" id="Node000016" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1StormcallerGhostCreator.html" title=" " alt="" coords="626,855,922,895"/>
-<area shape="poly" id="edge15_Node000002_Node000016" title=" " alt="" coords="460,551,480,614,514,693,536,733,562,773,593,809,628,840,648,852,645,856,624,844,589,812,558,776,532,736,509,695,475,616,454,552"/>
-<area shape="rect" id="Node000017" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1TestGhostCreator.html" title=" " alt="" coords="626,920,922,961"/>
-<area shape="poly" id="edge16_Node000002_Node000017" title=" " alt="" coords="456,551,473,626,504,723,527,773,555,821,588,866,628,905,647,917,644,922,624,909,584,870,550,824,522,775,499,724,468,628,451,553"/>
-<area shape="rect" id="Node000018" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1ZigguratGhostCreator.html" title=" " alt="" coords="626,985,922,1026"/>
-<area shape="poly" id="edge17_Node000002_Node000018" title=" " alt="" coords="454,552,466,638,478,692,495,751,518,811,547,870,583,924,628,970,646,983,643,987,624,974,579,927,542,873,513,814,490,753,473,694,461,639,448,552"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,528,268,569"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1BaseSensorGhostCreator.html" title=" " alt="" coords="316,528,578,569"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="283,546,315,546,315,551,283,551"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1AbyssalDrifterGhostCreator.html" title=" " alt="" coords="626,5,922,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="447,512,458,420,469,361,486,297,508,232,538,168,577,108,624,57,642,44,645,49,628,61,581,112,543,170,513,234,491,299,474,362,463,421,453,513"/>
+<area shape="rect" id="Node000004" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1ChargerGhostCreator.html" title=" " alt="" coords="626,71,922,111"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="450,512,464,431,495,325,518,270,546,216,582,166,624,122,643,110,646,114,628,126,586,169,551,218,522,272,500,327,469,432,455,513"/>
+<area shape="rect" id="Node000005" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1EchoGhostCreator.html" title=" " alt="" coords="626,136,922,177"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="453,512,471,442,504,354,527,308,554,264,587,223,624,188,644,175,647,179,628,192,591,227,559,267,532,311,509,356,476,444,458,513"/>
+<area shape="rect" id="Node000006" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1EncounterTricksterGhostCreator.html" title=" " alt="" coords="626,201,922,242"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="457,512,479,455,514,384,562,313,592,281,624,253,646,240,649,245,628,257,595,284,566,316,519,387,484,457,462,514"/>
+<area shape="rect" id="Node000007" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1GuideGhostCreator.html" title=" " alt="" coords="626,267,922,307"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="463,513,488,468,524,415,570,362,625,318,649,306,651,310,627,323,574,366,529,418,493,471,467,516"/>
+<area shape="rect" id="Node000008" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1LeviathanCalfGhostCreator.html" title=" " alt="" coords="626,332,922,373"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="472,514,537,447,579,412,625,383,654,371,656,376,627,388,582,417,540,451,476,518"/>
+<area shape="rect" id="Node000009" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1LeviathanGhostCreator.html" title=" " alt="" coords="626,397,922,438"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="491,517,553,482,625,449,664,436,666,441,627,453,556,486,494,522"/>
+<area shape="rect" id="Node000010" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1MinnowGhostCreator.html" title=" " alt="" coords="626,463,922,503"/>
+<area shape="poly" id="edge9_Node000002_Node000010" title=" " alt="" coords="566,522,668,501,669,507,567,527"/>
+<area shape="rect" id="Node000011" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1NoGhostCreator.html" title=" " alt="" coords="626,528,922,569"/>
+<area shape="poly" id="edge10_Node000002_Node000011" title=" " alt="" coords="593,546,626,546,626,551,593,551"/>
+<area shape="rect" id="Node000012" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1RacerGhostCreator.html" title=" " alt="" coords="626,593,922,634"/>
+<area shape="poly" id="edge11_Node000002_Node000012" title=" " alt="" coords="567,570,669,590,668,595,566,575"/>
+<area shape="rect" id="Node000013" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1RemnantGhostCreator.html" title=" " alt="" coords="626,659,922,699"/>
+<area shape="poly" id="edge12_Node000002_Node000013" title=" " alt="" coords="494,575,556,610,627,643,666,656,664,661,625,648,553,615,491,579"/>
+<area shape="rect" id="Node000014" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1RemoraGhostCreator.html" title=" " alt="" coords="626,724,922,765"/>
+<area shape="poly" id="edge13_Node000002_Node000014" title=" " alt="" coords="476,579,540,646,582,680,627,709,656,721,654,726,625,713,579,684,537,649,472,582"/>
+<area shape="rect" id="Node000015" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1ShipGhostCreator.html" title=" " alt="" coords="626,789,922,830"/>
+<area shape="poly" id="edge14_Node000002_Node000015" title=" " alt="" coords="467,581,493,626,529,678,574,731,627,774,651,786,649,791,625,779,570,734,524,682,488,628,463,584"/>
+<area shape="rect" id="Node000016" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1StormTricksterGhostCreator.html" title=" " alt="" coords="626,855,922,895"/>
+<area shape="poly" id="edge15_Node000002_Node000016" title=" " alt="" coords="462,583,484,640,519,710,566,781,595,812,628,839,649,852,646,856,624,844,592,816,562,784,514,713,479,642,457,585"/>
+<area shape="rect" id="Node000017" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1StormcallerGhostCreator.html" title=" " alt="" coords="626,920,922,961"/>
+<area shape="poly" id="edge16_Node000002_Node000017" title=" " alt="" coords="458,583,476,653,509,740,532,786,559,830,591,870,628,905,647,917,644,922,624,909,587,874,554,833,527,788,504,742,471,654,453,585"/>
+<area shape="rect" id="Node000018" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1TestGhostCreator.html" title=" " alt="" coords="626,985,922,1026"/>
+<area shape="poly" id="edge17_Node000002_Node000018" title=" " alt="" coords="455,584,469,664,500,769,522,825,551,878,586,928,628,970,646,983,643,987,624,974,582,931,546,881,518,827,495,771,464,666,450,585"/>
+<area shape="rect" id="Node000019" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1ZigguratGhostCreator.html" title=" " alt="" coords="626,1051,922,1091"/>
+<area shape="poly" id="edge18_Node000002_Node000019" title=" " alt="" coords="453,584,463,675,474,734,491,798,513,863,543,926,581,985,628,1036,645,1048,642,1052,624,1040,577,988,538,929,508,865,486,800,469,736,458,676,447,584"/>
 </map>

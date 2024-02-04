@@ -17,6 +17,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1Slipst
     [ "createTooltip", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamTerrainPlugin2.html#aef1384abb57a7bb80c75ffbdbc008b21", null ],
     [ "despawn", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamTerrainPlugin2.html#a745db65d68433e25b79813c0b76719ab", null ],
     [ "doSoundPlayback", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamTerrainPlugin2.html#a0703a5c9bce45101cf5bae3f6faa220d", null ],
+    [ "getAbyssalBMult", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamTerrainPlugin2.html#a0f10b145df0de47a845e79653f2c9daa", null ],
     [ "getActiveLayers", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamTerrainPlugin2.html#a5e15ab017431098550b000b311889c6f", null ],
     [ "getBounds", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamTerrainPlugin2.html#a05c33269faf3ca0c0451c3c4544aacff", null ],
     [ "getBuilder", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamTerrainPlugin2.html#a8b15f927871ef6d9b4108c7061e1f155", null ],

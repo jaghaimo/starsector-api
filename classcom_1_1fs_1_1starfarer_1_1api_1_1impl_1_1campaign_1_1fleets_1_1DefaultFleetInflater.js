@@ -9,6 +9,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DefaultF
     [ "getAvailableFighters", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DefaultFleetInflater.html#af36958fceb8371b923f281b9b63dc22f", null ],
     [ "getAvailableHullmods", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DefaultFleetInflater.html#a5d88edca53853e17b6e125cb8b16c1fe", null ],
     [ "getAvailableWeapons", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DefaultFleetInflater.html#ae50e2f0b952b36818047669091bc7a74", null ],
+    [ "getAverageNumSMods", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DefaultFleetInflater.html#aff4edac6af77e58aa4d146e66210585e", null ],
     [ "getFaction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DefaultFleetInflater.html#a56b52f46a70a4fc26428bbe9cad9c78a", null ],
     [ "getMember", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DefaultFleetInflater.html#aa2a32fa59a026b120d0086ee848af8b4", null ],
     [ "getParams", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DefaultFleetInflater.html#a2f234bfb23dec3498ac21733a6646960", null ],
@@ -29,5 +30,12 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DefaultF
     [ "setSeed", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DefaultFleetInflater.html#a59e85f48fa070cc8aee820d30b87526a", null ],
     [ "setTimestamp", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DefaultFleetInflater.html#ab5136bb809426a4cc287715ae9070ccc", null ],
     [ "syncUIWithVariant", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DefaultFleetInflater.html#aac36cd46aa88e2564d5ccd6fc8265a32", null ],
-    [ "p", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DefaultFleetInflater.html#a39e42f288f098ea7a47796c1a7a23d68", null ]
+    [ "currMember", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DefaultFleetInflater.html#a44998d8453f4db55924cc97b4d218d7b", null ],
+    [ "currVariant", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DefaultFleetInflater.html#aadcb71f685421c74e8f4a25e68e00b5a", null ],
+    [ "faction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DefaultFleetInflater.html#a36cc2f01f8e8632d622d727cd087f889", null ],
+    [ "fighters", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DefaultFleetInflater.html#ac280e1454641ba62b5e07654cae46fd5", null ],
+    [ "fleet", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DefaultFleetInflater.html#a7097a2263484a801c9677d4d52630ca5", null ],
+    [ "hullmods", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DefaultFleetInflater.html#a7725afde59196bcd1fd5c1e6e60fc5d5", null ],
+    [ "p", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DefaultFleetInflater.html#a39e42f288f098ea7a47796c1a7a23d68", null ],
+    [ "weapons", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DefaultFleetInflater.html#a276f0f4ad1d5b85d2ba7602a2af9eca0", null ]
 ];

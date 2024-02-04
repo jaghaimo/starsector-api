@@ -1,0 +1,6 @@
+var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HAKazeronTacBombardmentFactor =
+[
+    [ "HAKazeronTacBombardmentFactor", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HAKazeronTacBombardmentFactor.html#a285df109b45a29df6fa499bca9d2fa09", null ],
+    [ "getDesc", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HAKazeronTacBombardmentFactor.html#a4fe7a02d8626046ff274a0a382680698", null ],
+    [ "getMainRowTooltip", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HAKazeronTacBombardmentFactor.html#a263ab88e6ad6d9d6457e411f58bb8073", null ]
+];

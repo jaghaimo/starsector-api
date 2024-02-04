@@ -21,5 +21,6 @@ var dir_f58befce3e5d0e171812d29c0ea33946 =
     [ "SectorThemeGenerator.java", "SectorThemeGenerator_8java.html", "SectorThemeGenerator_8java" ],
     [ "ThemeGenContext.java", "ThemeGenContext_8java.html", "ThemeGenContext_8java" ],
     [ "ThemeGenerator.java", "ThemeGenerator_8java.html", "ThemeGenerator_8java" ],
-    [ "Themes.java", "Themes_8java.html", "Themes_8java" ]
+    [ "Themes.java", "Themes_8java.html", "Themes_8java" ],
+    [ "WarfleetAssignmentAI.java", "WarfleetAssignmentAI_8java.html", "WarfleetAssignmentAI_8java" ]
 ];

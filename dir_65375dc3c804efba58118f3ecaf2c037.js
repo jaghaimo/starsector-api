@@ -5,6 +5,7 @@ var dir_65375dc3c804efba58118f3ecaf2c037 =
     [ "CommSnifferIntel.java", "CommSnifferIntel_8java.html", "CommSnifferIntel_8java" ],
     [ "DistressCallIntel.java", "DistressCallIntel_8java.html", "DistressCallIntel_8java" ],
     [ "FleetLogIntel.java", "FleetLogIntel_8java.html", "FleetLogIntel_8java" ],
+    [ "GateHaulerIntel.java", "GateHaulerIntel_8java.html", "GateHaulerIntel_8java" ],
     [ "GateIntel.java", "GateIntel_8java.html", "GateIntel_8java" ],
     [ "LuddicShrineIntel.java", "LuddicShrineIntel_8java.html", "LuddicShrineIntel_8java" ],
     [ "ProductionReportIntel.java", "ProductionReportIntel_8java.html", "ProductionReportIntel_8java" ],

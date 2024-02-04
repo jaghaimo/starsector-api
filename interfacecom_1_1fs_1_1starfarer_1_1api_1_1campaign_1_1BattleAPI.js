@@ -7,6 +7,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BattleAPI =
     [ "finish", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BattleAPI.html#a094f2a50334d1fdcc8aad05d2ff0bcdb", null ],
     [ "genCombined", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BattleAPI.html#acb55e0951f95312c00ea3d96fa818dde", null ],
     [ "genCombined", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BattleAPI.html#a403b6a5578da160283233832ad2cdb70", null ],
+    [ "genCombinedDoNotRemoveEmpty", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BattleAPI.html#ab731095551d313bbfd197f5092c5fa56", null ],
     [ "getBothSides", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BattleAPI.html#abe620da6424fde52f5084ae9468b730a", null ],
     [ "getClosestInvolvedFleetTo", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BattleAPI.html#a348b1ba07be30dd1431db23ab7fb14b7", null ],
     [ "getCombined", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BattleAPI.html#ae524b80cc6b107bf3d16aef4ab3bbd45", null ],

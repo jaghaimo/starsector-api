@@ -1,9 +1,11 @@
 <map id="com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel" name="com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel">
 <area shape="rect" id="Node000001" title=" " alt="" coords="524,106,813,147"/>
-<area shape="rect" id="Node000008" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html" title=" " alt="" coords="868,73,1158,113"/>
-<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="829,108,868,104,868,110,829,113"/>
-<area shape="rect" id="Node000009" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html" title=" " alt="" coords="861,138,1165,179"/>
-<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="829,138,861,141,861,147,829,144"/>
+<area shape="rect" id="Node000008" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html" title=" " alt="" coords="872,41,1162,81"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="795,100,904,79,905,84,796,105"/>
+<area shape="rect" id="Node000009" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel.html" title=" " alt="" coords="865,106,1169,147"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="829,124,865,124,865,129,829,129"/>
+<area shape="rect" id="Node000010" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ttcr_1_1TriTachyonCommerceRaiding.html" title=" " alt="" coords="861,171,1173,212"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="796,147,905,168,904,173,795,152"/>
 <area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html" title=" " alt="" coords="229,77,476,117"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="492,107,524,110,523,115,491,112"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="41,5,145,31"/>

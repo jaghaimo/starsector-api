@@ -1,5 +1,7 @@
 var dir_fb6e65741a54f9f62a42d8ebdc726493 =
 [
+    [ "AbyssalDrifterGhost.java", "AbyssalDrifterGhost_8java.html", "AbyssalDrifterGhost_8java" ],
+    [ "AbyssalDrifterGhostCreator.java", "AbyssalDrifterGhostCreator_8java.html", "AbyssalDrifterGhostCreator_8java" ],
     [ "ChargerGhost.java", "ChargerGhost_8java.html", "ChargerGhost_8java" ],
     [ "ChargerGhostCreator.java", "ChargerGhostCreator_8java.html", "ChargerGhostCreator_8java" ],
     [ "EchoGhost.java", "EchoGhost_8java.html", "EchoGhost_8java" ],

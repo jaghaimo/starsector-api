@@ -1,9 +1,21 @@
 <map id="com.fs.starfarer.api.impl.campaign.intel.events.HostileActivityFactor" name="com.fs.starfarer.api.impl.campaign.intel.events.HostileActivityFactor">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,39,295,79"/>
-<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseHostileActivityFactor.html" title=" " alt="" coords="343,39,632,79"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="310,56,342,56,342,62,310,62"/>
-<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1LuddicPathHostileActivityFactor.html" title=" " alt="" coords="680,5,969,46"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="647,41,679,37,680,43,648,46"/>
-<area shape="rect" id="Node000004" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1PirateHostileActivityFactor.html" title=" " alt="" coords="680,71,969,111"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="648,72,680,75,679,80,647,77"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,235,295,275"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseHostileActivityFactor.html" title=" " alt="" coords="343,235,632,275"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="310,252,342,252,342,258,310,258"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HegemonyHostileActivityFactor.html" title=" " alt="" coords="680,5,969,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="509,220,539,182,578,138,626,94,679,57,706,44,708,49,681,61,629,98,582,141,543,185,513,224"/>
+<area shape="rect" id="Node000004" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1LuddicChurchHostileActivityFactor.html" title=" " alt="" coords="680,71,969,111"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="523,222,592,171,635,144,679,122,713,109,715,114,681,127,637,149,595,175,526,227"/>
+<area shape="rect" id="Node000005" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1LuddicPathHostileActivityFactor.html" title=" " alt="" coords="680,136,969,177"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="559,226,679,187,726,175,728,180,681,192,560,231"/>
+<area shape="rect" id="Node000006" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1PerseanLeagueHostileActivityFactor.html" title=" " alt="" coords="680,201,969,242"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="647,237,679,233,680,239,648,242"/>
+<area shape="rect" id="Node000007" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1PirateHostileActivityFactor.html" title=" " alt="" coords="680,267,969,307"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="648,268,680,271,679,276,647,273"/>
+<area shape="rect" id="Node000008" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1RemnantHostileActivityFactor.html" title=" " alt="" coords="680,332,969,373"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="561,278,681,316,728,329,727,334,679,322,560,283"/>
+<area shape="rect" id="Node000009" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1SindrianDiktatHostileActivityFactor.html" title=" " alt="" coords="680,397,969,438"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="526,283,595,334,637,360,681,382,715,394,713,399,679,387,635,364,592,338,523,287"/>
+<area shape="rect" id="Node000010" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1TriTachyonHostileActivityFactor.html" title=" " alt="" coords="680,463,969,503"/>
+<area shape="poly" id="edge9_Node000002_Node000010" title=" " alt="" coords="514,286,543,324,582,368,629,411,681,447,708,460,706,465,679,452,626,415,579,372,539,328,509,289"/>
 </map>

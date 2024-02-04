@@ -8,7 +8,6 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1ev
     [ "optionSelected", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianBarEvent.html#a41f12d9cd1807bad4d00c1776c041c4c", null ],
     [ "regen", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianBarEvent.html#a78167b295767449596be452b411bf7c5", null ],
     [ "shouldShowAtMarket", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianBarEvent.html#a6bbc75626088cc3c203248e5a08d0303", null ],
-    [ "backstory", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianBarEvent.html#ae72dd7decdbc349e68240297239c37a2", null ],
     [ "currentOffer", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianBarEvent.html#a69f1618f92b317f99bb098726a547e53", null ],
     [ "market", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianBarEvent.html#af5f6ba656ec96f65c2d92fecff1ab52d", null ],
     [ "offers", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianBarEvent.html#af2be06a38b963b540352761f3c413f5a", null ],

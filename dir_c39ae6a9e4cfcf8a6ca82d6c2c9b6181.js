@@ -4,6 +4,7 @@ var dir_c39ae6a9e4cfcf8a6ca82d6c2c9b6181 =
     [ "Commission.java", "Commission_8java.html", "Commission_8java" ],
     [ "DeliveryMission.java", "DeliveryMission_8java.html", "DeliveryMission_8java" ],
     [ "GateCMD.java", "GateCMD_8java.html", "GateCMD_8java" ],
+    [ "GateHaulerCMD.java", "GateHaulerCMD_8java.html", "GateHaulerCMD_8java" ],
     [ "MissionHubCMD.java", "MissionHubCMD_8java.html", "MissionHubCMD_8java" ],
     [ "ShrineCMD.java", "ShrineCMD_8java.html", "ShrineCMD_8java" ]
 ];

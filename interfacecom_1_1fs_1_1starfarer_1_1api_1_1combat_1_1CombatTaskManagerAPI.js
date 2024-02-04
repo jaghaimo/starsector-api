@@ -1,5 +1,6 @@
 var interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatTaskManagerAPI =
 [
+    [ "clearEmptyWaypoints", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatTaskManagerAPI.html#ad8bd17e12ee9141615fb7654e59be14c", null ],
     [ "createAssignment", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatTaskManagerAPI.html#a7116ab9bae7660710cc51b4a5cb7fefa", null ],
     [ "getAllAssignments", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatTaskManagerAPI.html#a3edc8b4128887b67e4016d2c046d91a6", null ],
     [ "getAssignmentFor", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatTaskManagerAPI.html#a7a8ef56ea31f73bf40841286938c7fad", null ],

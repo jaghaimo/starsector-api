@@ -9,5 +9,6 @@ var dir_e49ca445dadc8df392765d795c391473 =
     [ "ReputationChangeTracker.java", "ReputationChangeTracker_8java.html", "ReputationChangeTracker_8java" ],
     [ "SectorActivityTracker.java", "SectorActivityTracker_8java.html", "SectorActivityTracker_8java" ],
     [ "SharedData.java", "SharedData_8java.html", "SharedData_8java" ],
-    [ "StarSystemActivityTracker.java", "StarSystemActivityTracker_8java.html", "StarSystemActivityTracker_8java" ]
+    [ "StarSystemActivityTracker.java", "StarSystemActivityTracker_8java.html", "StarSystemActivityTracker_8java" ],
+    [ "WormholeManager.java", "WormholeManager_8java.html", "WormholeManager_8java" ]
 ];

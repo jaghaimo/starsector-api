@@ -233,31 +233,33 @@ $(document).ready(function(){initNavTree('StandardPirateActivityCause2_8java_sou
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno"><a class="line" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1StandardPirateActivityCause2.html#a2827826a18a0c5ee4d45d009530a481c">  112</a></span>    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_function" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1StandardPirateActivityCause2.html#a2827826a18a0c5ee4d45d009530a481c">getMagnitudeContribution</a>(StarSystemAPI system) {</div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        <span class="keywordflow">if</span> (KantaCMD.playerHasProtection()) <span class="keywordflow">return</span> 0f;</div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        </div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        List&lt;MarketAPI&gt; markets = Misc.getMarketsInLocation(system, Factions.PLAYER);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1StandardPirateActivityCause2.html#a2e5d72f7e70aea191477e9098ce35b4c">getProgress</a>() &lt;= 0) <span class="keywordflow">return</span> 0f;</div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        </div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        <span class="keywordtype">float</span> max = 0.1f;</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        <span class="keywordflow">for</span> (MarketAPI market : markets) {</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>            <span class="keywordtype">float</span> val = <a class="code hl_function" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1StandardPirateActivityCause2.html#ace5b12a52a4de49d8c5fcea09e6a7c84">getMagForMarket</a>(market);</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>            <span class="comment">//float val = market.getSize() * 0.01f * 5f;</span></div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>            max = Math.max(val, max);</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        }</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        </div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        <span class="keywordflow">if</span> (max &gt; <a class="code hl_variable" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1StandardPirateActivityCause2.html#aba2a5e1ce1ebb520cdb91f350d6d2d7d">MAX_MAG</a>) max = <a class="code hl_variable" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1StandardPirateActivityCause2.html#aba2a5e1ce1ebb520cdb91f350d6d2d7d">MAX_MAG</a>;</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        List&lt;MarketAPI&gt; markets = Misc.getMarketsInLocation(system, Factions.PLAYER);</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        <span class="keywordtype">float</span> max = 0.1f;</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        <span class="keywordflow">for</span> (MarketAPI market : markets) {</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>            <span class="keywordtype">float</span> val = <a class="code hl_function" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1StandardPirateActivityCause2.html#ace5b12a52a4de49d8c5fcea09e6a7c84">getMagForMarket</a>(market);</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>            <span class="comment">//float val = market.getSize() * 0.01f * 5f;</span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>            max = Math.max(val, max);</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        }</div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        </div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        max = Math.round(max * 100f) / 100f;</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        <span class="keywordflow">if</span> (max &gt; <a class="code hl_variable" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1StandardPirateActivityCause2.html#aba2a5e1ce1ebb520cdb91f350d6d2d7d">MAX_MAG</a>) max = <a class="code hl_variable" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1StandardPirateActivityCause2.html#aba2a5e1ce1ebb520cdb91f350d6d2d7d">MAX_MAG</a>;</div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        </div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        <span class="comment">//if (true) return 0.79f;</span></div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        <span class="keywordflow">return</span> max;</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    }</div>
-</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>}</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        max = Math.round(max * 100f) / 100f;</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        </div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        <span class="comment">//if (true) return 0.79f;</span></div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        <span class="keywordflow">return</span> max;</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    }</div>
 </div>
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>}</div>
+</div>
 <div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
 <div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
-<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_html"><div class="ttname"><a href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel</a></div><div class="ttdef"><b>Definition</b> <a href="BaseEventIntel_8java_source.html#l00034">BaseEventIntel.java:34</a></div></div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span> </div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
+<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_html"><div class="ttname"><a href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel</a></div><div class="ttdef"><b>Definition</b> <a href="BaseEventIntel_8java_source.html#l00035">BaseEventIntel.java:35</a></div></div>
 <div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseFactorTooltip_html"><div class="ttname"><a href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseFactorTooltip.html">com.fs.starfarer.api.impl.campaign.intel.events.BaseFactorTooltip</a></div><div class="ttdef"><b>Definition</b> <a href="BaseFactorTooltip_8java_source.html#l00006">BaseFactorTooltip.java:6</a></div></div>
 <div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseHostileActivityCause2_html"><div class="ttname"><a href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseHostileActivityCause2.html">com.fs.starfarer.api.impl.campaign.intel.events.BaseHostileActivityCause2</a></div><div class="ttdef"><b>Definition</b> <a href="BaseHostileActivityCause2_8java_source.html#l00010">BaseHostileActivityCause2.java:10</a></div></div>
 <div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseHostileActivityCause2_html_ac1541b2257561828bd30f3dae6777634"><div class="ttname"><a href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseHostileActivityCause2.html#ac1541b2257561828bd30f3dae6777634">com.fs.starfarer.api.impl.campaign.intel.events.BaseHostileActivityCause2.intel</a></div><div class="ttdeci">HostileActivityEventIntel intel</div><div class="ttdef"><b>Definition</b> <a href="BaseHostileActivityCause2_8java_source.html#l00012">BaseHostileActivityCause2.java:12</a></div></div>

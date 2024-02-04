@@ -7,6 +7,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1Commod
     [ "createTooltip", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CommodityProductionMission.html#a166730426ea4c82a198eef4d12b78218", null ],
     [ "getBaseName", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CommodityProductionMission.html#a248dfa0be0323022728e329f4211a6ff", null ],
     [ "getCompletionFlag", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CommodityProductionMission.html#aa88be1b0c9e8ed9b3b022a49002089f7", null ],
+    [ "getIntelTags", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CommodityProductionMission.html#a20a97ebb1f623744eb2f1ae3839b9295", null ],
     [ "getMissionTypeNoun", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CommodityProductionMission.html#ad8dce4d5fea3635bd6ec8652e5fe716b", null ],
     [ "getSpec", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CommodityProductionMission.html#afedfaaec481ab8273c33ec4dd413419a", null ],
     [ "getTooltipWidth", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CommodityProductionMission.html#a5ea0498ee2d797a040db19c2642d25c4", null ],

@@ -87,6 +87,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1WeaponAPI =
     [ "setTurnRateOverride", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1WeaponAPI.html#a700320b100ea35bb49b65b5f14fd47c0", null ],
     [ "setWeaponGlowHeightMult", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1WeaponAPI.html#ad30da50cb67043370adb78c0fac8d0fb", null ],
     [ "setWeaponGlowWidthMult", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1WeaponAPI.html#ad9aa9438311f4c81fa5b982a4c21516e", null ],
+    [ "stopFiring", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1WeaponAPI.html#aa07985b05e724d1e85d3b39eeb16d33a", null ],
     [ "updateBeamFromPoints", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1WeaponAPI.html#a1ffc9421425963424e44e6937f006302", null ],
     [ "usesAmmo", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1WeaponAPI.html#a8743f3f22979c08e177830b8391716a8", null ],
     [ "usesEnergy", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1WeaponAPI.html#ab686a3f2e9f8a7b9a230b6cf69e1bffb", null ]

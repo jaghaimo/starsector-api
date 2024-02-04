@@ -33,6 +33,7 @@ var dir_9af02b85544097a549d5d91401bbead1 =
     [ "ExperimentalPhaseCoils.java", "ExperimentalPhaseCoils_8java.html", "ExperimentalPhaseCoils_8java" ],
     [ "FaultyAutomatedSystems.java", "FaultyAutomatedSystems_8java.html", "FaultyAutomatedSystems_8java" ],
     [ "FighterChassisStorage.java", "FighterChassisStorage_8java.html", "FighterChassisStorage_8java" ],
+    [ "FlightControl.java", "FlightControl_8java.html", "FlightControl_8java" ],
     [ "FragileSubsystems.java", "FragileSubsystems_8java.html", "FragileSubsystems_8java" ],
     [ "GlitchedSensorArray.java", "GlitchedSensorArray_8java.html", "GlitchedSensorArray_8java" ],
     [ "GroundSupport.java", "GroundSupport_8java.html", "GroundSupport_8java" ],

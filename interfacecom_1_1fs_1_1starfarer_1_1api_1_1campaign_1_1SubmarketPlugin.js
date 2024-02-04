@@ -36,6 +36,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SubmarketPlugin =
     [ "isIllegalOnSubmarket", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SubmarketPlugin.html#ab17c31d8a8329fde9764b5daf0ad961a", null ],
     [ "isIllegalOnSubmarket", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SubmarketPlugin.html#aed88e7f693ccf35876b518db0a168812", null ],
     [ "isIllegalOnSubmarket", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SubmarketPlugin.html#aa849bddec418eed0230eddb23cc3e9ad", null ],
+    [ "isMilitaryMarket", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SubmarketPlugin.html#a07e68db34177aef38edb0655f9691733", null ],
     [ "isOpenMarket", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SubmarketPlugin.html#ac7646964155c9a73e227e447e12b8950", null ],
     [ "isParticipatesInEconomy", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SubmarketPlugin.html#a7deae258582fca2c41285042d8bcf7e7", null ],
     [ "isTooltipExpandable", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SubmarketPlugin.html#a459fa4545e39245b3d1a2020b81ba5c5", null ],

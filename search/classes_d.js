@@ -44,6 +44,7 @@ var searchData=
   ['noghostcreator_41',['NoGhostCreator',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1NoGhostCreator.html',1,'com::fs::starfarer::api::impl::campaign::ghosts::types']]],
   ['noise_42',['Noise',['../classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1Noise.html',1,'com::fs::starfarer::api::util']]],
   ['novaburststats_43',['NovaBurstStats',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1NovaBurstStats.html',1,'com::fs::starfarer::api::impl::combat']]],
-  ['npcwantscomms_44',['NPCWantsComms',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1NPCWantsComms.html',1,'com::fs::starfarer::api::impl::campaign::rulecmd']]],
-  ['nslanceeffectsavedcopy_45',['NSLanceEffectSavedCopy',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1NSLanceEffectSavedCopy.html',1,'com::fs::starfarer::api::impl::combat']]]
+  ['npchassler_44',['NPCHassler',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1NPCHassler.html',1,'com::fs::starfarer::api::impl::campaign']]],
+  ['npcwantscomms_45',['NPCWantsComms',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1NPCWantsComms.html',1,'com::fs::starfarer::api::impl::campaign::rulecmd']]],
+  ['nslanceeffectsavedcopy_46',['NSLanceEffectSavedCopy',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1NSLanceEffectSavedCopy.html',1,'com::fs::starfarer::api::impl::combat']]]
 ];

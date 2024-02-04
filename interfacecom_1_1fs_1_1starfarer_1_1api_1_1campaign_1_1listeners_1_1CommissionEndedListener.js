@@ -1,0 +1,4 @@
+var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1CommissionEndedListener =
+[
+    [ "reportCommissionEnded", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1CommissionEndedListener.html#abf8b53b2297b64f4022adcfc9deb2f5c", null ]
+];

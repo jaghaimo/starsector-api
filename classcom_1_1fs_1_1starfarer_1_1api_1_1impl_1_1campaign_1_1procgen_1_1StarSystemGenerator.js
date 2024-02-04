@@ -24,6 +24,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarSys
     [ "getPickerForCategory", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarSystemGenerator.html#ae9f952fde63225c221e19d20473b12ba", null ],
     [ "getPickerForCategory", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarSystemGenerator.html#ab12dd93e91eae4723a3170bb4ec42063", null ],
     [ "getStarAge", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarSystemGenerator.html#ab9b7c404b6e43224e3846044b3e225b8", null ],
+    [ "init", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarSystemGenerator.html#a45bf0f97b7c306ba78b701e1de60c4be", null ],
     [ "initSystem", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarSystemGenerator.html#ab2ffb4d3a3dbb4e792a5d5fe4c78d92b", null ],
     [ "isCategoryEmpty", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarSystemGenerator.html#a63157e6b5fed31b6029753f6629b8d3b", null ],
     [ "pickCategory", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarSystemGenerator.html#a80d1f0e61f4c601f323bfd608254d4a4", null ],

@@ -1,8 +1,12 @@
 var dir_38c15d66a5aa6b3b2e6b78afc2b6ccbd =
 [
     [ "AutoReducingValue.java", "AutoReducingValue_8java.html", "AutoReducingValue_8java" ],
+    [ "CampaignEngineGlowIndividualEngine.java", "CampaignEngineGlowIndividualEngine_8java.html", "CampaignEngineGlowIndividualEngine_8java" ],
+    [ "CampaignEngineGlowUtil.java", "CampaignEngineGlowUtil_8java.html", "CampaignEngineGlowUtil_8java" ],
+    [ "CampaignEntityMovementUtil.java", "CampaignEntityMovementUtil_8java.html", "CampaignEntityMovementUtil_8java" ],
     [ "CollisionGridUtil.java", "CollisionGridUtil_8java.html", "CollisionGridUtil_8java" ],
     [ "ColorShifterAPI.java", "ColorShifterAPI_8java.html", "ColorShifterAPI_8java" ],
+    [ "ColorShifterUtil.java", "ColorShifterUtil_8java.html", "ColorShifterUtil_8java" ],
     [ "CountingMap.java", "CountingMap_8java.html", "CountingMap_8java" ],
     [ "DelayedActionScript.java", "DelayedActionScript_8java.html", "DelayedActionScript_8java" ],
     [ "DynamicStatsAPI.java", "DynamicStatsAPI_8java.html", "DynamicStatsAPI_8java" ],
@@ -27,10 +31,12 @@ var dir_38c15d66a5aa6b3b2e6b78afc2b6ccbd =
     [ "RuleException.java", "RuleException_8java.html", "RuleException_8java" ],
     [ "SaveableIterator.java", "SaveableIterator_8java.html", "SaveableIterator_8java" ],
     [ "SkillData.java", "SkillData_8java.html", "SkillData_8java" ],
+    [ "SmoothFacingUtil.java", "SmoothFacingUtil_8java.html", "SmoothFacingUtil_8java" ],
     [ "SmoothMovementUtil.java", "SmoothMovementUtil_8java.html", "SmoothMovementUtil_8java" ],
     [ "TimeoutTracker.java", "TimeoutTracker_8java.html", "TimeoutTracker_8java" ],
     [ "TimeoutTrackerMap.java", "TimeoutTrackerMap_8java.html", "TimeoutTrackerMap_8java" ],
     [ "ValueShifterAPI.java", "ValueShifterAPI_8java.html", "ValueShifterAPI_8java" ],
+    [ "ValueShifterUtil.java", "ValueShifterUtil_8java.html", "ValueShifterUtil_8java" ],
     [ "WarpingSpriteRendererUtil.java", "WarpingSpriteRendererUtil_8java.html", "WarpingSpriteRendererUtil_8java" ],
     [ "WeightedRandomPicker.java", "WeightedRandomPicker_8java.html", "WeightedRandomPicker_8java" ]
 ];

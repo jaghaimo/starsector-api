@@ -32,7 +32,6 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_
     [ "addPotentialContacts", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission.html#ad225a943a29f0d5df1d68d032afb3912", null ],
     [ "addResultBulletsAssumingAlreadyIndented", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission.html#a7d5b5cd1d7aceea6e542dc9d28cf1b09", null ],
     [ "addSpecialItemDropOnlyUseInAcceptImplNotUndoneOnAbort", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission.html#aa88f62d918e783b1c760077f210cf6d8", null ],
-    [ "addStandardMarketDesc", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission.html#ab360a3d50b342d77e7df73bbfbc0fb94", null ],
     [ "addSuccessStages", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission.html#a0a433f38cf5ba53823fae1f163214163", null ],
     [ "addTag", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission.html#a858a2c3cdc9ba46d5fa1e09e2f49e62c", null ],
     [ "adjustRep", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission.html#a17c3c52460e174bd2ffa607f6ea2fc3e", null ],

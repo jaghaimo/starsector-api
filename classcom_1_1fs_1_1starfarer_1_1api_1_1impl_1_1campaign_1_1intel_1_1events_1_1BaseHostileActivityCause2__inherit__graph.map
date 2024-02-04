@@ -1,17 +1,29 @@
 <map id="com.fs.starfarer.api.impl.campaign.intel.events.BaseHostileActivityCause2" name="com.fs.starfarer.api.impl.campaign.intel.events.BaseHostileActivityCause2">
-<area shape="rect" id="Node000001" title=" " alt="" coords="343,169,632,210"/>
-<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1KantasProtectionPirateActivityCause2.html" title=" " alt="" coords="680,5,969,46"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="523,157,592,105,635,79,679,57,713,44,715,49,681,61,637,84,595,110,526,161"/>
-<area shape="rect" id="Node000004" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1KantasWrathPirateActivityCause2.html" title=" " alt="" coords="680,71,969,111"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="559,161,679,122,726,109,728,115,681,127,560,166"/>
-<area shape="rect" id="Node000005" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1LuddicPathAgreementHostileActivityCause2.html" title=" " alt="" coords="680,136,969,177"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="647,171,679,168,680,173,648,176"/>
-<area shape="rect" id="Node000006" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1PirateBasePirateActivityCause2.html" title=" " alt="" coords="680,201,969,242"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="648,202,680,205,679,211,647,208"/>
-<area shape="rect" id="Node000007" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1StandardLuddicPathActivityCause2.html" title=" " alt="" coords="680,267,969,307"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="561,213,681,251,728,263,727,269,679,256,560,218"/>
-<area shape="rect" id="Node000008" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1StandardPirateActivityCause2.html" title=" " alt="" coords="680,332,969,373"/>
-<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="526,218,595,269,637,295,681,317,715,329,713,334,679,321,635,299,592,273,523,222"/>
-<area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityCause2.html" title=" " alt="" coords="5,169,295,210"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="310,187,342,187,342,192,310,192"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="343,365,632,406"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HegemonyAICoresActivityCause.html" title=" " alt="" coords="680,5,969,46"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="496,350,519,286,557,207,581,165,609,125,642,89,678,57,700,44,702,49,682,61,646,92,614,129,586,168,561,209,524,288,501,352"/>
+<area shape="rect" id="Node000004" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1KantasProtectionPirateActivityCause2.html" title=" " alt="" coords="680,71,969,111"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="502,350,528,298,567,236,617,174,647,146,679,122,702,110,705,114,681,127,650,150,621,178,572,240,533,301,506,352"/>
+<area shape="rect" id="Node000005" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1KantasWrathPirateActivityCause2.html" title=" " alt="" coords="680,136,969,177"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="509,351,539,313,578,268,626,224,679,187,706,175,708,180,681,192,629,228,582,272,543,316,513,354"/>
+<area shape="rect" id="Node000006" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1LuddicChurchStandardActivityCause.html" title=" " alt="" coords="680,201,969,242"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="523,353,592,301,635,275,679,253,713,240,715,245,681,257,637,280,595,306,526,357"/>
+<area shape="rect" id="Node000007" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1LuddicPathAgreementHostileActivityCause2.html" title=" " alt="" coords="680,267,969,307"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="559,357,679,318,726,305,728,311,681,323,560,362"/>
+<area shape="rect" id="Node000008" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1PirateBasePirateActivityCause2.html" title=" " alt="" coords="680,332,969,373"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="647,367,679,364,680,369,648,372"/>
+<area shape="rect" id="Node000009" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1RemnantNexusActivityCause.html" title=" " alt="" coords="680,397,969,438"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="648,398,680,401,679,407,647,404"/>
+<area shape="rect" id="Node000010" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1SindrianDiktatStandardActivityCause.html" title=" " alt="" coords="680,463,969,503"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="561,409,681,447,728,459,727,465,679,452,560,414"/>
+<area shape="rect" id="Node000011" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1StandardLuddicPathActivityCause2.html" title=" " alt="" coords="680,528,969,569"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="526,414,595,465,637,491,681,513,715,525,713,530,679,517,635,495,592,469,523,418"/>
+<area shape="rect" id="Node000012" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1StandardPerseanLeagueActivityCause.html" title=" " alt="" coords="680,593,969,634"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="514,417,543,455,582,499,629,542,681,578,708,590,706,595,679,583,626,546,579,502,539,458,509,420"/>
+<area shape="rect" id="Node000013" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1StandardPirateActivityCause2.html" title=" " alt="" coords="680,659,969,699"/>
+<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="506,419,533,470,572,531,621,592,650,620,681,643,705,656,702,660,679,648,647,624,618,596,567,534,528,472,502,421"/>
+<area shape="rect" id="Node000014" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1TriTachyonStandardActivityCause.html" title=" " alt="" coords="680,724,969,765"/>
+<area shape="poly" id="edge13_Node000001_Node000014" title=" " alt="" coords="502,420,525,483,562,562,586,603,614,642,646,678,682,709,702,721,700,726,678,713,642,682,610,645,581,605,557,564,520,485,497,422"/>
+<area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityCause2.html" title=" " alt="" coords="5,365,295,406"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="310,383,342,383,342,388,310,388"/>
 </map>

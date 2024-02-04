@@ -4,6 +4,7 @@ var dir_7fedd38ece761a280da58b5bdb5bce47 =
     [ "BlueprintSpecial.java", "BlueprintSpecial_8java.html", "BlueprintSpecial_8java" ],
     [ "BreadcrumbSpecial.java", "BreadcrumbSpecial_8java.html", "BreadcrumbSpecial_8java" ],
     [ "CargoManifestSpecial.java", "CargoManifestSpecial_8java.html", "CargoManifestSpecial_8java" ],
+    [ "CryopodOfficerGen.java", "CryopodOfficerGen_8java.html", "CryopodOfficerGen_8java" ],
     [ "DomainSurveyDerelictSpecial.java", "DomainSurveyDerelictSpecial_8java.html", "DomainSurveyDerelictSpecial_8java" ],
     [ "ShipRecoverySpecial.java", "ShipRecoverySpecial_8java.html", "ShipRecoverySpecial_8java" ],
     [ "SleeperPodsSpecial.java", "SleeperPodsSpecial_8java.html", "SleeperPodsSpecial_8java" ],

@@ -6,8 +6,9 @@ var searchData=
   ['unhidegacharacters_3',['UnhideGACharacters',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1academy_1_1UnhideGACharacters.html',1,'com::fs::starfarer::api::impl::campaign::rulecmd::academy']]],
   ['unhideperson_4',['UnhidePerson',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1UnhidePerson.html',1,'com::fs::starfarer::api::impl::campaign::rulecmd']]],
   ['uninstallcommsniffer_5',['UninstallCommSniffer',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1UninstallCommSniffer.html',1,'com::fs::starfarer::api::impl::campaign::rulecmd']]],
-  ['unset_6',['unset',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1unset.html',1,'com::fs::starfarer::api::impl::campaign::rulecmd']]],
-  ['unsetall_7',['unsetAll',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1unsetAll.html',1,'com::fs::starfarer::api::impl::campaign::rulecmd']]],
-  ['updatememory_8',['UpdateMemory',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1UpdateMemory.html',1,'com::fs::starfarer::api::impl::campaign::rulecmd']]],
-  ['urbanizedpolity_9',['UrbanizedPolity',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1UrbanizedPolity.html',1,'com::fs::starfarer::api::impl::campaign::econ']]]
+  ['uniqueencounter_6',['UniqueEncounter',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1UniqueEncounter.html',1,'com::fs::starfarer::api::impl::campaign::rulecmd']]],
+  ['unset_7',['unset',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1unset.html',1,'com::fs::starfarer::api::impl::campaign::rulecmd']]],
+  ['unsetall_8',['unsetAll',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1unsetAll.html',1,'com::fs::starfarer::api::impl::campaign::rulecmd']]],
+  ['updatememory_9',['UpdateMemory',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1UpdateMemory.html',1,'com::fs::starfarer::api::impl::campaign::rulecmd']]],
+  ['urbanizedpolity_10',['UrbanizedPolity',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1UrbanizedPolity.html',1,'com::fs::starfarer::api::impl::campaign::econ']]]
 ];

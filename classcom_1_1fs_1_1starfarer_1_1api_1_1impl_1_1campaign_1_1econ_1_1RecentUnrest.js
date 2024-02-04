@@ -9,6 +9,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1RecentUnre
     [ "createTooltipAfterDescription", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1RecentUnrest.html#a06fb1490d8b27d68910e586304d4ecc5", null ],
     [ "getPenalty", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1RecentUnrest.html#a80d9eff5433677bb11a8c8dd2db25a0d", null ],
     [ "isTransient", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1RecentUnrest.html#a54798e5b7e0acbd0eb9633503b9d4276", null ],
+    [ "setPenalty", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1RecentUnrest.html#a6611d4a59723c5d91eb4996fbd61719a", null ],
     [ "unapply", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1RecentUnrest.html#a91f049dae170287ffa0f308f03db224e", null ],
     [ "penalty", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1RecentUnrest.html#af3f20d31d1503a9cbb54c6b0d89c964a", null ],
     [ "reasons", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1RecentUnrest.html#acd6749a497d7fb7535f5ccf07b731ef4", null ],

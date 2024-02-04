@@ -1,0 +1,4 @@
+var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1DiktatFuelBonusScript =
+[
+    [ "removeBonus", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1DiktatFuelBonusScript.html#a4d40d9eba0080fb4fdbcc091a956a0f4", null ]
+];

@@ -1,0 +1,26 @@
+var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AbyssalLightBonus =
+[
+    [ "AbyssalLightBonus", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AbyssalLightBonus.html#a730ad99a76733822383943514cd9a47d", null ],
+    [ "addBurnBonus", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AbyssalLightBonus.html#afe9c0941c9525684c0bac18810321cf7", null ],
+    [ "addSensorBonus", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AbyssalLightBonus.html#a5a57aac59dcbc5bb4a1a11c793ec8d15", null ],
+    [ "addTopographyPoints", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AbyssalLightBonus.html#ae3ee55a5bb9914fa55ccaac4b5397940", null ],
+    [ "advance", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AbyssalLightBonus.html#a86301a9d43639e34bc28f5b760d8f906", null ],
+    [ "checkPendingAndSendMessages", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AbyssalLightBonus.html#a996f4a1b9adcfb33bc6e8976de2508dd", null ],
+    [ "getBurnBonus", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AbyssalLightBonus.html#a278821f54fb711b048fa61bcbebbc7e8", null ],
+    [ "getBurnBonusLYRemaining", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AbyssalLightBonus.html#a3b1d4552b31754f22519f0f046701cba", null ],
+    [ "getSensorBonus", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AbyssalLightBonus.html#abc3530b2c5c7caf4c541bba5ddee15d7", null ],
+    [ "getSensorBonusLYRemaining", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AbyssalLightBonus.html#abe2826a17c76ee8f4f564583a6c59626", null ],
+    [ "isDone", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AbyssalLightBonus.html#a1e0f4772f449b72fbca9dd7fea8fa211", null ],
+    [ "runWhilePaused", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AbyssalLightBonus.html#acaef46f01be4f0869bc57f567e786a48", null ],
+    [ "setBurnBonus", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AbyssalLightBonus.html#a31ea94cd29bb08b8562b29e76d0d1c6e", null ],
+    [ "setSensorBonus", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AbyssalLightBonus.html#a5c39c822478d43a857318ba9ffaaf556", null ],
+    [ "burnBonus", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AbyssalLightBonus.html#aacb16f039539cf45ff2914eb30d78f6e", null ],
+    [ "fleet", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AbyssalLightBonus.html#a0ed5d0ce9ee3912bc8cc6aaaae1d01e2", null ],
+    [ "framesSpentPending", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AbyssalLightBonus.html#a5805805e5de0def2e36b20acf4492c2b", null ],
+    [ "pendingBurnBonus", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AbyssalLightBonus.html#a8005b80cb526c0c206530c9102c8921a", null ],
+    [ "pendingLightsCount", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AbyssalLightBonus.html#a6bb2312f31a3f3e955157ee0034d760d", null ],
+    [ "pendingSensorBonus", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AbyssalLightBonus.html#a21f23d5f41f8367a89c8c8cfc50a6be5", null ],
+    [ "pendingTopographyPoints", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AbyssalLightBonus.html#abdca7c68290148c1895802da34364b1a", null ],
+    [ "prevLoc", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AbyssalLightBonus.html#acb3bc55029777be54130747e8f3e797f", null ],
+    [ "sensorBonus", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AbyssalLightBonus.html#a4cfbd296ec48d8abae0841d2aeecf10c", null ]
+];

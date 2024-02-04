@@ -9,7 +9,6 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1Recove
     [ "getBaseName", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1RecoverAPlanetkiller.html#a8275cda0a66ab96b056e4ffbb0497abb", null ],
     [ "getMapLocation", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1RecoverAPlanetkiller.html#a84c0f9ef1d5b38392f7e3c844b145f52", null ],
     [ "getMissionTypeNoun", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1RecoverAPlanetkiller.html#a53491dcc9e29858615fc15d4d8f3e3ea", null ],
-    [ "getNexus", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1RecoverAPlanetkiller.html#a5ec736d57102f153055a74582b6ba770", null ],
     [ "getNexusSystem", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1RecoverAPlanetkiller.html#abd5d32d455360ceeeead650ad65b6975", null ],
     [ "getPostfixForState", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1RecoverAPlanetkiller.html#af87d86d004788c046ef992a59b1983d7", null ],
     [ "notifyEnding", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1RecoverAPlanetkiller.html#a96dc351c4f4ad816e96c484c0d6eb050", null ],

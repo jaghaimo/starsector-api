@@ -148,51 +148,59 @@ $(document).ready(function(){initNavTree('ApplyCRDamage_8java_source.html',''); 
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        </div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        Random random = Misc.getRandom(seed, 7);</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        List&lt;FleetMemberAPI&gt; shipsToDamage = <span class="keyword">new</span> ArrayList&lt;FleetMemberAPI&gt;();</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        WeightedRandomPicker&lt;FleetMemberAPI&gt; picker = <span class="keyword">new</span> WeightedRandomPicker&lt;FleetMemberAPI&gt;(random);</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <span class="keywordflow">for</span> (FleetMemberAPI member : playerFleet.getFleetData().getMembersListCopy()) {</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            <span class="keywordflow">if</span> (member.isMothballed() &amp;&amp; member.getRepairTracker().getBaseCR() &lt; 0.2f) <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            picker.add(member, member.getFleetPointCost());</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        }</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <span class="comment">//float totalDamage = Math.min(playerFleet.getFleetPoints(), other.getFleetPoints()) * INSPECTION_DAMAGE_MULT;</span></div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="keywordtype">float</span> totalDamage = baseFP * fpMult;</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <span class="keywordtype">float</span> picked = 0f;</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        <span class="keywordflow">while</span> (picked &lt; totalDamage &amp;&amp; !picker.isEmpty()) {</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            FleetMemberAPI pick = picker.pickAndRemove();</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>            shipsToDamage.add(pick);</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            picked += pick.getFleetPointCost();</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        }</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        </div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        </div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <span class="keywordflow">for</span> (FleetMemberAPI member : shipsToDamage) {</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>            <span class="keywordtype">float</span> crLost = Math.min(member.getRepairTracker().getBaseCR(), member.getDeployCost() * 0.5f);</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            crLost += 0.01f * (float)random.nextInt(10);</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>            crLost *= crMult;</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>            <span class="keywordflow">if</span> (crLost &gt; 0) {</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>                member.getRepairTracker().applyCREvent(-crLost, desc);</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>                <a class="code hl_class" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AddRemoveCommodity.html">AddRemoveCommodity</a>.<a class="code hl_function" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AddRemoveCommodity.html#ae26a0c34b923fedc8cc1d7c10f2b111b">addCRLossText</a>(member, text, crLost);</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>            }</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        }</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        </div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    }</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <a class="code hl_function" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1ApplyCRDamage.html#a7568a23de10101a2807497300eca9596">applyCRDamage</a>(playerFleet, baseFP * fpMult, crMult, desc, text, random);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    }</div>
 </div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>}</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    </div>
+<div class="foldopen" id="foldopen00072" data-start="{" data-end="}">
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1ApplyCRDamage.html#a7568a23de10101a2807497300eca9596">   72</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1ApplyCRDamage.html#a7568a23de10101a2807497300eca9596">applyCRDamage</a>(CampaignFleetAPI fleet, <span class="keywordtype">float</span> damageFP, <span class="keywordtype">float</span> crMult, String desc, TextPanelAPI text, Random random) {</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        List&lt;FleetMemberAPI&gt; shipsToDamage = <span class="keyword">new</span> ArrayList&lt;FleetMemberAPI&gt;();</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        WeightedRandomPicker&lt;FleetMemberAPI&gt; picker = <span class="keyword">new</span> WeightedRandomPicker&lt;FleetMemberAPI&gt;(random);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="keywordflow">for</span> (FleetMemberAPI member : fleet.getFleetData().getMembersListCopy()) {</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            <span class="keywordflow">if</span> (member.isMothballed() &amp;&amp; member.getRepairTracker().getBaseCR() &lt; 0.2f) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            picker.add(member, member.getFleetPointCost());</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        }</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <span class="keywordtype">float</span> totalDamage = damageFP;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <span class="keywordtype">float</span> picked = 0f;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <span class="keywordflow">while</span> (picked &lt; totalDamage &amp;&amp; !picker.isEmpty()) {</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>            FleetMemberAPI pick = picker.pickAndRemove();</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            shipsToDamage.add(pick);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>            picked += pick.getFleetPointCost();</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        }</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        <span class="keywordflow">for</span> (FleetMemberAPI member : shipsToDamage) {</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>            <span class="keywordtype">float</span> crLost = Math.min(member.getRepairTracker().getBaseCR(), member.getDeployCost() * 0.5f);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>            crLost += 0.01f * (float)random.nextInt(10);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            crLost *= crMult;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>            <span class="keywordflow">if</span> (crLost &gt; 0) {</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                member.getRepairTracker().applyCREvent(-crLost, desc);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>                <span class="keywordflow">if</span> (text != <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                    <a class="code hl_class" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AddRemoveCommodity.html">AddRemoveCommodity</a>.<a class="code hl_function" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AddRemoveCommodity.html#ae26a0c34b923fedc8cc1d7c10f2b111b">addCRLossText</a>(member, text, crLost);</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                }</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>            }</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        }</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    }</div>
 </div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>}</div>
+</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
 <div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1Global_html"><div class="ttname"><a href="classcom_1_1fs_1_1starfarer_1_1api_1_1Global.html">com.fs.starfarer.api.Global</a></div><div class="ttdef"><b>Definition</b> <a href="Global_8java_source.html#l00013">Global.java:13</a></div></div>
 <div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1Global_html_afca8164b2446371c2d5415aa72a0a733"><div class="ttname"><a href="classcom_1_1fs_1_1starfarer_1_1api_1_1Global.html#afca8164b2446371c2d5415aa72a0a733">com.fs.starfarer.api.Global.getSector</a></div><div class="ttdeci">static SectorAPI getSector()</div><div class="ttdef"><b>Definition</b> <a href="Global_8java_source.html#l00059">Global.java:59</a></div></div>
 <div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AddRemoveCommodity_html"><div class="ttname"><a href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AddRemoveCommodity.html">com.fs.starfarer.api.impl.campaign.rulecmd.AddRemoveCommodity</a></div><div class="ttdef"><b>Definition</b> <a href="AddRemoveCommodity_8java_source.html#l00031">AddRemoveCommodity.java:31</a></div></div>
 <div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AddRemoveCommodity_html_ae26a0c34b923fedc8cc1d7c10f2b111b"><div class="ttname"><a href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AddRemoveCommodity.html#ae26a0c34b923fedc8cc1d7c10f2b111b">com.fs.starfarer.api.impl.campaign.rulecmd.AddRemoveCommodity.addCRLossText</a></div><div class="ttdeci">static void addCRLossText(FleetMemberAPI member, TextPanelAPI text, float crLoss)</div><div class="ttdef"><b>Definition</b> <a href="AddRemoveCommodity_8java_source.html#l00335">AddRemoveCommodity.java:335</a></div></div>
 <div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1ApplyCRDamage_html"><div class="ttname"><a href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1ApplyCRDamage.html">com.fs.starfarer.api.impl.campaign.rulecmd.ApplyCRDamage</a></div><div class="ttdef"><b>Definition</b> <a href="ApplyCRDamage_8java_source.html#l00037">ApplyCRDamage.java:37</a></div></div>
+<div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1ApplyCRDamage_html_a7568a23de10101a2807497300eca9596"><div class="ttname"><a href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1ApplyCRDamage.html#a7568a23de10101a2807497300eca9596">com.fs.starfarer.api.impl.campaign.rulecmd.ApplyCRDamage.applyCRDamage</a></div><div class="ttdeci">static void applyCRDamage(CampaignFleetAPI fleet, float damageFP, float crMult, String desc, TextPanelAPI text, Random random)</div><div class="ttdef"><b>Definition</b> <a href="ApplyCRDamage_8java_source.html#l00072">ApplyCRDamage.java:72</a></div></div>
 <div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1ApplyCRDamage_html_a841f744671566e3cad99e94839451b07"><div class="ttname"><a href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1ApplyCRDamage.html#a841f744671566e3cad99e94839451b07">com.fs.starfarer.api.impl.campaign.rulecmd.ApplyCRDamage.execute</a></div><div class="ttdeci">boolean execute(String ruleId, InteractionDialogAPI dialog, List&lt; Token &gt; params, Map&lt; String, MemoryAPI &gt; memoryMap)</div><div class="ttdef"><b>Definition</b> <a href="ApplyCRDamage_8java_source.html#l00040">ApplyCRDamage.java:40</a></div></div>
 <div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1BaseCommandPlugin_html"><div class="ttname"><a href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1BaseCommandPlugin.html">com.fs.starfarer.api.impl.campaign.rulecmd.BaseCommandPlugin</a></div><div class="ttdef"><b>Definition</b> <a href="BaseCommandPlugin_8java_source.html#l00011">BaseCommandPlugin.java:11</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

@@ -1,0 +1,28 @@
+var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1RemnantHostileActivityFactor =
+[
+    [ "RemnantHostileActivityFactor", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1RemnantHostileActivityFactor.html#aec8690b71892857707e25f4b1400adb0", null ],
+    [ "addBulletPointForEvent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1RemnantHostileActivityFactor.html#ab5103482f27482f60ef4da1997cc5eda", null ],
+    [ "addBulletPointForEventReset", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1RemnantHostileActivityFactor.html#a456397489d02dfe4ea635881aedc05e2", null ],
+    [ "addStageDescriptionForEvent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1RemnantHostileActivityFactor.html#aa1fed0e72f41d482bcb3d454b7be06bd", null ],
+    [ "advance", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1RemnantHostileActivityFactor.html#af65c6e1355f6ff9a8cb75ddc5ce9423a", null ],
+    [ "createFleet", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1RemnantHostileActivityFactor.html#a926878ec5b374ff93d32bb4efb778ec6", null ],
+    [ "findAttackTarget", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1RemnantHostileActivityFactor.html#a911f6d49054648887f34e019b4ff6268", null ],
+    [ "fireEvent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1RemnantHostileActivityFactor.html#a90181d68047715371dfcec6f984bed02", null ],
+    [ "getDesc", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1RemnantHostileActivityFactor.html#a879bb0bcd0b803387dee496821b6ff08", null ],
+    [ "getDescColor", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1RemnantHostileActivityFactor.html#aa1c811dea5019ee9644504e18e238e9b", null ],
+    [ "getEventFrequency", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1RemnantHostileActivityFactor.html#a6f2dfd56a1c61a758607657fef27c966", null ],
+    [ "getEventStageIcon", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1RemnantHostileActivityFactor.html#afaf14db714159c927cfdeada1c60b7c5", null ],
+    [ "getMainRowTooltip", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1RemnantHostileActivityFactor.html#a497f42490533da1d10088a77e0dc7cb3", null ],
+    [ "getMaxNumFleets", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1RemnantHostileActivityFactor.html#a4d7abd431916fcbe9f52814387b59bcf", null ],
+    [ "getNameColor", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1RemnantHostileActivityFactor.html#a65d0281cedfa928b88939880df9aa38b", null ],
+    [ "getNameForThreatList", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1RemnantHostileActivityFactor.html#a40d439abba31b1ded457026183ae7580", null ],
+    [ "getProgress", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1RemnantHostileActivityFactor.html#a134214f54bdbd07a02ec47a009b9f693", null ],
+    [ "getProgressStr", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1RemnantHostileActivityFactor.html#abffbf281ca95062063b06c0254155db7", null ],
+    [ "getStageTooltipImpl", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1RemnantHostileActivityFactor.html#aa13184d3548c8d6ed7e0d9b3fee8649a", null ],
+    [ "notifyEventEnding", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1RemnantHostileActivityFactor.html#a1f4b0f524e612748de16e2176b4dc064", null ],
+    [ "notifyFactorRemoved", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1RemnantHostileActivityFactor.html#a2e5b85ca51f60ed14b36097eb0421307", null ],
+    [ "reportFGIAborted", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1RemnantHostileActivityFactor.html#af6150ec69112b608bcb821fafbe274ac", null ],
+    [ "rollEvent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1RemnantHostileActivityFactor.html#a18e2014ec1fa829445bd4c246be25fa8", null ],
+    [ "shouldShow", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1RemnantHostileActivityFactor.html#a23284df13f7f37faaa47619f5850c3d2", null ],
+    [ "startAttack", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1RemnantHostileActivityFactor.html#a3a22f56322572b470fb20d36bbe3cb3b", null ]
+];

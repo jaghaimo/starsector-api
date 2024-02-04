@@ -324,6 +324,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ae7822fdb11a85535277677048b1c4511"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ee1411458e77b7663eec7bcbe4f5b94" id="r_a1ee1411458e77b7663eec7bcbe4f5b94"><td class="memItemLeft" align="right" valign="top">MemoryAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorAPI.html#a1ee1411458e77b7663eec7bcbe4f5b94">getPlayerMemoryWithoutUpdate</a> ()</td></tr>
 <tr class="separator:a1ee1411458e77b7663eec7bcbe4f5b94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea7e9834ad1f87ba9822964778bd4b7d" id="r_aea7e9834ad1f87ba9822964778bd4b7d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorAPI.html#aea7e9834ad1f87ba9822964778bd4b7d">removeStarSystemNextFrame</a> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1StarSystemAPI.html">StarSystemAPI</a> system)</td></tr>
+<tr class="separator:aea7e9834ad1f87ba9822964778bd4b7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb1f9b7a176a8dc383902bb2d676b141" id="r_aeb1f9b7a176a8dc383902bb2d676b141"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html">SectorEntityToken</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorAPI.html#aeb1f9b7a176a8dc383902bb2d676b141">getMousedOverEntity</a> ()</td></tr>
+<tr class="separator:aeb1f9b7a176a8dc383902bb2d676b141"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Note: generics can not be used in scripts. They are used in this API purely to show the return/parameter types of functions more clearly. </p><dl class="section author"><dt>Author</dt><dd>Alex Mosolov</dd></dl>
@@ -1230,6 +1234,23 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="aeb1f9b7a176a8dc383902bb2d676b141" name="aeb1f9b7a176a8dc383902bb2d676b141"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb1f9b7a176a8dc383902bb2d676b141">&#9670;&#160;</a></span>getMousedOverEntity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html">SectorEntityToken</a> com.fs.starfarer.api.campaign.SectorAPI.getMousedOverEntity </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a02533394492d01cbc3916af445e1387a" name="a02533394492d01cbc3916af445e1387a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a02533394492d01cbc3916af445e1387a">&#9670;&#160;</a></span>getPersistentData()</h2>
 
@@ -1783,6 +1804,30 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="aea7e9834ad1f87ba9822964778bd4b7d" name="aea7e9834ad1f87ba9822964778bd4b7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea7e9834ad1f87ba9822964778bd4b7d">&#9670;&#160;</a></span>removeStarSystemNextFrame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.fs.starfarer.api.campaign.SectorAPI.removeStarSystemNextFrame </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1StarSystemAPI.html">StarSystemAPI</a>&#160;</td>
+          <td class="paramname"><em>system</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Useful for remove star systems from scripts etc where using removeStarSystem() would cause a ConcurrentModificationException. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">system</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

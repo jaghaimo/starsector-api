@@ -15,6 +15,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1Fract
     [ "getActivationText", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a116100cbd71a33f1387cb1a5df2df4a8", null ],
     [ "getCooldownColor", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a05adcd3625a637570f7dd4f292d0e263", null ],
     [ "getCooldownFraction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#ac72f675e1e5ad6759087616cbd093f42", null ],
+    [ "getCRCostMult", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a978436d9acd43c30712d5f972a8e9ca1", null ],
     [ "getNearestWell", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#ad01e93eba6fe5f8f3abd9dd9cb2bbb33", null ],
     [ "getNonReadyShips", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#ad6f73292819032764dca348929a7475a", null ],
     [ "hasTooltip", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a43211831ed98f5579abca31e98b29f6b", null ],

@@ -37,6 +37,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI =
     [ "getDamageToFrigates", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html#a6a76c12dcdf3555a187afb157bb7f554", null ],
     [ "getDamageToMissiles", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html#a2eb6062187a3038783dda0e38f91d404", null ],
     [ "getDamageToTargetEnginesMult", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html#a21ce4ffa02b30832543b92cd5743bf8b", null ],
+    [ "getDamageToTargetHullMult", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html#a97e41dd458cdb56653231e13f41be9f2", null ],
     [ "getDamageToTargetShieldsMult", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html#a350bd8323bf93b12d6afb4ab29080ed1", null ],
     [ "getDamageToTargetWeaponsMult", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html#a47c619919e85cdd15dbfb0b507d27608", null ],
     [ "getDeceleration", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html#a93afb1e640ace632f4b73e09e8f09893", null ],

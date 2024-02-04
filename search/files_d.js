@@ -43,6 +43,7 @@ var searchData=
   ['noghostcreator_2ejava_40',['NoGhostCreator.java',['../NoGhostCreator_8java.html',1,'']]],
   ['noise_2ejava_41',['Noise.java',['../Noise_8java.html',1,'']]],
   ['novaburststats_2ejava_42',['NovaBurstStats.java',['../NovaBurstStats_8java.html',1,'']]],
-  ['npcwantscomms_2ejava_43',['NPCWantsComms.java',['../NPCWantsComms_8java.html',1,'']]],
-  ['nslanceeffectsavedcopy_2ejava_44',['NSLanceEffectSavedCopy.java',['../NSLanceEffectSavedCopy_8java.html',1,'']]]
+  ['npchassler_2ejava_43',['NPCHassler.java',['../NPCHassler_8java.html',1,'']]],
+  ['npcwantscomms_2ejava_44',['NPCWantsComms.java',['../NPCWantsComms_8java.html',1,'']]],
+  ['nslanceeffectsavedcopy_2ejava_45',['NSLanceEffectSavedCopy.java',['../NSLanceEffectSavedCopy_8java.html',1,'']]]
 ];
