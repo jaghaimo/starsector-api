@@ -87,6 +87,8 @@ public class Tags {
 	public static final String THEME_CORE_POPULATED = "theme_core_populated";
 	public static final String THEME_CORE = "theme_core";
 	
+	public static final String DO_NOT_SHOW_STRANDED_DIALOG = "do_not_show_stranded_dialog";
+	
 	/**
 	 * Used to mark systems that would be "interesting" for the player to visit, due to ruins, derelicts,
 	 * anything special, and so on. These systems will be more likely to be picked for containing the 

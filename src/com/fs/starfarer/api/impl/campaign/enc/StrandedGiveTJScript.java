@@ -8,6 +8,7 @@ import com.fs.starfarer.api.campaign.LocationAPI;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.StarSystemAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Abilities;
+import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.util.IntervalUtil;
 import com.fs.starfarer.api.util.Misc;
 
@@ -27,6 +28,7 @@ public class StrandedGiveTJScript implements EveryFrameScript {
 			if (!(curr instanceof StarSystemAPI)) return;
 			
 			StarSystemAPI system = (StarSystemAPI) curr;
+			if (system.hasTag(Tags.DO_NOT_SHOW_STRANDED_DIALOG)) return;
 			
 			if (prev != system) {
 				prev = system;

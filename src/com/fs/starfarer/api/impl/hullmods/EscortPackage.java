@@ -163,9 +163,9 @@ public class EscortPackage extends BaseHullMod {
 				}
 			}
 			
-			if (best != null && bestMag > 0) {
+			//if (best != null && bestMag > 0) {
 				applyEPEffect(ship, best, bestMag);
-			}
+			//}
 			
 			data.mag = bestMag;
 		}
